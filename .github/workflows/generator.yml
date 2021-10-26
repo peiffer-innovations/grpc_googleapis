@@ -54,6 +54,7 @@ jobs:
       - name: Update main
         run: |
           git config --global user.email "noop@github.com"
+          git config --global url."https://action:${{secrets.REPO_TOKEN}}@github.com/".insteadOf https://github.com/
           git add .
           git commit -m "Updates"
           git push origin
