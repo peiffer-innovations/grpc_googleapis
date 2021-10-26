@@ -1,5 +1,5 @@
 name: grpc_googleapis
-description: Generated GRPC Dart files for the Google APIs
+description: Generator to create all the gRPC Dart files for googleapis.
 version: 1.0.0
 homepage: https://github.com/peiffer-innovations/grpc_googleapis
 

@@ -53,6 +53,7 @@ jobs:
 
       - name: Update main
         run: |
+          git config --global user.email "noop@github.com"
           git add .
           git commit -m "Updates"
           git push origin
