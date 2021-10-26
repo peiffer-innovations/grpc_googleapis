@@ -37,7 +37,9 @@ jobs:
       - name: Generate Dart Files
         run: |
           pub global activate protoc_plugin
-          export PATH=$PATH:~/.pub-cache/bin
+          export "PATH=$PATH:~/.pub-cache/bin"
+          ls -l ~/.pub-cache/bin
+          echo "$PATH"
           pub get
           mkdir generated
           cd generated
