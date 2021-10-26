@@ -47,6 +47,7 @@ jobs:
           cd ..
           dart tools/generate.dart $BUILD_NUMBER
           cd generated
+          pub get
           dart format lib
           dart analyze
 
