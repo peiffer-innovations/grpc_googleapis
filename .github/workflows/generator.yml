@@ -46,6 +46,9 @@ jobs:
           git clone https://github.com/peiffer-innovations/grpc_googleapis
           cd ..
           dart tools/generate.dart $BUILD_NUMBER
+          cd generated
+          dart format lib
+          dart analyze
 
       - name: Update main
         run: |

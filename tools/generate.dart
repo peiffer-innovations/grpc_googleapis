@@ -103,14 +103,6 @@ Future<void> main(List<String> args) async {
   }
 
   print('');
-  print('[FORMATTING]');
-  Process.runSync(
-    'dart',
-    ['format', 'lib'],
-    workingDirectory: 'generated',
-  );
-
-  print('');
   print('[LIBRARIES]');
   _generateLibraries('google');
   _generateLibraries('grafeas');
