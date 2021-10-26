@@ -33,6 +33,8 @@ jobs:
 
       - name: Get Dependencies
         run: |
+          pub global activate protoc_plugin
+          export PATH=$PATH:~/.pub-cache/bin
           mkdir deps
           cd deps
           git clone https://github.com/googleapis/googleapis
