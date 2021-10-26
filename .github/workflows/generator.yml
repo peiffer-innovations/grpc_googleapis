@@ -1,0 +1,55 @@
+name: Generator
+
+on:
+  push:
+    branches: [generator]
+    paths:
+      - .github/workflows/generator.yaml
+      - pubspec.yaml
+      - lib/**
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    container:
+      image: google/dart:latest
+    outputs:
+      buildnumber: ${{ steps.buildnumber.outputs.build_number }}
+    steps:
+      - name: Generate Build Number
+        id: buildnumber
+        uses: einaregilsson/build-number@v3
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+      - name: Build Number
+        run: echo "Build Number - $BUILD_NUMBER"
+
+      - uses: actions/checkout@v2
+        with:
+          ref: generator
+
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v1
+
+      - name: Get Dependencies
+        run: |
+          mkdir deps
+          cd deps
+          git clone https://github.com/googleapis/googleapis
+          git clone https://github.com/grafeas/grafeas
+
+      - name: Generate Dart Files
+        run: |
+          pub get
+          mkdir generated
+          cd generated
+          git clone https://github.com/peiffer-innovations/grpc_googleapis
+          cd ..
+          dart tools/generate.dart $BUILD_NUMBER
+
+      - name: Update main
+        run: |
+          git add .
+          git commit -m "Updates"
+          git push origin
+        working-directory: generated
