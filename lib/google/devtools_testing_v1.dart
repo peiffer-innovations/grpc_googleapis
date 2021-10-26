@@ -1,0 +1,12 @@
+export '../src/generated/google/devtools/testing/v1/application_details.pb.dart';
+export '../src/generated/google/devtools/testing/v1/application_details.pbenum.dart';
+export '../src/generated/google/devtools/testing/v1/application_details.pbgrpc.dart';
+export '../src/generated/google/devtools/testing/v1/application_details.pbjson.dart';
+export '../src/generated/google/devtools/testing/v1/test_environment_discovery.pb.dart';
+export '../src/generated/google/devtools/testing/v1/test_environment_discovery.pbenum.dart';
+export '../src/generated/google/devtools/testing/v1/test_environment_discovery.pbgrpc.dart';
+export '../src/generated/google/devtools/testing/v1/test_environment_discovery.pbjson.dart';
+export '../src/generated/google/devtools/testing/v1/test_execution.pb.dart';
+export '../src/generated/google/devtools/testing/v1/test_execution.pbenum.dart';
+export '../src/generated/google/devtools/testing/v1/test_execution.pbgrpc.dart';
+export '../src/generated/google/devtools/testing/v1/test_execution.pbjson.dart';

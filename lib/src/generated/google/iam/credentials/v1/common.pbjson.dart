@@ -1,0 +1,151 @@
+///
+//  Generated code. Do not modify.
+//  source: google/iam/credentials/v1/common.proto
+//
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use generateAccessTokenRequestDescriptor instead')
+const GenerateAccessTokenRequest$json = const {
+  '1': 'GenerateAccessTokenRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'delegates', '3': 2, '4': 3, '5': 9, '10': 'delegates'},
+    const {'1': 'scope', '3': 4, '4': 3, '5': 9, '8': const {}, '10': 'scope'},
+    const {
+      '1': 'lifetime',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'lifetime'
+    },
+  ],
+};
+
+/// Descriptor for `GenerateAccessTokenRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List generateAccessTokenRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVxdWVzdBI9CgRuYW1lGAEgASgJQingQQL6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudFIEbmFtZRIcCglkZWxlZ2F0ZXMYAiADKAlSCWRlbGVnYXRlcxIZCgVzY29wZRgEIAMoCUID4EECUgVzY29wZRI1CghsaWZldGltZRgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIIbGlmZXRpbWU=');
+@$core.Deprecated('Use generateAccessTokenResponseDescriptor instead')
+const GenerateAccessTokenResponse$json = const {
+  '1': 'GenerateAccessTokenResponse',
+  '2': const [
+    const {'1': 'access_token', '3': 1, '4': 1, '5': 9, '10': 'accessToken'},
+    const {
+      '1': 'expire_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'expireTime'
+    },
+  ],
+};
+
+/// Descriptor for `GenerateAccessTokenResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List generateAccessTokenResponseDescriptor =
+    $convert.base64Decode(
+        'ChtHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVzcG9uc2USIQoMYWNjZXNzX3Rva2VuGAEgASgJUgthY2Nlc3NUb2tlbhI7CgtleHBpcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmV4cGlyZVRpbWU=');
+@$core.Deprecated('Use signBlobRequestDescriptor instead')
+const SignBlobRequest$json = const {
+  '1': 'SignBlobRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'delegates', '3': 3, '4': 3, '5': 9, '10': 'delegates'},
+    const {
+      '1': 'payload',
+      '3': 5,
+      '4': 1,
+      '5': 12,
+      '8': const {},
+      '10': 'payload'
+    },
+  ],
+};
+
+/// Descriptor for `SignBlobRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signBlobRequestDescriptor = $convert.base64Decode(
+    'Cg9TaWduQmxvYlJlcXVlc3QSPQoEbmFtZRgBIAEoCUIp4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnRSBG5hbWUSHAoJZGVsZWdhdGVzGAMgAygJUglkZWxlZ2F0ZXMSHQoHcGF5bG9hZBgFIAEoDEID4EECUgdwYXlsb2Fk');
+@$core.Deprecated('Use signBlobResponseDescriptor instead')
+const SignBlobResponse$json = const {
+  '1': 'SignBlobResponse',
+  '2': const [
+    const {'1': 'key_id', '3': 1, '4': 1, '5': 9, '10': 'keyId'},
+    const {'1': 'signed_blob', '3': 4, '4': 1, '5': 12, '10': 'signedBlob'},
+  ],
+};
+
+/// Descriptor for `SignBlobResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signBlobResponseDescriptor = $convert.base64Decode(
+    'ChBTaWduQmxvYlJlc3BvbnNlEhUKBmtleV9pZBgBIAEoCVIFa2V5SWQSHwoLc2lnbmVkX2Jsb2IYBCABKAxSCnNpZ25lZEJsb2I=');
+@$core.Deprecated('Use signJwtRequestDescriptor instead')
+const SignJwtRequest$json = const {
+  '1': 'SignJwtRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'delegates', '3': 3, '4': 3, '5': 9, '10': 'delegates'},
+    const {
+      '1': 'payload',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'payload'
+    },
+  ],
+};
+
+/// Descriptor for `SignJwtRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signJwtRequestDescriptor = $convert.base64Decode(
+    'Cg5TaWduSnd0UmVxdWVzdBI9CgRuYW1lGAEgASgJQingQQL6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudFIEbmFtZRIcCglkZWxlZ2F0ZXMYAyADKAlSCWRlbGVnYXRlcxIdCgdwYXlsb2FkGAUgASgJQgPgQQJSB3BheWxvYWQ=');
+@$core.Deprecated('Use signJwtResponseDescriptor instead')
+const SignJwtResponse$json = const {
+  '1': 'SignJwtResponse',
+  '2': const [
+    const {'1': 'key_id', '3': 1, '4': 1, '5': 9, '10': 'keyId'},
+    const {'1': 'signed_jwt', '3': 2, '4': 1, '5': 9, '10': 'signedJwt'},
+  ],
+};
+
+/// Descriptor for `SignJwtResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signJwtResponseDescriptor = $convert.base64Decode(
+    'Cg9TaWduSnd0UmVzcG9uc2USFQoGa2V5X2lkGAEgASgJUgVrZXlJZBIdCgpzaWduZWRfand0GAIgASgJUglzaWduZWRKd3Q=');
+@$core.Deprecated('Use generateIdTokenRequestDescriptor instead')
+const GenerateIdTokenRequest$json = const {
+  '1': 'GenerateIdTokenRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'delegates', '3': 2, '4': 3, '5': 9, '10': 'delegates'},
+    const {
+      '1': 'audience',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'audience'
+    },
+    const {'1': 'include_email', '3': 4, '4': 1, '5': 8, '10': 'includeEmail'},
+  ],
+};
+
+/// Descriptor for `GenerateIdTokenRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List generateIdTokenRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZW5lcmF0ZUlkVG9rZW5SZXF1ZXN0Ej0KBG5hbWUYASABKAlCKeBBAvpBIwohaWFtLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50UgRuYW1lEhwKCWRlbGVnYXRlcxgCIAMoCVIJZGVsZWdhdGVzEh8KCGF1ZGllbmNlGAMgASgJQgPgQQJSCGF1ZGllbmNlEiMKDWluY2x1ZGVfZW1haWwYBCABKAhSDGluY2x1ZGVFbWFpbA==');
+@$core.Deprecated('Use generateIdTokenResponseDescriptor instead')
+const GenerateIdTokenResponse$json = const {
+  '1': 'GenerateIdTokenResponse',
+  '2': const [
+    const {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
+  ],
+};
+
+/// Descriptor for `GenerateIdTokenResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List generateIdTokenResponseDescriptor =
+    $convert.base64Decode(
+        'ChdHZW5lcmF0ZUlkVG9rZW5SZXNwb25zZRIUCgV0b2tlbhgBIAEoCVIFdG9rZW4=');

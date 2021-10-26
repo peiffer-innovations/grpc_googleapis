@@ -1,0 +1,10 @@
+export '../src/generated/google/iam/v1/iam_policy.pb.dart';
+export '../src/generated/google/iam/v1/iam_policy.pbenum.dart';
+export '../src/generated/google/iam/v1/iam_policy.pbgrpc.dart';
+export '../src/generated/google/iam/v1/iam_policy.pbjson.dart';
+export '../src/generated/google/iam/v1/options.pb.dart';
+export '../src/generated/google/iam/v1/options.pbenum.dart';
+export '../src/generated/google/iam/v1/options.pbjson.dart';
+export '../src/generated/google/iam/v1/policy.pb.dart';
+export '../src/generated/google/iam/v1/policy.pbenum.dart';
+export '../src/generated/google/iam/v1/policy.pbjson.dart';

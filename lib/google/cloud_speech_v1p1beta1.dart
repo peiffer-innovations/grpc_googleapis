@@ -1,0 +1,11 @@
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech.pb.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech.pbenum.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech.pbgrpc.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech.pbjson.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech_adaptation.pb.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech_adaptation.pbenum.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech_adaptation.pbgrpc.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/cloud_speech_adaptation.pbjson.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/resource.pb.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/resource.pbenum.dart';
+export '../src/generated/google/cloud/speech/v1p1beta1/resource.pbjson.dart';

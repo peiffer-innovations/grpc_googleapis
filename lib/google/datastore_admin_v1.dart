@@ -1,0 +1,10 @@
+export '../src/generated/google/datastore/admin/v1/datastore_admin.pb.dart';
+export '../src/generated/google/datastore/admin/v1/datastore_admin.pbenum.dart';
+export '../src/generated/google/datastore/admin/v1/datastore_admin.pbgrpc.dart';
+export '../src/generated/google/datastore/admin/v1/datastore_admin.pbjson.dart';
+export '../src/generated/google/datastore/admin/v1/index.pb.dart';
+export '../src/generated/google/datastore/admin/v1/index.pbenum.dart';
+export '../src/generated/google/datastore/admin/v1/index.pbjson.dart';
+export '../src/generated/google/datastore/admin/v1/migration.pb.dart';
+export '../src/generated/google/datastore/admin/v1/migration.pbenum.dart';
+export '../src/generated/google/datastore/admin/v1/migration.pbjson.dart';

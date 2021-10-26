@@ -1,0 +1,16 @@
+export '../src/generated/google/firestore/v1beta1/common.pb.dart';
+export '../src/generated/google/firestore/v1beta1/common.pbenum.dart';
+export '../src/generated/google/firestore/v1beta1/common.pbjson.dart';
+export '../src/generated/google/firestore/v1beta1/document.pb.dart';
+export '../src/generated/google/firestore/v1beta1/document.pbenum.dart';
+export '../src/generated/google/firestore/v1beta1/document.pbjson.dart';
+export '../src/generated/google/firestore/v1beta1/firestore.pb.dart';
+export '../src/generated/google/firestore/v1beta1/firestore.pbenum.dart';
+export '../src/generated/google/firestore/v1beta1/firestore.pbgrpc.dart';
+export '../src/generated/google/firestore/v1beta1/firestore.pbjson.dart';
+export '../src/generated/google/firestore/v1beta1/query.pb.dart';
+export '../src/generated/google/firestore/v1beta1/query.pbenum.dart';
+export '../src/generated/google/firestore/v1beta1/query.pbjson.dart';
+export '../src/generated/google/firestore/v1beta1/write.pb.dart';
+export '../src/generated/google/firestore/v1beta1/write.pbenum.dart';
+export '../src/generated/google/firestore/v1beta1/write.pbjson.dart';

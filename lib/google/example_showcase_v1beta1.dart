@@ -1,0 +1,16 @@
+export '../src/generated/google/example/showcase/v1beta1/compliance.pb.dart';
+export '../src/generated/google/example/showcase/v1beta1/compliance.pbenum.dart';
+export '../src/generated/google/example/showcase/v1beta1/compliance.pbgrpc.dart';
+export '../src/generated/google/example/showcase/v1beta1/compliance.pbjson.dart';
+export '../src/generated/google/example/showcase/v1beta1/echo.pb.dart';
+export '../src/generated/google/example/showcase/v1beta1/echo.pbenum.dart';
+export '../src/generated/google/example/showcase/v1beta1/echo.pbgrpc.dart';
+export '../src/generated/google/example/showcase/v1beta1/echo.pbjson.dart';
+export '../src/generated/google/example/showcase/v1beta1/sequence.pb.dart';
+export '../src/generated/google/example/showcase/v1beta1/sequence.pbenum.dart';
+export '../src/generated/google/example/showcase/v1beta1/sequence.pbgrpc.dart';
+export '../src/generated/google/example/showcase/v1beta1/sequence.pbjson.dart';
+export '../src/generated/google/example/showcase/v1beta1/testing.pb.dart';
+export '../src/generated/google/example/showcase/v1beta1/testing.pbenum.dart';
+export '../src/generated/google/example/showcase/v1beta1/testing.pbgrpc.dart';
+export '../src/generated/google/example/showcase/v1beta1/testing.pbjson.dart';

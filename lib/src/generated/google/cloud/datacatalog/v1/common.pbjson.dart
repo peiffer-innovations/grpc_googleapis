@@ -1,0 +1,25 @@
+///
+//  Generated code. Do not modify.
+//  source: google/cloud/datacatalog/v1/common.proto
+//
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use integratedSystemDescriptor instead')
+const IntegratedSystem$json = const {
+  '1': 'IntegratedSystem',
+  '2': const [
+    const {'1': 'INTEGRATED_SYSTEM_UNSPECIFIED', '2': 0},
+    const {'1': 'BIGQUERY', '2': 1},
+    const {'1': 'CLOUD_PUBSUB', '2': 2},
+    const {'1': 'DATAPROC_METASTORE', '2': 3},
+  ],
+};
+
+/// Descriptor for `IntegratedSystem`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List integratedSystemDescriptor = $convert.base64Decode(
+    'ChBJbnRlZ3JhdGVkU3lzdGVtEiEKHUlOVEVHUkFURURfU1lTVEVNX1VOU1BFQ0lGSUVEEAASDAoIQklHUVVFUlkQARIQCgxDTE9VRF9QVUJTVUIQAhIWChJEQVRBUFJPQ19NRVRBU1RPUkUQAw==');

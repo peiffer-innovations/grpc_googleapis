@@ -1,0 +1,10 @@
+export '../src/generated/google/cloud/recommender/v1/insight.pb.dart';
+export '../src/generated/google/cloud/recommender/v1/insight.pbenum.dart';
+export '../src/generated/google/cloud/recommender/v1/insight.pbjson.dart';
+export '../src/generated/google/cloud/recommender/v1/recommendation.pb.dart';
+export '../src/generated/google/cloud/recommender/v1/recommendation.pbenum.dart';
+export '../src/generated/google/cloud/recommender/v1/recommendation.pbjson.dart';
+export '../src/generated/google/cloud/recommender/v1/recommender_service.pb.dart';
+export '../src/generated/google/cloud/recommender/v1/recommender_service.pbenum.dart';
+export '../src/generated/google/cloud/recommender/v1/recommender_service.pbgrpc.dart';
+export '../src/generated/google/cloud/recommender/v1/recommender_service.pbjson.dart';

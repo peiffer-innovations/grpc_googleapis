@@ -1,0 +1,13 @@
+export '../src/generated/google/cloud/tasks/v2/cloudtasks.pb.dart';
+export '../src/generated/google/cloud/tasks/v2/cloudtasks.pbenum.dart';
+export '../src/generated/google/cloud/tasks/v2/cloudtasks.pbgrpc.dart';
+export '../src/generated/google/cloud/tasks/v2/cloudtasks.pbjson.dart';
+export '../src/generated/google/cloud/tasks/v2/queue.pb.dart';
+export '../src/generated/google/cloud/tasks/v2/queue.pbenum.dart';
+export '../src/generated/google/cloud/tasks/v2/queue.pbjson.dart';
+export '../src/generated/google/cloud/tasks/v2/target.pb.dart';
+export '../src/generated/google/cloud/tasks/v2/target.pbenum.dart';
+export '../src/generated/google/cloud/tasks/v2/target.pbjson.dart';
+export '../src/generated/google/cloud/tasks/v2/task.pb.dart';
+export '../src/generated/google/cloud/tasks/v2/task.pbenum.dart';
+export '../src/generated/google/cloud/tasks/v2/task.pbjson.dart';

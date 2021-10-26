@@ -1,0 +1,10 @@
+export '../src/generated/google/devtools/artifactregistry/v1/artifact.pb.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/artifact.pbenum.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/artifact.pbjson.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/repository.pb.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/repository.pbenum.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/repository.pbjson.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/service.pb.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/service.pbenum.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/service.pbgrpc.dart';
+export '../src/generated/google/devtools/artifactregistry/v1/service.pbjson.dart';

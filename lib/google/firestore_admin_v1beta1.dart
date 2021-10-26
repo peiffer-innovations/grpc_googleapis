@@ -1,0 +1,10 @@
+export '../src/generated/google/firestore/admin/v1beta1/firestore_admin.pb.dart';
+export '../src/generated/google/firestore/admin/v1beta1/firestore_admin.pbenum.dart';
+export '../src/generated/google/firestore/admin/v1beta1/firestore_admin.pbgrpc.dart';
+export '../src/generated/google/firestore/admin/v1beta1/firestore_admin.pbjson.dart';
+export '../src/generated/google/firestore/admin/v1beta1/index.pb.dart';
+export '../src/generated/google/firestore/admin/v1beta1/index.pbenum.dart';
+export '../src/generated/google/firestore/admin/v1beta1/index.pbjson.dart';
+export '../src/generated/google/firestore/admin/v1beta1/location.pb.dart';
+export '../src/generated/google/firestore/admin/v1beta1/location.pbenum.dart';
+export '../src/generated/google/firestore/admin/v1beta1/location.pbjson.dart';
