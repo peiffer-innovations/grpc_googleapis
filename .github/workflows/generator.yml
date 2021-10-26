@@ -43,7 +43,7 @@ jobs:
           pub get
           mkdir generated
           cd generated
-          git clone https://github.com/peiffer-innovations/grpc_googleapis
+          git clone https://github.com/peiffer-innovations/grpc_googleapis .
           cd ..
           dart tools/generate.dart $BUILD_NUMBER
           cd generated
