@@ -1,4 +1,6 @@
 # Miscellaneous
+deps/
+generated/
 *.class
 *.log
 *.pyc

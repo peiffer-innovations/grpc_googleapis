@@ -2,6 +2,13 @@ import 'dart:async';
 import 'dart:io';
 
 Future<void> main(List<String> args) async {
+  if (File('generated/pubspec.yaml').existsSync()) {
+    File('generated/pubspec.yaml').deleteSync(recursive: true);
+  }
+  if (File('generated/pubspec.lock').existsSync()) {
+    File('generated/pubspec.lock').deleteSync(recursive: true);
+  }
+
   var buildNumber = int.tryParse(args.isNotEmpty == true ? args[0] : '1') ?? 1;
   print('[BUILD_NUMBER]: $buildNumber');
 
@@ -70,7 +77,7 @@ Future<void> main(List<String> args) async {
     files,
   ));
 
-  final maxThreads = Platform.isMacOS ? 8 : 1;
+  final maxThreads = Platform.isMacOS ? 8 : 4;
   var futures = <Future>[];
   for (var file in protos) {
     count++;
@@ -117,7 +124,7 @@ Future<void> main(List<String> args) async {
   }
   pubspec.writeAsStringSync(
     File('assets/templates/pubspec.txt').readAsStringSync().replaceAll(
-          '{{version}}',
+          '{{BUILD_NUMBER}}',
           '$buildNumber',
         ),
   );
@@ -196,6 +203,9 @@ void _generateLibraries(String folder) {
       var paths = dir.path.split('/');
 
       var name = paths[4];
+      if (name == 'google') {
+        name = paths[5];
+      }
 
       var dartFiles = List<File>.from(dir
           .listSync(recursive: true)
@@ -212,11 +222,11 @@ void _generateLibraries(String folder) {
         for (var i = dartPaths.length - 2; i >= 0; i--) {
           if (dartPaths[i].startsWith('v') &&
               !dartPaths[i].startsWith('video')) {
-            var offset = 1;
-            if (i + offset + 1 < dartPaths.length) {
-              offset++;
+            var offset = 0;
+            if (i + 2 < dartPaths.length) {
+              offset = 1;
             }
-            libraryName = dartPaths.take(i + offset).join('_');
+            libraryName = dartPaths.skip(1).take(i + offset).join('_');
             break;
           }
         }
