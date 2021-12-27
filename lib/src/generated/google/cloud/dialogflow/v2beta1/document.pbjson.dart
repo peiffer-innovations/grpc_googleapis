@@ -404,6 +404,13 @@ const KnowledgeOperationMetadata$json = const {
       '8': const {},
       '10': 'state'
     },
+    const {
+      '1': 'knowledge_base',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'knowledgeBase'
+    },
   ],
   '4': const [KnowledgeOperationMetadata_State$json],
 };
@@ -422,7 +429,7 @@ const KnowledgeOperationMetadata_State$json = const {
 /// Descriptor for `KnowledgeOperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List knowledgeOperationMetadataDescriptor =
     $convert.base64Decode(
-        'ChpLbm93bGVkZ2VPcGVyYXRpb25NZXRhZGF0YRJcCgVzdGF0ZRgBIAEoDjJBLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuS25vd2xlZGdlT3BlcmF0aW9uTWV0YWRhdGEuU3RhdGVCA+BBA1IFc3RhdGUiQgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoHUlVOTklORxACEggKBERPTkUQAw==');
+        'ChpLbm93bGVkZ2VPcGVyYXRpb25NZXRhZGF0YRJcCgVzdGF0ZRgBIAEoDjJBLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuS25vd2xlZGdlT3BlcmF0aW9uTWV0YWRhdGEuU3RhdGVCA+BBA1IFc3RhdGUSJQoOa25vd2xlZGdlX2Jhc2UYAyABKAlSDWtub3dsZWRnZUJhc2UiQgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoHUlVOTklORxACEggKBERPTkUQAw==');
 @$core.Deprecated('Use reloadDocumentRequestDescriptor instead')
 const ReloadDocumentRequest$json = const {
   '1': 'ReloadDocumentRequest',

@@ -52,6 +52,11 @@ class IndexEndpointServiceClient extends $grpc.Client {
           '/google.cloud.aiplatform.v1.IndexEndpointService/UndeployIndex',
           ($2.UndeployIndexRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$mutateDeployedIndex = $grpc.ClientMethod<
+          $2.MutateDeployedIndexRequest, $0.Operation>(
+      '/google.cloud.aiplatform.v1.IndexEndpointService/MutateDeployedIndex',
+      ($2.MutateDeployedIndexRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   IndexEndpointServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -97,6 +102,12 @@ class IndexEndpointServiceClient extends $grpc.Client {
       $2.UndeployIndexRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$undeployIndex, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> mutateDeployedIndex(
+      $2.MutateDeployedIndexRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$mutateDeployedIndex, request, options: options);
   }
 }
 
@@ -163,6 +174,14 @@ abstract class IndexEndpointServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.UndeployIndexRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.MutateDeployedIndexRequest, $0.Operation>(
+        'MutateDeployedIndex',
+        mutateDeployedIndex_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.MutateDeployedIndexRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Operation> createIndexEndpoint_Pre($grpc.ServiceCall call,
@@ -202,6 +221,11 @@ abstract class IndexEndpointServiceBase extends $grpc.Service {
     return undeployIndex(call, await request);
   }
 
+  $async.Future<$0.Operation> mutateDeployedIndex_Pre($grpc.ServiceCall call,
+      $async.Future<$2.MutateDeployedIndexRequest> request) async {
+    return mutateDeployedIndex(call, await request);
+  }
+
   $async.Future<$0.Operation> createIndexEndpoint(
       $grpc.ServiceCall call, $2.CreateIndexEndpointRequest request);
   $async.Future<$3.IndexEndpoint> getIndexEndpoint(
@@ -216,4 +240,6 @@ abstract class IndexEndpointServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DeployIndexRequest request);
   $async.Future<$0.Operation> undeployIndex(
       $grpc.ServiceCall call, $2.UndeployIndexRequest request);
+  $async.Future<$0.Operation> mutateDeployedIndex(
+      $grpc.ServiceCall call, $2.MutateDeployedIndexRequest request);
 }

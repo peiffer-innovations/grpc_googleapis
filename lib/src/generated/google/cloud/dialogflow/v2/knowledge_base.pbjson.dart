@@ -44,13 +44,14 @@ const ListKnowledgeBasesRequest$json = const {
     },
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
   ],
 };
 
 /// Descriptor for `ListKnowledgeBasesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listKnowledgeBasesRequestDescriptor =
     $convert.base64Decode(
-        'ChlMaXN0S25vd2xlZGdlQmFzZXNSZXF1ZXN0EkcKBnBhcmVudBgBIAEoCUIv4EEC+kEpEidkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0tub3dsZWRnZUJhc2VSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbg==');
+        'ChlMaXN0S25vd2xlZGdlQmFzZXNSZXF1ZXN0EkcKBnBhcmVudBgBIAEoCUIv4EEC+kEpEidkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0tub3dsZWRnZUJhc2VSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbhIWCgZmaWx0ZXIYBCABKAlSBmZpbHRlcg==');
 @$core.Deprecated('Use listKnowledgeBasesResponseDescriptor instead')
 const ListKnowledgeBasesResponse$json = const {
   '1': 'ListKnowledgeBasesResponse',

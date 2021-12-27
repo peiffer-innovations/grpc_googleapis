@@ -17,9 +17,10 @@ import 'completion_stats.pb.dart' as $4;
 import '../../../protobuf/timestamp.pb.dart' as $5;
 import 'encryption_spec.pb.dart' as $6;
 import 'explanation.pb.dart' as $7;
-import 'io.pb.dart' as $8;
+import 'unmanaged_container_model.pb.dart' as $8;
+import 'io.pb.dart' as $9;
 
-import 'job_state.pbenum.dart' as $9;
+import 'job_state.pbenum.dart' as $10;
 
 enum BatchPredictionJob_InputConfig_Source { gcsSource, bigquerySource, notSet }
 
@@ -45,25 +46,25 @@ class BatchPredictionJob_InputConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'instancesFormat')
-    ..aOM<$8.GcsSource>(
+    ..aOM<$9.GcsSource>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gcsSource',
-        subBuilder: $8.GcsSource.create)
-    ..aOM<$8.BigQuerySource>(
+        subBuilder: $9.GcsSource.create)
+    ..aOM<$9.BigQuerySource>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bigquerySource',
-        subBuilder: $8.BigQuerySource.create)
+        subBuilder: $9.BigQuerySource.create)
     ..hasRequiredFields = false;
 
   BatchPredictionJob_InputConfig._() : super();
   factory BatchPredictionJob_InputConfig({
     $core.String? instancesFormat,
-    $8.GcsSource? gcsSource,
-    $8.BigQuerySource? bigquerySource,
+    $9.GcsSource? gcsSource,
+    $9.BigQuerySource? bigquerySource,
   }) {
     final _result = create();
     if (instancesFormat != null) {
@@ -125,9 +126,9 @@ class BatchPredictionJob_InputConfig extends $pb.GeneratedMessage {
   void clearInstancesFormat() => clearField(1);
 
   @$pb.TagNumber(2)
-  $8.GcsSource get gcsSource => $_getN(1);
+  $9.GcsSource get gcsSource => $_getN(1);
   @$pb.TagNumber(2)
-  set gcsSource($8.GcsSource v) {
+  set gcsSource($9.GcsSource v) {
     setField(2, v);
   }
 
@@ -136,12 +137,12 @@ class BatchPredictionJob_InputConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGcsSource() => clearField(2);
   @$pb.TagNumber(2)
-  $8.GcsSource ensureGcsSource() => $_ensure(1);
+  $9.GcsSource ensureGcsSource() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $8.BigQuerySource get bigquerySource => $_getN(2);
+  $9.BigQuerySource get bigquerySource => $_getN(2);
   @$pb.TagNumber(3)
-  set bigquerySource($8.BigQuerySource v) {
+  set bigquerySource($9.BigQuerySource v) {
     setField(3, v);
   }
 
@@ -150,7 +151,7 @@ class BatchPredictionJob_InputConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearBigquerySource() => clearField(3);
   @$pb.TagNumber(3)
-  $8.BigQuerySource ensureBigquerySource() => $_ensure(2);
+  $9.BigQuerySource ensureBigquerySource() => $_ensure(2);
 }
 
 enum BatchPredictionJob_OutputConfig_Destination {
@@ -181,25 +182,25 @@ class BatchPredictionJob_OutputConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predictionsFormat')
-    ..aOM<$8.GcsDestination>(
+    ..aOM<$9.GcsDestination>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gcsDestination',
-        subBuilder: $8.GcsDestination.create)
-    ..aOM<$8.BigQueryDestination>(
+        subBuilder: $9.GcsDestination.create)
+    ..aOM<$9.BigQueryDestination>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bigqueryDestination',
-        subBuilder: $8.BigQueryDestination.create)
+        subBuilder: $9.BigQueryDestination.create)
     ..hasRequiredFields = false;
 
   BatchPredictionJob_OutputConfig._() : super();
   factory BatchPredictionJob_OutputConfig({
     $core.String? predictionsFormat,
-    $8.GcsDestination? gcsDestination,
-    $8.BigQueryDestination? bigqueryDestination,
+    $9.GcsDestination? gcsDestination,
+    $9.BigQueryDestination? bigqueryDestination,
   }) {
     final _result = create();
     if (predictionsFormat != null) {
@@ -262,9 +263,9 @@ class BatchPredictionJob_OutputConfig extends $pb.GeneratedMessage {
   void clearPredictionsFormat() => clearField(1);
 
   @$pb.TagNumber(2)
-  $8.GcsDestination get gcsDestination => $_getN(1);
+  $9.GcsDestination get gcsDestination => $_getN(1);
   @$pb.TagNumber(2)
-  set gcsDestination($8.GcsDestination v) {
+  set gcsDestination($9.GcsDestination v) {
     setField(2, v);
   }
 
@@ -273,12 +274,12 @@ class BatchPredictionJob_OutputConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGcsDestination() => clearField(2);
   @$pb.TagNumber(2)
-  $8.GcsDestination ensureGcsDestination() => $_ensure(1);
+  $9.GcsDestination ensureGcsDestination() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $8.BigQueryDestination get bigqueryDestination => $_getN(2);
+  $9.BigQueryDestination get bigqueryDestination => $_getN(2);
   @$pb.TagNumber(3)
-  set bigqueryDestination($8.BigQueryDestination v) {
+  set bigqueryDestination($9.BigQueryDestination v) {
     setField(3, v);
   }
 
@@ -287,7 +288,7 @@ class BatchPredictionJob_OutputConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearBigqueryDestination() => clearField(3);
   @$pb.TagNumber(3)
-  $8.BigQueryDestination ensureBigqueryDestination() => $_ensure(2);
+  $9.BigQueryDestination ensureBigqueryDestination() => $_ensure(2);
 }
 
 enum BatchPredictionJob_OutputInfo_OutputLocation {
@@ -482,15 +483,15 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
             ? ''
             : 'outputInfo',
         subBuilder: BatchPredictionJob_OutputInfo.create)
-    ..e<$9.JobState>(
+    ..e<$10.JobState>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'state',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $9.JobState.JOB_STATE_UNSPECIFIED,
-        valueOf: $9.JobState.valueOf,
-        enumValues: $9.JobState.values)
+        defaultOrMaker: $10.JobState.JOB_STATE_UNSPECIFIED,
+        valueOf: $10.JobState.valueOf,
+        enumValues: $10.JobState.values)
     ..aOM<$3.Status>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -566,6 +567,12 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
             ? ''
             : 'explanationSpec',
         subBuilder: $7.ExplanationSpec.create)
+    ..aOM<$8.UnmanagedContainerModel>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'unmanagedContainerModel',
+        subBuilder: $8.UnmanagedContainerModel.create)
     ..hasRequiredFields = false;
 
   BatchPredictionJob._() : super();
@@ -579,7 +586,7 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
     $1.BatchDedicatedResources? dedicatedResources,
     $2.ManualBatchTuningParameters? manualBatchTuningParameters,
     BatchPredictionJob_OutputInfo? outputInfo,
-    $9.JobState? state,
+    $10.JobState? state,
     $3.Status? error,
     $core.Iterable<$3.Status>? partialFailures,
     $1.ResourcesConsumed? resourcesConsumed,
@@ -592,6 +599,7 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
     $core.bool? generateExplanation,
     $6.EncryptionSpec? encryptionSpec,
     $7.ExplanationSpec? explanationSpec,
+    $8.UnmanagedContainerModel? unmanagedContainerModel,
   }) {
     final _result = create();
     if (name != null) {
@@ -659,6 +667,9 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
     }
     if (explanationSpec != null) {
       _result.explanationSpec = explanationSpec;
+    }
+    if (unmanagedContainerModel != null) {
+      _result.unmanagedContainerModel = unmanagedContainerModel;
     }
     return _result;
   }
@@ -811,9 +822,9 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
   BatchPredictionJob_OutputInfo ensureOutputInfo() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $9.JobState get state => $_getN(9);
+  $10.JobState get state => $_getN(9);
   @$pb.TagNumber(10)
-  set state($9.JobState v) {
+  set state($10.JobState v) {
     setField(10, v);
   }
 
@@ -965,4 +976,18 @@ class BatchPredictionJob extends $pb.GeneratedMessage {
   void clearExplanationSpec() => clearField(25);
   @$pb.TagNumber(25)
   $7.ExplanationSpec ensureExplanationSpec() => $_ensure(21);
+
+  @$pb.TagNumber(28)
+  $8.UnmanagedContainerModel get unmanagedContainerModel => $_getN(22);
+  @$pb.TagNumber(28)
+  set unmanagedContainerModel($8.UnmanagedContainerModel v) {
+    setField(28, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasUnmanagedContainerModel() => $_has(22);
+  @$pb.TagNumber(28)
+  void clearUnmanagedContainerModel() => clearField(28);
+  @$pb.TagNumber(28)
+  $8.UnmanagedContainerModel ensureUnmanagedContainerModel() => $_ensure(22);
 }

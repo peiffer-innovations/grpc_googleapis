@@ -228,3 +228,64 @@ const LoadVersionRequest$json = const {
 /// Descriptor for `LoadVersionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List loadVersionRequestDescriptor = $convert.base64Decode(
     'ChJMb2FkVmVyc2lvblJlcXVlc3QSPQoEbmFtZRgBIAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1ZlcnNpb25SBG5hbWUSQwoeYWxsb3dfb3ZlcnJpZGVfYWdlbnRfcmVzb3VyY2VzGAIgASgIUhthbGxvd092ZXJyaWRlQWdlbnRSZXNvdXJjZXM=');
+@$core.Deprecated('Use compareVersionsRequestDescriptor instead')
+const CompareVersionsRequest$json = const {
+  '1': 'CompareVersionsRequest',
+  '2': const [
+    const {
+      '1': 'base_version',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'baseVersion'
+    },
+    const {
+      '1': 'target_version',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'targetVersion'
+    },
+    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+  ],
+};
+
+/// Descriptor for `CompareVersionsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List compareVersionsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZDb21wYXJlVmVyc2lvbnNSZXF1ZXN0EkwKDGJhc2VfdmVyc2lvbhgBIAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1ZlcnNpb25SC2Jhc2VWZXJzaW9uElAKDnRhcmdldF92ZXJzaW9uGAIgASgJQingQQL6QSMKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVmVyc2lvblINdGFyZ2V0VmVyc2lvbhIjCg1sYW5ndWFnZV9jb2RlGAMgASgJUgxsYW5ndWFnZUNvZGU=');
+@$core.Deprecated('Use compareVersionsResponseDescriptor instead')
+const CompareVersionsResponse$json = const {
+  '1': 'CompareVersionsResponse',
+  '2': const [
+    const {
+      '1': 'base_version_content_json',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'baseVersionContentJson'
+    },
+    const {
+      '1': 'target_version_content_json',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'targetVersionContentJson'
+    },
+    const {
+      '1': 'compare_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'compareTime'
+    },
+  ],
+};
+
+/// Descriptor for `CompareVersionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List compareVersionsResponseDescriptor =
+    $convert.base64Decode(
+        'ChdDb21wYXJlVmVyc2lvbnNSZXNwb25zZRI5ChliYXNlX3ZlcnNpb25fY29udGVudF9qc29uGAEgASgJUhZiYXNlVmVyc2lvbkNvbnRlbnRKc29uEj0KG3RhcmdldF92ZXJzaW9uX2NvbnRlbnRfanNvbhgCIAEoCVIYdGFyZ2V0VmVyc2lvbkNvbnRlbnRKc29uEj0KDGNvbXBhcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSC2NvbXBhcmVUaW1l');

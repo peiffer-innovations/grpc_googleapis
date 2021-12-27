@@ -9,9 +9,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $2;
+import 'resources.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'rpcmessages.pbenum.dart';
 
@@ -27,17 +27,17 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.streetview.publish.v1'),
       createEmptyInstance: create)
-    ..aOM<$0.Photo>(
+    ..aOM<$2.Photo>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'photo',
-        subBuilder: $0.Photo.create)
+        subBuilder: $2.Photo.create)
     ..hasRequiredFields = false;
 
   CreatePhotoRequest._() : super();
   factory CreatePhotoRequest({
-    $0.Photo? photo,
+    $2.Photo? photo,
   }) {
     final _result = create();
     if (photo != null) {
@@ -73,9 +73,9 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
   static CreatePhotoRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Photo get photo => $_getN(0);
+  $2.Photo get photo => $_getN(0);
   @$pb.TagNumber(1)
-  set photo($0.Photo v) {
+  set photo($2.Photo v) {
     setField(1, v);
   }
 
@@ -84,7 +84,7 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPhoto() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Photo ensurePhoto() => $_ensure(0);
+  $2.Photo ensurePhoto() => $_ensure(0);
 }
 
 class GetPhotoRequest extends $pb.GeneratedMessage {
@@ -378,24 +378,24 @@ class PhotoResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.streetview.publish.v1'),
       createEmptyInstance: create)
-    ..aOM<$1.Status>(
+    ..aOM<$3.Status>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
-        subBuilder: $1.Status.create)
-    ..aOM<$0.Photo>(
+        subBuilder: $3.Status.create)
+    ..aOM<$2.Photo>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'photo',
-        subBuilder: $0.Photo.create)
+        subBuilder: $2.Photo.create)
     ..hasRequiredFields = false;
 
   PhotoResponse._() : super();
   factory PhotoResponse({
-    $1.Status? status,
-    $0.Photo? photo,
+    $3.Status? status,
+    $2.Photo? photo,
   }) {
     final _result = create();
     if (status != null) {
@@ -434,9 +434,9 @@ class PhotoResponse extends $pb.GeneratedMessage {
   static PhotoResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.Status get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($1.Status v) {
+  set status($3.Status v) {
     setField(1, v);
   }
 
@@ -445,12 +445,12 @@ class PhotoResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $1.Status ensureStatus() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.Photo get photo => $_getN(1);
+  $2.Photo get photo => $_getN(1);
   @$pb.TagNumber(2)
-  set photo($0.Photo v) {
+  set photo($2.Photo v) {
     setField(2, v);
   }
 
@@ -459,7 +459,7 @@ class PhotoResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPhoto() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Photo ensurePhoto() => $_ensure(1);
+  $2.Photo ensurePhoto() => $_ensure(1);
 }
 
 class ListPhotosRequest extends $pb.GeneratedMessage {
@@ -628,13 +628,13 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.streetview.publish.v1'),
       createEmptyInstance: create)
-    ..pc<$0.Photo>(
+    ..pc<$2.Photo>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'photos',
         $pb.PbFieldType.PM,
-        subBuilder: $0.Photo.create)
+        subBuilder: $2.Photo.create)
     ..aOS(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -644,7 +644,7 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
 
   ListPhotosResponse._() : super();
   factory ListPhotosResponse({
-    $core.Iterable<$0.Photo>? photos,
+    $core.Iterable<$2.Photo>? photos,
     $core.String? nextPageToken,
   }) {
     final _result = create();
@@ -684,7 +684,7 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
   static ListPhotosResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$0.Photo> get photos => $_getList(0);
+  $core.List<$2.Photo> get photos => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
@@ -709,24 +709,24 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.streetview.publish.v1'),
       createEmptyInstance: create)
-    ..aOM<$0.Photo>(
+    ..aOM<$2.Photo>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'photo',
-        subBuilder: $0.Photo.create)
-    ..aOM<$2.FieldMask>(
+        subBuilder: $2.Photo.create)
+    ..aOM<$4.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $2.FieldMask.create)
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdatePhotoRequest._() : super();
   factory UpdatePhotoRequest({
-    $0.Photo? photo,
-    $2.FieldMask? updateMask,
+    $2.Photo? photo,
+    $4.FieldMask? updateMask,
   }) {
     final _result = create();
     if (photo != null) {
@@ -765,9 +765,9 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
   static UpdatePhotoRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Photo get photo => $_getN(0);
+  $2.Photo get photo => $_getN(0);
   @$pb.TagNumber(1)
-  set photo($0.Photo v) {
+  set photo($2.Photo v) {
     setField(1, v);
   }
 
@@ -776,12 +776,12 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPhoto() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Photo ensurePhoto() => $_ensure(0);
+  $2.Photo ensurePhoto() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $2.FieldMask get updateMask => $_getN(1);
+  $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($2.FieldMask v) {
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -790,7 +790,7 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $2.FieldMask ensureUpdateMask() => $_ensure(1);
+  $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class BatchUpdatePhotosRequest extends $pb.GeneratedMessage {
@@ -1054,18 +1054,18 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.streetview.publish.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Status>(
+    ..pc<$3.Status>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
         $pb.PbFieldType.PM,
-        subBuilder: $1.Status.create)
+        subBuilder: $3.Status.create)
     ..hasRequiredFields = false;
 
   BatchDeletePhotosResponse._() : super();
   factory BatchDeletePhotosResponse({
-    $core.Iterable<$1.Status>? status,
+    $core.Iterable<$3.Status>? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -1103,5 +1103,5 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
   static BatchDeletePhotosResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$1.Status> get status => $_getList(0);
+  $core.List<$3.Status> get status => $_getList(0);
 }

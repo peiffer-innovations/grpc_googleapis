@@ -9,6 +9,18 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use nodeInfoDescriptor instead')
+const NodeInfo$json = const {
+  '1': 'NodeInfo',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'id'},
+    const {'1': 'zone', '3': 2, '4': 1, '5': 9, '8': const {}, '10': 'zone'},
+  ],
+};
+
+/// Descriptor for `NodeInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nodeInfoDescriptor = $convert.base64Decode(
+    'CghOb2RlSW5mbxITCgJpZBgBIAEoCUID4EEDUgJpZBIXCgR6b25lGAIgASgJQgPgQQNSBHpvbmU=');
 @$core.Deprecated('Use instanceDescriptor instead')
 const Instance$json = const {
   '1': 'Instance',
@@ -142,12 +154,55 @@ const Instance$json = const {
       '8': const {},
       '10': 'connectMode'
     },
+    const {
+      '1': 'replica_count',
+      '3': 31,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'replicaCount'
+    },
+    const {
+      '1': 'nodes',
+      '3': 32,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.redis.v1.NodeInfo',
+      '8': const {},
+      '10': 'nodes'
+    },
+    const {
+      '1': 'read_endpoint',
+      '3': 33,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'readEndpoint'
+    },
+    const {
+      '1': 'read_endpoint_port',
+      '3': 34,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'readEndpointPort'
+    },
+    const {
+      '1': 'read_replicas_mode',
+      '3': 35,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.redis.v1.Instance.ReadReplicasMode',
+      '8': const {},
+      '10': 'readReplicasMode'
+    },
   ],
   '3': const [Instance_LabelsEntry$json, Instance_RedisConfigsEntry$json],
   '4': const [
     Instance_State$json,
     Instance_Tier$json,
-    Instance_ConnectMode$json
+    Instance_ConnectMode$json,
+    Instance_ReadReplicasMode$json
   ],
   '7': const {},
 };
@@ -208,9 +263,19 @@ const Instance_ConnectMode$json = const {
   ],
 };
 
+@$core.Deprecated('Use instanceDescriptor instead')
+const Instance_ReadReplicasMode$json = const {
+  '1': 'ReadReplicasMode',
+  '2': const [
+    const {'1': 'READ_REPLICAS_MODE_UNSPECIFIED', '2': 0},
+    const {'1': 'READ_REPLICAS_DISABLED', '2': 1},
+    const {'1': 'READ_REPLICAS_ENABLED', '2': 2},
+  ],
+};
+
 /// Descriptor for `Instance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List instanceDescriptor = $convert.base64Decode(
-    'CghJbnN0YW5jZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJDCgZsYWJlbHMYAyADKAsyKy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuTGFiZWxzRW50cnlSBmxhYmVscxIkCgtsb2NhdGlvbl9pZBgEIAEoCUID4EEBUgpsb2NhdGlvbklkEjsKF2FsdGVybmF0aXZlX2xvY2F0aW9uX2lkGAUgASgJQgPgQQFSFWFsdGVybmF0aXZlTG9jYXRpb25JZBIoCg1yZWRpc192ZXJzaW9uGAcgASgJQgPgQQFSDHJlZGlzVmVyc2lvbhIvChFyZXNlcnZlZF9pcF9yYW5nZRgJIAEoCUID4EEBUg9yZXNlcnZlZElwUmFuZ2USFwoEaG9zdBgKIAEoCUID4EEDUgRob3N0EhcKBHBvcnQYCyABKAVCA+BBA1IEcG9ydBIzChNjdXJyZW50X2xvY2F0aW9uX2lkGAwgASgJQgPgQQNSEWN1cnJlbnRMb2NhdGlvbklkEkAKC2NyZWF0ZV90aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKBXN0YXRlGA4gASgOMiUuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlLlN0YXRlQgPgQQNSBXN0YXRlEioKDnN0YXR1c19tZXNzYWdlGA8gASgJQgPgQQNSDXN0YXR1c01lc3NhZ2USWwoNcmVkaXNfY29uZmlncxgQIAMoCzIxLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZS5SZWRpc0NvbmZpZ3NFbnRyeUID4EEBUgxyZWRpc0NvbmZpZ3MSPQoEdGllchgRIAEoDjIkLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZS5UaWVyQgPgQQJSBHRpZXISKQoObWVtb3J5X3NpemVfZ2IYEiABKAVCA+BBAlIMbWVtb3J5U2l6ZUdiEjIKEmF1dGhvcml6ZWRfbmV0d29yaxgUIAEoCUID4EEBUhFhdXRob3JpemVkTmV0d29yaxI9ChhwZXJzaXN0ZW5jZV9pYW1faWRlbnRpdHkYFSABKAlCA+BBA1IWcGVyc2lzdGVuY2VJYW1JZGVudGl0eRJTCgxjb25uZWN0X21vZGUYFiABKA4yKy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuQ29ubmVjdE1vZGVCA+BBAVILY29ubmVjdE1vZGUaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ARo/ChFSZWRpc0NvbmZpZ3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIpQBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQSDQoJUkVQQUlSSU5HEAUSDwoLTUFJTlRFTkFOQ0UQBhINCglJTVBPUlRJTkcQCBIQCgxGQUlMSU5HX09WRVIQCSI4CgRUaWVyEhQKEFRJRVJfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEg8KC1NUQU5EQVJEX0hBEAMiWwoLQ29ubmVjdE1vZGUSHAoYQ09OTkVDVF9NT0RFX1VOU1BFQ0lGSUVEEAASEgoORElSRUNUX1BFRVJJTkcQARIaChZQUklWQVRFX1NFUlZJQ0VfQUNDRVNTEAI6YOpBXQodcmVkaXMuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnN0YW5jZXMve2luc3RhbmNlfQ==');
+    'CghJbnN0YW5jZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJDCgZsYWJlbHMYAyADKAsyKy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuTGFiZWxzRW50cnlSBmxhYmVscxIkCgtsb2NhdGlvbl9pZBgEIAEoCUID4EEBUgpsb2NhdGlvbklkEjsKF2FsdGVybmF0aXZlX2xvY2F0aW9uX2lkGAUgASgJQgPgQQFSFWFsdGVybmF0aXZlTG9jYXRpb25JZBIoCg1yZWRpc192ZXJzaW9uGAcgASgJQgPgQQFSDHJlZGlzVmVyc2lvbhIvChFyZXNlcnZlZF9pcF9yYW5nZRgJIAEoCUID4EEBUg9yZXNlcnZlZElwUmFuZ2USFwoEaG9zdBgKIAEoCUID4EEDUgRob3N0EhcKBHBvcnQYCyABKAVCA+BBA1IEcG9ydBIzChNjdXJyZW50X2xvY2F0aW9uX2lkGAwgASgJQgPgQQNSEWN1cnJlbnRMb2NhdGlvbklkEkAKC2NyZWF0ZV90aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKBXN0YXRlGA4gASgOMiUuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlLlN0YXRlQgPgQQNSBXN0YXRlEioKDnN0YXR1c19tZXNzYWdlGA8gASgJQgPgQQNSDXN0YXR1c01lc3NhZ2USWwoNcmVkaXNfY29uZmlncxgQIAMoCzIxLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZS5SZWRpc0NvbmZpZ3NFbnRyeUID4EEBUgxyZWRpc0NvbmZpZ3MSPQoEdGllchgRIAEoDjIkLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZS5UaWVyQgPgQQJSBHRpZXISKQoObWVtb3J5X3NpemVfZ2IYEiABKAVCA+BBAlIMbWVtb3J5U2l6ZUdiEjIKEmF1dGhvcml6ZWRfbmV0d29yaxgUIAEoCUID4EEBUhFhdXRob3JpemVkTmV0d29yaxI9ChhwZXJzaXN0ZW5jZV9pYW1faWRlbnRpdHkYFSABKAlCA+BBA1IWcGVyc2lzdGVuY2VJYW1JZGVudGl0eRJTCgxjb25uZWN0X21vZGUYFiABKA4yKy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuQ29ubmVjdE1vZGVCA+BBAVILY29ubmVjdE1vZGUSKAoNcmVwbGljYV9jb3VudBgfIAEoBUID4EEBUgxyZXBsaWNhQ291bnQSOgoFbm9kZXMYICADKAsyHy5nb29nbGUuY2xvdWQucmVkaXMudjEuTm9kZUluZm9CA+BBA1IFbm9kZXMSKAoNcmVhZF9lbmRwb2ludBghIAEoCUID4EEDUgxyZWFkRW5kcG9pbnQSMQoScmVhZF9lbmRwb2ludF9wb3J0GCIgASgFQgPgQQNSEHJlYWRFbmRwb2ludFBvcnQSYwoScmVhZF9yZXBsaWNhc19tb2RlGCMgASgOMjAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlLlJlYWRSZXBsaWNhc01vZGVCA+BBAVIQcmVhZFJlcGxpY2FzTW9kZRo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGj8KEVJlZGlzQ29uZmlnc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJTkcQBRIPCgtNQUlOVEVOQU5DRRAGEg0KCUlNUE9SVElORxAIEhAKDEZBSUxJTkdfT1ZFUhAJIjgKBFRpZXISFAoQVElFUl9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDwoLU1RBTkRBUkRfSEEQAyJbCgtDb25uZWN0TW9kZRIcChhDT05ORUNUX01PREVfVU5TUEVDSUZJRUQQABISCg5ESVJFQ1RfUEVFUklORxABEhoKFlBSSVZBVEVfU0VSVklDRV9BQ0NFU1MQAiJtChBSZWFkUmVwbGljYXNNb2RlEiIKHlJFQURfUkVQTElDQVNfTU9ERV9VTlNQRUNJRklFRBAAEhoKFlJFQURfUkVQTElDQVNfRElTQUJMRUQQARIZChVSRUFEX1JFUExJQ0FTX0VOQUJMRUQQAjpg6kFdCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9');
 @$core.Deprecated('Use listInstancesRequestDescriptor instead')
 const ListInstancesRequest$json = const {
   '1': 'ListInstancesRequest',

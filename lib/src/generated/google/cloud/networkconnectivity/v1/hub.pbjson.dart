@@ -296,7 +296,7 @@ const CreateHubRequest$json = const {
 
 /// Descriptor for `CreateHubRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createHubRequestDescriptor = $convert.base64Decode(
-    'ChBDcmVhdGVIdWJSZXF1ZXN0EkEKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb25SBnBhcmVudBIaCgZodWJfaWQYAiABKAlCA+BBAVIFaHViSWQSPwoDaHViGAMgASgLMiguZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjEuSHViQgPgQQJSA2h1YhIiCgpyZXF1ZXN0X2lkGAQgASgJQgPgQQFSCXJlcXVlc3RJZA==');
+    'ChBDcmVhdGVIdWJSZXF1ZXN0EkEKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb25SBnBhcmVudBIaCgZodWJfaWQYAiABKAlCA+BBAlIFaHViSWQSPwoDaHViGAMgASgLMiguZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjEuSHViQgPgQQJSA2h1YhIiCgpyZXF1ZXN0X2lkGAQgASgJQgPgQQFSCXJlcXVlc3RJZA==');
 @$core.Deprecated('Use updateHubRequestDescriptor instead')
 const UpdateHubRequest$json = const {
   '1': 'UpdateHubRequest',
@@ -453,7 +453,7 @@ const CreateSpokeRequest$json = const {
 
 /// Descriptor for `CreateSpokeRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSpokeRequestDescriptor = $convert.base64Decode(
-    'ChJDcmVhdGVTcG9rZVJlcXVlc3QSQQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvblIGcGFyZW50Eh4KCHNwb2tlX2lkGAIgASgJQgPgQQFSB3Nwb2tlSWQSRQoFc3Bva2UYAyABKAsyKi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5TcG9rZUID4EECUgVzcG9rZRIiCgpyZXF1ZXN0X2lkGAQgASgJQgPgQQFSCXJlcXVlc3RJZA==');
+    'ChJDcmVhdGVTcG9rZVJlcXVlc3QSQQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvblIGcGFyZW50Eh4KCHNwb2tlX2lkGAIgASgJQgPgQQJSB3Nwb2tlSWQSRQoFc3Bva2UYAyABKAsyKi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5TcG9rZUID4EECUgVzcG9rZRIiCgpyZXF1ZXN0X2lkGAQgASgJQgPgQQFSCXJlcXVlc3RJZA==');
 @$core.Deprecated('Use updateSpokeRequestDescriptor instead')
 const UpdateSpokeRequest$json = const {
   '1': 'UpdateSpokeRequest',

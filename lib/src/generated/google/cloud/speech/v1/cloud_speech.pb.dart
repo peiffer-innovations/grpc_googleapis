@@ -9,9 +9,11 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $3;
-import '../../../protobuf/timestamp.pb.dart' as $4;
-import '../../../rpc/status.pb.dart' as $5;
+import 'resource.pb.dart' as $3;
+import '../../../protobuf/wrappers.pb.dart' as $4;
+import '../../../protobuf/duration.pb.dart' as $5;
+import '../../../rpc/status.pb.dart' as $6;
+import '../../../protobuf/timestamp.pb.dart' as $7;
 
 import 'cloud_speech.pbenum.dart';
 
@@ -625,12 +627,40 @@ class RecognitionConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'useEnhanced')
+    ..aOB(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableWordConfidence')
+    ..pPS(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'alternativeLanguageCodes')
     ..aOM<SpeakerDiarizationConfig>(
         19,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'diarizationConfig',
         subBuilder: SpeakerDiarizationConfig.create)
+    ..aOM<$3.SpeechAdaptation>(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'adaptation',
+        subBuilder: $3.SpeechAdaptation.create)
+    ..aOM<$4.BoolValue>(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableSpokenPunctuation',
+        subBuilder: $4.BoolValue.create)
+    ..aOM<$4.BoolValue>(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableSpokenEmojis',
+        subBuilder: $4.BoolValue.create)
     ..hasRequiredFields = false;
 
   RecognitionConfig._() : super();
@@ -648,7 +678,12 @@ class RecognitionConfig extends $pb.GeneratedMessage {
     $core.bool? enableSeparateRecognitionPerChannel,
     $core.String? model,
     $core.bool? useEnhanced,
+    $core.bool? enableWordConfidence,
+    $core.Iterable<$core.String>? alternativeLanguageCodes,
     SpeakerDiarizationConfig? diarizationConfig,
+    $3.SpeechAdaptation? adaptation,
+    $4.BoolValue? enableSpokenPunctuation,
+    $4.BoolValue? enableSpokenEmojis,
   }) {
     final _result = create();
     if (encoding != null) {
@@ -691,8 +726,23 @@ class RecognitionConfig extends $pb.GeneratedMessage {
     if (useEnhanced != null) {
       _result.useEnhanced = useEnhanced;
     }
+    if (enableWordConfidence != null) {
+      _result.enableWordConfidence = enableWordConfidence;
+    }
+    if (alternativeLanguageCodes != null) {
+      _result.alternativeLanguageCodes.addAll(alternativeLanguageCodes);
+    }
     if (diarizationConfig != null) {
       _result.diarizationConfig = diarizationConfig;
+    }
+    if (adaptation != null) {
+      _result.adaptation = adaptation;
+    }
+    if (enableSpokenPunctuation != null) {
+      _result.enableSpokenPunctuation = enableSpokenPunctuation;
+    }
+    if (enableSpokenEmojis != null) {
+      _result.enableSpokenEmojis = enableSpokenEmojis;
     }
     return _result;
   }
@@ -872,19 +922,76 @@ class RecognitionConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearUseEnhanced() => clearField(14);
 
+  @$pb.TagNumber(15)
+  $core.bool get enableWordConfidence => $_getBF(13);
+  @$pb.TagNumber(15)
+  set enableWordConfidence($core.bool v) {
+    $_setBool(13, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasEnableWordConfidence() => $_has(13);
+  @$pb.TagNumber(15)
+  void clearEnableWordConfidence() => clearField(15);
+
+  @$pb.TagNumber(18)
+  $core.List<$core.String> get alternativeLanguageCodes => $_getList(14);
+
   @$pb.TagNumber(19)
-  SpeakerDiarizationConfig get diarizationConfig => $_getN(13);
+  SpeakerDiarizationConfig get diarizationConfig => $_getN(15);
   @$pb.TagNumber(19)
   set diarizationConfig(SpeakerDiarizationConfig v) {
     setField(19, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasDiarizationConfig() => $_has(13);
+  $core.bool hasDiarizationConfig() => $_has(15);
   @$pb.TagNumber(19)
   void clearDiarizationConfig() => clearField(19);
   @$pb.TagNumber(19)
-  SpeakerDiarizationConfig ensureDiarizationConfig() => $_ensure(13);
+  SpeakerDiarizationConfig ensureDiarizationConfig() => $_ensure(15);
+
+  @$pb.TagNumber(20)
+  $3.SpeechAdaptation get adaptation => $_getN(16);
+  @$pb.TagNumber(20)
+  set adaptation($3.SpeechAdaptation v) {
+    setField(20, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasAdaptation() => $_has(16);
+  @$pb.TagNumber(20)
+  void clearAdaptation() => clearField(20);
+  @$pb.TagNumber(20)
+  $3.SpeechAdaptation ensureAdaptation() => $_ensure(16);
+
+  @$pb.TagNumber(22)
+  $4.BoolValue get enableSpokenPunctuation => $_getN(17);
+  @$pb.TagNumber(22)
+  set enableSpokenPunctuation($4.BoolValue v) {
+    setField(22, v);
+  }
+
+  @$pb.TagNumber(22)
+  $core.bool hasEnableSpokenPunctuation() => $_has(17);
+  @$pb.TagNumber(22)
+  void clearEnableSpokenPunctuation() => clearField(22);
+  @$pb.TagNumber(22)
+  $4.BoolValue ensureEnableSpokenPunctuation() => $_ensure(17);
+
+  @$pb.TagNumber(23)
+  $4.BoolValue get enableSpokenEmojis => $_getN(18);
+  @$pb.TagNumber(23)
+  set enableSpokenEmojis($4.BoolValue v) {
+    setField(23, v);
+  }
+
+  @$pb.TagNumber(23)
+  $core.bool hasEnableSpokenEmojis() => $_has(18);
+  @$pb.TagNumber(23)
+  void clearEnableSpokenEmojis() => clearField(23);
+  @$pb.TagNumber(23)
+  $4.BoolValue ensureEnableSpokenEmojis() => $_ensure(18);
 }
 
 class SpeakerDiarizationConfig extends $pb.GeneratedMessage {
@@ -1277,15 +1384,25 @@ class SpeechContext extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'phrases')
+    ..a<$core.double>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'boost',
+        $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   SpeechContext._() : super();
   factory SpeechContext({
     $core.Iterable<$core.String>? phrases,
+    $core.double? boost,
   }) {
     final _result = create();
     if (phrases != null) {
       _result.phrases.addAll(phrases);
+    }
+    if (boost != null) {
+      _result.boost = boost;
     }
     return _result;
   }
@@ -1318,6 +1435,18 @@ class SpeechContext extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get phrases => $_getList(0);
+
+  @$pb.TagNumber(4)
+  $core.double get boost => $_getN(1);
+  @$pb.TagNumber(4)
+  set boost($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasBoost() => $_has(1);
+  @$pb.TagNumber(4)
+  void clearBoost() => clearField(4);
 }
 
 enum RecognitionAudio_AudioSource { content, uri, notSet }
@@ -1439,18 +1568,18 @@ class RecognizeResponse extends $pb.GeneratedMessage {
             : 'results',
         $pb.PbFieldType.PM,
         subBuilder: SpeechRecognitionResult.create)
-    ..aOM<$3.Duration>(
+    ..aOM<$5.Duration>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'totalBilledTime',
-        subBuilder: $3.Duration.create)
+        subBuilder: $5.Duration.create)
     ..hasRequiredFields = false;
 
   RecognizeResponse._() : super();
   factory RecognizeResponse({
     $core.Iterable<SpeechRecognitionResult>? results,
-    $3.Duration? totalBilledTime,
+    $5.Duration? totalBilledTime,
   }) {
     final _result = create();
     if (results != null) {
@@ -1492,9 +1621,9 @@ class RecognizeResponse extends $pb.GeneratedMessage {
   $core.List<SpeechRecognitionResult> get results => $_getList(0);
 
   @$pb.TagNumber(3)
-  $3.Duration get totalBilledTime => $_getN(1);
+  $5.Duration get totalBilledTime => $_getN(1);
   @$pb.TagNumber(3)
-  set totalBilledTime($3.Duration v) {
+  set totalBilledTime($5.Duration v) {
     setField(3, v);
   }
 
@@ -1503,7 +1632,7 @@ class RecognizeResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearTotalBilledTime() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Duration ensureTotalBilledTime() => $_ensure(1);
+  $5.Duration ensureTotalBilledTime() => $_ensure(1);
 }
 
 class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
@@ -1523,18 +1652,32 @@ class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
             : 'results',
         $pb.PbFieldType.PM,
         subBuilder: SpeechRecognitionResult.create)
-    ..aOM<$3.Duration>(
+    ..aOM<$5.Duration>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'totalBilledTime',
-        subBuilder: $3.Duration.create)
+        subBuilder: $5.Duration.create)
+    ..aOM<TranscriptOutputConfig>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'outputConfig',
+        subBuilder: TranscriptOutputConfig.create)
+    ..aOM<$6.Status>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'outputError',
+        subBuilder: $6.Status.create)
     ..hasRequiredFields = false;
 
   LongRunningRecognizeResponse._() : super();
   factory LongRunningRecognizeResponse({
     $core.Iterable<SpeechRecognitionResult>? results,
-    $3.Duration? totalBilledTime,
+    $5.Duration? totalBilledTime,
+    TranscriptOutputConfig? outputConfig,
+    $6.Status? outputError,
   }) {
     final _result = create();
     if (results != null) {
@@ -1542,6 +1685,12 @@ class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
     }
     if (totalBilledTime != null) {
       _result.totalBilledTime = totalBilledTime;
+    }
+    if (outputConfig != null) {
+      _result.outputConfig = outputConfig;
+    }
+    if (outputError != null) {
+      _result.outputError = outputError;
     }
     return _result;
   }
@@ -1580,9 +1729,9 @@ class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
   $core.List<SpeechRecognitionResult> get results => $_getList(0);
 
   @$pb.TagNumber(3)
-  $3.Duration get totalBilledTime => $_getN(1);
+  $5.Duration get totalBilledTime => $_getN(1);
   @$pb.TagNumber(3)
-  set totalBilledTime($3.Duration v) {
+  set totalBilledTime($5.Duration v) {
     setField(3, v);
   }
 
@@ -1591,7 +1740,35 @@ class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearTotalBilledTime() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Duration ensureTotalBilledTime() => $_ensure(1);
+  $5.Duration ensureTotalBilledTime() => $_ensure(1);
+
+  @$pb.TagNumber(6)
+  TranscriptOutputConfig get outputConfig => $_getN(2);
+  @$pb.TagNumber(6)
+  set outputConfig(TranscriptOutputConfig v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasOutputConfig() => $_has(2);
+  @$pb.TagNumber(6)
+  void clearOutputConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  TranscriptOutputConfig ensureOutputConfig() => $_ensure(2);
+
+  @$pb.TagNumber(7)
+  $6.Status get outputError => $_getN(3);
+  @$pb.TagNumber(7)
+  set outputError($6.Status v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasOutputError() => $_has(3);
+  @$pb.TagNumber(7)
+  void clearOutputError() => clearField(7);
+  @$pb.TagNumber(7)
+  $6.Status ensureOutputError() => $_ensure(3);
 }
 
 class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
@@ -1610,18 +1787,18 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'progressPercent',
         $pb.PbFieldType.O3)
-    ..aOM<$4.Timestamp>(
+    ..aOM<$7.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $4.Timestamp.create)
-    ..aOM<$4.Timestamp>(
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'lastUpdateTime',
-        subBuilder: $4.Timestamp.create)
+        subBuilder: $7.Timestamp.create)
     ..aOS(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1632,8 +1809,8 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
   LongRunningRecognizeMetadata._() : super();
   factory LongRunningRecognizeMetadata({
     $core.int? progressPercent,
-    $4.Timestamp? startTime,
-    $4.Timestamp? lastUpdateTime,
+    $7.Timestamp? startTime,
+    $7.Timestamp? lastUpdateTime,
     $core.String? uri,
   }) {
     final _result = create();
@@ -1695,9 +1872,9 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
   void clearProgressPercent() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.Timestamp get startTime => $_getN(1);
+  $7.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($4.Timestamp v) {
+  set startTime($7.Timestamp v) {
     setField(2, v);
   }
 
@@ -1706,12 +1883,12 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Timestamp ensureStartTime() => $_ensure(1);
+  $7.Timestamp ensureStartTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $4.Timestamp get lastUpdateTime => $_getN(2);
+  $7.Timestamp get lastUpdateTime => $_getN(2);
   @$pb.TagNumber(3)
-  set lastUpdateTime($4.Timestamp v) {
+  set lastUpdateTime($7.Timestamp v) {
     setField(3, v);
   }
 
@@ -1720,7 +1897,7 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLastUpdateTime() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Timestamp ensureLastUpdateTime() => $_ensure(2);
+  $7.Timestamp ensureLastUpdateTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get uri => $_getSZ(3);
@@ -1745,12 +1922,12 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.speech.v1'),
       createEmptyInstance: create)
-    ..aOM<$5.Status>(
+    ..aOM<$6.Status>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'error',
-        subBuilder: $5.Status.create)
+        subBuilder: $6.Status.create)
     ..pc<StreamingRecognitionResult>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1768,20 +1945,20 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
             StreamingRecognizeResponse_SpeechEventType.SPEECH_EVENT_UNSPECIFIED,
         valueOf: StreamingRecognizeResponse_SpeechEventType.valueOf,
         enumValues: StreamingRecognizeResponse_SpeechEventType.values)
-    ..aOM<$3.Duration>(
+    ..aOM<$5.Duration>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'totalBilledTime',
-        subBuilder: $3.Duration.create)
+        subBuilder: $5.Duration.create)
     ..hasRequiredFields = false;
 
   StreamingRecognizeResponse._() : super();
   factory StreamingRecognizeResponse({
-    $5.Status? error,
+    $6.Status? error,
     $core.Iterable<StreamingRecognitionResult>? results,
     StreamingRecognizeResponse_SpeechEventType? speechEventType,
-    $3.Duration? totalBilledTime,
+    $5.Duration? totalBilledTime,
   }) {
     final _result = create();
     if (error != null) {
@@ -1829,9 +2006,9 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
   static StreamingRecognizeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.Status get error => $_getN(0);
+  $6.Status get error => $_getN(0);
   @$pb.TagNumber(1)
-  set error($5.Status v) {
+  set error($6.Status v) {
     setField(1, v);
   }
 
@@ -1840,7 +2017,7 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearError() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Status ensureError() => $_ensure(0);
+  $6.Status ensureError() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<StreamingRecognitionResult> get results => $_getList(1);
@@ -1858,9 +2035,9 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
   void clearSpeechEventType() => clearField(4);
 
   @$pb.TagNumber(5)
-  $3.Duration get totalBilledTime => $_getN(3);
+  $5.Duration get totalBilledTime => $_getN(3);
   @$pb.TagNumber(5)
-  set totalBilledTime($3.Duration v) {
+  set totalBilledTime($5.Duration v) {
     setField(5, v);
   }
 
@@ -1869,7 +2046,7 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearTotalBilledTime() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Duration ensureTotalBilledTime() => $_ensure(3);
+  $5.Duration ensureTotalBilledTime() => $_ensure(3);
 }
 
 class StreamingRecognitionResult extends $pb.GeneratedMessage {
@@ -1900,12 +2077,12 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
             ? ''
             : 'stability',
         $pb.PbFieldType.OF)
-    ..aOM<$3.Duration>(
+    ..aOM<$5.Duration>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'resultEndTime',
-        subBuilder: $3.Duration.create)
+        subBuilder: $5.Duration.create)
     ..a<$core.int>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1924,7 +2101,7 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
     $core.Iterable<SpeechRecognitionAlternative>? alternatives,
     $core.bool? isFinal,
     $core.double? stability,
-    $3.Duration? resultEndTime,
+    $5.Duration? resultEndTime,
     $core.int? channelTag,
     $core.String? languageCode,
   }) {
@@ -2007,9 +2184,9 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
   void clearStability() => clearField(3);
 
   @$pb.TagNumber(4)
-  $3.Duration get resultEndTime => $_getN(3);
+  $5.Duration get resultEndTime => $_getN(3);
   @$pb.TagNumber(4)
-  set resultEndTime($3.Duration v) {
+  set resultEndTime($5.Duration v) {
     setField(4, v);
   }
 
@@ -2018,7 +2195,7 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearResultEndTime() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Duration ensureResultEndTime() => $_ensure(3);
+  $5.Duration ensureResultEndTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.int get channelTag => $_getIZ(4);
@@ -2068,12 +2245,25 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
             ? ''
             : 'channelTag',
         $pb.PbFieldType.O3)
+    ..aOM<$5.Duration>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resultEndTime',
+        subBuilder: $5.Duration.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'languageCode')
     ..hasRequiredFields = false;
 
   SpeechRecognitionResult._() : super();
   factory SpeechRecognitionResult({
     $core.Iterable<SpeechRecognitionAlternative>? alternatives,
     $core.int? channelTag,
+    $5.Duration? resultEndTime,
+    $core.String? languageCode,
   }) {
     final _result = create();
     if (alternatives != null) {
@@ -2081,6 +2271,12 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
     }
     if (channelTag != null) {
       _result.channelTag = channelTag;
+    }
+    if (resultEndTime != null) {
+      _result.resultEndTime = resultEndTime;
+    }
+    if (languageCode != null) {
+      _result.languageCode = languageCode;
     }
     return _result;
   }
@@ -2127,6 +2323,32 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
   $core.bool hasChannelTag() => $_has(1);
   @$pb.TagNumber(2)
   void clearChannelTag() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $5.Duration get resultEndTime => $_getN(2);
+  @$pb.TagNumber(4)
+  set resultEndTime($5.Duration v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasResultEndTime() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearResultEndTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Duration ensureResultEndTime() => $_ensure(2);
+
+  @$pb.TagNumber(5)
+  $core.String get languageCode => $_getSZ(3);
+  @$pb.TagNumber(5)
+  set languageCode($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasLanguageCode() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearLanguageCode() => clearField(5);
 }
 
 class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
@@ -2246,23 +2468,29 @@ class WordInfo extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.speech.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.Duration>(
+    ..aOM<$5.Duration>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $3.Duration.create)
-    ..aOM<$3.Duration>(
+        subBuilder: $5.Duration.create)
+    ..aOM<$5.Duration>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endTime',
-        subBuilder: $3.Duration.create)
+        subBuilder: $5.Duration.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'word')
+    ..a<$core.double>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'confidence',
+        $pb.PbFieldType.OF)
     ..a<$core.int>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2273,9 +2501,10 @@ class WordInfo extends $pb.GeneratedMessage {
 
   WordInfo._() : super();
   factory WordInfo({
-    $3.Duration? startTime,
-    $3.Duration? endTime,
+    $5.Duration? startTime,
+    $5.Duration? endTime,
     $core.String? word,
+    $core.double? confidence,
     $core.int? speakerTag,
   }) {
     final _result = create();
@@ -2287,6 +2516,9 @@ class WordInfo extends $pb.GeneratedMessage {
     }
     if (word != null) {
       _result.word = word;
+    }
+    if (confidence != null) {
+      _result.confidence = confidence;
     }
     if (speakerTag != null) {
       _result.speakerTag = speakerTag;
@@ -2320,9 +2552,9 @@ class WordInfo extends $pb.GeneratedMessage {
   static WordInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Duration get startTime => $_getN(0);
+  $5.Duration get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($3.Duration v) {
+  set startTime($5.Duration v) {
     setField(1, v);
   }
 
@@ -2331,12 +2563,12 @@ class WordInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStartTime() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Duration ensureStartTime() => $_ensure(0);
+  $5.Duration ensureStartTime() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.Duration get endTime => $_getN(1);
+  $5.Duration get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($3.Duration v) {
+  set endTime($5.Duration v) {
     setField(2, v);
   }
 
@@ -2345,7 +2577,7 @@ class WordInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEndTime() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Duration ensureEndTime() => $_ensure(1);
+  $5.Duration ensureEndTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get word => $_getSZ(2);
@@ -2359,15 +2591,27 @@ class WordInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearWord() => clearField(3);
 
+  @$pb.TagNumber(4)
+  $core.double get confidence => $_getN(3);
+  @$pb.TagNumber(4)
+  set confidence($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasConfidence() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearConfidence() => clearField(4);
+
   @$pb.TagNumber(5)
-  $core.int get speakerTag => $_getIZ(3);
+  $core.int get speakerTag => $_getIZ(4);
   @$pb.TagNumber(5)
   set speakerTag($core.int v) {
-    $_setSignedInt32(3, v);
+    $_setSignedInt32(4, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasSpeakerTag() => $_has(3);
+  $core.bool hasSpeakerTag() => $_has(4);
   @$pb.TagNumber(5)
   void clearSpeakerTag() => clearField(5);
 }

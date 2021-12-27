@@ -147,6 +147,11 @@ class ContactCenterInsightsClient extends $grpc.Client {
       '/google.cloud.contactcenterinsights.v1.ContactCenterInsights/DeletePhraseMatcher',
       ($2.DeletePhraseMatcherRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$updatePhraseMatcher = $grpc.ClientMethod<
+          $2.UpdatePhraseMatcherRequest, $3.PhraseMatcher>(
+      '/google.cloud.contactcenterinsights.v1.ContactCenterInsights/UpdatePhraseMatcher',
+      ($2.UpdatePhraseMatcherRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.PhraseMatcher.fromBuffer(value));
   static final _$calculateStats = $grpc.ClientMethod<$2.CalculateStatsRequest,
           $2.CalculateStatsResponse>(
       '/google.cloud.contactcenterinsights.v1.ContactCenterInsights/CalculateStats',
@@ -315,6 +320,12 @@ class ContactCenterInsightsClient extends $grpc.Client {
       $2.DeletePhraseMatcherRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deletePhraseMatcher, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.PhraseMatcher> updatePhraseMatcher(
+      $2.UpdatePhraseMatcherRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updatePhraseMatcher, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.CalculateStatsResponse> calculateStats(
@@ -547,6 +558,15 @@ abstract class ContactCenterInsightsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.DeletePhraseMatcherRequest.fromBuffer(value),
         ($1.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.UpdatePhraseMatcherRequest, $3.PhraseMatcher>(
+            'UpdatePhraseMatcher',
+            updatePhraseMatcher_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.UpdatePhraseMatcherRequest.fromBuffer(value),
+            ($3.PhraseMatcher value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.CalculateStatsRequest,
             $2.CalculateStatsResponse>(
         'CalculateStats',
@@ -705,6 +725,12 @@ abstract class ContactCenterInsightsServiceBase extends $grpc.Service {
     return deletePhraseMatcher(call, await request);
   }
 
+  $async.Future<$3.PhraseMatcher> updatePhraseMatcher_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.UpdatePhraseMatcherRequest> request) async {
+    return updatePhraseMatcher(call, await request);
+  }
+
   $async.Future<$2.CalculateStatsResponse> calculateStats_Pre(
       $grpc.ServiceCall call,
       $async.Future<$2.CalculateStatsRequest> request) async {
@@ -771,6 +797,8 @@ abstract class ContactCenterInsightsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ListPhraseMatchersRequest request);
   $async.Future<$1.Empty> deletePhraseMatcher(
       $grpc.ServiceCall call, $2.DeletePhraseMatcherRequest request);
+  $async.Future<$3.PhraseMatcher> updatePhraseMatcher(
+      $grpc.ServiceCall call, $2.UpdatePhraseMatcherRequest request);
   $async.Future<$2.CalculateStatsResponse> calculateStats(
       $grpc.ServiceCall call, $2.CalculateStatsRequest request);
   $async.Future<$3.Settings> getSettings(

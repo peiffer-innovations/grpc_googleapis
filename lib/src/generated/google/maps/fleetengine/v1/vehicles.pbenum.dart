@@ -233,3 +233,45 @@ class Vehicle_VehicleType_Category extends $pb.ProtobufEnum {
   const Vehicle_VehicleType_Category._($core.int v, $core.String n)
       : super(v, n);
 }
+
+class VisualTrafficReportPolylineRendering_RoadStretch_Style
+    extends $pb.ProtobufEnum {
+  static const VisualTrafficReportPolylineRendering_RoadStretch_Style
+      STYLE_UNSPECIFIED =
+      VisualTrafficReportPolylineRendering_RoadStretch_Style._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STYLE_UNSPECIFIED');
+  static const VisualTrafficReportPolylineRendering_RoadStretch_Style
+      SLOWER_TRAFFIC = VisualTrafficReportPolylineRendering_RoadStretch_Style._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SLOWER_TRAFFIC');
+  static const VisualTrafficReportPolylineRendering_RoadStretch_Style
+      TRAFFIC_JAM = VisualTrafficReportPolylineRendering_RoadStretch_Style._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TRAFFIC_JAM');
+
+  static const $core
+          .List<VisualTrafficReportPolylineRendering_RoadStretch_Style>
+      values = <VisualTrafficReportPolylineRendering_RoadStretch_Style>[
+    STYLE_UNSPECIFIED,
+    SLOWER_TRAFFIC,
+    TRAFFIC_JAM,
+  ];
+
+  static final $core.Map<$core.int,
+          VisualTrafficReportPolylineRendering_RoadStretch_Style> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static VisualTrafficReportPolylineRendering_RoadStretch_Style? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const VisualTrafficReportPolylineRendering_RoadStretch_Style._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}

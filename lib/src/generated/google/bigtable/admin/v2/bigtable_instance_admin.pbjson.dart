@@ -81,7 +81,7 @@ const GetInstanceRequest$json = const {
 
 /// Descriptor for `GetInstanceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getInstanceRequestDescriptor = $convert.base64Decode(
-    'ChJHZXRJbnN0YW5jZVJlcXVlc3QSPAoEbmFtZRgBIAEoCUIo4EEC+kEiCiBiaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIEbmFtZQ==');
+    'ChJHZXRJbnN0YW5jZVJlcXVlc3QSQQoEbmFtZRgBIAEoCUIt4EEC+kEnCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlUgRuYW1l');
 @$core.Deprecated('Use listInstancesRequestDescriptor instead')
 const ListInstancesRequest$json = const {
   '1': 'ListInstancesRequest',
@@ -172,7 +172,7 @@ const DeleteInstanceRequest$json = const {
 
 /// Descriptor for `DeleteInstanceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteInstanceRequestDescriptor = $convert.base64Decode(
-    'ChVEZWxldGVJbnN0YW5jZVJlcXVlc3QSPAoEbmFtZRgBIAEoCUIo4EEC+kEiCiBiaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIEbmFtZQ==');
+    'ChVEZWxldGVJbnN0YW5jZVJlcXVlc3QSQQoEbmFtZRgBIAEoCUIt4EEC+kEnCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlUgRuYW1l');
 @$core.Deprecated('Use createClusterRequestDescriptor instead')
 const CreateClusterRequest$json = const {
   '1': 'CreateClusterRequest',
@@ -207,7 +207,7 @@ const CreateClusterRequest$json = const {
 
 /// Descriptor for `CreateClusterRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createClusterRequestDescriptor = $convert.base64Decode(
-    'ChRDcmVhdGVDbHVzdGVyUmVxdWVzdBJACgZwYXJlbnQYASABKAlCKOBBAvpBIgogYmlndGFibGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VSBnBhcmVudBIiCgpjbHVzdGVyX2lkGAIgASgJQgPgQQJSCWNsdXN0ZXJJZBJACgdjbHVzdGVyGAMgASgLMiEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXJCA+BBAlIHY2x1c3Rlcg==');
+    'ChRDcmVhdGVDbHVzdGVyUmVxdWVzdBJFCgZwYXJlbnQYASABKAlCLeBBAvpBJwolYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIGcGFyZW50EiIKCmNsdXN0ZXJfaWQYAiABKAlCA+BBAlIJY2x1c3RlcklkEkAKB2NsdXN0ZXIYAyABKAsyIS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlckID4EECUgdjbHVzdGVy');
 @$core.Deprecated('Use getClusterRequestDescriptor instead')
 const GetClusterRequest$json = const {
   '1': 'GetClusterRequest',
@@ -218,7 +218,7 @@ const GetClusterRequest$json = const {
 
 /// Descriptor for `GetClusterRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getClusterRequestDescriptor = $convert.base64Decode(
-    'ChFHZXRDbHVzdGVyUmVxdWVzdBI7CgRuYW1lGAEgASgJQifgQQL6QSEKH2JpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXJSBG5hbWU=');
+    'ChFHZXRDbHVzdGVyUmVxdWVzdBJACgRuYW1lGAEgASgJQizgQQL6QSYKJGJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ2x1c3RlclIEbmFtZQ==');
 @$core.Deprecated('Use listClustersRequestDescriptor instead')
 const ListClustersRequest$json = const {
   '1': 'ListClustersRequest',
@@ -237,7 +237,7 @@ const ListClustersRequest$json = const {
 
 /// Descriptor for `ListClustersRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listClustersRequestDescriptor = $convert.base64Decode(
-    'ChNMaXN0Q2x1c3RlcnNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBiaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIGcGFyZW50Eh0KCnBhZ2VfdG9rZW4YAiABKAlSCXBhZ2VUb2tlbg==');
+    'ChNMaXN0Q2x1c3RlcnNSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUIt4EEC+kEnCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlUgZwYXJlbnQSHQoKcGFnZV90b2tlbhgCIAEoCVIJcGFnZVRva2Vu');
 @$core.Deprecated('Use listClustersResponseDescriptor instead')
 const ListClustersResponse$json = const {
   '1': 'ListClustersResponse',
@@ -280,7 +280,7 @@ const DeleteClusterRequest$json = const {
 
 /// Descriptor for `DeleteClusterRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteClusterRequestDescriptor = $convert.base64Decode(
-    'ChREZWxldGVDbHVzdGVyUmVxdWVzdBI7CgRuYW1lGAEgASgJQifgQQL6QSEKH2JpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXJSBG5hbWU=');
+    'ChREZWxldGVDbHVzdGVyUmVxdWVzdBJACgRuYW1lGAEgASgJQizgQQL6QSYKJGJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ2x1c3RlclIEbmFtZQ==');
 @$core.Deprecated('Use createInstanceMetadataDescriptor instead')
 const CreateInstanceMetadata$json = const {
   '1': 'CreateInstanceMetadata',
@@ -419,6 +419,70 @@ const UpdateClusterMetadata$json = const {
 /// Descriptor for `UpdateClusterMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateClusterMetadataDescriptor = $convert.base64Decode(
     'ChVVcGRhdGVDbHVzdGVyTWV0YWRhdGESTAoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVyUg9vcmlnaW5hbFJlcXVlc3QSPQoMcmVxdWVzdF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFILcmVxdWVzdFRpbWUSOwoLZmluaXNoX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpmaW5pc2hUaW1l');
+@$core.Deprecated('Use partialUpdateClusterMetadataDescriptor instead')
+const PartialUpdateClusterMetadata$json = const {
+  '1': 'PartialUpdateClusterMetadata',
+  '2': const [
+    const {
+      '1': 'request_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'requestTime'
+    },
+    const {
+      '1': 'finish_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'finishTime'
+    },
+    const {
+      '1': 'original_request',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.PartialUpdateClusterRequest',
+      '10': 'originalRequest'
+    },
+  ],
+};
+
+/// Descriptor for `PartialUpdateClusterMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List partialUpdateClusterMetadataDescriptor =
+    $convert.base64Decode(
+        'ChxQYXJ0aWFsVXBkYXRlQ2x1c3Rlck1ldGFkYXRhEj0KDHJlcXVlc3RfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSC3JlcXVlc3RUaW1lEjsKC2ZpbmlzaF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKZmluaXNoVGltZRJgChBvcmlnaW5hbF9yZXF1ZXN0GAMgASgLMjUuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlBhcnRpYWxVcGRhdGVDbHVzdGVyUmVxdWVzdFIPb3JpZ2luYWxSZXF1ZXN0');
+@$core.Deprecated('Use partialUpdateClusterRequestDescriptor instead')
+const PartialUpdateClusterRequest$json = const {
+  '1': 'PartialUpdateClusterRequest',
+  '2': const [
+    const {
+      '1': 'cluster',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.Cluster',
+      '8': const {},
+      '10': 'cluster'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `PartialUpdateClusterRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List partialUpdateClusterRequestDescriptor =
+    $convert.base64Decode(
+        'ChtQYXJ0aWFsVXBkYXRlQ2x1c3RlclJlcXVlc3QSQAoHY2x1c3RlchgBIAEoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVyQgPgQQJSB2NsdXN0ZXISQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
 @$core.Deprecated('Use createAppProfileRequestDescriptor instead')
 const CreateAppProfileRequest$json = const {
   '1': 'CreateAppProfileRequest',
@@ -461,7 +525,7 @@ const CreateAppProfileRequest$json = const {
 /// Descriptor for `CreateAppProfileRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createAppProfileRequestDescriptor =
     $convert.base64Decode(
-        'ChdDcmVhdGVBcHBQcm9maWxlUmVxdWVzdBJACgZwYXJlbnQYASABKAlCKOBBAvpBIgogYmlndGFibGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VSBnBhcmVudBIpCg5hcHBfcHJvZmlsZV9pZBgCIAEoCUID4EECUgxhcHBQcm9maWxlSWQSSgoLYXBwX3Byb2ZpbGUYAyABKAsyJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZUID4EECUgphcHBQcm9maWxlEicKD2lnbm9yZV93YXJuaW5ncxgEIAEoCFIOaWdub3JlV2FybmluZ3M=');
+        'ChdDcmVhdGVBcHBQcm9maWxlUmVxdWVzdBJFCgZwYXJlbnQYASABKAlCLeBBAvpBJwolYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIGcGFyZW50EikKDmFwcF9wcm9maWxlX2lkGAIgASgJQgPgQQJSDGFwcFByb2ZpbGVJZBJKCgthcHBfcHJvZmlsZRgDIAEoCzIkLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlQgPgQQJSCmFwcFByb2ZpbGUSJwoPaWdub3JlX3dhcm5pbmdzGAQgASgIUg5pZ25vcmVXYXJuaW5ncw==');
 @$core.Deprecated('Use getAppProfileRequestDescriptor instead')
 const GetAppProfileRequest$json = const {
   '1': 'GetAppProfileRequest',
@@ -472,7 +536,7 @@ const GetAppProfileRequest$json = const {
 
 /// Descriptor for `GetAppProfileRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getAppProfileRequestDescriptor = $convert.base64Decode(
-    'ChRHZXRBcHBQcm9maWxlUmVxdWVzdBI+CgRuYW1lGAEgASgJQirgQQL6QSQKImJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGVSBG5hbWU=');
+    'ChRHZXRBcHBQcm9maWxlUmVxdWVzdBJDCgRuYW1lGAEgASgJQi/gQQL6QSkKJ2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZVIEbmFtZQ==');
 @$core.Deprecated('Use listAppProfilesRequestDescriptor instead')
 const ListAppProfilesRequest$json = const {
   '1': 'ListAppProfilesRequest',
@@ -493,7 +557,7 @@ const ListAppProfilesRequest$json = const {
 /// Descriptor for `ListAppProfilesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listAppProfilesRequestDescriptor =
     $convert.base64Decode(
-        'ChZMaXN0QXBwUHJvZmlsZXNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBiaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgDIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgCIAEoCVIJcGFnZVRva2Vu');
+        'ChZMaXN0QXBwUHJvZmlsZXNSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUIt4EEC+kEnCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlUgZwYXJlbnQSGwoJcGFnZV9zaXplGAMgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAIgASgJUglwYWdlVG9rZW4=');
 @$core.Deprecated('Use listAppProfilesResponseDescriptor instead')
 const ListAppProfilesResponse$json = const {
   '1': 'ListAppProfilesResponse',
@@ -582,7 +646,7 @@ const DeleteAppProfileRequest$json = const {
 /// Descriptor for `DeleteAppProfileRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteAppProfileRequestDescriptor =
     $convert.base64Decode(
-        'ChdEZWxldGVBcHBQcm9maWxlUmVxdWVzdBI+CgRuYW1lGAEgASgJQirgQQL6QSQKImJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGVSBG5hbWUSLAoPaWdub3JlX3dhcm5pbmdzGAIgASgIQgPgQQJSDmlnbm9yZVdhcm5pbmdz');
+        'ChdEZWxldGVBcHBQcm9maWxlUmVxdWVzdBJDCgRuYW1lGAEgASgJQi/gQQL6QSkKJ2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZVIEbmFtZRIsCg9pZ25vcmVfd2FybmluZ3MYAiABKAhCA+BBAlIOaWdub3JlV2FybmluZ3M=');
 @$core.Deprecated('Use updateAppProfileMetadataDescriptor instead')
 const UpdateAppProfileMetadata$json = const {
   '1': 'UpdateAppProfileMetadata',

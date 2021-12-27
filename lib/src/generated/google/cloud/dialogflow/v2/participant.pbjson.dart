@@ -31,9 +31,30 @@ const Participant$json = const {
       '8': const {},
       '10': 'sipRecordingMediaLabel'
     },
+    const {
+      '1': 'documents_metadata_filters',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2.Participant.DocumentsMetadataFiltersEntry',
+      '8': const {},
+      '10': 'documentsMetadataFilters'
+    },
   ],
+  '3': const [Participant_DocumentsMetadataFiltersEntry$json],
   '4': const [Participant_Role$json],
   '7': const {},
+};
+
+@$core.Deprecated('Use participantDescriptor instead')
+const Participant_DocumentsMetadataFiltersEntry$json = const {
+  '1': 'DocumentsMetadataFiltersEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
 };
 
 @$core.Deprecated('Use participantDescriptor instead')
@@ -49,7 +70,7 @@ const Participant_Role$json = const {
 
 /// Descriptor for `Participant`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List participantDescriptor = $convert.base64Decode(
-    'CgtQYXJ0aWNpcGFudBIXCgRuYW1lGAEgASgJQgPgQQFSBG5hbWUSRQoEcm9sZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlBhcnRpY2lwYW50LlJvbGVCA+BBBVIEcm9sZRI+ChlzaXBfcmVjb3JkaW5nX21lZGlhX2xhYmVsGAYgASgJQgPgQQFSFnNpcFJlY29yZGluZ01lZGlhTGFiZWwiUAoEUm9sZRIUChBST0xFX1VOU1BFQ0lGSUVEEAASDwoLSFVNQU5fQUdFTlQQARITCg9BVVRPTUFURURfQUdFTlQQAhIMCghFTkRfVVNFUhADOtgB6kHUAQolZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFudBJKcHJvamVjdHMve3Byb2plY3R9L2NvbnZlcnNhdGlvbnMve2NvbnZlcnNhdGlvbn0vcGFydGljaXBhbnRzL3twYXJ0aWNpcGFudH0SX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb252ZXJzYXRpb25zL3tjb252ZXJzYXRpb259L3BhcnRpY2lwYW50cy97cGFydGljaXBhbnR9');
+    'CgtQYXJ0aWNpcGFudBIXCgRuYW1lGAEgASgJQgPgQQFSBG5hbWUSRQoEcm9sZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlBhcnRpY2lwYW50LlJvbGVCA+BBBVIEcm9sZRI+ChlzaXBfcmVjb3JkaW5nX21lZGlhX2xhYmVsGAYgASgJQgPgQQFSFnNpcFJlY29yZGluZ01lZGlhTGFiZWwSiAEKGmRvY3VtZW50c19tZXRhZGF0YV9maWx0ZXJzGAggAygLMkUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUGFydGljaXBhbnQuRG9jdW1lbnRzTWV0YWRhdGFGaWx0ZXJzRW50cnlCA+BBAVIYZG9jdW1lbnRzTWV0YWRhdGFGaWx0ZXJzGksKHURvY3VtZW50c01ldGFkYXRhRmlsdGVyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiUAoEUm9sZRIUChBST0xFX1VOU1BFQ0lGSUVEEAASDwoLSFVNQU5fQUdFTlQQARITCg9BVVRPTUFURURfQUdFTlQQAhIMCghFTkRfVVNFUhADOtgB6kHUAQolZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFudBJKcHJvamVjdHMve3Byb2plY3R9L2NvbnZlcnNhdGlvbnMve2NvbnZlcnNhdGlvbn0vcGFydGljaXBhbnRzL3twYXJ0aWNpcGFudH0SX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb252ZXJzYXRpb25zL3tjb252ZXJzYXRpb259L3BhcnRpY2lwYW50cy97cGFydGljaXBhbnR9');
 @$core.Deprecated('Use messageDescriptor instead')
 const Message$json = const {
   '1': 'Message',
@@ -288,6 +309,14 @@ const AnalyzeContentRequest$json = const {
       '6': '.google.cloud.dialogflow.v2.QueryParameters',
       '10': 'queryParams'
     },
+    const {
+      '1': 'assist_query_params',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.AssistQueryParameters',
+      '10': 'assistQueryParams'
+    },
     const {'1': 'request_id', '3': 11, '4': 1, '5': 9, '10': 'requestId'},
   ],
   '8': const [
@@ -297,7 +326,7 @@ const AnalyzeContentRequest$json = const {
 
 /// Descriptor for `AnalyzeContentRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List analyzeContentRequestDescriptor = $convert.base64Decode(
-    'ChVBbmFseXplQ29udGVudFJlcXVlc3QSTwoLcGFydGljaXBhbnQYASABKAlCLeBBAvpBJwolZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFudFILcGFydGljaXBhbnQSRgoKdGV4dF9pbnB1dBgGIAEoCzIlLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRleHRJbnB1dEgAUgl0ZXh0SW5wdXQSSQoLZXZlbnRfaW5wdXQYCCABKAsyJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FdmVudElucHV0SABSCmV2ZW50SW5wdXQSWwoScmVwbHlfYXVkaW9fY29uZmlnGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0QXVkaW9Db25maWdSEHJlcGx5QXVkaW9Db25maWcSTgoMcXVlcnlfcGFyYW1zGAkgASgLMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlQYXJhbWV0ZXJzUgtxdWVyeVBhcmFtcxIdCgpyZXF1ZXN0X2lkGAsgASgJUglyZXF1ZXN0SWRCBwoFaW5wdXQ=');
+    'ChVBbmFseXplQ29udGVudFJlcXVlc3QSTwoLcGFydGljaXBhbnQYASABKAlCLeBBAvpBJwolZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFudFILcGFydGljaXBhbnQSRgoKdGV4dF9pbnB1dBgGIAEoCzIlLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRleHRJbnB1dEgAUgl0ZXh0SW5wdXQSSQoLZXZlbnRfaW5wdXQYCCABKAsyJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FdmVudElucHV0SABSCmV2ZW50SW5wdXQSWwoScmVwbHlfYXVkaW9fY29uZmlnGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0QXVkaW9Db25maWdSEHJlcGx5QXVkaW9Db25maWcSTgoMcXVlcnlfcGFyYW1zGAkgASgLMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlQYXJhbWV0ZXJzUgtxdWVyeVBhcmFtcxJhChNhc3Npc3RfcXVlcnlfcGFyYW1zGA4gASgLMjEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQXNzaXN0UXVlcnlQYXJhbWV0ZXJzUhFhc3Npc3RRdWVyeVBhcmFtcxIdCgpyZXF1ZXN0X2lkGAsgASgJUglyZXF1ZXN0SWRCBwoFaW5wdXQ=');
 @$core.Deprecated('Use dtmfParametersDescriptor instead')
 const DtmfParameters$json = const {
   '1': 'DtmfParameters',
@@ -396,13 +425,21 @@ const SuggestArticlesRequest$json = const {
       '10': 'latestMessage'
     },
     const {'1': 'context_size', '3': 3, '4': 1, '5': 5, '10': 'contextSize'},
+    const {
+      '1': 'assist_query_params',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.AssistQueryParameters',
+      '10': 'assistQueryParams'
+    },
   ],
 };
 
 /// Descriptor for `SuggestArticlesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List suggestArticlesRequestDescriptor =
     $convert.base64Decode(
-        'ChZTdWdnZXN0QXJ0aWNsZXNSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUIt4EEC+kEnCiVkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1BhcnRpY2lwYW50UgZwYXJlbnQSTQoObGF0ZXN0X21lc3NhZ2UYAiABKAlCJvpBIwohZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9NZXNzYWdlUg1sYXRlc3RNZXNzYWdlEiEKDGNvbnRleHRfc2l6ZRgDIAEoBVILY29udGV4dFNpemU=');
+        'ChZTdWdnZXN0QXJ0aWNsZXNSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUIt4EEC+kEnCiVkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1BhcnRpY2lwYW50UgZwYXJlbnQSTQoObGF0ZXN0X21lc3NhZ2UYAiABKAlCJvpBIwohZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9NZXNzYWdlUg1sYXRlc3RNZXNzYWdlEiEKDGNvbnRleHRfc2l6ZRgDIAEoBVILY29udGV4dFNpemUSYQoTYXNzaXN0X3F1ZXJ5X3BhcmFtcxgEIAEoCzIxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFzc2lzdFF1ZXJ5UGFyYW1ldGVyc1IRYXNzaXN0UXVlcnlQYXJhbXM=');
 @$core.Deprecated('Use suggestArticlesResponseDescriptor instead')
 const SuggestArticlesResponse$json = const {
   '1': 'SuggestArticlesResponse',
@@ -451,13 +488,21 @@ const SuggestFaqAnswersRequest$json = const {
       '10': 'latestMessage'
     },
     const {'1': 'context_size', '3': 3, '4': 1, '5': 5, '10': 'contextSize'},
+    const {
+      '1': 'assist_query_params',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.AssistQueryParameters',
+      '10': 'assistQueryParams'
+    },
   ],
 };
 
 /// Descriptor for `SuggestFaqAnswersRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List suggestFaqAnswersRequestDescriptor =
     $convert.base64Decode(
-        'ChhTdWdnZXN0RmFxQW5zd2Vyc1JlcXVlc3QSRQoGcGFyZW50GAEgASgJQi3gQQL6QScKJWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vUGFydGljaXBhbnRSBnBhcmVudBJNCg5sYXRlc3RfbWVzc2FnZRgCIAEoCUIm+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2VSDWxhdGVzdE1lc3NhZ2USIQoMY29udGV4dF9zaXplGAMgASgFUgtjb250ZXh0U2l6ZQ==');
+        'ChhTdWdnZXN0RmFxQW5zd2Vyc1JlcXVlc3QSRQoGcGFyZW50GAEgASgJQi3gQQL6QScKJWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vUGFydGljaXBhbnRSBnBhcmVudBJNCg5sYXRlc3RfbWVzc2FnZRgCIAEoCUIm+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2VSDWxhdGVzdE1lc3NhZ2USIQoMY29udGV4dF9zaXplGAMgASgFUgtjb250ZXh0U2l6ZRJhChNhc3Npc3RfcXVlcnlfcGFyYW1zGAQgASgLMjEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQXNzaXN0UXVlcnlQYXJhbWV0ZXJzUhFhc3Npc3RRdWVyeVBhcmFtcw==');
 @$core.Deprecated('Use suggestFaqAnswersResponseDescriptor instead')
 const SuggestFaqAnswersResponse$json = const {
   '1': 'SuggestFaqAnswersResponse',
@@ -702,3 +747,33 @@ const MessageAnnotation$json = const {
 /// Descriptor for `MessageAnnotation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List messageAnnotationDescriptor = $convert.base64Decode(
     'ChFNZXNzYWdlQW5ub3RhdGlvbhJGCgVwYXJ0cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFubm90YXRlZE1lc3NhZ2VQYXJ0UgVwYXJ0cxIpChBjb250YWluX2VudGl0aWVzGAIgASgIUg9jb250YWluRW50aXRpZXM=');
+@$core.Deprecated('Use assistQueryParametersDescriptor instead')
+const AssistQueryParameters$json = const {
+  '1': 'AssistQueryParameters',
+  '2': const [
+    const {
+      '1': 'documents_metadata_filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2.AssistQueryParameters.DocumentsMetadataFiltersEntry',
+      '10': 'documentsMetadataFilters'
+    },
+  ],
+  '3': const [AssistQueryParameters_DocumentsMetadataFiltersEntry$json],
+};
+
+@$core.Deprecated('Use assistQueryParametersDescriptor instead')
+const AssistQueryParameters_DocumentsMetadataFiltersEntry$json = const {
+  '1': 'DocumentsMetadataFiltersEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+/// Descriptor for `AssistQueryParameters`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List assistQueryParametersDescriptor = $convert.base64Decode(
+    'ChVBc3Npc3RRdWVyeVBhcmFtZXRlcnMSjQEKGmRvY3VtZW50c19tZXRhZGF0YV9maWx0ZXJzGAEgAygLMk8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQXNzaXN0UXVlcnlQYXJhbWV0ZXJzLkRvY3VtZW50c01ldGFkYXRhRmlsdGVyc0VudHJ5Uhhkb2N1bWVudHNNZXRhZGF0YUZpbHRlcnMaSwodRG9jdW1lbnRzTWV0YWRhdGFGaWx0ZXJzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4AQ==');

@@ -1095,15 +1095,25 @@ class AlertPolicy_AlertStrategy extends $pb.GeneratedMessage {
             ? ''
             : 'notificationRateLimit',
         subBuilder: AlertPolicy_AlertStrategy_NotificationRateLimit.create)
+    ..aOM<$3.Duration>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'autoClose',
+        subBuilder: $3.Duration.create)
     ..hasRequiredFields = false;
 
   AlertPolicy_AlertStrategy._() : super();
   factory AlertPolicy_AlertStrategy({
     AlertPolicy_AlertStrategy_NotificationRateLimit? notificationRateLimit,
+    $3.Duration? autoClose,
   }) {
     final _result = create();
     if (notificationRateLimit != null) {
       _result.notificationRateLimit = notificationRateLimit;
+    }
+    if (autoClose != null) {
+      _result.autoClose = autoClose;
     }
     return _result;
   }
@@ -1151,6 +1161,20 @@ class AlertPolicy_AlertStrategy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AlertPolicy_AlertStrategy_NotificationRateLimit
       ensureNotificationRateLimit() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $3.Duration get autoClose => $_getN(1);
+  @$pb.TagNumber(3)
+  set autoClose($3.Duration v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasAutoClose() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearAutoClose() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Duration ensureAutoClose() => $_ensure(1);
 }
 
 class AlertPolicy extends $pb.GeneratedMessage {

@@ -13,7 +13,7 @@ import '../../../type/latlng.pb.dart' as $0;
 import '../../../protobuf/wrappers.pb.dart' as $1;
 import '../../../protobuf/timestamp.pb.dart' as $2;
 import '../../../protobuf/duration.pb.dart' as $3;
-import '../../../protobuf/any.pb.dart' as $4;
+import 'traffic.pb.dart' as $4;
 
 import 'fleetengine.pbenum.dart';
 
@@ -364,6 +364,11 @@ class TripWaypoint extends $pb.GeneratedMessage {
             : 'pathToWaypoint',
         $pb.PbFieldType.PM,
         subBuilder: $0.LatLng.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'encodedPathToWaypoint')
     ..aOM<$1.Int32Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -382,6 +387,12 @@ class TripWaypoint extends $pb.GeneratedMessage {
             ? ''
             : 'duration',
         subBuilder: $3.Duration.create)
+    ..aOM<$4.ConsumableTrafficPolyline>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'trafficToWaypoint',
+        subBuilder: $4.ConsumableTrafficPolyline.create)
     ..hasRequiredFields = false;
 
   TripWaypoint._() : super();
@@ -390,9 +401,11 @@ class TripWaypoint extends $pb.GeneratedMessage {
     $core.String? tripId,
     WaypointType? waypointType,
     $core.Iterable<$0.LatLng>? pathToWaypoint,
+    $core.String? encodedPathToWaypoint,
     $1.Int32Value? distanceMeters,
     $2.Timestamp? eta,
     $3.Duration? duration,
+    $4.ConsumableTrafficPolyline? trafficToWaypoint,
   }) {
     final _result = create();
     if (location != null) {
@@ -407,6 +420,9 @@ class TripWaypoint extends $pb.GeneratedMessage {
     if (pathToWaypoint != null) {
       _result.pathToWaypoint.addAll(pathToWaypoint);
     }
+    if (encodedPathToWaypoint != null) {
+      _result.encodedPathToWaypoint = encodedPathToWaypoint;
+    }
     if (distanceMeters != null) {
       _result.distanceMeters = distanceMeters;
     }
@@ -415,6 +431,9 @@ class TripWaypoint extends $pb.GeneratedMessage {
     }
     if (duration != null) {
       _result.duration = duration;
+    }
+    if (trafficToWaypoint != null) {
+      _result.trafficToWaypoint = trafficToWaypoint;
     }
     return _result;
   }
@@ -486,279 +505,73 @@ class TripWaypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.List<$0.LatLng> get pathToWaypoint => $_getList(3);
 
+  @$pb.TagNumber(5)
+  $core.String get encodedPathToWaypoint => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set encodedPathToWaypoint($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasEncodedPathToWaypoint() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEncodedPathToWaypoint() => clearField(5);
+
   @$pb.TagNumber(6)
-  $1.Int32Value get distanceMeters => $_getN(4);
+  $1.Int32Value get distanceMeters => $_getN(5);
   @$pb.TagNumber(6)
   set distanceMeters($1.Int32Value v) {
     setField(6, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasDistanceMeters() => $_has(4);
+  $core.bool hasDistanceMeters() => $_has(5);
   @$pb.TagNumber(6)
   void clearDistanceMeters() => clearField(6);
   @$pb.TagNumber(6)
-  $1.Int32Value ensureDistanceMeters() => $_ensure(4);
+  $1.Int32Value ensureDistanceMeters() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $2.Timestamp get eta => $_getN(5);
+  $2.Timestamp get eta => $_getN(6);
   @$pb.TagNumber(7)
   set eta($2.Timestamp v) {
     setField(7, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasEta() => $_has(5);
+  $core.bool hasEta() => $_has(6);
   @$pb.TagNumber(7)
   void clearEta() => clearField(7);
   @$pb.TagNumber(7)
-  $2.Timestamp ensureEta() => $_ensure(5);
+  $2.Timestamp ensureEta() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $3.Duration get duration => $_getN(6);
+  $3.Duration get duration => $_getN(7);
   @$pb.TagNumber(8)
   set duration($3.Duration v) {
     setField(8, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasDuration() => $_has(6);
+  $core.bool hasDuration() => $_has(7);
   @$pb.TagNumber(8)
   void clearDuration() => clearField(8);
   @$pb.TagNumber(8)
-  $3.Duration ensureDuration() => $_ensure(6);
-}
+  $3.Duration ensureDuration() => $_ensure(7);
 
-class Status extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Status',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..e<Status_Code>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'code',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Status_Code.UNSPECIFIED,
-        valueOf: Status_Code.valueOf,
-        enumValues: Status_Code.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'message')
-    ..pc<$4.Any>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details',
-        $pb.PbFieldType.PM,
-        subBuilder: $4.Any.create)
-    ..hasRequiredFields = false;
-
-  Status._() : super();
-  factory Status({
-    Status_Code? code,
-    $core.String? message,
-    $core.Iterable<$4.Any>? details,
-  }) {
-    final _result = create();
-    if (code != null) {
-      _result.code = code;
-    }
-    if (message != null) {
-      _result.message = message;
-    }
-    if (details != null) {
-      _result.details.addAll(details);
-    }
-    return _result;
-  }
-  factory Status.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Status.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Status clone() => Status()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Status copyWith(void Function(Status) updates) =>
-      super.copyWith((message) => updates(message as Status))
-          as Status; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Status create() => Status._();
-  Status createEmptyInstance() => create();
-  static $pb.PbList<Status> createRepeated() => $pb.PbList<Status>();
-  @$core.pragma('dart2js:noInline')
-  static Status getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Status>(create);
-  static Status? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  Status_Code get code => $_getN(0);
-  @$pb.TagNumber(1)
-  set code(Status_Code v) {
-    setField(1, v);
+  @$pb.TagNumber(10)
+  $4.ConsumableTrafficPolyline get trafficToWaypoint => $_getN(8);
+  @$pb.TagNumber(10)
+  set trafficToWaypoint($4.ConsumableTrafficPolyline v) {
+    setField(10, v);
   }
 
-  @$pb.TagNumber(1)
-  $core.bool hasCode() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get message => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set message($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasMessage() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMessage() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.List<$4.Any> get details => $_getList(2);
-}
-
-class FormattedAddress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FormattedAddress',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lines')
-    ..hasRequiredFields = false;
-
-  FormattedAddress._() : super();
-  factory FormattedAddress({
-    $core.Iterable<$core.String>? lines,
-  }) {
-    final _result = create();
-    if (lines != null) {
-      _result.lines.addAll(lines);
-    }
-    return _result;
-  }
-  factory FormattedAddress.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FormattedAddress.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FormattedAddress clone() => FormattedAddress()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  FormattedAddress copyWith(void Function(FormattedAddress) updates) =>
-      super.copyWith((message) => updates(message as FormattedAddress))
-          as FormattedAddress; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static FormattedAddress create() => FormattedAddress._();
-  FormattedAddress createEmptyInstance() => create();
-  static $pb.PbList<FormattedAddress> createRepeated() =>
-      $pb.PbList<FormattedAddress>();
-  @$core.pragma('dart2js:noInline')
-  static FormattedAddress getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FormattedAddress>(create);
-  static FormattedAddress? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<$core.String> get lines => $_getList(0);
-}
-
-class Address extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Address',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..aOM<FormattedAddress>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'formattedAddress',
-        subBuilder: FormattedAddress.create)
-    ..hasRequiredFields = false;
-
-  Address._() : super();
-  factory Address({
-    FormattedAddress? formattedAddress,
-  }) {
-    final _result = create();
-    if (formattedAddress != null) {
-      _result.formattedAddress = formattedAddress;
-    }
-    return _result;
-  }
-  factory Address.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Address.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Address clone() => Address()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Address copyWith(void Function(Address) updates) =>
-      super.copyWith((message) => updates(message as Address))
-          as Address; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Address create() => Address._();
-  Address createEmptyInstance() => create();
-  static $pb.PbList<Address> createRepeated() => $pb.PbList<Address>();
-  @$core.pragma('dart2js:noInline')
-  static Address getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Address>(create);
-  static Address? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  FormattedAddress get formattedAddress => $_getN(0);
-  @$pb.TagNumber(1)
-  set formattedAddress(FormattedAddress v) {
-    setField(1, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasFormattedAddress() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearFormattedAddress() => clearField(1);
-  @$pb.TagNumber(1)
-  FormattedAddress ensureFormattedAddress() => $_ensure(0);
+  @$pb.TagNumber(10)
+  $core.bool hasTrafficToWaypoint() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearTrafficToWaypoint() => clearField(10);
+  @$pb.TagNumber(10)
+  $4.ConsumableTrafficPolyline ensureTrafficToWaypoint() => $_ensure(8);
 }
 
 class VehicleAttribute extends $pb.GeneratedMessage {

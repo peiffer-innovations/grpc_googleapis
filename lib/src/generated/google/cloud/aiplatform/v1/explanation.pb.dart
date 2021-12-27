@@ -694,12 +694,19 @@ class IntegratedGradientsAttribution extends $pb.GeneratedMessage {
             ? ''
             : 'smoothGradConfig',
         subBuilder: SmoothGradConfig.create)
+    ..aOM<BlurBaselineConfig>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blurBaselineConfig',
+        subBuilder: BlurBaselineConfig.create)
     ..hasRequiredFields = false;
 
   IntegratedGradientsAttribution._() : super();
   factory IntegratedGradientsAttribution({
     $core.int? stepCount,
     SmoothGradConfig? smoothGradConfig,
+    BlurBaselineConfig? blurBaselineConfig,
   }) {
     final _result = create();
     if (stepCount != null) {
@@ -707,6 +714,9 @@ class IntegratedGradientsAttribution extends $pb.GeneratedMessage {
     }
     if (smoothGradConfig != null) {
       _result.smoothGradConfig = smoothGradConfig;
+    }
+    if (blurBaselineConfig != null) {
+      _result.blurBaselineConfig = blurBaselineConfig;
     }
     return _result;
   }
@@ -766,6 +776,20 @@ class IntegratedGradientsAttribution extends $pb.GeneratedMessage {
   void clearSmoothGradConfig() => clearField(2);
   @$pb.TagNumber(2)
   SmoothGradConfig ensureSmoothGradConfig() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  BlurBaselineConfig get blurBaselineConfig => $_getN(2);
+  @$pb.TagNumber(3)
+  set blurBaselineConfig(BlurBaselineConfig v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasBlurBaselineConfig() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBlurBaselineConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  BlurBaselineConfig ensureBlurBaselineConfig() => $_ensure(2);
 }
 
 class XraiAttribution extends $pb.GeneratedMessage {
@@ -790,12 +814,19 @@ class XraiAttribution extends $pb.GeneratedMessage {
             ? ''
             : 'smoothGradConfig',
         subBuilder: SmoothGradConfig.create)
+    ..aOM<BlurBaselineConfig>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blurBaselineConfig',
+        subBuilder: BlurBaselineConfig.create)
     ..hasRequiredFields = false;
 
   XraiAttribution._() : super();
   factory XraiAttribution({
     $core.int? stepCount,
     SmoothGradConfig? smoothGradConfig,
+    BlurBaselineConfig? blurBaselineConfig,
   }) {
     final _result = create();
     if (stepCount != null) {
@@ -803,6 +834,9 @@ class XraiAttribution extends $pb.GeneratedMessage {
     }
     if (smoothGradConfig != null) {
       _result.smoothGradConfig = smoothGradConfig;
+    }
+    if (blurBaselineConfig != null) {
+      _result.blurBaselineConfig = blurBaselineConfig;
     }
     return _result;
   }
@@ -858,6 +892,20 @@ class XraiAttribution extends $pb.GeneratedMessage {
   void clearSmoothGradConfig() => clearField(2);
   @$pb.TagNumber(2)
   SmoothGradConfig ensureSmoothGradConfig() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  BlurBaselineConfig get blurBaselineConfig => $_getN(2);
+  @$pb.TagNumber(3)
+  set blurBaselineConfig(BlurBaselineConfig v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasBlurBaselineConfig() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBlurBaselineConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  BlurBaselineConfig ensureBlurBaselineConfig() => $_ensure(2);
 }
 
 enum SmoothGradConfig_GradientNoiseSigma {
@@ -1145,6 +1193,74 @@ class FeatureNoiseSigma extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<FeatureNoiseSigma_NoiseSigmaForFeature> get noiseSigma =>
       $_getList(0);
+}
+
+class BlurBaselineConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BlurBaselineConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1'),
+      createEmptyInstance: create)
+    ..a<$core.double>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxBlurSigma',
+        $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  BlurBaselineConfig._() : super();
+  factory BlurBaselineConfig({
+    $core.double? maxBlurSigma,
+  }) {
+    final _result = create();
+    if (maxBlurSigma != null) {
+      _result.maxBlurSigma = maxBlurSigma;
+    }
+    return _result;
+  }
+  factory BlurBaselineConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BlurBaselineConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BlurBaselineConfig clone() => BlurBaselineConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BlurBaselineConfig copyWith(void Function(BlurBaselineConfig) updates) =>
+      super.copyWith((message) => updates(message as BlurBaselineConfig))
+          as BlurBaselineConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlurBaselineConfig create() => BlurBaselineConfig._();
+  BlurBaselineConfig createEmptyInstance() => create();
+  static $pb.PbList<BlurBaselineConfig> createRepeated() =>
+      $pb.PbList<BlurBaselineConfig>();
+  @$core.pragma('dart2js:noInline')
+  static BlurBaselineConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BlurBaselineConfig>(create);
+  static BlurBaselineConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get maxBlurSigma => $_getN(0);
+  @$pb.TagNumber(1)
+  set maxBlurSigma($core.double v) {
+    $_setFloat(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMaxBlurSigma() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMaxBlurSigma() => clearField(1);
 }
 
 class ExplanationSpecOverride extends $pb.GeneratedMessage {

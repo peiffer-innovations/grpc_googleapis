@@ -31,6 +31,7 @@ const CreatePhotoRequest$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.streetview.publish.v1.Photo',
+      '8': const {},
       '10': 'photo'
     },
   ],
@@ -38,18 +39,26 @@ const CreatePhotoRequest$json = const {
 
 /// Descriptor for `CreatePhotoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createPhotoRequestDescriptor = $convert.base64Decode(
-    'ChJDcmVhdGVQaG90b1JlcXVlc3QSOQoFcGhvdG8YASABKAsyIy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvUgVwaG90bw==');
+    'ChJDcmVhdGVQaG90b1JlcXVlc3QSPgoFcGhvdG8YASABKAsyIy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvQgPgQQJSBXBob3Rv');
 @$core.Deprecated('Use getPhotoRequestDescriptor instead')
 const GetPhotoRequest$json = const {
   '1': 'GetPhotoRequest',
   '2': const [
-    const {'1': 'photo_id', '3': 1, '4': 1, '5': 9, '10': 'photoId'},
+    const {
+      '1': 'photo_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'photoId'
+    },
     const {
       '1': 'view',
       '3': 2,
       '4': 1,
       '5': 14,
       '6': '.google.streetview.publish.v1.PhotoView',
+      '8': const {},
       '10': 'view'
     },
     const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
@@ -58,27 +67,42 @@ const GetPhotoRequest$json = const {
 
 /// Descriptor for `GetPhotoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getPhotoRequestDescriptor = $convert.base64Decode(
-    'Cg9HZXRQaG90b1JlcXVlc3QSGQoIcGhvdG9faWQYASABKAlSB3Bob3RvSWQSOwoEdmlldxgCIAEoDjInLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG9WaWV3UgR2aWV3EiMKDWxhbmd1YWdlX2NvZGUYAyABKAlSDGxhbmd1YWdlQ29kZQ==');
+    'Cg9HZXRQaG90b1JlcXVlc3QSHgoIcGhvdG9faWQYASABKAlCA+BBAlIHcGhvdG9JZBJACgR2aWV3GAIgASgOMicuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5QaG90b1ZpZXdCA+BBAlIEdmlldxIjCg1sYW5ndWFnZV9jb2RlGAMgASgJUgxsYW5ndWFnZUNvZGU=');
 @$core.Deprecated('Use batchGetPhotosRequestDescriptor instead')
 const BatchGetPhotosRequest$json = const {
   '1': 'BatchGetPhotosRequest',
   '2': const [
-    const {'1': 'photo_ids', '3': 1, '4': 3, '5': 9, '10': 'photoIds'},
+    const {
+      '1': 'photo_ids',
+      '3': 1,
+      '4': 3,
+      '5': 9,
+      '8': const {},
+      '10': 'photoIds'
+    },
     const {
       '1': 'view',
       '3': 2,
       '4': 1,
       '5': 14,
       '6': '.google.streetview.publish.v1.PhotoView',
+      '8': const {},
       '10': 'view'
     },
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    const {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'languageCode'
+    },
   ],
 };
 
 /// Descriptor for `BatchGetPhotosRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchGetPhotosRequestDescriptor = $convert.base64Decode(
-    'ChVCYXRjaEdldFBob3Rvc1JlcXVlc3QSGwoJcGhvdG9faWRzGAEgAygJUghwaG90b0lkcxI7CgR2aWV3GAIgASgOMicuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5QaG90b1ZpZXdSBHZpZXcSIwoNbGFuZ3VhZ2VfY29kZRgDIAEoCVIMbGFuZ3VhZ2VDb2Rl');
+    'ChVCYXRjaEdldFBob3Rvc1JlcXVlc3QSIAoJcGhvdG9faWRzGAEgAygJQgPgQQJSCHBob3RvSWRzEkAKBHZpZXcYAiABKA4yJy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvVmlld0ID4EECUgR2aWV3EigKDWxhbmd1YWdlX2NvZGUYAyABKAlCA+BBAVIMbGFuZ3VhZ2VDb2Rl');
 @$core.Deprecated('Use batchGetPhotosResponseDescriptor instead')
 const BatchGetPhotosResponse$json = const {
   '1': 'BatchGetPhotosResponse',
@@ -134,18 +158,47 @@ const ListPhotosRequest$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.streetview.publish.v1.PhotoView',
+      '8': const {},
       '10': 'view'
     },
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
-    const {'1': 'language_code', '3': 5, '4': 1, '5': 9, '10': 'languageCode'},
+    const {
+      '1': 'page_size',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+    const {
+      '1': 'page_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+    const {
+      '1': 'filter',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'filter'
+    },
+    const {
+      '1': 'language_code',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'languageCode'
+    },
   ],
 };
 
 /// Descriptor for `ListPhotosRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listPhotosRequestDescriptor = $convert.base64Decode(
-    'ChFMaXN0UGhvdG9zUmVxdWVzdBI7CgR2aWV3GAEgASgOMicuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5QaG90b1ZpZXdSBHZpZXcSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4SFgoGZmlsdGVyGAQgASgJUgZmaWx0ZXISIwoNbGFuZ3VhZ2VfY29kZRgFIAEoCVIMbGFuZ3VhZ2VDb2Rl');
+    'ChFMaXN0UGhvdG9zUmVxdWVzdBJACgR2aWV3GAEgASgOMicuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5QaG90b1ZpZXdCA+BBAlIEdmlldxIgCglwYWdlX3NpemUYAiABKAVCA+BBAVIIcGFnZVNpemUSIgoKcGFnZV90b2tlbhgDIAEoCUID4EEBUglwYWdlVG9rZW4SGwoGZmlsdGVyGAQgASgJQgPgQQFSBmZpbHRlchIoCg1sYW5ndWFnZV9jb2RlGAUgASgJQgPgQQFSDGxhbmd1YWdlQ29kZQ==');
 @$core.Deprecated('Use listPhotosResponseDescriptor instead')
 const ListPhotosResponse$json = const {
   '1': 'ListPhotosResponse',
@@ -181,6 +234,7 @@ const UpdatePhotoRequest$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.streetview.publish.v1.Photo',
+      '8': const {},
       '10': 'photo'
     },
     const {
@@ -189,6 +243,7 @@ const UpdatePhotoRequest$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': const {},
       '10': 'updateMask'
     },
   ],
@@ -196,7 +251,7 @@ const UpdatePhotoRequest$json = const {
 
 /// Descriptor for `UpdatePhotoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updatePhotoRequestDescriptor = $convert.base64Decode(
-    'ChJVcGRhdGVQaG90b1JlcXVlc3QSOQoFcGhvdG8YASABKAsyIy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvUgVwaG90bxI7Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tSCnVwZGF0ZU1hc2s=');
+    'ChJVcGRhdGVQaG90b1JlcXVlc3QSPgoFcGhvdG8YASABKAsyIy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvQgPgQQJSBXBob3RvEkAKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECUgp1cGRhdGVNYXNr');
 @$core.Deprecated('Use batchUpdatePhotosRequestDescriptor instead')
 const BatchUpdatePhotosRequest$json = const {
   '1': 'BatchUpdatePhotosRequest',
@@ -207,6 +262,7 @@ const BatchUpdatePhotosRequest$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.streetview.publish.v1.UpdatePhotoRequest',
+      '8': const {},
       '10': 'updatePhotoRequests'
     },
   ],
@@ -215,7 +271,7 @@ const BatchUpdatePhotosRequest$json = const {
 /// Descriptor for `BatchUpdatePhotosRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchUpdatePhotosRequestDescriptor =
     $convert.base64Decode(
-        'ChhCYXRjaFVwZGF0ZVBob3Rvc1JlcXVlc3QSZAoVdXBkYXRlX3Bob3RvX3JlcXVlc3RzGAEgAygLMjAuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5VcGRhdGVQaG90b1JlcXVlc3RSE3VwZGF0ZVBob3RvUmVxdWVzdHM=');
+        'ChhCYXRjaFVwZGF0ZVBob3Rvc1JlcXVlc3QSaQoVdXBkYXRlX3Bob3RvX3JlcXVlc3RzGAEgAygLMjAuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5VcGRhdGVQaG90b1JlcXVlc3RCA+BBAlITdXBkYXRlUGhvdG9SZXF1ZXN0cw==');
 @$core.Deprecated('Use batchUpdatePhotosResponseDescriptor instead')
 const BatchUpdatePhotosResponse$json = const {
   '1': 'BatchUpdatePhotosResponse',
@@ -239,26 +295,39 @@ final $typed_data.Uint8List batchUpdatePhotosResponseDescriptor =
 const DeletePhotoRequest$json = const {
   '1': 'DeletePhotoRequest',
   '2': const [
-    const {'1': 'photo_id', '3': 1, '4': 1, '5': 9, '10': 'photoId'},
+    const {
+      '1': 'photo_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'photoId'
+    },
   ],
 };
 
 /// Descriptor for `DeletePhotoRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deletePhotoRequestDescriptor =
-    $convert.base64Decode(
-        'ChJEZWxldGVQaG90b1JlcXVlc3QSGQoIcGhvdG9faWQYASABKAlSB3Bob3RvSWQ=');
+final $typed_data.Uint8List deletePhotoRequestDescriptor = $convert.base64Decode(
+    'ChJEZWxldGVQaG90b1JlcXVlc3QSHgoIcGhvdG9faWQYASABKAlCA+BBAlIHcGhvdG9JZA==');
 @$core.Deprecated('Use batchDeletePhotosRequestDescriptor instead')
 const BatchDeletePhotosRequest$json = const {
   '1': 'BatchDeletePhotosRequest',
   '2': const [
-    const {'1': 'photo_ids', '3': 1, '4': 3, '5': 9, '10': 'photoIds'},
+    const {
+      '1': 'photo_ids',
+      '3': 1,
+      '4': 3,
+      '5': 9,
+      '8': const {},
+      '10': 'photoIds'
+    },
   ],
 };
 
 /// Descriptor for `BatchDeletePhotosRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchDeletePhotosRequestDescriptor =
     $convert.base64Decode(
-        'ChhCYXRjaERlbGV0ZVBob3Rvc1JlcXVlc3QSGwoJcGhvdG9faWRzGAEgAygJUghwaG90b0lkcw==');
+        'ChhCYXRjaERlbGV0ZVBob3Rvc1JlcXVlc3QSIAoJcGhvdG9faWRzGAEgAygJQgPgQQJSCHBob3RvSWRz');
 @$core.Deprecated('Use batchDeletePhotosResponseDescriptor instead')
 const BatchDeletePhotosResponse$json = const {
   '1': 'BatchDeletePhotosResponse',

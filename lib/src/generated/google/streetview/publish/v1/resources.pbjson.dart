@@ -13,13 +13,23 @@ import 'dart:typed_data' as $typed_data;
 const UploadRef$json = const {
   '1': 'UploadRef',
   '2': const [
-    const {'1': 'upload_url', '3': 1, '4': 1, '5': 9, '10': 'uploadUrl'},
+    const {
+      '1': 'upload_url',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'uploadUrl'
+    },
+  ],
+  '8': const [
+    const {'1': 'file_source'},
   ],
 };
 
 /// Descriptor for `UploadRef`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List uploadRefDescriptor = $convert
-    .base64Decode('CglVcGxvYWRSZWYSHQoKdXBsb2FkX3VybBgBIAEoCVIJdXBsb2FkVXJs');
+final $typed_data.Uint8List uploadRefDescriptor = $convert.base64Decode(
+    'CglVcGxvYWRSZWYSHwoKdXBsb2FkX3VybBgBIAEoCUgAUgl1cGxvYWRVcmxCDQoLZmlsZV9zb3VyY2U=');
 @$core.Deprecated('Use photoIdDescriptor instead')
 const PhotoId$json = const {
   '1': 'PhotoId',
@@ -35,14 +45,21 @@ final $typed_data.Uint8List photoIdDescriptor =
 const Level$json = const {
   '1': 'Level',
   '2': const [
-    const {'1': 'number', '3': 1, '4': 1, '5': 1, '10': 'number'},
-    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {
+      '1': 'number',
+      '3': 1,
+      '4': 1,
+      '5': 1,
+      '8': const {},
+      '10': 'number'
+    },
+    const {'1': 'name', '3': 2, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `Level`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List levelDescriptor = $convert.base64Decode(
-    'CgVMZXZlbBIWCgZudW1iZXIYASABKAFSBm51bWJlchISCgRuYW1lGAIgASgJUgRuYW1l');
+    'CgVMZXZlbBIbCgZudW1iZXIYASABKAFCA+BBAVIGbnVtYmVyEhcKBG5hbWUYAiABKAlCA+BBAlIEbmFtZQ==');
 @$core.Deprecated('Use poseDescriptor instead')
 const Pose$json = const {
   '1': 'Pose',
@@ -85,14 +102,21 @@ const Place$json = const {
   '1': 'Place',
   '2': const [
     const {'1': 'place_id', '3': 1, '4': 1, '5': 9, '10': 'placeId'},
-    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    const {'1': 'name', '3': 2, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'languageCode'
+    },
   ],
 };
 
 /// Descriptor for `Place`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List placeDescriptor = $convert.base64Decode(
-    'CgVQbGFjZRIZCghwbGFjZV9pZBgBIAEoCVIHcGxhY2VJZBISCgRuYW1lGAIgASgJUgRuYW1lEiMKDWxhbmd1YWdlX2NvZGUYAyABKAlSDGxhbmd1YWdlQ29kZQ==');
+    'CgVQbGFjZRIZCghwbGFjZV9pZBgBIAEoCVIHcGxhY2VJZBIXCgRuYW1lGAIgASgJQgPgQQNSBG5hbWUSKAoNbGFuZ3VhZ2VfY29kZRgDIAEoCUID4EEDUgxsYW5ndWFnZUNvZGU=');
 @$core.Deprecated('Use connectionDescriptor instead')
 const Connection$json = const {
   '1': 'Connection',
@@ -103,6 +127,7 @@ const Connection$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.streetview.publish.v1.PhotoId',
+      '8': const {},
       '10': 'target'
     },
   ],
@@ -110,7 +135,7 @@ const Connection$json = const {
 
 /// Descriptor for `Connection`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List connectionDescriptor = $convert.base64Decode(
-    'CgpDb25uZWN0aW9uEj0KBnRhcmdldBgBIAEoCzIlLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG9JZFIGdGFyZ2V0');
+    'CgpDb25uZWN0aW9uEkIKBnRhcmdldBgBIAEoCzIlLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG9JZEID4EECUgZ0YXJnZXQ=');
 @$core.Deprecated('Use photoDescriptor instead')
 const Photo$json = const {
   '1': 'Photo',
@@ -121,6 +146,7 @@ const Photo$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.streetview.publish.v1.PhotoId',
+      '8': const {},
       '10': 'photoId'
     },
     const {
@@ -129,17 +155,40 @@ const Photo$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.streetview.publish.v1.UploadRef',
+      '8': const {},
       '10': 'uploadReference'
     },
-    const {'1': 'download_url', '3': 3, '4': 1, '5': 9, '10': 'downloadUrl'},
-    const {'1': 'thumbnail_url', '3': 9, '4': 1, '5': 9, '10': 'thumbnailUrl'},
-    const {'1': 'share_link', '3': 11, '4': 1, '5': 9, '10': 'shareLink'},
+    const {
+      '1': 'download_url',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'downloadUrl'
+    },
+    const {
+      '1': 'thumbnail_url',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'thumbnailUrl'
+    },
+    const {
+      '1': 'share_link',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'shareLink'
+    },
     const {
       '1': 'pose',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.streetview.publish.v1.Pose',
+      '8': const {},
       '10': 'pose'
     },
     const {
@@ -148,6 +197,7 @@ const Photo$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.streetview.publish.v1.Connection',
+      '8': const {},
       '10': 'connections'
     },
     const {
@@ -156,7 +206,17 @@ const Photo$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'captureTime'
+    },
+    const {
+      '1': 'upload_time',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'uploadTime'
     },
     const {
       '1': 'places',
@@ -164,15 +224,24 @@ const Photo$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.streetview.publish.v1.Place',
+      '8': const {},
       '10': 'places'
     },
-    const {'1': 'view_count', '3': 10, '4': 1, '5': 3, '10': 'viewCount'},
+    const {
+      '1': 'view_count',
+      '3': 10,
+      '4': 1,
+      '5': 3,
+      '8': const {},
+      '10': 'viewCount'
+    },
     const {
       '1': 'transfer_status',
       '3': 12,
       '4': 1,
       '5': 14,
       '6': '.google.streetview.publish.v1.Photo.TransferStatus',
+      '8': const {},
       '10': 'transferStatus'
     },
     const {
@@ -181,6 +250,7 @@ const Photo$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.streetview.publish.v1.Photo.MapsPublishStatus',
+      '8': const {},
       '10': 'mapsPublishStatus'
     },
   ],
@@ -214,4 +284,4 @@ const Photo_MapsPublishStatus$json = const {
 
 /// Descriptor for `Photo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List photoDescriptor = $convert.base64Decode(
-    'CgVQaG90bxJACghwaG90b19pZBgBIAEoCzIlLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG9JZFIHcGhvdG9JZBJSChB1cGxvYWRfcmVmZXJlbmNlGAIgASgLMicuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5VcGxvYWRSZWZSD3VwbG9hZFJlZmVyZW5jZRIhCgxkb3dubG9hZF91cmwYAyABKAlSC2Rvd25sb2FkVXJsEiMKDXRodW1ibmFpbF91cmwYCSABKAlSDHRodW1ibmFpbFVybBIdCgpzaGFyZV9saW5rGAsgASgJUglzaGFyZUxpbmsSNgoEcG9zZRgEIAEoCzIiLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUG9zZVIEcG9zZRJKCgtjb25uZWN0aW9ucxgFIAMoCzIoLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuQ29ubmVjdGlvblILY29ubmVjdGlvbnMSPQoMY2FwdHVyZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFILY2FwdHVyZVRpbWUSOwoGcGxhY2VzGAcgAygLMiMuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5QbGFjZVIGcGxhY2VzEh0KCnZpZXdfY291bnQYCiABKANSCXZpZXdDb3VudBJbCg90cmFuc2Zlcl9zdGF0dXMYDCABKA4yMi5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvLlRyYW5zZmVyU3RhdHVzUg50cmFuc2ZlclN0YXR1cxJlChNtYXBzX3B1Ymxpc2hfc3RhdHVzGA0gASgOMjUuZ29vZ2xlLnN0cmVldHZpZXcucHVibGlzaC52MS5QaG90by5NYXBzUHVibGlzaFN0YXR1c1IRbWFwc1B1Ymxpc2hTdGF0dXMipQEKDlRyYW5zZmVyU3RhdHVzEhsKF1RSQU5TRkVSX1NUQVRVU19VTktOT1dOEAASFQoRTkVWRVJfVFJBTlNGRVJSRUQQARILCgdQRU5ESU5HEAISDQoJQ09NUExFVEVEEAMSDAoIUkVKRUNURUQQBBILCgdFWFBJUkVEEAUSDQoJQ0FOQ0VMTEVEEAYSGQoVUkVDRUlWRURfVklBX1RSQU5TRkVSEAciXQoRTWFwc1B1Ymxpc2hTdGF0dXMSIwofVU5TUEVDSUZJRURfTUFQU19QVUJMSVNIX1NUQVRVUxAAEg0KCVBVQkxJU0hFRBABEhQKEFJFSkVDVEVEX1VOS05PV04QAg==');
+    'CgVQaG90bxJICghwaG90b19pZBgBIAEoCzIlLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG9JZEIG4EEC4EEDUgdwaG90b0lkElcKEHVwbG9hZF9yZWZlcmVuY2UYAiABKAsyJy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlVwbG9hZFJlZkID4EEEUg91cGxvYWRSZWZlcmVuY2USJgoMZG93bmxvYWRfdXJsGAMgASgJQgPgQQNSC2Rvd25sb2FkVXJsEigKDXRodW1ibmFpbF91cmwYCSABKAlCA+BBA1IMdGh1bWJuYWlsVXJsEiIKCnNoYXJlX2xpbmsYCyABKAlCA+BBA1IJc2hhcmVMaW5rEjsKBHBvc2UYBCABKAsyIi5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBvc2VCA+BBAVIEcG9zZRJPCgtjb25uZWN0aW9ucxgFIAMoCzIoLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuQ29ubmVjdGlvbkID4EEBUgtjb25uZWN0aW9ucxJCCgxjYXB0dXJlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFSC2NhcHR1cmVUaW1lEkAKC3VwbG9hZF90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGxvYWRUaW1lEkAKBnBsYWNlcxgHIAMoCzIjLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGxhY2VCA+BBAVIGcGxhY2VzEiIKCnZpZXdfY291bnQYCiABKANCA+BBA1IJdmlld0NvdW50EmAKD3RyYW5zZmVyX3N0YXR1cxgMIAEoDjIyLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG8uVHJhbnNmZXJTdGF0dXNCA+BBA1IOdHJhbnNmZXJTdGF0dXMSagoTbWFwc19wdWJsaXNoX3N0YXR1cxgNIAEoDjI1Lmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG8uTWFwc1B1Ymxpc2hTdGF0dXNCA+BBA1IRbWFwc1B1Ymxpc2hTdGF0dXMipQEKDlRyYW5zZmVyU3RhdHVzEhsKF1RSQU5TRkVSX1NUQVRVU19VTktOT1dOEAASFQoRTkVWRVJfVFJBTlNGRVJSRUQQARILCgdQRU5ESU5HEAISDQoJQ09NUExFVEVEEAMSDAoIUkVKRUNURUQQBBILCgdFWFBJUkVEEAUSDQoJQ0FOQ0VMTEVEEAYSGQoVUkVDRUlWRURfVklBX1RSQU5TRkVSEAciXQoRTWFwc1B1Ymxpc2hTdGF0dXMSIwofVU5TUEVDSUZJRURfTUFQU19QVUJMSVNIX1NUQVRVUxAAEg0KCVBVQkxJU0hFRBABEhQKEFJFSkVDVEVEX1VOS05PV04QAg==');

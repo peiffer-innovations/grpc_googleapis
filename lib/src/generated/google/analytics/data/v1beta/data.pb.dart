@@ -2529,6 +2529,179 @@ class CohortReportSettings extends $pb.GeneratedMessage {
   void clearAccumulate() => clearField(1);
 }
 
+class ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ResponseMetaData.SchemaRestrictionResponse.ActiveMetricRestriction',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.data.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metricName')
+    ..pc<RestrictedMetricType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'restrictedMetricTypes',
+        $pb.PbFieldType.PE,
+        valueOf: RestrictedMetricType.valueOf,
+        enumValues: RestrictedMetricType.values)
+    ..hasRequiredFields = false;
+
+  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction._()
+      : super();
+  factory ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction({
+    $core.String? metricName,
+    $core.Iterable<RestrictedMetricType>? restrictedMetricTypes,
+  }) {
+    final _result = create();
+    if (metricName != null) {
+      _result.metricName = metricName;
+    }
+    if (restrictedMetricTypes != null) {
+      _result.restrictedMetricTypes.addAll(restrictedMetricTypes);
+    }
+    return _result;
+  }
+  factory ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction clone() =>
+      ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction copyWith(
+          void Function(
+                  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction))
+          as ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
+      create() =>
+          ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
+              ._();
+  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>
+      createRepeated() => $pb.PbList<
+          ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>();
+  @$core.pragma('dart2js:noInline')
+  static ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>(
+          create);
+  static ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get metricName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set metricName($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMetricName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMetricName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<RestrictedMetricType> get restrictedMetricTypes => $_getList(1);
+}
+
+class ResponseMetaData_SchemaRestrictionResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ResponseMetaData.SchemaRestrictionResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.data.v1beta'),
+      createEmptyInstance: create)
+    ..pc<ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'activeMetricRestrictions',
+        $pb.PbFieldType.PM,
+        subBuilder:
+            ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
+                .create)
+    ..hasRequiredFields = false;
+
+  ResponseMetaData_SchemaRestrictionResponse._() : super();
+  factory ResponseMetaData_SchemaRestrictionResponse({
+    $core.Iterable<
+            ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>?
+        activeMetricRestrictions,
+  }) {
+    final _result = create();
+    if (activeMetricRestrictions != null) {
+      _result.activeMetricRestrictions.addAll(activeMetricRestrictions);
+    }
+    return _result;
+  }
+  factory ResponseMetaData_SchemaRestrictionResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResponseMetaData_SchemaRestrictionResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ResponseMetaData_SchemaRestrictionResponse clone() =>
+      ResponseMetaData_SchemaRestrictionResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ResponseMetaData_SchemaRestrictionResponse copyWith(
+          void Function(ResponseMetaData_SchemaRestrictionResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as ResponseMetaData_SchemaRestrictionResponse))
+          as ResponseMetaData_SchemaRestrictionResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ResponseMetaData_SchemaRestrictionResponse create() =>
+      ResponseMetaData_SchemaRestrictionResponse._();
+  ResponseMetaData_SchemaRestrictionResponse createEmptyInstance() => create();
+  static $pb.PbList<ResponseMetaData_SchemaRestrictionResponse>
+      createRepeated() =>
+          $pb.PbList<ResponseMetaData_SchemaRestrictionResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ResponseMetaData_SchemaRestrictionResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ResponseMetaData_SchemaRestrictionResponse>(create);
+  static ResponseMetaData_SchemaRestrictionResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>
+      get activeMetricRestrictions => $_getList(0);
+}
+
 class ResponseMetaData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -2544,15 +2717,52 @@ class ResponseMetaData extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'dataLossFromOtherRow')
+    ..aOM<ResponseMetaData_SchemaRestrictionResponse>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'schemaRestrictionResponse',
+        subBuilder: ResponseMetaData_SchemaRestrictionResponse.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currencyCode')
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'timeZone')
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'emptyReason')
     ..hasRequiredFields = false;
 
   ResponseMetaData._() : super();
   factory ResponseMetaData({
     $core.bool? dataLossFromOtherRow,
+    ResponseMetaData_SchemaRestrictionResponse? schemaRestrictionResponse,
+    $core.String? currencyCode,
+    $core.String? timeZone,
+    $core.String? emptyReason,
   }) {
     final _result = create();
     if (dataLossFromOtherRow != null) {
       _result.dataLossFromOtherRow = dataLossFromOtherRow;
+    }
+    if (schemaRestrictionResponse != null) {
+      _result.schemaRestrictionResponse = schemaRestrictionResponse;
+    }
+    if (currencyCode != null) {
+      _result.currencyCode = currencyCode;
+    }
+    if (timeZone != null) {
+      _result.timeZone = timeZone;
+    }
+    if (emptyReason != null) {
+      _result.emptyReason = emptyReason;
     }
     return _result;
   }
@@ -2594,6 +2804,58 @@ class ResponseMetaData extends $pb.GeneratedMessage {
   $core.bool hasDataLossFromOtherRow() => $_has(0);
   @$pb.TagNumber(3)
   void clearDataLossFromOtherRow() => clearField(3);
+
+  @$pb.TagNumber(4)
+  ResponseMetaData_SchemaRestrictionResponse get schemaRestrictionResponse =>
+      $_getN(1);
+  @$pb.TagNumber(4)
+  set schemaRestrictionResponse(ResponseMetaData_SchemaRestrictionResponse v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasSchemaRestrictionResponse() => $_has(1);
+  @$pb.TagNumber(4)
+  void clearSchemaRestrictionResponse() => clearField(4);
+  @$pb.TagNumber(4)
+  ResponseMetaData_SchemaRestrictionResponse
+      ensureSchemaRestrictionResponse() => $_ensure(1);
+
+  @$pb.TagNumber(5)
+  $core.String get currencyCode => $_getSZ(2);
+  @$pb.TagNumber(5)
+  set currencyCode($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasCurrencyCode() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearCurrencyCode() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get timeZone => $_getSZ(3);
+  @$pb.TagNumber(6)
+  set timeZone($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasTimeZone() => $_has(3);
+  @$pb.TagNumber(6)
+  void clearTimeZone() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get emptyReason => $_getSZ(4);
+  @$pb.TagNumber(7)
+  set emptyReason($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasEmptyReason() => $_has(4);
+  @$pb.TagNumber(7)
+  void clearEmptyReason() => clearField(7);
 }
 
 class DimensionHeader extends $pb.GeneratedMessage {
@@ -3697,6 +3959,14 @@ class MetricMetadata extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'customDefinition')
+    ..pc<MetricMetadata_BlockedReason>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blockedReasons',
+        $pb.PbFieldType.PE,
+        valueOf: MetricMetadata_BlockedReason.valueOf,
+        enumValues: MetricMetadata_BlockedReason.values)
     ..aOS(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3713,6 +3983,7 @@ class MetricMetadata extends $pb.GeneratedMessage {
     MetricType? type,
     $core.String? expression,
     $core.bool? customDefinition,
+    $core.Iterable<MetricMetadata_BlockedReason>? blockedReasons,
     $core.String? category,
   }) {
     final _result = create();
@@ -3736,6 +4007,9 @@ class MetricMetadata extends $pb.GeneratedMessage {
     }
     if (customDefinition != null) {
       _result.customDefinition = customDefinition;
+    }
+    if (blockedReasons != null) {
+      _result.blockedReasons.addAll(blockedReasons);
     }
     if (category != null) {
       _result.category = category;
@@ -3844,15 +4118,18 @@ class MetricMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearCustomDefinition() => clearField(7);
 
+  @$pb.TagNumber(8)
+  $core.List<MetricMetadata_BlockedReason> get blockedReasons => $_getList(7);
+
   @$pb.TagNumber(10)
-  $core.String get category => $_getSZ(7);
+  $core.String get category => $_getSZ(8);
   @$pb.TagNumber(10)
   set category($core.String v) {
-    $_setString(7, v);
+    $_setString(8, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasCategory() => $_has(7);
+  $core.bool hasCategory() => $_has(8);
   @$pb.TagNumber(10)
   void clearCategory() => clearField(10);
 }

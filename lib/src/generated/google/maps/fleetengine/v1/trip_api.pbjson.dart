@@ -97,12 +97,28 @@ const GetTripRequest$json = const {
       '6': '.maps.fleetengine.v1.PolylineFormatType',
       '10': 'routeFormatType'
     },
+    const {
+      '1': 'current_route_segment_traffic_version',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'currentRouteSegmentTrafficVersion'
+    },
+    const {
+      '1': 'remaining_waypoints_route_version',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'remainingWaypointsRouteVersion'
+    },
   ],
 };
 
 /// Descriptor for `GetTripRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTripRequestDescriptor = $convert.base64Decode(
-    'Cg5HZXRUcmlwUmVxdWVzdBI6CgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXJSBmhlYWRlchI7CgRuYW1lGAMgASgJQifgQQL6QSEKH2ZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1RyaXBSBG5hbWUSMQoEdmlldxgLIAEoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFZpZXdSBHZpZXcSXQodY3VycmVudF9yb3V0ZV9zZWdtZW50X3ZlcnNpb24YBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhpjdXJyZW50Um91dGVTZWdtZW50VmVyc2lvbhJaChtyZW1haW5pbmdfd2F5cG9pbnRzX3ZlcnNpb24YByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhlyZW1haW5pbmdXYXlwb2ludHNWZXJzaW9uElMKEXJvdXRlX2Zvcm1hdF90eXBlGAggASgOMicubWFwcy5mbGVldGVuZ2luZS52MS5Qb2x5bGluZUZvcm1hdFR5cGVSD3JvdXRlRm9ybWF0VHlwZQ==');
+    'Cg5HZXRUcmlwUmVxdWVzdBI6CgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXJSBmhlYWRlchI7CgRuYW1lGAMgASgJQifgQQL6QSEKH2ZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1RyaXBSBG5hbWUSMQoEdmlldxgLIAEoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFZpZXdSBHZpZXcSXQodY3VycmVudF9yb3V0ZV9zZWdtZW50X3ZlcnNpb24YBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhpjdXJyZW50Um91dGVTZWdtZW50VmVyc2lvbhJaChtyZW1haW5pbmdfd2F5cG9pbnRzX3ZlcnNpb24YByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhlyZW1haW5pbmdXYXlwb2ludHNWZXJzaW9uElMKEXJvdXRlX2Zvcm1hdF90eXBlGAggASgOMicubWFwcy5mbGVldGVuZ2luZS52MS5Qb2x5bGluZUZvcm1hdFR5cGVSD3JvdXRlRm9ybWF0VHlwZRJsCiVjdXJyZW50X3JvdXRlX3NlZ21lbnRfdHJhZmZpY192ZXJzaW9uGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIhY3VycmVudFJvdXRlU2VnbWVudFRyYWZmaWNWZXJzaW9uEmUKIXJlbWFpbmluZ193YXlwb2ludHNfcm91dGVfdmVyc2lvbhgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSHnJlbWFpbmluZ1dheXBvaW50c1JvdXRlVmVyc2lvbg==');
 @$core.Deprecated('Use reportBillableTripRequestDescriptor instead')
 const ReportBillableTripRequest$json = const {
   '1': 'ReportBillableTripRequest',

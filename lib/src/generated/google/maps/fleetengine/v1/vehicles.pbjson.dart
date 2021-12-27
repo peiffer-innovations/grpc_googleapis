@@ -73,7 +73,7 @@ final $typed_data.Uint8List powerSourceDescriptor = $convert.base64Decode(
 const Vehicle$json = const {
   '1': 'Vehicle',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'vehicle_state',
       '3': 2,
@@ -90,7 +90,14 @@ const Vehicle$json = const {
       '6': '.maps.fleetengine.v1.TripType',
       '10': 'supportedTripTypes'
     },
-    const {'1': 'current_trips', '3': 4, '4': 3, '5': 9, '10': 'currentTrips'},
+    const {
+      '1': 'current_trips',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '8': const {},
+      '10': 'currentTrips'
+    },
     const {
       '1': 'last_location',
       '3': 5,
@@ -105,13 +112,6 @@ const Vehicle$json = const {
       '4': 1,
       '5': 5,
       '10': 'maximumCapacity'
-    },
-    const {
-      '1': 'available_capacity',
-      '3': 7,
-      '4': 1,
-      '5': 5,
-      '10': 'availableCapacity'
     },
     const {
       '1': 'attributes',
@@ -154,11 +154,21 @@ const Vehicle$json = const {
       '10': 'currentRouteSegment'
     },
     const {
+      '1': 'current_route_segment_traffic',
+      '3': 28,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.v1.TrafficPolylineData',
+      '8': const {},
+      '10': 'currentRouteSegmentTraffic'
+    },
+    const {
       '1': 'current_route_segment_version',
       '3': 15,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'currentRouteSegmentVersion'
     },
     const {
@@ -191,6 +201,7 @@ const Vehicle$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Int32Value',
+      '8': const {},
       '10': 'remainingTimeSeconds'
     },
     const {
@@ -207,6 +218,7 @@ const Vehicle$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'waypointsVersion'
     },
     const {
@@ -230,6 +242,7 @@ const Vehicle$json = const {
       '4': 1,
       '5': 11,
       '6': '.maps.fleetengine.v1.DeviceSettings',
+      '8': const {},
       '10': 'deviceSettings'
     },
   ],
@@ -267,7 +280,7 @@ const Vehicle_VehicleType_Category$json = const {
 
 /// Descriptor for `Vehicle`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List vehicleDescriptor = $convert.base64Decode(
-    'CgdWZWhpY2xlEhIKBG5hbWUYASABKAlSBG5hbWUSRgoNdmVoaWNsZV9zdGF0ZRgCIAEoDjIhLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZVN0YXRlUgx2ZWhpY2xlU3RhdGUSTwoUc3VwcG9ydGVkX3RyaXBfdHlwZXMYAyADKA4yHS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBUeXBlUhJzdXBwb3J0ZWRUcmlwVHlwZXMSIwoNY3VycmVudF90cmlwcxgEIAMoCVIMY3VycmVudFRyaXBzEkkKDWxhc3RfbG9jYXRpb24YBSABKAsyJC5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVMb2NhdGlvblIMbGFzdExvY2F0aW9uEikKEG1heGltdW1fY2FwYWNpdHkYBiABKAVSD21heGltdW1DYXBhY2l0eRItChJhdmFpbGFibGVfY2FwYWNpdHkYByABKAVSEWF2YWlsYWJsZUNhcGFjaXR5EkUKCmF0dHJpYnV0ZXMYCCADKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVBdHRyaWJ1dGVSCmF0dHJpYnV0ZXMSSwoMdmVoaWNsZV90eXBlGAkgASgLMigubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlLlZlaGljbGVUeXBlUgt2ZWhpY2xlVHlwZRJGCg1saWNlbnNlX3BsYXRlGAogASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5MaWNlbnNlUGxhdGVSDGxpY2Vuc2VQbGF0ZRI/CgVyb3V0ZRgMIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlvbkICGAFSBXJvdXRlEjIKFWN1cnJlbnRfcm91dGVfc2VnbWVudBgUIAEoCVITY3VycmVudFJvdXRlU2VnbWVudBJdCh1jdXJyZW50X3JvdXRlX3NlZ21lbnRfdmVyc2lvbhgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSGmN1cnJlbnRSb3V0ZVNlZ21lbnRWZXJzaW9uEmcKH2N1cnJlbnRfcm91dGVfc2VnbWVudF9lbmRfcG9pbnQYGCABKAsyIS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBXYXlwb2ludFIbY3VycmVudFJvdXRlU2VnbWVudEVuZFBvaW50ElcKGXJlbWFpbmluZ19kaXN0YW5jZV9tZXRlcnMYEiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIXcmVtYWluaW5nRGlzdGFuY2VNZXRlcnMSTQoVZXRhX3RvX2ZpcnN0X3dheXBvaW50GBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFISZXRhVG9GaXJzdFdheXBvaW50ElEKFnJlbWFpbmluZ190aW1lX3NlY29uZHMYGSABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIUcmVtYWluaW5nVGltZVNlY29uZHMSPwoJd2F5cG9pbnRzGBYgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRSCXdheXBvaW50cxJHChF3YXlwb2ludHNfdmVyc2lvbhgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSEHdheXBvaW50c1ZlcnNpb24SLwoUYmFja190b19iYWNrX2VuYWJsZWQYFyABKAhSEWJhY2tUb0JhY2tFbmFibGVkElIKEW5hdmlnYXRpb25fc3RhdHVzGBogASgOMiUubWFwcy5mbGVldGVuZ2luZS52MS5OYXZpZ2F0aW9uU3RhdHVzUhBuYXZpZ2F0aW9uU3RhdHVzEkwKD2RldmljZV9zZXR0aW5ncxgbIAEoCzIjLm1hcHMuZmxlZXRlbmdpbmUudjEuRGV2aWNlU2V0dGluZ3NSDmRldmljZVNldHRpbmdzGqUBCgtWZWhpY2xlVHlwZRJNCghjYXRlZ29yeRgBIAEoDjIxLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZS5WZWhpY2xlVHlwZS5DYXRlZ29yeVIIY2F0ZWdvcnkiRwoIQ2F0ZWdvcnkSCwoHVU5LTk9XThAAEggKBEFVVE8QARIICgRUQVhJEAISCQoFVFJVQ0sQAxIPCgtUV09fV0hFRUxFUhAEOlDqQU0KImZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1ZlaGljbGUSJ3Byb3ZpZGVycy97cHJvdmlkZXJ9L3ZlaGljbGVzL3t2ZWhpY2xlfQ==');
+    'CgdWZWhpY2xlEhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRJGCg12ZWhpY2xlX3N0YXRlGAIgASgOMiEubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlU3RhdGVSDHZlaGljbGVTdGF0ZRJPChRzdXBwb3J0ZWRfdHJpcF90eXBlcxgDIAMoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFR5cGVSEnN1cHBvcnRlZFRyaXBUeXBlcxIoCg1jdXJyZW50X3RyaXBzGAQgAygJQgPgQQNSDGN1cnJlbnRUcmlwcxJJCg1sYXN0X2xvY2F0aW9uGAUgASgLMiQubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlTG9jYXRpb25SDGxhc3RMb2NhdGlvbhIpChBtYXhpbXVtX2NhcGFjaXR5GAYgASgFUg9tYXhpbXVtQ2FwYWNpdHkSRQoKYXR0cmlidXRlcxgIIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUF0dHJpYnV0ZVIKYXR0cmlidXRlcxJLCgx2ZWhpY2xlX3R5cGUYCSABKAsyKC5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGUuVmVoaWNsZVR5cGVSC3ZlaGljbGVUeXBlEkYKDWxpY2Vuc2VfcGxhdGUYCiABKAsyIS5tYXBzLmZsZWV0ZW5naW5lLnYxLkxpY2Vuc2VQbGF0ZVIMbGljZW5zZVBsYXRlEj8KBXJvdXRlGAwgAygLMiUubWFwcy5mbGVldGVuZ2luZS52MS5UZXJtaW5hbExvY2F0aW9uQgIYAVIFcm91dGUSMgoVY3VycmVudF9yb3V0ZV9zZWdtZW50GBQgASgJUhNjdXJyZW50Um91dGVTZWdtZW50EnAKHWN1cnJlbnRfcm91dGVfc2VnbWVudF90cmFmZmljGBwgASgLMigubWFwcy5mbGVldGVuZ2luZS52MS5UcmFmZmljUG9seWxpbmVEYXRhQgPgQQRSGmN1cnJlbnRSb3V0ZVNlZ21lbnRUcmFmZmljEmIKHWN1cnJlbnRfcm91dGVfc2VnbWVudF92ZXJzaW9uGA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUhpjdXJyZW50Um91dGVTZWdtZW50VmVyc2lvbhJnCh9jdXJyZW50X3JvdXRlX3NlZ21lbnRfZW5kX3BvaW50GBggASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRSG2N1cnJlbnRSb3V0ZVNlZ21lbnRFbmRQb2ludBJXChlyZW1haW5pbmdfZGlzdGFuY2VfbWV0ZXJzGBIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWVSF3JlbWFpbmluZ0Rpc3RhbmNlTWV0ZXJzEk0KFWV0YV90b19maXJzdF93YXlwb2ludBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSEmV0YVRvRmlyc3RXYXlwb2ludBJWChZyZW1haW5pbmdfdGltZV9zZWNvbmRzGBkgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWVCA+BBBFIUcmVtYWluaW5nVGltZVNlY29uZHMSPwoJd2F5cG9pbnRzGBYgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRSCXdheXBvaW50cxJMChF3YXlwb2ludHNfdmVyc2lvbhgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IQd2F5cG9pbnRzVmVyc2lvbhIvChRiYWNrX3RvX2JhY2tfZW5hYmxlZBgXIAEoCFIRYmFja1RvQmFja0VuYWJsZWQSUgoRbmF2aWdhdGlvbl9zdGF0dXMYGiABKA4yJS5tYXBzLmZsZWV0ZW5naW5lLnYxLk5hdmlnYXRpb25TdGF0dXNSEG5hdmlnYXRpb25TdGF0dXMSUQoPZGV2aWNlX3NldHRpbmdzGBsgASgLMiMubWFwcy5mbGVldGVuZ2luZS52MS5EZXZpY2VTZXR0aW5nc0ID4EEEUg5kZXZpY2VTZXR0aW5ncxqlAQoLVmVoaWNsZVR5cGUSTQoIY2F0ZWdvcnkYASABKA4yMS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGUuVmVoaWNsZVR5cGUuQ2F0ZWdvcnlSCGNhdGVnb3J5IkcKCENhdGVnb3J5EgsKB1VOS05PV04QABIICgRBVVRPEAESCAoEVEFYSRACEgkKBVRSVUNLEAMSDwoLVFdPX1dIRUVMRVIQBDpQ6kFNCiJmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9WZWhpY2xlEidwcm92aWRlcnMve3Byb3ZpZGVyfS92ZWhpY2xlcy97dmVoaWNsZX0=');
 @$core.Deprecated('Use batteryInfoDescriptor instead')
 const BatteryInfo$json = const {
   '1': 'BatteryInfo',
@@ -366,3 +379,87 @@ const LicensePlate$json = const {
 /// Descriptor for `LicensePlate`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List licensePlateDescriptor = $convert.base64Decode(
     'CgxMaWNlbnNlUGxhdGUSJgoMY291bnRyeV9jb2RlGAEgASgJQgPgQQJSC2NvdW50cnlDb2RlEiUKDmxhc3RfY2hhcmFjdGVyGAIgASgJUg1sYXN0Q2hhcmFjdGVy');
+@$core.Deprecated('Use visualTrafficReportPolylineRenderingDescriptor instead')
+const VisualTrafficReportPolylineRendering$json = const {
+  '1': 'VisualTrafficReportPolylineRendering',
+  '2': const [
+    const {
+      '1': 'road_stretch',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.maps.fleetengine.v1.VisualTrafficReportPolylineRendering.RoadStretch',
+      '8': const {},
+      '10': 'roadStretch'
+    },
+  ],
+  '3': const [VisualTrafficReportPolylineRendering_RoadStretch$json],
+};
+
+@$core.Deprecated('Use visualTrafficReportPolylineRenderingDescriptor instead')
+const VisualTrafficReportPolylineRendering_RoadStretch$json = const {
+  '1': 'RoadStretch',
+  '2': const [
+    const {
+      '1': 'style',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.maps.fleetengine.v1.VisualTrafficReportPolylineRendering.RoadStretch.Style',
+      '8': const {},
+      '10': 'style'
+    },
+    const {
+      '1': 'offset_meters',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'offsetMeters'
+    },
+    const {
+      '1': 'length_meters',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'lengthMeters'
+    },
+  ],
+  '4': const [VisualTrafficReportPolylineRendering_RoadStretch_Style$json],
+};
+
+@$core.Deprecated('Use visualTrafficReportPolylineRenderingDescriptor instead')
+const VisualTrafficReportPolylineRendering_RoadStretch_Style$json = const {
+  '1': 'Style',
+  '2': const [
+    const {'1': 'STYLE_UNSPECIFIED', '2': 0},
+    const {'1': 'SLOWER_TRAFFIC', '2': 1},
+    const {'1': 'TRAFFIC_JAM', '2': 2},
+  ],
+};
+
+/// Descriptor for `VisualTrafficReportPolylineRendering`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List visualTrafficReportPolylineRenderingDescriptor =
+    $convert.base64Decode(
+        'CiRWaXN1YWxUcmFmZmljUmVwb3J0UG9seWxpbmVSZW5kZXJpbmcSbQoMcm9hZF9zdHJldGNoGAEgAygLMkUubWFwcy5mbGVldGVuZ2luZS52MS5WaXN1YWxUcmFmZmljUmVwb3J0UG9seWxpbmVSZW5kZXJpbmcuUm9hZFN0cmV0Y2hCA+BBAVILcm9hZFN0cmV0Y2gajgIKC1JvYWRTdHJldGNoEmYKBXN0eWxlGAEgASgOMksubWFwcy5mbGVldGVuZ2luZS52MS5WaXN1YWxUcmFmZmljUmVwb3J0UG9seWxpbmVSZW5kZXJpbmcuUm9hZFN0cmV0Y2guU3R5bGVCA+BBAlIFc3R5bGUSKAoNb2Zmc2V0X21ldGVycxgCIAEoBUID4EECUgxvZmZzZXRNZXRlcnMSKAoNbGVuZ3RoX21ldGVycxgDIAEoBUID4EECUgxsZW5ndGhNZXRlcnMiQwoFU3R5bGUSFQoRU1RZTEVfVU5TUEVDSUZJRUQQABISCg5TTE9XRVJfVFJBRkZJQxABEg8KC1RSQUZGSUNfSkFNEAI=');
+@$core.Deprecated('Use trafficPolylineDataDescriptor instead')
+const TrafficPolylineData$json = const {
+  '1': 'TrafficPolylineData',
+  '2': const [
+    const {
+      '1': 'traffic_rendering',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.v1.VisualTrafficReportPolylineRendering',
+      '10': 'trafficRendering'
+    },
+  ],
+};
+
+/// Descriptor for `TrafficPolylineData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List trafficPolylineDataDescriptor = $convert.base64Decode(
+    'ChNUcmFmZmljUG9seWxpbmVEYXRhEmYKEXRyYWZmaWNfcmVuZGVyaW5nGAEgASgLMjkubWFwcy5mbGVldGVuZ2luZS52MS5WaXN1YWxUcmFmZmljUmVwb3J0UG9seWxpbmVSZW5kZXJpbmdSEHRyYWZmaWNSZW5kZXJpbmc=');

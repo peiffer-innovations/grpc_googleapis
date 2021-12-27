@@ -54,9 +54,11 @@ const OperationMetadataV1$json = const {
       '10': 'updateTime'
     },
     const {'1': 'build_id', '3': 6, '4': 1, '5': 9, '10': 'buildId'},
+    const {'1': 'source_token', '3': 7, '4': 1, '5': 9, '10': 'sourceToken'},
+    const {'1': 'build_name', '3': 8, '4': 1, '5': 9, '10': 'buildName'},
   ],
 };
 
 /// Descriptor for `OperationMetadataV1`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List operationMetadataV1Descriptor = $convert.base64Decode(
-    'ChNPcGVyYXRpb25NZXRhZGF0YVYxEhYKBnRhcmdldBgBIAEoCVIGdGFyZ2V0EjwKBHR5cGUYAiABKA4yKC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLk9wZXJhdGlvblR5cGVSBHR5cGUSLgoHcmVxdWVzdBgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSB3JlcXVlc3QSHQoKdmVyc2lvbl9pZBgEIAEoA1IJdmVyc2lvbklkEjsKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKdXBkYXRlVGltZRIZCghidWlsZF9pZBgGIAEoCVIHYnVpbGRJZA==');
+    'ChNPcGVyYXRpb25NZXRhZGF0YVYxEhYKBnRhcmdldBgBIAEoCVIGdGFyZ2V0EjwKBHR5cGUYAiABKA4yKC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLk9wZXJhdGlvblR5cGVSBHR5cGUSLgoHcmVxdWVzdBgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSB3JlcXVlc3QSHQoKdmVyc2lvbl9pZBgEIAEoA1IJdmVyc2lvbklkEjsKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKdXBkYXRlVGltZRIZCghidWlsZF9pZBgGIAEoCVIHYnVpbGRJZBIhCgxzb3VyY2VfdG9rZW4YByABKAlSC3NvdXJjZVRva2VuEh0KCmJ1aWxkX25hbWUYCCABKAlSCWJ1aWxkTmFtZQ==');

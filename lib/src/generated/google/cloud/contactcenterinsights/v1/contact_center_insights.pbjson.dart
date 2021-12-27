@@ -96,6 +96,15 @@ const CalculateStatsResponse$json = const {
       '10': 'issueMatches',
     },
     const {
+      '1': 'issue_matches_stats',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.contactcenterinsights.v1.CalculateStatsResponse.IssueMatchesStatsEntry',
+      '10': 'issueMatchesStats'
+    },
+    const {
       '1': 'conversation_count_time_series',
       '3': 7,
       '4': 1,
@@ -109,7 +118,8 @@ const CalculateStatsResponse$json = const {
     CalculateStatsResponse_TimeSeries$json,
     CalculateStatsResponse_SmartHighlighterMatchesEntry$json,
     CalculateStatsResponse_CustomHighlighterMatchesEntry$json,
-    CalculateStatsResponse_IssueMatchesEntry$json
+    CalculateStatsResponse_IssueMatchesEntry$json,
+    CalculateStatsResponse_IssueMatchesStatsEntry$json
   ],
 };
 
@@ -190,10 +200,28 @@ const CalculateStatsResponse_IssueMatchesEntry$json = const {
   '7': const {'7': true},
 };
 
+@$core.Deprecated('Use calculateStatsResponseDescriptor instead')
+const CalculateStatsResponse_IssueMatchesStatsEntry$json = const {
+  '1': 'IssueMatchesStatsEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.contactcenterinsights.v1.IssueModelLabelStats.IssueStats',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
 /// Descriptor for `CalculateStatsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List calculateStatsResponseDescriptor =
     $convert.base64Decode(
-        'ChZDYWxjdWxhdGVTdGF0c1Jlc3BvbnNlEkQKEGF2ZXJhZ2VfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SD2F2ZXJhZ2VEdXJhdGlvbhIsChJhdmVyYWdlX3R1cm5fY291bnQYAiABKAVSEGF2ZXJhZ2VUdXJuQ291bnQSLQoSY29udmVyc2F0aW9uX2NvdW50GAMgASgFUhFjb252ZXJzYXRpb25Db3VudBKWAQoZc21hcnRfaGlnaGxpZ2h0ZXJfbWF0Y2hlcxgEIAMoCzJaLmdvb2dsZS5jbG91ZC5jb250YWN0Y2VudGVyaW5zaWdodHMudjEuQ2FsY3VsYXRlU3RhdHNSZXNwb25zZS5TbWFydEhpZ2hsaWdodGVyTWF0Y2hlc0VudHJ5UhdzbWFydEhpZ2hsaWdodGVyTWF0Y2hlcxKZAQoaY3VzdG9tX2hpZ2hsaWdodGVyX21hdGNoZXMYBSADKAsyWy5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkNhbGN1bGF0ZVN0YXRzUmVzcG9uc2UuQ3VzdG9tSGlnaGxpZ2h0ZXJNYXRjaGVzRW50cnlSGGN1c3RvbUhpZ2hsaWdodGVyTWF0Y2hlcxJ4Cg1pc3N1ZV9tYXRjaGVzGAYgAygLMk8uZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5DYWxjdWxhdGVTdGF0c1Jlc3BvbnNlLklzc3VlTWF0Y2hlc0VudHJ5QgIYAVIMaXNzdWVNYXRjaGVzEo0BCh5jb252ZXJzYXRpb25fY291bnRfdGltZV9zZXJpZXMYByABKAsySC5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkNhbGN1bGF0ZVN0YXRzUmVzcG9uc2UuVGltZVNlcmllc1IbY29udmVyc2F0aW9uQ291bnRUaW1lU2VyaWVzGrUCCgpUaW1lU2VyaWVzEkYKEWludGVydmFsX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhBpbnRlcnZhbER1cmF0aW9uEmkKBnBvaW50cxgCIAMoCzJRLmdvb2dsZS5jbG91ZC5jb250YWN0Y2VudGVyaW5zaWdodHMudjEuQ2FsY3VsYXRlU3RhdHNSZXNwb25zZS5UaW1lU2VyaWVzLkludGVydmFsUgZwb2ludHMadAoISW50ZXJ2YWwSOQoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRItChJjb252ZXJzYXRpb25fY291bnQYAiABKAVSEWNvbnZlcnNhdGlvbkNvdW50GkoKHFNtYXJ0SGlnaGxpZ2h0ZXJNYXRjaGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAVSBXZhbHVlOgI4ARpLCh1DdXN0b21IaWdobGlnaHRlck1hdGNoZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoBVIFdmFsdWU6AjgBGj8KEUlzc3VlTWF0Y2hlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgFUgV2YWx1ZToCOAE=');
+        'ChZDYWxjdWxhdGVTdGF0c1Jlc3BvbnNlEkQKEGF2ZXJhZ2VfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SD2F2ZXJhZ2VEdXJhdGlvbhIsChJhdmVyYWdlX3R1cm5fY291bnQYAiABKAVSEGF2ZXJhZ2VUdXJuQ291bnQSLQoSY29udmVyc2F0aW9uX2NvdW50GAMgASgFUhFjb252ZXJzYXRpb25Db3VudBKWAQoZc21hcnRfaGlnaGxpZ2h0ZXJfbWF0Y2hlcxgEIAMoCzJaLmdvb2dsZS5jbG91ZC5jb250YWN0Y2VudGVyaW5zaWdodHMudjEuQ2FsY3VsYXRlU3RhdHNSZXNwb25zZS5TbWFydEhpZ2hsaWdodGVyTWF0Y2hlc0VudHJ5UhdzbWFydEhpZ2hsaWdodGVyTWF0Y2hlcxKZAQoaY3VzdG9tX2hpZ2hsaWdodGVyX21hdGNoZXMYBSADKAsyWy5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkNhbGN1bGF0ZVN0YXRzUmVzcG9uc2UuQ3VzdG9tSGlnaGxpZ2h0ZXJNYXRjaGVzRW50cnlSGGN1c3RvbUhpZ2hsaWdodGVyTWF0Y2hlcxJ4Cg1pc3N1ZV9tYXRjaGVzGAYgAygLMk8uZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5DYWxjdWxhdGVTdGF0c1Jlc3BvbnNlLklzc3VlTWF0Y2hlc0VudHJ5QgIYAVIMaXNzdWVNYXRjaGVzEoQBChNpc3N1ZV9tYXRjaGVzX3N0YXRzGAggAygLMlQuZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5DYWxjdWxhdGVTdGF0c1Jlc3BvbnNlLklzc3VlTWF0Y2hlc1N0YXRzRW50cnlSEWlzc3VlTWF0Y2hlc1N0YXRzEo0BCh5jb252ZXJzYXRpb25fY291bnRfdGltZV9zZXJpZXMYByABKAsySC5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkNhbGN1bGF0ZVN0YXRzUmVzcG9uc2UuVGltZVNlcmllc1IbY29udmVyc2F0aW9uQ291bnRUaW1lU2VyaWVzGrUCCgpUaW1lU2VyaWVzEkYKEWludGVydmFsX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhBpbnRlcnZhbER1cmF0aW9uEmkKBnBvaW50cxgCIAMoCzJRLmdvb2dsZS5jbG91ZC5jb250YWN0Y2VudGVyaW5zaWdodHMudjEuQ2FsY3VsYXRlU3RhdHNSZXNwb25zZS5UaW1lU2VyaWVzLkludGVydmFsUgZwb2ludHMadAoISW50ZXJ2YWwSOQoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRItChJjb252ZXJzYXRpb25fY291bnQYAiABKAVSEWNvbnZlcnNhdGlvbkNvdW50GkoKHFNtYXJ0SGlnaGxpZ2h0ZXJNYXRjaGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAVSBXZhbHVlOgI4ARpLCh1DdXN0b21IaWdobGlnaHRlck1hdGNoZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoBVIFdmFsdWU6AjgBGj8KEUlzc3VlTWF0Y2hlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgFUgV2YWx1ZToCOAEajAEKFklzc3VlTWF0Y2hlc1N0YXRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSXAoFdmFsdWUYAiABKAsyRi5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLklzc3VlTW9kZWxMYWJlbFN0YXRzLklzc3VlU3RhdHNSBXZhbHVlOgI4AQ==');
 @$core.Deprecated('Use createAnalysisOperationMetadataDescriptor instead')
 const CreateAnalysisOperationMetadata$json = const {
   '1': 'CreateAnalysisOperationMetadata',
@@ -502,8 +530,18 @@ const ExportInsightsDataRequest$json = const {
     },
     const {'1': 'filter', '3': 3, '4': 1, '5': 9, '10': 'filter'},
     const {'1': 'kms_key', '3': 4, '4': 1, '5': 9, '10': 'kmsKey'},
+    const {
+      '1': 'write_disposition',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.contactcenterinsights.v1.ExportInsightsDataRequest.WriteDisposition',
+      '10': 'writeDisposition'
+    },
   ],
   '3': const [ExportInsightsDataRequest_BigQueryDestination$json],
+  '4': const [ExportInsightsDataRequest_WriteDisposition$json],
   '8': const [
     const {'1': 'destination'},
   ],
@@ -526,10 +564,20 @@ const ExportInsightsDataRequest_BigQueryDestination$json = const {
   ],
 };
 
+@$core.Deprecated('Use exportInsightsDataRequestDescriptor instead')
+const ExportInsightsDataRequest_WriteDisposition$json = const {
+  '1': 'WriteDisposition',
+  '2': const [
+    const {'1': 'WRITE_DISPOSITION_UNSPECIFIED', '2': 0},
+    const {'1': 'WRITE_TRUNCATE', '2': 1},
+    const {'1': 'WRITE_APPEND', '2': 2},
+  ],
+};
+
 /// Descriptor for `ExportInsightsDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List exportInsightsDataRequestDescriptor =
     $convert.base64Decode(
-        'ChlFeHBvcnRJbnNpZ2h0c0RhdGFSZXF1ZXN0EooBChViaWdfcXVlcnlfZGVzdGluYXRpb24YAiABKAsyVC5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkV4cG9ydEluc2lnaHRzRGF0YVJlcXVlc3QuQmlnUXVlcnlEZXN0aW5hdGlvbkgAUhNiaWdRdWVyeURlc3RpbmF0aW9uEkEKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb25SBnBhcmVudBIWCgZmaWx0ZXIYAyABKAlSBmZpbHRlchIXCgdrbXNfa2V5GAQgASgJUgZrbXNLZXkaaQoTQmlnUXVlcnlEZXN0aW5hdGlvbhIdCgpwcm9qZWN0X2lkGAMgASgJUglwcm9qZWN0SWQSHQoHZGF0YXNldBgBIAEoCUID4EECUgdkYXRhc2V0EhQKBXRhYmxlGAIgASgJUgV0YWJsZUINCgtkZXN0aW5hdGlvbg==');
+        'ChlFeHBvcnRJbnNpZ2h0c0RhdGFSZXF1ZXN0EooBChViaWdfcXVlcnlfZGVzdGluYXRpb24YAiABKAsyVC5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkV4cG9ydEluc2lnaHRzRGF0YVJlcXVlc3QuQmlnUXVlcnlEZXN0aW5hdGlvbkgAUhNiaWdRdWVyeURlc3RpbmF0aW9uEkEKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb25SBnBhcmVudBIWCgZmaWx0ZXIYAyABKAlSBmZpbHRlchIXCgdrbXNfa2V5GAQgASgJUgZrbXNLZXkSfgoRd3JpdGVfZGlzcG9zaXRpb24YBSABKA4yUS5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLkV4cG9ydEluc2lnaHRzRGF0YVJlcXVlc3QuV3JpdGVEaXNwb3NpdGlvblIQd3JpdGVEaXNwb3NpdGlvbhppChNCaWdRdWVyeURlc3RpbmF0aW9uEh0KCnByb2plY3RfaWQYAyABKAlSCXByb2plY3RJZBIdCgdkYXRhc2V0GAEgASgJQgPgQQJSB2RhdGFzZXQSFAoFdGFibGUYAiABKAlSBXRhYmxlIlsKEFdyaXRlRGlzcG9zaXRpb24SIQodV1JJVEVfRElTUE9TSVRJT05fVU5TUEVDSUZJRUQQABISCg5XUklURV9UUlVOQ0FURRABEhAKDFdSSVRFX0FQUEVORBACQg0KC2Rlc3RpbmF0aW9u');
 @$core.Deprecated('Use exportInsightsDataMetadataDescriptor instead')
 const ExportInsightsDataMetadata$json = const {
   '1': 'ExportInsightsDataMetadata',
@@ -1100,6 +1148,34 @@ const DeletePhraseMatcherRequest$json = const {
 final $typed_data.Uint8List deletePhraseMatcherRequestDescriptor =
     $convert.base64Decode(
         'ChpEZWxldGVQaHJhc2VNYXRjaGVyUmVxdWVzdBJOCgRuYW1lGAEgASgJQjrgQQL6QTQKMmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy5nb29nbGVhcGlzLmNvbS9QaHJhc2VNYXRjaGVyUgRuYW1l');
+@$core.Deprecated('Use updatePhraseMatcherRequestDescriptor instead')
+const UpdatePhraseMatcherRequest$json = const {
+  '1': 'UpdatePhraseMatcherRequest',
+  '2': const [
+    const {
+      '1': 'phrase_matcher',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.contactcenterinsights.v1.PhraseMatcher',
+      '8': const {},
+      '10': 'phraseMatcher'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdatePhraseMatcherRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updatePhraseMatcherRequestDescriptor =
+    $convert.base64Decode(
+        'ChpVcGRhdGVQaHJhc2VNYXRjaGVyUmVxdWVzdBJgCg5waHJhc2VfbWF0Y2hlchgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5jb250YWN0Y2VudGVyaW5zaWdodHMudjEuUGhyYXNlTWF0Y2hlckID4EECUg1waHJhc2VNYXRjaGVyEjsKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza1IKdXBkYXRlTWFzaw==');
 @$core.Deprecated('Use getSettingsRequestDescriptor instead')
 const GetSettingsRequest$json = const {
   '1': 'GetSettingsRequest',

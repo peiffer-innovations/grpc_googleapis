@@ -160,3 +160,15 @@ const DeleteAttestorRequest$json = const {
 /// Descriptor for `DeleteAttestorRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteAttestorRequestDescriptor = $convert.base64Decode(
     'ChVEZWxldGVBdHRlc3RvclJlcXVlc3QSRwoEbmFtZRgBIAEoCUIz4EEC+kEtCitiaW5hcnlhdXRob3JpemF0aW9uLmdvb2dsZWFwaXMuY29tL0F0dGVzdG9yUgRuYW1l');
+@$core.Deprecated('Use getSystemPolicyRequestDescriptor instead')
+const GetSystemPolicyRequest$json = const {
+  '1': 'GetSystemPolicyRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetSystemPolicyRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSystemPolicyRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRTeXN0ZW1Qb2xpY3lSZXF1ZXN0EkUKBG5hbWUYASABKAlCMeBBAvpBKwopYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9Qb2xpY3lSBG5hbWU=');

@@ -40,9 +40,10 @@ const Resource$json = const {
       '8': const {},
       '10': 'folders'
     },
+    const {'1': 'display_name', '3': 8, '4': 1, '5': 9, '10': 'displayName'},
   ],
 };
 
 /// Descriptor for `Resource`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resourceDescriptor = $convert.base64Decode(
-    'CghSZXNvdXJjZRISCgRuYW1lGAEgASgJUgRuYW1lEhgKB3Byb2plY3QYAiABKAlSB3Byb2plY3QSMAoUcHJvamVjdF9kaXNwbGF5X25hbWUYAyABKAlSEnByb2plY3REaXNwbGF5TmFtZRIWCgZwYXJlbnQYBCABKAlSBnBhcmVudBIuChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJUhFwYXJlbnREaXNwbGF5TmFtZRISCgR0eXBlGAYgASgJUgR0eXBlEkUKB2ZvbGRlcnMYByADKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRm9sZGVyQgPgQQNSB2ZvbGRlcnM=');
+    'CghSZXNvdXJjZRISCgRuYW1lGAEgASgJUgRuYW1lEhgKB3Byb2plY3QYAiABKAlSB3Byb2plY3QSMAoUcHJvamVjdF9kaXNwbGF5X25hbWUYAyABKAlSEnByb2plY3REaXNwbGF5TmFtZRIWCgZwYXJlbnQYBCABKAlSBnBhcmVudBIuChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJUhFwYXJlbnREaXNwbGF5TmFtZRISCgR0eXBlGAYgASgJUgR0eXBlEkUKB2ZvbGRlcnMYByADKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRm9sZGVyQgPgQQNSB2ZvbGRlcnMSIQoMZGlzcGxheV9uYW1lGAggASgJUgtkaXNwbGF5TmFtZQ==');

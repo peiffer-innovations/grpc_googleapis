@@ -1560,15 +1560,25 @@ class ExportFeatureValuesRequest_SnapshotExport extends $pb.GeneratedMessage {
             ? ''
             : 'snapshotTime',
         subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
   ExportFeatureValuesRequest_SnapshotExport._() : super();
   factory ExportFeatureValuesRequest_SnapshotExport({
     $8.Timestamp? snapshotTime,
+    $8.Timestamp? startTime,
   }) {
     final _result = create();
     if (snapshotTime != null) {
       _result.snapshotTime = snapshotTime;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
     }
     return _result;
   }
@@ -1619,14 +1629,129 @@ class ExportFeatureValuesRequest_SnapshotExport extends $pb.GeneratedMessage {
   void clearSnapshotTime() => clearField(1);
   @$pb.TagNumber(1)
   $8.Timestamp ensureSnapshotTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $8.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set startTime($8.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureStartTime() => $_ensure(1);
 }
 
-enum ExportFeatureValuesRequest_Mode { snapshotExport, notSet }
+class ExportFeatureValuesRequest_FullExport extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ExportFeatureValuesRequest.FullExport',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1'),
+      createEmptyInstance: create)
+    ..aOM<$8.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $8.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  ExportFeatureValuesRequest_FullExport._() : super();
+  factory ExportFeatureValuesRequest_FullExport({
+    $8.Timestamp? endTime,
+    $8.Timestamp? startTime,
+  }) {
+    final _result = create();
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    return _result;
+  }
+  factory ExportFeatureValuesRequest_FullExport.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportFeatureValuesRequest_FullExport.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ExportFeatureValuesRequest_FullExport clone() =>
+      ExportFeatureValuesRequest_FullExport()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ExportFeatureValuesRequest_FullExport copyWith(
+          void Function(ExportFeatureValuesRequest_FullExport) updates) =>
+      super.copyWith((message) =>
+              updates(message as ExportFeatureValuesRequest_FullExport))
+          as ExportFeatureValuesRequest_FullExport; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ExportFeatureValuesRequest_FullExport create() =>
+      ExportFeatureValuesRequest_FullExport._();
+  ExportFeatureValuesRequest_FullExport createEmptyInstance() => create();
+  static $pb.PbList<ExportFeatureValuesRequest_FullExport> createRepeated() =>
+      $pb.PbList<ExportFeatureValuesRequest_FullExport>();
+  @$core.pragma('dart2js:noInline')
+  static ExportFeatureValuesRequest_FullExport getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ExportFeatureValuesRequest_FullExport>(create);
+  static ExportFeatureValuesRequest_FullExport? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $8.Timestamp get endTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set endTime($8.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasEndTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEndTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $8.Timestamp ensureEndTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $8.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set startTime($8.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureStartTime() => $_ensure(1);
+}
+
+enum ExportFeatureValuesRequest_Mode { snapshotExport, fullExport, notSet }
 
 class ExportFeatureValuesRequest extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, ExportFeatureValuesRequest_Mode>
       _ExportFeatureValuesRequest_ModeByTag = {
     3: ExportFeatureValuesRequest_Mode.snapshotExport,
+    7: ExportFeatureValuesRequest_Mode.fullExport,
     0: ExportFeatureValuesRequest_Mode.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1638,7 +1763,7 @@ class ExportFeatureValuesRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.aiplatform.v1'),
       createEmptyInstance: create)
-    ..oo(0, [3])
+    ..oo(0, [3, 7])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1669,6 +1794,12 @@ class ExportFeatureValuesRequest extends $pb.GeneratedMessage {
             : 'settings',
         $pb.PbFieldType.PM,
         subBuilder: DestinationFeatureSetting.create)
+    ..aOM<ExportFeatureValuesRequest_FullExport>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fullExport',
+        subBuilder: ExportFeatureValuesRequest_FullExport.create)
     ..hasRequiredFields = false;
 
   ExportFeatureValuesRequest._() : super();
@@ -1678,6 +1809,7 @@ class ExportFeatureValuesRequest extends $pb.GeneratedMessage {
     FeatureValueDestination? destination,
     $9.FeatureSelector? featureSelector,
     $core.Iterable<DestinationFeatureSetting>? settings,
+    ExportFeatureValuesRequest_FullExport? fullExport,
   }) {
     final _result = create();
     if (entityType != null) {
@@ -1694,6 +1826,9 @@ class ExportFeatureValuesRequest extends $pb.GeneratedMessage {
     }
     if (settings != null) {
       _result.settings.addAll(settings);
+    }
+    if (fullExport != null) {
+      _result.fullExport = fullExport;
     }
     return _result;
   }
@@ -1788,6 +1923,20 @@ class ExportFeatureValuesRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(6)
   $core.List<DestinationFeatureSetting> get settings => $_getList(4);
+
+  @$pb.TagNumber(7)
+  ExportFeatureValuesRequest_FullExport get fullExport => $_getN(5);
+  @$pb.TagNumber(7)
+  set fullExport(ExportFeatureValuesRequest_FullExport v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasFullExport() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearFullExport() => clearField(7);
+  @$pb.TagNumber(7)
+  ExportFeatureValuesRequest_FullExport ensureFullExport() => $_ensure(5);
 }
 
 class DestinationFeatureSetting extends $pb.GeneratedMessage {

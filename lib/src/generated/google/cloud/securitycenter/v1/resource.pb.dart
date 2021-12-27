@@ -58,6 +58,11 @@ class Resource extends $pb.GeneratedMessage {
             : 'folders',
         $pb.PbFieldType.PM,
         subBuilder: $0.Folder.create)
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
     ..hasRequiredFields = false;
 
   Resource._() : super();
@@ -69,6 +74,7 @@ class Resource extends $pb.GeneratedMessage {
     $core.String? parentDisplayName,
     $core.String? type,
     $core.Iterable<$0.Folder>? folders,
+    $core.String? displayName,
   }) {
     final _result = create();
     if (name != null) {
@@ -91,6 +97,9 @@ class Resource extends $pb.GeneratedMessage {
     }
     if (folders != null) {
       _result.folders.addAll(folders);
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
     }
     return _result;
   }
@@ -194,4 +203,16 @@ class Resource extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(7)
   $core.List<$0.Folder> get folders => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $core.String get displayName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set displayName($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasDisplayName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDisplayName() => clearField(8);
 }

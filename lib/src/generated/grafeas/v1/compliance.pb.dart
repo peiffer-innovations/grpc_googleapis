@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'vulnerability.pbenum.dart' as $0;
+import 'severity.pbenum.dart' as $0;
 
 class ComplianceNote_CisBenchmark extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(

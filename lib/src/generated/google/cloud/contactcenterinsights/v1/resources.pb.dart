@@ -3799,12 +3799,18 @@ class IssueModelLabelStats_IssueStats extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'labeledConversationsCount')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
     ..hasRequiredFields = false;
 
   IssueModelLabelStats_IssueStats._() : super();
   factory IssueModelLabelStats_IssueStats({
     $core.String? issue,
     $fixnum.Int64? labeledConversationsCount,
+    $core.String? displayName,
   }) {
     final _result = create();
     if (issue != null) {
@@ -3812,6 +3818,9 @@ class IssueModelLabelStats_IssueStats extends $pb.GeneratedMessage {
     }
     if (labeledConversationsCount != null) {
       _result.labeledConversationsCount = labeledConversationsCount;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
     }
     return _result;
   }
@@ -3870,6 +3879,18 @@ class IssueModelLabelStats_IssueStats extends $pb.GeneratedMessage {
   $core.bool hasLabeledConversationsCount() => $_has(1);
   @$pb.TagNumber(2)
   void clearLabeledConversationsCount() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get displayName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set displayName($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDisplayName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDisplayName() => clearField(3);
 }
 
 class IssueModelLabelStats extends $pb.GeneratedMessage {

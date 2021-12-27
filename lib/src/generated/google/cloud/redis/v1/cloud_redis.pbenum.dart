@@ -137,6 +137,40 @@ class Instance_ConnectMode extends $pb.ProtobufEnum {
   const Instance_ConnectMode._($core.int v, $core.String n) : super(v, n);
 }
 
+class Instance_ReadReplicasMode extends $pb.ProtobufEnum {
+  static const Instance_ReadReplicasMode READ_REPLICAS_MODE_UNSPECIFIED =
+      Instance_ReadReplicasMode._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'READ_REPLICAS_MODE_UNSPECIFIED');
+  static const Instance_ReadReplicasMode READ_REPLICAS_DISABLED =
+      Instance_ReadReplicasMode._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'READ_REPLICAS_DISABLED');
+  static const Instance_ReadReplicasMode READ_REPLICAS_ENABLED =
+      Instance_ReadReplicasMode._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'READ_REPLICAS_ENABLED');
+
+  static const $core.List<Instance_ReadReplicasMode> values =
+      <Instance_ReadReplicasMode>[
+    READ_REPLICAS_MODE_UNSPECIFIED,
+    READ_REPLICAS_DISABLED,
+    READ_REPLICAS_ENABLED,
+  ];
+
+  static final $core.Map<$core.int, Instance_ReadReplicasMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Instance_ReadReplicasMode? valueOf($core.int value) => _byValue[value];
+
+  const Instance_ReadReplicasMode._($core.int v, $core.String n) : super(v, n);
+}
+
 class FailoverInstanceRequest_DataProtectionMode extends $pb.ProtobufEnum {
   static const FailoverInstanceRequest_DataProtectionMode
       DATA_PROTECTION_MODE_UNSPECIFIED =

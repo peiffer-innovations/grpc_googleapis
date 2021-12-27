@@ -13,13 +13,14 @@ import 'dart:typed_data' as $typed_data;
 const Domain$json = const {
   '1': 'Domain',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'labels',
       '3': 2,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Domain.LabelsEntry',
+      '8': const {},
       '10': 'labels'
     },
     const {
@@ -27,6 +28,7 @@ const Domain$json = const {
       '3': 3,
       '4': 3,
       '5': 9,
+      '8': const {},
       '10': 'authorizedNetworks'
     },
     const {
@@ -34,17 +36,26 @@ const Domain$json = const {
       '3': 4,
       '4': 1,
       '5': 9,
+      '8': const {},
       '10': 'reservedIpRange'
     },
-    const {'1': 'locations', '3': 5, '4': 3, '5': 9, '10': 'locations'},
-    const {'1': 'admin', '3': 6, '4': 1, '5': 9, '10': 'admin'},
-    const {'1': 'fqdn', '3': 10, '4': 1, '5': 9, '10': 'fqdn'},
+    const {
+      '1': 'locations',
+      '3': 5,
+      '4': 3,
+      '5': 9,
+      '8': const {},
+      '10': 'locations'
+    },
+    const {'1': 'admin', '3': 6, '4': 1, '5': 9, '8': const {}, '10': 'admin'},
+    const {'1': 'fqdn', '3': 10, '4': 1, '5': 9, '8': const {}, '10': 'fqdn'},
     const {
       '1': 'create_time',
       '3': 11,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'createTime'
     },
     const {
@@ -53,6 +64,7 @@ const Domain$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'updateTime'
     },
     const {
@@ -61,6 +73,7 @@ const Domain$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.managedidentities.v1beta1.Domain.State',
+      '8': const {},
       '10': 'state'
     },
     const {
@@ -68,6 +81,7 @@ const Domain$json = const {
       '3': 14,
       '4': 1,
       '5': 9,
+      '8': const {},
       '10': 'statusMessage'
     },
     const {
@@ -76,11 +90,13 @@ const Domain$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Trust',
+      '8': const {},
       '10': 'trusts'
     },
   ],
   '3': const [Domain_LabelsEntry$json],
   '4': const [Domain_State$json],
+  '7': const {},
 };
 
 @$core.Deprecated('Use domainDescriptor instead')
@@ -110,7 +126,7 @@ const Domain_State$json = const {
 
 /// Descriptor for `Domain`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List domainDescriptor = $convert.base64Decode(
-    'CgZEb21haW4SEgoEbmFtZRgBIAEoCVIEbmFtZRJSCgZsYWJlbHMYAiADKAsyOi5nb29nbGUuY2xvdWQubWFuYWdlZGlkZW50aXRpZXMudjFiZXRhMS5Eb21haW4uTGFiZWxzRW50cnlSBmxhYmVscxIvChNhdXRob3JpemVkX25ldHdvcmtzGAMgAygJUhJhdXRob3JpemVkTmV0d29ya3MSKgoRcmVzZXJ2ZWRfaXBfcmFuZ2UYBCABKAlSD3Jlc2VydmVkSXBSYW5nZRIcCglsb2NhdGlvbnMYBSADKAlSCWxvY2F0aW9ucxIUCgVhZG1pbhgGIAEoCVIFYWRtaW4SEgoEZnFkbhgKIAEoCVIEZnFkbhI7CgtjcmVhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSOwoLdXBkYXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEkoKBXN0YXRlGA0gASgOMjQuZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuRG9tYWluLlN0YXRlUgVzdGF0ZRIlCg5zdGF0dXNfbWVzc2FnZRgOIAEoCVINc3RhdHVzTWVzc2FnZRJFCgZ0cnVzdHMYDyADKAsyLS5nb29nbGUuY2xvdWQubWFuYWdlZGlkZW50aXRpZXMudjFiZXRhMS5UcnVzdFIGdHJ1c3RzGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEijwEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJTkcQBRIaChZQRVJGT1JNSU5HX01BSU5URU5BTkNFEAYSDwoLVU5BVkFJTEFCTEUQBw==');
+    'CgZEb21haW4SFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lElcKBmxhYmVscxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLkRvbWFpbi5MYWJlbHNFbnRyeUID4EEBUgZsYWJlbHMSNAoTYXV0aG9yaXplZF9uZXR3b3JrcxgDIAMoCUID4EEBUhJhdXRob3JpemVkTmV0d29ya3MSLwoRcmVzZXJ2ZWRfaXBfcmFuZ2UYBCABKAlCA+BBAlIPcmVzZXJ2ZWRJcFJhbmdlEiEKCWxvY2F0aW9ucxgFIAMoCUID4EECUglsb2NhdGlvbnMSGQoFYWRtaW4YBiABKAlCA+BBAVIFYWRtaW4SFwoEZnFkbhgKIAEoCUID4EEDUgRmcWRuEkAKC2NyZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKC3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lEk8KBXN0YXRlGA0gASgOMjQuZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuRG9tYWluLlN0YXRlQgPgQQNSBXN0YXRlEioKDnN0YXR1c19tZXNzYWdlGA4gASgJQgPgQQNSDXN0YXR1c01lc3NhZ2USSgoGdHJ1c3RzGA8gAygLMi0uZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuVHJ1c3RCA+BBA1IGdHJ1c3RzGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEijwEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJTkcQBRIaChZQRVJGT1JNSU5HX01BSU5URU5BTkNFEAYSDwoLVU5BVkFJTEFCTEUQBzpm6kFjCidtYW5hZ2VkaWRlbnRpdGllcy5nb29nbGVhcGlzLmNvbS9Eb21haW4SOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kb21haW5zL3tkb21haW59');
 @$core.Deprecated('Use trustDescriptor instead')
 const Trust$json = const {
   '1': 'Trust',
@@ -157,6 +173,7 @@ const Trust$json = const {
       '3': 6,
       '4': 1,
       '5': 9,
+      '8': const {},
       '10': 'trustHandshakeSecret'
     },
     const {
@@ -165,6 +182,7 @@ const Trust$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'createTime'
     },
     const {
@@ -173,6 +191,7 @@ const Trust$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'updateTime'
     },
     const {
@@ -181,6 +200,7 @@ const Trust$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.managedidentities.v1beta1.Trust.State',
+      '8': const {},
       '10': 'state'
     },
     const {
@@ -188,6 +208,7 @@ const Trust$json = const {
       '3': 11,
       '4': 1,
       '5': 9,
+      '8': const {},
       '10': 'stateDescription'
     },
     const {
@@ -196,6 +217,7 @@ const Trust$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'lastTrustHeartbeatTime'
     },
   ],
@@ -242,4 +264,4 @@ const Trust_TrustDirection$json = const {
 
 /// Descriptor for `Trust`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List trustDescriptor = $convert.base64Decode(
-    'CgVUcnVzdBIsChJ0YXJnZXRfZG9tYWluX25hbWUYASABKAlSEHRhcmdldERvbWFpbk5hbWUSVgoKdHJ1c3RfdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0LlRydXN0VHlwZVIJdHJ1c3RUeXBlEmUKD3RydXN0X2RpcmVjdGlvbhgDIAEoDjI8Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0LlRydXN0RGlyZWN0aW9uUg50cnVzdERpcmVjdGlvbhI5ChhzZWxlY3RpdmVfYXV0aGVudGljYXRpb24YBCABKAhSF3NlbGVjdGl2ZUF1dGhlbnRpY2F0aW9uEjUKF3RhcmdldF9kbnNfaXBfYWRkcmVzc2VzGAUgAygJUhR0YXJnZXREbnNJcEFkZHJlc3NlcxI0ChZ0cnVzdF9oYW5kc2hha2Vfc2VjcmV0GAYgASgJUhR0cnVzdEhhbmRzaGFrZVNlY3JldBI7CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSOwoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEkkKBXN0YXRlGAkgASgOMjMuZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuVHJ1c3QuU3RhdGVSBXN0YXRlEisKEXN0YXRlX2Rlc2NyaXB0aW9uGAsgASgJUhBzdGF0ZURlc2NyaXB0aW9uElUKGWxhc3RfdHJ1c3RfaGVhcnRiZWF0X3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhZsYXN0VHJ1c3RIZWFydGJlYXRUaW1lImkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIMCghVUERBVElORxACEgwKCERFTEVUSU5HEAMSDQoJQ09OTkVDVEVEEAQSEAoMRElTQ09OTkVDVEVEEAUiQQoJVHJ1c3RUeXBlEhoKFlRSVVNUX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZGT1JFU1QQARIMCghFWFRFUk5BTBACIl8KDlRydXN0RGlyZWN0aW9uEh8KG1RSVVNUX0RJUkVDVElPTl9VTlNQRUNJRklFRBAAEgsKB0lOQk9VTkQQARIMCghPVVRCT1VORBACEhEKDUJJRElSRUNUSU9OQUwQAw==');
+    'CgVUcnVzdBIsChJ0YXJnZXRfZG9tYWluX25hbWUYASABKAlSEHRhcmdldERvbWFpbk5hbWUSVgoKdHJ1c3RfdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0LlRydXN0VHlwZVIJdHJ1c3RUeXBlEmUKD3RydXN0X2RpcmVjdGlvbhgDIAEoDjI8Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0LlRydXN0RGlyZWN0aW9uUg50cnVzdERpcmVjdGlvbhI5ChhzZWxlY3RpdmVfYXV0aGVudGljYXRpb24YBCABKAhSF3NlbGVjdGl2ZUF1dGhlbnRpY2F0aW9uEjUKF3RhcmdldF9kbnNfaXBfYWRkcmVzc2VzGAUgAygJUhR0YXJnZXREbnNJcEFkZHJlc3NlcxI5ChZ0cnVzdF9oYW5kc2hha2Vfc2VjcmV0GAYgASgJQgPgQQRSFHRydXN0SGFuZHNoYWtlU2VjcmV0EkAKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKC3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lEk4KBXN0YXRlGAkgASgOMjMuZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuVHJ1c3QuU3RhdGVCA+BBA1IFc3RhdGUSMAoRc3RhdGVfZGVzY3JpcHRpb24YCyABKAlCA+BBA1IQc3RhdGVEZXNjcmlwdGlvbhJaChlsYXN0X3RydXN0X2hlYXJ0YmVhdF90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUhZsYXN0VHJ1c3RIZWFydGJlYXRUaW1lImkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIMCghVUERBVElORxACEgwKCERFTEVUSU5HEAMSDQoJQ09OTkVDVEVEEAQSEAoMRElTQ09OTkVDVEVEEAUiQQoJVHJ1c3RUeXBlEhoKFlRSVVNUX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZGT1JFU1QQARIMCghFWFRFUk5BTBACIl8KDlRydXN0RGlyZWN0aW9uEh8KG1RSVVNUX0RJUkVDVElPTl9VTlNQRUNJRklFRBAAEgsKB0lOQk9VTkQQARIMCghPVVRCT1VORBACEhEKDUJJRElSRUNUSU9OQUwQAw==');

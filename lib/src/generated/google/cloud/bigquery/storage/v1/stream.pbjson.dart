@@ -217,8 +217,17 @@ const WriteStream$json = const {
       '8': const {},
       '10': 'tableSchema'
     },
+    const {
+      '1': 'write_mode',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.bigquery.storage.v1.WriteStream.WriteMode',
+      '8': const {},
+      '10': 'writeMode'
+    },
   ],
-  '4': const [WriteStream_Type$json],
+  '4': const [WriteStream_Type$json, WriteStream_WriteMode$json],
   '7': const {},
 };
 
@@ -233,6 +242,15 @@ const WriteStream_Type$json = const {
   ],
 };
 
+@$core.Deprecated('Use writeStreamDescriptor instead')
+const WriteStream_WriteMode$json = const {
+  '1': 'WriteMode',
+  '2': const [
+    const {'1': 'WRITE_MODE_UNSPECIFIED', '2': 0},
+    const {'1': 'INSERT', '2': 1},
+  ],
+};
+
 /// Descriptor for `WriteStream`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List writeStreamDescriptor = $convert.base64Decode(
-    'CgtXcml0ZVN0cmVhbRIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSSwoEdHlwZRgCIAEoDjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3RyZWFtLlR5cGVCA+BBBVIEdHlwZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgtjb21taXRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY29tbWl0VGltZRJVCgx0YWJsZV9zY2hlbWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZVNjaGVtYUID4EEDUgt0YWJsZVNjaGVtYSJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABINCglDT01NSVRURUQQARILCgdQRU5ESU5HEAISDAoIQlVGRkVSRUQQAzp26kFzCipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vV3JpdGVTdHJlYW0SRXByb2plY3RzL3twcm9qZWN0fS9kYXRhc2V0cy97ZGF0YXNldH0vdGFibGVzL3t0YWJsZX0vc3RyZWFtcy97c3RyZWFtfQ==');
+    'CgtXcml0ZVN0cmVhbRIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSSwoEdHlwZRgCIAEoDjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3RyZWFtLlR5cGVCA+BBBVIEdHlwZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgtjb21taXRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY29tbWl0VGltZRJVCgx0YWJsZV9zY2hlbWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZVNjaGVtYUID4EEDUgt0YWJsZVNjaGVtYRJbCgp3cml0ZV9tb2RlGAcgASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuV3JpdGVTdHJlYW0uV3JpdGVNb2RlQgPgQQVSCXdyaXRlTW9kZSJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABINCglDT01NSVRURUQQARILCgdQRU5ESU5HEAISDAoIQlVGRkVSRUQQAyIzCglXcml0ZU1vZGUSGgoWV1JJVEVfTU9ERV9VTlNQRUNJRklFRBAAEgoKBklOU0VSVBABOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9Xcml0ZVN0cmVhbRJFcHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfS9zdHJlYW1zL3tzdHJlYW19');

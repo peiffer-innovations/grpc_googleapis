@@ -46,6 +46,11 @@ class DocumentsClient extends $grpc.Client {
           '/google.cloud.dialogflow.v2.Documents/ReloadDocument',
           ($2.ReloadDocumentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$exportDocument =
+      $grpc.ClientMethod<$2.ExportDocumentRequest, $0.Operation>(
+          '/google.cloud.dialogflow.v2.Documents/ExportDocument',
+          ($2.ExportDocumentRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   DocumentsClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -85,6 +90,12 @@ class DocumentsClient extends $grpc.Client {
       $2.ReloadDocumentRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$reloadDocument, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> exportDocument(
+      $2.ExportDocumentRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$exportDocument, request, options: options);
   }
 }
 
@@ -141,6 +152,14 @@ abstract class DocumentsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.ReloadDocumentRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ExportDocumentRequest, $0.Operation>(
+        'ExportDocument',
+        exportDocument_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ExportDocumentRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.ListDocumentsResponse> listDocuments_Pre(
@@ -174,6 +193,11 @@ abstract class DocumentsServiceBase extends $grpc.Service {
     return reloadDocument(call, await request);
   }
 
+  $async.Future<$0.Operation> exportDocument_Pre($grpc.ServiceCall call,
+      $async.Future<$2.ExportDocumentRequest> request) async {
+    return exportDocument(call, await request);
+  }
+
   $async.Future<$2.ListDocumentsResponse> listDocuments(
       $grpc.ServiceCall call, $2.ListDocumentsRequest request);
   $async.Future<$2.Document> getDocument(
@@ -186,4 +210,6 @@ abstract class DocumentsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.UpdateDocumentRequest request);
   $async.Future<$0.Operation> reloadDocument(
       $grpc.ServiceCall call, $2.ReloadDocumentRequest request);
+  $async.Future<$0.Operation> exportDocument(
+      $grpc.ServiceCall call, $2.ExportDocumentRequest request);
 }

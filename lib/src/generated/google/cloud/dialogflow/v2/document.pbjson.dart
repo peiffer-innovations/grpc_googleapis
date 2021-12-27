@@ -162,12 +162,13 @@ const ListDocumentsRequest$json = const {
     },
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
   ],
 };
 
 /// Descriptor for `ListDocumentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listDocumentsRequestDescriptor = $convert.base64Decode(
-    'ChRMaXN0RG9jdW1lbnRzUmVxdWVzdBJCCgZwYXJlbnQYASABKAlCKuBBAvpBJBIiZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudFIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2Vu');
+    'ChRMaXN0RG9jdW1lbnRzUmVxdWVzdBJCCgZwYXJlbnQYASABKAlCKuBBAvpBJBIiZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudFIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2VuEhYKBmZpbHRlchgEIAEoCVIGZmlsdGVy');
 @$core.Deprecated('Use listDocumentsResponseDescriptor instead')
 const ListDocumentsResponse$json = const {
   '1': 'ListDocumentsResponse',
@@ -273,6 +274,22 @@ const ReloadDocumentRequest$json = const {
       '9': 0,
       '10': 'contentUri'
     },
+    const {
+      '1': 'import_gcs_custom_metadata',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'importGcsCustomMetadata'
+    },
+    const {
+      '1': 'smart_messaging_partial_update',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'smartMessagingPartialUpdate'
+    },
   ],
   '8': const [
     const {'1': 'source'},
@@ -281,7 +298,44 @@ const ReloadDocumentRequest$json = const {
 
 /// Descriptor for `ReloadDocumentRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List reloadDocumentRequestDescriptor = $convert.base64Decode(
-    'ChVSZWxvYWREb2N1bWVudFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIq4EEC+kEkCiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0RvY3VtZW50UgRuYW1lEiYKC2NvbnRlbnRfdXJpGAMgASgJQgPgQQFIAFIKY29udGVudFVyaUIICgZzb3VyY2U=');
+    'ChVSZWxvYWREb2N1bWVudFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIq4EEC+kEkCiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0RvY3VtZW50UgRuYW1lEiYKC2NvbnRlbnRfdXJpGAMgASgJQgPgQQFIAFIKY29udGVudFVyaRJAChppbXBvcnRfZ2NzX2N1c3RvbV9tZXRhZGF0YRgEIAEoCEID4EEBUhdpbXBvcnRHY3NDdXN0b21NZXRhZGF0YRJICh5zbWFydF9tZXNzYWdpbmdfcGFydGlhbF91cGRhdGUYBSABKAhCA+BBAVIbc21hcnRNZXNzYWdpbmdQYXJ0aWFsVXBkYXRlQggKBnNvdXJjZQ==');
+@$core.Deprecated('Use exportDocumentRequestDescriptor instead')
+const ExportDocumentRequest$json = const {
+  '1': 'ExportDocumentRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'gcs_destination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.GcsDestination',
+      '9': 0,
+      '10': 'gcsDestination'
+    },
+    const {
+      '1': 'export_full_content',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '10': 'exportFullContent'
+    },
+    const {
+      '1': 'smart_messaging_partial_update',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'smartMessagingPartialUpdate'
+    },
+  ],
+  '8': const [
+    const {'1': 'destination'},
+  ],
+};
+
+/// Descriptor for `ExportDocumentRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exportDocumentRequestDescriptor = $convert.base64Decode(
+    'ChVFeHBvcnREb2N1bWVudFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIq4EEC+kEkCiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0RvY3VtZW50UgRuYW1lElUKD2djc19kZXN0aW5hdGlvbhgCIAEoCzIqLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdjc0Rlc3RpbmF0aW9uSABSDmdjc0Rlc3RpbmF0aW9uEi4KE2V4cG9ydF9mdWxsX2NvbnRlbnQYAyABKAhSEWV4cG9ydEZ1bGxDb250ZW50EkMKHnNtYXJ0X21lc3NhZ2luZ19wYXJ0aWFsX3VwZGF0ZRgFIAEoCFIbc21hcnRNZXNzYWdpbmdQYXJ0aWFsVXBkYXRlQg0KC2Rlc3RpbmF0aW9u');
 @$core.Deprecated('Use knowledgeOperationMetadataDescriptor instead')
 const KnowledgeOperationMetadata$json = const {
   '1': 'KnowledgeOperationMetadata',

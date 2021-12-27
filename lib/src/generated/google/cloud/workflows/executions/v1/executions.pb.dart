@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../../protobuf/timestamp.pb.dart' as $1;
@@ -14,6 +15,298 @@ import '../../../../protobuf/timestamp.pb.dart' as $1;
 import 'executions.pbenum.dart';
 
 export 'executions.pbenum.dart';
+
+class Execution_StackTraceElement_Position extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Execution.StackTraceElement.Position',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.workflows.executions.v1'),
+      createEmptyInstance: create)
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'line')
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'column')
+    ..aInt64(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'length')
+    ..hasRequiredFields = false;
+
+  Execution_StackTraceElement_Position._() : super();
+  factory Execution_StackTraceElement_Position({
+    $fixnum.Int64? line,
+    $fixnum.Int64? column,
+    $fixnum.Int64? length,
+  }) {
+    final _result = create();
+    if (line != null) {
+      _result.line = line;
+    }
+    if (column != null) {
+      _result.column = column;
+    }
+    if (length != null) {
+      _result.length = length;
+    }
+    return _result;
+  }
+  factory Execution_StackTraceElement_Position.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Execution_StackTraceElement_Position.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Execution_StackTraceElement_Position clone() =>
+      Execution_StackTraceElement_Position()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Execution_StackTraceElement_Position copyWith(
+          void Function(Execution_StackTraceElement_Position) updates) =>
+      super.copyWith((message) =>
+              updates(message as Execution_StackTraceElement_Position))
+          as Execution_StackTraceElement_Position; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Execution_StackTraceElement_Position create() =>
+      Execution_StackTraceElement_Position._();
+  Execution_StackTraceElement_Position createEmptyInstance() => create();
+  static $pb.PbList<Execution_StackTraceElement_Position> createRepeated() =>
+      $pb.PbList<Execution_StackTraceElement_Position>();
+  @$core.pragma('dart2js:noInline')
+  static Execution_StackTraceElement_Position getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Execution_StackTraceElement_Position>(create);
+  static Execution_StackTraceElement_Position? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get line => $_getI64(0);
+  @$pb.TagNumber(1)
+  set line($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLine() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLine() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get column => $_getI64(1);
+  @$pb.TagNumber(2)
+  set column($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasColumn() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearColumn() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get length => $_getI64(2);
+  @$pb.TagNumber(3)
+  set length($fixnum.Int64 v) {
+    $_setInt64(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasLength() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLength() => clearField(3);
+}
+
+class Execution_StackTraceElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Execution.StackTraceElement',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.workflows.executions.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'step')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'routine')
+    ..aOM<Execution_StackTraceElement_Position>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'position',
+        subBuilder: Execution_StackTraceElement_Position.create)
+    ..hasRequiredFields = false;
+
+  Execution_StackTraceElement._() : super();
+  factory Execution_StackTraceElement({
+    $core.String? step,
+    $core.String? routine,
+    Execution_StackTraceElement_Position? position,
+  }) {
+    final _result = create();
+    if (step != null) {
+      _result.step = step;
+    }
+    if (routine != null) {
+      _result.routine = routine;
+    }
+    if (position != null) {
+      _result.position = position;
+    }
+    return _result;
+  }
+  factory Execution_StackTraceElement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Execution_StackTraceElement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Execution_StackTraceElement clone() =>
+      Execution_StackTraceElement()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Execution_StackTraceElement copyWith(
+          void Function(Execution_StackTraceElement) updates) =>
+      super.copyWith(
+              (message) => updates(message as Execution_StackTraceElement))
+          as Execution_StackTraceElement; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Execution_StackTraceElement create() =>
+      Execution_StackTraceElement._();
+  Execution_StackTraceElement createEmptyInstance() => create();
+  static $pb.PbList<Execution_StackTraceElement> createRepeated() =>
+      $pb.PbList<Execution_StackTraceElement>();
+  @$core.pragma('dart2js:noInline')
+  static Execution_StackTraceElement getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Execution_StackTraceElement>(create);
+  static Execution_StackTraceElement? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get step => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set step($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStep() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStep() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get routine => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set routine($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRoutine() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRoutine() => clearField(2);
+
+  @$pb.TagNumber(3)
+  Execution_StackTraceElement_Position get position => $_getN(2);
+  @$pb.TagNumber(3)
+  set position(Execution_StackTraceElement_Position v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPosition() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPosition() => clearField(3);
+  @$pb.TagNumber(3)
+  Execution_StackTraceElement_Position ensurePosition() => $_ensure(2);
+}
+
+class Execution_StackTrace extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Execution.StackTrace',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.workflows.executions.v1'),
+      createEmptyInstance: create)
+    ..pc<Execution_StackTraceElement>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'elements',
+        $pb.PbFieldType.PM,
+        subBuilder: Execution_StackTraceElement.create)
+    ..hasRequiredFields = false;
+
+  Execution_StackTrace._() : super();
+  factory Execution_StackTrace({
+    $core.Iterable<Execution_StackTraceElement>? elements,
+  }) {
+    final _result = create();
+    if (elements != null) {
+      _result.elements.addAll(elements);
+    }
+    return _result;
+  }
+  factory Execution_StackTrace.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Execution_StackTrace.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Execution_StackTrace clone() =>
+      Execution_StackTrace()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Execution_StackTrace copyWith(void Function(Execution_StackTrace) updates) =>
+      super.copyWith((message) => updates(message as Execution_StackTrace))
+          as Execution_StackTrace; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Execution_StackTrace create() => Execution_StackTrace._();
+  Execution_StackTrace createEmptyInstance() => create();
+  static $pb.PbList<Execution_StackTrace> createRepeated() =>
+      $pb.PbList<Execution_StackTrace>();
+  @$core.pragma('dart2js:noInline')
+  static Execution_StackTrace getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Execution_StackTrace>(create);
+  static Execution_StackTrace? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Execution_StackTraceElement> get elements => $_getList(0);
+}
 
 class Execution_Error extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -35,12 +328,19 @@ class Execution_Error extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'context')
+    ..aOM<Execution_StackTrace>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'stackTrace',
+        subBuilder: Execution_StackTrace.create)
     ..hasRequiredFields = false;
 
   Execution_Error._() : super();
   factory Execution_Error({
     $core.String? payload,
     $core.String? context,
+    Execution_StackTrace? stackTrace,
   }) {
     final _result = create();
     if (payload != null) {
@@ -48,6 +348,9 @@ class Execution_Error extends $pb.GeneratedMessage {
     }
     if (context != null) {
       _result.context = context;
+    }
+    if (stackTrace != null) {
+      _result.stackTrace = stackTrace;
     }
     return _result;
   }
@@ -101,6 +404,20 @@ class Execution_Error extends $pb.GeneratedMessage {
   $core.bool hasContext() => $_has(1);
   @$pb.TagNumber(2)
   void clearContext() => clearField(2);
+
+  @$pb.TagNumber(3)
+  Execution_StackTrace get stackTrace => $_getN(2);
+  @$pb.TagNumber(3)
+  set stackTrace(Execution_StackTrace v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasStackTrace() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStackTrace() => clearField(3);
+  @$pb.TagNumber(3)
+  Execution_StackTrace ensureStackTrace() => $_ensure(2);
 }
 
 class Execution extends $pb.GeneratedMessage {
@@ -160,6 +477,15 @@ class Execution extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'workflowRevisionId')
+    ..e<Execution_CallLogLevel>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'callLogLevel',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Execution_CallLogLevel.CALL_LOG_LEVEL_UNSPECIFIED,
+        valueOf: Execution_CallLogLevel.valueOf,
+        enumValues: Execution_CallLogLevel.values)
     ..hasRequiredFields = false;
 
   Execution._() : super();
@@ -172,6 +498,7 @@ class Execution extends $pb.GeneratedMessage {
     $core.String? result,
     Execution_Error? error,
     $core.String? workflowRevisionId,
+    Execution_CallLogLevel? callLogLevel,
   }) {
     final _result = create();
     if (name != null) {
@@ -197,6 +524,9 @@ class Execution extends $pb.GeneratedMessage {
     }
     if (workflowRevisionId != null) {
       _result.workflowRevisionId = workflowRevisionId;
+    }
+    if (callLogLevel != null) {
+      _result.callLogLevel = callLogLevel;
     }
     return _result;
   }
@@ -327,6 +657,18 @@ class Execution extends $pb.GeneratedMessage {
   $core.bool hasWorkflowRevisionId() => $_has(7);
   @$pb.TagNumber(8)
   void clearWorkflowRevisionId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  Execution_CallLogLevel get callLogLevel => $_getN(8);
+  @$pb.TagNumber(9)
+  set callLogLevel(Execution_CallLogLevel v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasCallLogLevel() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCallLogLevel() => clearField(9);
 }
 
 class ListExecutionsRequest extends $pb.GeneratedMessage {

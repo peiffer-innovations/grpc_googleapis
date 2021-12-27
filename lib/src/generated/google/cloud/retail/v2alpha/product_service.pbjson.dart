@@ -261,6 +261,119 @@ const AddFulfillmentPlacesResponse$json = const {
 /// Descriptor for `AddFulfillmentPlacesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addFulfillmentPlacesResponseDescriptor =
     $convert.base64Decode('ChxBZGRGdWxmaWxsbWVudFBsYWNlc1Jlc3BvbnNl');
+@$core.Deprecated('Use addLocalInventoriesRequestDescriptor instead')
+const AddLocalInventoriesRequest$json = const {
+  '1': 'AddLocalInventoriesRequest',
+  '2': const [
+    const {
+      '1': 'product',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'product'
+    },
+    const {
+      '1': 'local_inventories',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.retail.v2alpha.LocalInventory',
+      '8': const {},
+      '10': 'localInventories'
+    },
+    const {
+      '1': 'add_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'addMask'
+    },
+    const {
+      '1': 'add_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'addTime'
+    },
+    const {'1': 'allow_missing', '3': 6, '4': 1, '5': 8, '10': 'allowMissing'},
+  ],
+};
+
+/// Descriptor for `AddLocalInventoriesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addLocalInventoriesRequestDescriptor =
+    $convert.base64Decode(
+        'ChpBZGRMb2NhbEludmVudG9yaWVzUmVxdWVzdBI/Cgdwcm9kdWN0GAEgASgJQiXgQQL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0Ugdwcm9kdWN0El0KEWxvY2FsX2ludmVudG9yaWVzGAIgAygLMisuZ29vZ2xlLmNsb3VkLnJldGFpbC52MmFscGhhLkxvY2FsSW52ZW50b3J5QgPgQQJSEGxvY2FsSW52ZW50b3JpZXMSNQoIYWRkX21hc2sYBCABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrUgdhZGRNYXNrEjUKCGFkZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHYWRkVGltZRIjCg1hbGxvd19taXNzaW5nGAYgASgIUgxhbGxvd01pc3Npbmc=');
+@$core.Deprecated('Use addLocalInventoriesMetadataDescriptor instead')
+const AddLocalInventoriesMetadata$json = const {
+  '1': 'AddLocalInventoriesMetadata',
+};
+
+/// Descriptor for `AddLocalInventoriesMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addLocalInventoriesMetadataDescriptor =
+    $convert.base64Decode('ChtBZGRMb2NhbEludmVudG9yaWVzTWV0YWRhdGE=');
+@$core.Deprecated('Use addLocalInventoriesResponseDescriptor instead')
+const AddLocalInventoriesResponse$json = const {
+  '1': 'AddLocalInventoriesResponse',
+};
+
+/// Descriptor for `AddLocalInventoriesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addLocalInventoriesResponseDescriptor =
+    $convert.base64Decode('ChtBZGRMb2NhbEludmVudG9yaWVzUmVzcG9uc2U=');
+@$core.Deprecated('Use removeLocalInventoriesRequestDescriptor instead')
+const RemoveLocalInventoriesRequest$json = const {
+  '1': 'RemoveLocalInventoriesRequest',
+  '2': const [
+    const {
+      '1': 'product',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'product'
+    },
+    const {
+      '1': 'place_ids',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '8': const {},
+      '10': 'placeIds'
+    },
+    const {
+      '1': 'remove_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'removeTime'
+    },
+    const {'1': 'allow_missing', '3': 3, '4': 1, '5': 8, '10': 'allowMissing'},
+  ],
+};
+
+/// Descriptor for `RemoveLocalInventoriesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeLocalInventoriesRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1SZW1vdmVMb2NhbEludmVudG9yaWVzUmVxdWVzdBI/Cgdwcm9kdWN0GAEgASgJQiXgQQL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0Ugdwcm9kdWN0EiAKCXBsYWNlX2lkcxgCIAMoCUID4EECUghwbGFjZUlkcxI7CgtyZW1vdmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCnJlbW92ZVRpbWUSIwoNYWxsb3dfbWlzc2luZxgDIAEoCFIMYWxsb3dNaXNzaW5n');
+@$core.Deprecated('Use removeLocalInventoriesMetadataDescriptor instead')
+const RemoveLocalInventoriesMetadata$json = const {
+  '1': 'RemoveLocalInventoriesMetadata',
+};
+
+/// Descriptor for `RemoveLocalInventoriesMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeLocalInventoriesMetadataDescriptor =
+    $convert.base64Decode('Ch5SZW1vdmVMb2NhbEludmVudG9yaWVzTWV0YWRhdGE=');
+@$core.Deprecated('Use removeLocalInventoriesResponseDescriptor instead')
+const RemoveLocalInventoriesResponse$json = const {
+  '1': 'RemoveLocalInventoriesResponse',
+};
+
+/// Descriptor for `RemoveLocalInventoriesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeLocalInventoriesResponseDescriptor =
+    $convert.base64Decode('Ch5SZW1vdmVMb2NhbEludmVudG9yaWVzUmVzcG9uc2U=');
 @$core.Deprecated('Use removeFulfillmentPlacesRequestDescriptor instead')
 const RemoveFulfillmentPlacesRequest$json = const {
   '1': 'RemoveFulfillmentPlacesRequest',

@@ -49,19 +49,35 @@ class PipelineJob_RuntimeConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gcsOutputDirectory')
+    ..m<$core.String, $1.Value>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parameterValues',
+        entryClassName: 'PipelineJob.RuntimeConfig.ParameterValuesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $1.Value.create,
+        packageName: const $pb.PackageName('google.cloud.aiplatform.v1'))
     ..hasRequiredFields = false;
 
   PipelineJob_RuntimeConfig._() : super();
   factory PipelineJob_RuntimeConfig({
-    $core.Map<$core.String, $4.Value>? parameters,
+    @$core.Deprecated('This field is deprecated.')
+        $core.Map<$core.String, $4.Value>? parameters,
     $core.String? gcsOutputDirectory,
+    $core.Map<$core.String, $1.Value>? parameterValues,
   }) {
     final _result = create();
     if (parameters != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.parameters.addAll(parameters);
     }
     if (gcsOutputDirectory != null) {
       _result.gcsOutputDirectory = gcsOutputDirectory;
+    }
+    if (parameterValues != null) {
+      _result.parameterValues.addAll(parameterValues);
     }
     return _result;
   }
@@ -94,6 +110,7 @@ class PipelineJob_RuntimeConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PipelineJob_RuntimeConfig>(create);
   static PipelineJob_RuntimeConfig? _defaultInstance;
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.Map<$core.String, $4.Value> get parameters => $_getMap(0);
 
@@ -108,6 +125,9 @@ class PipelineJob_RuntimeConfig extends $pb.GeneratedMessage {
   $core.bool hasGcsOutputDirectory() => $_has(1);
   @$pb.TagNumber(2)
   void clearGcsOutputDirectory() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.Map<$core.String, $1.Value> get parameterValues => $_getMap(2);
 }
 
 class PipelineJob extends $pb.GeneratedMessage {
@@ -604,6 +624,131 @@ class PipelineJobDetail extends $pb.GeneratedMessage {
   $core.List<PipelineTaskDetail> get taskDetails => $_getList(2);
 }
 
+class PipelineTaskDetail_PipelineTaskStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PipelineTaskDetail.PipelineTaskStatus',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateTime',
+        subBuilder: $0.Timestamp.create)
+    ..e<PipelineTaskDetail_State>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: PipelineTaskDetail_State.STATE_UNSPECIFIED,
+        valueOf: PipelineTaskDetail_State.valueOf,
+        enumValues: PipelineTaskDetail_State.values)
+    ..aOM<$2.Status>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'error',
+        subBuilder: $2.Status.create)
+    ..hasRequiredFields = false;
+
+  PipelineTaskDetail_PipelineTaskStatus._() : super();
+  factory PipelineTaskDetail_PipelineTaskStatus({
+    $0.Timestamp? updateTime,
+    PipelineTaskDetail_State? state,
+    $2.Status? error,
+  }) {
+    final _result = create();
+    if (updateTime != null) {
+      _result.updateTime = updateTime;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (error != null) {
+      _result.error = error;
+    }
+    return _result;
+  }
+  factory PipelineTaskDetail_PipelineTaskStatus.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PipelineTaskDetail_PipelineTaskStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PipelineTaskDetail_PipelineTaskStatus clone() =>
+      PipelineTaskDetail_PipelineTaskStatus()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PipelineTaskDetail_PipelineTaskStatus copyWith(
+          void Function(PipelineTaskDetail_PipelineTaskStatus) updates) =>
+      super.copyWith((message) =>
+              updates(message as PipelineTaskDetail_PipelineTaskStatus))
+          as PipelineTaskDetail_PipelineTaskStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PipelineTaskDetail_PipelineTaskStatus create() =>
+      PipelineTaskDetail_PipelineTaskStatus._();
+  PipelineTaskDetail_PipelineTaskStatus createEmptyInstance() => create();
+  static $pb.PbList<PipelineTaskDetail_PipelineTaskStatus> createRepeated() =>
+      $pb.PbList<PipelineTaskDetail_PipelineTaskStatus>();
+  @$core.pragma('dart2js:noInline')
+  static PipelineTaskDetail_PipelineTaskStatus getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PipelineTaskDetail_PipelineTaskStatus>(create);
+  static PipelineTaskDetail_PipelineTaskStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Timestamp get updateTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set updateTime($0.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUpdateTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUpdateTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureUpdateTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  PipelineTaskDetail_State get state => $_getN(1);
+  @$pb.TagNumber(2)
+  set state(PipelineTaskDetail_State v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasState() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearState() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $2.Status get error => $_getN(2);
+  @$pb.TagNumber(3)
+  set error($2.Status v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasError() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensureError() => $_ensure(2);
+}
+
 class PipelineTaskDetail_ArtifactList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -759,6 +904,13 @@ class PipelineTaskDetail extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'parentTaskId')
+    ..pc<PipelineTaskDetail_PipelineTaskStatus>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pipelineTaskStatus',
+        $pb.PbFieldType.PM,
+        subBuilder: PipelineTaskDetail_PipelineTaskStatus.create)
     ..hasRequiredFields = false;
 
   PipelineTaskDetail._() : super();
@@ -775,6 +927,7 @@ class PipelineTaskDetail extends $pb.GeneratedMessage {
     $core.Map<$core.String, PipelineTaskDetail_ArtifactList>? inputs,
     $core.Map<$core.String, PipelineTaskDetail_ArtifactList>? outputs,
     $fixnum.Int64? parentTaskId,
+    $core.Iterable<PipelineTaskDetail_PipelineTaskStatus>? pipelineTaskStatus,
   }) {
     final _result = create();
     if (taskId != null) {
@@ -812,6 +965,9 @@ class PipelineTaskDetail extends $pb.GeneratedMessage {
     }
     if (parentTaskId != null) {
       _result.parentTaskId = parentTaskId;
+    }
+    if (pipelineTaskStatus != null) {
+      _result.pipelineTaskStatus.addAll(pipelineTaskStatus);
     }
     return _result;
   }
@@ -981,6 +1137,10 @@ class PipelineTaskDetail extends $pb.GeneratedMessage {
   $core.bool hasParentTaskId() => $_has(11);
   @$pb.TagNumber(12)
   void clearParentTaskId() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.List<PipelineTaskDetail_PipelineTaskStatus> get pipelineTaskStatus =>
+      $_getList(12);
 }
 
 class PipelineTaskExecutorDetail_ContainerDetail extends $pb.GeneratedMessage {

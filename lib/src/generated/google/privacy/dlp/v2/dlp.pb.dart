@@ -1343,6 +1343,11 @@ class Finding extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
+    ..aOS(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'findingId')
     ..hasRequiredFields = false;
 
   Finding._() : super();
@@ -1359,6 +1364,7 @@ class Finding extends $pb.GeneratedMessage {
     $3.Timestamp? jobCreateTime,
     $core.String? jobName,
     $core.String? name,
+    $core.String? findingId,
   }) {
     final _result = create();
     if (quote != null) {
@@ -1396,6 +1402,9 @@ class Finding extends $pb.GeneratedMessage {
     }
     if (name != null) {
       _result.name = name;
+    }
+    if (findingId != null) {
+      _result.findingId = findingId;
     }
     return _result;
   }
@@ -1569,6 +1578,18 @@ class Finding extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(11);
   @$pb.TagNumber(14)
   void clearName() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.String get findingId => $_getSZ(12);
+  @$pb.TagNumber(15)
+  set findingId($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasFindingId() => $_has(12);
+  @$pb.TagNumber(15)
+  void clearFindingId() => clearField(15);
 }
 
 class Location extends $pb.GeneratedMessage {
@@ -9973,6 +9994,7 @@ enum PrimitiveTransformation_Transformation {
   cryptoHashConfig,
   dateShiftConfig,
   cryptoDeterministicConfig,
+  replaceDictionaryConfig,
   notSet
 }
 
@@ -9990,6 +10012,7 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
     9: PrimitiveTransformation_Transformation.cryptoHashConfig,
     11: PrimitiveTransformation_Transformation.dateShiftConfig,
     12: PrimitiveTransformation_Transformation.cryptoDeterministicConfig,
+    13: PrimitiveTransformation_Transformation.replaceDictionaryConfig,
     0: PrimitiveTransformation_Transformation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -10001,7 +10024,7 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
               ? ''
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13])
     ..aOM<ReplaceValueConfig>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -10068,6 +10091,12 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
             ? ''
             : 'cryptoDeterministicConfig',
         subBuilder: CryptoDeterministicConfig.create)
+    ..aOM<ReplaceDictionaryConfig>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'replaceDictionaryConfig',
+        subBuilder: ReplaceDictionaryConfig.create)
     ..hasRequiredFields = false;
 
   PrimitiveTransformation._() : super();
@@ -10083,6 +10112,7 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
     CryptoHashConfig? cryptoHashConfig,
     DateShiftConfig? dateShiftConfig,
     CryptoDeterministicConfig? cryptoDeterministicConfig,
+    ReplaceDictionaryConfig? replaceDictionaryConfig,
   }) {
     final _result = create();
     if (replaceConfig != null) {
@@ -10117,6 +10147,9 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
     }
     if (cryptoDeterministicConfig != null) {
       _result.cryptoDeterministicConfig = cryptoDeterministicConfig;
+    }
+    if (replaceDictionaryConfig != null) {
+      _result.replaceDictionaryConfig = replaceDictionaryConfig;
     }
     return _result;
   }
@@ -10306,6 +10339,20 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
   void clearCryptoDeterministicConfig() => clearField(12);
   @$pb.TagNumber(12)
   CryptoDeterministicConfig ensureCryptoDeterministicConfig() => $_ensure(10);
+
+  @$pb.TagNumber(13)
+  ReplaceDictionaryConfig get replaceDictionaryConfig => $_getN(11);
+  @$pb.TagNumber(13)
+  set replaceDictionaryConfig(ReplaceDictionaryConfig v) {
+    setField(13, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasReplaceDictionaryConfig() => $_has(11);
+  @$pb.TagNumber(13)
+  void clearReplaceDictionaryConfig() => clearField(13);
+  @$pb.TagNumber(13)
+  ReplaceDictionaryConfig ensureReplaceDictionaryConfig() => $_ensure(11);
 }
 
 class TimePartConfig extends $pb.GeneratedMessage {
@@ -10637,6 +10684,90 @@ class ReplaceValueConfig extends $pb.GeneratedMessage {
   void clearNewValue() => clearField(1);
   @$pb.TagNumber(1)
   Value ensureNewValue() => $_ensure(0);
+}
+
+enum ReplaceDictionaryConfig_Type { wordList, notSet }
+
+class ReplaceDictionaryConfig extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ReplaceDictionaryConfig_Type>
+      _ReplaceDictionaryConfig_TypeByTag = {
+    1: ReplaceDictionaryConfig_Type.wordList,
+    0: ReplaceDictionaryConfig_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ReplaceDictionaryConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<$2.CustomInfoType_Dictionary_WordList>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'wordList',
+        subBuilder: $2.CustomInfoType_Dictionary_WordList.create)
+    ..hasRequiredFields = false;
+
+  ReplaceDictionaryConfig._() : super();
+  factory ReplaceDictionaryConfig({
+    $2.CustomInfoType_Dictionary_WordList? wordList,
+  }) {
+    final _result = create();
+    if (wordList != null) {
+      _result.wordList = wordList;
+    }
+    return _result;
+  }
+  factory ReplaceDictionaryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReplaceDictionaryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ReplaceDictionaryConfig clone() =>
+      ReplaceDictionaryConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ReplaceDictionaryConfig copyWith(
+          void Function(ReplaceDictionaryConfig) updates) =>
+      super.copyWith((message) => updates(message as ReplaceDictionaryConfig))
+          as ReplaceDictionaryConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ReplaceDictionaryConfig create() => ReplaceDictionaryConfig._();
+  ReplaceDictionaryConfig createEmptyInstance() => create();
+  static $pb.PbList<ReplaceDictionaryConfig> createRepeated() =>
+      $pb.PbList<ReplaceDictionaryConfig>();
+  @$core.pragma('dart2js:noInline')
+  static ReplaceDictionaryConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReplaceDictionaryConfig>(create);
+  static ReplaceDictionaryConfig? _defaultInstance;
+
+  ReplaceDictionaryConfig_Type whichType() =>
+      _ReplaceDictionaryConfig_TypeByTag[$_whichOneof(0)]!;
+  void clearType() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $2.CustomInfoType_Dictionary_WordList get wordList => $_getN(0);
+  @$pb.TagNumber(1)
+  set wordList($2.CustomInfoType_Dictionary_WordList v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasWordList() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearWordList() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.CustomInfoType_Dictionary_WordList ensureWordList() => $_ensure(0);
 }
 
 class ReplaceWithInfoTypeConfig extends $pb.GeneratedMessage {
@@ -15898,6 +16029,15 @@ class ListJobTriggersRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'filter')
+    ..e<DlpJobType>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'type',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DlpJobType.DLP_JOB_TYPE_UNSPECIFIED,
+        valueOf: DlpJobType.valueOf,
+        enumValues: DlpJobType.values)
     ..aOS(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -15912,6 +16052,7 @@ class ListJobTriggersRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? orderBy,
     $core.String? filter,
+    DlpJobType? type,
     $core.String? locationId,
   }) {
     final _result = create();
@@ -15929,6 +16070,9 @@ class ListJobTriggersRequest extends $pb.GeneratedMessage {
     }
     if (filter != null) {
       _result.filter = filter;
+    }
+    if (type != null) {
+      _result.type = type;
     }
     if (locationId != null) {
       _result.locationId = locationId;
@@ -16024,15 +16168,27 @@ class ListJobTriggersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 
+  @$pb.TagNumber(6)
+  DlpJobType get type => $_getN(5);
+  @$pb.TagNumber(6)
+  set type(DlpJobType v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasType() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearType() => clearField(6);
+
   @$pb.TagNumber(7)
-  $core.String get locationId => $_getSZ(5);
+  $core.String get locationId => $_getSZ(6);
   @$pb.TagNumber(7)
   set locationId($core.String v) {
-    $_setString(5, v);
+    $_setString(6, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasLocationId() => $_has(5);
+  $core.bool hasLocationId() => $_has(6);
   @$pb.TagNumber(7)
   void clearLocationId() => clearField(7);
 }

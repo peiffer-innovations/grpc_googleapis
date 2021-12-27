@@ -26,14 +26,14 @@ import '../enums/bidding_strategy_type.pbenum.dart' as $11;
 import '../enums/brand_safety_suitability.pbenum.dart' as $12;
 import '../enums/payment_mode.pbenum.dart' as $13;
 import '../enums/asset_field_type.pbenum.dart' as $14;
-import '../enums/vanity_pharma_display_url_mode.pbenum.dart' as $15;
-import '../enums/vanity_pharma_text.pbenum.dart' as $16;
-import '../enums/positive_geo_target_type.pbenum.dart' as $17;
-import '../enums/negative_geo_target_type.pbenum.dart' as $18;
-import '../enums/location_source_type.pbenum.dart' as $19;
-import '../enums/app_campaign_bidding_strategy_goal_type.pbenum.dart' as $20;
-import '../enums/app_campaign_app_store.pbenum.dart' as $21;
-import '../enums/optimization_goal_type.pbenum.dart' as $22;
+import '../enums/optimization_goal_type.pbenum.dart' as $15;
+import '../enums/positive_geo_target_type.pbenum.dart' as $16;
+import '../enums/negative_geo_target_type.pbenum.dart' as $17;
+import '../enums/location_source_type.pbenum.dart' as $18;
+import '../enums/app_campaign_bidding_strategy_goal_type.pbenum.dart' as $19;
+import '../enums/app_campaign_app_store.pbenum.dart' as $20;
+import '../enums/vanity_pharma_display_url_mode.pbenum.dart' as $21;
+import '../enums/vanity_pharma_text.pbenum.dart' as $22;
 
 class Campaign_NetworkSettings extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -236,137 +236,6 @@ class Campaign_HotelSettingInfo extends $pb.GeneratedMessage {
   void clearHotelCenterId() => clearField(2);
 }
 
-class Campaign_TrackingSetting extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Campaign.TrackingSetting',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'trackingUrl')
-    ..hasRequiredFields = false;
-
-  Campaign_TrackingSetting._() : super();
-  factory Campaign_TrackingSetting({
-    $core.String? trackingUrl,
-  }) {
-    final _result = create();
-    if (trackingUrl != null) {
-      _result.trackingUrl = trackingUrl;
-    }
-    return _result;
-  }
-  factory Campaign_TrackingSetting.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Campaign_TrackingSetting.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Campaign_TrackingSetting clone() =>
-      Campaign_TrackingSetting()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Campaign_TrackingSetting copyWith(
-          void Function(Campaign_TrackingSetting) updates) =>
-      super.copyWith((message) => updates(message as Campaign_TrackingSetting))
-          as Campaign_TrackingSetting; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Campaign_TrackingSetting create() => Campaign_TrackingSetting._();
-  Campaign_TrackingSetting createEmptyInstance() => create();
-  static $pb.PbList<Campaign_TrackingSetting> createRepeated() =>
-      $pb.PbList<Campaign_TrackingSetting>();
-  @$core.pragma('dart2js:noInline')
-  static Campaign_TrackingSetting getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Campaign_TrackingSetting>(create);
-  static Campaign_TrackingSetting? _defaultInstance;
-
-  @$pb.TagNumber(2)
-  $core.String get trackingUrl => $_getSZ(0);
-  @$pb.TagNumber(2)
-  set trackingUrl($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasTrackingUrl() => $_has(0);
-  @$pb.TagNumber(2)
-  void clearTrackingUrl() => clearField(2);
-}
-
-class Campaign_SelectiveOptimization extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Campaign.SelectiveOptimization',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'conversionActions')
-    ..hasRequiredFields = false;
-
-  Campaign_SelectiveOptimization._() : super();
-  factory Campaign_SelectiveOptimization({
-    $core.Iterable<$core.String>? conversionActions,
-  }) {
-    final _result = create();
-    if (conversionActions != null) {
-      _result.conversionActions.addAll(conversionActions);
-    }
-    return _result;
-  }
-  factory Campaign_SelectiveOptimization.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Campaign_SelectiveOptimization.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Campaign_SelectiveOptimization clone() =>
-      Campaign_SelectiveOptimization()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Campaign_SelectiveOptimization copyWith(
-          void Function(Campaign_SelectiveOptimization) updates) =>
-      super.copyWith(
-              (message) => updates(message as Campaign_SelectiveOptimization))
-          as Campaign_SelectiveOptimization; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Campaign_SelectiveOptimization create() =>
-      Campaign_SelectiveOptimization._();
-  Campaign_SelectiveOptimization createEmptyInstance() => create();
-  static $pb.PbList<Campaign_SelectiveOptimization> createRepeated() =>
-      $pb.PbList<Campaign_SelectiveOptimization>();
-  @$core.pragma('dart2js:noInline')
-  static Campaign_SelectiveOptimization getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Campaign_SelectiveOptimization>(create);
-  static Campaign_SelectiveOptimization? _defaultInstance;
-
-  @$pb.TagNumber(2)
-  $core.List<$core.String> get conversionActions => $_getList(0);
-}
-
 class Campaign_DynamicSearchAdsSetting extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -491,6 +360,68 @@ class Campaign_DynamicSearchAdsSetting extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(9)
   $core.List<$core.String> get feeds => $_getList(3);
+}
+
+class Campaign_SelectiveOptimization extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Campaign.SelectiveOptimization',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'conversionActions')
+    ..hasRequiredFields = false;
+
+  Campaign_SelectiveOptimization._() : super();
+  factory Campaign_SelectiveOptimization({
+    $core.Iterable<$core.String>? conversionActions,
+  }) {
+    final _result = create();
+    if (conversionActions != null) {
+      _result.conversionActions.addAll(conversionActions);
+    }
+    return _result;
+  }
+  factory Campaign_SelectiveOptimization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_SelectiveOptimization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Campaign_SelectiveOptimization clone() =>
+      Campaign_SelectiveOptimization()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Campaign_SelectiveOptimization copyWith(
+          void Function(Campaign_SelectiveOptimization) updates) =>
+      super.copyWith(
+              (message) => updates(message as Campaign_SelectiveOptimization))
+          as Campaign_SelectiveOptimization; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Campaign_SelectiveOptimization create() =>
+      Campaign_SelectiveOptimization._();
+  Campaign_SelectiveOptimization createEmptyInstance() => create();
+  static $pb.PbList<Campaign_SelectiveOptimization> createRepeated() =>
+      $pb.PbList<Campaign_SelectiveOptimization>();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_SelectiveOptimization getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Campaign_SelectiveOptimization>(create);
+  static Campaign_SelectiveOptimization? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get conversionActions => $_getList(0);
 }
 
 class Campaign_ShoppingSetting extends $pb.GeneratedMessage {
@@ -626,109 +557,141 @@ class Campaign_ShoppingSetting extends $pb.GeneratedMessage {
   void clearEnableLocal() => clearField(8);
 }
 
-class Campaign_VanityPharma extends $pb.GeneratedMessage {
+class Campaign_OptimizationGoalSetting extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'Campaign.VanityPharma',
+          : 'Campaign.OptimizationGoalSetting',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..e<$15.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode>(
+    ..pc<$15.OptimizationGoalTypeEnum_OptimizationGoalType>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'vanityPharmaDisplayUrlMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $15
-            .VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode
-            .UNSPECIFIED,
-        valueOf: $15
-            .VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode.valueOf,
-        enumValues: $15
-            .VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode.values)
-    ..e<$16.VanityPharmaTextEnum_VanityPharmaText>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vanityPharmaText',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $16.VanityPharmaTextEnum_VanityPharmaText.UNSPECIFIED,
-        valueOf: $16.VanityPharmaTextEnum_VanityPharmaText.valueOf,
-        enumValues: $16.VanityPharmaTextEnum_VanityPharmaText.values)
+            : 'optimizationGoalTypes',
+        $pb.PbFieldType.PE,
+        valueOf: $15.OptimizationGoalTypeEnum_OptimizationGoalType.valueOf,
+        enumValues: $15.OptimizationGoalTypeEnum_OptimizationGoalType.values)
     ..hasRequiredFields = false;
 
-  Campaign_VanityPharma._() : super();
-  factory Campaign_VanityPharma({
-    $15.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode?
-        vanityPharmaDisplayUrlMode,
-    $16.VanityPharmaTextEnum_VanityPharmaText? vanityPharmaText,
+  Campaign_OptimizationGoalSetting._() : super();
+  factory Campaign_OptimizationGoalSetting({
+    $core.Iterable<$15.OptimizationGoalTypeEnum_OptimizationGoalType>?
+        optimizationGoalTypes,
   }) {
     final _result = create();
-    if (vanityPharmaDisplayUrlMode != null) {
-      _result.vanityPharmaDisplayUrlMode = vanityPharmaDisplayUrlMode;
-    }
-    if (vanityPharmaText != null) {
-      _result.vanityPharmaText = vanityPharmaText;
+    if (optimizationGoalTypes != null) {
+      _result.optimizationGoalTypes.addAll(optimizationGoalTypes);
     }
     return _result;
   }
-  factory Campaign_VanityPharma.fromBuffer($core.List<$core.int> i,
+  factory Campaign_OptimizationGoalSetting.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory Campaign_VanityPharma.fromJson($core.String i,
+  factory Campaign_OptimizationGoalSetting.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  Campaign_VanityPharma clone() =>
-      Campaign_VanityPharma()..mergeFromMessage(this);
+  Campaign_OptimizationGoalSetting clone() =>
+      Campaign_OptimizationGoalSetting()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  Campaign_VanityPharma copyWith(
-          void Function(Campaign_VanityPharma) updates) =>
-      super.copyWith((message) => updates(message as Campaign_VanityPharma))
-          as Campaign_VanityPharma; // ignore: deprecated_member_use
+  Campaign_OptimizationGoalSetting copyWith(
+          void Function(Campaign_OptimizationGoalSetting) updates) =>
+      super.copyWith(
+              (message) => updates(message as Campaign_OptimizationGoalSetting))
+          as Campaign_OptimizationGoalSetting; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Campaign_VanityPharma create() => Campaign_VanityPharma._();
-  Campaign_VanityPharma createEmptyInstance() => create();
-  static $pb.PbList<Campaign_VanityPharma> createRepeated() =>
-      $pb.PbList<Campaign_VanityPharma>();
+  static Campaign_OptimizationGoalSetting create() =>
+      Campaign_OptimizationGoalSetting._();
+  Campaign_OptimizationGoalSetting createEmptyInstance() => create();
+  static $pb.PbList<Campaign_OptimizationGoalSetting> createRepeated() =>
+      $pb.PbList<Campaign_OptimizationGoalSetting>();
   @$core.pragma('dart2js:noInline')
-  static Campaign_VanityPharma getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Campaign_VanityPharma>(create);
-  static Campaign_VanityPharma? _defaultInstance;
+  static Campaign_OptimizationGoalSetting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Campaign_OptimizationGoalSetting>(
+          create);
+  static Campaign_OptimizationGoalSetting? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $15.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode
-      get vanityPharmaDisplayUrlMode => $_getN(0);
-  @$pb.TagNumber(1)
-  set vanityPharmaDisplayUrlMode(
-      $15.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode v) {
-    setField(1, v);
+  $core.List<$15.OptimizationGoalTypeEnum_OptimizationGoalType>
+      get optimizationGoalTypes => $_getList(0);
+}
+
+class Campaign_TrackingSetting extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Campaign.TrackingSetting',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'trackingUrl')
+    ..hasRequiredFields = false;
+
+  Campaign_TrackingSetting._() : super();
+  factory Campaign_TrackingSetting({
+    $core.String? trackingUrl,
+  }) {
+    final _result = create();
+    if (trackingUrl != null) {
+      _result.trackingUrl = trackingUrl;
+    }
+    return _result;
+  }
+  factory Campaign_TrackingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_TrackingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Campaign_TrackingSetting clone() =>
+      Campaign_TrackingSetting()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Campaign_TrackingSetting copyWith(
+          void Function(Campaign_TrackingSetting) updates) =>
+      super.copyWith((message) => updates(message as Campaign_TrackingSetting))
+          as Campaign_TrackingSetting; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Campaign_TrackingSetting create() => Campaign_TrackingSetting._();
+  Campaign_TrackingSetting createEmptyInstance() => create();
+  static $pb.PbList<Campaign_TrackingSetting> createRepeated() =>
+      $pb.PbList<Campaign_TrackingSetting>();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_TrackingSetting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Campaign_TrackingSetting>(create);
+  static Campaign_TrackingSetting? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.String get trackingUrl => $_getSZ(0);
+  @$pb.TagNumber(2)
+  set trackingUrl($core.String v) {
+    $_setString(0, v);
   }
 
-  @$pb.TagNumber(1)
-  $core.bool hasVanityPharmaDisplayUrlMode() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearVanityPharmaDisplayUrlMode() => clearField(1);
-
   @$pb.TagNumber(2)
-  $16.VanityPharmaTextEnum_VanityPharmaText get vanityPharmaText => $_getN(1);
+  $core.bool hasTrackingUrl() => $_has(0);
   @$pb.TagNumber(2)
-  set vanityPharmaText($16.VanityPharmaTextEnum_VanityPharmaText v) {
-    setField(2, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasVanityPharmaText() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearVanityPharmaText() => clearField(2);
+  void clearTrackingUrl() => clearField(2);
 }
 
 class Campaign_GeoTargetTypeSetting extends $pb.GeneratedMessage {
@@ -741,32 +704,32 @@ class Campaign_GeoTargetTypeSetting extends $pb.GeneratedMessage {
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..e<$17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType>(
+    ..e<$16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'positiveGeoTargetType',
         $pb.PbFieldType.OE,
         defaultOrMaker:
-            $17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType.UNSPECIFIED,
-        valueOf: $17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType.valueOf,
-        enumValues: $17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType.values)
-    ..e<$18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType>(
+            $16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType.UNSPECIFIED,
+        valueOf: $16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType.valueOf,
+        enumValues: $16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType.values)
+    ..e<$17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'negativeGeoTargetType',
         $pb.PbFieldType.OE,
         defaultOrMaker:
-            $18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.UNSPECIFIED,
-        valueOf: $18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.valueOf,
-        enumValues: $18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.values)
+            $17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.UNSPECIFIED,
+        valueOf: $17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.valueOf,
+        enumValues: $17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.values)
     ..hasRequiredFields = false;
 
   Campaign_GeoTargetTypeSetting._() : super();
   factory Campaign_GeoTargetTypeSetting({
-    $17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType? positiveGeoTargetType,
-    $18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType? negativeGeoTargetType,
+    $16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType? positiveGeoTargetType,
+    $17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType? negativeGeoTargetType,
   }) {
     final _result = create();
     if (positiveGeoTargetType != null) {
@@ -809,11 +772,11 @@ class Campaign_GeoTargetTypeSetting extends $pb.GeneratedMessage {
   static Campaign_GeoTargetTypeSetting? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType
+  $16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType
       get positiveGeoTargetType => $_getN(0);
   @$pb.TagNumber(1)
   set positiveGeoTargetType(
-      $17.PositiveGeoTargetTypeEnum_PositiveGeoTargetType v) {
+      $16.PositiveGeoTargetTypeEnum_PositiveGeoTargetType v) {
     setField(1, v);
   }
 
@@ -823,11 +786,11 @@ class Campaign_GeoTargetTypeSetting extends $pb.GeneratedMessage {
   void clearPositiveGeoTargetType() => clearField(1);
 
   @$pb.TagNumber(2)
-  $18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType
+  $17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType
       get negativeGeoTargetType => $_getN(1);
   @$pb.TagNumber(2)
   set negativeGeoTargetType(
-      $18.NegativeGeoTargetTypeEnum_NegativeGeoTargetType v) {
+      $17.NegativeGeoTargetTypeEnum_NegativeGeoTargetType v) {
     setField(2, v);
   }
 
@@ -847,21 +810,21 @@ class Campaign_LocalCampaignSetting extends $pb.GeneratedMessage {
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..e<$19.LocationSourceTypeEnum_LocationSourceType>(
+    ..e<$18.LocationSourceTypeEnum_LocationSourceType>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'locationSourceType',
         $pb.PbFieldType.OE,
         defaultOrMaker:
-            $19.LocationSourceTypeEnum_LocationSourceType.UNSPECIFIED,
-        valueOf: $19.LocationSourceTypeEnum_LocationSourceType.valueOf,
-        enumValues: $19.LocationSourceTypeEnum_LocationSourceType.values)
+            $18.LocationSourceTypeEnum_LocationSourceType.UNSPECIFIED,
+        valueOf: $18.LocationSourceTypeEnum_LocationSourceType.valueOf,
+        enumValues: $18.LocationSourceTypeEnum_LocationSourceType.values)
     ..hasRequiredFields = false;
 
   Campaign_LocalCampaignSetting._() : super();
   factory Campaign_LocalCampaignSetting({
-    $19.LocationSourceTypeEnum_LocationSourceType? locationSourceType,
+    $18.LocationSourceTypeEnum_LocationSourceType? locationSourceType,
   }) {
     final _result = create();
     if (locationSourceType != null) {
@@ -901,10 +864,10 @@ class Campaign_LocalCampaignSetting extends $pb.GeneratedMessage {
   static Campaign_LocalCampaignSetting? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.LocationSourceTypeEnum_LocationSourceType get locationSourceType =>
+  $18.LocationSourceTypeEnum_LocationSourceType get locationSourceType =>
       $_getN(0);
   @$pb.TagNumber(1)
-  set locationSourceType($19.LocationSourceTypeEnum_LocationSourceType v) {
+  set locationSourceType($18.LocationSourceTypeEnum_LocationSourceType v) {
     setField(1, v);
   }
 
@@ -924,31 +887,31 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..e<$20.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType>(
+    ..e<$19.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'biddingStrategyGoalType',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $20
+        defaultOrMaker: $19
             .AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
             .UNSPECIFIED,
-        valueOf: $20
+        valueOf: $19
             .AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
             .valueOf,
-        enumValues: $20
+        enumValues: $19
             .AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
             .values)
-    ..e<$21.AppCampaignAppStoreEnum_AppCampaignAppStore>(
+    ..e<$20.AppCampaignAppStoreEnum_AppCampaignAppStore>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'appStore',
         $pb.PbFieldType.OE,
         defaultOrMaker:
-            $21.AppCampaignAppStoreEnum_AppCampaignAppStore.UNSPECIFIED,
-        valueOf: $21.AppCampaignAppStoreEnum_AppCampaignAppStore.valueOf,
-        enumValues: $21.AppCampaignAppStoreEnum_AppCampaignAppStore.values)
+            $20.AppCampaignAppStoreEnum_AppCampaignAppStore.UNSPECIFIED,
+        valueOf: $20.AppCampaignAppStoreEnum_AppCampaignAppStore.valueOf,
+        enumValues: $20.AppCampaignAppStoreEnum_AppCampaignAppStore.values)
     ..aOS(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -958,9 +921,9 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
 
   Campaign_AppCampaignSetting._() : super();
   factory Campaign_AppCampaignSetting({
-    $20.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType?
+    $19.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType?
         biddingStrategyGoalType,
-    $21.AppCampaignAppStoreEnum_AppCampaignAppStore? appStore,
+    $20.AppCampaignAppStoreEnum_AppCampaignAppStore? appStore,
     $core.String? appId,
   }) {
     final _result = create();
@@ -1007,11 +970,11 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
   static Campaign_AppCampaignSetting? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $20.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
+  $19.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
       get biddingStrategyGoalType => $_getN(0);
   @$pb.TagNumber(1)
   set biddingStrategyGoalType(
-      $20.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
+      $19.AppCampaignBiddingStrategyGoalTypeEnum_AppCampaignBiddingStrategyGoalType
           v) {
     setField(1, v);
   }
@@ -1022,9 +985,9 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
   void clearBiddingStrategyGoalType() => clearField(1);
 
   @$pb.TagNumber(3)
-  $21.AppCampaignAppStoreEnum_AppCampaignAppStore get appStore => $_getN(1);
+  $20.AppCampaignAppStoreEnum_AppCampaignAppStore get appStore => $_getN(1);
   @$pb.TagNumber(3)
-  set appStore($21.AppCampaignAppStoreEnum_AppCampaignAppStore v) {
+  set appStore($20.AppCampaignAppStoreEnum_AppCampaignAppStore v) {
     setField(3, v);
   }
 
@@ -1046,72 +1009,109 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
   void clearAppId() => clearField(4);
 }
 
-class Campaign_OptimizationGoalSetting extends $pb.GeneratedMessage {
+class Campaign_VanityPharma extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'Campaign.OptimizationGoalSetting',
+          : 'Campaign.VanityPharma',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..pc<$22.OptimizationGoalTypeEnum_OptimizationGoalType>(
+    ..e<$21.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'optimizationGoalTypes',
-        $pb.PbFieldType.PE,
-        valueOf: $22.OptimizationGoalTypeEnum_OptimizationGoalType.valueOf,
-        enumValues: $22.OptimizationGoalTypeEnum_OptimizationGoalType.values)
+            : 'vanityPharmaDisplayUrlMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $21
+            .VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode
+            .UNSPECIFIED,
+        valueOf: $21
+            .VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode.valueOf,
+        enumValues: $21
+            .VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode.values)
+    ..e<$22.VanityPharmaTextEnum_VanityPharmaText>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'vanityPharmaText',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $22.VanityPharmaTextEnum_VanityPharmaText.UNSPECIFIED,
+        valueOf: $22.VanityPharmaTextEnum_VanityPharmaText.valueOf,
+        enumValues: $22.VanityPharmaTextEnum_VanityPharmaText.values)
     ..hasRequiredFields = false;
 
-  Campaign_OptimizationGoalSetting._() : super();
-  factory Campaign_OptimizationGoalSetting({
-    $core.Iterable<$22.OptimizationGoalTypeEnum_OptimizationGoalType>?
-        optimizationGoalTypes,
+  Campaign_VanityPharma._() : super();
+  factory Campaign_VanityPharma({
+    $21.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode?
+        vanityPharmaDisplayUrlMode,
+    $22.VanityPharmaTextEnum_VanityPharmaText? vanityPharmaText,
   }) {
     final _result = create();
-    if (optimizationGoalTypes != null) {
-      _result.optimizationGoalTypes.addAll(optimizationGoalTypes);
+    if (vanityPharmaDisplayUrlMode != null) {
+      _result.vanityPharmaDisplayUrlMode = vanityPharmaDisplayUrlMode;
+    }
+    if (vanityPharmaText != null) {
+      _result.vanityPharmaText = vanityPharmaText;
     }
     return _result;
   }
-  factory Campaign_OptimizationGoalSetting.fromBuffer($core.List<$core.int> i,
+  factory Campaign_VanityPharma.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory Campaign_OptimizationGoalSetting.fromJson($core.String i,
+  factory Campaign_VanityPharma.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  Campaign_OptimizationGoalSetting clone() =>
-      Campaign_OptimizationGoalSetting()..mergeFromMessage(this);
+  Campaign_VanityPharma clone() =>
+      Campaign_VanityPharma()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  Campaign_OptimizationGoalSetting copyWith(
-          void Function(Campaign_OptimizationGoalSetting) updates) =>
-      super.copyWith(
-              (message) => updates(message as Campaign_OptimizationGoalSetting))
-          as Campaign_OptimizationGoalSetting; // ignore: deprecated_member_use
+  Campaign_VanityPharma copyWith(
+          void Function(Campaign_VanityPharma) updates) =>
+      super.copyWith((message) => updates(message as Campaign_VanityPharma))
+          as Campaign_VanityPharma; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Campaign_OptimizationGoalSetting create() =>
-      Campaign_OptimizationGoalSetting._();
-  Campaign_OptimizationGoalSetting createEmptyInstance() => create();
-  static $pb.PbList<Campaign_OptimizationGoalSetting> createRepeated() =>
-      $pb.PbList<Campaign_OptimizationGoalSetting>();
+  static Campaign_VanityPharma create() => Campaign_VanityPharma._();
+  Campaign_VanityPharma createEmptyInstance() => create();
+  static $pb.PbList<Campaign_VanityPharma> createRepeated() =>
+      $pb.PbList<Campaign_VanityPharma>();
   @$core.pragma('dart2js:noInline')
-  static Campaign_OptimizationGoalSetting getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Campaign_OptimizationGoalSetting>(
-          create);
-  static Campaign_OptimizationGoalSetting? _defaultInstance;
+  static Campaign_VanityPharma getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Campaign_VanityPharma>(create);
+  static Campaign_VanityPharma? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$22.OptimizationGoalTypeEnum_OptimizationGoalType>
-      get optimizationGoalTypes => $_getList(0);
+  $21.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode
+      get vanityPharmaDisplayUrlMode => $_getN(0);
+  @$pb.TagNumber(1)
+  set vanityPharmaDisplayUrlMode(
+      $21.VanityPharmaDisplayUrlModeEnum_VanityPharmaDisplayUrlMode v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasVanityPharmaDisplayUrlMode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVanityPharmaDisplayUrlMode() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $22.VanityPharmaTextEnum_VanityPharmaText get vanityPharmaText => $_getN(1);
+  @$pb.TagNumber(2)
+  set vanityPharmaText($22.VanityPharmaTextEnum_VanityPharmaText v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasVanityPharmaText() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearVanityPharmaText() => clearField(2);
 }
 
 enum Campaign_CampaignBiddingStrategy {

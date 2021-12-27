@@ -11,6 +11,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'provenance.pb.dart' as $0;
 import 'intoto_provenance.pb.dart' as $1;
+import 'intoto_statement.pb.dart' as $2;
 
 class BuildNote extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -105,6 +106,12 @@ class BuildOccurrence extends $pb.GeneratedMessage {
             ? ''
             : 'intotoProvenance',
         subBuilder: $1.InTotoProvenance.create)
+    ..aOM<$2.InTotoStatement>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'intotoStatement',
+        subBuilder: $2.InTotoStatement.create)
     ..hasRequiredFields = false;
 
   BuildOccurrence._() : super();
@@ -112,6 +119,7 @@ class BuildOccurrence extends $pb.GeneratedMessage {
     $0.BuildProvenance? provenance,
     $core.String? provenanceBytes,
     $1.InTotoProvenance? intotoProvenance,
+    $2.InTotoStatement? intotoStatement,
   }) {
     final _result = create();
     if (provenance != null) {
@@ -122,6 +130,9 @@ class BuildOccurrence extends $pb.GeneratedMessage {
     }
     if (intotoProvenance != null) {
       _result.intotoProvenance = intotoProvenance;
+    }
+    if (intotoStatement != null) {
+      _result.intotoStatement = intotoStatement;
     }
     return _result;
   }
@@ -191,4 +202,18 @@ class BuildOccurrence extends $pb.GeneratedMessage {
   void clearIntotoProvenance() => clearField(3);
   @$pb.TagNumber(3)
   $1.InTotoProvenance ensureIntotoProvenance() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $2.InTotoStatement get intotoStatement => $_getN(3);
+  @$pb.TagNumber(4)
+  set intotoStatement($2.InTotoStatement v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasIntotoStatement() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIntotoStatement() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.InTotoStatement ensureIntotoStatement() => $_ensure(3);
 }

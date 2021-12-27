@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
 import '../../../protobuf/wrappers.pb.dart' as $1;
+import '../../../protobuf/duration.pb.dart' as $2;
 
 import 'cloud_sql_resources.pbenum.dart';
 
@@ -1914,6 +1915,202 @@ class DatabaseFlags extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+class SyncFlags extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SyncFlags',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value')
+    ..hasRequiredFields = false;
+
+  SyncFlags._() : super();
+  factory SyncFlags({
+    $core.String? name,
+    $core.String? value,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory SyncFlags.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SyncFlags.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SyncFlags clone() => SyncFlags()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SyncFlags copyWith(void Function(SyncFlags) updates) =>
+      super.copyWith((message) => updates(message as SyncFlags))
+          as SyncFlags; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SyncFlags create() => SyncFlags._();
+  SyncFlags createEmptyInstance() => create();
+  static $pb.PbList<SyncFlags> createRepeated() => $pb.PbList<SyncFlags>();
+  @$core.pragma('dart2js:noInline')
+  static SyncFlags getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SyncFlags>(create);
+  static SyncFlags? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set value($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValue() => clearField(2);
+}
+
+class InstanceReference extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'InstanceReference',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'region')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'project')
+    ..hasRequiredFields = false;
+
+  InstanceReference._() : super();
+  factory InstanceReference({
+    $core.String? name,
+    $core.String? region,
+    $core.String? project,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (region != null) {
+      _result.region = region;
+    }
+    if (project != null) {
+      _result.project = project;
+    }
+    return _result;
+  }
+  factory InstanceReference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InstanceReference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  InstanceReference clone() => InstanceReference()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  InstanceReference copyWith(void Function(InstanceReference) updates) =>
+      super.copyWith((message) => updates(message as InstanceReference))
+          as InstanceReference; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static InstanceReference create() => InstanceReference._();
+  InstanceReference createEmptyInstance() => create();
+  static $pb.PbList<InstanceReference> createRepeated() =>
+      $pb.PbList<InstanceReference>();
+  @$core.pragma('dart2js:noInline')
+  static InstanceReference getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InstanceReference>(create);
+  static InstanceReference? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get region => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set region($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRegion() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRegion() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get project => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set project($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasProject() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearProject() => clearField(3);
+}
+
 class DatabaseInstance_SqlFailoverReplica extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -2037,6 +2234,12 @@ class DatabaseInstance_SqlScheduledMaintenance extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'canReschedule')
+    ..aOM<$0.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'scheduleDeadlineTime',
+        subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   DatabaseInstance_SqlScheduledMaintenance._() : super();
@@ -2044,6 +2247,7 @@ class DatabaseInstance_SqlScheduledMaintenance extends $pb.GeneratedMessage {
     $0.Timestamp? startTime,
     @$core.Deprecated('This field is deprecated.') $core.bool? canDefer,
     $core.bool? canReschedule,
+    $0.Timestamp? scheduleDeadlineTime,
   }) {
     final _result = create();
     if (startTime != null) {
@@ -2055,6 +2259,9 @@ class DatabaseInstance_SqlScheduledMaintenance extends $pb.GeneratedMessage {
     }
     if (canReschedule != null) {
       _result.canReschedule = canReschedule;
+    }
+    if (scheduleDeadlineTime != null) {
+      _result.scheduleDeadlineTime = scheduleDeadlineTime;
     }
     return _result;
   }
@@ -2133,6 +2340,20 @@ class DatabaseInstance_SqlScheduledMaintenance extends $pb.GeneratedMessage {
   $core.bool hasCanReschedule() => $_has(2);
   @$pb.TagNumber(3)
   void clearCanReschedule() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $0.Timestamp get scheduleDeadlineTime => $_getN(3);
+  @$pb.TagNumber(4)
+  set scheduleDeadlineTime($0.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasScheduleDeadlineTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearScheduleDeadlineTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureScheduleDeadlineTime() => $_ensure(3);
 }
 
 class DatabaseInstance_SqlOutOfDiskReport extends $pb.GeneratedMessage {
@@ -2442,6 +2663,17 @@ class DatabaseInstance extends $pb.GeneratedMessage {
             ? ''
             : 'outOfDiskReport',
         subBuilder: DatabaseInstance_SqlOutOfDiskReport.create)
+    ..aOM<$0.Timestamp>(
+        39,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(
+        40,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseInstalledVersion')
     ..hasRequiredFields = false;
 
   DatabaseInstance._() : super();
@@ -2479,6 +2711,8 @@ class DatabaseInstance extends $pb.GeneratedMessage {
     $core.String? secondaryGceZone,
     $1.BoolValue? satisfiesPzs,
     DatabaseInstance_SqlOutOfDiskReport? outOfDiskReport,
+    $0.Timestamp? createTime,
+    $core.String? databaseInstalledVersion,
   }) {
     final _result = create();
     if (kind != null) {
@@ -2579,6 +2813,12 @@ class DatabaseInstance extends $pb.GeneratedMessage {
     }
     if (outOfDiskReport != null) {
       _result.outOfDiskReport = outOfDiskReport;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (databaseInstalledVersion != null) {
+      _result.databaseInstalledVersion = databaseInstalledVersion;
     }
     return _result;
   }
@@ -3006,6 +3246,32 @@ class DatabaseInstance extends $pb.GeneratedMessage {
   void clearOutOfDiskReport() => clearField(38);
   @$pb.TagNumber(38)
   DatabaseInstance_SqlOutOfDiskReport ensureOutOfDiskReport() => $_ensure(31);
+
+  @$pb.TagNumber(39)
+  $0.Timestamp get createTime => $_getN(32);
+  @$pb.TagNumber(39)
+  set createTime($0.Timestamp v) {
+    setField(39, v);
+  }
+
+  @$pb.TagNumber(39)
+  $core.bool hasCreateTime() => $_has(32);
+  @$pb.TagNumber(39)
+  void clearCreateTime() => clearField(39);
+  @$pb.TagNumber(39)
+  $0.Timestamp ensureCreateTime() => $_ensure(32);
+
+  @$pb.TagNumber(40)
+  $core.String get databaseInstalledVersion => $_getSZ(33);
+  @$pb.TagNumber(40)
+  set databaseInstalledVersion($core.String v) {
+    $_setString(33, v);
+  }
+
+  @$pb.TagNumber(40)
+  $core.bool hasDatabaseInstalledVersion() => $_has(33);
+  @$pb.TagNumber(40)
+  void clearDatabaseInstalledVersion() => clearField(40);
 }
 
 class DatabasesListResponse extends $pb.GeneratedMessage {
@@ -3218,6 +3484,11 @@ class DemoteMasterContext extends $pb.GeneratedMessage {
             ? ''
             : 'replicaConfiguration',
         subBuilder: DemoteMasterConfiguration.create)
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'skipReplicationSetup')
     ..hasRequiredFields = false;
 
   DemoteMasterContext._() : super();
@@ -3226,6 +3497,7 @@ class DemoteMasterContext extends $pb.GeneratedMessage {
     $1.BoolValue? verifyGtidConsistency,
     $core.String? masterInstanceName,
     DemoteMasterConfiguration? replicaConfiguration,
+    $core.bool? skipReplicationSetup,
   }) {
     final _result = create();
     if (kind != null) {
@@ -3239,6 +3511,9 @@ class DemoteMasterContext extends $pb.GeneratedMessage {
     }
     if (replicaConfiguration != null) {
       _result.replicaConfiguration = replicaConfiguration;
+    }
+    if (skipReplicationSetup != null) {
+      _result.skipReplicationSetup = skipReplicationSetup;
     }
     return _result;
   }
@@ -3320,6 +3595,18 @@ class DemoteMasterContext extends $pb.GeneratedMessage {
   void clearReplicaConfiguration() => clearField(4);
   @$pb.TagNumber(4)
   DemoteMasterConfiguration ensureReplicaConfiguration() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.bool get skipReplicationSetup => $_getBF(4);
+  @$pb.TagNumber(5)
+  set skipReplicationSetup($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSkipReplicationSetup() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSkipReplicationSetup() => clearField(5);
 }
 
 class DemoteMasterMySqlReplicaConfiguration extends $pb.GeneratedMessage {
@@ -3515,15 +3802,51 @@ class ExportContext_SqlCsvExportOptions extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'selectQuery')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'escapeCharacter')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'quoteCharacter')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fieldsTerminatedBy')
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'linesTerminatedBy')
     ..hasRequiredFields = false;
 
   ExportContext_SqlCsvExportOptions._() : super();
   factory ExportContext_SqlCsvExportOptions({
     $core.String? selectQuery,
+    $core.String? escapeCharacter,
+    $core.String? quoteCharacter,
+    $core.String? fieldsTerminatedBy,
+    $core.String? linesTerminatedBy,
   }) {
     final _result = create();
     if (selectQuery != null) {
       _result.selectQuery = selectQuery;
+    }
+    if (escapeCharacter != null) {
+      _result.escapeCharacter = escapeCharacter;
+    }
+    if (quoteCharacter != null) {
+      _result.quoteCharacter = quoteCharacter;
+    }
+    if (fieldsTerminatedBy != null) {
+      _result.fieldsTerminatedBy = fieldsTerminatedBy;
+    }
+    if (linesTerminatedBy != null) {
+      _result.linesTerminatedBy = linesTerminatedBy;
     }
     return _result;
   }
@@ -3570,6 +3893,54 @@ class ExportContext_SqlCsvExportOptions extends $pb.GeneratedMessage {
   $core.bool hasSelectQuery() => $_has(0);
   @$pb.TagNumber(1)
   void clearSelectQuery() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get escapeCharacter => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set escapeCharacter($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEscapeCharacter() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEscapeCharacter() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get quoteCharacter => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set quoteCharacter($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasQuoteCharacter() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearQuoteCharacter() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get fieldsTerminatedBy => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set fieldsTerminatedBy($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasFieldsTerminatedBy() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFieldsTerminatedBy() => clearField(4);
+
+  @$pb.TagNumber(6)
+  $core.String get linesTerminatedBy => $_getSZ(4);
+  @$pb.TagNumber(6)
+  set linesTerminatedBy($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasLinesTerminatedBy() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearLinesTerminatedBy() => clearField(6);
 }
 
 class ExportContext_SqlExportOptions_MysqlExportOptions
@@ -4400,12 +4771,36 @@ class ImportContext_SqlCsvImportOptions extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'columns')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'escapeCharacter')
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'quoteCharacter')
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fieldsTerminatedBy')
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'linesTerminatedBy')
     ..hasRequiredFields = false;
 
   ImportContext_SqlCsvImportOptions._() : super();
   factory ImportContext_SqlCsvImportOptions({
     $core.String? table,
     $core.Iterable<$core.String>? columns,
+    $core.String? escapeCharacter,
+    $core.String? quoteCharacter,
+    $core.String? fieldsTerminatedBy,
+    $core.String? linesTerminatedBy,
   }) {
     final _result = create();
     if (table != null) {
@@ -4413,6 +4808,18 @@ class ImportContext_SqlCsvImportOptions extends $pb.GeneratedMessage {
     }
     if (columns != null) {
       _result.columns.addAll(columns);
+    }
+    if (escapeCharacter != null) {
+      _result.escapeCharacter = escapeCharacter;
+    }
+    if (quoteCharacter != null) {
+      _result.quoteCharacter = quoteCharacter;
+    }
+    if (fieldsTerminatedBy != null) {
+      _result.fieldsTerminatedBy = fieldsTerminatedBy;
+    }
+    if (linesTerminatedBy != null) {
+      _result.linesTerminatedBy = linesTerminatedBy;
     }
     return _result;
   }
@@ -4462,6 +4869,54 @@ class ImportContext_SqlCsvImportOptions extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<$core.String> get columns => $_getList(1);
+
+  @$pb.TagNumber(4)
+  $core.String get escapeCharacter => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set escapeCharacter($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasEscapeCharacter() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearEscapeCharacter() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get quoteCharacter => $_getSZ(3);
+  @$pb.TagNumber(5)
+  set quoteCharacter($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasQuoteCharacter() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearQuoteCharacter() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get fieldsTerminatedBy => $_getSZ(4);
+  @$pb.TagNumber(6)
+  set fieldsTerminatedBy($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasFieldsTerminatedBy() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearFieldsTerminatedBy() => clearField(6);
+
+  @$pb.TagNumber(8)
+  $core.String get linesTerminatedBy => $_getSZ(5);
+  @$pb.TagNumber(8)
+  set linesTerminatedBy($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasLinesTerminatedBy() => $_has(5);
+  @$pb.TagNumber(8)
+  void clearLinesTerminatedBy() => clearField(8);
 }
 
 class ImportContext_SqlBakImportOptions_EncryptionOptions
@@ -5227,6 +5682,66 @@ class InstancesImportRequest extends $pb.GeneratedMessage {
   ImportContext ensureImportContext() => $_ensure(0);
 }
 
+class MySqlSyncConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MySqlSyncConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..pc<SyncFlags>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'initialSyncFlags',
+        $pb.PbFieldType.PM,
+        subBuilder: SyncFlags.create)
+    ..hasRequiredFields = false;
+
+  MySqlSyncConfig._() : super();
+  factory MySqlSyncConfig({
+    $core.Iterable<SyncFlags>? initialSyncFlags,
+  }) {
+    final _result = create();
+    if (initialSyncFlags != null) {
+      _result.initialSyncFlags.addAll(initialSyncFlags);
+    }
+    return _result;
+  }
+  factory MySqlSyncConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MySqlSyncConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  MySqlSyncConfig clone() => MySqlSyncConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MySqlSyncConfig copyWith(void Function(MySqlSyncConfig) updates) =>
+      super.copyWith((message) => updates(message as MySqlSyncConfig))
+          as MySqlSyncConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MySqlSyncConfig create() => MySqlSyncConfig._();
+  MySqlSyncConfig createEmptyInstance() => create();
+  static $pb.PbList<MySqlSyncConfig> createRepeated() =>
+      $pb.PbList<MySqlSyncConfig>();
+  @$core.pragma('dart2js:noInline')
+  static MySqlSyncConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MySqlSyncConfig>(create);
+  static MySqlSyncConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<SyncFlags> get initialSyncFlags => $_getList(0);
+}
+
 class InstancesListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -5935,6 +6450,11 @@ class IpConfiguration extends $pb.GeneratedMessage {
             : 'authorizedNetworks',
         $pb.PbFieldType.PM,
         subBuilder: AclEntry.create)
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allocatedIpRange')
     ..hasRequiredFields = false;
 
   IpConfiguration._() : super();
@@ -5943,6 +6463,7 @@ class IpConfiguration extends $pb.GeneratedMessage {
     $core.String? privateNetwork,
     $1.BoolValue? requireSsl,
     $core.Iterable<AclEntry>? authorizedNetworks,
+    $core.String? allocatedIpRange,
   }) {
     final _result = create();
     if (ipv4Enabled != null) {
@@ -5956,6 +6477,9 @@ class IpConfiguration extends $pb.GeneratedMessage {
     }
     if (authorizedNetworks != null) {
       _result.authorizedNetworks.addAll(authorizedNetworks);
+    }
+    if (allocatedIpRange != null) {
+      _result.allocatedIpRange = allocatedIpRange;
     }
     return _result;
   }
@@ -6028,6 +6552,18 @@ class IpConfiguration extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(4)
   $core.List<AclEntry> get authorizedNetworks => $_getList(3);
+
+  @$pb.TagNumber(6)
+  $core.String get allocatedIpRange => $_getSZ(4);
+  @$pb.TagNumber(6)
+  set allocatedIpRange($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasAllocatedIpRange() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearAllocatedIpRange() => clearField(6);
 }
 
 class IpMapping extends $pb.GeneratedMessage {
@@ -7027,6 +7563,12 @@ class OnPremisesConfiguration extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'dumpFilePath')
+    ..aOM<InstanceReference>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sourceInstance',
+        subBuilder: InstanceReference.create)
     ..hasRequiredFields = false;
 
   OnPremisesConfiguration._() : super();
@@ -7039,6 +7581,7 @@ class OnPremisesConfiguration extends $pb.GeneratedMessage {
     $core.String? clientCertificate,
     $core.String? clientKey,
     $core.String? dumpFilePath,
+    InstanceReference? sourceInstance,
   }) {
     final _result = create();
     if (hostPort != null) {
@@ -7064,6 +7607,9 @@ class OnPremisesConfiguration extends $pb.GeneratedMessage {
     }
     if (dumpFilePath != null) {
       _result.dumpFilePath = dumpFilePath;
+    }
+    if (sourceInstance != null) {
+      _result.sourceInstance = sourceInstance;
     }
     return _result;
   }
@@ -7191,6 +7737,20 @@ class OnPremisesConfiguration extends $pb.GeneratedMessage {
   $core.bool hasDumpFilePath() => $_has(7);
   @$pb.TagNumber(8)
   void clearDumpFilePath() => clearField(8);
+
+  @$pb.TagNumber(15)
+  InstanceReference get sourceInstance => $_getN(8);
+  @$pb.TagNumber(15)
+  set sourceInstance(InstanceReference v) {
+    setField(15, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasSourceInstance() => $_has(8);
+  @$pb.TagNumber(15)
+  void clearSourceInstance() => clearField(15);
+  @$pb.TagNumber(15)
+  InstanceReference ensureSourceInstance() => $_ensure(8);
 }
 
 class DiskEncryptionConfiguration extends $pb.GeneratedMessage {
@@ -7976,6 +8536,176 @@ class OperationErrors extends $pb.GeneratedMessage {
   $core.List<OperationError> get errors => $_getList(1);
 }
 
+class PasswordValidationPolicy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PasswordValidationPolicy',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..aOM<$1.Int32Value>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minLength',
+        subBuilder: $1.Int32Value.create)
+    ..e<PasswordValidationPolicy_Complexity>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'complexity',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            PasswordValidationPolicy_Complexity.COMPLEXITY_UNSPECIFIED,
+        valueOf: PasswordValidationPolicy_Complexity.valueOf,
+        enumValues: PasswordValidationPolicy_Complexity.values)
+    ..aOM<$1.Int32Value>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'reuseInterval',
+        subBuilder: $1.Int32Value.create)
+    ..aOM<$1.BoolValue>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disallowUsernameSubstring',
+        subBuilder: $1.BoolValue.create)
+    ..aOM<$2.Duration>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'passwordChangeInterval',
+        subBuilder: $2.Duration.create)
+    ..hasRequiredFields = false;
+
+  PasswordValidationPolicy._() : super();
+  factory PasswordValidationPolicy({
+    $1.Int32Value? minLength,
+    PasswordValidationPolicy_Complexity? complexity,
+    $1.Int32Value? reuseInterval,
+    $1.BoolValue? disallowUsernameSubstring,
+    $2.Duration? passwordChangeInterval,
+  }) {
+    final _result = create();
+    if (minLength != null) {
+      _result.minLength = minLength;
+    }
+    if (complexity != null) {
+      _result.complexity = complexity;
+    }
+    if (reuseInterval != null) {
+      _result.reuseInterval = reuseInterval;
+    }
+    if (disallowUsernameSubstring != null) {
+      _result.disallowUsernameSubstring = disallowUsernameSubstring;
+    }
+    if (passwordChangeInterval != null) {
+      _result.passwordChangeInterval = passwordChangeInterval;
+    }
+    return _result;
+  }
+  factory PasswordValidationPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PasswordValidationPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PasswordValidationPolicy clone() =>
+      PasswordValidationPolicy()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PasswordValidationPolicy copyWith(
+          void Function(PasswordValidationPolicy) updates) =>
+      super.copyWith((message) => updates(message as PasswordValidationPolicy))
+          as PasswordValidationPolicy; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PasswordValidationPolicy create() => PasswordValidationPolicy._();
+  PasswordValidationPolicy createEmptyInstance() => create();
+  static $pb.PbList<PasswordValidationPolicy> createRepeated() =>
+      $pb.PbList<PasswordValidationPolicy>();
+  @$core.pragma('dart2js:noInline')
+  static PasswordValidationPolicy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PasswordValidationPolicy>(create);
+  static PasswordValidationPolicy? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.Int32Value get minLength => $_getN(0);
+  @$pb.TagNumber(1)
+  set minLength($1.Int32Value v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMinLength() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMinLength() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Int32Value ensureMinLength() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  PasswordValidationPolicy_Complexity get complexity => $_getN(1);
+  @$pb.TagNumber(2)
+  set complexity(PasswordValidationPolicy_Complexity v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasComplexity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearComplexity() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.Int32Value get reuseInterval => $_getN(2);
+  @$pb.TagNumber(3)
+  set reuseInterval($1.Int32Value v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasReuseInterval() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearReuseInterval() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Int32Value ensureReuseInterval() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $1.BoolValue get disallowUsernameSubstring => $_getN(3);
+  @$pb.TagNumber(4)
+  set disallowUsernameSubstring($1.BoolValue v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDisallowUsernameSubstring() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDisallowUsernameSubstring() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.BoolValue ensureDisallowUsernameSubstring() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $2.Duration get passwordChangeInterval => $_getN(4);
+  @$pb.TagNumber(5)
+  set passwordChangeInterval($2.Duration v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasPasswordChangeInterval() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPasswordChangeInterval() => clearField(5);
+  @$pb.TagNumber(5)
+  $2.Duration ensurePasswordChangeInterval() => $_ensure(4);
+}
+
 class OperationsListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -8588,6 +9318,18 @@ class Settings extends $pb.GeneratedMessage {
             ? ''
             : 'insightsConfig',
         subBuilder: InsightsConfig.create)
+    ..aOM<PasswordValidationPolicy>(
+        27,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'passwordValidationPolicy',
+        subBuilder: PasswordValidationPolicy.create)
+    ..aOM<SqlServerAuditConfig>(
+        29,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sqlServerAuditConfig',
+        subBuilder: SqlServerAuditConfig.create)
     ..hasRequiredFields = false;
 
   Settings._() : super();
@@ -8619,6 +9361,8 @@ class Settings extends $pb.GeneratedMessage {
     $core.String? collation,
     $core.Iterable<DenyMaintenancePeriod>? denyMaintenancePeriods,
     InsightsConfig? insightsConfig,
+    PasswordValidationPolicy? passwordValidationPolicy,
+    SqlServerAuditConfig? sqlServerAuditConfig,
   }) {
     final _result = create();
     if (settingsVersion != null) {
@@ -8695,6 +9439,12 @@ class Settings extends $pb.GeneratedMessage {
     }
     if (insightsConfig != null) {
       _result.insightsConfig = insightsConfig;
+    }
+    if (passwordValidationPolicy != null) {
+      _result.passwordValidationPolicy = passwordValidationPolicy;
+    }
+    if (sqlServerAuditConfig != null) {
+      _result.sqlServerAuditConfig = sqlServerAuditConfig;
     }
     return _result;
   }
@@ -9009,6 +9759,34 @@ class Settings extends $pb.GeneratedMessage {
   void clearInsightsConfig() => clearField(25);
   @$pb.TagNumber(25)
   InsightsConfig ensureInsightsConfig() => $_ensure(23);
+
+  @$pb.TagNumber(27)
+  PasswordValidationPolicy get passwordValidationPolicy => $_getN(24);
+  @$pb.TagNumber(27)
+  set passwordValidationPolicy(PasswordValidationPolicy v) {
+    setField(27, v);
+  }
+
+  @$pb.TagNumber(27)
+  $core.bool hasPasswordValidationPolicy() => $_has(24);
+  @$pb.TagNumber(27)
+  void clearPasswordValidationPolicy() => clearField(27);
+  @$pb.TagNumber(27)
+  PasswordValidationPolicy ensurePasswordValidationPolicy() => $_ensure(24);
+
+  @$pb.TagNumber(29)
+  SqlServerAuditConfig get sqlServerAuditConfig => $_getN(25);
+  @$pb.TagNumber(29)
+  set sqlServerAuditConfig(SqlServerAuditConfig v) {
+    setField(29, v);
+  }
+
+  @$pb.TagNumber(29)
+  $core.bool hasSqlServerAuditConfig() => $_has(25);
+  @$pb.TagNumber(29)
+  void clearSqlServerAuditConfig() => clearField(29);
+  @$pb.TagNumber(29)
+  SqlServerAuditConfig ensureSqlServerAuditConfig() => $_ensure(25);
 }
 
 class SslCert extends $pb.GeneratedMessage {
@@ -10099,4 +10877,93 @@ class SqlActiveDirectoryConfig extends $pb.GeneratedMessage {
   $core.bool hasDomain() => $_has(1);
   @$pb.TagNumber(2)
   void clearDomain() => clearField(2);
+}
+
+class SqlServerAuditConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SqlServerAuditConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kind')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bucket')
+    ..hasRequiredFields = false;
+
+  SqlServerAuditConfig._() : super();
+  factory SqlServerAuditConfig({
+    $core.String? kind,
+    $core.String? bucket,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (bucket != null) {
+      _result.bucket = bucket;
+    }
+    return _result;
+  }
+  factory SqlServerAuditConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SqlServerAuditConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SqlServerAuditConfig clone() =>
+      SqlServerAuditConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SqlServerAuditConfig copyWith(void Function(SqlServerAuditConfig) updates) =>
+      super.copyWith((message) => updates(message as SqlServerAuditConfig))
+          as SqlServerAuditConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SqlServerAuditConfig create() => SqlServerAuditConfig._();
+  SqlServerAuditConfig createEmptyInstance() => create();
+  static $pb.PbList<SqlServerAuditConfig> createRepeated() =>
+      $pb.PbList<SqlServerAuditConfig>();
+  @$core.pragma('dart2js:noInline')
+  static SqlServerAuditConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SqlServerAuditConfig>(create);
+  static SqlServerAuditConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get bucket => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set bucket($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasBucket() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBucket() => clearField(2);
 }

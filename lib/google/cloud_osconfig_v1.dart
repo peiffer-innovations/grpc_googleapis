@@ -1,6 +1,15 @@
 export '../src/generated/google/cloud/osconfig/v1/inventory.pb.dart';
 export '../src/generated/google/cloud/osconfig/v1/inventory.pbenum.dart';
 export '../src/generated/google/cloud/osconfig/v1/inventory.pbjson.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy.pb.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy.pbenum.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy.pbjson.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy_assignment_reports.pb.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy_assignment_reports.pbenum.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy_assignment_reports.pbjson.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy_assignments.pb.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy_assignments.pbenum.dart';
+export '../src/generated/google/cloud/osconfig/v1/os_policy_assignments.pbjson.dart';
 export '../src/generated/google/cloud/osconfig/v1/osconfig_common.pb.dart';
 export '../src/generated/google/cloud/osconfig/v1/osconfig_common.pbenum.dart';
 export '../src/generated/google/cloud/osconfig/v1/osconfig_common.pbjson.dart';

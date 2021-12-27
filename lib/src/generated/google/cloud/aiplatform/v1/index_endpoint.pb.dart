@@ -75,6 +75,11 @@ class IndexEndpoint extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'network')
+    ..aOB(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enablePrivateServiceConnect')
     ..hasRequiredFields = false;
 
   IndexEndpoint._() : super();
@@ -88,6 +93,7 @@ class IndexEndpoint extends $pb.GeneratedMessage {
     $0.Timestamp? createTime,
     $0.Timestamp? updateTime,
     $core.String? network,
+    $core.bool? enablePrivateServiceConnect,
   }) {
     final _result = create();
     if (name != null) {
@@ -116,6 +122,9 @@ class IndexEndpoint extends $pb.GeneratedMessage {
     }
     if (network != null) {
       _result.network = network;
+    }
+    if (enablePrivateServiceConnect != null) {
+      _result.enablePrivateServiceConnect = enablePrivateServiceConnect;
     }
     return _result;
   }
@@ -239,6 +248,18 @@ class IndexEndpoint extends $pb.GeneratedMessage {
   $core.bool hasNetwork() => $_has(8);
   @$pb.TagNumber(9)
   void clearNetwork() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.bool get enablePrivateServiceConnect => $_getBF(9);
+  @$pb.TagNumber(10)
+  set enablePrivateServiceConnect($core.bool v) {
+    $_setBool(9, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasEnablePrivateServiceConnect() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearEnablePrivateServiceConnect() => clearField(10);
 }
 
 class DeployedIndex extends $pb.GeneratedMessage {
@@ -687,15 +708,24 @@ class IndexPrivateEndpoints extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'matchGrpcAddress')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'serviceAttachment')
     ..hasRequiredFields = false;
 
   IndexPrivateEndpoints._() : super();
   factory IndexPrivateEndpoints({
     $core.String? matchGrpcAddress,
+    $core.String? serviceAttachment,
   }) {
     final _result = create();
     if (matchGrpcAddress != null) {
       _result.matchGrpcAddress = matchGrpcAddress;
+    }
+    if (serviceAttachment != null) {
+      _result.serviceAttachment = serviceAttachment;
     }
     return _result;
   }
@@ -739,4 +769,16 @@ class IndexPrivateEndpoints extends $pb.GeneratedMessage {
   $core.bool hasMatchGrpcAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearMatchGrpcAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get serviceAttachment => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set serviceAttachment($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasServiceAttachment() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearServiceAttachment() => clearField(2);
 }

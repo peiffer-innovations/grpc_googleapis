@@ -69,6 +69,11 @@ class BigtableInstanceAdminClient extends $grpc.Client {
       '/google.bigtable.admin.v2.BigtableInstanceAdmin/UpdateCluster',
       ($5.Cluster value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$partialUpdateCluster = $grpc.ClientMethod<
+          $4.PartialUpdateClusterRequest, $2.Operation>(
+      '/google.bigtable.admin.v2.BigtableInstanceAdmin/PartialUpdateCluster',
+      ($4.PartialUpdateClusterRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$deleteCluster =
       $grpc.ClientMethod<$4.DeleteClusterRequest, $3.Empty>(
           '/google.bigtable.admin.v2.BigtableInstanceAdmin/DeleteCluster',
@@ -176,6 +181,12 @@ class BigtableInstanceAdminClient extends $grpc.Client {
   $grpc.ResponseFuture<$2.Operation> updateCluster($5.Cluster request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateCluster, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> partialUpdateCluster(
+      $4.PartialUpdateClusterRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$partialUpdateCluster, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Empty> deleteCluster($4.DeleteClusterRequest request,
@@ -314,6 +325,15 @@ abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $5.Cluster.fromBuffer(value),
         ($2.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.PartialUpdateClusterRequest, $2.Operation>(
+            'PartialUpdateCluster',
+            partialUpdateCluster_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.PartialUpdateClusterRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.DeleteClusterRequest, $3.Empty>(
         'DeleteCluster',
         deleteCluster_Pre,
@@ -442,6 +462,11 @@ abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
     return updateCluster(call, await request);
   }
 
+  $async.Future<$2.Operation> partialUpdateCluster_Pre($grpc.ServiceCall call,
+      $async.Future<$4.PartialUpdateClusterRequest> request) async {
+    return partialUpdateCluster(call, await request);
+  }
+
   $async.Future<$3.Empty> deleteCluster_Pre($grpc.ServiceCall call,
       $async.Future<$4.DeleteClusterRequest> request) async {
     return deleteCluster(call, await request);
@@ -509,6 +534,8 @@ abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.ListClustersRequest request);
   $async.Future<$2.Operation> updateCluster(
       $grpc.ServiceCall call, $5.Cluster request);
+  $async.Future<$2.Operation> partialUpdateCluster(
+      $grpc.ServiceCall call, $4.PartialUpdateClusterRequest request);
   $async.Future<$3.Empty> deleteCluster(
       $grpc.ServiceCall call, $4.DeleteClusterRequest request);
   $async.Future<$5.AppProfile> createAppProfile(

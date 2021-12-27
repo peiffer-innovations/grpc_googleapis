@@ -14,6 +14,7 @@ import '../../../protobuf/timestamp.pb.dart' as $1;
 import 'indicator.pb.dart' as $2;
 import 'vulnerability.pb.dart' as $3;
 import '../../../protobuf/struct.pb.dart' as $4;
+import 'external_system.pb.dart' as $5;
 
 import 'finding.pbenum.dart';
 
@@ -105,6 +106,15 @@ class Finding extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'canonicalName')
+    ..e<Finding_Mute>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mute',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Finding_Mute.MUTE_UNSPECIFIED,
+        valueOf: Finding_Mute.valueOf,
+        enumValues: Finding_Mute.values)
     ..e<Finding_FindingClass>(
         17,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -126,6 +136,27 @@ class Finding extends $pb.GeneratedMessage {
             ? ''
             : 'vulnerability',
         subBuilder: $3.Vulnerability.create)
+    ..aOM<$1.Timestamp>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteUpdateTime',
+        subBuilder: $1.Timestamp.create)
+    ..m<$core.String, $5.ExternalSystem>(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'externalSystems',
+        entryClassName: 'Finding.ExternalSystemsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $5.ExternalSystem.create,
+        packageName: const $pb.PackageName('google.cloud.securitycenter.v1'))
+    ..aOS(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteInitiator')
     ..hasRequiredFields = false;
 
   Finding._() : super();
@@ -142,9 +173,13 @@ class Finding extends $pb.GeneratedMessage {
     $1.Timestamp? createTime,
     Finding_Severity? severity,
     $core.String? canonicalName,
+    Finding_Mute? mute,
     Finding_FindingClass? findingClass,
     $2.Indicator? indicator,
     $3.Vulnerability? vulnerability,
+    $1.Timestamp? muteUpdateTime,
+    $core.Map<$core.String, $5.ExternalSystem>? externalSystems,
+    $core.String? muteInitiator,
   }) {
     final _result = create();
     if (name != null) {
@@ -183,6 +218,9 @@ class Finding extends $pb.GeneratedMessage {
     if (canonicalName != null) {
       _result.canonicalName = canonicalName;
     }
+    if (mute != null) {
+      _result.mute = mute;
+    }
     if (findingClass != null) {
       _result.findingClass = findingClass;
     }
@@ -191,6 +229,15 @@ class Finding extends $pb.GeneratedMessage {
     }
     if (vulnerability != null) {
       _result.vulnerability = vulnerability;
+    }
+    if (muteUpdateTime != null) {
+      _result.muteUpdateTime = muteUpdateTime;
+    }
+    if (externalSystems != null) {
+      _result.externalSystems.addAll(externalSystems);
+    }
+    if (muteInitiator != null) {
+      _result.muteInitiator = muteInitiator;
     }
     return _result;
   }
@@ -361,43 +408,85 @@ class Finding extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearCanonicalName() => clearField(14);
 
+  @$pb.TagNumber(15)
+  Finding_Mute get mute => $_getN(12);
+  @$pb.TagNumber(15)
+  set mute(Finding_Mute v) {
+    setField(15, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasMute() => $_has(12);
+  @$pb.TagNumber(15)
+  void clearMute() => clearField(15);
+
   @$pb.TagNumber(17)
-  Finding_FindingClass get findingClass => $_getN(12);
+  Finding_FindingClass get findingClass => $_getN(13);
   @$pb.TagNumber(17)
   set findingClass(Finding_FindingClass v) {
     setField(17, v);
   }
 
   @$pb.TagNumber(17)
-  $core.bool hasFindingClass() => $_has(12);
+  $core.bool hasFindingClass() => $_has(13);
   @$pb.TagNumber(17)
   void clearFindingClass() => clearField(17);
 
   @$pb.TagNumber(18)
-  $2.Indicator get indicator => $_getN(13);
+  $2.Indicator get indicator => $_getN(14);
   @$pb.TagNumber(18)
   set indicator($2.Indicator v) {
     setField(18, v);
   }
 
   @$pb.TagNumber(18)
-  $core.bool hasIndicator() => $_has(13);
+  $core.bool hasIndicator() => $_has(14);
   @$pb.TagNumber(18)
   void clearIndicator() => clearField(18);
   @$pb.TagNumber(18)
-  $2.Indicator ensureIndicator() => $_ensure(13);
+  $2.Indicator ensureIndicator() => $_ensure(14);
 
   @$pb.TagNumber(20)
-  $3.Vulnerability get vulnerability => $_getN(14);
+  $3.Vulnerability get vulnerability => $_getN(15);
   @$pb.TagNumber(20)
   set vulnerability($3.Vulnerability v) {
     setField(20, v);
   }
 
   @$pb.TagNumber(20)
-  $core.bool hasVulnerability() => $_has(14);
+  $core.bool hasVulnerability() => $_has(15);
   @$pb.TagNumber(20)
   void clearVulnerability() => clearField(20);
   @$pb.TagNumber(20)
-  $3.Vulnerability ensureVulnerability() => $_ensure(14);
+  $3.Vulnerability ensureVulnerability() => $_ensure(15);
+
+  @$pb.TagNumber(21)
+  $1.Timestamp get muteUpdateTime => $_getN(16);
+  @$pb.TagNumber(21)
+  set muteUpdateTime($1.Timestamp v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasMuteUpdateTime() => $_has(16);
+  @$pb.TagNumber(21)
+  void clearMuteUpdateTime() => clearField(21);
+  @$pb.TagNumber(21)
+  $1.Timestamp ensureMuteUpdateTime() => $_ensure(16);
+
+  @$pb.TagNumber(22)
+  $core.Map<$core.String, $5.ExternalSystem> get externalSystems =>
+      $_getMap(17);
+
+  @$pb.TagNumber(28)
+  $core.String get muteInitiator => $_getSZ(18);
+  @$pb.TagNumber(28)
+  set muteInitiator($core.String v) {
+    $_setString(18, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasMuteInitiator() => $_has(18);
+  @$pb.TagNumber(28)
+  void clearMuteInitiator() => clearField(28);
 }

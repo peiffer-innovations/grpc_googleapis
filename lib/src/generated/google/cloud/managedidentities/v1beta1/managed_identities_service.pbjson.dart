@@ -66,14 +66,29 @@ final $typed_data.Uint8List opMetadataDescriptor = $convert.base64Decode(
 const CreateMicrosoftAdDomainRequest$json = const {
   '1': 'CreateMicrosoftAdDomainRequest',
   '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'domain_name', '3': 2, '4': 1, '5': 9, '10': 'domainName'},
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'domain_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'domainName'
+    },
     const {
       '1': 'domain',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Domain',
+      '8': const {},
       '10': 'domain'
     },
   ],
@@ -82,19 +97,19 @@ const CreateMicrosoftAdDomainRequest$json = const {
 /// Descriptor for `CreateMicrosoftAdDomainRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createMicrosoftAdDomainRequestDescriptor =
     $convert.base64Decode(
-        'Ch5DcmVhdGVNaWNyb3NvZnRBZERvbWFpblJlcXVlc3QSFgoGcGFyZW50GAEgASgJUgZwYXJlbnQSHwoLZG9tYWluX25hbWUYAiABKAlSCmRvbWFpbk5hbWUSRgoGZG9tYWluGAMgASgLMi4uZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuRG9tYWluUgZkb21haW4=');
+        'Ch5DcmVhdGVNaWNyb3NvZnRBZERvbWFpblJlcXVlc3QSRwoGcGFyZW50GAEgASgJQi/gQQL6QSkSJ21hbmFnZWRpZGVudGl0aWVzLmdvb2dsZWFwaXMuY29tL0RvbWFpblIGcGFyZW50EiQKC2RvbWFpbl9uYW1lGAIgASgJQgPgQQJSCmRvbWFpbk5hbWUSSwoGZG9tYWluGAMgASgLMi4uZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuRG9tYWluQgPgQQJSBmRvbWFpbg==');
 @$core.Deprecated('Use resetAdminPasswordRequestDescriptor instead')
 const ResetAdminPasswordRequest$json = const {
   '1': 'ResetAdminPasswordRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `ResetAdminPasswordRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resetAdminPasswordRequestDescriptor =
     $convert.base64Decode(
-        'ChlSZXNldEFkbWluUGFzc3dvcmRSZXF1ZXN0EhIKBG5hbWUYASABKAlSBG5hbWU=');
+        'ChlSZXNldEFkbWluUGFzc3dvcmRSZXF1ZXN0EkMKBG5hbWUYASABKAlCL+BBAvpBKQonbWFuYWdlZGlkZW50aXRpZXMuZ29vZ2xlYXBpcy5jb20vRG9tYWluUgRuYW1l');
 @$core.Deprecated('Use resetAdminPasswordResponseDescriptor instead')
 const ResetAdminPasswordResponse$json = const {
   '1': 'ResetAdminPasswordResponse',
@@ -111,7 +126,14 @@ final $typed_data.Uint8List resetAdminPasswordResponseDescriptor =
 const ListDomainsRequest$json = const {
   '1': 'ListDomainsRequest',
   '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
@@ -121,7 +143,7 @@ const ListDomainsRequest$json = const {
 
 /// Descriptor for `ListDomainsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listDomainsRequestDescriptor = $convert.base64Decode(
-    'ChJMaXN0RG9tYWluc1JlcXVlc3QSFgoGcGFyZW50GAEgASgJUgZwYXJlbnQSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4SFgoGZmlsdGVyGAQgASgJUgZmaWx0ZXISGQoIb3JkZXJfYnkYBSABKAlSB29yZGVyQnk=');
+    'ChJMaXN0RG9tYWluc1JlcXVlc3QSRwoGcGFyZW50GAEgASgJQi/gQQL6QSkSJ21hbmFnZWRpZGVudGl0aWVzLmdvb2dsZWFwaXMuY29tL0RvbWFpblIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2VuEhYKBmZpbHRlchgEIAEoCVIGZmlsdGVyEhkKCG9yZGVyX2J5GAUgASgJUgdvcmRlckJ5');
 @$core.Deprecated('Use listDomainsResponseDescriptor instead')
 const ListDomainsResponse$json = const {
   '1': 'ListDomainsResponse',
@@ -152,13 +174,13 @@ final $typed_data.Uint8List listDomainsResponseDescriptor = $convert.base64Decod
 const GetDomainRequest$json = const {
   '1': 'GetDomainRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `GetDomainRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDomainRequestDescriptor = $convert
-    .base64Decode('ChBHZXREb21haW5SZXF1ZXN0EhIKBG5hbWUYASABKAlSBG5hbWU=');
+final $typed_data.Uint8List getDomainRequestDescriptor = $convert.base64Decode(
+    'ChBHZXREb21haW5SZXF1ZXN0EkMKBG5hbWUYASABKAlCL+BBAvpBKQonbWFuYWdlZGlkZW50aXRpZXMuZ29vZ2xlYXBpcy5jb20vRG9tYWluUgRuYW1l');
 @$core.Deprecated('Use updateDomainRequestDescriptor instead')
 const UpdateDomainRequest$json = const {
   '1': 'UpdateDomainRequest',
@@ -169,6 +191,7 @@ const UpdateDomainRequest$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': const {},
       '10': 'updateMask'
     },
     const {
@@ -177,6 +200,7 @@ const UpdateDomainRequest$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Domain',
+      '8': const {},
       '10': 'domain'
     },
   ],
@@ -184,29 +208,30 @@ const UpdateDomainRequest$json = const {
 
 /// Descriptor for `UpdateDomainRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateDomainRequestDescriptor = $convert.base64Decode(
-    'ChNVcGRhdGVEb21haW5SZXF1ZXN0EjsKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza1IKdXBkYXRlTWFzaxJGCgZkb21haW4YAiABKAsyLi5nb29nbGUuY2xvdWQubWFuYWdlZGlkZW50aXRpZXMudjFiZXRhMS5Eb21haW5SBmRvbWFpbg==');
+    'ChNVcGRhdGVEb21haW5SZXF1ZXN0EkAKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECUgp1cGRhdGVNYXNrEksKBmRvbWFpbhgCIAEoCzIuLmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLkRvbWFpbkID4EECUgZkb21haW4=');
 @$core.Deprecated('Use deleteDomainRequestDescriptor instead')
 const DeleteDomainRequest$json = const {
   '1': 'DeleteDomainRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `DeleteDomainRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteDomainRequestDescriptor = $convert
-    .base64Decode('ChNEZWxldGVEb21haW5SZXF1ZXN0EhIKBG5hbWUYASABKAlSBG5hbWU=');
+final $typed_data.Uint8List deleteDomainRequestDescriptor = $convert.base64Decode(
+    'ChNEZWxldGVEb21haW5SZXF1ZXN0EkMKBG5hbWUYASABKAlCL+BBAvpBKQonbWFuYWdlZGlkZW50aXRpZXMuZ29vZ2xlYXBpcy5jb20vRG9tYWluUgRuYW1l');
 @$core.Deprecated('Use attachTrustRequestDescriptor instead')
 const AttachTrustRequest$json = const {
   '1': 'AttachTrustRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'trust',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Trust',
+      '8': const {},
       '10': 'trust'
     },
   ],
@@ -214,17 +239,18 @@ const AttachTrustRequest$json = const {
 
 /// Descriptor for `AttachTrustRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List attachTrustRequestDescriptor = $convert.base64Decode(
-    'ChJBdHRhY2hUcnVzdFJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRJDCgV0cnVzdBgCIAEoCzItLmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0UgV0cnVzdA==');
+    'ChJBdHRhY2hUcnVzdFJlcXVlc3QSQwoEbmFtZRgBIAEoCUIv4EEC+kEpCidtYW5hZ2VkaWRlbnRpdGllcy5nb29nbGVhcGlzLmNvbS9Eb21haW5SBG5hbWUSSAoFdHJ1c3QYAiABKAsyLS5nb29nbGUuY2xvdWQubWFuYWdlZGlkZW50aXRpZXMudjFiZXRhMS5UcnVzdEID4EECUgV0cnVzdA==');
 @$core.Deprecated('Use reconfigureTrustRequestDescriptor instead')
 const ReconfigureTrustRequest$json = const {
   '1': 'ReconfigureTrustRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'target_domain_name',
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': const {},
       '10': 'targetDomainName'
     },
     const {
@@ -232,6 +258,7 @@ const ReconfigureTrustRequest$json = const {
       '3': 3,
       '4': 3,
       '5': 9,
+      '8': const {},
       '10': 'targetDnsIpAddresses'
     },
   ],
@@ -240,18 +267,19 @@ const ReconfigureTrustRequest$json = const {
 /// Descriptor for `ReconfigureTrustRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List reconfigureTrustRequestDescriptor =
     $convert.base64Decode(
-        'ChdSZWNvbmZpZ3VyZVRydXN0UmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEiwKEnRhcmdldF9kb21haW5fbmFtZRgCIAEoCVIQdGFyZ2V0RG9tYWluTmFtZRI1Chd0YXJnZXRfZG5zX2lwX2FkZHJlc3NlcxgDIAMoCVIUdGFyZ2V0RG5zSXBBZGRyZXNzZXM=');
+        'ChdSZWNvbmZpZ3VyZVRydXN0UmVxdWVzdBJDCgRuYW1lGAEgASgJQi/gQQL6QSkKJ21hbmFnZWRpZGVudGl0aWVzLmdvb2dsZWFwaXMuY29tL0RvbWFpblIEbmFtZRIxChJ0YXJnZXRfZG9tYWluX25hbWUYAiABKAlCA+BBAlIQdGFyZ2V0RG9tYWluTmFtZRI6Chd0YXJnZXRfZG5zX2lwX2FkZHJlc3NlcxgDIAMoCUID4EECUhR0YXJnZXREbnNJcEFkZHJlc3Nlcw==');
 @$core.Deprecated('Use detachTrustRequestDescriptor instead')
 const DetachTrustRequest$json = const {
   '1': 'DetachTrustRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'trust',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Trust',
+      '8': const {},
       '10': 'trust'
     },
   ],
@@ -259,18 +287,19 @@ const DetachTrustRequest$json = const {
 
 /// Descriptor for `DetachTrustRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List detachTrustRequestDescriptor = $convert.base64Decode(
-    'ChJEZXRhY2hUcnVzdFJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRJDCgV0cnVzdBgCIAEoCzItLmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0UgV0cnVzdA==');
+    'ChJEZXRhY2hUcnVzdFJlcXVlc3QSQwoEbmFtZRgBIAEoCUIv4EEC+kEpCidtYW5hZ2VkaWRlbnRpdGllcy5nb29nbGVhcGlzLmNvbS9Eb21haW5SBG5hbWUSSAoFdHJ1c3QYAiABKAsyLS5nb29nbGUuY2xvdWQubWFuYWdlZGlkZW50aXRpZXMudjFiZXRhMS5UcnVzdEID4EECUgV0cnVzdA==');
 @$core.Deprecated('Use validateTrustRequestDescriptor instead')
 const ValidateTrustRequest$json = const {
   '1': 'ValidateTrustRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'trust',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.managedidentities.v1beta1.Trust',
+      '8': const {},
       '10': 'trust'
     },
   ],
@@ -278,4 +307,4 @@ const ValidateTrustRequest$json = const {
 
 /// Descriptor for `ValidateTrustRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List validateTrustRequestDescriptor = $convert.base64Decode(
-    'ChRWYWxpZGF0ZVRydXN0UmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEkMKBXRydXN0GAIgASgLMi0uZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxYmV0YTEuVHJ1c3RSBXRydXN0');
+    'ChRWYWxpZGF0ZVRydXN0UmVxdWVzdBJDCgRuYW1lGAEgASgJQi/gQQL6QSkKJ21hbmFnZWRpZGVudGl0aWVzLmdvb2dsZWFwaXMuY29tL0RvbWFpblIEbmFtZRJICgV0cnVzdBgCIAEoCzItLmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MWJldGExLlRydXN0QgPgQQJSBXRydXN0');

@@ -62,6 +62,14 @@ const AnnotateAssessmentRequest$json = const {
       '8': const {},
       '10': 'reasons'
     },
+    const {
+      '1': 'hashed_account_id',
+      '3': 4,
+      '4': 1,
+      '5': 12,
+      '8': const {},
+      '10': 'hashedAccountId'
+    },
   ],
   '4': const [
     AnnotateAssessmentRequest_Annotation$json,
@@ -95,6 +103,8 @@ const AnnotateAssessmentRequest_Reason$json = const {
   '2': const [
     const {'1': 'REASON_UNSPECIFIED', '2': 0},
     const {'1': 'CHARGEBACK', '2': 1},
+    const {'1': 'CHARGEBACK_FRAUD', '2': 8},
+    const {'1': 'CHARGEBACK_DISPUTE', '2': 9},
     const {'1': 'PAYMENT_HEURISTICS', '2': 2},
     const {'1': 'INITIATED_TWO_FACTOR', '2': 7},
     const {'1': 'PASSED_TWO_FACTOR', '2': 3},
@@ -107,7 +117,7 @@ const AnnotateAssessmentRequest_Reason$json = const {
 /// Descriptor for `AnnotateAssessmentRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List annotateAssessmentRequestDescriptor =
     $convert.base64Decode(
-        'ChlBbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0EkkKBG5hbWUYASABKAlCNeBBAvpBLwotcmVjYXB0Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9Bc3Nlc3NtZW50UgRuYW1lEm4KCmFubm90YXRpb24YAiABKA4ySS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0LkFubm90YXRpb25CA+BBAVIKYW5ub3RhdGlvbhJkCgdyZWFzb25zGAMgAygOMkUuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuQW5ub3RhdGVBc3Nlc3NtZW50UmVxdWVzdC5SZWFzb25CA+BBAVIHcmVhc29ucyJ+CgpBbm5vdGF0aW9uEhoKFkFOTk9UQVRJT05fVU5TUEVDSUZJRUQQABIOCgpMRUdJVElNQVRFEAESDgoKRlJBVURVTEVOVBACEhgKEFBBU1NXT1JEX0NPUlJFQ1QQAxoCCAESGgoSUEFTU1dPUkRfSU5DT1JSRUNUEAQaAggBIr4BCgZSZWFzb24SFgoSUkVBU09OX1VOU1BFQ0lGSUVEEAASDgoKQ0hBUkdFQkFDSxABEhYKElBBWU1FTlRfSEVVUklTVElDUxACEhgKFElOSVRJQVRFRF9UV09fRkFDVE9SEAcSFQoRUEFTU0VEX1RXT19GQUNUT1IQAxIVChFGQUlMRURfVFdPX0ZBQ1RPUhAEEhQKEENPUlJFQ1RfUEFTU1dPUkQQBRIWChJJTkNPUlJFQ1RfUEFTU1dPUkQQBg==');
+        'ChlBbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0EkkKBG5hbWUYASABKAlCNeBBAvpBLwotcmVjYXB0Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9Bc3Nlc3NtZW50UgRuYW1lEm4KCmFubm90YXRpb24YAiABKA4ySS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0LkFubm90YXRpb25CA+BBAVIKYW5ub3RhdGlvbhJkCgdyZWFzb25zGAMgAygOMkUuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuQW5ub3RhdGVBc3Nlc3NtZW50UmVxdWVzdC5SZWFzb25CA+BBAVIHcmVhc29ucxIvChFoYXNoZWRfYWNjb3VudF9pZBgEIAEoDEID4EEBUg9oYXNoZWRBY2NvdW50SWQifgoKQW5ub3RhdGlvbhIaChZBTk5PVEFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKTEVHSVRJTUFURRABEg4KCkZSQVVEVUxFTlQQAhIYChBQQVNTV09SRF9DT1JSRUNUEAMaAggBEhoKElBBU1NXT1JEX0lOQ09SUkVDVBAEGgIIASLsAQoGUmVhc29uEhYKElJFQVNPTl9VTlNQRUNJRklFRBAAEg4KCkNIQVJHRUJBQ0sQARIUChBDSEFSR0VCQUNLX0ZSQVVEEAgSFgoSQ0hBUkdFQkFDS19ESVNQVVRFEAkSFgoSUEFZTUVOVF9IRVVSSVNUSUNTEAISGAoUSU5JVElBVEVEX1RXT19GQUNUT1IQBxIVChFQQVNTRURfVFdPX0ZBQ1RPUhADEhUKEUZBSUxFRF9UV09fRkFDVE9SEAQSFAoQQ09SUkVDVF9QQVNTV09SRBAFEhYKEklOQ09SUkVDVF9QQVNTV09SRBAG');
 @$core.Deprecated('Use annotateAssessmentResponseDescriptor instead')
 const AnnotateAssessmentResponse$json = const {
   '1': 'AnnotateAssessmentResponse',
@@ -147,13 +157,21 @@ const Assessment$json = const {
       '8': const {},
       '10': 'tokenProperties'
     },
+    const {
+      '1': 'account_defender_assessment',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.recaptchaenterprise.v1.AccountDefenderAssessment',
+      '10': 'accountDefenderAssessment'
+    },
   ],
   '7': const {},
 };
 
 /// Descriptor for `Assessment`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List assessmentDescriptor = $convert.base64Decode(
-    'CgpBc3Nlc3NtZW50EhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRJACgVldmVudBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkV2ZW50UgVldmVudBJbCg1yaXNrX2FuYWx5c2lzGAMgASgLMjEuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuUmlza0FuYWx5c2lzQgPgQQNSDHJpc2tBbmFseXNpcxJkChB0b2tlbl9wcm9wZXJ0aWVzGAQgASgLMjQuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuVG9rZW5Qcm9wZXJ0aWVzQgPgQQNSD3Rva2VuUHJvcGVydGllczpf6kFcCi1yZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29tL0Fzc2Vzc21lbnQSK3Byb2plY3RzL3twcm9qZWN0fS9hc3Nlc3NtZW50cy97YXNzZXNzbWVudH0=');
+    'CgpBc3Nlc3NtZW50EhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRJACgVldmVudBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkV2ZW50UgVldmVudBJbCg1yaXNrX2FuYWx5c2lzGAMgASgLMjEuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuUmlza0FuYWx5c2lzQgPgQQNSDHJpc2tBbmFseXNpcxJkChB0b2tlbl9wcm9wZXJ0aWVzGAQgASgLMjQuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuVG9rZW5Qcm9wZXJ0aWVzQgPgQQNSD3Rva2VuUHJvcGVydGllcxJ+ChthY2NvdW50X2RlZmVuZGVyX2Fzc2Vzc21lbnQYBiABKAsyPi5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5BY2NvdW50RGVmZW5kZXJBc3Nlc3NtZW50UhlhY2NvdW50RGVmZW5kZXJBc3Nlc3NtZW50Ol/qQVwKLXJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vQXNzZXNzbWVudBIrcHJvamVjdHMve3Byb2plY3R9L2Fzc2Vzc21lbnRzL3thc3Nlc3NtZW50fQ==');
 @$core.Deprecated('Use eventDescriptor instead')
 const Event$json = const {
   '1': 'Event',
@@ -191,12 +209,20 @@ const Event$json = const {
       '8': const {},
       '10': 'expectedAction'
     },
+    const {
+      '1': 'hashed_account_id',
+      '3': 6,
+      '4': 1,
+      '5': 12,
+      '8': const {},
+      '10': 'hashedAccountId'
+    },
   ],
 };
 
 /// Descriptor for `Event`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List eventDescriptor = $convert.base64Decode(
-    'CgVFdmVudBIZCgV0b2tlbhgBIAEoCUID4EEBUgV0b2tlbhIeCghzaXRlX2tleRgCIAEoCUID4EEBUgdzaXRlS2V5EiIKCnVzZXJfYWdlbnQYAyABKAlCA+BBAVIJdXNlckFnZW50EisKD3VzZXJfaXBfYWRkcmVzcxgEIAEoCUID4EEBUg11c2VySXBBZGRyZXNzEiwKD2V4cGVjdGVkX2FjdGlvbhgFIAEoCUID4EEBUg5leHBlY3RlZEFjdGlvbg==');
+    'CgVFdmVudBIZCgV0b2tlbhgBIAEoCUID4EEBUgV0b2tlbhIeCghzaXRlX2tleRgCIAEoCUID4EEBUgdzaXRlS2V5EiIKCnVzZXJfYWdlbnQYAyABKAlCA+BBAVIJdXNlckFnZW50EisKD3VzZXJfaXBfYWRkcmVzcxgEIAEoCUID4EEBUg11c2VySXBBZGRyZXNzEiwKD2V4cGVjdGVkX2FjdGlvbhgFIAEoCUID4EEBUg5leHBlY3RlZEFjdGlvbhIvChFoYXNoZWRfYWNjb3VudF9pZBgGIAEoDEID4EEBUg9oYXNoZWRBY2NvdW50SWQ=');
 @$core.Deprecated('Use riskAnalysisDescriptor instead')
 const RiskAnalysis$json = const {
   '1': 'RiskAnalysis',
@@ -275,6 +301,39 @@ const TokenProperties_InvalidReason$json = const {
 /// Descriptor for `TokenProperties`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tokenPropertiesDescriptor = $convert.base64Decode(
     'Cg9Ub2tlblByb3BlcnRpZXMSFAoFdmFsaWQYASABKAhSBXZhbGlkEmkKDmludmFsaWRfcmVhc29uGAIgASgOMkIuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuVG9rZW5Qcm9wZXJ0aWVzLkludmFsaWRSZWFzb25SDWludmFsaWRSZWFzb24SOwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjcmVhdGVUaW1lEhoKCGhvc3RuYW1lGAQgASgJUghob3N0bmFtZRIWCgZhY3Rpb24YBSABKAlSBmFjdGlvbiKRAQoNSW52YWxpZFJlYXNvbhIeChpJTlZBTElEX1JFQVNPTl9VTlNQRUNJRklFRBAAEhoKFlVOS05PV05fSU5WQUxJRF9SRUFTT04QARINCglNQUxGT1JNRUQQAhILCgdFWFBJUkVEEAMSCAoERFVQRRAEEgsKB01JU1NJTkcQBRIRCg1CUk9XU0VSX0VSUk9SEAY=');
+@$core.Deprecated('Use accountDefenderAssessmentDescriptor instead')
+const AccountDefenderAssessment$json = const {
+  '1': 'AccountDefenderAssessment',
+  '2': const [
+    const {
+      '1': 'labels',
+      '3': 1,
+      '4': 3,
+      '5': 14,
+      '6':
+          '.google.cloud.recaptchaenterprise.v1.AccountDefenderAssessment.AccountDefenderLabel',
+      '10': 'labels'
+    },
+  ],
+  '4': const [AccountDefenderAssessment_AccountDefenderLabel$json],
+};
+
+@$core.Deprecated('Use accountDefenderAssessmentDescriptor instead')
+const AccountDefenderAssessment_AccountDefenderLabel$json = const {
+  '1': 'AccountDefenderLabel',
+  '2': const [
+    const {'1': 'ACCOUNT_DEFENDER_LABEL_UNSPECIFIED', '2': 0},
+    const {'1': 'PROFILE_MATCH', '2': 1},
+    const {'1': 'SUSPICIOUS_LOGIN_ACTIVITY', '2': 2},
+    const {'1': 'SUSPICIOUS_ACCOUNT_CREATION', '2': 3},
+    const {'1': 'RELATED_ACCOUNTS_NUMBER_HIGH', '2': 4},
+  ],
+};
+
+/// Descriptor for `AccountDefenderAssessment`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List accountDefenderAssessmentDescriptor =
+    $convert.base64Decode(
+        'ChlBY2NvdW50RGVmZW5kZXJBc3Nlc3NtZW50EmsKBmxhYmVscxgBIAMoDjJTLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkFjY291bnREZWZlbmRlckFzc2Vzc21lbnQuQWNjb3VudERlZmVuZGVyTGFiZWxSBmxhYmVscyKzAQoUQWNjb3VudERlZmVuZGVyTGFiZWwSJgoiQUNDT1VOVF9ERUZFTkRFUl9MQUJFTF9VTlNQRUNJRklFRBAAEhEKDVBST0ZJTEVfTUFUQ0gQARIdChlTVVNQSUNJT1VTX0xPR0lOX0FDVElWSVRZEAISHwobU1VTUElDSU9VU19BQ0NPVU5UX0NSRUFUSU9OEAMSIAocUkVMQVRFRF9BQ0NPVU5UU19OVU1CRVJfSElHSBAE');
 @$core.Deprecated('Use createKeyRequestDescriptor instead')
 const CreateKeyRequest$json = const {
   '1': 'CreateKeyRequest',
@@ -601,7 +660,6 @@ const WebKeySettings$json = const {
       '3': 2,
       '4': 1,
       '5': 8,
-      '8': const {},
       '10': 'allowAmpTraffic'
     },
     const {
@@ -654,7 +712,7 @@ const WebKeySettings_ChallengeSecurityPreference$json = const {
 
 /// Descriptor for `WebKeySettings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List webKeySettingsDescriptor = $convert.base64Decode(
-    'Cg5XZWJLZXlTZXR0aW5ncxIqChFhbGxvd19hbGxfZG9tYWlucxgDIAEoCFIPYWxsb3dBbGxEb21haW5zEicKD2FsbG93ZWRfZG9tYWlucxgBIAMoCVIOYWxsb3dlZERvbWFpbnMSLwoRYWxsb3dfYW1wX3RyYWZmaWMYAiABKAhCA+BBAlIPYWxsb3dBbXBUcmFmZmljEnMKEGludGVncmF0aW9uX3R5cGUYBCABKA4yQy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5XZWJLZXlTZXR0aW5ncy5JbnRlZ3JhdGlvblR5cGVCA+BBAlIPaW50ZWdyYXRpb25UeXBlEpMBCh1jaGFsbGVuZ2Vfc2VjdXJpdHlfcHJlZmVyZW5jZRgFIAEoDjJPLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLldlYktleVNldHRpbmdzLkNoYWxsZW5nZVNlY3VyaXR5UHJlZmVyZW5jZVIbY2hhbGxlbmdlU2VjdXJpdHlQcmVmZXJlbmNlIlsKD0ludGVncmF0aW9uVHlwZRIgChxJTlRFR1JBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFU0NPUkUQARIMCghDSEVDS0JPWBACEg0KCUlOVklTSUJMRRADInYKG0NoYWxsZW5nZVNlY3VyaXR5UHJlZmVyZW5jZRItCilDSEFMTEVOR0VfU0VDVVJJVFlfUFJFRkVSRU5DRV9VTlNQRUNJRklFRBAAEg0KCVVTQUJJTElUWRABEgsKB0JBTEFOQ0UQAhIMCghTRUNVUklUWRAD');
+    'Cg5XZWJLZXlTZXR0aW5ncxIqChFhbGxvd19hbGxfZG9tYWlucxgDIAEoCFIPYWxsb3dBbGxEb21haW5zEicKD2FsbG93ZWRfZG9tYWlucxgBIAMoCVIOYWxsb3dlZERvbWFpbnMSKgoRYWxsb3dfYW1wX3RyYWZmaWMYAiABKAhSD2FsbG93QW1wVHJhZmZpYxJzChBpbnRlZ3JhdGlvbl90eXBlGAQgASgOMkMuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuV2ViS2V5U2V0dGluZ3MuSW50ZWdyYXRpb25UeXBlQgPgQQJSD2ludGVncmF0aW9uVHlwZRKTAQodY2hhbGxlbmdlX3NlY3VyaXR5X3ByZWZlcmVuY2UYBSABKA4yTy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5XZWJLZXlTZXR0aW5ncy5DaGFsbGVuZ2VTZWN1cml0eVByZWZlcmVuY2VSG2NoYWxsZW5nZVNlY3VyaXR5UHJlZmVyZW5jZSJbCg9JbnRlZ3JhdGlvblR5cGUSIAocSU5URUdSQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgkKBVNDT1JFEAESDAoIQ0hFQ0tCT1gQAhINCglJTlZJU0lCTEUQAyJ2ChtDaGFsbGVuZ2VTZWN1cml0eVByZWZlcmVuY2USLQopQ0hBTExFTkdFX1NFQ1VSSVRZX1BSRUZFUkVOQ0VfVU5TUEVDSUZJRUQQABINCglVU0FCSUxJVFkQARILCgdCQUxBTkNFEAISDAoIU0VDVVJJVFkQAw==');
 @$core.Deprecated('Use androidKeySettingsDescriptor instead')
 const AndroidKeySettings$json = const {
   '1': 'AndroidKeySettings',
@@ -804,3 +862,233 @@ const ChallengeMetrics$json = const {
 /// Descriptor for `ChallengeMetrics`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List challengeMetricsDescriptor = $convert.base64Decode(
     'ChBDaGFsbGVuZ2VNZXRyaWNzEiUKDnBhZ2Vsb2FkX2NvdW50GAEgASgDUg1wYWdlbG9hZENvdW50EicKD25vY2FwdGNoYV9jb3VudBgCIAEoA1IObm9jYXB0Y2hhQ291bnQSIQoMZmFpbGVkX2NvdW50GAMgASgDUgtmYWlsZWRDb3VudBIhCgxwYXNzZWRfY291bnQYBCABKANSC3Bhc3NlZENvdW50');
+@$core.Deprecated(
+    'Use listRelatedAccountGroupMembershipsRequestDescriptor instead')
+const ListRelatedAccountGroupMembershipsRequest$json = const {
+  '1': 'ListRelatedAccountGroupMembershipsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'page_size',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+    const {
+      '1': 'page_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListRelatedAccountGroupMembershipsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listRelatedAccountGroupMembershipsRequestDescriptor = $convert.base64Decode(
+        'CilMaXN0UmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXBzUmVxdWVzdBJgCgZwYXJlbnQYASABKAlCSOBBAvpBQhJAcmVjYXB0Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9SZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcFIGcGFyZW50EiAKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2VuGAMgASgJQgPgQQFSCXBhZ2VUb2tlbg==');
+@$core.Deprecated(
+    'Use listRelatedAccountGroupMembershipsResponseDescriptor instead')
+const ListRelatedAccountGroupMembershipsResponse$json = const {
+  '1': 'ListRelatedAccountGroupMembershipsResponse',
+  '2': const [
+    const {
+      '1': 'related_account_group_memberships',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership',
+      '10': 'relatedAccountGroupMemberships'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListRelatedAccountGroupMembershipsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listRelatedAccountGroupMembershipsResponseDescriptor =
+    $convert.base64Decode(
+        'CipMaXN0UmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXBzUmVzcG9uc2USjQEKIXJlbGF0ZWRfYWNjb3VudF9ncm91cF9tZW1iZXJzaGlwcxgBIAMoCzJCLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLlJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwUh5yZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+@$core.Deprecated('Use listRelatedAccountGroupsRequestDescriptor instead')
+const ListRelatedAccountGroupsRequest$json = const {
+  '1': 'ListRelatedAccountGroupsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'page_size',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+    const {
+      '1': 'page_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListRelatedAccountGroupsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listRelatedAccountGroupsRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9MaXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXF1ZXN0ElYKBnBhcmVudBgBIAEoCUI+4EEC+kE4EjZyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29tL1JlbGF0ZWRBY2NvdW50R3JvdXBSBnBhcmVudBIgCglwYWdlX3NpemUYAiABKAVCA+BBAVIIcGFnZVNpemUSIgoKcGFnZV90b2tlbhgDIAEoCUID4EEBUglwYWdlVG9rZW4=');
+@$core.Deprecated('Use listRelatedAccountGroupsResponseDescriptor instead')
+const ListRelatedAccountGroupsResponse$json = const {
+  '1': 'ListRelatedAccountGroupsResponse',
+  '2': const [
+    const {
+      '1': 'related_account_groups',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.recaptchaenterprise.v1.RelatedAccountGroup',
+      '10': 'relatedAccountGroups'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListRelatedAccountGroupsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listRelatedAccountGroupsResponseDescriptor =
+    $convert.base64Decode(
+        'CiBMaXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXNwb25zZRJuChZyZWxhdGVkX2FjY291bnRfZ3JvdXBzGAEgAygLMjguZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuUmVsYXRlZEFjY291bnRHcm91cFIUcmVsYXRlZEFjY291bnRHcm91cHMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+@$core.Deprecated(
+    'Use searchRelatedAccountGroupMembershipsRequestDescriptor instead')
+const SearchRelatedAccountGroupMembershipsRequest$json = const {
+  '1': 'SearchRelatedAccountGroupMembershipsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'hashed_account_id',
+      '3': 2,
+      '4': 1,
+      '5': 12,
+      '8': const {},
+      '10': 'hashedAccountId'
+    },
+    const {
+      '1': 'page_size',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+    const {
+      '1': 'page_token',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+  ],
+};
+
+/// Descriptor for `SearchRelatedAccountGroupMembershipsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    searchRelatedAccountGroupMembershipsRequestDescriptor =
+    $convert.base64Decode(
+        'CitTZWFyY2hSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHNSZXF1ZXN0EmAKBnBhcmVudBgBIAEoCUJI4EEC+kFCEkByZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29tL1JlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwUgZwYXJlbnQSLwoRaGFzaGVkX2FjY291bnRfaWQYAiABKAxCA+BBAVIPaGFzaGVkQWNjb3VudElkEiAKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2VuGAQgASgJQgPgQQFSCXBhZ2VUb2tlbg==');
+@$core.Deprecated(
+    'Use searchRelatedAccountGroupMembershipsResponseDescriptor instead')
+const SearchRelatedAccountGroupMembershipsResponse$json = const {
+  '1': 'SearchRelatedAccountGroupMembershipsResponse',
+  '2': const [
+    const {
+      '1': 'related_account_group_memberships',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership',
+      '10': 'relatedAccountGroupMemberships'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `SearchRelatedAccountGroupMembershipsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    searchRelatedAccountGroupMembershipsResponseDescriptor =
+    $convert.base64Decode(
+        'CixTZWFyY2hSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHNSZXNwb25zZRKNAQohcmVsYXRlZF9hY2NvdW50X2dyb3VwX21lbWJlcnNoaXBzGAEgAygLMkIuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXBSHnJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwcxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+@$core.Deprecated('Use relatedAccountGroupMembershipDescriptor instead')
+const RelatedAccountGroupMembership$json = const {
+  '1': 'RelatedAccountGroupMembership',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'hashed_account_id',
+      '3': 2,
+      '4': 1,
+      '5': 12,
+      '10': 'hashedAccountId'
+    },
+  ],
+  '7': const {},
+};
+
+/// Descriptor for `RelatedAccountGroupMembership`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List relatedAccountGroupMembershipDescriptor =
+    $convert.base64Decode(
+        'Ch1SZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcBJcCgRuYW1lGAEgASgJQkjgQQL6QUIKQHJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXBSBG5hbWUSKgoRaGFzaGVkX2FjY291bnRfaWQYAiABKAxSD2hhc2hlZEFjY291bnRJZDqeAepBmgEKQHJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXASVnByb2plY3RzL3twcm9qZWN0fS9yZWxhdGVkYWNjb3VudGdyb3Vwcy97cmVsYXRlZGFjY291bnRncm91cH0vbWVtYmVyc2hpcHMve21lbWJlcnNoaXB9');
+@$core.Deprecated('Use relatedAccountGroupDescriptor instead')
+const RelatedAccountGroup$json = const {
+  '1': 'RelatedAccountGroup',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+  '7': const {},
+};
+
+/// Descriptor for `RelatedAccountGroup`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List relatedAccountGroupDescriptor = $convert.base64Decode(
+    'ChNSZWxhdGVkQWNjb3VudEdyb3VwElIKBG5hbWUYASABKAlCPuBBAvpBOAo2cmVjYXB0Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9SZWxhdGVkQWNjb3VudEdyb3VwUgRuYW1lOnrqQXcKNnJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vUmVsYXRlZEFjY291bnRHcm91cBI9cHJvamVjdHMve3Byb2plY3R9L3JlbGF0ZWRhY2NvdW50Z3JvdXBzL3tyZWxhdGVkYWNjb3VudGdyb3VwfQ==');

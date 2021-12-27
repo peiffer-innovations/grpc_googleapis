@@ -88,6 +88,16 @@ class SearchCatalogResult extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fullyQualifiedName')
+    ..aOS(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
+    ..aOS(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'description')
     ..hasRequiredFields = false;
 
   SearchCatalogResult._() : super();
@@ -100,6 +110,8 @@ class SearchCatalogResult extends $pb.GeneratedMessage {
     $1.IntegratedSystem? integratedSystem,
     $core.String? userSpecifiedSystem,
     $core.String? fullyQualifiedName,
+    $core.String? displayName,
+    $core.String? description,
   }) {
     final _result = create();
     if (searchResultType != null) {
@@ -125,6 +137,12 @@ class SearchCatalogResult extends $pb.GeneratedMessage {
     }
     if (fullyQualifiedName != null) {
       _result.fullyQualifiedName = fullyQualifiedName;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    if (description != null) {
+      _result.description = description;
     }
     return _result;
   }
@@ -256,4 +274,28 @@ class SearchCatalogResult extends $pb.GeneratedMessage {
   $core.bool hasFullyQualifiedName() => $_has(7);
   @$pb.TagNumber(10)
   void clearFullyQualifiedName() => clearField(10);
+
+  @$pb.TagNumber(12)
+  $core.String get displayName => $_getSZ(8);
+  @$pb.TagNumber(12)
+  set displayName($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasDisplayName() => $_has(8);
+  @$pb.TagNumber(12)
+  void clearDisplayName() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get description => $_getSZ(9);
+  @$pb.TagNumber(13)
+  set description($core.String v) {
+    $_setString(9, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasDescription() => $_has(9);
+  @$pb.TagNumber(13)
+  void clearDescription() => clearField(13);
 }

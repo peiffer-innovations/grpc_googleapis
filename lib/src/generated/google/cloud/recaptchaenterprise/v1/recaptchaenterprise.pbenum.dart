@@ -72,6 +72,18 @@ class AnnotateAssessmentRequest_Reason extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'CHARGEBACK');
+  static const AnnotateAssessmentRequest_Reason CHARGEBACK_FRAUD =
+      AnnotateAssessmentRequest_Reason._(
+          8,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHARGEBACK_FRAUD');
+  static const AnnotateAssessmentRequest_Reason CHARGEBACK_DISPUTE =
+      AnnotateAssessmentRequest_Reason._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHARGEBACK_DISPUTE');
   static const AnnotateAssessmentRequest_Reason PAYMENT_HEURISTICS =
       AnnotateAssessmentRequest_Reason._(
           2,
@@ -113,6 +125,8 @@ class AnnotateAssessmentRequest_Reason extends $pb.ProtobufEnum {
       <AnnotateAssessmentRequest_Reason>[
     REASON_UNSPECIFIED,
     CHARGEBACK,
+    CHARGEBACK_FRAUD,
+    CHARGEBACK_DISPUTE,
     PAYMENT_HEURISTICS,
     INITIATED_TWO_FACTOR,
     PASSED_TWO_FACTOR,
@@ -248,6 +262,63 @@ class TokenProperties_InvalidReason extends $pb.ProtobufEnum {
       _byValue[value];
 
   const TokenProperties_InvalidReason._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class AccountDefenderAssessment_AccountDefenderLabel extends $pb.ProtobufEnum {
+  static const AccountDefenderAssessment_AccountDefenderLabel
+      ACCOUNT_DEFENDER_LABEL_UNSPECIFIED =
+      AccountDefenderAssessment_AccountDefenderLabel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ACCOUNT_DEFENDER_LABEL_UNSPECIFIED');
+  static const AccountDefenderAssessment_AccountDefenderLabel PROFILE_MATCH =
+      AccountDefenderAssessment_AccountDefenderLabel._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PROFILE_MATCH');
+  static const AccountDefenderAssessment_AccountDefenderLabel
+      SUSPICIOUS_LOGIN_ACTIVITY =
+      AccountDefenderAssessment_AccountDefenderLabel._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SUSPICIOUS_LOGIN_ACTIVITY');
+  static const AccountDefenderAssessment_AccountDefenderLabel
+      SUSPICIOUS_ACCOUNT_CREATION =
+      AccountDefenderAssessment_AccountDefenderLabel._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SUSPICIOUS_ACCOUNT_CREATION');
+  static const AccountDefenderAssessment_AccountDefenderLabel
+      RELATED_ACCOUNTS_NUMBER_HIGH =
+      AccountDefenderAssessment_AccountDefenderLabel._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RELATED_ACCOUNTS_NUMBER_HIGH');
+
+  static const $core.List<AccountDefenderAssessment_AccountDefenderLabel>
+      values = <AccountDefenderAssessment_AccountDefenderLabel>[
+    ACCOUNT_DEFENDER_LABEL_UNSPECIFIED,
+    PROFILE_MATCH,
+    SUSPICIOUS_LOGIN_ACTIVITY,
+    SUSPICIOUS_ACCOUNT_CREATION,
+    RELATED_ACCOUNTS_NUMBER_HIGH,
+  ];
+
+  static final $core
+          .Map<$core.int, AccountDefenderAssessment_AccountDefenderLabel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AccountDefenderAssessment_AccountDefenderLabel? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const AccountDefenderAssessment_AccountDefenderLabel._(
+      $core.int v, $core.String n)
       : super(v, n);
 }
 

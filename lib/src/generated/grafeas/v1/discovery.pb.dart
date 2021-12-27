@@ -135,6 +135,12 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
             ? ''
             : 'lastScanTime',
         subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'archiveTime',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   DiscoveryOccurrence._() : super();
@@ -144,6 +150,7 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
     $0.Status? analysisStatusError,
     $core.String? cpe,
     $1.Timestamp? lastScanTime,
+    $1.Timestamp? archiveTime,
   }) {
     final _result = create();
     if (continuousAnalysis != null) {
@@ -160,6 +167,9 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
     }
     if (lastScanTime != null) {
       _result.lastScanTime = lastScanTime;
+    }
+    if (archiveTime != null) {
+      _result.archiveTime = archiveTime;
     }
     return _result;
   }
@@ -253,4 +263,18 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
   void clearLastScanTime() => clearField(5);
   @$pb.TagNumber(5)
   $1.Timestamp ensureLastScanTime() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $1.Timestamp get archiveTime => $_getN(5);
+  @$pb.TagNumber(6)
+  set archiveTime($1.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasArchiveTime() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearArchiveTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.Timestamp ensureArchiveTime() => $_ensure(5);
 }

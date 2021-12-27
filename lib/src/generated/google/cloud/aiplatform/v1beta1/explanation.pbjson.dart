@@ -239,13 +239,21 @@ const IntegratedGradientsAttribution$json = const {
       '6': '.google.cloud.aiplatform.v1beta1.SmoothGradConfig',
       '10': 'smoothGradConfig'
     },
+    const {
+      '1': 'blur_baseline_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1beta1.BlurBaselineConfig',
+      '10': 'blurBaselineConfig'
+    },
   ],
 };
 
 /// Descriptor for `IntegratedGradientsAttribution`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List integratedGradientsAttributionDescriptor =
     $convert.base64Decode(
-        'Ch5JbnRlZ3JhdGVkR3JhZGllbnRzQXR0cmlidXRpb24SIgoKc3RlcF9jb3VudBgBIAEoBUID4EECUglzdGVwQ291bnQSXwoSc21vb3RoX2dyYWRfY29uZmlnGAIgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TbW9vdGhHcmFkQ29uZmlnUhBzbW9vdGhHcmFkQ29uZmln');
+        'Ch5JbnRlZ3JhdGVkR3JhZGllbnRzQXR0cmlidXRpb24SIgoKc3RlcF9jb3VudBgBIAEoBUID4EECUglzdGVwQ291bnQSXwoSc21vb3RoX2dyYWRfY29uZmlnGAIgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TbW9vdGhHcmFkQ29uZmlnUhBzbW9vdGhHcmFkQ29uZmlnEmUKFGJsdXJfYmFzZWxpbmVfY29uZmlnGAMgASgLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5CbHVyQmFzZWxpbmVDb25maWdSEmJsdXJCYXNlbGluZUNvbmZpZw==');
 @$core.Deprecated('Use xraiAttributionDescriptor instead')
 const XraiAttribution$json = const {
   '1': 'XraiAttribution',
@@ -266,12 +274,20 @@ const XraiAttribution$json = const {
       '6': '.google.cloud.aiplatform.v1beta1.SmoothGradConfig',
       '10': 'smoothGradConfig'
     },
+    const {
+      '1': 'blur_baseline_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1beta1.BlurBaselineConfig',
+      '10': 'blurBaselineConfig'
+    },
   ],
 };
 
 /// Descriptor for `XraiAttribution`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List xraiAttributionDescriptor = $convert.base64Decode(
-    'Cg9YcmFpQXR0cmlidXRpb24SIgoKc3RlcF9jb3VudBgBIAEoBUID4EECUglzdGVwQ291bnQSXwoSc21vb3RoX2dyYWRfY29uZmlnGAIgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TbW9vdGhHcmFkQ29uZmlnUhBzbW9vdGhHcmFkQ29uZmln');
+    'Cg9YcmFpQXR0cmlidXRpb24SIgoKc3RlcF9jb3VudBgBIAEoBUID4EECUglzdGVwQ291bnQSXwoSc21vb3RoX2dyYWRfY29uZmlnGAIgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TbW9vdGhHcmFkQ29uZmlnUhBzbW9vdGhHcmFkQ29uZmlnEmUKFGJsdXJfYmFzZWxpbmVfY29uZmlnGAMgASgLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5CbHVyQmFzZWxpbmVDb25maWdSEmJsdXJCYXNlbGluZUNvbmZpZw==');
 @$core.Deprecated('Use smoothGradConfigDescriptor instead')
 const SmoothGradConfig$json = const {
   '1': 'SmoothGradConfig',
@@ -338,6 +354,17 @@ const FeatureNoiseSigma_NoiseSigmaForFeature$json = const {
 /// Descriptor for `FeatureNoiseSigma`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List featureNoiseSigmaDescriptor = $convert.base64Decode(
     'ChFGZWF0dXJlTm9pc2VTaWdtYRJoCgtub2lzZV9zaWdtYRgBIAMoCzJHLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRmVhdHVyZU5vaXNlU2lnbWEuTm9pc2VTaWdtYUZvckZlYXR1cmVSCm5vaXNlU2lnbWEaQAoUTm9pc2VTaWdtYUZvckZlYXR1cmUSEgoEbmFtZRgBIAEoCVIEbmFtZRIUCgVzaWdtYRgCIAEoAlIFc2lnbWE=');
+@$core.Deprecated('Use blurBaselineConfigDescriptor instead')
+const BlurBaselineConfig$json = const {
+  '1': 'BlurBaselineConfig',
+  '2': const [
+    const {'1': 'max_blur_sigma', '3': 1, '4': 1, '5': 2, '10': 'maxBlurSigma'},
+  ],
+};
+
+/// Descriptor for `BlurBaselineConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blurBaselineConfigDescriptor = $convert.base64Decode(
+    'ChJCbHVyQmFzZWxpbmVDb25maWcSJAoObWF4X2JsdXJfc2lnbWEYASABKAJSDG1heEJsdXJTaWdtYQ==');
 @$core.Deprecated('Use similarityDescriptor instead')
 const Similarity$json = const {
   '1': 'Similarity',

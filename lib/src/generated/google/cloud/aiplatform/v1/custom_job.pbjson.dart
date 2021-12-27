@@ -183,6 +183,14 @@ const CustomJobSpec$json = const {
       '10': 'baseOutputDirectory'
     },
     const {
+      '1': 'tensorboard',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'tensorboard'
+    },
+    const {
       '1': 'enable_web_access',
       '3': 10,
       '4': 1,
@@ -195,7 +203,7 @@ const CustomJobSpec$json = const {
 
 /// Descriptor for `CustomJobSpec`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List customJobSpecDescriptor = $convert.base64Decode(
-    'Cg1DdXN0b21Kb2JTcGVjElsKEXdvcmtlcl9wb29sX3NwZWNzGAEgAygLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuV29ya2VyUG9vbFNwZWNCA+BBAlIPd29ya2VyUG9vbFNwZWNzEkYKCnNjaGVkdWxpbmcYAyABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TY2hlZHVsaW5nUgpzY2hlZHVsaW5nEicKD3NlcnZpY2VfYWNjb3VudBgEIAEoCVIOc2VydmljZUFjY291bnQSPQoHbmV0d29yaxgFIAEoCUIj+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmtSB25ldHdvcmsSXgoVYmFzZV9vdXRwdXRfZGlyZWN0b3J5GAYgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25SE2Jhc2VPdXRwdXREaXJlY3RvcnkSLwoRZW5hYmxlX3dlYl9hY2Nlc3MYCiABKAhCA+BBAVIPZW5hYmxlV2ViQWNjZXNz');
+    'Cg1DdXN0b21Kb2JTcGVjElsKEXdvcmtlcl9wb29sX3NwZWNzGAEgAygLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuV29ya2VyUG9vbFNwZWNCA+BBAlIPd29ya2VyUG9vbFNwZWNzEkYKCnNjaGVkdWxpbmcYAyABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TY2hlZHVsaW5nUgpzY2hlZHVsaW5nEicKD3NlcnZpY2VfYWNjb3VudBgEIAEoCVIOc2VydmljZUFjY291bnQSPQoHbmV0d29yaxgFIAEoCUIj+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmtSB25ldHdvcmsSXgoVYmFzZV9vdXRwdXRfZGlyZWN0b3J5GAYgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25SE2Jhc2VPdXRwdXREaXJlY3RvcnkSTwoLdGVuc29yYm9hcmQYByABKAlCLeBBAfpBJwolYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9UZW5zb3Jib2FyZFILdGVuc29yYm9hcmQSLwoRZW5hYmxlX3dlYl9hY2Nlc3MYCiABKAhCA+BBAVIPZW5hYmxlV2ViQWNjZXNz');
 @$core.Deprecated('Use workerPoolSpecDescriptor instead')
 const WorkerPoolSpec$json = const {
   '1': 'WorkerPoolSpec',

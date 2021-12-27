@@ -142,7 +142,8 @@ const PipelineJob_RuntimeConfig$json = const {
       '5': 11,
       '6':
           '.google.cloud.aiplatform.v1beta1.PipelineJob.RuntimeConfig.ParametersEntry',
-      '10': 'parameters'
+      '8': const {'3': true},
+      '10': 'parameters',
     },
     const {
       '1': 'gcs_output_directory',
@@ -152,8 +153,20 @@ const PipelineJob_RuntimeConfig$json = const {
       '8': const {},
       '10': 'gcsOutputDirectory'
     },
+    const {
+      '1': 'parameter_values',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.aiplatform.v1beta1.PipelineJob.RuntimeConfig.ParameterValuesEntry',
+      '10': 'parameterValues'
+    },
   ],
-  '3': const [PipelineJob_RuntimeConfig_ParametersEntry$json],
+  '3': const [
+    PipelineJob_RuntimeConfig_ParametersEntry$json,
+    PipelineJob_RuntimeConfig_ParameterValuesEntry$json
+  ],
 };
 
 @$core.Deprecated('Use pipelineJobDescriptor instead')
@@ -174,6 +187,23 @@ const PipelineJob_RuntimeConfig_ParametersEntry$json = const {
 };
 
 @$core.Deprecated('Use pipelineJobDescriptor instead')
+const PipelineJob_RuntimeConfig_ParameterValuesEntry$json = const {
+  '1': 'ParameterValuesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Value',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use pipelineJobDescriptor instead')
 const PipelineJob_LabelsEntry$json = const {
   '1': 'LabelsEntry',
   '2': const [
@@ -185,7 +215,7 @@ const PipelineJob_LabelsEntry$json = const {
 
 /// Descriptor for `PipelineJob`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pipelineJobDescriptor = $convert.base64Decode(
-    'CgtQaXBlbGluZUpvYhIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRI+CgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUglzdGFydFRpbWUSOgoIZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSB2VuZFRpbWUSQAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSQQoNcGlwZWxpbmVfc3BlYxgHIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAlIMcGlwZWxpbmVTcGVjEkkKBXN0YXRlGAggASgOMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVN0YXRlQgPgQQNSBXN0YXRlElYKCmpvYl9kZXRhaWwYCSABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lSm9iRGV0YWlsQgPgQQNSCWpvYkRldGFpbBItCgVlcnJvchgKIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQNSBWVycm9yElAKBmxhYmVscxgLIAMoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuTGFiZWxzRW50cnlSBmxhYmVscxJhCg5ydW50aW1lX2NvbmZpZxgMIAEoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuUnVudGltZUNvbmZpZ1INcnVudGltZUNvbmZpZxJYCg9lbmNyeXB0aW9uX3NwZWMYECABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkVuY3J5cHRpb25TcGVjUg5lbmNyeXB0aW9uU3BlYxInCg9zZXJ2aWNlX2FjY291bnQYESABKAlSDnNlcnZpY2VBY2NvdW50Ej0KB25ldHdvcmsYEiABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrUgduZXR3b3JrGpkCCg1SdW50aW1lQ29uZmlnEmoKCnBhcmFtZXRlcnMYASADKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lSm9iLlJ1bnRpbWVDb25maWcuUGFyYW1ldGVyc0VudHJ5UgpwYXJhbWV0ZXJzEjUKFGdjc19vdXRwdXRfZGlyZWN0b3J5GAIgASgJQgPgQQJSEmdjc091dHB1dERpcmVjdG9yeRplCg9QYXJhbWV0ZXJzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSPAoFdmFsdWUYAiABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlZhbHVlUgV2YWx1ZToCOAEaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ATpv6kFsCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1BpcGVsaW5lSm9iEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcGlwZWxpbmVKb2JzL3twaXBlbGluZV9qb2J9');
+    'CgtQaXBlbGluZUpvYhIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRI+CgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUglzdGFydFRpbWUSOgoIZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSB2VuZFRpbWUSQAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSQQoNcGlwZWxpbmVfc3BlYxgHIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAlIMcGlwZWxpbmVTcGVjEkkKBXN0YXRlGAggASgOMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVN0YXRlQgPgQQNSBXN0YXRlElYKCmpvYl9kZXRhaWwYCSABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lSm9iRGV0YWlsQgPgQQNSCWpvYkRldGFpbBItCgVlcnJvchgKIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQNSBWVycm9yElAKBmxhYmVscxgLIAMoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuTGFiZWxzRW50cnlSBmxhYmVscxJhCg5ydW50aW1lX2NvbmZpZxgMIAEoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuUnVudGltZUNvbmZpZ1INcnVudGltZUNvbmZpZxJYCg9lbmNyeXB0aW9uX3NwZWMYECABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkVuY3J5cHRpb25TcGVjUg5lbmNyeXB0aW9uU3BlYxInCg9zZXJ2aWNlX2FjY291bnQYESABKAlSDnNlcnZpY2VBY2NvdW50Ej0KB25ldHdvcmsYEiABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrUgduZXR3b3JrGvUDCg1SdW50aW1lQ29uZmlnEm4KCnBhcmFtZXRlcnMYASADKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lSm9iLlJ1bnRpbWVDb25maWcuUGFyYW1ldGVyc0VudHJ5QgIYAVIKcGFyYW1ldGVycxI1ChRnY3Nfb3V0cHV0X2RpcmVjdG9yeRgCIAEoCUID4EECUhJnY3NPdXRwdXREaXJlY3RvcnkSegoQcGFyYW1ldGVyX3ZhbHVlcxgDIAMoCzJPLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuUnVudGltZUNvbmZpZy5QYXJhbWV0ZXJWYWx1ZXNFbnRyeVIPcGFyYW1ldGVyVmFsdWVzGmUKD1BhcmFtZXRlcnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRI8CgV2YWx1ZRgCIAEoCzImLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVmFsdWVSBXZhbHVlOgI4ARpaChRQYXJhbWV0ZXJWYWx1ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZVIFdmFsdWU6AjgBGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE6b+pBbAolYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QaXBlbGluZUpvYhJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BpcGVsaW5lSm9icy97cGlwZWxpbmVfam9ifQ==');
 @$core.Deprecated('Use pipelineJobDetailDescriptor instead')
 const PipelineJobDetail$json = const {
   '1': 'PipelineJobDetail',

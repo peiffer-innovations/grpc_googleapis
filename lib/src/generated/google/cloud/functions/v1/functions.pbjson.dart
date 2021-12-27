@@ -140,8 +140,18 @@ const CloudFunction$json = const {
       '6': '.google.cloud.functions.v1.CloudFunction.EnvironmentVariablesEntry',
       '10': 'environmentVariables'
     },
+    const {
+      '1': 'build_environment_variables',
+      '3': 28,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.functions.v1.CloudFunction.BuildEnvironmentVariablesEntry',
+      '10': 'buildEnvironmentVariables'
+    },
     const {'1': 'network', '3': 18, '4': 1, '5': 9, '10': 'network'},
     const {'1': 'max_instances', '3': 20, '4': 1, '5': 5, '10': 'maxInstances'},
+    const {'1': 'min_instances', '3': 32, '4': 1, '5': 5, '10': 'minInstances'},
     const {'1': 'vpc_connector', '3': 22, '4': 1, '5': 9, '10': 'vpcConnector'},
     const {
       '1': 'vpc_connector_egress_settings',
@@ -161,6 +171,21 @@ const CloudFunction$json = const {
       '10': 'ingressSettings'
     },
     const {
+      '1': 'kms_key_name',
+      '3': 25,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'kmsKeyName'
+    },
+    const {
+      '1': 'build_worker_pool',
+      '3': 26,
+      '4': 1,
+      '5': 9,
+      '10': 'buildWorkerPool'
+    },
+    const {
       '1': 'build_id',
       '3': 27,
       '4': 1,
@@ -168,10 +193,51 @@ const CloudFunction$json = const {
       '8': const {},
       '10': 'buildId'
     },
+    const {
+      '1': 'build_name',
+      '3': 33,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'buildName'
+    },
+    const {
+      '1': 'secret_environment_variables',
+      '3': 29,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.functions.v1.SecretEnvVar',
+      '10': 'secretEnvironmentVariables'
+    },
+    const {
+      '1': 'secret_volumes',
+      '3': 30,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.functions.v1.SecretVolume',
+      '10': 'secretVolumes'
+    },
+    const {
+      '1': 'source_token',
+      '3': 31,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'sourceToken'
+    },
+    const {
+      '1': 'docker_repository',
+      '3': 34,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'dockerRepository'
+    },
   ],
   '3': const [
     CloudFunction_LabelsEntry$json,
-    CloudFunction_EnvironmentVariablesEntry$json
+    CloudFunction_EnvironmentVariablesEntry$json,
+    CloudFunction_BuildEnvironmentVariablesEntry$json
   ],
   '4': const [
     CloudFunction_VpcConnectorEgressSettings$json,
@@ -205,6 +271,16 @@ const CloudFunction_EnvironmentVariablesEntry$json = const {
 };
 
 @$core.Deprecated('Use cloudFunctionDescriptor instead')
+const CloudFunction_BuildEnvironmentVariablesEntry$json = const {
+  '1': 'BuildEnvironmentVariablesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use cloudFunctionDescriptor instead')
 const CloudFunction_VpcConnectorEgressSettings$json = const {
   '1': 'VpcConnectorEgressSettings',
   '2': const [
@@ -227,7 +303,7 @@ const CloudFunction_IngressSettings$json = const {
 
 /// Descriptor for `CloudFunction`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cloudFunctionDescriptor = $convert.base64Decode(
-    'Cg1DbG91ZEZ1bmN0aW9uEhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEi4KEnNvdXJjZV9hcmNoaXZlX3VybBgDIAEoCUgAUhBzb3VyY2VBcmNoaXZlVXJsEloKEXNvdXJjZV9yZXBvc2l0b3J5GAQgASgLMisuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5Tb3VyY2VSZXBvc2l0b3J5SABSEHNvdXJjZVJlcG9zaXRvcnkSLAoRc291cmNlX3VwbG9hZF91cmwYECABKAlIAFIPc291cmNlVXBsb2FkVXJsEk4KDWh0dHBzX3RyaWdnZXIYBSABKAsyJy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkh0dHBzVHJpZ2dlckgBUgxodHRwc1RyaWdnZXISTgoNZXZlbnRfdHJpZ2dlchgGIAEoCzInLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuRXZlbnRUcmlnZ2VySAFSDGV2ZW50VHJpZ2dlchJLCgZzdGF0dXMYByABKA4yLi5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb25TdGF0dXNCA+BBA1IGc3RhdHVzEh8KC2VudHJ5X3BvaW50GAggASgJUgplbnRyeVBvaW50EhgKB3J1bnRpbWUYEyABKAlSB3J1bnRpbWUSMwoHdGltZW91dBgJIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIHdGltZW91dBIuChNhdmFpbGFibGVfbWVtb3J5X21iGAogASgFUhFhdmFpbGFibGVNZW1vcnlNYhIyChVzZXJ2aWNlX2FjY291bnRfZW1haWwYCyABKAlSE3NlcnZpY2VBY2NvdW50RW1haWwSQAoLdXBkYXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSIgoKdmVyc2lvbl9pZBgOIAEoA0ID4EEDUgl2ZXJzaW9uSWQSTAoGbGFiZWxzGA8gAygLMjQuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLkxhYmVsc0VudHJ5UgZsYWJlbHMSdwoVZW52aXJvbm1lbnRfdmFyaWFibGVzGBEgAygLMkIuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLkVudmlyb25tZW50VmFyaWFibGVzRW50cnlSFGVudmlyb25tZW50VmFyaWFibGVzEhgKB25ldHdvcmsYEiABKAlSB25ldHdvcmsSIwoNbWF4X2luc3RhbmNlcxgUIAEoBVIMbWF4SW5zdGFuY2VzEiMKDXZwY19jb25uZWN0b3IYFiABKAlSDHZwY0Nvbm5lY3RvchKGAQoddnBjX2Nvbm5lY3Rvcl9lZ3Jlc3Nfc2V0dGluZ3MYFyABKA4yQy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb24uVnBjQ29ubmVjdG9yRWdyZXNzU2V0dGluZ3NSGnZwY0Nvbm5lY3RvckVncmVzc1NldHRpbmdzEmMKEGluZ3Jlc3Nfc2V0dGluZ3MYGCABKA4yOC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb24uSW5ncmVzc1NldHRpbmdzUg9pbmdyZXNzU2V0dGluZ3MSHgoIYnVpbGRfaWQYGyABKAlCA+BBA1IHYnVpbGRJZBo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGkcKGUVudmlyb25tZW50VmFyaWFibGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASJ1ChpWcGNDb25uZWN0b3JFZ3Jlc3NTZXR0aW5ncxItCilWUENfQ09OTkVDVE9SX0VHUkVTU19TRVRUSU5HU19VTlNQRUNJRklFRBAAEhcKE1BSSVZBVEVfUkFOR0VTX09OTFkQARIPCgtBTExfVFJBRkZJQxACIngKD0luZ3Jlc3NTZXR0aW5ncxIgChxJTkdSRVNTX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASDQoJQUxMT1dfQUxMEAESFwoTQUxMT1dfSU5URVJOQUxfT05MWRACEhsKF0FMTE9XX0lOVEVSTkFMX0FORF9HQ0xCEAM6bupBaworY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xvdWRGdW5jdGlvbhI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Z1bmN0aW9ucy97ZnVuY3Rpb259Qg0KC3NvdXJjZV9jb2RlQgkKB3RyaWdnZXI=');
+    'Cg1DbG91ZEZ1bmN0aW9uEhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEi4KEnNvdXJjZV9hcmNoaXZlX3VybBgDIAEoCUgAUhBzb3VyY2VBcmNoaXZlVXJsEloKEXNvdXJjZV9yZXBvc2l0b3J5GAQgASgLMisuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5Tb3VyY2VSZXBvc2l0b3J5SABSEHNvdXJjZVJlcG9zaXRvcnkSLAoRc291cmNlX3VwbG9hZF91cmwYECABKAlIAFIPc291cmNlVXBsb2FkVXJsEk4KDWh0dHBzX3RyaWdnZXIYBSABKAsyJy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkh0dHBzVHJpZ2dlckgBUgxodHRwc1RyaWdnZXISTgoNZXZlbnRfdHJpZ2dlchgGIAEoCzInLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuRXZlbnRUcmlnZ2VySAFSDGV2ZW50VHJpZ2dlchJLCgZzdGF0dXMYByABKA4yLi5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb25TdGF0dXNCA+BBA1IGc3RhdHVzEh8KC2VudHJ5X3BvaW50GAggASgJUgplbnRyeVBvaW50EhgKB3J1bnRpbWUYEyABKAlSB3J1bnRpbWUSMwoHdGltZW91dBgJIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIHdGltZW91dBIuChNhdmFpbGFibGVfbWVtb3J5X21iGAogASgFUhFhdmFpbGFibGVNZW1vcnlNYhIyChVzZXJ2aWNlX2FjY291bnRfZW1haWwYCyABKAlSE3NlcnZpY2VBY2NvdW50RW1haWwSQAoLdXBkYXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSIgoKdmVyc2lvbl9pZBgOIAEoA0ID4EEDUgl2ZXJzaW9uSWQSTAoGbGFiZWxzGA8gAygLMjQuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLkxhYmVsc0VudHJ5UgZsYWJlbHMSdwoVZW52aXJvbm1lbnRfdmFyaWFibGVzGBEgAygLMkIuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLkVudmlyb25tZW50VmFyaWFibGVzRW50cnlSFGVudmlyb25tZW50VmFyaWFibGVzEocBChtidWlsZF9lbnZpcm9ubWVudF92YXJpYWJsZXMYHCADKAsyRy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb24uQnVpbGRFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5UhlidWlsZEVudmlyb25tZW50VmFyaWFibGVzEhgKB25ldHdvcmsYEiABKAlSB25ldHdvcmsSIwoNbWF4X2luc3RhbmNlcxgUIAEoBVIMbWF4SW5zdGFuY2VzEiMKDW1pbl9pbnN0YW5jZXMYICABKAVSDG1pbkluc3RhbmNlcxIjCg12cGNfY29ubmVjdG9yGBYgASgJUgx2cGNDb25uZWN0b3IShgEKHXZwY19jb25uZWN0b3JfZWdyZXNzX3NldHRpbmdzGBcgASgOMkMuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLlZwY0Nvbm5lY3RvckVncmVzc1NldHRpbmdzUhp2cGNDb25uZWN0b3JFZ3Jlc3NTZXR0aW5ncxJjChBpbmdyZXNzX3NldHRpbmdzGBggASgOMjguZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLkluZ3Jlc3NTZXR0aW5nc1IPaW5ncmVzc1NldHRpbmdzEkgKDGttc19rZXlfbmFtZRgZIAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlSCmttc0tleU5hbWUSKgoRYnVpbGRfd29ya2VyX3Bvb2wYGiABKAlSD2J1aWxkV29ya2VyUG9vbBIeCghidWlsZF9pZBgbIAEoCUID4EEDUgdidWlsZElkEiIKCmJ1aWxkX25hbWUYISABKAlCA+BBA1IJYnVpbGROYW1lEmkKHHNlY3JldF9lbnZpcm9ubWVudF92YXJpYWJsZXMYHSADKAsyJy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlNlY3JldEVudlZhclIac2VjcmV0RW52aXJvbm1lbnRWYXJpYWJsZXMSTgoOc2VjcmV0X3ZvbHVtZXMYHiADKAsyJy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlNlY3JldFZvbHVtZVINc2VjcmV0Vm9sdW1lcxImCgxzb3VyY2VfdG9rZW4YHyABKAlCA+BBBFILc291cmNlVG9rZW4SXAoRZG9ja2VyX3JlcG9zaXRvcnkYIiABKAlCL/pBLAoqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5UhBkb2NrZXJSZXBvc2l0b3J5GjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEaRwoZRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGkwKHkJ1aWxkRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBInUKGlZwY0Nvbm5lY3RvckVncmVzc1NldHRpbmdzEi0KKVZQQ19DT05ORUNUT1JfRUdSRVNTX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASFwoTUFJJVkFURV9SQU5HRVNfT05MWRABEg8KC0FMTF9UUkFGRklDEAIieAoPSW5ncmVzc1NldHRpbmdzEiAKHElOR1JFU1NfU0VUVElOR1NfVU5TUEVDSUZJRUQQABINCglBTExPV19BTEwQARIXChNBTExPV19JTlRFUk5BTF9PTkxZEAISGwoXQUxMT1dfSU5URVJOQUxfQU5EX0dDTEIQAzpu6kFrCitjbG91ZGZ1bmN0aW9ucy5nb29nbGVhcGlzLmNvbS9DbG91ZEZ1bmN0aW9uEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZnVuY3Rpb25zL3tmdW5jdGlvbn1CDQoLc291cmNlX2NvZGVCCQoHdHJpZ2dlcg==');
 @$core.Deprecated('Use sourceRepositoryDescriptor instead')
 const SourceRepository$json = const {
   '1': 'SourceRepository',
@@ -326,6 +402,51 @@ const FailurePolicy_Retry$json = const {
 /// Descriptor for `FailurePolicy`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List failurePolicyDescriptor = $convert.base64Decode(
     'Cg1GYWlsdXJlUG9saWN5EkYKBXJldHJ5GAEgASgLMi4uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5GYWlsdXJlUG9saWN5LlJldHJ5SABSBXJldHJ5GgcKBVJldHJ5QggKBmFjdGlvbg==');
+@$core.Deprecated('Use secretEnvVarDescriptor instead')
+const SecretEnvVar$json = const {
+  '1': 'SecretEnvVar',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
+    const {'1': 'secret', '3': 3, '4': 1, '5': 9, '10': 'secret'},
+    const {'1': 'version', '3': 4, '4': 1, '5': 9, '10': 'version'},
+  ],
+};
+
+/// Descriptor for `SecretEnvVar`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List secretEnvVarDescriptor = $convert.base64Decode(
+    'CgxTZWNyZXRFbnZWYXISEAoDa2V5GAEgASgJUgNrZXkSHQoKcHJvamVjdF9pZBgCIAEoCVIJcHJvamVjdElkEhYKBnNlY3JldBgDIAEoCVIGc2VjcmV0EhgKB3ZlcnNpb24YBCABKAlSB3ZlcnNpb24=');
+@$core.Deprecated('Use secretVolumeDescriptor instead')
+const SecretVolume$json = const {
+  '1': 'SecretVolume',
+  '2': const [
+    const {'1': 'mount_path', '3': 1, '4': 1, '5': 9, '10': 'mountPath'},
+    const {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
+    const {'1': 'secret', '3': 3, '4': 1, '5': 9, '10': 'secret'},
+    const {
+      '1': 'versions',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.functions.v1.SecretVolume.SecretVersion',
+      '10': 'versions'
+    },
+  ],
+  '3': const [SecretVolume_SecretVersion$json],
+};
+
+@$core.Deprecated('Use secretVolumeDescriptor instead')
+const SecretVolume_SecretVersion$json = const {
+  '1': 'SecretVersion',
+  '2': const [
+    const {'1': 'version', '3': 1, '4': 1, '5': 9, '10': 'version'},
+    const {'1': 'path', '3': 2, '4': 1, '5': 9, '10': 'path'},
+  ],
+};
+
+/// Descriptor for `SecretVolume`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List secretVolumeDescriptor = $convert.base64Decode(
+    'CgxTZWNyZXRWb2x1bWUSHQoKbW91bnRfcGF0aBgBIAEoCVIJbW91bnRQYXRoEh0KCnByb2plY3RfaWQYAiABKAlSCXByb2plY3RJZBIWCgZzZWNyZXQYAyABKAlSBnNlY3JldBJRCgh2ZXJzaW9ucxgEIAMoCzI1Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuU2VjcmV0Vm9sdW1lLlNlY3JldFZlcnNpb25SCHZlcnNpb25zGj0KDVNlY3JldFZlcnNpb24SGAoHdmVyc2lvbhgBIAEoCVIHdmVyc2lvbhISCgRwYXRoGAIgASgJUgRwYXRo');
 @$core.Deprecated('Use createFunctionRequestDescriptor instead')
 const CreateFunctionRequest$json = const {
   '1': 'CreateFunctionRequest',

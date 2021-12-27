@@ -128,3 +128,39 @@ class SynthesizeSpeechRequest_TimepointType extends $pb.ProtobufEnum {
   const SynthesizeSpeechRequest_TimepointType._($core.int v, $core.String n)
       : super(v, n);
 }
+
+class CustomVoiceParams_ReportedUsage extends $pb.ProtobufEnum {
+  static const CustomVoiceParams_ReportedUsage REPORTED_USAGE_UNSPECIFIED =
+      CustomVoiceParams_ReportedUsage._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REPORTED_USAGE_UNSPECIFIED');
+  static const CustomVoiceParams_ReportedUsage REALTIME =
+      CustomVoiceParams_ReportedUsage._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REALTIME');
+  static const CustomVoiceParams_ReportedUsage OFFLINE =
+      CustomVoiceParams_ReportedUsage._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OFFLINE');
+
+  static const $core.List<CustomVoiceParams_ReportedUsage> values =
+      <CustomVoiceParams_ReportedUsage>[
+    REPORTED_USAGE_UNSPECIFIED,
+    REALTIME,
+    OFFLINE,
+  ];
+
+  static final $core.Map<$core.int, CustomVoiceParams_ReportedUsage> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CustomVoiceParams_ReportedUsage? valueOf($core.int value) =>
+      _byValue[value];
+
+  const CustomVoiceParams_ReportedUsage._($core.int v, $core.String n)
+      : super(v, n);
+}

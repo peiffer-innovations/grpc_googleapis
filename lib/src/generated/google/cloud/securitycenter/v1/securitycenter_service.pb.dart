@@ -11,22 +11,184 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'finding.pb.dart' as $6;
-import 'notification_config.pb.dart' as $7;
+import 'mute_config.pb.dart' as $7;
+import 'notification_config.pb.dart' as $8;
 import 'source.pb.dart' as $5;
-import '../../../protobuf/duration.pb.dart' as $10;
-import '../../../protobuf/timestamp.pb.dart' as $11;
-import '../../../protobuf/struct.pb.dart' as $12;
-import '../../../protobuf/field_mask.pb.dart' as $13;
-import 'asset.pb.dart' as $14;
-import 'folder.pb.dart' as $15;
-import 'organization_settings.pb.dart' as $8;
-import 'security_marks.pb.dart' as $9;
+import '../../../protobuf/duration.pb.dart' as $12;
+import '../../../protobuf/timestamp.pb.dart' as $13;
+import '../../../protobuf/struct.pb.dart' as $14;
+import '../../../protobuf/field_mask.pb.dart' as $15;
+import 'asset.pb.dart' as $16;
+import 'folder.pb.dart' as $17;
+import 'external_system.pb.dart' as $10;
+import 'organization_settings.pb.dart' as $9;
+import 'security_marks.pb.dart' as $11;
 
 import 'securitycenter_service.pbenum.dart';
 import 'finding.pbenum.dart' as $6;
 
 export 'run_asset_discovery_response.pb.dart';
 export 'securitycenter_service.pbenum.dart';
+
+class BulkMuteFindingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BulkMuteFindingsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteAnnotation')
+    ..hasRequiredFields = false;
+
+  BulkMuteFindingsRequest._() : super();
+  factory BulkMuteFindingsRequest({
+    $core.String? parent,
+    $core.String? filter,
+    @$core.Deprecated('This field is deprecated.') $core.String? muteAnnotation,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (filter != null) {
+      _result.filter = filter;
+    }
+    if (muteAnnotation != null) {
+      // ignore: deprecated_member_use_from_same_package
+      _result.muteAnnotation = muteAnnotation;
+    }
+    return _result;
+  }
+  factory BulkMuteFindingsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BulkMuteFindingsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BulkMuteFindingsRequest clone() =>
+      BulkMuteFindingsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BulkMuteFindingsRequest copyWith(
+          void Function(BulkMuteFindingsRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkMuteFindingsRequest))
+          as BulkMuteFindingsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BulkMuteFindingsRequest create() => BulkMuteFindingsRequest._();
+  BulkMuteFindingsRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkMuteFindingsRequest> createRepeated() =>
+      $pb.PbList<BulkMuteFindingsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkMuteFindingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkMuteFindingsRequest>(create);
+  static BulkMuteFindingsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set filter($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFilter() => clearField(2);
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
+  $core.String get muteAnnotation => $_getSZ(2);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
+  set muteAnnotation($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
+  $core.bool hasMuteAnnotation() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
+  void clearMuteAnnotation() => clearField(3);
+}
+
+class BulkMuteFindingsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BulkMuteFindingsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  BulkMuteFindingsResponse._() : super();
+  factory BulkMuteFindingsResponse() => create();
+  factory BulkMuteFindingsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BulkMuteFindingsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BulkMuteFindingsResponse clone() =>
+      BulkMuteFindingsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BulkMuteFindingsResponse copyWith(
+          void Function(BulkMuteFindingsResponse) updates) =>
+      super.copyWith((message) => updates(message as BulkMuteFindingsResponse))
+          as BulkMuteFindingsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BulkMuteFindingsResponse create() => BulkMuteFindingsResponse._();
+  BulkMuteFindingsResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkMuteFindingsResponse> createRepeated() =>
+      $pb.PbList<BulkMuteFindingsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkMuteFindingsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkMuteFindingsResponse>(create);
+  static BulkMuteFindingsResponse? _defaultInstance;
+}
 
 class CreateFindingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -141,6 +303,120 @@ class CreateFindingRequest extends $pb.GeneratedMessage {
   $6.Finding ensureFinding() => $_ensure(2);
 }
 
+class CreateMuteConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateMuteConfigRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<$7.MuteConfig>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteConfig',
+        subBuilder: $7.MuteConfig.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteConfigId')
+    ..hasRequiredFields = false;
+
+  CreateMuteConfigRequest._() : super();
+  factory CreateMuteConfigRequest({
+    $core.String? parent,
+    $7.MuteConfig? muteConfig,
+    $core.String? muteConfigId,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (muteConfig != null) {
+      _result.muteConfig = muteConfig;
+    }
+    if (muteConfigId != null) {
+      _result.muteConfigId = muteConfigId;
+    }
+    return _result;
+  }
+  factory CreateMuteConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateMuteConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateMuteConfigRequest clone() =>
+      CreateMuteConfigRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateMuteConfigRequest copyWith(
+          void Function(CreateMuteConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateMuteConfigRequest))
+          as CreateMuteConfigRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateMuteConfigRequest create() => CreateMuteConfigRequest._();
+  CreateMuteConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateMuteConfigRequest> createRepeated() =>
+      $pb.PbList<CreateMuteConfigRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateMuteConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateMuteConfigRequest>(create);
+  static CreateMuteConfigRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $7.MuteConfig get muteConfig => $_getN(1);
+  @$pb.TagNumber(2)
+  set muteConfig($7.MuteConfig v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMuteConfig() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMuteConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.MuteConfig ensureMuteConfig() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get muteConfigId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set muteConfigId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasMuteConfigId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMuteConfigId() => clearField(3);
+}
+
 class CreateNotificationConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -161,19 +437,19 @@ class CreateNotificationConfigRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'configId')
-    ..aOM<$7.NotificationConfig>(
+    ..aOM<$8.NotificationConfig>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'notificationConfig',
-        subBuilder: $7.NotificationConfig.create)
+        subBuilder: $8.NotificationConfig.create)
     ..hasRequiredFields = false;
 
   CreateNotificationConfigRequest._() : super();
   factory CreateNotificationConfigRequest({
     $core.String? parent,
     $core.String? configId,
-    $7.NotificationConfig? notificationConfig,
+    $8.NotificationConfig? notificationConfig,
   }) {
     final _result = create();
     if (parent != null) {
@@ -244,9 +520,9 @@ class CreateNotificationConfigRequest extends $pb.GeneratedMessage {
   void clearConfigId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $7.NotificationConfig get notificationConfig => $_getN(2);
+  $8.NotificationConfig get notificationConfig => $_getN(2);
   @$pb.TagNumber(3)
-  set notificationConfig($7.NotificationConfig v) {
+  set notificationConfig($8.NotificationConfig v) {
     setField(3, v);
   }
 
@@ -255,7 +531,7 @@ class CreateNotificationConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearNotificationConfig() => clearField(3);
   @$pb.TagNumber(3)
-  $7.NotificationConfig ensureNotificationConfig() => $_ensure(2);
+  $8.NotificationConfig ensureNotificationConfig() => $_ensure(2);
 }
 
 class CreateSourceRequest extends $pb.GeneratedMessage {
@@ -349,6 +625,75 @@ class CreateSourceRequest extends $pb.GeneratedMessage {
   $5.Source ensureSource() => $_ensure(1);
 }
 
+class DeleteMuteConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteMuteConfigRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  DeleteMuteConfigRequest._() : super();
+  factory DeleteMuteConfigRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DeleteMuteConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteMuteConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteMuteConfigRequest clone() =>
+      DeleteMuteConfigRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteMuteConfigRequest copyWith(
+          void Function(DeleteMuteConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteMuteConfigRequest))
+          as DeleteMuteConfigRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeleteMuteConfigRequest create() => DeleteMuteConfigRequest._();
+  DeleteMuteConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteMuteConfigRequest> createRepeated() =>
+      $pb.PbList<DeleteMuteConfigRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteMuteConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteMuteConfigRequest>(create);
+  static DeleteMuteConfigRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
 class DeleteNotificationConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -407,6 +752,74 @@ class DeleteNotificationConfigRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteNotificationConfigRequest>(
           create);
   static DeleteNotificationConfigRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class GetMuteConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetMuteConfigRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetMuteConfigRequest._() : super();
+  factory GetMuteConfigRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetMuteConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetMuteConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetMuteConfigRequest clone() =>
+      GetMuteConfigRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetMuteConfigRequest copyWith(void Function(GetMuteConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as GetMuteConfigRequest))
+          as GetMuteConfigRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetMuteConfigRequest create() => GetMuteConfigRequest._();
+  GetMuteConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetMuteConfigRequest> createRepeated() =>
+      $pb.PbList<GetMuteConfigRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetMuteConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetMuteConfigRequest>(create);
+  static GetMuteConfigRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -655,18 +1068,18 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'groupBy')
-    ..aOM<$10.Duration>(
+    ..aOM<$12.Duration>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'compareDuration',
-        subBuilder: $10.Duration.create)
-    ..aOM<$11.Timestamp>(
+        subBuilder: $12.Duration.create)
+    ..aOM<$13.Timestamp>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..aOS(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -685,8 +1098,8 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? filter,
     $core.String? groupBy,
-    $10.Duration? compareDuration,
-    $11.Timestamp? readTime,
+    $12.Duration? compareDuration,
+    $13.Timestamp? readTime,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
@@ -778,9 +1191,9 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
   void clearGroupBy() => clearField(3);
 
   @$pb.TagNumber(4)
-  $10.Duration get compareDuration => $_getN(3);
+  $12.Duration get compareDuration => $_getN(3);
   @$pb.TagNumber(4)
-  set compareDuration($10.Duration v) {
+  set compareDuration($12.Duration v) {
     setField(4, v);
   }
 
@@ -789,12 +1202,12 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCompareDuration() => clearField(4);
   @$pb.TagNumber(4)
-  $10.Duration ensureCompareDuration() => $_ensure(3);
+  $12.Duration ensureCompareDuration() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $11.Timestamp get readTime => $_getN(4);
+  $13.Timestamp get readTime => $_getN(4);
   @$pb.TagNumber(5)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(5, v);
   }
 
@@ -803,7 +1216,7 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearReadTime() => clearField(5);
   @$pb.TagNumber(5)
-  $11.Timestamp ensureReadTime() => $_ensure(4);
+  $13.Timestamp ensureReadTime() => $_ensure(4);
 
   @$pb.TagNumber(7)
   $core.String get pageToken => $_getSZ(5);
@@ -847,12 +1260,12 @@ class GroupAssetsResponse extends $pb.GeneratedMessage {
             : 'groupByResults',
         $pb.PbFieldType.PM,
         subBuilder: GroupResult.create)
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -869,7 +1282,7 @@ class GroupAssetsResponse extends $pb.GeneratedMessage {
   GroupAssetsResponse._() : super();
   factory GroupAssetsResponse({
     $core.Iterable<GroupResult>? groupByResults,
-    $11.Timestamp? readTime,
+    $13.Timestamp? readTime,
     $core.String? nextPageToken,
     $core.int? totalSize,
   }) {
@@ -919,9 +1332,9 @@ class GroupAssetsResponse extends $pb.GeneratedMessage {
   $core.List<GroupResult> get groupByResults => $_getList(0);
 
   @$pb.TagNumber(2)
-  $11.Timestamp get readTime => $_getN(1);
+  $13.Timestamp get readTime => $_getN(1);
   @$pb.TagNumber(2)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(2, v);
   }
 
@@ -930,7 +1343,7 @@ class GroupAssetsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReadTime() => clearField(2);
   @$pb.TagNumber(2)
-  $11.Timestamp ensureReadTime() => $_ensure(1);
+  $13.Timestamp ensureReadTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -982,18 +1395,18 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'groupBy')
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
-    ..aOM<$10.Duration>(
+        subBuilder: $13.Timestamp.create)
+    ..aOM<$12.Duration>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'compareDuration',
-        subBuilder: $10.Duration.create)
+        subBuilder: $12.Duration.create)
     ..aOS(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1012,8 +1425,8 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? filter,
     $core.String? groupBy,
-    $11.Timestamp? readTime,
-    $10.Duration? compareDuration,
+    $13.Timestamp? readTime,
+    $12.Duration? compareDuration,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
@@ -1106,9 +1519,9 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
   void clearGroupBy() => clearField(3);
 
   @$pb.TagNumber(4)
-  $11.Timestamp get readTime => $_getN(3);
+  $13.Timestamp get readTime => $_getN(3);
   @$pb.TagNumber(4)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(4, v);
   }
 
@@ -1117,12 +1530,12 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReadTime() => clearField(4);
   @$pb.TagNumber(4)
-  $11.Timestamp ensureReadTime() => $_ensure(3);
+  $13.Timestamp ensureReadTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $10.Duration get compareDuration => $_getN(4);
+  $12.Duration get compareDuration => $_getN(4);
   @$pb.TagNumber(5)
-  set compareDuration($10.Duration v) {
+  set compareDuration($12.Duration v) {
     setField(5, v);
   }
 
@@ -1131,7 +1544,7 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCompareDuration() => clearField(5);
   @$pb.TagNumber(5)
-  $10.Duration ensureCompareDuration() => $_ensure(4);
+  $12.Duration ensureCompareDuration() => $_ensure(4);
 
   @$pb.TagNumber(7)
   $core.String get pageToken => $_getSZ(5);
@@ -1175,12 +1588,12 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
             : 'groupByResults',
         $pb.PbFieldType.PM,
         subBuilder: GroupResult.create)
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1197,7 +1610,7 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
   GroupFindingsResponse._() : super();
   factory GroupFindingsResponse({
     $core.Iterable<GroupResult>? groupByResults,
-    $11.Timestamp? readTime,
+    $13.Timestamp? readTime,
     $core.String? nextPageToken,
     $core.int? totalSize,
   }) {
@@ -1249,9 +1662,9 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
   $core.List<GroupResult> get groupByResults => $_getList(0);
 
   @$pb.TagNumber(2)
-  $11.Timestamp get readTime => $_getN(1);
+  $13.Timestamp get readTime => $_getN(1);
   @$pb.TagNumber(2)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(2, v);
   }
 
@@ -1260,7 +1673,7 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReadTime() => clearField(2);
   @$pb.TagNumber(2)
-  $11.Timestamp ensureReadTime() => $_ensure(1);
+  $13.Timestamp ensureReadTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -1297,7 +1710,7 @@ class GroupResult extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.securitycenter.v1'),
       createEmptyInstance: create)
-    ..m<$core.String, $12.Value>(
+    ..m<$core.String, $14.Value>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
@@ -1305,7 +1718,7 @@ class GroupResult extends $pb.GeneratedMessage {
         entryClassName: 'GroupResult.PropertiesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $12.Value.create,
+        valueCreator: $14.Value.create,
         packageName: const $pb.PackageName('google.cloud.securitycenter.v1'))
     ..aInt64(
         2,
@@ -1316,7 +1729,7 @@ class GroupResult extends $pb.GeneratedMessage {
 
   GroupResult._() : super();
   factory GroupResult({
-    $core.Map<$core.String, $12.Value>? properties,
+    $core.Map<$core.String, $14.Value>? properties,
     $fixnum.Int64? count,
   }) {
     final _result = create();
@@ -1355,7 +1768,7 @@ class GroupResult extends $pb.GeneratedMessage {
   static GroupResult? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.Map<$core.String, $12.Value> get properties => $_getMap(0);
+  $core.Map<$core.String, $14.Value> get properties => $_getMap(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get count => $_getI64(1);
@@ -1368,6 +1781,201 @@ class GroupResult extends $pb.GeneratedMessage {
   $core.bool hasCount() => $_has(1);
   @$pb.TagNumber(2)
   void clearCount() => clearField(2);
+}
+
+class ListMuteConfigsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListMuteConfigsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListMuteConfigsRequest._() : super();
+  factory ListMuteConfigsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListMuteConfigsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListMuteConfigsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListMuteConfigsRequest clone() =>
+      ListMuteConfigsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListMuteConfigsRequest copyWith(
+          void Function(ListMuteConfigsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListMuteConfigsRequest))
+          as ListMuteConfigsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListMuteConfigsRequest create() => ListMuteConfigsRequest._();
+  ListMuteConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListMuteConfigsRequest> createRepeated() =>
+      $pb.PbList<ListMuteConfigsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListMuteConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMuteConfigsRequest>(create);
+  static ListMuteConfigsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => clearField(3);
+}
+
+class ListMuteConfigsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListMuteConfigsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..pc<$7.MuteConfig>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteConfigs',
+        $pb.PbFieldType.PM,
+        subBuilder: $7.MuteConfig.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListMuteConfigsResponse._() : super();
+  factory ListMuteConfigsResponse({
+    $core.Iterable<$7.MuteConfig>? muteConfigs,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (muteConfigs != null) {
+      _result.muteConfigs.addAll(muteConfigs);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListMuteConfigsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListMuteConfigsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListMuteConfigsResponse clone() =>
+      ListMuteConfigsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListMuteConfigsResponse copyWith(
+          void Function(ListMuteConfigsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListMuteConfigsResponse))
+          as ListMuteConfigsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListMuteConfigsResponse create() => ListMuteConfigsResponse._();
+  ListMuteConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListMuteConfigsResponse> createRepeated() =>
+      $pb.PbList<ListMuteConfigsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListMuteConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMuteConfigsResponse>(create);
+  static ListMuteConfigsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$7.MuteConfig> get muteConfigs => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
 }
 
 class ListNotificationConfigsRequest extends $pb.GeneratedMessage {
@@ -1494,13 +2102,13 @@ class ListNotificationConfigsResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.securitycenter.v1'),
       createEmptyInstance: create)
-    ..pc<$7.NotificationConfig>(
+    ..pc<$8.NotificationConfig>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'notificationConfigs',
         $pb.PbFieldType.PM,
-        subBuilder: $7.NotificationConfig.create)
+        subBuilder: $8.NotificationConfig.create)
     ..aOS(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1510,7 +2118,7 @@ class ListNotificationConfigsResponse extends $pb.GeneratedMessage {
 
   ListNotificationConfigsResponse._() : super();
   factory ListNotificationConfigsResponse({
-    $core.Iterable<$7.NotificationConfig>? notificationConfigs,
+    $core.Iterable<$8.NotificationConfig>? notificationConfigs,
     $core.String? nextPageToken,
   }) {
     final _result = create();
@@ -1555,7 +2163,7 @@ class ListNotificationConfigsResponse extends $pb.GeneratedMessage {
   static ListNotificationConfigsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$7.NotificationConfig> get notificationConfigs => $_getList(0);
+  $core.List<$8.NotificationConfig> get notificationConfigs => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
@@ -1786,24 +2394,24 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'orderBy')
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
-    ..aOM<$10.Duration>(
+        subBuilder: $13.Timestamp.create)
+    ..aOM<$12.Duration>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'compareDuration',
-        subBuilder: $10.Duration.create)
-    ..aOM<$13.FieldMask>(
+        subBuilder: $12.Duration.create)
+    ..aOM<$15.FieldMask>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fieldMask',
-        subBuilder: $13.FieldMask.create)
+        subBuilder: $15.FieldMask.create)
     ..aOS(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1822,9 +2430,9 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? filter,
     $core.String? orderBy,
-    $11.Timestamp? readTime,
-    $10.Duration? compareDuration,
-    $13.FieldMask? fieldMask,
+    $13.Timestamp? readTime,
+    $12.Duration? compareDuration,
+    $15.FieldMask? fieldMask,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
@@ -1919,9 +2527,9 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
   void clearOrderBy() => clearField(3);
 
   @$pb.TagNumber(4)
-  $11.Timestamp get readTime => $_getN(3);
+  $13.Timestamp get readTime => $_getN(3);
   @$pb.TagNumber(4)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(4, v);
   }
 
@@ -1930,12 +2538,12 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReadTime() => clearField(4);
   @$pb.TagNumber(4)
-  $11.Timestamp ensureReadTime() => $_ensure(3);
+  $13.Timestamp ensureReadTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $10.Duration get compareDuration => $_getN(4);
+  $12.Duration get compareDuration => $_getN(4);
   @$pb.TagNumber(5)
-  set compareDuration($10.Duration v) {
+  set compareDuration($12.Duration v) {
     setField(5, v);
   }
 
@@ -1944,12 +2552,12 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCompareDuration() => clearField(5);
   @$pb.TagNumber(5)
-  $10.Duration ensureCompareDuration() => $_ensure(4);
+  $12.Duration ensureCompareDuration() => $_ensure(4);
 
   @$pb.TagNumber(7)
-  $13.FieldMask get fieldMask => $_getN(5);
+  $15.FieldMask get fieldMask => $_getN(5);
   @$pb.TagNumber(7)
-  set fieldMask($13.FieldMask v) {
+  set fieldMask($15.FieldMask v) {
     setField(7, v);
   }
 
@@ -1958,7 +2566,7 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearFieldMask() => clearField(7);
   @$pb.TagNumber(7)
-  $13.FieldMask ensureFieldMask() => $_ensure(5);
+  $15.FieldMask ensureFieldMask() => $_ensure(5);
 
   @$pb.TagNumber(8)
   $core.String get pageToken => $_getSZ(6);
@@ -1995,12 +2603,12 @@ class ListAssetsResponse_ListAssetsResult extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.securitycenter.v1'),
       createEmptyInstance: create)
-    ..aOM<$14.Asset>(
+    ..aOM<$16.Asset>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'asset',
-        subBuilder: $14.Asset.create)
+        subBuilder: $16.Asset.create)
     ..e<ListAssetsResponse_ListAssetsResult_StateChange>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2014,7 +2622,7 @@ class ListAssetsResponse_ListAssetsResult extends $pb.GeneratedMessage {
 
   ListAssetsResponse_ListAssetsResult._() : super();
   factory ListAssetsResponse_ListAssetsResult({
-    $14.Asset? asset,
+    $16.Asset? asset,
     ListAssetsResponse_ListAssetsResult_StateChange? stateChange,
   }) {
     final _result = create();
@@ -2060,9 +2668,9 @@ class ListAssetsResponse_ListAssetsResult extends $pb.GeneratedMessage {
   static ListAssetsResponse_ListAssetsResult? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $14.Asset get asset => $_getN(0);
+  $16.Asset get asset => $_getN(0);
   @$pb.TagNumber(1)
-  set asset($14.Asset v) {
+  set asset($16.Asset v) {
     setField(1, v);
   }
 
@@ -2071,7 +2679,7 @@ class ListAssetsResponse_ListAssetsResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAsset() => clearField(1);
   @$pb.TagNumber(1)
-  $14.Asset ensureAsset() => $_ensure(0);
+  $16.Asset ensureAsset() => $_ensure(0);
 
   @$pb.TagNumber(2)
   ListAssetsResponse_ListAssetsResult_StateChange get stateChange => $_getN(1);
@@ -2103,12 +2711,12 @@ class ListAssetsResponse extends $pb.GeneratedMessage {
             : 'listAssetsResults',
         $pb.PbFieldType.PM,
         subBuilder: ListAssetsResponse_ListAssetsResult.create)
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2125,7 +2733,7 @@ class ListAssetsResponse extends $pb.GeneratedMessage {
   ListAssetsResponse._() : super();
   factory ListAssetsResponse({
     $core.Iterable<ListAssetsResponse_ListAssetsResult>? listAssetsResults,
-    $11.Timestamp? readTime,
+    $13.Timestamp? readTime,
     $core.String? nextPageToken,
     $core.int? totalSize,
   }) {
@@ -2176,9 +2784,9 @@ class ListAssetsResponse extends $pb.GeneratedMessage {
       $_getList(0);
 
   @$pb.TagNumber(2)
-  $11.Timestamp get readTime => $_getN(1);
+  $13.Timestamp get readTime => $_getN(1);
   @$pb.TagNumber(2)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(2, v);
   }
 
@@ -2187,7 +2795,7 @@ class ListAssetsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReadTime() => clearField(2);
   @$pb.TagNumber(2)
-  $11.Timestamp ensureReadTime() => $_ensure(1);
+  $13.Timestamp ensureReadTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -2239,24 +2847,24 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'orderBy')
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
-    ..aOM<$10.Duration>(
+        subBuilder: $13.Timestamp.create)
+    ..aOM<$12.Duration>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'compareDuration',
-        subBuilder: $10.Duration.create)
-    ..aOM<$13.FieldMask>(
+        subBuilder: $12.Duration.create)
+    ..aOM<$15.FieldMask>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fieldMask',
-        subBuilder: $13.FieldMask.create)
+        subBuilder: $15.FieldMask.create)
     ..aOS(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2275,9 +2883,9 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? filter,
     $core.String? orderBy,
-    $11.Timestamp? readTime,
-    $10.Duration? compareDuration,
-    $13.FieldMask? fieldMask,
+    $13.Timestamp? readTime,
+    $12.Duration? compareDuration,
+    $15.FieldMask? fieldMask,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
@@ -2372,9 +2980,9 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
   void clearOrderBy() => clearField(3);
 
   @$pb.TagNumber(4)
-  $11.Timestamp get readTime => $_getN(3);
+  $13.Timestamp get readTime => $_getN(3);
   @$pb.TagNumber(4)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(4, v);
   }
 
@@ -2383,12 +2991,12 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReadTime() => clearField(4);
   @$pb.TagNumber(4)
-  $11.Timestamp ensureReadTime() => $_ensure(3);
+  $13.Timestamp ensureReadTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $10.Duration get compareDuration => $_getN(4);
+  $12.Duration get compareDuration => $_getN(4);
   @$pb.TagNumber(5)
-  set compareDuration($10.Duration v) {
+  set compareDuration($12.Duration v) {
     setField(5, v);
   }
 
@@ -2397,12 +3005,12 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCompareDuration() => clearField(5);
   @$pb.TagNumber(5)
-  $10.Duration ensureCompareDuration() => $_ensure(4);
+  $12.Duration ensureCompareDuration() => $_ensure(4);
 
   @$pb.TagNumber(7)
-  $13.FieldMask get fieldMask => $_getN(5);
+  $15.FieldMask get fieldMask => $_getN(5);
   @$pb.TagNumber(7)
-  set fieldMask($13.FieldMask v) {
+  set fieldMask($15.FieldMask v) {
     setField(7, v);
   }
 
@@ -2411,7 +3019,7 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearFieldMask() => clearField(7);
   @$pb.TagNumber(7)
-  $13.FieldMask ensureFieldMask() => $_ensure(5);
+  $15.FieldMask ensureFieldMask() => $_ensure(5);
 
   @$pb.TagNumber(8)
   $core.String get pageToken => $_getSZ(6);
@@ -2474,13 +3082,23 @@ class ListFindingsResponse_ListFindingsResult_Resource
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'parentDisplayName')
-    ..pc<$15.Folder>(
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'type')
+    ..pc<$17.Folder>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'folders',
         $pb.PbFieldType.PM,
-        subBuilder: $15.Folder.create)
+        subBuilder: $17.Folder.create)
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
     ..hasRequiredFields = false;
 
   ListFindingsResponse_ListFindingsResult_Resource._() : super();
@@ -2490,7 +3108,9 @@ class ListFindingsResponse_ListFindingsResult_Resource
     $core.String? projectDisplayName,
     $core.String? parentName,
     $core.String? parentDisplayName,
-    $core.Iterable<$15.Folder>? folders,
+    $core.String? type,
+    $core.Iterable<$17.Folder>? folders,
+    $core.String? displayName,
   }) {
     final _result = create();
     if (name != null) {
@@ -2508,8 +3128,14 @@ class ListFindingsResponse_ListFindingsResult_Resource
     if (parentDisplayName != null) {
       _result.parentDisplayName = parentDisplayName;
     }
+    if (type != null) {
+      _result.type = type;
+    }
     if (folders != null) {
       _result.folders.addAll(folders);
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
     }
     return _result;
   }
@@ -2611,8 +3237,32 @@ class ListFindingsResponse_ListFindingsResult_Resource
   @$pb.TagNumber(5)
   void clearParentDisplayName() => clearField(5);
 
+  @$pb.TagNumber(6)
+  $core.String get type => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set type($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasType() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearType() => clearField(6);
+
   @$pb.TagNumber(7)
-  $core.List<$15.Folder> get folders => $_getList(5);
+  $core.List<$17.Folder> get folders => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $core.String get displayName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set displayName($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasDisplayName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDisplayName() => clearField(8);
 }
 
 class ListFindingsResponse_ListFindingsResult extends $pb.GeneratedMessage {
@@ -2760,12 +3410,12 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
             : 'listFindingsResults',
         $pb.PbFieldType.PM,
         subBuilder: ListFindingsResponse_ListFindingsResult.create)
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2783,7 +3433,7 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
   factory ListFindingsResponse({
     $core.Iterable<ListFindingsResponse_ListFindingsResult>?
         listFindingsResults,
-    $11.Timestamp? readTime,
+    $13.Timestamp? readTime,
     $core.String? nextPageToken,
     $core.int? totalSize,
   }) {
@@ -2835,9 +3485,9 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
       $_getList(0);
 
   @$pb.TagNumber(2)
-  $11.Timestamp get readTime => $_getN(1);
+  $13.Timestamp get readTime => $_getN(1);
   @$pb.TagNumber(2)
-  set readTime($11.Timestamp v) {
+  set readTime($13.Timestamp v) {
     setField(2, v);
   }
 
@@ -2846,7 +3496,7 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReadTime() => clearField(2);
   @$pb.TagNumber(2)
-  $11.Timestamp ensureReadTime() => $_ensure(1);
+  $13.Timestamp ensureReadTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -2897,19 +3547,19 @@ class SetFindingStateRequest extends $pb.GeneratedMessage {
         defaultOrMaker: $6.Finding_State.STATE_UNSPECIFIED,
         valueOf: $6.Finding_State.valueOf,
         enumValues: $6.Finding_State.values)
-    ..aOM<$11.Timestamp>(
+    ..aOM<$13.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..hasRequiredFields = false;
 
   SetFindingStateRequest._() : super();
   factory SetFindingStateRequest({
     $core.String? name,
     $6.Finding_State? state,
-    $11.Timestamp? startTime,
+    $13.Timestamp? startTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -2977,9 +3627,9 @@ class SetFindingStateRequest extends $pb.GeneratedMessage {
   void clearState() => clearField(2);
 
   @$pb.TagNumber(3)
-  $11.Timestamp get startTime => $_getN(2);
+  $13.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
-  set startTime($11.Timestamp v) {
+  set startTime($13.Timestamp v) {
     setField(3, v);
   }
 
@@ -2988,7 +3638,99 @@ class SetFindingStateRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearStartTime() => clearField(3);
   @$pb.TagNumber(3)
-  $11.Timestamp ensureStartTime() => $_ensure(2);
+  $13.Timestamp ensureStartTime() => $_ensure(2);
+}
+
+class SetMuteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SetMuteRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..e<$6.Finding_Mute>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mute',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $6.Finding_Mute.MUTE_UNSPECIFIED,
+        valueOf: $6.Finding_Mute.valueOf,
+        enumValues: $6.Finding_Mute.values)
+    ..hasRequiredFields = false;
+
+  SetMuteRequest._() : super();
+  factory SetMuteRequest({
+    $core.String? name,
+    $6.Finding_Mute? mute,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (mute != null) {
+      _result.mute = mute;
+    }
+    return _result;
+  }
+  factory SetMuteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetMuteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SetMuteRequest clone() => SetMuteRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SetMuteRequest copyWith(void Function(SetMuteRequest) updates) =>
+      super.copyWith((message) => updates(message as SetMuteRequest))
+          as SetMuteRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetMuteRequest create() => SetMuteRequest._();
+  SetMuteRequest createEmptyInstance() => create();
+  static $pb.PbList<SetMuteRequest> createRepeated() =>
+      $pb.PbList<SetMuteRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetMuteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetMuteRequest>(create);
+  static SetMuteRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $6.Finding_Mute get mute => $_getN(1);
+  @$pb.TagNumber(2)
+  set mute($6.Finding_Mute v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMute() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMute() => clearField(2);
 }
 
 class RunAssetDiscoveryRequest extends $pb.GeneratedMessage {
@@ -3060,6 +3802,104 @@ class RunAssetDiscoveryRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(1);
 }
 
+class UpdateExternalSystemRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateExternalSystemRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOM<$10.ExternalSystem>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'externalSystem',
+        subBuilder: $10.ExternalSystem.create)
+    ..aOM<$15.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $15.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateExternalSystemRequest._() : super();
+  factory UpdateExternalSystemRequest({
+    $10.ExternalSystem? externalSystem,
+    $15.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (externalSystem != null) {
+      _result.externalSystem = externalSystem;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateExternalSystemRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateExternalSystemRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateExternalSystemRequest clone() =>
+      UpdateExternalSystemRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateExternalSystemRequest copyWith(
+          void Function(UpdateExternalSystemRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateExternalSystemRequest))
+          as UpdateExternalSystemRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateExternalSystemRequest create() =>
+      UpdateExternalSystemRequest._();
+  UpdateExternalSystemRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateExternalSystemRequest> createRepeated() =>
+      $pb.PbList<UpdateExternalSystemRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateExternalSystemRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateExternalSystemRequest>(create);
+  static UpdateExternalSystemRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $10.ExternalSystem get externalSystem => $_getN(0);
+  @$pb.TagNumber(1)
+  set externalSystem($10.ExternalSystem v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasExternalSystem() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearExternalSystem() => clearField(1);
+  @$pb.TagNumber(1)
+  $10.ExternalSystem ensureExternalSystem() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $15.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($15.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
 class UpdateFindingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -3076,18 +3916,18 @@ class UpdateFindingRequest extends $pb.GeneratedMessage {
             ? ''
             : 'finding',
         subBuilder: $6.Finding.create)
-    ..aOM<$13.FieldMask>(
+    ..aOM<$15.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $13.FieldMask.create)
+        subBuilder: $15.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFindingRequest._() : super();
   factory UpdateFindingRequest({
     $6.Finding? finding,
-    $13.FieldMask? updateMask,
+    $15.FieldMask? updateMask,
   }) {
     final _result = create();
     if (finding != null) {
@@ -3141,9 +3981,9 @@ class UpdateFindingRequest extends $pb.GeneratedMessage {
   $6.Finding ensureFinding() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $13.FieldMask get updateMask => $_getN(1);
+  $15.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($13.FieldMask v) {
+  set updateMask($15.FieldMask v) {
     setField(2, v);
   }
 
@@ -3152,7 +3992,103 @@ class UpdateFindingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $13.FieldMask ensureUpdateMask() => $_ensure(1);
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class UpdateMuteConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateMuteConfigRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
+    ..aOM<$7.MuteConfig>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'muteConfig',
+        subBuilder: $7.MuteConfig.create)
+    ..aOM<$15.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $15.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateMuteConfigRequest._() : super();
+  factory UpdateMuteConfigRequest({
+    $7.MuteConfig? muteConfig,
+    $15.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (muteConfig != null) {
+      _result.muteConfig = muteConfig;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateMuteConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateMuteConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateMuteConfigRequest clone() =>
+      UpdateMuteConfigRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateMuteConfigRequest copyWith(
+          void Function(UpdateMuteConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateMuteConfigRequest))
+          as UpdateMuteConfigRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateMuteConfigRequest create() => UpdateMuteConfigRequest._();
+  UpdateMuteConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateMuteConfigRequest> createRepeated() =>
+      $pb.PbList<UpdateMuteConfigRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateMuteConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateMuteConfigRequest>(create);
+  static UpdateMuteConfigRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $7.MuteConfig get muteConfig => $_getN(0);
+  @$pb.TagNumber(1)
+  set muteConfig($7.MuteConfig v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMuteConfig() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMuteConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.MuteConfig ensureMuteConfig() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $15.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($15.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class UpdateNotificationConfigRequest extends $pb.GeneratedMessage {
@@ -3165,24 +4101,24 @@ class UpdateNotificationConfigRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.securitycenter.v1'),
       createEmptyInstance: create)
-    ..aOM<$7.NotificationConfig>(
+    ..aOM<$8.NotificationConfig>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'notificationConfig',
-        subBuilder: $7.NotificationConfig.create)
-    ..aOM<$13.FieldMask>(
+        subBuilder: $8.NotificationConfig.create)
+    ..aOM<$15.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $13.FieldMask.create)
+        subBuilder: $15.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateNotificationConfigRequest._() : super();
   factory UpdateNotificationConfigRequest({
-    $7.NotificationConfig? notificationConfig,
-    $13.FieldMask? updateMask,
+    $8.NotificationConfig? notificationConfig,
+    $15.FieldMask? updateMask,
   }) {
     final _result = create();
     if (notificationConfig != null) {
@@ -3226,9 +4162,9 @@ class UpdateNotificationConfigRequest extends $pb.GeneratedMessage {
   static UpdateNotificationConfigRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.NotificationConfig get notificationConfig => $_getN(0);
+  $8.NotificationConfig get notificationConfig => $_getN(0);
   @$pb.TagNumber(1)
-  set notificationConfig($7.NotificationConfig v) {
+  set notificationConfig($8.NotificationConfig v) {
     setField(1, v);
   }
 
@@ -3237,12 +4173,12 @@ class UpdateNotificationConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNotificationConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $7.NotificationConfig ensureNotificationConfig() => $_ensure(0);
+  $8.NotificationConfig ensureNotificationConfig() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $13.FieldMask get updateMask => $_getN(1);
+  $15.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($13.FieldMask v) {
+  set updateMask($15.FieldMask v) {
     setField(2, v);
   }
 
@@ -3251,7 +4187,7 @@ class UpdateNotificationConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $13.FieldMask ensureUpdateMask() => $_ensure(1);
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
@@ -3264,24 +4200,24 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.securitycenter.v1'),
       createEmptyInstance: create)
-    ..aOM<$8.OrganizationSettings>(
+    ..aOM<$9.OrganizationSettings>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'organizationSettings',
-        subBuilder: $8.OrganizationSettings.create)
-    ..aOM<$13.FieldMask>(
+        subBuilder: $9.OrganizationSettings.create)
+    ..aOM<$15.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $13.FieldMask.create)
+        subBuilder: $15.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOrganizationSettingsRequest._() : super();
   factory UpdateOrganizationSettingsRequest({
-    $8.OrganizationSettings? organizationSettings,
-    $13.FieldMask? updateMask,
+    $9.OrganizationSettings? organizationSettings,
+    $15.FieldMask? updateMask,
   }) {
     final _result = create();
     if (organizationSettings != null) {
@@ -3325,9 +4261,9 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
   static UpdateOrganizationSettingsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.OrganizationSettings get organizationSettings => $_getN(0);
+  $9.OrganizationSettings get organizationSettings => $_getN(0);
   @$pb.TagNumber(1)
-  set organizationSettings($8.OrganizationSettings v) {
+  set organizationSettings($9.OrganizationSettings v) {
     setField(1, v);
   }
 
@@ -3336,12 +4272,12 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOrganizationSettings() => clearField(1);
   @$pb.TagNumber(1)
-  $8.OrganizationSettings ensureOrganizationSettings() => $_ensure(0);
+  $9.OrganizationSettings ensureOrganizationSettings() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $13.FieldMask get updateMask => $_getN(1);
+  $15.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($13.FieldMask v) {
+  set updateMask($15.FieldMask v) {
     setField(2, v);
   }
 
@@ -3350,7 +4286,7 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $13.FieldMask ensureUpdateMask() => $_ensure(1);
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class UpdateSourceRequest extends $pb.GeneratedMessage {
@@ -3369,18 +4305,18 @@ class UpdateSourceRequest extends $pb.GeneratedMessage {
             ? ''
             : 'source',
         subBuilder: $5.Source.create)
-    ..aOM<$13.FieldMask>(
+    ..aOM<$15.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $13.FieldMask.create)
+        subBuilder: $15.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSourceRequest._() : super();
   factory UpdateSourceRequest({
     $5.Source? source,
-    $13.FieldMask? updateMask,
+    $15.FieldMask? updateMask,
   }) {
     final _result = create();
     if (source != null) {
@@ -3433,9 +4369,9 @@ class UpdateSourceRequest extends $pb.GeneratedMessage {
   $5.Source ensureSource() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $13.FieldMask get updateMask => $_getN(1);
+  $15.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($13.FieldMask v) {
+  set updateMask($15.FieldMask v) {
     setField(2, v);
   }
 
@@ -3444,7 +4380,7 @@ class UpdateSourceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $13.FieldMask ensureUpdateMask() => $_ensure(1);
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
@@ -3457,31 +4393,31 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.securitycenter.v1'),
       createEmptyInstance: create)
-    ..aOM<$9.SecurityMarks>(
+    ..aOM<$11.SecurityMarks>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'securityMarks',
-        subBuilder: $9.SecurityMarks.create)
-    ..aOM<$13.FieldMask>(
+        subBuilder: $11.SecurityMarks.create)
+    ..aOM<$15.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $13.FieldMask.create)
-    ..aOM<$11.Timestamp>(
+        subBuilder: $15.FieldMask.create)
+    ..aOM<$13.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $11.Timestamp.create)
+        subBuilder: $13.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateSecurityMarksRequest._() : super();
   factory UpdateSecurityMarksRequest({
-    $9.SecurityMarks? securityMarks,
-    $13.FieldMask? updateMask,
-    $11.Timestamp? startTime,
+    $11.SecurityMarks? securityMarks,
+    $15.FieldMask? updateMask,
+    $13.Timestamp? startTime,
   }) {
     final _result = create();
     if (securityMarks != null) {
@@ -3526,9 +4462,9 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
   static UpdateSecurityMarksRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $9.SecurityMarks get securityMarks => $_getN(0);
+  $11.SecurityMarks get securityMarks => $_getN(0);
   @$pb.TagNumber(1)
-  set securityMarks($9.SecurityMarks v) {
+  set securityMarks($11.SecurityMarks v) {
     setField(1, v);
   }
 
@@ -3537,12 +4473,12 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSecurityMarks() => clearField(1);
   @$pb.TagNumber(1)
-  $9.SecurityMarks ensureSecurityMarks() => $_ensure(0);
+  $11.SecurityMarks ensureSecurityMarks() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $13.FieldMask get updateMask => $_getN(1);
+  $15.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($13.FieldMask v) {
+  set updateMask($15.FieldMask v) {
     setField(2, v);
   }
 
@@ -3551,12 +4487,12 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $13.FieldMask ensureUpdateMask() => $_ensure(1);
+  $15.FieldMask ensureUpdateMask() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $11.Timestamp get startTime => $_getN(2);
+  $13.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
-  set startTime($11.Timestamp v) {
+  set startTime($13.Timestamp v) {
     setField(3, v);
   }
 
@@ -3565,5 +4501,5 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearStartTime() => clearField(3);
   @$pb.TagNumber(3)
-  $11.Timestamp ensureStartTime() => $_ensure(2);
+  $13.Timestamp ensureStartTime() => $_ensure(2);
 }

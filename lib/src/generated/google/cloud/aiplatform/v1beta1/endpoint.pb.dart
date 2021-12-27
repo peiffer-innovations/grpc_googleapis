@@ -97,6 +97,11 @@ class Endpoint extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'modelDeploymentMonitoringJob')
+    ..aOB(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enablePrivateServiceConnect')
     ..hasRequiredFields = false;
 
   Endpoint._() : super();
@@ -113,6 +118,7 @@ class Endpoint extends $pb.GeneratedMessage {
     $1.EncryptionSpec? encryptionSpec,
     $core.String? network,
     $core.String? modelDeploymentMonitoringJob,
+    $core.bool? enablePrivateServiceConnect,
   }) {
     final _result = create();
     if (name != null) {
@@ -150,6 +156,9 @@ class Endpoint extends $pb.GeneratedMessage {
     }
     if (modelDeploymentMonitoringJob != null) {
       _result.modelDeploymentMonitoringJob = modelDeploymentMonitoringJob;
+    }
+    if (enablePrivateServiceConnect != null) {
+      _result.enablePrivateServiceConnect = enablePrivateServiceConnect;
     }
     return _result;
   }
@@ -301,6 +310,18 @@ class Endpoint extends $pb.GeneratedMessage {
   $core.bool hasModelDeploymentMonitoringJob() => $_has(11);
   @$pb.TagNumber(14)
   void clearModelDeploymentMonitoringJob() => clearField(14);
+
+  @$pb.TagNumber(17)
+  $core.bool get enablePrivateServiceConnect => $_getBF(12);
+  @$pb.TagNumber(17)
+  set enablePrivateServiceConnect($core.bool v) {
+    $_setBool(12, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasEnablePrivateServiceConnect() => $_has(12);
+  @$pb.TagNumber(17)
+  void clearEnablePrivateServiceConnect() => clearField(17);
 }
 
 enum DeployedModel_PredictionResources {
@@ -637,6 +658,11 @@ class PrivateEndpoints extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'healthHttpUri')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'serviceAttachment')
     ..hasRequiredFields = false;
 
   PrivateEndpoints._() : super();
@@ -644,6 +670,7 @@ class PrivateEndpoints extends $pb.GeneratedMessage {
     $core.String? predictHttpUri,
     $core.String? explainHttpUri,
     $core.String? healthHttpUri,
+    $core.String? serviceAttachment,
   }) {
     final _result = create();
     if (predictHttpUri != null) {
@@ -654,6 +681,9 @@ class PrivateEndpoints extends $pb.GeneratedMessage {
     }
     if (healthHttpUri != null) {
       _result.healthHttpUri = healthHttpUri;
+    }
+    if (serviceAttachment != null) {
+      _result.serviceAttachment = serviceAttachment;
     }
     return _result;
   }
@@ -719,4 +749,16 @@ class PrivateEndpoints extends $pb.GeneratedMessage {
   $core.bool hasHealthHttpUri() => $_has(2);
   @$pb.TagNumber(3)
   void clearHealthHttpUri() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get serviceAttachment => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set serviceAttachment($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasServiceAttachment() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearServiceAttachment() => clearField(4);
 }

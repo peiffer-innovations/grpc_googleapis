@@ -1122,3 +1122,268 @@ class UndeployIndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.GenericOperationMetadata ensureGenericMetadata() => $_ensure(0);
 }
+
+class MutateDeployedIndexRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MutateDeployedIndexRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'indexEndpoint')
+    ..aOM<$3.DeployedIndex>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deployedIndex',
+        subBuilder: $3.DeployedIndex.create)
+    ..hasRequiredFields = false;
+
+  MutateDeployedIndexRequest._() : super();
+  factory MutateDeployedIndexRequest({
+    $core.String? indexEndpoint,
+    $3.DeployedIndex? deployedIndex,
+  }) {
+    final _result = create();
+    if (indexEndpoint != null) {
+      _result.indexEndpoint = indexEndpoint;
+    }
+    if (deployedIndex != null) {
+      _result.deployedIndex = deployedIndex;
+    }
+    return _result;
+  }
+  factory MutateDeployedIndexRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateDeployedIndexRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  MutateDeployedIndexRequest clone() =>
+      MutateDeployedIndexRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MutateDeployedIndexRequest copyWith(
+          void Function(MutateDeployedIndexRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as MutateDeployedIndexRequest))
+          as MutateDeployedIndexRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MutateDeployedIndexRequest create() => MutateDeployedIndexRequest._();
+  MutateDeployedIndexRequest createEmptyInstance() => create();
+  static $pb.PbList<MutateDeployedIndexRequest> createRepeated() =>
+      $pb.PbList<MutateDeployedIndexRequest>();
+  @$core.pragma('dart2js:noInline')
+  static MutateDeployedIndexRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateDeployedIndexRequest>(create);
+  static MutateDeployedIndexRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get indexEndpoint => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set indexEndpoint($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasIndexEndpoint() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIndexEndpoint() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $3.DeployedIndex get deployedIndex => $_getN(1);
+  @$pb.TagNumber(2)
+  set deployedIndex($3.DeployedIndex v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDeployedIndex() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDeployedIndex() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.DeployedIndex ensureDeployedIndex() => $_ensure(1);
+}
+
+class MutateDeployedIndexResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MutateDeployedIndexResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.DeployedIndex>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deployedIndex',
+        subBuilder: $3.DeployedIndex.create)
+    ..hasRequiredFields = false;
+
+  MutateDeployedIndexResponse._() : super();
+  factory MutateDeployedIndexResponse({
+    $3.DeployedIndex? deployedIndex,
+  }) {
+    final _result = create();
+    if (deployedIndex != null) {
+      _result.deployedIndex = deployedIndex;
+    }
+    return _result;
+  }
+  factory MutateDeployedIndexResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateDeployedIndexResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  MutateDeployedIndexResponse clone() =>
+      MutateDeployedIndexResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MutateDeployedIndexResponse copyWith(
+          void Function(MutateDeployedIndexResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as MutateDeployedIndexResponse))
+          as MutateDeployedIndexResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MutateDeployedIndexResponse create() =>
+      MutateDeployedIndexResponse._();
+  MutateDeployedIndexResponse createEmptyInstance() => create();
+  static $pb.PbList<MutateDeployedIndexResponse> createRepeated() =>
+      $pb.PbList<MutateDeployedIndexResponse>();
+  @$core.pragma('dart2js:noInline')
+  static MutateDeployedIndexResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateDeployedIndexResponse>(create);
+  static MutateDeployedIndexResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.DeployedIndex get deployedIndex => $_getN(0);
+  @$pb.TagNumber(1)
+  set deployedIndex($3.DeployedIndex v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDeployedIndex() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDeployedIndex() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.DeployedIndex ensureDeployedIndex() => $_ensure(0);
+}
+
+class MutateDeployedIndexOperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MutateDeployedIndexOperationMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.GenericOperationMetadata>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'genericMetadata',
+        subBuilder: $4.GenericOperationMetadata.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deployedIndexId')
+    ..hasRequiredFields = false;
+
+  MutateDeployedIndexOperationMetadata._() : super();
+  factory MutateDeployedIndexOperationMetadata({
+    $4.GenericOperationMetadata? genericMetadata,
+    $core.String? deployedIndexId,
+  }) {
+    final _result = create();
+    if (genericMetadata != null) {
+      _result.genericMetadata = genericMetadata;
+    }
+    if (deployedIndexId != null) {
+      _result.deployedIndexId = deployedIndexId;
+    }
+    return _result;
+  }
+  factory MutateDeployedIndexOperationMetadata.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateDeployedIndexOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  MutateDeployedIndexOperationMetadata clone() =>
+      MutateDeployedIndexOperationMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MutateDeployedIndexOperationMetadata copyWith(
+          void Function(MutateDeployedIndexOperationMetadata) updates) =>
+      super.copyWith((message) =>
+              updates(message as MutateDeployedIndexOperationMetadata))
+          as MutateDeployedIndexOperationMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MutateDeployedIndexOperationMetadata create() =>
+      MutateDeployedIndexOperationMetadata._();
+  MutateDeployedIndexOperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<MutateDeployedIndexOperationMetadata> createRepeated() =>
+      $pb.PbList<MutateDeployedIndexOperationMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static MutateDeployedIndexOperationMetadata getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          MutateDeployedIndexOperationMetadata>(create);
+  static MutateDeployedIndexOperationMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $4.GenericOperationMetadata get genericMetadata => $_getN(0);
+  @$pb.TagNumber(1)
+  set genericMetadata($4.GenericOperationMetadata v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasGenericMetadata() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearGenericMetadata() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.GenericOperationMetadata ensureGenericMetadata() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get deployedIndexId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set deployedIndexId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDeployedIndexId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDeployedIndexId() => clearField(2);
+}

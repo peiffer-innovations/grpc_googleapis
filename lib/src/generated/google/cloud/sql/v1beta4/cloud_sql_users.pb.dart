@@ -9,6 +9,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+
 import 'cloud_sql_users.pbenum.dart';
 
 export 'cloud_sql_users.pbenum.dart';
@@ -503,6 +506,238 @@ class SqlUsersListRequest extends $pb.GeneratedMessage {
   void clearProject() => clearField(2);
 }
 
+class UserPasswordValidationPolicy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UserPasswordValidationPolicy',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowedFailedAttempts',
+        $pb.PbFieldType.O3)
+    ..aOM<$2.Duration>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'passwordExpirationDuration',
+        subBuilder: $2.Duration.create)
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableFailedAttemptsCheck')
+    ..aOM<PasswordStatus>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        subBuilder: PasswordStatus.create)
+    ..hasRequiredFields = false;
+
+  UserPasswordValidationPolicy._() : super();
+  factory UserPasswordValidationPolicy({
+    $core.int? allowedFailedAttempts,
+    $2.Duration? passwordExpirationDuration,
+    $core.bool? enableFailedAttemptsCheck,
+    PasswordStatus? status,
+  }) {
+    final _result = create();
+    if (allowedFailedAttempts != null) {
+      _result.allowedFailedAttempts = allowedFailedAttempts;
+    }
+    if (passwordExpirationDuration != null) {
+      _result.passwordExpirationDuration = passwordExpirationDuration;
+    }
+    if (enableFailedAttemptsCheck != null) {
+      _result.enableFailedAttemptsCheck = enableFailedAttemptsCheck;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory UserPasswordValidationPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserPasswordValidationPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UserPasswordValidationPolicy clone() =>
+      UserPasswordValidationPolicy()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UserPasswordValidationPolicy copyWith(
+          void Function(UserPasswordValidationPolicy) updates) =>
+      super.copyWith(
+              (message) => updates(message as UserPasswordValidationPolicy))
+          as UserPasswordValidationPolicy; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UserPasswordValidationPolicy create() =>
+      UserPasswordValidationPolicy._();
+  UserPasswordValidationPolicy createEmptyInstance() => create();
+  static $pb.PbList<UserPasswordValidationPolicy> createRepeated() =>
+      $pb.PbList<UserPasswordValidationPolicy>();
+  @$core.pragma('dart2js:noInline')
+  static UserPasswordValidationPolicy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserPasswordValidationPolicy>(create);
+  static UserPasswordValidationPolicy? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get allowedFailedAttempts => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set allowedFailedAttempts($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAllowedFailedAttempts() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAllowedFailedAttempts() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $2.Duration get passwordExpirationDuration => $_getN(1);
+  @$pb.TagNumber(2)
+  set passwordExpirationDuration($2.Duration v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPasswordExpirationDuration() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPasswordExpirationDuration() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Duration ensurePasswordExpirationDuration() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.bool get enableFailedAttemptsCheck => $_getBF(2);
+  @$pb.TagNumber(3)
+  set enableFailedAttemptsCheck($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEnableFailedAttemptsCheck() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEnableFailedAttemptsCheck() => clearField(3);
+
+  @$pb.TagNumber(4)
+  PasswordStatus get status => $_getN(3);
+  @$pb.TagNumber(4)
+  set status(PasswordStatus v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasStatus() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStatus() => clearField(4);
+  @$pb.TagNumber(4)
+  PasswordStatus ensureStatus() => $_ensure(3);
+}
+
+class PasswordStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PasswordStatus',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.sql.v1beta4'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'locked')
+    ..aOM<$3.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'passwordExpirationTime',
+        subBuilder: $3.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  PasswordStatus._() : super();
+  factory PasswordStatus({
+    $core.bool? locked,
+    $3.Timestamp? passwordExpirationTime,
+  }) {
+    final _result = create();
+    if (locked != null) {
+      _result.locked = locked;
+    }
+    if (passwordExpirationTime != null) {
+      _result.passwordExpirationTime = passwordExpirationTime;
+    }
+    return _result;
+  }
+  factory PasswordStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PasswordStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PasswordStatus clone() => PasswordStatus()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PasswordStatus copyWith(void Function(PasswordStatus) updates) =>
+      super.copyWith((message) => updates(message as PasswordStatus))
+          as PasswordStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PasswordStatus create() => PasswordStatus._();
+  PasswordStatus createEmptyInstance() => create();
+  static $pb.PbList<PasswordStatus> createRepeated() =>
+      $pb.PbList<PasswordStatus>();
+  @$core.pragma('dart2js:noInline')
+  static PasswordStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PasswordStatus>(create);
+  static PasswordStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get locked => $_getBF(0);
+  @$pb.TagNumber(1)
+  set locked($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLocked() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLocked() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $3.Timestamp get passwordExpirationTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set passwordExpirationTime($3.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPasswordExpirationTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPasswordExpirationTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensurePasswordExpirationTime() => $_ensure(1);
+}
+
 enum User_UserDetails { sqlserverUserDetails, notSet }
 
 class User extends $pb.GeneratedMessage {
@@ -570,6 +805,12 @@ class User extends $pb.GeneratedMessage {
             ? ''
             : 'sqlserverUserDetails',
         subBuilder: SqlServerUserDetails.create)
+    ..aOM<UserPasswordValidationPolicy>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'passwordPolicy',
+        subBuilder: UserPasswordValidationPolicy.create)
     ..hasRequiredFields = false;
 
   User._() : super();
@@ -583,6 +824,7 @@ class User extends $pb.GeneratedMessage {
     $core.String? project,
     User_SqlUserType? type,
     SqlServerUserDetails? sqlserverUserDetails,
+    UserPasswordValidationPolicy? passwordPolicy,
   }) {
     final _result = create();
     if (kind != null) {
@@ -611,6 +853,9 @@ class User extends $pb.GeneratedMessage {
     }
     if (sqlserverUserDetails != null) {
       _result.sqlserverUserDetails = sqlserverUserDetails;
+    }
+    if (passwordPolicy != null) {
+      _result.passwordPolicy = passwordPolicy;
     }
     return _result;
   }
@@ -753,6 +998,20 @@ class User extends $pb.GeneratedMessage {
   void clearSqlserverUserDetails() => clearField(9);
   @$pb.TagNumber(9)
   SqlServerUserDetails ensureSqlserverUserDetails() => $_ensure(8);
+
+  @$pb.TagNumber(12)
+  UserPasswordValidationPolicy get passwordPolicy => $_getN(9);
+  @$pb.TagNumber(12)
+  set passwordPolicy(UserPasswordValidationPolicy v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasPasswordPolicy() => $_has(9);
+  @$pb.TagNumber(12)
+  void clearPasswordPolicy() => clearField(12);
+  @$pb.TagNumber(12)
+  UserPasswordValidationPolicy ensurePasswordPolicy() => $_ensure(9);
 }
 
 class SqlServerUserDetails extends $pb.GeneratedMessage {

@@ -663,3 +663,72 @@ class DeleteAttestorRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+class GetSystemPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetSystemPolicyRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetSystemPolicyRequest._() : super();
+  factory GetSystemPolicyRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetSystemPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSystemPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetSystemPolicyRequest clone() =>
+      GetSystemPolicyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetSystemPolicyRequest copyWith(
+          void Function(GetSystemPolicyRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSystemPolicyRequest))
+          as GetSystemPolicyRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetSystemPolicyRequest create() => GetSystemPolicyRequest._();
+  GetSystemPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSystemPolicyRequest> createRepeated() =>
+      $pb.PbList<GetSystemPolicyRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSystemPolicyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSystemPolicyRequest>(create);
+  static GetSystemPolicyRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}

@@ -967,15 +967,24 @@ class ModelMonitoringAlertConfig extends $pb.GeneratedMessage {
             ? ''
             : 'emailAlertConfig',
         subBuilder: ModelMonitoringAlertConfig_EmailAlertConfig.create)
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableLogging')
     ..hasRequiredFields = false;
 
   ModelMonitoringAlertConfig._() : super();
   factory ModelMonitoringAlertConfig({
     ModelMonitoringAlertConfig_EmailAlertConfig? emailAlertConfig,
+    $core.bool? enableLogging,
   }) {
     final _result = create();
     if (emailAlertConfig != null) {
       _result.emailAlertConfig = emailAlertConfig;
+    }
+    if (enableLogging != null) {
+      _result.enableLogging = enableLogging;
     }
     return _result;
   }
@@ -1027,6 +1036,18 @@ class ModelMonitoringAlertConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ModelMonitoringAlertConfig_EmailAlertConfig ensureEmailAlertConfig() =>
       $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get enableLogging => $_getBF(1);
+  @$pb.TagNumber(2)
+  set enableLogging($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEnableLogging() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEnableLogging() => clearField(2);
 }
 
 enum ThresholdConfig_Threshold { value, notSet }

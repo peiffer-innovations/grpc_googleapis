@@ -195,6 +195,21 @@ const TripWaypoint$json = const {
       '10': 'pathToWaypoint'
     },
     const {
+      '1': 'encoded_path_to_waypoint',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'encodedPathToWaypoint'
+    },
+    const {
+      '1': 'traffic_to_waypoint',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.v1.ConsumableTrafficPolyline',
+      '10': 'trafficToWaypoint'
+    },
+    const {
       '1': 'distance_meters',
       '3': 6,
       '4': 1,
@@ -223,74 +238,7 @@ const TripWaypoint$json = const {
 
 /// Descriptor for `TripWaypoint`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tripWaypointDescriptor = $convert.base64Decode(
-    'CgxUcmlwV2F5cG9pbnQSQQoIbG9jYXRpb24YASABKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsTG9jYXRpb25SCGxvY2F0aW9uEhcKB3RyaXBfaWQYAiABKAlSBnRyaXBJZBJGCg13YXlwb2ludF90eXBlGAMgASgOMiEubWFwcy5mbGVldGVuZ2luZS52MS5XYXlwb2ludFR5cGVSDHdheXBvaW50VHlwZRI9ChBwYXRoX3RvX3dheXBvaW50GAQgAygLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nUg5wYXRoVG9XYXlwb2ludBJECg9kaXN0YW5jZV9tZXRlcnMYBiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIOZGlzdGFuY2VNZXRlcnMSLAoDZXRhGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIDZXRhEjUKCGR1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUghkdXJhdGlvbg==');
-@$core.Deprecated('Use statusDescriptor instead')
-const Status$json = const {
-  '1': 'Status',
-  '2': const [
-    const {
-      '1': 'code',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.maps.fleetengine.v1.Status.Code',
-      '10': 'code'
-    },
-    const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
-    const {
-      '1': 'details',
-      '3': 3,
-      '4': 3,
-      '5': 11,
-      '6': '.google.protobuf.Any',
-      '10': 'details'
-    },
-  ],
-  '4': const [Status_Code$json],
-};
-
-@$core.Deprecated('Use statusDescriptor instead')
-const Status_Code$json = const {
-  '1': 'Code',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'FAILURE', '2': 1},
-    const {'1': 'ROUTE_NOT_POSSIBLE', '2': 2},
-  ],
-};
-
-/// Descriptor for `Status`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List statusDescriptor = $convert.base64Decode(
-    'CgZTdGF0dXMSNAoEY29kZRgBIAEoDjIgLm1hcHMuZmxlZXRlbmdpbmUudjEuU3RhdHVzLkNvZGVSBGNvZGUSGAoHbWVzc2FnZRgCIAEoCVIHbWVzc2FnZRIuCgdkZXRhaWxzGAMgAygLMhQuZ29vZ2xlLnByb3RvYnVmLkFueVIHZGV0YWlscyI8CgRDb2RlEg8KC1VOU1BFQ0lGSUVEEAASCwoHRkFJTFVSRRABEhYKElJPVVRFX05PVF9QT1NTSUJMRRAC');
-@$core.Deprecated('Use formattedAddressDescriptor instead')
-const FormattedAddress$json = const {
-  '1': 'FormattedAddress',
-  '2': const [
-    const {'1': 'lines', '3': 1, '4': 3, '5': 9, '10': 'lines'},
-  ],
-};
-
-/// Descriptor for `FormattedAddress`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List formattedAddressDescriptor = $convert
-    .base64Decode('ChBGb3JtYXR0ZWRBZGRyZXNzEhQKBWxpbmVzGAEgAygJUgVsaW5lcw==');
-@$core.Deprecated('Use addressDescriptor instead')
-const Address$json = const {
-  '1': 'Address',
-  '2': const [
-    const {
-      '1': 'formatted_address',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.maps.fleetengine.v1.FormattedAddress',
-      '10': 'formattedAddress'
-    },
-  ],
-};
-
-/// Descriptor for `Address`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDescriptor = $convert.base64Decode(
-    'CgdBZGRyZXNzElIKEWZvcm1hdHRlZF9hZGRyZXNzGAEgASgLMiUubWFwcy5mbGVldGVuZ2luZS52MS5Gb3JtYXR0ZWRBZGRyZXNzUhBmb3JtYXR0ZWRBZGRyZXNz');
+    'CgxUcmlwV2F5cG9pbnQSQQoIbG9jYXRpb24YASABKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsTG9jYXRpb25SCGxvY2F0aW9uEhcKB3RyaXBfaWQYAiABKAlSBnRyaXBJZBJGCg13YXlwb2ludF90eXBlGAMgASgOMiEubWFwcy5mbGVldGVuZ2luZS52MS5XYXlwb2ludFR5cGVSDHdheXBvaW50VHlwZRI9ChBwYXRoX3RvX3dheXBvaW50GAQgAygLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nUg5wYXRoVG9XYXlwb2ludBI3ChhlbmNvZGVkX3BhdGhfdG9fd2F5cG9pbnQYBSABKAlSFWVuY29kZWRQYXRoVG9XYXlwb2ludBJeChN0cmFmZmljX3RvX3dheXBvaW50GAogASgLMi4ubWFwcy5mbGVldGVuZ2luZS52MS5Db25zdW1hYmxlVHJhZmZpY1BvbHlsaW5lUhF0cmFmZmljVG9XYXlwb2ludBJECg9kaXN0YW5jZV9tZXRlcnMYBiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIOZGlzdGFuY2VNZXRlcnMSLAoDZXRhGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIDZXRhEjUKCGR1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUghkdXJhdGlvbg==');
 @$core.Deprecated('Use vehicleAttributeDescriptor instead')
 const VehicleAttribute$json = const {
   '1': 'VehicleAttribute',

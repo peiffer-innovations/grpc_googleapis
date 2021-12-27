@@ -80,3 +80,36 @@ class Execution_State extends $pb.ProtobufEnum {
 
   const Execution_State._($core.int v, $core.String n) : super(v, n);
 }
+
+class Execution_CallLogLevel extends $pb.ProtobufEnum {
+  static const Execution_CallLogLevel CALL_LOG_LEVEL_UNSPECIFIED =
+      Execution_CallLogLevel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CALL_LOG_LEVEL_UNSPECIFIED');
+  static const Execution_CallLogLevel LOG_ALL_CALLS = Execution_CallLogLevel._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'LOG_ALL_CALLS');
+  static const Execution_CallLogLevel LOG_ERRORS_ONLY =
+      Execution_CallLogLevel._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LOG_ERRORS_ONLY');
+
+  static const $core.List<Execution_CallLogLevel> values =
+      <Execution_CallLogLevel>[
+    CALL_LOG_LEVEL_UNSPECIFIED,
+    LOG_ALL_CALLS,
+    LOG_ERRORS_ONLY,
+  ];
+
+  static final $core.Map<$core.int, Execution_CallLogLevel> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Execution_CallLogLevel? valueOf($core.int value) => _byValue[value];
+
+  const Execution_CallLogLevel._($core.int v, $core.String n) : super(v, n);
+}

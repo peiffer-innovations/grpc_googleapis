@@ -17,7 +17,14 @@ import 'resources.pbenum.dart';
 
 export 'resources.pbenum.dart';
 
+enum UploadRef_FileSource { uploadUrl, notSet }
+
 class UploadRef extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, UploadRef_FileSource>
+      _UploadRef_FileSourceByTag = {
+    1: UploadRef_FileSource.uploadUrl,
+    0: UploadRef_FileSource.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -27,6 +34,7 @@ class UploadRef extends $pb.GeneratedMessage {
               ? ''
               : 'google.streetview.publish.v1'),
       createEmptyInstance: create)
+    ..oo(0, [1])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -69,6 +77,10 @@ class UploadRef extends $pb.GeneratedMessage {
   static UploadRef getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadRef>(create);
   static UploadRef? _defaultInstance;
+
+  UploadRef_FileSource whichFileSource() =>
+      _UploadRef_FileSourceByTag[$_whichOneof(0)]!;
+  void clearFileSource() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get uploadUrl => $_getSZ(0);
@@ -703,6 +715,12 @@ class Photo extends $pb.GeneratedMessage {
         defaultOrMaker: Photo_MapsPublishStatus.UNSPECIFIED_MAPS_PUBLISH_STATUS,
         valueOf: Photo_MapsPublishStatus.valueOf,
         enumValues: Photo_MapsPublishStatus.values)
+    ..aOM<$1.Timestamp>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uploadTime',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   Photo._() : super();
@@ -719,6 +737,7 @@ class Photo extends $pb.GeneratedMessage {
     $core.String? shareLink,
     Photo_TransferStatus? transferStatus,
     Photo_MapsPublishStatus? mapsPublishStatus,
+    $1.Timestamp? uploadTime,
   }) {
     final _result = create();
     if (photoId != null) {
@@ -756,6 +775,9 @@ class Photo extends $pb.GeneratedMessage {
     }
     if (mapsPublishStatus != null) {
       _result.mapsPublishStatus = mapsPublishStatus;
+    }
+    if (uploadTime != null) {
+      _result.uploadTime = uploadTime;
     }
     return _result;
   }
@@ -918,4 +940,18 @@ class Photo extends $pb.GeneratedMessage {
   $core.bool hasMapsPublishStatus() => $_has(11);
   @$pb.TagNumber(13)
   void clearMapsPublishStatus() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $1.Timestamp get uploadTime => $_getN(12);
+  @$pb.TagNumber(14)
+  set uploadTime($1.Timestamp v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasUploadTime() => $_has(12);
+  @$pb.TagNumber(14)
+  void clearUploadTime() => clearField(14);
+  @$pb.TagNumber(14)
+  $1.Timestamp ensureUploadTime() => $_ensure(12);
 }

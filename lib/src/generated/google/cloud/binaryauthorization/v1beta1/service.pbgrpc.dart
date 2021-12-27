@@ -212,3 +212,46 @@ abstract class BinauthzManagementServiceV1Beta1ServiceBase
   $async.Future<$2.Empty> deleteAttestor(
       $grpc.ServiceCall call, $0.DeleteAttestorRequest request);
 }
+
+class SystemPolicyV1Beta1Client extends $grpc.Client {
+  static final _$getSystemPolicy = $grpc.ClientMethod<$0.GetSystemPolicyRequest,
+          $1.Policy>(
+      '/google.cloud.binaryauthorization.v1beta1.SystemPolicyV1Beta1/GetSystemPolicy',
+      ($0.GetSystemPolicyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
+
+  SystemPolicyV1Beta1Client($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.Policy> getSystemPolicy(
+      $0.GetSystemPolicyRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSystemPolicy, request, options: options);
+  }
+}
+
+abstract class SystemPolicyV1Beta1ServiceBase extends $grpc.Service {
+  $core.String get $name =>
+      'google.cloud.binaryauthorization.v1beta1.SystemPolicyV1Beta1';
+
+  SystemPolicyV1Beta1ServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.GetSystemPolicyRequest, $1.Policy>(
+        'GetSystemPolicy',
+        getSystemPolicy_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSystemPolicyRequest.fromBuffer(value),
+        ($1.Policy value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.Policy> getSystemPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetSystemPolicyRequest> request) async {
+    return getSystemPolicy(call, await request);
+  }
+
+  $async.Future<$1.Policy> getSystemPolicy(
+      $grpc.ServiceCall call, $0.GetSystemPolicyRequest request);
+}

@@ -369,11 +369,48 @@ class SqlDatabaseVersion extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'MYSQL_8_0');
+  static const SqlDatabaseVersion MYSQL_8_0_18 = SqlDatabaseVersion._(
+      41,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MYSQL_8_0_18');
+  static const SqlDatabaseVersion MYSQL_8_0_26 = SqlDatabaseVersion._(
+      85,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MYSQL_8_0_26');
   static const SqlDatabaseVersion POSTGRES_13 = SqlDatabaseVersion._(
       23,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'POSTGRES_13');
+  static const SqlDatabaseVersion POSTGRES_14 = SqlDatabaseVersion._(
+      110,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'POSTGRES_14');
+  static const SqlDatabaseVersion SQLSERVER_2019_STANDARD =
+      SqlDatabaseVersion._(
+          26,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SQLSERVER_2019_STANDARD');
+  static const SqlDatabaseVersion SQLSERVER_2019_ENTERPRISE =
+      SqlDatabaseVersion._(
+          27,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SQLSERVER_2019_ENTERPRISE');
+  static const SqlDatabaseVersion SQLSERVER_2019_EXPRESS = SqlDatabaseVersion._(
+      28,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SQLSERVER_2019_EXPRESS');
+  static const SqlDatabaseVersion SQLSERVER_2019_WEB = SqlDatabaseVersion._(
+      29,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SQLSERVER_2019_WEB');
 
   static const $core.List<SqlDatabaseVersion> values = <SqlDatabaseVersion>[
     SQL_DATABASE_VERSION_UNSPECIFIED,
@@ -390,7 +427,14 @@ class SqlDatabaseVersion extends $pb.ProtobufEnum {
     POSTGRES_10,
     POSTGRES_12,
     MYSQL_8_0,
+    MYSQL_8_0_18,
+    MYSQL_8_0_26,
     POSTGRES_13,
+    POSTGRES_14,
+    SQLSERVER_2019_STANDARD,
+    SQLSERVER_2019_ENTERPRISE,
+    SQLSERVER_2019_EXPRESS,
+    SQLSERVER_2019_WEB,
   ];
 
   static final $core.Map<$core.int, SqlDatabaseVersion> _byValue =
@@ -763,6 +807,12 @@ class DatabaseInstance_SqlInstanceState extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'FAILED');
+  static const DatabaseInstance_SqlInstanceState ONLINE_MAINTENANCE =
+      DatabaseInstance_SqlInstanceState._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ONLINE_MAINTENANCE');
 
   static const $core.List<DatabaseInstance_SqlInstanceState> values =
       <DatabaseInstance_SqlInstanceState>[
@@ -773,6 +823,7 @@ class DatabaseInstance_SqlInstanceState extends $pb.ProtobufEnum {
     PENDING_CREATE,
     MAINTENANCE,
     FAILED,
+    ONLINE_MAINTENANCE,
   ];
 
   static final $core.Map<$core.int, DatabaseInstance_SqlInstanceState>
@@ -981,6 +1032,34 @@ class SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'UNSUPPORTED_DEFINER');
+  static const SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType
+      SQLSERVER_SERVERNAME_MISMATCH =
+      SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType._(
+          22,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SQLSERVER_SERVERNAME_MISMATCH');
+  static const SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType
+      PRIMARY_ALREADY_SETUP =
+      SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType._(
+          23,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PRIMARY_ALREADY_SETUP');
+  static const SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType
+      UNSUPPORTED_BINLOG_FORMAT =
+      SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType._(
+          24,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UNSUPPORTED_BINLOG_FORMAT');
+  static const SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType
+      BINLOG_RETENTION_SETTING =
+      SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType._(
+          25,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BINLOG_RETENTION_SETTING');
 
   static const $core
           .List<SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType>
@@ -1007,6 +1086,10 @@ class SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType
     SQLSERVER_AGENT_NOT_RUNNING,
     UNSUPPORTED_TABLE_DEFINITION,
     UNSUPPORTED_DEFINER,
+    SQLSERVER_SERVERNAME_MISMATCH,
+    PRIMARY_ALREADY_SETUP,
+    UNSUPPORTED_BINLOG_FORMAT,
+    BINLOG_RETENTION_SETTING,
   ];
 
   static final $core.Map<$core.int,
@@ -1313,6 +1396,35 @@ class Operation_SqlOperationStatus extends $pb.ProtobufEnum {
       _byValue[value];
 
   const Operation_SqlOperationStatus._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class PasswordValidationPolicy_Complexity extends $pb.ProtobufEnum {
+  static const PasswordValidationPolicy_Complexity COMPLEXITY_UNSPECIFIED =
+      PasswordValidationPolicy_Complexity._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COMPLEXITY_UNSPECIFIED');
+  static const PasswordValidationPolicy_Complexity COMPLEXITY_DEFAULT =
+      PasswordValidationPolicy_Complexity._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COMPLEXITY_DEFAULT');
+
+  static const $core.List<PasswordValidationPolicy_Complexity> values =
+      <PasswordValidationPolicy_Complexity>[
+    COMPLEXITY_UNSPECIFIED,
+    COMPLEXITY_DEFAULT,
+  ];
+
+  static final $core.Map<$core.int, PasswordValidationPolicy_Complexity>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PasswordValidationPolicy_Complexity? valueOf($core.int value) =>
+      _byValue[value];
+
+  const PasswordValidationPolicy_Complexity._($core.int v, $core.String n)
       : super(v, n);
 }
 

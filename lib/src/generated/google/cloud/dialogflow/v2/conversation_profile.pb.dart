@@ -96,6 +96,16 @@ class ConversationProfile extends $pb.GeneratedMessage {
             ? ''
             : 'updateTime',
         subBuilder: $10.Timestamp.create)
+    ..aOS(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'securitySettings')
+    ..aOS(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'timeZone')
     ..hasRequiredFields = false;
 
   ConversationProfile._() : super();
@@ -112,6 +122,8 @@ class ConversationProfile extends $pb.GeneratedMessage {
     $core.String? languageCode,
     $10.Timestamp? createTime,
     $10.Timestamp? updateTime,
+    $core.String? securitySettings,
+    $core.String? timeZone,
   }) {
     final _result = create();
     if (name != null) {
@@ -150,6 +162,12 @@ class ConversationProfile extends $pb.GeneratedMessage {
     }
     if (updateTime != null) {
       _result.updateTime = updateTime;
+    }
+    if (securitySettings != null) {
+      _result.securitySettings = securitySettings;
+    }
+    if (timeZone != null) {
+      _result.timeZone = timeZone;
     }
     return _result;
   }
@@ -341,6 +359,30 @@ class ConversationProfile extends $pb.GeneratedMessage {
   void clearUpdateTime() => clearField(12);
   @$pb.TagNumber(12)
   $10.Timestamp ensureUpdateTime() => $_ensure(11);
+
+  @$pb.TagNumber(13)
+  $core.String get securitySettings => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set securitySettings($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasSecuritySettings() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearSecuritySettings() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get timeZone => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set timeZone($core.String v) {
+    $_setString(13, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasTimeZone() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearTimeZone() => clearField(14);
 }
 
 class ListConversationProfilesRequest extends $pb.GeneratedMessage {

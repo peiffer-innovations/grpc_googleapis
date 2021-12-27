@@ -216,6 +216,9 @@ export '../src/generated/google/cloud/aiplatform/v1beta1/training_pipeline.pbjso
 export '../src/generated/google/cloud/aiplatform/v1beta1/types.pb.dart';
 export '../src/generated/google/cloud/aiplatform/v1beta1/types.pbenum.dart';
 export '../src/generated/google/cloud/aiplatform/v1beta1/types.pbjson.dart';
+export '../src/generated/google/cloud/aiplatform/v1beta1/unmanaged_container_model.pb.dart';
+export '../src/generated/google/cloud/aiplatform/v1beta1/unmanaged_container_model.pbenum.dart';
+export '../src/generated/google/cloud/aiplatform/v1beta1/unmanaged_container_model.pbjson.dart';
 export '../src/generated/google/cloud/aiplatform/v1beta1/user_action_reference.pb.dart';
 export '../src/generated/google/cloud/aiplatform/v1beta1/user_action_reference.pbenum.dart';
 export '../src/generated/google/cloud/aiplatform/v1beta1/user_action_reference.pbjson.dart';

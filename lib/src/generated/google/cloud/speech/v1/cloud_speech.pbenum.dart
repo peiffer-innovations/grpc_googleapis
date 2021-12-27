@@ -58,6 +58,12 @@ class RecognitionConfig_AudioEncoding extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'SPEEX_WITH_HEADER_BYTE');
+  static const RecognitionConfig_AudioEncoding WEBM_OPUS =
+      RecognitionConfig_AudioEncoding._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WEBM_OPUS');
 
   static const $core.List<RecognitionConfig_AudioEncoding> values =
       <RecognitionConfig_AudioEncoding>[
@@ -69,6 +75,7 @@ class RecognitionConfig_AudioEncoding extends $pb.ProtobufEnum {
     AMR_WB,
     OGG_OPUS,
     SPEEX_WITH_HEADER_BYTE,
+    WEBM_OPUS,
   ];
 
   static final $core.Map<$core.int, RecognitionConfig_AudioEncoding> _byValue =

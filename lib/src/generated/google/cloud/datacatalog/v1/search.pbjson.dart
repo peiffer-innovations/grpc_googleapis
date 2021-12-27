@@ -89,6 +89,8 @@ const SearchCatalogResult$json = const {
       '5': 9,
       '10': 'fullyQualifiedName'
     },
+    const {'1': 'display_name', '3': 12, '4': 1, '5': 9, '10': 'displayName'},
+    const {'1': 'description', '3': 13, '4': 1, '5': 9, '10': 'description'},
   ],
   '8': const [
     const {'1': 'system'},
@@ -97,4 +99,4 @@ const SearchCatalogResult$json = const {
 
 /// Descriptor for `SearchCatalogResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List searchCatalogResultDescriptor = $convert.base64Decode(
-    'ChNTZWFyY2hDYXRhbG9nUmVzdWx0ElsKEnNlYXJjaF9yZXN1bHRfdHlwZRgBIAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TZWFyY2hSZXN1bHRUeXBlUhBzZWFyY2hSZXN1bHRUeXBlEjIKFXNlYXJjaF9yZXN1bHRfc3VidHlwZRgCIAEoCVITc2VhcmNoUmVzdWx0U3VidHlwZRI0ChZyZWxhdGl2ZV9yZXNvdXJjZV9uYW1lGAMgASgJUhRyZWxhdGl2ZVJlc291cmNlTmFtZRInCg9saW5rZWRfcmVzb3VyY2UYBCABKAlSDmxpbmtlZFJlc291cmNlEjsKC21vZGlmeV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKbW9kaWZ5VGltZRJhChFpbnRlZ3JhdGVkX3N5c3RlbRgIIAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbnRlZ3JhdGVkU3lzdGVtQgPgQQNIAFIQaW50ZWdyYXRlZFN5c3RlbRI0ChV1c2VyX3NwZWNpZmllZF9zeXN0ZW0YCSABKAlIAFITdXNlclNwZWNpZmllZFN5c3RlbRIwChRmdWxseV9xdWFsaWZpZWRfbmFtZRgKIAEoCVISZnVsbHlRdWFsaWZpZWROYW1lQggKBnN5c3RlbQ==');
+    'ChNTZWFyY2hDYXRhbG9nUmVzdWx0ElsKEnNlYXJjaF9yZXN1bHRfdHlwZRgBIAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TZWFyY2hSZXN1bHRUeXBlUhBzZWFyY2hSZXN1bHRUeXBlEjIKFXNlYXJjaF9yZXN1bHRfc3VidHlwZRgCIAEoCVITc2VhcmNoUmVzdWx0U3VidHlwZRI0ChZyZWxhdGl2ZV9yZXNvdXJjZV9uYW1lGAMgASgJUhRyZWxhdGl2ZVJlc291cmNlTmFtZRInCg9saW5rZWRfcmVzb3VyY2UYBCABKAlSDmxpbmtlZFJlc291cmNlEjsKC21vZGlmeV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKbW9kaWZ5VGltZRJhChFpbnRlZ3JhdGVkX3N5c3RlbRgIIAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbnRlZ3JhdGVkU3lzdGVtQgPgQQNIAFIQaW50ZWdyYXRlZFN5c3RlbRI0ChV1c2VyX3NwZWNpZmllZF9zeXN0ZW0YCSABKAlIAFITdXNlclNwZWNpZmllZFN5c3RlbRIwChRmdWxseV9xdWFsaWZpZWRfbmFtZRgKIAEoCVISZnVsbHlRdWFsaWZpZWROYW1lEiEKDGRpc3BsYXlfbmFtZRgMIAEoCVILZGlzcGxheU5hbWUSIAoLZGVzY3JpcHRpb24YDSABKAlSC2Rlc2NyaXB0aW9uQggKBnN5c3RlbQ==');

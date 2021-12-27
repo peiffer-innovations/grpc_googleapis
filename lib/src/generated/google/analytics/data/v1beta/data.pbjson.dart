@@ -47,6 +47,19 @@ const MetricType$json = const {
 /// Descriptor for `MetricType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List metricTypeDescriptor = $convert.base64Decode(
     'CgpNZXRyaWNUeXBlEhsKF01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVEEAASEAoMVFlQRV9JTlRFR0VSEAESDgoKVFlQRV9GTE9BVBACEhAKDFRZUEVfU0VDT05EUxAEEhUKEVRZUEVfTUlMTElTRUNPTkRTEAUSEAoMVFlQRV9NSU5VVEVTEAYSDgoKVFlQRV9IT1VSUxAHEhEKDVRZUEVfU1RBTkRBUkQQCBIRCg1UWVBFX0NVUlJFTkNZEAkSDQoJVFlQRV9GRUVUEAoSDgoKVFlQRV9NSUxFUxALEg8KC1RZUEVfTUVURVJTEAwSEwoPVFlQRV9LSUxPTUVURVJTEA0=');
+@$core.Deprecated('Use restrictedMetricTypeDescriptor instead')
+const RestrictedMetricType$json = const {
+  '1': 'RestrictedMetricType',
+  '2': const [
+    const {'1': 'RESTRICTED_METRIC_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'COST_DATA', '2': 1},
+    const {'1': 'REVENUE_DATA', '2': 2},
+  ],
+};
+
+/// Descriptor for `RestrictedMetricType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List restrictedMetricTypeDescriptor = $convert.base64Decode(
+    'ChRSZXN0cmljdGVkTWV0cmljVHlwZRImCiJSRVNUUklDVEVEX01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJQ09TVF9EQVRBEAESEAoMUkVWRU5VRV9EQVRBEAI=');
 @$core.Deprecated('Use compatibilityDescriptor instead')
 const Compatibility$json = const {
   '1': 'Compatibility',
@@ -711,12 +724,104 @@ const ResponseMetaData$json = const {
       '5': 8,
       '10': 'dataLossFromOtherRow'
     },
+    const {
+      '1': 'schema_restriction_response',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.analytics.data.v1beta.ResponseMetaData.SchemaRestrictionResponse',
+      '9': 0,
+      '10': 'schemaRestrictionResponse',
+      '17': true
+    },
+    const {
+      '1': 'currency_code',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'currencyCode',
+      '17': true
+    },
+    const {
+      '1': 'time_zone',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'timeZone',
+      '17': true
+    },
+    const {
+      '1': 'empty_reason',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'emptyReason',
+      '17': true
+    },
+  ],
+  '3': const [ResponseMetaData_SchemaRestrictionResponse$json],
+  '8': const [
+    const {'1': '_schema_restriction_response'},
+    const {'1': '_currency_code'},
+    const {'1': '_time_zone'},
+    const {'1': '_empty_reason'},
+  ],
+};
+
+@$core.Deprecated('Use responseMetaDataDescriptor instead')
+const ResponseMetaData_SchemaRestrictionResponse$json = const {
+  '1': 'SchemaRestrictionResponse',
+  '2': const [
+    const {
+      '1': 'active_metric_restrictions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.analytics.data.v1beta.ResponseMetaData.SchemaRestrictionResponse.ActiveMetricRestriction',
+      '10': 'activeMetricRestrictions'
+    },
+  ],
+  '3': const [
+    ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction$json
+  ],
+};
+
+@$core.Deprecated('Use responseMetaDataDescriptor instead')
+const ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction$json =
+    const {
+  '1': 'ActiveMetricRestriction',
+  '2': const [
+    const {
+      '1': 'metric_name',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'metricName',
+      '17': true
+    },
+    const {
+      '1': 'restricted_metric_types',
+      '3': 2,
+      '4': 3,
+      '5': 14,
+      '6': '.google.analytics.data.v1beta.RestrictedMetricType',
+      '10': 'restrictedMetricTypes'
+    },
+  ],
+  '8': const [
+    const {'1': '_metric_name'},
   ],
 };
 
 /// Descriptor for `ResponseMetaData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List responseMetaDataDescriptor = $convert.base64Decode(
-    'ChBSZXNwb25zZU1ldGFEYXRhEjYKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCFIUZGF0YUxvc3NGcm9tT3RoZXJSb3c=');
+    'ChBSZXNwb25zZU1ldGFEYXRhEjYKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCFIUZGF0YUxvc3NGcm9tT3RoZXJSb3cSjQEKG3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlSABSGXNjaGVtYVJlc3RyaWN0aW9uUmVzcG9uc2WIAQESKAoNY3VycmVuY3lfY29kZRgFIAEoCUgBUgxjdXJyZW5jeUNvZGWIAQESIAoJdGltZV96b25lGAYgASgJSAJSCHRpbWVab25liAEBEiYKDGVtcHR5X3JlYXNvbhgHIAEoCUgDUgtlbXB0eVJlYXNvbogBARr6AgoZU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZRKeAQoaYWN0aXZlX21ldHJpY19yZXN0cmljdGlvbnMYASADKAsyYC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZS5BY3RpdmVNZXRyaWNSZXN0cmljdGlvblIYYWN0aXZlTWV0cmljUmVzdHJpY3Rpb25zGrsBChdBY3RpdmVNZXRyaWNSZXN0cmljdGlvbhIkCgttZXRyaWNfbmFtZRgBIAEoCUgAUgptZXRyaWNOYW1liAEBEmoKF3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlwZVIVcmVzdHJpY3RlZE1ldHJpY1R5cGVzQg4KDF9tZXRyaWNfbmFtZUIeChxfc2NoZW1hX3Jlc3RyaWN0aW9uX3Jlc3BvbnNlQhAKDl9jdXJyZW5jeV9jb2RlQgwKCl90aW1lX3pvbmVCDwoNX2VtcHR5X3JlYXNvbg==');
 @$core.Deprecated('Use dimensionHeaderDescriptor instead')
 const DimensionHeader$json = const {
   '1': 'DimensionHeader',
@@ -987,13 +1092,32 @@ const MetricMetadata$json = const {
       '5': 8,
       '10': 'customDefinition'
     },
+    const {
+      '1': 'blocked_reasons',
+      '3': 8,
+      '4': 3,
+      '5': 14,
+      '6': '.google.analytics.data.v1beta.MetricMetadata.BlockedReason',
+      '10': 'blockedReasons'
+    },
     const {'1': 'category', '3': 10, '4': 1, '5': 9, '10': 'category'},
+  ],
+  '4': const [MetricMetadata_BlockedReason$json],
+};
+
+@$core.Deprecated('Use metricMetadataDescriptor instead')
+const MetricMetadata_BlockedReason$json = const {
+  '1': 'BlockedReason',
+  '2': const [
+    const {'1': 'BLOCKED_REASON_UNSPECIFIED', '2': 0},
+    const {'1': 'NO_REVENUE_METRICS', '2': 1},
+    const {'1': 'NO_COST_METRICS', '2': 2},
   ],
 };
 
 /// Descriptor for `MetricMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List metricMetadataDescriptor = $convert.base64Decode(
-    'Cg5NZXRyaWNNZXRhZGF0YRIZCghhcGlfbmFtZRgBIAEoCVIHYXBpTmFtZRIXCgd1aV9uYW1lGAIgASgJUgZ1aU5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEjAKFGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJUhJkZXByZWNhdGVkQXBpTmFtZXMSPAoEdHlwZRgFIAEoDjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZVIEdHlwZRIeCgpleHByZXNzaW9uGAYgASgJUgpleHByZXNzaW9uEisKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgIUhBjdXN0b21EZWZpbml0aW9uEhoKCGNhdGVnb3J5GAogASgJUghjYXRlZ29yeQ==');
+    'Cg5NZXRyaWNNZXRhZGF0YRIZCghhcGlfbmFtZRgBIAEoCVIHYXBpTmFtZRIXCgd1aV9uYW1lGAIgASgJUgZ1aU5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEjAKFGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJUhJkZXByZWNhdGVkQXBpTmFtZXMSPAoEdHlwZRgFIAEoDjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZVIEdHlwZRIeCgpleHByZXNzaW9uGAYgASgJUgpleHByZXNzaW9uEisKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgIUhBjdXN0b21EZWZpbml0aW9uEmMKD2Jsb2NrZWRfcmVhc29ucxgIIAMoDjI6Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljTWV0YWRhdGEuQmxvY2tlZFJlYXNvblIOYmxvY2tlZFJlYXNvbnMSGgoIY2F0ZWdvcnkYCiABKAlSCGNhdGVnb3J5IlwKDUJsb2NrZWRSZWFzb24SHgoaQkxPQ0tFRF9SRUFTT05fVU5TUEVDSUZJRUQQABIWChJOT19SRVZFTlVFX01FVFJJQ1MQARITCg9OT19DT1NUX01FVFJJQ1MQAg==');
 @$core.Deprecated('Use dimensionCompatibilityDescriptor instead')
 const DimensionCompatibility$json = const {
   '1': 'DimensionCompatibility',

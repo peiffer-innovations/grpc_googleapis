@@ -199,6 +199,18 @@ class GetTripRequest extends $pb.GeneratedMessage {
         defaultOrMaker: $7.PolylineFormatType.UNKNOWN_FORMAT_TYPE,
         valueOf: $7.PolylineFormatType.valueOf,
         enumValues: $7.PolylineFormatType.values)
+    ..aOM<$4.Timestamp>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentRouteSegmentTrafficVersion',
+        subBuilder: $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'remainingWaypointsRouteVersion',
+        subBuilder: $4.Timestamp.create)
     ..e<$1.TripView>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -217,6 +229,8 @@ class GetTripRequest extends $pb.GeneratedMessage {
     $4.Timestamp? currentRouteSegmentVersion,
     $4.Timestamp? remainingWaypointsVersion,
     $7.PolylineFormatType? routeFormatType,
+    $4.Timestamp? currentRouteSegmentTrafficVersion,
+    $4.Timestamp? remainingWaypointsRouteVersion,
     $1.TripView? view,
   }) {
     final _result = create();
@@ -234,6 +248,13 @@ class GetTripRequest extends $pb.GeneratedMessage {
     }
     if (routeFormatType != null) {
       _result.routeFormatType = routeFormatType;
+    }
+    if (currentRouteSegmentTrafficVersion != null) {
+      _result.currentRouteSegmentTrafficVersion =
+          currentRouteSegmentTrafficVersion;
+    }
+    if (remainingWaypointsRouteVersion != null) {
+      _result.remainingWaypointsRouteVersion = remainingWaypointsRouteVersion;
     }
     if (view != null) {
       _result.view = view;
@@ -333,15 +354,43 @@ class GetTripRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearRouteFormatType() => clearField(8);
 
+  @$pb.TagNumber(9)
+  $4.Timestamp get currentRouteSegmentTrafficVersion => $_getN(5);
+  @$pb.TagNumber(9)
+  set currentRouteSegmentTrafficVersion($4.Timestamp v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasCurrentRouteSegmentTrafficVersion() => $_has(5);
+  @$pb.TagNumber(9)
+  void clearCurrentRouteSegmentTrafficVersion() => clearField(9);
+  @$pb.TagNumber(9)
+  $4.Timestamp ensureCurrentRouteSegmentTrafficVersion() => $_ensure(5);
+
+  @$pb.TagNumber(10)
+  $4.Timestamp get remainingWaypointsRouteVersion => $_getN(6);
+  @$pb.TagNumber(10)
+  set remainingWaypointsRouteVersion($4.Timestamp v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasRemainingWaypointsRouteVersion() => $_has(6);
+  @$pb.TagNumber(10)
+  void clearRemainingWaypointsRouteVersion() => clearField(10);
+  @$pb.TagNumber(10)
+  $4.Timestamp ensureRemainingWaypointsRouteVersion() => $_ensure(6);
+
   @$pb.TagNumber(11)
-  $1.TripView get view => $_getN(5);
+  $1.TripView get view => $_getN(7);
   @$pb.TagNumber(11)
   set view($1.TripView v) {
     setField(11, v);
   }
 
   @$pb.TagNumber(11)
-  $core.bool hasView() => $_has(5);
+  $core.bool hasView() => $_has(7);
   @$pb.TagNumber(11)
   void clearView() => clearField(11);
 }

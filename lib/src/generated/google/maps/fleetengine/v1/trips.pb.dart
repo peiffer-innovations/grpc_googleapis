@@ -14,6 +14,7 @@ import '../../../protobuf/timestamp.pb.dart' as $1;
 import '../../../type/latlng.pb.dart' as $2;
 import '../../../protobuf/wrappers.pb.dart' as $3;
 import '../../../protobuf/duration.pb.dart' as $4;
+import 'traffic.pb.dart' as $5;
 
 import 'trips.pbenum.dart';
 import 'fleetengine.pbenum.dart' as $0;
@@ -134,6 +135,12 @@ class Trip extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM,
         subBuilder: $0.TripWaypoint.create)
     ..aOM<$1.Timestamp>(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentRouteSegmentVersion',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(
         19,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
@@ -146,6 +153,11 @@ class Trip extends $pb.GeneratedMessage {
             : 'vehicleWaypoints',
         $pb.PbFieldType.PM,
         subBuilder: $0.TripWaypoint.create)
+    ..aOS(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentRouteSegment')
     ..aOM<StopLocation>(
         22,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -181,11 +193,23 @@ class Trip extends $pb.GeneratedMessage {
             ? ''
             : 'remainingTimeToFirstWaypoint',
         subBuilder: $4.Duration.create)
+    ..aOM<$5.ConsumableTrafficPolyline>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentRouteSegmentTraffic',
+        subBuilder: $5.ConsumableTrafficPolyline.create)
     ..aOM<$1.Timestamp>(
         29,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'remainingWaypointsRouteVersion',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(
+        30,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentRouteSegmentTrafficVersion',
         subBuilder: $1.Timestamp.create)
     ..e<TripView>(
         31,
@@ -236,15 +260,19 @@ class Trip extends $pb.GeneratedMessage {
     $core.Iterable<$0.TerminalLocation>? intermediateDestinations,
     $core.int? intermediateDestinationIndex,
     $core.Iterable<$0.TripWaypoint>? remainingWaypoints,
+    $1.Timestamp? currentRouteSegmentVersion,
     $1.Timestamp? remainingWaypointsVersion,
     $core.Iterable<$0.TripWaypoint>? vehicleWaypoints,
+    $core.String? currentRouteSegment,
     StopLocation? actualPickupPoint,
     StopLocation? actualDropoffPoint,
     $0.TripWaypoint? currentRouteSegmentEndPoint,
     $1.Timestamp? intermediateDestinationsVersion,
     $core.bool? lastLocationSnappable,
     $4.Duration? remainingTimeToFirstWaypoint,
+    $5.ConsumableTrafficPolyline? currentRouteSegmentTraffic,
     $1.Timestamp? remainingWaypointsRouteVersion,
+    $1.Timestamp? currentRouteSegmentTrafficVersion,
     TripView? view,
     StopLocation? actualPickupArrivalPoint,
     $core.Iterable<StopLocation>? actualIntermediateDestinationArrivalPoints,
@@ -299,11 +327,17 @@ class Trip extends $pb.GeneratedMessage {
     if (remainingWaypoints != null) {
       _result.remainingWaypoints.addAll(remainingWaypoints);
     }
+    if (currentRouteSegmentVersion != null) {
+      _result.currentRouteSegmentVersion = currentRouteSegmentVersion;
+    }
     if (remainingWaypointsVersion != null) {
       _result.remainingWaypointsVersion = remainingWaypointsVersion;
     }
     if (vehicleWaypoints != null) {
       _result.vehicleWaypoints.addAll(vehicleWaypoints);
+    }
+    if (currentRouteSegment != null) {
+      _result.currentRouteSegment = currentRouteSegment;
     }
     if (actualPickupPoint != null) {
       _result.actualPickupPoint = actualPickupPoint;
@@ -323,8 +357,15 @@ class Trip extends $pb.GeneratedMessage {
     if (remainingTimeToFirstWaypoint != null) {
       _result.remainingTimeToFirstWaypoint = remainingTimeToFirstWaypoint;
     }
+    if (currentRouteSegmentTraffic != null) {
+      _result.currentRouteSegmentTraffic = currentRouteSegmentTraffic;
+    }
     if (remainingWaypointsRouteVersion != null) {
       _result.remainingWaypointsRouteVersion = remainingWaypointsRouteVersion;
+    }
+    if (currentRouteSegmentTrafficVersion != null) {
+      _result.currentRouteSegmentTrafficVersion =
+          currentRouteSegmentTrafficVersion;
     }
     if (view != null) {
       _result.view = view;
@@ -547,151 +588,206 @@ class Trip extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $core.List<$0.TripWaypoint> get remainingWaypoints => $_getList(15);
 
+  @$pb.TagNumber(17)
+  $1.Timestamp get currentRouteSegmentVersion => $_getN(16);
+  @$pb.TagNumber(17)
+  set currentRouteSegmentVersion($1.Timestamp v) {
+    setField(17, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasCurrentRouteSegmentVersion() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearCurrentRouteSegmentVersion() => clearField(17);
+  @$pb.TagNumber(17)
+  $1.Timestamp ensureCurrentRouteSegmentVersion() => $_ensure(16);
+
   @$pb.TagNumber(19)
-  $1.Timestamp get remainingWaypointsVersion => $_getN(16);
+  $1.Timestamp get remainingWaypointsVersion => $_getN(17);
   @$pb.TagNumber(19)
   set remainingWaypointsVersion($1.Timestamp v) {
     setField(19, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasRemainingWaypointsVersion() => $_has(16);
+  $core.bool hasRemainingWaypointsVersion() => $_has(17);
   @$pb.TagNumber(19)
   void clearRemainingWaypointsVersion() => clearField(19);
   @$pb.TagNumber(19)
-  $1.Timestamp ensureRemainingWaypointsVersion() => $_ensure(16);
+  $1.Timestamp ensureRemainingWaypointsVersion() => $_ensure(17);
 
   @$pb.TagNumber(20)
-  $core.List<$0.TripWaypoint> get vehicleWaypoints => $_getList(17);
+  $core.List<$0.TripWaypoint> get vehicleWaypoints => $_getList(18);
+
+  @$pb.TagNumber(21)
+  $core.String get currentRouteSegment => $_getSZ(19);
+  @$pb.TagNumber(21)
+  set currentRouteSegment($core.String v) {
+    $_setString(19, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasCurrentRouteSegment() => $_has(19);
+  @$pb.TagNumber(21)
+  void clearCurrentRouteSegment() => clearField(21);
 
   @$pb.TagNumber(22)
-  StopLocation get actualPickupPoint => $_getN(18);
+  StopLocation get actualPickupPoint => $_getN(20);
   @$pb.TagNumber(22)
   set actualPickupPoint(StopLocation v) {
     setField(22, v);
   }
 
   @$pb.TagNumber(22)
-  $core.bool hasActualPickupPoint() => $_has(18);
+  $core.bool hasActualPickupPoint() => $_has(20);
   @$pb.TagNumber(22)
   void clearActualPickupPoint() => clearField(22);
   @$pb.TagNumber(22)
-  StopLocation ensureActualPickupPoint() => $_ensure(18);
+  StopLocation ensureActualPickupPoint() => $_ensure(20);
 
   @$pb.TagNumber(23)
-  StopLocation get actualDropoffPoint => $_getN(19);
+  StopLocation get actualDropoffPoint => $_getN(21);
   @$pb.TagNumber(23)
   set actualDropoffPoint(StopLocation v) {
     setField(23, v);
   }
 
   @$pb.TagNumber(23)
-  $core.bool hasActualDropoffPoint() => $_has(19);
+  $core.bool hasActualDropoffPoint() => $_has(21);
   @$pb.TagNumber(23)
   void clearActualDropoffPoint() => clearField(23);
   @$pb.TagNumber(23)
-  StopLocation ensureActualDropoffPoint() => $_ensure(19);
+  StopLocation ensureActualDropoffPoint() => $_ensure(21);
 
   @$pb.TagNumber(24)
-  $0.TripWaypoint get currentRouteSegmentEndPoint => $_getN(20);
+  $0.TripWaypoint get currentRouteSegmentEndPoint => $_getN(22);
   @$pb.TagNumber(24)
   set currentRouteSegmentEndPoint($0.TripWaypoint v) {
     setField(24, v);
   }
 
   @$pb.TagNumber(24)
-  $core.bool hasCurrentRouteSegmentEndPoint() => $_has(20);
+  $core.bool hasCurrentRouteSegmentEndPoint() => $_has(22);
   @$pb.TagNumber(24)
   void clearCurrentRouteSegmentEndPoint() => clearField(24);
   @$pb.TagNumber(24)
-  $0.TripWaypoint ensureCurrentRouteSegmentEndPoint() => $_ensure(20);
+  $0.TripWaypoint ensureCurrentRouteSegmentEndPoint() => $_ensure(22);
 
   @$pb.TagNumber(25)
-  $1.Timestamp get intermediateDestinationsVersion => $_getN(21);
+  $1.Timestamp get intermediateDestinationsVersion => $_getN(23);
   @$pb.TagNumber(25)
   set intermediateDestinationsVersion($1.Timestamp v) {
     setField(25, v);
   }
 
   @$pb.TagNumber(25)
-  $core.bool hasIntermediateDestinationsVersion() => $_has(21);
+  $core.bool hasIntermediateDestinationsVersion() => $_has(23);
   @$pb.TagNumber(25)
   void clearIntermediateDestinationsVersion() => clearField(25);
   @$pb.TagNumber(25)
-  $1.Timestamp ensureIntermediateDestinationsVersion() => $_ensure(21);
+  $1.Timestamp ensureIntermediateDestinationsVersion() => $_ensure(23);
 
   @$pb.TagNumber(26)
-  $core.bool get lastLocationSnappable => $_getBF(22);
+  $core.bool get lastLocationSnappable => $_getBF(24);
   @$pb.TagNumber(26)
   set lastLocationSnappable($core.bool v) {
-    $_setBool(22, v);
+    $_setBool(24, v);
   }
 
   @$pb.TagNumber(26)
-  $core.bool hasLastLocationSnappable() => $_has(22);
+  $core.bool hasLastLocationSnappable() => $_has(24);
   @$pb.TagNumber(26)
   void clearLastLocationSnappable() => clearField(26);
 
   @$pb.TagNumber(27)
-  $4.Duration get remainingTimeToFirstWaypoint => $_getN(23);
+  $4.Duration get remainingTimeToFirstWaypoint => $_getN(25);
   @$pb.TagNumber(27)
   set remainingTimeToFirstWaypoint($4.Duration v) {
     setField(27, v);
   }
 
   @$pb.TagNumber(27)
-  $core.bool hasRemainingTimeToFirstWaypoint() => $_has(23);
+  $core.bool hasRemainingTimeToFirstWaypoint() => $_has(25);
   @$pb.TagNumber(27)
   void clearRemainingTimeToFirstWaypoint() => clearField(27);
   @$pb.TagNumber(27)
-  $4.Duration ensureRemainingTimeToFirstWaypoint() => $_ensure(23);
+  $4.Duration ensureRemainingTimeToFirstWaypoint() => $_ensure(25);
+
+  @$pb.TagNumber(28)
+  $5.ConsumableTrafficPolyline get currentRouteSegmentTraffic => $_getN(26);
+  @$pb.TagNumber(28)
+  set currentRouteSegmentTraffic($5.ConsumableTrafficPolyline v) {
+    setField(28, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasCurrentRouteSegmentTraffic() => $_has(26);
+  @$pb.TagNumber(28)
+  void clearCurrentRouteSegmentTraffic() => clearField(28);
+  @$pb.TagNumber(28)
+  $5.ConsumableTrafficPolyline ensureCurrentRouteSegmentTraffic() =>
+      $_ensure(26);
 
   @$pb.TagNumber(29)
-  $1.Timestamp get remainingWaypointsRouteVersion => $_getN(24);
+  $1.Timestamp get remainingWaypointsRouteVersion => $_getN(27);
   @$pb.TagNumber(29)
   set remainingWaypointsRouteVersion($1.Timestamp v) {
     setField(29, v);
   }
 
   @$pb.TagNumber(29)
-  $core.bool hasRemainingWaypointsRouteVersion() => $_has(24);
+  $core.bool hasRemainingWaypointsRouteVersion() => $_has(27);
   @$pb.TagNumber(29)
   void clearRemainingWaypointsRouteVersion() => clearField(29);
   @$pb.TagNumber(29)
-  $1.Timestamp ensureRemainingWaypointsRouteVersion() => $_ensure(24);
+  $1.Timestamp ensureRemainingWaypointsRouteVersion() => $_ensure(27);
+
+  @$pb.TagNumber(30)
+  $1.Timestamp get currentRouteSegmentTrafficVersion => $_getN(28);
+  @$pb.TagNumber(30)
+  set currentRouteSegmentTrafficVersion($1.Timestamp v) {
+    setField(30, v);
+  }
+
+  @$pb.TagNumber(30)
+  $core.bool hasCurrentRouteSegmentTrafficVersion() => $_has(28);
+  @$pb.TagNumber(30)
+  void clearCurrentRouteSegmentTrafficVersion() => clearField(30);
+  @$pb.TagNumber(30)
+  $1.Timestamp ensureCurrentRouteSegmentTrafficVersion() => $_ensure(28);
 
   @$pb.TagNumber(31)
-  TripView get view => $_getN(25);
+  TripView get view => $_getN(29);
   @$pb.TagNumber(31)
   set view(TripView v) {
     setField(31, v);
   }
 
   @$pb.TagNumber(31)
-  $core.bool hasView() => $_has(25);
+  $core.bool hasView() => $_has(29);
   @$pb.TagNumber(31)
   void clearView() => clearField(31);
 
   @$pb.TagNumber(32)
-  StopLocation get actualPickupArrivalPoint => $_getN(26);
+  StopLocation get actualPickupArrivalPoint => $_getN(30);
   @$pb.TagNumber(32)
   set actualPickupArrivalPoint(StopLocation v) {
     setField(32, v);
   }
 
   @$pb.TagNumber(32)
-  $core.bool hasActualPickupArrivalPoint() => $_has(26);
+  $core.bool hasActualPickupArrivalPoint() => $_has(30);
   @$pb.TagNumber(32)
   void clearActualPickupArrivalPoint() => clearField(32);
   @$pb.TagNumber(32)
-  StopLocation ensureActualPickupArrivalPoint() => $_ensure(26);
+  StopLocation ensureActualPickupArrivalPoint() => $_ensure(30);
 
   @$pb.TagNumber(33)
   $core.List<StopLocation> get actualIntermediateDestinationArrivalPoints =>
-      $_getList(27);
+      $_getList(31);
 
   @$pb.TagNumber(34)
-  $core.List<StopLocation> get actualIntermediateDestinations => $_getList(28);
+  $core.List<StopLocation> get actualIntermediateDestinations => $_getList(32);
 }
 
 class StopLocation extends $pb.GeneratedMessage {
@@ -728,7 +824,7 @@ class StopLocation extends $pb.GeneratedMessage {
   factory StopLocation({
     $2.LatLng? point,
     $1.Timestamp? timestamp,
-    $1.Timestamp? stopTime,
+    @$core.Deprecated('This field is deprecated.') $1.Timestamp? stopTime,
   }) {
     final _result = create();
     if (point != null) {
@@ -738,6 +834,7 @@ class StopLocation extends $pb.GeneratedMessage {
       _result.timestamp = timestamp;
     }
     if (stopTime != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.stopTime = stopTime;
     }
     return _result;
@@ -797,17 +894,22 @@ class StopLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Timestamp ensureTimestamp() => $_ensure(1);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $1.Timestamp get stopTime => $_getN(2);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   set stopTime($1.Timestamp v) {
     setField(3, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $core.bool hasStopTime() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   void clearStopTime() => clearField(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $1.Timestamp ensureStopTime() => $_ensure(2);
 }

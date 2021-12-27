@@ -193,6 +193,15 @@ const InputDataConfig$json = const {
       '10': 'timestampSplit'
     },
     const {
+      '1': 'stratified_split',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1.StratifiedSplit',
+      '9': 0,
+      '10': 'stratifiedSplit'
+    },
+    const {
       '1': 'gcs_destination',
       '3': 8,
       '4': 1,
@@ -241,7 +250,7 @@ const InputDataConfig$json = const {
 
 /// Descriptor for `InputDataConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List inputDataConfigDescriptor = $convert.base64Decode(
-    'Cg9JbnB1dERhdGFDb25maWcSUgoOZnJhY3Rpb25fc3BsaXQYAiABKAsyKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GcmFjdGlvblNwbGl0SABSDWZyYWN0aW9uU3BsaXQSTAoMZmlsdGVyX3NwbGl0GAMgASgLMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmlsdGVyU3BsaXRIAFILZmlsdGVyU3BsaXQSWAoQcHJlZGVmaW5lZF9zcGxpdBgEIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByZWRlZmluZWRTcGxpdEgAUg9wcmVkZWZpbmVkU3BsaXQSVQoPdGltZXN0YW1wX3NwbGl0GAUgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVGltZXN0YW1wU3BsaXRIAFIOdGltZXN0YW1wU3BsaXQSVQoPZ2NzX2Rlc3RpbmF0aW9uGAggASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25IAVIOZ2NzRGVzdGluYXRpb24SZAoUYmlncXVlcnlfZGVzdGluYXRpb24YCiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CaWdRdWVyeURlc3RpbmF0aW9uSAFSE2JpZ3F1ZXJ5RGVzdGluYXRpb24SIgoKZGF0YXNldF9pZBgBIAEoCUID4EECUglkYXRhc2V0SWQSLQoSYW5ub3RhdGlvbnNfZmlsdGVyGAYgASgJUhFhbm5vdGF0aW9uc0ZpbHRlchIyChVhbm5vdGF0aW9uX3NjaGVtYV91cmkYCSABKAlSE2Fubm90YXRpb25TY2hlbWFVcmlCBwoFc3BsaXRCDQoLZGVzdGluYXRpb24=');
+    'Cg9JbnB1dERhdGFDb25maWcSUgoOZnJhY3Rpb25fc3BsaXQYAiABKAsyKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GcmFjdGlvblNwbGl0SABSDWZyYWN0aW9uU3BsaXQSTAoMZmlsdGVyX3NwbGl0GAMgASgLMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmlsdGVyU3BsaXRIAFILZmlsdGVyU3BsaXQSWAoQcHJlZGVmaW5lZF9zcGxpdBgEIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByZWRlZmluZWRTcGxpdEgAUg9wcmVkZWZpbmVkU3BsaXQSVQoPdGltZXN0YW1wX3NwbGl0GAUgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVGltZXN0YW1wU3BsaXRIAFIOdGltZXN0YW1wU3BsaXQSWAoQc3RyYXRpZmllZF9zcGxpdBgMIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0cmF0aWZpZWRTcGxpdEgAUg9zdHJhdGlmaWVkU3BsaXQSVQoPZ2NzX2Rlc3RpbmF0aW9uGAggASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25IAVIOZ2NzRGVzdGluYXRpb24SZAoUYmlncXVlcnlfZGVzdGluYXRpb24YCiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CaWdRdWVyeURlc3RpbmF0aW9uSAFSE2JpZ3F1ZXJ5RGVzdGluYXRpb24SIgoKZGF0YXNldF9pZBgBIAEoCUID4EECUglkYXRhc2V0SWQSLQoSYW5ub3RhdGlvbnNfZmlsdGVyGAYgASgJUhFhbm5vdGF0aW9uc0ZpbHRlchIyChVhbm5vdGF0aW9uX3NjaGVtYV91cmkYCSABKAlSE2Fubm90YXRpb25TY2hlbWFVcmlCBwoFc3BsaXRCDQoLZGVzdGluYXRpb24=');
 @$core.Deprecated('Use fractionSplitDescriptor instead')
 const FractionSplit$json = const {
   '1': 'FractionSplit',
@@ -338,3 +347,29 @@ const TimestampSplit$json = const {
 /// Descriptor for `TimestampSplit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List timestampSplitDescriptor = $convert.base64Decode(
     'Cg5UaW1lc3RhbXBTcGxpdBIrChF0cmFpbmluZ19mcmFjdGlvbhgBIAEoAVIQdHJhaW5pbmdGcmFjdGlvbhIvChN2YWxpZGF0aW9uX2ZyYWN0aW9uGAIgASgBUhJ2YWxpZGF0aW9uRnJhY3Rpb24SIwoNdGVzdF9mcmFjdGlvbhgDIAEoAVIMdGVzdEZyYWN0aW9uEhUKA2tleRgEIAEoCUID4EECUgNrZXk=');
+@$core.Deprecated('Use stratifiedSplitDescriptor instead')
+const StratifiedSplit$json = const {
+  '1': 'StratifiedSplit',
+  '2': const [
+    const {
+      '1': 'training_fraction',
+      '3': 1,
+      '4': 1,
+      '5': 1,
+      '10': 'trainingFraction'
+    },
+    const {
+      '1': 'validation_fraction',
+      '3': 2,
+      '4': 1,
+      '5': 1,
+      '10': 'validationFraction'
+    },
+    const {'1': 'test_fraction', '3': 3, '4': 1, '5': 1, '10': 'testFraction'},
+    const {'1': 'key', '3': 4, '4': 1, '5': 9, '8': const {}, '10': 'key'},
+  ],
+};
+
+/// Descriptor for `StratifiedSplit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List stratifiedSplitDescriptor = $convert.base64Decode(
+    'Cg9TdHJhdGlmaWVkU3BsaXQSKwoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAFSEHRyYWluaW5nRnJhY3Rpb24SLwoTdmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoAVISdmFsaWRhdGlvbkZyYWN0aW9uEiMKDXRlc3RfZnJhY3Rpb24YAyABKAFSDHRlc3RGcmFjdGlvbhIVCgNrZXkYBCABKAlCA+BBAlIDa2V5');

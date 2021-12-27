@@ -870,3 +870,228 @@ class LoadVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAllowOverrideAgentResources() => clearField(2);
 }
+
+class CompareVersionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CompareVersionsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.cx.v3beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'baseVersion')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetVersion')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'languageCode')
+    ..hasRequiredFields = false;
+
+  CompareVersionsRequest._() : super();
+  factory CompareVersionsRequest({
+    $core.String? baseVersion,
+    $core.String? targetVersion,
+    $core.String? languageCode,
+  }) {
+    final _result = create();
+    if (baseVersion != null) {
+      _result.baseVersion = baseVersion;
+    }
+    if (targetVersion != null) {
+      _result.targetVersion = targetVersion;
+    }
+    if (languageCode != null) {
+      _result.languageCode = languageCode;
+    }
+    return _result;
+  }
+  factory CompareVersionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompareVersionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CompareVersionsRequest clone() =>
+      CompareVersionsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CompareVersionsRequest copyWith(
+          void Function(CompareVersionsRequest) updates) =>
+      super.copyWith((message) => updates(message as CompareVersionsRequest))
+          as CompareVersionsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CompareVersionsRequest create() => CompareVersionsRequest._();
+  CompareVersionsRequest createEmptyInstance() => create();
+  static $pb.PbList<CompareVersionsRequest> createRepeated() =>
+      $pb.PbList<CompareVersionsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CompareVersionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CompareVersionsRequest>(create);
+  static CompareVersionsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get baseVersion => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set baseVersion($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBaseVersion() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBaseVersion() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get targetVersion => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set targetVersion($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTargetVersion() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTargetVersion() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set languageCode($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLanguageCode() => clearField(3);
+}
+
+class CompareVersionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CompareVersionsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.cx.v3beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'baseVersionContentJson')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetVersionContentJson')
+    ..aOM<$9.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'compareTime',
+        subBuilder: $9.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  CompareVersionsResponse._() : super();
+  factory CompareVersionsResponse({
+    $core.String? baseVersionContentJson,
+    $core.String? targetVersionContentJson,
+    $9.Timestamp? compareTime,
+  }) {
+    final _result = create();
+    if (baseVersionContentJson != null) {
+      _result.baseVersionContentJson = baseVersionContentJson;
+    }
+    if (targetVersionContentJson != null) {
+      _result.targetVersionContentJson = targetVersionContentJson;
+    }
+    if (compareTime != null) {
+      _result.compareTime = compareTime;
+    }
+    return _result;
+  }
+  factory CompareVersionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompareVersionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CompareVersionsResponse clone() =>
+      CompareVersionsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CompareVersionsResponse copyWith(
+          void Function(CompareVersionsResponse) updates) =>
+      super.copyWith((message) => updates(message as CompareVersionsResponse))
+          as CompareVersionsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CompareVersionsResponse create() => CompareVersionsResponse._();
+  CompareVersionsResponse createEmptyInstance() => create();
+  static $pb.PbList<CompareVersionsResponse> createRepeated() =>
+      $pb.PbList<CompareVersionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CompareVersionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CompareVersionsResponse>(create);
+  static CompareVersionsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get baseVersionContentJson => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set baseVersionContentJson($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBaseVersionContentJson() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBaseVersionContentJson() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get targetVersionContentJson => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set targetVersionContentJson($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTargetVersionContentJson() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTargetVersionContentJson() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $9.Timestamp get compareTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set compareTime($9.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCompareTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCompareTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $9.Timestamp ensureCompareTime() => $_ensure(2);
+}

@@ -1472,6 +1472,226 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
   $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
+class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PartialUpdateClusterMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$7.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requestTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'finishTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<PartialUpdateClusterRequest>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'originalRequest',
+        subBuilder: PartialUpdateClusterRequest.create)
+    ..hasRequiredFields = false;
+
+  PartialUpdateClusterMetadata._() : super();
+  factory PartialUpdateClusterMetadata({
+    $7.Timestamp? requestTime,
+    $7.Timestamp? finishTime,
+    PartialUpdateClusterRequest? originalRequest,
+  }) {
+    final _result = create();
+    if (requestTime != null) {
+      _result.requestTime = requestTime;
+    }
+    if (finishTime != null) {
+      _result.finishTime = finishTime;
+    }
+    if (originalRequest != null) {
+      _result.originalRequest = originalRequest;
+    }
+    return _result;
+  }
+  factory PartialUpdateClusterMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartialUpdateClusterMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PartialUpdateClusterMetadata clone() =>
+      PartialUpdateClusterMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PartialUpdateClusterMetadata copyWith(
+          void Function(PartialUpdateClusterMetadata) updates) =>
+      super.copyWith(
+              (message) => updates(message as PartialUpdateClusterMetadata))
+          as PartialUpdateClusterMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PartialUpdateClusterMetadata create() =>
+      PartialUpdateClusterMetadata._();
+  PartialUpdateClusterMetadata createEmptyInstance() => create();
+  static $pb.PbList<PartialUpdateClusterMetadata> createRepeated() =>
+      $pb.PbList<PartialUpdateClusterMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static PartialUpdateClusterMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartialUpdateClusterMetadata>(create);
+  static PartialUpdateClusterMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $7.Timestamp get requestTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set requestTime($7.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRequestTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRequestTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.Timestamp ensureRequestTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $7.Timestamp get finishTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set finishTime($7.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFinishTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFinishTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Timestamp ensureFinishTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  PartialUpdateClusterRequest get originalRequest => $_getN(2);
+  @$pb.TagNumber(3)
+  set originalRequest(PartialUpdateClusterRequest v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasOriginalRequest() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOriginalRequest() => clearField(3);
+  @$pb.TagNumber(3)
+  PartialUpdateClusterRequest ensureOriginalRequest() => $_ensure(2);
+}
+
+class PartialUpdateClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PartialUpdateClusterRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Cluster>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cluster',
+        subBuilder: $5.Cluster.create)
+    ..aOM<$6.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $6.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  PartialUpdateClusterRequest._() : super();
+  factory PartialUpdateClusterRequest({
+    $5.Cluster? cluster,
+    $6.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (cluster != null) {
+      _result.cluster = cluster;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory PartialUpdateClusterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartialUpdateClusterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PartialUpdateClusterRequest clone() =>
+      PartialUpdateClusterRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PartialUpdateClusterRequest copyWith(
+          void Function(PartialUpdateClusterRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as PartialUpdateClusterRequest))
+          as PartialUpdateClusterRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PartialUpdateClusterRequest create() =>
+      PartialUpdateClusterRequest._();
+  PartialUpdateClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<PartialUpdateClusterRequest> createRepeated() =>
+      $pb.PbList<PartialUpdateClusterRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PartialUpdateClusterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartialUpdateClusterRequest>(create);
+  static PartialUpdateClusterRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $5.Cluster get cluster => $_getN(0);
+  @$pb.TagNumber(1)
+  set cluster($5.Cluster v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasCluster() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCluster() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Cluster ensureCluster() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($6.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
 class CreateAppProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

@@ -88,6 +88,42 @@ class Workload_ComplianceRegime extends $pb.ProtobufEnum {
   const Workload_ComplianceRegime._($core.int v, $core.String n) : super(v, n);
 }
 
+class Workload_KajEnrollmentState extends $pb.ProtobufEnum {
+  static const Workload_KajEnrollmentState KAJ_ENROLLMENT_STATE_UNSPECIFIED =
+      Workload_KajEnrollmentState._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'KAJ_ENROLLMENT_STATE_UNSPECIFIED');
+  static const Workload_KajEnrollmentState KAJ_ENROLLMENT_STATE_PENDING =
+      Workload_KajEnrollmentState._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'KAJ_ENROLLMENT_STATE_PENDING');
+  static const Workload_KajEnrollmentState KAJ_ENROLLMENT_STATE_COMPLETE =
+      Workload_KajEnrollmentState._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'KAJ_ENROLLMENT_STATE_COMPLETE');
+
+  static const $core.List<Workload_KajEnrollmentState> values =
+      <Workload_KajEnrollmentState>[
+    KAJ_ENROLLMENT_STATE_UNSPECIFIED,
+    KAJ_ENROLLMENT_STATE_PENDING,
+    KAJ_ENROLLMENT_STATE_COMPLETE,
+  ];
+
+  static final $core.Map<$core.int, Workload_KajEnrollmentState> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Workload_KajEnrollmentState? valueOf($core.int value) =>
+      _byValue[value];
+
+  const Workload_KajEnrollmentState._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class Workload_ResourceInfo_ResourceType extends $pb.ProtobufEnum {
   static const Workload_ResourceInfo_ResourceType RESOURCE_TYPE_UNSPECIFIED =
       Workload_ResourceInfo_ResourceType._(
@@ -128,5 +164,93 @@ class Workload_ResourceInfo_ResourceType extends $pb.ProtobufEnum {
       _byValue[value];
 
   const Workload_ResourceInfo_ResourceType._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Workload_SaaEnrollmentResponse_SetupState extends $pb.ProtobufEnum {
+  static const Workload_SaaEnrollmentResponse_SetupState
+      SETUP_STATE_UNSPECIFIED = Workload_SaaEnrollmentResponse_SetupState._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SETUP_STATE_UNSPECIFIED');
+  static const Workload_SaaEnrollmentResponse_SetupState STATUS_PENDING =
+      Workload_SaaEnrollmentResponse_SetupState._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STATUS_PENDING');
+  static const Workload_SaaEnrollmentResponse_SetupState STATUS_COMPLETE =
+      Workload_SaaEnrollmentResponse_SetupState._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STATUS_COMPLETE');
+
+  static const $core.List<Workload_SaaEnrollmentResponse_SetupState> values =
+      <Workload_SaaEnrollmentResponse_SetupState>[
+    SETUP_STATE_UNSPECIFIED,
+    STATUS_PENDING,
+    STATUS_COMPLETE,
+  ];
+
+  static final $core.Map<$core.int, Workload_SaaEnrollmentResponse_SetupState>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Workload_SaaEnrollmentResponse_SetupState? valueOf($core.int value) =>
+      _byValue[value];
+
+  const Workload_SaaEnrollmentResponse_SetupState._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Workload_SaaEnrollmentResponse_SetupError extends $pb.ProtobufEnum {
+  static const Workload_SaaEnrollmentResponse_SetupError
+      SETUP_ERROR_UNSPECIFIED = Workload_SaaEnrollmentResponse_SetupError._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SETUP_ERROR_UNSPECIFIED');
+  static const Workload_SaaEnrollmentResponse_SetupError
+      ERROR_INVALID_BASE_SETUP = Workload_SaaEnrollmentResponse_SetupError._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ERROR_INVALID_BASE_SETUP');
+  static const Workload_SaaEnrollmentResponse_SetupError
+      ERROR_MISSING_EXTERNAL_SIGNING_KEY =
+      Workload_SaaEnrollmentResponse_SetupError._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ERROR_MISSING_EXTERNAL_SIGNING_KEY');
+  static const Workload_SaaEnrollmentResponse_SetupError
+      ERROR_NOT_ALL_SERVICES_ENROLLED =
+      Workload_SaaEnrollmentResponse_SetupError._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ERROR_NOT_ALL_SERVICES_ENROLLED');
+  static const Workload_SaaEnrollmentResponse_SetupError
+      ERROR_SETUP_CHECK_FAILED = Workload_SaaEnrollmentResponse_SetupError._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ERROR_SETUP_CHECK_FAILED');
+
+  static const $core.List<Workload_SaaEnrollmentResponse_SetupError> values =
+      <Workload_SaaEnrollmentResponse_SetupError>[
+    SETUP_ERROR_UNSPECIFIED,
+    ERROR_INVALID_BASE_SETUP,
+    ERROR_MISSING_EXTERNAL_SIGNING_KEY,
+    ERROR_NOT_ALL_SERVICES_ENROLLED,
+    ERROR_SETUP_CHECK_FAILED,
+  ];
+
+  static final $core.Map<$core.int, Workload_SaaEnrollmentResponse_SetupError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Workload_SaaEnrollmentResponse_SetupError? valueOf($core.int value) =>
+      _byValue[value];
+
+  const Workload_SaaEnrollmentResponse_SetupError._($core.int v, $core.String n)
       : super(v, n);
 }

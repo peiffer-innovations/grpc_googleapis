@@ -81,6 +81,42 @@ class Finding_Severity extends $pb.ProtobufEnum {
   const Finding_Severity._($core.int v, $core.String n) : super(v, n);
 }
 
+class Finding_Mute extends $pb.ProtobufEnum {
+  static const Finding_Mute MUTE_UNSPECIFIED = Finding_Mute._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MUTE_UNSPECIFIED');
+  static const Finding_Mute MUTED = Finding_Mute._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MUTED');
+  static const Finding_Mute UNMUTED = Finding_Mute._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'UNMUTED');
+  static const Finding_Mute UNDEFINED = Finding_Mute._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'UNDEFINED');
+
+  static const $core.List<Finding_Mute> values = <Finding_Mute>[
+    MUTE_UNSPECIFIED,
+    MUTED,
+    UNMUTED,
+    UNDEFINED,
+  ];
+
+  static final $core.Map<$core.int, Finding_Mute> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Finding_Mute? valueOf($core.int value) => _byValue[value];
+
+  const Finding_Mute._($core.int v, $core.String n) : super(v, n);
+}
+
 class Finding_FindingClass extends $pb.ProtobufEnum {
   static const Finding_FindingClass FINDING_CLASS_UNSPECIFIED =
       Finding_FindingClass._(

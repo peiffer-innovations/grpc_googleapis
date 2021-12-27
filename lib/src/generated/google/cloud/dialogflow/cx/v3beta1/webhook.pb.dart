@@ -53,6 +53,12 @@ class Webhook_GenericWebService extends $pb.GeneratedMessage {
         valueFieldType: $pb.PbFieldType.OS,
         packageName:
             const $pb.PackageName('google.cloud.dialogflow.cx.v3beta1'))
+    ..p<$core.List<$core.int>>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowedCaCerts',
+        $pb.PbFieldType.PY)
     ..hasRequiredFields = false;
 
   Webhook_GenericWebService._() : super();
@@ -61,6 +67,7 @@ class Webhook_GenericWebService extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.') $core.String? username,
     @$core.Deprecated('This field is deprecated.') $core.String? password,
     $core.Map<$core.String, $core.String>? requestHeaders,
+    $core.Iterable<$core.List<$core.int>>? allowedCaCerts,
   }) {
     final _result = create();
     if (uri != null) {
@@ -76,6 +83,9 @@ class Webhook_GenericWebService extends $pb.GeneratedMessage {
     }
     if (requestHeaders != null) {
       _result.requestHeaders.addAll(requestHeaders);
+    }
+    if (allowedCaCerts != null) {
+      _result.allowedCaCerts.addAll(allowedCaCerts);
     }
     return _result;
   }
@@ -154,6 +164,9 @@ class Webhook_GenericWebService extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get requestHeaders => $_getMap(3);
+
+  @$pb.TagNumber(5)
+  $core.List<$core.List<$core.int>> get allowedCaCerts => $_getList(4);
 }
 
 class Webhook_ServiceDirectoryConfig extends $pb.GeneratedMessage {
@@ -2267,12 +2280,18 @@ class PageInfo extends $pb.GeneratedMessage {
             ? ''
             : 'formInfo',
         subBuilder: PageInfo_FormInfo.create)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
     ..hasRequiredFields = false;
 
   PageInfo._() : super();
   factory PageInfo({
     $core.String? currentPage,
     PageInfo_FormInfo? formInfo,
+    $core.String? displayName,
   }) {
     final _result = create();
     if (currentPage != null) {
@@ -2280,6 +2299,9 @@ class PageInfo extends $pb.GeneratedMessage {
     }
     if (formInfo != null) {
       _result.formInfo = formInfo;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
     }
     return _result;
   }
@@ -2334,6 +2356,18 @@ class PageInfo extends $pb.GeneratedMessage {
   void clearFormInfo() => clearField(3);
   @$pb.TagNumber(3)
   PageInfo_FormInfo ensureFormInfo() => $_ensure(1);
+
+  @$pb.TagNumber(4)
+  $core.String get displayName => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set displayName($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDisplayName() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearDisplayName() => clearField(4);
 }
 
 class SessionInfo extends $pb.GeneratedMessage {

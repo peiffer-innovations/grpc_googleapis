@@ -75,6 +75,14 @@ const Finding$json = const {
       '10': 'canonicalName'
     },
     const {
+      '1': 'mute',
+      '3': 15,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.securitycenter.v1.Finding.Mute',
+      '10': 'mute'
+    },
+    const {
       '1': 'finding_class',
       '3': 17,
       '4': 1,
@@ -98,11 +106,40 @@ const Finding$json = const {
       '6': '.google.cloud.securitycenter.v1.Vulnerability',
       '10': 'vulnerability'
     },
+    const {
+      '1': 'mute_update_time',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'muteUpdateTime'
+    },
+    const {
+      '1': 'external_systems',
+      '3': 22,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.securitycenter.v1.Finding.ExternalSystemsEntry',
+      '8': const {},
+      '10': 'externalSystems'
+    },
+    const {
+      '1': 'mute_initiator',
+      '3': 28,
+      '4': 1,
+      '5': 9,
+      '10': 'muteInitiator'
+    },
   ],
-  '3': const [Finding_SourcePropertiesEntry$json],
+  '3': const [
+    Finding_SourcePropertiesEntry$json,
+    Finding_ExternalSystemsEntry$json
+  ],
   '4': const [
     Finding_State$json,
     Finding_Severity$json,
+    Finding_Mute$json,
     Finding_FindingClass$json
   ],
   '7': const {},
@@ -119,6 +156,23 @@ const Finding_SourcePropertiesEntry$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Value',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use findingDescriptor instead')
+const Finding_ExternalSystemsEntry$json = const {
+  '1': 'ExternalSystemsEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.securitycenter.v1.ExternalSystem',
       '10': 'value'
     },
   ],
@@ -148,6 +202,17 @@ const Finding_Severity$json = const {
 };
 
 @$core.Deprecated('Use findingDescriptor instead')
+const Finding_Mute$json = const {
+  '1': 'Mute',
+  '2': const [
+    const {'1': 'MUTE_UNSPECIFIED', '2': 0},
+    const {'1': 'MUTED', '2': 1},
+    const {'1': 'UNMUTED', '2': 2},
+    const {'1': 'UNDEFINED', '2': 4},
+  ],
+};
+
+@$core.Deprecated('Use findingDescriptor instead')
 const Finding_FindingClass$json = const {
   '1': 'FindingClass',
   '2': const [
@@ -161,4 +226,4 @@ const Finding_FindingClass$json = const {
 
 /// Descriptor for `Finding`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List findingDescriptor = $convert.base64Decode(
-    'CgdGaW5kaW5nEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGcGFyZW50GAIgASgJUgZwYXJlbnQSIwoNcmVzb3VyY2VfbmFtZRgDIAEoCVIMcmVzb3VyY2VOYW1lEkMKBXN0YXRlGAQgASgOMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuU3RhdGVSBXN0YXRlEhoKCGNhdGVnb3J5GAUgASgJUghjYXRlZ29yeRIhCgxleHRlcm5hbF91cmkYBiABKAlSC2V4dGVybmFsVXJpEmoKEXNvdXJjZV9wcm9wZXJ0aWVzGAcgAygLMj0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuU291cmNlUHJvcGVydGllc0VudHJ5UhBzb3VyY2VQcm9wZXJ0aWVzElkKDnNlY3VyaXR5X21hcmtzGAggASgLMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlNlY3VyaXR5TWFya3NCA+BBA1INc2VjdXJpdHlNYXJrcxI5CgpldmVudF90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZXZlbnRUaW1lEjsKC2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRJMCghzZXZlcml0eRgMIAEoDjIwLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlNldmVyaXR5UghzZXZlcml0eRIlCg5jYW5vbmljYWxfbmFtZRgOIAEoCVINY2Fub25pY2FsTmFtZRJZCg1maW5kaW5nX2NsYXNzGBEgASgOMjQuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuRmluZGluZ0NsYXNzUgxmaW5kaW5nQ2xhc3MSRwoJaW5kaWNhdG9yGBIgASgLMikuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkluZGljYXRvclIJaW5kaWNhdG9yElMKDXZ1bG5lcmFiaWxpdHkYFCABKAsyLS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuVnVsbmVyYWJpbGl0eVINdnVsbmVyYWJpbGl0eRpbChVTb3VyY2VQcm9wZXJ0aWVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLAoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWVSBXZhbHVlOgI4ASI4CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgwKCElOQUNUSVZFEAIiUQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIKCgZNRURJVU0QAxIHCgNMT1cQBCJzCgxGaW5kaW5nQ2xhc3MSHQoZRklORElOR19DTEFTU19VTlNQRUNJRklFRBAAEgoKBlRIUkVBVBABEhEKDVZVTE5FUkFCSUxJVFkQAhIUChBNSVNDT05GSUdVUkFUSU9OEAMSDwoLT0JTRVJWQVRJT04QBDrbAepB1wEKJXNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL0ZpbmRpbmcSQG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30SNGZvbGRlcnMve2ZvbGRlcn0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30SNnByb2plY3RzL3twcm9qZWN0fS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5nfQ==');
+    'CgdGaW5kaW5nEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGcGFyZW50GAIgASgJUgZwYXJlbnQSIwoNcmVzb3VyY2VfbmFtZRgDIAEoCVIMcmVzb3VyY2VOYW1lEkMKBXN0YXRlGAQgASgOMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuU3RhdGVSBXN0YXRlEhoKCGNhdGVnb3J5GAUgASgJUghjYXRlZ29yeRIhCgxleHRlcm5hbF91cmkYBiABKAlSC2V4dGVybmFsVXJpEmoKEXNvdXJjZV9wcm9wZXJ0aWVzGAcgAygLMj0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuU291cmNlUHJvcGVydGllc0VudHJ5UhBzb3VyY2VQcm9wZXJ0aWVzElkKDnNlY3VyaXR5X21hcmtzGAggASgLMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlNlY3VyaXR5TWFya3NCA+BBA1INc2VjdXJpdHlNYXJrcxI5CgpldmVudF90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZXZlbnRUaW1lEjsKC2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRJMCghzZXZlcml0eRgMIAEoDjIwLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlNldmVyaXR5UghzZXZlcml0eRIlCg5jYW5vbmljYWxfbmFtZRgOIAEoCVINY2Fub25pY2FsTmFtZRJACgRtdXRlGA8gASgOMiwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuTXV0ZVIEbXV0ZRJZCg1maW5kaW5nX2NsYXNzGBEgASgOMjQuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuRmluZGluZ0NsYXNzUgxmaW5kaW5nQ2xhc3MSRwoJaW5kaWNhdG9yGBIgASgLMikuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkluZGljYXRvclIJaW5kaWNhdG9yElMKDXZ1bG5lcmFiaWxpdHkYFCABKAsyLS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuVnVsbmVyYWJpbGl0eVINdnVsbmVyYWJpbGl0eRJJChBtdXRlX3VwZGF0ZV90aW1lGBUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUg5tdXRlVXBkYXRlVGltZRJsChBleHRlcm5hbF9zeXN0ZW1zGBYgAygLMjwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuRXh0ZXJuYWxTeXN0ZW1zRW50cnlCA+BBA1IPZXh0ZXJuYWxTeXN0ZW1zEiUKDm11dGVfaW5pdGlhdG9yGBwgASgJUg1tdXRlSW5pdGlhdG9yGlsKFVNvdXJjZVByb3BlcnRpZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZVIFdmFsdWU6AjgBGnIKFEV4dGVybmFsU3lzdGVtc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EkQKBXZhbHVlGAIgASgLMi4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkV4dGVybmFsU3lzdGVtUgV2YWx1ZToCOAEiOAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRACIlEKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDAoIQ1JJVElDQUwQARIICgRISUdIEAISCgoGTUVESVVNEAMSBwoDTE9XEAQiQwoETXV0ZRIUChBNVVRFX1VOU1BFQ0lGSUVEEAASCQoFTVVURUQQARILCgdVTk1VVEVEEAISDQoJVU5ERUZJTkVEEAQicwoMRmluZGluZ0NsYXNzEh0KGUZJTkRJTkdfQ0xBU1NfVU5TUEVDSUZJRUQQABIKCgZUSFJFQVQQARIRCg1WVUxORVJBQklMSVRZEAISFAoQTUlTQ09ORklHVVJBVElPThADEg8KC09CU0VSVkFUSU9OEAQ62wHqQdcBCiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9EjRmb2xkZXJzL3tmb2xkZXJ9L3NvdXJjZXMve3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9EjZwcm9qZWN0cy97cHJvamVjdH0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30=');

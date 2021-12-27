@@ -53,9 +53,17 @@ const BuildOccurrence$json = const {
       '6': '.grafeas.v1.InTotoProvenance',
       '10': 'intotoProvenance'
     },
+    const {
+      '1': 'intoto_statement',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.grafeas.v1.InTotoStatement',
+      '10': 'intotoStatement'
+    },
   ],
 };
 
 /// Descriptor for `BuildOccurrence`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List buildOccurrenceDescriptor = $convert.base64Decode(
-    'Cg9CdWlsZE9jY3VycmVuY2USOwoKcHJvdmVuYW5jZRgBIAEoCzIbLmdyYWZlYXMudjEuQnVpbGRQcm92ZW5hbmNlUgpwcm92ZW5hbmNlEikKEHByb3ZlbmFuY2VfYnl0ZXMYAiABKAlSD3Byb3ZlbmFuY2VCeXRlcxJJChFpbnRvdG9fcHJvdmVuYW5jZRgDIAEoCzIcLmdyYWZlYXMudjEuSW5Ub3RvUHJvdmVuYW5jZVIQaW50b3RvUHJvdmVuYW5jZQ==');
+    'Cg9CdWlsZE9jY3VycmVuY2USOwoKcHJvdmVuYW5jZRgBIAEoCzIbLmdyYWZlYXMudjEuQnVpbGRQcm92ZW5hbmNlUgpwcm92ZW5hbmNlEikKEHByb3ZlbmFuY2VfYnl0ZXMYAiABKAlSD3Byb3ZlbmFuY2VCeXRlcxJJChFpbnRvdG9fcHJvdmVuYW5jZRgDIAEoCzIcLmdyYWZlYXMudjEuSW5Ub3RvUHJvdmVuYW5jZVIQaW50b3RvUHJvdmVuYW5jZRJGChBpbnRvdG9fc3RhdGVtZW50GAQgASgLMhsuZ3JhZmVhcy52MS5JblRvdG9TdGF0ZW1lbnRSD2ludG90b1N0YXRlbWVudA==');

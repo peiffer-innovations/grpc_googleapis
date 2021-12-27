@@ -201,21 +201,6 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.ListAndroidAppDataStreamsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListAndroidAppDataStreamsResponse.fromBuffer(value));
-  static final _$getEnhancedMeasurementSettings = $grpc.ClientMethod<
-          $0.GetEnhancedMeasurementSettingsRequest,
-          $1.EnhancedMeasurementSettings>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetEnhancedMeasurementSettings',
-      ($0.GetEnhancedMeasurementSettingsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $1.EnhancedMeasurementSettings.fromBuffer(value));
-  static final _$updateEnhancedMeasurementSettings = $grpc.ClientMethod<
-          $0.UpdateEnhancedMeasurementSettingsRequest,
-          $1.EnhancedMeasurementSettings>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateEnhancedMeasurementSettings',
-      ($0.UpdateEnhancedMeasurementSettingsRequest value) =>
-          value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $1.EnhancedMeasurementSettings.fromBuffer(value));
   static final _$createFirebaseLink = $grpc.ClientMethod<
           $0.CreateFirebaseLinkRequest, $1.FirebaseLink>(
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateFirebaseLink',
@@ -299,6 +284,13 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
           value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $1.MeasurementProtocolSecret.fromBuffer(value));
+  static final _$acknowledgeUserDataCollection = $grpc.ClientMethod<
+          $0.AcknowledgeUserDataCollectionRequest,
+          $0.AcknowledgeUserDataCollectionResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/AcknowledgeUserDataCollection',
+      ($0.AcknowledgeUserDataCollectionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.AcknowledgeUserDataCollectionResponse.fromBuffer(value));
   static final _$searchChangeHistoryEvents = $grpc.ClientMethod<
           $0.SearchChangeHistoryEventsRequest,
           $0.SearchChangeHistoryEventsResponse>(
@@ -489,6 +481,32 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.UpdateDataRetentionSettingsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $1.DataRetentionSettings.fromBuffer(value));
+  static final _$createDataStream = $grpc.ClientMethod<
+          $0.CreateDataStreamRequest, $1.DataStream>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateDataStream',
+      ($0.CreateDataStreamRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.DataStream.fromBuffer(value));
+  static final _$deleteDataStream = $grpc.ClientMethod<
+          $0.DeleteDataStreamRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteDataStream',
+      ($0.DeleteDataStreamRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$updateDataStream = $grpc.ClientMethod<
+          $0.UpdateDataStreamRequest, $1.DataStream>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateDataStream',
+      ($0.UpdateDataStreamRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.DataStream.fromBuffer(value));
+  static final _$listDataStreams = $grpc.ClientMethod<$0.ListDataStreamsRequest,
+          $0.ListDataStreamsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListDataStreams',
+      ($0.ListDataStreamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListDataStreamsResponse.fromBuffer(value));
+  static final _$getDataStream =
+      $grpc.ClientMethod<$0.GetDataStreamRequest, $1.DataStream>(
+          '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetDataStream',
+          ($0.GetDataStreamRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.DataStream.fromBuffer(value));
 
   AnalyticsAdminServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -702,22 +720,6 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$1.EnhancedMeasurementSettings>
-      getEnhancedMeasurementSettings(
-          $0.GetEnhancedMeasurementSettingsRequest request,
-          {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getEnhancedMeasurementSettings, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$1.EnhancedMeasurementSettings>
-      updateEnhancedMeasurementSettings(
-          $0.UpdateEnhancedMeasurementSettingsRequest request,
-          {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateEnhancedMeasurementSettings, request,
-        options: options);
-  }
-
   $grpc.ResponseFuture<$1.FirebaseLink> createFirebaseLink(
       $0.CreateFirebaseLinkRequest request,
       {$grpc.CallOptions? options}) {
@@ -809,6 +811,14 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
           $0.UpdateMeasurementProtocolSecretRequest request,
           {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateMeasurementProtocolSecret, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.AcknowledgeUserDataCollectionResponse>
+      acknowledgeUserDataCollection(
+          $0.AcknowledgeUserDataCollectionRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$acknowledgeUserDataCollection, request,
         options: options);
   }
 
@@ -1021,6 +1031,36 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateDataRetentionSettings, request,
         options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DataStream> createDataStream(
+      $0.CreateDataStreamRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createDataStream, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteDataStream(
+      $0.DeleteDataStreamRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteDataStream, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DataStream> updateDataStream(
+      $0.UpdateDataStreamRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateDataStream, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListDataStreamsResponse> listDataStreams(
+      $0.ListDataStreamsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listDataStreams, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DataStream> getDataStream(
+      $0.GetDataStreamRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDataStream, request, options: options);
   }
 }
 
@@ -1320,24 +1360,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAndroidAppDataStreamsRequest.fromBuffer(value),
         ($0.ListAndroidAppDataStreamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetEnhancedMeasurementSettingsRequest,
-            $1.EnhancedMeasurementSettings>(
-        'GetEnhancedMeasurementSettings',
-        getEnhancedMeasurementSettings_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.GetEnhancedMeasurementSettingsRequest.fromBuffer(value),
-        ($1.EnhancedMeasurementSettings value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.UpdateEnhancedMeasurementSettingsRequest,
-            $1.EnhancedMeasurementSettings>(
-        'UpdateEnhancedMeasurementSettings',
-        updateEnhancedMeasurementSettings_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.UpdateEnhancedMeasurementSettingsRequest.fromBuffer(value),
-        ($1.EnhancedMeasurementSettings value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.CreateFirebaseLinkRequest, $1.FirebaseLink>(
             'CreateFirebaseLink',
@@ -1463,6 +1485,16 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdateMeasurementProtocolSecretRequest.fromBuffer(value),
         ($1.MeasurementProtocolSecret value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AcknowledgeUserDataCollectionRequest,
+            $0.AcknowledgeUserDataCollectionResponse>(
+        'AcknowledgeUserDataCollection',
+        acknowledgeUserDataCollection_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AcknowledgeUserDataCollectionRequest.fromBuffer(value),
+        ($0.AcknowledgeUserDataCollectionResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.SearchChangeHistoryEventsRequest,
             $0.SearchChangeHistoryEventsResponse>(
         'SearchChangeHistoryEvents',
@@ -1748,6 +1780,47 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdateDataRetentionSettingsRequest.fromBuffer(value),
         ($1.DataRetentionSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateDataStreamRequest, $1.DataStream>(
+        'CreateDataStream',
+        createDataStream_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateDataStreamRequest.fromBuffer(value),
+        ($1.DataStream value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteDataStreamRequest, $2.Empty>(
+        'DeleteDataStream',
+        deleteDataStream_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteDataStreamRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateDataStreamRequest, $1.DataStream>(
+        'UpdateDataStream',
+        updateDataStream_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateDataStreamRequest.fromBuffer(value),
+        ($1.DataStream value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListDataStreamsRequest,
+            $0.ListDataStreamsResponse>(
+        'ListDataStreams',
+        listDataStreams_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListDataStreamsRequest.fromBuffer(value),
+        ($0.ListDataStreamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetDataStreamRequest, $1.DataStream>(
+        'GetDataStream',
+        getDataStream_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetDataStreamRequest.fromBuffer(value),
+        ($1.DataStream value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Account> getAccount_Pre($grpc.ServiceCall call,
@@ -1938,22 +2011,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return listAndroidAppDataStreams(call, await request);
   }
 
-  $async.Future<$1.EnhancedMeasurementSettings>
-      getEnhancedMeasurementSettings_Pre(
-          $grpc.ServiceCall call,
-          $async.Future<$0.GetEnhancedMeasurementSettingsRequest>
-              request) async {
-    return getEnhancedMeasurementSettings(call, await request);
-  }
-
-  $async.Future<$1.EnhancedMeasurementSettings>
-      updateEnhancedMeasurementSettings_Pre(
-          $grpc.ServiceCall call,
-          $async.Future<$0.UpdateEnhancedMeasurementSettingsRequest>
-              request) async {
-    return updateEnhancedMeasurementSettings(call, await request);
-  }
-
   $async.Future<$1.FirebaseLink> createFirebaseLink_Pre($grpc.ServiceCall call,
       $async.Future<$0.CreateFirebaseLinkRequest> request) async {
     return createFirebaseLink(call, await request);
@@ -2038,6 +2095,14 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
           $async.Future<$0.UpdateMeasurementProtocolSecretRequest>
               request) async {
     return updateMeasurementProtocolSecret(call, await request);
+  }
+
+  $async.Future<$0.AcknowledgeUserDataCollectionResponse>
+      acknowledgeUserDataCollection_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.AcknowledgeUserDataCollectionRequest>
+              request) async {
+    return acknowledgeUserDataCollection(call, await request);
   }
 
   $async.Future<$0.SearchChangeHistoryEventsResponse>
@@ -2234,6 +2299,32 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return updateDataRetentionSettings(call, await request);
   }
 
+  $async.Future<$1.DataStream> createDataStream_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateDataStreamRequest> request) async {
+    return createDataStream(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteDataStream_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteDataStreamRequest> request) async {
+    return deleteDataStream(call, await request);
+  }
+
+  $async.Future<$1.DataStream> updateDataStream_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateDataStreamRequest> request) async {
+    return updateDataStream(call, await request);
+  }
+
+  $async.Future<$0.ListDataStreamsResponse> listDataStreams_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListDataStreamsRequest> request) async {
+    return listDataStreams(call, await request);
+  }
+
+  $async.Future<$1.DataStream> getDataStream_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetDataStreamRequest> request) async {
+    return getDataStream(call, await request);
+  }
+
   $async.Future<$1.Account> getAccount(
       $grpc.ServiceCall call, $0.GetAccountRequest request);
   $async.Future<$0.ListAccountsResponse> listAccounts(
@@ -2302,11 +2393,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.UpdateAndroidAppDataStreamRequest request);
   $async.Future<$0.ListAndroidAppDataStreamsResponse> listAndroidAppDataStreams(
       $grpc.ServiceCall call, $0.ListAndroidAppDataStreamsRequest request);
-  $async.Future<$1.EnhancedMeasurementSettings> getEnhancedMeasurementSettings(
-      $grpc.ServiceCall call, $0.GetEnhancedMeasurementSettingsRequest request);
-  $async.Future<$1.EnhancedMeasurementSettings>
-      updateEnhancedMeasurementSettings($grpc.ServiceCall call,
-          $0.UpdateEnhancedMeasurementSettingsRequest request);
   $async.Future<$1.FirebaseLink> createFirebaseLink(
       $grpc.ServiceCall call, $0.CreateFirebaseLinkRequest request);
   $async.Future<$2.Empty> deleteFirebaseLink(
@@ -2339,6 +2425,9 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
   $async.Future<$1.MeasurementProtocolSecret> updateMeasurementProtocolSecret(
       $grpc.ServiceCall call,
       $0.UpdateMeasurementProtocolSecretRequest request);
+  $async.Future<$0.AcknowledgeUserDataCollectionResponse>
+      acknowledgeUserDataCollection($grpc.ServiceCall call,
+          $0.AcknowledgeUserDataCollectionRequest request);
   $async.Future<$0.SearchChangeHistoryEventsResponse> searchChangeHistoryEvents(
       $grpc.ServiceCall call, $0.SearchChangeHistoryEventsRequest request);
   $async.Future<$1.GoogleSignalsSettings> getGoogleSignalsSettings(
@@ -2410,4 +2499,14 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetDataRetentionSettingsRequest request);
   $async.Future<$1.DataRetentionSettings> updateDataRetentionSettings(
       $grpc.ServiceCall call, $0.UpdateDataRetentionSettingsRequest request);
+  $async.Future<$1.DataStream> createDataStream(
+      $grpc.ServiceCall call, $0.CreateDataStreamRequest request);
+  $async.Future<$2.Empty> deleteDataStream(
+      $grpc.ServiceCall call, $0.DeleteDataStreamRequest request);
+  $async.Future<$1.DataStream> updateDataStream(
+      $grpc.ServiceCall call, $0.UpdateDataStreamRequest request);
+  $async.Future<$0.ListDataStreamsResponse> listDataStreams(
+      $grpc.ServiceCall call, $0.ListDataStreamsRequest request);
+  $async.Future<$1.DataStream> getDataStream(
+      $grpc.ServiceCall call, $0.GetDataStreamRequest request);
 }

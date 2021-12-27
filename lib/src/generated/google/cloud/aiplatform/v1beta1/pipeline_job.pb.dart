@@ -49,19 +49,35 @@ class PipelineJob_RuntimeConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gcsOutputDirectory')
+    ..m<$core.String, $1.Value>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parameterValues',
+        entryClassName: 'PipelineJob.RuntimeConfig.ParameterValuesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $1.Value.create,
+        packageName: const $pb.PackageName('google.cloud.aiplatform.v1beta1'))
     ..hasRequiredFields = false;
 
   PipelineJob_RuntimeConfig._() : super();
   factory PipelineJob_RuntimeConfig({
-    $core.Map<$core.String, $4.Value>? parameters,
+    @$core.Deprecated('This field is deprecated.')
+        $core.Map<$core.String, $4.Value>? parameters,
     $core.String? gcsOutputDirectory,
+    $core.Map<$core.String, $1.Value>? parameterValues,
   }) {
     final _result = create();
     if (parameters != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.parameters.addAll(parameters);
     }
     if (gcsOutputDirectory != null) {
       _result.gcsOutputDirectory = gcsOutputDirectory;
+    }
+    if (parameterValues != null) {
+      _result.parameterValues.addAll(parameterValues);
     }
     return _result;
   }
@@ -94,6 +110,7 @@ class PipelineJob_RuntimeConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PipelineJob_RuntimeConfig>(create);
   static PipelineJob_RuntimeConfig? _defaultInstance;
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.Map<$core.String, $4.Value> get parameters => $_getMap(0);
 
@@ -108,6 +125,9 @@ class PipelineJob_RuntimeConfig extends $pb.GeneratedMessage {
   $core.bool hasGcsOutputDirectory() => $_has(1);
   @$pb.TagNumber(2)
   void clearGcsOutputDirectory() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.Map<$core.String, $1.Value> get parameterValues => $_getMap(2);
 }
 
 class PipelineJob extends $pb.GeneratedMessage {

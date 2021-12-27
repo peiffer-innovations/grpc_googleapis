@@ -143,6 +143,12 @@ class AnnotateAssessmentRequest extends $pb.GeneratedMessage {
         $pb.PbFieldType.PE,
         valueOf: AnnotateAssessmentRequest_Reason.valueOf,
         enumValues: AnnotateAssessmentRequest_Reason.values)
+    ..a<$core.List<$core.int>>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'hashedAccountId',
+        $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   AnnotateAssessmentRequest._() : super();
@@ -150,6 +156,7 @@ class AnnotateAssessmentRequest extends $pb.GeneratedMessage {
     $core.String? name,
     AnnotateAssessmentRequest_Annotation? annotation,
     $core.Iterable<AnnotateAssessmentRequest_Reason>? reasons,
+    $core.List<$core.int>? hashedAccountId,
   }) {
     final _result = create();
     if (name != null) {
@@ -160,6 +167,9 @@ class AnnotateAssessmentRequest extends $pb.GeneratedMessage {
     }
     if (reasons != null) {
       _result.reasons.addAll(reasons);
+    }
+    if (hashedAccountId != null) {
+      _result.hashedAccountId = hashedAccountId;
     }
     return _result;
   }
@@ -218,6 +228,18 @@ class AnnotateAssessmentRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<AnnotateAssessmentRequest_Reason> get reasons => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.int> get hashedAccountId => $_getN(3);
+  @$pb.TagNumber(4)
+  set hashedAccountId($core.List<$core.int> v) {
+    $_setBytes(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasHashedAccountId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearHashedAccountId() => clearField(4);
 }
 
 class AnnotateAssessmentResponse extends $pb.GeneratedMessage {
@@ -298,6 +320,12 @@ class Assessment extends $pb.GeneratedMessage {
             ? ''
             : 'tokenProperties',
         subBuilder: TokenProperties.create)
+    ..aOM<AccountDefenderAssessment>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'accountDefenderAssessment',
+        subBuilder: AccountDefenderAssessment.create)
     ..hasRequiredFields = false;
 
   Assessment._() : super();
@@ -306,6 +334,7 @@ class Assessment extends $pb.GeneratedMessage {
     Event? event,
     RiskAnalysis? riskAnalysis,
     TokenProperties? tokenProperties,
+    AccountDefenderAssessment? accountDefenderAssessment,
   }) {
     final _result = create();
     if (name != null) {
@@ -319,6 +348,9 @@ class Assessment extends $pb.GeneratedMessage {
     }
     if (tokenProperties != null) {
       _result.tokenProperties = tokenProperties;
+    }
+    if (accountDefenderAssessment != null) {
+      _result.accountDefenderAssessment = accountDefenderAssessment;
     }
     return _result;
   }
@@ -401,6 +433,20 @@ class Assessment extends $pb.GeneratedMessage {
   void clearTokenProperties() => clearField(4);
   @$pb.TagNumber(4)
   TokenProperties ensureTokenProperties() => $_ensure(3);
+
+  @$pb.TagNumber(6)
+  AccountDefenderAssessment get accountDefenderAssessment => $_getN(4);
+  @$pb.TagNumber(6)
+  set accountDefenderAssessment(AccountDefenderAssessment v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasAccountDefenderAssessment() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearAccountDefenderAssessment() => clearField(6);
+  @$pb.TagNumber(6)
+  AccountDefenderAssessment ensureAccountDefenderAssessment() => $_ensure(4);
 }
 
 class Event extends $pb.GeneratedMessage {
@@ -438,6 +484,12 @@ class Event extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'expectedAction')
+    ..a<$core.List<$core.int>>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'hashedAccountId',
+        $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   Event._() : super();
@@ -447,6 +499,7 @@ class Event extends $pb.GeneratedMessage {
     $core.String? userAgent,
     $core.String? userIpAddress,
     $core.String? expectedAction,
+    $core.List<$core.int>? hashedAccountId,
   }) {
     final _result = create();
     if (token != null) {
@@ -463,6 +516,9 @@ class Event extends $pb.GeneratedMessage {
     }
     if (expectedAction != null) {
       _result.expectedAction = expectedAction;
+    }
+    if (hashedAccountId != null) {
+      _result.hashedAccountId = hashedAccountId;
     }
     return _result;
   }
@@ -551,6 +607,18 @@ class Event extends $pb.GeneratedMessage {
   $core.bool hasExpectedAction() => $_has(4);
   @$pb.TagNumber(5)
   void clearExpectedAction() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.List<$core.int> get hashedAccountId => $_getN(5);
+  @$pb.TagNumber(6)
+  set hashedAccountId($core.List<$core.int> v) {
+    $_setBytes(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasHashedAccountId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearHashedAccountId() => clearField(6);
 }
 
 class RiskAnalysis extends $pb.GeneratedMessage {
@@ -793,6 +861,70 @@ class TokenProperties extends $pb.GeneratedMessage {
   $core.bool hasAction() => $_has(4);
   @$pb.TagNumber(5)
   void clearAction() => clearField(5);
+}
+
+class AccountDefenderAssessment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AccountDefenderAssessment',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..pc<AccountDefenderAssessment_AccountDefenderLabel>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels',
+        $pb.PbFieldType.PE,
+        valueOf: AccountDefenderAssessment_AccountDefenderLabel.valueOf,
+        enumValues: AccountDefenderAssessment_AccountDefenderLabel.values)
+    ..hasRequiredFields = false;
+
+  AccountDefenderAssessment._() : super();
+  factory AccountDefenderAssessment({
+    $core.Iterable<AccountDefenderAssessment_AccountDefenderLabel>? labels,
+  }) {
+    final _result = create();
+    if (labels != null) {
+      _result.labels.addAll(labels);
+    }
+    return _result;
+  }
+  factory AccountDefenderAssessment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccountDefenderAssessment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AccountDefenderAssessment clone() =>
+      AccountDefenderAssessment()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AccountDefenderAssessment copyWith(
+          void Function(AccountDefenderAssessment) updates) =>
+      super.copyWith((message) => updates(message as AccountDefenderAssessment))
+          as AccountDefenderAssessment; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AccountDefenderAssessment create() => AccountDefenderAssessment._();
+  AccountDefenderAssessment createEmptyInstance() => create();
+  static $pb.PbList<AccountDefenderAssessment> createRepeated() =>
+      $pb.PbList<AccountDefenderAssessment>();
+  @$core.pragma('dart2js:noInline')
+  static AccountDefenderAssessment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AccountDefenderAssessment>(create);
+  static AccountDefenderAssessment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<AccountDefenderAssessment_AccountDefenderLabel> get labels =>
+      $_getList(0);
 }
 
 class CreateKeyRequest extends $pb.GeneratedMessage {
@@ -2480,4 +2612,806 @@ class ChallengeMetrics extends $pb.GeneratedMessage {
   $core.bool hasPassedCount() => $_has(3);
   @$pb.TagNumber(4)
   void clearPassedCount() => clearField(4);
+}
+
+class ListRelatedAccountGroupMembershipsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListRelatedAccountGroupMembershipsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListRelatedAccountGroupMembershipsRequest._() : super();
+  factory ListRelatedAccountGroupMembershipsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListRelatedAccountGroupMembershipsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListRelatedAccountGroupMembershipsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupMembershipsRequest clone() =>
+      ListRelatedAccountGroupMembershipsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupMembershipsRequest copyWith(
+          void Function(ListRelatedAccountGroupMembershipsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListRelatedAccountGroupMembershipsRequest))
+          as ListRelatedAccountGroupMembershipsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupMembershipsRequest create() =>
+      ListRelatedAccountGroupMembershipsRequest._();
+  ListRelatedAccountGroupMembershipsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListRelatedAccountGroupMembershipsRequest>
+      createRepeated() =>
+          $pb.PbList<ListRelatedAccountGroupMembershipsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupMembershipsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListRelatedAccountGroupMembershipsRequest>(create);
+  static ListRelatedAccountGroupMembershipsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => clearField(3);
+}
+
+class ListRelatedAccountGroupMembershipsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListRelatedAccountGroupMembershipsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..pc<RelatedAccountGroupMembership>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'relatedAccountGroupMemberships',
+        $pb.PbFieldType.PM,
+        subBuilder: RelatedAccountGroupMembership.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListRelatedAccountGroupMembershipsResponse._() : super();
+  factory ListRelatedAccountGroupMembershipsResponse({
+    $core.Iterable<RelatedAccountGroupMembership>?
+        relatedAccountGroupMemberships,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (relatedAccountGroupMemberships != null) {
+      _result.relatedAccountGroupMemberships
+          .addAll(relatedAccountGroupMemberships);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListRelatedAccountGroupMembershipsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListRelatedAccountGroupMembershipsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupMembershipsResponse clone() =>
+      ListRelatedAccountGroupMembershipsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupMembershipsResponse copyWith(
+          void Function(ListRelatedAccountGroupMembershipsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListRelatedAccountGroupMembershipsResponse))
+          as ListRelatedAccountGroupMembershipsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupMembershipsResponse create() =>
+      ListRelatedAccountGroupMembershipsResponse._();
+  ListRelatedAccountGroupMembershipsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListRelatedAccountGroupMembershipsResponse>
+      createRepeated() =>
+          $pb.PbList<ListRelatedAccountGroupMembershipsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupMembershipsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListRelatedAccountGroupMembershipsResponse>(create);
+  static ListRelatedAccountGroupMembershipsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<RelatedAccountGroupMembership>
+      get relatedAccountGroupMemberships => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class ListRelatedAccountGroupsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListRelatedAccountGroupsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListRelatedAccountGroupsRequest._() : super();
+  factory ListRelatedAccountGroupsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListRelatedAccountGroupsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListRelatedAccountGroupsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupsRequest clone() =>
+      ListRelatedAccountGroupsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupsRequest copyWith(
+          void Function(ListRelatedAccountGroupsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListRelatedAccountGroupsRequest))
+          as ListRelatedAccountGroupsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupsRequest create() =>
+      ListRelatedAccountGroupsRequest._();
+  ListRelatedAccountGroupsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListRelatedAccountGroupsRequest> createRepeated() =>
+      $pb.PbList<ListRelatedAccountGroupsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListRelatedAccountGroupsRequest>(
+          create);
+  static ListRelatedAccountGroupsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => clearField(3);
+}
+
+class ListRelatedAccountGroupsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListRelatedAccountGroupsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..pc<RelatedAccountGroup>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'relatedAccountGroups',
+        $pb.PbFieldType.PM,
+        subBuilder: RelatedAccountGroup.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListRelatedAccountGroupsResponse._() : super();
+  factory ListRelatedAccountGroupsResponse({
+    $core.Iterable<RelatedAccountGroup>? relatedAccountGroups,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (relatedAccountGroups != null) {
+      _result.relatedAccountGroups.addAll(relatedAccountGroups);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListRelatedAccountGroupsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListRelatedAccountGroupsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupsResponse clone() =>
+      ListRelatedAccountGroupsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListRelatedAccountGroupsResponse copyWith(
+          void Function(ListRelatedAccountGroupsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListRelatedAccountGroupsResponse))
+          as ListRelatedAccountGroupsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupsResponse create() =>
+      ListRelatedAccountGroupsResponse._();
+  ListRelatedAccountGroupsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListRelatedAccountGroupsResponse> createRepeated() =>
+      $pb.PbList<ListRelatedAccountGroupsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListRelatedAccountGroupsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListRelatedAccountGroupsResponse>(
+          create);
+  static ListRelatedAccountGroupsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<RelatedAccountGroup> get relatedAccountGroups => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class SearchRelatedAccountGroupMembershipsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SearchRelatedAccountGroupMembershipsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'hashedAccountId',
+        $pb.PbFieldType.OY)
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  SearchRelatedAccountGroupMembershipsRequest._() : super();
+  factory SearchRelatedAccountGroupMembershipsRequest({
+    $core.String? parent,
+    $core.List<$core.int>? hashedAccountId,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (hashedAccountId != null) {
+      _result.hashedAccountId = hashedAccountId;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory SearchRelatedAccountGroupMembershipsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchRelatedAccountGroupMembershipsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SearchRelatedAccountGroupMembershipsRequest clone() =>
+      SearchRelatedAccountGroupMembershipsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SearchRelatedAccountGroupMembershipsRequest copyWith(
+          void Function(SearchRelatedAccountGroupMembershipsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as SearchRelatedAccountGroupMembershipsRequest))
+          as SearchRelatedAccountGroupMembershipsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SearchRelatedAccountGroupMembershipsRequest create() =>
+      SearchRelatedAccountGroupMembershipsRequest._();
+  SearchRelatedAccountGroupMembershipsRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchRelatedAccountGroupMembershipsRequest>
+      createRepeated() =>
+          $pb.PbList<SearchRelatedAccountGroupMembershipsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SearchRelatedAccountGroupMembershipsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SearchRelatedAccountGroupMembershipsRequest>(create);
+  static SearchRelatedAccountGroupMembershipsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get hashedAccountId => $_getN(1);
+  @$pb.TagNumber(2)
+  set hashedAccountId($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasHashedAccountId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearHashedAccountId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set pageSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set pageToken($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPageToken() => clearField(4);
+}
+
+class SearchRelatedAccountGroupMembershipsResponse
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SearchRelatedAccountGroupMembershipsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..pc<RelatedAccountGroupMembership>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'relatedAccountGroupMemberships',
+        $pb.PbFieldType.PM,
+        subBuilder: RelatedAccountGroupMembership.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  SearchRelatedAccountGroupMembershipsResponse._() : super();
+  factory SearchRelatedAccountGroupMembershipsResponse({
+    $core.Iterable<RelatedAccountGroupMembership>?
+        relatedAccountGroupMemberships,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (relatedAccountGroupMemberships != null) {
+      _result.relatedAccountGroupMemberships
+          .addAll(relatedAccountGroupMemberships);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory SearchRelatedAccountGroupMembershipsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchRelatedAccountGroupMembershipsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SearchRelatedAccountGroupMembershipsResponse clone() =>
+      SearchRelatedAccountGroupMembershipsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SearchRelatedAccountGroupMembershipsResponse copyWith(
+          void Function(SearchRelatedAccountGroupMembershipsResponse)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as SearchRelatedAccountGroupMembershipsResponse))
+          as SearchRelatedAccountGroupMembershipsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SearchRelatedAccountGroupMembershipsResponse create() =>
+      SearchRelatedAccountGroupMembershipsResponse._();
+  SearchRelatedAccountGroupMembershipsResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<SearchRelatedAccountGroupMembershipsResponse>
+      createRepeated() =>
+          $pb.PbList<SearchRelatedAccountGroupMembershipsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SearchRelatedAccountGroupMembershipsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SearchRelatedAccountGroupMembershipsResponse>(create);
+  static SearchRelatedAccountGroupMembershipsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<RelatedAccountGroupMembership>
+      get relatedAccountGroupMemberships => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class RelatedAccountGroupMembership extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RelatedAccountGroupMembership',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'hashedAccountId',
+        $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  RelatedAccountGroupMembership._() : super();
+  factory RelatedAccountGroupMembership({
+    $core.String? name,
+    $core.List<$core.int>? hashedAccountId,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (hashedAccountId != null) {
+      _result.hashedAccountId = hashedAccountId;
+    }
+    return _result;
+  }
+  factory RelatedAccountGroupMembership.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RelatedAccountGroupMembership.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RelatedAccountGroupMembership clone() =>
+      RelatedAccountGroupMembership()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RelatedAccountGroupMembership copyWith(
+          void Function(RelatedAccountGroupMembership) updates) =>
+      super.copyWith(
+              (message) => updates(message as RelatedAccountGroupMembership))
+          as RelatedAccountGroupMembership; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RelatedAccountGroupMembership create() =>
+      RelatedAccountGroupMembership._();
+  RelatedAccountGroupMembership createEmptyInstance() => create();
+  static $pb.PbList<RelatedAccountGroupMembership> createRepeated() =>
+      $pb.PbList<RelatedAccountGroupMembership>();
+  @$core.pragma('dart2js:noInline')
+  static RelatedAccountGroupMembership getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RelatedAccountGroupMembership>(create);
+  static RelatedAccountGroupMembership? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get hashedAccountId => $_getN(1);
+  @$pb.TagNumber(2)
+  set hashedAccountId($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasHashedAccountId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearHashedAccountId() => clearField(2);
+}
+
+class RelatedAccountGroup extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RelatedAccountGroup',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.recaptchaenterprise.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  RelatedAccountGroup._() : super();
+  factory RelatedAccountGroup({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory RelatedAccountGroup.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RelatedAccountGroup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RelatedAccountGroup clone() => RelatedAccountGroup()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RelatedAccountGroup copyWith(void Function(RelatedAccountGroup) updates) =>
+      super.copyWith((message) => updates(message as RelatedAccountGroup))
+          as RelatedAccountGroup; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RelatedAccountGroup create() => RelatedAccountGroup._();
+  RelatedAccountGroup createEmptyInstance() => create();
+  static $pb.PbList<RelatedAccountGroup> createRepeated() =>
+      $pb.PbList<RelatedAccountGroup>();
+  @$core.pragma('dart2js:noInline')
+  static RelatedAccountGroup getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RelatedAccountGroup>(create);
+  static RelatedAccountGroup? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
 }

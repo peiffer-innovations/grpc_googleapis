@@ -47,6 +47,12 @@ class VersionsClient extends $grpc.Client {
           '/google.cloud.dialogflow.cx.v3beta1.Versions/LoadVersion',
           ($8.LoadVersionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $3.Operation.fromBuffer(value));
+  static final _$compareVersions =
+      $grpc.ClientMethod<$8.CompareVersionsRequest, $8.CompareVersionsResponse>(
+          '/google.cloud.dialogflow.cx.v3beta1.Versions/CompareVersions',
+          ($8.CompareVersionsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $8.CompareVersionsResponse.fromBuffer(value));
 
   VersionsClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -84,6 +90,12 @@ class VersionsClient extends $grpc.Client {
   $grpc.ResponseFuture<$3.Operation> loadVersion($8.LoadVersionRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$loadVersion, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$8.CompareVersionsResponse> compareVersions(
+      $8.CompareVersionsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$compareVersions, request, options: options);
   }
 }
 
@@ -139,6 +151,15 @@ abstract class VersionsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $8.LoadVersionRequest.fromBuffer(value),
         ($3.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.CompareVersionsRequest,
+            $8.CompareVersionsResponse>(
+        'CompareVersions',
+        compareVersions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $8.CompareVersionsRequest.fromBuffer(value),
+        ($8.CompareVersionsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$8.ListVersionsResponse> listVersions_Pre(
@@ -172,6 +193,12 @@ abstract class VersionsServiceBase extends $grpc.Service {
     return loadVersion(call, await request);
   }
 
+  $async.Future<$8.CompareVersionsResponse> compareVersions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$8.CompareVersionsRequest> request) async {
+    return compareVersions(call, await request);
+  }
+
   $async.Future<$8.ListVersionsResponse> listVersions(
       $grpc.ServiceCall call, $8.ListVersionsRequest request);
   $async.Future<$8.Version> getVersion(
@@ -184,4 +211,6 @@ abstract class VersionsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $8.DeleteVersionRequest request);
   $async.Future<$3.Operation> loadVersion(
       $grpc.ServiceCall call, $8.LoadVersionRequest request);
+  $async.Future<$8.CompareVersionsResponse> compareVersions(
+      $grpc.ServiceCall call, $8.CompareVersionsRequest request);
 }

@@ -34,12 +34,18 @@ class CreateEndpointRequest extends $pb.GeneratedMessage {
             ? ''
             : 'endpoint',
         subBuilder: $3.Endpoint.create)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endpointId')
     ..hasRequiredFields = false;
 
   CreateEndpointRequest._() : super();
   factory CreateEndpointRequest({
     $core.String? parent,
     $3.Endpoint? endpoint,
+    $core.String? endpointId,
   }) {
     final _result = create();
     if (parent != null) {
@@ -47,6 +53,9 @@ class CreateEndpointRequest extends $pb.GeneratedMessage {
     }
     if (endpoint != null) {
       _result.endpoint = endpoint;
+    }
+    if (endpointId != null) {
+      _result.endpointId = endpointId;
     }
     return _result;
   }
@@ -104,6 +113,18 @@ class CreateEndpointRequest extends $pb.GeneratedMessage {
   void clearEndpoint() => clearField(2);
   @$pb.TagNumber(2)
   $3.Endpoint ensureEndpoint() => $_ensure(1);
+
+  @$pb.TagNumber(4)
+  $core.String get endpointId => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set endpointId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasEndpointId() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearEndpointId() => clearField(4);
 }
 
 class CreateEndpointOperationMetadata extends $pb.GeneratedMessage {

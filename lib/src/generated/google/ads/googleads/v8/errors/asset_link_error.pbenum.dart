@@ -120,6 +120,12 @@ class AssetLinkErrorEnum_AssetLinkError extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'INVALID_STATUS');
+  static const AssetLinkErrorEnum_AssetLinkError
+      YOUTUBE_VIDEO_DURATION_NOT_DEFINED = AssetLinkErrorEnum_AssetLinkError._(
+          18,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'YOUTUBE_VIDEO_DURATION_NOT_DEFINED');
 
   static const $core.List<AssetLinkErrorEnum_AssetLinkError> values =
       <AssetLinkErrorEnum_AssetLinkError>[
@@ -140,6 +146,7 @@ class AssetLinkErrorEnum_AssetLinkError extends $pb.ProtobufEnum {
     YOUTUBE_VIDEO_TOO_LONG,
     YOUTUBE_VIDEO_TOO_SHORT,
     INVALID_STATUS,
+    YOUTUBE_VIDEO_DURATION_NOT_DEFINED,
   ];
 
   static final $core.Map<$core.int, AssetLinkErrorEnum_AssetLinkError>

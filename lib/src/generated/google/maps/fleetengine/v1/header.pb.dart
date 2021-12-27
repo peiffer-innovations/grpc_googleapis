@@ -9,6 +9,10 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'header.pbenum.dart';
+
+export 'header.pbenum.dart';
+
 class RequestHeader extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -44,6 +48,45 @@ class RequestHeader extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'deviceModel')
+    ..e<RequestHeader_SdkType>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sdkType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: RequestHeader_SdkType.SDK_TYPE_UNSPECIFIED,
+        valueOf: RequestHeader_SdkType.valueOf,
+        enumValues: RequestHeader_SdkType.values)
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mapsSdkVersion')
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'navSdkVersion')
+    ..e<RequestHeader_Platform>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'platform',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: RequestHeader_Platform.PLATFORM_UNSPECIFIED,
+        valueOf: RequestHeader_Platform.valueOf,
+        enumValues: RequestHeader_Platform.values)
+    ..aOS(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'manufacturer')
+    ..a<$core.int>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'androidApiLevel',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   RequestHeader._() : super();
@@ -53,6 +96,12 @@ class RequestHeader extends $pb.GeneratedMessage {
     $core.String? sdkVersion,
     $core.String? osVersion,
     $core.String? deviceModel,
+    RequestHeader_SdkType? sdkType,
+    $core.String? mapsSdkVersion,
+    $core.String? navSdkVersion,
+    RequestHeader_Platform? platform,
+    $core.String? manufacturer,
+    $core.int? androidApiLevel,
   }) {
     final _result = create();
     if (languageCode != null) {
@@ -69,6 +118,24 @@ class RequestHeader extends $pb.GeneratedMessage {
     }
     if (deviceModel != null) {
       _result.deviceModel = deviceModel;
+    }
+    if (sdkType != null) {
+      _result.sdkType = sdkType;
+    }
+    if (mapsSdkVersion != null) {
+      _result.mapsSdkVersion = mapsSdkVersion;
+    }
+    if (navSdkVersion != null) {
+      _result.navSdkVersion = navSdkVersion;
+    }
+    if (platform != null) {
+      _result.platform = platform;
+    }
+    if (manufacturer != null) {
+      _result.manufacturer = manufacturer;
+    }
+    if (androidApiLevel != null) {
+      _result.androidApiLevel = androidApiLevel;
     }
     return _result;
   }
@@ -158,4 +225,76 @@ class RequestHeader extends $pb.GeneratedMessage {
   $core.bool hasDeviceModel() => $_has(4);
   @$pb.TagNumber(5)
   void clearDeviceModel() => clearField(5);
+
+  @$pb.TagNumber(6)
+  RequestHeader_SdkType get sdkType => $_getN(5);
+  @$pb.TagNumber(6)
+  set sdkType(RequestHeader_SdkType v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasSdkType() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSdkType() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get mapsSdkVersion => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set mapsSdkVersion($core.String v) {
+    $_setString(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasMapsSdkVersion() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearMapsSdkVersion() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get navSdkVersion => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set navSdkVersion($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasNavSdkVersion() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearNavSdkVersion() => clearField(8);
+
+  @$pb.TagNumber(9)
+  RequestHeader_Platform get platform => $_getN(8);
+  @$pb.TagNumber(9)
+  set platform(RequestHeader_Platform v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasPlatform() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearPlatform() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get manufacturer => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set manufacturer($core.String v) {
+    $_setString(9, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasManufacturer() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearManufacturer() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.int get androidApiLevel => $_getIZ(10);
+  @$pb.TagNumber(11)
+  set androidApiLevel($core.int v) {
+    $_setSignedInt32(10, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasAndroidApiLevel() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearAndroidApiLevel() => clearField(11);
 }

@@ -31,15 +31,24 @@ class InfoType extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version')
     ..hasRequiredFields = false;
 
   InfoType._() : super();
   factory InfoType({
     $core.String? name,
+    $core.String? version,
   }) {
     final _result = create();
     if (name != null) {
       _result.name = name;
+    }
+    if (version != null) {
+      _result.version = version;
     }
     return _result;
   }
@@ -80,6 +89,18 @@ class InfoType extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get version => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set version($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearVersion() => clearField(2);
 }
 
 class StoredType extends $pb.GeneratedMessage {
@@ -2021,6 +2042,13 @@ class BigQueryOptions extends $pb.GeneratedMessage {
             ? ''
             : 'rowsLimitPercent',
         $pb.PbFieldType.O3)
+    ..pc<FieldId>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'includedFields',
+        $pb.PbFieldType.PM,
+        subBuilder: FieldId.create)
     ..hasRequiredFields = false;
 
   BigQueryOptions._() : super();
@@ -2031,6 +2059,7 @@ class BigQueryOptions extends $pb.GeneratedMessage {
     BigQueryOptions_SampleMethod? sampleMethod,
     $core.Iterable<FieldId>? excludedFields,
     $core.int? rowsLimitPercent,
+    $core.Iterable<FieldId>? includedFields,
   }) {
     final _result = create();
     if (tableReference != null) {
@@ -2050,6 +2079,9 @@ class BigQueryOptions extends $pb.GeneratedMessage {
     }
     if (rowsLimitPercent != null) {
       _result.rowsLimitPercent = rowsLimitPercent;
+    }
+    if (includedFields != null) {
+      _result.includedFields.addAll(includedFields);
     }
     return _result;
   }
@@ -2135,6 +2167,9 @@ class BigQueryOptions extends $pb.GeneratedMessage {
   $core.bool hasRowsLimitPercent() => $_has(5);
   @$pb.TagNumber(6)
   void clearRowsLimitPercent() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.List<FieldId> get includedFields => $_getList(6);
 }
 
 class StorageConfig_TimespanConfig extends $pb.GeneratedMessage {

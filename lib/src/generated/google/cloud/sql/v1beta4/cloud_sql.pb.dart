@@ -3440,8 +3440,19 @@ class SqlInstancesRescheduleMaintenanceRequest extends $pb.GeneratedMessage {
   $1.SqlInstancesRescheduleMaintenanceRequestBody ensureBody() => $_ensure(2);
 }
 
+enum SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfig {
+  mysqlSyncConfig,
+  notSet
+}
+
 class SqlInstancesVerifyExternalSyncSettingsRequest
     extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int,
+          SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfig>
+      _SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfigByTag = {
+    6: SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfig.mysqlSyncConfig,
+    0: SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfig.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -3451,6 +3462,7 @@ class SqlInstancesVerifyExternalSyncSettingsRequest
               ? ''
               : 'google.cloud.sql.v1beta4'),
       createEmptyInstance: create)
+    ..oo(0, [6])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3480,6 +3492,17 @@ class SqlInstancesVerifyExternalSyncSettingsRequest
         enumValues:
             SqlInstancesVerifyExternalSyncSettingsRequest_ExternalSyncMode
                 .values)
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'verifyReplicationOnly')
+    ..aOM<$1.MySqlSyncConfig>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mysqlSyncConfig',
+        subBuilder: $1.MySqlSyncConfig.create)
     ..hasRequiredFields = false;
 
   SqlInstancesVerifyExternalSyncSettingsRequest._() : super();
@@ -3488,6 +3511,8 @@ class SqlInstancesVerifyExternalSyncSettingsRequest
     $core.String? project,
     $core.bool? verifyConnectionOnly,
     SqlInstancesVerifyExternalSyncSettingsRequest_ExternalSyncMode? syncMode,
+    $core.bool? verifyReplicationOnly,
+    $1.MySqlSyncConfig? mysqlSyncConfig,
   }) {
     final _result = create();
     if (instance != null) {
@@ -3501,6 +3526,12 @@ class SqlInstancesVerifyExternalSyncSettingsRequest
     }
     if (syncMode != null) {
       _result.syncMode = syncMode;
+    }
+    if (verifyReplicationOnly != null) {
+      _result.verifyReplicationOnly = verifyReplicationOnly;
+    }
+    if (mysqlSyncConfig != null) {
+      _result.mysqlSyncConfig = mysqlSyncConfig;
     }
     return _result;
   }
@@ -3539,6 +3570,11 @@ class SqlInstancesVerifyExternalSyncSettingsRequest
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           SqlInstancesVerifyExternalSyncSettingsRequest>(create);
   static SqlInstancesVerifyExternalSyncSettingsRequest? _defaultInstance;
+
+  SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfig whichSyncConfig() =>
+      _SqlInstancesVerifyExternalSyncSettingsRequest_SyncConfigByTag[
+          $_whichOneof(0)]!;
+  void clearSyncConfig() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get instance => $_getSZ(0);
@@ -3589,9 +3625,43 @@ class SqlInstancesVerifyExternalSyncSettingsRequest
   $core.bool hasSyncMode() => $_has(3);
   @$pb.TagNumber(4)
   void clearSyncMode() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get verifyReplicationOnly => $_getBF(4);
+  @$pb.TagNumber(5)
+  set verifyReplicationOnly($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasVerifyReplicationOnly() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearVerifyReplicationOnly() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $1.MySqlSyncConfig get mysqlSyncConfig => $_getN(5);
+  @$pb.TagNumber(6)
+  set mysqlSyncConfig($1.MySqlSyncConfig v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasMysqlSyncConfig() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMysqlSyncConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.MySqlSyncConfig ensureMysqlSyncConfig() => $_ensure(5);
 }
 
+enum SqlInstancesStartExternalSyncRequest_SyncConfig { mysqlSyncConfig, notSet }
+
 class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, SqlInstancesStartExternalSyncRequest_SyncConfig>
+      _SqlInstancesStartExternalSyncRequest_SyncConfigByTag = {
+    6: SqlInstancesStartExternalSyncRequest_SyncConfig.mysqlSyncConfig,
+    0: SqlInstancesStartExternalSyncRequest_SyncConfig.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -3601,6 +3671,7 @@ class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.sql.v1beta4'),
       createEmptyInstance: create)
+    ..oo(0, [6])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3630,6 +3701,12 @@ class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'skipVerification')
+    ..aOM<$1.MySqlSyncConfig>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mysqlSyncConfig',
+        subBuilder: $1.MySqlSyncConfig.create)
     ..hasRequiredFields = false;
 
   SqlInstancesStartExternalSyncRequest._() : super();
@@ -3638,6 +3715,7 @@ class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
     $core.String? project,
     SqlInstancesVerifyExternalSyncSettingsRequest_ExternalSyncMode? syncMode,
     $core.bool? skipVerification,
+    $1.MySqlSyncConfig? mysqlSyncConfig,
   }) {
     final _result = create();
     if (instance != null) {
@@ -3651,6 +3729,9 @@ class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
     }
     if (skipVerification != null) {
       _result.skipVerification = skipVerification;
+    }
+    if (mysqlSyncConfig != null) {
+      _result.mysqlSyncConfig = mysqlSyncConfig;
     }
     return _result;
   }
@@ -3686,6 +3767,10 @@ class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           SqlInstancesStartExternalSyncRequest>(create);
   static SqlInstancesStartExternalSyncRequest? _defaultInstance;
+
+  SqlInstancesStartExternalSyncRequest_SyncConfig whichSyncConfig() =>
+      _SqlInstancesStartExternalSyncRequest_SyncConfigByTag[$_whichOneof(0)]!;
+  void clearSyncConfig() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get instance => $_getSZ(0);
@@ -3736,6 +3821,20 @@ class SqlInstancesStartExternalSyncRequest extends $pb.GeneratedMessage {
   $core.bool hasSkipVerification() => $_has(3);
   @$pb.TagNumber(4)
   void clearSkipVerification() => clearField(4);
+
+  @$pb.TagNumber(6)
+  $1.MySqlSyncConfig get mysqlSyncConfig => $_getN(4);
+  @$pb.TagNumber(6)
+  set mysqlSyncConfig($1.MySqlSyncConfig v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasMysqlSyncConfig() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearMysqlSyncConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.MySqlSyncConfig ensureMysqlSyncConfig() => $_ensure(4);
 }
 
 class SqlOperationsGetRequest extends $pb.GeneratedMessage {

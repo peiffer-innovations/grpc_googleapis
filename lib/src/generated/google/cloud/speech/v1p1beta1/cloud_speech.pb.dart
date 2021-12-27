@@ -2375,6 +2375,12 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
             ? ''
             : 'channelTag',
         $pb.PbFieldType.O3)
+    ..aOM<$5.Duration>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resultEndTime',
+        subBuilder: $5.Duration.create)
     ..aOS(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2386,6 +2392,7 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
   factory SpeechRecognitionResult({
     $core.Iterable<SpeechRecognitionAlternative>? alternatives,
     $core.int? channelTag,
+    $5.Duration? resultEndTime,
     $core.String? languageCode,
   }) {
     final _result = create();
@@ -2394,6 +2401,9 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
     }
     if (channelTag != null) {
       _result.channelTag = channelTag;
+    }
+    if (resultEndTime != null) {
+      _result.resultEndTime = resultEndTime;
     }
     if (languageCode != null) {
       _result.languageCode = languageCode;
@@ -2444,15 +2454,29 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearChannelTag() => clearField(2);
 
+  @$pb.TagNumber(4)
+  $5.Duration get resultEndTime => $_getN(2);
+  @$pb.TagNumber(4)
+  set resultEndTime($5.Duration v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasResultEndTime() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearResultEndTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Duration ensureResultEndTime() => $_ensure(2);
+
   @$pb.TagNumber(5)
-  $core.String get languageCode => $_getSZ(2);
+  $core.String get languageCode => $_getSZ(3);
   @$pb.TagNumber(5)
   set languageCode($core.String v) {
-    $_setString(2, v);
+    $_setString(3, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasLanguageCode() => $_has(2);
+  $core.bool hasLanguageCode() => $_has(3);
   @$pb.TagNumber(5)
   void clearLanguageCode() => clearField(5);
 }

@@ -255,3 +255,48 @@ const Promotion$json = const {
 /// Descriptor for `Promotion`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List promotionDescriptor = $convert.base64Decode(
     'CglQcm9tb3Rpb24SIQoMcHJvbW90aW9uX2lkGAEgASgJUgtwcm9tb3Rpb25JZA==');
+@$core.Deprecated('Use localInventoryDescriptor instead')
+const LocalInventory$json = const {
+  '1': 'LocalInventory',
+  '2': const [
+    const {'1': 'place_id', '3': 1, '4': 1, '5': 9, '10': 'placeId'},
+    const {
+      '1': 'price_info',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.retail.v2alpha.PriceInfo',
+      '10': 'priceInfo'
+    },
+    const {
+      '1': 'attributes',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.retail.v2alpha.LocalInventory.AttributesEntry',
+      '10': 'attributes'
+    },
+  ],
+  '3': const [LocalInventory_AttributesEntry$json],
+};
+
+@$core.Deprecated('Use localInventoryDescriptor instead')
+const LocalInventory_AttributesEntry$json = const {
+  '1': 'AttributesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.retail.v2alpha.CustomAttribute',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
+/// Descriptor for `LocalInventory`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List localInventoryDescriptor = $convert.base64Decode(
+    'Cg5Mb2NhbEludmVudG9yeRIZCghwbGFjZV9pZBgBIAEoCVIHcGxhY2VJZBJFCgpwcmljZV9pbmZvGAIgASgLMiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52MmFscGhhLlByaWNlSW5mb1IJcHJpY2VJbmZvElsKCmF0dHJpYnV0ZXMYAyADKAsyOy5nb29nbGUuY2xvdWQucmV0YWlsLnYyYWxwaGEuTG9jYWxJbnZlbnRvcnkuQXR0cmlidXRlc0VudHJ5UgphdHRyaWJ1dGVzGmsKD0F0dHJpYnV0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRJCCgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJhbHBoYS5DdXN0b21BdHRyaWJ1dGVSBXZhbHVlOgI4AQ==');

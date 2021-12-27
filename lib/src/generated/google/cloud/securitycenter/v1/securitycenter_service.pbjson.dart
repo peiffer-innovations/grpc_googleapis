@@ -9,6 +9,42 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use bulkMuteFindingsRequestDescriptor instead')
+const BulkMuteFindingsRequest$json = const {
+  '1': 'BulkMuteFindingsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    const {
+      '1': 'mute_annotation',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {'3': true},
+      '10': 'muteAnnotation',
+    },
+  ],
+};
+
+/// Descriptor for `BulkMuteFindingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkMuteFindingsRequestDescriptor =
+    $convert.base64Decode(
+        'ChdCdWxrTXV0ZUZpbmRpbmdzUmVxdWVzdBIhCgZwYXJlbnQYASABKAlCCeBBAvpBAwoBKlIGcGFyZW50EhYKBmZpbHRlchgCIAEoCVIGZmlsdGVyEisKD211dGVfYW5ub3RhdGlvbhgDIAEoCUICGAFSDm11dGVBbm5vdGF0aW9u');
+@$core.Deprecated('Use bulkMuteFindingsResponseDescriptor instead')
+const BulkMuteFindingsResponse$json = const {
+  '1': 'BulkMuteFindingsResponse',
+};
+
+/// Descriptor for `BulkMuteFindingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkMuteFindingsResponseDescriptor =
+    $convert.base64Decode('ChhCdWxrTXV0ZUZpbmRpbmdzUmVzcG9uc2U=');
 @$core.Deprecated('Use createFindingRequestDescriptor instead')
 const CreateFindingRequest$json = const {
   '1': 'CreateFindingRequest',
@@ -44,6 +80,42 @@ const CreateFindingRequest$json = const {
 /// Descriptor for `CreateFindingRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createFindingRequestDescriptor = $convert.base64Decode(
     'ChRDcmVhdGVGaW5kaW5nUmVxdWVzdBJECgZwYXJlbnQYASABKAlCLOBBAvpBJgokc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vU291cmNlUgZwYXJlbnQSIgoKZmluZGluZ19pZBgCIAEoCUID4EECUglmaW5kaW5nSWQSRgoHZmluZGluZxgDIAEoCzInLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nQgPgQQJSB2ZpbmRpbmc=');
+@$core.Deprecated('Use createMuteConfigRequestDescriptor instead')
+const CreateMuteConfigRequest$json = const {
+  '1': 'CreateMuteConfigRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'mute_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.securitycenter.v1.MuteConfig',
+      '8': const {},
+      '10': 'muteConfig'
+    },
+    const {
+      '1': 'mute_config_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'muteConfigId'
+    },
+  ],
+};
+
+/// Descriptor for `CreateMuteConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createMuteConfigRequestDescriptor =
+    $convert.base64Decode(
+        'ChdDcmVhdGVNdXRlQ29uZmlnUmVxdWVzdBJICgZwYXJlbnQYASABKAlCMOBBAvpBKhIoc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vTXV0ZUNvbmZpZ1IGcGFyZW50ElAKC211dGVfY29uZmlnGAIgASgLMiouZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLk11dGVDb25maWdCA+BBAlIKbXV0ZUNvbmZpZxIpCg5tdXRlX2NvbmZpZ19pZBgDIAEoCUID4EECUgxtdXRlQ29uZmlnSWQ=');
 @$core.Deprecated('Use createNotificationConfigRequestDescriptor instead')
 const CreateNotificationConfigRequest$json = const {
   '1': 'CreateNotificationConfigRequest',
@@ -107,6 +179,18 @@ const CreateSourceRequest$json = const {
 /// Descriptor for `CreateSourceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSourceRequestDescriptor = $convert.base64Decode(
     'ChNDcmVhdGVTb3VyY2VSZXF1ZXN0ElAKBnBhcmVudBgBIAEoCUI44EEC+kEyCjBjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb25SBnBhcmVudBJDCgZzb3VyY2UYAiABKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuU291cmNlQgPgQQJSBnNvdXJjZQ==');
+@$core.Deprecated('Use deleteMuteConfigRequestDescriptor instead')
+const DeleteMuteConfigRequest$json = const {
+  '1': 'DeleteMuteConfigRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteMuteConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteMuteConfigRequestDescriptor =
+    $convert.base64Decode(
+        'ChdEZWxldGVNdXRlQ29uZmlnUmVxdWVzdBJECgRuYW1lGAEgASgJQjDgQQL6QSoKKHNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL011dGVDb25maWdSBG5hbWU=');
 @$core.Deprecated('Use deleteNotificationConfigRequestDescriptor instead')
 const DeleteNotificationConfigRequest$json = const {
   '1': 'DeleteNotificationConfigRequest',
@@ -119,6 +203,17 @@ const DeleteNotificationConfigRequest$json = const {
 final $typed_data.Uint8List deleteNotificationConfigRequestDescriptor =
     $convert.base64Decode(
         'Ch9EZWxldGVOb3RpZmljYXRpb25Db25maWdSZXF1ZXN0EkwKBG5hbWUYASABKAlCOOBBAvpBMgowc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vTm90aWZpY2F0aW9uQ29uZmlnUgRuYW1l');
+@$core.Deprecated('Use getMuteConfigRequestDescriptor instead')
+const GetMuteConfigRequest$json = const {
+  '1': 'GetMuteConfigRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetMuteConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getMuteConfigRequestDescriptor = $convert.base64Decode(
+    'ChRHZXRNdXRlQ29uZmlnUmVxdWVzdBJECgRuYW1lGAEgASgJQjDgQQL6QSoKKHNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL011dGVDb25maWdSBG5hbWU=');
 @$core.Deprecated('Use getNotificationConfigRequestDescriptor instead')
 const GetNotificationConfigRequest$json = const {
   '1': 'GetNotificationConfigRequest',
@@ -349,6 +444,53 @@ const GroupResult_PropertiesEntry$json = const {
 /// Descriptor for `GroupResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List groupResultDescriptor = $convert.base64Decode(
     'CgtHcm91cFJlc3VsdBJbCgpwcm9wZXJ0aWVzGAEgAygLMjsuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkdyb3VwUmVzdWx0LlByb3BlcnRpZXNFbnRyeVIKcHJvcGVydGllcxIUCgVjb3VudBgCIAEoA1IFY291bnQaVQoPUHJvcGVydGllc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlUgV2YWx1ZToCOAE=');
+@$core.Deprecated('Use listMuteConfigsRequestDescriptor instead')
+const ListMuteConfigsRequest$json = const {
+  '1': 'ListMuteConfigsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListMuteConfigsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listMuteConfigsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZMaXN0TXV0ZUNvbmZpZ3NSZXF1ZXN0EkgKBnBhcmVudBgBIAEoCUIw4EEC+kEqEihzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9NdXRlQ29uZmlnUgZwYXJlbnQSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4=');
+@$core.Deprecated('Use listMuteConfigsResponseDescriptor instead')
+const ListMuteConfigsResponse$json = const {
+  '1': 'ListMuteConfigsResponse',
+  '2': const [
+    const {
+      '1': 'mute_configs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.securitycenter.v1.MuteConfig',
+      '10': 'muteConfigs'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListMuteConfigsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listMuteConfigsResponseDescriptor =
+    $convert.base64Decode(
+        'ChdMaXN0TXV0ZUNvbmZpZ3NSZXNwb25zZRJNCgxtdXRlX2NvbmZpZ3MYASADKAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuTXV0ZUNvbmZpZ1ILbXV0ZUNvbmZpZ3MSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
 @$core.Deprecated('Use listNotificationConfigsRequestDescriptor instead')
 const ListNotificationConfigsRequest$json = const {
   '1': 'ListNotificationConfigsRequest',
@@ -695,6 +837,7 @@ const ListFindingsResponse_ListFindingsResult_Resource$json = const {
       '5': 9,
       '10': 'parentDisplayName'
     },
+    const {'1': 'type', '3': 6, '4': 1, '5': 9, '10': 'type'},
     const {
       '1': 'folders',
       '3': 7,
@@ -703,6 +846,7 @@ const ListFindingsResponse_ListFindingsResult_Resource$json = const {
       '6': '.google.cloud.securitycenter.v1.Folder',
       '10': 'folders'
     },
+    const {'1': 'display_name', '3': 8, '4': 1, '5': 9, '10': 'displayName'},
   ],
 };
 
@@ -720,7 +864,7 @@ const ListFindingsResponse_ListFindingsResult_StateChange$json = const {
 
 /// Descriptor for `ListFindingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listFindingsResponseDescriptor = $convert.base64Decode(
-    'ChRMaXN0RmluZGluZ3NSZXNwb25zZRJ7ChVsaXN0X2ZpbmRpbmdzX3Jlc3VsdHMYASADKAsyRy5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuTGlzdEZpbmRpbmdzUmVzcG9uc2UuTGlzdEZpbmRpbmdzUmVzdWx0UhNsaXN0RmluZGluZ3NSZXN1bHRzEjcKCXJlYWRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCHJlYWRUaW1lEiYKD25leHRfcGFnZV90b2tlbhgDIAEoCVINbmV4dFBhZ2VUb2tlbhIdCgp0b3RhbF9zaXplGAQgASgFUgl0b3RhbFNpemUamgUKEkxpc3RGaW5kaW5nc1Jlc3VsdBJBCgdmaW5kaW5nGAEgASgLMicuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmdSB2ZpbmRpbmcSdgoMc3RhdGVfY2hhbmdlGAIgASgOMlMuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkxpc3RGaW5kaW5nc1Jlc3BvbnNlLkxpc3RGaW5kaW5nc1Jlc3VsdC5TdGF0ZUNoYW5nZVILc3RhdGVDaGFuZ2UScQoIcmVzb3VyY2UYAyABKAsyUC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuTGlzdEZpbmRpbmdzUmVzcG9uc2UuTGlzdEZpbmRpbmdzUmVzdWx0LlJlc291cmNlQgPgQQNSCHJlc291cmNlGoYCCghSZXNvdXJjZRISCgRuYW1lGAEgASgJUgRuYW1lEiEKDHByb2plY3RfbmFtZRgCIAEoCVILcHJvamVjdE5hbWUSMAoUcHJvamVjdF9kaXNwbGF5X25hbWUYAyABKAlSEnByb2plY3REaXNwbGF5TmFtZRIfCgtwYXJlbnRfbmFtZRgEIAEoCVIKcGFyZW50TmFtZRIuChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJUhFwYXJlbnREaXNwbGF5TmFtZRJACgdmb2xkZXJzGAcgAygLMiYuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZvbGRlclIHZm9sZGVycyJNCgtTdGF0ZUNoYW5nZRIKCgZVTlVTRUQQABILCgdDSEFOR0VEEAESDQoJVU5DSEFOR0VEEAISCQoFQURERUQQAxILCgdSRU1PVkVEEAQ=');
+    'ChRMaXN0RmluZGluZ3NSZXNwb25zZRJ7ChVsaXN0X2ZpbmRpbmdzX3Jlc3VsdHMYASADKAsyRy5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuTGlzdEZpbmRpbmdzUmVzcG9uc2UuTGlzdEZpbmRpbmdzUmVzdWx0UhNsaXN0RmluZGluZ3NSZXN1bHRzEjcKCXJlYWRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCHJlYWRUaW1lEiYKD25leHRfcGFnZV90b2tlbhgDIAEoCVINbmV4dFBhZ2VUb2tlbhIdCgp0b3RhbF9zaXplGAQgASgFUgl0b3RhbFNpemUa0QUKEkxpc3RGaW5kaW5nc1Jlc3VsdBJBCgdmaW5kaW5nGAEgASgLMicuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmdSB2ZpbmRpbmcSdgoMc3RhdGVfY2hhbmdlGAIgASgOMlMuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkxpc3RGaW5kaW5nc1Jlc3BvbnNlLkxpc3RGaW5kaW5nc1Jlc3VsdC5TdGF0ZUNoYW5nZVILc3RhdGVDaGFuZ2UScQoIcmVzb3VyY2UYAyABKAsyUC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuTGlzdEZpbmRpbmdzUmVzcG9uc2UuTGlzdEZpbmRpbmdzUmVzdWx0LlJlc291cmNlQgPgQQNSCHJlc291cmNlGr0CCghSZXNvdXJjZRISCgRuYW1lGAEgASgJUgRuYW1lEiEKDHByb2plY3RfbmFtZRgCIAEoCVILcHJvamVjdE5hbWUSMAoUcHJvamVjdF9kaXNwbGF5X25hbWUYAyABKAlSEnByb2plY3REaXNwbGF5TmFtZRIfCgtwYXJlbnRfbmFtZRgEIAEoCVIKcGFyZW50TmFtZRIuChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJUhFwYXJlbnREaXNwbGF5TmFtZRISCgR0eXBlGAYgASgJUgR0eXBlEkAKB2ZvbGRlcnMYByADKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRm9sZGVyUgdmb2xkZXJzEiEKDGRpc3BsYXlfbmFtZRgIIAEoCVILZGlzcGxheU5hbWUiTQoLU3RhdGVDaGFuZ2USCgoGVU5VU0VEEAASCwoHQ0hBTkdFRBABEg0KCVVOQ0hBTkdFRBACEgkKBUFEREVEEAMSCwoHUkVNT1ZFRBAE');
 @$core.Deprecated('Use setFindingStateRequestDescriptor instead')
 const SetFindingStateRequest$json = const {
   '1': 'SetFindingStateRequest',
@@ -751,6 +895,26 @@ const SetFindingStateRequest$json = const {
 final $typed_data.Uint8List setFindingStateRequestDescriptor =
     $convert.base64Decode(
         'ChZTZXRGaW5kaW5nU3RhdGVSZXF1ZXN0EkEKBG5hbWUYASABKAlCLeBBAvpBJwolc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vRmluZGluZ1IEbmFtZRJICgVzdGF0ZRgCIAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlN0YXRlQgPgQQJSBXN0YXRlEj4KCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQJSCXN0YXJ0VGltZQ==');
+@$core.Deprecated('Use setMuteRequestDescriptor instead')
+const SetMuteRequest$json = const {
+  '1': 'SetMuteRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'mute',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.securitycenter.v1.Finding.Mute',
+      '8': const {},
+      '10': 'mute'
+    },
+  ],
+};
+
+/// Descriptor for `SetMuteRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setMuteRequestDescriptor = $convert.base64Decode(
+    'Cg5TZXRNdXRlUmVxdWVzdBJBCgRuYW1lGAEgASgJQi3gQQL6QScKJXNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL0ZpbmRpbmdSBG5hbWUSRQoEbXV0ZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLk11dGVCA+BBAlIEbXV0ZQ==');
 @$core.Deprecated('Use runAssetDiscoveryRequestDescriptor instead')
 const RunAssetDiscoveryRequest$json = const {
   '1': 'RunAssetDiscoveryRequest',
@@ -770,6 +934,34 @@ const RunAssetDiscoveryRequest$json = const {
 final $typed_data.Uint8List runAssetDiscoveryRequestDescriptor =
     $convert.base64Decode(
         'ChhSdW5Bc3NldERpc2NvdmVyeVJlcXVlc3QSUAoGcGFyZW50GAEgASgJQjjgQQL6QTIKMGNsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL09yZ2FuaXphdGlvblIGcGFyZW50');
+@$core.Deprecated('Use updateExternalSystemRequestDescriptor instead')
+const UpdateExternalSystemRequest$json = const {
+  '1': 'UpdateExternalSystemRequest',
+  '2': const [
+    const {
+      '1': 'external_system',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.securitycenter.v1.ExternalSystem',
+      '8': const {},
+      '10': 'externalSystem'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateExternalSystemRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateExternalSystemRequestDescriptor =
+    $convert.base64Decode(
+        'ChtVcGRhdGVFeHRlcm5hbFN5c3RlbVJlcXVlc3QSXAoPZXh0ZXJuYWxfc3lzdGVtGAEgASgLMi4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkV4dGVybmFsU3lzdGVtQgPgQQJSDmV4dGVybmFsU3lzdGVtEjsKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza1IKdXBkYXRlTWFzaw==');
 @$core.Deprecated('Use updateFindingRequestDescriptor instead')
 const UpdateFindingRequest$json = const {
   '1': 'UpdateFindingRequest',
@@ -797,6 +989,34 @@ const UpdateFindingRequest$json = const {
 /// Descriptor for `UpdateFindingRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateFindingRequestDescriptor = $convert.base64Decode(
     'ChRVcGRhdGVGaW5kaW5nUmVxdWVzdBJGCgdmaW5kaW5nGAEgASgLMicuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmdCA+BBAlIHZmluZGluZxI7Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use updateMuteConfigRequestDescriptor instead')
+const UpdateMuteConfigRequest$json = const {
+  '1': 'UpdateMuteConfigRequest',
+  '2': const [
+    const {
+      '1': 'mute_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.securitycenter.v1.MuteConfig',
+      '8': const {},
+      '10': 'muteConfig'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateMuteConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateMuteConfigRequestDescriptor =
+    $convert.base64Decode(
+        'ChdVcGRhdGVNdXRlQ29uZmlnUmVxdWVzdBJQCgttdXRlX2NvbmZpZxgBIAEoCzIqLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5NdXRlQ29uZmlnQgPgQQJSCm11dGVDb25maWcSOwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrUgp1cGRhdGVNYXNr');
 @$core.Deprecated('Use updateNotificationConfigRequestDescriptor instead')
 const UpdateNotificationConfigRequest$json = const {
   '1': 'UpdateNotificationConfigRequest',

@@ -371,6 +371,11 @@ class CustomJobSpec extends $pb.GeneratedMessage {
             ? ''
             : 'baseOutputDirectory',
         subBuilder: $3.GcsDestination.create)
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tensorboard')
     ..aOB(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -385,6 +390,7 @@ class CustomJobSpec extends $pb.GeneratedMessage {
     $core.String? serviceAccount,
     $core.String? network,
     $3.GcsDestination? baseOutputDirectory,
+    $core.String? tensorboard,
     $core.bool? enableWebAccess,
   }) {
     final _result = create();
@@ -402,6 +408,9 @@ class CustomJobSpec extends $pb.GeneratedMessage {
     }
     if (baseOutputDirectory != null) {
       _result.baseOutputDirectory = baseOutputDirectory;
+    }
+    if (tensorboard != null) {
+      _result.tensorboard = tensorboard;
     }
     if (enableWebAccess != null) {
       _result.enableWebAccess = enableWebAccess;
@@ -490,15 +499,27 @@ class CustomJobSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $3.GcsDestination ensureBaseOutputDirectory() => $_ensure(4);
 
+  @$pb.TagNumber(7)
+  $core.String get tensorboard => $_getSZ(5);
+  @$pb.TagNumber(7)
+  set tensorboard($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasTensorboard() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearTensorboard() => clearField(7);
+
   @$pb.TagNumber(10)
-  $core.bool get enableWebAccess => $_getBF(5);
+  $core.bool get enableWebAccess => $_getBF(6);
   @$pb.TagNumber(10)
   set enableWebAccess($core.bool v) {
-    $_setBool(5, v);
+    $_setBool(6, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasEnableWebAccess() => $_has(5);
+  $core.bool hasEnableWebAccess() => $_has(6);
   @$pb.TagNumber(10)
   void clearEnableWebAccess() => clearField(10);
 }

@@ -146,6 +146,11 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'pageToken')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
     ..hasRequiredFields = false;
 
   ListKnowledgeBasesRequest._() : super();
@@ -153,6 +158,7 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
+    $core.String? filter,
   }) {
     final _result = create();
     if (parent != null) {
@@ -163,6 +169,9 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
     }
     if (pageToken != null) {
       _result.pageToken = pageToken;
+    }
+    if (filter != null) {
+      _result.filter = filter;
     }
     return _result;
   }
@@ -230,6 +239,18 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set filter($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFilter() => clearField(4);
 }
 
 class ListKnowledgeBasesResponse extends $pb.GeneratedMessage {

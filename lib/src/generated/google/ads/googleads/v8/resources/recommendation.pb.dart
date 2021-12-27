@@ -15,8 +15,8 @@ import 'ad.pb.dart' as $1;
 import '../common/extensions.pb.dart' as $2;
 
 import '../enums/recommendation_type.pbenum.dart' as $3;
-import '../enums/keyword_match_type.pbenum.dart' as $4;
-import '../enums/target_cpa_opt_in_recommendation_goal.pbenum.dart' as $5;
+import '../enums/target_cpa_opt_in_recommendation_goal.pbenum.dart' as $4;
+import '../enums/keyword_match_type.pbenum.dart' as $5;
 
 class Recommendation_RecommendationImpact extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -602,110 +602,58 @@ class Recommendation_KeywordRecommendation extends $pb.GeneratedMessage {
   void clearRecommendedCpcBidMicros() => clearField(3);
 }
 
-class Recommendation_KeywordMatchTypeRecommendation
+class Recommendation_SearchPartnersOptInRecommendation
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'Recommendation.KeywordMatchTypeRecommendation',
+          : 'Recommendation.SearchPartnersOptInRecommendation',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..aOM<$0.KeywordInfo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyword',
-        subBuilder: $0.KeywordInfo.create)
-    ..e<$4.KeywordMatchTypeEnum_KeywordMatchType>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'recommendedMatchType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $4.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
-        valueOf: $4.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
-        enumValues: $4.KeywordMatchTypeEnum_KeywordMatchType.values)
     ..hasRequiredFields = false;
 
-  Recommendation_KeywordMatchTypeRecommendation._() : super();
-  factory Recommendation_KeywordMatchTypeRecommendation({
-    $0.KeywordInfo? keyword,
-    $4.KeywordMatchTypeEnum_KeywordMatchType? recommendedMatchType,
-  }) {
-    final _result = create();
-    if (keyword != null) {
-      _result.keyword = keyword;
-    }
-    if (recommendedMatchType != null) {
-      _result.recommendedMatchType = recommendedMatchType;
-    }
-    return _result;
-  }
-  factory Recommendation_KeywordMatchTypeRecommendation.fromBuffer(
+  Recommendation_SearchPartnersOptInRecommendation._() : super();
+  factory Recommendation_SearchPartnersOptInRecommendation() => create();
+  factory Recommendation_SearchPartnersOptInRecommendation.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory Recommendation_KeywordMatchTypeRecommendation.fromJson($core.String i,
+  factory Recommendation_SearchPartnersOptInRecommendation.fromJson(
+          $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  Recommendation_KeywordMatchTypeRecommendation clone() =>
-      Recommendation_KeywordMatchTypeRecommendation()..mergeFromMessage(this);
+  Recommendation_SearchPartnersOptInRecommendation clone() =>
+      Recommendation_SearchPartnersOptInRecommendation()
+        ..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  Recommendation_KeywordMatchTypeRecommendation copyWith(
-          void Function(Recommendation_KeywordMatchTypeRecommendation)
+  Recommendation_SearchPartnersOptInRecommendation copyWith(
+          void Function(Recommendation_SearchPartnersOptInRecommendation)
               updates) =>
-      super.copyWith((message) =>
-              updates(message as Recommendation_KeywordMatchTypeRecommendation))
-          as Recommendation_KeywordMatchTypeRecommendation; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(
+              message as Recommendation_SearchPartnersOptInRecommendation))
+          as Recommendation_SearchPartnersOptInRecommendation; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Recommendation_KeywordMatchTypeRecommendation create() =>
-      Recommendation_KeywordMatchTypeRecommendation._();
-  Recommendation_KeywordMatchTypeRecommendation createEmptyInstance() =>
+  static Recommendation_SearchPartnersOptInRecommendation create() =>
+      Recommendation_SearchPartnersOptInRecommendation._();
+  Recommendation_SearchPartnersOptInRecommendation createEmptyInstance() =>
       create();
-  static $pb.PbList<Recommendation_KeywordMatchTypeRecommendation>
+  static $pb.PbList<Recommendation_SearchPartnersOptInRecommendation>
       createRepeated() =>
-          $pb.PbList<Recommendation_KeywordMatchTypeRecommendation>();
+          $pb.PbList<Recommendation_SearchPartnersOptInRecommendation>();
   @$core.pragma('dart2js:noInline')
-  static Recommendation_KeywordMatchTypeRecommendation getDefault() =>
+  static Recommendation_SearchPartnersOptInRecommendation getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_KeywordMatchTypeRecommendation>(create);
-  static Recommendation_KeywordMatchTypeRecommendation? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $0.KeywordInfo get keyword => $_getN(0);
-  @$pb.TagNumber(1)
-  set keyword($0.KeywordInfo v) {
-    setField(1, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasKeyword() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearKeyword() => clearField(1);
-  @$pb.TagNumber(1)
-  $0.KeywordInfo ensureKeyword() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  $4.KeywordMatchTypeEnum_KeywordMatchType get recommendedMatchType =>
-      $_getN(1);
-  @$pb.TagNumber(2)
-  set recommendedMatchType($4.KeywordMatchTypeEnum_KeywordMatchType v) {
-    setField(2, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasRecommendedMatchType() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearRecommendedMatchType() => clearField(2);
+          Recommendation_SearchPartnersOptInRecommendation>(create);
+  static Recommendation_SearchPartnersOptInRecommendation? _defaultInstance;
 }
 
 class Recommendation_TextAdRecommendation extends $pb.GeneratedMessage {
@@ -826,109 +774,6 @@ class Recommendation_TextAdRecommendation extends $pb.GeneratedMessage {
   void clearAutoApplyDate() => clearField(5);
 }
 
-class Recommendation_MoveUnusedBudgetRecommendation
-    extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Recommendation.MoveUnusedBudgetRecommendation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..aOM<Recommendation_CampaignBudgetRecommendation>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'budgetRecommendation',
-        subBuilder: Recommendation_CampaignBudgetRecommendation.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'excessCampaignBudget')
-    ..hasRequiredFields = false;
-
-  Recommendation_MoveUnusedBudgetRecommendation._() : super();
-  factory Recommendation_MoveUnusedBudgetRecommendation({
-    Recommendation_CampaignBudgetRecommendation? budgetRecommendation,
-    $core.String? excessCampaignBudget,
-  }) {
-    final _result = create();
-    if (budgetRecommendation != null) {
-      _result.budgetRecommendation = budgetRecommendation;
-    }
-    if (excessCampaignBudget != null) {
-      _result.excessCampaignBudget = excessCampaignBudget;
-    }
-    return _result;
-  }
-  factory Recommendation_MoveUnusedBudgetRecommendation.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Recommendation_MoveUnusedBudgetRecommendation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Recommendation_MoveUnusedBudgetRecommendation clone() =>
-      Recommendation_MoveUnusedBudgetRecommendation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Recommendation_MoveUnusedBudgetRecommendation copyWith(
-          void Function(Recommendation_MoveUnusedBudgetRecommendation)
-              updates) =>
-      super.copyWith((message) =>
-              updates(message as Recommendation_MoveUnusedBudgetRecommendation))
-          as Recommendation_MoveUnusedBudgetRecommendation; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_MoveUnusedBudgetRecommendation create() =>
-      Recommendation_MoveUnusedBudgetRecommendation._();
-  Recommendation_MoveUnusedBudgetRecommendation createEmptyInstance() =>
-      create();
-  static $pb.PbList<Recommendation_MoveUnusedBudgetRecommendation>
-      createRepeated() =>
-          $pb.PbList<Recommendation_MoveUnusedBudgetRecommendation>();
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_MoveUnusedBudgetRecommendation getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_MoveUnusedBudgetRecommendation>(create);
-  static Recommendation_MoveUnusedBudgetRecommendation? _defaultInstance;
-
-  @$pb.TagNumber(2)
-  Recommendation_CampaignBudgetRecommendation get budgetRecommendation =>
-      $_getN(0);
-  @$pb.TagNumber(2)
-  set budgetRecommendation(Recommendation_CampaignBudgetRecommendation v) {
-    setField(2, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasBudgetRecommendation() => $_has(0);
-  @$pb.TagNumber(2)
-  void clearBudgetRecommendation() => clearField(2);
-  @$pb.TagNumber(2)
-  Recommendation_CampaignBudgetRecommendation ensureBudgetRecommendation() =>
-      $_ensure(0);
-
-  @$pb.TagNumber(3)
-  $core.String get excessCampaignBudget => $_getSZ(1);
-  @$pb.TagNumber(3)
-  set excessCampaignBudget($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasExcessCampaignBudget() => $_has(1);
-  @$pb.TagNumber(3)
-  void clearExcessCampaignBudget() => clearField(3);
-}
-
 class Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -940,19 +785,19 @@ class Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOp
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..e<$5.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal>(
+    ..e<$4.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'goal',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $5
+        defaultOrMaker: $4
             .TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
             .UNSPECIFIED,
-        valueOf: $5
+        valueOf: $4
             .TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
             .valueOf,
-        enumValues: $5
+        enumValues: $4
             .TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
             .values)
     ..aOM<Recommendation_RecommendationImpact>(
@@ -976,7 +821,7 @@ class Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOp
   Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption._()
       : super();
   factory Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption({
-    $5.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal?
+    $4.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal?
         goal,
     Recommendation_RecommendationImpact? impact,
     $fixnum.Int64? targetCpaMicros,
@@ -1044,11 +889,11 @@ class Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOp
       _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+  $4.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
       get goal => $_getN(0);
   @$pb.TagNumber(1)
   set goal(
-      $5.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      $4.TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
           v) {
     setField(1, v);
   }
@@ -1191,93 +1036,12 @@ class Recommendation_TargetCpaOptInRecommendation extends $pb.GeneratedMessage {
   void clearRecommendedTargetCpaMicros() => clearField(3);
 }
 
-class Recommendation_ResponsiveSearchAdRecommendation
+class Recommendation_MaximizeClicksOptInRecommendation
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'Recommendation.ResponsiveSearchAdRecommendation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..aOM<$1.Ad>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ad',
-        subBuilder: $1.Ad.create)
-    ..hasRequiredFields = false;
-
-  Recommendation_ResponsiveSearchAdRecommendation._() : super();
-  factory Recommendation_ResponsiveSearchAdRecommendation({
-    $1.Ad? ad,
-  }) {
-    final _result = create();
-    if (ad != null) {
-      _result.ad = ad;
-    }
-    return _result;
-  }
-  factory Recommendation_ResponsiveSearchAdRecommendation.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Recommendation_ResponsiveSearchAdRecommendation.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Recommendation_ResponsiveSearchAdRecommendation clone() =>
-      Recommendation_ResponsiveSearchAdRecommendation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Recommendation_ResponsiveSearchAdRecommendation copyWith(
-          void Function(Recommendation_ResponsiveSearchAdRecommendation)
-              updates) =>
-      super.copyWith((message) => updates(
-              message as Recommendation_ResponsiveSearchAdRecommendation))
-          as Recommendation_ResponsiveSearchAdRecommendation; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_ResponsiveSearchAdRecommendation create() =>
-      Recommendation_ResponsiveSearchAdRecommendation._();
-  Recommendation_ResponsiveSearchAdRecommendation createEmptyInstance() =>
-      create();
-  static $pb.PbList<Recommendation_ResponsiveSearchAdRecommendation>
-      createRepeated() =>
-          $pb.PbList<Recommendation_ResponsiveSearchAdRecommendation>();
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_ResponsiveSearchAdRecommendation getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_ResponsiveSearchAdRecommendation>(create);
-  static Recommendation_ResponsiveSearchAdRecommendation? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $1.Ad get ad => $_getN(0);
-  @$pb.TagNumber(1)
-  set ad($1.Ad v) {
-    setField(1, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasAd() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAd() => clearField(1);
-  @$pb.TagNumber(1)
-  $1.Ad ensureAd() => $_ensure(0);
-}
-
-class Recommendation_MaximizeConversionsOptInRecommendation
-    extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Recommendation.MaximizeConversionsOptInRecommendation',
+          : 'Recommendation.MaximizeClicksOptInRecommendation',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -1290,8 +1054,8 @@ class Recommendation_MaximizeConversionsOptInRecommendation
             : 'recommendedBudgetAmountMicros')
     ..hasRequiredFields = false;
 
-  Recommendation_MaximizeConversionsOptInRecommendation._() : super();
-  factory Recommendation_MaximizeConversionsOptInRecommendation({
+  Recommendation_MaximizeClicksOptInRecommendation._() : super();
+  factory Recommendation_MaximizeClicksOptInRecommendation({
     $fixnum.Int64? recommendedBudgetAmountMicros,
   }) {
     final _result = create();
@@ -1300,44 +1064,43 @@ class Recommendation_MaximizeConversionsOptInRecommendation
     }
     return _result;
   }
-  factory Recommendation_MaximizeConversionsOptInRecommendation.fromBuffer(
+  factory Recommendation_MaximizeClicksOptInRecommendation.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory Recommendation_MaximizeConversionsOptInRecommendation.fromJson(
+  factory Recommendation_MaximizeClicksOptInRecommendation.fromJson(
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  Recommendation_MaximizeConversionsOptInRecommendation clone() =>
-      Recommendation_MaximizeConversionsOptInRecommendation()
+  Recommendation_MaximizeClicksOptInRecommendation clone() =>
+      Recommendation_MaximizeClicksOptInRecommendation()
         ..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  Recommendation_MaximizeConversionsOptInRecommendation copyWith(
-          void Function(Recommendation_MaximizeConversionsOptInRecommendation)
+  Recommendation_MaximizeClicksOptInRecommendation copyWith(
+          void Function(Recommendation_MaximizeClicksOptInRecommendation)
               updates) =>
       super.copyWith((message) => updates(
-              message as Recommendation_MaximizeConversionsOptInRecommendation))
-          as Recommendation_MaximizeConversionsOptInRecommendation; // ignore: deprecated_member_use
+              message as Recommendation_MaximizeClicksOptInRecommendation))
+          as Recommendation_MaximizeClicksOptInRecommendation; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Recommendation_MaximizeConversionsOptInRecommendation create() =>
-      Recommendation_MaximizeConversionsOptInRecommendation._();
-  Recommendation_MaximizeConversionsOptInRecommendation createEmptyInstance() =>
+  static Recommendation_MaximizeClicksOptInRecommendation create() =>
+      Recommendation_MaximizeClicksOptInRecommendation._();
+  Recommendation_MaximizeClicksOptInRecommendation createEmptyInstance() =>
       create();
-  static $pb.PbList<Recommendation_MaximizeConversionsOptInRecommendation>
+  static $pb.PbList<Recommendation_MaximizeClicksOptInRecommendation>
       createRepeated() =>
-          $pb.PbList<Recommendation_MaximizeConversionsOptInRecommendation>();
+          $pb.PbList<Recommendation_MaximizeClicksOptInRecommendation>();
   @$core.pragma('dart2js:noInline')
-  static Recommendation_MaximizeConversionsOptInRecommendation getDefault() =>
+  static Recommendation_MaximizeClicksOptInRecommendation getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_MaximizeConversionsOptInRecommendation>(create);
-  static Recommendation_MaximizeConversionsOptInRecommendation?
-      _defaultInstance;
+          Recommendation_MaximizeClicksOptInRecommendation>(create);
+  static Recommendation_MaximizeClicksOptInRecommendation? _defaultInstance;
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get recommendedBudgetAmountMicros => $_getI64(0);
@@ -1422,6 +1185,153 @@ class Recommendation_CalloutExtensionRecommendation
   $core.List<$2.CalloutFeedItem> get recommendedExtensions => $_getList(0);
 }
 
+class Recommendation_CallExtensionRecommendation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Recommendation.CallExtensionRecommendation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..pc<$2.CallFeedItem>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'recommendedExtensions',
+        $pb.PbFieldType.PM,
+        subBuilder: $2.CallFeedItem.create)
+    ..hasRequiredFields = false;
+
+  Recommendation_CallExtensionRecommendation._() : super();
+  factory Recommendation_CallExtensionRecommendation({
+    $core.Iterable<$2.CallFeedItem>? recommendedExtensions,
+  }) {
+    final _result = create();
+    if (recommendedExtensions != null) {
+      _result.recommendedExtensions.addAll(recommendedExtensions);
+    }
+    return _result;
+  }
+  factory Recommendation_CallExtensionRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_CallExtensionRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Recommendation_CallExtensionRecommendation clone() =>
+      Recommendation_CallExtensionRecommendation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Recommendation_CallExtensionRecommendation copyWith(
+          void Function(Recommendation_CallExtensionRecommendation) updates) =>
+      super.copyWith((message) =>
+              updates(message as Recommendation_CallExtensionRecommendation))
+          as Recommendation_CallExtensionRecommendation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_CallExtensionRecommendation create() =>
+      Recommendation_CallExtensionRecommendation._();
+  Recommendation_CallExtensionRecommendation createEmptyInstance() => create();
+  static $pb.PbList<Recommendation_CallExtensionRecommendation>
+      createRepeated() =>
+          $pb.PbList<Recommendation_CallExtensionRecommendation>();
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_CallExtensionRecommendation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Recommendation_CallExtensionRecommendation>(create);
+  static Recommendation_CallExtensionRecommendation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$2.CallFeedItem> get recommendedExtensions => $_getList(0);
+}
+
+class Recommendation_MaximizeConversionsOptInRecommendation
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Recommendation.MaximizeConversionsOptInRecommendation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'recommendedBudgetAmountMicros')
+    ..hasRequiredFields = false;
+
+  Recommendation_MaximizeConversionsOptInRecommendation._() : super();
+  factory Recommendation_MaximizeConversionsOptInRecommendation({
+    $fixnum.Int64? recommendedBudgetAmountMicros,
+  }) {
+    final _result = create();
+    if (recommendedBudgetAmountMicros != null) {
+      _result.recommendedBudgetAmountMicros = recommendedBudgetAmountMicros;
+    }
+    return _result;
+  }
+  factory Recommendation_MaximizeConversionsOptInRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_MaximizeConversionsOptInRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Recommendation_MaximizeConversionsOptInRecommendation clone() =>
+      Recommendation_MaximizeConversionsOptInRecommendation()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Recommendation_MaximizeConversionsOptInRecommendation copyWith(
+          void Function(Recommendation_MaximizeConversionsOptInRecommendation)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as Recommendation_MaximizeConversionsOptInRecommendation))
+          as Recommendation_MaximizeConversionsOptInRecommendation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_MaximizeConversionsOptInRecommendation create() =>
+      Recommendation_MaximizeConversionsOptInRecommendation._();
+  Recommendation_MaximizeConversionsOptInRecommendation createEmptyInstance() =>
+      create();
+  static $pb.PbList<Recommendation_MaximizeConversionsOptInRecommendation>
+      createRepeated() =>
+          $pb.PbList<Recommendation_MaximizeConversionsOptInRecommendation>();
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_MaximizeConversionsOptInRecommendation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Recommendation_MaximizeConversionsOptInRecommendation>(create);
+  static Recommendation_MaximizeConversionsOptInRecommendation?
+      _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get recommendedBudgetAmountMicros => $_getI64(0);
+  @$pb.TagNumber(2)
+  set recommendedBudgetAmountMicros($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRecommendedBudgetAmountMicros() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearRecommendedBudgetAmountMicros() => clearField(2);
+}
+
 class Recommendation_EnhancedCpcOptInRecommendation
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1472,192 +1382,6 @@ class Recommendation_EnhancedCpcOptInRecommendation
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           Recommendation_EnhancedCpcOptInRecommendation>(create);
   static Recommendation_EnhancedCpcOptInRecommendation? _defaultInstance;
-}
-
-class Recommendation_SearchPartnersOptInRecommendation
-    extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Recommendation.SearchPartnersOptInRecommendation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  Recommendation_SearchPartnersOptInRecommendation._() : super();
-  factory Recommendation_SearchPartnersOptInRecommendation() => create();
-  factory Recommendation_SearchPartnersOptInRecommendation.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Recommendation_SearchPartnersOptInRecommendation.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Recommendation_SearchPartnersOptInRecommendation clone() =>
-      Recommendation_SearchPartnersOptInRecommendation()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Recommendation_SearchPartnersOptInRecommendation copyWith(
-          void Function(Recommendation_SearchPartnersOptInRecommendation)
-              updates) =>
-      super.copyWith((message) => updates(
-              message as Recommendation_SearchPartnersOptInRecommendation))
-          as Recommendation_SearchPartnersOptInRecommendation; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_SearchPartnersOptInRecommendation create() =>
-      Recommendation_SearchPartnersOptInRecommendation._();
-  Recommendation_SearchPartnersOptInRecommendation createEmptyInstance() =>
-      create();
-  static $pb.PbList<Recommendation_SearchPartnersOptInRecommendation>
-      createRepeated() =>
-          $pb.PbList<Recommendation_SearchPartnersOptInRecommendation>();
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_SearchPartnersOptInRecommendation getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_SearchPartnersOptInRecommendation>(create);
-  static Recommendation_SearchPartnersOptInRecommendation? _defaultInstance;
-}
-
-class Recommendation_OptimizeAdRotationRecommendation
-    extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Recommendation.OptimizeAdRotationRecommendation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  Recommendation_OptimizeAdRotationRecommendation._() : super();
-  factory Recommendation_OptimizeAdRotationRecommendation() => create();
-  factory Recommendation_OptimizeAdRotationRecommendation.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Recommendation_OptimizeAdRotationRecommendation.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Recommendation_OptimizeAdRotationRecommendation clone() =>
-      Recommendation_OptimizeAdRotationRecommendation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Recommendation_OptimizeAdRotationRecommendation copyWith(
-          void Function(Recommendation_OptimizeAdRotationRecommendation)
-              updates) =>
-      super.copyWith((message) => updates(
-              message as Recommendation_OptimizeAdRotationRecommendation))
-          as Recommendation_OptimizeAdRotationRecommendation; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_OptimizeAdRotationRecommendation create() =>
-      Recommendation_OptimizeAdRotationRecommendation._();
-  Recommendation_OptimizeAdRotationRecommendation createEmptyInstance() =>
-      create();
-  static $pb.PbList<Recommendation_OptimizeAdRotationRecommendation>
-      createRepeated() =>
-          $pb.PbList<Recommendation_OptimizeAdRotationRecommendation>();
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_OptimizeAdRotationRecommendation getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_OptimizeAdRotationRecommendation>(create);
-  static Recommendation_OptimizeAdRotationRecommendation? _defaultInstance;
-}
-
-class Recommendation_MaximizeClicksOptInRecommendation
-    extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Recommendation.MaximizeClicksOptInRecommendation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ads.googleads.v8.resources'),
-      createEmptyInstance: create)
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'recommendedBudgetAmountMicros')
-    ..hasRequiredFields = false;
-
-  Recommendation_MaximizeClicksOptInRecommendation._() : super();
-  factory Recommendation_MaximizeClicksOptInRecommendation({
-    $fixnum.Int64? recommendedBudgetAmountMicros,
-  }) {
-    final _result = create();
-    if (recommendedBudgetAmountMicros != null) {
-      _result.recommendedBudgetAmountMicros = recommendedBudgetAmountMicros;
-    }
-    return _result;
-  }
-  factory Recommendation_MaximizeClicksOptInRecommendation.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Recommendation_MaximizeClicksOptInRecommendation.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Recommendation_MaximizeClicksOptInRecommendation clone() =>
-      Recommendation_MaximizeClicksOptInRecommendation()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Recommendation_MaximizeClicksOptInRecommendation copyWith(
-          void Function(Recommendation_MaximizeClicksOptInRecommendation)
-              updates) =>
-      super.copyWith((message) => updates(
-              message as Recommendation_MaximizeClicksOptInRecommendation))
-          as Recommendation_MaximizeClicksOptInRecommendation; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_MaximizeClicksOptInRecommendation create() =>
-      Recommendation_MaximizeClicksOptInRecommendation._();
-  Recommendation_MaximizeClicksOptInRecommendation createEmptyInstance() =>
-      create();
-  static $pb.PbList<Recommendation_MaximizeClicksOptInRecommendation>
-      createRepeated() =>
-          $pb.PbList<Recommendation_MaximizeClicksOptInRecommendation>();
-  @$core.pragma('dart2js:noInline')
-  static Recommendation_MaximizeClicksOptInRecommendation getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_MaximizeClicksOptInRecommendation>(create);
-  static Recommendation_MaximizeClicksOptInRecommendation? _defaultInstance;
-
-  @$pb.TagNumber(2)
-  $fixnum.Int64 get recommendedBudgetAmountMicros => $_getI64(0);
-  @$pb.TagNumber(2)
-  set recommendedBudgetAmountMicros($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasRecommendedBudgetAmountMicros() => $_has(0);
-  @$pb.TagNumber(2)
-  void clearRecommendedBudgetAmountMicros() => clearField(2);
 }
 
 class Recommendation_SitelinkExtensionRecommendation
@@ -1729,6 +1453,165 @@ class Recommendation_SitelinkExtensionRecommendation
 
   @$pb.TagNumber(1)
   $core.List<$2.SitelinkFeedItem> get recommendedExtensions => $_getList(0);
+}
+
+class Recommendation_OptimizeAdRotationRecommendation
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Recommendation.OptimizeAdRotationRecommendation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  Recommendation_OptimizeAdRotationRecommendation._() : super();
+  factory Recommendation_OptimizeAdRotationRecommendation() => create();
+  factory Recommendation_OptimizeAdRotationRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_OptimizeAdRotationRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Recommendation_OptimizeAdRotationRecommendation clone() =>
+      Recommendation_OptimizeAdRotationRecommendation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Recommendation_OptimizeAdRotationRecommendation copyWith(
+          void Function(Recommendation_OptimizeAdRotationRecommendation)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as Recommendation_OptimizeAdRotationRecommendation))
+          as Recommendation_OptimizeAdRotationRecommendation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_OptimizeAdRotationRecommendation create() =>
+      Recommendation_OptimizeAdRotationRecommendation._();
+  Recommendation_OptimizeAdRotationRecommendation createEmptyInstance() =>
+      create();
+  static $pb.PbList<Recommendation_OptimizeAdRotationRecommendation>
+      createRepeated() =>
+          $pb.PbList<Recommendation_OptimizeAdRotationRecommendation>();
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_OptimizeAdRotationRecommendation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Recommendation_OptimizeAdRotationRecommendation>(create);
+  static Recommendation_OptimizeAdRotationRecommendation? _defaultInstance;
+}
+
+class Recommendation_KeywordMatchTypeRecommendation
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Recommendation.KeywordMatchTypeRecommendation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..aOM<$0.KeywordInfo>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'keyword',
+        subBuilder: $0.KeywordInfo.create)
+    ..e<$5.KeywordMatchTypeEnum_KeywordMatchType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'recommendedMatchType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $5.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
+        valueOf: $5.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
+        enumValues: $5.KeywordMatchTypeEnum_KeywordMatchType.values)
+    ..hasRequiredFields = false;
+
+  Recommendation_KeywordMatchTypeRecommendation._() : super();
+  factory Recommendation_KeywordMatchTypeRecommendation({
+    $0.KeywordInfo? keyword,
+    $5.KeywordMatchTypeEnum_KeywordMatchType? recommendedMatchType,
+  }) {
+    final _result = create();
+    if (keyword != null) {
+      _result.keyword = keyword;
+    }
+    if (recommendedMatchType != null) {
+      _result.recommendedMatchType = recommendedMatchType;
+    }
+    return _result;
+  }
+  factory Recommendation_KeywordMatchTypeRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_KeywordMatchTypeRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Recommendation_KeywordMatchTypeRecommendation clone() =>
+      Recommendation_KeywordMatchTypeRecommendation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Recommendation_KeywordMatchTypeRecommendation copyWith(
+          void Function(Recommendation_KeywordMatchTypeRecommendation)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as Recommendation_KeywordMatchTypeRecommendation))
+          as Recommendation_KeywordMatchTypeRecommendation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_KeywordMatchTypeRecommendation create() =>
+      Recommendation_KeywordMatchTypeRecommendation._();
+  Recommendation_KeywordMatchTypeRecommendation createEmptyInstance() =>
+      create();
+  static $pb.PbList<Recommendation_KeywordMatchTypeRecommendation>
+      createRepeated() =>
+          $pb.PbList<Recommendation_KeywordMatchTypeRecommendation>();
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_KeywordMatchTypeRecommendation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Recommendation_KeywordMatchTypeRecommendation>(create);
+  static Recommendation_KeywordMatchTypeRecommendation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.KeywordInfo get keyword => $_getN(0);
+  @$pb.TagNumber(1)
+  set keyword($0.KeywordInfo v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasKeyword() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKeyword() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.KeywordInfo ensureKeyword() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $5.KeywordMatchTypeEnum_KeywordMatchType get recommendedMatchType =>
+      $_getN(1);
+  @$pb.TagNumber(2)
+  set recommendedMatchType($5.KeywordMatchTypeEnum_KeywordMatchType v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRecommendedMatchType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRecommendedMatchType() => clearField(2);
 }
 
 class Recommendation_TargetRoasOptInRecommendation
@@ -1831,71 +1714,188 @@ class Recommendation_TargetRoasOptInRecommendation
   void clearRequiredCampaignBudgetAmountMicros() => clearField(2);
 }
 
-class Recommendation_CallExtensionRecommendation extends $pb.GeneratedMessage {
+class Recommendation_MoveUnusedBudgetRecommendation
+    extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'Recommendation.CallExtensionRecommendation',
+          : 'Recommendation.MoveUnusedBudgetRecommendation',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'google.ads.googleads.v8.resources'),
       createEmptyInstance: create)
-    ..pc<$2.CallFeedItem>(
-        1,
+    ..aOM<Recommendation_CampaignBudgetRecommendation>(
+        2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'recommendedExtensions',
-        $pb.PbFieldType.PM,
-        subBuilder: $2.CallFeedItem.create)
+            : 'budgetRecommendation',
+        subBuilder: Recommendation_CampaignBudgetRecommendation.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'excessCampaignBudget')
     ..hasRequiredFields = false;
 
-  Recommendation_CallExtensionRecommendation._() : super();
-  factory Recommendation_CallExtensionRecommendation({
-    $core.Iterable<$2.CallFeedItem>? recommendedExtensions,
+  Recommendation_MoveUnusedBudgetRecommendation._() : super();
+  factory Recommendation_MoveUnusedBudgetRecommendation({
+    Recommendation_CampaignBudgetRecommendation? budgetRecommendation,
+    $core.String? excessCampaignBudget,
   }) {
     final _result = create();
-    if (recommendedExtensions != null) {
-      _result.recommendedExtensions.addAll(recommendedExtensions);
+    if (budgetRecommendation != null) {
+      _result.budgetRecommendation = budgetRecommendation;
+    }
+    if (excessCampaignBudget != null) {
+      _result.excessCampaignBudget = excessCampaignBudget;
     }
     return _result;
   }
-  factory Recommendation_CallExtensionRecommendation.fromBuffer(
+  factory Recommendation_MoveUnusedBudgetRecommendation.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory Recommendation_CallExtensionRecommendation.fromJson($core.String i,
+  factory Recommendation_MoveUnusedBudgetRecommendation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  Recommendation_CallExtensionRecommendation clone() =>
-      Recommendation_CallExtensionRecommendation()..mergeFromMessage(this);
+  Recommendation_MoveUnusedBudgetRecommendation clone() =>
+      Recommendation_MoveUnusedBudgetRecommendation()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  Recommendation_CallExtensionRecommendation copyWith(
-          void Function(Recommendation_CallExtensionRecommendation) updates) =>
+  Recommendation_MoveUnusedBudgetRecommendation copyWith(
+          void Function(Recommendation_MoveUnusedBudgetRecommendation)
+              updates) =>
       super.copyWith((message) =>
-              updates(message as Recommendation_CallExtensionRecommendation))
-          as Recommendation_CallExtensionRecommendation; // ignore: deprecated_member_use
+              updates(message as Recommendation_MoveUnusedBudgetRecommendation))
+          as Recommendation_MoveUnusedBudgetRecommendation; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Recommendation_CallExtensionRecommendation create() =>
-      Recommendation_CallExtensionRecommendation._();
-  Recommendation_CallExtensionRecommendation createEmptyInstance() => create();
-  static $pb.PbList<Recommendation_CallExtensionRecommendation>
+  static Recommendation_MoveUnusedBudgetRecommendation create() =>
+      Recommendation_MoveUnusedBudgetRecommendation._();
+  Recommendation_MoveUnusedBudgetRecommendation createEmptyInstance() =>
+      create();
+  static $pb.PbList<Recommendation_MoveUnusedBudgetRecommendation>
       createRepeated() =>
-          $pb.PbList<Recommendation_CallExtensionRecommendation>();
+          $pb.PbList<Recommendation_MoveUnusedBudgetRecommendation>();
   @$core.pragma('dart2js:noInline')
-  static Recommendation_CallExtensionRecommendation getDefault() =>
+  static Recommendation_MoveUnusedBudgetRecommendation getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          Recommendation_CallExtensionRecommendation>(create);
-  static Recommendation_CallExtensionRecommendation? _defaultInstance;
+          Recommendation_MoveUnusedBudgetRecommendation>(create);
+  static Recommendation_MoveUnusedBudgetRecommendation? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  Recommendation_CampaignBudgetRecommendation get budgetRecommendation =>
+      $_getN(0);
+  @$pb.TagNumber(2)
+  set budgetRecommendation(Recommendation_CampaignBudgetRecommendation v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasBudgetRecommendation() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearBudgetRecommendation() => clearField(2);
+  @$pb.TagNumber(2)
+  Recommendation_CampaignBudgetRecommendation ensureBudgetRecommendation() =>
+      $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $core.String get excessCampaignBudget => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set excessCampaignBudget($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasExcessCampaignBudget() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearExcessCampaignBudget() => clearField(3);
+}
+
+class Recommendation_ResponsiveSearchAdRecommendation
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Recommendation.ResponsiveSearchAdRecommendation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.ads.googleads.v8.resources'),
+      createEmptyInstance: create)
+    ..aOM<$1.Ad>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ad',
+        subBuilder: $1.Ad.create)
+    ..hasRequiredFields = false;
+
+  Recommendation_ResponsiveSearchAdRecommendation._() : super();
+  factory Recommendation_ResponsiveSearchAdRecommendation({
+    $1.Ad? ad,
+  }) {
+    final _result = create();
+    if (ad != null) {
+      _result.ad = ad;
+    }
+    return _result;
+  }
+  factory Recommendation_ResponsiveSearchAdRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_ResponsiveSearchAdRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Recommendation_ResponsiveSearchAdRecommendation clone() =>
+      Recommendation_ResponsiveSearchAdRecommendation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Recommendation_ResponsiveSearchAdRecommendation copyWith(
+          void Function(Recommendation_ResponsiveSearchAdRecommendation)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as Recommendation_ResponsiveSearchAdRecommendation))
+          as Recommendation_ResponsiveSearchAdRecommendation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_ResponsiveSearchAdRecommendation create() =>
+      Recommendation_ResponsiveSearchAdRecommendation._();
+  Recommendation_ResponsiveSearchAdRecommendation createEmptyInstance() =>
+      create();
+  static $pb.PbList<Recommendation_ResponsiveSearchAdRecommendation>
+      createRepeated() =>
+          $pb.PbList<Recommendation_ResponsiveSearchAdRecommendation>();
+  @$core.pragma('dart2js:noInline')
+  static Recommendation_ResponsiveSearchAdRecommendation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Recommendation_ResponsiveSearchAdRecommendation>(create);
+  static Recommendation_ResponsiveSearchAdRecommendation? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.CallFeedItem> get recommendedExtensions => $_getList(0);
+  $1.Ad get ad => $_getN(0);
+  @$pb.TagNumber(1)
+  set ad($1.Ad v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAd() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAd() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Ad ensureAd() => $_ensure(0);
 }
 
 enum Recommendation_Recommendation {

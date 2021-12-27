@@ -202,12 +202,20 @@ const VoiceSelectionParams$json = const {
       '6': '.google.cloud.texttospeech.v1beta1.SsmlVoiceGender',
       '10': 'ssmlGender'
     },
+    const {
+      '1': 'custom_voice',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.texttospeech.v1beta1.CustomVoiceParams',
+      '10': 'customVoice'
+    },
   ],
 };
 
 /// Descriptor for `VoiceSelectionParams`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List voiceSelectionParamsDescriptor = $convert.base64Decode(
-    'ChRWb2ljZVNlbGVjdGlvblBhcmFtcxIoCg1sYW5ndWFnZV9jb2RlGAEgASgJQgPgQQJSDGxhbmd1YWdlQ29kZRISCgRuYW1lGAIgASgJUgRuYW1lElMKC3NzbWxfZ2VuZGVyGAMgASgOMjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlNzbWxWb2ljZUdlbmRlclIKc3NtbEdlbmRlcg==');
+    'ChRWb2ljZVNlbGVjdGlvblBhcmFtcxIoCg1sYW5ndWFnZV9jb2RlGAEgASgJQgPgQQJSDGxhbmd1YWdlQ29kZRISCgRuYW1lGAIgASgJUgRuYW1lElMKC3NzbWxfZ2VuZGVyGAMgASgOMjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlNzbWxWb2ljZUdlbmRlclIKc3NtbEdlbmRlchJXCgxjdXN0b21fdm9pY2UYBCABKAsyNC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuQ3VzdG9tVm9pY2VQYXJhbXNSC2N1c3RvbVZvaWNl');
 @$core.Deprecated('Use audioConfigDescriptor instead')
 const AudioConfig$json = const {
   '1': 'AudioConfig',
@@ -260,6 +268,37 @@ const AudioConfig$json = const {
 /// Descriptor for `AudioConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List audioConfigDescriptor = $convert.base64Decode(
     'CgtBdWRpb0NvbmZpZxJcCg5hdWRpb19lbmNvZGluZxgBIAEoDjIwLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5BdWRpb0VuY29kaW5nQgPgQQJSDWF1ZGlvRW5jb2RpbmcSKwoNc3BlYWtpbmdfcmF0ZRgCIAEoAUIG4EEE4EEBUgxzcGVha2luZ1JhdGUSHAoFcGl0Y2gYAyABKAFCBuBBBOBBAVIFcGl0Y2gSLAoOdm9sdW1lX2dhaW5fZGIYBCABKAFCBuBBBOBBAVIMdm9sdW1lR2FpbkRiEi8KEXNhbXBsZV9yYXRlX2hlcnR6GAUgASgFQgPgQQFSD3NhbXBsZVJhdGVIZXJ0ehI0ChJlZmZlY3RzX3Byb2ZpbGVfaWQYBiADKAlCBuBBBOBBAVIQZWZmZWN0c1Byb2ZpbGVJZA==');
+@$core.Deprecated('Use customVoiceParamsDescriptor instead')
+const CustomVoiceParams$json = const {
+  '1': 'CustomVoiceParams',
+  '2': const [
+    const {'1': 'model', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'model'},
+    const {
+      '1': 'reported_usage',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.texttospeech.v1beta1.CustomVoiceParams.ReportedUsage',
+      '8': const {},
+      '10': 'reportedUsage'
+    },
+  ],
+  '4': const [CustomVoiceParams_ReportedUsage$json],
+};
+
+@$core.Deprecated('Use customVoiceParamsDescriptor instead')
+const CustomVoiceParams_ReportedUsage$json = const {
+  '1': 'ReportedUsage',
+  '2': const [
+    const {'1': 'REPORTED_USAGE_UNSPECIFIED', '2': 0},
+    const {'1': 'REALTIME', '2': 1},
+    const {'1': 'OFFLINE', '2': 2},
+  ],
+};
+
+/// Descriptor for `CustomVoiceParams`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List customVoiceParamsDescriptor = $convert.base64Decode(
+    'ChFDdXN0b21Wb2ljZVBhcmFtcxI5CgVtb2RlbBgBIAEoCUIj4EEC+kEdChthdXRvbWwuZ29vZ2xlYXBpcy5jb20vTW9kZWxSBW1vZGVsEm4KDnJlcG9ydGVkX3VzYWdlGAMgASgOMkIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLkN1c3RvbVZvaWNlUGFyYW1zLlJlcG9ydGVkVXNhZ2VCA+BBAVINcmVwb3J0ZWRVc2FnZSJKCg1SZXBvcnRlZFVzYWdlEh4KGlJFUE9SVEVEX1VTQUdFX1VOU1BFQ0lGSUVEEAASDAoIUkVBTFRJTUUQARILCgdPRkZMSU5FEAI=');
 @$core.Deprecated('Use synthesizeSpeechResponseDescriptor instead')
 const SynthesizeSpeechResponse$json = const {
   '1': 'SynthesizeSpeechResponse',

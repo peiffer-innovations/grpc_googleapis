@@ -333,6 +333,13 @@ const ModelMonitoringAlertConfig$json = const {
       '9': 0,
       '10': 'emailAlertConfig'
     },
+    const {
+      '1': 'enable_logging',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'enableLogging'
+    },
   ],
   '3': const [ModelMonitoringAlertConfig_EmailAlertConfig$json],
   '8': const [
@@ -351,7 +358,7 @@ const ModelMonitoringAlertConfig_EmailAlertConfig$json = const {
 /// Descriptor for `ModelMonitoringAlertConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List modelMonitoringAlertConfigDescriptor =
     $convert.base64Decode(
-        'ChpNb2RlbE1vbml0b3JpbmdBbGVydENvbmZpZxJ8ChJlbWFpbF9hbGVydF9jb25maWcYASABKAsyTC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29uZmlnLkVtYWlsQWxlcnRDb25maWdIAFIQZW1haWxBbGVydENvbmZpZxozChBFbWFpbEFsZXJ0Q29uZmlnEh8KC3VzZXJfZW1haWxzGAEgAygJUgp1c2VyRW1haWxzQgcKBWFsZXJ0');
+        'ChpNb2RlbE1vbml0b3JpbmdBbGVydENvbmZpZxJ8ChJlbWFpbF9hbGVydF9jb25maWcYASABKAsyTC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29uZmlnLkVtYWlsQWxlcnRDb25maWdIAFIQZW1haWxBbGVydENvbmZpZxIlCg5lbmFibGVfbG9nZ2luZxgCIAEoCFINZW5hYmxlTG9nZ2luZxozChBFbWFpbEFsZXJ0Q29uZmlnEh8KC3VzZXJfZW1haWxzGAEgAygJUgp1c2VyRW1haWxzQgcKBWFsZXJ0');
 @$core.Deprecated('Use thresholdConfigDescriptor instead')
 const ThresholdConfig$json = const {
   '1': 'ThresholdConfig',

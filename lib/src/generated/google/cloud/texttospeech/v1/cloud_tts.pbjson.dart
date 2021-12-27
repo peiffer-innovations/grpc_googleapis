@@ -31,12 +31,14 @@ const AudioEncoding$json = const {
     const {'1': 'LINEAR16', '2': 1},
     const {'1': 'MP3', '2': 2},
     const {'1': 'OGG_OPUS', '2': 3},
+    const {'1': 'MULAW', '2': 5},
+    const {'1': 'ALAW', '2': 6},
   ],
 };
 
 /// Descriptor for `AudioEncoding`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List audioEncodingDescriptor = $convert.base64Decode(
-    'Cg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIHCgNNUDMQAhIMCghPR0dfT1BVUxAD');
+    'Cg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIHCgNNUDMQAhIMCghPR0dfT1BVUxADEgkKBU1VTEFXEAUSCAoEQUxBVxAG');
 @$core.Deprecated('Use listVoicesRequestDescriptor instead')
 const ListVoicesRequest$json = const {
   '1': 'ListVoicesRequest',

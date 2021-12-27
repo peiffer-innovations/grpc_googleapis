@@ -1271,15 +1271,24 @@ class KnowledgeOperationMetadata extends $pb.GeneratedMessage {
         defaultOrMaker: KnowledgeOperationMetadata_State.STATE_UNSPECIFIED,
         valueOf: KnowledgeOperationMetadata_State.valueOf,
         enumValues: KnowledgeOperationMetadata_State.values)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'knowledgeBase')
     ..hasRequiredFields = false;
 
   KnowledgeOperationMetadata._() : super();
   factory KnowledgeOperationMetadata({
     KnowledgeOperationMetadata_State? state,
+    $core.String? knowledgeBase,
   }) {
     final _result = create();
     if (state != null) {
       _result.state = state;
+    }
+    if (knowledgeBase != null) {
+      _result.knowledgeBase = knowledgeBase;
     }
     return _result;
   }
@@ -1324,6 +1333,18 @@ class KnowledgeOperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
   void clearState() => clearField(1);
+
+  @$pb.TagNumber(3)
+  $core.String get knowledgeBase => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set knowledgeBase($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasKnowledgeBase() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearKnowledgeBase() => clearField(3);
 }
 
 enum ReloadDocumentRequest_Source { gcsSource, notSet }

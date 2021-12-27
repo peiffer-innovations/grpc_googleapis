@@ -74,6 +74,13 @@ class KeywordPlanAdGroupKeywordErrorEnum_KeywordPlanAdGroupKeywordError
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'NEGATIVE_KEYWORD_HAS_CPC_BID');
+  static const KeywordPlanAdGroupKeywordErrorEnum_KeywordPlanAdGroupKeywordError
+      NEW_BMM_KEYWORDS_NOT_ALLOWED =
+      KeywordPlanAdGroupKeywordErrorEnum_KeywordPlanAdGroupKeywordError._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NEW_BMM_KEYWORDS_NOT_ALLOWED');
 
   static const $core.List<
           KeywordPlanAdGroupKeywordErrorEnum_KeywordPlanAdGroupKeywordError>
@@ -88,6 +95,7 @@ class KeywordPlanAdGroupKeywordErrorEnum_KeywordPlanAdGroupKeywordError
     KEYWORD_HAS_TOO_MANY_WORDS,
     INVALID_KEYWORD_TEXT,
     NEGATIVE_KEYWORD_HAS_CPC_BID,
+    NEW_BMM_KEYWORDS_NOT_ALLOWED,
   ];
 
   static final $core.Map<$core.int,

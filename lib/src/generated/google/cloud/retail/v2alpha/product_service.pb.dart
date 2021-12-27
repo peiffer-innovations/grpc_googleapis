@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'product.pb.dart' as $3;
 import '../../../protobuf/field_mask.pb.dart' as $5;
 import '../../../protobuf/timestamp.pb.dart' as $6;
+import 'common.pb.dart' as $7;
 
 class CreateProductRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1121,6 +1122,471 @@ class AddFulfillmentPlacesResponse extends $pb.GeneratedMessage {
   static AddFulfillmentPlacesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddFulfillmentPlacesResponse>(create);
   static AddFulfillmentPlacesResponse? _defaultInstance;
+}
+
+class AddLocalInventoriesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AddLocalInventoriesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'product')
+    ..pc<$7.LocalInventory>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'localInventories',
+        $pb.PbFieldType.PM,
+        subBuilder: $7.LocalInventory.create)
+    ..aOM<$5.FieldMask>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'addMask',
+        subBuilder: $5.FieldMask.create)
+    ..aOM<$6.Timestamp>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'addTime',
+        subBuilder: $6.Timestamp.create)
+    ..aOB(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowMissing')
+    ..hasRequiredFields = false;
+
+  AddLocalInventoriesRequest._() : super();
+  factory AddLocalInventoriesRequest({
+    $core.String? product,
+    $core.Iterable<$7.LocalInventory>? localInventories,
+    $5.FieldMask? addMask,
+    $6.Timestamp? addTime,
+    $core.bool? allowMissing,
+  }) {
+    final _result = create();
+    if (product != null) {
+      _result.product = product;
+    }
+    if (localInventories != null) {
+      _result.localInventories.addAll(localInventories);
+    }
+    if (addMask != null) {
+      _result.addMask = addMask;
+    }
+    if (addTime != null) {
+      _result.addTime = addTime;
+    }
+    if (allowMissing != null) {
+      _result.allowMissing = allowMissing;
+    }
+    return _result;
+  }
+  factory AddLocalInventoriesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AddLocalInventoriesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AddLocalInventoriesRequest clone() =>
+      AddLocalInventoriesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AddLocalInventoriesRequest copyWith(
+          void Function(AddLocalInventoriesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddLocalInventoriesRequest))
+          as AddLocalInventoriesRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AddLocalInventoriesRequest create() => AddLocalInventoriesRequest._();
+  AddLocalInventoriesRequest createEmptyInstance() => create();
+  static $pb.PbList<AddLocalInventoriesRequest> createRepeated() =>
+      $pb.PbList<AddLocalInventoriesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddLocalInventoriesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddLocalInventoriesRequest>(create);
+  static AddLocalInventoriesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get product => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set product($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProduct() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProduct() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$7.LocalInventory> get localInventories => $_getList(1);
+
+  @$pb.TagNumber(4)
+  $5.FieldMask get addMask => $_getN(2);
+  @$pb.TagNumber(4)
+  set addMask($5.FieldMask v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasAddMask() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearAddMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.FieldMask ensureAddMask() => $_ensure(2);
+
+  @$pb.TagNumber(5)
+  $6.Timestamp get addTime => $_getN(3);
+  @$pb.TagNumber(5)
+  set addTime($6.Timestamp v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasAddTime() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearAddTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $6.Timestamp ensureAddTime() => $_ensure(3);
+
+  @$pb.TagNumber(6)
+  $core.bool get allowMissing => $_getBF(4);
+  @$pb.TagNumber(6)
+  set allowMissing($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasAllowMissing() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearAllowMissing() => clearField(6);
+}
+
+class AddLocalInventoriesMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AddLocalInventoriesMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  AddLocalInventoriesMetadata._() : super();
+  factory AddLocalInventoriesMetadata() => create();
+  factory AddLocalInventoriesMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AddLocalInventoriesMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AddLocalInventoriesMetadata clone() =>
+      AddLocalInventoriesMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AddLocalInventoriesMetadata copyWith(
+          void Function(AddLocalInventoriesMetadata) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddLocalInventoriesMetadata))
+          as AddLocalInventoriesMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AddLocalInventoriesMetadata create() =>
+      AddLocalInventoriesMetadata._();
+  AddLocalInventoriesMetadata createEmptyInstance() => create();
+  static $pb.PbList<AddLocalInventoriesMetadata> createRepeated() =>
+      $pb.PbList<AddLocalInventoriesMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static AddLocalInventoriesMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddLocalInventoriesMetadata>(create);
+  static AddLocalInventoriesMetadata? _defaultInstance;
+}
+
+class AddLocalInventoriesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AddLocalInventoriesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  AddLocalInventoriesResponse._() : super();
+  factory AddLocalInventoriesResponse() => create();
+  factory AddLocalInventoriesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AddLocalInventoriesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AddLocalInventoriesResponse clone() =>
+      AddLocalInventoriesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AddLocalInventoriesResponse copyWith(
+          void Function(AddLocalInventoriesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddLocalInventoriesResponse))
+          as AddLocalInventoriesResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AddLocalInventoriesResponse create() =>
+      AddLocalInventoriesResponse._();
+  AddLocalInventoriesResponse createEmptyInstance() => create();
+  static $pb.PbList<AddLocalInventoriesResponse> createRepeated() =>
+      $pb.PbList<AddLocalInventoriesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddLocalInventoriesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddLocalInventoriesResponse>(create);
+  static AddLocalInventoriesResponse? _defaultInstance;
+}
+
+class RemoveLocalInventoriesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RemoveLocalInventoriesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'product')
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'placeIds')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowMissing')
+    ..aOM<$6.Timestamp>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'removeTime',
+        subBuilder: $6.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  RemoveLocalInventoriesRequest._() : super();
+  factory RemoveLocalInventoriesRequest({
+    $core.String? product,
+    $core.Iterable<$core.String>? placeIds,
+    $core.bool? allowMissing,
+    $6.Timestamp? removeTime,
+  }) {
+    final _result = create();
+    if (product != null) {
+      _result.product = product;
+    }
+    if (placeIds != null) {
+      _result.placeIds.addAll(placeIds);
+    }
+    if (allowMissing != null) {
+      _result.allowMissing = allowMissing;
+    }
+    if (removeTime != null) {
+      _result.removeTime = removeTime;
+    }
+    return _result;
+  }
+  factory RemoveLocalInventoriesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemoveLocalInventoriesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RemoveLocalInventoriesRequest clone() =>
+      RemoveLocalInventoriesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RemoveLocalInventoriesRequest copyWith(
+          void Function(RemoveLocalInventoriesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveLocalInventoriesRequest))
+          as RemoveLocalInventoriesRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RemoveLocalInventoriesRequest create() =>
+      RemoveLocalInventoriesRequest._();
+  RemoveLocalInventoriesRequest createEmptyInstance() => create();
+  static $pb.PbList<RemoveLocalInventoriesRequest> createRepeated() =>
+      $pb.PbList<RemoveLocalInventoriesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveLocalInventoriesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveLocalInventoriesRequest>(create);
+  static RemoveLocalInventoriesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get product => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set product($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProduct() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProduct() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get placeIds => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.bool get allowMissing => $_getBF(2);
+  @$pb.TagNumber(3)
+  set allowMissing($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasAllowMissing() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAllowMissing() => clearField(3);
+
+  @$pb.TagNumber(5)
+  $6.Timestamp get removeTime => $_getN(3);
+  @$pb.TagNumber(5)
+  set removeTime($6.Timestamp v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasRemoveTime() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearRemoveTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $6.Timestamp ensureRemoveTime() => $_ensure(3);
+}
+
+class RemoveLocalInventoriesMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RemoveLocalInventoriesMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  RemoveLocalInventoriesMetadata._() : super();
+  factory RemoveLocalInventoriesMetadata() => create();
+  factory RemoveLocalInventoriesMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemoveLocalInventoriesMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RemoveLocalInventoriesMetadata clone() =>
+      RemoveLocalInventoriesMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RemoveLocalInventoriesMetadata copyWith(
+          void Function(RemoveLocalInventoriesMetadata) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveLocalInventoriesMetadata))
+          as RemoveLocalInventoriesMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RemoveLocalInventoriesMetadata create() =>
+      RemoveLocalInventoriesMetadata._();
+  RemoveLocalInventoriesMetadata createEmptyInstance() => create();
+  static $pb.PbList<RemoveLocalInventoriesMetadata> createRepeated() =>
+      $pb.PbList<RemoveLocalInventoriesMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveLocalInventoriesMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveLocalInventoriesMetadata>(create);
+  static RemoveLocalInventoriesMetadata? _defaultInstance;
+}
+
+class RemoveLocalInventoriesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RemoveLocalInventoriesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  RemoveLocalInventoriesResponse._() : super();
+  factory RemoveLocalInventoriesResponse() => create();
+  factory RemoveLocalInventoriesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemoveLocalInventoriesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RemoveLocalInventoriesResponse clone() =>
+      RemoveLocalInventoriesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RemoveLocalInventoriesResponse copyWith(
+          void Function(RemoveLocalInventoriesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveLocalInventoriesResponse))
+          as RemoveLocalInventoriesResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RemoveLocalInventoriesResponse create() =>
+      RemoveLocalInventoriesResponse._();
+  RemoveLocalInventoriesResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveLocalInventoriesResponse> createRepeated() =>
+      $pb.PbList<RemoveLocalInventoriesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveLocalInventoriesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveLocalInventoriesResponse>(create);
+  static RemoveLocalInventoriesResponse? _defaultInstance;
 }
 
 class RemoveFulfillmentPlacesRequest extends $pb.GeneratedMessage {

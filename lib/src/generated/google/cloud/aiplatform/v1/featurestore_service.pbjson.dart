@@ -422,6 +422,15 @@ const ExportFeatureValuesRequest$json = const {
       '10': 'snapshotExport'
     },
     const {
+      '1': 'full_export',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1.ExportFeatureValuesRequest.FullExport',
+      '9': 0,
+      '10': 'fullExport'
+    },
+    const {
       '1': 'entity_type',
       '3': 1,
       '4': 1,
@@ -456,7 +465,10 @@ const ExportFeatureValuesRequest$json = const {
       '10': 'settings'
     },
   ],
-  '3': const [ExportFeatureValuesRequest_SnapshotExport$json],
+  '3': const [
+    ExportFeatureValuesRequest_SnapshotExport$json,
+    ExportFeatureValuesRequest_FullExport$json
+  ],
   '8': const [
     const {'1': 'mode'},
   ],
@@ -474,13 +486,44 @@ const ExportFeatureValuesRequest_SnapshotExport$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'snapshotTime'
     },
+    const {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+  ],
+};
+
+@$core.Deprecated('Use exportFeatureValuesRequestDescriptor instead')
+const ExportFeatureValuesRequest_FullExport$json = const {
+  '1': 'FullExport',
+  '2': const [
+    const {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
   ],
 };
 
 /// Descriptor for `ExportFeatureValuesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List exportFeatureValuesRequestDescriptor =
     $convert.base64Decode(
-        'ChpFeHBvcnRGZWF0dXJlVmFsdWVzUmVxdWVzdBJwCg9zbmFwc2hvdF9leHBvcnQYAyABKAsyRS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBvcnRGZWF0dXJlVmFsdWVzUmVxdWVzdC5TbmFwc2hvdEV4cG9ydEgAUg5zbmFwc2hvdEV4cG9ydBJNCgtlbnRpdHlfdHlwZRgBIAEoCUIs4EEC+kEmCiRhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VudGl0eVR5cGVSCmVudGl0eVR5cGUSWgoLZGVzdGluYXRpb24YBCABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmFsdWVEZXN0aW5hdGlvbkID4EECUgtkZXN0aW5hdGlvbhJbChBmZWF0dXJlX3NlbGVjdG9yGAUgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVNlbGVjdG9yQgPgQQJSD2ZlYXR1cmVTZWxlY3RvchJRCghzZXR0aW5ncxgGIAMoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlc3RpbmF0aW9uRmVhdHVyZVNldHRpbmdSCHNldHRpbmdzGlEKDlNuYXBzaG90RXhwb3J0Ej8KDXNuYXBzaG90X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgxzbmFwc2hvdFRpbWVCBgoEbW9kZQ==');
+        'ChpFeHBvcnRGZWF0dXJlVmFsdWVzUmVxdWVzdBJwCg9zbmFwc2hvdF9leHBvcnQYAyABKAsyRS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBvcnRGZWF0dXJlVmFsdWVzUmVxdWVzdC5TbmFwc2hvdEV4cG9ydEgAUg5zbmFwc2hvdEV4cG9ydBJkCgtmdWxsX2V4cG9ydBgHIAEoCzJBLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4cG9ydEZlYXR1cmVWYWx1ZXNSZXF1ZXN0LkZ1bGxFeHBvcnRIAFIKZnVsbEV4cG9ydBJNCgtlbnRpdHlfdHlwZRgBIAEoCUIs4EEC+kEmCiRhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VudGl0eVR5cGVSCmVudGl0eVR5cGUSWgoLZGVzdGluYXRpb24YBCABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmFsdWVEZXN0aW5hdGlvbkID4EECUgtkZXN0aW5hdGlvbhJbChBmZWF0dXJlX3NlbGVjdG9yGAUgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVNlbGVjdG9yQgPgQQJSD2ZlYXR1cmVTZWxlY3RvchJRCghzZXR0aW5ncxgGIAMoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlc3RpbmF0aW9uRmVhdHVyZVNldHRpbmdSCHNldHRpbmdzGowBCg5TbmFwc2hvdEV4cG9ydBI/Cg1zbmFwc2hvdF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIMc25hcHNob3RUaW1lEjkKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUafgoKRnVsbEV4cG9ydBI5CgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJc3RhcnRUaW1lEjUKCGVuZF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHZW5kVGltZUIGCgRtb2Rl');
 @$core.Deprecated('Use destinationFeatureSettingDescriptor instead')
 const DestinationFeatureSetting$json = const {
   '1': 'DestinationFeatureSetting',

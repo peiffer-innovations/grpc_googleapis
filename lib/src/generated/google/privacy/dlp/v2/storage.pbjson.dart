@@ -49,12 +49,13 @@ const InfoType$json = const {
   '1': 'InfoType',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
   ],
 };
 
 /// Descriptor for `InfoType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List infoTypeDescriptor =
-    $convert.base64Decode('CghJbmZvVHlwZRISCgRuYW1lGAEgASgJUgRuYW1l');
+final $typed_data.Uint8List infoTypeDescriptor = $convert.base64Decode(
+    'CghJbmZvVHlwZRISCgRuYW1lGAEgASgJUgRuYW1lEhgKB3ZlcnNpb24YAiABKAlSB3ZlcnNpb24=');
 @$core.Deprecated('Use storedTypeDescriptor instead')
 const StoredType$json = const {
   '1': 'StoredType',
@@ -537,6 +538,14 @@ const BigQueryOptions$json = const {
       '6': '.google.privacy.dlp.v2.FieldId',
       '10': 'excludedFields'
     },
+    const {
+      '1': 'included_fields',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.FieldId',
+      '10': 'includedFields'
+    },
   ],
   '4': const [BigQueryOptions_SampleMethod$json],
 };
@@ -553,7 +562,7 @@ const BigQueryOptions_SampleMethod$json = const {
 
 /// Descriptor for `BigQueryOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List bigQueryOptionsDescriptor = $convert.base64Decode(
-    'Cg9CaWdRdWVyeU9wdGlvbnMSTQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGVSDnRhYmxlUmVmZXJlbmNlEk0KEmlkZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkUhFpZGVudGlmeWluZ0ZpZWxkcxIdCgpyb3dzX2xpbWl0GAMgASgDUglyb3dzTGltaXQSLAoScm93c19saW1pdF9wZXJjZW50GAYgASgFUhByb3dzTGltaXRQZXJjZW50ElgKDXNhbXBsZV9tZXRob2QYBCABKA4yMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zLlNhbXBsZU1ldGhvZFIMc2FtcGxlTWV0aG9kEkcKD2V4Y2x1ZGVkX2ZpZWxkcxgFIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkUg5leGNsdWRlZEZpZWxkcyJICgxTYW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRPTV9TVEFSVBAC');
+    'Cg9CaWdRdWVyeU9wdGlvbnMSTQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGVSDnRhYmxlUmVmZXJlbmNlEk0KEmlkZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkUhFpZGVudGlmeWluZ0ZpZWxkcxIdCgpyb3dzX2xpbWl0GAMgASgDUglyb3dzTGltaXQSLAoScm93c19saW1pdF9wZXJjZW50GAYgASgFUhByb3dzTGltaXRQZXJjZW50ElgKDXNhbXBsZV9tZXRob2QYBCABKA4yMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zLlNhbXBsZU1ldGhvZFIMc2FtcGxlTWV0aG9kEkcKD2V4Y2x1ZGVkX2ZpZWxkcxgFIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkUg5leGNsdWRlZEZpZWxkcxJHCg9pbmNsdWRlZF9maWVsZHMYByADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZFIOaW5jbHVkZWRGaWVsZHMiSAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRIT0RfVU5TUEVDSUZJRUQQABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQAg==');
 @$core.Deprecated('Use storageConfigDescriptor instead')
 const StorageConfig$json = const {
   '1': 'StorageConfig',

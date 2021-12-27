@@ -606,6 +606,15 @@ class WriteStream extends $pb.GeneratedMessage {
             ? ''
             : 'tableSchema',
         subBuilder: $3.TableSchema.create)
+    ..e<WriteStream_WriteMode>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'writeMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: WriteStream_WriteMode.WRITE_MODE_UNSPECIFIED,
+        valueOf: WriteStream_WriteMode.valueOf,
+        enumValues: WriteStream_WriteMode.values)
     ..hasRequiredFields = false;
 
   WriteStream._() : super();
@@ -615,6 +624,7 @@ class WriteStream extends $pb.GeneratedMessage {
     $0.Timestamp? createTime,
     $0.Timestamp? commitTime,
     $3.TableSchema? tableSchema,
+    WriteStream_WriteMode? writeMode,
   }) {
     final _result = create();
     if (name != null) {
@@ -631,6 +641,9 @@ class WriteStream extends $pb.GeneratedMessage {
     }
     if (tableSchema != null) {
       _result.tableSchema = tableSchema;
+    }
+    if (writeMode != null) {
+      _result.writeMode = writeMode;
     }
     return _result;
   }
@@ -725,4 +738,16 @@ class WriteStream extends $pb.GeneratedMessage {
   void clearTableSchema() => clearField(5);
   @$pb.TagNumber(5)
   $3.TableSchema ensureTableSchema() => $_ensure(4);
+
+  @$pb.TagNumber(7)
+  WriteStream_WriteMode get writeMode => $_getN(5);
+  @$pb.TagNumber(7)
+  set writeMode(WriteStream_WriteMode v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasWriteMode() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearWriteMode() => clearField(7);
 }

@@ -275,7 +275,6 @@ const SpeechToTextConfig$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.SpeechModelVariant',
-      '8': const {},
       '10': 'speechModelVariant'
     },
   ],
@@ -283,4 +282,4 @@ const SpeechToTextConfig$json = const {
 
 /// Descriptor for `SpeechToTextConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List speechToTextConfigDescriptor = $convert.base64Decode(
-    'ChJTcGVlY2hUb1RleHRDb25maWcSZQoUc3BlZWNoX21vZGVsX3ZhcmlhbnQYASABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hNb2RlbFZhcmlhbnRCA+BBAVISc3BlZWNoTW9kZWxWYXJpYW50');
+    'ChJTcGVlY2hUb1RleHRDb25maWcSYAoUc3BlZWNoX21vZGVsX3ZhcmlhbnQYASABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hNb2RlbFZhcmlhbnRSEnNwZWVjaE1vZGVsVmFyaWFudA==');

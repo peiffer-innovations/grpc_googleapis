@@ -582,9 +582,30 @@ const SqlInstancesVerifyExternalSyncSettingsRequest$json = const {
           '.google.cloud.sql.v1beta4.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode',
       '10': 'syncMode'
     },
+    const {
+      '1': 'verify_replication_only',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'verifyReplicationOnly'
+    },
+    const {
+      '1': 'mysql_sync_config',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.sql.v1beta4.MySqlSyncConfig',
+      '8': const {},
+      '9': 0,
+      '10': 'mysqlSyncConfig'
+    },
   ],
   '4': const [
     SqlInstancesVerifyExternalSyncSettingsRequest_ExternalSyncMode$json
+  ],
+  '8': const [
+    const {'1': 'sync_config'},
   ],
 };
 
@@ -604,7 +625,7 @@ const SqlInstancesVerifyExternalSyncSettingsRequest_ExternalSyncMode$json =
 final $typed_data.Uint8List
     sqlInstancesVerifyExternalSyncSettingsRequestDescriptor =
     $convert.base64Decode(
-        'Ci1TcWxJbnN0YW5jZXNWZXJpZnlFeHRlcm5hbFN5bmNTZXR0aW5nc1JlcXVlc3QSGgoIaW5zdGFuY2UYASABKAlSCGluc3RhbmNlEhgKB3Byb2plY3QYAiABKAlSB3Byb2plY3QSNAoWdmVyaWZ5X2Nvbm5lY3Rpb25fb25seRgDIAEoCFIUdmVyaWZ5Q29ubmVjdGlvbk9ubHkSdQoJc3luY19tb2RlGAQgASgOMlguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEluc3RhbmNlc1ZlcmlmeUV4dGVybmFsU3luY1NldHRpbmdzUmVxdWVzdC5FeHRlcm5hbFN5bmNNb2RlUghzeW5jTW9kZSJPChBFeHRlcm5hbFN5bmNNb2RlEiIKHkVYVEVSTkFMX1NZTkNfTU9ERV9VTlNQRUNJRklFRBAAEgoKBk9OTElORRABEgsKB09GRkxJTkUQAg==');
+        'Ci1TcWxJbnN0YW5jZXNWZXJpZnlFeHRlcm5hbFN5bmNTZXR0aW5nc1JlcXVlc3QSGgoIaW5zdGFuY2UYASABKAlSCGluc3RhbmNlEhgKB3Byb2plY3QYAiABKAlSB3Byb2plY3QSNAoWdmVyaWZ5X2Nvbm5lY3Rpb25fb25seRgDIAEoCFIUdmVyaWZ5Q29ubmVjdGlvbk9ubHkSdQoJc3luY19tb2RlGAQgASgOMlguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEluc3RhbmNlc1ZlcmlmeUV4dGVybmFsU3luY1NldHRpbmdzUmVxdWVzdC5FeHRlcm5hbFN5bmNNb2RlUghzeW5jTW9kZRI7Chd2ZXJpZnlfcmVwbGljYXRpb25fb25seRgFIAEoCEID4EEBUhV2ZXJpZnlSZXBsaWNhdGlvbk9ubHkSXAoRbXlzcWxfc3luY19jb25maWcYBiABKAsyKS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuTXlTcWxTeW5jQ29uZmlnQgPgQQFIAFIPbXlzcWxTeW5jQ29uZmlnIk8KEEV4dGVybmFsU3luY01vZGUSIgoeRVhURVJOQUxfU1lOQ19NT0RFX1VOU1BFQ0lGSUVEEAASCgoGT05MSU5FEAESCwoHT0ZGTElORRACQg0KC3N5bmNfY29uZmln');
 @$core.Deprecated('Use sqlInstancesStartExternalSyncRequestDescriptor instead')
 const SqlInstancesStartExternalSyncRequest$json = const {
   '1': 'SqlInstancesStartExternalSyncRequest',
@@ -627,13 +648,25 @@ const SqlInstancesStartExternalSyncRequest$json = const {
       '5': 8,
       '10': 'skipVerification'
     },
+    const {
+      '1': 'mysql_sync_config',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.sql.v1beta4.MySqlSyncConfig',
+      '9': 0,
+      '10': 'mysqlSyncConfig'
+    },
+  ],
+  '8': const [
+    const {'1': 'sync_config'},
   ],
 };
 
 /// Descriptor for `SqlInstancesStartExternalSyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sqlInstancesStartExternalSyncRequestDescriptor =
     $convert.base64Decode(
-        'CiRTcWxJbnN0YW5jZXNTdGFydEV4dGVybmFsU3luY1JlcXVlc3QSGgoIaW5zdGFuY2UYASABKAlSCGluc3RhbmNlEhgKB3Byb2plY3QYAiABKAlSB3Byb2plY3QSdQoJc3luY19tb2RlGAMgASgOMlguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEluc3RhbmNlc1ZlcmlmeUV4dGVybmFsU3luY1NldHRpbmdzUmVxdWVzdC5FeHRlcm5hbFN5bmNNb2RlUghzeW5jTW9kZRIrChFza2lwX3ZlcmlmaWNhdGlvbhgEIAEoCFIQc2tpcFZlcmlmaWNhdGlvbg==');
+        'CiRTcWxJbnN0YW5jZXNTdGFydEV4dGVybmFsU3luY1JlcXVlc3QSGgoIaW5zdGFuY2UYASABKAlSCGluc3RhbmNlEhgKB3Byb2plY3QYAiABKAlSB3Byb2plY3QSdQoJc3luY19tb2RlGAMgASgOMlguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEluc3RhbmNlc1ZlcmlmeUV4dGVybmFsU3luY1NldHRpbmdzUmVxdWVzdC5FeHRlcm5hbFN5bmNNb2RlUghzeW5jTW9kZRIrChFza2lwX3ZlcmlmaWNhdGlvbhgEIAEoCFIQc2tpcFZlcmlmaWNhdGlvbhJXChFteXNxbF9zeW5jX2NvbmZpZxgGIAEoCzIpLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5NeVNxbFN5bmNDb25maWdIAFIPbXlzcWxTeW5jQ29uZmlnQg0KC3N5bmNfY29uZmln');
 @$core.Deprecated('Use sqlOperationsGetRequestDescriptor instead')
 const SqlOperationsGetRequest$json = const {
   '1': 'SqlOperationsGetRequest',

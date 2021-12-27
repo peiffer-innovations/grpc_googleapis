@@ -193,6 +193,336 @@ class Instance extends $pb.GeneratedMessage {
   $0.Timestamp ensureCreateTime() => $_ensure(5);
 }
 
+class AutoscalingTargets extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AutoscalingTargets',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cpuUtilizationPercent',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  AutoscalingTargets._() : super();
+  factory AutoscalingTargets({
+    $core.int? cpuUtilizationPercent,
+  }) {
+    final _result = create();
+    if (cpuUtilizationPercent != null) {
+      _result.cpuUtilizationPercent = cpuUtilizationPercent;
+    }
+    return _result;
+  }
+  factory AutoscalingTargets.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AutoscalingTargets.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AutoscalingTargets clone() => AutoscalingTargets()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AutoscalingTargets copyWith(void Function(AutoscalingTargets) updates) =>
+      super.copyWith((message) => updates(message as AutoscalingTargets))
+          as AutoscalingTargets; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AutoscalingTargets create() => AutoscalingTargets._();
+  AutoscalingTargets createEmptyInstance() => create();
+  static $pb.PbList<AutoscalingTargets> createRepeated() =>
+      $pb.PbList<AutoscalingTargets>();
+  @$core.pragma('dart2js:noInline')
+  static AutoscalingTargets getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AutoscalingTargets>(create);
+  static AutoscalingTargets? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.int get cpuUtilizationPercent => $_getIZ(0);
+  @$pb.TagNumber(2)
+  set cpuUtilizationPercent($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasCpuUtilizationPercent() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearCpuUtilizationPercent() => clearField(2);
+}
+
+class AutoscalingLimits extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AutoscalingLimits',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minServeNodes',
+        $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxServeNodes',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  AutoscalingLimits._() : super();
+  factory AutoscalingLimits({
+    $core.int? minServeNodes,
+    $core.int? maxServeNodes,
+  }) {
+    final _result = create();
+    if (minServeNodes != null) {
+      _result.minServeNodes = minServeNodes;
+    }
+    if (maxServeNodes != null) {
+      _result.maxServeNodes = maxServeNodes;
+    }
+    return _result;
+  }
+  factory AutoscalingLimits.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AutoscalingLimits.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AutoscalingLimits clone() => AutoscalingLimits()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AutoscalingLimits copyWith(void Function(AutoscalingLimits) updates) =>
+      super.copyWith((message) => updates(message as AutoscalingLimits))
+          as AutoscalingLimits; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AutoscalingLimits create() => AutoscalingLimits._();
+  AutoscalingLimits createEmptyInstance() => create();
+  static $pb.PbList<AutoscalingLimits> createRepeated() =>
+      $pb.PbList<AutoscalingLimits>();
+  @$core.pragma('dart2js:noInline')
+  static AutoscalingLimits getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AutoscalingLimits>(create);
+  static AutoscalingLimits? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get minServeNodes => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set minServeNodes($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMinServeNodes() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMinServeNodes() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get maxServeNodes => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set maxServeNodes($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMaxServeNodes() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMaxServeNodes() => clearField(2);
+}
+
+class Cluster_ClusterAutoscalingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Cluster.ClusterAutoscalingConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<AutoscalingLimits>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'autoscalingLimits',
+        subBuilder: AutoscalingLimits.create)
+    ..aOM<AutoscalingTargets>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'autoscalingTargets',
+        subBuilder: AutoscalingTargets.create)
+    ..hasRequiredFields = false;
+
+  Cluster_ClusterAutoscalingConfig._() : super();
+  factory Cluster_ClusterAutoscalingConfig({
+    AutoscalingLimits? autoscalingLimits,
+    AutoscalingTargets? autoscalingTargets,
+  }) {
+    final _result = create();
+    if (autoscalingLimits != null) {
+      _result.autoscalingLimits = autoscalingLimits;
+    }
+    if (autoscalingTargets != null) {
+      _result.autoscalingTargets = autoscalingTargets;
+    }
+    return _result;
+  }
+  factory Cluster_ClusterAutoscalingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cluster_ClusterAutoscalingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Cluster_ClusterAutoscalingConfig clone() =>
+      Cluster_ClusterAutoscalingConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Cluster_ClusterAutoscalingConfig copyWith(
+          void Function(Cluster_ClusterAutoscalingConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as Cluster_ClusterAutoscalingConfig))
+          as Cluster_ClusterAutoscalingConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Cluster_ClusterAutoscalingConfig create() =>
+      Cluster_ClusterAutoscalingConfig._();
+  Cluster_ClusterAutoscalingConfig createEmptyInstance() => create();
+  static $pb.PbList<Cluster_ClusterAutoscalingConfig> createRepeated() =>
+      $pb.PbList<Cluster_ClusterAutoscalingConfig>();
+  @$core.pragma('dart2js:noInline')
+  static Cluster_ClusterAutoscalingConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Cluster_ClusterAutoscalingConfig>(
+          create);
+  static Cluster_ClusterAutoscalingConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  AutoscalingLimits get autoscalingLimits => $_getN(0);
+  @$pb.TagNumber(1)
+  set autoscalingLimits(AutoscalingLimits v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAutoscalingLimits() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAutoscalingLimits() => clearField(1);
+  @$pb.TagNumber(1)
+  AutoscalingLimits ensureAutoscalingLimits() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  AutoscalingTargets get autoscalingTargets => $_getN(1);
+  @$pb.TagNumber(2)
+  set autoscalingTargets(AutoscalingTargets v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAutoscalingTargets() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAutoscalingTargets() => clearField(2);
+  @$pb.TagNumber(2)
+  AutoscalingTargets ensureAutoscalingTargets() => $_ensure(1);
+}
+
+class Cluster_ClusterConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Cluster.ClusterConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<Cluster_ClusterAutoscalingConfig>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'clusterAutoscalingConfig',
+        subBuilder: Cluster_ClusterAutoscalingConfig.create)
+    ..hasRequiredFields = false;
+
+  Cluster_ClusterConfig._() : super();
+  factory Cluster_ClusterConfig({
+    Cluster_ClusterAutoscalingConfig? clusterAutoscalingConfig,
+  }) {
+    final _result = create();
+    if (clusterAutoscalingConfig != null) {
+      _result.clusterAutoscalingConfig = clusterAutoscalingConfig;
+    }
+    return _result;
+  }
+  factory Cluster_ClusterConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cluster_ClusterConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Cluster_ClusterConfig clone() =>
+      Cluster_ClusterConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Cluster_ClusterConfig copyWith(
+          void Function(Cluster_ClusterConfig) updates) =>
+      super.copyWith((message) => updates(message as Cluster_ClusterConfig))
+          as Cluster_ClusterConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Cluster_ClusterConfig create() => Cluster_ClusterConfig._();
+  Cluster_ClusterConfig createEmptyInstance() => create();
+  static $pb.PbList<Cluster_ClusterConfig> createRepeated() =>
+      $pb.PbList<Cluster_ClusterConfig>();
+  @$core.pragma('dart2js:noInline')
+  static Cluster_ClusterConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Cluster_ClusterConfig>(create);
+  static Cluster_ClusterConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Cluster_ClusterAutoscalingConfig get clusterAutoscalingConfig => $_getN(0);
+  @$pb.TagNumber(1)
+  set clusterAutoscalingConfig(Cluster_ClusterAutoscalingConfig v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasClusterAutoscalingConfig() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearClusterAutoscalingConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  Cluster_ClusterAutoscalingConfig ensureClusterAutoscalingConfig() =>
+      $_ensure(0);
+}
+
 class Cluster_EncryptionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -262,7 +592,13 @@ class Cluster_EncryptionConfig extends $pb.GeneratedMessage {
   void clearKmsKeyName() => clearField(1);
 }
 
+enum Cluster_Config { clusterConfig, notSet }
+
 class Cluster extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Cluster_Config> _Cluster_ConfigByTag = {
+    7: Cluster_Config.clusterConfig,
+    0: Cluster_Config.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -272,6 +608,7 @@ class Cluster extends $pb.GeneratedMessage {
               ? ''
               : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
+    ..oo(0, [7])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -312,6 +649,12 @@ class Cluster extends $pb.GeneratedMessage {
             ? ''
             : 'encryptionConfig',
         subBuilder: Cluster_EncryptionConfig.create)
+    ..aOM<Cluster_ClusterConfig>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'clusterConfig',
+        subBuilder: Cluster_ClusterConfig.create)
     ..hasRequiredFields = false;
 
   Cluster._() : super();
@@ -322,6 +665,7 @@ class Cluster extends $pb.GeneratedMessage {
     $core.int? serveNodes,
     $1.StorageType? defaultStorageType,
     Cluster_EncryptionConfig? encryptionConfig,
+    Cluster_ClusterConfig? clusterConfig,
   }) {
     final _result = create();
     if (name != null) {
@@ -341,6 +685,9 @@ class Cluster extends $pb.GeneratedMessage {
     }
     if (encryptionConfig != null) {
       _result.encryptionConfig = encryptionConfig;
+    }
+    if (clusterConfig != null) {
+      _result.clusterConfig = clusterConfig;
     }
     return _result;
   }
@@ -369,6 +716,9 @@ class Cluster extends $pb.GeneratedMessage {
   static Cluster getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Cluster>(create);
   static Cluster? _defaultInstance;
+
+  Cluster_Config whichConfig() => _Cluster_ConfigByTag[$_whichOneof(0)]!;
+  void clearConfig() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -443,6 +793,20 @@ class Cluster extends $pb.GeneratedMessage {
   void clearEncryptionConfig() => clearField(6);
   @$pb.TagNumber(6)
   Cluster_EncryptionConfig ensureEncryptionConfig() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  Cluster_ClusterConfig get clusterConfig => $_getN(6);
+  @$pb.TagNumber(7)
+  set clusterConfig(Cluster_ClusterConfig v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasClusterConfig() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearClusterConfig() => clearField(7);
+  @$pb.TagNumber(7)
+  Cluster_ClusterConfig ensureClusterConfig() => $_ensure(6);
 }
 
 class AppProfile_MultiClusterRoutingUseAny extends $pb.GeneratedMessage {

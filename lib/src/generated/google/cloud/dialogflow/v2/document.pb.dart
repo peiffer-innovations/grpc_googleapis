@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../../protobuf/timestamp.pb.dart' as $3;
 import '../../../rpc/status.pb.dart' as $4;
 import '../../../protobuf/field_mask.pb.dart' as $5;
+import 'gcs.pb.dart' as $6;
 
 import 'document.pbenum.dart';
 
@@ -444,6 +445,11 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'pageToken')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
     ..hasRequiredFields = false;
 
   ListDocumentsRequest._() : super();
@@ -451,6 +457,7 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
+    $core.String? filter,
   }) {
     final _result = create();
     if (parent != null) {
@@ -461,6 +468,9 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
     }
     if (pageToken != null) {
       _result.pageToken = pageToken;
+    }
+    if (filter != null) {
+      _result.filter = filter;
     }
     return _result;
   }
@@ -527,6 +537,18 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set filter($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFilter() => clearField(4);
 }
 
 class ListDocumentsResponse extends $pb.GeneratedMessage {
@@ -898,12 +920,24 @@ class ReloadDocumentRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'contentUri')
+    ..aOB(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'importGcsCustomMetadata')
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'smartMessagingPartialUpdate')
     ..hasRequiredFields = false;
 
   ReloadDocumentRequest._() : super();
   factory ReloadDocumentRequest({
     $core.String? name,
     $core.String? contentUri,
+    $core.bool? importGcsCustomMetadata,
+    $core.bool? smartMessagingPartialUpdate,
   }) {
     final _result = create();
     if (name != null) {
@@ -911,6 +945,12 @@ class ReloadDocumentRequest extends $pb.GeneratedMessage {
     }
     if (contentUri != null) {
       _result.contentUri = contentUri;
+    }
+    if (importGcsCustomMetadata != null) {
+      _result.importGcsCustomMetadata = importGcsCustomMetadata;
+    }
+    if (smartMessagingPartialUpdate != null) {
+      _result.smartMessagingPartialUpdate = smartMessagingPartialUpdate;
     }
     return _result;
   }
@@ -970,6 +1010,177 @@ class ReloadDocumentRequest extends $pb.GeneratedMessage {
   $core.bool hasContentUri() => $_has(1);
   @$pb.TagNumber(3)
   void clearContentUri() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get importGcsCustomMetadata => $_getBF(2);
+  @$pb.TagNumber(4)
+  set importGcsCustomMetadata($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasImportGcsCustomMetadata() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearImportGcsCustomMetadata() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get smartMessagingPartialUpdate => $_getBF(3);
+  @$pb.TagNumber(5)
+  set smartMessagingPartialUpdate($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSmartMessagingPartialUpdate() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearSmartMessagingPartialUpdate() => clearField(5);
+}
+
+enum ExportDocumentRequest_Destination { gcsDestination, notSet }
+
+class ExportDocumentRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ExportDocumentRequest_Destination>
+      _ExportDocumentRequest_DestinationByTag = {
+    2: ExportDocumentRequest_Destination.gcsDestination,
+    0: ExportDocumentRequest_Destination.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ExportDocumentRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [2])
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOM<$6.GcsDestination>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gcsDestination',
+        subBuilder: $6.GcsDestination.create)
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'exportFullContent')
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'smartMessagingPartialUpdate')
+    ..hasRequiredFields = false;
+
+  ExportDocumentRequest._() : super();
+  factory ExportDocumentRequest({
+    $core.String? name,
+    $6.GcsDestination? gcsDestination,
+    $core.bool? exportFullContent,
+    $core.bool? smartMessagingPartialUpdate,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (gcsDestination != null) {
+      _result.gcsDestination = gcsDestination;
+    }
+    if (exportFullContent != null) {
+      _result.exportFullContent = exportFullContent;
+    }
+    if (smartMessagingPartialUpdate != null) {
+      _result.smartMessagingPartialUpdate = smartMessagingPartialUpdate;
+    }
+    return _result;
+  }
+  factory ExportDocumentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDocumentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ExportDocumentRequest clone() =>
+      ExportDocumentRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ExportDocumentRequest copyWith(
+          void Function(ExportDocumentRequest) updates) =>
+      super.copyWith((message) => updates(message as ExportDocumentRequest))
+          as ExportDocumentRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentRequest create() => ExportDocumentRequest._();
+  ExportDocumentRequest createEmptyInstance() => create();
+  static $pb.PbList<ExportDocumentRequest> createRepeated() =>
+      $pb.PbList<ExportDocumentRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportDocumentRequest>(create);
+  static ExportDocumentRequest? _defaultInstance;
+
+  ExportDocumentRequest_Destination whichDestination() =>
+      _ExportDocumentRequest_DestinationByTag[$_whichOneof(0)]!;
+  void clearDestination() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $6.GcsDestination get gcsDestination => $_getN(1);
+  @$pb.TagNumber(2)
+  set gcsDestination($6.GcsDestination v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasGcsDestination() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearGcsDestination() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.GcsDestination ensureGcsDestination() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.bool get exportFullContent => $_getBF(2);
+  @$pb.TagNumber(3)
+  set exportFullContent($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasExportFullContent() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearExportFullContent() => clearField(3);
+
+  @$pb.TagNumber(5)
+  $core.bool get smartMessagingPartialUpdate => $_getBF(3);
+  @$pb.TagNumber(5)
+  set smartMessagingPartialUpdate($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSmartMessagingPartialUpdate() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearSmartMessagingPartialUpdate() => clearField(5);
 }
 
 class KnowledgeOperationMetadata extends $pb.GeneratedMessage {

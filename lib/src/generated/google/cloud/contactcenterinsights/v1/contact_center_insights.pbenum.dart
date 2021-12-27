@@ -39,3 +39,41 @@ class ConversationView extends $pb.ProtobufEnum {
 
   const ConversationView._($core.int v, $core.String n) : super(v, n);
 }
+
+class ExportInsightsDataRequest_WriteDisposition extends $pb.ProtobufEnum {
+  static const ExportInsightsDataRequest_WriteDisposition
+      WRITE_DISPOSITION_UNSPECIFIED =
+      ExportInsightsDataRequest_WriteDisposition._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WRITE_DISPOSITION_UNSPECIFIED');
+  static const ExportInsightsDataRequest_WriteDisposition WRITE_TRUNCATE =
+      ExportInsightsDataRequest_WriteDisposition._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WRITE_TRUNCATE');
+  static const ExportInsightsDataRequest_WriteDisposition WRITE_APPEND =
+      ExportInsightsDataRequest_WriteDisposition._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WRITE_APPEND');
+
+  static const $core.List<ExportInsightsDataRequest_WriteDisposition> values =
+      <ExportInsightsDataRequest_WriteDisposition>[
+    WRITE_DISPOSITION_UNSPECIFIED,
+    WRITE_TRUNCATE,
+    WRITE_APPEND,
+  ];
+
+  static final $core.Map<$core.int, ExportInsightsDataRequest_WriteDisposition>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ExportInsightsDataRequest_WriteDisposition? valueOf($core.int value) =>
+      _byValue[value];
+
+  const ExportInsightsDataRequest_WriteDisposition._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}

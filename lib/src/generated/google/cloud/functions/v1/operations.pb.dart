@@ -63,6 +63,16 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'buildId')
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sourceToken')
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'buildName')
     ..hasRequiredFields = false;
 
   OperationMetadataV1._() : super();
@@ -73,6 +83,8 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
     $fixnum.Int64? versionId,
     $1.Timestamp? updateTime,
     $core.String? buildId,
+    $core.String? sourceToken,
+    $core.String? buildName,
   }) {
     final _result = create();
     if (target != null) {
@@ -92,6 +104,12 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
     }
     if (buildId != null) {
       _result.buildId = buildId;
+    }
+    if (sourceToken != null) {
+      _result.sourceToken = sourceToken;
+    }
+    if (buildName != null) {
+      _result.buildName = buildName;
     }
     return _result;
   }
@@ -197,4 +215,28 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   $core.bool hasBuildId() => $_has(5);
   @$pb.TagNumber(6)
   void clearBuildId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get sourceToken => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set sourceToken($core.String v) {
+    $_setString(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasSourceToken() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSourceToken() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get buildName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set buildName($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasBuildName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearBuildName() => clearField(8);
 }

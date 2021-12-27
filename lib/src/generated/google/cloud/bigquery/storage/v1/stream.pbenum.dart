@@ -74,3 +74,29 @@ class WriteStream_Type extends $pb.ProtobufEnum {
 
   const WriteStream_Type._($core.int v, $core.String n) : super(v, n);
 }
+
+class WriteStream_WriteMode extends $pb.ProtobufEnum {
+  static const WriteStream_WriteMode WRITE_MODE_UNSPECIFIED =
+      WriteStream_WriteMode._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WRITE_MODE_UNSPECIFIED');
+  static const WriteStream_WriteMode INSERT = WriteStream_WriteMode._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'INSERT');
+
+  static const $core.List<WriteStream_WriteMode> values =
+      <WriteStream_WriteMode>[
+    WRITE_MODE_UNSPECIFIED,
+    INSERT,
+  ];
+
+  static final $core.Map<$core.int, WriteStream_WriteMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static WriteStream_WriteMode? valueOf($core.int value) => _byValue[value];
+
+  const WriteStream_WriteMode._($core.int v, $core.String n) : super(v, n);
+}

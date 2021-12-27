@@ -127,10 +127,18 @@ const BigQueryDateShardedSpec$json = const {
       '8': const {},
       '10': 'shardCount'
     },
+    const {
+      '1': 'latest_shard_resource',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'latestShardResource'
+    },
   ],
 };
 
 /// Descriptor for `BigQueryDateShardedSpec`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List bigQueryDateShardedSpecDescriptor =
     $convert.base64Decode(
-        'ChdCaWdRdWVyeURhdGVTaGFyZGVkU3BlYxJCCgdkYXRhc2V0GAEgASgJQijgQQP6QSIKIGRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5UgdkYXRhc2V0EiYKDHRhYmxlX3ByZWZpeBgCIAEoCUID4EEDUgt0YWJsZVByZWZpeBIkCgtzaGFyZF9jb3VudBgDIAEoA0ID4EEDUgpzaGFyZENvdW50');
+        'ChdCaWdRdWVyeURhdGVTaGFyZGVkU3BlYxJCCgdkYXRhc2V0GAEgASgJQijgQQP6QSIKIGRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5UgdkYXRhc2V0EiYKDHRhYmxlX3ByZWZpeBgCIAEoCUID4EEDUgt0YWJsZVByZWZpeBIkCgtzaGFyZF9jb3VudBgDIAEoA0ID4EEDUgpzaGFyZENvdW50EjcKFWxhdGVzdF9zaGFyZF9yZXNvdXJjZRgEIAEoCUID4EEDUhNsYXRlc3RTaGFyZFJlc291cmNl');

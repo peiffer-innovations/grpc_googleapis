@@ -62,7 +62,7 @@ final $typed_data.Uint8List tripViewDescriptor = $convert.base64Decode(
 const Trip$json = const {
   '1': 'Trip',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {'1': 'vehicle_id', '3': 2, '4': 1, '5': 9, '10': 'vehicleId'},
     const {
       '1': 'trip_status',
@@ -112,6 +112,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'pickupTime'
     },
     const {
@@ -178,6 +179,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'dropoffTime'
     },
     const {
@@ -203,7 +205,43 @@ const Trip$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.type.LatLng',
+      '8': const {},
       '10': 'route'
+    },
+    const {
+      '1': 'current_route_segment',
+      '3': 21,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'currentRouteSegment'
+    },
+    const {
+      '1': 'current_route_segment_version',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'currentRouteSegmentVersion'
+    },
+    const {
+      '1': 'current_route_segment_traffic',
+      '3': 28,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.v1.ConsumableTrafficPolyline',
+      '8': const {},
+      '10': 'currentRouteSegmentTraffic'
+    },
+    const {
+      '1': 'current_route_segment_traffic_version',
+      '3': 30,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'currentRouteSegmentTrafficVersion'
     },
     const {
       '1': 'current_route_segment_end_point',
@@ -211,6 +249,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.maps.fleetengine.v1.TripWaypoint',
+      '8': const {},
       '10': 'currentRouteSegmentEndPoint'
     },
     const {
@@ -219,6 +258,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Int32Value',
+      '8': const {},
       '10': 'remainingDistanceMeters'
     },
     const {
@@ -245,6 +285,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'remainingWaypointsVersion'
     },
     const {
@@ -253,6 +294,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'remainingWaypointsRouteVersion'
     },
     const {
@@ -260,6 +302,7 @@ const Trip$json = const {
       '3': 10,
       '4': 1,
       '5': 5,
+      '8': const {},
       '10': 'numberOfPassengers'
     },
     const {
@@ -268,6 +311,7 @@ const Trip$json = const {
       '4': 1,
       '5': 11,
       '6': '.maps.fleetengine.v1.VehicleLocation',
+      '8': const {},
       '10': 'lastLocation'
     },
     const {
@@ -275,6 +319,7 @@ const Trip$json = const {
       '3': 26,
       '4': 1,
       '5': 8,
+      '8': const {},
       '10': 'lastLocationSnappable'
     },
     const {
@@ -291,7 +336,7 @@ const Trip$json = const {
 
 /// Descriptor for `Trip`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tripDescriptor = $convert.base64Decode(
-    'CgRUcmlwEhIKBG5hbWUYASABKAlSBG5hbWUSHQoKdmVoaWNsZV9pZBgCIAEoCVIJdmVoaWNsZUlkEkAKC3RyaXBfc3RhdHVzGAMgASgOMh8ubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwU3RhdHVzUgp0cmlwU3RhdHVzEjoKCXRyaXBfdHlwZRgEIAEoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFR5cGVSCHRyaXBUeXBlEkgKDHBpY2t1cF9wb2ludBgFIAEoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlvblILcGlja3VwUG9pbnQSVgoTYWN0dWFsX3BpY2t1cF9wb2ludBgWIAEoCzIhLm1hcHMuZmxlZXRlbmdpbmUudjEuU3RvcExvY2F0aW9uQgPgQQRSEWFjdHVhbFBpY2t1cFBvaW50EmUKG2FjdHVhbF9waWNrdXBfYXJyaXZhbF9wb2ludBggIAEoCzIhLm1hcHMuZmxlZXRlbmdpbmUudjEuU3RvcExvY2F0aW9uQgPgQQRSGGFjdHVhbFBpY2t1cEFycml2YWxQb2ludBI7CgtwaWNrdXBfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCnBpY2t1cFRpbWUSYgoZaW50ZXJtZWRpYXRlX2Rlc3RpbmF0aW9ucxgOIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlvblIYaW50ZXJtZWRpYXRlRGVzdGluYXRpb25zEmYKIWludGVybWVkaWF0ZV9kZXN0aW5hdGlvbnNfdmVyc2lvbhgZIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSH2ludGVybWVkaWF0ZURlc3RpbmF0aW9uc1ZlcnNpb24SRAoeaW50ZXJtZWRpYXRlX2Rlc3RpbmF0aW9uX2luZGV4GA8gASgFUhxpbnRlcm1lZGlhdGVEZXN0aW5hdGlvbkluZGV4EooBCi5hY3R1YWxfaW50ZXJtZWRpYXRlX2Rlc3RpbmF0aW9uX2Fycml2YWxfcG9pbnRzGCEgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5TdG9wTG9jYXRpb25CA+BBBFIqYWN0dWFsSW50ZXJtZWRpYXRlRGVzdGluYXRpb25BcnJpdmFsUG9pbnRzEnAKIGFjdHVhbF9pbnRlcm1lZGlhdGVfZGVzdGluYXRpb25zGCIgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5TdG9wTG9jYXRpb25CA+BBBFIeYWN0dWFsSW50ZXJtZWRpYXRlRGVzdGluYXRpb25zEkoKDWRyb3BvZmZfcG9pbnQYByABKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsTG9jYXRpb25SDGRyb3BvZmZQb2ludBJYChRhY3R1YWxfZHJvcG9mZl9wb2ludBgXIAEoCzIhLm1hcHMuZmxlZXRlbmdpbmUudjEuU3RvcExvY2F0aW9uQgPgQQRSEmFjdHVhbERyb3BvZmZQb2ludBI9Cgxkcm9wb2ZmX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgtkcm9wb2ZmVGltZRJXChNyZW1haW5pbmdfd2F5cG9pbnRzGBAgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRCA+BBA1IScmVtYWluaW5nV2F5cG9pbnRzEk4KEXZlaGljbGVfd2F5cG9pbnRzGBQgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRSEHZlaGljbGVXYXlwb2ludHMSKQoFcm91dGUYCSADKAsyEy5nb29nbGUudHlwZS5MYXRMbmdSBXJvdXRlEmcKH2N1cnJlbnRfcm91dGVfc2VnbWVudF9lbmRfcG9pbnQYGCABKAsyIS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBXYXlwb2ludFIbY3VycmVudFJvdXRlU2VnbWVudEVuZFBvaW50ElcKGXJlbWFpbmluZ19kaXN0YW5jZV9tZXRlcnMYDCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIXcmVtYWluaW5nRGlzdGFuY2VNZXRlcnMSUgoVZXRhX3RvX2ZpcnN0X3dheXBvaW50GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUhJldGFUb0ZpcnN0V2F5cG9pbnQSZgogcmVtYWluaW5nX3RpbWVfdG9fZmlyc3Rfd2F5cG9pbnQYGyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBA1IccmVtYWluaW5nVGltZVRvRmlyc3RXYXlwb2ludBJaChtyZW1haW5pbmdfd2F5cG9pbnRzX3ZlcnNpb24YEyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhlyZW1haW5pbmdXYXlwb2ludHNWZXJzaW9uEmUKIXJlbWFpbmluZ193YXlwb2ludHNfcm91dGVfdmVyc2lvbhgdIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSHnJlbWFpbmluZ1dheXBvaW50c1JvdXRlVmVyc2lvbhIwChRudW1iZXJfb2ZfcGFzc2VuZ2VycxgKIAEoBVISbnVtYmVyT2ZQYXNzZW5nZXJzEkkKDWxhc3RfbG9jYXRpb24YCyABKAsyJC5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVMb2NhdGlvblIMbGFzdExvY2F0aW9uEjYKF2xhc3RfbG9jYXRpb25fc25hcHBhYmxlGBogASgIUhVsYXN0TG9jYXRpb25TbmFwcGFibGUSMQoEdmlldxgfIAEoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFZpZXdSBHZpZXc6R+pBRAofZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVHJpcBIhcHJvdmlkZXJzL3twcm92aWRlcn0vdHJpcHMve3RyaXB9');
+    'CgRUcmlwEhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRIdCgp2ZWhpY2xlX2lkGAIgASgJUgl2ZWhpY2xlSWQSQAoLdHJpcF9zdGF0dXMYAyABKA4yHy5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBTdGF0dXNSCnRyaXBTdGF0dXMSOgoJdHJpcF90eXBlGAQgASgOMh0ubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZVIIdHJpcFR5cGUSSAoMcGlja3VwX3BvaW50GAUgASgLMiUubWFwcy5mbGVldGVuZ2luZS52MS5UZXJtaW5hbExvY2F0aW9uUgtwaWNrdXBQb2ludBJWChNhY3R1YWxfcGlja3VwX3BvaW50GBYgASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5TdG9wTG9jYXRpb25CA+BBBFIRYWN0dWFsUGlja3VwUG9pbnQSZQobYWN0dWFsX3BpY2t1cF9hcnJpdmFsX3BvaW50GCAgASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5TdG9wTG9jYXRpb25CA+BBBFIYYWN0dWFsUGlja3VwQXJyaXZhbFBvaW50EkAKC3BpY2t1cF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpwaWNrdXBUaW1lEmIKGWludGVybWVkaWF0ZV9kZXN0aW5hdGlvbnMYDiADKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsTG9jYXRpb25SGGludGVybWVkaWF0ZURlc3RpbmF0aW9ucxJmCiFpbnRlcm1lZGlhdGVfZGVzdGluYXRpb25zX3ZlcnNpb24YGSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUh9pbnRlcm1lZGlhdGVEZXN0aW5hdGlvbnNWZXJzaW9uEkQKHmludGVybWVkaWF0ZV9kZXN0aW5hdGlvbl9pbmRleBgPIAEoBVIcaW50ZXJtZWRpYXRlRGVzdGluYXRpb25JbmRleBKKAQouYWN0dWFsX2ludGVybWVkaWF0ZV9kZXN0aW5hdGlvbl9hcnJpdmFsX3BvaW50cxghIAMoCzIhLm1hcHMuZmxlZXRlbmdpbmUudjEuU3RvcExvY2F0aW9uQgPgQQRSKmFjdHVhbEludGVybWVkaWF0ZURlc3RpbmF0aW9uQXJyaXZhbFBvaW50cxJwCiBhY3R1YWxfaW50ZXJtZWRpYXRlX2Rlc3RpbmF0aW9ucxgiIAMoCzIhLm1hcHMuZmxlZXRlbmdpbmUudjEuU3RvcExvY2F0aW9uQgPgQQRSHmFjdHVhbEludGVybWVkaWF0ZURlc3RpbmF0aW9ucxJKCg1kcm9wb2ZmX3BvaW50GAcgASgLMiUubWFwcy5mbGVldGVuZ2luZS52MS5UZXJtaW5hbExvY2F0aW9uUgxkcm9wb2ZmUG9pbnQSWAoUYWN0dWFsX2Ryb3BvZmZfcG9pbnQYFyABKAsyIS5tYXBzLmZsZWV0ZW5naW5lLnYxLlN0b3BMb2NhdGlvbkID4EEEUhJhY3R1YWxEcm9wb2ZmUG9pbnQSQgoMZHJvcG9mZl90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgtkcm9wb2ZmVGltZRJXChNyZW1haW5pbmdfd2F5cG9pbnRzGBAgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRCA+BBA1IScmVtYWluaW5nV2F5cG9pbnRzEk4KEXZlaGljbGVfd2F5cG9pbnRzGBQgAygLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRSEHZlaGljbGVXYXlwb2ludHMSLgoFcm91dGUYCSADKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBA1IFcm91dGUSNwoVY3VycmVudF9yb3V0ZV9zZWdtZW50GBUgASgJQgPgQQNSE2N1cnJlbnRSb3V0ZVNlZ21lbnQSYgodY3VycmVudF9yb3V0ZV9zZWdtZW50X3ZlcnNpb24YESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSGmN1cnJlbnRSb3V0ZVNlZ21lbnRWZXJzaW9uEnYKHWN1cnJlbnRfcm91dGVfc2VnbWVudF90cmFmZmljGBwgASgLMi4ubWFwcy5mbGVldGVuZ2luZS52MS5Db25zdW1hYmxlVHJhZmZpY1BvbHlsaW5lQgPgQQNSGmN1cnJlbnRSb3V0ZVNlZ21lbnRUcmFmZmljEnEKJWN1cnJlbnRfcm91dGVfc2VnbWVudF90cmFmZmljX3ZlcnNpb24YHiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSIWN1cnJlbnRSb3V0ZVNlZ21lbnRUcmFmZmljVmVyc2lvbhJsCh9jdXJyZW50X3JvdXRlX3NlZ21lbnRfZW5kX3BvaW50GBggASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnRCA+BBA1IbY3VycmVudFJvdXRlU2VnbWVudEVuZFBvaW50ElwKGXJlbWFpbmluZ19kaXN0YW5jZV9tZXRlcnMYDCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEDUhdyZW1haW5pbmdEaXN0YW5jZU1ldGVycxJSChVldGFfdG9fZmlyc3Rfd2F5cG9pbnQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSEmV0YVRvRmlyc3RXYXlwb2ludBJmCiByZW1haW5pbmdfdGltZV90b19maXJzdF93YXlwb2ludBgbIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDUhxyZW1haW5pbmdUaW1lVG9GaXJzdFdheXBvaW50El8KG3JlbWFpbmluZ193YXlwb2ludHNfdmVyc2lvbhgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IZcmVtYWluaW5nV2F5cG9pbnRzVmVyc2lvbhJqCiFyZW1haW5pbmdfd2F5cG9pbnRzX3JvdXRlX3ZlcnNpb24YHSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSHnJlbWFpbmluZ1dheXBvaW50c1JvdXRlVmVyc2lvbhI1ChRudW1iZXJfb2ZfcGFzc2VuZ2VycxgKIAEoBUID4EEFUhJudW1iZXJPZlBhc3NlbmdlcnMSTgoNbGFzdF9sb2NhdGlvbhgLIAEoCzIkLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUxvY2F0aW9uQgPgQQNSDGxhc3RMb2NhdGlvbhI7ChdsYXN0X2xvY2F0aW9uX3NuYXBwYWJsZRgaIAEoCEID4EEDUhVsYXN0TG9jYXRpb25TbmFwcGFibGUSMQoEdmlldxgfIAEoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFZpZXdSBHZpZXc6R+pBRAofZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVHJpcBIhcHJvdmlkZXJzL3twcm92aWRlcn0vdHJpcHMve3RyaXB9');
 @$core.Deprecated('Use stopLocationDescriptor instead')
 const StopLocation$json = const {
   '1': 'StopLocation',
@@ -319,11 +364,12 @@ const StopLocation$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'stopTime'
+      '8': const {'3': true},
+      '10': 'stopTime',
     },
   ],
 };
 
 /// Descriptor for `StopLocation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List stopLocationDescriptor = $convert.base64Decode(
-    'CgxTdG9wTG9jYXRpb24SLgoFcG9pbnQYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAlIFcG9pbnQSOAoJdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJdGltZXN0YW1wEjcKCXN0b3BfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCHN0b3BUaW1l');
+    'CgxTdG9wTG9jYXRpb24SLgoFcG9pbnQYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAlIFcG9pbnQSOAoJdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJdGltZXN0YW1wEj4KCXN0b3BfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBRgB4EEEUghzdG9wVGltZQ==');

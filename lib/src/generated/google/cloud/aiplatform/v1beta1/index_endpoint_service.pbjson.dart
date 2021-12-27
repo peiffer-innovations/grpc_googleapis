@@ -311,3 +311,76 @@ const UndeployIndexOperationMetadata$json = const {
 final $typed_data.Uint8List undeployIndexOperationMetadataDescriptor =
     $convert.base64Decode(
         'Ch5VbmRlcGxveUluZGV4T3BlcmF0aW9uTWV0YWRhdGESZAoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhUg9nZW5lcmljTWV0YWRhdGE=');
+@$core.Deprecated('Use mutateDeployedIndexRequestDescriptor instead')
+const MutateDeployedIndexRequest$json = const {
+  '1': 'MutateDeployedIndexRequest',
+  '2': const [
+    const {
+      '1': 'index_endpoint',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'indexEndpoint'
+    },
+    const {
+      '1': 'deployed_index',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1beta1.DeployedIndex',
+      '8': const {},
+      '10': 'deployedIndex'
+    },
+  ],
+};
+
+/// Descriptor for `MutateDeployedIndexRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mutateDeployedIndexRequestDescriptor =
+    $convert.base64Decode(
+        'ChpNdXRhdGVEZXBsb3llZEluZGV4UmVxdWVzdBJWCg5pbmRleF9lbmRwb2ludBgBIAEoCUIv4EEC+kEpCidhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4RW5kcG9pbnRSDWluZGV4RW5kcG9pbnQSWgoOZGVwbG95ZWRfaW5kZXgYAiABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveWVkSW5kZXhCA+BBAlINZGVwbG95ZWRJbmRleA==');
+@$core.Deprecated('Use mutateDeployedIndexResponseDescriptor instead')
+const MutateDeployedIndexResponse$json = const {
+  '1': 'MutateDeployedIndexResponse',
+  '2': const [
+    const {
+      '1': 'deployed_index',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1beta1.DeployedIndex',
+      '10': 'deployedIndex'
+    },
+  ],
+};
+
+/// Descriptor for `MutateDeployedIndexResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mutateDeployedIndexResponseDescriptor =
+    $convert.base64Decode(
+        'ChtNdXRhdGVEZXBsb3llZEluZGV4UmVzcG9uc2USVQoOZGVwbG95ZWRfaW5kZXgYASABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveWVkSW5kZXhSDWRlcGxveWVkSW5kZXg=');
+@$core.Deprecated('Use mutateDeployedIndexOperationMetadataDescriptor instead')
+const MutateDeployedIndexOperationMetadata$json = const {
+  '1': 'MutateDeployedIndexOperationMetadata',
+  '2': const [
+    const {
+      '1': 'generic_metadata',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.aiplatform.v1beta1.GenericOperationMetadata',
+      '10': 'genericMetadata'
+    },
+    const {
+      '1': 'deployed_index_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'deployedIndexId'
+    },
+  ],
+};
+
+/// Descriptor for `MutateDeployedIndexOperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mutateDeployedIndexOperationMetadataDescriptor =
+    $convert.base64Decode(
+        'CiRNdXRhdGVEZXBsb3llZEluZGV4T3BlcmF0aW9uTWV0YWRhdGESZAoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhUg9nZW5lcmljTWV0YWRhdGESKgoRZGVwbG95ZWRfaW5kZXhfaWQYAiABKAlSD2RlcGxveWVkSW5kZXhJZA==');

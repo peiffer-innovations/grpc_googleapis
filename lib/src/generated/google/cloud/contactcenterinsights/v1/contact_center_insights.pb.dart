@@ -362,6 +362,17 @@ class CalculateStatsResponse extends $pb.GeneratedMessage {
             ? ''
             : 'conversationCountTimeSeries',
         subBuilder: CalculateStatsResponse_TimeSeries.create)
+    ..m<$core.String, $3.IssueModelLabelStats_IssueStats>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'issueMatchesStats',
+        entryClassName: 'CalculateStatsResponse.IssueMatchesStatsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $3.IssueModelLabelStats_IssueStats.create,
+        packageName:
+            const $pb.PackageName('google.cloud.contactcenterinsights.v1'))
     ..hasRequiredFields = false;
 
   CalculateStatsResponse._() : super();
@@ -374,6 +385,8 @@ class CalculateStatsResponse extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.')
         $core.Map<$core.String, $core.int>? issueMatches,
     CalculateStatsResponse_TimeSeries? conversationCountTimeSeries,
+    $core.Map<$core.String, $3.IssueModelLabelStats_IssueStats>?
+        issueMatchesStats,
   }) {
     final _result = create();
     if (averageDuration != null) {
@@ -397,6 +410,9 @@ class CalculateStatsResponse extends $pb.GeneratedMessage {
     }
     if (conversationCountTimeSeries != null) {
       _result.conversationCountTimeSeries = conversationCountTimeSeries;
+    }
+    if (issueMatchesStats != null) {
+      _result.issueMatchesStats.addAll(issueMatchesStats);
     }
     return _result;
   }
@@ -493,6 +509,10 @@ class CalculateStatsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   CalculateStatsResponse_TimeSeries ensureConversationCountTimeSeries() =>
       $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $core.Map<$core.String, $3.IssueModelLabelStats_IssueStats>
+      get issueMatchesStats => $_getMap(7);
 }
 
 class CreateAnalysisOperationMetadata extends $pb.GeneratedMessage {
@@ -1850,6 +1870,16 @@ class ExportInsightsDataRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'kmsKey')
+    ..e<ExportInsightsDataRequest_WriteDisposition>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'writeDisposition',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: ExportInsightsDataRequest_WriteDisposition
+            .WRITE_DISPOSITION_UNSPECIFIED,
+        valueOf: ExportInsightsDataRequest_WriteDisposition.valueOf,
+        enumValues: ExportInsightsDataRequest_WriteDisposition.values)
     ..hasRequiredFields = false;
 
   ExportInsightsDataRequest._() : super();
@@ -1858,6 +1888,7 @@ class ExportInsightsDataRequest extends $pb.GeneratedMessage {
     ExportInsightsDataRequest_BigQueryDestination? bigQueryDestination,
     $core.String? filter,
     $core.String? kmsKey,
+    ExportInsightsDataRequest_WriteDisposition? writeDisposition,
   }) {
     final _result = create();
     if (parent != null) {
@@ -1871,6 +1902,9 @@ class ExportInsightsDataRequest extends $pb.GeneratedMessage {
     }
     if (kmsKey != null) {
       _result.kmsKey = kmsKey;
+    }
+    if (writeDisposition != null) {
+      _result.writeDisposition = writeDisposition;
     }
     return _result;
   }
@@ -1958,6 +1992,18 @@ class ExportInsightsDataRequest extends $pb.GeneratedMessage {
   $core.bool hasKmsKey() => $_has(3);
   @$pb.TagNumber(4)
   void clearKmsKey() => clearField(4);
+
+  @$pb.TagNumber(5)
+  ExportInsightsDataRequest_WriteDisposition get writeDisposition => $_getN(4);
+  @$pb.TagNumber(5)
+  set writeDisposition(ExportInsightsDataRequest_WriteDisposition v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasWriteDisposition() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearWriteDisposition() => clearField(5);
 }
 
 class ExportInsightsDataMetadata extends $pb.GeneratedMessage {
@@ -4188,6 +4234,103 @@ class DeletePhraseMatcherRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
+}
+
+class UpdatePhraseMatcherRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdatePhraseMatcherRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.contactcenterinsights.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.PhraseMatcher>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'phraseMatcher',
+        subBuilder: $3.PhraseMatcher.create)
+    ..aOM<$6.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $6.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdatePhraseMatcherRequest._() : super();
+  factory UpdatePhraseMatcherRequest({
+    $3.PhraseMatcher? phraseMatcher,
+    $6.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (phraseMatcher != null) {
+      _result.phraseMatcher = phraseMatcher;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdatePhraseMatcherRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdatePhraseMatcherRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdatePhraseMatcherRequest clone() =>
+      UpdatePhraseMatcherRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdatePhraseMatcherRequest copyWith(
+          void Function(UpdatePhraseMatcherRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdatePhraseMatcherRequest))
+          as UpdatePhraseMatcherRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdatePhraseMatcherRequest create() => UpdatePhraseMatcherRequest._();
+  UpdatePhraseMatcherRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdatePhraseMatcherRequest> createRepeated() =>
+      $pb.PbList<UpdatePhraseMatcherRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePhraseMatcherRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdatePhraseMatcherRequest>(create);
+  static UpdatePhraseMatcherRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.PhraseMatcher get phraseMatcher => $_getN(0);
+  @$pb.TagNumber(1)
+  set phraseMatcher($3.PhraseMatcher v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPhraseMatcher() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPhraseMatcher() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.PhraseMatcher ensurePhraseMatcher() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($6.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class GetSettingsRequest extends $pb.GeneratedMessage {

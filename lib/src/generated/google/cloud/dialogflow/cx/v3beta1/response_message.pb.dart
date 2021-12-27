@@ -696,6 +696,92 @@ class ResponseMessage_MixedAudio extends $pb.GeneratedMessage {
   $core.List<ResponseMessage_MixedAudio_Segment> get segments => $_getList(0);
 }
 
+enum ResponseMessage_TelephonyTransferCall_Endpoint { phoneNumber, notSet }
+
+class ResponseMessage_TelephonyTransferCall extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, ResponseMessage_TelephonyTransferCall_Endpoint>
+      _ResponseMessage_TelephonyTransferCall_EndpointByTag = {
+    1: ResponseMessage_TelephonyTransferCall_Endpoint.phoneNumber,
+    0: ResponseMessage_TelephonyTransferCall_Endpoint.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ResponseMessage.TelephonyTransferCall',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.cx.v3beta1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'phoneNumber')
+    ..hasRequiredFields = false;
+
+  ResponseMessage_TelephonyTransferCall._() : super();
+  factory ResponseMessage_TelephonyTransferCall({
+    $core.String? phoneNumber,
+  }) {
+    final _result = create();
+    if (phoneNumber != null) {
+      _result.phoneNumber = phoneNumber;
+    }
+    return _result;
+  }
+  factory ResponseMessage_TelephonyTransferCall.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResponseMessage_TelephonyTransferCall.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ResponseMessage_TelephonyTransferCall clone() =>
+      ResponseMessage_TelephonyTransferCall()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ResponseMessage_TelephonyTransferCall copyWith(
+          void Function(ResponseMessage_TelephonyTransferCall) updates) =>
+      super.copyWith((message) =>
+              updates(message as ResponseMessage_TelephonyTransferCall))
+          as ResponseMessage_TelephonyTransferCall; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ResponseMessage_TelephonyTransferCall create() =>
+      ResponseMessage_TelephonyTransferCall._();
+  ResponseMessage_TelephonyTransferCall createEmptyInstance() => create();
+  static $pb.PbList<ResponseMessage_TelephonyTransferCall> createRepeated() =>
+      $pb.PbList<ResponseMessage_TelephonyTransferCall>();
+  @$core.pragma('dart2js:noInline')
+  static ResponseMessage_TelephonyTransferCall getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ResponseMessage_TelephonyTransferCall>(create);
+  static ResponseMessage_TelephonyTransferCall? _defaultInstance;
+
+  ResponseMessage_TelephonyTransferCall_Endpoint whichEndpoint() =>
+      _ResponseMessage_TelephonyTransferCall_EndpointByTag[$_whichOneof(0)]!;
+  void clearEndpoint() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get phoneNumber => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set phoneNumber($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPhoneNumber() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPhoneNumber() => clearField(1);
+}
+
 enum ResponseMessage_Message {
   text,
   payload,
@@ -705,6 +791,7 @@ enum ResponseMessage_Message {
   endInteraction,
   playAudio,
   mixedAudio,
+  telephonyTransferCall,
   notSet
 }
 
@@ -719,6 +806,7 @@ class ResponseMessage extends $pb.GeneratedMessage {
     11: ResponseMessage_Message.endInteraction,
     12: ResponseMessage_Message.playAudio,
     13: ResponseMessage_Message.mixedAudio,
+    18: ResponseMessage_Message.telephonyTransferCall,
     0: ResponseMessage_Message.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -730,7 +818,7 @@ class ResponseMessage extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.dialogflow.cx.v3beta1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 8, 9, 10, 11, 12, 13])
+    ..oo(0, [1, 2, 8, 9, 10, 11, 12, 13, 18])
     ..aOM<ResponseMessage_Text>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -779,6 +867,12 @@ class ResponseMessage extends $pb.GeneratedMessage {
             ? ''
             : 'mixedAudio',
         subBuilder: ResponseMessage_MixedAudio.create)
+    ..aOM<ResponseMessage_TelephonyTransferCall>(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'telephonyTransferCall',
+        subBuilder: ResponseMessage_TelephonyTransferCall.create)
     ..hasRequiredFields = false;
 
   ResponseMessage._() : super();
@@ -791,6 +885,7 @@ class ResponseMessage extends $pb.GeneratedMessage {
     ResponseMessage_EndInteraction? endInteraction,
     ResponseMessage_PlayAudio? playAudio,
     ResponseMessage_MixedAudio? mixedAudio,
+    ResponseMessage_TelephonyTransferCall? telephonyTransferCall,
   }) {
     final _result = create();
     if (text != null) {
@@ -816,6 +911,9 @@ class ResponseMessage extends $pb.GeneratedMessage {
     }
     if (mixedAudio != null) {
       _result.mixedAudio = mixedAudio;
+    }
+    if (telephonyTransferCall != null) {
+      _result.telephonyTransferCall = telephonyTransferCall;
     }
     return _result;
   }
@@ -962,4 +1060,19 @@ class ResponseMessage extends $pb.GeneratedMessage {
   void clearMixedAudio() => clearField(13);
   @$pb.TagNumber(13)
   ResponseMessage_MixedAudio ensureMixedAudio() => $_ensure(7);
+
+  @$pb.TagNumber(18)
+  ResponseMessage_TelephonyTransferCall get telephonyTransferCall => $_getN(8);
+  @$pb.TagNumber(18)
+  set telephonyTransferCall(ResponseMessage_TelephonyTransferCall v) {
+    setField(18, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasTelephonyTransferCall() => $_has(8);
+  @$pb.TagNumber(18)
+  void clearTelephonyTransferCall() => clearField(18);
+  @$pb.TagNumber(18)
+  ResponseMessage_TelephonyTransferCall ensureTelephonyTransferCall() =>
+      $_ensure(8);
 }

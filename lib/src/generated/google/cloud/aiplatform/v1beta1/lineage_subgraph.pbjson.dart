@@ -19,7 +19,6 @@ const LineageSubgraph$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.aiplatform.v1beta1.Artifact',
-      '8': const {},
       '10': 'artifacts'
     },
     const {
@@ -28,7 +27,6 @@ const LineageSubgraph$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.aiplatform.v1beta1.Execution',
-      '8': const {},
       '10': 'executions'
     },
     const {
@@ -44,4 +42,4 @@ const LineageSubgraph$json = const {
 
 /// Descriptor for `LineageSubgraph`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List lineageSubgraphDescriptor = $convert.base64Decode(
-    'Cg9MaW5lYWdlU3ViZ3JhcGgScAoJYXJ0aWZhY3RzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5BcnRpZmFjdEIn+kEkCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0FydGlmYWN0UglhcnRpZmFjdHMSdAoKZXhlY3V0aW9ucxgCIAMoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRXhlY3V0aW9uQij6QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uUgpleGVjdXRpb25zEj4KBmV2ZW50cxgDIAMoCzImLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRXZlbnRSBmV2ZW50cw==');
+    'Cg9MaW5lYWdlU3ViZ3JhcGgSRwoJYXJ0aWZhY3RzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5BcnRpZmFjdFIJYXJ0aWZhY3RzEkoKCmV4ZWN1dGlvbnMYAiADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkV4ZWN1dGlvblIKZXhlY3V0aW9ucxI+CgZldmVudHMYAyADKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkV2ZW50UgZldmVudHM=');

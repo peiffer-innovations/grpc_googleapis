@@ -75,6 +75,39 @@ class Policy extends $pb.GeneratedMessage {
             .GLOBAL_POLICY_EVALUATION_MODE_UNSPECIFIED,
         valueOf: Policy_GlobalPolicyEvaluationMode.valueOf,
         enumValues: Policy_GlobalPolicyEvaluationMode.values)
+    ..m<$core.String, AdmissionRule>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kubernetesServiceAccountAdmissionRules',
+        entryClassName: 'Policy.KubernetesServiceAccountAdmissionRulesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: AdmissionRule.create,
+        packageName:
+            const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+    ..m<$core.String, AdmissionRule>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'istioServiceIdentityAdmissionRules',
+        entryClassName: 'Policy.IstioServiceIdentityAdmissionRulesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: AdmissionRule.create,
+        packageName:
+            const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+    ..m<$core.String, AdmissionRule>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kubernetesNamespaceAdmissionRules',
+        entryClassName: 'Policy.KubernetesNamespaceAdmissionRulesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: AdmissionRule.create,
+        packageName:
+            const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
     ..hasRequiredFields = false;
 
   Policy._() : super();
@@ -86,6 +119,10 @@ class Policy extends $pb.GeneratedMessage {
     $0.Timestamp? updateTime,
     $core.String? description,
     Policy_GlobalPolicyEvaluationMode? globalPolicyEvaluationMode,
+    $core.Map<$core.String, AdmissionRule>?
+        kubernetesServiceAccountAdmissionRules,
+    $core.Map<$core.String, AdmissionRule>? istioServiceIdentityAdmissionRules,
+    $core.Map<$core.String, AdmissionRule>? kubernetesNamespaceAdmissionRules,
   }) {
     final _result = create();
     if (name != null) {
@@ -108,6 +145,18 @@ class Policy extends $pb.GeneratedMessage {
     }
     if (globalPolicyEvaluationMode != null) {
       _result.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
+    }
+    if (kubernetesServiceAccountAdmissionRules != null) {
+      _result.kubernetesServiceAccountAdmissionRules
+          .addAll(kubernetesServiceAccountAdmissionRules);
+    }
+    if (istioServiceIdentityAdmissionRules != null) {
+      _result.istioServiceIdentityAdmissionRules
+          .addAll(istioServiceIdentityAdmissionRules);
+    }
+    if (kubernetesNamespaceAdmissionRules != null) {
+      _result.kubernetesNamespaceAdmissionRules
+          .addAll(kubernetesNamespaceAdmissionRules);
     }
     return _result;
   }
@@ -208,6 +257,18 @@ class Policy extends $pb.GeneratedMessage {
   $core.bool hasGlobalPolicyEvaluationMode() => $_has(6);
   @$pb.TagNumber(7)
   void clearGlobalPolicyEvaluationMode() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.Map<$core.String, AdmissionRule>
+      get kubernetesServiceAccountAdmissionRules => $_getMap(7);
+
+  @$pb.TagNumber(9)
+  $core.Map<$core.String, AdmissionRule>
+      get istioServiceIdentityAdmissionRules => $_getMap(8);
+
+  @$pb.TagNumber(10)
+  $core.Map<$core.String, AdmissionRule>
+      get kubernetesNamespaceAdmissionRules => $_getMap(9);
 }
 
 class AdmissionWhitelistPattern extends $pb.GeneratedMessage {

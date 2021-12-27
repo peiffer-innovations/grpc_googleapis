@@ -1198,6 +1198,98 @@ class Workload_ResourceSettings extends $pb.GeneratedMessage {
   void clearDisplayName() => clearField(3);
 }
 
+class Workload_SaaEnrollmentResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Workload.SaaEnrollmentResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.assuredworkloads.v1beta1'),
+      createEmptyInstance: create)
+    ..e<Workload_SaaEnrollmentResponse_SetupState>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'setupStatus',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            Workload_SaaEnrollmentResponse_SetupState.SETUP_STATE_UNSPECIFIED,
+        valueOf: Workload_SaaEnrollmentResponse_SetupState.valueOf,
+        enumValues: Workload_SaaEnrollmentResponse_SetupState.values)
+    ..pc<Workload_SaaEnrollmentResponse_SetupError>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'setupErrors',
+        $pb.PbFieldType.PE,
+        valueOf: Workload_SaaEnrollmentResponse_SetupError.valueOf,
+        enumValues: Workload_SaaEnrollmentResponse_SetupError.values)
+    ..hasRequiredFields = false;
+
+  Workload_SaaEnrollmentResponse._() : super();
+  factory Workload_SaaEnrollmentResponse({
+    Workload_SaaEnrollmentResponse_SetupState? setupStatus,
+    $core.Iterable<Workload_SaaEnrollmentResponse_SetupError>? setupErrors,
+  }) {
+    final _result = create();
+    if (setupStatus != null) {
+      _result.setupStatus = setupStatus;
+    }
+    if (setupErrors != null) {
+      _result.setupErrors.addAll(setupErrors);
+    }
+    return _result;
+  }
+  factory Workload_SaaEnrollmentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Workload_SaaEnrollmentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Workload_SaaEnrollmentResponse clone() =>
+      Workload_SaaEnrollmentResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Workload_SaaEnrollmentResponse copyWith(
+          void Function(Workload_SaaEnrollmentResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as Workload_SaaEnrollmentResponse))
+          as Workload_SaaEnrollmentResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Workload_SaaEnrollmentResponse create() =>
+      Workload_SaaEnrollmentResponse._();
+  Workload_SaaEnrollmentResponse createEmptyInstance() => create();
+  static $pb.PbList<Workload_SaaEnrollmentResponse> createRepeated() =>
+      $pb.PbList<Workload_SaaEnrollmentResponse>();
+  @$core.pragma('dart2js:noInline')
+  static Workload_SaaEnrollmentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Workload_SaaEnrollmentResponse>(create);
+  static Workload_SaaEnrollmentResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Workload_SaaEnrollmentResponse_SetupState get setupStatus => $_getN(0);
+  @$pb.TagNumber(1)
+  set setupStatus(Workload_SaaEnrollmentResponse_SetupState v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSetupStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSetupStatus() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<Workload_SaaEnrollmentResponse_SetupError> get setupErrors =>
+      $_getList(1);
+}
+
 enum Workload_ComplianceRegimeSettings {
   il4Settings,
   cjisSettings,
@@ -1319,6 +1411,27 @@ class Workload extends $pb.GeneratedMessage {
             : 'resourceSettings',
         $pb.PbFieldType.PM,
         subBuilder: Workload_ResourceSettings.create)
+    ..e<Workload_KajEnrollmentState>(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kajEnrollmentState',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            Workload_KajEnrollmentState.KAJ_ENROLLMENT_STATE_UNSPECIFIED,
+        valueOf: Workload_KajEnrollmentState.valueOf,
+        enumValues: Workload_KajEnrollmentState.values)
+    ..aOB(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableSovereignControls')
+    ..aOM<Workload_SaaEnrollmentResponse>(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'saaEnrollmentResponse',
+        subBuilder: Workload_SaaEnrollmentResponse.create)
     ..hasRequiredFields = false;
 
   Workload._() : super();
@@ -1342,6 +1455,9 @@ class Workload extends $pb.GeneratedMessage {
     $core.String? provisionedResourcesParent,
     Workload_KMSSettings? kmsSettings,
     $core.Iterable<Workload_ResourceSettings>? resourceSettings,
+    Workload_KajEnrollmentState? kajEnrollmentState,
+    $core.bool? enableSovereignControls,
+    Workload_SaaEnrollmentResponse? saaEnrollmentResponse,
   }) {
     final _result = create();
     if (name != null) {
@@ -1392,6 +1508,15 @@ class Workload extends $pb.GeneratedMessage {
     }
     if (resourceSettings != null) {
       _result.resourceSettings.addAll(resourceSettings);
+    }
+    if (kajEnrollmentState != null) {
+      _result.kajEnrollmentState = kajEnrollmentState;
+    }
+    if (enableSovereignControls != null) {
+      _result.enableSovereignControls = enableSovereignControls;
+    }
+    if (saaEnrollmentResponse != null) {
+      _result.saaEnrollmentResponse = saaEnrollmentResponse;
     }
     return _result;
   }
@@ -1610,6 +1735,44 @@ class Workload extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(15)
   $core.List<Workload_ResourceSettings> get resourceSettings => $_getList(14);
+
+  @$pb.TagNumber(17)
+  Workload_KajEnrollmentState get kajEnrollmentState => $_getN(15);
+  @$pb.TagNumber(17)
+  set kajEnrollmentState(Workload_KajEnrollmentState v) {
+    setField(17, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasKajEnrollmentState() => $_has(15);
+  @$pb.TagNumber(17)
+  void clearKajEnrollmentState() => clearField(17);
+
+  @$pb.TagNumber(18)
+  $core.bool get enableSovereignControls => $_getBF(16);
+  @$pb.TagNumber(18)
+  set enableSovereignControls($core.bool v) {
+    $_setBool(16, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasEnableSovereignControls() => $_has(16);
+  @$pb.TagNumber(18)
+  void clearEnableSovereignControls() => clearField(18);
+
+  @$pb.TagNumber(20)
+  Workload_SaaEnrollmentResponse get saaEnrollmentResponse => $_getN(17);
+  @$pb.TagNumber(20)
+  set saaEnrollmentResponse(Workload_SaaEnrollmentResponse v) {
+    setField(20, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasSaaEnrollmentResponse() => $_has(17);
+  @$pb.TagNumber(20)
+  void clearSaaEnrollmentResponse() => clearField(20);
+  @$pb.TagNumber(20)
+  Workload_SaaEnrollmentResponse ensureSaaEnrollmentResponse() => $_ensure(17);
 }
 
 class CreateWorkloadOperationMetadata extends $pb.GeneratedMessage {

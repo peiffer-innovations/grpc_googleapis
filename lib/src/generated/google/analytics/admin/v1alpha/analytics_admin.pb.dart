@@ -3788,181 +3788,6 @@ class ListAndroidAppDataStreamsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
-class GetEnhancedMeasurementSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetEnhancedMeasurementSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetEnhancedMeasurementSettingsRequest._() : super();
-  factory GetEnhancedMeasurementSettingsRequest({
-    $core.String? name,
-  }) {
-    final _result = create();
-    if (name != null) {
-      _result.name = name;
-    }
-    return _result;
-  }
-  factory GetEnhancedMeasurementSettingsRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetEnhancedMeasurementSettingsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetEnhancedMeasurementSettingsRequest clone() =>
-      GetEnhancedMeasurementSettingsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  GetEnhancedMeasurementSettingsRequest copyWith(
-          void Function(GetEnhancedMeasurementSettingsRequest) updates) =>
-      super.copyWith((message) =>
-              updates(message as GetEnhancedMeasurementSettingsRequest))
-          as GetEnhancedMeasurementSettingsRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static GetEnhancedMeasurementSettingsRequest create() =>
-      GetEnhancedMeasurementSettingsRequest._();
-  GetEnhancedMeasurementSettingsRequest createEmptyInstance() => create();
-  static $pb.PbList<GetEnhancedMeasurementSettingsRequest> createRepeated() =>
-      $pb.PbList<GetEnhancedMeasurementSettingsRequest>();
-  @$core.pragma('dart2js:noInline')
-  static GetEnhancedMeasurementSettingsRequest getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetEnhancedMeasurementSettingsRequest>(create);
-  static GetEnhancedMeasurementSettingsRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearName() => clearField(1);
-}
-
-class UpdateEnhancedMeasurementSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateEnhancedMeasurementSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOM<$1.EnhancedMeasurementSettings>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enhancedMeasurementSettings',
-        subBuilder: $1.EnhancedMeasurementSettings.create)
-    ..aOM<$3.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $3.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateEnhancedMeasurementSettingsRequest._() : super();
-  factory UpdateEnhancedMeasurementSettingsRequest({
-    $1.EnhancedMeasurementSettings? enhancedMeasurementSettings,
-    $3.FieldMask? updateMask,
-  }) {
-    final _result = create();
-    if (enhancedMeasurementSettings != null) {
-      _result.enhancedMeasurementSettings = enhancedMeasurementSettings;
-    }
-    if (updateMask != null) {
-      _result.updateMask = updateMask;
-    }
-    return _result;
-  }
-  factory UpdateEnhancedMeasurementSettingsRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateEnhancedMeasurementSettingsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateEnhancedMeasurementSettingsRequest clone() =>
-      UpdateEnhancedMeasurementSettingsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  UpdateEnhancedMeasurementSettingsRequest copyWith(
-          void Function(UpdateEnhancedMeasurementSettingsRequest) updates) =>
-      super.copyWith((message) =>
-              updates(message as UpdateEnhancedMeasurementSettingsRequest))
-          as UpdateEnhancedMeasurementSettingsRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static UpdateEnhancedMeasurementSettingsRequest create() =>
-      UpdateEnhancedMeasurementSettingsRequest._();
-  UpdateEnhancedMeasurementSettingsRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateEnhancedMeasurementSettingsRequest>
-      createRepeated() =>
-          $pb.PbList<UpdateEnhancedMeasurementSettingsRequest>();
-  @$core.pragma('dart2js:noInline')
-  static UpdateEnhancedMeasurementSettingsRequest getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          UpdateEnhancedMeasurementSettingsRequest>(create);
-  static UpdateEnhancedMeasurementSettingsRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $1.EnhancedMeasurementSettings get enhancedMeasurementSettings => $_getN(0);
-  @$pb.TagNumber(1)
-  set enhancedMeasurementSettings($1.EnhancedMeasurementSettings v) {
-    setField(1, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasEnhancedMeasurementSettings() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearEnhancedMeasurementSettings() => clearField(1);
-  @$pb.TagNumber(1)
-  $1.EnhancedMeasurementSettings ensureEnhancedMeasurementSettings() =>
-      $_ensure(0);
-
-  @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
-  @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
-    setField(2, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasUpdateMask() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
-  @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
-}
-
 class CreateFirebaseLinkRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -5093,6 +4918,148 @@ class ListAccountSummariesResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
+}
+
+class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AcknowledgeUserDataCollectionRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'property')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acknowledgement')
+    ..hasRequiredFields = false;
+
+  AcknowledgeUserDataCollectionRequest._() : super();
+  factory AcknowledgeUserDataCollectionRequest({
+    $core.String? property,
+    $core.String? acknowledgement,
+  }) {
+    final _result = create();
+    if (property != null) {
+      _result.property = property;
+    }
+    if (acknowledgement != null) {
+      _result.acknowledgement = acknowledgement;
+    }
+    return _result;
+  }
+  factory AcknowledgeUserDataCollectionRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AcknowledgeUserDataCollectionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AcknowledgeUserDataCollectionRequest clone() =>
+      AcknowledgeUserDataCollectionRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AcknowledgeUserDataCollectionRequest copyWith(
+          void Function(AcknowledgeUserDataCollectionRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as AcknowledgeUserDataCollectionRequest))
+          as AcknowledgeUserDataCollectionRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AcknowledgeUserDataCollectionRequest create() =>
+      AcknowledgeUserDataCollectionRequest._();
+  AcknowledgeUserDataCollectionRequest createEmptyInstance() => create();
+  static $pb.PbList<AcknowledgeUserDataCollectionRequest> createRepeated() =>
+      $pb.PbList<AcknowledgeUserDataCollectionRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AcknowledgeUserDataCollectionRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AcknowledgeUserDataCollectionRequest>(create);
+  static AcknowledgeUserDataCollectionRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get property => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set property($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProperty() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProperty() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get acknowledgement => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set acknowledgement($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAcknowledgement() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAcknowledgement() => clearField(2);
+}
+
+class AcknowledgeUserDataCollectionResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AcknowledgeUserDataCollectionResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  AcknowledgeUserDataCollectionResponse._() : super();
+  factory AcknowledgeUserDataCollectionResponse() => create();
+  factory AcknowledgeUserDataCollectionResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AcknowledgeUserDataCollectionResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AcknowledgeUserDataCollectionResponse clone() =>
+      AcknowledgeUserDataCollectionResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AcknowledgeUserDataCollectionResponse copyWith(
+          void Function(AcknowledgeUserDataCollectionResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as AcknowledgeUserDataCollectionResponse))
+          as AcknowledgeUserDataCollectionResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AcknowledgeUserDataCollectionResponse create() =>
+      AcknowledgeUserDataCollectionResponse._();
+  AcknowledgeUserDataCollectionResponse createEmptyInstance() => create();
+  static $pb.PbList<AcknowledgeUserDataCollectionResponse> createRepeated() =>
+      $pb.PbList<AcknowledgeUserDataCollectionResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AcknowledgeUserDataCollectionResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AcknowledgeUserDataCollectionResponse>(create);
+  static AcknowledgeUserDataCollectionResponse? _defaultInstance;
 }
 
 class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
@@ -9072,4 +9039,525 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
   $3.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class CreateDataStreamRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateDataStreamRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<$1.DataStream>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataStream',
+        subBuilder: $1.DataStream.create)
+    ..hasRequiredFields = false;
+
+  CreateDataStreamRequest._() : super();
+  factory CreateDataStreamRequest({
+    $core.String? parent,
+    $1.DataStream? dataStream,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (dataStream != null) {
+      _result.dataStream = dataStream;
+    }
+    return _result;
+  }
+  factory CreateDataStreamRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDataStreamRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateDataStreamRequest clone() =>
+      CreateDataStreamRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateDataStreamRequest copyWith(
+          void Function(CreateDataStreamRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateDataStreamRequest))
+          as CreateDataStreamRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateDataStreamRequest create() => CreateDataStreamRequest._();
+  CreateDataStreamRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateDataStreamRequest> createRepeated() =>
+      $pb.PbList<CreateDataStreamRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDataStreamRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDataStreamRequest>(create);
+  static CreateDataStreamRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.DataStream get dataStream => $_getN(1);
+  @$pb.TagNumber(2)
+  set dataStream($1.DataStream v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDataStream() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDataStream() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.DataStream ensureDataStream() => $_ensure(1);
+}
+
+class DeleteDataStreamRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteDataStreamRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  DeleteDataStreamRequest._() : super();
+  factory DeleteDataStreamRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DeleteDataStreamRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteDataStreamRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteDataStreamRequest clone() =>
+      DeleteDataStreamRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteDataStreamRequest copyWith(
+          void Function(DeleteDataStreamRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteDataStreamRequest))
+          as DeleteDataStreamRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeleteDataStreamRequest create() => DeleteDataStreamRequest._();
+  DeleteDataStreamRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteDataStreamRequest> createRepeated() =>
+      $pb.PbList<DeleteDataStreamRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDataStreamRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDataStreamRequest>(create);
+  static DeleteDataStreamRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class UpdateDataStreamRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateDataStreamRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOM<$1.DataStream>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataStream',
+        subBuilder: $1.DataStream.create)
+    ..aOM<$3.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $3.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateDataStreamRequest._() : super();
+  factory UpdateDataStreamRequest({
+    $1.DataStream? dataStream,
+    $3.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (dataStream != null) {
+      _result.dataStream = dataStream;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateDataStreamRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDataStreamRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateDataStreamRequest clone() =>
+      UpdateDataStreamRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateDataStreamRequest copyWith(
+          void Function(UpdateDataStreamRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateDataStreamRequest))
+          as UpdateDataStreamRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateDataStreamRequest create() => UpdateDataStreamRequest._();
+  UpdateDataStreamRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateDataStreamRequest> createRepeated() =>
+      $pb.PbList<UpdateDataStreamRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDataStreamRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDataStreamRequest>(create);
+  static UpdateDataStreamRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.DataStream get dataStream => $_getN(0);
+  @$pb.TagNumber(1)
+  set dataStream($1.DataStream v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDataStream() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDataStream() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.DataStream ensureDataStream() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($3.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class ListDataStreamsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListDataStreamsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListDataStreamsRequest._() : super();
+  factory ListDataStreamsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListDataStreamsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDataStreamsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListDataStreamsRequest clone() =>
+      ListDataStreamsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListDataStreamsRequest copyWith(
+          void Function(ListDataStreamsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListDataStreamsRequest))
+          as ListDataStreamsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListDataStreamsRequest create() => ListDataStreamsRequest._();
+  ListDataStreamsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListDataStreamsRequest> createRepeated() =>
+      $pb.PbList<ListDataStreamsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListDataStreamsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDataStreamsRequest>(create);
+  static ListDataStreamsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => clearField(3);
+}
+
+class ListDataStreamsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListDataStreamsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$1.DataStream>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataStreams',
+        $pb.PbFieldType.PM,
+        subBuilder: $1.DataStream.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListDataStreamsResponse._() : super();
+  factory ListDataStreamsResponse({
+    $core.Iterable<$1.DataStream>? dataStreams,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (dataStreams != null) {
+      _result.dataStreams.addAll(dataStreams);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListDataStreamsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDataStreamsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListDataStreamsResponse clone() =>
+      ListDataStreamsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListDataStreamsResponse copyWith(
+          void Function(ListDataStreamsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListDataStreamsResponse))
+          as ListDataStreamsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListDataStreamsResponse create() => ListDataStreamsResponse._();
+  ListDataStreamsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListDataStreamsResponse> createRepeated() =>
+      $pb.PbList<ListDataStreamsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListDataStreamsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDataStreamsResponse>(create);
+  static ListDataStreamsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$1.DataStream> get dataStreams => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class GetDataStreamRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetDataStreamRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetDataStreamRequest._() : super();
+  factory GetDataStreamRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetDataStreamRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDataStreamRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetDataStreamRequest clone() =>
+      GetDataStreamRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetDataStreamRequest copyWith(void Function(GetDataStreamRequest) updates) =>
+      super.copyWith((message) => updates(message as GetDataStreamRequest))
+          as GetDataStreamRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetDataStreamRequest create() => GetDataStreamRequest._();
+  GetDataStreamRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDataStreamRequest> createRepeated() =>
+      $pb.PbList<GetDataStreamRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDataStreamRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDataStreamRequest>(create);
+  static GetDataStreamRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
 }

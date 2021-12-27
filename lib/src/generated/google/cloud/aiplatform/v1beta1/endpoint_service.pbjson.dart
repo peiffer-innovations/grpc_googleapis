@@ -30,12 +30,20 @@ const CreateEndpointRequest$json = const {
       '8': const {},
       '10': 'endpoint'
     },
+    const {
+      '1': 'endpoint_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'endpointId'
+    },
   ],
 };
 
 /// Descriptor for `CreateEndpointRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createEndpointRequestDescriptor = $convert.base64Decode(
-    'ChVDcmVhdGVFbmRwb2ludFJlcXVlc3QSQQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvblIGcGFyZW50EkoKCGVuZHBvaW50GAIgASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5FbmRwb2ludEID4EECUghlbmRwb2ludA==');
+    'ChVDcmVhdGVFbmRwb2ludFJlcXVlc3QSQQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvblIGcGFyZW50EkoKCGVuZHBvaW50GAIgASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5FbmRwb2ludEID4EECUghlbmRwb2ludBIkCgtlbmRwb2ludF9pZBgEIAEoCUID4EEFUgplbmRwb2ludElk');
 @$core.Deprecated('Use createEndpointOperationMetadataDescriptor instead')
 const CreateEndpointOperationMetadata$json = const {
   '1': 'CreateEndpointOperationMetadata',

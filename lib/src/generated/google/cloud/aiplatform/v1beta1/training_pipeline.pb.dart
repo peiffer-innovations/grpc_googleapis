@@ -413,6 +413,7 @@ enum InputDataConfig_Split {
   filterSplit,
   predefinedSplit,
   timestampSplit,
+  stratifiedSplit,
   notSet
 }
 
@@ -425,6 +426,7 @@ class InputDataConfig extends $pb.GeneratedMessage {
     3: InputDataConfig_Split.filterSplit,
     4: InputDataConfig_Split.predefinedSplit,
     5: InputDataConfig_Split.timestampSplit,
+    12: InputDataConfig_Split.stratifiedSplit,
     0: InputDataConfig_Split.notSet
   };
   static const $core.Map<$core.int, InputDataConfig_Destination>
@@ -442,7 +444,7 @@ class InputDataConfig extends $pb.GeneratedMessage {
               ? ''
               : 'google.cloud.aiplatform.v1beta1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 4, 5])
+    ..oo(0, [2, 3, 4, 5, 12])
     ..oo(1, [8, 10])
     ..aOS(
         1,
@@ -495,6 +497,12 @@ class InputDataConfig extends $pb.GeneratedMessage {
             ? ''
             : 'bigqueryDestination',
         subBuilder: $5.BigQueryDestination.create)
+    ..aOM<StratifiedSplit>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'stratifiedSplit',
+        subBuilder: StratifiedSplit.create)
     ..hasRequiredFields = false;
 
   InputDataConfig._() : super();
@@ -508,6 +516,7 @@ class InputDataConfig extends $pb.GeneratedMessage {
     $5.GcsDestination? gcsDestination,
     $core.String? annotationSchemaUri,
     $5.BigQueryDestination? bigqueryDestination,
+    StratifiedSplit? stratifiedSplit,
   }) {
     final _result = create();
     if (datasetId != null) {
@@ -536,6 +545,9 @@ class InputDataConfig extends $pb.GeneratedMessage {
     }
     if (bigqueryDestination != null) {
       _result.bigqueryDestination = bigqueryDestination;
+    }
+    if (stratifiedSplit != null) {
+      _result.stratifiedSplit = stratifiedSplit;
     }
     return _result;
   }
@@ -693,6 +705,20 @@ class InputDataConfig extends $pb.GeneratedMessage {
   void clearBigqueryDestination() => clearField(10);
   @$pb.TagNumber(10)
   $5.BigQueryDestination ensureBigqueryDestination() => $_ensure(8);
+
+  @$pb.TagNumber(12)
+  StratifiedSplit get stratifiedSplit => $_getN(9);
+  @$pb.TagNumber(12)
+  set stratifiedSplit(StratifiedSplit v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasStratifiedSplit() => $_has(9);
+  @$pb.TagNumber(12)
+  void clearStratifiedSplit() => clearField(12);
+  @$pb.TagNumber(12)
+  StratifiedSplit ensureStratifiedSplit() => $_ensure(9);
 }
 
 class FractionSplit extends $pb.GeneratedMessage {
@@ -1065,6 +1091,139 @@ class TimestampSplit extends $pb.GeneratedMessage {
   static TimestampSplit getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimestampSplit>(create);
   static TimestampSplit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get trainingFraction => $_getN(0);
+  @$pb.TagNumber(1)
+  set trainingFraction($core.double v) {
+    $_setDouble(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTrainingFraction() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTrainingFraction() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get validationFraction => $_getN(1);
+  @$pb.TagNumber(2)
+  set validationFraction($core.double v) {
+    $_setDouble(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasValidationFraction() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValidationFraction() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get testFraction => $_getN(2);
+  @$pb.TagNumber(3)
+  set testFraction($core.double v) {
+    $_setDouble(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTestFraction() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTestFraction() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get key => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set key($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasKey() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearKey() => clearField(4);
+}
+
+class StratifiedSplit extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StratifiedSplit',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.aiplatform.v1beta1'),
+      createEmptyInstance: create)
+    ..a<$core.double>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'trainingFraction',
+        $pb.PbFieldType.OD)
+    ..a<$core.double>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'validationFraction',
+        $pb.PbFieldType.OD)
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'testFraction',
+        $pb.PbFieldType.OD)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'key')
+    ..hasRequiredFields = false;
+
+  StratifiedSplit._() : super();
+  factory StratifiedSplit({
+    $core.double? trainingFraction,
+    $core.double? validationFraction,
+    $core.double? testFraction,
+    $core.String? key,
+  }) {
+    final _result = create();
+    if (trainingFraction != null) {
+      _result.trainingFraction = trainingFraction;
+    }
+    if (validationFraction != null) {
+      _result.validationFraction = validationFraction;
+    }
+    if (testFraction != null) {
+      _result.testFraction = testFraction;
+    }
+    if (key != null) {
+      _result.key = key;
+    }
+    return _result;
+  }
+  factory StratifiedSplit.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StratifiedSplit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StratifiedSplit clone() => StratifiedSplit()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StratifiedSplit copyWith(void Function(StratifiedSplit) updates) =>
+      super.copyWith((message) => updates(message as StratifiedSplit))
+          as StratifiedSplit; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StratifiedSplit create() => StratifiedSplit._();
+  StratifiedSplit createEmptyInstance() => create();
+  static $pb.PbList<StratifiedSplit> createRepeated() =>
+      $pb.PbList<StratifiedSplit>();
+  @$core.pragma('dart2js:noInline')
+  static StratifiedSplit getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StratifiedSplit>(create);
+  static StratifiedSplit? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get trainingFraction => $_getN(0);

@@ -63,12 +63,18 @@ class SuggestionFeature_Type extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'FAQ');
+  static const SuggestionFeature_Type SMART_REPLY = SuggestionFeature_Type._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SMART_REPLY');
 
   static const $core.List<SuggestionFeature_Type> values =
       <SuggestionFeature_Type>[
     TYPE_UNSPECIFIED,
     ARTICLE_SUGGESTION,
     FAQ,
+    SMART_REPLY,
   ];
 
   static final $core.Map<$core.int, SuggestionFeature_Type> _byValue =

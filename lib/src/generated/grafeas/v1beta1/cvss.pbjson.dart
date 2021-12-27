@@ -9,9 +9,9 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3$json = const {
-  '1': 'CVSSv3',
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS$json = const {
+  '1': 'CVSS',
   '2': const [
     const {'1': 'base_score', '3': 1, '4': 1, '5': 2, '10': 'baseScore'},
     const {
@@ -24,26 +24,34 @@ const CVSSv3$json = const {
     const {'1': 'impact_score', '3': 3, '4': 1, '5': 2, '10': 'impactScore'},
     const {
       '1': 'attack_vector',
-      '3': 5,
+      '3': 4,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.AttackVector',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.AttackVector',
       '10': 'attackVector'
     },
     const {
       '1': 'attack_complexity',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.AttackComplexity',
+      '10': 'attackComplexity'
+    },
+    const {
+      '1': 'authentication',
       '3': 6,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.AttackComplexity',
-      '10': 'attackComplexity'
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.Authentication',
+      '10': 'authentication'
     },
     const {
       '1': 'privileges_required',
       '3': 7,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.PrivilegesRequired',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.PrivilegesRequired',
       '10': 'privilegesRequired'
     },
     const {
@@ -51,7 +59,7 @@ const CVSSv3$json = const {
       '3': 8,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.UserInteraction',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.UserInteraction',
       '10': 'userInteraction'
     },
     const {
@@ -59,7 +67,7 @@ const CVSSv3$json = const {
       '3': 9,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.Scope',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.Scope',
       '10': 'scope'
     },
     const {
@@ -67,7 +75,7 @@ const CVSSv3$json = const {
       '3': 10,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.Impact',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.Impact',
       '10': 'confidentialityImpact'
     },
     const {
@@ -75,7 +83,7 @@ const CVSSv3$json = const {
       '3': 11,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.Impact',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.Impact',
       '10': 'integrityImpact'
     },
     const {
@@ -83,22 +91,23 @@ const CVSSv3$json = const {
       '3': 12,
       '4': 1,
       '5': 14,
-      '6': '.grafeas.v1beta1.vulnerability.CVSSv3.Impact',
+      '6': '.grafeas.v1beta1.vulnerability.CVSS.Impact',
       '10': 'availabilityImpact'
     },
   ],
   '4': const [
-    CVSSv3_AttackVector$json,
-    CVSSv3_AttackComplexity$json,
-    CVSSv3_PrivilegesRequired$json,
-    CVSSv3_UserInteraction$json,
-    CVSSv3_Scope$json,
-    CVSSv3_Impact$json
+    CVSS_AttackVector$json,
+    CVSS_AttackComplexity$json,
+    CVSS_Authentication$json,
+    CVSS_PrivilegesRequired$json,
+    CVSS_UserInteraction$json,
+    CVSS_Scope$json,
+    CVSS_Impact$json
   ],
 };
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3_AttackVector$json = const {
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_AttackVector$json = const {
   '1': 'AttackVector',
   '2': const [
     const {'1': 'ATTACK_VECTOR_UNSPECIFIED', '2': 0},
@@ -109,8 +118,8 @@ const CVSSv3_AttackVector$json = const {
   ],
 };
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3_AttackComplexity$json = const {
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_AttackComplexity$json = const {
   '1': 'AttackComplexity',
   '2': const [
     const {'1': 'ATTACK_COMPLEXITY_UNSPECIFIED', '2': 0},
@@ -119,8 +128,19 @@ const CVSSv3_AttackComplexity$json = const {
   ],
 };
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3_PrivilegesRequired$json = const {
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_Authentication$json = const {
+  '1': 'Authentication',
+  '2': const [
+    const {'1': 'AUTHENTICATION_UNSPECIFIED', '2': 0},
+    const {'1': 'AUTHENTICATION_MULTIPLE', '2': 1},
+    const {'1': 'AUTHENTICATION_SINGLE', '2': 2},
+    const {'1': 'AUTHENTICATION_NONE', '2': 3},
+  ],
+};
+
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_PrivilegesRequired$json = const {
   '1': 'PrivilegesRequired',
   '2': const [
     const {'1': 'PRIVILEGES_REQUIRED_UNSPECIFIED', '2': 0},
@@ -130,8 +150,8 @@ const CVSSv3_PrivilegesRequired$json = const {
   ],
 };
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3_UserInteraction$json = const {
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_UserInteraction$json = const {
   '1': 'UserInteraction',
   '2': const [
     const {'1': 'USER_INTERACTION_UNSPECIFIED', '2': 0},
@@ -140,8 +160,8 @@ const CVSSv3_UserInteraction$json = const {
   ],
 };
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3_Scope$json = const {
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_Scope$json = const {
   '1': 'Scope',
   '2': const [
     const {'1': 'SCOPE_UNSPECIFIED', '2': 0},
@@ -150,8 +170,8 @@ const CVSSv3_Scope$json = const {
   ],
 };
 
-@$core.Deprecated('Use cVSSv3Descriptor instead')
-const CVSSv3_Impact$json = const {
+@$core.Deprecated('Use cVSSDescriptor instead')
+const CVSS_Impact$json = const {
   '1': 'Impact',
   '2': const [
     const {'1': 'IMPACT_UNSPECIFIED', '2': 0},
@@ -161,6 +181,6 @@ const CVSSv3_Impact$json = const {
   ],
 };
 
-/// Descriptor for `CVSSv3`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List cVSSv3Descriptor = $convert.base64Decode(
-    'CgZDVlNTdjMSHQoKYmFzZV9zY29yZRgBIAEoAlIJYmFzZVNjb3JlEjEKFGV4cGxvaXRhYmlsaXR5X3Njb3JlGAIgASgCUhNleHBsb2l0YWJpbGl0eVNjb3JlEiEKDGltcGFjdF9zY29yZRgDIAEoAlILaW1wYWN0U2NvcmUSVwoNYXR0YWNrX3ZlY3RvchgFIAEoDjIyLmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1N2My5BdHRhY2tWZWN0b3JSDGF0dGFja1ZlY3RvchJjChFhdHRhY2tfY29tcGxleGl0eRgGIAEoDjI2LmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1N2My5BdHRhY2tDb21wbGV4aXR5UhBhdHRhY2tDb21wbGV4aXR5EmkKE3ByaXZpbGVnZXNfcmVxdWlyZWQYByABKA4yOC5ncmFmZWFzLnYxYmV0YTEudnVsbmVyYWJpbGl0eS5DVlNTdjMuUHJpdmlsZWdlc1JlcXVpcmVkUhJwcml2aWxlZ2VzUmVxdWlyZWQSYAoQdXNlcl9pbnRlcmFjdGlvbhgIIAEoDjI1LmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1N2My5Vc2VySW50ZXJhY3Rpb25SD3VzZXJJbnRlcmFjdGlvbhJBCgVzY29wZRgJIAEoDjIrLmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1N2My5TY29wZVIFc2NvcGUSYwoWY29uZmlkZW50aWFsaXR5X2ltcGFjdBgKIAEoDjIsLmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1N2My5JbXBhY3RSFWNvbmZpZGVudGlhbGl0eUltcGFjdBJXChBpbnRlZ3JpdHlfaW1wYWN0GAsgASgOMiwuZ3JhZmVhcy52MWJldGExLnZ1bG5lcmFiaWxpdHkuQ1ZTU3YzLkltcGFjdFIPaW50ZWdyaXR5SW1wYWN0El0KE2F2YWlsYWJpbGl0eV9pbXBhY3QYDCABKA4yLC5ncmFmZWFzLnYxYmV0YTEudnVsbmVyYWJpbGl0eS5DVlNTdjMuSW1wYWN0UhJhdmFpbGFiaWxpdHlJbXBhY3QimQEKDEF0dGFja1ZlY3RvchIdChlBVFRBQ0tfVkVDVE9SX1VOU1BFQ0lGSUVEEAASGQoVQVRUQUNLX1ZFQ1RPUl9ORVRXT1JLEAESGgoWQVRUQUNLX1ZFQ1RPUl9BREpBQ0VOVBACEhcKE0FUVEFDS19WRUNUT1JfTE9DQUwQAxIaChZBVFRBQ0tfVkVDVE9SX1BIWVNJQ0FMEAQibAoQQXR0YWNrQ29tcGxleGl0eRIhCh1BVFRBQ0tfQ09NUExFWElUWV9VTlNQRUNJRklFRBAAEhkKFUFUVEFDS19DT01QTEVYSVRZX0xPVxABEhoKFkFUVEFDS19DT01QTEVYSVRZX0hJR0gQAiKSAQoSUHJpdmlsZWdlc1JlcXVpcmVkEiMKH1BSSVZJTEVHRVNfUkVRVUlSRURfVU5TUEVDSUZJRUQQABIcChhQUklWSUxFR0VTX1JFUVVJUkVEX05PTkUQARIbChdQUklWSUxFR0VTX1JFUVVJUkVEX0xPVxACEhwKGFBSSVZJTEVHRVNfUkVRVUlSRURfSElHSBADIm0KD1VzZXJJbnRlcmFjdGlvbhIgChxVU0VSX0lOVEVSQUNUSU9OX1VOU1BFQ0lGSUVEEAASGQoVVVNFUl9JTlRFUkFDVElPTl9OT05FEAESHQoZVVNFUl9JTlRFUkFDVElPTl9SRVFVSVJFRBACIkYKBVNjb3BlEhUKEVNDT1BFX1VOU1BFQ0lGSUVEEAASEwoPU0NPUEVfVU5DSEFOR0VEEAESEQoNU0NPUEVfQ0hBTkdFRBACIlIKBkltcGFjdBIWChJJTVBBQ1RfVU5TUEVDSUZJRUQQABIPCgtJTVBBQ1RfSElHSBABEg4KCklNUEFDVF9MT1cQAhIPCgtJTVBBQ1RfTk9ORRAD');
+/// Descriptor for `CVSS`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cVSSDescriptor = $convert.base64Decode(
+    'CgRDVlNTEh0KCmJhc2Vfc2NvcmUYASABKAJSCWJhc2VTY29yZRIxChRleHBsb2l0YWJpbGl0eV9zY29yZRgCIAEoAlITZXhwbG9pdGFiaWxpdHlTY29yZRIhCgxpbXBhY3Rfc2NvcmUYAyABKAJSC2ltcGFjdFNjb3JlElUKDWF0dGFja192ZWN0b3IYBCABKA4yMC5ncmFmZWFzLnYxYmV0YTEudnVsbmVyYWJpbGl0eS5DVlNTLkF0dGFja1ZlY3RvclIMYXR0YWNrVmVjdG9yEmEKEWF0dGFja19jb21wbGV4aXR5GAUgASgOMjQuZ3JhZmVhcy52MWJldGExLnZ1bG5lcmFiaWxpdHkuQ1ZTUy5BdHRhY2tDb21wbGV4aXR5UhBhdHRhY2tDb21wbGV4aXR5EloKDmF1dGhlbnRpY2F0aW9uGAYgASgOMjIuZ3JhZmVhcy52MWJldGExLnZ1bG5lcmFiaWxpdHkuQ1ZTUy5BdXRoZW50aWNhdGlvblIOYXV0aGVudGljYXRpb24SZwoTcHJpdmlsZWdlc19yZXF1aXJlZBgHIAEoDjI2LmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1MuUHJpdmlsZWdlc1JlcXVpcmVkUhJwcml2aWxlZ2VzUmVxdWlyZWQSXgoQdXNlcl9pbnRlcmFjdGlvbhgIIAEoDjIzLmdyYWZlYXMudjFiZXRhMS52dWxuZXJhYmlsaXR5LkNWU1MuVXNlckludGVyYWN0aW9uUg91c2VySW50ZXJhY3Rpb24SPwoFc2NvcGUYCSABKA4yKS5ncmFmZWFzLnYxYmV0YTEudnVsbmVyYWJpbGl0eS5DVlNTLlNjb3BlUgVzY29wZRJhChZjb25maWRlbnRpYWxpdHlfaW1wYWN0GAogASgOMiouZ3JhZmVhcy52MWJldGExLnZ1bG5lcmFiaWxpdHkuQ1ZTUy5JbXBhY3RSFWNvbmZpZGVudGlhbGl0eUltcGFjdBJVChBpbnRlZ3JpdHlfaW1wYWN0GAsgASgOMiouZ3JhZmVhcy52MWJldGExLnZ1bG5lcmFiaWxpdHkuQ1ZTUy5JbXBhY3RSD2ludGVncml0eUltcGFjdBJbChNhdmFpbGFiaWxpdHlfaW1wYWN0GAwgASgOMiouZ3JhZmVhcy52MWJldGExLnZ1bG5lcmFiaWxpdHkuQ1ZTUy5JbXBhY3RSEmF2YWlsYWJpbGl0eUltcGFjdCKZAQoMQXR0YWNrVmVjdG9yEh0KGUFUVEFDS19WRUNUT1JfVU5TUEVDSUZJRUQQABIZChVBVFRBQ0tfVkVDVE9SX05FVFdPUksQARIaChZBVFRBQ0tfVkVDVE9SX0FESkFDRU5UEAISFwoTQVRUQUNLX1ZFQ1RPUl9MT0NBTBADEhoKFkFUVEFDS19WRUNUT1JfUEhZU0lDQUwQBCJsChBBdHRhY2tDb21wbGV4aXR5EiEKHUFUVEFDS19DT01QTEVYSVRZX1VOU1BFQ0lGSUVEEAASGQoVQVRUQUNLX0NPTVBMRVhJVFlfTE9XEAESGgoWQVRUQUNLX0NPTVBMRVhJVFlfSElHSBACIoEBCg5BdXRoZW50aWNhdGlvbhIeChpBVVRIRU5USUNBVElPTl9VTlNQRUNJRklFRBAAEhsKF0FVVEhFTlRJQ0FUSU9OX01VTFRJUExFEAESGQoVQVVUSEVOVElDQVRJT05fU0lOR0xFEAISFwoTQVVUSEVOVElDQVRJT05fTk9ORRADIpIBChJQcml2aWxlZ2VzUmVxdWlyZWQSIwofUFJJVklMRUdFU19SRVFVSVJFRF9VTlNQRUNJRklFRBAAEhwKGFBSSVZJTEVHRVNfUkVRVUlSRURfTk9ORRABEhsKF1BSSVZJTEVHRVNfUkVRVUlSRURfTE9XEAISHAoYUFJJVklMRUdFU19SRVFVSVJFRF9ISUdIEAMibQoPVXNlckludGVyYWN0aW9uEiAKHFVTRVJfSU5URVJBQ1RJT05fVU5TUEVDSUZJRUQQABIZChVVU0VSX0lOVEVSQUNUSU9OX05PTkUQARIdChlVU0VSX0lOVEVSQUNUSU9OX1JFUVVJUkVEEAIiRgoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABITCg9TQ09QRV9VTkNIQU5HRUQQARIRCg1TQ09QRV9DSEFOR0VEEAIiUgoGSW1wYWN0EhYKEklNUEFDVF9VTlNQRUNJRklFRBAAEg8KC0lNUEFDVF9ISUdIEAESDgoKSU1QQUNUX0xPVxACEg8KC0lNUEFDVF9OT05FEAM=');

@@ -142,13 +142,20 @@ const SqlDatabaseVersion$json = const {
     const {'1': 'POSTGRES_10', '2': 18},
     const {'1': 'POSTGRES_12', '2': 19},
     const {'1': 'MYSQL_8_0', '2': 20},
+    const {'1': 'MYSQL_8_0_18', '2': 41},
+    const {'1': 'MYSQL_8_0_26', '2': 85},
     const {'1': 'POSTGRES_13', '2': 23},
+    const {'1': 'POSTGRES_14', '2': 110},
+    const {'1': 'SQLSERVER_2019_STANDARD', '2': 26},
+    const {'1': 'SQLSERVER_2019_ENTERPRISE', '2': 27},
+    const {'1': 'SQLSERVER_2019_EXPRESS', '2': 28},
+    const {'1': 'SQLSERVER_2019_WEB', '2': 29},
   ],
 };
 
 /// Descriptor for `SqlDatabaseVersion`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List sqlDatabaseVersionDescriptor = $convert.base64Decode(
-    'ChJTcWxEYXRhYmFzZVZlcnNpb24SJAogU1FMX0RBVEFCQVNFX1ZFUlNJT05fVU5TUEVDSUZJRUQQABIRCglNWVNRTF81XzEQAhoCCAESEQoJTVlTUUxfNV81EAMaAggBEg0KCU1ZU1FMXzVfNhAFEg0KCU1ZU1FMXzVfNxAGEhAKDFBPU1RHUkVTXzlfNhAJEg8KC1BPU1RHUkVTXzExEAoSGwoXU1FMU0VSVkVSXzIwMTdfU1RBTkRBUkQQCxIdChlTUUxTRVJWRVJfMjAxN19FTlRFUlBSSVNFEA4SGgoWU1FMU0VSVkVSXzIwMTdfRVhQUkVTUxAPEhYKElNRTFNFUlZFUl8yMDE3X1dFQhAQEg8KC1BPU1RHUkVTXzEwEBISDwoLUE9TVEdSRVNfMTIQExINCglNWVNRTF84XzAQFBIPCgtQT1NUR1JFU18xMxAX');
+    'ChJTcWxEYXRhYmFzZVZlcnNpb24SJAogU1FMX0RBVEFCQVNFX1ZFUlNJT05fVU5TUEVDSUZJRUQQABIRCglNWVNRTF81XzEQAhoCCAESEQoJTVlTUUxfNV81EAMaAggBEg0KCU1ZU1FMXzVfNhAFEg0KCU1ZU1FMXzVfNxAGEhAKDFBPU1RHUkVTXzlfNhAJEg8KC1BPU1RHUkVTXzExEAoSGwoXU1FMU0VSVkVSXzIwMTdfU1RBTkRBUkQQCxIdChlTUUxTRVJWRVJfMjAxN19FTlRFUlBSSVNFEA4SGgoWU1FMU0VSVkVSXzIwMTdfRVhQUkVTUxAPEhYKElNRTFNFUlZFUl8yMDE3X1dFQhAQEg8KC1BPU1RHUkVTXzEwEBISDwoLUE9TVEdSRVNfMTIQExINCglNWVNRTF84XzAQFBIQCgxNWVNRTF84XzBfMTgQKRIQCgxNWVNRTF84XzBfMjYQVRIPCgtQT1NUR1JFU18xMxAXEg8KC1BPU1RHUkVTXzE0EG4SGwoXU1FMU0VSVkVSXzIwMTlfU1RBTkRBUkQQGhIdChlTUUxTRVJWRVJfMjAxOV9FTlRFUlBSSVNFEBsSGgoWU1FMU0VSVkVSXzIwMTlfRVhQUkVTUxAcEhYKElNRTFNFUlZFUl8yMDE5X1dFQhAd');
 @$core.Deprecated('Use sqlSuspensionReasonDescriptor instead')
 const SqlSuspensionReason$json = const {
   '1': 'SqlSuspensionReason',
@@ -669,6 +676,31 @@ const DatabaseFlags$json = const {
 /// Descriptor for `DatabaseFlags`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List databaseFlagsDescriptor = $convert.base64Decode(
     'Cg1EYXRhYmFzZUZsYWdzEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdmFsdWUYAiABKAlSBXZhbHVl');
+@$core.Deprecated('Use syncFlagsDescriptor instead')
+const SyncFlags$json = const {
+  '1': 'SyncFlags',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+};
+
+/// Descriptor for `SyncFlags`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List syncFlagsDescriptor = $convert.base64Decode(
+    'CglTeW5jRmxhZ3MSEgoEbmFtZRgBIAEoCVIEbmFtZRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU=');
+@$core.Deprecated('Use instanceReferenceDescriptor instead')
+const InstanceReference$json = const {
+  '1': 'InstanceReference',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'region', '3': 2, '4': 1, '5': 9, '10': 'region'},
+    const {'1': 'project', '3': 3, '4': 1, '5': 9, '10': 'project'},
+  ],
+};
+
+/// Descriptor for `InstanceReference`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List instanceReferenceDescriptor = $convert.base64Decode(
+    'ChFJbnN0YW5jZVJlZmVyZW5jZRISCgRuYW1lGAEgASgJUgRuYW1lEhYKBnJlZ2lvbhgCIAEoCVIGcmVnaW9uEhgKB3Byb2plY3QYAyABKAlSB3Byb2plY3Q=');
 @$core.Deprecated('Use databaseInstanceDescriptor instead')
 const DatabaseInstance$json = const {
   '1': 'DatabaseInstance',
@@ -857,6 +889,14 @@ const DatabaseInstance$json = const {
       '10': 'satisfiesPzs'
     },
     const {
+      '1': 'database_installed_version',
+      '3': 40,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'databaseInstalledVersion'
+    },
+    const {
       '1': 'out_of_disk_report',
       '3': 38,
       '4': 1,
@@ -865,6 +905,15 @@ const DatabaseInstance$json = const {
       '9': 0,
       '10': 'outOfDiskReport',
       '17': true
+    },
+    const {
+      '1': 'create_time',
+      '3': 39,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'createTime'
     },
   ],
   '3': const [
@@ -921,6 +970,19 @@ const DatabaseInstance_SqlScheduledMaintenance$json = const {
       '5': 8,
       '10': 'canReschedule'
     },
+    const {
+      '1': 'schedule_deadline_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'scheduleDeadlineTime',
+      '17': true
+    },
+  ],
+  '8': const [
+    const {'1': '_schedule_deadline_time'},
   ],
 };
 
@@ -977,12 +1039,17 @@ const DatabaseInstance_SqlInstanceState$json = const {
     const {'1': 'PENDING_CREATE', '2': 4},
     const {'1': 'MAINTENANCE', '2': 5},
     const {'1': 'FAILED', '2': 6},
+    const {
+      '1': 'ONLINE_MAINTENANCE',
+      '2': 7,
+      '3': const {'1': true},
+    },
   ],
 };
 
 /// Descriptor for `DatabaseInstance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List databaseInstanceDescriptor = $convert.base64Decode(
-    'ChBEYXRhYmFzZUluc3RhbmNlEhIKBGtpbmQYASABKAlSBGtpbmQSUQoFc3RhdGUYAiABKA4yOy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGF0YWJhc2VJbnN0YW5jZS5TcWxJbnN0YW5jZVN0YXRlUgVzdGF0ZRJXChBkYXRhYmFzZV92ZXJzaW9uGAMgASgOMiwuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbERhdGFiYXNlVmVyc2lvblIPZGF0YWJhc2VWZXJzaW9uEj4KCHNldHRpbmdzGAQgASgLMiIuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNldHRpbmdzUghzZXR0aW5ncxISCgRldGFnGAUgASgJUgRldGFnEmgKEGZhaWxvdmVyX3JlcGxpY2EYBiABKAsyPS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGF0YWJhc2VJbnN0YW5jZS5TcWxGYWlsb3ZlclJlcGxpY2FSD2ZhaWxvdmVyUmVwbGljYRIwChRtYXN0ZXJfaW5zdGFuY2VfbmFtZRgHIAEoCVISbWFzdGVySW5zdGFuY2VOYW1lEiMKDXJlcGxpY2FfbmFtZXMYCCADKAlSDHJlcGxpY2FOYW1lcxJDCg1tYXhfZGlza19zaXplGAkgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCAhgBUgttYXhEaXNrU2l6ZRJLChFjdXJyZW50X2Rpc2tfc2l6ZRgKIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgIYAVIPY3VycmVudERpc2tTaXplEkYKDGlwX2FkZHJlc3NlcxgLIAMoCzIjLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5JcE1hcHBpbmdSC2lwQWRkcmVzc2VzEkcKDnNlcnZlcl9jYV9jZXJ0GAwgASgLMiEuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNzbENlcnRSDHNlcnZlckNhQ2VydBJOCg1pbnN0YW5jZV90eXBlGA0gASgOMikuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEluc3RhbmNlVHlwZVIMaW5zdGFuY2VUeXBlEhgKB3Byb2plY3QYDiABKAlSB3Byb2plY3QSJQoMaXB2Nl9hZGRyZXNzGA8gASgJQgIYAVILaXB2NkFkZHJlc3MSQQodc2VydmljZV9hY2NvdW50X2VtYWlsX2FkZHJlc3MYECABKAlSGnNlcnZpY2VBY2NvdW50RW1haWxBZGRyZXNzEm0KGW9uX3ByZW1pc2VzX2NvbmZpZ3VyYXRpb24YESABKAsyMS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuT25QcmVtaXNlc0NvbmZpZ3VyYXRpb25SF29uUHJlbWlzZXNDb25maWd1cmF0aW9uEmMKFXJlcGxpY2FfY29uZmlndXJhdGlvbhgSIAEoCzIuLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5SZXBsaWNhQ29uZmlndXJhdGlvblIUcmVwbGljYUNvbmZpZ3VyYXRpb24SSwoMYmFja2VuZF90eXBlGBMgASgOMiguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEJhY2tlbmRUeXBlUgtiYWNrZW5kVHlwZRIbCglzZWxmX2xpbmsYFCABKAlSCHNlbGZMaW5rEloKEXN1c3BlbnNpb25fcmVhc29uGBUgAygOMi0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbFN1c3BlbnNpb25SZWFzb25SEHN1c3BlbnNpb25SZWFzb24SJwoPY29ubmVjdGlvbl9uYW1lGBYgASgJUg5jb25uZWN0aW9uTmFtZRISCgRuYW1lGBcgASgJUgRuYW1lEhYKBnJlZ2lvbhgYIAEoCVIGcmVnaW9uEhkKCGdjZV96b25lGBkgASgJUgdnY2Vab25lEiwKEnNlY29uZGFyeV9nY2Vfem9uZRgiIAEoCVIQc2Vjb25kYXJ5R2NlWm9uZRJ5Ch1kaXNrX2VuY3J5cHRpb25fY29uZmlndXJhdGlvbhgaIAEoCzI1Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5EaXNrRW5jcnlwdGlvbkNvbmZpZ3VyYXRpb25SG2Rpc2tFbmNyeXB0aW9uQ29uZmlndXJhdGlvbhJkChZkaXNrX2VuY3J5cHRpb25fc3RhdHVzGBsgASgLMi4uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRpc2tFbmNyeXB0aW9uU3RhdHVzUhRkaXNrRW5jcnlwdGlvblN0YXR1cxIjCg1yb290X3Bhc3N3b3JkGB0gASgJUgxyb290UGFzc3dvcmQSdwoVc2NoZWR1bGVkX21haW50ZW5hbmNlGB4gASgLMkIuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRhdGFiYXNlSW5zdGFuY2UuU3FsU2NoZWR1bGVkTWFpbnRlbmFuY2VSFHNjaGVkdWxlZE1haW50ZW5hbmNlEj8KDXNhdGlzZmllc19wenMYIyABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlUgxzYXRpc2ZpZXNQenMSbwoSb3V0X29mX2Rpc2tfcmVwb3J0GCYgASgLMj0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRhdGFiYXNlSW5zdGFuY2UuU3FsT3V0T2ZEaXNrUmVwb3J0SABSD291dE9mRGlza1JlcG9ydIgBARpiChJTcWxGYWlsb3ZlclJlcGxpY2ESEgoEbmFtZRgBIAEoCVIEbmFtZRI4CglhdmFpbGFibGUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlUglhdmFpbGFibGUanAEKF1NxbFNjaGVkdWxlZE1haW50ZW5hbmNlEjkKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSHwoJY2FuX2RlZmVyGAIgASgIQgIYAVIIY2FuRGVmZXISJQoOY2FuX3Jlc2NoZWR1bGUYAyABKAhSDWNhblJlc2NoZWR1bGUajwMKElNxbE91dE9mRGlza1JlcG9ydBKGAQoVc3FsX291dF9vZl9kaXNrX3N0YXRlGAEgASgOMk8uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRhdGFiYXNlSW5zdGFuY2UuU3FsT3V0T2ZEaXNrUmVwb3J0LlNxbE91dE9mRGlza1N0YXRlSABSEXNxbE91dE9mRGlza1N0YXRliAEBElIKJHNxbF9taW5fcmVjb21tZW5kZWRfaW5jcmVhc2Vfc2l6ZV9nYhgCIAEoBUgBUh9zcWxNaW5SZWNvbW1lbmRlZEluY3JlYXNlU2l6ZUdiiAEBIlkKEVNxbE91dE9mRGlza1N0YXRlEiUKIVNRTF9PVVRfT0ZfRElTS19TVEFURV9VTlNQRUNJRklFRBAAEgoKBk5PUk1BTBABEhEKDVNPRlRfU0hVVERPV04QAkIYChZfc3FsX291dF9vZl9kaXNrX3N0YXRlQicKJV9zcWxfbWluX3JlY29tbWVuZGVkX2luY3JlYXNlX3NpemVfZ2IimAEKEFNxbEluc3RhbmNlU3RhdGUSIgoeU1FMX0lOU1RBTkNFX1NUQVRFX1VOU1BFQ0lGSUVEEAASDAoIUlVOTkFCTEUQARINCglTVVNQRU5ERUQQAhISCg5QRU5ESU5HX0RFTEVURRADEhIKDlBFTkRJTkdfQ1JFQVRFEAQSDwoLTUFJTlRFTkFOQ0UQBRIKCgZGQUlMRUQQBkIVChNfb3V0X29mX2Rpc2tfcmVwb3J0');
+    'ChBEYXRhYmFzZUluc3RhbmNlEhIKBGtpbmQYASABKAlSBGtpbmQSUQoFc3RhdGUYAiABKA4yOy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGF0YWJhc2VJbnN0YW5jZS5TcWxJbnN0YW5jZVN0YXRlUgVzdGF0ZRJXChBkYXRhYmFzZV92ZXJzaW9uGAMgASgOMiwuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbERhdGFiYXNlVmVyc2lvblIPZGF0YWJhc2VWZXJzaW9uEj4KCHNldHRpbmdzGAQgASgLMiIuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNldHRpbmdzUghzZXR0aW5ncxISCgRldGFnGAUgASgJUgRldGFnEmgKEGZhaWxvdmVyX3JlcGxpY2EYBiABKAsyPS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGF0YWJhc2VJbnN0YW5jZS5TcWxGYWlsb3ZlclJlcGxpY2FSD2ZhaWxvdmVyUmVwbGljYRIwChRtYXN0ZXJfaW5zdGFuY2VfbmFtZRgHIAEoCVISbWFzdGVySW5zdGFuY2VOYW1lEiMKDXJlcGxpY2FfbmFtZXMYCCADKAlSDHJlcGxpY2FOYW1lcxJDCg1tYXhfZGlza19zaXplGAkgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCAhgBUgttYXhEaXNrU2l6ZRJLChFjdXJyZW50X2Rpc2tfc2l6ZRgKIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgIYAVIPY3VycmVudERpc2tTaXplEkYKDGlwX2FkZHJlc3NlcxgLIAMoCzIjLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5JcE1hcHBpbmdSC2lwQWRkcmVzc2VzEkcKDnNlcnZlcl9jYV9jZXJ0GAwgASgLMiEuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNzbENlcnRSDHNlcnZlckNhQ2VydBJOCg1pbnN0YW5jZV90eXBlGA0gASgOMikuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEluc3RhbmNlVHlwZVIMaW5zdGFuY2VUeXBlEhgKB3Byb2plY3QYDiABKAlSB3Byb2plY3QSJQoMaXB2Nl9hZGRyZXNzGA8gASgJQgIYAVILaXB2NkFkZHJlc3MSQQodc2VydmljZV9hY2NvdW50X2VtYWlsX2FkZHJlc3MYECABKAlSGnNlcnZpY2VBY2NvdW50RW1haWxBZGRyZXNzEm0KGW9uX3ByZW1pc2VzX2NvbmZpZ3VyYXRpb24YESABKAsyMS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuT25QcmVtaXNlc0NvbmZpZ3VyYXRpb25SF29uUHJlbWlzZXNDb25maWd1cmF0aW9uEmMKFXJlcGxpY2FfY29uZmlndXJhdGlvbhgSIAEoCzIuLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5SZXBsaWNhQ29uZmlndXJhdGlvblIUcmVwbGljYUNvbmZpZ3VyYXRpb24SSwoMYmFja2VuZF90eXBlGBMgASgOMiguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEJhY2tlbmRUeXBlUgtiYWNrZW5kVHlwZRIbCglzZWxmX2xpbmsYFCABKAlSCHNlbGZMaW5rEloKEXN1c3BlbnNpb25fcmVhc29uGBUgAygOMi0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbFN1c3BlbnNpb25SZWFzb25SEHN1c3BlbnNpb25SZWFzb24SJwoPY29ubmVjdGlvbl9uYW1lGBYgASgJUg5jb25uZWN0aW9uTmFtZRISCgRuYW1lGBcgASgJUgRuYW1lEhYKBnJlZ2lvbhgYIAEoCVIGcmVnaW9uEhkKCGdjZV96b25lGBkgASgJUgdnY2Vab25lEiwKEnNlY29uZGFyeV9nY2Vfem9uZRgiIAEoCVIQc2Vjb25kYXJ5R2NlWm9uZRJ5Ch1kaXNrX2VuY3J5cHRpb25fY29uZmlndXJhdGlvbhgaIAEoCzI1Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5EaXNrRW5jcnlwdGlvbkNvbmZpZ3VyYXRpb25SG2Rpc2tFbmNyeXB0aW9uQ29uZmlndXJhdGlvbhJkChZkaXNrX2VuY3J5cHRpb25fc3RhdHVzGBsgASgLMi4uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRpc2tFbmNyeXB0aW9uU3RhdHVzUhRkaXNrRW5jcnlwdGlvblN0YXR1cxIjCg1yb290X3Bhc3N3b3JkGB0gASgJUgxyb290UGFzc3dvcmQSdwoVc2NoZWR1bGVkX21haW50ZW5hbmNlGB4gASgLMkIuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRhdGFiYXNlSW5zdGFuY2UuU3FsU2NoZWR1bGVkTWFpbnRlbmFuY2VSFHNjaGVkdWxlZE1haW50ZW5hbmNlEj8KDXNhdGlzZmllc19wenMYIyABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlUgxzYXRpc2ZpZXNQenMSQQoaZGF0YWJhc2VfaW5zdGFsbGVkX3ZlcnNpb24YKCABKAlCA+BBA1IYZGF0YWJhc2VJbnN0YWxsZWRWZXJzaW9uEm8KEm91dF9vZl9kaXNrX3JlcG9ydBgmIAEoCzI9Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5EYXRhYmFzZUluc3RhbmNlLlNxbE91dE9mRGlza1JlcG9ydEgAUg9vdXRPZkRpc2tSZXBvcnSIAQESQAoLY3JlYXRlX3RpbWUYJyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUaYgoSU3FsRmFpbG92ZXJSZXBsaWNhEhIKBG5hbWUYASABKAlSBG5hbWUSOAoJYXZhaWxhYmxlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZVIJYXZhaWxhYmxlGo4CChdTcWxTY2hlZHVsZWRNYWludGVuYW5jZRI5CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJc3RhcnRUaW1lEh8KCWNhbl9kZWZlchgCIAEoCEICGAFSCGNhbkRlZmVyEiUKDmNhbl9yZXNjaGVkdWxlGAMgASgIUg1jYW5SZXNjaGVkdWxlElUKFnNjaGVkdWxlX2RlYWRsaW5lX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSFHNjaGVkdWxlRGVhZGxpbmVUaW1liAEBQhkKF19zY2hlZHVsZV9kZWFkbGluZV90aW1lGo8DChJTcWxPdXRPZkRpc2tSZXBvcnQShgEKFXNxbF9vdXRfb2ZfZGlza19zdGF0ZRgBIAEoDjJPLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5EYXRhYmFzZUluc3RhbmNlLlNxbE91dE9mRGlza1JlcG9ydC5TcWxPdXRPZkRpc2tTdGF0ZUgAUhFzcWxPdXRPZkRpc2tTdGF0ZYgBARJSCiRzcWxfbWluX3JlY29tbWVuZGVkX2luY3JlYXNlX3NpemVfZ2IYAiABKAVIAVIfc3FsTWluUmVjb21tZW5kZWRJbmNyZWFzZVNpemVHYogBASJZChFTcWxPdXRPZkRpc2tTdGF0ZRIlCiFTUUxfT1VUX09GX0RJU0tfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZOT1JNQUwQARIRCg1TT0ZUX1NIVVRET1dOEAJCGAoWX3NxbF9vdXRfb2ZfZGlza19zdGF0ZUInCiVfc3FsX21pbl9yZWNvbW1lbmRlZF9pbmNyZWFzZV9zaXplX2diIrQBChBTcWxJbnN0YW5jZVN0YXRlEiIKHlNRTF9JTlNUQU5DRV9TVEFURV9VTlNQRUNJRklFRBAAEgwKCFJVTk5BQkxFEAESDQoJU1VTUEVOREVEEAISEgoOUEVORElOR19ERUxFVEUQAxISCg5QRU5ESU5HX0NSRUFURRAEEg8KC01BSU5URU5BTkNFEAUSCgoGRkFJTEVEEAYSGgoST05MSU5FX01BSU5URU5BTkNFEAcaAggBQhUKE19vdXRfb2ZfZGlza19yZXBvcnQ=');
 @$core.Deprecated('Use databasesListResponseDescriptor instead')
 const DatabasesListResponse$json = const {
   '1': 'DatabasesListResponse',
@@ -1050,12 +1117,19 @@ const DemoteMasterContext$json = const {
       '6': '.google.cloud.sql.v1beta4.DemoteMasterConfiguration',
       '10': 'replicaConfiguration'
     },
+    const {
+      '1': 'skip_replication_setup',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'skipReplicationSetup'
+    },
   ],
 };
 
 /// Descriptor for `DemoteMasterContext`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List demoteMasterContextDescriptor = $convert.base64Decode(
-    'ChNEZW1vdGVNYXN0ZXJDb250ZXh0EhIKBGtpbmQYASABKAlSBGtpbmQSUgoXdmVyaWZ5X2d0aWRfY29uc2lzdGVuY3kYAiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlUhV2ZXJpZnlHdGlkQ29uc2lzdGVuY3kSMAoUbWFzdGVyX2luc3RhbmNlX25hbWUYAyABKAlSEm1hc3Rlckluc3RhbmNlTmFtZRJoChVyZXBsaWNhX2NvbmZpZ3VyYXRpb24YBCABKAsyMy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGVtb3RlTWFzdGVyQ29uZmlndXJhdGlvblIUcmVwbGljYUNvbmZpZ3VyYXRpb24=');
+    'ChNEZW1vdGVNYXN0ZXJDb250ZXh0EhIKBGtpbmQYASABKAlSBGtpbmQSUgoXdmVyaWZ5X2d0aWRfY29uc2lzdGVuY3kYAiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlUhV2ZXJpZnlHdGlkQ29uc2lzdGVuY3kSMAoUbWFzdGVyX2luc3RhbmNlX25hbWUYAyABKAlSEm1hc3Rlckluc3RhbmNlTmFtZRJoChVyZXBsaWNhX2NvbmZpZ3VyYXRpb24YBCABKAsyMy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGVtb3RlTWFzdGVyQ29uZmlndXJhdGlvblIUcmVwbGljYUNvbmZpZ3VyYXRpb24SNAoWc2tpcF9yZXBsaWNhdGlvbl9zZXR1cBgFIAEoCFIUc2tpcFJlcGxpY2F0aW9uU2V0dXA=');
 @$core.Deprecated('Use demoteMasterMySqlReplicaConfigurationDescriptor instead')
 const DemoteMasterMySqlReplicaConfiguration$json = const {
   '1': 'DemoteMasterMySqlReplicaConfiguration',
@@ -1136,6 +1210,34 @@ const ExportContext_SqlCsvExportOptions$json = const {
   '1': 'SqlCsvExportOptions',
   '2': const [
     const {'1': 'select_query', '3': 1, '4': 1, '5': 9, '10': 'selectQuery'},
+    const {
+      '1': 'escape_character',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'escapeCharacter'
+    },
+    const {
+      '1': 'quote_character',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'quoteCharacter'
+    },
+    const {
+      '1': 'fields_terminated_by',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'fieldsTerminatedBy'
+    },
+    const {
+      '1': 'lines_terminated_by',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '10': 'linesTerminatedBy'
+    },
   ],
 };
 
@@ -1182,7 +1284,7 @@ const ExportContext_SqlExportOptions_MysqlExportOptions$json = const {
 
 /// Descriptor for `ExportContext`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List exportContextDescriptor = $convert.base64Decode(
-    'Cg1FeHBvcnRDb250ZXh0EhAKA3VyaRgBIAEoCVIDdXJpEhwKCWRhdGFiYXNlcxgCIAMoCVIJZGF0YWJhc2VzEhIKBGtpbmQYAyABKAlSBGtpbmQSZgoSc3FsX2V4cG9ydF9vcHRpb25zGAQgASgLMjguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkV4cG9ydENvbnRleHQuU3FsRXhwb3J0T3B0aW9uc1IQc3FsRXhwb3J0T3B0aW9ucxJpChJjc3ZfZXhwb3J0X29wdGlvbnMYBSABKAsyOy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRXhwb3J0Q29udGV4dC5TcWxDc3ZFeHBvcnRPcHRpb25zUhBjc3ZFeHBvcnRPcHRpb25zEkIKCWZpbGVfdHlwZRgGIAEoDjIlLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TcWxGaWxlVHlwZVIIZmlsZVR5cGUSNAoHb2ZmbG9hZBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSB29mZmxvYWQaOAoTU3FsQ3N2RXhwb3J0T3B0aW9ucxIhCgxzZWxlY3RfcXVlcnkYASABKAlSC3NlbGVjdFF1ZXJ5GroCChBTcWxFeHBvcnRPcHRpb25zEhYKBnRhYmxlcxgBIAMoCVIGdGFibGVzEjsKC3NjaGVtYV9vbmx5GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZVIKc2NoZW1hT25seRJ9ChRteXNxbF9leHBvcnRfb3B0aW9ucxgDIAEoCzJLLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5FeHBvcnRDb250ZXh0LlNxbEV4cG9ydE9wdGlvbnMuTXlzcWxFeHBvcnRPcHRpb25zUhJteXNxbEV4cG9ydE9wdGlvbnMaUgoSTXlzcWxFeHBvcnRPcHRpb25zEjwKC21hc3Rlcl9kYXRhGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWVSCm1hc3RlckRhdGE=');
+    'Cg1FeHBvcnRDb250ZXh0EhAKA3VyaRgBIAEoCVIDdXJpEhwKCWRhdGFiYXNlcxgCIAMoCVIJZGF0YWJhc2VzEhIKBGtpbmQYAyABKAlSBGtpbmQSZgoSc3FsX2V4cG9ydF9vcHRpb25zGAQgASgLMjguZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkV4cG9ydENvbnRleHQuU3FsRXhwb3J0T3B0aW9uc1IQc3FsRXhwb3J0T3B0aW9ucxJpChJjc3ZfZXhwb3J0X29wdGlvbnMYBSABKAsyOy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRXhwb3J0Q29udGV4dC5TcWxDc3ZFeHBvcnRPcHRpb25zUhBjc3ZFeHBvcnRPcHRpb25zEkIKCWZpbGVfdHlwZRgGIAEoDjIlLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TcWxGaWxlVHlwZVIIZmlsZVR5cGUSNAoHb2ZmbG9hZBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSB29mZmxvYWQa7gEKE1NxbENzdkV4cG9ydE9wdGlvbnMSIQoMc2VsZWN0X3F1ZXJ5GAEgASgJUgtzZWxlY3RRdWVyeRIpChBlc2NhcGVfY2hhcmFjdGVyGAIgASgJUg9lc2NhcGVDaGFyYWN0ZXISJwoPcXVvdGVfY2hhcmFjdGVyGAMgASgJUg5xdW90ZUNoYXJhY3RlchIwChRmaWVsZHNfdGVybWluYXRlZF9ieRgEIAEoCVISZmllbGRzVGVybWluYXRlZEJ5Ei4KE2xpbmVzX3Rlcm1pbmF0ZWRfYnkYBiABKAlSEWxpbmVzVGVybWluYXRlZEJ5GroCChBTcWxFeHBvcnRPcHRpb25zEhYKBnRhYmxlcxgBIAMoCVIGdGFibGVzEjsKC3NjaGVtYV9vbmx5GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZVIKc2NoZW1hT25seRJ9ChRteXNxbF9leHBvcnRfb3B0aW9ucxgDIAEoCzJLLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5FeHBvcnRDb250ZXh0LlNxbEV4cG9ydE9wdGlvbnMuTXlzcWxFeHBvcnRPcHRpb25zUhJteXNxbEV4cG9ydE9wdGlvbnMaUgoSTXlzcWxFeHBvcnRPcHRpb25zEjwKC21hc3Rlcl9kYXRhGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWVSCm1hc3RlckRhdGE=');
 @$core.Deprecated('Use failoverContextDescriptor instead')
 const FailoverContext$json = const {
   '1': 'FailoverContext',
@@ -1339,6 +1441,34 @@ const ImportContext_SqlCsvImportOptions$json = const {
   '2': const [
     const {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
     const {'1': 'columns', '3': 2, '4': 3, '5': 9, '10': 'columns'},
+    const {
+      '1': 'escape_character',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'escapeCharacter'
+    },
+    const {
+      '1': 'quote_character',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'quoteCharacter'
+    },
+    const {
+      '1': 'fields_terminated_by',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '10': 'fieldsTerminatedBy'
+    },
+    const {
+      '1': 'lines_terminated_by',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '10': 'linesTerminatedBy'
+    },
   ],
 };
 
@@ -1371,7 +1501,7 @@ const ImportContext_SqlBakImportOptions_EncryptionOptions$json = const {
 
 /// Descriptor for `ImportContext`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List importContextDescriptor = $convert.base64Decode(
-    'Cg1JbXBvcnRDb250ZXh0EhAKA3VyaRgBIAEoCVIDdXJpEhoKCGRhdGFiYXNlGAIgASgJUghkYXRhYmFzZRISCgRraW5kGAMgASgJUgRraW5kEkIKCWZpbGVfdHlwZRgEIAEoDjIlLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TcWxGaWxlVHlwZVIIZmlsZVR5cGUSaQoSY3N2X2ltcG9ydF9vcHRpb25zGAUgASgLMjsuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkltcG9ydENvbnRleHQuU3FsQ3N2SW1wb3J0T3B0aW9uc1IQY3N2SW1wb3J0T3B0aW9ucxIfCgtpbXBvcnRfdXNlchgGIAEoCVIKaW1wb3J0VXNlchJpChJiYWtfaW1wb3J0X29wdGlvbnMYByABKAsyOy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuSW1wb3J0Q29udGV4dC5TcWxCYWtJbXBvcnRPcHRpb25zUhBiYWtJbXBvcnRPcHRpb25zGkUKE1NxbENzdkltcG9ydE9wdGlvbnMSFAoFdGFibGUYASABKAlSBXRhYmxlEhgKB2NvbHVtbnMYAiADKAlSB2NvbHVtbnMagwIKE1NxbEJha0ltcG9ydE9wdGlvbnMSfAoSZW5jcnlwdGlvbl9vcHRpb25zGAEgASgLMk0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkltcG9ydENvbnRleHQuU3FsQmFrSW1wb3J0T3B0aW9ucy5FbmNyeXB0aW9uT3B0aW9uc1IRZW5jcnlwdGlvbk9wdGlvbnMabgoRRW5jcnlwdGlvbk9wdGlvbnMSGwoJY2VydF9wYXRoGAEgASgJUghjZXJ0UGF0aBIZCghwdmtfcGF0aBgCIAEoCVIHcHZrUGF0aBIhCgxwdmtfcGFzc3dvcmQYAyABKAlSC3B2a1Bhc3N3b3Jk');
+    'Cg1JbXBvcnRDb250ZXh0EhAKA3VyaRgBIAEoCVIDdXJpEhoKCGRhdGFiYXNlGAIgASgJUghkYXRhYmFzZRISCgRraW5kGAMgASgJUgRraW5kEkIKCWZpbGVfdHlwZRgEIAEoDjIlLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TcWxGaWxlVHlwZVIIZmlsZVR5cGUSaQoSY3N2X2ltcG9ydF9vcHRpb25zGAUgASgLMjsuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkltcG9ydENvbnRleHQuU3FsQ3N2SW1wb3J0T3B0aW9uc1IQY3N2SW1wb3J0T3B0aW9ucxIfCgtpbXBvcnRfdXNlchgGIAEoCVIKaW1wb3J0VXNlchJpChJiYWtfaW1wb3J0X29wdGlvbnMYByABKAsyOy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuSW1wb3J0Q29udGV4dC5TcWxCYWtJbXBvcnRPcHRpb25zUhBiYWtJbXBvcnRPcHRpb25zGvsBChNTcWxDc3ZJbXBvcnRPcHRpb25zEhQKBXRhYmxlGAEgASgJUgV0YWJsZRIYCgdjb2x1bW5zGAIgAygJUgdjb2x1bW5zEikKEGVzY2FwZV9jaGFyYWN0ZXIYBCABKAlSD2VzY2FwZUNoYXJhY3RlchInCg9xdW90ZV9jaGFyYWN0ZXIYBSABKAlSDnF1b3RlQ2hhcmFjdGVyEjAKFGZpZWxkc190ZXJtaW5hdGVkX2J5GAYgASgJUhJmaWVsZHNUZXJtaW5hdGVkQnkSLgoTbGluZXNfdGVybWluYXRlZF9ieRgIIAEoCVIRbGluZXNUZXJtaW5hdGVkQnkagwIKE1NxbEJha0ltcG9ydE9wdGlvbnMSfAoSZW5jcnlwdGlvbl9vcHRpb25zGAEgASgLMk0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkltcG9ydENvbnRleHQuU3FsQmFrSW1wb3J0T3B0aW9ucy5FbmNyeXB0aW9uT3B0aW9uc1IRZW5jcnlwdGlvbk9wdGlvbnMabgoRRW5jcnlwdGlvbk9wdGlvbnMSGwoJY2VydF9wYXRoGAEgASgJUghjZXJ0UGF0aBIZCghwdmtfcGF0aBgCIAEoCVIHcHZrUGF0aBIhCgxwdmtfcGFzc3dvcmQYAyABKAlSC3B2a1Bhc3N3b3Jk');
 @$core.Deprecated('Use instancesCloneRequestDescriptor instead')
 const InstancesCloneRequest$json = const {
   '1': 'InstancesCloneRequest',
@@ -1466,6 +1596,24 @@ const InstancesImportRequest$json = const {
 final $typed_data.Uint8List instancesImportRequestDescriptor =
     $convert.base64Decode(
         'ChZJbnN0YW5jZXNJbXBvcnRSZXF1ZXN0Ek4KDmltcG9ydF9jb250ZXh0GAEgASgLMicuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkltcG9ydENvbnRleHRSDWltcG9ydENvbnRleHQ=');
+@$core.Deprecated('Use mySqlSyncConfigDescriptor instead')
+const MySqlSyncConfig$json = const {
+  '1': 'MySqlSyncConfig',
+  '2': const [
+    const {
+      '1': 'initial_sync_flags',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.sql.v1beta4.SyncFlags',
+      '10': 'initialSyncFlags'
+    },
+  ],
+};
+
+/// Descriptor for `MySqlSyncConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mySqlSyncConfigDescriptor = $convert.base64Decode(
+    'Cg9NeVNxbFN5bmNDb25maWcSUQoSaW5pdGlhbF9zeW5jX2ZsYWdzGAEgAygLMiMuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlN5bmNGbGFnc1IQaW5pdGlhbFN5bmNGbGFncw==');
 @$core.Deprecated('Use instancesListResponseDescriptor instead')
 const InstancesListResponse$json = const {
   '1': 'InstancesListResponse',
@@ -1659,13 +1807,17 @@ const SqlExternalSyncSettingError_SqlExternalSyncSettingErrorType$json = const {
     const {'1': 'SQLSERVER_AGENT_NOT_RUNNING', '2': 19},
     const {'1': 'UNSUPPORTED_TABLE_DEFINITION', '2': 20},
     const {'1': 'UNSUPPORTED_DEFINER', '2': 21},
+    const {'1': 'SQLSERVER_SERVERNAME_MISMATCH', '2': 22},
+    const {'1': 'PRIMARY_ALREADY_SETUP', '2': 23},
+    const {'1': 'UNSUPPORTED_BINLOG_FORMAT', '2': 24},
+    const {'1': 'BINLOG_RETENTION_SETTING', '2': 25},
   ],
 };
 
 /// Descriptor for `SqlExternalSyncSettingError`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sqlExternalSyncSettingErrorDescriptor =
     $convert.base64Decode(
-        'ChtTcWxFeHRlcm5hbFN5bmNTZXR0aW5nRXJyb3ISEgoEa2luZBgBIAEoCVIEa2luZBJpCgR0eXBlGAIgASgOMlUuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEV4dGVybmFsU3luY1NldHRpbmdFcnJvci5TcWxFeHRlcm5hbFN5bmNTZXR0aW5nRXJyb3JUeXBlUgR0eXBlEhYKBmRldGFpbBgDIAEoCVIGZGV0YWlsItUFCh9TcWxFeHRlcm5hbFN5bmNTZXR0aW5nRXJyb3JUeXBlEjQKMFNRTF9FWFRFUk5BTF9TWU5DX1NFVFRJTkdfRVJST1JfVFlQRV9VTlNQRUNJRklFRBAAEhYKEkNPTk5FQ1RJT05fRkFJTFVSRRABEhYKEkJJTkxPR19OT1RfRU5BQkxFRBACEiEKHUlOQ09NUEFUSUJMRV9EQVRBQkFTRV9WRVJTSU9OEAMSGQoVUkVQTElDQV9BTFJFQURZX1NFVFVQEAQSGgoWSU5TVUZGSUNJRU5UX1BSSVZJTEVHRRAFEh4KGlVOU1VQUE9SVEVEX01JR1JBVElPTl9UWVBFEAYSGgoWTk9fUEdMT0dJQ0FMX0lOU1RBTExFRBAHEiEKHVBHTE9HSUNBTF9OT0RFX0FMUkVBRFlfRVhJU1RTEAgSFQoRSU5WQUxJRF9XQUxfTEVWRUwQCRIiCh5JTlZBTElEX1NIQVJFRF9QUkVMT0FEX0xJQlJBUlkQChImCiJJTlNVRkZJQ0lFTlRfTUFYX1JFUExJQ0FUSU9OX1NMT1RTEAsSIAocSU5TVUZGSUNJRU5UX01BWF9XQUxfU0VOREVSUxAMEiUKIUlOU1VGRklDSUVOVF9NQVhfV09SS0VSX1BST0NFU1NFUxANEhoKFlVOU1VQUE9SVEVEX0VYVEVOU0lPTlMQDhIjCh9JTlZBTElEX1JEU19MT0dJQ0FMX1JFUExJQ0FUSU9OEA8SGQoVSU5WQUxJRF9MT0dHSU5HX1NFVFVQEBASFAoQSU5WQUxJRF9EQl9QQVJBTRAREhkKFVVOU1VQUE9SVEVEX0dUSURfTU9ERRASEh8KG1NRTFNFUlZFUl9BR0VOVF9OT1RfUlVOTklORxATEiAKHFVOU1VQUE9SVEVEX1RBQkxFX0RFRklOSVRJT04QFBIXChNVTlNVUFBPUlRFRF9ERUZJTkVSEBU=');
+        'ChtTcWxFeHRlcm5hbFN5bmNTZXR0aW5nRXJyb3ISEgoEa2luZBgBIAEoCVIEa2luZBJpCgR0eXBlGAIgASgOMlUuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbEV4dGVybmFsU3luY1NldHRpbmdFcnJvci5TcWxFeHRlcm5hbFN5bmNTZXR0aW5nRXJyb3JUeXBlUgR0eXBlEhYKBmRldGFpbBgDIAEoCVIGZGV0YWlsItAGCh9TcWxFeHRlcm5hbFN5bmNTZXR0aW5nRXJyb3JUeXBlEjQKMFNRTF9FWFRFUk5BTF9TWU5DX1NFVFRJTkdfRVJST1JfVFlQRV9VTlNQRUNJRklFRBAAEhYKEkNPTk5FQ1RJT05fRkFJTFVSRRABEhYKEkJJTkxPR19OT1RfRU5BQkxFRBACEiEKHUlOQ09NUEFUSUJMRV9EQVRBQkFTRV9WRVJTSU9OEAMSGQoVUkVQTElDQV9BTFJFQURZX1NFVFVQEAQSGgoWSU5TVUZGSUNJRU5UX1BSSVZJTEVHRRAFEh4KGlVOU1VQUE9SVEVEX01JR1JBVElPTl9UWVBFEAYSGgoWTk9fUEdMT0dJQ0FMX0lOU1RBTExFRBAHEiEKHVBHTE9HSUNBTF9OT0RFX0FMUkVBRFlfRVhJU1RTEAgSFQoRSU5WQUxJRF9XQUxfTEVWRUwQCRIiCh5JTlZBTElEX1NIQVJFRF9QUkVMT0FEX0xJQlJBUlkQChImCiJJTlNVRkZJQ0lFTlRfTUFYX1JFUExJQ0FUSU9OX1NMT1RTEAsSIAocSU5TVUZGSUNJRU5UX01BWF9XQUxfU0VOREVSUxAMEiUKIUlOU1VGRklDSUVOVF9NQVhfV09SS0VSX1BST0NFU1NFUxANEhoKFlVOU1VQUE9SVEVEX0VYVEVOU0lPTlMQDhIjCh9JTlZBTElEX1JEU19MT0dJQ0FMX1JFUExJQ0FUSU9OEA8SGQoVSU5WQUxJRF9MT0dHSU5HX1NFVFVQEBASFAoQSU5WQUxJRF9EQl9QQVJBTRAREhkKFVVOU1VQUE9SVEVEX0dUSURfTU9ERRASEh8KG1NRTFNFUlZFUl9BR0VOVF9OT1RfUlVOTklORxATEiAKHFVOU1VQUE9SVEVEX1RBQkxFX0RFRklOSVRJT04QFBIXChNVTlNVUFBPUlRFRF9ERUZJTkVSEBUSIQodU1FMU0VSVkVSX1NFUlZFUk5BTUVfTUlTTUFUQ0gQFhIZChVQUklNQVJZX0FMUkVBRFlfU0VUVVAQFxIdChlVTlNVUFBPUlRFRF9CSU5MT0dfRk9STUFUEBgSHAoYQklOTE9HX1JFVEVOVElPTl9TRVRUSU5HEBk=');
 @$core.Deprecated('Use ipConfigurationDescriptor instead')
 const IpConfiguration$json = const {
   '1': 'IpConfiguration',
@@ -1701,12 +1853,19 @@ const IpConfiguration$json = const {
       '6': '.google.cloud.sql.v1beta4.AclEntry',
       '10': 'authorizedNetworks'
     },
+    const {
+      '1': 'allocated_ip_range',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '10': 'allocatedIpRange'
+    },
   ],
 };
 
 /// Descriptor for `IpConfiguration`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List ipConfigurationDescriptor = $convert.base64Decode(
-    'Cg9JcENvbmZpZ3VyYXRpb24SPQoMaXB2NF9lbmFibGVkGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZVILaXB2NEVuYWJsZWQSJwoPcHJpdmF0ZV9uZXR3b3JrGAIgASgJUg5wcml2YXRlTmV0d29yaxI7CgtyZXF1aXJlX3NzbBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSCnJlcXVpcmVTc2wSUwoTYXV0aG9yaXplZF9uZXR3b3JrcxgEIAMoCzIiLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5BY2xFbnRyeVISYXV0aG9yaXplZE5ldHdvcmtz');
+    'Cg9JcENvbmZpZ3VyYXRpb24SPQoMaXB2NF9lbmFibGVkGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZVILaXB2NEVuYWJsZWQSJwoPcHJpdmF0ZV9uZXR3b3JrGAIgASgJUg5wcml2YXRlTmV0d29yaxI7CgtyZXF1aXJlX3NzbBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSCnJlcXVpcmVTc2wSUwoTYXV0aG9yaXplZF9uZXR3b3JrcxgEIAMoCzIiLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5BY2xFbnRyeVISYXV0aG9yaXplZE5ldHdvcmtzEiwKEmFsbG9jYXRlZF9pcF9yYW5nZRgGIAEoCVIQYWxsb2NhdGVkSXBSYW5nZQ==');
 @$core.Deprecated('Use ipMappingDescriptor instead')
 const IpMapping$json = const {
   '1': 'IpMapping',
@@ -1935,13 +2094,21 @@ const OnPremisesConfiguration$json = const {
     },
     const {'1': 'client_key', '3': 7, '4': 1, '5': 9, '10': 'clientKey'},
     const {'1': 'dump_file_path', '3': 8, '4': 1, '5': 9, '10': 'dumpFilePath'},
+    const {
+      '1': 'source_instance',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.sql.v1beta4.InstanceReference',
+      '10': 'sourceInstance'
+    },
   ],
 };
 
 /// Descriptor for `OnPremisesConfiguration`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List onPremisesConfigurationDescriptor =
     $convert.base64Decode(
-        'ChdPblByZW1pc2VzQ29uZmlndXJhdGlvbhIbCglob3N0X3BvcnQYASABKAlSCGhvc3RQb3J0EhIKBGtpbmQYAiABKAlSBGtpbmQSGgoIdXNlcm5hbWUYAyABKAlSCHVzZXJuYW1lEhoKCHBhc3N3b3JkGAQgASgJUghwYXNzd29yZBIlCg5jYV9jZXJ0aWZpY2F0ZRgFIAEoCVINY2FDZXJ0aWZpY2F0ZRItChJjbGllbnRfY2VydGlmaWNhdGUYBiABKAlSEWNsaWVudENlcnRpZmljYXRlEh0KCmNsaWVudF9rZXkYByABKAlSCWNsaWVudEtleRIkCg5kdW1wX2ZpbGVfcGF0aBgIIAEoCVIMZHVtcEZpbGVQYXRo');
+        'ChdPblByZW1pc2VzQ29uZmlndXJhdGlvbhIbCglob3N0X3BvcnQYASABKAlSCGhvc3RQb3J0EhIKBGtpbmQYAiABKAlSBGtpbmQSGgoIdXNlcm5hbWUYAyABKAlSCHVzZXJuYW1lEhoKCHBhc3N3b3JkGAQgASgJUghwYXNzd29yZBIlCg5jYV9jZXJ0aWZpY2F0ZRgFIAEoCVINY2FDZXJ0aWZpY2F0ZRItChJjbGllbnRfY2VydGlmaWNhdGUYBiABKAlSEWNsaWVudENlcnRpZmljYXRlEh0KCmNsaWVudF9rZXkYByABKAlSCWNsaWVudEtleRIkCg5kdW1wX2ZpbGVfcGF0aBgIIAEoCVIMZHVtcEZpbGVQYXRoElQKD3NvdXJjZV9pbnN0YW5jZRgPIAEoCzIrLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5JbnN0YW5jZVJlZmVyZW5jZVIOc291cmNlSW5zdGFuY2U=');
 @$core.Deprecated('Use diskEncryptionConfigurationDescriptor instead')
 const DiskEncryptionConfiguration$json = const {
   '1': 'DiskEncryptionConfiguration',
@@ -2177,6 +2344,67 @@ const OperationErrors$json = const {
 /// Descriptor for `OperationErrors`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List operationErrorsDescriptor = $convert.base64Decode(
     'Cg9PcGVyYXRpb25FcnJvcnMSEgoEa2luZBgBIAEoCVIEa2luZBJACgZlcnJvcnMYAiADKAsyKC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuT3BlcmF0aW9uRXJyb3JSBmVycm9ycw==');
+@$core.Deprecated('Use passwordValidationPolicyDescriptor instead')
+const PasswordValidationPolicy$json = const {
+  '1': 'PasswordValidationPolicy',
+  '2': const [
+    const {
+      '1': 'min_length',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int32Value',
+      '10': 'minLength'
+    },
+    const {
+      '1': 'complexity',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.sql.v1beta4.PasswordValidationPolicy.Complexity',
+      '10': 'complexity'
+    },
+    const {
+      '1': 'reuse_interval',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int32Value',
+      '10': 'reuseInterval'
+    },
+    const {
+      '1': 'disallow_username_substring',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'disallowUsernameSubstring'
+    },
+    const {
+      '1': 'password_change_interval',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'passwordChangeInterval'
+    },
+  ],
+  '4': const [PasswordValidationPolicy_Complexity$json],
+};
+
+@$core.Deprecated('Use passwordValidationPolicyDescriptor instead')
+const PasswordValidationPolicy_Complexity$json = const {
+  '1': 'Complexity',
+  '2': const [
+    const {'1': 'COMPLEXITY_UNSPECIFIED', '2': 0},
+    const {'1': 'COMPLEXITY_DEFAULT', '2': 1},
+  ],
+};
+
+/// Descriptor for `PasswordValidationPolicy`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List passwordValidationPolicyDescriptor =
+    $convert.base64Decode(
+        'ChhQYXNzd29yZFZhbGlkYXRpb25Qb2xpY3kSOgoKbWluX2xlbmd0aBgBIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlUgltaW5MZW5ndGgSXQoKY29tcGxleGl0eRgCIAEoDjI9Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5QYXNzd29yZFZhbGlkYXRpb25Qb2xpY3kuQ29tcGxleGl0eVIKY29tcGxleGl0eRJCCg5yZXVzZV9pbnRlcnZhbBgDIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlUg1yZXVzZUludGVydmFsEloKG2Rpc2FsbG93X3VzZXJuYW1lX3N1YnN0cmluZxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSGWRpc2FsbG93VXNlcm5hbWVTdWJzdHJpbmcSUwoYcGFzc3dvcmRfY2hhbmdlX2ludGVydmFsGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhZwYXNzd29yZENoYW5nZUludGVydmFsIkAKCkNvbXBsZXhpdHkSGgoWQ09NUExFWElUWV9VTlNQRUNJRklFRBAAEhYKEkNPTVBMRVhJVFlfREVGQVVMVBAB');
 @$core.Deprecated('Use operationsListResponseDescriptor instead')
 const OperationsListResponse$json = const {
   '1': 'OperationsListResponse',
@@ -2434,6 +2662,22 @@ const Settings$json = const {
       '6': '.google.cloud.sql.v1beta4.InsightsConfig',
       '10': 'insightsConfig'
     },
+    const {
+      '1': 'password_validation_policy',
+      '3': 27,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.sql.v1beta4.PasswordValidationPolicy',
+      '10': 'passwordValidationPolicy'
+    },
+    const {
+      '1': 'sql_server_audit_config',
+      '3': 29,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.sql.v1beta4.SqlServerAuditConfig',
+      '10': 'sqlServerAuditConfig'
+    },
   ],
   '3': const [Settings_UserLabelsEntry$json],
   '4': const [Settings_SqlActivationPolicy$json],
@@ -2466,7 +2710,7 @@ const Settings_SqlActivationPolicy$json = const {
 
 /// Descriptor for `Settings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List settingsDescriptor = $convert.base64Decode(
-    'CghTZXR0aW5ncxJGChBzZXR0aW5nc192ZXJzaW9uGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVSD3NldHRpbmdzVmVyc2lvbhJCChthdXRob3JpemVkX2dhZV9hcHBsaWNhdGlvbnMYAiADKAlCAhgBUhlhdXRob3JpemVkR2FlQXBwbGljYXRpb25zEhIKBHRpZXIYAyABKAlSBHRpZXISEgoEa2luZBgEIAEoCVIEa2luZBJTCgt1c2VyX2xhYmVscxgFIAMoCzIyLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TZXR0aW5ncy5Vc2VyTGFiZWxzRW50cnlSCnVzZXJMYWJlbHMSWgoRYXZhaWxhYmlsaXR5X3R5cGUYBiABKA4yLS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsQXZhaWxhYmlsaXR5VHlwZVIQYXZhaWxhYmlsaXR5VHlwZRJLCgxwcmljaW5nX3BsYW4YByABKA4yKC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsUHJpY2luZ1BsYW5SC3ByaWNpbmdQbGFuElsKEHJlcGxpY2F0aW9uX3R5cGUYCCABKA4yLC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsUmVwbGljYXRpb25UeXBlQgIYAVIPcmVwbGljYXRpb25UeXBlElYKGXN0b3JhZ2VfYXV0b19yZXNpemVfbGltaXQYCSABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZVIWc3RvcmFnZUF1dG9SZXNpemVMaW1pdBJjChFhY3RpdmF0aW9uX3BvbGljeRgKIAEoDjI2Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TZXR0aW5ncy5TcWxBY3RpdmF0aW9uUG9saWN5UhBhY3RpdmF0aW9uUG9saWN5ElQKEGlwX2NvbmZpZ3VyYXRpb24YCyABKAsyKS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuSXBDb25maWd1cmF0aW9uUg9pcENvbmZpZ3VyYXRpb24SSgoTc3RvcmFnZV9hdXRvX3Jlc2l6ZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSEXN0b3JhZ2VBdXRvUmVzaXplEl0KE2xvY2F0aW9uX3ByZWZlcmVuY2UYDSABKAsyLC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuTG9jYXRpb25QcmVmZXJlbmNlUhJsb2NhdGlvblByZWZlcmVuY2USTgoOZGF0YWJhc2VfZmxhZ3MYDiADKAsyJy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGF0YWJhc2VGbGFnc1INZGF0YWJhc2VGbGFncxJPCg5kYXRhX2Rpc2tfdHlwZRgPIAEoDjIpLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TcWxEYXRhRGlza1R5cGVSDGRhdGFEaXNrVHlwZRJaChJtYWludGVuYW5jZV93aW5kb3cYECABKAsyKy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuTWFpbnRlbmFuY2VXaW5kb3dSEW1haW50ZW5hbmNlV2luZG93EmAKFGJhY2t1cF9jb25maWd1cmF0aW9uGBEgASgLMi0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkJhY2t1cENvbmZpZ3VyYXRpb25SE2JhY2t1cENvbmZpZ3VyYXRpb24SXAocZGF0YWJhc2VfcmVwbGljYXRpb25fZW5hYmxlZBgSIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSGmRhdGFiYXNlUmVwbGljYXRpb25FbmFibGVkEmMKHmNyYXNoX3NhZmVfcmVwbGljYXRpb25fZW5hYmxlZBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCAhgBUhtjcmFzaFNhZmVSZXBsaWNhdGlvbkVuYWJsZWQSRgoRZGF0YV9kaXNrX3NpemVfZ2IYFCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZVIOZGF0YURpc2tTaXplR2ISagoXYWN0aXZlX2RpcmVjdG9yeV9jb25maWcYFiABKAsyMi5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsQWN0aXZlRGlyZWN0b3J5Q29uZmlnUhVhY3RpdmVEaXJlY3RvcnlDb25maWcSHAoJY29sbGF0aW9uGBcgASgJUgljb2xsYXRpb24SaQoYZGVueV9tYWludGVuYW5jZV9wZXJpb2RzGBggAygLMi8uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRlbnlNYWludGVuYW5jZVBlcmlvZFIWZGVueU1haW50ZW5hbmNlUGVyaW9kcxJRCg9pbnNpZ2h0c19jb25maWcYGSABKAsyKC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuSW5zaWdodHNDb25maWdSDmluc2lnaHRzQ29uZmlnGj0KD1VzZXJMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBImYKE1NxbEFjdGl2YXRpb25Qb2xpY3kSJQohU1FMX0FDVElWQVRJT05fUE9MSUNZX1VOU1BFQ0lGSUVEEAASCgoGQUxXQVlTEAESCQoFTkVWRVIQAhIRCglPTl9ERU1BTkQQAxoCCAE=');
+    'CghTZXR0aW5ncxJGChBzZXR0aW5nc192ZXJzaW9uGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVSD3NldHRpbmdzVmVyc2lvbhJCChthdXRob3JpemVkX2dhZV9hcHBsaWNhdGlvbnMYAiADKAlCAhgBUhlhdXRob3JpemVkR2FlQXBwbGljYXRpb25zEhIKBHRpZXIYAyABKAlSBHRpZXISEgoEa2luZBgEIAEoCVIEa2luZBJTCgt1c2VyX2xhYmVscxgFIAMoCzIyLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TZXR0aW5ncy5Vc2VyTGFiZWxzRW50cnlSCnVzZXJMYWJlbHMSWgoRYXZhaWxhYmlsaXR5X3R5cGUYBiABKA4yLS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsQXZhaWxhYmlsaXR5VHlwZVIQYXZhaWxhYmlsaXR5VHlwZRJLCgxwcmljaW5nX3BsYW4YByABKA4yKC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsUHJpY2luZ1BsYW5SC3ByaWNpbmdQbGFuElsKEHJlcGxpY2F0aW9uX3R5cGUYCCABKA4yLC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsUmVwbGljYXRpb25UeXBlQgIYAVIPcmVwbGljYXRpb25UeXBlElYKGXN0b3JhZ2VfYXV0b19yZXNpemVfbGltaXQYCSABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZVIWc3RvcmFnZUF1dG9SZXNpemVMaW1pdBJjChFhY3RpdmF0aW9uX3BvbGljeRgKIAEoDjI2Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TZXR0aW5ncy5TcWxBY3RpdmF0aW9uUG9saWN5UhBhY3RpdmF0aW9uUG9saWN5ElQKEGlwX2NvbmZpZ3VyYXRpb24YCyABKAsyKS5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuSXBDb25maWd1cmF0aW9uUg9pcENvbmZpZ3VyYXRpb24SSgoTc3RvcmFnZV9hdXRvX3Jlc2l6ZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSEXN0b3JhZ2VBdXRvUmVzaXplEl0KE2xvY2F0aW9uX3ByZWZlcmVuY2UYDSABKAsyLC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuTG9jYXRpb25QcmVmZXJlbmNlUhJsb2NhdGlvblByZWZlcmVuY2USTgoOZGF0YWJhc2VfZmxhZ3MYDiADKAsyJy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuRGF0YWJhc2VGbGFnc1INZGF0YWJhc2VGbGFncxJPCg5kYXRhX2Rpc2tfdHlwZRgPIAEoDjIpLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5TcWxEYXRhRGlza1R5cGVSDGRhdGFEaXNrVHlwZRJaChJtYWludGVuYW5jZV93aW5kb3cYECABKAsyKy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuTWFpbnRlbmFuY2VXaW5kb3dSEW1haW50ZW5hbmNlV2luZG93EmAKFGJhY2t1cF9jb25maWd1cmF0aW9uGBEgASgLMi0uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkJhY2t1cENvbmZpZ3VyYXRpb25SE2JhY2t1cENvbmZpZ3VyYXRpb24SXAocZGF0YWJhc2VfcmVwbGljYXRpb25fZW5hYmxlZBgSIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSGmRhdGFiYXNlUmVwbGljYXRpb25FbmFibGVkEmMKHmNyYXNoX3NhZmVfcmVwbGljYXRpb25fZW5hYmxlZBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCAhgBUhtjcmFzaFNhZmVSZXBsaWNhdGlvbkVuYWJsZWQSRgoRZGF0YV9kaXNrX3NpemVfZ2IYFCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZVIOZGF0YURpc2tTaXplR2ISagoXYWN0aXZlX2RpcmVjdG9yeV9jb25maWcYFiABKAsyMi5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuU3FsQWN0aXZlRGlyZWN0b3J5Q29uZmlnUhVhY3RpdmVEaXJlY3RvcnlDb25maWcSHAoJY29sbGF0aW9uGBcgASgJUgljb2xsYXRpb24SaQoYZGVueV9tYWludGVuYW5jZV9wZXJpb2RzGBggAygLMi8uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LkRlbnlNYWludGVuYW5jZVBlcmlvZFIWZGVueU1haW50ZW5hbmNlUGVyaW9kcxJRCg9pbnNpZ2h0c19jb25maWcYGSABKAsyKC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuSW5zaWdodHNDb25maWdSDmluc2lnaHRzQ29uZmlnEnAKGnBhc3N3b3JkX3ZhbGlkYXRpb25fcG9saWN5GBsgASgLMjIuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlBhc3N3b3JkVmFsaWRhdGlvblBvbGljeVIYcGFzc3dvcmRWYWxpZGF0aW9uUG9saWN5EmUKF3NxbF9zZXJ2ZXJfYXVkaXRfY29uZmlnGB0gASgLMi4uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0LlNxbFNlcnZlckF1ZGl0Q29uZmlnUhRzcWxTZXJ2ZXJBdWRpdENvbmZpZxo9Cg9Vc2VyTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASJmChNTcWxBY3RpdmF0aW9uUG9saWN5EiUKIVNRTF9BQ1RJVkFUSU9OX1BPTElDWV9VTlNQRUNJRklFRBAAEgoKBkFMV0FZUxABEgkKBU5FVkVSEAISEQoJT05fREVNQU5EEAMaAggB');
 @$core.Deprecated('Use sslCertDescriptor instead')
 const SslCert$json = const {
   '1': 'SslCert',
@@ -2703,3 +2947,15 @@ const SqlActiveDirectoryConfig$json = const {
 final $typed_data.Uint8List sqlActiveDirectoryConfigDescriptor =
     $convert.base64Decode(
         'ChhTcWxBY3RpdmVEaXJlY3RvcnlDb25maWcSEgoEa2luZBgBIAEoCVIEa2luZBIWCgZkb21haW4YAiABKAlSBmRvbWFpbg==');
+@$core.Deprecated('Use sqlServerAuditConfigDescriptor instead')
+const SqlServerAuditConfig$json = const {
+  '1': 'SqlServerAuditConfig',
+  '2': const [
+    const {'1': 'kind', '3': 1, '4': 1, '5': 9, '10': 'kind'},
+    const {'1': 'bucket', '3': 2, '4': 1, '5': 9, '10': 'bucket'},
+  ],
+};
+
+/// Descriptor for `SqlServerAuditConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sqlServerAuditConfigDescriptor = $convert.base64Decode(
+    'ChRTcWxTZXJ2ZXJBdWRpdENvbmZpZxISCgRraW5kGAEgASgJUgRraW5kEhYKBmJ1Y2tldBgCIAEoCVIGYnVja2V0');

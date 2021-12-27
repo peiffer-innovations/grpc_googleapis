@@ -142,6 +142,37 @@ class MetricType extends $pb.ProtobufEnum {
   const MetricType._($core.int v, $core.String n) : super(v, n);
 }
 
+class RestrictedMetricType extends $pb.ProtobufEnum {
+  static const RestrictedMetricType RESTRICTED_METRIC_TYPE_UNSPECIFIED =
+      RestrictedMetricType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESTRICTED_METRIC_TYPE_UNSPECIFIED');
+  static const RestrictedMetricType COST_DATA = RestrictedMetricType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'COST_DATA');
+  static const RestrictedMetricType REVENUE_DATA = RestrictedMetricType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REVENUE_DATA');
+
+  static const $core.List<RestrictedMetricType> values = <RestrictedMetricType>[
+    RESTRICTED_METRIC_TYPE_UNSPECIFIED,
+    COST_DATA,
+    REVENUE_DATA,
+  ];
+
+  static final $core.Map<$core.int, RestrictedMetricType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static RestrictedMetricType? valueOf($core.int value) => _byValue[value];
+
+  const RestrictedMetricType._($core.int v, $core.String n) : super(v, n);
+}
+
 class Compatibility extends $pb.ProtobufEnum {
   static const Compatibility COMPATIBILITY_UNSPECIFIED = Compatibility._(
       0,
@@ -372,4 +403,40 @@ class CohortsRange_Granularity extends $pb.ProtobufEnum {
   static CohortsRange_Granularity? valueOf($core.int value) => _byValue[value];
 
   const CohortsRange_Granularity._($core.int v, $core.String n) : super(v, n);
+}
+
+class MetricMetadata_BlockedReason extends $pb.ProtobufEnum {
+  static const MetricMetadata_BlockedReason BLOCKED_REASON_UNSPECIFIED =
+      MetricMetadata_BlockedReason._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BLOCKED_REASON_UNSPECIFIED');
+  static const MetricMetadata_BlockedReason NO_REVENUE_METRICS =
+      MetricMetadata_BlockedReason._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_REVENUE_METRICS');
+  static const MetricMetadata_BlockedReason NO_COST_METRICS =
+      MetricMetadata_BlockedReason._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_COST_METRICS');
+
+  static const $core.List<MetricMetadata_BlockedReason> values =
+      <MetricMetadata_BlockedReason>[
+    BLOCKED_REASON_UNSPECIFIED,
+    NO_REVENUE_METRICS,
+    NO_COST_METRICS,
+  ];
+
+  static final $core.Map<$core.int, MetricMetadata_BlockedReason> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static MetricMetadata_BlockedReason? valueOf($core.int value) =>
+      _byValue[value];
+
+  const MetricMetadata_BlockedReason._($core.int v, $core.String n)
+      : super(v, n);
 }

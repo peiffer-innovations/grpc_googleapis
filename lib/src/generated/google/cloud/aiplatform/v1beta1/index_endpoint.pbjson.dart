@@ -67,6 +67,14 @@ const IndexEndpoint$json = const {
       '8': const {},
       '10': 'network'
     },
+    const {
+      '1': 'enable_private_service_connect',
+      '3': 10,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'enablePrivateServiceConnect'
+    },
   ],
   '3': const [IndexEndpoint_LabelsEntry$json],
   '7': const {},
@@ -84,7 +92,7 @@ const IndexEndpoint_LabelsEntry$json = const {
 
 /// Descriptor for `IndexEndpoint`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List indexEndpointDescriptor = $convert.base64Decode(
-    'Cg1JbmRleEVuZHBvaW50EhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRImCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAlILZGlzcGxheU5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEl4KEGRlcGxveWVkX2luZGV4ZXMYBCADKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveWVkSW5kZXhCA+BBA1IPZGVwbG95ZWRJbmRleGVzEhIKBGV0YWcYBSABKAlSBGV0YWcSUgoGbGFiZWxzGAYgAygLMjouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5JbmRleEVuZHBvaW50LkxhYmVsc0VudHJ5UgZsYWJlbHMSQAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSQAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSIAoHbmV0d29yaxgJIAEoCUIG4EEC4EEFUgduZXR3b3JrGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE6depBcgonYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9JbmRleEVuZHBvaW50Ekdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5kZXhFbmRwb2ludHMve2luZGV4X2VuZHBvaW50fQ==');
+    'Cg1JbmRleEVuZHBvaW50EhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRImCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAlILZGlzcGxheU5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEl4KEGRlcGxveWVkX2luZGV4ZXMYBCADKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveWVkSW5kZXhCA+BBA1IPZGVwbG95ZWRJbmRleGVzEhIKBGV0YWcYBSABKAlSBGV0YWcSUgoGbGFiZWxzGAYgAygLMjouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5JbmRleEVuZHBvaW50LkxhYmVsc0VudHJ5UgZsYWJlbHMSQAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSQAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSHQoHbmV0d29yaxgJIAEoCUID4EEBUgduZXR3b3JrEkgKHmVuYWJsZV9wcml2YXRlX3NlcnZpY2VfY29ubmVjdBgKIAEoCEID4EEBUhtlbmFibGVQcml2YXRlU2VydmljZUNvbm5lY3QaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ATp16kFyCidhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4RW5kcG9pbnQSR3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbmRleEVuZHBvaW50cy97aW5kZXhfZW5kcG9pbnR9');
 @$core.Deprecated('Use deployedIndexDescriptor instead')
 const DeployedIndex$json = const {
   '1': 'DeployedIndex',
@@ -215,9 +223,17 @@ const IndexPrivateEndpoints$json = const {
       '8': const {},
       '10': 'matchGrpcAddress'
     },
+    const {
+      '1': 'service_attachment',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'serviceAttachment'
+    },
   ],
 };
 
 /// Descriptor for `IndexPrivateEndpoints`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List indexPrivateEndpointsDescriptor = $convert.base64Decode(
-    'ChVJbmRleFByaXZhdGVFbmRwb2ludHMSMQoSbWF0Y2hfZ3JwY19hZGRyZXNzGAEgASgJQgPgQQNSEG1hdGNoR3JwY0FkZHJlc3M=');
+    'ChVJbmRleFByaXZhdGVFbmRwb2ludHMSMQoSbWF0Y2hfZ3JwY19hZGRyZXNzGAEgASgJQgPgQQNSEG1hdGNoR3JwY0FkZHJlc3MSMgoSc2VydmljZV9hdHRhY2htZW50GAIgASgJQgPgQQNSEXNlcnZpY2VBdHRhY2htZW50');

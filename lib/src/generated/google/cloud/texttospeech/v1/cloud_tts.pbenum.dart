@@ -67,12 +67,24 @@ class AudioEncoding extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'OGG_OPUS');
+  static const AudioEncoding MULAW = AudioEncoding._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MULAW');
+  static const AudioEncoding ALAW = AudioEncoding._(
+      6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ALAW');
 
   static const $core.List<AudioEncoding> values = <AudioEncoding>[
     AUDIO_ENCODING_UNSPECIFIED,
     LINEAR16,
     MP3,
     OGG_OPUS,
+    MULAW,
+    ALAW,
   ];
 
   static final $core.Map<$core.int, AudioEncoding> _byValue =

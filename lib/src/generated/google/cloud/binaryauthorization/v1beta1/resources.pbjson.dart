@@ -53,6 +53,36 @@ const Policy$json = const {
       '10': 'clusterAdmissionRules'
     },
     const {
+      '1': 'kubernetes_namespace_admission_rules',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.binaryauthorization.v1beta1.Policy.KubernetesNamespaceAdmissionRulesEntry',
+      '8': const {},
+      '10': 'kubernetesNamespaceAdmissionRules'
+    },
+    const {
+      '1': 'kubernetes_service_account_admission_rules',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.binaryauthorization.v1beta1.Policy.KubernetesServiceAccountAdmissionRulesEntry',
+      '8': const {},
+      '10': 'kubernetesServiceAccountAdmissionRules'
+    },
+    const {
+      '1': 'istio_service_identity_admission_rules',
+      '3': 9,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.binaryauthorization.v1beta1.Policy.IstioServiceIdentityAdmissionRulesEntry',
+      '8': const {},
+      '10': 'istioServiceIdentityAdmissionRules'
+    },
+    const {
       '1': 'default_admission_rule',
       '3': 4,
       '4': 1,
@@ -71,7 +101,12 @@ const Policy$json = const {
       '10': 'updateTime'
     },
   ],
-  '3': const [Policy_ClusterAdmissionRulesEntry$json],
+  '3': const [
+    Policy_ClusterAdmissionRulesEntry$json,
+    Policy_KubernetesNamespaceAdmissionRulesEntry$json,
+    Policy_KubernetesServiceAccountAdmissionRulesEntry$json,
+    Policy_IstioServiceIdentityAdmissionRulesEntry$json
+  ],
   '4': const [Policy_GlobalPolicyEvaluationMode$json],
   '7': const {},
 };
@@ -79,6 +114,57 @@ const Policy$json = const {
 @$core.Deprecated('Use policyDescriptor instead')
 const Policy_ClusterAdmissionRulesEntry$json = const {
   '1': 'ClusterAdmissionRulesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.binaryauthorization.v1beta1.AdmissionRule',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use policyDescriptor instead')
+const Policy_KubernetesNamespaceAdmissionRulesEntry$json = const {
+  '1': 'KubernetesNamespaceAdmissionRulesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.binaryauthorization.v1beta1.AdmissionRule',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use policyDescriptor instead')
+const Policy_KubernetesServiceAccountAdmissionRulesEntry$json = const {
+  '1': 'KubernetesServiceAccountAdmissionRulesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.binaryauthorization.v1beta1.AdmissionRule',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use policyDescriptor instead')
+const Policy_IstioServiceIdentityAdmissionRulesEntry$json = const {
+  '1': 'IstioServiceIdentityAdmissionRulesEntry',
   '2': const [
     const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
     const {
@@ -105,7 +191,7 @@ const Policy_GlobalPolicyEvaluationMode$json = const {
 
 /// Descriptor for `Policy`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List policyDescriptor = $convert.base64Decode(
-    'CgZQb2xpY3kSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiUKC2Rlc2NyaXB0aW9uGAYgASgJQgPgQQFSC2Rlc2NyaXB0aW9uEpMBCh1nbG9iYWxfcG9saWN5X2V2YWx1YXRpb25fbW9kZRgHIAEoDjJLLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUG9saWN5Lkdsb2JhbFBvbGljeUV2YWx1YXRpb25Nb2RlQgPgQQFSGmdsb2JhbFBvbGljeUV2YWx1YXRpb25Nb2RlEooBChxhZG1pc3Npb25fd2hpdGVsaXN0X3BhdHRlcm5zGAIgAygLMkMuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25XaGl0ZWxpc3RQYXR0ZXJuQgPgQQFSGmFkbWlzc2lvbldoaXRlbGlzdFBhdHRlcm5zEogBChdjbHVzdGVyX2FkbWlzc2lvbl9ydWxlcxgDIAMoCzJLLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUG9saWN5LkNsdXN0ZXJBZG1pc3Npb25SdWxlc0VudHJ5QgPgQQFSFWNsdXN0ZXJBZG1pc3Npb25SdWxlcxJyChZkZWZhdWx0X2FkbWlzc2lvbl9ydWxlGAQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25SdWxlQgPgQQJSFGRlZmF1bHRBZG1pc3Npb25SdWxlEkAKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lGoEBChpDbHVzdGVyQWRtaXNzaW9uUnVsZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRJNCgV2YWx1ZRgCIAEoCzI3Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQWRtaXNzaW9uUnVsZVIFdmFsdWU6AjgBImQKGkdsb2JhbFBvbGljeUV2YWx1YXRpb25Nb2RlEi0KKUdMT0JBTF9QT0xJQ1lfRVZBTFVBVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASCgoGRU5BQkxFEAESCwoHRElTQUJMRRACOknqQUYKKWJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJvamVjdH0vcG9saWN5');
+    'CgZQb2xpY3kSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiUKC2Rlc2NyaXB0aW9uGAYgASgJQgPgQQFSC2Rlc2NyaXB0aW9uEpMBCh1nbG9iYWxfcG9saWN5X2V2YWx1YXRpb25fbW9kZRgHIAEoDjJLLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUG9saWN5Lkdsb2JhbFBvbGljeUV2YWx1YXRpb25Nb2RlQgPgQQFSGmdsb2JhbFBvbGljeUV2YWx1YXRpb25Nb2RlEooBChxhZG1pc3Npb25fd2hpdGVsaXN0X3BhdHRlcm5zGAIgAygLMkMuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25XaGl0ZWxpc3RQYXR0ZXJuQgPgQQFSGmFkbWlzc2lvbldoaXRlbGlzdFBhdHRlcm5zEogBChdjbHVzdGVyX2FkbWlzc2lvbl9ydWxlcxgDIAMoCzJLLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUG9saWN5LkNsdXN0ZXJBZG1pc3Npb25SdWxlc0VudHJ5QgPgQQFSFWNsdXN0ZXJBZG1pc3Npb25SdWxlcxKtAQoka3ViZXJuZXRlc19uYW1lc3BhY2VfYWRtaXNzaW9uX3J1bGVzGAogAygLMlcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5Qb2xpY3kuS3ViZXJuZXRlc05hbWVzcGFjZUFkbWlzc2lvblJ1bGVzRW50cnlCA+BBAVIha3ViZXJuZXRlc05hbWVzcGFjZUFkbWlzc2lvblJ1bGVzEr0BCiprdWJlcm5ldGVzX3NlcnZpY2VfYWNjb3VudF9hZG1pc3Npb25fcnVsZXMYCCADKAsyXC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLlBvbGljeS5LdWJlcm5ldGVzU2VydmljZUFjY291bnRBZG1pc3Npb25SdWxlc0VudHJ5QgPgQQFSJmt1YmVybmV0ZXNTZXJ2aWNlQWNjb3VudEFkbWlzc2lvblJ1bGVzErEBCiZpc3Rpb19zZXJ2aWNlX2lkZW50aXR5X2FkbWlzc2lvbl9ydWxlcxgJIAMoCzJYLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUG9saWN5LklzdGlvU2VydmljZUlkZW50aXR5QWRtaXNzaW9uUnVsZXNFbnRyeUID4EEBUiJpc3Rpb1NlcnZpY2VJZGVudGl0eUFkbWlzc2lvblJ1bGVzEnIKFmRlZmF1bHRfYWRtaXNzaW9uX3J1bGUYBCABKAsyNy5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkFkbWlzc2lvblJ1bGVCA+BBAlIUZGVmYXVsdEFkbWlzc2lvblJ1bGUSQAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUagQEKGkNsdXN0ZXJBZG1pc3Npb25SdWxlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ek0KBXZhbHVlGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25SdWxlUgV2YWx1ZToCOAEajQEKJkt1YmVybmV0ZXNOYW1lc3BhY2VBZG1pc3Npb25SdWxlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ek0KBXZhbHVlGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25SdWxlUgV2YWx1ZToCOAEakgEKK0t1YmVybmV0ZXNTZXJ2aWNlQWNjb3VudEFkbWlzc2lvblJ1bGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSTQoFdmFsdWUYAiABKAsyNy5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkFkbWlzc2lvblJ1bGVSBXZhbHVlOgI4ARqOAQonSXN0aW9TZXJ2aWNlSWRlbnRpdHlBZG1pc3Npb25SdWxlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ek0KBXZhbHVlGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25SdWxlUgV2YWx1ZToCOAEiZAoaR2xvYmFsUG9saWN5RXZhbHVhdGlvbk1vZGUSLQopR0xPQkFMX1BPTElDWV9FVkFMVUFUSU9OX01PREVfVU5TUEVDSUZJRUQQABIKCgZFTkFCTEUQARILCgdESVNBQkxFEAI6ZupBYwopYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9Qb2xpY3kSGXByb2plY3RzL3twcm9qZWN0fS9wb2xpY3kSG2xvY2F0aW9ucy97bG9jYXRpb259L3BvbGljeQ==');
 @$core.Deprecated('Use admissionWhitelistPatternDescriptor instead')
 const AdmissionWhitelistPattern$json = const {
   '1': 'AdmissionWhitelistPattern',
@@ -289,14 +375,18 @@ const PkixPublicKey_SignatureAlgorithm$json = const {
     const {'1': 'RSA_SIGN_PKCS1_4096_SHA256', '2': 7},
     const {'1': 'RSA_SIGN_PKCS1_4096_SHA512', '2': 8},
     const {'1': 'ECDSA_P256_SHA256', '2': 9},
+    const {'1': 'EC_SIGN_P256_SHA256', '2': 9},
     const {'1': 'ECDSA_P384_SHA384', '2': 10},
+    const {'1': 'EC_SIGN_P384_SHA384', '2': 10},
     const {'1': 'ECDSA_P521_SHA512', '2': 11},
+    const {'1': 'EC_SIGN_P521_SHA512', '2': 11},
   ],
+  '3': const {'2': true},
 };
 
 /// Descriptor for `PkixPublicKey`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pkixPublicKeyDescriptor = $convert.base64Decode(
-    'Cg1Qa2l4UHVibGljS2V5EiQKDnB1YmxpY19rZXlfcGVtGAEgASgJUgxwdWJsaWNLZXlQZW0SewoTc2lnbmF0dXJlX2FsZ29yaXRobRgCIAEoDjJKLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUGtpeFB1YmxpY0tleS5TaWduYXR1cmVBbGdvcml0aG1SEnNpZ25hdHVyZUFsZ29yaXRobSLiAgoSU2lnbmF0dXJlQWxnb3JpdGhtEiMKH1NJR05BVFVSRV9BTEdPUklUSE1fVU5TUEVDSUZJRUQQABIXChNSU0FfUFNTXzIwNDhfU0hBMjU2EAESFwoTUlNBX1BTU18zMDcyX1NIQTI1NhACEhcKE1JTQV9QU1NfNDA5Nl9TSEEyNTYQAxIXChNSU0FfUFNTXzQwOTZfU0hBNTEyEAQSHgoaUlNBX1NJR05fUEtDUzFfMjA0OF9TSEEyNTYQBRIeChpSU0FfU0lHTl9QS0NTMV8zMDcyX1NIQTI1NhAGEh4KGlJTQV9TSUdOX1BLQ1MxXzQwOTZfU0hBMjU2EAcSHgoaUlNBX1NJR05fUEtDUzFfNDA5Nl9TSEE1MTIQCBIVChFFQ0RTQV9QMjU2X1NIQTI1NhAJEhUKEUVDRFNBX1AzODRfU0hBMzg0EAoSFQoRRUNEU0FfUDUyMV9TSEE1MTIQCw==');
+    'Cg1Qa2l4UHVibGljS2V5EiQKDnB1YmxpY19rZXlfcGVtGAEgASgJUgxwdWJsaWNLZXlQZW0SewoTc2lnbmF0dXJlX2FsZ29yaXRobRgCIAEoDjJKLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuUGtpeFB1YmxpY0tleS5TaWduYXR1cmVBbGdvcml0aG1SEnNpZ25hdHVyZUFsZ29yaXRobSKxAwoSU2lnbmF0dXJlQWxnb3JpdGhtEiMKH1NJR05BVFVSRV9BTEdPUklUSE1fVU5TUEVDSUZJRUQQABIXChNSU0FfUFNTXzIwNDhfU0hBMjU2EAESFwoTUlNBX1BTU18zMDcyX1NIQTI1NhACEhcKE1JTQV9QU1NfNDA5Nl9TSEEyNTYQAxIXChNSU0FfUFNTXzQwOTZfU0hBNTEyEAQSHgoaUlNBX1NJR05fUEtDUzFfMjA0OF9TSEEyNTYQBRIeChpSU0FfU0lHTl9QS0NTMV8zMDcyX1NIQTI1NhAGEh4KGlJTQV9TSUdOX1BLQ1MxXzQwOTZfU0hBMjU2EAcSHgoaUlNBX1NJR05fUEtDUzFfNDA5Nl9TSEE1MTIQCBIVChFFQ0RTQV9QMjU2X1NIQTI1NhAJEhcKE0VDX1NJR05fUDI1Nl9TSEEyNTYQCRIVChFFQ0RTQV9QMzg0X1NIQTM4NBAKEhcKE0VDX1NJR05fUDM4NF9TSEEzODQQChIVChFFQ0RTQV9QNTIxX1NIQTUxMhALEhcKE0VDX1NJR05fUDUyMV9TSEE1MTIQCxoCEAE=');
 @$core.Deprecated('Use attestorPublicKeyDescriptor instead')
 const AttestorPublicKey$json = const {
   '1': 'AttestorPublicKey',

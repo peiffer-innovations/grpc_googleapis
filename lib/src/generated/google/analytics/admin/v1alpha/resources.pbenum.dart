@@ -370,6 +370,18 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'DATA_RETENTION_SETTINGS');
+  static const ChangeHistoryResourceType DISPLAY_VIDEO_360_ADVERTISER_LINK =
+      ChangeHistoryResourceType._(
+          14,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DISPLAY_VIDEO_360_ADVERTISER_LINK');
+  static const ChangeHistoryResourceType
+      DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL = ChangeHistoryResourceType._(
+          15,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL');
 
   static const $core.List<ChangeHistoryResourceType> values =
       <ChangeHistoryResourceType>[
@@ -387,6 +399,8 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
     CUSTOM_DIMENSION,
     CUSTOM_METRIC,
     DATA_RETENTION_SETTINGS,
+    DISPLAY_VIDEO_360_ADVERTISER_LINK,
+    DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL,
   ];
 
   static final $core.Map<$core.int, ChangeHistoryResourceType> _byValue =
@@ -553,6 +567,47 @@ class LinkProposalState extends $pb.ProtobufEnum {
   static LinkProposalState? valueOf($core.int value) => _byValue[value];
 
   const LinkProposalState._($core.int v, $core.String n) : super(v, n);
+}
+
+class DataStream_DataStreamType extends $pb.ProtobufEnum {
+  static const DataStream_DataStreamType DATA_STREAM_TYPE_UNSPECIFIED =
+      DataStream_DataStreamType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DATA_STREAM_TYPE_UNSPECIFIED');
+  static const DataStream_DataStreamType WEB_DATA_STREAM =
+      DataStream_DataStreamType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WEB_DATA_STREAM');
+  static const DataStream_DataStreamType ANDROID_APP_DATA_STREAM =
+      DataStream_DataStreamType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ANDROID_APP_DATA_STREAM');
+  static const DataStream_DataStreamType IOS_APP_DATA_STREAM =
+      DataStream_DataStreamType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'IOS_APP_DATA_STREAM');
+
+  static const $core.List<DataStream_DataStreamType> values =
+      <DataStream_DataStreamType>[
+    DATA_STREAM_TYPE_UNSPECIFIED,
+    WEB_DATA_STREAM,
+    ANDROID_APP_DATA_STREAM,
+    IOS_APP_DATA_STREAM,
+  ];
+
+  static final $core.Map<$core.int, DataStream_DataStreamType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DataStream_DataStreamType? valueOf($core.int value) => _byValue[value];
+
+  const DataStream_DataStreamType._($core.int v, $core.String n) : super(v, n);
 }
 
 class CustomDimension_DimensionScope extends $pb.ProtobufEnum {

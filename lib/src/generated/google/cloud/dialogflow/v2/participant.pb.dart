@@ -49,6 +49,15 @@ class Participant extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sipRecordingMediaLabel')
+    ..m<$core.String, $core.String>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'documentsMetadataFilters',
+        entryClassName: 'Participant.DocumentsMetadataFiltersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..hasRequiredFields = false;
 
   Participant._() : super();
@@ -56,6 +65,7 @@ class Participant extends $pb.GeneratedMessage {
     $core.String? name,
     Participant_Role? role,
     $core.String? sipRecordingMediaLabel,
+    $core.Map<$core.String, $core.String>? documentsMetadataFilters,
   }) {
     final _result = create();
     if (name != null) {
@@ -66,6 +76,9 @@ class Participant extends $pb.GeneratedMessage {
     }
     if (sipRecordingMediaLabel != null) {
       _result.sipRecordingMediaLabel = sipRecordingMediaLabel;
+    }
+    if (documentsMetadataFilters != null) {
+      _result.documentsMetadataFilters.addAll(documentsMetadataFilters);
     }
     return _result;
   }
@@ -130,6 +143,10 @@ class Participant extends $pb.GeneratedMessage {
   $core.bool hasSipRecordingMediaLabel() => $_has(2);
   @$pb.TagNumber(6)
   void clearSipRecordingMediaLabel() => clearField(6);
+
+  @$pb.TagNumber(8)
+  $core.Map<$core.String, $core.String> get documentsMetadataFilters =>
+      $_getMap(3);
 }
 
 class Message extends $pb.GeneratedMessage {
@@ -840,6 +857,12 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'requestId')
+    ..aOM<AssistQueryParameters>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'assistQueryParams',
+        subBuilder: AssistQueryParameters.create)
     ..hasRequiredFields = false;
 
   AnalyzeContentRequest._() : super();
@@ -850,6 +873,7 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
     $6.EventInput? eventInput,
     $6.QueryParameters? queryParams,
     $core.String? requestId,
+    AssistQueryParameters? assistQueryParams,
   }) {
     final _result = create();
     if (participant != null) {
@@ -869,6 +893,9 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
     }
     if (requestId != null) {
       _result.requestId = requestId;
+    }
+    if (assistQueryParams != null) {
+      _result.assistQueryParams = assistQueryParams;
     }
     return _result;
   }
@@ -984,6 +1011,20 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   $core.bool hasRequestId() => $_has(5);
   @$pb.TagNumber(11)
   void clearRequestId() => clearField(11);
+
+  @$pb.TagNumber(14)
+  AssistQueryParameters get assistQueryParams => $_getN(6);
+  @$pb.TagNumber(14)
+  set assistQueryParams(AssistQueryParameters v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasAssistQueryParams() => $_has(6);
+  @$pb.TagNumber(14)
+  void clearAssistQueryParams() => clearField(14);
+  @$pb.TagNumber(14)
+  AssistQueryParameters ensureAssistQueryParams() => $_ensure(6);
 }
 
 class DtmfParameters extends $pb.GeneratedMessage {
@@ -1272,6 +1313,12 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
             ? ''
             : 'contextSize',
         $pb.PbFieldType.O3)
+    ..aOM<AssistQueryParameters>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'assistQueryParams',
+        subBuilder: AssistQueryParameters.create)
     ..hasRequiredFields = false;
 
   SuggestArticlesRequest._() : super();
@@ -1279,6 +1326,7 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? latestMessage,
     $core.int? contextSize,
+    AssistQueryParameters? assistQueryParams,
   }) {
     final _result = create();
     if (parent != null) {
@@ -1289,6 +1337,9 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
     }
     if (contextSize != null) {
       _result.contextSize = contextSize;
+    }
+    if (assistQueryParams != null) {
+      _result.assistQueryParams = assistQueryParams;
     }
     return _result;
   }
@@ -1356,6 +1407,20 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
   $core.bool hasContextSize() => $_has(2);
   @$pb.TagNumber(3)
   void clearContextSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  AssistQueryParameters get assistQueryParams => $_getN(3);
+  @$pb.TagNumber(4)
+  set assistQueryParams(AssistQueryParameters v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasAssistQueryParams() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAssistQueryParams() => clearField(4);
+  @$pb.TagNumber(4)
+  AssistQueryParameters ensureAssistQueryParams() => $_ensure(3);
 }
 
 class SuggestArticlesResponse extends $pb.GeneratedMessage {
@@ -1489,6 +1554,12 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
             ? ''
             : 'contextSize',
         $pb.PbFieldType.O3)
+    ..aOM<AssistQueryParameters>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'assistQueryParams',
+        subBuilder: AssistQueryParameters.create)
     ..hasRequiredFields = false;
 
   SuggestFaqAnswersRequest._() : super();
@@ -1496,6 +1567,7 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? latestMessage,
     $core.int? contextSize,
+    AssistQueryParameters? assistQueryParams,
   }) {
     final _result = create();
     if (parent != null) {
@@ -1506,6 +1578,9 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
     }
     if (contextSize != null) {
       _result.contextSize = contextSize;
+    }
+    if (assistQueryParams != null) {
+      _result.assistQueryParams = assistQueryParams;
     }
     return _result;
   }
@@ -1573,6 +1648,20 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
   $core.bool hasContextSize() => $_has(2);
   @$pb.TagNumber(3)
   void clearContextSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  AssistQueryParameters get assistQueryParams => $_getN(3);
+  @$pb.TagNumber(4)
+  set assistQueryParams(AssistQueryParameters v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasAssistQueryParams() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAssistQueryParams() => clearField(4);
+  @$pb.TagNumber(4)
+  AssistQueryParameters ensureAssistQueryParams() => $_ensure(3);
 }
 
 class SuggestFaqAnswersResponse extends $pb.GeneratedMessage {
@@ -2544,4 +2633,69 @@ class MessageAnnotation extends $pb.GeneratedMessage {
   $core.bool hasContainEntities() => $_has(1);
   @$pb.TagNumber(2)
   void clearContainEntities() => clearField(2);
+}
+
+class AssistQueryParameters extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AssistQueryParameters',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..m<$core.String, $core.String>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'documentsMetadataFilters',
+        entryClassName: 'AssistQueryParameters.DocumentsMetadataFiltersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..hasRequiredFields = false;
+
+  AssistQueryParameters._() : super();
+  factory AssistQueryParameters({
+    $core.Map<$core.String, $core.String>? documentsMetadataFilters,
+  }) {
+    final _result = create();
+    if (documentsMetadataFilters != null) {
+      _result.documentsMetadataFilters.addAll(documentsMetadataFilters);
+    }
+    return _result;
+  }
+  factory AssistQueryParameters.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AssistQueryParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AssistQueryParameters clone() =>
+      AssistQueryParameters()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AssistQueryParameters copyWith(
+          void Function(AssistQueryParameters) updates) =>
+      super.copyWith((message) => updates(message as AssistQueryParameters))
+          as AssistQueryParameters; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AssistQueryParameters create() => AssistQueryParameters._();
+  AssistQueryParameters createEmptyInstance() => create();
+  static $pb.PbList<AssistQueryParameters> createRepeated() =>
+      $pb.PbList<AssistQueryParameters>();
+  @$core.pragma('dart2js:noInline')
+  static AssistQueryParameters getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssistQueryParameters>(create);
+  static AssistQueryParameters? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $core.String> get documentsMetadataFilters =>
+      $_getMap(0);
 }

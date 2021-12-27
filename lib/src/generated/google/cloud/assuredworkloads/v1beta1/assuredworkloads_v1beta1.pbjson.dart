@@ -267,6 +267,33 @@ const Workload$json = const {
       '8': const {},
       '10': 'resourceSettings'
     },
+    const {
+      '1': 'kaj_enrollment_state',
+      '3': 17,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.assuredworkloads.v1beta1.Workload.KajEnrollmentState',
+      '8': const {},
+      '10': 'kajEnrollmentState'
+    },
+    const {
+      '1': 'enable_sovereign_controls',
+      '3': 18,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'enableSovereignControls'
+    },
+    const {
+      '1': 'saa_enrollment_response',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.assuredworkloads.v1beta1.Workload.SaaEnrollmentResponse',
+      '8': const {},
+      '10': 'saaEnrollmentResponse'
+    },
   ],
   '3': const [
     Workload_ResourceInfo$json,
@@ -276,9 +303,10 @@ const Workload$json = const {
     Workload_FedrampHighSettings$json,
     Workload_FedrampModerateSettings$json,
     Workload_ResourceSettings$json,
+    Workload_SaaEnrollmentResponse$json,
     Workload_LabelsEntry$json
   ],
-  '4': const [Workload_ComplianceRegime$json],
+  '4': const [Workload_ComplianceRegime$json, Workload_KajEnrollmentState$json],
   '7': const {},
   '8': const [
     const {'1': 'compliance_regime_settings'},
@@ -431,6 +459,62 @@ const Workload_ResourceSettings$json = const {
 };
 
 @$core.Deprecated('Use workloadDescriptor instead')
+const Workload_SaaEnrollmentResponse$json = const {
+  '1': 'SaaEnrollmentResponse',
+  '2': const [
+    const {
+      '1': 'setup_status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.assuredworkloads.v1beta1.Workload.SaaEnrollmentResponse.SetupState',
+      '9': 0,
+      '10': 'setupStatus',
+      '17': true
+    },
+    const {
+      '1': 'setup_errors',
+      '3': 2,
+      '4': 3,
+      '5': 14,
+      '6':
+          '.google.cloud.assuredworkloads.v1beta1.Workload.SaaEnrollmentResponse.SetupError',
+      '10': 'setupErrors'
+    },
+  ],
+  '4': const [
+    Workload_SaaEnrollmentResponse_SetupState$json,
+    Workload_SaaEnrollmentResponse_SetupError$json
+  ],
+  '8': const [
+    const {'1': '_setup_status'},
+  ],
+};
+
+@$core.Deprecated('Use workloadDescriptor instead')
+const Workload_SaaEnrollmentResponse_SetupState$json = const {
+  '1': 'SetupState',
+  '2': const [
+    const {'1': 'SETUP_STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'STATUS_PENDING', '2': 1},
+    const {'1': 'STATUS_COMPLETE', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use workloadDescriptor instead')
+const Workload_SaaEnrollmentResponse_SetupError$json = const {
+  '1': 'SetupError',
+  '2': const [
+    const {'1': 'SETUP_ERROR_UNSPECIFIED', '2': 0},
+    const {'1': 'ERROR_INVALID_BASE_SETUP', '2': 1},
+    const {'1': 'ERROR_MISSING_EXTERNAL_SIGNING_KEY', '2': 2},
+    const {'1': 'ERROR_NOT_ALL_SERVICES_ENROLLED', '2': 3},
+    const {'1': 'ERROR_SETUP_CHECK_FAILED', '2': 4},
+  ],
+};
+
+@$core.Deprecated('Use workloadDescriptor instead')
 const Workload_LabelsEntry$json = const {
   '1': 'LabelsEntry',
   '2': const [
@@ -457,9 +541,19 @@ const Workload_ComplianceRegime$json = const {
   ],
 };
 
+@$core.Deprecated('Use workloadDescriptor instead')
+const Workload_KajEnrollmentState$json = const {
+  '1': 'KajEnrollmentState',
+  '2': const [
+    const {'1': 'KAJ_ENROLLMENT_STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'KAJ_ENROLLMENT_STATE_PENDING', '2': 1},
+    const {'1': 'KAJ_ENROLLMENT_STATE_COMPLETE', '2': 2},
+  ],
+};
+
 /// Descriptor for `Workload`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List workloadDescriptor = $convert.base64Decode(
-    'CghXb3JrbG9hZBIXCgRuYW1lGAEgASgJQgPgQQFSBG5hbWUSJgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJSC2Rpc3BsYXlOYW1lEl8KCXJlc291cmNlcxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQNSCXJlc291cmNlcxJ1ChFjb21wbGlhbmNlX3JlZ2ltZRgEIAEoDjJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuQ29tcGxpYW5jZVJlZ2ltZUIG4EEC4EEFUhBjb21wbGlhbmNlUmVnaW1lEkMKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIG4EED4EEFUgpjcmVhdGVUaW1lEiwKD2JpbGxpbmdfYWNjb3VudBgGIAEoCUID4EEEUg5iaWxsaW5nQWNjb3VudBJtCgxpbDRfc2V0dGluZ3MYByABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLklMNFNldHRpbmdzQgsYAeBBAuBBBOBBBUgAUgtpbDRTZXR0aW5ncxJwCg1jamlzX3NldHRpbmdzGAggASgLMjwuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5DSklTU2V0dGluZ3NCCxgB4EEC4EEE4EEFSABSDGNqaXNTZXR0aW5ncxKGAQoVZmVkcmFtcF9oaWdoX3NldHRpbmdzGAsgASgLMkMuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5GZWRyYW1wSGlnaFNldHRpbmdzQgsYAeBBAuBBBOBBBUgAUhNmZWRyYW1wSGlnaFNldHRpbmdzEpIBChlmZWRyYW1wX21vZGVyYXRlX3NldHRpbmdzGAwgASgLMkcuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5GZWRyYW1wTW9kZXJhdGVTZXR0aW5nc0ILGAHgQQLgQQTgQQVIAFIXZmVkcmFtcE1vZGVyYXRlU2V0dGluZ3MSFwoEZXRhZxgJIAEoCUID4EEBUgRldGFnElgKBmxhYmVscxgKIAMoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuTGFiZWxzRW50cnlCA+BBAVIGbGFiZWxzEkUKHHByb3Zpc2lvbmVkX3Jlc291cmNlc19wYXJlbnQYDSABKAlCA+BBBFIacHJvdmlzaW9uZWRSZXNvdXJjZXNQYXJlbnQSYwoMa21zX3NldHRpbmdzGA4gASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0ID4EEEUgtrbXNTZXR0aW5ncxJyChFyZXNvdXJjZV9zZXR0aW5ncxgPIAMoCzJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuUmVzb3VyY2VTZXR0aW5nc0ID4EEEUhByZXNvdXJjZVNldHRpbmdzGqgCCgxSZXNvdXJjZUluZm8SHwoLcmVzb3VyY2VfaWQYASABKANSCnJlc291cmNlSWQSbgoNcmVzb3VyY2VfdHlwZRgCIAEoDjJJLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvLlJlc291cmNlVHlwZVIMcmVzb3VyY2VUeXBlIoYBCgxSZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhgKEENPTlNVTUVSX1BST0pFQ1QQARoCCAESEwoPQ09OU1VNRVJfRk9MREVSEAQSGwoXRU5DUllQVElPTl9LRVlTX1BST0pFQ1QQAhILCgdLRVlSSU5HEAMasQEKC0tNU1NldHRpbmdzElMKEm5leHRfcm90YXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCeBBAuBBBOBBBVIQbmV4dFJvdGF0aW9uVGltZRJNCg9yb3RhdGlvbl9wZXJpb2QYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CCeBBAuBBBOBBBVIOcm90YXRpb25QZXJpb2QafAoLSUw0U2V0dGluZ3MSaQoMa21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IJ4EEC4EEE4EEFUgtrbXNTZXR0aW5nczoCGAEafQoMQ0pJU1NldHRpbmdzEmkKDGttc19zZXR0aW5ncxgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuS01TU2V0dGluZ3NCCeBBAuBBBOBBBVILa21zU2V0dGluZ3M6AhgBGoQBChNGZWRyYW1wSGlnaFNldHRpbmdzEmkKDGttc19zZXR0aW5ncxgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuS01TU2V0dGluZ3NCCeBBAuBBBOBBBVILa21zU2V0dGluZ3M6AhgBGogBChdGZWRyYW1wTW9kZXJhdGVTZXR0aW5ncxJpCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQVSC2ttc1NldHRpbmdzOgIYARrGAQoQUmVzb3VyY2VTZXR0aW5ncxIfCgtyZXNvdXJjZV9pZBgBIAEoCVIKcmVzb3VyY2VJZBJuCg1yZXNvdXJjZV90eXBlGAIgASgOMkkuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZUluZm8uUmVzb3VyY2VUeXBlUgxyZXNvdXJjZVR5cGUSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBItgBChBDb21wbGlhbmNlUmVnaW1lEiEKHUNPTVBMSUFOQ0VfUkVHSU1FX1VOU1BFQ0lGSUVEEAASBwoDSUw0EAESCAoEQ0pJUxACEhAKDEZFRFJBTVBfSElHSBADEhQKEEZFRFJBTVBfTU9ERVJBVEUQBBIWChJVU19SRUdJT05BTF9BQ0NFU1MQBRIJCgVISVBBQRAGEgsKB0hJVFJVU1QQBxIaChZFVV9SRUdJT05TX0FORF9TVVBQT1JUEAgSGgoWQ0FfUkVHSU9OU19BTkRfU1VQUE9SVBAJOnXqQXIKKGFzc3VyZWR3b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vV29ya2xvYWQSRm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2xvYWRzL3t3b3JrbG9hZH1CHAoaY29tcGxpYW5jZV9yZWdpbWVfc2V0dGluZ3M=');
+    'CghXb3JrbG9hZBIXCgRuYW1lGAEgASgJQgPgQQFSBG5hbWUSJgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJSC2Rpc3BsYXlOYW1lEl8KCXJlc291cmNlcxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQNSCXJlc291cmNlcxJ1ChFjb21wbGlhbmNlX3JlZ2ltZRgEIAEoDjJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuQ29tcGxpYW5jZVJlZ2ltZUIG4EEC4EEFUhBjb21wbGlhbmNlUmVnaW1lEkMKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIG4EED4EEFUgpjcmVhdGVUaW1lEiwKD2JpbGxpbmdfYWNjb3VudBgGIAEoCUID4EEEUg5iaWxsaW5nQWNjb3VudBJtCgxpbDRfc2V0dGluZ3MYByABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLklMNFNldHRpbmdzQgsYAeBBAuBBBOBBBUgAUgtpbDRTZXR0aW5ncxJwCg1jamlzX3NldHRpbmdzGAggASgLMjwuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5DSklTU2V0dGluZ3NCCxgB4EEC4EEE4EEFSABSDGNqaXNTZXR0aW5ncxKGAQoVZmVkcmFtcF9oaWdoX3NldHRpbmdzGAsgASgLMkMuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5GZWRyYW1wSGlnaFNldHRpbmdzQgsYAeBBAuBBBOBBBUgAUhNmZWRyYW1wSGlnaFNldHRpbmdzEpIBChlmZWRyYW1wX21vZGVyYXRlX3NldHRpbmdzGAwgASgLMkcuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5GZWRyYW1wTW9kZXJhdGVTZXR0aW5nc0ILGAHgQQLgQQTgQQVIAFIXZmVkcmFtcE1vZGVyYXRlU2V0dGluZ3MSFwoEZXRhZxgJIAEoCUID4EEBUgRldGFnElgKBmxhYmVscxgKIAMoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuTGFiZWxzRW50cnlCA+BBAVIGbGFiZWxzEkUKHHByb3Zpc2lvbmVkX3Jlc291cmNlc19wYXJlbnQYDSABKAlCA+BBBFIacHJvdmlzaW9uZWRSZXNvdXJjZXNQYXJlbnQSYwoMa21zX3NldHRpbmdzGA4gASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0ID4EEEUgtrbXNTZXR0aW5ncxJyChFyZXNvdXJjZV9zZXR0aW5ncxgPIAMoCzJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuUmVzb3VyY2VTZXR0aW5nc0ID4EEEUhByZXNvdXJjZVNldHRpbmdzEnkKFGthal9lbnJvbGxtZW50X3N0YXRlGBEgASgOMkIuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LYWpFbnJvbGxtZW50U3RhdGVCA+BBA1ISa2FqRW5yb2xsbWVudFN0YXRlEj8KGWVuYWJsZV9zb3ZlcmVpZ25fY29udHJvbHMYEiABKAhCA+BBAVIXZW5hYmxlU292ZXJlaWduQ29udHJvbHMSggEKF3NhYV9lbnJvbGxtZW50X3Jlc3BvbnNlGBQgASgLMkUuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50UmVzcG9uc2VCA+BBA1IVc2FhRW5yb2xsbWVudFJlc3BvbnNlGqgCCgxSZXNvdXJjZUluZm8SHwoLcmVzb3VyY2VfaWQYASABKANSCnJlc291cmNlSWQSbgoNcmVzb3VyY2VfdHlwZRgCIAEoDjJJLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvLlJlc291cmNlVHlwZVIMcmVzb3VyY2VUeXBlIoYBCgxSZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhgKEENPTlNVTUVSX1BST0pFQ1QQARoCCAESEwoPQ09OU1VNRVJfRk9MREVSEAQSGwoXRU5DUllQVElPTl9LRVlTX1BST0pFQ1QQAhILCgdLRVlSSU5HEAMasQEKC0tNU1NldHRpbmdzElMKEm5leHRfcm90YXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCeBBAuBBBOBBBVIQbmV4dFJvdGF0aW9uVGltZRJNCg9yb3RhdGlvbl9wZXJpb2QYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CCeBBAuBBBOBBBVIOcm90YXRpb25QZXJpb2QafAoLSUw0U2V0dGluZ3MSaQoMa21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IJ4EEC4EEE4EEFUgtrbXNTZXR0aW5nczoCGAEafQoMQ0pJU1NldHRpbmdzEmkKDGttc19zZXR0aW5ncxgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuS01TU2V0dGluZ3NCCeBBAuBBBOBBBVILa21zU2V0dGluZ3M6AhgBGoQBChNGZWRyYW1wSGlnaFNldHRpbmdzEmkKDGttc19zZXR0aW5ncxgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuS01TU2V0dGluZ3NCCeBBAuBBBOBBBVILa21zU2V0dGluZ3M6AhgBGogBChdGZWRyYW1wTW9kZXJhdGVTZXR0aW5ncxJpCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQVSC2ttc1NldHRpbmdzOgIYARrGAQoQUmVzb3VyY2VTZXR0aW5ncxIfCgtyZXNvdXJjZV9pZBgBIAEoCVIKcmVzb3VyY2VJZBJuCg1yZXNvdXJjZV90eXBlGAIgASgOMkkuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZUluZm8uUmVzb3VyY2VUeXBlUgxyZXNvdXJjZVR5cGUSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRqgBAoVU2FhRW5yb2xsbWVudFJlc3BvbnNlEngKDHNldHVwX3N0YXR1cxgBIAEoDjJQLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuU2FhRW5yb2xsbWVudFJlc3BvbnNlLlNldHVwU3RhdGVIAFILc2V0dXBTdGF0dXOIAQEScwoMc2V0dXBfZXJyb3JzGAIgAygOMlAuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50UmVzcG9uc2UuU2V0dXBFcnJvclILc2V0dXBFcnJvcnMiUgoKU2V0dXBTdGF0ZRIbChdTRVRVUF9TVEFURV9VTlNQRUNJRklFRBAAEhIKDlNUQVRVU19QRU5ESU5HEAESEwoPU1RBVFVTX0NPTVBMRVRFEAIisgEKClNldHVwRXJyb3ISGwoXU0VUVVBfRVJST1JfVU5TUEVDSUZJRUQQABIcChhFUlJPUl9JTlZBTElEX0JBU0VfU0VUVVAQARImCiJFUlJPUl9NSVNTSU5HX0VYVEVSTkFMX1NJR05JTkdfS0VZEAISIwofRVJST1JfTk9UX0FMTF9TRVJWSUNFU19FTlJPTExFRBADEhwKGEVSUk9SX1NFVFVQX0NIRUNLX0ZBSUxFRBAEQg8KDV9zZXR1cF9zdGF0dXMaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASLYAQoQQ29tcGxpYW5jZVJlZ2ltZRIhCh1DT01QTElBTkNFX1JFR0lNRV9VTlNQRUNJRklFRBAAEgcKA0lMNBABEggKBENKSVMQAhIQCgxGRURSQU1QX0hJR0gQAxIUChBGRURSQU1QX01PREVSQVRFEAQSFgoSVVNfUkVHSU9OQUxfQUNDRVNTEAUSCQoFSElQQUEQBhILCgdISVRSVVNUEAcSGgoWRVVfUkVHSU9OU19BTkRfU1VQUE9SVBAIEhoKFkNBX1JFR0lPTlNfQU5EX1NVUFBPUlQQCSJ/ChJLYWpFbnJvbGxtZW50U3RhdGUSJAogS0FKX0VOUk9MTE1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIgChxLQUpfRU5ST0xMTUVOVF9TVEFURV9QRU5ESU5HEAESIQodS0FKX0VOUk9MTE1FTlRfU1RBVEVfQ09NUExFVEUQAjp16kFyCihhc3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkEkZvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtsb2Fkcy97d29ya2xvYWR9QhwKGmNvbXBsaWFuY2VfcmVnaW1lX3NldHRpbmdz');
 @$core.Deprecated('Use createWorkloadOperationMetadataDescriptor instead')
 const CreateWorkloadOperationMetadata$json = const {
   '1': 'CreateWorkloadOperationMetadata',

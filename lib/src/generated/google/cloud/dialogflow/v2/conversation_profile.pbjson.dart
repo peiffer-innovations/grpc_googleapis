@@ -97,13 +97,22 @@ const ConversationProfile$json = const {
       '10': 'sttConfig'
     },
     const {'1': 'language_code', '3': 10, '4': 1, '5': 9, '10': 'languageCode'},
+    const {'1': 'time_zone', '3': 14, '4': 1, '5': 9, '10': 'timeZone'},
+    const {
+      '1': 'security_settings',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'securitySettings'
+    },
   ],
   '7': const {},
 };
 
 /// Descriptor for `ConversationProfile`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List conversationProfileDescriptor = $convert.base64Decode(
-    'ChNDb252ZXJzYXRpb25Qcm9maWxlEhIKBG5hbWUYASABKAlSBG5hbWUSJgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJSC2Rpc3BsYXlOYW1lEkAKC2NyZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKC3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lEmYKFmF1dG9tYXRlZF9hZ2VudF9jb25maWcYAyABKAsyMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5BdXRvbWF0ZWRBZ2VudENvbmZpZ1IUYXV0b21hdGVkQWdlbnRDb25maWcSdgocaHVtYW5fYWdlbnRfYXNzaXN0YW50X2NvbmZpZxgEIAEoCzI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWdSGWh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWcScAoaaHVtYW5fYWdlbnRfaGFuZG9mZl9jb25maWcYBSABKAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5IdW1hbkFnZW50SGFuZG9mZkNvbmZpZ1IXaHVtYW5BZ2VudEhhbmRvZmZDb25maWcSXwoTbm90aWZpY2F0aW9uX2NvbmZpZxgGIAEoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk5vdGlmaWNhdGlvbkNvbmZpZ1ISbm90aWZpY2F0aW9uQ29uZmlnElAKDmxvZ2dpbmdfY29uZmlnGAcgASgLMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTG9nZ2luZ0NvbmZpZ1INbG9nZ2luZ0NvbmZpZxKAAQolbmV3X21lc3NhZ2VfZXZlbnRfbm90aWZpY2F0aW9uX2NvbmZpZxgIIAEoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk5vdGlmaWNhdGlvbkNvbmZpZ1IhbmV3TWVzc2FnZUV2ZW50Tm90aWZpY2F0aW9uQ29uZmlnEk0KCnN0dF9jb25maWcYCSABKAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hUb1RleHRDb25maWdSCXN0dENvbmZpZxIjCg1sYW5ndWFnZV9jb2RlGAogASgJUgxsYW5ndWFnZUNvZGU6yAHqQcQBCi1kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0NvbnZlcnNhdGlvblByb2ZpbGUSPnByb2plY3RzL3twcm9qZWN0fS9jb252ZXJzYXRpb25Qcm9maWxlcy97Y29udmVyc2F0aW9uX3Byb2ZpbGV9ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29udmVyc2F0aW9uUHJvZmlsZXMve2NvbnZlcnNhdGlvbl9wcm9maWxlfQ==');
+    'ChNDb252ZXJzYXRpb25Qcm9maWxlEhIKBG5hbWUYASABKAlSBG5hbWUSJgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJSC2Rpc3BsYXlOYW1lEkAKC2NyZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKC3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lEmYKFmF1dG9tYXRlZF9hZ2VudF9jb25maWcYAyABKAsyMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5BdXRvbWF0ZWRBZ2VudENvbmZpZ1IUYXV0b21hdGVkQWdlbnRDb25maWcSdgocaHVtYW5fYWdlbnRfYXNzaXN0YW50X2NvbmZpZxgEIAEoCzI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWdSGWh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWcScAoaaHVtYW5fYWdlbnRfaGFuZG9mZl9jb25maWcYBSABKAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5IdW1hbkFnZW50SGFuZG9mZkNvbmZpZ1IXaHVtYW5BZ2VudEhhbmRvZmZDb25maWcSXwoTbm90aWZpY2F0aW9uX2NvbmZpZxgGIAEoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk5vdGlmaWNhdGlvbkNvbmZpZ1ISbm90aWZpY2F0aW9uQ29uZmlnElAKDmxvZ2dpbmdfY29uZmlnGAcgASgLMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTG9nZ2luZ0NvbmZpZ1INbG9nZ2luZ0NvbmZpZxKAAQolbmV3X21lc3NhZ2VfZXZlbnRfbm90aWZpY2F0aW9uX2NvbmZpZxgIIAEoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk5vdGlmaWNhdGlvbkNvbmZpZ1IhbmV3TWVzc2FnZUV2ZW50Tm90aWZpY2F0aW9uQ29uZmlnEk0KCnN0dF9jb25maWcYCSABKAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hUb1RleHRDb25maWdSCXN0dENvbmZpZxIjCg1sYW5ndWFnZV9jb2RlGAogASgJUgxsYW5ndWFnZUNvZGUSGwoJdGltZV96b25lGA4gASgJUgh0aW1lWm9uZRJeChFzZWN1cml0eV9zZXR0aW5ncxgNIAEoCUIx+kEuCixkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0NYU2VjdXJpdHlTZXR0aW5nc1IQc2VjdXJpdHlTZXR0aW5nczrIAepBxAEKLWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9uUHJvZmlsZRI+cHJvamVjdHMve3Byb2plY3R9L2NvbnZlcnNhdGlvblByb2ZpbGVzL3tjb252ZXJzYXRpb25fcHJvZmlsZX0SU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb252ZXJzYXRpb25Qcm9maWxlcy97Y29udmVyc2F0aW9uX3Byb2ZpbGV9');
 @$core.Deprecated('Use listConversationProfilesRequestDescriptor instead')
 const ListConversationProfilesRequest$json = const {
   '1': 'ListConversationProfilesRequest',
@@ -702,9 +711,10 @@ const SuggestionFeature_Type$json = const {
     const {'1': 'TYPE_UNSPECIFIED', '2': 0},
     const {'1': 'ARTICLE_SUGGESTION', '2': 1},
     const {'1': 'FAQ', '2': 2},
+    const {'1': 'SMART_REPLY', '2': 3},
   ],
 };
 
 /// Descriptor for `SuggestionFeature`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List suggestionFeatureDescriptor = $convert.base64Decode(
-    'ChFTdWdnZXN0aW9uRmVhdHVyZRJGCgR0eXBlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3VnZ2VzdGlvbkZlYXR1cmUuVHlwZVIEdHlwZSI9CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIWChJBUlRJQ0xFX1NVR0dFU1RJT04QARIHCgNGQVEQAg==');
+    'ChFTdWdnZXN0aW9uRmVhdHVyZRJGCgR0eXBlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3VnZ2VzdGlvbkZlYXR1cmUuVHlwZVIEdHlwZSJOCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIWChJBUlRJQ0xFX1NVR0dFU1RJT04QARIHCgNGQVEQAhIPCgtTTUFSVF9SRVBMWRAD');

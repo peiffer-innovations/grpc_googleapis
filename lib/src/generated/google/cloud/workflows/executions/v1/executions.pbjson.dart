@@ -80,10 +80,66 @@ const Execution$json = const {
       '8': const {},
       '10': 'workflowRevisionId'
     },
+    const {
+      '1': 'call_log_level',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.workflows.executions.v1.Execution.CallLogLevel',
+      '10': 'callLogLevel'
+    },
   ],
-  '3': const [Execution_Error$json],
-  '4': const [Execution_State$json],
+  '3': const [
+    Execution_StackTraceElement$json,
+    Execution_StackTrace$json,
+    Execution_Error$json
+  ],
+  '4': const [Execution_State$json, Execution_CallLogLevel$json],
   '7': const {},
+};
+
+@$core.Deprecated('Use executionDescriptor instead')
+const Execution_StackTraceElement$json = const {
+  '1': 'StackTraceElement',
+  '2': const [
+    const {'1': 'step', '3': 1, '4': 1, '5': 9, '10': 'step'},
+    const {'1': 'routine', '3': 2, '4': 1, '5': 9, '10': 'routine'},
+    const {
+      '1': 'position',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.workflows.executions.v1.Execution.StackTraceElement.Position',
+      '10': 'position'
+    },
+  ],
+  '3': const [Execution_StackTraceElement_Position$json],
+};
+
+@$core.Deprecated('Use executionDescriptor instead')
+const Execution_StackTraceElement_Position$json = const {
+  '1': 'Position',
+  '2': const [
+    const {'1': 'line', '3': 1, '4': 1, '5': 3, '10': 'line'},
+    const {'1': 'column', '3': 2, '4': 1, '5': 3, '10': 'column'},
+    const {'1': 'length', '3': 3, '4': 1, '5': 3, '10': 'length'},
+  ],
+};
+
+@$core.Deprecated('Use executionDescriptor instead')
+const Execution_StackTrace$json = const {
+  '1': 'StackTrace',
+  '2': const [
+    const {
+      '1': 'elements',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.workflows.executions.v1.Execution.StackTraceElement',
+      '10': 'elements'
+    },
+  ],
 };
 
 @$core.Deprecated('Use executionDescriptor instead')
@@ -92,6 +148,14 @@ const Execution_Error$json = const {
   '2': const [
     const {'1': 'payload', '3': 1, '4': 1, '5': 9, '10': 'payload'},
     const {'1': 'context', '3': 2, '4': 1, '5': 9, '10': 'context'},
+    const {
+      '1': 'stack_trace',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.workflows.executions.v1.Execution.StackTrace',
+      '10': 'stackTrace'
+    },
   ],
 };
 
@@ -107,9 +171,19 @@ const Execution_State$json = const {
   ],
 };
 
+@$core.Deprecated('Use executionDescriptor instead')
+const Execution_CallLogLevel$json = const {
+  '1': 'CallLogLevel',
+  '2': const [
+    const {'1': 'CALL_LOG_LEVEL_UNSPECIFIED', '2': 0},
+    const {'1': 'LOG_ALL_CALLS', '2': 1},
+    const {'1': 'LOG_ERRORS_ONLY', '2': 2},
+  ],
+};
+
 /// Descriptor for `Execution`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List executionDescriptor = $convert.base64Decode(
-    'CglFeGVjdXRpb24SFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEj4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCXN0YXJ0VGltZRI6CghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IHZW5kVGltZRJQCgVzdGF0ZRgEIAEoDjI1Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhdGVCA+BBA1IFc3RhdGUSGgoIYXJndW1lbnQYBSABKAlSCGFyZ3VtZW50EhsKBnJlc3VsdBgGIAEoCUID4EEDUgZyZXN1bHQSUAoFZXJyb3IYByABKAsyNS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uLkVycm9yQgPgQQNSBWVycm9yEjUKFHdvcmtmbG93X3JldmlzaW9uX2lkGAggASgJQgPgQQNSEndvcmtmbG93UmV2aXNpb25JZBo7CgVFcnJvchIYCgdwYXlsb2FkGAEgASgJUgdwYXlsb2FkEhgKB2NvbnRleHQYAiABKAlSB2NvbnRleHQiVAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxINCglDQU5DRUxMRUQQBDqGAepBggEKK3dvcmtmbG93ZXhlY3V0aW9ucy5nb29nbGVhcGlzLmNvbS9FeGVjdXRpb24SU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3JrZmxvd3Mve3dvcmtmbG93fS9leGVjdXRpb25zL3tleGVjdXRpb259');
+    'CglFeGVjdXRpb24SFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEj4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCXN0YXJ0VGltZRI6CghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IHZW5kVGltZRJQCgVzdGF0ZRgEIAEoDjI1Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhdGVCA+BBA1IFc3RhdGUSGgoIYXJndW1lbnQYBSABKAlSCGFyZ3VtZW50EhsKBnJlc3VsdBgGIAEoCUID4EEDUgZyZXN1bHQSUAoFZXJyb3IYByABKAsyNS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uLkVycm9yQgPgQQNSBWVycm9yEjUKFHdvcmtmbG93X3JldmlzaW9uX2lkGAggASgJQgPgQQNSEndvcmtmbG93UmV2aXNpb25JZBJiCg5jYWxsX2xvZ19sZXZlbBgJIAEoDjI8Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uQ2FsbExvZ0xldmVsUgxjYWxsTG9nTGV2ZWwa+QEKEVN0YWNrVHJhY2VFbGVtZW50EhIKBHN0ZXAYASABKAlSBHN0ZXASGAoHcm91dGluZRgCIAEoCVIHcm91dGluZRJmCghwb3NpdGlvbhgDIAEoCzJKLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhY2tUcmFjZUVsZW1lbnQuUG9zaXRpb25SCHBvc2l0aW9uGk4KCFBvc2l0aW9uEhIKBGxpbmUYASABKANSBGxpbmUSFgoGY29sdW1uGAIgASgDUgZjb2x1bW4SFgoGbGVuZ3RoGAMgASgDUgZsZW5ndGgaawoKU3RhY2tUcmFjZRJdCghlbGVtZW50cxgBIAMoCzJBLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhY2tUcmFjZUVsZW1lbnRSCGVsZW1lbnRzGpgBCgVFcnJvchIYCgdwYXlsb2FkGAEgASgJUgdwYXlsb2FkEhgKB2NvbnRleHQYAiABKAlSB2NvbnRleHQSWwoLc3RhY2tfdHJhY2UYAyABKAsyOi5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uLlN0YWNrVHJhY2VSCnN0YWNrVHJhY2UiVAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxINCglDQU5DRUxMRUQQBCJWCgxDYWxsTG9nTGV2ZWwSHgoaQ0FMTF9MT0dfTEVWRUxfVU5TUEVDSUZJRUQQABIRCg1MT0dfQUxMX0NBTExTEAESEwoPTE9HX0VSUk9SU19PTkxZEAI6hgHqQYIBCit3b3JrZmxvd2V4ZWN1dGlvbnMuZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dzL3t3b3JrZmxvd30vZXhlY3V0aW9ucy97ZXhlY3V0aW9ufQ==');
 @$core.Deprecated('Use listExecutionsRequestDescriptor instead')
 const ListExecutionsRequest$json = const {
   '1': 'ListExecutionsRequest',

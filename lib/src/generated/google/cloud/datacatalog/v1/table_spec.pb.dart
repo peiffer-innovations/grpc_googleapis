@@ -303,6 +303,11 @@ class BigQueryDateShardedSpec extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'shardCount')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'latestShardResource')
     ..hasRequiredFields = false;
 
   BigQueryDateShardedSpec._() : super();
@@ -310,6 +315,7 @@ class BigQueryDateShardedSpec extends $pb.GeneratedMessage {
     $core.String? dataset,
     $core.String? tablePrefix,
     $fixnum.Int64? shardCount,
+    $core.String? latestShardResource,
   }) {
     final _result = create();
     if (dataset != null) {
@@ -320,6 +326,9 @@ class BigQueryDateShardedSpec extends $pb.GeneratedMessage {
     }
     if (shardCount != null) {
       _result.shardCount = shardCount;
+    }
+    if (latestShardResource != null) {
+      _result.latestShardResource = latestShardResource;
     }
     return _result;
   }
@@ -387,4 +396,16 @@ class BigQueryDateShardedSpec extends $pb.GeneratedMessage {
   $core.bool hasShardCount() => $_has(2);
   @$pb.TagNumber(3)
   void clearShardCount() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get latestShardResource => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set latestShardResource($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasLatestShardResource() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLatestShardResource() => clearField(4);
 }

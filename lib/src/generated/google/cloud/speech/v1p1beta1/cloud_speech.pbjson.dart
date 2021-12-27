@@ -754,6 +754,14 @@ const SpeechRecognitionResult$json = const {
     },
     const {'1': 'channel_tag', '3': 2, '4': 1, '5': 5, '10': 'channelTag'},
     const {
+      '1': 'result_end_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'resultEndTime'
+    },
+    const {
       '1': 'language_code',
       '3': 5,
       '4': 1,
@@ -767,7 +775,7 @@ const SpeechRecognitionResult$json = const {
 /// Descriptor for `SpeechRecognitionResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List speechRecognitionResultDescriptor =
     $convert.base64Decode(
-        'ChdTcGVlY2hSZWNvZ25pdGlvblJlc3VsdBJfCgxhbHRlcm5hdGl2ZXMYASADKAsyOy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5TcGVlY2hSZWNvZ25pdGlvbkFsdGVybmF0aXZlUgxhbHRlcm5hdGl2ZXMSHwoLY2hhbm5lbF90YWcYAiABKAVSCmNoYW5uZWxUYWcSKAoNbGFuZ3VhZ2VfY29kZRgFIAEoCUID4EEDUgxsYW5ndWFnZUNvZGU=');
+        'ChdTcGVlY2hSZWNvZ25pdGlvblJlc3VsdBJfCgxhbHRlcm5hdGl2ZXMYASADKAsyOy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5TcGVlY2hSZWNvZ25pdGlvbkFsdGVybmF0aXZlUgxhbHRlcm5hdGl2ZXMSHwoLY2hhbm5lbF90YWcYAiABKAVSCmNoYW5uZWxUYWcSQQoPcmVzdWx0X2VuZF90aW1lGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUg1yZXN1bHRFbmRUaW1lEigKDWxhbmd1YWdlX2NvZGUYBSABKAlCA+BBA1IMbGFuZ3VhZ2VDb2Rl');
 @$core.Deprecated('Use speechRecognitionAlternativeDescriptor instead')
 const SpeechRecognitionAlternative$json = const {
   '1': 'SpeechRecognitionAlternative',

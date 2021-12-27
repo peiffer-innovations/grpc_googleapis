@@ -1149,6 +1149,7 @@ const IssueModelLabelStats_IssueStats$json = const {
       '5': 3,
       '10': 'labeledConversationsCount'
     },
+    const {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
   ],
 };
 
@@ -1172,7 +1173,7 @@ const IssueModelLabelStats_IssueStatsEntry$json = const {
 
 /// Descriptor for `IssueModelLabelStats`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List issueModelLabelStatsDescriptor = $convert.base64Decode(
-    'ChRJc3N1ZU1vZGVsTGFiZWxTdGF0cxJAChxhbmFseXplZF9jb252ZXJzYXRpb25zX2NvdW50GAEgASgDUhphbmFseXplZENvbnZlcnNhdGlvbnNDb3VudBJICiB1bmNsYXNzaWZpZWRfY29udmVyc2F0aW9uc19jb3VudBgCIAEoA1IedW5jbGFzc2lmaWVkQ29udmVyc2F0aW9uc0NvdW50EmwKC2lzc3VlX3N0YXRzGAMgAygLMksuZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5Jc3N1ZU1vZGVsTGFiZWxTdGF0cy5Jc3N1ZVN0YXRzRW50cnlSCmlzc3VlU3RhdHMaYgoKSXNzdWVTdGF0cxIUCgVpc3N1ZRgBIAEoCVIFaXNzdWUSPgobbGFiZWxlZF9jb252ZXJzYXRpb25zX2NvdW50GAIgASgDUhlsYWJlbGVkQ29udmVyc2F0aW9uc0NvdW50GoUBCg9Jc3N1ZVN0YXRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSXAoFdmFsdWUYAiABKAsyRi5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLklzc3VlTW9kZWxMYWJlbFN0YXRzLklzc3VlU3RhdHNSBXZhbHVlOgI4AQ==');
+    'ChRJc3N1ZU1vZGVsTGFiZWxTdGF0cxJAChxhbmFseXplZF9jb252ZXJzYXRpb25zX2NvdW50GAEgASgDUhphbmFseXplZENvbnZlcnNhdGlvbnNDb3VudBJICiB1bmNsYXNzaWZpZWRfY29udmVyc2F0aW9uc19jb3VudBgCIAEoA1IedW5jbGFzc2lmaWVkQ29udmVyc2F0aW9uc0NvdW50EmwKC2lzc3VlX3N0YXRzGAMgAygLMksuZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5Jc3N1ZU1vZGVsTGFiZWxTdGF0cy5Jc3N1ZVN0YXRzRW50cnlSCmlzc3VlU3RhdHMahQEKCklzc3VlU3RhdHMSFAoFaXNzdWUYASABKAlSBWlzc3VlEj4KG2xhYmVsZWRfY29udmVyc2F0aW9uc19jb3VudBgCIAEoA1IZbGFiZWxlZENvbnZlcnNhdGlvbnNDb3VudBIhCgxkaXNwbGF5X25hbWUYAyABKAlSC2Rpc3BsYXlOYW1lGoUBCg9Jc3N1ZVN0YXRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSXAoFdmFsdWUYAiABKAsyRi5nb29nbGUuY2xvdWQuY29udGFjdGNlbnRlcmluc2lnaHRzLnYxLklzc3VlTW9kZWxMYWJlbFN0YXRzLklzc3VlU3RhdHNSBXZhbHVlOgI4AQ==');
 @$core.Deprecated('Use phraseMatcherDescriptor instead')
 const PhraseMatcher$json = const {
   '1': 'PhraseMatcher',

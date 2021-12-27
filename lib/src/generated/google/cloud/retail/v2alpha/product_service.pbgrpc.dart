@@ -64,6 +64,16 @@ class ProductServiceClient extends $grpc.Client {
           '/google.cloud.retail.v2alpha.ProductService/RemoveFulfillmentPlaces',
           ($2.RemoveFulfillmentPlacesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$addLocalInventories =
+      $grpc.ClientMethod<$2.AddLocalInventoriesRequest, $0.Operation>(
+          '/google.cloud.retail.v2alpha.ProductService/AddLocalInventories',
+          ($2.AddLocalInventoriesRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$removeLocalInventories =
+      $grpc.ClientMethod<$2.RemoveLocalInventoriesRequest, $0.Operation>(
+          '/google.cloud.retail.v2alpha.ProductService/RemoveLocalInventories',
+          ($2.RemoveLocalInventoriesRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   ProductServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -120,6 +130,19 @@ class ProductServiceClient extends $grpc.Client {
       $2.RemoveFulfillmentPlacesRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$removeFulfillmentPlaces, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> addLocalInventories(
+      $2.AddLocalInventoriesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$addLocalInventories, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> removeLocalInventories(
+      $2.RemoveLocalInventoriesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$removeLocalInventories, request,
         options: options);
   }
 }
@@ -202,6 +225,23 @@ abstract class ProductServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $2.RemoveFulfillmentPlacesRequest.fromBuffer(value),
             ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.AddLocalInventoriesRequest, $0.Operation>(
+        'AddLocalInventories',
+        addLocalInventories_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.AddLocalInventoriesRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.RemoveLocalInventoriesRequest, $0.Operation>(
+            'RemoveLocalInventories',
+            removeLocalInventories_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.RemoveLocalInventoriesRequest.fromBuffer(value),
+            ($0.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$3.Product> createProduct_Pre($grpc.ServiceCall call,
@@ -251,6 +291,16 @@ abstract class ProductServiceBase extends $grpc.Service {
     return removeFulfillmentPlaces(call, await request);
   }
 
+  $async.Future<$0.Operation> addLocalInventories_Pre($grpc.ServiceCall call,
+      $async.Future<$2.AddLocalInventoriesRequest> request) async {
+    return addLocalInventories(call, await request);
+  }
+
+  $async.Future<$0.Operation> removeLocalInventories_Pre($grpc.ServiceCall call,
+      $async.Future<$2.RemoveLocalInventoriesRequest> request) async {
+    return removeLocalInventories(call, await request);
+  }
+
   $async.Future<$3.Product> createProduct(
       $grpc.ServiceCall call, $2.CreateProductRequest request);
   $async.Future<$3.Product> getProduct(
@@ -269,4 +319,8 @@ abstract class ProductServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.AddFulfillmentPlacesRequest request);
   $async.Future<$0.Operation> removeFulfillmentPlaces(
       $grpc.ServiceCall call, $2.RemoveFulfillmentPlacesRequest request);
+  $async.Future<$0.Operation> addLocalInventories(
+      $grpc.ServiceCall call, $2.AddLocalInventoriesRequest request);
+  $async.Future<$0.Operation> removeLocalInventories(
+      $grpc.ServiceCall call, $2.RemoveLocalInventoriesRequest request);
 }

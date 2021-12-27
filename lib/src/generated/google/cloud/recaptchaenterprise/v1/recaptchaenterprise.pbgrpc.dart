@@ -56,6 +56,29 @@ class RecaptchaEnterpriseServiceClient extends $grpc.Client {
       '/google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService/GetMetrics',
       ($0.GetMetricsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Metrics.fromBuffer(value));
+  static final _$listRelatedAccountGroups = $grpc.ClientMethod<
+          $0.ListRelatedAccountGroupsRequest,
+          $0.ListRelatedAccountGroupsResponse>(
+      '/google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService/ListRelatedAccountGroups',
+      ($0.ListRelatedAccountGroupsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListRelatedAccountGroupsResponse.fromBuffer(value));
+  static final _$listRelatedAccountGroupMemberships = $grpc.ClientMethod<
+          $0.ListRelatedAccountGroupMembershipsRequest,
+          $0.ListRelatedAccountGroupMembershipsResponse>(
+      '/google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService/ListRelatedAccountGroupMemberships',
+      ($0.ListRelatedAccountGroupMembershipsRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListRelatedAccountGroupMembershipsResponse.fromBuffer(value));
+  static final _$searchRelatedAccountGroupMemberships = $grpc.ClientMethod<
+          $0.SearchRelatedAccountGroupMembershipsRequest,
+          $0.SearchRelatedAccountGroupMembershipsResponse>(
+      '/google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService/SearchRelatedAccountGroupMemberships',
+      ($0.SearchRelatedAccountGroupMembershipsRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.SearchRelatedAccountGroupMembershipsResponse.fromBuffer(value));
 
   RecaptchaEnterpriseServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -107,6 +130,29 @@ class RecaptchaEnterpriseServiceClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.Metrics> getMetrics($0.GetMetricsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getMetrics, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListRelatedAccountGroupsResponse>
+      listRelatedAccountGroups($0.ListRelatedAccountGroupsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listRelatedAccountGroups, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListRelatedAccountGroupMembershipsResponse>
+      listRelatedAccountGroupMemberships(
+          $0.ListRelatedAccountGroupMembershipsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listRelatedAccountGroupMemberships, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.SearchRelatedAccountGroupMembershipsResponse>
+      searchRelatedAccountGroupMemberships(
+          $0.SearchRelatedAccountGroupMembershipsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$searchRelatedAccountGroupMemberships, request,
+        options: options);
   }
 }
 
@@ -181,6 +227,36 @@ abstract class RecaptchaEnterpriseServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetMetricsRequest.fromBuffer(value),
         ($0.Metrics value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRelatedAccountGroupsRequest,
+            $0.ListRelatedAccountGroupsResponse>(
+        'ListRelatedAccountGroups',
+        listRelatedAccountGroups_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListRelatedAccountGroupsRequest.fromBuffer(value),
+        ($0.ListRelatedAccountGroupsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRelatedAccountGroupMembershipsRequest,
+            $0.ListRelatedAccountGroupMembershipsResponse>(
+        'ListRelatedAccountGroupMemberships',
+        listRelatedAccountGroupMemberships_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListRelatedAccountGroupMembershipsRequest.fromBuffer(value),
+        ($0.ListRelatedAccountGroupMembershipsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.SearchRelatedAccountGroupMembershipsRequest,
+            $0.SearchRelatedAccountGroupMembershipsResponse>(
+        'SearchRelatedAccountGroupMemberships',
+        searchRelatedAccountGroupMemberships_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.SearchRelatedAccountGroupMembershipsRequest.fromBuffer(value),
+        ($0.SearchRelatedAccountGroupMembershipsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.Assessment> createAssessment_Pre($grpc.ServiceCall call,
@@ -229,6 +305,28 @@ abstract class RecaptchaEnterpriseServiceBase extends $grpc.Service {
     return getMetrics(call, await request);
   }
 
+  $async.Future<$0.ListRelatedAccountGroupsResponse>
+      listRelatedAccountGroups_Pre($grpc.ServiceCall call,
+          $async.Future<$0.ListRelatedAccountGroupsRequest> request) async {
+    return listRelatedAccountGroups(call, await request);
+  }
+
+  $async.Future<$0.ListRelatedAccountGroupMembershipsResponse>
+      listRelatedAccountGroupMemberships_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.ListRelatedAccountGroupMembershipsRequest>
+              request) async {
+    return listRelatedAccountGroupMemberships(call, await request);
+  }
+
+  $async.Future<$0.SearchRelatedAccountGroupMembershipsResponse>
+      searchRelatedAccountGroupMemberships_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.SearchRelatedAccountGroupMembershipsRequest>
+              request) async {
+    return searchRelatedAccountGroupMemberships(call, await request);
+  }
+
   $async.Future<$0.Assessment> createAssessment(
       $grpc.ServiceCall call, $0.CreateAssessmentRequest request);
   $async.Future<$0.AnnotateAssessmentResponse> annotateAssessment(
@@ -247,4 +345,12 @@ abstract class RecaptchaEnterpriseServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.MigrateKeyRequest request);
   $async.Future<$0.Metrics> getMetrics(
       $grpc.ServiceCall call, $0.GetMetricsRequest request);
+  $async.Future<$0.ListRelatedAccountGroupsResponse> listRelatedAccountGroups(
+      $grpc.ServiceCall call, $0.ListRelatedAccountGroupsRequest request);
+  $async.Future<$0.ListRelatedAccountGroupMembershipsResponse>
+      listRelatedAccountGroupMemberships($grpc.ServiceCall call,
+          $0.ListRelatedAccountGroupMembershipsRequest request);
+  $async.Future<$0.SearchRelatedAccountGroupMembershipsResponse>
+      searchRelatedAccountGroupMemberships($grpc.ServiceCall call,
+          $0.SearchRelatedAccountGroupMembershipsRequest request);
 }

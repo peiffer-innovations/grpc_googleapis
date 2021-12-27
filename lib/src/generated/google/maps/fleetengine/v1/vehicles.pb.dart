@@ -138,12 +138,6 @@ class Vehicle extends $pb.GeneratedMessage {
             ? ''
             : 'maximumCapacity',
         $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'availableCapacity',
-        $pb.PbFieldType.O3)
     ..pc<$0.VehicleAttribute>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -238,6 +232,12 @@ class Vehicle extends $pb.GeneratedMessage {
             ? ''
             : 'deviceSettings',
         subBuilder: DeviceSettings.create)
+    ..aOM<TrafficPolylineData>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentRouteSegmentTraffic',
+        subBuilder: TrafficPolylineData.create)
     ..hasRequiredFields = false;
 
   Vehicle._() : super();
@@ -248,7 +248,6 @@ class Vehicle extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? currentTrips,
     $0.VehicleLocation? lastLocation,
     $core.int? maximumCapacity,
-    $core.int? availableCapacity,
     $core.Iterable<$0.VehicleAttribute>? attributes,
     Vehicle_VehicleType? vehicleType,
     LicensePlate? licensePlate,
@@ -265,6 +264,7 @@ class Vehicle extends $pb.GeneratedMessage {
     $2.Int32Value? remainingTimeSeconds,
     $0.NavigationStatus? navigationStatus,
     DeviceSettings? deviceSettings,
+    TrafficPolylineData? currentRouteSegmentTraffic,
   }) {
     final _result = create();
     if (name != null) {
@@ -284,9 +284,6 @@ class Vehicle extends $pb.GeneratedMessage {
     }
     if (maximumCapacity != null) {
       _result.maximumCapacity = maximumCapacity;
-    }
-    if (availableCapacity != null) {
-      _result.availableCapacity = availableCapacity;
     }
     if (attributes != null) {
       _result.attributes.addAll(attributes);
@@ -333,6 +330,9 @@ class Vehicle extends $pb.GeneratedMessage {
     }
     if (deviceSettings != null) {
       _result.deviceSettings = deviceSettings;
+    }
+    if (currentRouteSegmentTraffic != null) {
+      _result.currentRouteSegmentTraffic = currentRouteSegmentTraffic;
     }
     return _result;
   }
@@ -418,189 +418,191 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearMaximumCapacity() => clearField(6);
 
-  @$pb.TagNumber(7)
-  $core.int get availableCapacity => $_getIZ(6);
-  @$pb.TagNumber(7)
-  set availableCapacity($core.int v) {
-    $_setSignedInt32(6, v);
-  }
-
-  @$pb.TagNumber(7)
-  $core.bool hasAvailableCapacity() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearAvailableCapacity() => clearField(7);
-
   @$pb.TagNumber(8)
-  $core.List<$0.VehicleAttribute> get attributes => $_getList(7);
+  $core.List<$0.VehicleAttribute> get attributes => $_getList(6);
 
   @$pb.TagNumber(9)
-  Vehicle_VehicleType get vehicleType => $_getN(8);
+  Vehicle_VehicleType get vehicleType => $_getN(7);
   @$pb.TagNumber(9)
   set vehicleType(Vehicle_VehicleType v) {
     setField(9, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasVehicleType() => $_has(8);
+  $core.bool hasVehicleType() => $_has(7);
   @$pb.TagNumber(9)
   void clearVehicleType() => clearField(9);
   @$pb.TagNumber(9)
-  Vehicle_VehicleType ensureVehicleType() => $_ensure(8);
+  Vehicle_VehicleType ensureVehicleType() => $_ensure(7);
 
   @$pb.TagNumber(10)
-  LicensePlate get licensePlate => $_getN(9);
+  LicensePlate get licensePlate => $_getN(8);
   @$pb.TagNumber(10)
   set licensePlate(LicensePlate v) {
     setField(10, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasLicensePlate() => $_has(9);
+  $core.bool hasLicensePlate() => $_has(8);
   @$pb.TagNumber(10)
   void clearLicensePlate() => clearField(10);
   @$pb.TagNumber(10)
-  LicensePlate ensureLicensePlate() => $_ensure(9);
+  LicensePlate ensureLicensePlate() => $_ensure(8);
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(12)
-  $core.List<$0.TerminalLocation> get route => $_getList(10);
+  $core.List<$0.TerminalLocation> get route => $_getList(9);
 
   @$pb.TagNumber(15)
-  $1.Timestamp get currentRouteSegmentVersion => $_getN(11);
+  $1.Timestamp get currentRouteSegmentVersion => $_getN(10);
   @$pb.TagNumber(15)
   set currentRouteSegmentVersion($1.Timestamp v) {
     setField(15, v);
   }
 
   @$pb.TagNumber(15)
-  $core.bool hasCurrentRouteSegmentVersion() => $_has(11);
+  $core.bool hasCurrentRouteSegmentVersion() => $_has(10);
   @$pb.TagNumber(15)
   void clearCurrentRouteSegmentVersion() => clearField(15);
   @$pb.TagNumber(15)
-  $1.Timestamp ensureCurrentRouteSegmentVersion() => $_ensure(11);
+  $1.Timestamp ensureCurrentRouteSegmentVersion() => $_ensure(10);
 
   @$pb.TagNumber(16)
-  $1.Timestamp get waypointsVersion => $_getN(12);
+  $1.Timestamp get waypointsVersion => $_getN(11);
   @$pb.TagNumber(16)
   set waypointsVersion($1.Timestamp v) {
     setField(16, v);
   }
 
   @$pb.TagNumber(16)
-  $core.bool hasWaypointsVersion() => $_has(12);
+  $core.bool hasWaypointsVersion() => $_has(11);
   @$pb.TagNumber(16)
   void clearWaypointsVersion() => clearField(16);
   @$pb.TagNumber(16)
-  $1.Timestamp ensureWaypointsVersion() => $_ensure(12);
+  $1.Timestamp ensureWaypointsVersion() => $_ensure(11);
 
   @$pb.TagNumber(18)
-  $2.Int32Value get remainingDistanceMeters => $_getN(13);
+  $2.Int32Value get remainingDistanceMeters => $_getN(12);
   @$pb.TagNumber(18)
   set remainingDistanceMeters($2.Int32Value v) {
     setField(18, v);
   }
 
   @$pb.TagNumber(18)
-  $core.bool hasRemainingDistanceMeters() => $_has(13);
+  $core.bool hasRemainingDistanceMeters() => $_has(12);
   @$pb.TagNumber(18)
   void clearRemainingDistanceMeters() => clearField(18);
   @$pb.TagNumber(18)
-  $2.Int32Value ensureRemainingDistanceMeters() => $_ensure(13);
+  $2.Int32Value ensureRemainingDistanceMeters() => $_ensure(12);
 
   @$pb.TagNumber(19)
-  $1.Timestamp get etaToFirstWaypoint => $_getN(14);
+  $1.Timestamp get etaToFirstWaypoint => $_getN(13);
   @$pb.TagNumber(19)
   set etaToFirstWaypoint($1.Timestamp v) {
     setField(19, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasEtaToFirstWaypoint() => $_has(14);
+  $core.bool hasEtaToFirstWaypoint() => $_has(13);
   @$pb.TagNumber(19)
   void clearEtaToFirstWaypoint() => clearField(19);
   @$pb.TagNumber(19)
-  $1.Timestamp ensureEtaToFirstWaypoint() => $_ensure(14);
+  $1.Timestamp ensureEtaToFirstWaypoint() => $_ensure(13);
 
   @$pb.TagNumber(20)
-  $core.String get currentRouteSegment => $_getSZ(15);
+  $core.String get currentRouteSegment => $_getSZ(14);
   @$pb.TagNumber(20)
   set currentRouteSegment($core.String v) {
-    $_setString(15, v);
+    $_setString(14, v);
   }
 
   @$pb.TagNumber(20)
-  $core.bool hasCurrentRouteSegment() => $_has(15);
+  $core.bool hasCurrentRouteSegment() => $_has(14);
   @$pb.TagNumber(20)
   void clearCurrentRouteSegment() => clearField(20);
 
   @$pb.TagNumber(22)
-  $core.List<$0.TripWaypoint> get waypoints => $_getList(16);
+  $core.List<$0.TripWaypoint> get waypoints => $_getList(15);
 
   @$pb.TagNumber(23)
-  $core.bool get backToBackEnabled => $_getBF(17);
+  $core.bool get backToBackEnabled => $_getBF(16);
   @$pb.TagNumber(23)
   set backToBackEnabled($core.bool v) {
-    $_setBool(17, v);
+    $_setBool(16, v);
   }
 
   @$pb.TagNumber(23)
-  $core.bool hasBackToBackEnabled() => $_has(17);
+  $core.bool hasBackToBackEnabled() => $_has(16);
   @$pb.TagNumber(23)
   void clearBackToBackEnabled() => clearField(23);
 
   @$pb.TagNumber(24)
-  $0.TripWaypoint get currentRouteSegmentEndPoint => $_getN(18);
+  $0.TripWaypoint get currentRouteSegmentEndPoint => $_getN(17);
   @$pb.TagNumber(24)
   set currentRouteSegmentEndPoint($0.TripWaypoint v) {
     setField(24, v);
   }
 
   @$pb.TagNumber(24)
-  $core.bool hasCurrentRouteSegmentEndPoint() => $_has(18);
+  $core.bool hasCurrentRouteSegmentEndPoint() => $_has(17);
   @$pb.TagNumber(24)
   void clearCurrentRouteSegmentEndPoint() => clearField(24);
   @$pb.TagNumber(24)
-  $0.TripWaypoint ensureCurrentRouteSegmentEndPoint() => $_ensure(18);
+  $0.TripWaypoint ensureCurrentRouteSegmentEndPoint() => $_ensure(17);
 
   @$pb.TagNumber(25)
-  $2.Int32Value get remainingTimeSeconds => $_getN(19);
+  $2.Int32Value get remainingTimeSeconds => $_getN(18);
   @$pb.TagNumber(25)
   set remainingTimeSeconds($2.Int32Value v) {
     setField(25, v);
   }
 
   @$pb.TagNumber(25)
-  $core.bool hasRemainingTimeSeconds() => $_has(19);
+  $core.bool hasRemainingTimeSeconds() => $_has(18);
   @$pb.TagNumber(25)
   void clearRemainingTimeSeconds() => clearField(25);
   @$pb.TagNumber(25)
-  $2.Int32Value ensureRemainingTimeSeconds() => $_ensure(19);
+  $2.Int32Value ensureRemainingTimeSeconds() => $_ensure(18);
 
   @$pb.TagNumber(26)
-  $0.NavigationStatus get navigationStatus => $_getN(20);
+  $0.NavigationStatus get navigationStatus => $_getN(19);
   @$pb.TagNumber(26)
   set navigationStatus($0.NavigationStatus v) {
     setField(26, v);
   }
 
   @$pb.TagNumber(26)
-  $core.bool hasNavigationStatus() => $_has(20);
+  $core.bool hasNavigationStatus() => $_has(19);
   @$pb.TagNumber(26)
   void clearNavigationStatus() => clearField(26);
 
   @$pb.TagNumber(27)
-  DeviceSettings get deviceSettings => $_getN(21);
+  DeviceSettings get deviceSettings => $_getN(20);
   @$pb.TagNumber(27)
   set deviceSettings(DeviceSettings v) {
     setField(27, v);
   }
 
   @$pb.TagNumber(27)
-  $core.bool hasDeviceSettings() => $_has(21);
+  $core.bool hasDeviceSettings() => $_has(20);
   @$pb.TagNumber(27)
   void clearDeviceSettings() => clearField(27);
   @$pb.TagNumber(27)
-  DeviceSettings ensureDeviceSettings() => $_ensure(21);
+  DeviceSettings ensureDeviceSettings() => $_ensure(20);
+
+  @$pb.TagNumber(28)
+  TrafficPolylineData get currentRouteSegmentTraffic => $_getN(21);
+  @$pb.TagNumber(28)
+  set currentRouteSegmentTraffic(TrafficPolylineData v) {
+    setField(28, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasCurrentRouteSegmentTraffic() => $_has(21);
+  @$pb.TagNumber(28)
+  void clearCurrentRouteSegmentTraffic() => clearField(28);
+  @$pb.TagNumber(28)
+  TrafficPolylineData ensureCurrentRouteSegmentTraffic() => $_ensure(21);
 }
 
 class BatteryInfo extends $pb.GeneratedMessage {
@@ -943,4 +945,271 @@ class LicensePlate extends $pb.GeneratedMessage {
   $core.bool hasLastCharacter() => $_has(1);
   @$pb.TagNumber(2)
   void clearLastCharacter() => clearField(2);
+}
+
+class VisualTrafficReportPolylineRendering_RoadStretch
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'VisualTrafficReportPolylineRendering.RoadStretch',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..e<VisualTrafficReportPolylineRendering_RoadStretch_Style>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'style',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: VisualTrafficReportPolylineRendering_RoadStretch_Style
+            .STYLE_UNSPECIFIED,
+        valueOf: VisualTrafficReportPolylineRendering_RoadStretch_Style.valueOf,
+        enumValues:
+            VisualTrafficReportPolylineRendering_RoadStretch_Style.values)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'offsetMeters',
+        $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lengthMeters',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  VisualTrafficReportPolylineRendering_RoadStretch._() : super();
+  factory VisualTrafficReportPolylineRendering_RoadStretch({
+    VisualTrafficReportPolylineRendering_RoadStretch_Style? style,
+    $core.int? offsetMeters,
+    $core.int? lengthMeters,
+  }) {
+    final _result = create();
+    if (style != null) {
+      _result.style = style;
+    }
+    if (offsetMeters != null) {
+      _result.offsetMeters = offsetMeters;
+    }
+    if (lengthMeters != null) {
+      _result.lengthMeters = lengthMeters;
+    }
+    return _result;
+  }
+  factory VisualTrafficReportPolylineRendering_RoadStretch.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VisualTrafficReportPolylineRendering_RoadStretch.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  VisualTrafficReportPolylineRendering_RoadStretch clone() =>
+      VisualTrafficReportPolylineRendering_RoadStretch()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  VisualTrafficReportPolylineRendering_RoadStretch copyWith(
+          void Function(VisualTrafficReportPolylineRendering_RoadStretch)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as VisualTrafficReportPolylineRendering_RoadStretch))
+          as VisualTrafficReportPolylineRendering_RoadStretch; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VisualTrafficReportPolylineRendering_RoadStretch create() =>
+      VisualTrafficReportPolylineRendering_RoadStretch._();
+  VisualTrafficReportPolylineRendering_RoadStretch createEmptyInstance() =>
+      create();
+  static $pb.PbList<VisualTrafficReportPolylineRendering_RoadStretch>
+      createRepeated() =>
+          $pb.PbList<VisualTrafficReportPolylineRendering_RoadStretch>();
+  @$core.pragma('dart2js:noInline')
+  static VisualTrafficReportPolylineRendering_RoadStretch getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          VisualTrafficReportPolylineRendering_RoadStretch>(create);
+  static VisualTrafficReportPolylineRendering_RoadStretch? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  VisualTrafficReportPolylineRendering_RoadStretch_Style get style => $_getN(0);
+  @$pb.TagNumber(1)
+  set style(VisualTrafficReportPolylineRendering_RoadStretch_Style v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStyle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStyle() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get offsetMeters => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set offsetMeters($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasOffsetMeters() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOffsetMeters() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get lengthMeters => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set lengthMeters($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasLengthMeters() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLengthMeters() => clearField(3);
+}
+
+class VisualTrafficReportPolylineRendering extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'VisualTrafficReportPolylineRendering',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..pc<VisualTrafficReportPolylineRendering_RoadStretch>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'roadStretch',
+        $pb.PbFieldType.PM,
+        subBuilder: VisualTrafficReportPolylineRendering_RoadStretch.create)
+    ..hasRequiredFields = false;
+
+  VisualTrafficReportPolylineRendering._() : super();
+  factory VisualTrafficReportPolylineRendering({
+    $core.Iterable<VisualTrafficReportPolylineRendering_RoadStretch>?
+        roadStretch,
+  }) {
+    final _result = create();
+    if (roadStretch != null) {
+      _result.roadStretch.addAll(roadStretch);
+    }
+    return _result;
+  }
+  factory VisualTrafficReportPolylineRendering.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VisualTrafficReportPolylineRendering.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  VisualTrafficReportPolylineRendering clone() =>
+      VisualTrafficReportPolylineRendering()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  VisualTrafficReportPolylineRendering copyWith(
+          void Function(VisualTrafficReportPolylineRendering) updates) =>
+      super.copyWith((message) =>
+              updates(message as VisualTrafficReportPolylineRendering))
+          as VisualTrafficReportPolylineRendering; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VisualTrafficReportPolylineRendering create() =>
+      VisualTrafficReportPolylineRendering._();
+  VisualTrafficReportPolylineRendering createEmptyInstance() => create();
+  static $pb.PbList<VisualTrafficReportPolylineRendering> createRepeated() =>
+      $pb.PbList<VisualTrafficReportPolylineRendering>();
+  @$core.pragma('dart2js:noInline')
+  static VisualTrafficReportPolylineRendering getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          VisualTrafficReportPolylineRendering>(create);
+  static VisualTrafficReportPolylineRendering? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<VisualTrafficReportPolylineRendering_RoadStretch>
+      get roadStretch => $_getList(0);
+}
+
+class TrafficPolylineData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TrafficPolylineData',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..aOM<VisualTrafficReportPolylineRendering>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'trafficRendering',
+        subBuilder: VisualTrafficReportPolylineRendering.create)
+    ..hasRequiredFields = false;
+
+  TrafficPolylineData._() : super();
+  factory TrafficPolylineData({
+    VisualTrafficReportPolylineRendering? trafficRendering,
+  }) {
+    final _result = create();
+    if (trafficRendering != null) {
+      _result.trafficRendering = trafficRendering;
+    }
+    return _result;
+  }
+  factory TrafficPolylineData.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TrafficPolylineData.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TrafficPolylineData clone() => TrafficPolylineData()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TrafficPolylineData copyWith(void Function(TrafficPolylineData) updates) =>
+      super.copyWith((message) => updates(message as TrafficPolylineData))
+          as TrafficPolylineData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TrafficPolylineData create() => TrafficPolylineData._();
+  TrafficPolylineData createEmptyInstance() => create();
+  static $pb.PbList<TrafficPolylineData> createRepeated() =>
+      $pb.PbList<TrafficPolylineData>();
+  @$core.pragma('dart2js:noInline')
+  static TrafficPolylineData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TrafficPolylineData>(create);
+  static TrafficPolylineData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  VisualTrafficReportPolylineRendering get trafficRendering => $_getN(0);
+  @$pb.TagNumber(1)
+  set trafficRendering(VisualTrafficReportPolylineRendering v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTrafficRendering() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTrafficRendering() => clearField(1);
+  @$pb.TagNumber(1)
+  VisualTrafficReportPolylineRendering ensureTrafficRendering() => $_ensure(0);
 }

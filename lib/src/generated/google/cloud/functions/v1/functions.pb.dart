@@ -192,10 +192,64 @@ class CloudFunction extends $pb.GeneratedMessage {
         valueOf: CloudFunction_IngressSettings.valueOf,
         enumValues: CloudFunction_IngressSettings.values)
     ..aOS(
+        25,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kmsKeyName')
+    ..aOS(
+        26,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'buildWorkerPool')
+    ..aOS(
         27,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'buildId')
+    ..m<$core.String, $core.String>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'buildEnvironmentVariables',
+        entryClassName: 'CloudFunction.BuildEnvironmentVariablesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.functions.v1'))
+    ..pc<SecretEnvVar>(
+        29,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'secretEnvironmentVariables',
+        $pb.PbFieldType.PM,
+        subBuilder: SecretEnvVar.create)
+    ..pc<SecretVolume>(
+        30,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'secretVolumes',
+        $pb.PbFieldType.PM,
+        subBuilder: SecretVolume.create)
+    ..aOS(
+        31,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sourceToken')
+    ..a<$core.int>(
+        32,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minInstances',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        33,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'buildName')
+    ..aOS(
+        34,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dockerRepository')
     ..hasRequiredFields = false;
 
   CloudFunction._() : super();
@@ -222,7 +276,16 @@ class CloudFunction extends $pb.GeneratedMessage {
     $core.String? vpcConnector,
     CloudFunction_VpcConnectorEgressSettings? vpcConnectorEgressSettings,
     CloudFunction_IngressSettings? ingressSettings,
+    $core.String? kmsKeyName,
+    $core.String? buildWorkerPool,
     $core.String? buildId,
+    $core.Map<$core.String, $core.String>? buildEnvironmentVariables,
+    $core.Iterable<SecretEnvVar>? secretEnvironmentVariables,
+    $core.Iterable<SecretVolume>? secretVolumes,
+    $core.String? sourceToken,
+    $core.int? minInstances,
+    $core.String? buildName,
+    $core.String? dockerRepository,
   }) {
     final _result = create();
     if (name != null) {
@@ -291,8 +354,35 @@ class CloudFunction extends $pb.GeneratedMessage {
     if (ingressSettings != null) {
       _result.ingressSettings = ingressSettings;
     }
+    if (kmsKeyName != null) {
+      _result.kmsKeyName = kmsKeyName;
+    }
+    if (buildWorkerPool != null) {
+      _result.buildWorkerPool = buildWorkerPool;
+    }
     if (buildId != null) {
       _result.buildId = buildId;
+    }
+    if (buildEnvironmentVariables != null) {
+      _result.buildEnvironmentVariables.addAll(buildEnvironmentVariables);
+    }
+    if (secretEnvironmentVariables != null) {
+      _result.secretEnvironmentVariables.addAll(secretEnvironmentVariables);
+    }
+    if (secretVolumes != null) {
+      _result.secretVolumes.addAll(secretVolumes);
+    }
+    if (sourceToken != null) {
+      _result.sourceToken = sourceToken;
+    }
+    if (minInstances != null) {
+      _result.minInstances = minInstances;
+    }
+    if (buildName != null) {
+      _result.buildName = buildName;
+    }
+    if (dockerRepository != null) {
+      _result.dockerRepository = dockerRepository;
     }
     return _result;
   }
@@ -589,17 +679,99 @@ class CloudFunction extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   void clearIngressSettings() => clearField(24);
 
-  @$pb.TagNumber(27)
-  $core.String get buildId => $_getSZ(22);
-  @$pb.TagNumber(27)
-  set buildId($core.String v) {
+  @$pb.TagNumber(25)
+  $core.String get kmsKeyName => $_getSZ(22);
+  @$pb.TagNumber(25)
+  set kmsKeyName($core.String v) {
     $_setString(22, v);
   }
 
+  @$pb.TagNumber(25)
+  $core.bool hasKmsKeyName() => $_has(22);
+  @$pb.TagNumber(25)
+  void clearKmsKeyName() => clearField(25);
+
+  @$pb.TagNumber(26)
+  $core.String get buildWorkerPool => $_getSZ(23);
+  @$pb.TagNumber(26)
+  set buildWorkerPool($core.String v) {
+    $_setString(23, v);
+  }
+
+  @$pb.TagNumber(26)
+  $core.bool hasBuildWorkerPool() => $_has(23);
+  @$pb.TagNumber(26)
+  void clearBuildWorkerPool() => clearField(26);
+
   @$pb.TagNumber(27)
-  $core.bool hasBuildId() => $_has(22);
+  $core.String get buildId => $_getSZ(24);
+  @$pb.TagNumber(27)
+  set buildId($core.String v) {
+    $_setString(24, v);
+  }
+
+  @$pb.TagNumber(27)
+  $core.bool hasBuildId() => $_has(24);
   @$pb.TagNumber(27)
   void clearBuildId() => clearField(27);
+
+  @$pb.TagNumber(28)
+  $core.Map<$core.String, $core.String> get buildEnvironmentVariables =>
+      $_getMap(25);
+
+  @$pb.TagNumber(29)
+  $core.List<SecretEnvVar> get secretEnvironmentVariables => $_getList(26);
+
+  @$pb.TagNumber(30)
+  $core.List<SecretVolume> get secretVolumes => $_getList(27);
+
+  @$pb.TagNumber(31)
+  $core.String get sourceToken => $_getSZ(28);
+  @$pb.TagNumber(31)
+  set sourceToken($core.String v) {
+    $_setString(28, v);
+  }
+
+  @$pb.TagNumber(31)
+  $core.bool hasSourceToken() => $_has(28);
+  @$pb.TagNumber(31)
+  void clearSourceToken() => clearField(31);
+
+  @$pb.TagNumber(32)
+  $core.int get minInstances => $_getIZ(29);
+  @$pb.TagNumber(32)
+  set minInstances($core.int v) {
+    $_setSignedInt32(29, v);
+  }
+
+  @$pb.TagNumber(32)
+  $core.bool hasMinInstances() => $_has(29);
+  @$pb.TagNumber(32)
+  void clearMinInstances() => clearField(32);
+
+  @$pb.TagNumber(33)
+  $core.String get buildName => $_getSZ(30);
+  @$pb.TagNumber(33)
+  set buildName($core.String v) {
+    $_setString(30, v);
+  }
+
+  @$pb.TagNumber(33)
+  $core.bool hasBuildName() => $_has(30);
+  @$pb.TagNumber(33)
+  void clearBuildName() => clearField(33);
+
+  @$pb.TagNumber(34)
+  $core.String get dockerRepository => $_getSZ(31);
+  @$pb.TagNumber(34)
+  set dockerRepository($core.String v) {
+    $_setString(31, v);
+  }
+
+  @$pb.TagNumber(34)
+  $core.bool hasDockerRepository() => $_has(31);
+  @$pb.TagNumber(34)
+  void clearDockerRepository() => clearField(34);
 }
 
 class SourceRepository extends $pb.GeneratedMessage {
@@ -1037,6 +1209,350 @@ class FailurePolicy extends $pb.GeneratedMessage {
   void clearRetry() => clearField(1);
   @$pb.TagNumber(1)
   FailurePolicy_Retry ensureRetry() => $_ensure(0);
+}
+
+class SecretEnvVar extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SecretEnvVar',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.functions.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'key')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'secret')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version')
+    ..hasRequiredFields = false;
+
+  SecretEnvVar._() : super();
+  factory SecretEnvVar({
+    $core.String? key,
+    $core.String? projectId,
+    $core.String? secret,
+    $core.String? version,
+  }) {
+    final _result = create();
+    if (key != null) {
+      _result.key = key;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (secret != null) {
+      _result.secret = secret;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    return _result;
+  }
+  factory SecretEnvVar.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SecretEnvVar.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SecretEnvVar clone() => SecretEnvVar()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SecretEnvVar copyWith(void Function(SecretEnvVar) updates) =>
+      super.copyWith((message) => updates(message as SecretEnvVar))
+          as SecretEnvVar; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SecretEnvVar create() => SecretEnvVar._();
+  SecretEnvVar createEmptyInstance() => create();
+  static $pb.PbList<SecretEnvVar> createRepeated() =>
+      $pb.PbList<SecretEnvVar>();
+  @$core.pragma('dart2js:noInline')
+  static SecretEnvVar getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SecretEnvVar>(create);
+  static SecretEnvVar? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get key => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set key($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKey() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set projectId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProjectId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secret => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secret($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasSecret() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecret() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get version => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set version($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasVersion() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearVersion() => clearField(4);
+}
+
+class SecretVolume_SecretVersion extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SecretVolume.SecretVersion',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.functions.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'path')
+    ..hasRequiredFields = false;
+
+  SecretVolume_SecretVersion._() : super();
+  factory SecretVolume_SecretVersion({
+    $core.String? version,
+    $core.String? path,
+  }) {
+    final _result = create();
+    if (version != null) {
+      _result.version = version;
+    }
+    if (path != null) {
+      _result.path = path;
+    }
+    return _result;
+  }
+  factory SecretVolume_SecretVersion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SecretVolume_SecretVersion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SecretVolume_SecretVersion clone() =>
+      SecretVolume_SecretVersion()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SecretVolume_SecretVersion copyWith(
+          void Function(SecretVolume_SecretVersion) updates) =>
+      super.copyWith(
+              (message) => updates(message as SecretVolume_SecretVersion))
+          as SecretVolume_SecretVersion; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SecretVolume_SecretVersion create() => SecretVolume_SecretVersion._();
+  SecretVolume_SecretVersion createEmptyInstance() => create();
+  static $pb.PbList<SecretVolume_SecretVersion> createRepeated() =>
+      $pb.PbList<SecretVolume_SecretVersion>();
+  @$core.pragma('dart2js:noInline')
+  static SecretVolume_SecretVersion getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SecretVolume_SecretVersion>(create);
+  static SecretVolume_SecretVersion? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get version => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set version($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasVersion() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVersion() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get path => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set path($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPath() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPath() => clearField(2);
+}
+
+class SecretVolume extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SecretVolume',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.functions.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mountPath')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'secret')
+    ..pc<SecretVolume_SecretVersion>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'versions',
+        $pb.PbFieldType.PM,
+        subBuilder: SecretVolume_SecretVersion.create)
+    ..hasRequiredFields = false;
+
+  SecretVolume._() : super();
+  factory SecretVolume({
+    $core.String? mountPath,
+    $core.String? projectId,
+    $core.String? secret,
+    $core.Iterable<SecretVolume_SecretVersion>? versions,
+  }) {
+    final _result = create();
+    if (mountPath != null) {
+      _result.mountPath = mountPath;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (secret != null) {
+      _result.secret = secret;
+    }
+    if (versions != null) {
+      _result.versions.addAll(versions);
+    }
+    return _result;
+  }
+  factory SecretVolume.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SecretVolume.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SecretVolume clone() => SecretVolume()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SecretVolume copyWith(void Function(SecretVolume) updates) =>
+      super.copyWith((message) => updates(message as SecretVolume))
+          as SecretVolume; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SecretVolume create() => SecretVolume._();
+  SecretVolume createEmptyInstance() => create();
+  static $pb.PbList<SecretVolume> createRepeated() =>
+      $pb.PbList<SecretVolume>();
+  @$core.pragma('dart2js:noInline')
+  static SecretVolume getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SecretVolume>(create);
+  static SecretVolume? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get mountPath => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set mountPath($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMountPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMountPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set projectId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProjectId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secret => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secret($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasSecret() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecret() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<SecretVolume_SecretVersion> get versions => $_getList(3);
 }
 
 class CreateFunctionRequest extends $pb.GeneratedMessage {

@@ -195,33 +195,3 @@ class LocationSensor extends $pb.ProtobufEnum {
 
   const LocationSensor._($core.int v, $core.String n) : super(v, n);
 }
-
-class Status_Code extends $pb.ProtobufEnum {
-  static const Status_Code UNSPECIFIED = Status_Code._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNSPECIFIED');
-  static const Status_Code FAILURE = Status_Code._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILURE');
-  static const Status_Code ROUTE_NOT_POSSIBLE = Status_Code._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ROUTE_NOT_POSSIBLE');
-
-  static const $core.List<Status_Code> values = <Status_Code>[
-    UNSPECIFIED,
-    FAILURE,
-    ROUTE_NOT_POSSIBLE,
-  ];
-
-  static final $core.Map<$core.int, Status_Code> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static Status_Code? valueOf($core.int value) => _byValue[value];
-
-  const Status_Code._($core.int v, $core.String n) : super(v, n);
-}

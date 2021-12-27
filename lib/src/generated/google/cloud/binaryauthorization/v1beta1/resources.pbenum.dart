@@ -199,6 +199,13 @@ class PkixPublicKey_SignatureAlgorithm extends $pb.ProtobufEnum {
               ? ''
               : 'ECDSA_P521_SHA512');
 
+  static const PkixPublicKey_SignatureAlgorithm EC_SIGN_P256_SHA256 =
+      ECDSA_P256_SHA256;
+  static const PkixPublicKey_SignatureAlgorithm EC_SIGN_P384_SHA384 =
+      ECDSA_P384_SHA384;
+  static const PkixPublicKey_SignatureAlgorithm EC_SIGN_P521_SHA512 =
+      ECDSA_P521_SHA512;
+
   static const $core.List<PkixPublicKey_SignatureAlgorithm> values =
       <PkixPublicKey_SignatureAlgorithm>[
     SIGNATURE_ALGORITHM_UNSPECIFIED,

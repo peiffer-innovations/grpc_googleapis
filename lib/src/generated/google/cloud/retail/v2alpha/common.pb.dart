@@ -1201,3 +1201,111 @@ class Promotion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPromotionId() => clearField(1);
 }
+
+class LocalInventory extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LocalInventory',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.retail.v2alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'placeId')
+    ..aOM<PriceInfo>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'priceInfo',
+        subBuilder: PriceInfo.create)
+    ..m<$core.String, CustomAttribute>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'attributes',
+        entryClassName: 'LocalInventory.AttributesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: CustomAttribute.create,
+        packageName: const $pb.PackageName('google.cloud.retail.v2alpha'))
+    ..hasRequiredFields = false;
+
+  LocalInventory._() : super();
+  factory LocalInventory({
+    $core.String? placeId,
+    PriceInfo? priceInfo,
+    $core.Map<$core.String, CustomAttribute>? attributes,
+  }) {
+    final _result = create();
+    if (placeId != null) {
+      _result.placeId = placeId;
+    }
+    if (priceInfo != null) {
+      _result.priceInfo = priceInfo;
+    }
+    if (attributes != null) {
+      _result.attributes.addAll(attributes);
+    }
+    return _result;
+  }
+  factory LocalInventory.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LocalInventory.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  LocalInventory clone() => LocalInventory()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  LocalInventory copyWith(void Function(LocalInventory) updates) =>
+      super.copyWith((message) => updates(message as LocalInventory))
+          as LocalInventory; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static LocalInventory create() => LocalInventory._();
+  LocalInventory createEmptyInstance() => create();
+  static $pb.PbList<LocalInventory> createRepeated() =>
+      $pb.PbList<LocalInventory>();
+  @$core.pragma('dart2js:noInline')
+  static LocalInventory getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocalInventory>(create);
+  static LocalInventory? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get placeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set placeId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPlaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPlaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  PriceInfo get priceInfo => $_getN(1);
+  @$pb.TagNumber(2)
+  set priceInfo(PriceInfo v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPriceInfo() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPriceInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  PriceInfo ensurePriceInfo() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.Map<$core.String, CustomAttribute> get attributes => $_getMap(2);
+}

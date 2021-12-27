@@ -16,6 +16,93 @@ import 'cloud_redis.pbenum.dart';
 
 export 'cloud_redis.pbenum.dart';
 
+class NodeInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodeInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.redis.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'id')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'zone')
+    ..hasRequiredFields = false;
+
+  NodeInfo._() : super();
+  factory NodeInfo({
+    $core.String? id,
+    $core.String? zone,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (zone != null) {
+      _result.zone = zone;
+    }
+    return _result;
+  }
+  factory NodeInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodeInfo clone() => NodeInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodeInfo copyWith(void Function(NodeInfo) updates) =>
+      super.copyWith((message) => updates(message as NodeInfo))
+          as NodeInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodeInfo create() => NodeInfo._();
+  NodeInfo createEmptyInstance() => create();
+  static $pb.PbList<NodeInfo> createRepeated() => $pb.PbList<NodeInfo>();
+  @$core.pragma('dart2js:noInline')
+  static NodeInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodeInfo>(create);
+  static NodeInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get zone => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set zone($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasZone() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearZone() => clearField(2);
+}
+
 class Instance extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -144,6 +231,40 @@ class Instance extends $pb.GeneratedMessage {
         defaultOrMaker: Instance_ConnectMode.CONNECT_MODE_UNSPECIFIED,
         valueOf: Instance_ConnectMode.valueOf,
         enumValues: Instance_ConnectMode.values)
+    ..a<$core.int>(
+        31,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'replicaCount',
+        $pb.PbFieldType.O3)
+    ..pc<NodeInfo>(
+        32,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nodes',
+        $pb.PbFieldType.PM,
+        subBuilder: NodeInfo.create)
+    ..aOS(
+        33,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readEndpoint')
+    ..a<$core.int>(
+        34,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readEndpointPort',
+        $pb.PbFieldType.O3)
+    ..e<Instance_ReadReplicasMode>(
+        35,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readReplicasMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            Instance_ReadReplicasMode.READ_REPLICAS_MODE_UNSPECIFIED,
+        valueOf: Instance_ReadReplicasMode.valueOf,
+        enumValues: Instance_ReadReplicasMode.values)
     ..hasRequiredFields = false;
 
   Instance._() : super();
@@ -167,6 +288,11 @@ class Instance extends $pb.GeneratedMessage {
     $core.String? authorizedNetwork,
     $core.String? persistenceIamIdentity,
     Instance_ConnectMode? connectMode,
+    $core.int? replicaCount,
+    $core.Iterable<NodeInfo>? nodes,
+    $core.String? readEndpoint,
+    $core.int? readEndpointPort,
+    Instance_ReadReplicasMode? readReplicasMode,
   }) {
     final _result = create();
     if (name != null) {
@@ -225,6 +351,21 @@ class Instance extends $pb.GeneratedMessage {
     }
     if (connectMode != null) {
       _result.connectMode = connectMode;
+    }
+    if (replicaCount != null) {
+      _result.replicaCount = replicaCount;
+    }
+    if (nodes != null) {
+      _result.nodes.addAll(nodes);
+    }
+    if (readEndpoint != null) {
+      _result.readEndpoint = readEndpoint;
+    }
+    if (readEndpointPort != null) {
+      _result.readEndpointPort = readEndpointPort;
+    }
+    if (readReplicasMode != null) {
+      _result.readReplicasMode = readReplicasMode;
     }
     return _result;
   }
@@ -465,6 +606,57 @@ class Instance extends $pb.GeneratedMessage {
   $core.bool hasConnectMode() => $_has(18);
   @$pb.TagNumber(22)
   void clearConnectMode() => clearField(22);
+
+  @$pb.TagNumber(31)
+  $core.int get replicaCount => $_getIZ(19);
+  @$pb.TagNumber(31)
+  set replicaCount($core.int v) {
+    $_setSignedInt32(19, v);
+  }
+
+  @$pb.TagNumber(31)
+  $core.bool hasReplicaCount() => $_has(19);
+  @$pb.TagNumber(31)
+  void clearReplicaCount() => clearField(31);
+
+  @$pb.TagNumber(32)
+  $core.List<NodeInfo> get nodes => $_getList(20);
+
+  @$pb.TagNumber(33)
+  $core.String get readEndpoint => $_getSZ(21);
+  @$pb.TagNumber(33)
+  set readEndpoint($core.String v) {
+    $_setString(21, v);
+  }
+
+  @$pb.TagNumber(33)
+  $core.bool hasReadEndpoint() => $_has(21);
+  @$pb.TagNumber(33)
+  void clearReadEndpoint() => clearField(33);
+
+  @$pb.TagNumber(34)
+  $core.int get readEndpointPort => $_getIZ(22);
+  @$pb.TagNumber(34)
+  set readEndpointPort($core.int v) {
+    $_setSignedInt32(22, v);
+  }
+
+  @$pb.TagNumber(34)
+  $core.bool hasReadEndpointPort() => $_has(22);
+  @$pb.TagNumber(34)
+  void clearReadEndpointPort() => clearField(34);
+
+  @$pb.TagNumber(35)
+  Instance_ReadReplicasMode get readReplicasMode => $_getN(23);
+  @$pb.TagNumber(35)
+  set readReplicasMode(Instance_ReadReplicasMode v) {
+    setField(35, v);
+  }
+
+  @$pb.TagNumber(35)
+  $core.bool hasReadReplicasMode() => $_has(23);
+  @$pb.TagNumber(35)
+  void clearReadReplicasMode() => clearField(35);
 }
 
 class ListInstancesRequest extends $pb.GeneratedMessage {

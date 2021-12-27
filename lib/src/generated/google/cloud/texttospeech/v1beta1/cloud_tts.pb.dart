@@ -531,6 +531,12 @@ class VoiceSelectionParams extends $pb.GeneratedMessage {
         defaultOrMaker: SsmlVoiceGender.SSML_VOICE_GENDER_UNSPECIFIED,
         valueOf: SsmlVoiceGender.valueOf,
         enumValues: SsmlVoiceGender.values)
+    ..aOM<CustomVoiceParams>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customVoice',
+        subBuilder: CustomVoiceParams.create)
     ..hasRequiredFields = false;
 
   VoiceSelectionParams._() : super();
@@ -538,6 +544,7 @@ class VoiceSelectionParams extends $pb.GeneratedMessage {
     $core.String? languageCode,
     $core.String? name,
     SsmlVoiceGender? ssmlGender,
+    CustomVoiceParams? customVoice,
   }) {
     final _result = create();
     if (languageCode != null) {
@@ -548,6 +555,9 @@ class VoiceSelectionParams extends $pb.GeneratedMessage {
     }
     if (ssmlGender != null) {
       _result.ssmlGender = ssmlGender;
+    }
+    if (customVoice != null) {
+      _result.customVoice = customVoice;
     }
     return _result;
   }
@@ -614,6 +624,20 @@ class VoiceSelectionParams extends $pb.GeneratedMessage {
   $core.bool hasSsmlGender() => $_has(2);
   @$pb.TagNumber(3)
   void clearSsmlGender() => clearField(3);
+
+  @$pb.TagNumber(4)
+  CustomVoiceParams get customVoice => $_getN(3);
+  @$pb.TagNumber(4)
+  set customVoice(CustomVoiceParams v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCustomVoice() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCustomVoice() => clearField(4);
+  @$pb.TagNumber(4)
+  CustomVoiceParams ensureCustomVoice() => $_ensure(3);
 }
 
 class AudioConfig extends $pb.GeneratedMessage {
@@ -784,6 +808,99 @@ class AudioConfig extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(6)
   $core.List<$core.String> get effectsProfileId => $_getList(5);
+}
+
+class CustomVoiceParams extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CustomVoiceParams',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.texttospeech.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'model')
+    ..e<CustomVoiceParams_ReportedUsage>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'reportedUsage',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            CustomVoiceParams_ReportedUsage.REPORTED_USAGE_UNSPECIFIED,
+        valueOf: CustomVoiceParams_ReportedUsage.valueOf,
+        enumValues: CustomVoiceParams_ReportedUsage.values)
+    ..hasRequiredFields = false;
+
+  CustomVoiceParams._() : super();
+  factory CustomVoiceParams({
+    $core.String? model,
+    CustomVoiceParams_ReportedUsage? reportedUsage,
+  }) {
+    final _result = create();
+    if (model != null) {
+      _result.model = model;
+    }
+    if (reportedUsage != null) {
+      _result.reportedUsage = reportedUsage;
+    }
+    return _result;
+  }
+  factory CustomVoiceParams.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomVoiceParams.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CustomVoiceParams clone() => CustomVoiceParams()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CustomVoiceParams copyWith(void Function(CustomVoiceParams) updates) =>
+      super.copyWith((message) => updates(message as CustomVoiceParams))
+          as CustomVoiceParams; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomVoiceParams create() => CustomVoiceParams._();
+  CustomVoiceParams createEmptyInstance() => create();
+  static $pb.PbList<CustomVoiceParams> createRepeated() =>
+      $pb.PbList<CustomVoiceParams>();
+  @$core.pragma('dart2js:noInline')
+  static CustomVoiceParams getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomVoiceParams>(create);
+  static CustomVoiceParams? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get model => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set model($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasModel() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearModel() => clearField(1);
+
+  @$pb.TagNumber(3)
+  CustomVoiceParams_ReportedUsage get reportedUsage => $_getN(1);
+  @$pb.TagNumber(3)
+  set reportedUsage(CustomVoiceParams_ReportedUsage v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasReportedUsage() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearReportedUsage() => clearField(3);
 }
 
 class SynthesizeSpeechResponse extends $pb.GeneratedMessage {
