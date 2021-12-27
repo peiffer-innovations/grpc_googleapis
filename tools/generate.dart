@@ -131,7 +131,7 @@ Future<void> main(List<String> args) async {
   }
 
   changelog.writeAsStringSync(
-    '# 1.0.$buildNumber\n * Auto Generated\n\n${changelog.readAsStringSync()}',
+    '# 2.0.$buildNumber\n * Auto Generated\n\n${changelog.readAsStringSync()}',
   );
 }
 
