@@ -39,7 +39,6 @@ jobs:
           rm -rf googleapis/grafeas/v1alpha1
           rm -rf googleapis/grafeas/v1beta1
 
-
           rm -rf grafeas/proto/v1alpha1
           rm -rf grafeas/proto//v1beta1
 
