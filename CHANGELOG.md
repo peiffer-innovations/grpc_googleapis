@@ -1,3 +1,8 @@
+## [1.1.1] - January 3rd, 2021
+
+* Dart 2.15
+
+
 ## [1.1.0] - December 27th, 2021
 
 * Removed `ads` to reduce space requirements
