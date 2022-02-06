@@ -1,3 +1,6 @@
+export '../src/generated/google/devtools/artifactregistry/v1beta2/apt_artifact.pb.dart';
+export '../src/generated/google/devtools/artifactregistry/v1beta2/apt_artifact.pbenum.dart';
+export '../src/generated/google/devtools/artifactregistry/v1beta2/apt_artifact.pbjson.dart';
 export '../src/generated/google/devtools/artifactregistry/v1beta2/file.pb.dart';
 export '../src/generated/google/devtools/artifactregistry/v1beta2/file.pbenum.dart';
 export '../src/generated/google/devtools/artifactregistry/v1beta2/file.pbjson.dart';
@@ -20,3 +23,6 @@ export '../src/generated/google/devtools/artifactregistry/v1beta2/tag.pbjson.dar
 export '../src/generated/google/devtools/artifactregistry/v1beta2/version.pb.dart';
 export '../src/generated/google/devtools/artifactregistry/v1beta2/version.pbenum.dart';
 export '../src/generated/google/devtools/artifactregistry/v1beta2/version.pbjson.dart';
+export '../src/generated/google/devtools/artifactregistry/v1beta2/yum_artifact.pb.dart';
+export '../src/generated/google/devtools/artifactregistry/v1beta2/yum_artifact.pbenum.dart';
+export '../src/generated/google/devtools/artifactregistry/v1beta2/yum_artifact.pbjson.dart';

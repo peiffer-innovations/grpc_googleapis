@@ -9,6 +9,19 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use databaseDialectDescriptor instead')
+const DatabaseDialect$json = const {
+  '1': 'DatabaseDialect',
+  '2': const [
+    const {'1': 'DATABASE_DIALECT_UNSPECIFIED', '2': 0},
+    const {'1': 'GOOGLE_STANDARD_SQL', '2': 1},
+    const {'1': 'POSTGRESQL', '2': 2},
+  ],
+};
+
+/// Descriptor for `DatabaseDialect`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List databaseDialectDescriptor = $convert.base64Decode(
+    'Cg9EYXRhYmFzZURpYWxlY3QSIAocREFUQUJBU0VfRElBTEVDVF9VTlNQRUNJRklFRBAAEhcKE0dPT0dMRV9TVEFOREFSRF9TUUwQARIOCgpQT1NUR1JFU1FMEAI=');
 @$core.Deprecated('Use operationProgressDescriptor instead')
 const OperationProgress$json = const {
   '1': 'OperationProgress',

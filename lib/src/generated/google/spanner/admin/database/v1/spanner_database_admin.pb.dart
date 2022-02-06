@@ -15,6 +15,7 @@ import 'common.pb.dart' as $7;
 import '../../../../longrunning/operations.pb.dart' as $2;
 
 import 'spanner_database_admin.pbenum.dart';
+import 'common.pbenum.dart' as $7;
 
 export 'spanner_database_admin.pbenum.dart';
 
@@ -189,6 +190,15 @@ class Database extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'defaultLeader')
+    ..e<$7.DatabaseDialect>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseDialect',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $7.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED,
+        valueOf: $7.DatabaseDialect.valueOf,
+        enumValues: $7.DatabaseDialect.values)
     ..hasRequiredFields = false;
 
   Database._() : super();
@@ -202,6 +212,7 @@ class Database extends $pb.GeneratedMessage {
     $6.Timestamp? earliestVersionTime,
     $core.Iterable<$7.EncryptionInfo>? encryptionInfo,
     $core.String? defaultLeader,
+    $7.DatabaseDialect? databaseDialect,
   }) {
     final _result = create();
     if (name != null) {
@@ -230,6 +241,9 @@ class Database extends $pb.GeneratedMessage {
     }
     if (defaultLeader != null) {
       _result.defaultLeader = defaultLeader;
+    }
+    if (databaseDialect != null) {
+      _result.databaseDialect = databaseDialect;
     }
     return _result;
   }
@@ -365,6 +379,18 @@ class Database extends $pb.GeneratedMessage {
   $core.bool hasDefaultLeader() => $_has(8);
   @$pb.TagNumber(9)
   void clearDefaultLeader() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $7.DatabaseDialect get databaseDialect => $_getN(9);
+  @$pb.TagNumber(10)
+  set databaseDialect($7.DatabaseDialect v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasDatabaseDialect() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearDatabaseDialect() => clearField(10);
 }
 
 class ListDatabasesRequest extends $pb.GeneratedMessage {
@@ -592,6 +618,15 @@ class CreateDatabaseRequest extends $pb.GeneratedMessage {
             ? ''
             : 'encryptionConfig',
         subBuilder: $7.EncryptionConfig.create)
+    ..e<$7.DatabaseDialect>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseDialect',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $7.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED,
+        valueOf: $7.DatabaseDialect.valueOf,
+        enumValues: $7.DatabaseDialect.values)
     ..hasRequiredFields = false;
 
   CreateDatabaseRequest._() : super();
@@ -600,6 +635,7 @@ class CreateDatabaseRequest extends $pb.GeneratedMessage {
     $core.String? createStatement,
     $core.Iterable<$core.String>? extraStatements,
     $7.EncryptionConfig? encryptionConfig,
+    $7.DatabaseDialect? databaseDialect,
   }) {
     final _result = create();
     if (parent != null) {
@@ -613,6 +649,9 @@ class CreateDatabaseRequest extends $pb.GeneratedMessage {
     }
     if (encryptionConfig != null) {
       _result.encryptionConfig = encryptionConfig;
+    }
+    if (databaseDialect != null) {
+      _result.databaseDialect = databaseDialect;
     }
     return _result;
   }
@@ -685,6 +724,18 @@ class CreateDatabaseRequest extends $pb.GeneratedMessage {
   void clearEncryptionConfig() => clearField(4);
   @$pb.TagNumber(4)
   $7.EncryptionConfig ensureEncryptionConfig() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $7.DatabaseDialect get databaseDialect => $_getN(4);
+  @$pb.TagNumber(5)
+  set databaseDialect($7.DatabaseDialect v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDatabaseDialect() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDatabaseDialect() => clearField(5);
 }
 
 class CreateDatabaseMetadata extends $pb.GeneratedMessage {

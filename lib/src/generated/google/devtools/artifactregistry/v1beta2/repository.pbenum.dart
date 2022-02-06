@@ -20,10 +20,40 @@ class Repository_Format extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'DOCKER');
+  static const Repository_Format MAVEN = Repository_Format._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MAVEN');
+  static const Repository_Format NPM = Repository_Format._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NPM');
+  static const Repository_Format APT = Repository_Format._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'APT');
+  static const Repository_Format YUM = Repository_Format._(
+      6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'YUM');
+  static const Repository_Format PYTHON = Repository_Format._(
+      8,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PYTHON');
 
   static const $core.List<Repository_Format> values = <Repository_Format>[
     FORMAT_UNSPECIFIED,
     DOCKER,
+    MAVEN,
+    NPM,
+    APT,
+    YUM,
+    PYTHON,
   ];
 
   static final $core.Map<$core.int, Repository_Format> _byValue =
@@ -31,4 +61,44 @@ class Repository_Format extends $pb.ProtobufEnum {
   static Repository_Format? valueOf($core.int value) => _byValue[value];
 
   const Repository_Format._($core.int v, $core.String n) : super(v, n);
+}
+
+class Repository_MavenRepositoryConfig_VersionPolicy extends $pb.ProtobufEnum {
+  static const Repository_MavenRepositoryConfig_VersionPolicy
+      VERSION_POLICY_UNSPECIFIED =
+      Repository_MavenRepositoryConfig_VersionPolicy._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'VERSION_POLICY_UNSPECIFIED');
+  static const Repository_MavenRepositoryConfig_VersionPolicy RELEASE =
+      Repository_MavenRepositoryConfig_VersionPolicy._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RELEASE');
+  static const Repository_MavenRepositoryConfig_VersionPolicy SNAPSHOT =
+      Repository_MavenRepositoryConfig_VersionPolicy._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SNAPSHOT');
+
+  static const $core.List<Repository_MavenRepositoryConfig_VersionPolicy>
+      values = <Repository_MavenRepositoryConfig_VersionPolicy>[
+    VERSION_POLICY_UNSPECIFIED,
+    RELEASE,
+    SNAPSHOT,
+  ];
+
+  static final $core
+          .Map<$core.int, Repository_MavenRepositoryConfig_VersionPolicy>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Repository_MavenRepositoryConfig_VersionPolicy? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Repository_MavenRepositoryConfig_VersionPolicy._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }

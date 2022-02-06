@@ -16,11 +16,12 @@ const Tag$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
   ],
+  '7': const {},
 };
 
 /// Descriptor for `Tag`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tagDescriptor = $convert.base64Decode(
-    'CgNUYWcSEgoEbmFtZRgBIAEoCVIEbmFtZRIYCgd2ZXJzaW9uGAIgASgJUgd2ZXJzaW9u');
+    'CgNUYWcSEgoEbmFtZRgBIAEoCVIEbmFtZRIYCgd2ZXJzaW9uGAIgASgJUgd2ZXJzaW9uOooB6kGGAQojYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9UYWcSX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9L3BhY2thZ2VzL3twYWNrYWdlfS90YWdzL3t0YWd9');
 @$core.Deprecated('Use listTagsRequestDescriptor instead')
 const ListTagsRequest$json = const {
   '1': 'ListTagsRequest',

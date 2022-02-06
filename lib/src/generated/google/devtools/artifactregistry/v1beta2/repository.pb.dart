@@ -16,7 +16,112 @@ import 'repository.pbenum.dart';
 
 export 'repository.pbenum.dart';
 
+class Repository_MavenRepositoryConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Repository.MavenRepositoryConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowSnapshotOverwrites')
+    ..e<Repository_MavenRepositoryConfig_VersionPolicy>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'versionPolicy',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Repository_MavenRepositoryConfig_VersionPolicy
+            .VERSION_POLICY_UNSPECIFIED,
+        valueOf: Repository_MavenRepositoryConfig_VersionPolicy.valueOf,
+        enumValues: Repository_MavenRepositoryConfig_VersionPolicy.values)
+    ..hasRequiredFields = false;
+
+  Repository_MavenRepositoryConfig._() : super();
+  factory Repository_MavenRepositoryConfig({
+    $core.bool? allowSnapshotOverwrites,
+    Repository_MavenRepositoryConfig_VersionPolicy? versionPolicy,
+  }) {
+    final _result = create();
+    if (allowSnapshotOverwrites != null) {
+      _result.allowSnapshotOverwrites = allowSnapshotOverwrites;
+    }
+    if (versionPolicy != null) {
+      _result.versionPolicy = versionPolicy;
+    }
+    return _result;
+  }
+  factory Repository_MavenRepositoryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Repository_MavenRepositoryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Repository_MavenRepositoryConfig clone() =>
+      Repository_MavenRepositoryConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Repository_MavenRepositoryConfig copyWith(
+          void Function(Repository_MavenRepositoryConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as Repository_MavenRepositoryConfig))
+          as Repository_MavenRepositoryConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Repository_MavenRepositoryConfig create() =>
+      Repository_MavenRepositoryConfig._();
+  Repository_MavenRepositoryConfig createEmptyInstance() => create();
+  static $pb.PbList<Repository_MavenRepositoryConfig> createRepeated() =>
+      $pb.PbList<Repository_MavenRepositoryConfig>();
+  @$core.pragma('dart2js:noInline')
+  static Repository_MavenRepositoryConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Repository_MavenRepositoryConfig>(
+          create);
+  static Repository_MavenRepositoryConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get allowSnapshotOverwrites => $_getBF(0);
+  @$pb.TagNumber(1)
+  set allowSnapshotOverwrites($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAllowSnapshotOverwrites() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAllowSnapshotOverwrites() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Repository_MavenRepositoryConfig_VersionPolicy get versionPolicy => $_getN(1);
+  @$pb.TagNumber(2)
+  set versionPolicy(Repository_MavenRepositoryConfig_VersionPolicy v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasVersionPolicy() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearVersionPolicy() => clearField(2);
+}
+
+enum Repository_FormatConfig { mavenConfig, notSet }
+
 class Repository extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Repository_FormatConfig>
+      _Repository_FormatConfigByTag = {
+    9: Repository_FormatConfig.mavenConfig,
+    0: Repository_FormatConfig.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -26,6 +131,7 @@ class Repository extends $pb.GeneratedMessage {
               ? ''
               : 'google.devtools.artifactregistry.v1beta2'),
       createEmptyInstance: create)
+    ..oo(0, [9])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -72,6 +178,12 @@ class Repository extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'kmsKeyName')
+    ..aOM<Repository_MavenRepositoryConfig>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mavenConfig',
+        subBuilder: Repository_MavenRepositoryConfig.create)
     ..hasRequiredFields = false;
 
   Repository._() : super();
@@ -83,6 +195,7 @@ class Repository extends $pb.GeneratedMessage {
     $0.Timestamp? createTime,
     $0.Timestamp? updateTime,
     $core.String? kmsKeyName,
+    Repository_MavenRepositoryConfig? mavenConfig,
   }) {
     final _result = create();
     if (name != null) {
@@ -105,6 +218,9 @@ class Repository extends $pb.GeneratedMessage {
     }
     if (kmsKeyName != null) {
       _result.kmsKeyName = kmsKeyName;
+    }
+    if (mavenConfig != null) {
+      _result.mavenConfig = mavenConfig;
     }
     return _result;
   }
@@ -133,6 +249,10 @@ class Repository extends $pb.GeneratedMessage {
   static Repository getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Repository>(create);
   static Repository? _defaultInstance;
+
+  Repository_FormatConfig whichFormatConfig() =>
+      _Repository_FormatConfigByTag[$_whichOneof(0)]!;
+  void clearFormatConfig() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -212,6 +332,20 @@ class Repository extends $pb.GeneratedMessage {
   $core.bool hasKmsKeyName() => $_has(6);
   @$pb.TagNumber(8)
   void clearKmsKeyName() => clearField(8);
+
+  @$pb.TagNumber(9)
+  Repository_MavenRepositoryConfig get mavenConfig => $_getN(7);
+  @$pb.TagNumber(9)
+  set mavenConfig(Repository_MavenRepositoryConfig v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasMavenConfig() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearMavenConfig() => clearField(9);
+  @$pb.TagNumber(9)
+  Repository_MavenRepositoryConfig ensureMavenConfig() => $_ensure(7);
 }
 
 class ListRepositoriesRequest extends $pb.GeneratedMessage {

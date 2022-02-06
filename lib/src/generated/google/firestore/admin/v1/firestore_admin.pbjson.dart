@@ -9,6 +9,88 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listDatabasesRequestDescriptor instead')
+const ListDatabasesRequest$json = const {
+  '1': 'ListDatabasesRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+  ],
+};
+
+/// Descriptor for `ListDatabasesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listDatabasesRequestDescriptor = $convert.base64Decode(
+    'ChRMaXN0RGF0YWJhc2VzUmVxdWVzdBJBCgZwYXJlbnQYASABKAlCKeBBAvpBIxIhZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUgZwYXJlbnQ=');
+@$core.Deprecated('Use listDatabasesResponseDescriptor instead')
+const ListDatabasesResponse$json = const {
+  '1': 'ListDatabasesResponse',
+  '2': const [
+    const {
+      '1': 'databases',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.Database',
+      '10': 'databases'
+    },
+  ],
+};
+
+/// Descriptor for `ListDatabasesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listDatabasesResponseDescriptor = $convert.base64Decode(
+    'ChVMaXN0RGF0YWJhc2VzUmVzcG9uc2USQQoJZGF0YWJhc2VzGAEgAygLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFzZVIJZGF0YWJhc2Vz');
+@$core.Deprecated('Use getDatabaseRequestDescriptor instead')
+const GetDatabaseRequest$json = const {
+  '1': 'GetDatabaseRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDatabaseRequestDescriptor = $convert.base64Decode(
+    'ChJHZXREYXRhYmFzZVJlcXVlc3QSPQoEbmFtZRgBIAEoCUIp4EEC+kEjCiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSBG5hbWU=');
+@$core.Deprecated('Use updateDatabaseRequestDescriptor instead')
+const UpdateDatabaseRequest$json = const {
+  '1': 'UpdateDatabaseRequest',
+  '2': const [
+    const {
+      '1': 'database',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.Database',
+      '8': const {},
+      '10': 'database'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateDatabaseRequestDescriptor = $convert.base64Decode(
+    'ChVVcGRhdGVEYXRhYmFzZVJlcXVlc3QSRAoIZGF0YWJhc2UYASABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNlQgPgQQJSCGRhdGFiYXNlEjsKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza1IKdXBkYXRlTWFzaw==');
+@$core.Deprecated('Use updateDatabaseMetadataDescriptor instead')
+const UpdateDatabaseMetadata$json = const {
+  '1': 'UpdateDatabaseMetadata',
+};
+
+/// Descriptor for `UpdateDatabaseMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateDatabaseMetadataDescriptor =
+    $convert.base64Decode('ChZVcGRhdGVEYXRhYmFzZU1ldGFkYXRh');
 @$core.Deprecated('Use createIndexRequestDescriptor instead')
 const CreateIndexRequest$json = const {
   '1': 'CreateIndexRequest',

@@ -32,12 +32,13 @@ const Hash_HashType$json = const {
   '2': const [
     const {'1': 'HASH_TYPE_UNSPECIFIED', '2': 0},
     const {'1': 'SHA256', '2': 1},
+    const {'1': 'MD5', '2': 2},
   ],
 };
 
 /// Descriptor for `Hash`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List hashDescriptor = $convert.base64Decode(
-    'CgRIYXNoEksKBHR5cGUYASABKA4yNy5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MWJldGEyLkhhc2guSGFzaFR5cGVSBHR5cGUSFAoFdmFsdWUYAiABKAxSBXZhbHVlIjEKCEhhc2hUeXBlEhkKFUhBU0hfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNIQTI1NhAB');
+    'CgRIYXNoEksKBHR5cGUYASABKA4yNy5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MWJldGEyLkhhc2guSGFzaFR5cGVSBHR5cGUSFAoFdmFsdWUYAiABKAxSBXZhbHVlIjoKCEhhc2hUeXBlEhkKFUhBU0hfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNIQTI1NhABEgcKA01ENRAC');
 @$core.Deprecated('Use fileDescriptor instead')
 const File$json = const {
   '1': 'File',

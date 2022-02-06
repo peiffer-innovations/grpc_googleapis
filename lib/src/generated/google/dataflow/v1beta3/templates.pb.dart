@@ -572,6 +572,36 @@ class FlexTemplateRuntimeEnvironment extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sdkContainerImage')
+    ..a<$core.int>(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'diskSizeGb',
+        $pb.PbFieldType.O3)
+    ..e<$4.AutoscalingAlgorithm>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'autoscalingAlgorithm',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $4.AutoscalingAlgorithm.AUTOSCALING_ALGORITHM_UNKNOWN,
+        valueOf: $4.AutoscalingAlgorithm.valueOf,
+        enumValues: $4.AutoscalingAlgorithm.values)
+    ..aOB(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dumpHeapOnOom')
+    ..aOS(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'saveHeapDumpsToGcsPath')
+    ..aOS(
+        24,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'launcherMachineType')
     ..hasRequiredFields = false;
 
   FlexTemplateRuntimeEnvironment._() : super();
@@ -594,6 +624,11 @@ class FlexTemplateRuntimeEnvironment extends $pb.GeneratedMessage {
     $4.FlexResourceSchedulingGoal? flexrsGoal,
     $core.String? stagingLocation,
     $core.String? sdkContainerImage,
+    $core.int? diskSizeGb,
+    $4.AutoscalingAlgorithm? autoscalingAlgorithm,
+    $core.bool? dumpHeapOnOom,
+    $core.String? saveHeapDumpsToGcsPath,
+    $core.String? launcherMachineType,
   }) {
     final _result = create();
     if (numWorkers != null) {
@@ -649,6 +684,21 @@ class FlexTemplateRuntimeEnvironment extends $pb.GeneratedMessage {
     }
     if (sdkContainerImage != null) {
       _result.sdkContainerImage = sdkContainerImage;
+    }
+    if (diskSizeGb != null) {
+      _result.diskSizeGb = diskSizeGb;
+    }
+    if (autoscalingAlgorithm != null) {
+      _result.autoscalingAlgorithm = autoscalingAlgorithm;
+    }
+    if (dumpHeapOnOom != null) {
+      _result.dumpHeapOnOom = dumpHeapOnOom;
+    }
+    if (saveHeapDumpsToGcsPath != null) {
+      _result.saveHeapDumpsToGcsPath = saveHeapDumpsToGcsPath;
+    }
+    if (launcherMachineType != null) {
+      _result.launcherMachineType = launcherMachineType;
     }
     return _result;
   }
@@ -880,6 +930,66 @@ class FlexTemplateRuntimeEnvironment extends $pb.GeneratedMessage {
   $core.bool hasSdkContainerImage() => $_has(17);
   @$pb.TagNumber(18)
   void clearSdkContainerImage() => clearField(18);
+
+  @$pb.TagNumber(20)
+  $core.int get diskSizeGb => $_getIZ(18);
+  @$pb.TagNumber(20)
+  set diskSizeGb($core.int v) {
+    $_setSignedInt32(18, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasDiskSizeGb() => $_has(18);
+  @$pb.TagNumber(20)
+  void clearDiskSizeGb() => clearField(20);
+
+  @$pb.TagNumber(21)
+  $4.AutoscalingAlgorithm get autoscalingAlgorithm => $_getN(19);
+  @$pb.TagNumber(21)
+  set autoscalingAlgorithm($4.AutoscalingAlgorithm v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasAutoscalingAlgorithm() => $_has(19);
+  @$pb.TagNumber(21)
+  void clearAutoscalingAlgorithm() => clearField(21);
+
+  @$pb.TagNumber(22)
+  $core.bool get dumpHeapOnOom => $_getBF(20);
+  @$pb.TagNumber(22)
+  set dumpHeapOnOom($core.bool v) {
+    $_setBool(20, v);
+  }
+
+  @$pb.TagNumber(22)
+  $core.bool hasDumpHeapOnOom() => $_has(20);
+  @$pb.TagNumber(22)
+  void clearDumpHeapOnOom() => clearField(22);
+
+  @$pb.TagNumber(23)
+  $core.String get saveHeapDumpsToGcsPath => $_getSZ(21);
+  @$pb.TagNumber(23)
+  set saveHeapDumpsToGcsPath($core.String v) {
+    $_setString(21, v);
+  }
+
+  @$pb.TagNumber(23)
+  $core.bool hasSaveHeapDumpsToGcsPath() => $_has(21);
+  @$pb.TagNumber(23)
+  void clearSaveHeapDumpsToGcsPath() => clearField(23);
+
+  @$pb.TagNumber(24)
+  $core.String get launcherMachineType => $_getSZ(22);
+  @$pb.TagNumber(24)
+  set launcherMachineType($core.String v) {
+    $_setString(22, v);
+  }
+
+  @$pb.TagNumber(24)
+  $core.bool hasLauncherMachineType() => $_has(22);
+  @$pb.TagNumber(24)
+  void clearLauncherMachineType() => clearField(24);
 }
 
 class LaunchFlexTemplateRequest extends $pb.GeneratedMessage {

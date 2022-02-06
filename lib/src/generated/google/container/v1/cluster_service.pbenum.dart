@@ -9,6 +9,109 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class PrivateIPv6GoogleAccess extends $pb.ProtobufEnum {
+  static const PrivateIPv6GoogleAccess PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED =
+      PrivateIPv6GoogleAccess._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED');
+  static const PrivateIPv6GoogleAccess PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED =
+      PrivateIPv6GoogleAccess._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED');
+  static const PrivateIPv6GoogleAccess PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE =
+      PrivateIPv6GoogleAccess._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE');
+  static const PrivateIPv6GoogleAccess
+      PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL = PrivateIPv6GoogleAccess._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL');
+
+  static const $core.List<PrivateIPv6GoogleAccess> values =
+      <PrivateIPv6GoogleAccess>[
+    PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED,
+    PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED,
+    PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE,
+    PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL,
+  ];
+
+  static final $core.Map<$core.int, PrivateIPv6GoogleAccess> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PrivateIPv6GoogleAccess? valueOf($core.int value) => _byValue[value];
+
+  const PrivateIPv6GoogleAccess._($core.int v, $core.String n) : super(v, n);
+}
+
+class DatapathProvider extends $pb.ProtobufEnum {
+  static const DatapathProvider DATAPATH_PROVIDER_UNSPECIFIED =
+      DatapathProvider._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DATAPATH_PROVIDER_UNSPECIFIED');
+  static const DatapathProvider LEGACY_DATAPATH = DatapathProvider._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'LEGACY_DATAPATH');
+  static const DatapathProvider ADVANCED_DATAPATH = DatapathProvider._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ADVANCED_DATAPATH');
+
+  static const $core.List<DatapathProvider> values = <DatapathProvider>[
+    DATAPATH_PROVIDER_UNSPECIFIED,
+    LEGACY_DATAPATH,
+    ADVANCED_DATAPATH,
+  ];
+
+  static final $core.Map<$core.int, DatapathProvider> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DatapathProvider? valueOf($core.int value) => _byValue[value];
+
+  const DatapathProvider._($core.int v, $core.String n) : super(v, n);
+}
+
+class UpgradeResourceType extends $pb.ProtobufEnum {
+  static const UpgradeResourceType UPGRADE_RESOURCE_TYPE_UNSPECIFIED =
+      UpgradeResourceType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPGRADE_RESOURCE_TYPE_UNSPECIFIED');
+  static const UpgradeResourceType MASTER = UpgradeResourceType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MASTER');
+  static const UpgradeResourceType NODE_POOL = UpgradeResourceType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NODE_POOL');
+
+  static const $core.List<UpgradeResourceType> values = <UpgradeResourceType>[
+    UPGRADE_RESOURCE_TYPE_UNSPECIFIED,
+    MASTER,
+    NODE_POOL,
+  ];
+
+  static final $core.Map<$core.int, UpgradeResourceType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static UpgradeResourceType? valueOf($core.int value) => _byValue[value];
+
+  const UpgradeResourceType._($core.int v, $core.String n) : super(v, n);
+}
+
 class SandboxConfig_Type extends $pb.ProtobufEnum {
   static const SandboxConfig_Type UNSPECIFIED = SandboxConfig_Type._(
       0,
@@ -479,6 +582,78 @@ class NodePool_Status extends $pb.ProtobufEnum {
   const NodePool_Status._($core.int v, $core.String n) : super(v, n);
 }
 
+class MaintenanceExclusionOptions_Scope extends $pb.ProtobufEnum {
+  static const MaintenanceExclusionOptions_Scope NO_UPGRADES =
+      MaintenanceExclusionOptions_Scope._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_UPGRADES');
+  static const MaintenanceExclusionOptions_Scope NO_MINOR_UPGRADES =
+      MaintenanceExclusionOptions_Scope._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_MINOR_UPGRADES');
+  static const MaintenanceExclusionOptions_Scope NO_MINOR_OR_NODE_UPGRADES =
+      MaintenanceExclusionOptions_Scope._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_MINOR_OR_NODE_UPGRADES');
+
+  static const $core.List<MaintenanceExclusionOptions_Scope> values =
+      <MaintenanceExclusionOptions_Scope>[
+    NO_UPGRADES,
+    NO_MINOR_UPGRADES,
+    NO_MINOR_OR_NODE_UPGRADES,
+  ];
+
+  static final $core.Map<$core.int, MaintenanceExclusionOptions_Scope>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MaintenanceExclusionOptions_Scope? valueOf($core.int value) =>
+      _byValue[value];
+
+  const MaintenanceExclusionOptions_Scope._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class ClusterAutoscaling_AutoscalingProfile extends $pb.ProtobufEnum {
+  static const ClusterAutoscaling_AutoscalingProfile PROFILE_UNSPECIFIED =
+      ClusterAutoscaling_AutoscalingProfile._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PROFILE_UNSPECIFIED');
+  static const ClusterAutoscaling_AutoscalingProfile OPTIMIZE_UTILIZATION =
+      ClusterAutoscaling_AutoscalingProfile._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OPTIMIZE_UTILIZATION');
+  static const ClusterAutoscaling_AutoscalingProfile BALANCED =
+      ClusterAutoscaling_AutoscalingProfile._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BALANCED');
+
+  static const $core.List<ClusterAutoscaling_AutoscalingProfile> values =
+      <ClusterAutoscaling_AutoscalingProfile>[
+    PROFILE_UNSPECIFIED,
+    OPTIMIZE_UTILIZATION,
+    BALANCED,
+  ];
+
+  static final $core.Map<$core.int, ClusterAutoscaling_AutoscalingProfile>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ClusterAutoscaling_AutoscalingProfile? valueOf($core.int value) =>
+      _byValue[value];
+
+  const ClusterAutoscaling_AutoscalingProfile._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class WorkloadMetadataConfig_Mode extends $pb.ProtobufEnum {
   static const WorkloadMetadataConfig_Mode MODE_UNSPECIFIED =
       WorkloadMetadataConfig_Mode._(
@@ -548,6 +723,11 @@ class StatusCondition_Code extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'CLOUD_KMS_KEY_ERROR');
+  static const StatusCondition_Code CA_EXPIRING = StatusCondition_Code._(
+      9,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CA_EXPIRING');
 
   static const $core.List<StatusCondition_Code> values = <StatusCondition_Code>[
     UNKNOWN,
@@ -556,6 +736,7 @@ class StatusCondition_Code extends $pb.ProtobufEnum {
     GCE_QUOTA_EXCEEDED,
     SET_BY_OPERATOR,
     CLOUD_KMS_KEY_ERROR,
+    CA_EXPIRING,
   ];
 
   static final $core.Map<$core.int, StatusCondition_Code> _byValue =
@@ -600,6 +781,60 @@ class ReleaseChannel_Channel extends $pb.ProtobufEnum {
   static ReleaseChannel_Channel? valueOf($core.int value) => _byValue[value];
 
   const ReleaseChannel_Channel._($core.int v, $core.String n) : super(v, n);
+}
+
+class DNSConfig_Provider extends $pb.ProtobufEnum {
+  static const DNSConfig_Provider PROVIDER_UNSPECIFIED = DNSConfig_Provider._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROVIDER_UNSPECIFIED');
+  static const DNSConfig_Provider PLATFORM_DEFAULT = DNSConfig_Provider._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PLATFORM_DEFAULT');
+  static const DNSConfig_Provider CLOUD_DNS = DNSConfig_Provider._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CLOUD_DNS');
+
+  static const $core.List<DNSConfig_Provider> values = <DNSConfig_Provider>[
+    PROVIDER_UNSPECIFIED,
+    PLATFORM_DEFAULT,
+    CLOUD_DNS,
+  ];
+
+  static final $core.Map<$core.int, DNSConfig_Provider> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DNSConfig_Provider? valueOf($core.int value) => _byValue[value];
+
+  const DNSConfig_Provider._($core.int v, $core.String n) : super(v, n);
+}
+
+class DNSConfig_DNSScope extends $pb.ProtobufEnum {
+  static const DNSConfig_DNSScope DNS_SCOPE_UNSPECIFIED = DNSConfig_DNSScope._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DNS_SCOPE_UNSPECIFIED');
+  static const DNSConfig_DNSScope VPC_SCOPE = DNSConfig_DNSScope._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'VPC_SCOPE');
+
+  static const $core.List<DNSConfig_DNSScope> values = <DNSConfig_DNSScope>[
+    DNS_SCOPE_UNSPECIFIED,
+    VPC_SCOPE,
+  ];
+
+  static final $core.Map<$core.int, DNSConfig_DNSScope> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DNSConfig_DNSScope? valueOf($core.int value) => _byValue[value];
+
+  const DNSConfig_DNSScope._($core.int v, $core.String n) : super(v, n);
 }
 
 class DatabaseEncryption_State extends $pb.ProtobufEnum {
@@ -680,5 +915,113 @@ class UsableSubnetworkSecondaryRange_Status extends $pb.ProtobufEnum {
       _byValue[value];
 
   const UsableSubnetworkSecondaryRange_Status._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class NotificationConfig_EventType extends $pb.ProtobufEnum {
+  static const NotificationConfig_EventType EVENT_TYPE_UNSPECIFIED =
+      NotificationConfig_EventType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVENT_TYPE_UNSPECIFIED');
+  static const NotificationConfig_EventType UPGRADE_AVAILABLE_EVENT =
+      NotificationConfig_EventType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPGRADE_AVAILABLE_EVENT');
+  static const NotificationConfig_EventType UPGRADE_EVENT =
+      NotificationConfig_EventType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPGRADE_EVENT');
+  static const NotificationConfig_EventType SECURITY_BULLETIN_EVENT =
+      NotificationConfig_EventType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SECURITY_BULLETIN_EVENT');
+
+  static const $core.List<NotificationConfig_EventType> values =
+      <NotificationConfig_EventType>[
+    EVENT_TYPE_UNSPECIFIED,
+    UPGRADE_AVAILABLE_EVENT,
+    UPGRADE_EVENT,
+    SECURITY_BULLETIN_EVENT,
+  ];
+
+  static final $core.Map<$core.int, NotificationConfig_EventType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static NotificationConfig_EventType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const NotificationConfig_EventType._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class LoggingComponentConfig_Component extends $pb.ProtobufEnum {
+  static const LoggingComponentConfig_Component COMPONENT_UNSPECIFIED =
+      LoggingComponentConfig_Component._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COMPONENT_UNSPECIFIED');
+  static const LoggingComponentConfig_Component SYSTEM_COMPONENTS =
+      LoggingComponentConfig_Component._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SYSTEM_COMPONENTS');
+  static const LoggingComponentConfig_Component WORKLOADS =
+      LoggingComponentConfig_Component._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WORKLOADS');
+
+  static const $core.List<LoggingComponentConfig_Component> values =
+      <LoggingComponentConfig_Component>[
+    COMPONENT_UNSPECIFIED,
+    SYSTEM_COMPONENTS,
+    WORKLOADS,
+  ];
+
+  static final $core.Map<$core.int, LoggingComponentConfig_Component> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static LoggingComponentConfig_Component? valueOf($core.int value) =>
+      _byValue[value];
+
+  const LoggingComponentConfig_Component._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class MonitoringComponentConfig_Component extends $pb.ProtobufEnum {
+  static const MonitoringComponentConfig_Component COMPONENT_UNSPECIFIED =
+      MonitoringComponentConfig_Component._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COMPONENT_UNSPECIFIED');
+  static const MonitoringComponentConfig_Component SYSTEM_COMPONENTS =
+      MonitoringComponentConfig_Component._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SYSTEM_COMPONENTS');
+
+  static const $core.List<MonitoringComponentConfig_Component> values =
+      <MonitoringComponentConfig_Component>[
+    COMPONENT_UNSPECIFIED,
+    SYSTEM_COMPONENTS,
+  ];
+
+  static final $core.Map<$core.int, MonitoringComponentConfig_Component>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MonitoringComponentConfig_Component? valueOf($core.int value) =>
+      _byValue[value];
+
+  const MonitoringComponentConfig_Component._($core.int v, $core.String n)
       : super(v, n);
 }

@@ -81,6 +81,15 @@ const Backup$json = const {
       '8': const {},
       '10': 'encryptionInfo'
     },
+    const {
+      '1': 'database_dialect',
+      '3': 10,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.admin.database.v1.DatabaseDialect',
+      '8': const {},
+      '10': 'databaseDialect'
+    },
   ],
   '4': const [Backup_State$json],
   '7': const {},
@@ -98,7 +107,7 @@ const Backup_State$json = const {
 
 /// Descriptor for `Backup`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List backupDescriptor = $convert.base64Decode(
-    'CgZCYWNrdXASQAoIZGF0YWJhc2UYAiABKAlCJPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZVIIZGF0YWJhc2USPQoMdmVyc2lvbl90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFILdmVyc2lvblRpbWUSOwoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpleHBpcmVUaW1lEhIKBG5hbWUYASABKAlSBG5hbWUSQAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSIgoKc2l6ZV9ieXRlcxgFIAEoA0ID4EEDUglzaXplQnl0ZXMSSQoFc3RhdGUYBiABKA4yLi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXAuU3RhdGVCA+BBA1IFc3RhdGUSXAoVcmVmZXJlbmNpbmdfZGF0YWJhc2VzGAcgAygJQifgQQP6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSFHJlZmVyZW5jaW5nRGF0YWJhc2VzEl4KD2VuY3J5cHRpb25faW5mbxgIIAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25JbmZvQgPgQQNSDmVuY3J5cHRpb25JbmZvIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOlzqQVkKHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwEjhwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vYmFja3Vwcy97YmFja3VwfQ==');
+    'CgZCYWNrdXASQAoIZGF0YWJhc2UYAiABKAlCJPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZVIIZGF0YWJhc2USPQoMdmVyc2lvbl90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFILdmVyc2lvblRpbWUSOwoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpleHBpcmVUaW1lEhIKBG5hbWUYASABKAlSBG5hbWUSQAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSIgoKc2l6ZV9ieXRlcxgFIAEoA0ID4EEDUglzaXplQnl0ZXMSSQoFc3RhdGUYBiABKA4yLi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXAuU3RhdGVCA+BBA1IFc3RhdGUSXAoVcmVmZXJlbmNpbmdfZGF0YWJhc2VzGAcgAygJQifgQQP6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSFHJlZmVyZW5jaW5nRGF0YWJhc2VzEl4KD2VuY3J5cHRpb25faW5mbxgIIAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25JbmZvQgPgQQNSDmVuY3J5cHRpb25JbmZvEmEKEGRhdGFiYXNlX2RpYWxlY3QYCiABKA4yMS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZURpYWxlY3RCA+BBA1IPZGF0YWJhc2VEaWFsZWN0IjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOlzqQVkKHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwEjhwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vYmFja3Vwcy97YmFja3VwfQ==');
 @$core.Deprecated('Use createBackupRequestDescriptor instead')
 const CreateBackupRequest$json = const {
   '1': 'CreateBackupRequest',

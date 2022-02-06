@@ -9,9 +9,347 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'database.pb.dart' as $5;
+import '../../../protobuf/field_mask.pb.dart' as $6;
 import 'index.pb.dart' as $3;
 import 'field.pb.dart' as $4;
-import '../../../protobuf/field_mask.pb.dart' as $5;
+
+class ListDatabasesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListDatabasesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..hasRequiredFields = false;
+
+  ListDatabasesRequest._() : super();
+  factory ListDatabasesRequest({
+    $core.String? parent,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    return _result;
+  }
+  factory ListDatabasesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatabasesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListDatabasesRequest clone() =>
+      ListDatabasesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListDatabasesRequest copyWith(void Function(ListDatabasesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListDatabasesRequest))
+          as ListDatabasesRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListDatabasesRequest create() => ListDatabasesRequest._();
+  ListDatabasesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListDatabasesRequest> createRepeated() =>
+      $pb.PbList<ListDatabasesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListDatabasesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDatabasesRequest>(create);
+  static ListDatabasesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+}
+
+class ListDatabasesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListDatabasesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<$5.Database>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databases',
+        $pb.PbFieldType.PM,
+        subBuilder: $5.Database.create)
+    ..hasRequiredFields = false;
+
+  ListDatabasesResponse._() : super();
+  factory ListDatabasesResponse({
+    $core.Iterable<$5.Database>? databases,
+  }) {
+    final _result = create();
+    if (databases != null) {
+      _result.databases.addAll(databases);
+    }
+    return _result;
+  }
+  factory ListDatabasesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatabasesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListDatabasesResponse clone() =>
+      ListDatabasesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListDatabasesResponse copyWith(
+          void Function(ListDatabasesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListDatabasesResponse))
+          as ListDatabasesResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListDatabasesResponse create() => ListDatabasesResponse._();
+  ListDatabasesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListDatabasesResponse> createRepeated() =>
+      $pb.PbList<ListDatabasesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListDatabasesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDatabasesResponse>(create);
+  static ListDatabasesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$5.Database> get databases => $_getList(0);
+}
+
+class GetDatabaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetDatabaseRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetDatabaseRequest._() : super();
+  factory GetDatabaseRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetDatabaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDatabaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetDatabaseRequest clone() => GetDatabaseRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetDatabaseRequest copyWith(void Function(GetDatabaseRequest) updates) =>
+      super.copyWith((message) => updates(message as GetDatabaseRequest))
+          as GetDatabaseRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetDatabaseRequest create() => GetDatabaseRequest._();
+  GetDatabaseRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDatabaseRequest> createRepeated() =>
+      $pb.PbList<GetDatabaseRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDatabaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDatabaseRequest>(create);
+  static GetDatabaseRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class UpdateDatabaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateDatabaseRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOM<$5.Database>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'database',
+        subBuilder: $5.Database.create)
+    ..aOM<$6.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $6.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateDatabaseRequest._() : super();
+  factory UpdateDatabaseRequest({
+    $5.Database? database,
+    $6.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (database != null) {
+      _result.database = database;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateDatabaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatabaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseRequest clone() =>
+      UpdateDatabaseRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseRequest copyWith(
+          void Function(UpdateDatabaseRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateDatabaseRequest))
+          as UpdateDatabaseRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseRequest create() => UpdateDatabaseRequest._();
+  UpdateDatabaseRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateDatabaseRequest> createRepeated() =>
+      $pb.PbList<UpdateDatabaseRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDatabaseRequest>(create);
+  static UpdateDatabaseRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $5.Database get database => $_getN(0);
+  @$pb.TagNumber(1)
+  set database($5.Database v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDatabase() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDatabase() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Database ensureDatabase() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($6.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class UpdateDatabaseMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateDatabaseMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  UpdateDatabaseMetadata._() : super();
+  factory UpdateDatabaseMetadata() => create();
+  factory UpdateDatabaseMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatabaseMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseMetadata clone() =>
+      UpdateDatabaseMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseMetadata copyWith(
+          void Function(UpdateDatabaseMetadata) updates) =>
+      super.copyWith((message) => updates(message as UpdateDatabaseMetadata))
+          as UpdateDatabaseMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseMetadata create() => UpdateDatabaseMetadata._();
+  UpdateDatabaseMetadata createEmptyInstance() => create();
+  static $pb.PbList<UpdateDatabaseMetadata> createRepeated() =>
+      $pb.PbList<UpdateDatabaseMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDatabaseMetadata>(create);
+  static UpdateDatabaseMetadata? _defaultInstance;
+}
 
 class CreateIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -466,18 +804,18 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
             ? ''
             : 'field',
         subBuilder: $4.Field.create)
-    ..aOM<$5.FieldMask>(
+    ..aOM<$6.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFieldRequest._() : super();
   factory UpdateFieldRequest({
     $4.Field? field_1,
-    $5.FieldMask? updateMask,
+    $6.FieldMask? updateMask,
   }) {
     final _result = create();
     if (field_1 != null) {
@@ -530,9 +868,9 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
   $4.Field ensureField_1() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $5.FieldMask get updateMask => $_getN(1);
+  $6.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($5.FieldMask v) {
+  set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
@@ -541,7 +879,7 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $5.FieldMask ensureUpdateMask() => $_ensure(1);
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class GetFieldRequest extends $pb.GeneratedMessage {

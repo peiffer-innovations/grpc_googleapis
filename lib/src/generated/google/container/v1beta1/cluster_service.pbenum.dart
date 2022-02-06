@@ -646,6 +646,71 @@ class NodePool_Status extends $pb.ProtobufEnum {
   const NodePool_Status._($core.int v, $core.String n) : super(v, n);
 }
 
+class NodePool_PlacementPolicy_Type extends $pb.ProtobufEnum {
+  static const NodePool_PlacementPolicy_Type TYPE_UNSPECIFIED =
+      NodePool_PlacementPolicy_Type._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TYPE_UNSPECIFIED');
+  static const NodePool_PlacementPolicy_Type COMPACT =
+      NodePool_PlacementPolicy_Type._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COMPACT');
+
+  static const $core.List<NodePool_PlacementPolicy_Type> values =
+      <NodePool_PlacementPolicy_Type>[
+    TYPE_UNSPECIFIED,
+    COMPACT,
+  ];
+
+  static final $core.Map<$core.int, NodePool_PlacementPolicy_Type> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static NodePool_PlacementPolicy_Type? valueOf($core.int value) =>
+      _byValue[value];
+
+  const NodePool_PlacementPolicy_Type._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class MaintenanceExclusionOptions_Scope extends $pb.ProtobufEnum {
+  static const MaintenanceExclusionOptions_Scope NO_UPGRADES =
+      MaintenanceExclusionOptions_Scope._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_UPGRADES');
+  static const MaintenanceExclusionOptions_Scope NO_MINOR_UPGRADES =
+      MaintenanceExclusionOptions_Scope._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_MINOR_UPGRADES');
+  static const MaintenanceExclusionOptions_Scope NO_MINOR_OR_NODE_UPGRADES =
+      MaintenanceExclusionOptions_Scope._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NO_MINOR_OR_NODE_UPGRADES');
+
+  static const $core.List<MaintenanceExclusionOptions_Scope> values =
+      <MaintenanceExclusionOptions_Scope>[
+    NO_UPGRADES,
+    NO_MINOR_UPGRADES,
+    NO_MINOR_OR_NODE_UPGRADES,
+  ];
+
+  static final $core.Map<$core.int, MaintenanceExclusionOptions_Scope>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MaintenanceExclusionOptions_Scope? valueOf($core.int value) =>
+      _byValue[value];
+
+  const MaintenanceExclusionOptions_Scope._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class ClusterAutoscaling_AutoscalingProfile extends $pb.ProtobufEnum {
   static const ClusterAutoscaling_AutoscalingProfile PROFILE_UNSPECIFIED =
       ClusterAutoscaling_AutoscalingProfile._(
@@ -1025,6 +1090,49 @@ class ReleaseChannel_Channel extends $pb.ProtobufEnum {
   static ReleaseChannel_Channel? valueOf($core.int value) => _byValue[value];
 
   const ReleaseChannel_Channel._($core.int v, $core.String n) : super(v, n);
+}
+
+class NotificationConfig_EventType extends $pb.ProtobufEnum {
+  static const NotificationConfig_EventType EVENT_TYPE_UNSPECIFIED =
+      NotificationConfig_EventType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVENT_TYPE_UNSPECIFIED');
+  static const NotificationConfig_EventType UPGRADE_AVAILABLE_EVENT =
+      NotificationConfig_EventType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPGRADE_AVAILABLE_EVENT');
+  static const NotificationConfig_EventType UPGRADE_EVENT =
+      NotificationConfig_EventType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPGRADE_EVENT');
+  static const NotificationConfig_EventType SECURITY_BULLETIN_EVENT =
+      NotificationConfig_EventType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SECURITY_BULLETIN_EVENT');
+
+  static const $core.List<NotificationConfig_EventType> values =
+      <NotificationConfig_EventType>[
+    EVENT_TYPE_UNSPECIFIED,
+    UPGRADE_AVAILABLE_EVENT,
+    UPGRADE_EVENT,
+    SECURITY_BULLETIN_EVENT,
+  ];
+
+  static final $core.Map<$core.int, NotificationConfig_EventType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static NotificationConfig_EventType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const NotificationConfig_EventType._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class LoggingComponentConfig_Component extends $pb.ProtobufEnum {

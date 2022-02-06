@@ -69,6 +69,59 @@ class PredefinedObjectAcl extends $pb.ProtobufEnum {
   const PredefinedObjectAcl._($core.int v, $core.String n) : super(v, n);
 }
 
+class PredefinedBucketAcl extends $pb.ProtobufEnum {
+  static const PredefinedBucketAcl PREDEFINED_BUCKET_ACL_UNSPECIFIED =
+      PredefinedBucketAcl._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PREDEFINED_BUCKET_ACL_UNSPECIFIED');
+  static const PredefinedBucketAcl BUCKET_ACL_AUTHENTICATED_READ =
+      PredefinedBucketAcl._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BUCKET_ACL_AUTHENTICATED_READ');
+  static const PredefinedBucketAcl BUCKET_ACL_PRIVATE = PredefinedBucketAcl._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'BUCKET_ACL_PRIVATE');
+  static const PredefinedBucketAcl BUCKET_ACL_PROJECT_PRIVATE =
+      PredefinedBucketAcl._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BUCKET_ACL_PROJECT_PRIVATE');
+  static const PredefinedBucketAcl BUCKET_ACL_PUBLIC_READ =
+      PredefinedBucketAcl._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BUCKET_ACL_PUBLIC_READ');
+  static const PredefinedBucketAcl BUCKET_ACL_PUBLIC_READ_WRITE =
+      PredefinedBucketAcl._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BUCKET_ACL_PUBLIC_READ_WRITE');
+
+  static const $core.List<PredefinedBucketAcl> values = <PredefinedBucketAcl>[
+    PREDEFINED_BUCKET_ACL_UNSPECIFIED,
+    BUCKET_ACL_AUTHENTICATED_READ,
+    BUCKET_ACL_PRIVATE,
+    BUCKET_ACL_PROJECT_PRIVATE,
+    BUCKET_ACL_PUBLIC_READ,
+    BUCKET_ACL_PUBLIC_READ_WRITE,
+  ];
+
+  static final $core.Map<$core.int, PredefinedBucketAcl> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PredefinedBucketAcl? valueOf($core.int value) => _byValue[value];
+
+  const PredefinedBucketAcl._($core.int v, $core.String n) : super(v, n);
+}
+
 class ServiceConstants_Values extends $pb.ProtobufEnum {
   static const ServiceConstants_Values VALUES_UNSPECIFIED =
       ServiceConstants_Values._(

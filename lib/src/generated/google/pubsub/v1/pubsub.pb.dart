@@ -1661,6 +1661,11 @@ class Subscription extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'detached')
+    ..aOB(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableExactlyOnceDelivery')
     ..aOM<$3.Duration>(
         17,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1684,6 +1689,7 @@ class Subscription extends $pb.GeneratedMessage {
     DeadLetterPolicy? deadLetterPolicy,
     RetryPolicy? retryPolicy,
     $core.bool? detached,
+    $core.bool? enableExactlyOnceDelivery,
     $3.Duration? topicMessageRetentionDuration,
   }) {
     final _result = create();
@@ -1725,6 +1731,9 @@ class Subscription extends $pb.GeneratedMessage {
     }
     if (detached != null) {
       _result.detached = detached;
+    }
+    if (enableExactlyOnceDelivery != null) {
+      _result.enableExactlyOnceDelivery = enableExactlyOnceDelivery;
     }
     if (topicMessageRetentionDuration != null) {
       _result.topicMessageRetentionDuration = topicMessageRetentionDuration;
@@ -1915,19 +1924,31 @@ class Subscription extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   void clearDetached() => clearField(15);
 
+  @$pb.TagNumber(16)
+  $core.bool get enableExactlyOnceDelivery => $_getBF(13);
+  @$pb.TagNumber(16)
+  set enableExactlyOnceDelivery($core.bool v) {
+    $_setBool(13, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasEnableExactlyOnceDelivery() => $_has(13);
+  @$pb.TagNumber(16)
+  void clearEnableExactlyOnceDelivery() => clearField(16);
+
   @$pb.TagNumber(17)
-  $3.Duration get topicMessageRetentionDuration => $_getN(13);
+  $3.Duration get topicMessageRetentionDuration => $_getN(14);
   @$pb.TagNumber(17)
   set topicMessageRetentionDuration($3.Duration v) {
     setField(17, v);
   }
 
   @$pb.TagNumber(17)
-  $core.bool hasTopicMessageRetentionDuration() => $_has(13);
+  $core.bool hasTopicMessageRetentionDuration() => $_has(14);
   @$pb.TagNumber(17)
   void clearTopicMessageRetentionDuration() => clearField(17);
   @$pb.TagNumber(17)
-  $3.Duration ensureTopicMessageRetentionDuration() => $_ensure(13);
+  $3.Duration ensureTopicMessageRetentionDuration() => $_ensure(14);
 }
 
 class RetryPolicy extends $pb.GeneratedMessage {
@@ -3571,6 +3592,180 @@ class StreamingPullRequest extends $pb.GeneratedMessage {
   void clearMaxOutstandingBytes() => clearField(8);
 }
 
+class StreamingPullResponse_AcknowledgeConfirmation
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StreamingPullResponse.AcknowledgeConfirmation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ackIds')
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'invalidAckIds')
+    ..pPS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'unorderedAckIds')
+    ..hasRequiredFields = false;
+
+  StreamingPullResponse_AcknowledgeConfirmation._() : super();
+  factory StreamingPullResponse_AcknowledgeConfirmation({
+    $core.Iterable<$core.String>? ackIds,
+    $core.Iterable<$core.String>? invalidAckIds,
+    $core.Iterable<$core.String>? unorderedAckIds,
+  }) {
+    final _result = create();
+    if (ackIds != null) {
+      _result.ackIds.addAll(ackIds);
+    }
+    if (invalidAckIds != null) {
+      _result.invalidAckIds.addAll(invalidAckIds);
+    }
+    if (unorderedAckIds != null) {
+      _result.unorderedAckIds.addAll(unorderedAckIds);
+    }
+    return _result;
+  }
+  factory StreamingPullResponse_AcknowledgeConfirmation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingPullResponse_AcknowledgeConfirmation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamingPullResponse_AcknowledgeConfirmation clone() =>
+      StreamingPullResponse_AcknowledgeConfirmation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamingPullResponse_AcknowledgeConfirmation copyWith(
+          void Function(StreamingPullResponse_AcknowledgeConfirmation)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as StreamingPullResponse_AcknowledgeConfirmation))
+          as StreamingPullResponse_AcknowledgeConfirmation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamingPullResponse_AcknowledgeConfirmation create() =>
+      StreamingPullResponse_AcknowledgeConfirmation._();
+  StreamingPullResponse_AcknowledgeConfirmation createEmptyInstance() =>
+      create();
+  static $pb.PbList<StreamingPullResponse_AcknowledgeConfirmation>
+      createRepeated() =>
+          $pb.PbList<StreamingPullResponse_AcknowledgeConfirmation>();
+  @$core.pragma('dart2js:noInline')
+  static StreamingPullResponse_AcknowledgeConfirmation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          StreamingPullResponse_AcknowledgeConfirmation>(create);
+  static StreamingPullResponse_AcknowledgeConfirmation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get ackIds => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get invalidAckIds => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get unorderedAckIds => $_getList(2);
+}
+
+class StreamingPullResponse_ModifyAckDeadlineConfirmation
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StreamingPullResponse.ModifyAckDeadlineConfirmation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ackIds')
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'invalidAckIds')
+    ..hasRequiredFields = false;
+
+  StreamingPullResponse_ModifyAckDeadlineConfirmation._() : super();
+  factory StreamingPullResponse_ModifyAckDeadlineConfirmation({
+    $core.Iterable<$core.String>? ackIds,
+    $core.Iterable<$core.String>? invalidAckIds,
+  }) {
+    final _result = create();
+    if (ackIds != null) {
+      _result.ackIds.addAll(ackIds);
+    }
+    if (invalidAckIds != null) {
+      _result.invalidAckIds.addAll(invalidAckIds);
+    }
+    return _result;
+  }
+  factory StreamingPullResponse_ModifyAckDeadlineConfirmation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingPullResponse_ModifyAckDeadlineConfirmation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamingPullResponse_ModifyAckDeadlineConfirmation clone() =>
+      StreamingPullResponse_ModifyAckDeadlineConfirmation()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamingPullResponse_ModifyAckDeadlineConfirmation copyWith(
+          void Function(StreamingPullResponse_ModifyAckDeadlineConfirmation)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as StreamingPullResponse_ModifyAckDeadlineConfirmation))
+          as StreamingPullResponse_ModifyAckDeadlineConfirmation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamingPullResponse_ModifyAckDeadlineConfirmation create() =>
+      StreamingPullResponse_ModifyAckDeadlineConfirmation._();
+  StreamingPullResponse_ModifyAckDeadlineConfirmation createEmptyInstance() =>
+      create();
+  static $pb.PbList<StreamingPullResponse_ModifyAckDeadlineConfirmation>
+      createRepeated() =>
+          $pb.PbList<StreamingPullResponse_ModifyAckDeadlineConfirmation>();
+  @$core.pragma('dart2js:noInline')
+  static StreamingPullResponse_ModifyAckDeadlineConfirmation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          StreamingPullResponse_ModifyAckDeadlineConfirmation>(create);
+  static StreamingPullResponse_ModifyAckDeadlineConfirmation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get ackIds => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get invalidAckIds => $_getList(1);
+}
+
 class StreamingPullResponse_SubscriptionProperties
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -3583,6 +3778,11 @@ class StreamingPullResponse_SubscriptionProperties
               : 'google.pubsub.v1'),
       createEmptyInstance: create)
     ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'exactlyOnceDeliveryEnabled')
+    ..aOB(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
@@ -3591,9 +3791,13 @@ class StreamingPullResponse_SubscriptionProperties
 
   StreamingPullResponse_SubscriptionProperties._() : super();
   factory StreamingPullResponse_SubscriptionProperties({
+    $core.bool? exactlyOnceDeliveryEnabled,
     $core.bool? messageOrderingEnabled,
   }) {
     final _result = create();
+    if (exactlyOnceDeliveryEnabled != null) {
+      _result.exactlyOnceDeliveryEnabled = exactlyOnceDeliveryEnabled;
+    }
     if (messageOrderingEnabled != null) {
       _result.messageOrderingEnabled = messageOrderingEnabled;
     }
@@ -3635,15 +3839,27 @@ class StreamingPullResponse_SubscriptionProperties
           StreamingPullResponse_SubscriptionProperties>(create);
   static StreamingPullResponse_SubscriptionProperties? _defaultInstance;
 
-  @$pb.TagNumber(2)
-  $core.bool get messageOrderingEnabled => $_getBF(0);
-  @$pb.TagNumber(2)
-  set messageOrderingEnabled($core.bool v) {
+  @$pb.TagNumber(1)
+  $core.bool get exactlyOnceDeliveryEnabled => $_getBF(0);
+  @$pb.TagNumber(1)
+  set exactlyOnceDeliveryEnabled($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(1)
+  $core.bool hasExactlyOnceDeliveryEnabled() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearExactlyOnceDeliveryEnabled() => clearField(1);
+
   @$pb.TagNumber(2)
-  $core.bool hasMessageOrderingEnabled() => $_has(0);
+  $core.bool get messageOrderingEnabled => $_getBF(1);
+  @$pb.TagNumber(2)
+  set messageOrderingEnabled($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMessageOrderingEnabled() => $_has(1);
   @$pb.TagNumber(2)
   void clearMessageOrderingEnabled() => clearField(2);
 }
@@ -3665,6 +3881,18 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
             : 'receivedMessages',
         $pb.PbFieldType.PM,
         subBuilder: ReceivedMessage.create)
+    ..aOM<StreamingPullResponse_AcknowledgeConfirmation>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acknowlegeConfirmation',
+        subBuilder: StreamingPullResponse_AcknowledgeConfirmation.create)
+    ..aOM<StreamingPullResponse_ModifyAckDeadlineConfirmation>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'modifyAckDeadlineConfirmation',
+        subBuilder: StreamingPullResponse_ModifyAckDeadlineConfirmation.create)
     ..aOM<StreamingPullResponse_SubscriptionProperties>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3676,11 +3904,20 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
   StreamingPullResponse._() : super();
   factory StreamingPullResponse({
     $core.Iterable<ReceivedMessage>? receivedMessages,
+    StreamingPullResponse_AcknowledgeConfirmation? acknowlegeConfirmation,
+    StreamingPullResponse_ModifyAckDeadlineConfirmation?
+        modifyAckDeadlineConfirmation,
     StreamingPullResponse_SubscriptionProperties? subscriptionProperties,
   }) {
     final _result = create();
     if (receivedMessages != null) {
       _result.receivedMessages.addAll(receivedMessages);
+    }
+    if (acknowlegeConfirmation != null) {
+      _result.acknowlegeConfirmation = acknowlegeConfirmation;
+    }
+    if (modifyAckDeadlineConfirmation != null) {
+      _result.modifyAckDeadlineConfirmation = modifyAckDeadlineConfirmation;
     }
     if (subscriptionProperties != null) {
       _result.subscriptionProperties = subscriptionProperties;
@@ -3719,21 +3956,54 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<ReceivedMessage> get receivedMessages => $_getList(0);
 
+  @$pb.TagNumber(2)
+  StreamingPullResponse_AcknowledgeConfirmation get acknowlegeConfirmation =>
+      $_getN(1);
+  @$pb.TagNumber(2)
+  set acknowlegeConfirmation(StreamingPullResponse_AcknowledgeConfirmation v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAcknowlegeConfirmation() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAcknowlegeConfirmation() => clearField(2);
+  @$pb.TagNumber(2)
+  StreamingPullResponse_AcknowledgeConfirmation
+      ensureAcknowlegeConfirmation() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  StreamingPullResponse_ModifyAckDeadlineConfirmation
+      get modifyAckDeadlineConfirmation => $_getN(2);
+  @$pb.TagNumber(3)
+  set modifyAckDeadlineConfirmation(
+      StreamingPullResponse_ModifyAckDeadlineConfirmation v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasModifyAckDeadlineConfirmation() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearModifyAckDeadlineConfirmation() => clearField(3);
+  @$pb.TagNumber(3)
+  StreamingPullResponse_ModifyAckDeadlineConfirmation
+      ensureModifyAckDeadlineConfirmation() => $_ensure(2);
+
   @$pb.TagNumber(4)
   StreamingPullResponse_SubscriptionProperties get subscriptionProperties =>
-      $_getN(1);
+      $_getN(3);
   @$pb.TagNumber(4)
   set subscriptionProperties(StreamingPullResponse_SubscriptionProperties v) {
     setField(4, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasSubscriptionProperties() => $_has(1);
+  $core.bool hasSubscriptionProperties() => $_has(3);
   @$pb.TagNumber(4)
   void clearSubscriptionProperties() => clearField(4);
   @$pb.TagNumber(4)
   StreamingPullResponse_SubscriptionProperties ensureSubscriptionProperties() =>
-      $_ensure(1);
+      $_ensure(3);
 }
 
 class CreateSnapshotRequest extends $pb.GeneratedMessage {

@@ -260,6 +260,36 @@ const FlexTemplateRuntimeEnvironment$json = const {
       '5': 9,
       '10': 'sdkContainerImage'
     },
+    const {'1': 'disk_size_gb', '3': 20, '4': 1, '5': 5, '10': 'diskSizeGb'},
+    const {
+      '1': 'autoscaling_algorithm',
+      '3': 21,
+      '4': 1,
+      '5': 14,
+      '6': '.google.dataflow.v1beta3.AutoscalingAlgorithm',
+      '10': 'autoscalingAlgorithm'
+    },
+    const {
+      '1': 'dump_heap_on_oom',
+      '3': 22,
+      '4': 1,
+      '5': 8,
+      '10': 'dumpHeapOnOom'
+    },
+    const {
+      '1': 'save_heap_dumps_to_gcs_path',
+      '3': 23,
+      '4': 1,
+      '5': 9,
+      '10': 'saveHeapDumpsToGcsPath'
+    },
+    const {
+      '1': 'launcher_machine_type',
+      '3': 24,
+      '4': 1,
+      '5': 9,
+      '10': 'launcherMachineType'
+    },
   ],
   '3': const [FlexTemplateRuntimeEnvironment_AdditionalUserLabelsEntry$json],
 };
@@ -277,7 +307,7 @@ const FlexTemplateRuntimeEnvironment_AdditionalUserLabelsEntry$json = const {
 /// Descriptor for `FlexTemplateRuntimeEnvironment`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List flexTemplateRuntimeEnvironmentDescriptor =
     $convert.base64Decode(
-        'Ch5GbGV4VGVtcGxhdGVSdW50aW1lRW52aXJvbm1lbnQSHwoLbnVtX3dvcmtlcnMYASABKAVSCm51bVdvcmtlcnMSHwoLbWF4X3dvcmtlcnMYAiABKAVSCm1heFdvcmtlcnMSEgoEem9uZRgDIAEoCVIEem9uZRIyChVzZXJ2aWNlX2FjY291bnRfZW1haWwYBCABKAlSE3NlcnZpY2VBY2NvdW50RW1haWwSIwoNdGVtcF9sb2NhdGlvbhgFIAEoCVIMdGVtcExvY2F0aW9uEiEKDG1hY2hpbmVfdHlwZRgGIAEoCVILbWFjaGluZVR5cGUSNQoWYWRkaXRpb25hbF9leHBlcmltZW50cxgHIAMoCVIVYWRkaXRpb25hbEV4cGVyaW1lbnRzEhgKB25ldHdvcmsYCCABKAlSB25ldHdvcmsSHgoKc3VibmV0d29yaxgJIAEoCVIKc3VibmV0d29yaxKHAQoWYWRkaXRpb25hbF91c2VyX2xhYmVscxgKIAMoCzJRLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhUZW1wbGF0ZVJ1bnRpbWVFbnZpcm9ubWVudC5BZGRpdGlvbmFsVXNlckxhYmVsc0VudHJ5UhRhZGRpdGlvbmFsVXNlckxhYmVscxIgCgxrbXNfa2V5X25hbWUYCyABKAlSCmttc0tleU5hbWUSYAoQaXBfY29uZmlndXJhdGlvbhgMIAEoDjI1Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtlcklQQWRkcmVzc0NvbmZpZ3VyYXRpb25SD2lwQ29uZmlndXJhdGlvbhIjCg13b3JrZXJfcmVnaW9uGA0gASgJUgx3b3JrZXJSZWdpb24SHwoLd29ya2VyX3pvbmUYDiABKAlSCndvcmtlclpvbmUSNgoXZW5hYmxlX3N0cmVhbWluZ19lbmdpbmUYDyABKAhSFWVuYWJsZVN0cmVhbWluZ0VuZ2luZRJUCgtmbGV4cnNfZ29hbBgQIAEoDjIzLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhSZXNvdXJjZVNjaGVkdWxpbmdHb2FsUgpmbGV4cnNHb2FsEikKEHN0YWdpbmdfbG9jYXRpb24YESABKAlSD3N0YWdpbmdMb2NhdGlvbhIuChNzZGtfY29udGFpbmVyX2ltYWdlGBIgASgJUhFzZGtDb250YWluZXJJbWFnZRpHChlBZGRpdGlvbmFsVXNlckxhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
+        'Ch5GbGV4VGVtcGxhdGVSdW50aW1lRW52aXJvbm1lbnQSHwoLbnVtX3dvcmtlcnMYASABKAVSCm51bVdvcmtlcnMSHwoLbWF4X3dvcmtlcnMYAiABKAVSCm1heFdvcmtlcnMSEgoEem9uZRgDIAEoCVIEem9uZRIyChVzZXJ2aWNlX2FjY291bnRfZW1haWwYBCABKAlSE3NlcnZpY2VBY2NvdW50RW1haWwSIwoNdGVtcF9sb2NhdGlvbhgFIAEoCVIMdGVtcExvY2F0aW9uEiEKDG1hY2hpbmVfdHlwZRgGIAEoCVILbWFjaGluZVR5cGUSNQoWYWRkaXRpb25hbF9leHBlcmltZW50cxgHIAMoCVIVYWRkaXRpb25hbEV4cGVyaW1lbnRzEhgKB25ldHdvcmsYCCABKAlSB25ldHdvcmsSHgoKc3VibmV0d29yaxgJIAEoCVIKc3VibmV0d29yaxKHAQoWYWRkaXRpb25hbF91c2VyX2xhYmVscxgKIAMoCzJRLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhUZW1wbGF0ZVJ1bnRpbWVFbnZpcm9ubWVudC5BZGRpdGlvbmFsVXNlckxhYmVsc0VudHJ5UhRhZGRpdGlvbmFsVXNlckxhYmVscxIgCgxrbXNfa2V5X25hbWUYCyABKAlSCmttc0tleU5hbWUSYAoQaXBfY29uZmlndXJhdGlvbhgMIAEoDjI1Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtlcklQQWRkcmVzc0NvbmZpZ3VyYXRpb25SD2lwQ29uZmlndXJhdGlvbhIjCg13b3JrZXJfcmVnaW9uGA0gASgJUgx3b3JrZXJSZWdpb24SHwoLd29ya2VyX3pvbmUYDiABKAlSCndvcmtlclpvbmUSNgoXZW5hYmxlX3N0cmVhbWluZ19lbmdpbmUYDyABKAhSFWVuYWJsZVN0cmVhbWluZ0VuZ2luZRJUCgtmbGV4cnNfZ29hbBgQIAEoDjIzLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhSZXNvdXJjZVNjaGVkdWxpbmdHb2FsUgpmbGV4cnNHb2FsEikKEHN0YWdpbmdfbG9jYXRpb24YESABKAlSD3N0YWdpbmdMb2NhdGlvbhIuChNzZGtfY29udGFpbmVyX2ltYWdlGBIgASgJUhFzZGtDb250YWluZXJJbWFnZRIgCgxkaXNrX3NpemVfZ2IYFCABKAVSCmRpc2tTaXplR2ISYgoVYXV0b3NjYWxpbmdfYWxnb3JpdGhtGBUgASgOMi0uZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuQXV0b3NjYWxpbmdBbGdvcml0aG1SFGF1dG9zY2FsaW5nQWxnb3JpdGhtEicKEGR1bXBfaGVhcF9vbl9vb20YFiABKAhSDWR1bXBIZWFwT25Pb20SOwobc2F2ZV9oZWFwX2R1bXBzX3RvX2djc19wYXRoGBcgASgJUhZzYXZlSGVhcER1bXBzVG9HY3NQYXRoEjIKFWxhdW5jaGVyX21hY2hpbmVfdHlwZRgYIAEoCVITbGF1bmNoZXJNYWNoaW5lVHlwZRpHChlBZGRpdGlvbmFsVXNlckxhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use launchFlexTemplateRequestDescriptor instead')
 const LaunchFlexTemplateRequest$json = const {
   '1': 'LaunchFlexTemplateRequest',

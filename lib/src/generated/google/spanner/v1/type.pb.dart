@@ -44,6 +44,15 @@ class Type extends $pb.GeneratedMessage {
             ? ''
             : 'structType',
         subBuilder: StructType.create)
+    ..e<TypeAnnotationCode>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'typeAnnotation',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TypeAnnotationCode.TYPE_ANNOTATION_CODE_UNSPECIFIED,
+        valueOf: TypeAnnotationCode.valueOf,
+        enumValues: TypeAnnotationCode.values)
     ..hasRequiredFields = false;
 
   Type._() : super();
@@ -51,6 +60,7 @@ class Type extends $pb.GeneratedMessage {
     TypeCode? code,
     Type? arrayElementType,
     StructType? structType,
+    TypeAnnotationCode? typeAnnotation,
   }) {
     final _result = create();
     if (code != null) {
@@ -61,6 +71,9 @@ class Type extends $pb.GeneratedMessage {
     }
     if (structType != null) {
       _result.structType = structType;
+    }
+    if (typeAnnotation != null) {
+      _result.typeAnnotation = typeAnnotation;
     }
     return _result;
   }
@@ -129,6 +142,18 @@ class Type extends $pb.GeneratedMessage {
   void clearStructType() => clearField(3);
   @$pb.TagNumber(3)
   StructType ensureStructType() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  TypeAnnotationCode get typeAnnotation => $_getN(3);
+  @$pb.TagNumber(4)
+  set typeAnnotation(TypeAnnotationCode v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasTypeAnnotation() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTypeAnnotation() => clearField(4);
 }
 
 class StructType_Field extends $pb.GeneratedMessage {

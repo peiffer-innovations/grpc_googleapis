@@ -1,3 +1,6 @@
+export '../src/generated/google/firestore/admin/v1/database.pb.dart';
+export '../src/generated/google/firestore/admin/v1/database.pbenum.dart';
+export '../src/generated/google/firestore/admin/v1/database.pbjson.dart';
 export '../src/generated/google/firestore/admin/v1/field.pb.dart';
 export '../src/generated/google/firestore/admin/v1/field.pbenum.dart';
 export '../src/generated/google/firestore/admin/v1/field.pbjson.dart';

@@ -126,6 +126,15 @@ const Database$json = const {
       '8': const {},
       '10': 'defaultLeader'
     },
+    const {
+      '1': 'database_dialect',
+      '3': 10,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.admin.database.v1.DatabaseDialect',
+      '8': const {},
+      '10': 'databaseDialect'
+    },
   ],
   '4': const [Database_State$json],
   '7': const {},
@@ -144,7 +153,7 @@ const Database_State$json = const {
 
 /// Descriptor for `Database`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List databaseDescriptor = $convert.base64Decode(
-    'CghEYXRhYmFzZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSSwoFc3RhdGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZS5TdGF0ZUID4EEDUgVzdGF0ZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJVCgxyZXN0b3JlX2luZm8YBCABKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5SZXN0b3JlSW5mb0ID4EEDUgtyZXN0b3JlSW5mbxJkChFlbmNyeXB0aW9uX2NvbmZpZxgFIAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25Db25maWdCA+BBA1IQZW5jcnlwdGlvbkNvbmZpZxJeCg9lbmNyeXB0aW9uX2luZm8YCCADKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5FbmNyeXB0aW9uSW5mb0ID4EEDUg5lbmNyeXB0aW9uSW5mbxI9Chh2ZXJzaW9uX3JldGVudGlvbl9wZXJpb2QYBiABKAlCA+BBA1IWdmVyc2lvblJldGVudGlvblBlcmlvZBJTChVlYXJsaWVzdF92ZXJzaW9uX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSE2VhcmxpZXN0VmVyc2lvblRpbWUSKgoOZGVmYXVsdF9sZWFkZXIYCSABKAlCA+BBA1INZGVmYXVsdExlYWRlciJNCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIUChBSRUFEWV9PUFRJTUlaSU5HEAM6YupBXwofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9');
+    'CghEYXRhYmFzZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSSwoFc3RhdGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZS5TdGF0ZUID4EEDUgVzdGF0ZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJVCgxyZXN0b3JlX2luZm8YBCABKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5SZXN0b3JlSW5mb0ID4EEDUgtyZXN0b3JlSW5mbxJkChFlbmNyeXB0aW9uX2NvbmZpZxgFIAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25Db25maWdCA+BBA1IQZW5jcnlwdGlvbkNvbmZpZxJeCg9lbmNyeXB0aW9uX2luZm8YCCADKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5FbmNyeXB0aW9uSW5mb0ID4EEDUg5lbmNyeXB0aW9uSW5mbxI9Chh2ZXJzaW9uX3JldGVudGlvbl9wZXJpb2QYBiABKAlCA+BBA1IWdmVyc2lvblJldGVudGlvblBlcmlvZBJTChVlYXJsaWVzdF92ZXJzaW9uX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSE2VhcmxpZXN0VmVyc2lvblRpbWUSKgoOZGVmYXVsdF9sZWFkZXIYCSABKAlCA+BBA1INZGVmYXVsdExlYWRlchJhChBkYXRhYmFzZV9kaWFsZWN0GAogASgOMjEuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2VEaWFsZWN0QgPgQQNSD2RhdGFiYXNlRGlhbGVjdCJNCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIUChBSRUFEWV9PUFRJTUlaSU5HEAM6YupBXwofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9');
 @$core.Deprecated('Use listDatabasesRequestDescriptor instead')
 const ListDatabasesRequest$json = const {
   '1': 'ListDatabasesRequest',
@@ -227,12 +236,21 @@ const CreateDatabaseRequest$json = const {
       '8': const {},
       '10': 'encryptionConfig'
     },
+    const {
+      '1': 'database_dialect',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.admin.database.v1.DatabaseDialect',
+      '8': const {},
+      '10': 'databaseDialect'
+    },
   ],
 };
 
 /// Descriptor for `CreateDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createDatabaseRequestDescriptor = $convert.base64Decode(
-    'ChVDcmVhdGVEYXRhYmFzZVJlcXVlc3QSPwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VSBnBhcmVudBIuChBjcmVhdGVfc3RhdGVtZW50GAIgASgJQgPgQQJSD2NyZWF0ZVN0YXRlbWVudBIuChBleHRyYV9zdGF0ZW1lbnRzGAMgAygJQgPgQQFSD2V4dHJhU3RhdGVtZW50cxJkChFlbmNyeXB0aW9uX2NvbmZpZxgEIAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25Db25maWdCA+BBAVIQZW5jcnlwdGlvbkNvbmZpZw==');
+    'ChVDcmVhdGVEYXRhYmFzZVJlcXVlc3QSPwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VSBnBhcmVudBIuChBjcmVhdGVfc3RhdGVtZW50GAIgASgJQgPgQQJSD2NyZWF0ZVN0YXRlbWVudBIuChBleHRyYV9zdGF0ZW1lbnRzGAMgAygJQgPgQQFSD2V4dHJhU3RhdGVtZW50cxJkChFlbmNyeXB0aW9uX2NvbmZpZxgEIAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25Db25maWdCA+BBAVIQZW5jcnlwdGlvbkNvbmZpZxJhChBkYXRhYmFzZV9kaWFsZWN0GAUgASgOMjEuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2VEaWFsZWN0QgPgQQFSD2RhdGFiYXNlRGlhbGVjdA==');
 @$core.Deprecated('Use createDatabaseMetadataDescriptor instead')
 const CreateDatabaseMetadata$json = const {
   '1': 'CreateDatabaseMetadata',

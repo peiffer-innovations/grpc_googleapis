@@ -453,6 +453,13 @@ const Subscription$json = const {
     },
     const {'1': 'detached', '3': 15, '4': 1, '5': 8, '10': 'detached'},
     const {
+      '1': 'enable_exactly_once_delivery',
+      '3': 16,
+      '4': 1,
+      '5': 8,
+      '10': 'enableExactlyOnceDelivery'
+    },
+    const {
       '1': 'topic_message_retention_duration',
       '3': 17,
       '4': 1,
@@ -478,7 +485,7 @@ const Subscription_LabelsEntry$json = const {
 
 /// Descriptor for `Subscription`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List subscriptionDescriptor = $convert.base64Decode(
-    'CgxTdWJzY3JpcHRpb24SFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjkKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSPQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWdSCnB1c2hDb25maWcSMAoUYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAVSEmFja0RlYWRsaW5lU2Vjb25kcxIyChVyZXRhaW5fYWNrZWRfbWVzc2FnZXMYByABKAhSE3JldGFpbkFja2VkTWVzc2FnZXMSVwoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SGG1lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhJCCgZsYWJlbHMYCSADKAsyKi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbi5MYWJlbHNFbnRyeVIGbGFiZWxzEjYKF2VuYWJsZV9tZXNzYWdlX29yZGVyaW5nGAogASgIUhVlbmFibGVNZXNzYWdlT3JkZXJpbmcSTwoRZXhwaXJhdGlvbl9wb2xpY3kYCyABKAsyIi5nb29nbGUucHVic3ViLnYxLkV4cGlyYXRpb25Qb2xpY3lSEGV4cGlyYXRpb25Qb2xpY3kSFgoGZmlsdGVyGAwgASgJUgZmaWx0ZXISUAoSZGVhZF9sZXR0ZXJfcG9saWN5GA0gASgLMiIuZ29vZ2xlLnB1YnN1Yi52MS5EZWFkTGV0dGVyUG9saWN5UhBkZWFkTGV0dGVyUG9saWN5EkAKDHJldHJ5X3BvbGljeRgOIAEoCzIdLmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3lSC3JldHJ5UG9saWN5EhoKCGRldGFjaGVkGA8gASgIUghkZXRhY2hlZBJnCiB0b3BpY19tZXNzYWdlX3JldGVudGlvbl9kdXJhdGlvbhgRIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDUh10b3BpY01lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbho5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBOljqQVUKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SL3Byb2plY3RzL3twcm9qZWN0fS9zdWJzY3JpcHRpb25zL3tzdWJzY3JpcHRpb259');
+    'CgxTdWJzY3JpcHRpb24SFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjkKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSPQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWdSCnB1c2hDb25maWcSMAoUYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAVSEmFja0RlYWRsaW5lU2Vjb25kcxIyChVyZXRhaW5fYWNrZWRfbWVzc2FnZXMYByABKAhSE3JldGFpbkFja2VkTWVzc2FnZXMSVwoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SGG1lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhJCCgZsYWJlbHMYCSADKAsyKi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbi5MYWJlbHNFbnRyeVIGbGFiZWxzEjYKF2VuYWJsZV9tZXNzYWdlX29yZGVyaW5nGAogASgIUhVlbmFibGVNZXNzYWdlT3JkZXJpbmcSTwoRZXhwaXJhdGlvbl9wb2xpY3kYCyABKAsyIi5nb29nbGUucHVic3ViLnYxLkV4cGlyYXRpb25Qb2xpY3lSEGV4cGlyYXRpb25Qb2xpY3kSFgoGZmlsdGVyGAwgASgJUgZmaWx0ZXISUAoSZGVhZF9sZXR0ZXJfcG9saWN5GA0gASgLMiIuZ29vZ2xlLnB1YnN1Yi52MS5EZWFkTGV0dGVyUG9saWN5UhBkZWFkTGV0dGVyUG9saWN5EkAKDHJldHJ5X3BvbGljeRgOIAEoCzIdLmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3lSC3JldHJ5UG9saWN5EhoKCGRldGFjaGVkGA8gASgIUghkZXRhY2hlZBI/ChxlbmFibGVfZXhhY3RseV9vbmNlX2RlbGl2ZXJ5GBAgASgIUhllbmFibGVFeGFjdGx5T25jZURlbGl2ZXJ5EmcKIHRvcGljX21lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQNSHXRvcGljTWVzc2FnZVJldGVudGlvbkR1cmF0aW9uGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE6WOpBVQoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvcHJvamVjdHMve3Byb2plY3R9L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbn0=');
 @$core.Deprecated('Use retryPolicyDescriptor instead')
 const RetryPolicy$json = const {
   '1': 'RetryPolicy',
@@ -954,6 +961,23 @@ const StreamingPullResponse$json = const {
       '10': 'receivedMessages'
     },
     const {
+      '1': 'acknowlege_confirmation',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.StreamingPullResponse.AcknowledgeConfirmation',
+      '10': 'acknowlegeConfirmation'
+    },
+    const {
+      '1': 'modify_ack_deadline_confirmation',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.pubsub.v1.StreamingPullResponse.ModifyAckDeadlineConfirmation',
+      '10': 'modifyAckDeadlineConfirmation'
+    },
+    const {
       '1': 'subscription_properties',
       '3': 4,
       '4': 1,
@@ -962,13 +986,78 @@ const StreamingPullResponse$json = const {
       '10': 'subscriptionProperties'
     },
   ],
-  '3': const [StreamingPullResponse_SubscriptionProperties$json],
+  '3': const [
+    StreamingPullResponse_AcknowledgeConfirmation$json,
+    StreamingPullResponse_ModifyAckDeadlineConfirmation$json,
+    StreamingPullResponse_SubscriptionProperties$json
+  ],
+};
+
+@$core.Deprecated('Use streamingPullResponseDescriptor instead')
+const StreamingPullResponse_AcknowledgeConfirmation$json = const {
+  '1': 'AcknowledgeConfirmation',
+  '2': const [
+    const {
+      '1': 'ack_ids',
+      '3': 1,
+      '4': 3,
+      '5': 9,
+      '8': const {'1': 1},
+      '10': 'ackIds',
+    },
+    const {
+      '1': 'invalid_ack_ids',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '8': const {'1': 1},
+      '10': 'invalidAckIds',
+    },
+    const {
+      '1': 'unordered_ack_ids',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '8': const {'1': 1},
+      '10': 'unorderedAckIds',
+    },
+  ],
+};
+
+@$core.Deprecated('Use streamingPullResponseDescriptor instead')
+const StreamingPullResponse_ModifyAckDeadlineConfirmation$json = const {
+  '1': 'ModifyAckDeadlineConfirmation',
+  '2': const [
+    const {
+      '1': 'ack_ids',
+      '3': 1,
+      '4': 3,
+      '5': 9,
+      '8': const {'1': 1},
+      '10': 'ackIds',
+    },
+    const {
+      '1': 'invalid_ack_ids',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '8': const {'1': 1},
+      '10': 'invalidAckIds',
+    },
+  ],
 };
 
 @$core.Deprecated('Use streamingPullResponseDescriptor instead')
 const StreamingPullResponse_SubscriptionProperties$json = const {
   '1': 'SubscriptionProperties',
   '2': const [
+    const {
+      '1': 'exactly_once_delivery_enabled',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'exactlyOnceDeliveryEnabled'
+    },
     const {
       '1': 'message_ordering_enabled',
       '3': 2,
@@ -981,7 +1070,7 @@ const StreamingPullResponse_SubscriptionProperties$json = const {
 
 /// Descriptor for `StreamingPullResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List streamingPullResponseDescriptor = $convert.base64Decode(
-    'ChVTdHJlYW1pbmdQdWxsUmVzcG9uc2USTgoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsyIS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZVIQcmVjZWl2ZWRNZXNzYWdlcxJ3ChdzdWJzY3JpcHRpb25fcHJvcGVydGllcxgEIAEoCzI+Lmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlLlN1YnNjcmlwdGlvblByb3BlcnRpZXNSFnN1YnNjcmlwdGlvblByb3BlcnRpZXMaUgoWU3Vic2NyaXB0aW9uUHJvcGVydGllcxI4ChhtZXNzYWdlX29yZGVyaW5nX2VuYWJsZWQYAiABKAhSFm1lc3NhZ2VPcmRlcmluZ0VuYWJsZWQ=');
+    'ChVTdHJlYW1pbmdQdWxsUmVzcG9uc2USTgoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsyIS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZVIQcmVjZWl2ZWRNZXNzYWdlcxJ4ChdhY2tub3dsZWdlX2NvbmZpcm1hdGlvbhgCIAEoCzI/Lmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlLkFja25vd2xlZGdlQ29uZmlybWF0aW9uUhZhY2tub3dsZWdlQ29uZmlybWF0aW9uEo4BCiBtb2RpZnlfYWNrX2RlYWRsaW5lX2NvbmZpcm1hdGlvbhgDIAEoCzJFLmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlLk1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uUh1tb2RpZnlBY2tEZWFkbGluZUNvbmZpcm1hdGlvbhJ3ChdzdWJzY3JpcHRpb25fcHJvcGVydGllcxgEIAEoCzI+Lmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlLlN1YnNjcmlwdGlvblByb3BlcnRpZXNSFnN1YnNjcmlwdGlvblByb3BlcnRpZXMakgEKF0Fja25vd2xlZGdlQ29uZmlybWF0aW9uEhsKB2Fja19pZHMYASADKAlCAggBUgZhY2tJZHMSKgoPaW52YWxpZF9hY2tfaWRzGAIgAygJQgIIAVINaW52YWxpZEFja0lkcxIuChF1bm9yZGVyZWRfYWNrX2lkcxgDIAMoCUICCAFSD3Vub3JkZXJlZEFja0lkcxpoCh1Nb2RpZnlBY2tEZWFkbGluZUNvbmZpcm1hdGlvbhIbCgdhY2tfaWRzGAEgAygJQgIIAVIGYWNrSWRzEioKD2ludmFsaWRfYWNrX2lkcxgCIAMoCUICCAFSDWludmFsaWRBY2tJZHMalQEKFlN1YnNjcmlwdGlvblByb3BlcnRpZXMSQQodZXhhY3RseV9vbmNlX2RlbGl2ZXJ5X2VuYWJsZWQYASABKAhSGmV4YWN0bHlPbmNlRGVsaXZlcnlFbmFibGVkEjgKGG1lc3NhZ2Vfb3JkZXJpbmdfZW5hYmxlZBgCIAEoCFIWbWVzc2FnZU9yZGVyaW5nRW5hYmxlZA==');
 @$core.Deprecated('Use createSnapshotRequestDescriptor instead')
 const CreateSnapshotRequest$json = const {
   '1': 'CreateSnapshotRequest',

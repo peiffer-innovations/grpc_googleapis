@@ -13,6 +13,16 @@ import 'dart:typed_data' as $typed_data;
 const Repository$json = const {
   '1': 'Repository',
   '2': const [
+    const {
+      '1': 'maven_config',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.devtools.artifactregistry.v1beta2.Repository.MavenRepositoryConfig',
+      '9': 0,
+      '10': 'mavenConfig'
+    },
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {
       '1': 'format',
@@ -49,9 +59,49 @@ const Repository$json = const {
     },
     const {'1': 'kms_key_name', '3': 8, '4': 1, '5': 9, '10': 'kmsKeyName'},
   ],
-  '3': const [Repository_LabelsEntry$json],
+  '3': const [
+    Repository_MavenRepositoryConfig$json,
+    Repository_LabelsEntry$json
+  ],
   '4': const [Repository_Format$json],
   '7': const {},
+  '8': const [
+    const {'1': 'format_config'},
+  ],
+};
+
+@$core.Deprecated('Use repositoryDescriptor instead')
+const Repository_MavenRepositoryConfig$json = const {
+  '1': 'MavenRepositoryConfig',
+  '2': const [
+    const {
+      '1': 'allow_snapshot_overwrites',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'allowSnapshotOverwrites'
+    },
+    const {
+      '1': 'version_policy',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.devtools.artifactregistry.v1beta2.Repository.MavenRepositoryConfig.VersionPolicy',
+      '10': 'versionPolicy'
+    },
+  ],
+  '4': const [Repository_MavenRepositoryConfig_VersionPolicy$json],
+};
+
+@$core.Deprecated('Use repositoryDescriptor instead')
+const Repository_MavenRepositoryConfig_VersionPolicy$json = const {
+  '1': 'VersionPolicy',
+  '2': const [
+    const {'1': 'VERSION_POLICY_UNSPECIFIED', '2': 0},
+    const {'1': 'RELEASE', '2': 1},
+    const {'1': 'SNAPSHOT', '2': 2},
+  ],
 };
 
 @$core.Deprecated('Use repositoryDescriptor instead')
@@ -70,17 +120,29 @@ const Repository_Format$json = const {
   '2': const [
     const {'1': 'FORMAT_UNSPECIFIED', '2': 0},
     const {'1': 'DOCKER', '2': 1},
+    const {'1': 'MAVEN', '2': 2},
+    const {'1': 'NPM', '2': 3},
+    const {'1': 'APT', '2': 5},
+    const {'1': 'YUM', '2': 6},
+    const {'1': 'PYTHON', '2': 8},
   ],
 };
 
 /// Descriptor for `Repository`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List repositoryDescriptor = $convert.base64Decode(
-    'CgpSZXBvc2l0b3J5EhIKBG5hbWUYASABKAlSBG5hbWUSUwoGZm9ybWF0GAIgASgOMjsuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMi5SZXBvc2l0b3J5LkZvcm1hdFIGZm9ybWF0EiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhJYCgZsYWJlbHMYBCADKAsyQC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MWJldGEyLlJlcG9zaXRvcnkuTGFiZWxzRW50cnlSBmxhYmVscxI7CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSOwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEiAKDGttc19rZXlfbmFtZRgIIAEoCVIKa21zS2V5TmFtZRo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIiwKBkZvcm1hdBIWChJGT1JNQVRfVU5TUEVDSUZJRUQQABIKCgZET0NLRVIQATpy6kFvCiphcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkSQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9');
+    'CgpSZXBvc2l0b3J5Em8KDG1hdmVuX2NvbmZpZxgJIAEoCzJKLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxYmV0YTIuUmVwb3NpdG9yeS5NYXZlblJlcG9zaXRvcnlDb25maWdIAFILbWF2ZW5Db25maWcSEgoEbmFtZRgBIAEoCVIEbmFtZRJTCgZmb3JtYXQYAiABKA4yOy5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MWJldGEyLlJlcG9zaXRvcnkuRm9ybWF0UgZmb3JtYXQSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uElgKBmxhYmVscxgEIAMoCzJALmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxYmV0YTIuUmVwb3NpdG9yeS5MYWJlbHNFbnRyeVIGbGFiZWxzEjsKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRI7Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCnVwZGF0ZVRpbWUSIAoMa21zX2tleV9uYW1lGAggASgJUgprbXNLZXlOYW1lGqACChVNYXZlblJlcG9zaXRvcnlDb25maWcSOgoZYWxsb3dfc25hcHNob3Rfb3ZlcndyaXRlcxgBIAEoCFIXYWxsb3dTbmFwc2hvdE92ZXJ3cml0ZXMSfwoOdmVyc2lvbl9wb2xpY3kYAiABKA4yWC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MWJldGEyLlJlcG9zaXRvcnkuTWF2ZW5SZXBvc2l0b3J5Q29uZmlnLlZlcnNpb25Qb2xpY3lSDXZlcnNpb25Qb2xpY3kiSgoNVmVyc2lvblBvbGljeRIeChpWRVJTSU9OX1BPTElDWV9VTlNQRUNJRklFRBAAEgsKB1JFTEVBU0UQARIMCghTTkFQU0hPVBACGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiXgoGRm9ybWF0EhYKEkZPUk1BVF9VTlNQRUNJRklFRBAAEgoKBkRPQ0tFUhABEgkKBU1BVkVOEAISBwoDTlBNEAMSBwoDQVBUEAUSBwoDWVVNEAYSCgoGUFlUSE9OEAg6cupBbwoqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fUIPCg1mb3JtYXRfY29uZmln');
 @$core.Deprecated('Use listRepositoriesRequestDescriptor instead')
 const ListRepositoriesRequest$json = const {
   '1': 'ListRepositoriesRequest',
   '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -89,7 +151,7 @@ const ListRepositoriesRequest$json = const {
 /// Descriptor for `ListRepositoriesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listRepositoriesRequestDescriptor =
     $convert.base64Decode(
-        'ChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIWCgZwYXJlbnQYASABKAlSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbg==');
+        'ChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBJKCgZwYXJlbnQYASABKAlCMuBBAvpBLBIqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5UgZwYXJlbnQSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4=');
 @$core.Deprecated('Use listRepositoriesResponseDescriptor instead')
 const ListRepositoriesResponse$json = const {
   '1': 'ListRepositoriesResponse',
@@ -120,18 +182,25 @@ final $typed_data.Uint8List listRepositoriesResponseDescriptor =
 const GetRepositoryRequest$json = const {
   '1': 'GetRepositoryRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `GetRepositoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getRepositoryRequestDescriptor = $convert
-    .base64Decode('ChRHZXRSZXBvc2l0b3J5UmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1l');
+final $typed_data.Uint8List getRepositoryRequestDescriptor = $convert.base64Decode(
+    'ChRHZXRSZXBvc2l0b3J5UmVxdWVzdBJGCgRuYW1lGAEgASgJQjLgQQL6QSwKKmFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeVIEbmFtZQ==');
 @$core.Deprecated('Use createRepositoryRequestDescriptor instead')
 const CreateRepositoryRequest$json = const {
   '1': 'CreateRepositoryRequest',
   '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
     const {'1': 'repository_id', '3': 2, '4': 1, '5': 9, '10': 'repositoryId'},
     const {
       '1': 'repository',
@@ -147,7 +216,7 @@ const CreateRepositoryRequest$json = const {
 /// Descriptor for `CreateRepositoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createRepositoryRequestDescriptor =
     $convert.base64Decode(
-        'ChdDcmVhdGVSZXBvc2l0b3J5UmVxdWVzdBIWCgZwYXJlbnQYASABKAlSBnBhcmVudBIjCg1yZXBvc2l0b3J5X2lkGAIgASgJUgxyZXBvc2l0b3J5SWQSVAoKcmVwb3NpdG9yeRgDIAEoCzI0Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxYmV0YTIuUmVwb3NpdG9yeVIKcmVwb3NpdG9yeQ==');
+        'ChdDcmVhdGVSZXBvc2l0b3J5UmVxdWVzdBJKCgZwYXJlbnQYASABKAlCMuBBAvpBLBIqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5UgZwYXJlbnQSIwoNcmVwb3NpdG9yeV9pZBgCIAEoCVIMcmVwb3NpdG9yeUlkElQKCnJlcG9zaXRvcnkYAyABKAsyNC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MWJldGEyLlJlcG9zaXRvcnlSCnJlcG9zaXRvcnk=');
 @$core.Deprecated('Use updateRepositoryRequestDescriptor instead')
 const UpdateRepositoryRequest$json = const {
   '1': 'UpdateRepositoryRequest',
@@ -179,11 +248,11 @@ final $typed_data.Uint8List updateRepositoryRequestDescriptor =
 const DeleteRepositoryRequest$json = const {
   '1': 'DeleteRepositoryRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `DeleteRepositoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteRepositoryRequestDescriptor =
     $convert.base64Decode(
-        'ChdEZWxldGVSZXBvc2l0b3J5UmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1l');
+        'ChdEZWxldGVSZXBvc2l0b3J5UmVxdWVzdBJGCgRuYW1lGAEgASgJQjLgQQL6QSwKKmFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeVIEbmFtZQ==');

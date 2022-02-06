@@ -81,25 +81,64 @@ const WordDetectionRequest$json = const {
   '1': 'WordDetectionRequest',
   '2': const [
     const {'1': 'word', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'word'},
+    const {'1': 'regex_mode', '3': 2, '4': 1, '5': 8, '10': 'regexMode'},
+    const {
+      '1': 'disable_approx_match',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '10': 'disableApproxMatch'
+    },
+    const {
+      '1': 'max_edit_distance',
+      '3': 4,
+      '4': 1,
+      '5': 5,
+      '9': 0,
+      '10': 'maxEditDistance',
+      '17': true
+    },
+  ],
+  '8': const [
+    const {'1': '_max_edit_distance'},
   ],
 };
 
 /// Descriptor for `WordDetectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wordDetectionRequestDescriptor =
-    $convert.base64Decode(
-        'ChRXb3JkRGV0ZWN0aW9uUmVxdWVzdBIXCgR3b3JkGAEgASgJQgPgQQJSBHdvcmQ=');
+final $typed_data.Uint8List wordDetectionRequestDescriptor = $convert.base64Decode(
+    'ChRXb3JkRGV0ZWN0aW9uUmVxdWVzdBIXCgR3b3JkGAEgASgJQgPgQQJSBHdvcmQSHQoKcmVnZXhfbW9kZRgCIAEoCFIJcmVnZXhNb2RlEjAKFGRpc2FibGVfYXBwcm94X21hdGNoGAMgASgIUhJkaXNhYmxlQXBwcm94TWF0Y2gSLwoRbWF4X2VkaXRfZGlzdGFuY2UYBCABKAVIAFIPbWF4RWRpdERpc3RhbmNliAEBQhQKEl9tYXhfZWRpdF9kaXN0YW5jZQ==');
 @$core.Deprecated('Use textBlockDetectionRequestDescriptor instead')
 const TextBlockDetectionRequest$json = const {
   '1': 'TextBlockDetectionRequest',
   '2': const [
     const {'1': 'words', '3': 1, '4': 3, '5': 9, '8': const {}, '10': 'words'},
+    const {'1': 'regex_mode', '3': 2, '4': 1, '5': 8, '10': 'regexMode'},
+    const {
+      '1': 'disable_approx_match',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '10': 'disableApproxMatch'
+    },
+    const {
+      '1': 'max_edit_distance',
+      '3': 4,
+      '4': 1,
+      '5': 5,
+      '9': 0,
+      '10': 'maxEditDistance',
+      '17': true
+    },
+  ],
+  '8': const [
+    const {'1': '_max_edit_distance'},
   ],
 };
 
 /// Descriptor for `TextBlockDetectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List textBlockDetectionRequestDescriptor =
     $convert.base64Decode(
-        'ChlUZXh0QmxvY2tEZXRlY3Rpb25SZXF1ZXN0EhkKBXdvcmRzGAEgAygJQgPgQQJSBXdvcmRz');
+        'ChlUZXh0QmxvY2tEZXRlY3Rpb25SZXF1ZXN0EhkKBXdvcmRzGAEgAygJQgPgQQJSBXdvcmRzEh0KCnJlZ2V4X21vZGUYAiABKAhSCXJlZ2V4TW9kZRIwChRkaXNhYmxlX2FwcHJveF9tYXRjaBgDIAEoCFISZGlzYWJsZUFwcHJveE1hdGNoEi8KEW1heF9lZGl0X2Rpc3RhbmNlGAQgASgFSABSD21heEVkaXREaXN0YW5jZYgBAUIUChJfbWF4X2VkaXRfZGlzdGFuY2U=');
 @$core.Deprecated('Use customIconDetectionRequestDescriptor instead')
 const CustomIconDetectionRequest$json = const {
   '1': 'CustomIconDetectionRequest',
@@ -112,13 +151,21 @@ const CustomIconDetectionRequest$json = const {
       '8': const {},
       '10': 'iconPng'
     },
+    const {'1': 'match_count', '3': 2, '4': 1, '5': 5, '10': 'matchCount'},
+    const {
+      '1': 'min_confidence_threshold',
+      '3': 3,
+      '4': 1,
+      '5': 1,
+      '10': 'minConfidenceThreshold'
+    },
   ],
 };
 
 /// Descriptor for `CustomIconDetectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List customIconDetectionRequestDescriptor =
     $convert.base64Decode(
-        'ChpDdXN0b21JY29uRGV0ZWN0aW9uUmVxdWVzdBIeCghpY29uX3BuZxgBIAEoDEID4EECUgdpY29uUG5n');
+        'ChpDdXN0b21JY29uRGV0ZWN0aW9uUmVxdWVzdBIeCghpY29uX3BuZxgBIAEoDEID4EECUgdpY29uUG5nEh8KC21hdGNoX2NvdW50GAIgASgFUgptYXRjaENvdW50EjgKGG1pbl9jb25maWRlbmNlX3RocmVzaG9sZBgDIAEoAVIWbWluQ29uZmlkZW5jZVRocmVzaG9sZA==');
 @$core.Deprecated('Use uiDetectionResponseDescriptor instead')
 const UiDetectionResponse$json = const {
   '1': 'UiDetectionResponse',

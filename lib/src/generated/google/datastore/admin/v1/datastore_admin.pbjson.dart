@@ -459,3 +459,30 @@ const IndexOperationMetadata$json = const {
 final $typed_data.Uint8List indexOperationMetadataDescriptor =
     $convert.base64Decode(
         'ChZJbmRleE9wZXJhdGlvbk1ldGFkYXRhEkEKBmNvbW1vbhgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuQ29tbW9uTWV0YWRhdGFSBmNvbW1vbhJQChFwcm9ncmVzc19lbnRpdGllcxgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3NSEHByb2dyZXNzRW50aXRpZXMSGQoIaW5kZXhfaWQYAyABKAlSB2luZGV4SWQ=');
+@$core.Deprecated('Use datastoreFirestoreMigrationMetadataDescriptor instead')
+const DatastoreFirestoreMigrationMetadata$json = const {
+  '1': 'DatastoreFirestoreMigrationMetadata',
+  '2': const [
+    const {
+      '1': 'migration_state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.datastore.admin.v1.MigrationState',
+      '10': 'migrationState'
+    },
+    const {
+      '1': 'migration_step',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.datastore.admin.v1.MigrationStep',
+      '10': 'migrationStep'
+    },
+  ],
+};
+
+/// Descriptor for `DatastoreFirestoreMigrationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List datastoreFirestoreMigrationMetadataDescriptor =
+    $convert.base64Decode(
+        'CiNEYXRhc3RvcmVGaXJlc3RvcmVNaWdyYXRpb25NZXRhZGF0YRJSCg9taWdyYXRpb25fc3RhdGUYASABKA4yKS5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLk1pZ3JhdGlvblN0YXRlUg5taWdyYXRpb25TdGF0ZRJPCg5taWdyYXRpb25fc3RlcBgCIAEoDjIoLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuTWlncmF0aW9uU3RlcFINbWlncmF0aW9uU3RlcA==');

@@ -9,6 +9,36 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class DatabaseDialect extends $pb.ProtobufEnum {
+  static const DatabaseDialect DATABASE_DIALECT_UNSPECIFIED = DatabaseDialect._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DATABASE_DIALECT_UNSPECIFIED');
+  static const DatabaseDialect GOOGLE_STANDARD_SQL = DatabaseDialect._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GOOGLE_STANDARD_SQL');
+  static const DatabaseDialect POSTGRESQL = DatabaseDialect._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'POSTGRESQL');
+
+  static const $core.List<DatabaseDialect> values = <DatabaseDialect>[
+    DATABASE_DIALECT_UNSPECIFIED,
+    GOOGLE_STANDARD_SQL,
+    POSTGRESQL,
+  ];
+
+  static final $core.Map<$core.int, DatabaseDialect> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DatabaseDialect? valueOf($core.int value) => _byValue[value];
+
+  const DatabaseDialect._($core.int v, $core.String n) : super(v, n);
+}
+
 class EncryptionInfo_Type extends $pb.ProtobufEnum {
   static const EncryptionInfo_Type TYPE_UNSPECIFIED = EncryptionInfo_Type._(
       0,

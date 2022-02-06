@@ -253,15 +253,43 @@ class WordDetectionRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'word')
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'regexMode')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disableApproxMatch')
+    ..a<$core.int>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxEditDistance',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   WordDetectionRequest._() : super();
   factory WordDetectionRequest({
     $core.String? word,
+    $core.bool? regexMode,
+    $core.bool? disableApproxMatch,
+    $core.int? maxEditDistance,
   }) {
     final _result = create();
     if (word != null) {
       _result.word = word;
+    }
+    if (regexMode != null) {
+      _result.regexMode = regexMode;
+    }
+    if (disableApproxMatch != null) {
+      _result.disableApproxMatch = disableApproxMatch;
+    }
+    if (maxEditDistance != null) {
+      _result.maxEditDistance = maxEditDistance;
     }
     return _result;
   }
@@ -304,6 +332,42 @@ class WordDetectionRequest extends $pb.GeneratedMessage {
   $core.bool hasWord() => $_has(0);
   @$pb.TagNumber(1)
   void clearWord() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get regexMode => $_getBF(1);
+  @$pb.TagNumber(2)
+  set regexMode($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRegexMode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRegexMode() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get disableApproxMatch => $_getBF(2);
+  @$pb.TagNumber(3)
+  set disableApproxMatch($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDisableApproxMatch() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDisableApproxMatch() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get maxEditDistance => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set maxEditDistance($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasMaxEditDistance() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMaxEditDistance() => clearField(4);
 }
 
 class TextBlockDetectionRequest extends $pb.GeneratedMessage {
@@ -321,15 +385,43 @@ class TextBlockDetectionRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'words')
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'regexMode')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disableApproxMatch')
+    ..a<$core.int>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxEditDistance',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   TextBlockDetectionRequest._() : super();
   factory TextBlockDetectionRequest({
     $core.Iterable<$core.String>? words,
+    $core.bool? regexMode,
+    $core.bool? disableApproxMatch,
+    $core.int? maxEditDistance,
   }) {
     final _result = create();
     if (words != null) {
       _result.words.addAll(words);
+    }
+    if (regexMode != null) {
+      _result.regexMode = regexMode;
+    }
+    if (disableApproxMatch != null) {
+      _result.disableApproxMatch = disableApproxMatch;
+    }
+    if (maxEditDistance != null) {
+      _result.maxEditDistance = maxEditDistance;
     }
     return _result;
   }
@@ -364,6 +456,42 @@ class TextBlockDetectionRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get words => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get regexMode => $_getBF(1);
+  @$pb.TagNumber(2)
+  set regexMode($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRegexMode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRegexMode() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get disableApproxMatch => $_getBF(2);
+  @$pb.TagNumber(3)
+  set disableApproxMatch($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDisableApproxMatch() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDisableApproxMatch() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get maxEditDistance => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set maxEditDistance($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasMaxEditDistance() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMaxEditDistance() => clearField(4);
 }
 
 class CustomIconDetectionRequest extends $pb.GeneratedMessage {
@@ -382,15 +510,35 @@ class CustomIconDetectionRequest extends $pb.GeneratedMessage {
             ? ''
             : 'iconPng',
         $pb.PbFieldType.OY)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'matchCount',
+        $pb.PbFieldType.O3)
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minConfidenceThreshold',
+        $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
   CustomIconDetectionRequest._() : super();
   factory CustomIconDetectionRequest({
     $core.List<$core.int>? iconPng,
+    $core.int? matchCount,
+    $core.double? minConfidenceThreshold,
   }) {
     final _result = create();
     if (iconPng != null) {
       _result.iconPng = iconPng;
+    }
+    if (matchCount != null) {
+      _result.matchCount = matchCount;
+    }
+    if (minConfidenceThreshold != null) {
+      _result.minConfidenceThreshold = minConfidenceThreshold;
     }
     return _result;
   }
@@ -435,6 +583,30 @@ class CustomIconDetectionRequest extends $pb.GeneratedMessage {
   $core.bool hasIconPng() => $_has(0);
   @$pb.TagNumber(1)
   void clearIconPng() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get matchCount => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set matchCount($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMatchCount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMatchCount() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get minConfidenceThreshold => $_getN(2);
+  @$pb.TagNumber(3)
+  set minConfidenceThreshold($core.double v) {
+    $_setDouble(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasMinConfidenceThreshold() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMinConfidenceThreshold() => clearField(3);
 }
 
 class UiDetectionResponse extends $pb.GeneratedMessage {

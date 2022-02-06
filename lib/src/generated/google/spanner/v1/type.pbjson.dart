@@ -31,6 +31,18 @@ const TypeCode$json = const {
 /// Descriptor for `TypeCode`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List typeCodeDescriptor = $convert.base64Decode(
     'CghUeXBlQ29kZRIZChVUWVBFX0NPREVfVU5TUEVDSUZJRUQQABIICgRCT09MEAESCQoFSU5UNjQQAhILCgdGTE9BVDY0EAMSDQoJVElNRVNUQU1QEAQSCAoEREFURRAFEgoKBlNUUklORxAGEgkKBUJZVEVTEAcSCQoFQVJSQVkQCBIKCgZTVFJVQ1QQCRILCgdOVU1FUklDEAoSCAoESlNPThAL');
+@$core.Deprecated('Use typeAnnotationCodeDescriptor instead')
+const TypeAnnotationCode$json = const {
+  '1': 'TypeAnnotationCode',
+  '2': const [
+    const {'1': 'TYPE_ANNOTATION_CODE_UNSPECIFIED', '2': 0},
+    const {'1': 'PG_NUMERIC', '2': 2},
+  ],
+};
+
+/// Descriptor for `TypeAnnotationCode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List typeAnnotationCodeDescriptor = $convert.base64Decode(
+    'ChJUeXBlQW5ub3RhdGlvbkNvZGUSJAogVFlQRV9BTk5PVEFUSU9OX0NPREVfVU5TUEVDSUZJRUQQABIOCgpQR19OVU1FUklDEAI=');
 @$core.Deprecated('Use typeDescriptor instead')
 const Type$json = const {
   '1': 'Type',
@@ -60,12 +72,20 @@ const Type$json = const {
       '6': '.google.spanner.v1.StructType',
       '10': 'structType'
     },
+    const {
+      '1': 'type_annotation',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.v1.TypeAnnotationCode',
+      '10': 'typeAnnotation'
+    },
   ],
 };
 
 /// Descriptor for `Type`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List typeDescriptor = $convert.base64Decode(
-    'CgRUeXBlEjQKBGNvZGUYASABKA4yGy5nb29nbGUuc3Bhbm5lci52MS5UeXBlQ29kZUID4EECUgRjb2RlEkUKEmFycmF5X2VsZW1lbnRfdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5cGVSEGFycmF5RWxlbWVudFR5cGUSPgoLc3RydWN0X3R5cGUYAyABKAsyHS5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlUgpzdHJ1Y3RUeXBl');
+    'CgRUeXBlEjQKBGNvZGUYASABKA4yGy5nb29nbGUuc3Bhbm5lci52MS5UeXBlQ29kZUID4EECUgRjb2RlEkUKEmFycmF5X2VsZW1lbnRfdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5cGVSEGFycmF5RWxlbWVudFR5cGUSPgoLc3RydWN0X3R5cGUYAyABKAsyHS5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlUgpzdHJ1Y3RUeXBlEk4KD3R5cGVfYW5ub3RhdGlvbhgEIAEoDjIlLmdvb2dsZS5zcGFubmVyLnYxLlR5cGVBbm5vdGF0aW9uQ29kZVIOdHlwZUFubm90YXRpb24=');
 @$core.Deprecated('Use structTypeDescriptor instead')
 const StructType$json = const {
   '1': 'StructType',

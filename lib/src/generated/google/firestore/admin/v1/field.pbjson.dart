@@ -13,7 +13,7 @@ import 'dart:typed_data' as $typed_data;
 const Field$json = const {
   '1': 'Field',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'index_config',
       '3': 2,
@@ -59,4 +59,4 @@ const Field_IndexConfig$json = const {
 
 /// Descriptor for `Field`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List fieldDescriptor = $convert.base64Decode(
-    'CgVGaWVsZBISCgRuYW1lGAEgASgJUgRuYW1lEk8KDGluZGV4X2NvbmZpZxgCIAEoCzIsLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuRmllbGQuSW5kZXhDb25maWdSC2luZGV4Q29uZmlnGsABCgtJbmRleENvbmZpZxI6CgdpbmRleGVzGAEgAygLMiAuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleFIHaW5kZXhlcxIwChR1c2VzX2FuY2VzdG9yX2NvbmZpZxgCIAEoCFISdXNlc0FuY2VzdG9yQ29uZmlnEiUKDmFuY2VzdG9yX2ZpZWxkGAMgASgJUg1hbmNlc3RvckZpZWxkEhwKCXJldmVydGluZxgEIAEoCFIJcmV2ZXJ0aW5nOnnqQXYKHmZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9GaWVsZBJUcHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9L2NvbGxlY3Rpb25Hcm91cHMve2NvbGxlY3Rpb259L2ZpZWxkcy97ZmllbGR9');
+    'CgVGaWVsZBIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSTwoMaW5kZXhfY29uZmlnGAIgASgLMiwuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZC5JbmRleENvbmZpZ1ILaW5kZXhDb25maWcawAEKC0luZGV4Q29uZmlnEjoKB2luZGV4ZXMYASADKAsyIC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4UgdpbmRleGVzEjAKFHVzZXNfYW5jZXN0b3JfY29uZmlnGAIgASgIUhJ1c2VzQW5jZXN0b3JDb25maWcSJQoOYW5jZXN0b3JfZmllbGQYAyABKAlSDWFuY2VzdG9yRmllbGQSHAoJcmV2ZXJ0aW5nGAQgASgIUglyZXZlcnRpbmc6eepBdgoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0ZpZWxkElRwcm9qZWN0cy97cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vwcy97Y29sbGVjdGlvbn0vZmllbGRzL3tmaWVsZH0=');

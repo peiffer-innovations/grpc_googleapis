@@ -15,6 +15,7 @@ import '../../../longrunning/operations.pb.dart' as $0;
 import 'index.pb.dart' as $3;
 import '../../../protobuf/empty.pb.dart' as $1;
 import 'field.pb.dart' as $4;
+import 'database.pb.dart' as $5;
 export 'firestore_admin.pb.dart';
 
 class FirestoreAdminClient extends $grpc.Client {
@@ -62,6 +63,22 @@ class FirestoreAdminClient extends $grpc.Client {
       $grpc.ClientMethod<$2.ImportDocumentsRequest, $0.Operation>(
           '/google.firestore.admin.v1.FirestoreAdmin/ImportDocuments',
           ($2.ImportDocumentsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$getDatabase =
+      $grpc.ClientMethod<$2.GetDatabaseRequest, $5.Database>(
+          '/google.firestore.admin.v1.FirestoreAdmin/GetDatabase',
+          ($2.GetDatabaseRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $5.Database.fromBuffer(value));
+  static final _$listDatabases =
+      $grpc.ClientMethod<$2.ListDatabasesRequest, $2.ListDatabasesResponse>(
+          '/google.firestore.admin.v1.FirestoreAdmin/ListDatabases',
+          ($2.ListDatabasesRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.ListDatabasesResponse.fromBuffer(value));
+  static final _$updateDatabase =
+      $grpc.ClientMethod<$2.UpdateDatabaseRequest, $0.Operation>(
+          '/google.firestore.admin.v1.FirestoreAdmin/UpdateDatabase',
+          ($2.UpdateDatabaseRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   FirestoreAdminClient($grpc.ClientChannel channel,
@@ -116,6 +133,23 @@ class FirestoreAdminClient extends $grpc.Client {
       $2.ImportDocumentsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$importDocuments, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.Database> getDatabase($2.GetDatabaseRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDatabase, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.ListDatabasesResponse> listDatabases(
+      $2.ListDatabasesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listDatabases, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> updateDatabase(
+      $2.UpdateDatabaseRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateDatabase, request, options: options);
   }
 }
 
@@ -193,6 +227,31 @@ abstract class FirestoreAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.ImportDocumentsRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetDatabaseRequest, $5.Database>(
+        'GetDatabase',
+        getDatabase_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetDatabaseRequest.fromBuffer(value),
+        ($5.Database value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.ListDatabasesRequest, $2.ListDatabasesResponse>(
+            'ListDatabases',
+            listDatabases_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.ListDatabasesRequest.fromBuffer(value),
+            ($2.ListDatabasesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateDatabaseRequest, $0.Operation>(
+        'UpdateDatabase',
+        updateDatabase_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.UpdateDatabaseRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Operation> createIndex_Pre($grpc.ServiceCall call,
@@ -240,6 +299,22 @@ abstract class FirestoreAdminServiceBase extends $grpc.Service {
     return importDocuments(call, await request);
   }
 
+  $async.Future<$5.Database> getDatabase_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetDatabaseRequest> request) async {
+    return getDatabase(call, await request);
+  }
+
+  $async.Future<$2.ListDatabasesResponse> listDatabases_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListDatabasesRequest> request) async {
+    return listDatabases(call, await request);
+  }
+
+  $async.Future<$0.Operation> updateDatabase_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateDatabaseRequest> request) async {
+    return updateDatabase(call, await request);
+  }
+
   $async.Future<$0.Operation> createIndex(
       $grpc.ServiceCall call, $2.CreateIndexRequest request);
   $async.Future<$2.ListIndexesResponse> listIndexes(
@@ -258,4 +333,10 @@ abstract class FirestoreAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ExportDocumentsRequest request);
   $async.Future<$0.Operation> importDocuments(
       $grpc.ServiceCall call, $2.ImportDocumentsRequest request);
+  $async.Future<$5.Database> getDatabase(
+      $grpc.ServiceCall call, $2.GetDatabaseRequest request);
+  $async.Future<$2.ListDatabasesResponse> listDatabases(
+      $grpc.ServiceCall call, $2.ListDatabasesRequest request);
+  $async.Future<$0.Operation> updateDatabase(
+      $grpc.ServiceCall call, $2.UpdateDatabaseRequest request);
 }

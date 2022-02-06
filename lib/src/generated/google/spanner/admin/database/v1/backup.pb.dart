@@ -16,6 +16,7 @@ import '../../../../protobuf/field_mask.pb.dart' as $4;
 import '../../../../longrunning/operations.pb.dart' as $0;
 
 import 'backup.pbenum.dart';
+import 'common.pbenum.dart' as $3;
 
 export 'backup.pbenum.dart';
 
@@ -82,6 +83,15 @@ class Backup extends $pb.GeneratedMessage {
             ? ''
             : 'versionTime',
         subBuilder: $2.Timestamp.create)
+    ..e<$3.DatabaseDialect>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseDialect',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $3.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED,
+        valueOf: $3.DatabaseDialect.valueOf,
+        enumValues: $3.DatabaseDialect.values)
     ..hasRequiredFields = false;
 
   Backup._() : super();
@@ -95,6 +105,7 @@ class Backup extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? referencingDatabases,
     $3.EncryptionInfo? encryptionInfo,
     $2.Timestamp? versionTime,
+    $3.DatabaseDialect? databaseDialect,
   }) {
     final _result = create();
     if (name != null) {
@@ -123,6 +134,9 @@ class Backup extends $pb.GeneratedMessage {
     }
     if (versionTime != null) {
       _result.versionTime = versionTime;
+    }
+    if (databaseDialect != null) {
+      _result.databaseDialect = databaseDialect;
     }
     return _result;
   }
@@ -258,6 +272,18 @@ class Backup extends $pb.GeneratedMessage {
   void clearVersionTime() => clearField(9);
   @$pb.TagNumber(9)
   $2.Timestamp ensureVersionTime() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $3.DatabaseDialect get databaseDialect => $_getN(9);
+  @$pb.TagNumber(10)
+  set databaseDialect($3.DatabaseDialect v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasDatabaseDialect() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearDatabaseDialect() => clearField(10);
 }
 
 class CreateBackupRequest extends $pb.GeneratedMessage {

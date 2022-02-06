@@ -14,6 +14,7 @@ import '../../../protobuf/timestamp.pb.dart' as $4;
 import 'index.pb.dart' as $3;
 
 import 'datastore_admin.pbenum.dart';
+import 'migration.pbenum.dart' as $5;
 
 export 'datastore_admin.pbenum.dart';
 
@@ -1587,4 +1588,106 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasIndexId() => $_has(2);
   @$pb.TagNumber(3)
   void clearIndexId() => clearField(3);
+}
+
+class DatastoreFirestoreMigrationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DatastoreFirestoreMigrationMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.admin.v1'),
+      createEmptyInstance: create)
+    ..e<$5.MigrationState>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'migrationState',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $5.MigrationState.MIGRATION_STATE_UNSPECIFIED,
+        valueOf: $5.MigrationState.valueOf,
+        enumValues: $5.MigrationState.values)
+    ..e<$5.MigrationStep>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'migrationStep',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $5.MigrationStep.MIGRATION_STEP_UNSPECIFIED,
+        valueOf: $5.MigrationStep.valueOf,
+        enumValues: $5.MigrationStep.values)
+    ..hasRequiredFields = false;
+
+  DatastoreFirestoreMigrationMetadata._() : super();
+  factory DatastoreFirestoreMigrationMetadata({
+    $5.MigrationState? migrationState,
+    $5.MigrationStep? migrationStep,
+  }) {
+    final _result = create();
+    if (migrationState != null) {
+      _result.migrationState = migrationState;
+    }
+    if (migrationStep != null) {
+      _result.migrationStep = migrationStep;
+    }
+    return _result;
+  }
+  factory DatastoreFirestoreMigrationMetadata.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DatastoreFirestoreMigrationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DatastoreFirestoreMigrationMetadata clone() =>
+      DatastoreFirestoreMigrationMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DatastoreFirestoreMigrationMetadata copyWith(
+          void Function(DatastoreFirestoreMigrationMetadata) updates) =>
+      super.copyWith((message) =>
+              updates(message as DatastoreFirestoreMigrationMetadata))
+          as DatastoreFirestoreMigrationMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DatastoreFirestoreMigrationMetadata create() =>
+      DatastoreFirestoreMigrationMetadata._();
+  DatastoreFirestoreMigrationMetadata createEmptyInstance() => create();
+  static $pb.PbList<DatastoreFirestoreMigrationMetadata> createRepeated() =>
+      $pb.PbList<DatastoreFirestoreMigrationMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static DatastoreFirestoreMigrationMetadata getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          DatastoreFirestoreMigrationMetadata>(create);
+  static DatastoreFirestoreMigrationMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $5.MigrationState get migrationState => $_getN(0);
+  @$pb.TagNumber(1)
+  set migrationState($5.MigrationState v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMigrationState() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMigrationState() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $5.MigrationStep get migrationStep => $_getN(1);
+  @$pb.TagNumber(2)
+  set migrationStep($5.MigrationStep v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMigrationStep() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMigrationStep() => clearField(2);
 }

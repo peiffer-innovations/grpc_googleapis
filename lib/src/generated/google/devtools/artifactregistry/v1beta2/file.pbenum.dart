@@ -20,10 +20,16 @@ class Hash_HashType extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'SHA256');
+  static const Hash_HashType MD5 = Hash_HashType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MD5');
 
   static const $core.List<Hash_HashType> values = <Hash_HashType>[
     HASH_TYPE_UNSPECIFIED,
     SHA256,
+    MD5,
   ];
 
   static final $core.Map<$core.int, Hash_HashType> _byValue =

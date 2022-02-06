@@ -92,3 +92,28 @@ class TypeCode extends $pb.ProtobufEnum {
 
   const TypeCode._($core.int v, $core.String n) : super(v, n);
 }
+
+class TypeAnnotationCode extends $pb.ProtobufEnum {
+  static const TypeAnnotationCode TYPE_ANNOTATION_CODE_UNSPECIFIED =
+      TypeAnnotationCode._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TYPE_ANNOTATION_CODE_UNSPECIFIED');
+  static const TypeAnnotationCode PG_NUMERIC = TypeAnnotationCode._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PG_NUMERIC');
+
+  static const $core.List<TypeAnnotationCode> values = <TypeAnnotationCode>[
+    TYPE_ANNOTATION_CODE_UNSPECIFIED,
+    PG_NUMERIC,
+  ];
+
+  static final $core.Map<$core.int, TypeAnnotationCode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static TypeAnnotationCode? valueOf($core.int value) => _byValue[value];
+
+  const TypeAnnotationCode._($core.int v, $core.String n) : super(v, n);
+}

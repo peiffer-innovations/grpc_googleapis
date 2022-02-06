@@ -11,6 +11,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'tag.pb.dart' as $1;
+import '../../../protobuf/struct.pb.dart' as $2;
 
 import 'version.pbenum.dart';
 
@@ -55,6 +56,12 @@ class Version extends $pb.GeneratedMessage {
             : 'relatedTags',
         $pb.PbFieldType.PM,
         subBuilder: $1.Tag.create)
+    ..aOM<$2.Struct>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metadata',
+        subBuilder: $2.Struct.create)
     ..hasRequiredFields = false;
 
   Version._() : super();
@@ -64,6 +71,7 @@ class Version extends $pb.GeneratedMessage {
     $0.Timestamp? createTime,
     $0.Timestamp? updateTime,
     $core.Iterable<$1.Tag>? relatedTags,
+    $2.Struct? metadata,
   }) {
     final _result = create();
     if (name != null) {
@@ -80,6 +88,9 @@ class Version extends $pb.GeneratedMessage {
     }
     if (relatedTags != null) {
       _result.relatedTags.addAll(relatedTags);
+    }
+    if (metadata != null) {
+      _result.metadata = metadata;
     }
     return _result;
   }
@@ -163,6 +174,20 @@ class Version extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(7)
   $core.List<$1.Tag> get relatedTags => $_getList(4);
+
+  @$pb.TagNumber(8)
+  $2.Struct get metadata => $_getN(5);
+  @$pb.TagNumber(8)
+  set metadata($2.Struct v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasMetadata() => $_has(5);
+  @$pb.TagNumber(8)
+  void clearMetadata() => clearField(8);
+  @$pb.TagNumber(8)
+  $2.Struct ensureMetadata() => $_ensure(5);
 }
 
 class ListVersionsRequest extends $pb.GeneratedMessage {
@@ -200,6 +225,11 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
         defaultOrMaker: VersionView.VERSION_VIEW_UNSPECIFIED,
         valueOf: VersionView.valueOf,
         enumValues: VersionView.values)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'orderBy')
     ..hasRequiredFields = false;
 
   ListVersionsRequest._() : super();
@@ -208,6 +238,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
     VersionView? view,
+    $core.String? orderBy,
   }) {
     final _result = create();
     if (parent != null) {
@@ -221,6 +252,9 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
     }
     if (view != null) {
       _result.view = view;
+    }
+    if (orderBy != null) {
+      _result.orderBy = orderBy;
     }
     return _result;
   }
@@ -298,6 +332,18 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   $core.bool hasView() => $_has(3);
   @$pb.TagNumber(4)
   void clearView() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get orderBy => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set orderBy($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasOrderBy() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearOrderBy() => clearField(5);
 }
 
 class ListVersionsResponse extends $pb.GeneratedMessage {
