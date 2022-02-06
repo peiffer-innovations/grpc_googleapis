@@ -1,3 +1,8 @@
+## [1.1.2] - February 6th, 2021
+
+* Version bump to trigger build
+
+
 ## [1.1.1] - January 3rd, 2021
 
 * Dart 2.15
