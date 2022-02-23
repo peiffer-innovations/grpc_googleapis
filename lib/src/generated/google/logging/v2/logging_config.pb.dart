@@ -7,10 +7,11 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $2;
-import '../../protobuf/field_mask.pb.dart' as $3;
+import '../../protobuf/timestamp.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $4;
 
 import 'logging_config.pbenum.dart';
 
@@ -36,18 +37,18 @@ class LogBucket extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'description')
-    ..aOM<$2.Timestamp>(
+    ..aOM<$3.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateTime',
-        subBuilder: $2.Timestamp.create)
+        subBuilder: $3.Timestamp.create)
     ..aOB(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -68,17 +69,30 @@ class LogBucket extends $pb.GeneratedMessage {
         defaultOrMaker: LifecycleState.LIFECYCLE_STATE_UNSPECIFIED,
         valueOf: LifecycleState.valueOf,
         enumValues: LifecycleState.values)
+    ..pPS(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'restrictedFields')
+    ..aOM<CmekSettings>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmekSettings',
+        subBuilder: CmekSettings.create)
     ..hasRequiredFields = false;
 
   LogBucket._() : super();
   factory LogBucket({
     $core.String? name,
     $core.String? description,
-    $2.Timestamp? createTime,
-    $2.Timestamp? updateTime,
+    $3.Timestamp? createTime,
+    $3.Timestamp? updateTime,
     $core.bool? locked,
     $core.int? retentionDays,
     LifecycleState? lifecycleState,
+    $core.Iterable<$core.String>? restrictedFields,
+    CmekSettings? cmekSettings,
   }) {
     final _result = create();
     if (name != null) {
@@ -101,6 +115,12 @@ class LogBucket extends $pb.GeneratedMessage {
     }
     if (lifecycleState != null) {
       _result.lifecycleState = lifecycleState;
+    }
+    if (restrictedFields != null) {
+      _result.restrictedFields.addAll(restrictedFields);
+    }
+    if (cmekSettings != null) {
+      _result.cmekSettings = cmekSettings;
     }
     return _result;
   }
@@ -155,9 +175,9 @@ class LogBucket extends $pb.GeneratedMessage {
   void clearDescription() => clearField(3);
 
   @$pb.TagNumber(4)
-  $2.Timestamp get createTime => $_getN(2);
+  $3.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(4)
-  set createTime($2.Timestamp v) {
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -166,12 +186,12 @@ class LogBucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
   @$pb.TagNumber(4)
-  $2.Timestamp ensureCreateTime() => $_ensure(2);
+  $3.Timestamp ensureCreateTime() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $2.Timestamp get updateTime => $_getN(3);
+  $3.Timestamp get updateTime => $_getN(3);
   @$pb.TagNumber(5)
-  set updateTime($2.Timestamp v) {
+  set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -180,7 +200,7 @@ class LogBucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearUpdateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $2.Timestamp ensureUpdateTime() => $_ensure(3);
+  $3.Timestamp ensureUpdateTime() => $_ensure(3);
 
   @$pb.TagNumber(9)
   $core.bool get locked => $_getBF(4);
@@ -217,6 +237,23 @@ class LogBucket extends $pb.GeneratedMessage {
   $core.bool hasLifecycleState() => $_has(6);
   @$pb.TagNumber(12)
   void clearLifecycleState() => clearField(12);
+
+  @$pb.TagNumber(15)
+  $core.List<$core.String> get restrictedFields => $_getList(7);
+
+  @$pb.TagNumber(19)
+  CmekSettings get cmekSettings => $_getN(8);
+  @$pb.TagNumber(19)
+  set cmekSettings(CmekSettings v) {
+    setField(19, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasCmekSettings() => $_has(8);
+  @$pb.TagNumber(19)
+  void clearCmekSettings() => clearField(19);
+  @$pb.TagNumber(19)
+  CmekSettings ensureCmekSettings() => $_ensure(8);
 }
 
 class LogView extends $pb.GeneratedMessage {
@@ -239,18 +276,18 @@ class LogView extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'description')
-    ..aOM<$2.Timestamp>(
+    ..aOM<$3.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateTime',
-        subBuilder: $2.Timestamp.create)
+        subBuilder: $3.Timestamp.create)
     ..aOS(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -262,8 +299,8 @@ class LogView extends $pb.GeneratedMessage {
   factory LogView({
     $core.String? name,
     $core.String? description,
-    $2.Timestamp? createTime,
-    $2.Timestamp? updateTime,
+    $3.Timestamp? createTime,
+    $3.Timestamp? updateTime,
     $core.String? filter,
   }) {
     final _result = create();
@@ -335,9 +372,9 @@ class LogView extends $pb.GeneratedMessage {
   void clearDescription() => clearField(3);
 
   @$pb.TagNumber(4)
-  $2.Timestamp get createTime => $_getN(2);
+  $3.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(4)
-  set createTime($2.Timestamp v) {
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -346,12 +383,12 @@ class LogView extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
   @$pb.TagNumber(4)
-  $2.Timestamp ensureCreateTime() => $_ensure(2);
+  $3.Timestamp ensureCreateTime() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $2.Timestamp get updateTime => $_getN(3);
+  $3.Timestamp get updateTime => $_getN(3);
   @$pb.TagNumber(5)
-  set updateTime($2.Timestamp v) {
+  set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -360,7 +397,7 @@ class LogView extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearUpdateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $2.Timestamp ensureUpdateTime() => $_ensure(3);
+  $3.Timestamp ensureUpdateTime() => $_ensure(3);
 
   @$pb.TagNumber(7)
   $core.String get filter => $_getSZ(4);
@@ -432,18 +469,18 @@ class LogSink extends $pb.GeneratedMessage {
             ? ''
             : 'bigqueryOptions',
         subBuilder: BigQueryOptions.create)
-    ..aOM<$2.Timestamp>(
+    ..aOM<$3.Timestamp>(
         13,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
         14,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateTime',
-        subBuilder: $2.Timestamp.create)
+        subBuilder: $3.Timestamp.create)
     ..pc<LogExclusion>(
         16,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -473,8 +510,8 @@ class LogSink extends $pb.GeneratedMessage {
     $core.String? writerIdentity,
     $core.bool? includeChildren,
     BigQueryOptions? bigqueryOptions,
-    $2.Timestamp? createTime,
-    $2.Timestamp? updateTime,
+    $3.Timestamp? createTime,
+    $3.Timestamp? updateTime,
     $core.Iterable<LogExclusion>? exclusions,
     $core.String? description,
     $core.bool? disabled,
@@ -639,9 +676,9 @@ class LogSink extends $pb.GeneratedMessage {
   BigQueryOptions ensureBigqueryOptions() => $_ensure(6);
 
   @$pb.TagNumber(13)
-  $2.Timestamp get createTime => $_getN(7);
+  $3.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(13)
-  set createTime($2.Timestamp v) {
+  set createTime($3.Timestamp v) {
     setField(13, v);
   }
 
@@ -650,12 +687,12 @@ class LogSink extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearCreateTime() => clearField(13);
   @$pb.TagNumber(13)
-  $2.Timestamp ensureCreateTime() => $_ensure(7);
+  $3.Timestamp ensureCreateTime() => $_ensure(7);
 
   @$pb.TagNumber(14)
-  $2.Timestamp get updateTime => $_getN(8);
+  $3.Timestamp get updateTime => $_getN(8);
   @$pb.TagNumber(14)
-  set updateTime($2.Timestamp v) {
+  set updateTime($3.Timestamp v) {
     setField(14, v);
   }
 
@@ -664,7 +701,7 @@ class LogSink extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearUpdateTime() => clearField(14);
   @$pb.TagNumber(14)
-  $2.Timestamp ensureUpdateTime() => $_ensure(8);
+  $3.Timestamp ensureUpdateTime() => $_ensure(8);
 
   @$pb.TagNumber(16)
   $core.List<LogExclusion> get exclusions => $_getList(9);
@@ -1106,19 +1143,19 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
             ? ''
             : 'bucket',
         subBuilder: LogBucket.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$4.FieldMask>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateBucketRequest._() : super();
   factory UpdateBucketRequest({
     $core.String? name,
     LogBucket? bucket,
-    $3.FieldMask? updateMask,
+    $4.FieldMask? updateMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -1186,9 +1223,9 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   LogBucket ensureBucket() => $_ensure(1);
 
   @$pb.TagNumber(4)
-  $3.FieldMask get updateMask => $_getN(2);
+  $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(4)
-  set updateMask($3.FieldMask v) {
+  set updateMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -1197,7 +1234,7 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
   @$pb.TagNumber(4)
-  $3.FieldMask ensureUpdateMask() => $_ensure(2);
+  $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetBucketRequest extends $pb.GeneratedMessage {
@@ -1727,19 +1764,19 @@ class UpdateViewRequest extends $pb.GeneratedMessage {
             ? ''
             : 'view',
         subBuilder: LogView.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$4.FieldMask>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateViewRequest._() : super();
   factory UpdateViewRequest({
     $core.String? name,
     LogView? view,
-    $3.FieldMask? updateMask,
+    $4.FieldMask? updateMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -1807,9 +1844,9 @@ class UpdateViewRequest extends $pb.GeneratedMessage {
   LogView ensureView() => $_ensure(1);
 
   @$pb.TagNumber(4)
-  $3.FieldMask get updateMask => $_getN(2);
+  $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(4)
-  set updateMask($3.FieldMask v) {
+  set updateMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -1818,7 +1855,7 @@ class UpdateViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
   @$pb.TagNumber(4)
-  $3.FieldMask ensureUpdateMask() => $_ensure(2);
+  $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetViewRequest extends $pb.GeneratedMessage {
@@ -2351,12 +2388,12 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'uniqueWriterIdentity')
-    ..aOM<$3.FieldMask>(
+    ..aOM<$4.FieldMask>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSinkRequest._() : super();
@@ -2364,7 +2401,7 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
     $core.String? sinkName,
     LogSink? sink,
     $core.bool? uniqueWriterIdentity,
-    $3.FieldMask? updateMask,
+    $4.FieldMask? updateMask,
   }) {
     final _result = create();
     if (sinkName != null) {
@@ -2447,9 +2484,9 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
   void clearUniqueWriterIdentity() => clearField(3);
 
   @$pb.TagNumber(4)
-  $3.FieldMask get updateMask => $_getN(3);
+  $4.FieldMask get updateMask => $_getN(3);
   @$pb.TagNumber(4)
-  set updateMask($3.FieldMask v) {
+  set updateMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -2458,7 +2495,7 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
   @$pb.TagNumber(4)
-  $3.FieldMask ensureUpdateMask() => $_ensure(3);
+  $4.FieldMask ensureUpdateMask() => $_ensure(3);
 }
 
 class DeleteSinkRequest extends $pb.GeneratedMessage {
@@ -2558,18 +2595,18 @@ class LogExclusion extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'disabled')
-    ..aOM<$2.Timestamp>(
+    ..aOM<$3.Timestamp>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateTime',
-        subBuilder: $2.Timestamp.create)
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   LogExclusion._() : super();
@@ -2578,8 +2615,8 @@ class LogExclusion extends $pb.GeneratedMessage {
     $core.String? description,
     $core.String? filter,
     $core.bool? disabled,
-    $2.Timestamp? createTime,
-    $2.Timestamp? updateTime,
+    $3.Timestamp? createTime,
+    $3.Timestamp? updateTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -2678,9 +2715,9 @@ class LogExclusion extends $pb.GeneratedMessage {
   void clearDisabled() => clearField(4);
 
   @$pb.TagNumber(5)
-  $2.Timestamp get createTime => $_getN(4);
+  $3.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($2.Timestamp v) {
+  set createTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -2689,12 +2726,12 @@ class LogExclusion extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $2.Timestamp ensureCreateTime() => $_ensure(4);
+  $3.Timestamp ensureCreateTime() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $2.Timestamp get updateTime => $_getN(5);
+  $3.Timestamp get updateTime => $_getN(5);
   @$pb.TagNumber(6)
-  set updateTime($2.Timestamp v) {
+  set updateTime($3.Timestamp v) {
     setField(6, v);
   }
 
@@ -2703,7 +2740,7 @@ class LogExclusion extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearUpdateTime() => clearField(6);
   @$pb.TagNumber(6)
-  $2.Timestamp ensureUpdateTime() => $_ensure(5);
+  $3.Timestamp ensureUpdateTime() => $_ensure(5);
 }
 
 class ListExclusionsRequest extends $pb.GeneratedMessage {
@@ -3082,19 +3119,19 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
             ? ''
             : 'exclusion',
         subBuilder: LogExclusion.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$4.FieldMask>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateExclusionRequest._() : super();
   factory UpdateExclusionRequest({
     $core.String? name,
     LogExclusion? exclusion,
-    $3.FieldMask? updateMask,
+    $4.FieldMask? updateMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -3164,9 +3201,9 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
   LogExclusion ensureExclusion() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $3.FieldMask get updateMask => $_getN(2);
+  $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($3.FieldMask v) {
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -3175,7 +3212,7 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $3.FieldMask ensureUpdateMask() => $_ensure(2);
+  $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class DeleteExclusionRequest extends $pb.GeneratedMessage {
@@ -3337,19 +3374,19 @@ class UpdateCmekSettingsRequest extends $pb.GeneratedMessage {
             ? ''
             : 'cmekSettings',
         subBuilder: CmekSettings.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$4.FieldMask>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCmekSettingsRequest._() : super();
   factory UpdateCmekSettingsRequest({
     $core.String? name,
     CmekSettings? cmekSettings,
-    $3.FieldMask? updateMask,
+    $4.FieldMask? updateMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -3419,9 +3456,9 @@ class UpdateCmekSettingsRequest extends $pb.GeneratedMessage {
   CmekSettings ensureCmekSettings() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $3.FieldMask get updateMask => $_getN(2);
+  $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($3.FieldMask v) {
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -3430,7 +3467,7 @@ class UpdateCmekSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $3.FieldMask ensureUpdateMask() => $_ensure(2);
+  $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class CmekSettings extends $pb.GeneratedMessage {
@@ -3540,4 +3577,727 @@ class CmekSettings extends $pb.GeneratedMessage {
   $core.bool hasServiceAccountId() => $_has(2);
   @$pb.TagNumber(3)
   void clearServiceAccountId() => clearField(3);
+}
+
+class GetSettingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetSettingsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetSettingsRequest._() : super();
+  factory GetSettingsRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetSettingsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSettingsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetSettingsRequest clone() => GetSettingsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetSettingsRequest copyWith(void Function(GetSettingsRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSettingsRequest))
+          as GetSettingsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetSettingsRequest create() => GetSettingsRequest._();
+  GetSettingsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSettingsRequest> createRepeated() =>
+      $pb.PbList<GetSettingsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSettingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSettingsRequest>(create);
+  static GetSettingsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class UpdateSettingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateSettingsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOM<Settings>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'settings',
+        subBuilder: Settings.create)
+    ..aOM<$4.FieldMask>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateSettingsRequest._() : super();
+  factory UpdateSettingsRequest({
+    $core.String? name,
+    Settings? settings,
+    $4.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (settings != null) {
+      _result.settings = settings;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateSettingsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateSettingsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateSettingsRequest clone() =>
+      UpdateSettingsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateSettingsRequest copyWith(
+          void Function(UpdateSettingsRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateSettingsRequest))
+          as UpdateSettingsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateSettingsRequest create() => UpdateSettingsRequest._();
+  UpdateSettingsRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSettingsRequest> createRepeated() =>
+      $pb.PbList<UpdateSettingsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSettingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSettingsRequest>(create);
+  static UpdateSettingsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Settings get settings => $_getN(1);
+  @$pb.TagNumber(2)
+  set settings(Settings v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasSettings() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSettings() => clearField(2);
+  @$pb.TagNumber(2)
+  Settings ensureSettings() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $4.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
+  set updateMask($4.FieldMask v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.FieldMask ensureUpdateMask() => $_ensure(2);
+}
+
+class Settings extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Settings',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kmsKeyName')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kmsServiceAccountId')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'storageLocation')
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disableDefaultSink')
+    ..hasRequiredFields = false;
+
+  Settings._() : super();
+  factory Settings({
+    $core.String? name,
+    $core.String? kmsKeyName,
+    $core.String? kmsServiceAccountId,
+    $core.String? storageLocation,
+    $core.bool? disableDefaultSink,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (kmsKeyName != null) {
+      _result.kmsKeyName = kmsKeyName;
+    }
+    if (kmsServiceAccountId != null) {
+      _result.kmsServiceAccountId = kmsServiceAccountId;
+    }
+    if (storageLocation != null) {
+      _result.storageLocation = storageLocation;
+    }
+    if (disableDefaultSink != null) {
+      _result.disableDefaultSink = disableDefaultSink;
+    }
+    return _result;
+  }
+  factory Settings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Settings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Settings clone() => Settings()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Settings copyWith(void Function(Settings) updates) =>
+      super.copyWith((message) => updates(message as Settings))
+          as Settings; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Settings create() => Settings._();
+  Settings createEmptyInstance() => create();
+  static $pb.PbList<Settings> createRepeated() => $pb.PbList<Settings>();
+  @$core.pragma('dart2js:noInline')
+  static Settings getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Settings>(create);
+  static Settings? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get kmsKeyName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set kmsKeyName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasKmsKeyName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearKmsKeyName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get kmsServiceAccountId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set kmsServiceAccountId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasKmsServiceAccountId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearKmsServiceAccountId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get storageLocation => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set storageLocation($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasStorageLocation() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStorageLocation() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get disableDefaultSink => $_getBF(4);
+  @$pb.TagNumber(5)
+  set disableDefaultSink($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDisableDefaultSink() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDisableDefaultSink() => clearField(5);
+}
+
+class CopyLogEntriesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CopyLogEntriesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'destination')
+    ..hasRequiredFields = false;
+
+  CopyLogEntriesRequest._() : super();
+  factory CopyLogEntriesRequest({
+    $core.String? name,
+    $core.String? filter,
+    $core.String? destination,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (filter != null) {
+      _result.filter = filter;
+    }
+    if (destination != null) {
+      _result.destination = destination;
+    }
+    return _result;
+  }
+  factory CopyLogEntriesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CopyLogEntriesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CopyLogEntriesRequest clone() =>
+      CopyLogEntriesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CopyLogEntriesRequest copyWith(
+          void Function(CopyLogEntriesRequest) updates) =>
+      super.copyWith((message) => updates(message as CopyLogEntriesRequest))
+          as CopyLogEntriesRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CopyLogEntriesRequest create() => CopyLogEntriesRequest._();
+  CopyLogEntriesRequest createEmptyInstance() => create();
+  static $pb.PbList<CopyLogEntriesRequest> createRepeated() =>
+      $pb.PbList<CopyLogEntriesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CopyLogEntriesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CopyLogEntriesRequest>(create);
+  static CopyLogEntriesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set filter($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearFilter() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get destination => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set destination($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDestination() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearDestination() => clearField(4);
+}
+
+class CopyLogEntriesMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CopyLogEntriesMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOM<$3.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $3.Timestamp.create)
+    ..e<OperationState>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOB(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cancellationRequested')
+    ..aOM<CopyLogEntriesRequest>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'request',
+        subBuilder: CopyLogEntriesRequest.create)
+    ..a<$core.int>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'progress',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'writerIdentity')
+    ..hasRequiredFields = false;
+
+  CopyLogEntriesMetadata._() : super();
+  factory CopyLogEntriesMetadata({
+    $3.Timestamp? startTime,
+    $3.Timestamp? endTime,
+    OperationState? state,
+    $core.bool? cancellationRequested,
+    CopyLogEntriesRequest? request,
+    $core.int? progress,
+    $core.String? writerIdentity,
+  }) {
+    final _result = create();
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (cancellationRequested != null) {
+      _result.cancellationRequested = cancellationRequested;
+    }
+    if (request != null) {
+      _result.request = request;
+    }
+    if (progress != null) {
+      _result.progress = progress;
+    }
+    if (writerIdentity != null) {
+      _result.writerIdentity = writerIdentity;
+    }
+    return _result;
+  }
+  factory CopyLogEntriesMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CopyLogEntriesMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CopyLogEntriesMetadata clone() =>
+      CopyLogEntriesMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CopyLogEntriesMetadata copyWith(
+          void Function(CopyLogEntriesMetadata) updates) =>
+      super.copyWith((message) => updates(message as CopyLogEntriesMetadata))
+          as CopyLogEntriesMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CopyLogEntriesMetadata create() => CopyLogEntriesMetadata._();
+  CopyLogEntriesMetadata createEmptyInstance() => create();
+  static $pb.PbList<CopyLogEntriesMetadata> createRepeated() =>
+      $pb.PbList<CopyLogEntriesMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static CopyLogEntriesMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CopyLogEntriesMetadata>(create);
+  static CopyLogEntriesMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.Timestamp get startTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set startTime($3.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStartTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Timestamp ensureStartTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $3.Timestamp get endTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set endTime($3.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEndTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureEndTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  OperationState get state => $_getN(2);
+  @$pb.TagNumber(3)
+  set state(OperationState v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearState() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get cancellationRequested => $_getBF(3);
+  @$pb.TagNumber(4)
+  set cancellationRequested($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCancellationRequested() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCancellationRequested() => clearField(4);
+
+  @$pb.TagNumber(5)
+  CopyLogEntriesRequest get request => $_getN(4);
+  @$pb.TagNumber(5)
+  set request(CopyLogEntriesRequest v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasRequest() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRequest() => clearField(5);
+  @$pb.TagNumber(5)
+  CopyLogEntriesRequest ensureRequest() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.int get progress => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set progress($core.int v) {
+    $_setSignedInt32(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasProgress() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearProgress() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get writerIdentity => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set writerIdentity($core.String v) {
+    $_setString(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasWriterIdentity() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearWriterIdentity() => clearField(7);
+}
+
+class CopyLogEntriesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CopyLogEntriesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logEntriesCopiedCount')
+    ..hasRequiredFields = false;
+
+  CopyLogEntriesResponse._() : super();
+  factory CopyLogEntriesResponse({
+    $fixnum.Int64? logEntriesCopiedCount,
+  }) {
+    final _result = create();
+    if (logEntriesCopiedCount != null) {
+      _result.logEntriesCopiedCount = logEntriesCopiedCount;
+    }
+    return _result;
+  }
+  factory CopyLogEntriesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CopyLogEntriesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CopyLogEntriesResponse clone() =>
+      CopyLogEntriesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CopyLogEntriesResponse copyWith(
+          void Function(CopyLogEntriesResponse) updates) =>
+      super.copyWith((message) => updates(message as CopyLogEntriesResponse))
+          as CopyLogEntriesResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CopyLogEntriesResponse create() => CopyLogEntriesResponse._();
+  CopyLogEntriesResponse createEmptyInstance() => create();
+  static $pb.PbList<CopyLogEntriesResponse> createRepeated() =>
+      $pb.PbList<CopyLogEntriesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CopyLogEntriesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CopyLogEntriesResponse>(create);
+  static CopyLogEntriesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get logEntriesCopiedCount => $_getI64(0);
+  @$pb.TagNumber(1)
+  set logEntriesCopiedCount($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLogEntriesCopiedCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLogEntriesCopiedCount() => clearField(1);
 }

@@ -86,16 +86,6 @@ class ServiceManagerClient extends $grpc.Client {
       ($2.GenerateConfigReportRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $2.GenerateConfigReportResponse.fromBuffer(value));
-  static final _$enableService =
-      $grpc.ClientMethod<$2.EnableServiceRequest, $0.Operation>(
-          '/google.api.servicemanagement.v1.ServiceManager/EnableService',
-          ($2.EnableServiceRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
-  static final _$disableService =
-      $grpc.ClientMethod<$2.DisableServiceRequest, $0.Operation>(
-          '/google.api.servicemanagement.v1.ServiceManager/DisableService',
-          ($2.DisableServiceRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   ServiceManagerClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -178,18 +168,6 @@ class ServiceManagerClient extends $grpc.Client {
       $2.GenerateConfigReportRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$generateConfigReport, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.Operation> enableService(
-      $2.EnableServiceRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$enableService, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.Operation> disableService(
-      $2.DisableServiceRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$disableService, request, options: options);
   }
 }
 
@@ -305,22 +283,6 @@ abstract class ServiceManagerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.GenerateConfigReportRequest.fromBuffer(value),
         ($2.GenerateConfigReportResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.EnableServiceRequest, $0.Operation>(
-        'EnableService',
-        enableService_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.EnableServiceRequest.fromBuffer(value),
-        ($0.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.DisableServiceRequest, $0.Operation>(
-        'DisableService',
-        disableService_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.DisableServiceRequest.fromBuffer(value),
-        ($0.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.ListServicesResponse> listServices_Pre(
@@ -392,16 +354,6 @@ abstract class ServiceManagerServiceBase extends $grpc.Service {
     return generateConfigReport(call, await request);
   }
 
-  $async.Future<$0.Operation> enableService_Pre($grpc.ServiceCall call,
-      $async.Future<$2.EnableServiceRequest> request) async {
-    return enableService(call, await request);
-  }
-
-  $async.Future<$0.Operation> disableService_Pre($grpc.ServiceCall call,
-      $async.Future<$2.DisableServiceRequest> request) async {
-    return disableService(call, await request);
-  }
-
   $async.Future<$2.ListServicesResponse> listServices(
       $grpc.ServiceCall call, $2.ListServicesRequest request);
   $async.Future<$3.ManagedService> getService(
@@ -428,8 +380,4 @@ abstract class ServiceManagerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.CreateServiceRolloutRequest request);
   $async.Future<$2.GenerateConfigReportResponse> generateConfigReport(
       $grpc.ServiceCall call, $2.GenerateConfigReportRequest request);
-  $async.Future<$0.Operation> enableService(
-      $grpc.ServiceCall call, $2.EnableServiceRequest request);
-  $async.Future<$0.Operation> disableService(
-      $grpc.ServiceCall call, $2.DisableServiceRequest request);
 }

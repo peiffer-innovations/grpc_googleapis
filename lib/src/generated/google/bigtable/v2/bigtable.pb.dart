@@ -1422,6 +1422,136 @@ class CheckAndMutateRowResponse extends $pb.GeneratedMessage {
   void clearPredicateMatched() => clearField(1);
 }
 
+class PingAndWarmRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PingAndWarmRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'appProfileId')
+    ..hasRequiredFields = false;
+
+  PingAndWarmRequest._() : super();
+  factory PingAndWarmRequest({
+    $core.String? name,
+    $core.String? appProfileId,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (appProfileId != null) {
+      _result.appProfileId = appProfileId;
+    }
+    return _result;
+  }
+  factory PingAndWarmRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PingAndWarmRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PingAndWarmRequest clone() => PingAndWarmRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PingAndWarmRequest copyWith(void Function(PingAndWarmRequest) updates) =>
+      super.copyWith((message) => updates(message as PingAndWarmRequest))
+          as PingAndWarmRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PingAndWarmRequest create() => PingAndWarmRequest._();
+  PingAndWarmRequest createEmptyInstance() => create();
+  static $pb.PbList<PingAndWarmRequest> createRepeated() =>
+      $pb.PbList<PingAndWarmRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PingAndWarmRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PingAndWarmRequest>(create);
+  static PingAndWarmRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get appProfileId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set appProfileId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAppProfileId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAppProfileId() => clearField(2);
+}
+
+class PingAndWarmResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PingAndWarmResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  PingAndWarmResponse._() : super();
+  factory PingAndWarmResponse() => create();
+  factory PingAndWarmResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PingAndWarmResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PingAndWarmResponse clone() => PingAndWarmResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PingAndWarmResponse copyWith(void Function(PingAndWarmResponse) updates) =>
+      super.copyWith((message) => updates(message as PingAndWarmResponse))
+          as PingAndWarmResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PingAndWarmResponse create() => PingAndWarmResponse._();
+  PingAndWarmResponse createEmptyInstance() => create();
+  static $pb.PbList<PingAndWarmResponse> createRepeated() =>
+      $pb.PbList<PingAndWarmResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PingAndWarmResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PingAndWarmResponse>(create);
+  static PingAndWarmResponse? _defaultInstance;
+}
+
 class ReadModifyWriteRowRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

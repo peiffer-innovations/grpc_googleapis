@@ -22,11 +22,28 @@ const LifecycleState$json = const {
 /// Descriptor for `LifecycleState`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List lifecycleStateDescriptor = $convert.base64Decode(
     'Cg5MaWZlY3ljbGVTdGF0ZRIfChtMSUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIUChBERUxFVEVfUkVRVUVTVEVEEAI=');
+@$core.Deprecated('Use operationStateDescriptor instead')
+const OperationState$json = const {
+  '1': 'OperationState',
+  '2': const [
+    const {'1': 'OPERATION_STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'OPERATION_STATE_SCHEDULED', '2': 1},
+    const {'1': 'OPERATION_STATE_WAITING_FOR_PERMISSIONS', '2': 2},
+    const {'1': 'OPERATION_STATE_RUNNING', '2': 3},
+    const {'1': 'OPERATION_STATE_SUCCEEDED', '2': 4},
+    const {'1': 'OPERATION_STATE_FAILED', '2': 5},
+    const {'1': 'OPERATION_STATE_CANCELLED', '2': 6},
+  ],
+};
+
+/// Descriptor for `OperationState`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List operationStateDescriptor = $convert.base64Decode(
+    'Cg5PcGVyYXRpb25TdGF0ZRIfChtPUEVSQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIdChlPUEVSQVRJT05fU1RBVEVfU0NIRURVTEVEEAESKwonT1BFUkFUSU9OX1NUQVRFX1dBSVRJTkdfRk9SX1BFUk1JU1NJT05TEAISGwoXT1BFUkFUSU9OX1NUQVRFX1JVTk5JTkcQAxIdChlPUEVSQVRJT05fU1RBVEVfU1VDQ0VFREVEEAQSGgoWT1BFUkFUSU9OX1NUQVRFX0ZBSUxFRBAFEh0KGU9QRVJBVElPTl9TVEFURV9DQU5DRUxMRUQQBg==');
 @$core.Deprecated('Use logBucketDescriptor instead')
 const LogBucket$json = const {
   '1': 'LogBucket',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
     const {
       '1': 'create_time',
@@ -63,13 +80,28 @@ const LogBucket$json = const {
       '8': const {},
       '10': 'lifecycleState'
     },
+    const {
+      '1': 'restricted_fields',
+      '3': 15,
+      '4': 3,
+      '5': 9,
+      '10': 'restrictedFields'
+    },
+    const {
+      '1': 'cmek_settings',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.CmekSettings',
+      '10': 'cmekSettings'
+    },
   ],
   '7': const {},
 };
 
 /// Descriptor for `LogBucket`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List logBucketDescriptor = $convert.base64Decode(
-    'CglMb2dCdWNrZXQSEgoEbmFtZRgBIAEoCVIEbmFtZRIgCgtkZXNjcmlwdGlvbhgDIAEoCVILZGVzY3JpcHRpb24SQAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSQAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSJQoOcmV0ZW50aW9uX2RheXMYCyABKAVSDXJldGVudGlvbkRheXMSFgoGbG9ja2VkGAkgASgIUgZsb2NrZWQSTwoPbGlmZWN5Y2xlX3N0YXRlGAwgASgOMiEuZ29vZ2xlLmxvZ2dpbmcudjIuTGlmZWN5Y2xlU3RhdGVCA+BBA1IObGlmZWN5Y2xlU3RhdGU6pQLqQaECCiBsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZ0J1Y2tldBI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0SQm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fRI2Zm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9idWNrZXRzL3tidWNrZXR9EkdiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fQ==');
+    'CglMb2dCdWNrZXQSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhJACgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRIlCg5yZXRlbnRpb25fZGF5cxgLIAEoBVINcmV0ZW50aW9uRGF5cxIWCgZsb2NrZWQYCSABKAhSBmxvY2tlZBJPCg9saWZlY3ljbGVfc3RhdGUYDCABKA4yIS5nb29nbGUubG9nZ2luZy52Mi5MaWZlY3ljbGVTdGF0ZUID4EEDUg5saWZlY3ljbGVTdGF0ZRIrChFyZXN0cmljdGVkX2ZpZWxkcxgPIAMoCVIQcmVzdHJpY3RlZEZpZWxkcxJECg1jbWVrX3NldHRpbmdzGBMgASgLMh8uZ29vZ2xlLmxvZ2dpbmcudjIuQ21la1NldHRpbmdzUgxjbWVrU2V0dGluZ3M6pQLqQaECCiBsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZ0J1Y2tldBI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0SQm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fRI2Zm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9idWNrZXRzL3tidWNrZXR9EkdiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fQ==');
 @$core.Deprecated('Use logViewDescriptor instead')
 const LogView$json = const {
   '1': 'LogView',
@@ -981,3 +1013,190 @@ const CmekSettings$json = const {
 /// Descriptor for `CmekSettings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cmekSettingsDescriptor = $convert.base64Decode(
     'CgxDbWVrU2V0dGluZ3MSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiAKDGttc19rZXlfbmFtZRgCIAEoCVIKa21zS2V5TmFtZRIxChJzZXJ2aWNlX2FjY291bnRfaWQYAyABKAlCA+BBA1IQc2VydmljZUFjY291bnRJZDrEAepBwAEKI2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vQ21la1NldHRpbmdzEh9wcm9qZWN0cy97cHJvamVjdH0vY21la1NldHRpbmdzEilvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2NtZWtTZXR0aW5ncxIdZm9sZGVycy97Zm9sZGVyfS9jbWVrU2V0dGluZ3MSLmJpbGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9jbWVrU2V0dGluZ3M=');
+@$core.Deprecated('Use getSettingsRequestDescriptor instead')
+const GetSettingsRequest$json = const {
+  '1': 'GetSettingsRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSettingsRequestDescriptor = $convert.base64Decode(
+    'ChJHZXRTZXR0aW5nc1JlcXVlc3QSOwoEbmFtZRgBIAEoCUIn4EEC+kEhCh9sb2dnaW5nLmdvb2dsZWFwaXMuY29tL1NldHRpbmdzUgRuYW1l');
+@$core.Deprecated('Use updateSettingsRequestDescriptor instead')
+const UpdateSettingsRequest$json = const {
+  '1': 'UpdateSettingsRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'settings',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.Settings',
+      '8': const {},
+      '10': 'settings'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSettingsRequestDescriptor = $convert.base64Decode(
+    'ChVVcGRhdGVTZXR0aW5nc1JlcXVlc3QSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjwKCHNldHRpbmdzGAIgASgLMhsuZ29vZ2xlLmxvZ2dpbmcudjIuU2V0dGluZ3NCA+BBAlIIc2V0dGluZ3MSQAoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQFSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use settingsDescriptor instead')
+const Settings$json = const {
+  '1': 'Settings',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'kms_key_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'kmsKeyName'
+    },
+    const {
+      '1': 'kms_service_account_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'kmsServiceAccountId'
+    },
+    const {
+      '1': 'storage_location',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'storageLocation'
+    },
+    const {
+      '1': 'disable_default_sink',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'disableDefaultSink'
+    },
+  ],
+  '7': const {},
+};
+
+/// Descriptor for `Settings`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List settingsDescriptor = $convert.base64Decode(
+    'CghTZXR0aW5ncxIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSJQoMa21zX2tleV9uYW1lGAIgASgJQgPgQQFSCmttc0tleU5hbWUSOAoWa21zX3NlcnZpY2VfYWNjb3VudF9pZBgDIAEoCUID4EEDUhNrbXNTZXJ2aWNlQWNjb3VudElkEi4KEHN0b3JhZ2VfbG9jYXRpb24YBCABKAlCA+BBAVIPc3RvcmFnZUxvY2F0aW9uEjUKFGRpc2FibGVfZGVmYXVsdF9zaW5rGAUgASgIQgPgQQFSEmRpc2FibGVEZWZhdWx0U2luazqwAepBrAEKH2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vU2V0dGluZ3MSG3Byb2plY3RzL3twcm9qZWN0fS9zZXR0aW5ncxIlb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9zZXR0aW5ncxIZZm9sZGVycy97Zm9sZGVyfS9zZXR0aW5ncxIqYmlsbGluZ0FjY291bnRzL3tiaWxsaW5nX2FjY291bnR9L3NldHRpbmdz');
+@$core.Deprecated('Use copyLogEntriesRequestDescriptor instead')
+const CopyLogEntriesRequest$json = const {
+  '1': 'CopyLogEntriesRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'filter',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'filter'
+    },
+    const {
+      '1': 'destination',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'destination'
+    },
+  ],
+};
+
+/// Descriptor for `CopyLogEntriesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List copyLogEntriesRequestDescriptor = $convert.base64Decode(
+    'ChVDb3B5TG9nRW50cmllc1JlcXVlc3QSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEhsKBmZpbHRlchgDIAEoCUID4EEBUgZmaWx0ZXISJQoLZGVzdGluYXRpb24YBCABKAlCA+BBAlILZGVzdGluYXRpb24=');
+@$core.Deprecated('Use copyLogEntriesMetadataDescriptor instead')
+const CopyLogEntriesMetadata$json = const {
+  '1': 'CopyLogEntriesMetadata',
+  '2': const [
+    const {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    const {
+      '1': 'state',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.logging.v2.OperationState',
+      '10': 'state'
+    },
+    const {
+      '1': 'cancellation_requested',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '10': 'cancellationRequested'
+    },
+    const {
+      '1': 'request',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.CopyLogEntriesRequest',
+      '10': 'request'
+    },
+    const {'1': 'progress', '3': 6, '4': 1, '5': 5, '10': 'progress'},
+    const {
+      '1': 'writer_identity',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '10': 'writerIdentity'
+    },
+  ],
+};
+
+/// Descriptor for `CopyLogEntriesMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List copyLogEntriesMetadataDescriptor =
+    $convert.base64Decode(
+        'ChZDb3B5TG9nRW50cmllc01ldGFkYXRhEjkKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSNQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgdlbmRUaW1lEjcKBXN0YXRlGAMgASgOMiEuZ29vZ2xlLmxvZ2dpbmcudjIuT3BlcmF0aW9uU3RhdGVSBXN0YXRlEjUKFmNhbmNlbGxhdGlvbl9yZXF1ZXN0ZWQYBCABKAhSFWNhbmNlbGxhdGlvblJlcXVlc3RlZBJCCgdyZXF1ZXN0GAUgASgLMiguZ29vZ2xlLmxvZ2dpbmcudjIuQ29weUxvZ0VudHJpZXNSZXF1ZXN0UgdyZXF1ZXN0EhoKCHByb2dyZXNzGAYgASgFUghwcm9ncmVzcxInCg93cml0ZXJfaWRlbnRpdHkYByABKAlSDndyaXRlcklkZW50aXR5');
+@$core.Deprecated('Use copyLogEntriesResponseDescriptor instead')
+const CopyLogEntriesResponse$json = const {
+  '1': 'CopyLogEntriesResponse',
+  '2': const [
+    const {
+      '1': 'log_entries_copied_count',
+      '3': 1,
+      '4': 1,
+      '5': 3,
+      '10': 'logEntriesCopiedCount'
+    },
+  ],
+};
+
+/// Descriptor for `CopyLogEntriesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List copyLogEntriesResponseDescriptor =
+    $convert.base64Decode(
+        'ChZDb3B5TG9nRW50cmllc1Jlc3BvbnNlEjcKGGxvZ19lbnRyaWVzX2NvcGllZF9jb3VudBgBIAEoA1IVbG9nRW50cmllc0NvcGllZENvdW50');

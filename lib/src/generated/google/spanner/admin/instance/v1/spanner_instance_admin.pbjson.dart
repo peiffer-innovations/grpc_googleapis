@@ -79,7 +79,7 @@ final $typed_data.Uint8List instanceConfigDescriptor = $convert.base64Decode(
 const Instance$json = const {
   '1': 'Instance',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {
       '1': 'config',
       '3': 2,
@@ -88,7 +88,14 @@ const Instance$json = const {
       '8': const {},
       '10': 'config'
     },
-    const {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
+    const {
+      '1': 'display_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'displayName'
+    },
     const {'1': 'node_count', '3': 5, '4': 1, '5': 5, '10': 'nodeCount'},
     const {
       '1': 'processing_units',
@@ -143,7 +150,7 @@ const Instance_State$json = const {
 
 /// Descriptor for `Instance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List instanceDescriptor = $convert.base64Decode(
-    'CghJbnN0YW5jZRISCgRuYW1lGAEgASgJUgRuYW1lEkIKBmNvbmZpZxgCIAEoCUIq+kEnCiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnUgZjb25maWcSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRIdCgpub2RlX2NvdW50GAUgASgFUglub2RlQ291bnQSKQoQcHJvY2Vzc2luZ191bml0cxgJIAEoBVIPcHJvY2Vzc2luZ1VuaXRzEksKBXN0YXRlGAYgASgOMjAuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2UuU3RhdGVCA+BBA1IFc3RhdGUSTgoGbGFiZWxzGAcgAygLMjYuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2UuTGFiZWxzRW50cnlSBmxhYmVscxIjCg1lbmRwb2ludF91cmlzGAggAygJUgxlbmRwb2ludFVyaXMaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAjpN6kFKCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0=');
+    'CghJbnN0YW5jZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSRQoGY29uZmlnGAIgASgJQi3gQQL6QScKJXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWdSBmNvbmZpZxImCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAlILZGlzcGxheU5hbWUSHQoKbm9kZV9jb3VudBgFIAEoBVIJbm9kZUNvdW50EikKEHByb2Nlc3NpbmdfdW5pdHMYCSABKAVSD3Byb2Nlc3NpbmdVbml0cxJLCgVzdGF0ZRgGIAEoDjIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlLlN0YXRlQgPgQQNSBXN0YXRlEk4KBmxhYmVscxgHIAMoCzI2Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlLkxhYmVsc0VudHJ5UgZsYWJlbHMSIwoNZW5kcG9pbnRfdXJpcxgIIAMoCVIMZW5kcG9pbnRVcmlzGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6TepBSgofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9');
 @$core.Deprecated('Use listInstanceConfigsRequestDescriptor instead')
 const ListInstanceConfigsRequest$json = const {
   '1': 'ListInstanceConfigsRequest',

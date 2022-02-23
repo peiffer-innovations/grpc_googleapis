@@ -343,6 +343,26 @@ const CheckAndMutateRowResponse$json = const {
 final $typed_data.Uint8List checkAndMutateRowResponseDescriptor =
     $convert.base64Decode(
         'ChlDaGVja0FuZE11dGF0ZVJvd1Jlc3BvbnNlEisKEXByZWRpY2F0ZV9tYXRjaGVkGAEgASgIUhBwcmVkaWNhdGVNYXRjaGVk');
+@$core.Deprecated('Use pingAndWarmRequestDescriptor instead')
+const PingAndWarmRequest$json = const {
+  '1': 'PingAndWarmRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'app_profile_id', '3': 2, '4': 1, '5': 9, '10': 'appProfileId'},
+  ],
+};
+
+/// Descriptor for `PingAndWarmRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pingAndWarmRequestDescriptor = $convert.base64Decode(
+    'ChJQaW5nQW5kV2FybVJlcXVlc3QSQQoEbmFtZRgBIAEoCUIt4EEC+kEnCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlUgRuYW1lEiQKDmFwcF9wcm9maWxlX2lkGAIgASgJUgxhcHBQcm9maWxlSWQ=');
+@$core.Deprecated('Use pingAndWarmResponseDescriptor instead')
+const PingAndWarmResponse$json = const {
+  '1': 'PingAndWarmResponse',
+};
+
+/// Descriptor for `PingAndWarmResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pingAndWarmResponseDescriptor =
+    $convert.base64Decode('ChNQaW5nQW5kV2FybVJlc3BvbnNl');
 @$core.Deprecated('Use readModifyWriteRowRequestDescriptor instead')
 const ReadModifyWriteRowRequest$json = const {
   '1': 'ReadModifyWriteRowRequest',

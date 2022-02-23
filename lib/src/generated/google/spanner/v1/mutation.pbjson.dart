@@ -69,7 +69,7 @@ const Mutation$json = const {
 const Mutation_Write$json = const {
   '1': 'Write',
   '2': const [
-    const {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
+    const {'1': 'table', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'table'},
     const {'1': 'columns', '3': 2, '4': 3, '5': 9, '10': 'columns'},
     const {
       '1': 'values',
@@ -86,13 +86,14 @@ const Mutation_Write$json = const {
 const Mutation_Delete$json = const {
   '1': 'Delete',
   '2': const [
-    const {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
+    const {'1': 'table', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'table'},
     const {
       '1': 'key_set',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.spanner.v1.KeySet',
+      '8': const {},
       '10': 'keySet'
     },
   ],
@@ -100,4 +101,4 @@ const Mutation_Delete$json = const {
 
 /// Descriptor for `Mutation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mutationDescriptor = $convert.base64Decode(
-    'CghNdXRhdGlvbhI7CgZpbnNlcnQYASABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbi5Xcml0ZUgAUgZpbnNlcnQSOwoGdXBkYXRlGAIgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIAFIGdXBkYXRlEk0KEGluc2VydF9vcl91cGRhdGUYAyABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbi5Xcml0ZUgAUg5pbnNlcnRPclVwZGF0ZRI9CgdyZXBsYWNlGAQgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIAFIHcmVwbGFjZRI8CgZkZWxldGUYBSABKAsyIi5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbi5EZWxldGVIAFIGZGVsZXRlGmsKBVdyaXRlEhQKBXRhYmxlGAEgASgJUgV0YWJsZRIYCgdjb2x1bW5zGAIgAygJUgdjb2x1bW5zEjIKBnZhbHVlcxgDIAMoCzIaLmdvb2dsZS5wcm90b2J1Zi5MaXN0VmFsdWVSBnZhbHVlcxpSCgZEZWxldGUSFAoFdGFibGUYASABKAlSBXRhYmxlEjIKB2tleV9zZXQYAiABKAsyGS5nb29nbGUuc3Bhbm5lci52MS5LZXlTZXRSBmtleVNldEILCglvcGVyYXRpb24=');
+    'CghNdXRhdGlvbhI7CgZpbnNlcnQYASABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbi5Xcml0ZUgAUgZpbnNlcnQSOwoGdXBkYXRlGAIgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIAFIGdXBkYXRlEk0KEGluc2VydF9vcl91cGRhdGUYAyABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbi5Xcml0ZUgAUg5pbnNlcnRPclVwZGF0ZRI9CgdyZXBsYWNlGAQgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIAFIHcmVwbGFjZRI8CgZkZWxldGUYBSABKAsyIi5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbi5EZWxldGVIAFIGZGVsZXRlGnAKBVdyaXRlEhkKBXRhYmxlGAEgASgJQgPgQQJSBXRhYmxlEhgKB2NvbHVtbnMYAiADKAlSB2NvbHVtbnMSMgoGdmFsdWVzGAMgAygLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZVIGdmFsdWVzGlwKBkRlbGV0ZRIZCgV0YWJsZRgBIAEoCUID4EECUgV0YWJsZRI3CgdrZXlfc2V0GAIgASgLMhkuZ29vZ2xlLnNwYW5uZXIudjEuS2V5U2V0QgPgQQJSBmtleVNldEILCglvcGVyYXRpb24=');

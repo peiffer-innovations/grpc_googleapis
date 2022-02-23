@@ -9,12 +9,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../v1/fleetengine.pb.dart' as $0;
+import 'common.pb.dart' as $0;
 import '../../../../type/latlng.pb.dart' as $1;
 import '../../../../protobuf/wrappers.pb.dart' as $2;
 import '../../../../protobuf/duration.pb.dart' as $3;
 
-import '../../v1/fleetengine.pbenum.dart' as $0;
+import 'common.pbenum.dart' as $0;
 import 'delivery_vehicles.pbenum.dart';
 
 export 'delivery_vehicles.pbenum.dart';
@@ -34,21 +34,22 @@ class DeliveryVehicle extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
-    ..aOM<$0.VehicleLocation>(
+    ..aOM<$0.DeliveryVehicleLocation>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'lastLocation',
-        subBuilder: $0.VehicleLocation.create)
-    ..e<$0.NavigationStatus>(
+        subBuilder: $0.DeliveryVehicleLocation.create)
+    ..e<$0.DeliveryVehicleNavigationStatus>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'navigationStatus',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $0.NavigationStatus.UNKNOWN_NAVIGATION_STATUS,
-        valueOf: $0.NavigationStatus.valueOf,
-        enumValues: $0.NavigationStatus.values)
+        defaultOrMaker:
+            $0.DeliveryVehicleNavigationStatus.UNKNOWN_NAVIGATION_STATUS,
+        valueOf: $0.DeliveryVehicleNavigationStatus.valueOf,
+        enumValues: $0.DeliveryVehicleNavigationStatus.values)
     ..a<$core.List<$core.int>>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -80,26 +81,26 @@ class DeliveryVehicle extends $pb.GeneratedMessage {
             : 'remainingVehicleJourneySegments',
         $pb.PbFieldType.PM,
         subBuilder: VehicleJourneySegment.create)
-    ..pc<$0.VehicleAttribute>(
+    ..pc<$0.DeliveryVehicleAttribute>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'attributes',
         $pb.PbFieldType.PM,
-        subBuilder: $0.VehicleAttribute.create)
+        subBuilder: $0.DeliveryVehicleAttribute.create)
     ..hasRequiredFields = false;
 
   DeliveryVehicle._() : super();
   factory DeliveryVehicle({
     $core.String? name,
-    $0.VehicleLocation? lastLocation,
-    $0.NavigationStatus? navigationStatus,
+    $0.DeliveryVehicleLocation? lastLocation,
+    $0.DeliveryVehicleNavigationStatus? navigationStatus,
     $core.List<$core.int>? currentRouteSegment,
     $1.LatLng? currentRouteSegmentEndPoint,
     $2.Int32Value? remainingDistanceMeters,
     $3.Duration? remainingDuration,
     $core.Iterable<VehicleJourneySegment>? remainingVehicleJourneySegments,
-    $core.Iterable<$0.VehicleAttribute>? attributes,
+    $core.Iterable<$0.DeliveryVehicleAttribute>? attributes,
   }) {
     final _result = create();
     if (name != null) {
@@ -172,9 +173,9 @@ class DeliveryVehicle extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.VehicleLocation get lastLocation => $_getN(1);
+  $0.DeliveryVehicleLocation get lastLocation => $_getN(1);
   @$pb.TagNumber(2)
-  set lastLocation($0.VehicleLocation v) {
+  set lastLocation($0.DeliveryVehicleLocation v) {
     setField(2, v);
   }
 
@@ -183,12 +184,12 @@ class DeliveryVehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLastLocation() => clearField(2);
   @$pb.TagNumber(2)
-  $0.VehicleLocation ensureLastLocation() => $_ensure(1);
+  $0.DeliveryVehicleLocation ensureLastLocation() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $0.NavigationStatus get navigationStatus => $_getN(2);
+  $0.DeliveryVehicleNavigationStatus get navigationStatus => $_getN(2);
   @$pb.TagNumber(3)
-  set navigationStatus($0.NavigationStatus v) {
+  set navigationStatus($0.DeliveryVehicleNavigationStatus v) {
     setField(3, v);
   }
 
@@ -256,7 +257,7 @@ class DeliveryVehicle extends $pb.GeneratedMessage {
       $_getList(7);
 
   @$pb.TagNumber(9)
-  $core.List<$0.VehicleAttribute> get attributes => $_getList(8);
+  $core.List<$0.DeliveryVehicleAttribute> get attributes => $_getList(8);
 }
 
 class LocationInfo extends $pb.GeneratedMessage {

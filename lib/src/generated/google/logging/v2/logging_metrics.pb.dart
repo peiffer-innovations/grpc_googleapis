@@ -89,6 +89,11 @@ class LogMetric extends $pb.GeneratedMessage {
             ? ''
             : 'updateTime',
         subBuilder: $4.Timestamp.create)
+    ..aOB(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disabled')
     ..hasRequiredFields = false;
 
   LogMetric._() : super();
@@ -104,6 +109,7 @@ class LogMetric extends $pb.GeneratedMessage {
     $3.Distribution_BucketOptions? bucketOptions,
     $4.Timestamp? createTime,
     $4.Timestamp? updateTime,
+    $core.bool? disabled,
   }) {
     final _result = create();
     if (name != null) {
@@ -136,6 +142,9 @@ class LogMetric extends $pb.GeneratedMessage {
     }
     if (updateTime != null) {
       _result.updateTime = updateTime;
+    }
+    if (disabled != null) {
+      _result.disabled = disabled;
     }
     return _result;
   }
@@ -287,6 +296,18 @@ class LogMetric extends $pb.GeneratedMessage {
   void clearUpdateTime() => clearField(10);
   @$pb.TagNumber(10)
   $4.Timestamp ensureUpdateTime() => $_ensure(9);
+
+  @$pb.TagNumber(12)
+  $core.bool get disabled => $_getBF(10);
+  @$pb.TagNumber(12)
+  set disabled($core.bool v) {
+    $_setBool(10, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasDisabled() => $_has(10);
+  @$pb.TagNumber(12)
+  void clearDisabled() => clearField(12);
 }
 
 class ListLogMetricsRequest extends $pb.GeneratedMessage {

@@ -9,8 +9,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import '../../config_change.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../config_change.pb.dart' as $1;
 
 import 'resources.pbenum.dart';
 
@@ -226,12 +226,12 @@ class OperationMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'progressPercentage',
         $pb.PbFieldType.O3)
-    ..aOM<$2.Timestamp>(
+    ..aOM<$0.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $2.Timestamp.create)
+        subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata._() : super();
@@ -239,7 +239,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? resourceNames,
     $core.Iterable<OperationMetadata_Step>? steps,
     $core.int? progressPercentage,
-    $2.Timestamp? startTime,
+    $0.Timestamp? startTime,
   }) {
     final _result = create();
     if (resourceNames != null) {
@@ -302,9 +302,9 @@ class OperationMetadata extends $pb.GeneratedMessage {
   void clearProgressPercentage() => clearField(3);
 
   @$pb.TagNumber(4)
-  $2.Timestamp get startTime => $_getN(3);
+  $0.Timestamp get startTime => $_getN(3);
   @$pb.TagNumber(4)
-  set startTime($2.Timestamp v) {
+  set startTime($0.Timestamp v) {
     setField(4, v);
   }
 
@@ -313,7 +313,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearStartTime() => clearField(4);
   @$pb.TagNumber(4)
-  $2.Timestamp ensureStartTime() => $_ensure(3);
+  $0.Timestamp ensureStartTime() => $_ensure(3);
 }
 
 class Diagnostic extends $pb.GeneratedMessage {
@@ -698,18 +698,18 @@ class ChangeReport extends $pb.GeneratedMessage {
               ? ''
               : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..pc<$3.ConfigChange>(
+    ..pc<$1.ConfigChange>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'configChanges',
         $pb.PbFieldType.PM,
-        subBuilder: $3.ConfigChange.create)
+        subBuilder: $1.ConfigChange.create)
     ..hasRequiredFields = false;
 
   ChangeReport._() : super();
   factory ChangeReport({
-    $core.Iterable<$3.ConfigChange>? configChanges,
+    $core.Iterable<$1.ConfigChange>? configChanges,
   }) {
     final _result = create();
     if (configChanges != null) {
@@ -745,7 +745,7 @@ class ChangeReport extends $pb.GeneratedMessage {
   static ChangeReport? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.ConfigChange> get configChanges => $_getList(0);
+  $core.List<$1.ConfigChange> get configChanges => $_getList(0);
 }
 
 class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
@@ -883,12 +883,12 @@ class Rollout extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'rolloutId')
-    ..aOM<$2.Timestamp>(
+    ..aOM<$0.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'createTime',
-        subBuilder: $2.Timestamp.create)
+        subBuilder: $0.Timestamp.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -925,7 +925,7 @@ class Rollout extends $pb.GeneratedMessage {
   Rollout._() : super();
   factory Rollout({
     $core.String? rolloutId,
-    $2.Timestamp? createTime,
+    $0.Timestamp? createTime,
     $core.String? createdBy,
     Rollout_RolloutStatus? status,
     Rollout_TrafficPercentStrategy? trafficPercentStrategy,
@@ -998,9 +998,9 @@ class Rollout extends $pb.GeneratedMessage {
   void clearRolloutId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $2.Timestamp get createTime => $_getN(1);
+  $0.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(2)
-  set createTime($2.Timestamp v) {
+  set createTime($0.Timestamp v) {
     setField(2, v);
   }
 
@@ -1009,7 +1009,7 @@ class Rollout extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCreateTime() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Timestamp ensureCreateTime() => $_ensure(1);
+  $0.Timestamp ensureCreateTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get createdBy => $_getSZ(2);

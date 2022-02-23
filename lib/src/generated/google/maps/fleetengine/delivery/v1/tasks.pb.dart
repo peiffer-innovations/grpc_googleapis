@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'delivery_vehicles.pb.dart' as $0;
 import '../../../../protobuf/duration.pb.dart' as $1;
 import '../../../../protobuf/timestamp.pb.dart' as $2;
-import '../../v1/fleetengine.pb.dart' as $3;
+import 'common.pb.dart' as $3;
 
 import 'tasks.pbenum.dart';
 
@@ -35,12 +35,12 @@ class Task_JourneySharingInfo extends $pb.GeneratedMessage {
             : 'remainingVehicleJourneySegments',
         $pb.PbFieldType.PM,
         subBuilder: $0.VehicleJourneySegment.create)
-    ..aOM<$3.VehicleLocation>(
+    ..aOM<$3.DeliveryVehicleLocation>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'lastLocation',
-        subBuilder: $3.VehicleLocation.create)
+        subBuilder: $3.DeliveryVehicleLocation.create)
     ..aOB(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -51,7 +51,7 @@ class Task_JourneySharingInfo extends $pb.GeneratedMessage {
   Task_JourneySharingInfo._() : super();
   factory Task_JourneySharingInfo({
     $core.Iterable<$0.VehicleJourneySegment>? remainingVehicleJourneySegments,
-    $3.VehicleLocation? lastLocation,
+    $3.DeliveryVehicleLocation? lastLocation,
     $core.bool? lastLocationSnappable,
   }) {
     final _result = create();
@@ -101,9 +101,9 @@ class Task_JourneySharingInfo extends $pb.GeneratedMessage {
       $_getList(0);
 
   @$pb.TagNumber(2)
-  $3.VehicleLocation get lastLocation => $_getN(1);
+  $3.DeliveryVehicleLocation get lastLocation => $_getN(1);
   @$pb.TagNumber(2)
-  set lastLocation($3.VehicleLocation v) {
+  set lastLocation($3.DeliveryVehicleLocation v) {
     setField(2, v);
   }
 
@@ -112,7 +112,7 @@ class Task_JourneySharingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLastLocation() => clearField(2);
   @$pb.TagNumber(2)
-  $3.VehicleLocation ensureLastLocation() => $_ensure(1);
+  $3.DeliveryVehicleLocation ensureLastLocation() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.bool get lastLocationSnappable => $_getBF(2);

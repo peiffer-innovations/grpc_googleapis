@@ -27,6 +27,7 @@ const CreateSessionRequest$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.spanner.v1.Session',
+      '8': const {},
       '10': 'session'
     },
   ],
@@ -34,7 +35,7 @@ const CreateSessionRequest$json = const {
 
 /// Descriptor for `CreateSessionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSessionRequestDescriptor = $convert.base64Decode(
-    'ChRDcmVhdGVTZXNzaW9uUmVxdWVzdBJDCghkYXRhYmFzZRgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUghkYXRhYmFzZRI0CgdzZXNzaW9uGAIgASgLMhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvblIHc2Vzc2lvbg==');
+    'ChRDcmVhdGVTZXNzaW9uUmVxdWVzdBJDCghkYXRhYmFzZRgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUghkYXRhYmFzZRI5CgdzZXNzaW9uGAIgASgLMhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvbkID4EECUgdzZXNzaW9u');
 @$core.Deprecated('Use batchCreateSessionsRequestDescriptor instead')
 const BatchCreateSessionsRequest$json = const {
   '1': 'BatchCreateSessionsRequest',
@@ -420,7 +421,7 @@ const ExecuteBatchDmlRequest$json = const {
 const ExecuteBatchDmlRequest_Statement$json = const {
   '1': 'Statement',
   '2': const [
-    const {'1': 'sql', '3': 1, '4': 1, '5': 9, '10': 'sql'},
+    const {'1': 'sql', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'sql'},
     const {
       '1': 'params',
       '3': 2,
@@ -462,7 +463,7 @@ const ExecuteBatchDmlRequest_Statement_ParamTypesEntry$json = const {
 /// Descriptor for `ExecuteBatchDmlRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List executeBatchDmlRequestDescriptor =
     $convert.base64Decode(
-        'ChZFeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0EkAKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uUgdzZXNzaW9uEk0KC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25TZWxlY3RvckID4EECUgt0cmFuc2FjdGlvbhJYCgpzdGF0ZW1lbnRzGAMgAygLMjMuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZUJhdGNoRG1sUmVxdWVzdC5TdGF0ZW1lbnRCA+BBAlIKc3RhdGVtZW50cxIZCgVzZXFubxgEIAEoA0ID4EECUgVzZXFubxJKCg9yZXF1ZXN0X29wdGlvbnMYBSABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0aW9uc1IOcmVxdWVzdE9wdGlvbnMajAIKCVN0YXRlbWVudBIQCgNzcWwYASABKAlSA3NxbBIvCgZwYXJhbXMYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0UgZwYXJhbXMSZAoLcGFyYW1fdHlwZXMYAyADKAsyQy5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0LlN0YXRlbWVudC5QYXJhbVR5cGVzRW50cnlSCnBhcmFtVHlwZXMaVgoPUGFyYW1UeXBlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ei0KBXZhbHVlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZVIFdmFsdWU6AjgB');
+        'ChZFeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0EkAKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uUgdzZXNzaW9uEk0KC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25TZWxlY3RvckID4EECUgt0cmFuc2FjdGlvbhJYCgpzdGF0ZW1lbnRzGAMgAygLMjMuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZUJhdGNoRG1sUmVxdWVzdC5TdGF0ZW1lbnRCA+BBAlIKc3RhdGVtZW50cxIZCgVzZXFubxgEIAEoA0ID4EECUgVzZXFubxJKCg9yZXF1ZXN0X29wdGlvbnMYBSABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0aW9uc1IOcmVxdWVzdE9wdGlvbnMakQIKCVN0YXRlbWVudBIVCgNzcWwYASABKAlCA+BBAlIDc3FsEi8KBnBhcmFtcxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RSBnBhcmFtcxJkCgtwYXJhbV90eXBlcxgDIAMoCzJDLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVCYXRjaERtbFJlcXVlc3QuU3RhdGVtZW50LlBhcmFtVHlwZXNFbnRyeVIKcGFyYW1UeXBlcxpWCg9QYXJhbVR5cGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLQoFdmFsdWUYAiABKAsyFy5nb29nbGUuc3Bhbm5lci52MS5UeXBlUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use executeBatchDmlResponseDescriptor instead')
 const ExecuteBatchDmlResponse$json = const {
   '1': 'ExecuteBatchDmlResponse',

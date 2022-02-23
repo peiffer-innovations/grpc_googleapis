@@ -19,7 +19,7 @@ const DeliveryVehicle$json = const {
       '3': 2,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.VehicleLocation',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryVehicleLocation',
       '10': 'lastLocation'
     },
     const {
@@ -27,7 +27,7 @@ const DeliveryVehicle$json = const {
       '3': 3,
       '4': 1,
       '5': 14,
-      '6': '.maps.fleetengine.v1.NavigationStatus',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryVehicleNavigationStatus',
       '10': 'navigationStatus'
     },
     const {
@@ -74,7 +74,7 @@ const DeliveryVehicle$json = const {
       '3': 9,
       '4': 3,
       '5': 11,
-      '6': '.maps.fleetengine.v1.VehicleAttribute',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryVehicleAttribute',
       '10': 'attributes'
     },
   ],
@@ -83,7 +83,7 @@ const DeliveryVehicle$json = const {
 
 /// Descriptor for `DeliveryVehicle`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deliveryVehicleDescriptor = $convert.base64Decode(
-    'Cg9EZWxpdmVyeVZlaGljbGUSEgoEbmFtZRgBIAEoCVIEbmFtZRJJCg1sYXN0X2xvY2F0aW9uGAIgASgLMiQubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlTG9jYXRpb25SDGxhc3RMb2NhdGlvbhJSChFuYXZpZ2F0aW9uX3N0YXR1cxgDIAEoDjIlLm1hcHMuZmxlZXRlbmdpbmUudjEuTmF2aWdhdGlvblN0YXR1c1IQbmF2aWdhdGlvblN0YXR1cxIyChVjdXJyZW50X3JvdXRlX3NlZ21lbnQYBCABKAxSE2N1cnJlbnRSb3V0ZVNlZ21lbnQSWQofY3VycmVudF9yb3V0ZV9zZWdtZW50X2VuZF9wb2ludBgFIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ1IbY3VycmVudFJvdXRlU2VnbWVudEVuZFBvaW50ElcKGXJlbWFpbmluZ19kaXN0YW5jZV9tZXRlcnMYBiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIXcmVtYWluaW5nRGlzdGFuY2VNZXRlcnMSSAoScmVtYWluaW5nX2R1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhFyZW1haW5pbmdEdXJhdGlvbhKAAQoicmVtYWluaW5nX3ZlaGljbGVfam91cm5leV9zZWdtZW50cxgIIAMoCzIzLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVoaWNsZUpvdXJuZXlTZWdtZW50Uh9yZW1haW5pbmdWZWhpY2xlSm91cm5leVNlZ21lbnRzEkUKCmF0dHJpYnV0ZXMYCSADKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVBdHRyaWJ1dGVSCmF0dHJpYnV0ZXM6YOpBXQoqZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vRGVsaXZlcnlWZWhpY2xlEi9wcm92aWRlcnMve3Byb3ZpZGVyfS9kZWxpdmVyeVZlaGljbGVzL3t2ZWhpY2xlfQ==');
+    'Cg9EZWxpdmVyeVZlaGljbGUSEgoEbmFtZRgBIAEoCVIEbmFtZRJaCg1sYXN0X2xvY2F0aW9uGAIgASgLMjUubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVMb2NhdGlvblIMbGFzdExvY2F0aW9uEmoKEW5hdmlnYXRpb25fc3RhdHVzGAMgASgOMj0ubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVOYXZpZ2F0aW9uU3RhdHVzUhBuYXZpZ2F0aW9uU3RhdHVzEjIKFWN1cnJlbnRfcm91dGVfc2VnbWVudBgEIAEoDFITY3VycmVudFJvdXRlU2VnbWVudBJZCh9jdXJyZW50X3JvdXRlX3NlZ21lbnRfZW5kX3BvaW50GAUgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nUhtjdXJyZW50Um91dGVTZWdtZW50RW5kUG9pbnQSVwoZcmVtYWluaW5nX2Rpc3RhbmNlX21ldGVycxgGIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlUhdyZW1haW5pbmdEaXN0YW5jZU1ldGVycxJIChJyZW1haW5pbmdfZHVyYXRpb24YByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SEXJlbWFpbmluZ0R1cmF0aW9uEoABCiJyZW1haW5pbmdfdmVoaWNsZV9qb3VybmV5X3NlZ21lbnRzGAggAygLMjMubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5WZWhpY2xlSm91cm5leVNlZ21lbnRSH3JlbWFpbmluZ1ZlaGljbGVKb3VybmV5U2VnbWVudHMSVgoKYXR0cmlidXRlcxgJIAMoCzI2Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlQXR0cmlidXRlUgphdHRyaWJ1dGVzOmDqQV0KKmZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RlbGl2ZXJ5VmVoaWNsZRIvcHJvdmlkZXJzL3twcm92aWRlcn0vZGVsaXZlcnlWZWhpY2xlcy97dmVoaWNsZX0=');
 @$core.Deprecated('Use locationInfoDescriptor instead')
 const LocationInfo$json = const {
   '1': 'LocationInfo',
@@ -138,6 +138,7 @@ const VehicleJourneySegment$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.type.LatLng',
+      '8': const {},
       '10': 'path'
     },
   ],
@@ -145,7 +146,7 @@ const VehicleJourneySegment$json = const {
 
 /// Descriptor for `VehicleJourneySegment`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List vehicleJourneySegmentDescriptor = $convert.base64Decode(
-    'ChVWZWhpY2xlSm91cm5leVNlZ21lbnQSPQoEc3RvcBgBIAEoCzIpLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVoaWNsZVN0b3BSBHN0b3ASWAoXZHJpdmluZ19kaXN0YW5jZV9tZXRlcnMYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEDUhVkcml2aW5nRGlzdGFuY2VNZXRlcnMSSQoQZHJpdmluZ19kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDUg9kcml2aW5nRHVyYXRpb24SJwoEcGF0aBgFIAMoCzITLmdvb2dsZS50eXBlLkxhdExuZ1IEcGF0aA==');
+    'ChVWZWhpY2xlSm91cm5leVNlZ21lbnQSPQoEc3RvcBgBIAEoCzIpLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVoaWNsZVN0b3BSBHN0b3ASWAoXZHJpdmluZ19kaXN0YW5jZV9tZXRlcnMYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEDUhVkcml2aW5nRGlzdGFuY2VNZXRlcnMSSQoQZHJpdmluZ19kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDUg9kcml2aW5nRHVyYXRpb24SLAoEcGF0aBgFIAMoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID4EEDUgRwYXRo');
 @$core.Deprecated('Use vehicleStopDescriptor instead')
 const VehicleStop$json = const {
   '1': 'VehicleStop',

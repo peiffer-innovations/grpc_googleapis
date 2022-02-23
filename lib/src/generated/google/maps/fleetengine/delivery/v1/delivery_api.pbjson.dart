@@ -18,7 +18,7 @@ const CreateDeliveryVehicleRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -53,7 +53,7 @@ const CreateDeliveryVehicleRequest$json = const {
 /// Descriptor for `CreateDeliveryVehicleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createDeliveryVehicleRequestDescriptor =
     $convert.base64Decode(
-        'ChxDcmVhdGVEZWxpdmVyeVZlaGljbGVSZXF1ZXN0Ej8KBmhlYWRlchgBIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUudjEuUmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISGwoGcGFyZW50GAMgASgJQgPgQQJSBnBhcmVudBIzChNkZWxpdmVyeV92ZWhpY2xlX2lkGAQgASgJQgPgQQJSEWRlbGl2ZXJ5VmVoaWNsZUlkEl0KEGRlbGl2ZXJ5X3ZlaGljbGUYBSABKAsyLS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5VmVoaWNsZUID4EECUg9kZWxpdmVyeVZlaGljbGU=');
+        'ChxDcmVhdGVEZWxpdmVyeVZlaGljbGVSZXF1ZXN0ElAKBmhlYWRlchgBIAEoCzIzLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchIbCgZwYXJlbnQYAyABKAlCA+BBAlIGcGFyZW50EjMKE2RlbGl2ZXJ5X3ZlaGljbGVfaWQYBCABKAlCA+BBAlIRZGVsaXZlcnlWZWhpY2xlSWQSXQoQZGVsaXZlcnlfdmVoaWNsZRgFIAEoCzItLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlQgPgQQJSD2RlbGl2ZXJ5VmVoaWNsZQ==');
 @$core.Deprecated('Use getDeliveryVehicleRequestDescriptor instead')
 const GetDeliveryVehicleRequest$json = const {
   '1': 'GetDeliveryVehicleRequest',
@@ -63,7 +63,7 @@ const GetDeliveryVehicleRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -74,7 +74,7 @@ const GetDeliveryVehicleRequest$json = const {
 /// Descriptor for `GetDeliveryVehicleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getDeliveryVehicleRequestDescriptor =
     $convert.base64Decode(
-        'ChlHZXREZWxpdmVyeVZlaGljbGVSZXF1ZXN0Ej8KBmhlYWRlchgBIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUudjEuUmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISRgoEbmFtZRgDIAEoCUIy4EEC+kEsCipmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9EZWxpdmVyeVZlaGljbGVSBG5hbWU=');
+        'ChlHZXREZWxpdmVyeVZlaGljbGVSZXF1ZXN0ElAKBmhlYWRlchgBIAEoCzIzLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchJGCgRuYW1lGAMgASgJQjLgQQL6QSwKKmZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RlbGl2ZXJ5VmVoaWNsZVIEbmFtZQ==');
 @$core.Deprecated('Use listDeliveryVehiclesRequestDescriptor instead')
 const ListDeliveryVehiclesRequest$json = const {
   '1': 'ListDeliveryVehiclesRequest',
@@ -84,7 +84,7 @@ const ListDeliveryVehiclesRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -135,7 +135,7 @@ const ListDeliveryVehiclesRequest$json = const {
 /// Descriptor for `ListDeliveryVehiclesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listDeliveryVehiclesRequestDescriptor =
     $convert.base64Decode(
-        'ChtMaXN0RGVsaXZlcnlWZWhpY2xlc1JlcXVlc3QSPwoGaGVhZGVyGAEgASgLMiIubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchJKCgZwYXJlbnQYAyABKAlCMuBBAvpBLBIqZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vRGVsaXZlcnlWZWhpY2xlUgZwYXJlbnQSIAoJcGFnZV9zaXplGAQgASgFQgPgQQFSCHBhZ2VTaXplEiIKCnBhZ2VfdG9rZW4YBSABKAlCA+BBAVIJcGFnZVRva2VuEhsKBmZpbHRlchgGIAEoCUID4EEBUgZmaWx0ZXISOgoIdmlld3BvcnQYByABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3BvcnRCA+BBAVIIdmlld3BvcnQ=');
+        'ChtMaXN0RGVsaXZlcnlWZWhpY2xlc1JlcXVlc3QSUAoGaGVhZGVyGAEgASgLMjMubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVJlcXVlc3RIZWFkZXJCA+BBAVIGaGVhZGVyEkoKBnBhcmVudBgDIAEoCUIy4EEC+kEsEipmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9EZWxpdmVyeVZlaGljbGVSBnBhcmVudBIgCglwYWdlX3NpemUYBCABKAVCA+BBAVIIcGFnZVNpemUSIgoKcGFnZV90b2tlbhgFIAEoCUID4EEBUglwYWdlVG9rZW4SGwoGZmlsdGVyGAYgASgJQgPgQQFSBmZpbHRlchI6Cgh2aWV3cG9ydBgHIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEID4EEBUgh2aWV3cG9ydA==');
 @$core.Deprecated('Use listDeliveryVehiclesResponseDescriptor instead')
 const ListDeliveryVehiclesResponse$json = const {
   '1': 'ListDeliveryVehiclesResponse',
@@ -172,7 +172,7 @@ const UpdateDeliveryVehicleRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -200,7 +200,7 @@ const UpdateDeliveryVehicleRequest$json = const {
 /// Descriptor for `UpdateDeliveryVehicleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateDeliveryVehicleRequestDescriptor =
     $convert.base64Decode(
-        'ChxVcGRhdGVEZWxpdmVyeVZlaGljbGVSZXF1ZXN0Ej8KBmhlYWRlchgBIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUudjEuUmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISXQoQZGVsaXZlcnlfdmVoaWNsZRgDIAEoCzItLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlQgPgQQJSD2RlbGl2ZXJ5VmVoaWNsZRJACgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAlIKdXBkYXRlTWFzaw==');
+        'ChxVcGRhdGVEZWxpdmVyeVZlaGljbGVSZXF1ZXN0ElAKBmhlYWRlchgBIAEoCzIzLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchJdChBkZWxpdmVyeV92ZWhpY2xlGAMgASgLMi0ubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVCA+BBAlIPZGVsaXZlcnlWZWhpY2xlEkAKC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECUgp1cGRhdGVNYXNr');
 @$core.Deprecated('Use createTaskRequestDescriptor instead')
 const CreateTaskRequest$json = const {
   '1': 'CreateTaskRequest',
@@ -210,7 +210,7 @@ const CreateTaskRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -244,7 +244,7 @@ const CreateTaskRequest$json = const {
 
 /// Descriptor for `CreateTaskRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createTaskRequestDescriptor = $convert.base64Decode(
-    'ChFDcmVhdGVUYXNrUmVxdWVzdBI/CgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXJCA+BBAVIGaGVhZGVyEhsKBnBhcmVudBgDIAEoCUID4EECUgZwYXJlbnQSHAoHdGFza19pZBgFIAEoCUID4EECUgZ0YXNrSWQSOwoEdGFzaxgEIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGFza0ID4EECUgR0YXNr');
+    'ChFDcmVhdGVUYXNrUmVxdWVzdBJQCgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISGwoGcGFyZW50GAMgASgJQgPgQQJSBnBhcmVudBIcCgd0YXNrX2lkGAUgASgJQgPgQQJSBnRhc2tJZBI7CgR0YXNrGAQgASgLMiIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5UYXNrQgPgQQJSBHRhc2s=');
 @$core.Deprecated('Use getTaskRequestDescriptor instead')
 const GetTaskRequest$json = const {
   '1': 'GetTaskRequest',
@@ -254,7 +254,7 @@ const GetTaskRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -264,7 +264,7 @@ const GetTaskRequest$json = const {
 
 /// Descriptor for `GetTaskRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTaskRequestDescriptor = $convert.base64Decode(
-    'Cg5HZXRUYXNrUmVxdWVzdBI/CgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXJCA+BBAVIGaGVhZGVyEjsKBG5hbWUYAyABKAlCJ+BBAvpBIQofZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVGFza1IEbmFtZQ==');
+    'Cg5HZXRUYXNrUmVxdWVzdBJQCgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISOwoEbmFtZRgDIAEoCUIn4EEC+kEhCh9mbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9UYXNrUgRuYW1l');
 @$core.Deprecated('Use searchTasksRequestDescriptor instead')
 const SearchTasksRequest$json = const {
   '1': 'SearchTasksRequest',
@@ -274,7 +274,7 @@ const SearchTasksRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -315,7 +315,7 @@ const SearchTasksRequest$json = const {
 
 /// Descriptor for `SearchTasksRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List searchTasksRequestDescriptor = $convert.base64Decode(
-    'ChJTZWFyY2hUYXNrc1JlcXVlc3QSPwoGaGVhZGVyGAEgASgLMiIubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchIbCgZwYXJlbnQYAyABKAlCA+BBAlIGcGFyZW50EiQKC3RyYWNraW5nX2lkGAQgASgJQgPgQQJSCnRyYWNraW5nSWQSIAoJcGFnZV9zaXplGAUgASgFQgPgQQFSCHBhZ2VTaXplEiIKCnBhZ2VfdG9rZW4YBiABKAlCA+BBAVIJcGFnZVRva2Vu');
+    'ChJTZWFyY2hUYXNrc1JlcXVlc3QSUAoGaGVhZGVyGAEgASgLMjMubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVJlcXVlc3RIZWFkZXJCA+BBAVIGaGVhZGVyEhsKBnBhcmVudBgDIAEoCUID4EECUgZwYXJlbnQSJAoLdHJhY2tpbmdfaWQYBCABKAlCA+BBAlIKdHJhY2tpbmdJZBIgCglwYWdlX3NpemUYBSABKAVCA+BBAVIIcGFnZVNpemUSIgoKcGFnZV90b2tlbhgGIAEoCUID4EEBUglwYWdlVG9rZW4=');
 @$core.Deprecated('Use searchTasksResponseDescriptor instead')
 const SearchTasksResponse$json = const {
   '1': 'SearchTasksResponse',
@@ -350,7 +350,7 @@ const UpdateTaskRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -377,7 +377,7 @@ const UpdateTaskRequest$json = const {
 
 /// Descriptor for `UpdateTaskRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateTaskRequestDescriptor = $convert.base64Decode(
-    'ChFVcGRhdGVUYXNrUmVxdWVzdBI/CgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXJCA+BBAVIGaGVhZGVyEjsKBHRhc2sYAyABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlRhc2tCA+BBAlIEdGFzaxJACgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAlIKdXBkYXRlTWFzaw==');
+    'ChFVcGRhdGVUYXNrUmVxdWVzdBJQCgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISOwoEdGFzaxgDIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGFza0ID4EECUgR0YXNrEkAKC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECUgp1cGRhdGVNYXNr');
 @$core.Deprecated('Use listTasksRequestDescriptor instead')
 const ListTasksRequest$json = const {
   '1': 'ListTasksRequest',
@@ -387,7 +387,7 @@ const ListTasksRequest$json = const {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.maps.fleetengine.v1.RequestHeader',
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
       '8': const {},
       '10': 'header'
     },
@@ -428,7 +428,7 @@ const ListTasksRequest$json = const {
 
 /// Descriptor for `ListTasksRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listTasksRequestDescriptor = $convert.base64Decode(
-    'ChBMaXN0VGFza3NSZXF1ZXN0Ej8KBmhlYWRlchgBIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUudjEuUmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISPwoGcGFyZW50GAMgASgJQifgQQL6QSESH2ZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Rhc2tSBnBhcmVudBIgCglwYWdlX3NpemUYBCABKAVCA+BBAVIIcGFnZVNpemUSIgoKcGFnZV90b2tlbhgFIAEoCUID4EEBUglwYWdlVG9rZW4SGwoGZmlsdGVyGAYgASgJQgPgQQFSBmZpbHRlcg==');
+    'ChBMaXN0VGFza3NSZXF1ZXN0ElAKBmhlYWRlchgBIAEoCzIzLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchI/CgZwYXJlbnQYAyABKAlCJ+BBAvpBIRIfZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVGFza1IGcGFyZW50EiAKCXBhZ2Vfc2l6ZRgEIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2VuGAUgASgJQgPgQQFSCXBhZ2VUb2tlbhIbCgZmaWx0ZXIYBiABKAlCA+BBAVIGZmlsdGVy');
 @$core.Deprecated('Use listTasksResponseDescriptor instead')
 const ListTasksResponse$json = const {
   '1': 'ListTasksResponse',

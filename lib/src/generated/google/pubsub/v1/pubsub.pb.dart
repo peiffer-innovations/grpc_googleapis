@@ -3881,12 +3881,6 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
             : 'receivedMessages',
         $pb.PbFieldType.PM,
         subBuilder: ReceivedMessage.create)
-    ..aOM<StreamingPullResponse_AcknowledgeConfirmation>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'acknowlegeConfirmation',
-        subBuilder: StreamingPullResponse_AcknowledgeConfirmation.create)
     ..aOM<StreamingPullResponse_ModifyAckDeadlineConfirmation>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3899,28 +3893,34 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
             ? ''
             : 'subscriptionProperties',
         subBuilder: StreamingPullResponse_SubscriptionProperties.create)
+    ..aOM<StreamingPullResponse_AcknowledgeConfirmation>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acknowledgeConfirmation',
+        subBuilder: StreamingPullResponse_AcknowledgeConfirmation.create)
     ..hasRequiredFields = false;
 
   StreamingPullResponse._() : super();
   factory StreamingPullResponse({
     $core.Iterable<ReceivedMessage>? receivedMessages,
-    StreamingPullResponse_AcknowledgeConfirmation? acknowlegeConfirmation,
     StreamingPullResponse_ModifyAckDeadlineConfirmation?
         modifyAckDeadlineConfirmation,
     StreamingPullResponse_SubscriptionProperties? subscriptionProperties,
+    StreamingPullResponse_AcknowledgeConfirmation? acknowledgeConfirmation,
   }) {
     final _result = create();
     if (receivedMessages != null) {
       _result.receivedMessages.addAll(receivedMessages);
-    }
-    if (acknowlegeConfirmation != null) {
-      _result.acknowlegeConfirmation = acknowlegeConfirmation;
     }
     if (modifyAckDeadlineConfirmation != null) {
       _result.modifyAckDeadlineConfirmation = modifyAckDeadlineConfirmation;
     }
     if (subscriptionProperties != null) {
       _result.subscriptionProperties = subscriptionProperties;
+    }
+    if (acknowledgeConfirmation != null) {
+      _result.acknowledgeConfirmation = acknowledgeConfirmation;
     }
     return _result;
   }
@@ -3956,25 +3956,9 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<ReceivedMessage> get receivedMessages => $_getList(0);
 
-  @$pb.TagNumber(2)
-  StreamingPullResponse_AcknowledgeConfirmation get acknowlegeConfirmation =>
-      $_getN(1);
-  @$pb.TagNumber(2)
-  set acknowlegeConfirmation(StreamingPullResponse_AcknowledgeConfirmation v) {
-    setField(2, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasAcknowlegeConfirmation() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearAcknowlegeConfirmation() => clearField(2);
-  @$pb.TagNumber(2)
-  StreamingPullResponse_AcknowledgeConfirmation
-      ensureAcknowlegeConfirmation() => $_ensure(1);
-
   @$pb.TagNumber(3)
   StreamingPullResponse_ModifyAckDeadlineConfirmation
-      get modifyAckDeadlineConfirmation => $_getN(2);
+      get modifyAckDeadlineConfirmation => $_getN(1);
   @$pb.TagNumber(3)
   set modifyAckDeadlineConfirmation(
       StreamingPullResponse_ModifyAckDeadlineConfirmation v) {
@@ -3982,28 +3966,44 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
   }
 
   @$pb.TagNumber(3)
-  $core.bool hasModifyAckDeadlineConfirmation() => $_has(2);
+  $core.bool hasModifyAckDeadlineConfirmation() => $_has(1);
   @$pb.TagNumber(3)
   void clearModifyAckDeadlineConfirmation() => clearField(3);
   @$pb.TagNumber(3)
   StreamingPullResponse_ModifyAckDeadlineConfirmation
-      ensureModifyAckDeadlineConfirmation() => $_ensure(2);
+      ensureModifyAckDeadlineConfirmation() => $_ensure(1);
 
   @$pb.TagNumber(4)
   StreamingPullResponse_SubscriptionProperties get subscriptionProperties =>
-      $_getN(3);
+      $_getN(2);
   @$pb.TagNumber(4)
   set subscriptionProperties(StreamingPullResponse_SubscriptionProperties v) {
     setField(4, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasSubscriptionProperties() => $_has(3);
+  $core.bool hasSubscriptionProperties() => $_has(2);
   @$pb.TagNumber(4)
   void clearSubscriptionProperties() => clearField(4);
   @$pb.TagNumber(4)
   StreamingPullResponse_SubscriptionProperties ensureSubscriptionProperties() =>
-      $_ensure(3);
+      $_ensure(2);
+
+  @$pb.TagNumber(5)
+  StreamingPullResponse_AcknowledgeConfirmation get acknowledgeConfirmation =>
+      $_getN(3);
+  @$pb.TagNumber(5)
+  set acknowledgeConfirmation(StreamingPullResponse_AcknowledgeConfirmation v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasAcknowledgeConfirmation() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearAcknowledgeConfirmation() => clearField(5);
+  @$pb.TagNumber(5)
+  StreamingPullResponse_AcknowledgeConfirmation
+      ensureAcknowledgeConfirmation() => $_ensure(3);
 }
 
 class CreateSnapshotRequest extends $pb.GeneratedMessage {

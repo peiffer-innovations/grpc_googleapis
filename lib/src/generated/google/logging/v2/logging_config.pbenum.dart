@@ -39,6 +39,61 @@ class LifecycleState extends $pb.ProtobufEnum {
   const LifecycleState._($core.int v, $core.String n) : super(v, n);
 }
 
+class OperationState extends $pb.ProtobufEnum {
+  static const OperationState OPERATION_STATE_UNSPECIFIED = OperationState._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATE_UNSPECIFIED');
+  static const OperationState OPERATION_STATE_SCHEDULED = OperationState._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATE_SCHEDULED');
+  static const OperationState OPERATION_STATE_WAITING_FOR_PERMISSIONS =
+      OperationState._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OPERATION_STATE_WAITING_FOR_PERMISSIONS');
+  static const OperationState OPERATION_STATE_RUNNING = OperationState._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATE_RUNNING');
+  static const OperationState OPERATION_STATE_SUCCEEDED = OperationState._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATE_SUCCEEDED');
+  static const OperationState OPERATION_STATE_FAILED = OperationState._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATE_FAILED');
+  static const OperationState OPERATION_STATE_CANCELLED = OperationState._(
+      6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATE_CANCELLED');
+
+  static const $core.List<OperationState> values = <OperationState>[
+    OPERATION_STATE_UNSPECIFIED,
+    OPERATION_STATE_SCHEDULED,
+    OPERATION_STATE_WAITING_FOR_PERMISSIONS,
+    OPERATION_STATE_RUNNING,
+    OPERATION_STATE_SUCCEEDED,
+    OPERATION_STATE_FAILED,
+    OPERATION_STATE_CANCELLED,
+  ];
+
+  static final $core.Map<$core.int, OperationState> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static OperationState? valueOf($core.int value) => _byValue[value];
+
+  const OperationState._($core.int v, $core.String n) : super(v, n);
+}
+
 class LogSink_VersionFormat extends $pb.ProtobufEnum {
   static const LogSink_VersionFormat VERSION_FORMAT_UNSPECIFIED =
       LogSink_VersionFormat._(

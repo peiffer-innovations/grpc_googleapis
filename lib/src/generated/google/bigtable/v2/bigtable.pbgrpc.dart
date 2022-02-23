@@ -44,6 +44,12 @@ class BigtableClient extends $grpc.Client {
       ($0.CheckAndMutateRowRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.CheckAndMutateRowResponse.fromBuffer(value));
+  static final _$pingAndWarm =
+      $grpc.ClientMethod<$0.PingAndWarmRequest, $0.PingAndWarmResponse>(
+          '/google.bigtable.v2.Bigtable/PingAndWarm',
+          ($0.PingAndWarmRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.PingAndWarmResponse.fromBuffer(value));
   static final _$readModifyWriteRow = $grpc.ClientMethod<
           $0.ReadModifyWriteRowRequest, $0.ReadModifyWriteRowResponse>(
       '/google.bigtable.v2.Bigtable/ReadModifyWriteRow',
@@ -89,6 +95,12 @@ class BigtableClient extends $grpc.Client {
       $0.CheckAndMutateRowRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$checkAndMutateRow, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.PingAndWarmResponse> pingAndWarm(
+      $0.PingAndWarmRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$pingAndWarm, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ReadModifyWriteRowResponse> readModifyWriteRow(
@@ -141,6 +153,15 @@ abstract class BigtableServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CheckAndMutateRowRequest.fromBuffer(value),
         ($0.CheckAndMutateRowResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.PingAndWarmRequest, $0.PingAndWarmResponse>(
+            'PingAndWarm',
+            pingAndWarm_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.PingAndWarmRequest.fromBuffer(value),
+            ($0.PingAndWarmResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ReadModifyWriteRowRequest,
             $0.ReadModifyWriteRowResponse>(
         'ReadModifyWriteRow',
@@ -179,6 +200,11 @@ abstract class BigtableServiceBase extends $grpc.Service {
     return checkAndMutateRow(call, await request);
   }
 
+  $async.Future<$0.PingAndWarmResponse> pingAndWarm_Pre($grpc.ServiceCall call,
+      $async.Future<$0.PingAndWarmRequest> request) async {
+    return pingAndWarm(call, await request);
+  }
+
   $async.Future<$0.ReadModifyWriteRowResponse> readModifyWriteRow_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.ReadModifyWriteRowRequest> request) async {
@@ -195,6 +221,8 @@ abstract class BigtableServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.MutateRowsRequest request);
   $async.Future<$0.CheckAndMutateRowResponse> checkAndMutateRow(
       $grpc.ServiceCall call, $0.CheckAndMutateRowRequest request);
+  $async.Future<$0.PingAndWarmResponse> pingAndWarm(
+      $grpc.ServiceCall call, $0.PingAndWarmRequest request);
   $async.Future<$0.ReadModifyWriteRowResponse> readModifyWriteRow(
       $grpc.ServiceCall call, $0.ReadModifyWriteRowRequest request);
 }

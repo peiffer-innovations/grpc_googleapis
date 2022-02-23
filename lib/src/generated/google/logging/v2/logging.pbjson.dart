@@ -318,7 +318,7 @@ const ListLogsRequest$json = const {
 
 /// Descriptor for `ListLogsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listLogsRequestDescriptor = $convert.base64Decode(
-    'Cg9MaXN0TG9nc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQiLgQQL6QRwSGmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nUgZwYXJlbnQSIAoJcGFnZV9zaXplGAIgASgFQgPgQQFSCHBhZ2VTaXplEiIKCnBhZ2VfdG9rZW4YAyABKAlCA+BBAVIJcGFnZVRva2VuEioKDnJlc291cmNlX25hbWVzGAggAygJQgPgQQFSDXJlc291cmNlTmFtZXM=');
+    'Cg9MaXN0TG9nc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQiLgQQL6QRwSGmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nUgZwYXJlbnQSIAoJcGFnZV9zaXplGAIgASgFQgPgQQFSCHBhZ2VTaXplEiIKCnBhZ2VfdG9rZW4YAyABKAlCA+BBAVIJcGFnZVRva2VuEkkKDnJlc291cmNlX25hbWVzGAggAygJQiLgQQH6QRwSGmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nUg1yZXNvdXJjZU5hbWVz');
 @$core.Deprecated('Use listLogsResponseDescriptor instead')
 const ListLogsResponse$json = const {
   '1': 'ListLogsResponse',
