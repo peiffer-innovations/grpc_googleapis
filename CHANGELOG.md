@@ -1,3 +1,8 @@
+## [1.2.0] - June 24th, 2022
+
+* Version bump to trigger build
+
+
 ## [1.1.3] - February 23rd, 2022
 
 * Version bump to trigger build
