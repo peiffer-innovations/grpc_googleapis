@@ -3,7 +3,7 @@
 //  source: google/firestore/v1/firestore.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -1885,7 +1885,14 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   $4.Timestamp ensureReadTime() => $_ensure(4);
 }
 
+enum RunQueryResponse_ContinuationSelector { done, notSet }
+
 class RunQueryResponse extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RunQueryResponse_ContinuationSelector>
+      _RunQueryResponse_ContinuationSelectorByTag = {
+    6: RunQueryResponse_ContinuationSelector.done,
+    0: RunQueryResponse_ContinuationSelector.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -1895,6 +1902,7 @@ class RunQueryResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.firestore.v1'),
       createEmptyInstance: create)
+    ..oo(0, [6])
     ..aOM<$1.Document>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1919,6 +1927,11 @@ class RunQueryResponse extends $pb.GeneratedMessage {
             ? ''
             : 'skippedResults',
         $pb.PbFieldType.O3)
+    ..aOB(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'done')
     ..hasRequiredFields = false;
 
   RunQueryResponse._() : super();
@@ -1927,6 +1940,7 @@ class RunQueryResponse extends $pb.GeneratedMessage {
     $core.List<$core.int>? transaction,
     $4.Timestamp? readTime,
     $core.int? skippedResults,
+    $core.bool? done,
   }) {
     final _result = create();
     if (document != null) {
@@ -1940,6 +1954,9 @@ class RunQueryResponse extends $pb.GeneratedMessage {
     }
     if (skippedResults != null) {
       _result.skippedResults = skippedResults;
+    }
+    if (done != null) {
+      _result.done = done;
     }
     return _result;
   }
@@ -1969,6 +1986,10 @@ class RunQueryResponse extends $pb.GeneratedMessage {
   static RunQueryResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RunQueryResponse>(create);
   static RunQueryResponse? _defaultInstance;
+
+  RunQueryResponse_ContinuationSelector whichContinuationSelector() =>
+      _RunQueryResponse_ContinuationSelectorByTag[$_whichOneof(0)]!;
+  void clearContinuationSelector() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $1.Document get document => $_getN(0);
@@ -2021,15 +2042,34 @@ class RunQueryResponse extends $pb.GeneratedMessage {
   $core.bool hasSkippedResults() => $_has(3);
   @$pb.TagNumber(4)
   void clearSkippedResults() => clearField(4);
+
+  @$pb.TagNumber(6)
+  $core.bool get done => $_getBF(4);
+  @$pb.TagNumber(6)
+  set done($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasDone() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearDone() => clearField(6);
 }
 
 enum PartitionQueryRequest_QueryType { structuredQuery, notSet }
+
+enum PartitionQueryRequest_ConsistencySelector { readTime, notSet }
 
 class PartitionQueryRequest extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, PartitionQueryRequest_QueryType>
       _PartitionQueryRequest_QueryTypeByTag = {
     2: PartitionQueryRequest_QueryType.structuredQuery,
     0: PartitionQueryRequest_QueryType.notSet
+  };
+  static const $core.Map<$core.int, PartitionQueryRequest_ConsistencySelector>
+      _PartitionQueryRequest_ConsistencySelectorByTag = {
+    6: PartitionQueryRequest_ConsistencySelector.readTime,
+    0: PartitionQueryRequest_ConsistencySelector.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -2041,6 +2081,7 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
               : 'google.firestore.v1'),
       createEmptyInstance: create)
     ..oo(0, [2])
+    ..oo(1, [6])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2068,6 +2109,12 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
             ? ''
             : 'pageSize',
         $pb.PbFieldType.O3)
+    ..aOM<$4.Timestamp>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readTime',
+        subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   PartitionQueryRequest._() : super();
@@ -2077,6 +2124,7 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? partitionCount,
     $core.String? pageToken,
     $core.int? pageSize,
+    $4.Timestamp? readTime,
   }) {
     final _result = create();
     if (parent != null) {
@@ -2093,6 +2141,9 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
     }
     if (pageSize != null) {
       _result.pageSize = pageSize;
+    }
+    if (readTime != null) {
+      _result.readTime = readTime;
     }
     return _result;
   }
@@ -2128,6 +2179,10 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   PartitionQueryRequest_QueryType whichQueryType() =>
       _PartitionQueryRequest_QueryTypeByTag[$_whichOneof(0)]!;
   void clearQueryType() => clearField($_whichOneof(0));
+
+  PartitionQueryRequest_ConsistencySelector whichConsistencySelector() =>
+      _PartitionQueryRequest_ConsistencySelectorByTag[$_whichOneof(1)]!;
+  void clearConsistencySelector() => clearField($_whichOneof(1));
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
@@ -2190,6 +2245,20 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasPageSize() => $_has(4);
   @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $4.Timestamp get readTime => $_getN(5);
+  @$pb.TagNumber(6)
+  set readTime($4.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasReadTime() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearReadTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $4.Timestamp ensureReadTime() => $_ensure(5);
 }
 
 class PartitionQueryResponse extends $pb.GeneratedMessage {
@@ -3268,7 +3337,7 @@ class TargetChange extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'targetIds',
-        $pb.PbFieldType.P3)
+        $pb.PbFieldType.K3)
     ..aOM<$7.Status>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3398,7 +3467,15 @@ class TargetChange extends $pb.GeneratedMessage {
   $4.Timestamp ensureReadTime() => $_ensure(4);
 }
 
+enum ListCollectionIdsRequest_ConsistencySelector { readTime, notSet }
+
 class ListCollectionIdsRequest extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, ListCollectionIdsRequest_ConsistencySelector>
+      _ListCollectionIdsRequest_ConsistencySelectorByTag = {
+    4: ListCollectionIdsRequest_ConsistencySelector.readTime,
+    0: ListCollectionIdsRequest_ConsistencySelector.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -3408,6 +3485,7 @@ class ListCollectionIdsRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.firestore.v1'),
       createEmptyInstance: create)
+    ..oo(0, [4])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3424,6 +3502,12 @@ class ListCollectionIdsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'pageToken')
+    ..aOM<$4.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readTime',
+        subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   ListCollectionIdsRequest._() : super();
@@ -3431,6 +3515,7 @@ class ListCollectionIdsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
+    $4.Timestamp? readTime,
   }) {
     final _result = create();
     if (parent != null) {
@@ -3441,6 +3526,9 @@ class ListCollectionIdsRequest extends $pb.GeneratedMessage {
     }
     if (pageToken != null) {
       _result.pageToken = pageToken;
+    }
+    if (readTime != null) {
+      _result.readTime = readTime;
     }
     return _result;
   }
@@ -3472,6 +3560,10 @@ class ListCollectionIdsRequest extends $pb.GeneratedMessage {
   static ListCollectionIdsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListCollectionIdsRequest>(create);
   static ListCollectionIdsRequest? _defaultInstance;
+
+  ListCollectionIdsRequest_ConsistencySelector whichConsistencySelector() =>
+      _ListCollectionIdsRequest_ConsistencySelectorByTag[$_whichOneof(0)]!;
+  void clearConsistencySelector() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
@@ -3508,6 +3600,20 @@ class ListCollectionIdsRequest extends $pb.GeneratedMessage {
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $4.Timestamp get readTime => $_getN(3);
+  @$pb.TagNumber(4)
+  set readTime($4.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasReadTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearReadTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.Timestamp ensureReadTime() => $_ensure(3);
 }
 
 class ListCollectionIdsResponse extends $pb.GeneratedMessage {

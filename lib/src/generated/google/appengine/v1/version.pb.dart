@@ -3,7 +3,7 @@
 //  source: google/appengine/v1/version.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -71,9 +71,10 @@ class Version extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'inboundServices',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: InboundServiceType.valueOf,
-        enumValues: InboundServiceType.values)
+        enumValues: InboundServiceType.values,
+        defaultEnumValue: InboundServiceType.INBOUND_SERVICE_UNSPECIFIED)
     ..aOS(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -273,6 +274,11 @@ class Version extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'serviceAccount')
+    ..aOB(
+        128,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'appEngineApis')
     ..hasRequiredFields = false;
 
   Version._() : super();
@@ -316,6 +322,7 @@ class Version extends $pb.GeneratedMessage {
     Entrypoint? entrypoint,
     $core.Map<$core.String, $core.String>? buildEnvVariables,
     $core.String? serviceAccount,
+    $core.bool? appEngineApis,
   }) {
     final _result = create();
     if (name != null) {
@@ -434,6 +441,9 @@ class Version extends $pb.GeneratedMessage {
     }
     if (serviceAccount != null) {
       _result.serviceAccount = serviceAccount;
+    }
+    if (appEngineApis != null) {
+      _result.appEngineApis = appEngineApis;
     }
     return _result;
   }
@@ -891,6 +901,18 @@ class Version extends $pb.GeneratedMessage {
   $core.bool hasServiceAccount() => $_has(38);
   @$pb.TagNumber(127)
   void clearServiceAccount() => clearField(127);
+
+  @$pb.TagNumber(128)
+  $core.bool get appEngineApis => $_getBF(39);
+  @$pb.TagNumber(128)
+  set appEngineApis($core.bool v) {
+    $_setBool(39, v);
+  }
+
+  @$pb.TagNumber(128)
+  $core.bool hasAppEngineApis() => $_has(39);
+  @$pb.TagNumber(128)
+  void clearAppEngineApis() => clearField(128);
 }
 
 class EndpointsApiService extends $pb.GeneratedMessage {
@@ -2533,15 +2555,29 @@ class VpcAccessConnector extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
+    ..e<VpcAccessConnector_EgressSetting>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'egressSetting',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            VpcAccessConnector_EgressSetting.EGRESS_SETTING_UNSPECIFIED,
+        valueOf: VpcAccessConnector_EgressSetting.valueOf,
+        enumValues: VpcAccessConnector_EgressSetting.values)
     ..hasRequiredFields = false;
 
   VpcAccessConnector._() : super();
   factory VpcAccessConnector({
     $core.String? name,
+    VpcAccessConnector_EgressSetting? egressSetting,
   }) {
     final _result = create();
     if (name != null) {
       _result.name = name;
+    }
+    if (egressSetting != null) {
+      _result.egressSetting = egressSetting;
     }
     return _result;
   }
@@ -2583,6 +2619,18 @@ class VpcAccessConnector extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  VpcAccessConnector_EgressSetting get egressSetting => $_getN(1);
+  @$pb.TagNumber(2)
+  set egressSetting(VpcAccessConnector_EgressSetting v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEgressSetting() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEgressSetting() => clearField(2);
 }
 
 enum Entrypoint_Command { shell, notSet }

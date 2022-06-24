@@ -3,7 +3,7 @@
 //  source: google/maps/fleetengine/v1/fleetengine.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -131,7 +131,6 @@ const TerminalLocation$json = const {
       '4': 1,
       '5': 11,
       '6': '.maps.fleetengine.v1.TerminalPointId',
-      '8': const {},
       '10': 'terminalPointId'
     },
     const {
@@ -164,7 +163,7 @@ const TerminalLocation$json = const {
 
 /// Descriptor for `TerminalLocation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List terminalLocationDescriptor = $convert.base64Decode(
-    'ChBUZXJtaW5hbExvY2F0aW9uEi4KBXBvaW50GAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQJSBXBvaW50ElUKEXRlcm1pbmFsX3BvaW50X2lkGAIgASgLMiQubWFwcy5mbGVldGVuZ2luZS52MS5UZXJtaW5hbFBvaW50SWRCA+BBAlIPdGVybWluYWxQb2ludElkEioKD2FjY2Vzc19wb2ludF9pZBgDIAEoCUICGAFSDWFjY2Vzc1BvaW50SWQSGwoHdHJpcF9pZBgEIAEoCUICGAFSBnRyaXBJZBJbChZ0ZXJtaW5hbF9sb2NhdGlvbl90eXBlGAUgASgOMiEubWFwcy5mbGVldGVuZ2luZS52MS5XYXlwb2ludFR5cGVCAhgBUhR0ZXJtaW5hbExvY2F0aW9uVHlwZQ==');
+    'ChBUZXJtaW5hbExvY2F0aW9uEi4KBXBvaW50GAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQJSBXBvaW50ElAKEXRlcm1pbmFsX3BvaW50X2lkGAIgASgLMiQubWFwcy5mbGVldGVuZ2luZS52MS5UZXJtaW5hbFBvaW50SWRSD3Rlcm1pbmFsUG9pbnRJZBIqCg9hY2Nlc3NfcG9pbnRfaWQYAyABKAlCAhgBUg1hY2Nlc3NQb2ludElkEhsKB3RyaXBfaWQYBCABKAlCAhgBUgZ0cmlwSWQSWwoWdGVybWluYWxfbG9jYXRpb25fdHlwZRgFIAEoDjIhLm1hcHMuZmxlZXRlbmdpbmUudjEuV2F5cG9pbnRUeXBlQgIYAVIUdGVybWluYWxMb2NhdGlvblR5cGU=');
 @$core.Deprecated('Use tripWaypointDescriptor instead')
 const TripWaypoint$json = const {
   '1': 'TripWaypoint',

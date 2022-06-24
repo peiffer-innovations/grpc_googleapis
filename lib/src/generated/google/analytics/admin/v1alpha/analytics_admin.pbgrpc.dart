@@ -3,7 +3,7 @@
 //  source: google/analytics/admin/v1alpha/analytics_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -130,77 +130,6 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchDeleteUserLinks',
       ($0.BatchDeleteUserLinksRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
-  static final _$getWebDataStream = $grpc.ClientMethod<
-          $0.GetWebDataStreamRequest, $1.WebDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetWebDataStream',
-      ($0.GetWebDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.WebDataStream.fromBuffer(value));
-  static final _$deleteWebDataStream = $grpc.ClientMethod<
-          $0.DeleteWebDataStreamRequest, $2.Empty>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteWebDataStream',
-      ($0.DeleteWebDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
-  static final _$updateWebDataStream = $grpc.ClientMethod<
-          $0.UpdateWebDataStreamRequest, $1.WebDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateWebDataStream',
-      ($0.UpdateWebDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.WebDataStream.fromBuffer(value));
-  static final _$createWebDataStream = $grpc.ClientMethod<
-          $0.CreateWebDataStreamRequest, $1.WebDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateWebDataStream',
-      ($0.CreateWebDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.WebDataStream.fromBuffer(value));
-  static final _$listWebDataStreams = $grpc.ClientMethod<
-          $0.ListWebDataStreamsRequest, $0.ListWebDataStreamsResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListWebDataStreams',
-      ($0.ListWebDataStreamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.ListWebDataStreamsResponse.fromBuffer(value));
-  static final _$getIosAppDataStream = $grpc.ClientMethod<
-          $0.GetIosAppDataStreamRequest, $1.IosAppDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetIosAppDataStream',
-      ($0.GetIosAppDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.IosAppDataStream.fromBuffer(value));
-  static final _$deleteIosAppDataStream = $grpc.ClientMethod<
-          $0.DeleteIosAppDataStreamRequest, $2.Empty>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteIosAppDataStream',
-      ($0.DeleteIosAppDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
-  static final _$updateIosAppDataStream = $grpc.ClientMethod<
-          $0.UpdateIosAppDataStreamRequest, $1.IosAppDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateIosAppDataStream',
-      ($0.UpdateIosAppDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.IosAppDataStream.fromBuffer(value));
-  static final _$listIosAppDataStreams = $grpc.ClientMethod<
-          $0.ListIosAppDataStreamsRequest, $0.ListIosAppDataStreamsResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListIosAppDataStreams',
-      ($0.ListIosAppDataStreamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.ListIosAppDataStreamsResponse.fromBuffer(value));
-  static final _$getAndroidAppDataStream = $grpc.ClientMethod<
-          $0.GetAndroidAppDataStreamRequest, $1.AndroidAppDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetAndroidAppDataStream',
-      ($0.GetAndroidAppDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $1.AndroidAppDataStream.fromBuffer(value));
-  static final _$deleteAndroidAppDataStream = $grpc.ClientMethod<
-          $0.DeleteAndroidAppDataStreamRequest, $2.Empty>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteAndroidAppDataStream',
-      ($0.DeleteAndroidAppDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
-  static final _$updateAndroidAppDataStream = $grpc.ClientMethod<
-          $0.UpdateAndroidAppDataStreamRequest, $1.AndroidAppDataStream>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateAndroidAppDataStream',
-      ($0.UpdateAndroidAppDataStreamRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $1.AndroidAppDataStream.fromBuffer(value));
-  static final _$listAndroidAppDataStreams = $grpc.ClientMethod<
-          $0.ListAndroidAppDataStreamsRequest,
-          $0.ListAndroidAppDataStreamsResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListAndroidAppDataStreams',
-      ($0.ListAndroidAppDataStreamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.ListAndroidAppDataStreamsResponse.fromBuffer(value));
   static final _$createFirebaseLink = $grpc.ClientMethod<
           $0.CreateFirebaseLinkRequest, $1.FirebaseLink>(
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateFirebaseLink',
@@ -634,90 +563,6 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.BatchDeleteUserLinksRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$batchDeleteUserLinks, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.WebDataStream> getWebDataStream(
-      $0.GetWebDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getWebDataStream, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.Empty> deleteWebDataStream(
-      $0.DeleteWebDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteWebDataStream, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.WebDataStream> updateWebDataStream(
-      $0.UpdateWebDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateWebDataStream, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.WebDataStream> createWebDataStream(
-      $0.CreateWebDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createWebDataStream, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.ListWebDataStreamsResponse> listWebDataStreams(
-      $0.ListWebDataStreamsRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listWebDataStreams, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.IosAppDataStream> getIosAppDataStream(
-      $0.GetIosAppDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getIosAppDataStream, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.Empty> deleteIosAppDataStream(
-      $0.DeleteIosAppDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteIosAppDataStream, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$1.IosAppDataStream> updateIosAppDataStream(
-      $0.UpdateIosAppDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateIosAppDataStream, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$0.ListIosAppDataStreamsResponse> listIosAppDataStreams(
-      $0.ListIosAppDataStreamsRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listIosAppDataStreams, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.AndroidAppDataStream> getAndroidAppDataStream(
-      $0.GetAndroidAppDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getAndroidAppDataStream, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$2.Empty> deleteAndroidAppDataStream(
-      $0.DeleteAndroidAppDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteAndroidAppDataStream, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$1.AndroidAppDataStream> updateAndroidAppDataStream(
-      $0.UpdateAndroidAppDataStreamRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateAndroidAppDataStream, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$0.ListAndroidAppDataStreamsResponse>
-      listAndroidAppDataStreams($0.ListAndroidAppDataStreamsRequest request,
-          {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listAndroidAppDataStreams, request,
-        options: options);
   }
 
   $grpc.ResponseFuture<$1.FirebaseLink> createFirebaseLink(
@@ -1245,121 +1090,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.BatchDeleteUserLinksRequest.fromBuffer(value),
         ($2.Empty value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.GetWebDataStreamRequest, $1.WebDataStream>(
-            'GetWebDataStream',
-            getWebDataStream_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.GetWebDataStreamRequest.fromBuffer(value),
-            ($1.WebDataStream value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.DeleteWebDataStreamRequest, $2.Empty>(
-        'DeleteWebDataStream',
-        deleteWebDataStream_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.DeleteWebDataStreamRequest.fromBuffer(value),
-        ($2.Empty value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.UpdateWebDataStreamRequest, $1.WebDataStream>(
-            'UpdateWebDataStream',
-            updateWebDataStream_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.UpdateWebDataStreamRequest.fromBuffer(value),
-            ($1.WebDataStream value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.CreateWebDataStreamRequest, $1.WebDataStream>(
-            'CreateWebDataStream',
-            createWebDataStream_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.CreateWebDataStreamRequest.fromBuffer(value),
-            ($1.WebDataStream value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListWebDataStreamsRequest,
-            $0.ListWebDataStreamsResponse>(
-        'ListWebDataStreams',
-        listWebDataStreams_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.ListWebDataStreamsRequest.fromBuffer(value),
-        ($0.ListWebDataStreamsResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.GetIosAppDataStreamRequest, $1.IosAppDataStream>(
-            'GetIosAppDataStream',
-            getIosAppDataStream_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.GetIosAppDataStreamRequest.fromBuffer(value),
-            ($1.IosAppDataStream value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.DeleteIosAppDataStreamRequest, $2.Empty>(
-        'DeleteIosAppDataStream',
-        deleteIosAppDataStream_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.DeleteIosAppDataStreamRequest.fromBuffer(value),
-        ($2.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.UpdateIosAppDataStreamRequest,
-            $1.IosAppDataStream>(
-        'UpdateIosAppDataStream',
-        updateIosAppDataStream_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.UpdateIosAppDataStreamRequest.fromBuffer(value),
-        ($1.IosAppDataStream value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListIosAppDataStreamsRequest,
-            $0.ListIosAppDataStreamsResponse>(
-        'ListIosAppDataStreams',
-        listIosAppDataStreams_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.ListIosAppDataStreamsRequest.fromBuffer(value),
-        ($0.ListIosAppDataStreamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetAndroidAppDataStreamRequest,
-            $1.AndroidAppDataStream>(
-        'GetAndroidAppDataStream',
-        getAndroidAppDataStream_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.GetAndroidAppDataStreamRequest.fromBuffer(value),
-        ($1.AndroidAppDataStream value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.DeleteAndroidAppDataStreamRequest, $2.Empty>(
-            'DeleteAndroidAppDataStream',
-            deleteAndroidAppDataStream_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.DeleteAndroidAppDataStreamRequest.fromBuffer(value),
-            ($2.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.UpdateAndroidAppDataStreamRequest,
-            $1.AndroidAppDataStream>(
-        'UpdateAndroidAppDataStream',
-        updateAndroidAppDataStream_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.UpdateAndroidAppDataStreamRequest.fromBuffer(value),
-        ($1.AndroidAppDataStream value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListAndroidAppDataStreamsRequest,
-            $0.ListAndroidAppDataStreamsResponse>(
-        'ListAndroidAppDataStreams',
-        listAndroidAppDataStreams_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.ListAndroidAppDataStreamsRequest.fromBuffer(value),
-        ($0.ListAndroidAppDataStreamsResponse value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.CreateFirebaseLinkRequest, $1.FirebaseLink>(
             'CreateFirebaseLink',
@@ -1937,80 +1667,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return batchDeleteUserLinks(call, await request);
   }
 
-  $async.Future<$1.WebDataStream> getWebDataStream_Pre($grpc.ServiceCall call,
-      $async.Future<$0.GetWebDataStreamRequest> request) async {
-    return getWebDataStream(call, await request);
-  }
-
-  $async.Future<$2.Empty> deleteWebDataStream_Pre($grpc.ServiceCall call,
-      $async.Future<$0.DeleteWebDataStreamRequest> request) async {
-    return deleteWebDataStream(call, await request);
-  }
-
-  $async.Future<$1.WebDataStream> updateWebDataStream_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.UpdateWebDataStreamRequest> request) async {
-    return updateWebDataStream(call, await request);
-  }
-
-  $async.Future<$1.WebDataStream> createWebDataStream_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.CreateWebDataStreamRequest> request) async {
-    return createWebDataStream(call, await request);
-  }
-
-  $async.Future<$0.ListWebDataStreamsResponse> listWebDataStreams_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.ListWebDataStreamsRequest> request) async {
-    return listWebDataStreams(call, await request);
-  }
-
-  $async.Future<$1.IosAppDataStream> getIosAppDataStream_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.GetIosAppDataStreamRequest> request) async {
-    return getIosAppDataStream(call, await request);
-  }
-
-  $async.Future<$2.Empty> deleteIosAppDataStream_Pre($grpc.ServiceCall call,
-      $async.Future<$0.DeleteIosAppDataStreamRequest> request) async {
-    return deleteIosAppDataStream(call, await request);
-  }
-
-  $async.Future<$1.IosAppDataStream> updateIosAppDataStream_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.UpdateIosAppDataStreamRequest> request) async {
-    return updateIosAppDataStream(call, await request);
-  }
-
-  $async.Future<$0.ListIosAppDataStreamsResponse> listIosAppDataStreams_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.ListIosAppDataStreamsRequest> request) async {
-    return listIosAppDataStreams(call, await request);
-  }
-
-  $async.Future<$1.AndroidAppDataStream> getAndroidAppDataStream_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.GetAndroidAppDataStreamRequest> request) async {
-    return getAndroidAppDataStream(call, await request);
-  }
-
-  $async.Future<$2.Empty> deleteAndroidAppDataStream_Pre($grpc.ServiceCall call,
-      $async.Future<$0.DeleteAndroidAppDataStreamRequest> request) async {
-    return deleteAndroidAppDataStream(call, await request);
-  }
-
-  $async.Future<$1.AndroidAppDataStream> updateAndroidAppDataStream_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.UpdateAndroidAppDataStreamRequest> request) async {
-    return updateAndroidAppDataStream(call, await request);
-  }
-
-  $async.Future<$0.ListAndroidAppDataStreamsResponse>
-      listAndroidAppDataStreams_Pre($grpc.ServiceCall call,
-          $async.Future<$0.ListAndroidAppDataStreamsRequest> request) async {
-    return listAndroidAppDataStreams(call, await request);
-  }
-
   $async.Future<$1.FirebaseLink> createFirebaseLink_Pre($grpc.ServiceCall call,
       $async.Future<$0.CreateFirebaseLinkRequest> request) async {
     return createFirebaseLink(call, await request);
@@ -2367,32 +2023,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.DeleteUserLinkRequest request);
   $async.Future<$2.Empty> batchDeleteUserLinks(
       $grpc.ServiceCall call, $0.BatchDeleteUserLinksRequest request);
-  $async.Future<$1.WebDataStream> getWebDataStream(
-      $grpc.ServiceCall call, $0.GetWebDataStreamRequest request);
-  $async.Future<$2.Empty> deleteWebDataStream(
-      $grpc.ServiceCall call, $0.DeleteWebDataStreamRequest request);
-  $async.Future<$1.WebDataStream> updateWebDataStream(
-      $grpc.ServiceCall call, $0.UpdateWebDataStreamRequest request);
-  $async.Future<$1.WebDataStream> createWebDataStream(
-      $grpc.ServiceCall call, $0.CreateWebDataStreamRequest request);
-  $async.Future<$0.ListWebDataStreamsResponse> listWebDataStreams(
-      $grpc.ServiceCall call, $0.ListWebDataStreamsRequest request);
-  $async.Future<$1.IosAppDataStream> getIosAppDataStream(
-      $grpc.ServiceCall call, $0.GetIosAppDataStreamRequest request);
-  $async.Future<$2.Empty> deleteIosAppDataStream(
-      $grpc.ServiceCall call, $0.DeleteIosAppDataStreamRequest request);
-  $async.Future<$1.IosAppDataStream> updateIosAppDataStream(
-      $grpc.ServiceCall call, $0.UpdateIosAppDataStreamRequest request);
-  $async.Future<$0.ListIosAppDataStreamsResponse> listIosAppDataStreams(
-      $grpc.ServiceCall call, $0.ListIosAppDataStreamsRequest request);
-  $async.Future<$1.AndroidAppDataStream> getAndroidAppDataStream(
-      $grpc.ServiceCall call, $0.GetAndroidAppDataStreamRequest request);
-  $async.Future<$2.Empty> deleteAndroidAppDataStream(
-      $grpc.ServiceCall call, $0.DeleteAndroidAppDataStreamRequest request);
-  $async.Future<$1.AndroidAppDataStream> updateAndroidAppDataStream(
-      $grpc.ServiceCall call, $0.UpdateAndroidAppDataStreamRequest request);
-  $async.Future<$0.ListAndroidAppDataStreamsResponse> listAndroidAppDataStreams(
-      $grpc.ServiceCall call, $0.ListAndroidAppDataStreamsRequest request);
   $async.Future<$1.FirebaseLink> createFirebaseLink(
       $grpc.ServiceCall call, $0.CreateFirebaseLinkRequest request);
   $async.Future<$2.Empty> deleteFirebaseLink(

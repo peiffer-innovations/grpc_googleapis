@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/metrics.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -220,8 +220,20 @@ const Threshold$json = const {
       '6': '.google.monitoring.dashboard.v1.Threshold.Direction',
       '10': 'direction'
     },
+    const {
+      '1': 'target_axis',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.monitoring.dashboard.v1.Threshold.TargetAxis',
+      '10': 'targetAxis'
+    },
   ],
-  '4': const [Threshold_Color$json, Threshold_Direction$json],
+  '4': const [
+    Threshold_Color$json,
+    Threshold_Direction$json,
+    Threshold_TargetAxis$json
+  ],
 };
 
 @$core.Deprecated('Use thresholdDescriptor instead')
@@ -244,6 +256,16 @@ const Threshold_Direction$json = const {
   ],
 };
 
+@$core.Deprecated('Use thresholdDescriptor instead')
+const Threshold_TargetAxis$json = const {
+  '1': 'TargetAxis',
+  '2': const [
+    const {'1': 'TARGET_AXIS_UNSPECIFIED', '2': 0},
+    const {'1': 'Y1', '2': 1},
+    const {'1': 'Y2', '2': 2},
+  ],
+};
+
 /// Descriptor for `Threshold`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List thresholdDescriptor = $convert.base64Decode(
-    'CglUaHJlc2hvbGQSFAoFbGFiZWwYASABKAlSBWxhYmVsEhQKBXZhbHVlGAIgASgBUgV2YWx1ZRJFCgVjb2xvchgDIAEoDjIvLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UaHJlc2hvbGQuQ29sb3JSBWNvbG9yElEKCWRpcmVjdGlvbhgEIAEoDjIzLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UaHJlc2hvbGQuRGlyZWN0aW9uUglkaXJlY3Rpb24iMwoFQ29sb3ISFQoRQ09MT1JfVU5TUEVDSUZJRUQQABIKCgZZRUxMT1cQBBIHCgNSRUQQBiI8CglEaXJlY3Rpb24SGQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASCQoFQUJPVkUQARIJCgVCRUxPVxAC');
+    'CglUaHJlc2hvbGQSFAoFbGFiZWwYASABKAlSBWxhYmVsEhQKBXZhbHVlGAIgASgBUgV2YWx1ZRJFCgVjb2xvchgDIAEoDjIvLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UaHJlc2hvbGQuQ29sb3JSBWNvbG9yElEKCWRpcmVjdGlvbhgEIAEoDjIzLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UaHJlc2hvbGQuRGlyZWN0aW9uUglkaXJlY3Rpb24SVQoLdGFyZ2V0X2F4aXMYBSABKA4yNC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGhyZXNob2xkLlRhcmdldEF4aXNSCnRhcmdldEF4aXMiMwoFQ29sb3ISFQoRQ09MT1JfVU5TUEVDSUZJRUQQABIKCgZZRUxMT1cQBBIHCgNSRUQQBiI8CglEaXJlY3Rpb24SGQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASCQoFQUJPVkUQARIJCgVCRUxPVxACIjkKClRhcmdldEF4aXMSGwoXVEFSR0VUX0FYSVNfVU5TUEVDSUZJRUQQABIGCgJZMRABEgYKAlkyEAI=');

@@ -3,7 +3,7 @@
 //  source: google/maps/routes/v1/route.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -82,6 +82,12 @@ class Route extends $pb.GeneratedMessage {
             ? ''
             : 'travelAdvisory',
         subBuilder: RouteTravelAdvisory.create)
+    ..p<$core.int>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'optimizedIntermediateWaypointIndex',
+        $pb.PbFieldType.K3)
     ..hasRequiredFields = false;
 
   Route._() : super();
@@ -95,6 +101,7 @@ class Route extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? warnings,
     $2.Viewport? viewport,
     RouteTravelAdvisory? travelAdvisory,
+    $core.Iterable<$core.int>? optimizedIntermediateWaypointIndex,
   }) {
     final _result = create();
     if (legs != null) {
@@ -123,6 +130,10 @@ class Route extends $pb.GeneratedMessage {
     }
     if (travelAdvisory != null) {
       _result.travelAdvisory = travelAdvisory;
+    }
+    if (optimizedIntermediateWaypointIndex != null) {
+      _result.optimizedIntermediateWaypointIndex
+          .addAll(optimizedIntermediateWaypointIndex);
     }
     return _result;
   }
@@ -251,6 +262,9 @@ class Route extends $pb.GeneratedMessage {
   void clearTravelAdvisory() => clearField(9);
   @$pb.TagNumber(9)
   RouteTravelAdvisory ensureTravelAdvisory() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $core.List<$core.int> get optimizedIntermediateWaypointIndex => $_getList(9);
 }
 
 class RouteTravelAdvisory extends $pb.GeneratedMessage {
@@ -282,6 +296,12 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
             : 'speedReadingIntervals',
         $pb.PbFieldType.PM,
         subBuilder: SpeedReadingInterval.create)
+    ..aOM<CustomLayerInfo>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customLayerInfo',
+        subBuilder: CustomLayerInfo.create)
     ..hasRequiredFields = false;
 
   RouteTravelAdvisory._() : super();
@@ -289,6 +309,7 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
     TrafficRestriction? trafficRestriction,
     TollInfo? tollInfo,
     $core.Iterable<SpeedReadingInterval>? speedReadingIntervals,
+    CustomLayerInfo? customLayerInfo,
   }) {
     final _result = create();
     if (trafficRestriction != null) {
@@ -299,6 +320,9 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
     }
     if (speedReadingIntervals != null) {
       _result.speedReadingIntervals.addAll(speedReadingIntervals);
+    }
+    if (customLayerInfo != null) {
+      _result.customLayerInfo = customLayerInfo;
     }
     return _result;
   }
@@ -359,6 +383,20 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<SpeedReadingInterval> get speedReadingIntervals => $_getList(2);
+
+  @$pb.TagNumber(4)
+  CustomLayerInfo get customLayerInfo => $_getN(3);
+  @$pb.TagNumber(4)
+  set customLayerInfo(CustomLayerInfo v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCustomLayerInfo() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCustomLayerInfo() => clearField(4);
+  @$pb.TagNumber(4)
+  CustomLayerInfo ensureCustomLayerInfo() => $_ensure(3);
 }
 
 class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
@@ -384,12 +422,19 @@ class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
             : 'speedReadingIntervals',
         $pb.PbFieldType.PM,
         subBuilder: SpeedReadingInterval.create)
+    ..aOM<CustomLayerInfo>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customLayerInfo',
+        subBuilder: CustomLayerInfo.create)
     ..hasRequiredFields = false;
 
   RouteLegTravelAdvisory._() : super();
   factory RouteLegTravelAdvisory({
     TollInfo? tollInfo,
     $core.Iterable<SpeedReadingInterval>? speedReadingIntervals,
+    CustomLayerInfo? customLayerInfo,
   }) {
     final _result = create();
     if (tollInfo != null) {
@@ -397,6 +442,9 @@ class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
     }
     if (speedReadingIntervals != null) {
       _result.speedReadingIntervals.addAll(speedReadingIntervals);
+    }
+    if (customLayerInfo != null) {
+      _result.customLayerInfo = customLayerInfo;
     }
     return _result;
   }
@@ -445,6 +493,20 @@ class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<SpeedReadingInterval> get speedReadingIntervals => $_getList(1);
+
+  @$pb.TagNumber(3)
+  CustomLayerInfo get customLayerInfo => $_getN(2);
+  @$pb.TagNumber(3)
+  set customLayerInfo(CustomLayerInfo v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCustomLayerInfo() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCustomLayerInfo() => clearField(3);
+  @$pb.TagNumber(3)
+  CustomLayerInfo ensureCustomLayerInfo() => $_ensure(2);
 }
 
 class RouteLegStepTravelAdvisory extends $pb.GeneratedMessage {
@@ -1352,4 +1414,179 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
   $core.bool hasSpeed() => $_has(2);
   @$pb.TagNumber(3)
   void clearSpeed() => clearField(3);
+}
+
+class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CustomLayerInfo.AreaInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'areaId')
+    ..a<$core.double>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'distanceInAreaMeters',
+        $pb.PbFieldType.OF)
+    ..aOM<$0.Duration>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'durationInArea',
+        subBuilder: $0.Duration.create)
+    ..hasRequiredFields = false;
+
+  CustomLayerInfo_AreaInfo._() : super();
+  factory CustomLayerInfo_AreaInfo({
+    $core.String? areaId,
+    $core.double? distanceInAreaMeters,
+    $0.Duration? durationInArea,
+  }) {
+    final _result = create();
+    if (areaId != null) {
+      _result.areaId = areaId;
+    }
+    if (distanceInAreaMeters != null) {
+      _result.distanceInAreaMeters = distanceInAreaMeters;
+    }
+    if (durationInArea != null) {
+      _result.durationInArea = durationInArea;
+    }
+    return _result;
+  }
+  factory CustomLayerInfo_AreaInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomLayerInfo_AreaInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CustomLayerInfo_AreaInfo clone() =>
+      CustomLayerInfo_AreaInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CustomLayerInfo_AreaInfo copyWith(
+          void Function(CustomLayerInfo_AreaInfo) updates) =>
+      super.copyWith((message) => updates(message as CustomLayerInfo_AreaInfo))
+          as CustomLayerInfo_AreaInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomLayerInfo_AreaInfo create() => CustomLayerInfo_AreaInfo._();
+  CustomLayerInfo_AreaInfo createEmptyInstance() => create();
+  static $pb.PbList<CustomLayerInfo_AreaInfo> createRepeated() =>
+      $pb.PbList<CustomLayerInfo_AreaInfo>();
+  @$core.pragma('dart2js:noInline')
+  static CustomLayerInfo_AreaInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomLayerInfo_AreaInfo>(create);
+  static CustomLayerInfo_AreaInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get areaId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set areaId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAreaId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAreaId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get distanceInAreaMeters => $_getN(1);
+  @$pb.TagNumber(2)
+  set distanceInAreaMeters($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDistanceInAreaMeters() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDistanceInAreaMeters() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.Duration get durationInArea => $_getN(2);
+  @$pb.TagNumber(3)
+  set durationInArea($0.Duration v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDurationInArea() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDurationInArea() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Duration ensureDurationInArea() => $_ensure(2);
+}
+
+class CustomLayerInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CustomLayerInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..pc<CustomLayerInfo_AreaInfo>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'areaInfo',
+        $pb.PbFieldType.PM,
+        subBuilder: CustomLayerInfo_AreaInfo.create)
+    ..hasRequiredFields = false;
+
+  CustomLayerInfo._() : super();
+  factory CustomLayerInfo({
+    $core.Iterable<CustomLayerInfo_AreaInfo>? areaInfo,
+  }) {
+    final _result = create();
+    if (areaInfo != null) {
+      _result.areaInfo.addAll(areaInfo);
+    }
+    return _result;
+  }
+  factory CustomLayerInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomLayerInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CustomLayerInfo clone() => CustomLayerInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CustomLayerInfo copyWith(void Function(CustomLayerInfo) updates) =>
+      super.copyWith((message) => updates(message as CustomLayerInfo))
+          as CustomLayerInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomLayerInfo create() => CustomLayerInfo._();
+  CustomLayerInfo createEmptyInstance() => create();
+  static $pb.PbList<CustomLayerInfo> createRepeated() =>
+      $pb.PbList<CustomLayerInfo>();
+  @$core.pragma('dart2js:noInline')
+  static CustomLayerInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomLayerInfo>(create);
+  static CustomLayerInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<CustomLayerInfo_AreaInfo> get areaInfo => $_getList(0);
 }

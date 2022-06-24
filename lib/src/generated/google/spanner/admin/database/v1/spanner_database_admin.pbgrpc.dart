@@ -3,7 +3,7 @@
 //  source: google/spanner/admin/database/v1/spanner_database_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -71,6 +71,11 @@ class DatabaseAdminClient extends $grpc.Client {
       $grpc.ClientMethod<$5.CreateBackupRequest, $2.Operation>(
           '/google.spanner.admin.database.v1.DatabaseAdmin/CreateBackup',
           ($5.CreateBackupRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$copyBackup =
+      $grpc.ClientMethod<$5.CopyBackupRequest, $2.Operation>(
+          '/google.spanner.admin.database.v1.DatabaseAdmin/CopyBackup',
+          ($5.CopyBackupRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$getBackup = $grpc.ClientMethod<$5.GetBackupRequest, $5.Backup>(
       '/google.spanner.admin.database.v1.DatabaseAdmin/GetBackup',
@@ -169,6 +174,11 @@ class DatabaseAdminClient extends $grpc.Client {
       $5.CreateBackupRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createBackup, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> copyBackup($5.CopyBackupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$copyBackup, request, options: options);
   }
 
   $grpc.ResponseFuture<$5.Backup> getBackup($5.GetBackupRequest request,
@@ -299,6 +309,13 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.CreateBackupRequest.fromBuffer(value),
         ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.CopyBackupRequest, $2.Operation>(
+        'CopyBackup',
+        copyBackup_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $5.CopyBackupRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$5.GetBackupRequest, $5.Backup>(
         'GetBackup',
         getBackup_Pre,
@@ -412,6 +429,11 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
     return createBackup(call, await request);
   }
 
+  $async.Future<$2.Operation> copyBackup_Pre($grpc.ServiceCall call,
+      $async.Future<$5.CopyBackupRequest> request) async {
+    return copyBackup(call, await request);
+  }
+
   $async.Future<$5.Backup> getBackup_Pre($grpc.ServiceCall call,
       $async.Future<$5.GetBackupRequest> request) async {
     return getBackup(call, await request);
@@ -469,6 +491,8 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
   $async.Future<$2.Operation> createBackup(
       $grpc.ServiceCall call, $5.CreateBackupRequest request);
+  $async.Future<$2.Operation> copyBackup(
+      $grpc.ServiceCall call, $5.CopyBackupRequest request);
   $async.Future<$5.Backup> getBackup(
       $grpc.ServiceCall call, $5.GetBackupRequest request);
   $async.Future<$5.Backup> updateBackup(

@@ -3,15 +3,20 @@
 //  source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'instance.pb.dart' as $5;
 import '../../../protobuf/field_mask.pb.dart' as $6;
 import '../../../protobuf/timestamp.pb.dart' as $7;
+
+import 'bigtable_instance_admin.pbenum.dart';
+
+export 'bigtable_instance_admin.pbenum.dart';
 
 class CreateInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1232,6 +1237,126 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
+class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateClusterMetadata.TableProgress',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'estimatedSizeBytes')
+    ..aInt64(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'estimatedCopiedBytes')
+    ..e<CreateClusterMetadata_TableProgress_State>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            CreateClusterMetadata_TableProgress_State.STATE_UNSPECIFIED,
+        valueOf: CreateClusterMetadata_TableProgress_State.valueOf,
+        enumValues: CreateClusterMetadata_TableProgress_State.values)
+    ..hasRequiredFields = false;
+
+  CreateClusterMetadata_TableProgress._() : super();
+  factory CreateClusterMetadata_TableProgress({
+    $fixnum.Int64? estimatedSizeBytes,
+    $fixnum.Int64? estimatedCopiedBytes,
+    CreateClusterMetadata_TableProgress_State? state,
+  }) {
+    final _result = create();
+    if (estimatedSizeBytes != null) {
+      _result.estimatedSizeBytes = estimatedSizeBytes;
+    }
+    if (estimatedCopiedBytes != null) {
+      _result.estimatedCopiedBytes = estimatedCopiedBytes;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    return _result;
+  }
+  factory CreateClusterMetadata_TableProgress.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateClusterMetadata_TableProgress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateClusterMetadata_TableProgress clone() =>
+      CreateClusterMetadata_TableProgress()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateClusterMetadata_TableProgress copyWith(
+          void Function(CreateClusterMetadata_TableProgress) updates) =>
+      super.copyWith((message) =>
+              updates(message as CreateClusterMetadata_TableProgress))
+          as CreateClusterMetadata_TableProgress; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateClusterMetadata_TableProgress create() =>
+      CreateClusterMetadata_TableProgress._();
+  CreateClusterMetadata_TableProgress createEmptyInstance() => create();
+  static $pb.PbList<CreateClusterMetadata_TableProgress> createRepeated() =>
+      $pb.PbList<CreateClusterMetadata_TableProgress>();
+  @$core.pragma('dart2js:noInline')
+  static CreateClusterMetadata_TableProgress getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          CreateClusterMetadata_TableProgress>(create);
+  static CreateClusterMetadata_TableProgress? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get estimatedSizeBytes => $_getI64(0);
+  @$pb.TagNumber(2)
+  set estimatedSizeBytes($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEstimatedSizeBytes() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearEstimatedSizeBytes() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get estimatedCopiedBytes => $_getI64(1);
+  @$pb.TagNumber(3)
+  set estimatedCopiedBytes($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEstimatedCopiedBytes() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearEstimatedCopiedBytes() => clearField(3);
+
+  @$pb.TagNumber(4)
+  CreateClusterMetadata_TableProgress_State get state => $_getN(2);
+  @$pb.TagNumber(4)
+  set state(CreateClusterMetadata_TableProgress_State v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearState() => clearField(4);
+}
+
 class CreateClusterMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1260,6 +1385,16 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'finishTime',
         subBuilder: $7.Timestamp.create)
+    ..m<$core.String, CreateClusterMetadata_TableProgress>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tables',
+        entryClassName: 'CreateClusterMetadata.TablesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: CreateClusterMetadata_TableProgress.create,
+        packageName: const $pb.PackageName('google.bigtable.admin.v2'))
     ..hasRequiredFields = false;
 
   CreateClusterMetadata._() : super();
@@ -1267,6 +1402,7 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
     CreateClusterRequest? originalRequest,
     $7.Timestamp? requestTime,
     $7.Timestamp? finishTime,
+    $core.Map<$core.String, CreateClusterMetadata_TableProgress>? tables,
   }) {
     final _result = create();
     if (originalRequest != null) {
@@ -1277,6 +1413,9 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
     }
     if (finishTime != null) {
       _result.finishTime = finishTime;
+    }
+    if (tables != null) {
+      _result.tables.addAll(tables);
     }
     return _result;
   }
@@ -1350,6 +1489,10 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   void clearFinishTime() => clearField(3);
   @$pb.TagNumber(3)
   $7.Timestamp ensureFinishTime() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.Map<$core.String, CreateClusterMetadata_TableProgress> get tables =>
+      $_getMap(3);
 }
 
 class UpdateClusterMetadata extends $pb.GeneratedMessage {
@@ -2351,4 +2494,247 @@ class UpdateAppProfileMetadata extends $pb.GeneratedMessage {
   static UpdateAppProfileMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAppProfileMetadata>(create);
   static UpdateAppProfileMetadata? _defaultInstance;
+}
+
+class ListHotTabletsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListHotTabletsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<$7.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $7.Timestamp.create)
+    ..a<$core.int>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListHotTabletsRequest._() : super();
+  factory ListHotTabletsRequest({
+    $core.String? parent,
+    $7.Timestamp? startTime,
+    $7.Timestamp? endTime,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListHotTabletsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListHotTabletsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListHotTabletsRequest clone() =>
+      ListHotTabletsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListHotTabletsRequest copyWith(
+          void Function(ListHotTabletsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListHotTabletsRequest))
+          as ListHotTabletsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListHotTabletsRequest create() => ListHotTabletsRequest._();
+  ListHotTabletsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListHotTabletsRequest> createRepeated() =>
+      $pb.PbList<ListHotTabletsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListHotTabletsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListHotTabletsRequest>(create);
+  static ListHotTabletsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $7.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set startTime($7.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Timestamp ensureStartTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $7.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set endTime($7.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEndTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Timestamp ensureEndTime() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set pageSize($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPageSize() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPageSize() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get pageToken => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set pageToken($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasPageToken() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageToken() => clearField(5);
+}
+
+class ListHotTabletsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListHotTabletsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.HotTablet>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'hotTablets',
+        $pb.PbFieldType.PM,
+        subBuilder: $5.HotTablet.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListHotTabletsResponse._() : super();
+  factory ListHotTabletsResponse({
+    $core.Iterable<$5.HotTablet>? hotTablets,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (hotTablets != null) {
+      _result.hotTablets.addAll(hotTablets);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListHotTabletsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListHotTabletsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListHotTabletsResponse clone() =>
+      ListHotTabletsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListHotTabletsResponse copyWith(
+          void Function(ListHotTabletsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListHotTabletsResponse))
+          as ListHotTabletsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListHotTabletsResponse create() => ListHotTabletsResponse._();
+  ListHotTabletsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListHotTabletsResponse> createRepeated() =>
+      $pb.PbList<ListHotTabletsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListHotTabletsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListHotTabletsResponse>(create);
+  static ListHotTabletsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$5.HotTablet> get hotTablets => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
 }

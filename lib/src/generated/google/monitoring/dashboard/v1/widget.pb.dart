@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/widget.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -14,8 +14,21 @@ import 'scorecard.pb.dart' as $1;
 import 'text.pb.dart' as $2;
 import '../../../protobuf/empty.pb.dart' as $3;
 import 'alertchart.pb.dart' as $4;
+import 'table.pb.dart' as $5;
+import 'collapsible_group.pb.dart' as $6;
+import 'logs_panel.pb.dart' as $7;
 
-enum Widget_Content { xyChart, scorecard, text, blank, alertChart, notSet }
+enum Widget_Content {
+  xyChart,
+  scorecard,
+  text,
+  blank,
+  alertChart,
+  timeSeriesTable,
+  collapsibleGroup,
+  logsPanel,
+  notSet
+}
 
 class Widget extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, Widget_Content> _Widget_ContentByTag = {
@@ -24,6 +37,9 @@ class Widget extends $pb.GeneratedMessage {
     4: Widget_Content.text,
     5: Widget_Content.blank,
     7: Widget_Content.alertChart,
+    8: Widget_Content.timeSeriesTable,
+    9: Widget_Content.collapsibleGroup,
+    10: Widget_Content.logsPanel,
     0: Widget_Content.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -35,7 +51,7 @@ class Widget extends $pb.GeneratedMessage {
               ? ''
               : 'google.monitoring.dashboard.v1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 4, 5, 7])
+    ..oo(0, [2, 3, 4, 5, 7, 8, 9, 10])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -71,6 +87,24 @@ class Widget extends $pb.GeneratedMessage {
             ? ''
             : 'alertChart',
         subBuilder: $4.AlertChart.create)
+    ..aOM<$5.TimeSeriesTable>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'timeSeriesTable',
+        subBuilder: $5.TimeSeriesTable.create)
+    ..aOM<$6.CollapsibleGroup>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'collapsibleGroup',
+        subBuilder: $6.CollapsibleGroup.create)
+    ..aOM<$7.LogsPanel>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logsPanel',
+        subBuilder: $7.LogsPanel.create)
     ..hasRequiredFields = false;
 
   Widget._() : super();
@@ -81,6 +115,9 @@ class Widget extends $pb.GeneratedMessage {
     $2.Text? text,
     $3.Empty? blank,
     $4.AlertChart? alertChart,
+    $5.TimeSeriesTable? timeSeriesTable,
+    $6.CollapsibleGroup? collapsibleGroup,
+    $7.LogsPanel? logsPanel,
   }) {
     final _result = create();
     if (title != null) {
@@ -100,6 +137,15 @@ class Widget extends $pb.GeneratedMessage {
     }
     if (alertChart != null) {
       _result.alertChart = alertChart;
+    }
+    if (timeSeriesTable != null) {
+      _result.timeSeriesTable = timeSeriesTable;
+    }
+    if (collapsibleGroup != null) {
+      _result.collapsibleGroup = collapsibleGroup;
+    }
+    if (logsPanel != null) {
+      _result.logsPanel = logsPanel;
     }
     return _result;
   }
@@ -213,4 +259,46 @@ class Widget extends $pb.GeneratedMessage {
   void clearAlertChart() => clearField(7);
   @$pb.TagNumber(7)
   $4.AlertChart ensureAlertChart() => $_ensure(5);
+
+  @$pb.TagNumber(8)
+  $5.TimeSeriesTable get timeSeriesTable => $_getN(6);
+  @$pb.TagNumber(8)
+  set timeSeriesTable($5.TimeSeriesTable v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasTimeSeriesTable() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearTimeSeriesTable() => clearField(8);
+  @$pb.TagNumber(8)
+  $5.TimeSeriesTable ensureTimeSeriesTable() => $_ensure(6);
+
+  @$pb.TagNumber(9)
+  $6.CollapsibleGroup get collapsibleGroup => $_getN(7);
+  @$pb.TagNumber(9)
+  set collapsibleGroup($6.CollapsibleGroup v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasCollapsibleGroup() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearCollapsibleGroup() => clearField(9);
+  @$pb.TagNumber(9)
+  $6.CollapsibleGroup ensureCollapsibleGroup() => $_ensure(7);
+
+  @$pb.TagNumber(10)
+  $7.LogsPanel get logsPanel => $_getN(8);
+  @$pb.TagNumber(10)
+  set logsPanel($7.LogsPanel v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasLogsPanel() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearLogsPanel() => clearField(10);
+  @$pb.TagNumber(10)
+  $7.LogsPanel ensureLogsPanel() => $_ensure(8);
 }

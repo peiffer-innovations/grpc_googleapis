@@ -3,7 +3,7 @@
 //  source: google/devtools/build/v1/publish_build_event.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -54,6 +54,13 @@ const PublishLifecycleEventRequest$json = const {
       '8': const {},
       '10': 'projectId'
     },
+    const {
+      '1': 'check_preceding_lifecycle_events_present',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '10': 'checkPrecedingLifecycleEventsPresent'
+    },
   ],
   '4': const [PublishLifecycleEventRequest_ServiceLevel$json],
 };
@@ -70,7 +77,7 @@ const PublishLifecycleEventRequest_ServiceLevel$json = const {
 /// Descriptor for `PublishLifecycleEventRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List publishLifecycleEventRequestDescriptor =
     $convert.base64Decode(
-        'ChxQdWJsaXNoTGlmZWN5Y2xlRXZlbnRSZXF1ZXN0EmgKDXNlcnZpY2VfbGV2ZWwYASABKA4yQy5nb29nbGUuZGV2dG9vbHMuYnVpbGQudjEuUHVibGlzaExpZmVjeWNsZUV2ZW50UmVxdWVzdC5TZXJ2aWNlTGV2ZWxSDHNlcnZpY2VMZXZlbBJRCgtidWlsZF9ldmVudBgCIAEoCzIrLmdvb2dsZS5kZXZ0b29scy5idWlsZC52MS5PcmRlcmVkQnVpbGRFdmVudEID4EECUgpidWlsZEV2ZW50EkAKDnN0cmVhbV90aW1lb3V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUg1zdHJlYW1UaW1lb3V0EjMKFW5vdGlmaWNhdGlvbl9rZXl3b3JkcxgEIAMoCVIUbm90aWZpY2F0aW9uS2V5d29yZHMSIgoKcHJvamVjdF9pZBgGIAEoCUID4EECUglwcm9qZWN0SWQiMwoMU2VydmljZUxldmVsEhIKDk5PTklOVEVSQUNUSVZFEAASDwoLSU5URVJBQ1RJVkUQAQ==');
+        'ChxQdWJsaXNoTGlmZWN5Y2xlRXZlbnRSZXF1ZXN0EmgKDXNlcnZpY2VfbGV2ZWwYASABKA4yQy5nb29nbGUuZGV2dG9vbHMuYnVpbGQudjEuUHVibGlzaExpZmVjeWNsZUV2ZW50UmVxdWVzdC5TZXJ2aWNlTGV2ZWxSDHNlcnZpY2VMZXZlbBJRCgtidWlsZF9ldmVudBgCIAEoCzIrLmdvb2dsZS5kZXZ0b29scy5idWlsZC52MS5PcmRlcmVkQnVpbGRFdmVudEID4EECUgpidWlsZEV2ZW50EkAKDnN0cmVhbV90aW1lb3V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUg1zdHJlYW1UaW1lb3V0EjMKFW5vdGlmaWNhdGlvbl9rZXl3b3JkcxgEIAMoCVIUbm90aWZpY2F0aW9uS2V5d29yZHMSIgoKcHJvamVjdF9pZBgGIAEoCUID4EECUglwcm9qZWN0SWQSVgooY2hlY2tfcHJlY2VkaW5nX2xpZmVjeWNsZV9ldmVudHNfcHJlc2VudBgHIAEoCFIkY2hlY2tQcmVjZWRpbmdMaWZlY3ljbGVFdmVudHNQcmVzZW50IjMKDFNlcnZpY2VMZXZlbBISCg5OT05JTlRFUkFDVElWRRAAEg8KC0lOVEVSQUNUSVZFEAE=');
 @$core.Deprecated('Use publishBuildToolEventStreamResponseDescriptor instead')
 const PublishBuildToolEventStreamResponse$json = const {
   '1': 'PublishBuildToolEventStreamResponse',
@@ -158,10 +165,17 @@ const PublishBuildToolEventStreamRequest$json = const {
       '8': const {},
       '10': 'projectId'
     },
+    const {
+      '1': 'check_preceding_lifecycle_events_present',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '10': 'checkPrecedingLifecycleEventsPresent'
+    },
   ],
 };
 
 /// Descriptor for `PublishBuildToolEventStreamRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List publishBuildToolEventStreamRequestDescriptor =
     $convert.base64Decode(
-        'CiJQdWJsaXNoQnVpbGRUb29sRXZlbnRTdHJlYW1SZXF1ZXN0EmAKE29yZGVyZWRfYnVpbGRfZXZlbnQYBCABKAsyKy5nb29nbGUuZGV2dG9vbHMuYnVpbGQudjEuT3JkZXJlZEJ1aWxkRXZlbnRCA+BBAlIRb3JkZXJlZEJ1aWxkRXZlbnQSMwoVbm90aWZpY2F0aW9uX2tleXdvcmRzGAUgAygJUhRub3RpZmljYXRpb25LZXl3b3JkcxIiCgpwcm9qZWN0X2lkGAYgASgJQgPgQQJSCXByb2plY3RJZA==');
+        'CiJQdWJsaXNoQnVpbGRUb29sRXZlbnRTdHJlYW1SZXF1ZXN0EmAKE29yZGVyZWRfYnVpbGRfZXZlbnQYBCABKAsyKy5nb29nbGUuZGV2dG9vbHMuYnVpbGQudjEuT3JkZXJlZEJ1aWxkRXZlbnRCA+BBAlIRb3JkZXJlZEJ1aWxkRXZlbnQSMwoVbm90aWZpY2F0aW9uX2tleXdvcmRzGAUgAygJUhRub3RpZmljYXRpb25LZXl3b3JkcxIiCgpwcm9qZWN0X2lkGAYgASgJQgPgQQJSCXByb2plY3RJZBJWCihjaGVja19wcmVjZWRpbmdfbGlmZWN5Y2xlX2V2ZW50c19wcmVzZW50GAcgASgIUiRjaGVja1ByZWNlZGluZ0xpZmVjeWNsZUV2ZW50c1ByZXNlbnQ=');

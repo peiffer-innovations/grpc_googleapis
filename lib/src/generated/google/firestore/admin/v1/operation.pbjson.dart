@@ -3,7 +3,7 @@
 //  source: google/firestore/admin/v1/operation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -132,8 +132,19 @@ const FieldOperationMetadata$json = const {
       '6': '.google.firestore.admin.v1.Progress',
       '10': 'progressBytes'
     },
+    const {
+      '1': 'ttl_config_delta',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.FieldOperationMetadata.TtlConfigDelta',
+      '10': 'ttlConfigDelta'
+    },
   ],
-  '3': const [FieldOperationMetadata_IndexConfigDelta$json],
+  '3': const [
+    FieldOperationMetadata_IndexConfigDelta$json,
+    FieldOperationMetadata_TtlConfigDelta$json
+  ],
 };
 
 @$core.Deprecated('Use fieldOperationMetadataDescriptor instead')
@@ -171,10 +182,37 @@ const FieldOperationMetadata_IndexConfigDelta_ChangeType$json = const {
   ],
 };
 
+@$core.Deprecated('Use fieldOperationMetadataDescriptor instead')
+const FieldOperationMetadata_TtlConfigDelta$json = const {
+  '1': 'TtlConfigDelta',
+  '2': const [
+    const {
+      '1': 'change_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.firestore.admin.v1.FieldOperationMetadata.TtlConfigDelta.ChangeType',
+      '10': 'changeType'
+    },
+  ],
+  '4': const [FieldOperationMetadata_TtlConfigDelta_ChangeType$json],
+};
+
+@$core.Deprecated('Use fieldOperationMetadataDescriptor instead')
+const FieldOperationMetadata_TtlConfigDelta_ChangeType$json = const {
+  '1': 'ChangeType',
+  '2': const [
+    const {'1': 'CHANGE_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'ADD', '2': 1},
+    const {'1': 'REMOVE', '2': 2},
+  ],
+};
+
 /// Descriptor for `FieldOperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List fieldOperationMetadataDescriptor =
     $convert.base64Decode(
-        'ChZGaWVsZE9wZXJhdGlvbk1ldGFkYXRhEjkKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSNQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgdlbmRUaW1lEhQKBWZpZWxkGAMgASgJUgVmaWVsZBJyChNpbmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVsdGFSEWluZGV4Q29uZmlnRGVsdGFzEj8KBXN0YXRlGAUgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZVIFc3RhdGUSUgoScHJvZ3Jlc3NfZG9jdW1lbnRzGAYgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzc1IRcHJvZ3Jlc3NEb2N1bWVudHMSSgoOcHJvZ3Jlc3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzUg1wcm9ncmVzc0J5dGVzGvoBChBJbmRleENvbmZpZ0RlbHRhEm4KC2NoYW5nZV90eXBlGAEgASgOMk0uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVsdGEuQ2hhbmdlVHlwZVIKY2hhbmdlVHlwZRI2CgVpbmRleBgCIAEoCzIgLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXhSBWluZGV4Ij4KCkNoYW5nZVR5cGUSGwoXQ0hBTkdFX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBREQQARIKCgZSRU1PVkUQAg==');
+        'ChZGaWVsZE9wZXJhdGlvbk1ldGFkYXRhEjkKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSNQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgdlbmRUaW1lEhQKBWZpZWxkGAMgASgJUgVmaWVsZBJyChNpbmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVsdGFSEWluZGV4Q29uZmlnRGVsdGFzEj8KBXN0YXRlGAUgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZVIFc3RhdGUSUgoScHJvZ3Jlc3NfZG9jdW1lbnRzGAYgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzc1IRcHJvZ3Jlc3NEb2N1bWVudHMSSgoOcHJvZ3Jlc3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzUg1wcm9ncmVzc0J5dGVzEmoKEHR0bF9jb25maWdfZGVsdGEYCCABKAsyQC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuVHRsQ29uZmlnRGVsdGFSDnR0bENvbmZpZ0RlbHRhGvoBChBJbmRleENvbmZpZ0RlbHRhEm4KC2NoYW5nZV90eXBlGAEgASgOMk0uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVsdGEuQ2hhbmdlVHlwZVIKY2hhbmdlVHlwZRI2CgVpbmRleBgCIAEoCzIgLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXhSBWluZGV4Ij4KCkNoYW5nZVR5cGUSGwoXQ0hBTkdFX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBREQQARIKCgZSRU1PVkUQAhq+AQoOVHRsQ29uZmlnRGVsdGESbAoLY2hhbmdlX3R5cGUYASABKA4ySy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuVHRsQ29uZmlnRGVsdGEuQ2hhbmdlVHlwZVIKY2hhbmdlVHlwZSI+CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAI=');
 @$core.Deprecated('Use exportDocumentsMetadataDescriptor instead')
 const ExportDocumentsMetadata$json = const {
   '1': 'ExportDocumentsMetadata',

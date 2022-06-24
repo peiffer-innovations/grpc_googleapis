@@ -3,7 +3,7 @@
 //  source: google/maps/fleetengine/v1/vehicle_api.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -332,8 +332,19 @@ const SearchVehiclesRequest$json = const {
       '10': 'includeBackToBack'
     },
     const {'1': 'trip_id', '3': 19, '4': 1, '5': 9, '10': 'tripId'},
+    const {
+      '1': 'current_trips_present',
+      '3': 21,
+      '4': 1,
+      '5': 14,
+      '6': '.maps.fleetengine.v1.SearchVehiclesRequest.CurrentTripsPresent',
+      '10': 'currentTripsPresent'
+    },
   ],
-  '4': const [SearchVehiclesRequest_VehicleMatchOrder$json],
+  '4': const [
+    SearchVehiclesRequest_VehicleMatchOrder$json,
+    SearchVehiclesRequest_CurrentTripsPresent$json
+  ],
 };
 
 @$core.Deprecated('Use searchVehiclesRequestDescriptor instead')
@@ -349,9 +360,19 @@ const SearchVehiclesRequest_VehicleMatchOrder$json = const {
   ],
 };
 
+@$core.Deprecated('Use searchVehiclesRequestDescriptor instead')
+const SearchVehiclesRequest_CurrentTripsPresent$json = const {
+  '1': 'CurrentTripsPresent',
+  '2': const [
+    const {'1': 'CURRENT_TRIPS_PRESENT_UNSPECIFIED', '2': 0},
+    const {'1': 'NONE', '2': 1},
+    const {'1': 'ANY', '2': 2},
+  ],
+};
+
 /// Descriptor for `SearchVehiclesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List searchVehiclesRequestDescriptor = $convert.base64Decode(
-    'ChVTZWFyY2hWZWhpY2xlc1JlcXVlc3QSOgoGaGVhZGVyGAEgASgLMiIubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1ZXN0SGVhZGVyUgZoZWFkZXISGwoGcGFyZW50GAMgASgJQgPgQQJSBnBhcmVudBJNCgxwaWNrdXBfcG9pbnQYBCABKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsTG9jYXRpb25CA+BBAlILcGlja3VwUG9pbnQSSgoNZHJvcG9mZl9wb2ludBgFIAEoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlvblIMZHJvcG9mZlBvaW50EjUKFHBpY2t1cF9yYWRpdXNfbWV0ZXJzGAYgASgFQgPgQQJSEnBpY2t1cFJhZGl1c01ldGVycxIZCgVjb3VudBgHIAEoBUID4EECUgVjb3VudBIuChBtaW5pbXVtX2NhcGFjaXR5GAggASgFQgPgQQJSD21pbmltdW1DYXBhY2l0eRJBCgp0cmlwX3R5cGVzGAkgAygOMh0ubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZUID4EECUgl0cmlwVHlwZXMSRgoRbWF4aW11bV9zdGFsZW5lc3MYCiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SEG1heGltdW1TdGFsZW5lc3MSUgoNdmVoaWNsZV90eXBlcxgOIAMoCzIoLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZS5WZWhpY2xlVHlwZUID4EECUgx2ZWhpY2xlVHlwZXMSVgoTcmVxdWlyZWRfYXR0cmlidXRlcxgMIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUF0dHJpYnV0ZVIScmVxdWlyZWRBdHRyaWJ1dGVzEmYKGnJlcXVpcmVkX29uZV9vZl9hdHRyaWJ1dGVzGA8gAygLMikubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlTGlzdFIXcmVxdWlyZWRPbmVPZkF0dHJpYnV0ZXMSbQoecmVxdWlyZWRfb25lX29mX2F0dHJpYnV0ZV9zZXRzGBQgAygLMikubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlTGlzdFIacmVxdWlyZWRPbmVPZkF0dHJpYnV0ZVNldHMSXAoIb3JkZXJfYnkYDSABKA4yPC5tYXBzLmZsZWV0ZW5naW5lLnYxLlNlYXJjaFZlaGljbGVzUmVxdWVzdC5WZWhpY2xlTWF0Y2hPcmRlckID4EECUgdvcmRlckJ5Ei8KFGluY2x1ZGVfYmFja190b19iYWNrGBIgASgIUhFpbmNsdWRlQmFja1RvQmFjaxIXCgd0cmlwX2lkGBMgASgJUgZ0cmlwSWQiqgEKEVZlaGljbGVNYXRjaE9yZGVyEh8KG1VOS05PV05fVkVISUNMRV9NQVRDSF9PUkRFUhAAEhQKEFBJQ0tVUF9QT0lOVF9FVEEQARIZChVQSUNLVVBfUE9JTlRfRElTVEFOQ0UQAhIVChFEUk9QT0ZGX1BPSU5UX0VUQRADEiIKHlBJQ0tVUF9QT0lOVF9TVFJBSUdIVF9ESVNUQU5DRRAEEggKBENPU1QQBQ==');
+    'ChVTZWFyY2hWZWhpY2xlc1JlcXVlc3QSOgoGaGVhZGVyGAEgASgLMiIubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1ZXN0SGVhZGVyUgZoZWFkZXISGwoGcGFyZW50GAMgASgJQgPgQQJSBnBhcmVudBJNCgxwaWNrdXBfcG9pbnQYBCABKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRlcm1pbmFsTG9jYXRpb25CA+BBAlILcGlja3VwUG9pbnQSSgoNZHJvcG9mZl9wb2ludBgFIAEoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlvblIMZHJvcG9mZlBvaW50EjUKFHBpY2t1cF9yYWRpdXNfbWV0ZXJzGAYgASgFQgPgQQJSEnBpY2t1cFJhZGl1c01ldGVycxIZCgVjb3VudBgHIAEoBUID4EECUgVjb3VudBIuChBtaW5pbXVtX2NhcGFjaXR5GAggASgFQgPgQQJSD21pbmltdW1DYXBhY2l0eRJBCgp0cmlwX3R5cGVzGAkgAygOMh0ubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZUID4EECUgl0cmlwVHlwZXMSRgoRbWF4aW11bV9zdGFsZW5lc3MYCiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SEG1heGltdW1TdGFsZW5lc3MSUgoNdmVoaWNsZV90eXBlcxgOIAMoCzIoLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZS5WZWhpY2xlVHlwZUID4EECUgx2ZWhpY2xlVHlwZXMSVgoTcmVxdWlyZWRfYXR0cmlidXRlcxgMIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUF0dHJpYnV0ZVIScmVxdWlyZWRBdHRyaWJ1dGVzEmYKGnJlcXVpcmVkX29uZV9vZl9hdHRyaWJ1dGVzGA8gAygLMikubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlTGlzdFIXcmVxdWlyZWRPbmVPZkF0dHJpYnV0ZXMSbQoecmVxdWlyZWRfb25lX29mX2F0dHJpYnV0ZV9zZXRzGBQgAygLMikubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlTGlzdFIacmVxdWlyZWRPbmVPZkF0dHJpYnV0ZVNldHMSXAoIb3JkZXJfYnkYDSABKA4yPC5tYXBzLmZsZWV0ZW5naW5lLnYxLlNlYXJjaFZlaGljbGVzUmVxdWVzdC5WZWhpY2xlTWF0Y2hPcmRlckID4EECUgdvcmRlckJ5Ei8KFGluY2x1ZGVfYmFja190b19iYWNrGBIgASgIUhFpbmNsdWRlQmFja1RvQmFjaxIXCgd0cmlwX2lkGBMgASgJUgZ0cmlwSWQScgoVY3VycmVudF90cmlwc19wcmVzZW50GBUgASgOMj4ubWFwcy5mbGVldGVuZ2luZS52MS5TZWFyY2hWZWhpY2xlc1JlcXVlc3QuQ3VycmVudFRyaXBzUHJlc2VudFITY3VycmVudFRyaXBzUHJlc2VudCKqAQoRVmVoaWNsZU1hdGNoT3JkZXISHwobVU5LTk9XTl9WRUhJQ0xFX01BVENIX09SREVSEAASFAoQUElDS1VQX1BPSU5UX0VUQRABEhkKFVBJQ0tVUF9QT0lOVF9ESVNUQU5DRRACEhUKEURST1BPRkZfUE9JTlRfRVRBEAMSIgoeUElDS1VQX1BPSU5UX1NUUkFJR0hUX0RJU1RBTkNFEAQSCAoEQ09TVBAFIk8KE0N1cnJlbnRUcmlwc1ByZXNlbnQSJQohQ1VSUkVOVF9UUklQU19QUkVTRU5UX1VOU1BFQ0lGSUVEEAASCAoETk9ORRABEgcKA0FOWRAC');
 @$core.Deprecated('Use searchVehiclesResponseDescriptor instead')
 const SearchVehiclesResponse$json = const {
   '1': 'SearchVehiclesResponse',

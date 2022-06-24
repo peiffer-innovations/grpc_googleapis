@@ -3,7 +3,7 @@
 //  source: google/maps/routes/v1/route.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -99,12 +99,19 @@ const Route$json = const {
       '6': '.google.maps.routes.v1.RouteTravelAdvisory',
       '10': 'travelAdvisory'
     },
+    const {
+      '1': 'optimized_intermediate_waypoint_index',
+      '3': 10,
+      '4': 3,
+      '5': 5,
+      '10': 'optimizedIntermediateWaypointIndex'
+    },
   ],
 };
 
 /// Descriptor for `Route`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List routeDescriptor = $convert.base64Decode(
-    'CgVSb3V0ZRIzCgRsZWdzGAEgAygLMh8uZ29vZ2xlLm1hcHMucm91dGVzLnYxLlJvdXRlTGVnUgRsZWdzEicKD2Rpc3RhbmNlX21ldGVycxgCIAEoBVIOZGlzdGFuY2VNZXRlcnMSNQoIZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SCGR1cmF0aW9uEkIKD3N0YXRpY19kdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIOc3RhdGljRHVyYXRpb24SOwoIcG9seWxpbmUYBSABKAsyHy5nb29nbGUubWFwcy5yb3V0ZXMudjEuUG9seWxpbmVSCHBvbHlsaW5lEiAKC2Rlc2NyaXB0aW9uGAYgASgJUgtkZXNjcmlwdGlvbhIaCgh3YXJuaW5ncxgHIAMoCVIId2FybmluZ3MSNQoIdmlld3BvcnQYCCABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3BvcnRSCHZpZXdwb3J0ElMKD3RyYXZlbF9hZHZpc29yeRgJIAEoCzIqLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Sb3V0ZVRyYXZlbEFkdmlzb3J5Ug50cmF2ZWxBZHZpc29yeQ==');
+    'CgVSb3V0ZRIzCgRsZWdzGAEgAygLMh8uZ29vZ2xlLm1hcHMucm91dGVzLnYxLlJvdXRlTGVnUgRsZWdzEicKD2Rpc3RhbmNlX21ldGVycxgCIAEoBVIOZGlzdGFuY2VNZXRlcnMSNQoIZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SCGR1cmF0aW9uEkIKD3N0YXRpY19kdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIOc3RhdGljRHVyYXRpb24SOwoIcG9seWxpbmUYBSABKAsyHy5nb29nbGUubWFwcy5yb3V0ZXMudjEuUG9seWxpbmVSCHBvbHlsaW5lEiAKC2Rlc2NyaXB0aW9uGAYgASgJUgtkZXNjcmlwdGlvbhIaCgh3YXJuaW5ncxgHIAMoCVIId2FybmluZ3MSNQoIdmlld3BvcnQYCCABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3BvcnRSCHZpZXdwb3J0ElMKD3RyYXZlbF9hZHZpc29yeRgJIAEoCzIqLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Sb3V0ZVRyYXZlbEFkdmlzb3J5Ug50cmF2ZWxBZHZpc29yeRJRCiVvcHRpbWl6ZWRfaW50ZXJtZWRpYXRlX3dheXBvaW50X2luZGV4GAogAygFUiJvcHRpbWl6ZWRJbnRlcm1lZGlhdGVXYXlwb2ludEluZGV4');
 @$core.Deprecated('Use routeTravelAdvisoryDescriptor instead')
 const RouteTravelAdvisory$json = const {
   '1': 'RouteTravelAdvisory',
@@ -133,12 +140,20 @@ const RouteTravelAdvisory$json = const {
       '6': '.google.maps.routes.v1.SpeedReadingInterval',
       '10': 'speedReadingIntervals'
     },
+    const {
+      '1': 'custom_layer_info',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.maps.routes.v1.CustomLayerInfo',
+      '10': 'customLayerInfo'
+    },
   ],
 };
 
 /// Descriptor for `RouteTravelAdvisory`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List routeTravelAdvisoryDescriptor = $convert.base64Decode(
-    'ChNSb3V0ZVRyYXZlbEFkdmlzb3J5EloKE3RyYWZmaWNfcmVzdHJpY3Rpb24YASABKAsyKS5nb29nbGUubWFwcy5yb3V0ZXMudjEuVHJhZmZpY1Jlc3RyaWN0aW9uUhJ0cmFmZmljUmVzdHJpY3Rpb24SPAoJdG9sbF9pbmZvGAIgASgLMh8uZ29vZ2xlLm1hcHMucm91dGVzLnYxLlRvbGxJbmZvUgh0b2xsSW5mbxJjChdzcGVlZF9yZWFkaW5nX2ludGVydmFscxgDIAMoCzIrLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5TcGVlZFJlYWRpbmdJbnRlcnZhbFIVc3BlZWRSZWFkaW5nSW50ZXJ2YWxz');
+    'ChNSb3V0ZVRyYXZlbEFkdmlzb3J5EloKE3RyYWZmaWNfcmVzdHJpY3Rpb24YASABKAsyKS5nb29nbGUubWFwcy5yb3V0ZXMudjEuVHJhZmZpY1Jlc3RyaWN0aW9uUhJ0cmFmZmljUmVzdHJpY3Rpb24SPAoJdG9sbF9pbmZvGAIgASgLMh8uZ29vZ2xlLm1hcHMucm91dGVzLnYxLlRvbGxJbmZvUgh0b2xsSW5mbxJjChdzcGVlZF9yZWFkaW5nX2ludGVydmFscxgDIAMoCzIrLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5TcGVlZFJlYWRpbmdJbnRlcnZhbFIVc3BlZWRSZWFkaW5nSW50ZXJ2YWxzElIKEWN1c3RvbV9sYXllcl9pbmZvGAQgASgLMiYuZ29vZ2xlLm1hcHMucm91dGVzLnYxLkN1c3RvbUxheWVySW5mb1IPY3VzdG9tTGF5ZXJJbmZv');
 @$core.Deprecated('Use routeLegTravelAdvisoryDescriptor instead')
 const RouteLegTravelAdvisory$json = const {
   '1': 'RouteLegTravelAdvisory',
@@ -159,13 +174,21 @@ const RouteLegTravelAdvisory$json = const {
       '6': '.google.maps.routes.v1.SpeedReadingInterval',
       '10': 'speedReadingIntervals'
     },
+    const {
+      '1': 'custom_layer_info',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.maps.routes.v1.CustomLayerInfo',
+      '10': 'customLayerInfo'
+    },
   ],
 };
 
 /// Descriptor for `RouteLegTravelAdvisory`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List routeLegTravelAdvisoryDescriptor =
     $convert.base64Decode(
-        'ChZSb3V0ZUxlZ1RyYXZlbEFkdmlzb3J5EjwKCXRvbGxfaW5mbxgBIAEoCzIfLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Ub2xsSW5mb1IIdG9sbEluZm8SYwoXc3BlZWRfcmVhZGluZ19pbnRlcnZhbHMYAiADKAsyKy5nb29nbGUubWFwcy5yb3V0ZXMudjEuU3BlZWRSZWFkaW5nSW50ZXJ2YWxSFXNwZWVkUmVhZGluZ0ludGVydmFscw==');
+        'ChZSb3V0ZUxlZ1RyYXZlbEFkdmlzb3J5EjwKCXRvbGxfaW5mbxgBIAEoCzIfLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Ub2xsSW5mb1IIdG9sbEluZm8SYwoXc3BlZWRfcmVhZGluZ19pbnRlcnZhbHMYAiADKAsyKy5nb29nbGUubWFwcy5yb3V0ZXMudjEuU3BlZWRSZWFkaW5nSW50ZXJ2YWxSFXNwZWVkUmVhZGluZ0ludGVydmFscxJSChFjdXN0b21fbGF5ZXJfaW5mbxgDIAEoCzImLmdvb2dsZS5tYXBzLnJvdXRlcy52MS5DdXN0b21MYXllckluZm9SD2N1c3RvbUxheWVySW5mbw==');
 @$core.Deprecated('Use routeLegStepTravelAdvisoryDescriptor instead')
 const RouteLegStepTravelAdvisory$json = const {
   '1': 'RouteLegStepTravelAdvisory',
@@ -440,3 +463,45 @@ const SpeedReadingInterval_Speed$json = const {
 /// Descriptor for `SpeedReadingInterval`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List speedReadingIntervalDescriptor = $convert.base64Decode(
     'ChRTcGVlZFJlYWRpbmdJbnRlcnZhbBI7ChpzdGFydF9wb2x5bGluZV9wb2ludF9pbmRleBgBIAEoBVIXc3RhcnRQb2x5bGluZVBvaW50SW5kZXgSNwoYZW5kX3BvbHlsaW5lX3BvaW50X2luZGV4GAIgASgFUhVlbmRQb2x5bGluZVBvaW50SW5kZXgSRwoFc3BlZWQYAyABKA4yMS5nb29nbGUubWFwcy5yb3V0ZXMudjEuU3BlZWRSZWFkaW5nSW50ZXJ2YWwuU3BlZWRSBXNwZWVkIkUKBVNwZWVkEhUKEVNQRUVEX1VOU1BFQ0lGSUVEEAASCgoGTk9STUFMEAESCAoEU0xPVxACEg8KC1RSQUZGSUNfSkFNEAM=');
+@$core.Deprecated('Use customLayerInfoDescriptor instead')
+const CustomLayerInfo$json = const {
+  '1': 'CustomLayerInfo',
+  '2': const [
+    const {
+      '1': 'area_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.maps.routes.v1.CustomLayerInfo.AreaInfo',
+      '10': 'areaInfo'
+    },
+  ],
+  '3': const [CustomLayerInfo_AreaInfo$json],
+};
+
+@$core.Deprecated('Use customLayerInfoDescriptor instead')
+const CustomLayerInfo_AreaInfo$json = const {
+  '1': 'AreaInfo',
+  '2': const [
+    const {'1': 'area_id', '3': 1, '4': 1, '5': 9, '10': 'areaId'},
+    const {
+      '1': 'distance_in_area_meters',
+      '3': 2,
+      '4': 1,
+      '5': 2,
+      '10': 'distanceInAreaMeters'
+    },
+    const {
+      '1': 'duration_in_area',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'durationInArea'
+    },
+  ],
+};
+
+/// Descriptor for `CustomLayerInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List customLayerInfoDescriptor = $convert.base64Decode(
+    'Cg9DdXN0b21MYXllckluZm8STAoJYXJlYV9pbmZvGAEgAygLMi8uZ29vZ2xlLm1hcHMucm91dGVzLnYxLkN1c3RvbUxheWVySW5mby5BcmVhSW5mb1IIYXJlYUluZm8anwEKCEFyZWFJbmZvEhcKB2FyZWFfaWQYASABKAlSBmFyZWFJZBI1ChdkaXN0YW5jZV9pbl9hcmVhX21ldGVycxgCIAEoAlIUZGlzdGFuY2VJbkFyZWFNZXRlcnMSQwoQZHVyYXRpb25faW5fYXJlYRgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIOZHVyYXRpb25JbkFyZWE=');

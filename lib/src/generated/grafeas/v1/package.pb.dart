@@ -3,11 +3,13 @@
 //  source: grafeas/v1/package.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+import 'common.pb.dart' as $0;
 
 import 'package.pbenum.dart';
 
@@ -325,12 +327,74 @@ class PackageNote extends $pb.GeneratedMessage {
             : 'distribution',
         $pb.PbFieldType.PM,
         subBuilder: Distribution.create)
+    ..aOS(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'packageType')
+    ..aOS(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cpeUri')
+    ..e<Architecture>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'architecture',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Architecture.ARCHITECTURE_UNSPECIFIED,
+        valueOf: Architecture.valueOf,
+        enumValues: Architecture.values)
+    ..aOM<Version>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version',
+        subBuilder: Version.create)
+    ..aOS(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maintainer')
+    ..aOS(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'url')
+    ..aOS(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'description')
+    ..aOM<$0.License>(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'license',
+        subBuilder: $0.License.create)
+    ..pc<$0.Digest>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'digest',
+        $pb.PbFieldType.PM,
+        subBuilder: $0.Digest.create)
     ..hasRequiredFields = false;
 
   PackageNote._() : super();
   factory PackageNote({
     $core.String? name,
     $core.Iterable<Distribution>? distribution,
+    $core.String? packageType,
+    $core.String? cpeUri,
+    Architecture? architecture,
+    Version? version,
+    $core.String? maintainer,
+    $core.String? url,
+    $core.String? description,
+    $0.License? license,
+    $core.Iterable<$0.Digest>? digest,
   }) {
     final _result = create();
     if (name != null) {
@@ -338,6 +402,33 @@ class PackageNote extends $pb.GeneratedMessage {
     }
     if (distribution != null) {
       _result.distribution.addAll(distribution);
+    }
+    if (packageType != null) {
+      _result.packageType = packageType;
+    }
+    if (cpeUri != null) {
+      _result.cpeUri = cpeUri;
+    }
+    if (architecture != null) {
+      _result.architecture = architecture;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    if (maintainer != null) {
+      _result.maintainer = maintainer;
+    }
+    if (url != null) {
+      _result.url = url;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (license != null) {
+      _result.license = license;
+    }
+    if (digest != null) {
+      _result.digest.addAll(digest);
     }
     return _result;
   }
@@ -381,6 +472,109 @@ class PackageNote extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(10)
   $core.List<Distribution> get distribution => $_getList(1);
+
+  @$pb.TagNumber(11)
+  $core.String get packageType => $_getSZ(2);
+  @$pb.TagNumber(11)
+  set packageType($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasPackageType() => $_has(2);
+  @$pb.TagNumber(11)
+  void clearPackageType() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get cpeUri => $_getSZ(3);
+  @$pb.TagNumber(12)
+  set cpeUri($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasCpeUri() => $_has(3);
+  @$pb.TagNumber(12)
+  void clearCpeUri() => clearField(12);
+
+  @$pb.TagNumber(13)
+  Architecture get architecture => $_getN(4);
+  @$pb.TagNumber(13)
+  set architecture(Architecture v) {
+    setField(13, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasArchitecture() => $_has(4);
+  @$pb.TagNumber(13)
+  void clearArchitecture() => clearField(13);
+
+  @$pb.TagNumber(14)
+  Version get version => $_getN(5);
+  @$pb.TagNumber(14)
+  set version(Version v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasVersion() => $_has(5);
+  @$pb.TagNumber(14)
+  void clearVersion() => clearField(14);
+  @$pb.TagNumber(14)
+  Version ensureVersion() => $_ensure(5);
+
+  @$pb.TagNumber(15)
+  $core.String get maintainer => $_getSZ(6);
+  @$pb.TagNumber(15)
+  set maintainer($core.String v) {
+    $_setString(6, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasMaintainer() => $_has(6);
+  @$pb.TagNumber(15)
+  void clearMaintainer() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.String get url => $_getSZ(7);
+  @$pb.TagNumber(16)
+  set url($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasUrl() => $_has(7);
+  @$pb.TagNumber(16)
+  void clearUrl() => clearField(16);
+
+  @$pb.TagNumber(17)
+  $core.String get description => $_getSZ(8);
+  @$pb.TagNumber(17)
+  set description($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasDescription() => $_has(8);
+  @$pb.TagNumber(17)
+  void clearDescription() => clearField(17);
+
+  @$pb.TagNumber(18)
+  $0.License get license => $_getN(9);
+  @$pb.TagNumber(18)
+  set license($0.License v) {
+    setField(18, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasLicense() => $_has(9);
+  @$pb.TagNumber(18)
+  void clearLicense() => clearField(18);
+  @$pb.TagNumber(18)
+  $0.License ensureLicense() => $_ensure(9);
+
+  @$pb.TagNumber(19)
+  $core.List<$0.Digest> get digest => $_getList(10);
 }
 
 class PackageOccurrence extends $pb.GeneratedMessage {
@@ -405,12 +599,48 @@ class PackageOccurrence extends $pb.GeneratedMessage {
             : 'location',
         $pb.PbFieldType.PM,
         subBuilder: Location.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'packageType')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cpeUri')
+    ..e<Architecture>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'architecture',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Architecture.ARCHITECTURE_UNSPECIFIED,
+        valueOf: Architecture.valueOf,
+        enumValues: Architecture.values)
+    ..aOM<$0.License>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'license',
+        subBuilder: $0.License.create)
+    ..aOM<Version>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version',
+        subBuilder: Version.create)
     ..hasRequiredFields = false;
 
   PackageOccurrence._() : super();
   factory PackageOccurrence({
     $core.String? name,
     $core.Iterable<Location>? location,
+    $core.String? packageType,
+    $core.String? cpeUri,
+    Architecture? architecture,
+    $0.License? license,
+    Version? version,
   }) {
     final _result = create();
     if (name != null) {
@@ -418,6 +648,21 @@ class PackageOccurrence extends $pb.GeneratedMessage {
     }
     if (location != null) {
       _result.location.addAll(location);
+    }
+    if (packageType != null) {
+      _result.packageType = packageType;
+    }
+    if (cpeUri != null) {
+      _result.cpeUri = cpeUri;
+    }
+    if (architecture != null) {
+      _result.architecture = architecture;
+    }
+    if (license != null) {
+      _result.license = license;
+    }
+    if (version != null) {
+      _result.version = version;
     }
     return _result;
   }
@@ -462,6 +707,70 @@ class PackageOccurrence extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<Location> get location => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get packageType => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set packageType($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPackageType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPackageType() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get cpeUri => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set cpeUri($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCpeUri() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCpeUri() => clearField(4);
+
+  @$pb.TagNumber(5)
+  Architecture get architecture => $_getN(4);
+  @$pb.TagNumber(5)
+  set architecture(Architecture v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasArchitecture() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearArchitecture() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $0.License get license => $_getN(5);
+  @$pb.TagNumber(6)
+  set license($0.License v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasLicense() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLicense() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.License ensureLicense() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  Version get version => $_getN(6);
+  @$pb.TagNumber(7)
+  set version(Version v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasVersion() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearVersion() => clearField(7);
+  @$pb.TagNumber(7)
+  Version ensureVersion() => $_ensure(6);
 }
 
 class Version extends $pb.GeneratedMessage {

@@ -3,7 +3,7 @@
 //  source: google/storage/v1/storage_resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -12,6 +12,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../protobuf/timestamp.pb.dart' as $0;
 import '../../protobuf/wrappers.pb.dart' as $1;
+
+import 'storage_resources.pbenum.dart';
 
 export 'storage_resources.pbenum.dart';
 
@@ -371,15 +373,29 @@ class Bucket_IamConfiguration extends $pb.GeneratedMessage {
             ? ''
             : 'uniformBucketLevelAccess',
         subBuilder: Bucket_IamConfiguration_UniformBucketLevelAccess.create)
+    ..e<Bucket_IamConfiguration_PublicAccessPrevention>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'publicAccessPrevention',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Bucket_IamConfiguration_PublicAccessPrevention
+            .PUBLIC_ACCESS_PREVENTION_UNSPECIFIED,
+        valueOf: Bucket_IamConfiguration_PublicAccessPrevention.valueOf,
+        enumValues: Bucket_IamConfiguration_PublicAccessPrevention.values)
     ..hasRequiredFields = false;
 
   Bucket_IamConfiguration._() : super();
   factory Bucket_IamConfiguration({
     Bucket_IamConfiguration_UniformBucketLevelAccess? uniformBucketLevelAccess,
+    Bucket_IamConfiguration_PublicAccessPrevention? publicAccessPrevention,
   }) {
     final _result = create();
     if (uniformBucketLevelAccess != null) {
       _result.uniformBucketLevelAccess = uniformBucketLevelAccess;
+    }
+    if (publicAccessPrevention != null) {
+      _result.publicAccessPrevention = publicAccessPrevention;
     }
     return _result;
   }
@@ -428,6 +444,19 @@ class Bucket_IamConfiguration extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Bucket_IamConfiguration_UniformBucketLevelAccess
       ensureUniformBucketLevelAccess() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Bucket_IamConfiguration_PublicAccessPrevention get publicAccessPrevention =>
+      $_getN(1);
+  @$pb.TagNumber(2)
+  set publicAccessPrevention(Bucket_IamConfiguration_PublicAccessPrevention v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPublicAccessPrevention() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPublicAccessPrevention() => clearField(2);
 }
 
 class Bucket_Lifecycle_Rule_Action extends $pb.GeneratedMessage {
@@ -566,6 +595,40 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'matchesPattern')
+    ..a<$core.int>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'daysSinceCustomTime',
+        $pb.PbFieldType.O3)
+    ..aOM<$0.Timestamp>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customTimeBefore',
+        subBuilder: $0.Timestamp.create)
+    ..a<$core.int>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'daysSinceNoncurrentTime',
+        $pb.PbFieldType.O3)
+    ..aOM<$0.Timestamp>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'noncurrentTimeBefore',
+        subBuilder: $0.Timestamp.create)
+    ..pPS(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'matchesPrefix')
+    ..pPS(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'matchesSuffix')
     ..hasRequiredFields = false;
 
   Bucket_Lifecycle_Rule_Condition._() : super();
@@ -576,6 +639,12 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
     $core.int? numNewerVersions,
     $core.Iterable<$core.String>? matchesStorageClass,
     $core.String? matchesPattern,
+    $core.int? daysSinceCustomTime,
+    $0.Timestamp? customTimeBefore,
+    $core.int? daysSinceNoncurrentTime,
+    $0.Timestamp? noncurrentTimeBefore,
+    $core.Iterable<$core.String>? matchesPrefix,
+    $core.Iterable<$core.String>? matchesSuffix,
   }) {
     final _result = create();
     if (age != null) {
@@ -595,6 +664,24 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
     }
     if (matchesPattern != null) {
       _result.matchesPattern = matchesPattern;
+    }
+    if (daysSinceCustomTime != null) {
+      _result.daysSinceCustomTime = daysSinceCustomTime;
+    }
+    if (customTimeBefore != null) {
+      _result.customTimeBefore = customTimeBefore;
+    }
+    if (daysSinceNoncurrentTime != null) {
+      _result.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
+    }
+    if (noncurrentTimeBefore != null) {
+      _result.noncurrentTimeBefore = noncurrentTimeBefore;
+    }
+    if (matchesPrefix != null) {
+      _result.matchesPrefix.addAll(matchesPrefix);
+    }
+    if (matchesSuffix != null) {
+      _result.matchesSuffix.addAll(matchesSuffix);
     }
     return _result;
   }
@@ -696,6 +783,64 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   $core.bool hasMatchesPattern() => $_has(5);
   @$pb.TagNumber(6)
   void clearMatchesPattern() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get daysSinceCustomTime => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set daysSinceCustomTime($core.int v) {
+    $_setSignedInt32(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasDaysSinceCustomTime() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDaysSinceCustomTime() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $0.Timestamp get customTimeBefore => $_getN(7);
+  @$pb.TagNumber(8)
+  set customTimeBefore($0.Timestamp v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasCustomTimeBefore() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearCustomTimeBefore() => clearField(8);
+  @$pb.TagNumber(8)
+  $0.Timestamp ensureCustomTimeBefore() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $core.int get daysSinceNoncurrentTime => $_getIZ(8);
+  @$pb.TagNumber(9)
+  set daysSinceNoncurrentTime($core.int v) {
+    $_setSignedInt32(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDaysSinceNoncurrentTime() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDaysSinceNoncurrentTime() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $0.Timestamp get noncurrentTimeBefore => $_getN(9);
+  @$pb.TagNumber(10)
+  set noncurrentTimeBefore($0.Timestamp v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasNoncurrentTimeBefore() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearNoncurrentTimeBefore() => clearField(10);
+  @$pb.TagNumber(10)
+  $0.Timestamp ensureNoncurrentTimeBefore() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $core.List<$core.String> get matchesPrefix => $_getList(10);
+
+  @$pb.TagNumber(12)
+  $core.List<$core.String> get matchesSuffix => $_getList(11);
 }
 
 class Bucket_Lifecycle_Rule extends $pb.GeneratedMessage {
@@ -1211,6 +1356,97 @@ class Bucket_Website extends $pb.GeneratedMessage {
   void clearNotFoundPage() => clearField(2);
 }
 
+class Bucket_Autoclass extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Bucket.Autoclass',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enabled')
+    ..aOM<$0.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'toggleTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  Bucket_Autoclass._() : super();
+  factory Bucket_Autoclass({
+    $core.bool? enabled,
+    $0.Timestamp? toggleTime,
+  }) {
+    final _result = create();
+    if (enabled != null) {
+      _result.enabled = enabled;
+    }
+    if (toggleTime != null) {
+      _result.toggleTime = toggleTime;
+    }
+    return _result;
+  }
+  factory Bucket_Autoclass.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Bucket_Autoclass.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Bucket_Autoclass clone() => Bucket_Autoclass()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Bucket_Autoclass copyWith(void Function(Bucket_Autoclass) updates) =>
+      super.copyWith((message) => updates(message as Bucket_Autoclass))
+          as Bucket_Autoclass; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Bucket_Autoclass create() => Bucket_Autoclass._();
+  Bucket_Autoclass createEmptyInstance() => create();
+  static $pb.PbList<Bucket_Autoclass> createRepeated() =>
+      $pb.PbList<Bucket_Autoclass>();
+  @$core.pragma('dart2js:noInline')
+  static Bucket_Autoclass getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Bucket_Autoclass>(create);
+  static Bucket_Autoclass? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get enabled => $_getBF(0);
+  @$pb.TagNumber(1)
+  set enabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasEnabled() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEnabled() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Timestamp get toggleTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set toggleTime($0.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasToggleTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearToggleTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureToggleTime() => $_ensure(1);
+}
+
 class Bucket extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1367,6 +1603,17 @@ class Bucket extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'zoneAffinity')
+    ..aOB(
+        26,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'satisfiesPzs')
+    ..aOM<Bucket_Autoclass>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'autoclass',
+        subBuilder: Bucket_Autoclass.create)
     ..hasRequiredFields = false;
 
   Bucket._() : super();
@@ -1395,7 +1642,10 @@ class Bucket extends $pb.GeneratedMessage {
     Bucket_RetentionPolicy? retentionPolicy,
     $core.String? locationType,
     Bucket_IamConfiguration? iamConfiguration,
-    $core.Iterable<$core.String>? zoneAffinity,
+    @$core.Deprecated('This field is deprecated.')
+        $core.Iterable<$core.String>? zoneAffinity,
+    $core.bool? satisfiesPzs,
+    Bucket_Autoclass? autoclass,
   }) {
     final _result = create();
     if (acl != null) {
@@ -1471,7 +1721,14 @@ class Bucket extends $pb.GeneratedMessage {
       _result.iamConfiguration = iamConfiguration;
     }
     if (zoneAffinity != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.zoneAffinity.addAll(zoneAffinity);
+    }
+    if (satisfiesPzs != null) {
+      _result.satisfiesPzs = satisfiesPzs;
+    }
+    if (autoclass != null) {
+      _result.autoclass = autoclass;
     }
     return _result;
   }
@@ -1775,8 +2032,35 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   Bucket_IamConfiguration ensureIamConfiguration() => $_ensure(23);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(25)
   $core.List<$core.String> get zoneAffinity => $_getList(24);
+
+  @$pb.TagNumber(26)
+  $core.bool get satisfiesPzs => $_getBF(25);
+  @$pb.TagNumber(26)
+  set satisfiesPzs($core.bool v) {
+    $_setBool(25, v);
+  }
+
+  @$pb.TagNumber(26)
+  $core.bool hasSatisfiesPzs() => $_has(25);
+  @$pb.TagNumber(26)
+  void clearSatisfiesPzs() => clearField(26);
+
+  @$pb.TagNumber(28)
+  Bucket_Autoclass get autoclass => $_getN(26);
+  @$pb.TagNumber(28)
+  set autoclass(Bucket_Autoclass v) {
+    setField(28, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasAutoclass() => $_has(26);
+  @$pb.TagNumber(28)
+  void clearAutoclass() => clearField(28);
+  @$pb.TagNumber(28)
+  Bucket_Autoclass ensureAutoclass() => $_ensure(26);
 }
 
 class BucketAccessControl extends $pb.GeneratedMessage {
@@ -3663,6 +3947,12 @@ class Object extends $pb.GeneratedMessage {
             ? ''
             : 'eventBasedHold',
         subBuilder: $1.BoolValue.create)
+    ..aOM<$0.Timestamp>(
+        30,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customTime',
+        subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   Object._() : super();
@@ -3695,6 +3985,7 @@ class Object extends $pb.GeneratedMessage {
     Owner? owner,
     Object_CustomerEncryption? customerEncryption,
     $1.BoolValue? eventBasedHold,
+    $0.Timestamp? customTime,
   }) {
     final _result = create();
     if (contentEncoding != null) {
@@ -3780,6 +4071,9 @@ class Object extends $pb.GeneratedMessage {
     }
     if (eventBasedHold != null) {
       _result.eventBasedHold = eventBasedHold;
+    }
+    if (customTime != null) {
+      _result.customTime = customTime;
     }
     return _result;
   }
@@ -4144,6 +4438,20 @@ class Object extends $pb.GeneratedMessage {
   void clearEventBasedHold() => clearField(29);
   @$pb.TagNumber(29)
   $1.BoolValue ensureEventBasedHold() => $_ensure(27);
+
+  @$pb.TagNumber(30)
+  $0.Timestamp get customTime => $_getN(28);
+  @$pb.TagNumber(30)
+  set customTime($0.Timestamp v) {
+    setField(30, v);
+  }
+
+  @$pb.TagNumber(30)
+  $core.bool hasCustomTime() => $_has(28);
+  @$pb.TagNumber(30)
+  void clearCustomTime() => clearField(30);
+  @$pb.TagNumber(30)
+  $0.Timestamp ensureCustomTime() => $_ensure(28);
 }
 
 class ObjectAccessControl extends $pb.GeneratedMessage {

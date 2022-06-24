@@ -3,7 +3,7 @@
 //  source: google/appengine/v1/service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -41,6 +41,15 @@ class Service extends $pb.GeneratedMessage {
             ? ''
             : 'split',
         subBuilder: TrafficSplit.create)
+    ..m<$core.String, $core.String>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels',
+        entryClassName: 'Service.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.appengine.v1'))
     ..aOM<$0.NetworkSettings>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -54,6 +63,7 @@ class Service extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? id,
     TrafficSplit? split,
+    $core.Map<$core.String, $core.String>? labels,
     $0.NetworkSettings? networkSettings,
   }) {
     final _result = create();
@@ -65,6 +75,9 @@ class Service extends $pb.GeneratedMessage {
     }
     if (split != null) {
       _result.split = split;
+    }
+    if (labels != null) {
+      _result.labels.addAll(labels);
     }
     if (networkSettings != null) {
       _result.networkSettings = networkSettings;
@@ -135,19 +148,22 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   TrafficSplit ensureSplit() => $_ensure(2);
 
+  @$pb.TagNumber(4)
+  $core.Map<$core.String, $core.String> get labels => $_getMap(3);
+
   @$pb.TagNumber(6)
-  $0.NetworkSettings get networkSettings => $_getN(3);
+  $0.NetworkSettings get networkSettings => $_getN(4);
   @$pb.TagNumber(6)
   set networkSettings($0.NetworkSettings v) {
     setField(6, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasNetworkSettings() => $_has(3);
+  $core.bool hasNetworkSettings() => $_has(4);
   @$pb.TagNumber(6)
   void clearNetworkSettings() => clearField(6);
   @$pb.TagNumber(6)
-  $0.NetworkSettings ensureNetworkSettings() => $_ensure(3);
+  $0.NetworkSettings ensureNetworkSettings() => $_ensure(4);
 }
 
 class TrafficSplit extends $pb.GeneratedMessage {

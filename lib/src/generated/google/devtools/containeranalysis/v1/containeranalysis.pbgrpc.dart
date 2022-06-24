@@ -3,7 +3,7 @@
 //  source: google/devtools/containeranalysis/v1/containeranalysis.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -12,7 +12,7 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
-import 'containeranalysis.pb.dart' as $4;
+import 'containeranalysis.pb.dart' as $2;
 export 'containeranalysis.pb.dart';
 
 class ContainerAnalysisClient extends $grpc.Client {
@@ -33,13 +33,13 @@ class ContainerAnalysisClient extends $grpc.Client {
       ($core.List<$core.int> value) =>
           $0.TestIamPermissionsResponse.fromBuffer(value));
   static final _$getVulnerabilityOccurrencesSummary = $grpc.ClientMethod<
-          $4.GetVulnerabilityOccurrencesSummaryRequest,
-          $4.VulnerabilityOccurrencesSummary>(
+          $2.GetVulnerabilityOccurrencesSummaryRequest,
+          $2.VulnerabilityOccurrencesSummary>(
       '/google.devtools.containeranalysis.v1.ContainerAnalysis/GetVulnerabilityOccurrencesSummary',
-      ($4.GetVulnerabilityOccurrencesSummaryRequest value) =>
+      ($2.GetVulnerabilityOccurrencesSummaryRequest value) =>
           value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $4.VulnerabilityOccurrencesSummary.fromBuffer(value));
+          $2.VulnerabilityOccurrencesSummary.fromBuffer(value));
 
   ContainerAnalysisClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -62,9 +62,9 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $createUnaryCall(_$testIamPermissions, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.VulnerabilityOccurrencesSummary>
+  $grpc.ResponseFuture<$2.VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummary(
-          $4.GetVulnerabilityOccurrencesSummaryRequest request,
+          $2.GetVulnerabilityOccurrencesSummaryRequest request,
           {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getVulnerabilityOccurrencesSummary, request,
         options: options);
@@ -101,15 +101,15 @@ abstract class ContainerAnalysisServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.TestIamPermissionsRequest.fromBuffer(value),
         ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.GetVulnerabilityOccurrencesSummaryRequest,
-            $4.VulnerabilityOccurrencesSummary>(
+    $addMethod($grpc.ServiceMethod<$2.GetVulnerabilityOccurrencesSummaryRequest,
+            $2.VulnerabilityOccurrencesSummary>(
         'GetVulnerabilityOccurrencesSummary',
         getVulnerabilityOccurrencesSummary_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $4.GetVulnerabilityOccurrencesSummaryRequest.fromBuffer(value),
-        ($4.VulnerabilityOccurrencesSummary value) => value.writeToBuffer()));
+            $2.GetVulnerabilityOccurrencesSummaryRequest.fromBuffer(value),
+        ($2.VulnerabilityOccurrencesSummary value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Policy> setIamPolicy_Pre($grpc.ServiceCall call,
@@ -128,10 +128,10 @@ abstract class ContainerAnalysisServiceBase extends $grpc.Service {
     return testIamPermissions(call, await request);
   }
 
-  $async.Future<$4.VulnerabilityOccurrencesSummary>
+  $async.Future<$2.VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummary_Pre(
           $grpc.ServiceCall call,
-          $async.Future<$4.GetVulnerabilityOccurrencesSummaryRequest>
+          $async.Future<$2.GetVulnerabilityOccurrencesSummaryRequest>
               request) async {
     return getVulnerabilityOccurrencesSummary(call, await request);
   }
@@ -142,7 +142,7 @@ abstract class ContainerAnalysisServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetIamPolicyRequest request);
   $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
-  $async.Future<$4.VulnerabilityOccurrencesSummary>
+  $async.Future<$2.VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummary($grpc.ServiceCall call,
-          $4.GetVulnerabilityOccurrencesSummaryRequest request);
+          $2.GetVulnerabilityOccurrencesSummaryRequest request);
 }

@@ -3,7 +3,7 @@
 //  source: google/storage/v1/storage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -278,22 +278,6 @@ class StorageClient extends $grpc.Client {
           '/google.storage.v1.Storage/UpdateObject',
           ($2.UpdateObjectRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $4.Object.fromBuffer(value));
-  static final _$getObjectIamPolicy =
-      $grpc.ClientMethod<$2.GetIamPolicyRequest, $1.Policy>(
-          '/google.storage.v1.Storage/GetObjectIamPolicy',
-          ($2.GetIamPolicyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
-  static final _$setObjectIamPolicy =
-      $grpc.ClientMethod<$2.SetIamPolicyRequest, $1.Policy>(
-          '/google.storage.v1.Storage/SetObjectIamPolicy',
-          ($2.SetIamPolicyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
-  static final _$testObjectIamPermissions = $grpc.ClientMethod<
-          $2.TestIamPermissionsRequest, $0.TestIamPermissionsResponse>(
-      '/google.storage.v1.Storage/TestObjectIamPermissions',
-      ($2.TestIamPermissionsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.TestIamPermissionsResponse.fromBuffer(value));
   static final _$watchAllObjects =
       $grpc.ClientMethod<$2.WatchAllObjectsRequest, $4.Channel>(
           '/google.storage.v1.Storage/WatchAllObjects',
@@ -625,25 +609,6 @@ class StorageClient extends $grpc.Client {
   $grpc.ResponseFuture<$4.Object> updateObject($2.UpdateObjectRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateObject, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.Policy> getObjectIamPolicy(
-      $2.GetIamPolicyRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getObjectIamPolicy, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.Policy> setObjectIamPolicy(
-      $2.SetIamPolicyRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$setObjectIamPolicy, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.TestIamPermissionsResponse> testObjectIamPermissions(
-      $2.TestIamPermissionsRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$testObjectIamPermissions, request,
-        options: options);
   }
 
   $grpc.ResponseFuture<$4.Channel> watchAllObjects(
@@ -1084,31 +1049,6 @@ abstract class StorageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.UpdateObjectRequest.fromBuffer(value),
         ($4.Object value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetIamPolicyRequest, $1.Policy>(
-        'GetObjectIamPolicy',
-        getObjectIamPolicy_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.GetIamPolicyRequest.fromBuffer(value),
-        ($1.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.SetIamPolicyRequest, $1.Policy>(
-        'SetObjectIamPolicy',
-        setObjectIamPolicy_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.SetIamPolicyRequest.fromBuffer(value),
-        ($1.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.TestIamPermissionsRequest,
-            $0.TestIamPermissionsResponse>(
-        'TestObjectIamPermissions',
-        testObjectIamPermissions_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.TestIamPermissionsRequest.fromBuffer(value),
-        ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.WatchAllObjectsRequest, $4.Channel>(
         'WatchAllObjects',
         watchAllObjects_Pre,
@@ -1418,22 +1358,6 @@ abstract class StorageServiceBase extends $grpc.Service {
     return updateObject(call, await request);
   }
 
-  $async.Future<$1.Policy> getObjectIamPolicy_Pre($grpc.ServiceCall call,
-      $async.Future<$2.GetIamPolicyRequest> request) async {
-    return getObjectIamPolicy(call, await request);
-  }
-
-  $async.Future<$1.Policy> setObjectIamPolicy_Pre($grpc.ServiceCall call,
-      $async.Future<$2.SetIamPolicyRequest> request) async {
-    return setObjectIamPolicy(call, await request);
-  }
-
-  $async.Future<$0.TestIamPermissionsResponse> testObjectIamPermissions_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$2.TestIamPermissionsRequest> request) async {
-    return testObjectIamPermissions(call, await request);
-  }
-
   $async.Future<$4.Channel> watchAllObjects_Pre($grpc.ServiceCall call,
       $async.Future<$2.WatchAllObjectsRequest> request) async {
     return watchAllObjects(call, await request);
@@ -1568,12 +1492,6 @@ abstract class StorageServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.PatchObjectRequest request);
   $async.Future<$4.Object> updateObject(
       $grpc.ServiceCall call, $2.UpdateObjectRequest request);
-  $async.Future<$1.Policy> getObjectIamPolicy(
-      $grpc.ServiceCall call, $2.GetIamPolicyRequest request);
-  $async.Future<$1.Policy> setObjectIamPolicy(
-      $grpc.ServiceCall call, $2.SetIamPolicyRequest request);
-  $async.Future<$0.TestIamPermissionsResponse> testObjectIamPermissions(
-      $grpc.ServiceCall call, $2.TestIamPermissionsRequest request);
   $async.Future<$4.Channel> watchAllObjects(
       $grpc.ServiceCall call, $2.WatchAllObjectsRequest request);
   $async.Future<$4.ServiceAccount> getServiceAccount(

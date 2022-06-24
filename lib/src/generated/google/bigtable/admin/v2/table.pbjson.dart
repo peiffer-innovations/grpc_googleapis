@@ -3,7 +3,7 @@
 //  source: google/bigtable/admin/v2/table.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -62,6 +62,7 @@ const Table$json = const {
       '4': 3,
       '5': 11,
       '6': '.google.bigtable.admin.v2.Table.ClusterStatesEntry',
+      '8': const {},
       '10': 'clusterStates'
     },
     const {
@@ -78,6 +79,7 @@ const Table$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.bigtable.admin.v2.Table.TimestampGranularity',
+      '8': const {},
       '10': 'granularity'
     },
     const {
@@ -86,6 +88,7 @@ const Table$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.bigtable.admin.v2.RestoreInfo',
+      '8': const {},
       '10': 'restoreInfo'
     },
   ],
@@ -108,6 +111,7 @@ const Table_ClusterState$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.bigtable.admin.v2.Table.ClusterState.ReplicationState',
+      '8': const {},
       '10': 'replicationState'
     },
     const {
@@ -194,7 +198,7 @@ const Table_View$json = const {
 
 /// Descriptor for `Table`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tableDescriptor = $convert.base64Decode(
-    'CgVUYWJsZRISCgRuYW1lGAEgASgJUgRuYW1lElkKDmNsdXN0ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeVINY2x1c3RlclN0YXRlcxJcCg9jb2x1bW5fZmFtaWxpZXMYAyADKAsyMy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuQ29sdW1uRmFtaWxpZXNFbnRyeVIOY29sdW1uRmFtaWxpZXMSVgoLZ3JhbnVsYXJpdHkYBCABKA4yNC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuVGltZXN0YW1wR3JhbnVsYXJpdHlSC2dyYW51bGFyaXR5EkgKDHJlc3RvcmVfaW5mbxgGIAEoCzIlLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5SZXN0b3JlSW5mb1ILcmVzdG9yZUluZm8a4wIKDENsdXN0ZXJTdGF0ZRJqChFyZXBsaWNhdGlvbl9zdGF0ZRgBIAEoDjI9Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGUuUmVwbGljYXRpb25TdGF0ZVIQcmVwbGljYXRpb25TdGF0ZRJWCg9lbmNyeXB0aW9uX2luZm8YAiADKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRW5jcnlwdGlvbkluZm9CA+BBA1IOZW5jcnlwdGlvbkluZm8ijgEKEFJlcGxpY2F0aW9uU3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASEAoMSU5JVElBTElaSU5HEAESFwoTUExBTk5FRF9NQUlOVEVOQU5DRRACEhkKFVVOUExBTk5FRF9NQUlOVEVOQU5DRRADEgkKBVJFQURZEAQSFAoQUkVBRFlfT1BUSU1JWklORxAFGm4KEkNsdXN0ZXJTdGF0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRJCCgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGVSBXZhbHVlOgI4ARppChNDb2x1bW5GYW1pbGllc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EjwKBXZhbHVlGAIgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNvbHVtbkZhbWlseVIFdmFsdWU6AjgBIkkKFFRpbWVzdGFtcEdyYW51bGFyaXR5EiUKIVRJTUVTVEFNUF9HUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEgoKBk1JTExJUxABInEKBFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEg0KCU5BTUVfT05MWRABEg8KC1NDSEVNQV9WSUVXEAISFAoQUkVQTElDQVRJT05fVklFVxADEhMKD0VOQ1JZUFRJT05fVklFVxAFEggKBEZVTEwQBDpf6kFcCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEjZwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vdGFibGVzL3t0YWJsZX0=');
+    'CgVUYWJsZRISCgRuYW1lGAEgASgJUgRuYW1lEl4KDmNsdXN0ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeUID4EEDUg1jbHVzdGVyU3RhdGVzElwKD2NvbHVtbl9mYW1pbGllcxgDIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5Db2x1bW5GYW1pbGllc0VudHJ5Ug5jb2x1bW5GYW1pbGllcxJbCgtncmFudWxhcml0eRgEIAEoDjI0Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5UaW1lc3RhbXBHcmFudWxhcml0eUID4EEFUgtncmFudWxhcml0eRJNCgxyZXN0b3JlX2luZm8YBiABKAsyJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuUmVzdG9yZUluZm9CA+BBA1ILcmVzdG9yZUluZm8a6AIKDENsdXN0ZXJTdGF0ZRJvChFyZXBsaWNhdGlvbl9zdGF0ZRgBIAEoDjI9Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGUuUmVwbGljYXRpb25TdGF0ZUID4EEDUhByZXBsaWNhdGlvblN0YXRlElYKD2VuY3J5cHRpb25faW5mbxgCIAMoCzIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5FbmNyeXB0aW9uSW5mb0ID4EEDUg5lbmNyeXB0aW9uSW5mbyKOAQoQUmVwbGljYXRpb25TdGF0ZRITCg9TVEFURV9OT1RfS05PV04QABIQCgxJTklUSUFMSVpJTkcQARIXChNQTEFOTkVEX01BSU5URU5BTkNFEAISGQoVVU5QTEFOTkVEX01BSU5URU5BTkNFEAMSCQoFUkVBRFkQBBIUChBSRUFEWV9PUFRJTUlaSU5HEAUabgoSQ2x1c3RlclN0YXRlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EkIKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZVIFdmFsdWU6AjgBGmkKE0NvbHVtbkZhbWlsaWVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSPAoFdmFsdWUYAiABKAsyJi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ29sdW1uRmFtaWx5UgV2YWx1ZToCOAEiSQoUVGltZXN0YW1wR3JhbnVsYXJpdHkSJQohVElNRVNUQU1QX0dSQU5VTEFSSVRZX1VOU1BFQ0lGSUVEEAASCgoGTUlMTElTEAEicQoEVmlldxIUChBWSUVXX1VOU1BFQ0lGSUVEEAASDQoJTkFNRV9PTkxZEAESDwoLU0NIRU1BX1ZJRVcQAhIUChBSRVBMSUNBVElPTl9WSUVXEAMSEwoPRU5DUllQVElPTl9WSUVXEAUSCAoERlVMTBAEOl/qQVwKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSNnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS90YWJsZXMve3RhYmxlfQ==');
 @$core.Deprecated('Use columnFamilyDescriptor instead')
 const ColumnFamily$json = const {
   '1': 'ColumnFamily',
@@ -406,7 +410,7 @@ final $typed_data.Uint8List snapshotDescriptor = $convert.base64Decode(
 const Backup$json = const {
   '1': 'Backup',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {
       '1': 'source_table',
       '3': 2,
@@ -485,7 +489,7 @@ const Backup_State$json = const {
 
 /// Descriptor for `Backup`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List backupDescriptor = $convert.base64Decode(
-    'CgZCYWNrdXASFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEikKDHNvdXJjZV90YWJsZRgCIAEoCUIG4EEF4EECUgtzb3VyY2VUYWJsZRJACgtleHBpcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAlIKZXhwaXJlVGltZRI+CgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUglzdGFydFRpbWUSOgoIZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSB2VuZFRpbWUSIgoKc2l6ZV9ieXRlcxgGIAEoA0ID4EEDUglzaXplQnl0ZXMSQQoFc3RhdGUYByABKA4yJi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQmFja3VwLlN0YXRlQgPgQQNSBXN0YXRlElYKD2VuY3J5cHRpb25faW5mbxgJIAEoCzIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5FbmNyeXB0aW9uSW5mb0ID4EEDUg5lbmNyeXB0aW9uSW5mbyI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAjp16kFyCiNiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0JhY2t1cBJLcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9iYWNrdXBzL3tiYWNrdXB9');
+    'CgZCYWNrdXASEgoEbmFtZRgBIAEoCVIEbmFtZRIpCgxzb3VyY2VfdGFibGUYAiABKAlCBuBBBeBBAlILc291cmNlVGFibGUSQAoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQJSCmV4cGlyZVRpbWUSPgoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IJc3RhcnRUaW1lEjoKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgdlbmRUaW1lEiIKCnNpemVfYnl0ZXMYBiABKANCA+BBA1IJc2l6ZUJ5dGVzEkEKBXN0YXRlGAcgASgOMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkJhY2t1cC5TdGF0ZUID4EEDUgVzdGF0ZRJWCg9lbmNyeXB0aW9uX2luZm8YCSABKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRW5jcnlwdGlvbkluZm9CA+BBA1IOZW5jcnlwdGlvbkluZm8iNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6depBcgojYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9CYWNrdXASS3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vYmFja3Vwcy97YmFja3VwfQ==');
 @$core.Deprecated('Use backupInfoDescriptor instead')
 const BackupInfo$json = const {
   '1': 'BackupInfo',

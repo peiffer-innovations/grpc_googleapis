@@ -3,7 +3,7 @@
 //  source: google/storage/v1/storage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -7047,6 +7047,16 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
             ? ''
             : 'commonRequestParams',
         subBuilder: CommonRequestParams.create)
+    ..aOS(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lexicographicStart')
+    ..aOS(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lexicographicEnd')
     ..hasRequiredFields = false;
 
   ListObjectsRequest._() : super();
@@ -7060,6 +7070,8 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
     $4.CommonEnums_Projection? projection,
     $core.bool? versions,
     CommonRequestParams? commonRequestParams,
+    $core.String? lexicographicStart,
+    $core.String? lexicographicEnd,
   }) {
     final _result = create();
     if (bucket != null) {
@@ -7088,6 +7100,12 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
     }
     if (commonRequestParams != null) {
       _result.commonRequestParams = commonRequestParams;
+    }
+    if (lexicographicStart != null) {
+      _result.lexicographicStart = lexicographicStart;
+    }
+    if (lexicographicEnd != null) {
+      _result.lexicographicEnd = lexicographicEnd;
     }
     return _result;
   }
@@ -7227,6 +7245,30 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
   void clearCommonRequestParams() => clearField(10);
   @$pb.TagNumber(10)
   CommonRequestParams ensureCommonRequestParams() => $_ensure(8);
+
+  @$pb.TagNumber(11)
+  $core.String get lexicographicStart => $_getSZ(9);
+  @$pb.TagNumber(11)
+  set lexicographicStart($core.String v) {
+    $_setString(9, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasLexicographicStart() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearLexicographicStart() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get lexicographicEnd => $_getSZ(10);
+  @$pb.TagNumber(12)
+  set lexicographicEnd($core.String v) {
+    $_setString(10, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasLexicographicEnd() => $_has(10);
+  @$pb.TagNumber(12)
+  void clearLexicographicEnd() => clearField(12);
 }
 
 class QueryWriteStatusRequest extends $pb.GeneratedMessage {
@@ -7366,12 +7408,19 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'complete')
+    ..aOM<$4.Object>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resource',
+        subBuilder: $4.Object.create)
     ..hasRequiredFields = false;
 
   QueryWriteStatusResponse._() : super();
   factory QueryWriteStatusResponse({
     $fixnum.Int64? committedSize,
     $core.bool? complete,
+    $4.Object? resource,
   }) {
     final _result = create();
     if (committedSize != null) {
@@ -7379,6 +7428,9 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
     }
     if (complete != null) {
       _result.complete = complete;
+    }
+    if (resource != null) {
+      _result.resource = resource;
     }
     return _result;
   }
@@ -7434,6 +7486,20 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
   $core.bool hasComplete() => $_has(1);
   @$pb.TagNumber(2)
   void clearComplete() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $4.Object get resource => $_getN(2);
+  @$pb.TagNumber(3)
+  set resource($4.Object v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasResource() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearResource() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.Object ensureResource() => $_ensure(2);
 }
 
 class RewriteObjectRequest extends $pb.GeneratedMessage {

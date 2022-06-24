@@ -3,7 +3,7 @@
 //  source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -379,12 +379,84 @@ const CreateClusterMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'finishTime'
     },
+    const {
+      '1': 'tables',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.CreateClusterMetadata.TablesEntry',
+      '10': 'tables'
+    },
   ],
+  '3': const [
+    CreateClusterMetadata_TableProgress$json,
+    CreateClusterMetadata_TablesEntry$json
+  ],
+};
+
+@$core.Deprecated('Use createClusterMetadataDescriptor instead')
+const CreateClusterMetadata_TableProgress$json = const {
+  '1': 'TableProgress',
+  '2': const [
+    const {
+      '1': 'estimated_size_bytes',
+      '3': 2,
+      '4': 1,
+      '5': 3,
+      '10': 'estimatedSizeBytes'
+    },
+    const {
+      '1': 'estimated_copied_bytes',
+      '3': 3,
+      '4': 1,
+      '5': 3,
+      '10': 'estimatedCopiedBytes'
+    },
+    const {
+      '1': 'state',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.bigtable.admin.v2.CreateClusterMetadata.TableProgress.State',
+      '10': 'state'
+    },
+  ],
+  '4': const [CreateClusterMetadata_TableProgress_State$json],
+};
+
+@$core.Deprecated('Use createClusterMetadataDescriptor instead')
+const CreateClusterMetadata_TableProgress_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'PENDING', '2': 1},
+    const {'1': 'COPYING', '2': 2},
+    const {'1': 'COMPLETED', '2': 3},
+    const {'1': 'CANCELLED', '2': 4},
+  ],
+};
+
+@$core.Deprecated('Use createClusterMetadataDescriptor instead')
+const CreateClusterMetadata_TablesEntry$json = const {
+  '1': 'TablesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.CreateClusterMetadata.TableProgress',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
 };
 
 /// Descriptor for `CreateClusterMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createClusterMetadataDescriptor = $convert.base64Decode(
-    'ChVDcmVhdGVDbHVzdGVyTWV0YWRhdGESWQoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVDbHVzdGVyUmVxdWVzdFIPb3JpZ2luYWxSZXF1ZXN0Ej0KDHJlcXVlc3RfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSC3JlcXVlc3RUaW1lEjsKC2ZpbmlzaF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKZmluaXNoVGltZQ==');
+    'ChVDcmVhdGVDbHVzdGVyTWV0YWRhdGESWQoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVDbHVzdGVyUmVxdWVzdFIPb3JpZ2luYWxSZXF1ZXN0Ej0KDHJlcXVlc3RfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSC3JlcXVlc3RUaW1lEjsKC2ZpbmlzaF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKZmluaXNoVGltZRJTCgZ0YWJsZXMYBCADKAsyOy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRlQ2x1c3Rlck1ldGFkYXRhLlRhYmxlc0VudHJ5UgZ0YWJsZXMaqgIKDVRhYmxlUHJvZ3Jlc3MSMAoUZXN0aW1hdGVkX3NpemVfYnl0ZXMYAiABKANSEmVzdGltYXRlZFNpemVCeXRlcxI0ChZlc3RpbWF0ZWRfY29waWVkX2J5dGVzGAMgASgDUhRlc3RpbWF0ZWRDb3BpZWRCeXRlcxJZCgVzdGF0ZRgEIAEoDjJDLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVDbHVzdGVyTWV0YWRhdGEuVGFibGVQcm9ncmVzcy5TdGF0ZVIFc3RhdGUiVgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoHQ09QWUlORxACEg0KCUNPTVBMRVRFRBADEg0KCUNBTkNFTExFRBAEGngKC1RhYmxlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5ElMKBXZhbHVlGAIgASgLMj0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNyZWF0ZUNsdXN0ZXJNZXRhZGF0YS5UYWJsZVByb2dyZXNzUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use updateClusterMetadataDescriptor instead')
 const UpdateClusterMetadata$json = const {
   '1': 'UpdateClusterMetadata',
@@ -655,3 +727,65 @@ const UpdateAppProfileMetadata$json = const {
 /// Descriptor for `UpdateAppProfileMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateAppProfileMetadataDescriptor =
     $convert.base64Decode('ChhVcGRhdGVBcHBQcm9maWxlTWV0YWRhdGE=');
+@$core.Deprecated('Use listHotTabletsRequestDescriptor instead')
+const ListHotTabletsRequest$json = const {
+  '1': 'ListHotTabletsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    const {'1': 'page_size', '3': 4, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 5, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListHotTabletsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listHotTabletsRequestDescriptor = $convert.base64Decode(
+    'ChVMaXN0SG90VGFibGV0c1JlcXVlc3QSRAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ2x1c3RlclIGcGFyZW50EjkKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSNQoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgdlbmRUaW1lEhsKCXBhZ2Vfc2l6ZRgEIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgFIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listHotTabletsResponseDescriptor instead')
+const ListHotTabletsResponse$json = const {
+  '1': 'ListHotTabletsResponse',
+  '2': const [
+    const {
+      '1': 'hot_tablets',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.HotTablet',
+      '10': 'hotTablets'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListHotTabletsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listHotTabletsResponseDescriptor =
+    $convert.base64Decode(
+        'ChZMaXN0SG90VGFibGV0c1Jlc3BvbnNlEkQKC2hvdF90YWJsZXRzGAEgAygLMiMuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkhvdFRhYmxldFIKaG90VGFibGV0cxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');

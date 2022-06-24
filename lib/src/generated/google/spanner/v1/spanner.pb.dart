@@ -3,7 +3,7 @@
 //  source: google/spanner/v1/spanner.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -332,6 +332,11 @@ class Session extends $pb.GeneratedMessage {
             ? ''
             : 'approximateLastUseTime',
         subBuilder: $5.Timestamp.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'creatorRole')
     ..hasRequiredFields = false;
 
   Session._() : super();
@@ -340,6 +345,7 @@ class Session extends $pb.GeneratedMessage {
     $core.Map<$core.String, $core.String>? labels,
     $5.Timestamp? createTime,
     $5.Timestamp? approximateLastUseTime,
+    $core.String? creatorRole,
   }) {
     final _result = create();
     if (name != null) {
@@ -353,6 +359,9 @@ class Session extends $pb.GeneratedMessage {
     }
     if (approximateLastUseTime != null) {
       _result.approximateLastUseTime = approximateLastUseTime;
+    }
+    if (creatorRole != null) {
+      _result.creatorRole = creatorRole;
     }
     return _result;
   }
@@ -424,6 +433,18 @@ class Session extends $pb.GeneratedMessage {
   void clearApproximateLastUseTime() => clearField(4);
   @$pb.TagNumber(4)
   $5.Timestamp ensureApproximateLastUseTime() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get creatorRole => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set creatorRole($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasCreatorRole() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCreatorRole() => clearField(5);
 }
 
 class GetSessionRequest extends $pb.GeneratedMessage {

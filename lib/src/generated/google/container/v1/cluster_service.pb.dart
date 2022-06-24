@@ -3,7 +3,7 @@
 //  source: google/container/v1/cluster_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -17056,9 +17056,10 @@ class NotificationConfig_Filter extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'eventType',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: NotificationConfig_EventType.valueOf,
-        enumValues: NotificationConfig_EventType.values)
+        enumValues: NotificationConfig_EventType.values,
+        defaultEnumValue: NotificationConfig_EventType.EVENT_TYPE_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   NotificationConfig_Filter._() : super();
@@ -17941,9 +17942,11 @@ class LoggingComponentConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'enableComponents',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: LoggingComponentConfig_Component.valueOf,
-        enumValues: LoggingComponentConfig_Component.values)
+        enumValues: LoggingComponentConfig_Component.values,
+        defaultEnumValue:
+            LoggingComponentConfig_Component.COMPONENT_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   LoggingComponentConfig._() : super();
@@ -18075,9 +18078,11 @@ class MonitoringComponentConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'enableComponents',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: MonitoringComponentConfig_Component.valueOf,
-        enumValues: MonitoringComponentConfig_Component.values)
+        enumValues: MonitoringComponentConfig_Component.values,
+        defaultEnumValue:
+            MonitoringComponentConfig_Component.COMPONENT_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   MonitoringComponentConfig._() : super();

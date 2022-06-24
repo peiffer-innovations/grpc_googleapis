@@ -3,7 +3,7 @@
 //  source: google/datastore/v1/query.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -139,11 +139,23 @@ class PropertyFilter_Operator extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'EQUAL');
+  static const PropertyFilter_Operator IN = PropertyFilter_Operator._(6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'IN');
+  static const PropertyFilter_Operator NOT_EQUAL = PropertyFilter_Operator._(
+      9,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NOT_EQUAL');
   static const PropertyFilter_Operator HAS_ANCESTOR = PropertyFilter_Operator._(
       11,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'HAS_ANCESTOR');
+  static const PropertyFilter_Operator NOT_IN = PropertyFilter_Operator._(
+      13,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NOT_IN');
 
   static const $core.List<PropertyFilter_Operator> values =
       <PropertyFilter_Operator>[
@@ -153,7 +165,10 @@ class PropertyFilter_Operator extends $pb.ProtobufEnum {
     GREATER_THAN,
     GREATER_THAN_OR_EQUAL,
     EQUAL,
+    IN,
+    NOT_EQUAL,
     HAS_ANCESTOR,
+    NOT_IN,
   ];
 
   static final $core.Map<$core.int, PropertyFilter_Operator> _byValue =

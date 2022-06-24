@@ -3,7 +3,7 @@
 //  source: google/storage/v1/storage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -2048,6 +2048,20 @@ const ListObjectsRequest$json = const {
     },
     const {'1': 'versions', '3': 9, '4': 1, '5': 8, '10': 'versions'},
     const {
+      '1': 'lexicographic_start',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '10': 'lexicographicStart'
+    },
+    const {
+      '1': 'lexicographic_end',
+      '3': 12,
+      '4': 1,
+      '5': 9,
+      '10': 'lexicographicEnd'
+    },
+    const {
       '1': 'common_request_params',
       '3': 10,
       '4': 1,
@@ -2060,7 +2074,7 @@ const ListObjectsRequest$json = const {
 
 /// Descriptor for `ListObjectsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listObjectsRequestDescriptor = $convert.base64Decode(
-    'ChJMaXN0T2JqZWN0c1JlcXVlc3QSGwoGYnVja2V0GAEgASgJQgPgQQJSBmJ1Y2tldBIcCglkZWxpbWl0ZXIYAiABKAlSCWRlbGltaXRlchI8ChppbmNsdWRlX3RyYWlsaW5nX2RlbGltaXRlchgDIAEoCFIYaW5jbHVkZVRyYWlsaW5nRGVsaW1pdGVyEh8KC21heF9yZXN1bHRzGAQgASgFUgptYXhSZXN1bHRzEh0KCnBhZ2VfdG9rZW4YBSABKAlSCXBhZ2VUb2tlbhIWCgZwcmVmaXgYBiABKAlSBnByZWZpeBJJCgpwcm9qZWN0aW9uGAcgASgOMikuZ29vZ2xlLnN0b3JhZ2UudjEuQ29tbW9uRW51bXMuUHJvamVjdGlvblIKcHJvamVjdGlvbhIaCgh2ZXJzaW9ucxgJIAEoCFIIdmVyc2lvbnMSWgoVY29tbW9uX3JlcXVlc3RfcGFyYW1zGAogASgLMiYuZ29vZ2xlLnN0b3JhZ2UudjEuQ29tbW9uUmVxdWVzdFBhcmFtc1ITY29tbW9uUmVxdWVzdFBhcmFtcw==');
+    'ChJMaXN0T2JqZWN0c1JlcXVlc3QSGwoGYnVja2V0GAEgASgJQgPgQQJSBmJ1Y2tldBIcCglkZWxpbWl0ZXIYAiABKAlSCWRlbGltaXRlchI8ChppbmNsdWRlX3RyYWlsaW5nX2RlbGltaXRlchgDIAEoCFIYaW5jbHVkZVRyYWlsaW5nRGVsaW1pdGVyEh8KC21heF9yZXN1bHRzGAQgASgFUgptYXhSZXN1bHRzEh0KCnBhZ2VfdG9rZW4YBSABKAlSCXBhZ2VUb2tlbhIWCgZwcmVmaXgYBiABKAlSBnByZWZpeBJJCgpwcm9qZWN0aW9uGAcgASgOMikuZ29vZ2xlLnN0b3JhZ2UudjEuQ29tbW9uRW51bXMuUHJvamVjdGlvblIKcHJvamVjdGlvbhIaCgh2ZXJzaW9ucxgJIAEoCFIIdmVyc2lvbnMSLwoTbGV4aWNvZ3JhcGhpY19zdGFydBgLIAEoCVISbGV4aWNvZ3JhcGhpY1N0YXJ0EisKEWxleGljb2dyYXBoaWNfZW5kGAwgASgJUhBsZXhpY29ncmFwaGljRW5kEloKFWNvbW1vbl9yZXF1ZXN0X3BhcmFtcxgKIAEoCzImLmdvb2dsZS5zdG9yYWdlLnYxLkNvbW1vblJlcXVlc3RQYXJhbXNSE2NvbW1vblJlcXVlc3RQYXJhbXM=');
 @$core.Deprecated('Use queryWriteStatusRequestDescriptor instead')
 const QueryWriteStatusRequest$json = const {
   '1': 'QueryWriteStatusRequest',
@@ -2108,13 +2122,21 @@ const QueryWriteStatusResponse$json = const {
       '10': 'committedSize'
     },
     const {'1': 'complete', '3': 2, '4': 1, '5': 8, '10': 'complete'},
+    const {
+      '1': 'resource',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storage.v1.Object',
+      '10': 'resource'
+    },
   ],
 };
 
 /// Descriptor for `QueryWriteStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryWriteStatusResponseDescriptor =
     $convert.base64Decode(
-        'ChhRdWVyeVdyaXRlU3RhdHVzUmVzcG9uc2USJQoOY29tbWl0dGVkX3NpemUYASABKANSDWNvbW1pdHRlZFNpemUSGgoIY29tcGxldGUYAiABKAhSCGNvbXBsZXRl');
+        'ChhRdWVyeVdyaXRlU3RhdHVzUmVzcG9uc2USJQoOY29tbWl0dGVkX3NpemUYASABKANSDWNvbW1pdHRlZFNpemUSGgoIY29tcGxldGUYAiABKAhSCGNvbXBsZXRlEjUKCHJlc291cmNlGAMgASgLMhkuZ29vZ2xlLnN0b3JhZ2UudjEuT2JqZWN0UghyZXNvdXJjZQ==');
 @$core.Deprecated('Use rewriteObjectRequestDescriptor instead')
 const RewriteObjectRequest$json = const {
   '1': 'RewriteObjectRequest',

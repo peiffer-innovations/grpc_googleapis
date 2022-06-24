@@ -3,7 +3,7 @@
 //  source: google/spanner/admin/database/v1/backup.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -90,6 +90,23 @@ const Backup$json = const {
       '8': const {},
       '10': 'databaseDialect'
     },
+    const {
+      '1': 'referencing_backups',
+      '3': 11,
+      '4': 3,
+      '5': 9,
+      '8': const {},
+      '10': 'referencingBackups'
+    },
+    const {
+      '1': 'max_expire_time',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'maxExpireTime'
+    },
   ],
   '4': const [Backup_State$json],
   '7': const {},
@@ -107,7 +124,7 @@ const Backup_State$json = const {
 
 /// Descriptor for `Backup`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List backupDescriptor = $convert.base64Decode(
-    'CgZCYWNrdXASQAoIZGF0YWJhc2UYAiABKAlCJPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZVIIZGF0YWJhc2USPQoMdmVyc2lvbl90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFILdmVyc2lvblRpbWUSOwoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpleHBpcmVUaW1lEhIKBG5hbWUYASABKAlSBG5hbWUSQAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSIgoKc2l6ZV9ieXRlcxgFIAEoA0ID4EEDUglzaXplQnl0ZXMSSQoFc3RhdGUYBiABKA4yLi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXAuU3RhdGVCA+BBA1IFc3RhdGUSXAoVcmVmZXJlbmNpbmdfZGF0YWJhc2VzGAcgAygJQifgQQP6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSFHJlZmVyZW5jaW5nRGF0YWJhc2VzEl4KD2VuY3J5cHRpb25faW5mbxgIIAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25JbmZvQgPgQQNSDmVuY3J5cHRpb25JbmZvEmEKEGRhdGFiYXNlX2RpYWxlY3QYCiABKA4yMS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZURpYWxlY3RCA+BBA1IPZGF0YWJhc2VEaWFsZWN0IjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOlzqQVkKHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwEjhwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vYmFja3Vwcy97YmFja3VwfQ==');
+    'CgZCYWNrdXASQAoIZGF0YWJhc2UYAiABKAlCJPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZVIIZGF0YWJhc2USPQoMdmVyc2lvbl90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFILdmVyc2lvblRpbWUSOwoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpleHBpcmVUaW1lEhIKBG5hbWUYASABKAlSBG5hbWUSQAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSIgoKc2l6ZV9ieXRlcxgFIAEoA0ID4EEDUglzaXplQnl0ZXMSSQoFc3RhdGUYBiABKA4yLi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXAuU3RhdGVCA+BBA1IFc3RhdGUSXAoVcmVmZXJlbmNpbmdfZGF0YWJhc2VzGAcgAygJQifgQQP6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSFHJlZmVyZW5jaW5nRGF0YWJhc2VzEl4KD2VuY3J5cHRpb25faW5mbxgIIAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25JbmZvQgPgQQNSDmVuY3J5cHRpb25JbmZvEmEKEGRhdGFiYXNlX2RpYWxlY3QYCiABKA4yMS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZURpYWxlY3RCA+BBA1IPZGF0YWJhc2VEaWFsZWN0ElYKE3JlZmVyZW5jaW5nX2JhY2t1cHMYCyADKAlCJeBBA/pBHwodc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9CYWNrdXBSEnJlZmVyZW5jaW5nQmFja3VwcxJHCg9tYXhfZXhwaXJlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSDW1heEV4cGlyZVRpbWUiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6XOpBWQodc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9CYWNrdXASOHByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9iYWNrdXBzL3tiYWNrdXB9');
 @$core.Deprecated('Use createBackupRequestDescriptor instead')
 const CreateBackupRequest$json = const {
   '1': 'CreateBackupRequest',
@@ -187,6 +204,93 @@ const CreateBackupMetadata$json = const {
 /// Descriptor for `CreateBackupMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createBackupMetadataDescriptor = $convert.base64Decode(
     'ChRDcmVhdGVCYWNrdXBNZXRhZGF0YRI2CgRuYW1lGAEgASgJQiL6QR8KHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUgRuYW1lEkAKCGRhdGFiYXNlGAIgASgJQiT6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSCGRhdGFiYXNlEk8KCHByb2dyZXNzGAMgASgLMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuT3BlcmF0aW9uUHJvZ3Jlc3NSCHByb2dyZXNzEjsKC2NhbmNlbF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY2FuY2VsVGltZQ==');
+@$core.Deprecated('Use copyBackupRequestDescriptor instead')
+const CopyBackupRequest$json = const {
+  '1': 'CopyBackupRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'backup_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'backupId'
+    },
+    const {
+      '1': 'source_backup',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'sourceBackup'
+    },
+    const {
+      '1': 'expire_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'expireTime'
+    },
+    const {
+      '1': 'encryption_config',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.database.v1.CopyBackupEncryptionConfig',
+      '8': const {},
+      '10': 'encryptionConfig'
+    },
+  ],
+};
+
+/// Descriptor for `CopyBackupRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List copyBackupRequestDescriptor = $convert.base64Decode(
+    'ChFDb3B5QmFja3VwUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIGcGFyZW50EiAKCWJhY2t1cF9pZBgCIAEoCUID4EECUghiYWNrdXBJZBJKCg1zb3VyY2VfYmFja3VwGAMgASgJQiXgQQL6QR8KHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUgxzb3VyY2VCYWNrdXASQAoLZXhwaXJlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQJSCmV4cGlyZVRpbWUSbgoRZW5jcnlwdGlvbl9jb25maWcYBSABKAsyPC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5Db3B5QmFja3VwRW5jcnlwdGlvbkNvbmZpZ0ID4EEBUhBlbmNyeXB0aW9uQ29uZmln');
+@$core.Deprecated('Use copyBackupMetadataDescriptor instead')
+const CopyBackupMetadata$json = const {
+  '1': 'CopyBackupMetadata',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'source_backup',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'sourceBackup'
+    },
+    const {
+      '1': 'progress',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.database.v1.OperationProgress',
+      '10': 'progress'
+    },
+    const {
+      '1': 'cancel_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'cancelTime'
+    },
+  ],
+};
+
+/// Descriptor for `CopyBackupMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List copyBackupMetadataDescriptor = $convert.base64Decode(
+    'ChJDb3B5QmFja3VwTWV0YWRhdGESNgoEbmFtZRgBIAEoCUIi+kEfCh1zcGFubmVyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFIEbmFtZRJHCg1zb3VyY2VfYmFja3VwGAIgASgJQiL6QR8KHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUgxzb3VyY2VCYWNrdXASTwoIcHJvZ3Jlc3MYAyABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5PcGVyYXRpb25Qcm9ncmVzc1IIcHJvZ3Jlc3MSOwoLY2FuY2VsX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjYW5jZWxUaW1l');
 @$core.Deprecated('Use updateBackupRequestDescriptor instead')
 const UpdateBackupRequest$json = const {
   '1': 'UpdateBackupRequest',
@@ -414,3 +518,44 @@ const CreateBackupEncryptionConfig_EncryptionType$json = const {
 final $typed_data.Uint8List createBackupEncryptionConfigDescriptor =
     $convert.base64Decode(
         'ChxDcmVhdGVCYWNrdXBFbmNyeXB0aW9uQ29uZmlnEnsKD2VuY3J5cHRpb25fdHlwZRgBIAEoDjJNLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkNyZWF0ZUJhY2t1cEVuY3J5cHRpb25Db25maWcuRW5jcnlwdGlvblR5cGVCA+BBAlIOZW5jcnlwdGlvblR5cGUSSwoMa21zX2tleV9uYW1lGAIgASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVIKa21zS2V5TmFtZSKOAQoORW5jcnlwdGlvblR5cGUSHwobRU5DUllQVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASGwoXVVNFX0RBVEFCQVNFX0VOQ1JZUFRJT04QARIdChlHT09HTEVfREVGQVVMVF9FTkNSWVBUSU9OEAISHwobQ1VTVE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9OEAM=');
+@$core.Deprecated('Use copyBackupEncryptionConfigDescriptor instead')
+const CopyBackupEncryptionConfig$json = const {
+  '1': 'CopyBackupEncryptionConfig',
+  '2': const [
+    const {
+      '1': 'encryption_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.spanner.admin.database.v1.CopyBackupEncryptionConfig.EncryptionType',
+      '8': const {},
+      '10': 'encryptionType'
+    },
+    const {
+      '1': 'kms_key_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'kmsKeyName'
+    },
+  ],
+  '4': const [CopyBackupEncryptionConfig_EncryptionType$json],
+};
+
+@$core.Deprecated('Use copyBackupEncryptionConfigDescriptor instead')
+const CopyBackupEncryptionConfig_EncryptionType$json = const {
+  '1': 'EncryptionType',
+  '2': const [
+    const {'1': 'ENCRYPTION_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION', '2': 1},
+    const {'1': 'GOOGLE_DEFAULT_ENCRYPTION', '2': 2},
+    const {'1': 'CUSTOMER_MANAGED_ENCRYPTION', '2': 3},
+  ],
+};
+
+/// Descriptor for `CopyBackupEncryptionConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List copyBackupEncryptionConfigDescriptor =
+    $convert.base64Decode(
+        'ChpDb3B5QmFja3VwRW5jcnlwdGlvbkNvbmZpZxJ5Cg9lbmNyeXB0aW9uX3R5cGUYASABKA4ySy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5Db3B5QmFja3VwRW5jcnlwdGlvbkNvbmZpZy5FbmNyeXB0aW9uVHlwZUID4EECUg5lbmNyeXB0aW9uVHlwZRJLCgxrbXNfa2V5X25hbWUYAiABKAlCKeBBAfpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5UgprbXNLZXlOYW1lIp4BCg5FbmNyeXB0aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIrCidVU0VfQ09ORklHX0RFRkFVTFRfT1JfQkFDS1VQX0VOQ1JZUFRJT04QARIdChlHT09HTEVfREVGQVVMVF9FTkNSWVBUSU9OEAISHwobQ1VTVE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9OEAM=');

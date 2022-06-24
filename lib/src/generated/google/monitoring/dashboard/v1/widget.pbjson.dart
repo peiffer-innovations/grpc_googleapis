@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/widget.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -59,6 +59,33 @@ const Widget$json = const {
       '9': 0,
       '10': 'alertChart'
     },
+    const {
+      '1': 'time_series_table',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.monitoring.dashboard.v1.TimeSeriesTable',
+      '9': 0,
+      '10': 'timeSeriesTable'
+    },
+    const {
+      '1': 'collapsible_group',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.monitoring.dashboard.v1.CollapsibleGroup',
+      '9': 0,
+      '10': 'collapsibleGroup'
+    },
+    const {
+      '1': 'logs_panel',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.monitoring.dashboard.v1.LogsPanel',
+      '9': 0,
+      '10': 'logsPanel'
+    },
   ],
   '8': const [
     const {'1': 'content'},
@@ -67,4 +94,4 @@ const Widget$json = const {
 
 /// Descriptor for `Widget`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List widgetDescriptor = $convert.base64Decode(
-    'CgZXaWRnZXQSGQoFdGl0bGUYASABKAlCA+BBAVIFdGl0bGUSRAoIeHlfY2hhcnQYAiABKAsyJy5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydEgAUgd4eUNoYXJ0EkkKCXNjb3JlY2FyZBgDIAEoCzIpLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5TY29yZWNhcmRIAFIJc2NvcmVjYXJkEjoKBHRleHQYBCABKAsyJC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGV4dEgAUgR0ZXh0Ei4KBWJsYW5rGAUgASgLMhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5SABSBWJsYW5rEk0KC2FsZXJ0X2NoYXJ0GAcgASgLMiouZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLkFsZXJ0Q2hhcnRIAFIKYWxlcnRDaGFydEIJCgdjb250ZW50');
+    'CgZXaWRnZXQSGQoFdGl0bGUYASABKAlCA+BBAVIFdGl0bGUSRAoIeHlfY2hhcnQYAiABKAsyJy5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydEgAUgd4eUNoYXJ0EkkKCXNjb3JlY2FyZBgDIAEoCzIpLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5TY29yZWNhcmRIAFIJc2NvcmVjYXJkEjoKBHRleHQYBCABKAsyJC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGV4dEgAUgR0ZXh0Ei4KBWJsYW5rGAUgASgLMhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5SABSBWJsYW5rEk0KC2FsZXJ0X2NoYXJ0GAcgASgLMiouZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLkFsZXJ0Q2hhcnRIAFIKYWxlcnRDaGFydBJdChF0aW1lX3Nlcmllc190YWJsZRgIIAEoCzIvLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UaW1lU2VyaWVzVGFibGVIAFIPdGltZVNlcmllc1RhYmxlEl8KEWNvbGxhcHNpYmxlX2dyb3VwGAkgASgLMjAuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLkNvbGxhcHNpYmxlR3JvdXBIAFIQY29sbGFwc2libGVHcm91cBJKCgpsb2dzX3BhbmVsGAogASgLMikuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLkxvZ3NQYW5lbEgAUglsb2dzUGFuZWxCCQoHY29udGVudA==');

@@ -3,7 +3,7 @@
 //  source: google/storagetransfer/v1/transfer_types.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -851,6 +851,278 @@ class HttpData extends $pb.GeneratedMessage {
   void clearListUrl() => clearField(1);
 }
 
+class PosixFilesystem extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PosixFilesystem',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rootDirectory')
+    ..hasRequiredFields = false;
+
+  PosixFilesystem._() : super();
+  factory PosixFilesystem({
+    $core.String? rootDirectory,
+  }) {
+    final _result = create();
+    if (rootDirectory != null) {
+      _result.rootDirectory = rootDirectory;
+    }
+    return _result;
+  }
+  factory PosixFilesystem.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PosixFilesystem.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PosixFilesystem clone() => PosixFilesystem()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PosixFilesystem copyWith(void Function(PosixFilesystem) updates) =>
+      super.copyWith((message) => updates(message as PosixFilesystem))
+          as PosixFilesystem; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PosixFilesystem create() => PosixFilesystem._();
+  PosixFilesystem createEmptyInstance() => create();
+  static $pb.PbList<PosixFilesystem> createRepeated() =>
+      $pb.PbList<PosixFilesystem>();
+  @$core.pragma('dart2js:noInline')
+  static PosixFilesystem getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PosixFilesystem>(create);
+  static PosixFilesystem? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rootDirectory => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rootDirectory($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRootDirectory() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRootDirectory() => clearField(1);
+}
+
+class AgentPool_BandwidthLimit extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AgentPool.BandwidthLimit',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'limitMbps')
+    ..hasRequiredFields = false;
+
+  AgentPool_BandwidthLimit._() : super();
+  factory AgentPool_BandwidthLimit({
+    $fixnum.Int64? limitMbps,
+  }) {
+    final _result = create();
+    if (limitMbps != null) {
+      _result.limitMbps = limitMbps;
+    }
+    return _result;
+  }
+  factory AgentPool_BandwidthLimit.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AgentPool_BandwidthLimit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AgentPool_BandwidthLimit clone() =>
+      AgentPool_BandwidthLimit()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AgentPool_BandwidthLimit copyWith(
+          void Function(AgentPool_BandwidthLimit) updates) =>
+      super.copyWith((message) => updates(message as AgentPool_BandwidthLimit))
+          as AgentPool_BandwidthLimit; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AgentPool_BandwidthLimit create() => AgentPool_BandwidthLimit._();
+  AgentPool_BandwidthLimit createEmptyInstance() => create();
+  static $pb.PbList<AgentPool_BandwidthLimit> createRepeated() =>
+      $pb.PbList<AgentPool_BandwidthLimit>();
+  @$core.pragma('dart2js:noInline')
+  static AgentPool_BandwidthLimit getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AgentPool_BandwidthLimit>(create);
+  static AgentPool_BandwidthLimit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get limitMbps => $_getI64(0);
+  @$pb.TagNumber(1)
+  set limitMbps($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLimitMbps() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLimitMbps() => clearField(1);
+}
+
+class AgentPool extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AgentPool',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
+    ..e<AgentPool_State>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: AgentPool_State.STATE_UNSPECIFIED,
+        valueOf: AgentPool_State.valueOf,
+        enumValues: AgentPool_State.values)
+    ..aOM<AgentPool_BandwidthLimit>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bandwidthLimit',
+        subBuilder: AgentPool_BandwidthLimit.create)
+    ..hasRequiredFields = false;
+
+  AgentPool._() : super();
+  factory AgentPool({
+    $core.String? name,
+    $core.String? displayName,
+    AgentPool_State? state,
+    AgentPool_BandwidthLimit? bandwidthLimit,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (bandwidthLimit != null) {
+      _result.bandwidthLimit = bandwidthLimit;
+    }
+    return _result;
+  }
+  factory AgentPool.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AgentPool.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AgentPool clone() => AgentPool()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AgentPool copyWith(void Function(AgentPool) updates) =>
+      super.copyWith((message) => updates(message as AgentPool))
+          as AgentPool; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AgentPool create() => AgentPool._();
+  AgentPool createEmptyInstance() => create();
+  static $pb.PbList<AgentPool> createRepeated() => $pb.PbList<AgentPool>();
+  @$core.pragma('dart2js:noInline')
+  static AgentPool getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AgentPool>(create);
+  static AgentPool? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(2)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set displayName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearDisplayName() => clearField(3);
+
+  @$pb.TagNumber(4)
+  AgentPool_State get state => $_getN(2);
+  @$pb.TagNumber(4)
+  set state(AgentPool_State v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearState() => clearField(4);
+
+  @$pb.TagNumber(5)
+  AgentPool_BandwidthLimit get bandwidthLimit => $_getN(3);
+  @$pb.TagNumber(5)
+  set bandwidthLimit(AgentPool_BandwidthLimit v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasBandwidthLimit() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearBandwidthLimit() => clearField(5);
+  @$pb.TagNumber(5)
+  AgentPool_BandwidthLimit ensureBandwidthLimit() => $_ensure(3);
+}
+
 class TransferOptions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -876,6 +1148,22 @@ class TransferOptions extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'deleteObjectsFromSourceAfterTransfer')
+    ..e<TransferOptions_OverwriteWhen>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'overwriteWhen',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            TransferOptions_OverwriteWhen.OVERWRITE_WHEN_UNSPECIFIED,
+        valueOf: TransferOptions_OverwriteWhen.valueOf,
+        enumValues: TransferOptions_OverwriteWhen.values)
+    ..aOM<MetadataOptions>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metadataOptions',
+        subBuilder: MetadataOptions.create)
     ..hasRequiredFields = false;
 
   TransferOptions._() : super();
@@ -883,6 +1171,8 @@ class TransferOptions extends $pb.GeneratedMessage {
     $core.bool? overwriteObjectsAlreadyExistingInSink,
     $core.bool? deleteObjectsUniqueInSink,
     $core.bool? deleteObjectsFromSourceAfterTransfer,
+    TransferOptions_OverwriteWhen? overwriteWhen,
+    MetadataOptions? metadataOptions,
   }) {
     final _result = create();
     if (overwriteObjectsAlreadyExistingInSink != null) {
@@ -895,6 +1185,12 @@ class TransferOptions extends $pb.GeneratedMessage {
     if (deleteObjectsFromSourceAfterTransfer != null) {
       _result.deleteObjectsFromSourceAfterTransfer =
           deleteObjectsFromSourceAfterTransfer;
+    }
+    if (overwriteWhen != null) {
+      _result.overwriteWhen = overwriteWhen;
+    }
+    if (metadataOptions != null) {
+      _result.metadataOptions = metadataOptions;
     }
     return _result;
   }
@@ -960,15 +1256,47 @@ class TransferOptions extends $pb.GeneratedMessage {
   $core.bool hasDeleteObjectsFromSourceAfterTransfer() => $_has(2);
   @$pb.TagNumber(3)
   void clearDeleteObjectsFromSourceAfterTransfer() => clearField(3);
+
+  @$pb.TagNumber(4)
+  TransferOptions_OverwriteWhen get overwriteWhen => $_getN(3);
+  @$pb.TagNumber(4)
+  set overwriteWhen(TransferOptions_OverwriteWhen v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasOverwriteWhen() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearOverwriteWhen() => clearField(4);
+
+  @$pb.TagNumber(5)
+  MetadataOptions get metadataOptions => $_getN(4);
+  @$pb.TagNumber(5)
+  set metadataOptions(MetadataOptions v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasMetadataOptions() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMetadataOptions() => clearField(5);
+  @$pb.TagNumber(5)
+  MetadataOptions ensureMetadataOptions() => $_ensure(4);
 }
 
-enum TransferSpec_DataSink { gcsDataSink, notSet }
+enum TransferSpec_DataSink { gcsDataSink, posixDataSink, notSet }
 
 enum TransferSpec_DataSource {
   gcsDataSource,
   awsS3DataSource,
   httpDataSource,
   azureBlobStorageDataSource,
+  posixDataSource,
+  notSet
+}
+
+enum TransferSpec_IntermediateDataLocation {
+  gcsIntermediateDataLocation,
   notSet
 }
 
@@ -976,6 +1304,7 @@ class TransferSpec extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, TransferSpec_DataSink>
       _TransferSpec_DataSinkByTag = {
     4: TransferSpec_DataSink.gcsDataSink,
+    13: TransferSpec_DataSink.posixDataSink,
     0: TransferSpec_DataSink.notSet
   };
   static const $core.Map<$core.int, TransferSpec_DataSource>
@@ -984,7 +1313,13 @@ class TransferSpec extends $pb.GeneratedMessage {
     2: TransferSpec_DataSource.awsS3DataSource,
     3: TransferSpec_DataSource.httpDataSource,
     8: TransferSpec_DataSource.azureBlobStorageDataSource,
+    14: TransferSpec_DataSource.posixDataSource,
     0: TransferSpec_DataSource.notSet
+  };
+  static const $core.Map<$core.int, TransferSpec_IntermediateDataLocation>
+      _TransferSpec_IntermediateDataLocationByTag = {
+    16: TransferSpec_IntermediateDataLocation.gcsIntermediateDataLocation,
+    0: TransferSpec_IntermediateDataLocation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -995,8 +1330,9 @@ class TransferSpec extends $pb.GeneratedMessage {
               ? ''
               : 'google.storagetransfer.v1'),
       createEmptyInstance: create)
-    ..oo(0, [4])
-    ..oo(1, [1, 2, 3, 8])
+    ..oo(0, [4, 13])
+    ..oo(1, [1, 2, 3, 8, 14])
+    ..oo(2, [16])
     ..aOM<GcsData>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1039,6 +1375,40 @@ class TransferSpec extends $pb.GeneratedMessage {
             ? ''
             : 'azureBlobStorageDataSource',
         subBuilder: AzureBlobStorageData.create)
+    ..aOM<PosixFilesystem>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'posixDataSink',
+        subBuilder: PosixFilesystem.create)
+    ..aOM<PosixFilesystem>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'posixDataSource',
+        subBuilder: PosixFilesystem.create)
+    ..aOM<TransferManifest>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transferManifest',
+        subBuilder: TransferManifest.create)
+    ..aOM<GcsData>(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gcsIntermediateDataLocation',
+        subBuilder: GcsData.create)
+    ..aOS(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sourceAgentPoolName')
+    ..aOS(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sinkAgentPoolName')
     ..hasRequiredFields = false;
 
   TransferSpec._() : super();
@@ -1050,6 +1420,12 @@ class TransferSpec extends $pb.GeneratedMessage {
     ObjectConditions? objectConditions,
     TransferOptions? transferOptions,
     AzureBlobStorageData? azureBlobStorageDataSource,
+    PosixFilesystem? posixDataSink,
+    PosixFilesystem? posixDataSource,
+    TransferManifest? transferManifest,
+    GcsData? gcsIntermediateDataLocation,
+    $core.String? sourceAgentPoolName,
+    $core.String? sinkAgentPoolName,
   }) {
     final _result = create();
     if (gcsDataSource != null) {
@@ -1072,6 +1448,24 @@ class TransferSpec extends $pb.GeneratedMessage {
     }
     if (azureBlobStorageDataSource != null) {
       _result.azureBlobStorageDataSource = azureBlobStorageDataSource;
+    }
+    if (posixDataSink != null) {
+      _result.posixDataSink = posixDataSink;
+    }
+    if (posixDataSource != null) {
+      _result.posixDataSource = posixDataSource;
+    }
+    if (transferManifest != null) {
+      _result.transferManifest = transferManifest;
+    }
+    if (gcsIntermediateDataLocation != null) {
+      _result.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
+    }
+    if (sourceAgentPoolName != null) {
+      _result.sourceAgentPoolName = sourceAgentPoolName;
+    }
+    if (sinkAgentPoolName != null) {
+      _result.sinkAgentPoolName = sinkAgentPoolName;
     }
     return _result;
   }
@@ -1109,6 +1503,10 @@ class TransferSpec extends $pb.GeneratedMessage {
   TransferSpec_DataSource whichDataSource() =>
       _TransferSpec_DataSourceByTag[$_whichOneof(1)]!;
   void clearDataSource() => clearField($_whichOneof(1));
+
+  TransferSpec_IntermediateDataLocation whichIntermediateDataLocation() =>
+      _TransferSpec_IntermediateDataLocationByTag[$_whichOneof(2)]!;
+  void clearIntermediateDataLocation() => clearField($_whichOneof(2));
 
   @$pb.TagNumber(1)
   GcsData get gcsDataSource => $_getN(0);
@@ -1207,6 +1605,425 @@ class TransferSpec extends $pb.GeneratedMessage {
   void clearAzureBlobStorageDataSource() => clearField(8);
   @$pb.TagNumber(8)
   AzureBlobStorageData ensureAzureBlobStorageDataSource() => $_ensure(6);
+
+  @$pb.TagNumber(13)
+  PosixFilesystem get posixDataSink => $_getN(7);
+  @$pb.TagNumber(13)
+  set posixDataSink(PosixFilesystem v) {
+    setField(13, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasPosixDataSink() => $_has(7);
+  @$pb.TagNumber(13)
+  void clearPosixDataSink() => clearField(13);
+  @$pb.TagNumber(13)
+  PosixFilesystem ensurePosixDataSink() => $_ensure(7);
+
+  @$pb.TagNumber(14)
+  PosixFilesystem get posixDataSource => $_getN(8);
+  @$pb.TagNumber(14)
+  set posixDataSource(PosixFilesystem v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasPosixDataSource() => $_has(8);
+  @$pb.TagNumber(14)
+  void clearPosixDataSource() => clearField(14);
+  @$pb.TagNumber(14)
+  PosixFilesystem ensurePosixDataSource() => $_ensure(8);
+
+  @$pb.TagNumber(15)
+  TransferManifest get transferManifest => $_getN(9);
+  @$pb.TagNumber(15)
+  set transferManifest(TransferManifest v) {
+    setField(15, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasTransferManifest() => $_has(9);
+  @$pb.TagNumber(15)
+  void clearTransferManifest() => clearField(15);
+  @$pb.TagNumber(15)
+  TransferManifest ensureTransferManifest() => $_ensure(9);
+
+  @$pb.TagNumber(16)
+  GcsData get gcsIntermediateDataLocation => $_getN(10);
+  @$pb.TagNumber(16)
+  set gcsIntermediateDataLocation(GcsData v) {
+    setField(16, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasGcsIntermediateDataLocation() => $_has(10);
+  @$pb.TagNumber(16)
+  void clearGcsIntermediateDataLocation() => clearField(16);
+  @$pb.TagNumber(16)
+  GcsData ensureGcsIntermediateDataLocation() => $_ensure(10);
+
+  @$pb.TagNumber(17)
+  $core.String get sourceAgentPoolName => $_getSZ(11);
+  @$pb.TagNumber(17)
+  set sourceAgentPoolName($core.String v) {
+    $_setString(11, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasSourceAgentPoolName() => $_has(11);
+  @$pb.TagNumber(17)
+  void clearSourceAgentPoolName() => clearField(17);
+
+  @$pb.TagNumber(18)
+  $core.String get sinkAgentPoolName => $_getSZ(12);
+  @$pb.TagNumber(18)
+  set sinkAgentPoolName($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasSinkAgentPoolName() => $_has(12);
+  @$pb.TagNumber(18)
+  void clearSinkAgentPoolName() => clearField(18);
+}
+
+class MetadataOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MetadataOptions',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..e<MetadataOptions_Symlink>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'symlink',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_Symlink.SYMLINK_UNSPECIFIED,
+        valueOf: MetadataOptions_Symlink.valueOf,
+        enumValues: MetadataOptions_Symlink.values)
+    ..e<MetadataOptions_Mode>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_Mode.MODE_UNSPECIFIED,
+        valueOf: MetadataOptions_Mode.valueOf,
+        enumValues: MetadataOptions_Mode.values)
+    ..e<MetadataOptions_GID>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gid',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_GID.GID_UNSPECIFIED,
+        valueOf: MetadataOptions_GID.valueOf,
+        enumValues: MetadataOptions_GID.values)
+    ..e<MetadataOptions_UID>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uid',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_UID.UID_UNSPECIFIED,
+        valueOf: MetadataOptions_UID.valueOf,
+        enumValues: MetadataOptions_UID.values)
+    ..e<MetadataOptions_Acl>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acl',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_Acl.ACL_UNSPECIFIED,
+        valueOf: MetadataOptions_Acl.valueOf,
+        enumValues: MetadataOptions_Acl.values)
+    ..e<MetadataOptions_StorageClass>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'storageClass',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_StorageClass.STORAGE_CLASS_UNSPECIFIED,
+        valueOf: MetadataOptions_StorageClass.valueOf,
+        enumValues: MetadataOptions_StorageClass.values)
+    ..e<MetadataOptions_TemporaryHold>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'temporaryHold',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            MetadataOptions_TemporaryHold.TEMPORARY_HOLD_UNSPECIFIED,
+        valueOf: MetadataOptions_TemporaryHold.valueOf,
+        enumValues: MetadataOptions_TemporaryHold.values)
+    ..e<MetadataOptions_KmsKey>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kmsKey',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_KmsKey.KMS_KEY_UNSPECIFIED,
+        valueOf: MetadataOptions_KmsKey.valueOf,
+        enumValues: MetadataOptions_KmsKey.values)
+    ..e<MetadataOptions_TimeCreated>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'timeCreated',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: MetadataOptions_TimeCreated.TIME_CREATED_UNSPECIFIED,
+        valueOf: MetadataOptions_TimeCreated.valueOf,
+        enumValues: MetadataOptions_TimeCreated.values)
+    ..hasRequiredFields = false;
+
+  MetadataOptions._() : super();
+  factory MetadataOptions({
+    MetadataOptions_Symlink? symlink,
+    MetadataOptions_Mode? mode,
+    MetadataOptions_GID? gid,
+    MetadataOptions_UID? uid,
+    MetadataOptions_Acl? acl,
+    MetadataOptions_StorageClass? storageClass,
+    MetadataOptions_TemporaryHold? temporaryHold,
+    MetadataOptions_KmsKey? kmsKey,
+    MetadataOptions_TimeCreated? timeCreated,
+  }) {
+    final _result = create();
+    if (symlink != null) {
+      _result.symlink = symlink;
+    }
+    if (mode != null) {
+      _result.mode = mode;
+    }
+    if (gid != null) {
+      _result.gid = gid;
+    }
+    if (uid != null) {
+      _result.uid = uid;
+    }
+    if (acl != null) {
+      _result.acl = acl;
+    }
+    if (storageClass != null) {
+      _result.storageClass = storageClass;
+    }
+    if (temporaryHold != null) {
+      _result.temporaryHold = temporaryHold;
+    }
+    if (kmsKey != null) {
+      _result.kmsKey = kmsKey;
+    }
+    if (timeCreated != null) {
+      _result.timeCreated = timeCreated;
+    }
+    return _result;
+  }
+  factory MetadataOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MetadataOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  MetadataOptions clone() => MetadataOptions()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MetadataOptions copyWith(void Function(MetadataOptions) updates) =>
+      super.copyWith((message) => updates(message as MetadataOptions))
+          as MetadataOptions; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MetadataOptions create() => MetadataOptions._();
+  MetadataOptions createEmptyInstance() => create();
+  static $pb.PbList<MetadataOptions> createRepeated() =>
+      $pb.PbList<MetadataOptions>();
+  @$core.pragma('dart2js:noInline')
+  static MetadataOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MetadataOptions>(create);
+  static MetadataOptions? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  MetadataOptions_Symlink get symlink => $_getN(0);
+  @$pb.TagNumber(1)
+  set symlink(MetadataOptions_Symlink v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSymlink() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSymlink() => clearField(1);
+
+  @$pb.TagNumber(2)
+  MetadataOptions_Mode get mode => $_getN(1);
+  @$pb.TagNumber(2)
+  set mode(MetadataOptions_Mode v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMode() => clearField(2);
+
+  @$pb.TagNumber(3)
+  MetadataOptions_GID get gid => $_getN(2);
+  @$pb.TagNumber(3)
+  set gid(MetadataOptions_GID v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasGid() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearGid() => clearField(3);
+
+  @$pb.TagNumber(4)
+  MetadataOptions_UID get uid => $_getN(3);
+  @$pb.TagNumber(4)
+  set uid(MetadataOptions_UID v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasUid() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUid() => clearField(4);
+
+  @$pb.TagNumber(5)
+  MetadataOptions_Acl get acl => $_getN(4);
+  @$pb.TagNumber(5)
+  set acl(MetadataOptions_Acl v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasAcl() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAcl() => clearField(5);
+
+  @$pb.TagNumber(6)
+  MetadataOptions_StorageClass get storageClass => $_getN(5);
+  @$pb.TagNumber(6)
+  set storageClass(MetadataOptions_StorageClass v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasStorageClass() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearStorageClass() => clearField(6);
+
+  @$pb.TagNumber(7)
+  MetadataOptions_TemporaryHold get temporaryHold => $_getN(6);
+  @$pb.TagNumber(7)
+  set temporaryHold(MetadataOptions_TemporaryHold v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasTemporaryHold() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTemporaryHold() => clearField(7);
+
+  @$pb.TagNumber(8)
+  MetadataOptions_KmsKey get kmsKey => $_getN(7);
+  @$pb.TagNumber(8)
+  set kmsKey(MetadataOptions_KmsKey v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasKmsKey() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearKmsKey() => clearField(8);
+
+  @$pb.TagNumber(9)
+  MetadataOptions_TimeCreated get timeCreated => $_getN(8);
+  @$pb.TagNumber(9)
+  set timeCreated(MetadataOptions_TimeCreated v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasTimeCreated() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearTimeCreated() => clearField(9);
+}
+
+class TransferManifest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransferManifest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'location')
+    ..hasRequiredFields = false;
+
+  TransferManifest._() : super();
+  factory TransferManifest({
+    $core.String? location,
+  }) {
+    final _result = create();
+    if (location != null) {
+      _result.location = location;
+    }
+    return _result;
+  }
+  factory TransferManifest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransferManifest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransferManifest clone() => TransferManifest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransferManifest copyWith(void Function(TransferManifest) updates) =>
+      super.copyWith((message) => updates(message as TransferManifest))
+          as TransferManifest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransferManifest create() => TransferManifest._();
+  TransferManifest createEmptyInstance() => create();
+  static $pb.PbList<TransferManifest> createRepeated() =>
+      $pb.PbList<TransferManifest>();
+  @$core.pragma('dart2js:noInline')
+  static TransferManifest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransferManifest>(create);
+  static TransferManifest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get location => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set location($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLocation() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLocation() => clearField(1);
 }
 
 class Schedule extends $pb.GeneratedMessage {
@@ -1449,6 +2266,12 @@ class TransferJob extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'latestOperationName')
+    ..aOM<LoggingConfig>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'loggingConfig',
+        subBuilder: LoggingConfig.create)
     ..hasRequiredFields = false;
 
   TransferJob._() : super();
@@ -1464,6 +2287,7 @@ class TransferJob extends $pb.GeneratedMessage {
     $1.Timestamp? deletionTime,
     NotificationConfig? notificationConfig,
     $core.String? latestOperationName,
+    LoggingConfig? loggingConfig,
   }) {
     final _result = create();
     if (name != null) {
@@ -1498,6 +2322,9 @@ class TransferJob extends $pb.GeneratedMessage {
     }
     if (latestOperationName != null) {
       _result.latestOperationName = latestOperationName;
+    }
+    if (loggingConfig != null) {
+      _result.loggingConfig = loggingConfig;
     }
     return _result;
   }
@@ -1670,6 +2497,20 @@ class TransferJob extends $pb.GeneratedMessage {
   $core.bool hasLatestOperationName() => $_has(10);
   @$pb.TagNumber(12)
   void clearLatestOperationName() => clearField(12);
+
+  @$pb.TagNumber(14)
+  LoggingConfig get loggingConfig => $_getN(11);
+  @$pb.TagNumber(14)
+  set loggingConfig(LoggingConfig v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasLoggingConfig() => $_has(11);
+  @$pb.TagNumber(14)
+  void clearLoggingConfig() => clearField(14);
+  @$pb.TagNumber(14)
+  LoggingConfig ensureLoggingConfig() => $_ensure(11);
 }
 
 class ErrorLogEntry extends $pb.GeneratedMessage {
@@ -1947,6 +2788,31 @@ class TransferCounters extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bytesFailedToDeleteFromSink')
+    ..aInt64(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'directoriesFoundFromSource')
+    ..aInt64(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'directoriesFailedToListFromSource')
+    ..aInt64(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'directoriesSuccessfullyListedFromSource')
+    ..aInt64(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'intermediateObjectsCleanedUp')
+    ..aInt64(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'intermediateObjectsFailedCleanedUp')
     ..hasRequiredFields = false;
 
   TransferCounters._() : super();
@@ -1967,6 +2833,11 @@ class TransferCounters extends $pb.GeneratedMessage {
     $fixnum.Int64? bytesFromSourceFailed,
     $fixnum.Int64? objectsFailedToDeleteFromSink,
     $fixnum.Int64? bytesFailedToDeleteFromSink,
+    $fixnum.Int64? directoriesFoundFromSource,
+    $fixnum.Int64? directoriesFailedToListFromSource,
+    $fixnum.Int64? directoriesSuccessfullyListedFromSource,
+    $fixnum.Int64? intermediateObjectsCleanedUp,
+    $fixnum.Int64? intermediateObjectsFailedCleanedUp,
   }) {
     final _result = create();
     if (objectsFoundFromSource != null) {
@@ -2016,6 +2887,24 @@ class TransferCounters extends $pb.GeneratedMessage {
     }
     if (bytesFailedToDeleteFromSink != null) {
       _result.bytesFailedToDeleteFromSink = bytesFailedToDeleteFromSink;
+    }
+    if (directoriesFoundFromSource != null) {
+      _result.directoriesFoundFromSource = directoriesFoundFromSource;
+    }
+    if (directoriesFailedToListFromSource != null) {
+      _result.directoriesFailedToListFromSource =
+          directoriesFailedToListFromSource;
+    }
+    if (directoriesSuccessfullyListedFromSource != null) {
+      _result.directoriesSuccessfullyListedFromSource =
+          directoriesSuccessfullyListedFromSource;
+    }
+    if (intermediateObjectsCleanedUp != null) {
+      _result.intermediateObjectsCleanedUp = intermediateObjectsCleanedUp;
+    }
+    if (intermediateObjectsFailedCleanedUp != null) {
+      _result.intermediateObjectsFailedCleanedUp =
+          intermediateObjectsFailedCleanedUp;
     }
     return _result;
   }
@@ -2237,6 +3126,66 @@ class TransferCounters extends $pb.GeneratedMessage {
   $core.bool hasBytesFailedToDeleteFromSink() => $_has(15);
   @$pb.TagNumber(16)
   void clearBytesFailedToDeleteFromSink() => clearField(16);
+
+  @$pb.TagNumber(17)
+  $fixnum.Int64 get directoriesFoundFromSource => $_getI64(16);
+  @$pb.TagNumber(17)
+  set directoriesFoundFromSource($fixnum.Int64 v) {
+    $_setInt64(16, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasDirectoriesFoundFromSource() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearDirectoriesFoundFromSource() => clearField(17);
+
+  @$pb.TagNumber(18)
+  $fixnum.Int64 get directoriesFailedToListFromSource => $_getI64(17);
+  @$pb.TagNumber(18)
+  set directoriesFailedToListFromSource($fixnum.Int64 v) {
+    $_setInt64(17, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasDirectoriesFailedToListFromSource() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearDirectoriesFailedToListFromSource() => clearField(18);
+
+  @$pb.TagNumber(19)
+  $fixnum.Int64 get directoriesSuccessfullyListedFromSource => $_getI64(18);
+  @$pb.TagNumber(19)
+  set directoriesSuccessfullyListedFromSource($fixnum.Int64 v) {
+    $_setInt64(18, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasDirectoriesSuccessfullyListedFromSource() => $_has(18);
+  @$pb.TagNumber(19)
+  void clearDirectoriesSuccessfullyListedFromSource() => clearField(19);
+
+  @$pb.TagNumber(22)
+  $fixnum.Int64 get intermediateObjectsCleanedUp => $_getI64(19);
+  @$pb.TagNumber(22)
+  set intermediateObjectsCleanedUp($fixnum.Int64 v) {
+    $_setInt64(19, v);
+  }
+
+  @$pb.TagNumber(22)
+  $core.bool hasIntermediateObjectsCleanedUp() => $_has(19);
+  @$pb.TagNumber(22)
+  void clearIntermediateObjectsCleanedUp() => clearField(22);
+
+  @$pb.TagNumber(23)
+  $fixnum.Int64 get intermediateObjectsFailedCleanedUp => $_getI64(20);
+  @$pb.TagNumber(23)
+  set intermediateObjectsFailedCleanedUp($fixnum.Int64 v) {
+    $_setInt64(20, v);
+  }
+
+  @$pb.TagNumber(23)
+  $core.bool hasIntermediateObjectsFailedCleanedUp() => $_has(20);
+  @$pb.TagNumber(23)
+  void clearIntermediateObjectsFailedCleanedUp() => clearField(23);
 }
 
 class NotificationConfig extends $pb.GeneratedMessage {
@@ -2259,9 +3208,10 @@ class NotificationConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'eventTypes',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: NotificationConfig_EventType.valueOf,
-        enumValues: NotificationConfig_EventType.values)
+        enumValues: NotificationConfig_EventType.values,
+        defaultEnumValue: NotificationConfig_EventType.EVENT_TYPE_UNSPECIFIED)
     ..e<NotificationConfig_PayloadFormat>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2345,6 +3295,108 @@ class NotificationConfig extends $pb.GeneratedMessage {
   $core.bool hasPayloadFormat() => $_has(2);
   @$pb.TagNumber(3)
   void clearPayloadFormat() => clearField(3);
+}
+
+class LoggingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LoggingConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..pc<LoggingConfig_LoggableAction>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logActions',
+        $pb.PbFieldType.KE,
+        valueOf: LoggingConfig_LoggableAction.valueOf,
+        enumValues: LoggingConfig_LoggableAction.values,
+        defaultEnumValue:
+            LoggingConfig_LoggableAction.LOGGABLE_ACTION_UNSPECIFIED)
+    ..pc<LoggingConfig_LoggableActionState>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logActionStates',
+        $pb.PbFieldType.KE,
+        valueOf: LoggingConfig_LoggableActionState.valueOf,
+        enumValues: LoggingConfig_LoggableActionState.values,
+        defaultEnumValue:
+            LoggingConfig_LoggableActionState.LOGGABLE_ACTION_STATE_UNSPECIFIED)
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableOnpremGcsTransferLogs')
+    ..hasRequiredFields = false;
+
+  LoggingConfig._() : super();
+  factory LoggingConfig({
+    $core.Iterable<LoggingConfig_LoggableAction>? logActions,
+    $core.Iterable<LoggingConfig_LoggableActionState>? logActionStates,
+    $core.bool? enableOnpremGcsTransferLogs,
+  }) {
+    final _result = create();
+    if (logActions != null) {
+      _result.logActions.addAll(logActions);
+    }
+    if (logActionStates != null) {
+      _result.logActionStates.addAll(logActionStates);
+    }
+    if (enableOnpremGcsTransferLogs != null) {
+      _result.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
+    }
+    return _result;
+  }
+  factory LoggingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LoggingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  LoggingConfig clone() => LoggingConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  LoggingConfig copyWith(void Function(LoggingConfig) updates) =>
+      super.copyWith((message) => updates(message as LoggingConfig))
+          as LoggingConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static LoggingConfig create() => LoggingConfig._();
+  LoggingConfig createEmptyInstance() => create();
+  static $pb.PbList<LoggingConfig> createRepeated() =>
+      $pb.PbList<LoggingConfig>();
+  @$core.pragma('dart2js:noInline')
+  static LoggingConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LoggingConfig>(create);
+  static LoggingConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<LoggingConfig_LoggableAction> get logActions => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<LoggingConfig_LoggableActionState> get logActionStates =>
+      $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.bool get enableOnpremGcsTransferLogs => $_getBF(2);
+  @$pb.TagNumber(3)
+  set enableOnpremGcsTransferLogs($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEnableOnpremGcsTransferLogs() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEnableOnpremGcsTransferLogs() => clearField(3);
 }
 
 class TransferOperation extends $pb.GeneratedMessage {

@@ -3,7 +3,7 @@
 //  source: google/maps/routes/v1/compute_custom_routes_request.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -140,8 +140,17 @@ const RouteObjective$json = const {
       '9': 0,
       '10': 'rateCard'
     },
+    const {
+      '1': 'custom_layer',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.maps.routes.v1.RouteObjective.CustomLayer',
+      '8': const {},
+      '10': 'customLayer'
+    },
   ],
-  '3': const [RouteObjective_RateCard$json],
+  '3': const [RouteObjective_RateCard$json, RouteObjective_CustomLayer$json],
   '8': const [
     const {'1': 'objective'},
   ],
@@ -189,6 +198,38 @@ const RouteObjective_RateCard_MonetaryCost$json = const {
   ],
 };
 
+@$core.Deprecated('Use routeObjectiveDescriptor instead')
+const RouteObjective_CustomLayer$json = const {
+  '1': 'CustomLayer',
+  '2': const [
+    const {
+      '1': 'dataset_info',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.maps.routes.v1.RouteObjective.CustomLayer.DatasetInfo',
+      '8': const {},
+      '10': 'datasetInfo'
+    },
+  ],
+  '3': const [RouteObjective_CustomLayer_DatasetInfo$json],
+};
+
+@$core.Deprecated('Use routeObjectiveDescriptor instead')
+const RouteObjective_CustomLayer_DatasetInfo$json = const {
+  '1': 'DatasetInfo',
+  '2': const [
+    const {
+      '1': 'dataset_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'datasetId'
+    },
+  ],
+};
+
 /// Descriptor for `RouteObjective`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List routeObjectiveDescriptor = $convert.base64Decode(
-    'Cg5Sb3V0ZU9iamVjdGl2ZRJNCglyYXRlX2NhcmQYASABKAsyLi5nb29nbGUubWFwcy5yb3V0ZXMudjEuUm91dGVPYmplY3RpdmUuUmF0ZUNhcmRIAFIIcmF0ZUNhcmQaqwIKCFJhdGVDYXJkEmgKD2Nvc3RfcGVyX21pbnV0ZRgCIAEoCzI7Lmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Sb3V0ZU9iamVjdGl2ZS5SYXRlQ2FyZC5Nb25ldGFyeUNvc3RCA+BBAVINY29zdFBlck1pbnV0ZRJgCgtjb3N0X3Blcl9rbRgDIAEoCzI7Lmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Sb3V0ZU9iamVjdGl2ZS5SYXRlQ2FyZC5Nb25ldGFyeUNvc3RCA+BBAVIJY29zdFBlckttEigKDWluY2x1ZGVfdG9sbHMYBCABKAhCA+BBAVIMaW5jbHVkZVRvbGxzGikKDE1vbmV0YXJ5Q29zdBIZCgV2YWx1ZRgBIAEoAUID4EECUgV2YWx1ZUILCglvYmplY3RpdmU=');
+    'Cg5Sb3V0ZU9iamVjdGl2ZRJNCglyYXRlX2NhcmQYASABKAsyLi5nb29nbGUubWFwcy5yb3V0ZXMudjEuUm91dGVPYmplY3RpdmUuUmF0ZUNhcmRIAFIIcmF0ZUNhcmQSWQoMY3VzdG9tX2xheWVyGAIgASgLMjEuZ29vZ2xlLm1hcHMucm91dGVzLnYxLlJvdXRlT2JqZWN0aXZlLkN1c3RvbUxheWVyQgPgQQFSC2N1c3RvbUxheWVyGqsCCghSYXRlQ2FyZBJoCg9jb3N0X3Blcl9taW51dGUYAiABKAsyOy5nb29nbGUubWFwcy5yb3V0ZXMudjEuUm91dGVPYmplY3RpdmUuUmF0ZUNhcmQuTW9uZXRhcnlDb3N0QgPgQQFSDWNvc3RQZXJNaW51dGUSYAoLY29zdF9wZXJfa20YAyABKAsyOy5nb29nbGUubWFwcy5yb3V0ZXMudjEuUm91dGVPYmplY3RpdmUuUmF0ZUNhcmQuTW9uZXRhcnlDb3N0QgPgQQFSCWNvc3RQZXJLbRIoCg1pbmNsdWRlX3RvbGxzGAQgASgIQgPgQQFSDGluY2x1ZGVUb2xscxopCgxNb25ldGFyeUNvc3QSGQoFdmFsdWUYASABKAFCA+BBAlIFdmFsdWUapwEKC0N1c3RvbUxheWVyEmUKDGRhdGFzZXRfaW5mbxgBIAEoCzI9Lmdvb2dsZS5tYXBzLnJvdXRlcy52MS5Sb3V0ZU9iamVjdGl2ZS5DdXN0b21MYXllci5EYXRhc2V0SW5mb0ID4EECUgtkYXRhc2V0SW5mbxoxCgtEYXRhc2V0SW5mbxIiCgpkYXRhc2V0X2lkGAEgASgJQgPgQQJSCWRhdGFzZXRJZEILCglvYmplY3RpdmU=');

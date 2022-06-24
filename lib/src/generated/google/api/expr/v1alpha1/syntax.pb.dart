@@ -3,7 +3,7 @@
 //  source: google/api/expr/v1alpha1/syntax.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -1464,7 +1464,7 @@ class SourceInfo extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'lineOffsets',
-        $pb.PbFieldType.P3)
+        $pb.PbFieldType.K3)
     ..m<$fixnum.Int64, $core.int>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')

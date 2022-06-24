@@ -3,7 +3,7 @@
 //  source: google/privacy/dlp/v2/dlp.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -107,6 +107,32 @@ const StoredInfoTypeState$json = const {
 /// Descriptor for `StoredInfoTypeState`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List storedInfoTypeStateDescriptor = $convert.base64Decode(
     'ChNTdG9yZWRJbmZvVHlwZVN0YXRlEiYKIlNUT1JFRF9JTkZPX1RZUEVfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCQoFUkVBRFkQAhIKCgZGQUlMRUQQAxILCgdJTlZBTElEEAQ=');
+@$core.Deprecated('Use resourceVisibilityDescriptor instead')
+const ResourceVisibility$json = const {
+  '1': 'ResourceVisibility',
+  '2': const [
+    const {'1': 'RESOURCE_VISIBILITY_UNSPECIFIED', '2': 0},
+    const {'1': 'RESOURCE_VISIBILITY_PUBLIC', '2': 10},
+    const {'1': 'RESOURCE_VISIBILITY_RESTRICTED', '2': 20},
+  ],
+};
+
+/// Descriptor for `ResourceVisibility`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List resourceVisibilityDescriptor = $convert.base64Decode(
+    'ChJSZXNvdXJjZVZpc2liaWxpdHkSIwofUkVTT1VSQ0VfVklTSUJJTElUWV9VTlNQRUNJRklFRBAAEh4KGlJFU09VUkNFX1ZJU0lCSUxJVFlfUFVCTElDEAoSIgoeUkVTT1VSQ0VfVklTSUJJTElUWV9SRVNUUklDVEVEEBQ=');
+@$core.Deprecated('Use encryptionStatusDescriptor instead')
+const EncryptionStatus$json = const {
+  '1': 'EncryptionStatus',
+  '2': const [
+    const {'1': 'ENCRYPTION_STATUS_UNSPECIFIED', '2': 0},
+    const {'1': 'ENCRYPTION_GOOGLE_MANAGED', '2': 1},
+    const {'1': 'ENCRYPTION_CUSTOMER_MANAGED', '2': 2},
+  ],
+};
+
+/// Descriptor for `EncryptionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List encryptionStatusDescriptor = $convert.base64Decode(
+    'ChBFbmNyeXB0aW9uU3RhdHVzEiEKHUVOQ1JZUFRJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASHQoZRU5DUllQVElPTl9HT09HTEVfTUFOQUdFRBABEh8KG0VOQ1JZUFRJT05fQ1VTVE9NRVJfTUFOQUdFRBAC');
 @$core.Deprecated('Use excludeInfoTypesDescriptor instead')
 const ExcludeInfoTypes$json = const {
   '1': 'ExcludeInfoTypes',
@@ -373,6 +399,8 @@ const ByteContentItem_BytesType$json = const {
     const {'1': 'TEXT_UTF8', '2': 5},
     const {'1': 'WORD_DOCUMENT', '2': 7},
     const {'1': 'PDF', '2': 8},
+    const {'1': 'POWERPOINT_DOCUMENT', '2': 9},
+    const {'1': 'EXCEL_DOCUMENT', '2': 10},
     const {'1': 'AVRO', '2': 11},
     const {'1': 'CSV', '2': 12},
     const {'1': 'TSV', '2': 13},
@@ -381,7 +409,7 @@ const ByteContentItem_BytesType$json = const {
 
 /// Descriptor for `ByteContentItem`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List byteContentItemDescriptor = $convert.base64Decode(
-    'Cg9CeXRlQ29udGVudEl0ZW0SRAoEdHlwZRgBIAEoDjIwLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CeXRlQ29udGVudEl0ZW0uQnl0ZXNUeXBlUgR0eXBlEhIKBGRhdGEYAiABKAxSBGRhdGEitgEKCUJ5dGVzVHlwZRIaChZCWVRFU19UWVBFX1VOU1BFQ0lGSUVEEAASCQoFSU1BR0UQBhIOCgpJTUFHRV9KUEVHEAESDQoJSU1BR0VfQk1QEAISDQoJSU1BR0VfUE5HEAMSDQoJSU1BR0VfU1ZHEAQSDQoJVEVYVF9VVEY4EAUSEQoNV09SRF9ET0NVTUVOVBAHEgcKA1BERhAIEggKBEFWUk8QCxIHCgNDU1YQDBIHCgNUU1YQDQ==');
+    'Cg9CeXRlQ29udGVudEl0ZW0SRAoEdHlwZRgBIAEoDjIwLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CeXRlQ29udGVudEl0ZW0uQnl0ZXNUeXBlUgR0eXBlEhIKBGRhdGEYAiABKAxSBGRhdGEi4wEKCUJ5dGVzVHlwZRIaChZCWVRFU19UWVBFX1VOU1BFQ0lGSUVEEAASCQoFSU1BR0UQBhIOCgpJTUFHRV9KUEVHEAESDQoJSU1BR0VfQk1QEAISDQoJSU1BR0VfUE5HEAMSDQoJSU1BR0VfU1ZHEAQSDQoJVEVYVF9VVEY4EAUSEQoNV09SRF9ET0NVTUVOVBAHEgcKA1BERhAIEhcKE1BPV0VSUE9JTlRfRE9DVU1FTlQQCRISCg5FWENFTF9ET0NVTUVOVBAKEggKBEFWUk8QCxIHCgNDU1YQDBIHCgNUU1YQDQ==');
 @$core.Deprecated('Use contentItemDescriptor instead')
 const ContentItem$json = const {
   '1': 'ContentItem',
@@ -4439,6 +4467,169 @@ const InspectJobConfig$json = const {
 /// Descriptor for `InspectJobConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List inspectJobConfigDescriptor = $convert.base64Decode(
     'ChBJbnNwZWN0Sm9iQ29uZmlnEksKDnN0b3JhZ2VfY29uZmlnGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0b3JhZ2VDb25maWdSDXN0b3JhZ2VDb25maWcSSwoOaW5zcGVjdF9jb25maWcYAiABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5zcGVjdENvbmZpZ1INaW5zcGVjdENvbmZpZxIyChVpbnNwZWN0X3RlbXBsYXRlX25hbWUYAyABKAlSE2luc3BlY3RUZW1wbGF0ZU5hbWUSNwoHYWN0aW9ucxgEIAMoCzIdLmdvb2dsZS5wcml2YWN5LmRscC52Mi5BY3Rpb25SB2FjdGlvbnM=');
+@$core.Deprecated('Use dataProfileActionDescriptor instead')
+const DataProfileAction$json = const {
+  '1': 'DataProfileAction',
+  '2': const [
+    const {
+      '1': 'export_data',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfileAction.Export',
+      '9': 0,
+      '10': 'exportData'
+    },
+    const {
+      '1': 'pub_sub_notification',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfileAction.PubSubNotification',
+      '9': 0,
+      '10': 'pubSubNotification'
+    },
+  ],
+  '3': const [
+    DataProfileAction_Export$json,
+    DataProfileAction_PubSubNotification$json
+  ],
+  '4': const [DataProfileAction_EventType$json],
+  '8': const [
+    const {'1': 'action'},
+  ],
+};
+
+@$core.Deprecated('Use dataProfileActionDescriptor instead')
+const DataProfileAction_Export$json = const {
+  '1': 'Export',
+  '2': const [
+    const {
+      '1': 'profile_table',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.BigQueryTable',
+      '10': 'profileTable'
+    },
+  ],
+};
+
+@$core.Deprecated('Use dataProfileActionDescriptor instead')
+const DataProfileAction_PubSubNotification$json = const {
+  '1': 'PubSubNotification',
+  '2': const [
+    const {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
+    const {
+      '1': 'event',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.DataProfileAction.EventType',
+      '10': 'event'
+    },
+    const {
+      '1': 'pubsub_condition',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfilePubSubCondition',
+      '10': 'pubsubCondition'
+    },
+    const {
+      '1': 'detail_of_message',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.privacy.dlp.v2.DataProfileAction.PubSubNotification.DetailLevel',
+      '10': 'detailOfMessage'
+    },
+  ],
+  '4': const [DataProfileAction_PubSubNotification_DetailLevel$json],
+};
+
+@$core.Deprecated('Use dataProfileActionDescriptor instead')
+const DataProfileAction_PubSubNotification_DetailLevel$json = const {
+  '1': 'DetailLevel',
+  '2': const [
+    const {'1': 'DETAIL_LEVEL_UNSPECIFIED', '2': 0},
+    const {'1': 'TABLE_PROFILE', '2': 1},
+    const {'1': 'RESOURCE_NAME', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use dataProfileActionDescriptor instead')
+const DataProfileAction_EventType$json = const {
+  '1': 'EventType',
+  '2': const [
+    const {'1': 'EVENT_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'NEW_PROFILE', '2': 1},
+    const {'1': 'CHANGED_PROFILE', '2': 2},
+    const {'1': 'SCORE_INCREASED', '2': 3},
+    const {'1': 'ERROR_CHANGED', '2': 4},
+  ],
+};
+
+/// Descriptor for `DataProfileAction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataProfileActionDescriptor = $convert.base64Decode(
+    'ChFEYXRhUHJvZmlsZUFjdGlvbhJSCgtleHBvcnRfZGF0YRgBIAEoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUFjdGlvbi5FeHBvcnRIAFIKZXhwb3J0RGF0YRJvChRwdWJfc3ViX25vdGlmaWNhdGlvbhgCIAEoCzI7Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUFjdGlvbi5QdWJTdWJOb3RpZmljYXRpb25IAFIScHViU3ViTm90aWZpY2F0aW9uGlMKBkV4cG9ydBJJCg1wcm9maWxlX3RhYmxlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGVSDHByb2ZpbGVUYWJsZRqaAwoSUHViU3ViTm90aWZpY2F0aW9uEhQKBXRvcGljGAEgASgJUgV0b3BpYxJICgVldmVudBgCIAEoDjIyLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUFjdGlvbi5FdmVudFR5cGVSBWV2ZW50ElwKEHB1YnN1Yl9jb25kaXRpb24YAyABKAsyMS5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YVByb2ZpbGVQdWJTdWJDb25kaXRpb25SD3B1YnN1YkNvbmRpdGlvbhJzChFkZXRhaWxfb2ZfbWVzc2FnZRgEIAEoDjJHLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUFjdGlvbi5QdWJTdWJOb3RpZmljYXRpb24uRGV0YWlsTGV2ZWxSD2RldGFpbE9mTWVzc2FnZSJRCgtEZXRhaWxMZXZlbBIcChhERVRBSUxfTEVWRUxfVU5TUEVDSUZJRUQQABIRCg1UQUJMRV9QUk9GSUxFEAESEQoNUkVTT1VSQ0VfTkFNRRACInUKCUV2ZW50VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLTkVXX1BST0ZJTEUQARITCg9DSEFOR0VEX1BST0ZJTEUQAhITCg9TQ09SRV9JTkNSRUFTRUQQAxIRCg1FUlJPUl9DSEFOR0VEEARCCAoGYWN0aW9u');
+@$core.Deprecated('Use dataProfileJobConfigDescriptor instead')
+const DataProfileJobConfig$json = const {
+  '1': 'DataProfileJobConfig',
+  '2': const [
+    const {
+      '1': 'location',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfileLocation',
+      '10': 'location'
+    },
+    const {'1': 'project_id', '3': 5, '4': 1, '5': 9, '10': 'projectId'},
+    const {
+      '1': 'inspect_templates',
+      '3': 7,
+      '4': 3,
+      '5': 9,
+      '10': 'inspectTemplates'
+    },
+    const {
+      '1': 'data_profile_actions',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfileAction',
+      '10': 'dataProfileActions'
+    },
+  ],
+};
+
+/// Descriptor for `DataProfileJobConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataProfileJobConfigDescriptor = $convert.base64Decode(
+    'ChREYXRhUHJvZmlsZUpvYkNvbmZpZxJGCghsb2NhdGlvbhgBIAEoCzIqLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUxvY2F0aW9uUghsb2NhdGlvbhIdCgpwcm9qZWN0X2lkGAUgASgJUglwcm9qZWN0SWQSKwoRaW5zcGVjdF90ZW1wbGF0ZXMYByADKAlSEGluc3BlY3RUZW1wbGF0ZXMSWgoUZGF0YV9wcm9maWxlX2FjdGlvbnMYBiADKAsyKC5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YVByb2ZpbGVBY3Rpb25SEmRhdGFQcm9maWxlQWN0aW9ucw==');
+@$core.Deprecated('Use dataProfileLocationDescriptor instead')
+const DataProfileLocation$json = const {
+  '1': 'DataProfileLocation',
+  '2': const [
+    const {
+      '1': 'organization_id',
+      '3': 1,
+      '4': 1,
+      '5': 3,
+      '9': 0,
+      '10': 'organizationId'
+    },
+    const {'1': 'folder_id', '3': 2, '4': 1, '5': 3, '9': 0, '10': 'folderId'},
+  ],
+  '8': const [
+    const {'1': 'location'},
+  ],
+};
+
+/// Descriptor for `DataProfileLocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataProfileLocationDescriptor = $convert.base64Decode(
+    'ChNEYXRhUHJvZmlsZUxvY2F0aW9uEikKD29yZ2FuaXphdGlvbl9pZBgBIAEoA0gAUg5vcmdhbml6YXRpb25JZBIdCglmb2xkZXJfaWQYAiABKANIAFIIZm9sZGVySWRCCgoIbG9jYXRpb24=');
 @$core.Deprecated('Use dlpJobDescriptor instead')
 const DlpJob$json = const {
   '1': 'DlpJob',
@@ -5231,3 +5422,473 @@ const HybridInspectResponse$json = const {
 /// Descriptor for `HybridInspectResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List hybridInspectResponseDescriptor =
     $convert.base64Decode('ChVIeWJyaWRJbnNwZWN0UmVzcG9uc2U=');
+@$core.Deprecated('Use sensitivityScoreDescriptor instead')
+const SensitivityScore$json = const {
+  '1': 'SensitivityScore',
+  '2': const [
+    const {
+      '1': 'score',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.SensitivityScore.SensitivityScoreLevel',
+      '10': 'score'
+    },
+  ],
+  '4': const [SensitivityScore_SensitivityScoreLevel$json],
+};
+
+@$core.Deprecated('Use sensitivityScoreDescriptor instead')
+const SensitivityScore_SensitivityScoreLevel$json = const {
+  '1': 'SensitivityScoreLevel',
+  '2': const [
+    const {'1': 'SENSITIVITY_SCORE_UNSPECIFIED', '2': 0},
+    const {'1': 'SENSITIVITY_LOW', '2': 10},
+    const {'1': 'SENSITIVITY_MODERATE', '2': 20},
+    const {'1': 'SENSITIVITY_HIGH', '2': 30},
+  ],
+};
+
+/// Descriptor for `SensitivityScore`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sensitivityScoreDescriptor = $convert.base64Decode(
+    'ChBTZW5zaXRpdml0eVNjb3JlElMKBXNjb3JlGAEgASgOMj0uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlNlbnNpdGl2aXR5U2NvcmUuU2Vuc2l0aXZpdHlTY29yZUxldmVsUgVzY29yZSJ/ChVTZW5zaXRpdml0eVNjb3JlTGV2ZWwSIQodU0VOU0lUSVZJVFlfU0NPUkVfVU5TUEVDSUZJRUQQABITCg9TRU5TSVRJVklUWV9MT1cQChIYChRTRU5TSVRJVklUWV9NT0RFUkFURRAUEhQKEFNFTlNJVElWSVRZX0hJR0gQHg==');
+@$core.Deprecated('Use dataRiskLevelDescriptor instead')
+const DataRiskLevel$json = const {
+  '1': 'DataRiskLevel',
+  '2': const [
+    const {
+      '1': 'score',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.DataRiskLevel.DataRiskLevelScore',
+      '10': 'score'
+    },
+  ],
+  '4': const [DataRiskLevel_DataRiskLevelScore$json],
+};
+
+@$core.Deprecated('Use dataRiskLevelDescriptor instead')
+const DataRiskLevel_DataRiskLevelScore$json = const {
+  '1': 'DataRiskLevelScore',
+  '2': const [
+    const {'1': 'RISK_SCORE_UNSPECIFIED', '2': 0},
+    const {'1': 'RISK_LOW', '2': 10},
+    const {'1': 'RISK_MODERATE', '2': 20},
+    const {'1': 'RISK_HIGH', '2': 30},
+  ],
+};
+
+/// Descriptor for `DataRiskLevel`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataRiskLevelDescriptor = $convert.base64Decode(
+    'Cg1EYXRhUmlza0xldmVsEk0KBXNjb3JlGAEgASgOMjcuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFSaXNrTGV2ZWwuRGF0YVJpc2tMZXZlbFNjb3JlUgVzY29yZSJgChJEYXRhUmlza0xldmVsU2NvcmUSGgoWUklTS19TQ09SRV9VTlNQRUNJRklFRBAAEgwKCFJJU0tfTE9XEAoSEQoNUklTS19NT0RFUkFURRAUEg0KCVJJU0tfSElHSBAe');
+@$core.Deprecated('Use dataProfileConfigSnapshotDescriptor instead')
+const DataProfileConfigSnapshot$json = const {
+  '1': 'DataProfileConfigSnapshot',
+  '2': const [
+    const {
+      '1': 'inspect_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.InspectConfig',
+      '10': 'inspectConfig'
+    },
+    const {
+      '1': 'data_profile_job',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfileJobConfig',
+      '10': 'dataProfileJob'
+    },
+  ],
+};
+
+/// Descriptor for `DataProfileConfigSnapshot`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataProfileConfigSnapshotDescriptor =
+    $convert.base64Decode(
+        'ChlEYXRhUHJvZmlsZUNvbmZpZ1NuYXBzaG90EksKDmluc3BlY3RfY29uZmlnGAIgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluc3BlY3RDb25maWdSDWluc3BlY3RDb25maWcSVQoQZGF0YV9wcm9maWxlX2pvYhgDIAEoCzIrLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUpvYkNvbmZpZ1IOZGF0YVByb2ZpbGVKb2I=');
+@$core.Deprecated('Use tableDataProfileDescriptor instead')
+const TableDataProfile$json = const {
+  '1': 'TableDataProfile',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {
+      '1': 'project_data_profile',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'projectDataProfile'
+    },
+    const {
+      '1': 'dataset_project_id',
+      '3': 24,
+      '4': 1,
+      '5': 9,
+      '10': 'datasetProjectId'
+    },
+    const {
+      '1': 'dataset_location',
+      '3': 29,
+      '4': 1,
+      '5': 9,
+      '10': 'datasetLocation'
+    },
+    const {'1': 'dataset_id', '3': 25, '4': 1, '5': 9, '10': 'datasetId'},
+    const {'1': 'table_id', '3': 26, '4': 1, '5': 9, '10': 'tableId'},
+    const {'1': 'full_resource', '3': 3, '4': 1, '5': 9, '10': 'fullResource'},
+    const {
+      '1': 'profile_status',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.ProfileStatus',
+      '10': 'profileStatus'
+    },
+    const {
+      '1': 'state',
+      '3': 22,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.TableDataProfile.State',
+      '10': 'state'
+    },
+    const {
+      '1': 'sensitivity_score',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.SensitivityScore',
+      '10': 'sensitivityScore'
+    },
+    const {
+      '1': 'data_risk_level',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataRiskLevel',
+      '10': 'dataRiskLevel'
+    },
+    const {
+      '1': 'predicted_info_types',
+      '3': 27,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.InfoTypeSummary',
+      '10': 'predictedInfoTypes'
+    },
+    const {
+      '1': 'other_info_types',
+      '3': 28,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.OtherInfoTypeSummary',
+      '10': 'otherInfoTypes'
+    },
+    const {
+      '1': 'config_snapshot',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfileConfigSnapshot',
+      '10': 'configSnapshot'
+    },
+    const {
+      '1': 'last_modified_time',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'lastModifiedTime'
+    },
+    const {
+      '1': 'expiration_time',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'expirationTime'
+    },
+    const {
+      '1': 'scanned_column_count',
+      '3': 10,
+      '4': 1,
+      '5': 3,
+      '10': 'scannedColumnCount'
+    },
+    const {
+      '1': 'failed_column_count',
+      '3': 11,
+      '4': 1,
+      '5': 3,
+      '10': 'failedColumnCount'
+    },
+    const {
+      '1': 'table_size_bytes',
+      '3': 12,
+      '4': 1,
+      '5': 3,
+      '10': 'tableSizeBytes'
+    },
+    const {'1': 'row_count', '3': 13, '4': 1, '5': 3, '10': 'rowCount'},
+    const {
+      '1': 'encryption_status',
+      '3': 14,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.EncryptionStatus',
+      '10': 'encryptionStatus'
+    },
+    const {
+      '1': 'resource_visibility',
+      '3': 15,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.ResourceVisibility',
+      '10': 'resourceVisibility'
+    },
+    const {
+      '1': 'profile_last_generated',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'profileLastGenerated'
+    },
+    const {
+      '1': 'resource_labels',
+      '3': 17,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.TableDataProfile.ResourceLabelsEntry',
+      '10': 'resourceLabels'
+    },
+    const {
+      '1': 'create_time',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+  ],
+  '3': const [TableDataProfile_ResourceLabelsEntry$json],
+  '4': const [TableDataProfile_State$json],
+};
+
+@$core.Deprecated('Use tableDataProfileDescriptor instead')
+const TableDataProfile_ResourceLabelsEntry$json = const {
+  '1': 'ResourceLabelsEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use tableDataProfileDescriptor instead')
+const TableDataProfile_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'RUNNING', '2': 1},
+    const {'1': 'DONE', '2': 2},
+  ],
+};
+
+/// Descriptor for `TableDataProfile`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tableDataProfileDescriptor = $convert.base64Decode(
+    'ChBUYWJsZURhdGFQcm9maWxlEhIKBG5hbWUYASABKAlSBG5hbWUSMAoUcHJvamVjdF9kYXRhX3Byb2ZpbGUYAiABKAlSEnByb2plY3REYXRhUHJvZmlsZRIsChJkYXRhc2V0X3Byb2plY3RfaWQYGCABKAlSEGRhdGFzZXRQcm9qZWN0SWQSKQoQZGF0YXNldF9sb2NhdGlvbhgdIAEoCVIPZGF0YXNldExvY2F0aW9uEh0KCmRhdGFzZXRfaWQYGSABKAlSCWRhdGFzZXRJZBIZCgh0YWJsZV9pZBgaIAEoCVIHdGFibGVJZBIjCg1mdWxsX3Jlc291cmNlGAMgASgJUgxmdWxsUmVzb3VyY2USSwoOcHJvZmlsZV9zdGF0dXMYFSABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAudjIuUHJvZmlsZVN0YXR1c1INcHJvZmlsZVN0YXR1cxJDCgVzdGF0ZRgWIAEoDjItLmdvb2dsZS5wcml2YWN5LmRscC52Mi5UYWJsZURhdGFQcm9maWxlLlN0YXRlUgVzdGF0ZRJUChFzZW5zaXRpdml0eV9zY29yZRgFIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5TZW5zaXRpdml0eVNjb3JlUhBzZW5zaXRpdml0eVNjb3JlEkwKD2RhdGFfcmlza19sZXZlbBgGIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUmlza0xldmVsUg1kYXRhUmlza0xldmVsElgKFHByZWRpY3RlZF9pbmZvX3R5cGVzGBsgAygLMiYuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9UeXBlU3VtbWFyeVIScHJlZGljdGVkSW5mb1R5cGVzElUKEG90aGVyX2luZm9fdHlwZXMYHCADKAsyKy5nb29nbGUucHJpdmFjeS5kbHAudjIuT3RoZXJJbmZvVHlwZVN1bW1hcnlSDm90aGVySW5mb1R5cGVzElkKD2NvbmZpZ19zbmFwc2hvdBgHIAEoCzIwLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZUNvbmZpZ1NuYXBzaG90Ug5jb25maWdTbmFwc2hvdBJIChJsYXN0X21vZGlmaWVkX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhBsYXN0TW9kaWZpZWRUaW1lEkMKD2V4cGlyYXRpb25fdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDmV4cGlyYXRpb25UaW1lEjAKFHNjYW5uZWRfY29sdW1uX2NvdW50GAogASgDUhJzY2FubmVkQ29sdW1uQ291bnQSLgoTZmFpbGVkX2NvbHVtbl9jb3VudBgLIAEoA1IRZmFpbGVkQ29sdW1uQ291bnQSKAoQdGFibGVfc2l6ZV9ieXRlcxgMIAEoA1IOdGFibGVTaXplQnl0ZXMSGwoJcm93X2NvdW50GA0gASgDUghyb3dDb3VudBJUChFlbmNyeXB0aW9uX3N0YXR1cxgOIAEoDjInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5FbmNyeXB0aW9uU3RhdHVzUhBlbmNyeXB0aW9uU3RhdHVzEloKE3Jlc291cmNlX3Zpc2liaWxpdHkYDyABKA4yKS5nb29nbGUucHJpdmFjeS5kbHAudjIuUmVzb3VyY2VWaXNpYmlsaXR5UhJyZXNvdXJjZVZpc2liaWxpdHkSUAoWcHJvZmlsZV9sYXN0X2dlbmVyYXRlZBgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSFHByb2ZpbGVMYXN0R2VuZXJhdGVkEmQKD3Jlc291cmNlX2xhYmVscxgRIAMoCzI7Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5UYWJsZURhdGFQcm9maWxlLlJlc291cmNlTGFiZWxzRW50cnlSDnJlc291cmNlTGFiZWxzEjsKC2NyZWF0ZV90aW1lGBcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRpBChNSZXNvdXJjZUxhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiNQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCAoERE9ORRAC');
+@$core.Deprecated('Use profileStatusDescriptor instead')
+const ProfileStatus$json = const {
+  '1': 'ProfileStatus',
+  '2': const [
+    const {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'status'
+    },
+    const {
+      '1': 'timestamp',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'timestamp'
+    },
+  ],
+};
+
+/// Descriptor for `ProfileStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List profileStatusDescriptor = $convert.base64Decode(
+    'Cg1Qcm9maWxlU3RhdHVzEioKBnN0YXR1cxgBIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzUgZzdGF0dXMSOAoJdGltZXN0YW1wGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJdGltZXN0YW1w');
+@$core.Deprecated('Use infoTypeSummaryDescriptor instead')
+const InfoTypeSummary$json = const {
+  '1': 'InfoTypeSummary',
+  '2': const [
+    const {
+      '1': 'info_type',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.InfoType',
+      '10': 'infoType'
+    },
+  ],
+};
+
+/// Descriptor for `InfoTypeSummary`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List infoTypeSummaryDescriptor = $convert.base64Decode(
+    'Cg9JbmZvVHlwZVN1bW1hcnkSPAoJaW5mb190eXBlGAEgASgLMh8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9UeXBlUghpbmZvVHlwZQ==');
+@$core.Deprecated('Use otherInfoTypeSummaryDescriptor instead')
+const OtherInfoTypeSummary$json = const {
+  '1': 'OtherInfoTypeSummary',
+  '2': const [
+    const {
+      '1': 'info_type',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.InfoType',
+      '10': 'infoType'
+    },
+  ],
+};
+
+/// Descriptor for `OtherInfoTypeSummary`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List otherInfoTypeSummaryDescriptor = $convert.base64Decode(
+    'ChRPdGhlckluZm9UeXBlU3VtbWFyeRI8CglpbmZvX3R5cGUYASABKAsyHy5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGVSCGluZm9UeXBl');
+@$core.Deprecated('Use dataProfilePubSubConditionDescriptor instead')
+const DataProfilePubSubCondition$json = const {
+  '1': 'DataProfilePubSubCondition',
+  '2': const [
+    const {
+      '1': 'expressions',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.privacy.dlp.v2.DataProfilePubSubCondition.PubSubExpressions',
+      '10': 'expressions'
+    },
+  ],
+  '3': const [
+    DataProfilePubSubCondition_PubSubCondition$json,
+    DataProfilePubSubCondition_PubSubExpressions$json
+  ],
+  '4': const [DataProfilePubSubCondition_ProfileScoreBucket$json],
+};
+
+@$core.Deprecated('Use dataProfilePubSubConditionDescriptor instead')
+const DataProfilePubSubCondition_PubSubCondition$json = const {
+  '1': 'PubSubCondition',
+  '2': const [
+    const {
+      '1': 'minimum_risk_score',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.privacy.dlp.v2.DataProfilePubSubCondition.ProfileScoreBucket',
+      '9': 0,
+      '10': 'minimumRiskScore'
+    },
+    const {
+      '1': 'minimum_sensitivity_score',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.privacy.dlp.v2.DataProfilePubSubCondition.ProfileScoreBucket',
+      '9': 0,
+      '10': 'minimumSensitivityScore'
+    },
+  ],
+  '8': const [
+    const {'1': 'value'},
+  ],
+};
+
+@$core.Deprecated('Use dataProfilePubSubConditionDescriptor instead')
+const DataProfilePubSubCondition_PubSubExpressions$json = const {
+  '1': 'PubSubExpressions',
+  '2': const [
+    const {
+      '1': 'logical_operator',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.privacy.dlp.v2.DataProfilePubSubCondition.PubSubExpressions.PubSubLogicalOperator',
+      '10': 'logicalOperator'
+    },
+    const {
+      '1': 'conditions',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.DataProfilePubSubCondition.PubSubCondition',
+      '10': 'conditions'
+    },
+  ],
+  '4': const [
+    DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator$json
+  ],
+};
+
+@$core.Deprecated('Use dataProfilePubSubConditionDescriptor instead')
+const DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator$json =
+    const {
+  '1': 'PubSubLogicalOperator',
+  '2': const [
+    const {'1': 'LOGICAL_OPERATOR_UNSPECIFIED', '2': 0},
+    const {'1': 'OR', '2': 1},
+    const {'1': 'AND', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use dataProfilePubSubConditionDescriptor instead')
+const DataProfilePubSubCondition_ProfileScoreBucket$json = const {
+  '1': 'ProfileScoreBucket',
+  '2': const [
+    const {'1': 'PROFILE_SCORE_BUCKET_UNSPECIFIED', '2': 0},
+    const {'1': 'HIGH', '2': 1},
+    const {'1': 'MEDIUM_OR_HIGH', '2': 2},
+  ],
+};
+
+/// Descriptor for `DataProfilePubSubCondition`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataProfilePubSubConditionDescriptor =
+    $convert.base64Decode(
+        'ChpEYXRhUHJvZmlsZVB1YlN1YkNvbmRpdGlvbhJlCgtleHByZXNzaW9ucxgBIAEoCzJDLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZVB1YlN1YkNvbmRpdGlvbi5QdWJTdWJFeHByZXNzaW9uc1ILZXhwcmVzc2lvbnMalQIKD1B1YlN1YkNvbmRpdGlvbhJ0ChJtaW5pbXVtX3Jpc2tfc2NvcmUYASABKA4yRC5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YVByb2ZpbGVQdWJTdWJDb25kaXRpb24uUHJvZmlsZVNjb3JlQnVja2V0SABSEG1pbmltdW1SaXNrU2NvcmUSggEKGW1pbmltdW1fc2Vuc2l0aXZpdHlfc2NvcmUYAiABKA4yRC5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YVByb2ZpbGVQdWJTdWJDb25kaXRpb24uUHJvZmlsZVNjb3JlQnVja2V0SABSF21pbmltdW1TZW5zaXRpdml0eVNjb3JlQgcKBXZhbHVlGskCChFQdWJTdWJFeHByZXNzaW9ucxKEAQoQbG9naWNhbF9vcGVyYXRvchgBIAEoDjJZLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhUHJvZmlsZVB1YlN1YkNvbmRpdGlvbi5QdWJTdWJFeHByZXNzaW9ucy5QdWJTdWJMb2dpY2FsT3BlcmF0b3JSD2xvZ2ljYWxPcGVyYXRvchJhCgpjb25kaXRpb25zGAIgAygLMkEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFQcm9maWxlUHViU3ViQ29uZGl0aW9uLlB1YlN1YkNvbmRpdGlvblIKY29uZGl0aW9ucyJKChVQdWJTdWJMb2dpY2FsT3BlcmF0b3ISIAocTE9HSUNBTF9PUEVSQVRPUl9VTlNQRUNJRklFRBAAEgYKAk9SEAESBwoDQU5EEAIiWAoSUHJvZmlsZVNjb3JlQnVja2V0EiQKIFBST0ZJTEVfU0NPUkVfQlVDS0VUX1VOU1BFQ0lGSUVEEAASCAoESElHSBABEhIKDk1FRElVTV9PUl9ISUdIEAI=');
+@$core.Deprecated('Use dataProfilePubSubMessageDescriptor instead')
+const DataProfilePubSubMessage$json = const {
+  '1': 'DataProfilePubSubMessage',
+  '2': const [
+    const {
+      '1': 'profile',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.TableDataProfile',
+      '10': 'profile'
+    },
+    const {
+      '1': 'event',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.DataProfileAction.EventType',
+      '10': 'event'
+    },
+  ],
+};
+
+/// Descriptor for `DataProfilePubSubMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataProfilePubSubMessageDescriptor =
+    $convert.base64Decode(
+        'ChhEYXRhUHJvZmlsZVB1YlN1Yk1lc3NhZ2USQQoHcHJvZmlsZRgBIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5UYWJsZURhdGFQcm9maWxlUgdwcm9maWxlEkgKBWV2ZW50GAIgASgOMjIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFQcm9maWxlQWN0aW9uLkV2ZW50VHlwZVIFZXZlbnQ=');

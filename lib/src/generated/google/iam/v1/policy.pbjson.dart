@@ -3,7 +3,7 @@
 //  source: google/iam/v1/policy.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -22,13 +22,21 @@ const Policy$json = const {
       '6': '.google.iam.v1.Binding',
       '10': 'bindings'
     },
+    const {
+      '1': 'audit_configs',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.v1.AuditConfig',
+      '10': 'auditConfigs'
+    },
     const {'1': 'etag', '3': 3, '4': 1, '5': 12, '10': 'etag'},
   ],
 };
 
 /// Descriptor for `Policy`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List policyDescriptor = $convert.base64Decode(
-    'CgZQb2xpY3kSGAoHdmVyc2lvbhgBIAEoBVIHdmVyc2lvbhIyCghiaW5kaW5ncxgEIAMoCzIWLmdvb2dsZS5pYW0udjEuQmluZGluZ1IIYmluZGluZ3MSEgoEZXRhZxgDIAEoDFIEZXRhZw==');
+    'CgZQb2xpY3kSGAoHdmVyc2lvbhgBIAEoBVIHdmVyc2lvbhIyCghiaW5kaW5ncxgEIAMoCzIWLmdvb2dsZS5pYW0udjEuQmluZGluZ1IIYmluZGluZ3MSPwoNYXVkaXRfY29uZmlncxgGIAMoCzIaLmdvb2dsZS5pYW0udjEuQXVkaXRDb25maWdSDGF1ZGl0Q29uZmlncxISCgRldGFnGAMgASgMUgRldGFn');
 @$core.Deprecated('Use bindingDescriptor instead')
 const Binding$json = const {
   '1': 'Binding',
@@ -49,6 +57,62 @@ const Binding$json = const {
 /// Descriptor for `Binding`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List bindingDescriptor = $convert.base64Decode(
     'CgdCaW5kaW5nEhIKBHJvbGUYASABKAlSBHJvbGUSGAoHbWVtYmVycxgCIAMoCVIHbWVtYmVycxIvCgljb25kaXRpb24YAyABKAsyES5nb29nbGUudHlwZS5FeHByUgljb25kaXRpb24=');
+@$core.Deprecated('Use auditConfigDescriptor instead')
+const AuditConfig$json = const {
+  '1': 'AuditConfig',
+  '2': const [
+    const {'1': 'service', '3': 1, '4': 1, '5': 9, '10': 'service'},
+    const {
+      '1': 'audit_log_configs',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.v1.AuditLogConfig',
+      '10': 'auditLogConfigs'
+    },
+  ],
+};
+
+/// Descriptor for `AuditConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List auditConfigDescriptor = $convert.base64Decode(
+    'CgtBdWRpdENvbmZpZxIYCgdzZXJ2aWNlGAEgASgJUgdzZXJ2aWNlEkkKEWF1ZGl0X2xvZ19jb25maWdzGAMgAygLMh0uZ29vZ2xlLmlhbS52MS5BdWRpdExvZ0NvbmZpZ1IPYXVkaXRMb2dDb25maWdz');
+@$core.Deprecated('Use auditLogConfigDescriptor instead')
+const AuditLogConfig$json = const {
+  '1': 'AuditLogConfig',
+  '2': const [
+    const {
+      '1': 'log_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.v1.AuditLogConfig.LogType',
+      '10': 'logType'
+    },
+    const {
+      '1': 'exempted_members',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '10': 'exemptedMembers'
+    },
+  ],
+  '4': const [AuditLogConfig_LogType$json],
+};
+
+@$core.Deprecated('Use auditLogConfigDescriptor instead')
+const AuditLogConfig_LogType$json = const {
+  '1': 'LogType',
+  '2': const [
+    const {'1': 'LOG_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'ADMIN_READ', '2': 1},
+    const {'1': 'DATA_WRITE', '2': 2},
+    const {'1': 'DATA_READ', '2': 3},
+  ],
+};
+
+/// Descriptor for `AuditLogConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List auditLogConfigDescriptor = $convert.base64Decode(
+    'Cg5BdWRpdExvZ0NvbmZpZxJACghsb2dfdHlwZRgBIAEoDjIlLmdvb2dsZS5pYW0udjEuQXVkaXRMb2dDb25maWcuTG9nVHlwZVIHbG9nVHlwZRIpChBleGVtcHRlZF9tZW1iZXJzGAIgAygJUg9leGVtcHRlZE1lbWJlcnMiUgoHTG9nVHlwZRIYChRMT0dfVFlQRV9VTlNQRUNJRklFRBAAEg4KCkFETUlOX1JFQUQQARIOCgpEQVRBX1dSSVRFEAISDQoJREFUQV9SRUFEEAM=');
 @$core.Deprecated('Use policyDeltaDescriptor instead')
 const PolicyDelta$json = const {
   '1': 'PolicyDelta',

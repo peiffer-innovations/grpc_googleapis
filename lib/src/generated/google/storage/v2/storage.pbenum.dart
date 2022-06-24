@@ -3,124 +3,11 @@
 //  source: google/storage/v2/storage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
-
-class PredefinedObjectAcl extends $pb.ProtobufEnum {
-  static const PredefinedObjectAcl PREDEFINED_OBJECT_ACL_UNSPECIFIED =
-      PredefinedObjectAcl._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PREDEFINED_OBJECT_ACL_UNSPECIFIED');
-  static const PredefinedObjectAcl OBJECT_ACL_AUTHENTICATED_READ =
-      PredefinedObjectAcl._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OBJECT_ACL_AUTHENTICATED_READ');
-  static const PredefinedObjectAcl OBJECT_ACL_BUCKET_OWNER_FULL_CONTROL =
-      PredefinedObjectAcl._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OBJECT_ACL_BUCKET_OWNER_FULL_CONTROL');
-  static const PredefinedObjectAcl OBJECT_ACL_BUCKET_OWNER_READ =
-      PredefinedObjectAcl._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OBJECT_ACL_BUCKET_OWNER_READ');
-  static const PredefinedObjectAcl OBJECT_ACL_PRIVATE = PredefinedObjectAcl._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OBJECT_ACL_PRIVATE');
-  static const PredefinedObjectAcl OBJECT_ACL_PROJECT_PRIVATE =
-      PredefinedObjectAcl._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OBJECT_ACL_PROJECT_PRIVATE');
-  static const PredefinedObjectAcl OBJECT_ACL_PUBLIC_READ =
-      PredefinedObjectAcl._(
-          6,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OBJECT_ACL_PUBLIC_READ');
-
-  static const $core.List<PredefinedObjectAcl> values = <PredefinedObjectAcl>[
-    PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-    OBJECT_ACL_AUTHENTICATED_READ,
-    OBJECT_ACL_BUCKET_OWNER_FULL_CONTROL,
-    OBJECT_ACL_BUCKET_OWNER_READ,
-    OBJECT_ACL_PRIVATE,
-    OBJECT_ACL_PROJECT_PRIVATE,
-    OBJECT_ACL_PUBLIC_READ,
-  ];
-
-  static final $core.Map<$core.int, PredefinedObjectAcl> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static PredefinedObjectAcl? valueOf($core.int value) => _byValue[value];
-
-  const PredefinedObjectAcl._($core.int v, $core.String n) : super(v, n);
-}
-
-class PredefinedBucketAcl extends $pb.ProtobufEnum {
-  static const PredefinedBucketAcl PREDEFINED_BUCKET_ACL_UNSPECIFIED =
-      PredefinedBucketAcl._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PREDEFINED_BUCKET_ACL_UNSPECIFIED');
-  static const PredefinedBucketAcl BUCKET_ACL_AUTHENTICATED_READ =
-      PredefinedBucketAcl._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'BUCKET_ACL_AUTHENTICATED_READ');
-  static const PredefinedBucketAcl BUCKET_ACL_PRIVATE = PredefinedBucketAcl._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'BUCKET_ACL_PRIVATE');
-  static const PredefinedBucketAcl BUCKET_ACL_PROJECT_PRIVATE =
-      PredefinedBucketAcl._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'BUCKET_ACL_PROJECT_PRIVATE');
-  static const PredefinedBucketAcl BUCKET_ACL_PUBLIC_READ =
-      PredefinedBucketAcl._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'BUCKET_ACL_PUBLIC_READ');
-  static const PredefinedBucketAcl BUCKET_ACL_PUBLIC_READ_WRITE =
-      PredefinedBucketAcl._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'BUCKET_ACL_PUBLIC_READ_WRITE');
-
-  static const $core.List<PredefinedBucketAcl> values = <PredefinedBucketAcl>[
-    PREDEFINED_BUCKET_ACL_UNSPECIFIED,
-    BUCKET_ACL_AUTHENTICATED_READ,
-    BUCKET_ACL_PRIVATE,
-    BUCKET_ACL_PROJECT_PRIVATE,
-    BUCKET_ACL_PUBLIC_READ,
-    BUCKET_ACL_PUBLIC_READ_WRITE,
-  ];
-
-  static final $core.Map<$core.int, PredefinedBucketAcl> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static PredefinedBucketAcl? valueOf($core.int value) => _byValue[value];
-
-  const PredefinedBucketAcl._($core.int v, $core.String n) : super(v, n);
-}
 
 class ServiceConstants_Values extends $pb.ProtobufEnum {
   static const ServiceConstants_Values VALUES_UNSPECIFIED =
@@ -246,41 +133,4 @@ class ServiceConstants_Values extends $pb.ProtobufEnum {
   static ServiceConstants_Values? valueOf($core.int value) => _byValue[value];
 
   const ServiceConstants_Values._($core.int v, $core.String n) : super(v, n);
-}
-
-class Bucket_IamConfig_PublicAccessPrevention extends $pb.ProtobufEnum {
-  static const Bucket_IamConfig_PublicAccessPrevention
-      PUBLIC_ACCESS_PREVENTION_UNSPECIFIED =
-      Bucket_IamConfig_PublicAccessPrevention._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PUBLIC_ACCESS_PREVENTION_UNSPECIFIED');
-  static const Bucket_IamConfig_PublicAccessPrevention ENFORCED =
-      Bucket_IamConfig_PublicAccessPrevention._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ENFORCED');
-  static const Bucket_IamConfig_PublicAccessPrevention INHERITED =
-      Bucket_IamConfig_PublicAccessPrevention._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'INHERITED');
-
-  static const $core.List<Bucket_IamConfig_PublicAccessPrevention> values =
-      <Bucket_IamConfig_PublicAccessPrevention>[
-    PUBLIC_ACCESS_PREVENTION_UNSPECIFIED,
-    ENFORCED,
-    INHERITED,
-  ];
-
-  static final $core.Map<$core.int, Bucket_IamConfig_PublicAccessPrevention>
-      _byValue = $pb.ProtobufEnum.initByValue(values);
-  static Bucket_IamConfig_PublicAccessPrevention? valueOf($core.int value) =>
-      _byValue[value];
-
-  const Bucket_IamConfig_PublicAccessPrevention._($core.int v, $core.String n)
-      : super(v, n);
 }

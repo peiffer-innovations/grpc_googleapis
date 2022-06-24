@@ -3,7 +3,7 @@
 //  source: google/analytics/admin/v1alpha/resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -508,562 +508,6 @@ class Property extends $pb.GeneratedMessage {
   $core.bool hasAccount() => $_has(11);
   @$pb.TagNumber(13)
   void clearAccount() => clearField(13);
-}
-
-class AndroidAppDataStream extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidAppDataStream',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firebaseAppId')
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'packageName')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..hasRequiredFields = false;
-
-  AndroidAppDataStream._() : super();
-  factory AndroidAppDataStream({
-    $core.String? name,
-    $core.String? firebaseAppId,
-    $0.Timestamp? createTime,
-    $0.Timestamp? updateTime,
-    $core.String? packageName,
-    $core.String? displayName,
-  }) {
-    final _result = create();
-    if (name != null) {
-      _result.name = name;
-    }
-    if (firebaseAppId != null) {
-      _result.firebaseAppId = firebaseAppId;
-    }
-    if (createTime != null) {
-      _result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      _result.updateTime = updateTime;
-    }
-    if (packageName != null) {
-      _result.packageName = packageName;
-    }
-    if (displayName != null) {
-      _result.displayName = displayName;
-    }
-    return _result;
-  }
-  factory AndroidAppDataStream.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AndroidAppDataStream.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AndroidAppDataStream clone() =>
-      AndroidAppDataStream()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  AndroidAppDataStream copyWith(void Function(AndroidAppDataStream) updates) =>
-      super.copyWith((message) => updates(message as AndroidAppDataStream))
-          as AndroidAppDataStream; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static AndroidAppDataStream create() => AndroidAppDataStream._();
-  AndroidAppDataStream createEmptyInstance() => create();
-  static $pb.PbList<AndroidAppDataStream> createRepeated() =>
-      $pb.PbList<AndroidAppDataStream>();
-  @$core.pragma('dart2js:noInline')
-  static AndroidAppDataStream getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AndroidAppDataStream>(create);
-  static AndroidAppDataStream? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearName() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get firebaseAppId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set firebaseAppId($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasFirebaseAppId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFirebaseAppId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $0.Timestamp get createTime => $_getN(2);
-  @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasCreateTime() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
-  @$pb.TagNumber(3)
-  $0.Timestamp ensureCreateTime() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $0.Timestamp get updateTime => $_getN(3);
-  @$pb.TagNumber(4)
-  set updateTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasUpdateTime() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearUpdateTime() => clearField(4);
-  @$pb.TagNumber(4)
-  $0.Timestamp ensureUpdateTime() => $_ensure(3);
-
-  @$pb.TagNumber(5)
-  $core.String get packageName => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set packageName($core.String v) {
-    $_setString(4, v);
-  }
-
-  @$pb.TagNumber(5)
-  $core.bool hasPackageName() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearPackageName() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.String get displayName => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set displayName($core.String v) {
-    $_setString(5, v);
-  }
-
-  @$pb.TagNumber(6)
-  $core.bool hasDisplayName() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearDisplayName() => clearField(6);
-}
-
-class IosAppDataStream extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosAppDataStream',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firebaseAppId')
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bundleId')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..hasRequiredFields = false;
-
-  IosAppDataStream._() : super();
-  factory IosAppDataStream({
-    $core.String? name,
-    $core.String? firebaseAppId,
-    $0.Timestamp? createTime,
-    $0.Timestamp? updateTime,
-    $core.String? bundleId,
-    $core.String? displayName,
-  }) {
-    final _result = create();
-    if (name != null) {
-      _result.name = name;
-    }
-    if (firebaseAppId != null) {
-      _result.firebaseAppId = firebaseAppId;
-    }
-    if (createTime != null) {
-      _result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      _result.updateTime = updateTime;
-    }
-    if (bundleId != null) {
-      _result.bundleId = bundleId;
-    }
-    if (displayName != null) {
-      _result.displayName = displayName;
-    }
-    return _result;
-  }
-  factory IosAppDataStream.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory IosAppDataStream.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  IosAppDataStream clone() => IosAppDataStream()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  IosAppDataStream copyWith(void Function(IosAppDataStream) updates) =>
-      super.copyWith((message) => updates(message as IosAppDataStream))
-          as IosAppDataStream; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static IosAppDataStream create() => IosAppDataStream._();
-  IosAppDataStream createEmptyInstance() => create();
-  static $pb.PbList<IosAppDataStream> createRepeated() =>
-      $pb.PbList<IosAppDataStream>();
-  @$core.pragma('dart2js:noInline')
-  static IosAppDataStream getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<IosAppDataStream>(create);
-  static IosAppDataStream? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearName() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get firebaseAppId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set firebaseAppId($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasFirebaseAppId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFirebaseAppId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $0.Timestamp get createTime => $_getN(2);
-  @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasCreateTime() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
-  @$pb.TagNumber(3)
-  $0.Timestamp ensureCreateTime() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $0.Timestamp get updateTime => $_getN(3);
-  @$pb.TagNumber(4)
-  set updateTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasUpdateTime() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearUpdateTime() => clearField(4);
-  @$pb.TagNumber(4)
-  $0.Timestamp ensureUpdateTime() => $_ensure(3);
-
-  @$pb.TagNumber(5)
-  $core.String get bundleId => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set bundleId($core.String v) {
-    $_setString(4, v);
-  }
-
-  @$pb.TagNumber(5)
-  $core.bool hasBundleId() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearBundleId() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.String get displayName => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set displayName($core.String v) {
-    $_setString(5, v);
-  }
-
-  @$pb.TagNumber(6)
-  $core.bool hasDisplayName() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearDisplayName() => clearField(6);
-}
-
-class WebDataStream extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WebDataStream',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'measurementId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firebaseAppId')
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'defaultUri')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..hasRequiredFields = false;
-
-  WebDataStream._() : super();
-  factory WebDataStream({
-    $core.String? name,
-    $core.String? measurementId,
-    $core.String? firebaseAppId,
-    $0.Timestamp? createTime,
-    $0.Timestamp? updateTime,
-    $core.String? defaultUri,
-    $core.String? displayName,
-  }) {
-    final _result = create();
-    if (name != null) {
-      _result.name = name;
-    }
-    if (measurementId != null) {
-      _result.measurementId = measurementId;
-    }
-    if (firebaseAppId != null) {
-      _result.firebaseAppId = firebaseAppId;
-    }
-    if (createTime != null) {
-      _result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      _result.updateTime = updateTime;
-    }
-    if (defaultUri != null) {
-      _result.defaultUri = defaultUri;
-    }
-    if (displayName != null) {
-      _result.displayName = displayName;
-    }
-    return _result;
-  }
-  factory WebDataStream.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WebDataStream.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WebDataStream clone() => WebDataStream()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  WebDataStream copyWith(void Function(WebDataStream) updates) =>
-      super.copyWith((message) => updates(message as WebDataStream))
-          as WebDataStream; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static WebDataStream create() => WebDataStream._();
-  WebDataStream createEmptyInstance() => create();
-  static $pb.PbList<WebDataStream> createRepeated() =>
-      $pb.PbList<WebDataStream>();
-  @$core.pragma('dart2js:noInline')
-  static WebDataStream getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<WebDataStream>(create);
-  static WebDataStream? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearName() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get measurementId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set measurementId($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasMeasurementId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMeasurementId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get firebaseAppId => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set firebaseAppId($core.String v) {
-    $_setString(2, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasFirebaseAppId() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearFirebaseAppId() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $0.Timestamp get createTime => $_getN(3);
-  @$pb.TagNumber(4)
-  set createTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasCreateTime() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearCreateTime() => clearField(4);
-  @$pb.TagNumber(4)
-  $0.Timestamp ensureCreateTime() => $_ensure(3);
-
-  @$pb.TagNumber(5)
-  $0.Timestamp get updateTime => $_getN(4);
-  @$pb.TagNumber(5)
-  set updateTime($0.Timestamp v) {
-    setField(5, v);
-  }
-
-  @$pb.TagNumber(5)
-  $core.bool hasUpdateTime() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearUpdateTime() => clearField(5);
-  @$pb.TagNumber(5)
-  $0.Timestamp ensureUpdateTime() => $_ensure(4);
-
-  @$pb.TagNumber(6)
-  $core.String get defaultUri => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set defaultUri($core.String v) {
-    $_setString(5, v);
-  }
-
-  @$pb.TagNumber(6)
-  $core.bool hasDefaultUri() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearDefaultUri() => clearField(6);
-
-  @$pb.TagNumber(7)
-  $core.String get displayName => $_getSZ(6);
-  @$pb.TagNumber(7)
-  set displayName($core.String v) {
-    $_setString(6, v);
-  }
-
-  @$pb.TagNumber(7)
-  $core.bool hasDisplayName() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearDisplayName() => clearField(7);
 }
 
 class DataStream_WebStreamData extends $pb.GeneratedMessage {
@@ -2898,9 +2342,6 @@ class ChangeHistoryEvent extends $pb.GeneratedMessage {
 enum ChangeHistoryChange_ChangeHistoryResource_Resource {
   account,
   property,
-  webDataStream,
-  androidAppDataStream,
-  iosAppDataStream,
   firebaseLink,
   googleAdsLink,
   googleSignalsSettings,
@@ -2911,6 +2352,7 @@ enum ChangeHistoryChange_ChangeHistoryResource_Resource {
   customDimension,
   customMetric,
   dataRetentionSettings,
+  dataStream,
   notSet
 }
 
@@ -2920,9 +2362,6 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
       _ChangeHistoryChange_ChangeHistoryResource_ResourceByTag = {
     1: ChangeHistoryChange_ChangeHistoryResource_Resource.account,
     2: ChangeHistoryChange_ChangeHistoryResource_Resource.property,
-    3: ChangeHistoryChange_ChangeHistoryResource_Resource.webDataStream,
-    4: ChangeHistoryChange_ChangeHistoryResource_Resource.androidAppDataStream,
-    5: ChangeHistoryChange_ChangeHistoryResource_Resource.iosAppDataStream,
     6: ChangeHistoryChange_ChangeHistoryResource_Resource.firebaseLink,
     7: ChangeHistoryChange_ChangeHistoryResource_Resource.googleAdsLink,
     8: ChangeHistoryChange_ChangeHistoryResource_Resource.googleSignalsSettings,
@@ -2937,6 +2376,7 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     14: ChangeHistoryChange_ChangeHistoryResource_Resource.customMetric,
     15: ChangeHistoryChange_ChangeHistoryResource_Resource
         .dataRetentionSettings,
+    18: ChangeHistoryChange_ChangeHistoryResource_Resource.dataStream,
     0: ChangeHistoryChange_ChangeHistoryResource_Resource.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -2948,7 +2388,7 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
               ? ''
               : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+    ..oo(0, [1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18])
     ..aOM<Account>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2961,24 +2401,6 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
             ? ''
             : 'property',
         subBuilder: Property.create)
-    ..aOM<WebDataStream>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'webDataStream',
-        subBuilder: WebDataStream.create)
-    ..aOM<AndroidAppDataStream>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidAppDataStream',
-        subBuilder: AndroidAppDataStream.create)
-    ..aOM<IosAppDataStream>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosAppDataStream',
-        subBuilder: IosAppDataStream.create)
     ..aOM<FirebaseLink>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3041,15 +2463,18 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
             ? ''
             : 'dataRetentionSettings',
         subBuilder: DataRetentionSettings.create)
+    ..aOM<DataStream>(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataStream',
+        subBuilder: DataStream.create)
     ..hasRequiredFields = false;
 
   ChangeHistoryChange_ChangeHistoryResource._() : super();
   factory ChangeHistoryChange_ChangeHistoryResource({
     Account? account,
     Property? property,
-    WebDataStream? webDataStream,
-    AndroidAppDataStream? androidAppDataStream,
-    IosAppDataStream? iosAppDataStream,
     FirebaseLink? firebaseLink,
     GoogleAdsLink? googleAdsLink,
     GoogleSignalsSettings? googleSignalsSettings,
@@ -3061,6 +2486,7 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     CustomDimension? customDimension,
     CustomMetric? customMetric,
     DataRetentionSettings? dataRetentionSettings,
+    DataStream? dataStream,
   }) {
     final _result = create();
     if (account != null) {
@@ -3068,15 +2494,6 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     }
     if (property != null) {
       _result.property = property;
-    }
-    if (webDataStream != null) {
-      _result.webDataStream = webDataStream;
-    }
-    if (androidAppDataStream != null) {
-      _result.androidAppDataStream = androidAppDataStream;
-    }
-    if (iosAppDataStream != null) {
-      _result.iosAppDataStream = iosAppDataStream;
     }
     if (firebaseLink != null) {
       _result.firebaseLink = firebaseLink;
@@ -3108,6 +2525,9 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     }
     if (dataRetentionSettings != null) {
       _result.dataRetentionSettings = dataRetentionSettings;
+    }
+    if (dataStream != null) {
+      _result.dataStream = dataStream;
     }
     return _result;
   }
@@ -3178,108 +2598,66 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Property ensureProperty() => $_ensure(1);
 
-  @$pb.TagNumber(3)
-  WebDataStream get webDataStream => $_getN(2);
-  @$pb.TagNumber(3)
-  set webDataStream(WebDataStream v) {
-    setField(3, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasWebDataStream() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearWebDataStream() => clearField(3);
-  @$pb.TagNumber(3)
-  WebDataStream ensureWebDataStream() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  AndroidAppDataStream get androidAppDataStream => $_getN(3);
-  @$pb.TagNumber(4)
-  set androidAppDataStream(AndroidAppDataStream v) {
-    setField(4, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasAndroidAppDataStream() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearAndroidAppDataStream() => clearField(4);
-  @$pb.TagNumber(4)
-  AndroidAppDataStream ensureAndroidAppDataStream() => $_ensure(3);
-
-  @$pb.TagNumber(5)
-  IosAppDataStream get iosAppDataStream => $_getN(4);
-  @$pb.TagNumber(5)
-  set iosAppDataStream(IosAppDataStream v) {
-    setField(5, v);
-  }
-
-  @$pb.TagNumber(5)
-  $core.bool hasIosAppDataStream() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearIosAppDataStream() => clearField(5);
-  @$pb.TagNumber(5)
-  IosAppDataStream ensureIosAppDataStream() => $_ensure(4);
-
   @$pb.TagNumber(6)
-  FirebaseLink get firebaseLink => $_getN(5);
+  FirebaseLink get firebaseLink => $_getN(2);
   @$pb.TagNumber(6)
   set firebaseLink(FirebaseLink v) {
     setField(6, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasFirebaseLink() => $_has(5);
+  $core.bool hasFirebaseLink() => $_has(2);
   @$pb.TagNumber(6)
   void clearFirebaseLink() => clearField(6);
   @$pb.TagNumber(6)
-  FirebaseLink ensureFirebaseLink() => $_ensure(5);
+  FirebaseLink ensureFirebaseLink() => $_ensure(2);
 
   @$pb.TagNumber(7)
-  GoogleAdsLink get googleAdsLink => $_getN(6);
+  GoogleAdsLink get googleAdsLink => $_getN(3);
   @$pb.TagNumber(7)
   set googleAdsLink(GoogleAdsLink v) {
     setField(7, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasGoogleAdsLink() => $_has(6);
+  $core.bool hasGoogleAdsLink() => $_has(3);
   @$pb.TagNumber(7)
   void clearGoogleAdsLink() => clearField(7);
   @$pb.TagNumber(7)
-  GoogleAdsLink ensureGoogleAdsLink() => $_ensure(6);
+  GoogleAdsLink ensureGoogleAdsLink() => $_ensure(3);
 
   @$pb.TagNumber(8)
-  GoogleSignalsSettings get googleSignalsSettings => $_getN(7);
+  GoogleSignalsSettings get googleSignalsSettings => $_getN(4);
   @$pb.TagNumber(8)
   set googleSignalsSettings(GoogleSignalsSettings v) {
     setField(8, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasGoogleSignalsSettings() => $_has(7);
+  $core.bool hasGoogleSignalsSettings() => $_has(4);
   @$pb.TagNumber(8)
   void clearGoogleSignalsSettings() => clearField(8);
   @$pb.TagNumber(8)
-  GoogleSignalsSettings ensureGoogleSignalsSettings() => $_ensure(7);
+  GoogleSignalsSettings ensureGoogleSignalsSettings() => $_ensure(4);
 
   @$pb.TagNumber(9)
-  DisplayVideo360AdvertiserLink get displayVideo360AdvertiserLink => $_getN(8);
+  DisplayVideo360AdvertiserLink get displayVideo360AdvertiserLink => $_getN(5);
   @$pb.TagNumber(9)
   set displayVideo360AdvertiserLink(DisplayVideo360AdvertiserLink v) {
     setField(9, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasDisplayVideo360AdvertiserLink() => $_has(8);
+  $core.bool hasDisplayVideo360AdvertiserLink() => $_has(5);
   @$pb.TagNumber(9)
   void clearDisplayVideo360AdvertiserLink() => clearField(9);
   @$pb.TagNumber(9)
   DisplayVideo360AdvertiserLink ensureDisplayVideo360AdvertiserLink() =>
-      $_ensure(8);
+      $_ensure(5);
 
   @$pb.TagNumber(10)
   DisplayVideo360AdvertiserLinkProposal
-      get displayVideo360AdvertiserLinkProposal => $_getN(9);
+      get displayVideo360AdvertiserLinkProposal => $_getN(6);
   @$pb.TagNumber(10)
   set displayVideo360AdvertiserLinkProposal(
       DisplayVideo360AdvertiserLinkProposal v) {
@@ -3287,82 +2665,96 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasDisplayVideo360AdvertiserLinkProposal() => $_has(9);
+  $core.bool hasDisplayVideo360AdvertiserLinkProposal() => $_has(6);
   @$pb.TagNumber(10)
   void clearDisplayVideo360AdvertiserLinkProposal() => clearField(10);
   @$pb.TagNumber(10)
   DisplayVideo360AdvertiserLinkProposal
-      ensureDisplayVideo360AdvertiserLinkProposal() => $_ensure(9);
+      ensureDisplayVideo360AdvertiserLinkProposal() => $_ensure(6);
 
   @$pb.TagNumber(11)
-  ConversionEvent get conversionEvent => $_getN(10);
+  ConversionEvent get conversionEvent => $_getN(7);
   @$pb.TagNumber(11)
   set conversionEvent(ConversionEvent v) {
     setField(11, v);
   }
 
   @$pb.TagNumber(11)
-  $core.bool hasConversionEvent() => $_has(10);
+  $core.bool hasConversionEvent() => $_has(7);
   @$pb.TagNumber(11)
   void clearConversionEvent() => clearField(11);
   @$pb.TagNumber(11)
-  ConversionEvent ensureConversionEvent() => $_ensure(10);
+  ConversionEvent ensureConversionEvent() => $_ensure(7);
 
   @$pb.TagNumber(12)
-  MeasurementProtocolSecret get measurementProtocolSecret => $_getN(11);
+  MeasurementProtocolSecret get measurementProtocolSecret => $_getN(8);
   @$pb.TagNumber(12)
   set measurementProtocolSecret(MeasurementProtocolSecret v) {
     setField(12, v);
   }
 
   @$pb.TagNumber(12)
-  $core.bool hasMeasurementProtocolSecret() => $_has(11);
+  $core.bool hasMeasurementProtocolSecret() => $_has(8);
   @$pb.TagNumber(12)
   void clearMeasurementProtocolSecret() => clearField(12);
   @$pb.TagNumber(12)
-  MeasurementProtocolSecret ensureMeasurementProtocolSecret() => $_ensure(11);
+  MeasurementProtocolSecret ensureMeasurementProtocolSecret() => $_ensure(8);
 
   @$pb.TagNumber(13)
-  CustomDimension get customDimension => $_getN(12);
+  CustomDimension get customDimension => $_getN(9);
   @$pb.TagNumber(13)
   set customDimension(CustomDimension v) {
     setField(13, v);
   }
 
   @$pb.TagNumber(13)
-  $core.bool hasCustomDimension() => $_has(12);
+  $core.bool hasCustomDimension() => $_has(9);
   @$pb.TagNumber(13)
   void clearCustomDimension() => clearField(13);
   @$pb.TagNumber(13)
-  CustomDimension ensureCustomDimension() => $_ensure(12);
+  CustomDimension ensureCustomDimension() => $_ensure(9);
 
   @$pb.TagNumber(14)
-  CustomMetric get customMetric => $_getN(13);
+  CustomMetric get customMetric => $_getN(10);
   @$pb.TagNumber(14)
   set customMetric(CustomMetric v) {
     setField(14, v);
   }
 
   @$pb.TagNumber(14)
-  $core.bool hasCustomMetric() => $_has(13);
+  $core.bool hasCustomMetric() => $_has(10);
   @$pb.TagNumber(14)
   void clearCustomMetric() => clearField(14);
   @$pb.TagNumber(14)
-  CustomMetric ensureCustomMetric() => $_ensure(13);
+  CustomMetric ensureCustomMetric() => $_ensure(10);
 
   @$pb.TagNumber(15)
-  DataRetentionSettings get dataRetentionSettings => $_getN(14);
+  DataRetentionSettings get dataRetentionSettings => $_getN(11);
   @$pb.TagNumber(15)
   set dataRetentionSettings(DataRetentionSettings v) {
     setField(15, v);
   }
 
   @$pb.TagNumber(15)
-  $core.bool hasDataRetentionSettings() => $_has(14);
+  $core.bool hasDataRetentionSettings() => $_has(11);
   @$pb.TagNumber(15)
   void clearDataRetentionSettings() => clearField(15);
   @$pb.TagNumber(15)
-  DataRetentionSettings ensureDataRetentionSettings() => $_ensure(14);
+  DataRetentionSettings ensureDataRetentionSettings() => $_ensure(11);
+
+  @$pb.TagNumber(18)
+  DataStream get dataStream => $_getN(12);
+  @$pb.TagNumber(18)
+  set dataStream(DataStream v) {
+    setField(18, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasDataStream() => $_has(12);
+  @$pb.TagNumber(18)
+  void clearDataStream() => clearField(18);
+  @$pb.TagNumber(18)
+  DataStream ensureDataStream() => $_ensure(12);
 }
 
 class ChangeHistoryChange extends $pb.GeneratedMessage {
@@ -4545,6 +3937,16 @@ class CustomMetric extends $pb.GeneratedMessage {
         defaultOrMaker: CustomMetric_MetricScope.METRIC_SCOPE_UNSPECIFIED,
         valueOf: CustomMetric_MetricScope.valueOf,
         enumValues: CustomMetric_MetricScope.values)
+    ..pc<CustomMetric_RestrictedMetricType>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'restrictedMetricType',
+        $pb.PbFieldType.KE,
+        valueOf: CustomMetric_RestrictedMetricType.valueOf,
+        enumValues: CustomMetric_RestrictedMetricType.values,
+        defaultEnumValue: CustomMetric_RestrictedMetricType
+            .RESTRICTED_METRIC_TYPE_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   CustomMetric._() : super();
@@ -4555,6 +3957,7 @@ class CustomMetric extends $pb.GeneratedMessage {
     $core.String? description,
     CustomMetric_MeasurementUnit? measurementUnit,
     CustomMetric_MetricScope? scope,
+    $core.Iterable<CustomMetric_RestrictedMetricType>? restrictedMetricType,
   }) {
     final _result = create();
     if (name != null) {
@@ -4574,6 +3977,9 @@ class CustomMetric extends $pb.GeneratedMessage {
     }
     if (scope != null) {
       _result.scope = scope;
+    }
+    if (restrictedMetricType != null) {
+      _result.restrictedMetricType.addAll(restrictedMetricType);
     }
     return _result;
   }
@@ -4675,6 +4081,10 @@ class CustomMetric extends $pb.GeneratedMessage {
   $core.bool hasScope() => $_has(5);
   @$pb.TagNumber(6)
   void clearScope() => clearField(6);
+
+  @$pb.TagNumber(8)
+  $core.List<CustomMetric_RestrictedMetricType> get restrictedMetricType =>
+      $_getList(6);
 }
 
 class DataRetentionSettings extends $pb.GeneratedMessage {

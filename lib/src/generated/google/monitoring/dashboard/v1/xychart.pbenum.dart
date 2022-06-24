@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/xychart.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -53,6 +53,33 @@ class XyChart_DataSet_PlotType extends $pb.ProtobufEnum {
   static XyChart_DataSet_PlotType? valueOf($core.int value) => _byValue[value];
 
   const XyChart_DataSet_PlotType._($core.int v, $core.String n) : super(v, n);
+}
+
+class XyChart_DataSet_TargetAxis extends $pb.ProtobufEnum {
+  static const XyChart_DataSet_TargetAxis TARGET_AXIS_UNSPECIFIED =
+      XyChart_DataSet_TargetAxis._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TARGET_AXIS_UNSPECIFIED');
+  static const XyChart_DataSet_TargetAxis Y1 = XyChart_DataSet_TargetAxis._(1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Y1');
+  static const XyChart_DataSet_TargetAxis Y2 = XyChart_DataSet_TargetAxis._(2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Y2');
+
+  static const $core.List<XyChart_DataSet_TargetAxis> values =
+      <XyChart_DataSet_TargetAxis>[
+    TARGET_AXIS_UNSPECIFIED,
+    Y1,
+    Y2,
+  ];
+
+  static final $core.Map<$core.int, XyChart_DataSet_TargetAxis> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static XyChart_DataSet_TargetAxis? valueOf($core.int value) =>
+      _byValue[value];
+
+  const XyChart_DataSet_TargetAxis._($core.int v, $core.String n) : super(v, n);
 }
 
 class XyChart_Axis_Scale extends $pb.ProtobufEnum {

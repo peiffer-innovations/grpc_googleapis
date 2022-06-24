@@ -3,7 +3,7 @@
 //  source: google/datastore/v1/datastore.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity.pb.dart' as $1;
 import 'query.pb.dart' as $2;
+import '../../protobuf/timestamp.pb.dart' as $3;
 
 import 'datastore.pbenum.dart';
 
@@ -153,6 +154,12 @@ class LookupResponse extends $pb.GeneratedMessage {
             : 'deferred',
         $pb.PbFieldType.PM,
         subBuilder: $1.Key.create)
+    ..aOM<$3.Timestamp>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   LookupResponse._() : super();
@@ -160,6 +167,7 @@ class LookupResponse extends $pb.GeneratedMessage {
     $core.Iterable<$2.EntityResult>? found,
     $core.Iterable<$2.EntityResult>? missing,
     $core.Iterable<$1.Key>? deferred,
+    $3.Timestamp? readTime,
   }) {
     final _result = create();
     if (found != null) {
@@ -170,6 +178,9 @@ class LookupResponse extends $pb.GeneratedMessage {
     }
     if (deferred != null) {
       _result.deferred.addAll(deferred);
+    }
+    if (readTime != null) {
+      _result.readTime = readTime;
     }
     return _result;
   }
@@ -208,6 +219,20 @@ class LookupResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$1.Key> get deferred => $_getList(2);
+
+  @$pb.TagNumber(7)
+  $3.Timestamp get readTime => $_getN(3);
+  @$pb.TagNumber(7)
+  set readTime($3.Timestamp v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasReadTime() => $_has(3);
+  @$pb.TagNumber(7)
+  void clearReadTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $3.Timestamp ensureReadTime() => $_ensure(3);
 }
 
 enum RunQueryRequest_QueryType { query, gqlQuery, notSet }
@@ -937,12 +962,19 @@ class CommitResponse extends $pb.GeneratedMessage {
             ? ''
             : 'indexUpdates',
         $pb.PbFieldType.O3)
+    ..aOM<$3.Timestamp>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'commitTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   CommitResponse._() : super();
   factory CommitResponse({
     $core.Iterable<MutationResult>? mutationResults,
     $core.int? indexUpdates,
+    $3.Timestamp? commitTime,
   }) {
     final _result = create();
     if (mutationResults != null) {
@@ -950,6 +982,9 @@ class CommitResponse extends $pb.GeneratedMessage {
     }
     if (indexUpdates != null) {
       _result.indexUpdates = indexUpdates;
+    }
+    if (commitTime != null) {
+      _result.commitTime = commitTime;
     }
     return _result;
   }
@@ -994,6 +1029,20 @@ class CommitResponse extends $pb.GeneratedMessage {
   $core.bool hasIndexUpdates() => $_has(1);
   @$pb.TagNumber(4)
   void clearIndexUpdates() => clearField(4);
+
+  @$pb.TagNumber(8)
+  $3.Timestamp get commitTime => $_getN(2);
+  @$pb.TagNumber(8)
+  set commitTime($3.Timestamp v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasCommitTime() => $_has(2);
+  @$pb.TagNumber(8)
+  void clearCommitTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $3.Timestamp ensureCommitTime() => $_ensure(2);
 }
 
 class AllocateIdsRequest extends $pb.GeneratedMessage {
@@ -1283,7 +1332,7 @@ class ReserveIdsResponse extends $pb.GeneratedMessage {
 
 enum Mutation_Operation { insert, update, upsert, delete, notSet }
 
-enum Mutation_ConflictDetectionStrategy { baseVersion, notSet }
+enum Mutation_ConflictDetectionStrategy { baseVersion, updateTime, notSet }
 
 class Mutation extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, Mutation_Operation>
@@ -1297,6 +1346,7 @@ class Mutation extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, Mutation_ConflictDetectionStrategy>
       _Mutation_ConflictDetectionStrategyByTag = {
     8: Mutation_ConflictDetectionStrategy.baseVersion,
+    11: Mutation_ConflictDetectionStrategy.updateTime,
     0: Mutation_ConflictDetectionStrategy.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1309,7 +1359,7 @@ class Mutation extends $pb.GeneratedMessage {
               : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7])
-    ..oo(1, [8])
+    ..oo(1, [8, 11])
     ..aOM<$1.Entity>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1339,6 +1389,12 @@ class Mutation extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'baseVersion')
+    ..aOM<$3.Timestamp>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   Mutation._() : super();
@@ -1348,6 +1404,7 @@ class Mutation extends $pb.GeneratedMessage {
     $1.Entity? upsert,
     $1.Key? delete,
     $fixnum.Int64? baseVersion,
+    $3.Timestamp? updateTime,
   }) {
     final _result = create();
     if (insert != null) {
@@ -1364,6 +1421,9 @@ class Mutation extends $pb.GeneratedMessage {
     }
     if (baseVersion != null) {
       _result.baseVersion = baseVersion;
+    }
+    if (updateTime != null) {
+      _result.updateTime = updateTime;
     }
     return _result;
   }
@@ -1468,6 +1528,20 @@ class Mutation extends $pb.GeneratedMessage {
   $core.bool hasBaseVersion() => $_has(4);
   @$pb.TagNumber(8)
   void clearBaseVersion() => clearField(8);
+
+  @$pb.TagNumber(11)
+  $3.Timestamp get updateTime => $_getN(5);
+  @$pb.TagNumber(11)
+  set updateTime($3.Timestamp v) {
+    setField(11, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasUpdateTime() => $_has(5);
+  @$pb.TagNumber(11)
+  void clearUpdateTime() => clearField(11);
+  @$pb.TagNumber(11)
+  $3.Timestamp ensureUpdateTime() => $_ensure(5);
 }
 
 class MutationResult extends $pb.GeneratedMessage {
@@ -1496,6 +1570,12 @@ class MutationResult extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'conflictDetected')
+    ..aOM<$3.Timestamp>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   MutationResult._() : super();
@@ -1503,6 +1583,7 @@ class MutationResult extends $pb.GeneratedMessage {
     $1.Key? key,
     $fixnum.Int64? version,
     $core.bool? conflictDetected,
+    $3.Timestamp? updateTime,
   }) {
     final _result = create();
     if (key != null) {
@@ -1513,6 +1594,9 @@ class MutationResult extends $pb.GeneratedMessage {
     }
     if (conflictDetected != null) {
       _result.conflictDetected = conflictDetected;
+    }
+    if (updateTime != null) {
+      _result.updateTime = updateTime;
     }
     return _result;
   }
@@ -1580,15 +1664,35 @@ class MutationResult extends $pb.GeneratedMessage {
   $core.bool hasConflictDetected() => $_has(2);
   @$pb.TagNumber(5)
   void clearConflictDetected() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $3.Timestamp get updateTime => $_getN(3);
+  @$pb.TagNumber(6)
+  set updateTime($3.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasUpdateTime() => $_has(3);
+  @$pb.TagNumber(6)
+  void clearUpdateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Timestamp ensureUpdateTime() => $_ensure(3);
 }
 
-enum ReadOptions_ConsistencyType { readConsistency, transaction, notSet }
+enum ReadOptions_ConsistencyType {
+  readConsistency,
+  transaction,
+  readTime,
+  notSet
+}
 
 class ReadOptions extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, ReadOptions_ConsistencyType>
       _ReadOptions_ConsistencyTypeByTag = {
     1: ReadOptions_ConsistencyType.readConsistency,
     2: ReadOptions_ConsistencyType.transaction,
+    4: ReadOptions_ConsistencyType.readTime,
     0: ReadOptions_ConsistencyType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1600,7 +1704,7 @@ class ReadOptions extends $pb.GeneratedMessage {
               ? ''
               : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 4])
     ..e<ReadOptions_ReadConsistency>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1617,12 +1721,19 @@ class ReadOptions extends $pb.GeneratedMessage {
             ? ''
             : 'transaction',
         $pb.PbFieldType.OY)
+    ..aOM<$3.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   ReadOptions._() : super();
   factory ReadOptions({
     ReadOptions_ReadConsistency? readConsistency,
     $core.List<$core.int>? transaction,
+    $3.Timestamp? readTime,
   }) {
     final _result = create();
     if (readConsistency != null) {
@@ -1630,6 +1741,9 @@ class ReadOptions extends $pb.GeneratedMessage {
     }
     if (transaction != null) {
       _result.transaction = transaction;
+    }
+    if (readTime != null) {
+      _result.readTime = readTime;
     }
     return _result;
   }
@@ -1686,6 +1800,20 @@ class ReadOptions extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $3.Timestamp get readTime => $_getN(2);
+  @$pb.TagNumber(4)
+  set readTime($3.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasReadTime() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearReadTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.Timestamp ensureReadTime() => $_ensure(2);
 }
 
 class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
@@ -1770,10 +1898,24 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
               ? ''
               : 'google.datastore.v1'),
       createEmptyInstance: create)
+    ..aOM<$3.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadOnly._() : super();
-  factory TransactionOptions_ReadOnly() => create();
+  factory TransactionOptions_ReadOnly({
+    $3.Timestamp? readTime,
+  }) {
+    final _result = create();
+    if (readTime != null) {
+      _result.readTime = readTime;
+    }
+    return _result;
+  }
   factory TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -1804,6 +1946,20 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   static TransactionOptions_ReadOnly getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadOnly>(create);
   static TransactionOptions_ReadOnly? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.Timestamp get readTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set readTime($3.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasReadTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearReadTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Timestamp ensureReadTime() => $_ensure(0);
 }
 
 enum TransactionOptions_Mode { readWrite, readOnly, notSet }

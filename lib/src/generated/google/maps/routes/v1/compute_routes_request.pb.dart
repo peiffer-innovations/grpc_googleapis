@@ -3,7 +3,7 @@
 //  source: google/maps/routes/v1/compute_routes_request.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -115,6 +115,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         defaultOrMaker: $2.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
         valueOf: $2.PolylineEncoding.valueOf,
         enumValues: $2.PolylineEncoding.values)
+    ..aOB(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'optimizeWaypointOrder')
     ..hasRequiredFields = false;
 
   ComputeRoutesRequest._() : super();
@@ -131,6 +136,7 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     $core.String? languageCode,
     Units? units,
     $2.PolylineEncoding? polylineEncoding,
+    $core.bool? optimizeWaypointOrder,
   }) {
     final _result = create();
     if (origin != null) {
@@ -168,6 +174,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     }
     if (polylineEncoding != null) {
       _result.polylineEncoding = polylineEncoding;
+    }
+    if (optimizeWaypointOrder != null) {
+      _result.optimizeWaypointOrder = optimizeWaypointOrder;
     }
     return _result;
   }
@@ -341,6 +350,18 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   $core.bool hasPolylineEncoding() => $_has(11);
   @$pb.TagNumber(12)
   void clearPolylineEncoding() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.bool get optimizeWaypointOrder => $_getBF(12);
+  @$pb.TagNumber(13)
+  set optimizeWaypointOrder($core.bool v) {
+    $_setBool(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasOptimizeWaypointOrder() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearOptimizeWaypointOrder() => clearField(13);
 }
 
 class RouteModifiers extends $pb.GeneratedMessage {
@@ -384,9 +405,10 @@ class RouteModifiers extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'tollPasses',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.TollPass.valueOf,
-        enumValues: $3.TollPass.values)
+        enumValues: $3.TollPass.values,
+        defaultEnumValue: $3.TollPass.TOLL_PASS_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   RouteModifiers._() : super();

@@ -3,13 +3,14 @@
 //  source: google/monitoring/dashboard/v1/dashboard.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'layouts.pb.dart' as $0;
+import 'dashboard_filter.pb.dart' as $1;
 
 enum Dashboard_Layout {
   gridLayout,
@@ -76,6 +77,22 @@ class Dashboard extends $pb.GeneratedMessage {
             ? ''
             : 'columnLayout',
         subBuilder: $0.ColumnLayout.create)
+    ..pc<$1.DashboardFilter>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dashboardFilters',
+        $pb.PbFieldType.PM,
+        subBuilder: $1.DashboardFilter.create)
+    ..m<$core.String, $core.String>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels',
+        entryClassName: 'Dashboard.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.monitoring.dashboard.v1'))
     ..hasRequiredFields = false;
 
   Dashboard._() : super();
@@ -87,6 +104,8 @@ class Dashboard extends $pb.GeneratedMessage {
     $0.MosaicLayout? mosaicLayout,
     $0.RowLayout? rowLayout,
     $0.ColumnLayout? columnLayout,
+    $core.Iterable<$1.DashboardFilter>? dashboardFilters,
+    $core.Map<$core.String, $core.String>? labels,
   }) {
     final _result = create();
     if (name != null) {
@@ -109,6 +128,12 @@ class Dashboard extends $pb.GeneratedMessage {
     }
     if (columnLayout != null) {
       _result.columnLayout = columnLayout;
+    }
+    if (dashboardFilters != null) {
+      _result.dashboardFilters.addAll(dashboardFilters);
+    }
+    if (labels != null) {
+      _result.labels.addAll(labels);
     }
     return _result;
   }
@@ -232,4 +257,10 @@ class Dashboard extends $pb.GeneratedMessage {
   void clearColumnLayout() => clearField(9);
   @$pb.TagNumber(9)
   $0.ColumnLayout ensureColumnLayout() => $_ensure(6);
+
+  @$pb.TagNumber(11)
+  $core.List<$1.DashboardFilter> get dashboardFilters => $_getList(7);
+
+  @$pb.TagNumber(12)
+  $core.Map<$core.String, $core.String> get labels => $_getMap(8);
 }

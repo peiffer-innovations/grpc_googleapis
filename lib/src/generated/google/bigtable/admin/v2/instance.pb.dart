@@ -3,7 +3,7 @@
 //  source: google/bigtable/admin/v2/instance.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -1139,4 +1139,203 @@ class AppProfile extends $pb.GeneratedMessage {
   void clearSingleClusterRouting() => clearField(6);
   @$pb.TagNumber(6)
   AppProfile_SingleClusterRouting ensureSingleClusterRouting() => $_ensure(4);
+}
+
+class HotTablet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'HotTablet',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tableName')
+    ..aOM<$0.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startKey')
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endKey')
+    ..a<$core.double>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nodeCpuUsagePercent',
+        $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  HotTablet._() : super();
+  factory HotTablet({
+    $core.String? name,
+    $core.String? tableName,
+    $0.Timestamp? startTime,
+    $0.Timestamp? endTime,
+    $core.String? startKey,
+    $core.String? endKey,
+    $core.double? nodeCpuUsagePercent,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (tableName != null) {
+      _result.tableName = tableName;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (startKey != null) {
+      _result.startKey = startKey;
+    }
+    if (endKey != null) {
+      _result.endKey = endKey;
+    }
+    if (nodeCpuUsagePercent != null) {
+      _result.nodeCpuUsagePercent = nodeCpuUsagePercent;
+    }
+    return _result;
+  }
+  factory HotTablet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HotTablet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  HotTablet clone() => HotTablet()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  HotTablet copyWith(void Function(HotTablet) updates) =>
+      super.copyWith((message) => updates(message as HotTablet))
+          as HotTablet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static HotTablet create() => HotTablet._();
+  HotTablet createEmptyInstance() => create();
+  static $pb.PbList<HotTablet> createRepeated() => $pb.PbList<HotTablet>();
+  @$core.pragma('dart2js:noInline')
+  static HotTablet getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HotTablet>(create);
+  static HotTablet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get tableName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set tableName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTableName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTableName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.Timestamp get startTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set startTime($0.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasStartTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStartTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Timestamp ensureStartTime() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $0.Timestamp get endTime => $_getN(3);
+  @$pb.TagNumber(4)
+  set endTime($0.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasEndTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearEndTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureEndTime() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get startKey => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set startKey($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasStartKey() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearStartKey() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get endKey => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set endKey($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasEndKey() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEndKey() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.double get nodeCpuUsagePercent => $_getN(6);
+  @$pb.TagNumber(7)
+  set nodeCpuUsagePercent($core.double v) {
+    $_setFloat(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasNodeCpuUsagePercent() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearNodeCpuUsagePercent() => clearField(7);
 }

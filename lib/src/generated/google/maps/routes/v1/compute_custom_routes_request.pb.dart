@@ -3,7 +3,7 @@
 //  source: google/maps/routes/v1/compute_custom_routes_request.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -536,6 +536,152 @@ class RouteObjective_RateCard extends $pb.GeneratedMessage {
   void clearIncludeTolls() => clearField(4);
 }
 
+class RouteObjective_CustomLayer_DatasetInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RouteObjective.CustomLayer.DatasetInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'datasetId')
+    ..hasRequiredFields = false;
+
+  RouteObjective_CustomLayer_DatasetInfo._() : super();
+  factory RouteObjective_CustomLayer_DatasetInfo({
+    $core.String? datasetId,
+  }) {
+    final _result = create();
+    if (datasetId != null) {
+      _result.datasetId = datasetId;
+    }
+    return _result;
+  }
+  factory RouteObjective_CustomLayer_DatasetInfo.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RouteObjective_CustomLayer_DatasetInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RouteObjective_CustomLayer_DatasetInfo clone() =>
+      RouteObjective_CustomLayer_DatasetInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RouteObjective_CustomLayer_DatasetInfo copyWith(
+          void Function(RouteObjective_CustomLayer_DatasetInfo) updates) =>
+      super.copyWith((message) =>
+              updates(message as RouteObjective_CustomLayer_DatasetInfo))
+          as RouteObjective_CustomLayer_DatasetInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RouteObjective_CustomLayer_DatasetInfo create() =>
+      RouteObjective_CustomLayer_DatasetInfo._();
+  RouteObjective_CustomLayer_DatasetInfo createEmptyInstance() => create();
+  static $pb.PbList<RouteObjective_CustomLayer_DatasetInfo> createRepeated() =>
+      $pb.PbList<RouteObjective_CustomLayer_DatasetInfo>();
+  @$core.pragma('dart2js:noInline')
+  static RouteObjective_CustomLayer_DatasetInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RouteObjective_CustomLayer_DatasetInfo>(create);
+  static RouteObjective_CustomLayer_DatasetInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get datasetId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set datasetId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDatasetId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDatasetId() => clearField(1);
+}
+
+class RouteObjective_CustomLayer extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RouteObjective.CustomLayer',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<RouteObjective_CustomLayer_DatasetInfo>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'datasetInfo',
+        subBuilder: RouteObjective_CustomLayer_DatasetInfo.create)
+    ..hasRequiredFields = false;
+
+  RouteObjective_CustomLayer._() : super();
+  factory RouteObjective_CustomLayer({
+    RouteObjective_CustomLayer_DatasetInfo? datasetInfo,
+  }) {
+    final _result = create();
+    if (datasetInfo != null) {
+      _result.datasetInfo = datasetInfo;
+    }
+    return _result;
+  }
+  factory RouteObjective_CustomLayer.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RouteObjective_CustomLayer.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RouteObjective_CustomLayer clone() =>
+      RouteObjective_CustomLayer()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RouteObjective_CustomLayer copyWith(
+          void Function(RouteObjective_CustomLayer) updates) =>
+      super.copyWith(
+              (message) => updates(message as RouteObjective_CustomLayer))
+          as RouteObjective_CustomLayer; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RouteObjective_CustomLayer create() => RouteObjective_CustomLayer._();
+  RouteObjective_CustomLayer createEmptyInstance() => create();
+  static $pb.PbList<RouteObjective_CustomLayer> createRepeated() =>
+      $pb.PbList<RouteObjective_CustomLayer>();
+  @$core.pragma('dart2js:noInline')
+  static RouteObjective_CustomLayer getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RouteObjective_CustomLayer>(create);
+  static RouteObjective_CustomLayer? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  RouteObjective_CustomLayer_DatasetInfo get datasetInfo => $_getN(0);
+  @$pb.TagNumber(1)
+  set datasetInfo(RouteObjective_CustomLayer_DatasetInfo v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDatasetInfo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDatasetInfo() => clearField(1);
+  @$pb.TagNumber(1)
+  RouteObjective_CustomLayer_DatasetInfo ensureDatasetInfo() => $_ensure(0);
+}
+
 enum RouteObjective_Objective { rateCard, notSet }
 
 class RouteObjective extends $pb.GeneratedMessage {
@@ -560,15 +706,25 @@ class RouteObjective extends $pb.GeneratedMessage {
             ? ''
             : 'rateCard',
         subBuilder: RouteObjective_RateCard.create)
+    ..aOM<RouteObjective_CustomLayer>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customLayer',
+        subBuilder: RouteObjective_CustomLayer.create)
     ..hasRequiredFields = false;
 
   RouteObjective._() : super();
   factory RouteObjective({
     RouteObjective_RateCard? rateCard,
+    RouteObjective_CustomLayer? customLayer,
   }) {
     final _result = create();
     if (rateCard != null) {
       _result.rateCard = rateCard;
+    }
+    if (customLayer != null) {
+      _result.customLayer = customLayer;
     }
     return _result;
   }
@@ -616,4 +772,18 @@ class RouteObjective extends $pb.GeneratedMessage {
   void clearRateCard() => clearField(1);
   @$pb.TagNumber(1)
   RouteObjective_RateCard ensureRateCard() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  RouteObjective_CustomLayer get customLayer => $_getN(1);
+  @$pb.TagNumber(2)
+  set customLayer(RouteObjective_CustomLayer v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasCustomLayer() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCustomLayer() => clearField(2);
+  @$pb.TagNumber(2)
+  RouteObjective_CustomLayer ensureCustomLayer() => $_ensure(1);
 }

@@ -3,7 +3,7 @@
 //  source: google/datastore/v1/query.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -11,7 +11,8 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity.pb.dart' as $0;
-import '../../protobuf/wrappers.pb.dart' as $1;
+import '../../protobuf/timestamp.pb.dart' as $1;
+import '../../protobuf/wrappers.pb.dart' as $2;
 
 import 'query.pbenum.dart';
 
@@ -44,6 +45,12 @@ class EntityResult extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'version')
+    ..aOM<$1.Timestamp>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateTime',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   EntityResult._() : super();
@@ -51,6 +58,7 @@ class EntityResult extends $pb.GeneratedMessage {
     $0.Entity? entity,
     $core.List<$core.int>? cursor,
     $fixnum.Int64? version,
+    $1.Timestamp? updateTime,
   }) {
     final _result = create();
     if (entity != null) {
@@ -61,6 +69,9 @@ class EntityResult extends $pb.GeneratedMessage {
     }
     if (version != null) {
       _result.version = version;
+    }
+    if (updateTime != null) {
+      _result.updateTime = updateTime;
     }
     return _result;
   }
@@ -128,6 +139,20 @@ class EntityResult extends $pb.GeneratedMessage {
   $core.bool hasVersion() => $_has(2);
   @$pb.TagNumber(4)
   void clearVersion() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $1.Timestamp get updateTime => $_getN(3);
+  @$pb.TagNumber(5)
+  set updateTime($1.Timestamp v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasUpdateTime() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearUpdateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.Timestamp ensureUpdateTime() => $_ensure(3);
 }
 
 class Query extends $pb.GeneratedMessage {
@@ -192,12 +217,12 @@ class Query extends $pb.GeneratedMessage {
             ? ''
             : 'offset',
         $pb.PbFieldType.O3)
-    ..aOM<$1.Int32Value>(
+    ..aOM<$2.Int32Value>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'limit',
-        subBuilder: $1.Int32Value.create)
+        subBuilder: $2.Int32Value.create)
     ..hasRequiredFields = false;
 
   Query._() : super();
@@ -210,7 +235,7 @@ class Query extends $pb.GeneratedMessage {
     $core.List<$core.int>? startCursor,
     $core.List<$core.int>? endCursor,
     $core.int? offset,
-    $1.Int32Value? limit,
+    $2.Int32Value? limit,
   }) {
     final _result = create();
     if (projection != null) {
@@ -331,9 +356,9 @@ class Query extends $pb.GeneratedMessage {
   void clearOffset() => clearField(10);
 
   @$pb.TagNumber(12)
-  $1.Int32Value get limit => $_getN(8);
+  $2.Int32Value get limit => $_getN(8);
   @$pb.TagNumber(12)
-  set limit($1.Int32Value v) {
+  set limit($2.Int32Value v) {
     setField(12, v);
   }
 
@@ -342,7 +367,7 @@ class Query extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearLimit() => clearField(12);
   @$pb.TagNumber(12)
-  $1.Int32Value ensureLimit() => $_ensure(8);
+  $2.Int32Value ensureLimit() => $_ensure(8);
 }
 
 class KindExpression extends $pb.GeneratedMessage {
@@ -1235,6 +1260,12 @@ class QueryResultBatch extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'snapshotVersion')
+    ..aOM<$1.Timestamp>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readTime',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   QueryResultBatch._() : super();
@@ -1246,6 +1277,7 @@ class QueryResultBatch extends $pb.GeneratedMessage {
     QueryResultBatch_MoreResultsType? moreResults,
     $core.int? skippedResults,
     $fixnum.Int64? snapshotVersion,
+    $1.Timestamp? readTime,
   }) {
     final _result = create();
     if (entityResultType != null) {
@@ -1268,6 +1300,9 @@ class QueryResultBatch extends $pb.GeneratedMessage {
     }
     if (snapshotVersion != null) {
       _result.snapshotVersion = snapshotVersion;
+    }
+    if (readTime != null) {
+      _result.readTime = readTime;
     }
     return _result;
   }
@@ -1372,4 +1407,18 @@ class QueryResultBatch extends $pb.GeneratedMessage {
   $core.bool hasSnapshotVersion() => $_has(6);
   @$pb.TagNumber(7)
   void clearSnapshotVersion() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $1.Timestamp get readTime => $_getN(7);
+  @$pb.TagNumber(8)
+  set readTime($1.Timestamp v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasReadTime() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearReadTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureReadTime() => $_ensure(7);
 }

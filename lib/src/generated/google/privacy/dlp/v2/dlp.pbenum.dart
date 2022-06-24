@@ -3,7 +3,7 @@
 //  source: google/privacy/dlp/v2/dlp.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -264,6 +264,71 @@ class StoredInfoTypeState extends $pb.ProtobufEnum {
   const StoredInfoTypeState._($core.int v, $core.String n) : super(v, n);
 }
 
+class ResourceVisibility extends $pb.ProtobufEnum {
+  static const ResourceVisibility RESOURCE_VISIBILITY_UNSPECIFIED =
+      ResourceVisibility._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESOURCE_VISIBILITY_UNSPECIFIED');
+  static const ResourceVisibility RESOURCE_VISIBILITY_PUBLIC =
+      ResourceVisibility._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESOURCE_VISIBILITY_PUBLIC');
+  static const ResourceVisibility RESOURCE_VISIBILITY_RESTRICTED =
+      ResourceVisibility._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESOURCE_VISIBILITY_RESTRICTED');
+
+  static const $core.List<ResourceVisibility> values = <ResourceVisibility>[
+    RESOURCE_VISIBILITY_UNSPECIFIED,
+    RESOURCE_VISIBILITY_PUBLIC,
+    RESOURCE_VISIBILITY_RESTRICTED,
+  ];
+
+  static final $core.Map<$core.int, ResourceVisibility> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ResourceVisibility? valueOf($core.int value) => _byValue[value];
+
+  const ResourceVisibility._($core.int v, $core.String n) : super(v, n);
+}
+
+class EncryptionStatus extends $pb.ProtobufEnum {
+  static const EncryptionStatus ENCRYPTION_STATUS_UNSPECIFIED =
+      EncryptionStatus._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ENCRYPTION_STATUS_UNSPECIFIED');
+  static const EncryptionStatus ENCRYPTION_GOOGLE_MANAGED = EncryptionStatus._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ENCRYPTION_GOOGLE_MANAGED');
+  static const EncryptionStatus ENCRYPTION_CUSTOMER_MANAGED =
+      EncryptionStatus._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ENCRYPTION_CUSTOMER_MANAGED');
+
+  static const $core.List<EncryptionStatus> values = <EncryptionStatus>[
+    ENCRYPTION_STATUS_UNSPECIFIED,
+    ENCRYPTION_GOOGLE_MANAGED,
+    ENCRYPTION_CUSTOMER_MANAGED,
+  ];
+
+  static final $core.Map<$core.int, EncryptionStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static EncryptionStatus? valueOf($core.int value) => _byValue[value];
+
+  const EncryptionStatus._($core.int v, $core.String n) : super(v, n);
+}
+
 class ByteContentItem_BytesType extends $pb.ProtobufEnum {
   static const ByteContentItem_BytesType BYTES_TYPE_UNSPECIFIED =
       ByteContentItem_BytesType._(
@@ -317,6 +382,18 @@ class ByteContentItem_BytesType extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'PDF');
+  static const ByteContentItem_BytesType POWERPOINT_DOCUMENT =
+      ByteContentItem_BytesType._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'POWERPOINT_DOCUMENT');
+  static const ByteContentItem_BytesType EXCEL_DOCUMENT =
+      ByteContentItem_BytesType._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EXCEL_DOCUMENT');
   static const ByteContentItem_BytesType AVRO = ByteContentItem_BytesType._(
       11,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
@@ -344,6 +421,8 @@ class ByteContentItem_BytesType extends $pb.ProtobufEnum {
     TEXT_UTF8,
     WORD_DOCUMENT,
     PDF,
+    POWERPOINT_DOCUMENT,
+    EXCEL_DOCUMENT,
     AVRO,
     CSV,
     TSV,
@@ -690,6 +769,97 @@ class JobTrigger_Status extends $pb.ProtobufEnum {
   const JobTrigger_Status._($core.int v, $core.String n) : super(v, n);
 }
 
+class DataProfileAction_EventType extends $pb.ProtobufEnum {
+  static const DataProfileAction_EventType EVENT_TYPE_UNSPECIFIED =
+      DataProfileAction_EventType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVENT_TYPE_UNSPECIFIED');
+  static const DataProfileAction_EventType NEW_PROFILE =
+      DataProfileAction_EventType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NEW_PROFILE');
+  static const DataProfileAction_EventType CHANGED_PROFILE =
+      DataProfileAction_EventType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANGED_PROFILE');
+  static const DataProfileAction_EventType SCORE_INCREASED =
+      DataProfileAction_EventType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SCORE_INCREASED');
+  static const DataProfileAction_EventType ERROR_CHANGED =
+      DataProfileAction_EventType._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ERROR_CHANGED');
+
+  static const $core.List<DataProfileAction_EventType> values =
+      <DataProfileAction_EventType>[
+    EVENT_TYPE_UNSPECIFIED,
+    NEW_PROFILE,
+    CHANGED_PROFILE,
+    SCORE_INCREASED,
+    ERROR_CHANGED,
+  ];
+
+  static final $core.Map<$core.int, DataProfileAction_EventType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DataProfileAction_EventType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const DataProfileAction_EventType._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class DataProfileAction_PubSubNotification_DetailLevel
+    extends $pb.ProtobufEnum {
+  static const DataProfileAction_PubSubNotification_DetailLevel
+      DETAIL_LEVEL_UNSPECIFIED =
+      DataProfileAction_PubSubNotification_DetailLevel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DETAIL_LEVEL_UNSPECIFIED');
+  static const DataProfileAction_PubSubNotification_DetailLevel TABLE_PROFILE =
+      DataProfileAction_PubSubNotification_DetailLevel._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TABLE_PROFILE');
+  static const DataProfileAction_PubSubNotification_DetailLevel RESOURCE_NAME =
+      DataProfileAction_PubSubNotification_DetailLevel._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESOURCE_NAME');
+
+  static const $core.List<DataProfileAction_PubSubNotification_DetailLevel>
+      values = <DataProfileAction_PubSubNotification_DetailLevel>[
+    DETAIL_LEVEL_UNSPECIFIED,
+    TABLE_PROFILE,
+    RESOURCE_NAME,
+  ];
+
+  static final $core
+          .Map<$core.int, DataProfileAction_PubSubNotification_DetailLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DataProfileAction_PubSubNotification_DetailLevel? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const DataProfileAction_PubSubNotification_DetailLevel._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
 class DlpJob_JobState extends $pb.ProtobufEnum {
   static const DlpJob_JobState JOB_STATE_UNSPECIFIED = DlpJob_JobState._(
       0,
@@ -742,4 +912,205 @@ class DlpJob_JobState extends $pb.ProtobufEnum {
   static DlpJob_JobState? valueOf($core.int value) => _byValue[value];
 
   const DlpJob_JobState._($core.int v, $core.String n) : super(v, n);
+}
+
+class SensitivityScore_SensitivityScoreLevel extends $pb.ProtobufEnum {
+  static const SensitivityScore_SensitivityScoreLevel
+      SENSITIVITY_SCORE_UNSPECIFIED = SensitivityScore_SensitivityScoreLevel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_SCORE_UNSPECIFIED');
+  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_LOW =
+      SensitivityScore_SensitivityScoreLevel._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_LOW');
+  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_MODERATE =
+      SensitivityScore_SensitivityScoreLevel._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_MODERATE');
+  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_HIGH =
+      SensitivityScore_SensitivityScoreLevel._(
+          30,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_HIGH');
+
+  static const $core.List<SensitivityScore_SensitivityScoreLevel> values =
+      <SensitivityScore_SensitivityScoreLevel>[
+    SENSITIVITY_SCORE_UNSPECIFIED,
+    SENSITIVITY_LOW,
+    SENSITIVITY_MODERATE,
+    SENSITIVITY_HIGH,
+  ];
+
+  static final $core.Map<$core.int, SensitivityScore_SensitivityScoreLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SensitivityScore_SensitivityScoreLevel? valueOf($core.int value) =>
+      _byValue[value];
+
+  const SensitivityScore_SensitivityScoreLevel._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class DataRiskLevel_DataRiskLevelScore extends $pb.ProtobufEnum {
+  static const DataRiskLevel_DataRiskLevelScore RISK_SCORE_UNSPECIFIED =
+      DataRiskLevel_DataRiskLevelScore._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RISK_SCORE_UNSPECIFIED');
+  static const DataRiskLevel_DataRiskLevelScore RISK_LOW =
+      DataRiskLevel_DataRiskLevelScore._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RISK_LOW');
+  static const DataRiskLevel_DataRiskLevelScore RISK_MODERATE =
+      DataRiskLevel_DataRiskLevelScore._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RISK_MODERATE');
+  static const DataRiskLevel_DataRiskLevelScore RISK_HIGH =
+      DataRiskLevel_DataRiskLevelScore._(
+          30,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RISK_HIGH');
+
+  static const $core.List<DataRiskLevel_DataRiskLevelScore> values =
+      <DataRiskLevel_DataRiskLevelScore>[
+    RISK_SCORE_UNSPECIFIED,
+    RISK_LOW,
+    RISK_MODERATE,
+    RISK_HIGH,
+  ];
+
+  static final $core.Map<$core.int, DataRiskLevel_DataRiskLevelScore> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DataRiskLevel_DataRiskLevelScore? valueOf($core.int value) =>
+      _byValue[value];
+
+  const DataRiskLevel_DataRiskLevelScore._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class TableDataProfile_State extends $pb.ProtobufEnum {
+  static const TableDataProfile_State STATE_UNSPECIFIED =
+      TableDataProfile_State._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STATE_UNSPECIFIED');
+  static const TableDataProfile_State RUNNING = TableDataProfile_State._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RUNNING');
+  static const TableDataProfile_State DONE = TableDataProfile_State._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DONE');
+
+  static const $core.List<TableDataProfile_State> values =
+      <TableDataProfile_State>[
+    STATE_UNSPECIFIED,
+    RUNNING,
+    DONE,
+  ];
+
+  static final $core.Map<$core.int, TableDataProfile_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static TableDataProfile_State? valueOf($core.int value) => _byValue[value];
+
+  const TableDataProfile_State._($core.int v, $core.String n) : super(v, n);
+}
+
+class DataProfilePubSubCondition_ProfileScoreBucket extends $pb.ProtobufEnum {
+  static const DataProfilePubSubCondition_ProfileScoreBucket
+      PROFILE_SCORE_BUCKET_UNSPECIFIED =
+      DataProfilePubSubCondition_ProfileScoreBucket._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PROFILE_SCORE_BUCKET_UNSPECIFIED');
+  static const DataProfilePubSubCondition_ProfileScoreBucket HIGH =
+      DataProfilePubSubCondition_ProfileScoreBucket._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'HIGH');
+  static const DataProfilePubSubCondition_ProfileScoreBucket MEDIUM_OR_HIGH =
+      DataProfilePubSubCondition_ProfileScoreBucket._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MEDIUM_OR_HIGH');
+
+  static const $core.List<DataProfilePubSubCondition_ProfileScoreBucket>
+      values = <DataProfilePubSubCondition_ProfileScoreBucket>[
+    PROFILE_SCORE_BUCKET_UNSPECIFIED,
+    HIGH,
+    MEDIUM_OR_HIGH,
+  ];
+
+  static final $core
+          .Map<$core.int, DataProfilePubSubCondition_ProfileScoreBucket>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DataProfilePubSubCondition_ProfileScoreBucket? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const DataProfilePubSubCondition_ProfileScoreBucket._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+    extends $pb.ProtobufEnum {
+  static const DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+      LOGICAL_OPERATOR_UNSPECIFIED =
+      DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LOGICAL_OPERATOR_UNSPECIFIED');
+  static const DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+      OR = DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OR');
+  static const DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+      AND =
+      DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'AND');
+
+  static const $core.List<
+          DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator>
+      values =
+      <DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator>[
+    LOGICAL_OPERATOR_UNSPECIFIED,
+    OR,
+    AND,
+  ];
+
+  static final $core.Map<$core.int,
+          DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator?
+      valueOf($core.int value) => _byValue[value];
+
+  const DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }

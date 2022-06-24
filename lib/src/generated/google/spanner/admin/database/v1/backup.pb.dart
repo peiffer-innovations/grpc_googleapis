@@ -3,7 +3,7 @@
 //  source: google/spanner/admin/database/v1/backup.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -92,6 +92,17 @@ class Backup extends $pb.GeneratedMessage {
         defaultOrMaker: $3.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED,
         valueOf: $3.DatabaseDialect.valueOf,
         enumValues: $3.DatabaseDialect.values)
+    ..pPS(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'referencingBackups')
+    ..aOM<$2.Timestamp>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxExpireTime',
+        subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   Backup._() : super();
@@ -106,6 +117,8 @@ class Backup extends $pb.GeneratedMessage {
     $3.EncryptionInfo? encryptionInfo,
     $2.Timestamp? versionTime,
     $3.DatabaseDialect? databaseDialect,
+    $core.Iterable<$core.String>? referencingBackups,
+    $2.Timestamp? maxExpireTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -137,6 +150,12 @@ class Backup extends $pb.GeneratedMessage {
     }
     if (databaseDialect != null) {
       _result.databaseDialect = databaseDialect;
+    }
+    if (referencingBackups != null) {
+      _result.referencingBackups.addAll(referencingBackups);
+    }
+    if (maxExpireTime != null) {
+      _result.maxExpireTime = maxExpireTime;
     }
     return _result;
   }
@@ -284,6 +303,23 @@ class Backup extends $pb.GeneratedMessage {
   $core.bool hasDatabaseDialect() => $_has(9);
   @$pb.TagNumber(10)
   void clearDatabaseDialect() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.List<$core.String> get referencingBackups => $_getList(10);
+
+  @$pb.TagNumber(12)
+  $2.Timestamp get maxExpireTime => $_getN(11);
+  @$pb.TagNumber(12)
+  set maxExpireTime($2.Timestamp v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasMaxExpireTime() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearMaxExpireTime() => clearField(12);
+  @$pb.TagNumber(12)
+  $2.Timestamp ensureMaxExpireTime() => $_ensure(11);
 }
 
 class CreateBackupRequest extends $pb.GeneratedMessage {
@@ -529,6 +565,299 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
   $core.bool hasDatabase() => $_has(1);
   @$pb.TagNumber(2)
   void clearDatabase() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $3.OperationProgress get progress => $_getN(2);
+  @$pb.TagNumber(3)
+  set progress($3.OperationProgress v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasProgress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearProgress() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.OperationProgress ensureProgress() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $2.Timestamp get cancelTime => $_getN(3);
+  @$pb.TagNumber(4)
+  set cancelTime($2.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCancelTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCancelTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.Timestamp ensureCancelTime() => $_ensure(3);
+}
+
+class CopyBackupRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CopyBackupRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.spanner.admin.database.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'backupId')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sourceBackup')
+    ..aOM<$2.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'expireTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<CopyBackupEncryptionConfig>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'encryptionConfig',
+        subBuilder: CopyBackupEncryptionConfig.create)
+    ..hasRequiredFields = false;
+
+  CopyBackupRequest._() : super();
+  factory CopyBackupRequest({
+    $core.String? parent,
+    $core.String? backupId,
+    $core.String? sourceBackup,
+    $2.Timestamp? expireTime,
+    CopyBackupEncryptionConfig? encryptionConfig,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (backupId != null) {
+      _result.backupId = backupId;
+    }
+    if (sourceBackup != null) {
+      _result.sourceBackup = sourceBackup;
+    }
+    if (expireTime != null) {
+      _result.expireTime = expireTime;
+    }
+    if (encryptionConfig != null) {
+      _result.encryptionConfig = encryptionConfig;
+    }
+    return _result;
+  }
+  factory CopyBackupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CopyBackupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CopyBackupRequest clone() => CopyBackupRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CopyBackupRequest copyWith(void Function(CopyBackupRequest) updates) =>
+      super.copyWith((message) => updates(message as CopyBackupRequest))
+          as CopyBackupRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CopyBackupRequest create() => CopyBackupRequest._();
+  CopyBackupRequest createEmptyInstance() => create();
+  static $pb.PbList<CopyBackupRequest> createRepeated() =>
+      $pb.PbList<CopyBackupRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CopyBackupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CopyBackupRequest>(create);
+  static CopyBackupRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get backupId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set backupId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasBackupId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBackupId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get sourceBackup => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set sourceBackup($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasSourceBackup() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSourceBackup() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $2.Timestamp get expireTime => $_getN(3);
+  @$pb.TagNumber(4)
+  set expireTime($2.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasExpireTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearExpireTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.Timestamp ensureExpireTime() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  CopyBackupEncryptionConfig get encryptionConfig => $_getN(4);
+  @$pb.TagNumber(5)
+  set encryptionConfig(CopyBackupEncryptionConfig v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasEncryptionConfig() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEncryptionConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  CopyBackupEncryptionConfig ensureEncryptionConfig() => $_ensure(4);
+}
+
+class CopyBackupMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CopyBackupMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.spanner.admin.database.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sourceBackup')
+    ..aOM<$3.OperationProgress>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'progress',
+        subBuilder: $3.OperationProgress.create)
+    ..aOM<$2.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cancelTime',
+        subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  CopyBackupMetadata._() : super();
+  factory CopyBackupMetadata({
+    $core.String? name,
+    $core.String? sourceBackup,
+    $3.OperationProgress? progress,
+    $2.Timestamp? cancelTime,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (sourceBackup != null) {
+      _result.sourceBackup = sourceBackup;
+    }
+    if (progress != null) {
+      _result.progress = progress;
+    }
+    if (cancelTime != null) {
+      _result.cancelTime = cancelTime;
+    }
+    return _result;
+  }
+  factory CopyBackupMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CopyBackupMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CopyBackupMetadata clone() => CopyBackupMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CopyBackupMetadata copyWith(void Function(CopyBackupMetadata) updates) =>
+      super.copyWith((message) => updates(message as CopyBackupMetadata))
+          as CopyBackupMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CopyBackupMetadata create() => CopyBackupMetadata._();
+  CopyBackupMetadata createEmptyInstance() => create();
+  static $pb.PbList<CopyBackupMetadata> createRepeated() =>
+      $pb.PbList<CopyBackupMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static CopyBackupMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CopyBackupMetadata>(create);
+  static CopyBackupMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sourceBackup => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sourceBackup($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasSourceBackup() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSourceBackup() => clearField(2);
 
   @$pb.TagNumber(3)
   $3.OperationProgress get progress => $_getN(2);
@@ -1430,6 +1759,102 @@ class CreateBackupEncryptionConfig extends $pb.GeneratedMessage {
   CreateBackupEncryptionConfig_EncryptionType get encryptionType => $_getN(0);
   @$pb.TagNumber(1)
   set encryptionType(CreateBackupEncryptionConfig_EncryptionType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasEncryptionType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEncryptionType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get kmsKeyName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set kmsKeyName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasKmsKeyName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearKmsKeyName() => clearField(2);
+}
+
+class CopyBackupEncryptionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CopyBackupEncryptionConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.spanner.admin.database.v1'),
+      createEmptyInstance: create)
+    ..e<CopyBackupEncryptionConfig_EncryptionType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'encryptionType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: CopyBackupEncryptionConfig_EncryptionType
+            .ENCRYPTION_TYPE_UNSPECIFIED,
+        valueOf: CopyBackupEncryptionConfig_EncryptionType.valueOf,
+        enumValues: CopyBackupEncryptionConfig_EncryptionType.values)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kmsKeyName')
+    ..hasRequiredFields = false;
+
+  CopyBackupEncryptionConfig._() : super();
+  factory CopyBackupEncryptionConfig({
+    CopyBackupEncryptionConfig_EncryptionType? encryptionType,
+    $core.String? kmsKeyName,
+  }) {
+    final _result = create();
+    if (encryptionType != null) {
+      _result.encryptionType = encryptionType;
+    }
+    if (kmsKeyName != null) {
+      _result.kmsKeyName = kmsKeyName;
+    }
+    return _result;
+  }
+  factory CopyBackupEncryptionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CopyBackupEncryptionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CopyBackupEncryptionConfig clone() =>
+      CopyBackupEncryptionConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CopyBackupEncryptionConfig copyWith(
+          void Function(CopyBackupEncryptionConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as CopyBackupEncryptionConfig))
+          as CopyBackupEncryptionConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CopyBackupEncryptionConfig create() => CopyBackupEncryptionConfig._();
+  CopyBackupEncryptionConfig createEmptyInstance() => create();
+  static $pb.PbList<CopyBackupEncryptionConfig> createRepeated() =>
+      $pb.PbList<CopyBackupEncryptionConfig>();
+  @$core.pragma('dart2js:noInline')
+  static CopyBackupEncryptionConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CopyBackupEncryptionConfig>(create);
+  static CopyBackupEncryptionConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  CopyBackupEncryptionConfig_EncryptionType get encryptionType => $_getN(0);
+  @$pb.TagNumber(1)
+  set encryptionType(CopyBackupEncryptionConfig_EncryptionType v) {
     setField(1, v);
   }
 

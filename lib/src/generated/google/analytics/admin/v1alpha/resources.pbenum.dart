@@ -3,7 +3,7 @@
 //  source: google/analytics/admin/v1alpha/resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -304,24 +304,6 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'PROPERTY');
-  static const ChangeHistoryResourceType WEB_DATA_STREAM =
-      ChangeHistoryResourceType._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'WEB_DATA_STREAM');
-  static const ChangeHistoryResourceType ANDROID_APP_DATA_STREAM =
-      ChangeHistoryResourceType._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ANDROID_APP_DATA_STREAM');
-  static const ChangeHistoryResourceType IOS_APP_DATA_STREAM =
-      ChangeHistoryResourceType._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'IOS_APP_DATA_STREAM');
   static const ChangeHistoryResourceType FIREBASE_LINK =
       ChangeHistoryResourceType._(
           6,
@@ -382,15 +364,18 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL');
+  static const ChangeHistoryResourceType DATA_STREAM =
+      ChangeHistoryResourceType._(
+          18,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DATA_STREAM');
 
   static const $core.List<ChangeHistoryResourceType> values =
       <ChangeHistoryResourceType>[
     CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED,
     ACCOUNT,
     PROPERTY,
-    WEB_DATA_STREAM,
-    ANDROID_APP_DATA_STREAM,
-    IOS_APP_DATA_STREAM,
     FIREBASE_LINK,
     GOOGLE_ADS_LINK,
     GOOGLE_SIGNALS_SETTINGS,
@@ -401,6 +386,7 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
     DATA_RETENTION_SETTINGS,
     DISPLAY_VIDEO_360_ADVERTISER_LINK,
     DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL,
+    DATA_STREAM,
   ];
 
   static final $core.Map<$core.int, ChangeHistoryResourceType> _byValue =
@@ -762,6 +748,42 @@ class CustomMetric_MetricScope extends $pb.ProtobufEnum {
   static CustomMetric_MetricScope? valueOf($core.int value) => _byValue[value];
 
   const CustomMetric_MetricScope._($core.int v, $core.String n) : super(v, n);
+}
+
+class CustomMetric_RestrictedMetricType extends $pb.ProtobufEnum {
+  static const CustomMetric_RestrictedMetricType
+      RESTRICTED_METRIC_TYPE_UNSPECIFIED = CustomMetric_RestrictedMetricType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESTRICTED_METRIC_TYPE_UNSPECIFIED');
+  static const CustomMetric_RestrictedMetricType COST_DATA =
+      CustomMetric_RestrictedMetricType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COST_DATA');
+  static const CustomMetric_RestrictedMetricType REVENUE_DATA =
+      CustomMetric_RestrictedMetricType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REVENUE_DATA');
+
+  static const $core.List<CustomMetric_RestrictedMetricType> values =
+      <CustomMetric_RestrictedMetricType>[
+    RESTRICTED_METRIC_TYPE_UNSPECIFIED,
+    COST_DATA,
+    REVENUE_DATA,
+  ];
+
+  static final $core.Map<$core.int, CustomMetric_RestrictedMetricType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CustomMetric_RestrictedMetricType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const CustomMetric_RestrictedMetricType._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class DataRetentionSettings_RetentionDuration extends $pb.ProtobufEnum {

@@ -3,7 +3,7 @@
 //  source: google/storagetransfer/v1/transfer.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -808,4 +808,566 @@ class RunTransferJobRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(1);
   @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
+}
+
+class CreateAgentPoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateAgentPoolRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOM<$3.AgentPool>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'agentPool',
+        subBuilder: $3.AgentPool.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'agentPoolId')
+    ..hasRequiredFields = false;
+
+  CreateAgentPoolRequest._() : super();
+  factory CreateAgentPoolRequest({
+    $core.String? projectId,
+    $3.AgentPool? agentPool,
+    $core.String? agentPoolId,
+  }) {
+    final _result = create();
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (agentPool != null) {
+      _result.agentPool = agentPool;
+    }
+    if (agentPoolId != null) {
+      _result.agentPoolId = agentPoolId;
+    }
+    return _result;
+  }
+  factory CreateAgentPoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAgentPoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateAgentPoolRequest clone() =>
+      CreateAgentPoolRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateAgentPoolRequest copyWith(
+          void Function(CreateAgentPoolRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateAgentPoolRequest))
+          as CreateAgentPoolRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateAgentPoolRequest create() => CreateAgentPoolRequest._();
+  CreateAgentPoolRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAgentPoolRequest> createRepeated() =>
+      $pb.PbList<CreateAgentPoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateAgentPoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateAgentPoolRequest>(create);
+  static CreateAgentPoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set projectId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProjectId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $3.AgentPool get agentPool => $_getN(1);
+  @$pb.TagNumber(2)
+  set agentPool($3.AgentPool v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAgentPool() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAgentPool() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.AgentPool ensureAgentPool() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get agentPoolId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set agentPoolId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasAgentPoolId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAgentPoolId() => clearField(3);
+}
+
+class UpdateAgentPoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateAgentPoolRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.AgentPool>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'agentPool',
+        subBuilder: $3.AgentPool.create)
+    ..aOM<$4.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateAgentPoolRequest._() : super();
+  factory UpdateAgentPoolRequest({
+    $3.AgentPool? agentPool,
+    $4.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (agentPool != null) {
+      _result.agentPool = agentPool;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateAgentPoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAgentPoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateAgentPoolRequest clone() =>
+      UpdateAgentPoolRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateAgentPoolRequest copyWith(
+          void Function(UpdateAgentPoolRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateAgentPoolRequest))
+          as UpdateAgentPoolRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateAgentPoolRequest create() => UpdateAgentPoolRequest._();
+  UpdateAgentPoolRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAgentPoolRequest> createRepeated() =>
+      $pb.PbList<UpdateAgentPoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAgentPoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAgentPoolRequest>(create);
+  static UpdateAgentPoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.AgentPool get agentPool => $_getN(0);
+  @$pb.TagNumber(1)
+  set agentPool($3.AgentPool v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAgentPool() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAgentPool() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.AgentPool ensureAgentPool() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $4.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($4.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class GetAgentPoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetAgentPoolRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetAgentPoolRequest._() : super();
+  factory GetAgentPoolRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetAgentPoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAgentPoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetAgentPoolRequest clone() => GetAgentPoolRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetAgentPoolRequest copyWith(void Function(GetAgentPoolRequest) updates) =>
+      super.copyWith((message) => updates(message as GetAgentPoolRequest))
+          as GetAgentPoolRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetAgentPoolRequest create() => GetAgentPoolRequest._();
+  GetAgentPoolRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAgentPoolRequest> createRepeated() =>
+      $pb.PbList<GetAgentPoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAgentPoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAgentPoolRequest>(create);
+  static GetAgentPoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class DeleteAgentPoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteAgentPoolRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  DeleteAgentPoolRequest._() : super();
+  factory DeleteAgentPoolRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DeleteAgentPoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAgentPoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteAgentPoolRequest clone() =>
+      DeleteAgentPoolRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteAgentPoolRequest copyWith(
+          void Function(DeleteAgentPoolRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteAgentPoolRequest))
+          as DeleteAgentPoolRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeleteAgentPoolRequest create() => DeleteAgentPoolRequest._();
+  DeleteAgentPoolRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteAgentPoolRequest> createRepeated() =>
+      $pb.PbList<DeleteAgentPoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAgentPoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAgentPoolRequest>(create);
+  static DeleteAgentPoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class ListAgentPoolsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListAgentPoolsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListAgentPoolsRequest._() : super();
+  factory ListAgentPoolsRequest({
+    $core.String? projectId,
+    $core.String? filter,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (filter != null) {
+      _result.filter = filter;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListAgentPoolsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAgentPoolsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListAgentPoolsRequest clone() =>
+      ListAgentPoolsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListAgentPoolsRequest copyWith(
+          void Function(ListAgentPoolsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListAgentPoolsRequest))
+          as ListAgentPoolsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListAgentPoolsRequest create() => ListAgentPoolsRequest._();
+  ListAgentPoolsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListAgentPoolsRequest> createRepeated() =>
+      $pb.PbList<ListAgentPoolsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListAgentPoolsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAgentPoolsRequest>(create);
+  static ListAgentPoolsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set projectId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProjectId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set filter($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFilter() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set pageSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set pageToken($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPageToken() => clearField(4);
+}
+
+class ListAgentPoolsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListAgentPoolsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.AgentPool>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'agentPools',
+        $pb.PbFieldType.PM,
+        subBuilder: $3.AgentPool.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListAgentPoolsResponse._() : super();
+  factory ListAgentPoolsResponse({
+    $core.Iterable<$3.AgentPool>? agentPools,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (agentPools != null) {
+      _result.agentPools.addAll(agentPools);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListAgentPoolsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAgentPoolsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListAgentPoolsResponse clone() =>
+      ListAgentPoolsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListAgentPoolsResponse copyWith(
+          void Function(ListAgentPoolsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListAgentPoolsResponse))
+          as ListAgentPoolsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListAgentPoolsResponse create() => ListAgentPoolsResponse._();
+  ListAgentPoolsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAgentPoolsResponse> createRepeated() =>
+      $pb.PbList<ListAgentPoolsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListAgentPoolsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAgentPoolsResponse>(create);
+  static ListAgentPoolsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$3.AgentPool> get agentPools => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
 }

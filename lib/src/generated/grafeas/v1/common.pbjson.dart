@@ -3,7 +3,7 @@
 //  source: grafeas/v1/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -86,3 +86,38 @@ const EnvelopeSignature$json = const {
 /// Descriptor for `EnvelopeSignature`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List envelopeSignatureDescriptor = $convert.base64Decode(
     'ChFFbnZlbG9wZVNpZ25hdHVyZRIQCgNzaWcYASABKAxSA3NpZxIUCgVrZXlpZBgCIAEoCVIFa2V5aWQ=');
+@$core.Deprecated('Use fileLocationDescriptor instead')
+const FileLocation$json = const {
+  '1': 'FileLocation',
+  '2': const [
+    const {'1': 'file_path', '3': 1, '4': 1, '5': 9, '10': 'filePath'},
+  ],
+};
+
+/// Descriptor for `FileLocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileLocationDescriptor = $convert.base64Decode(
+    'CgxGaWxlTG9jYXRpb24SGwoJZmlsZV9wYXRoGAEgASgJUghmaWxlUGF0aA==');
+@$core.Deprecated('Use licenseDescriptor instead')
+const License$json = const {
+  '1': 'License',
+  '2': const [
+    const {'1': 'expression', '3': 1, '4': 1, '5': 9, '10': 'expression'},
+    const {'1': 'comments', '3': 2, '4': 1, '5': 9, '10': 'comments'},
+  ],
+};
+
+/// Descriptor for `License`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List licenseDescriptor = $convert.base64Decode(
+    'CgdMaWNlbnNlEh4KCmV4cHJlc3Npb24YASABKAlSCmV4cHJlc3Npb24SGgoIY29tbWVudHMYAiABKAlSCGNvbW1lbnRz');
+@$core.Deprecated('Use digestDescriptor instead')
+const Digest$json = const {
+  '1': 'Digest',
+  '2': const [
+    const {'1': 'algo', '3': 1, '4': 1, '5': 9, '10': 'algo'},
+    const {'1': 'digest_bytes', '3': 2, '4': 1, '5': 12, '10': 'digestBytes'},
+  ],
+};
+
+/// Descriptor for `Digest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List digestDescriptor = $convert.base64Decode(
+    'CgZEaWdlc3QSEgoEYWxnbxgBIAEoCVIEYWxnbxIhCgxkaWdlc3RfYnl0ZXMYAiABKAxSC2RpZ2VzdEJ5dGVz');

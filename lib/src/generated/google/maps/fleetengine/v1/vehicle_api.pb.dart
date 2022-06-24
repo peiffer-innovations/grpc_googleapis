@@ -3,7 +3,7 @@
 //  source: google/maps/fleetengine/v1/vehicle_api.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -815,9 +815,10 @@ class SearchVehiclesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'tripTypes',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $2.TripType.valueOf,
-        enumValues: $2.TripType.values)
+        enumValues: $2.TripType.values,
+        defaultEnumValue: $2.TripType.UNKNOWN_TRIP_TYPE)
     ..aOM<$6.Duration>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -872,6 +873,16 @@ class SearchVehiclesRequest extends $pb.GeneratedMessage {
             : 'requiredOneOfAttributeSets',
         $pb.PbFieldType.PM,
         subBuilder: VehicleAttributeList.create)
+    ..e<SearchVehiclesRequest_CurrentTripsPresent>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'currentTripsPresent',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: SearchVehiclesRequest_CurrentTripsPresent
+            .CURRENT_TRIPS_PRESENT_UNSPECIFIED,
+        valueOf: SearchVehiclesRequest_CurrentTripsPresent.valueOf,
+        enumValues: SearchVehiclesRequest_CurrentTripsPresent.values)
     ..hasRequiredFields = false;
 
   SearchVehiclesRequest._() : super();
@@ -892,6 +903,7 @@ class SearchVehiclesRequest extends $pb.GeneratedMessage {
     $core.bool? includeBackToBack,
     $core.String? tripId,
     $core.Iterable<VehicleAttributeList>? requiredOneOfAttributeSets,
+    SearchVehiclesRequest_CurrentTripsPresent? currentTripsPresent,
   }) {
     final _result = create();
     if (header != null) {
@@ -941,6 +953,9 @@ class SearchVehiclesRequest extends $pb.GeneratedMessage {
     }
     if (requiredOneOfAttributeSets != null) {
       _result.requiredOneOfAttributeSets.addAll(requiredOneOfAttributeSets);
+    }
+    if (currentTripsPresent != null) {
+      _result.currentTripsPresent = currentTripsPresent;
     }
     return _result;
   }
@@ -1128,6 +1143,19 @@ class SearchVehiclesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   $core.List<VehicleAttributeList> get requiredOneOfAttributeSets =>
       $_getList(15);
+
+  @$pb.TagNumber(21)
+  SearchVehiclesRequest_CurrentTripsPresent get currentTripsPresent =>
+      $_getN(16);
+  @$pb.TagNumber(21)
+  set currentTripsPresent(SearchVehiclesRequest_CurrentTripsPresent v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasCurrentTripsPresent() => $_has(16);
+  @$pb.TagNumber(21)
+  void clearCurrentTripsPresent() => clearField(21);
 }
 
 class SearchVehiclesResponse extends $pb.GeneratedMessage {
@@ -1229,9 +1257,10 @@ class ListVehiclesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'tripTypes',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $2.TripType.valueOf,
-        enumValues: $2.TripType.values)
+        enumValues: $2.TripType.values,
+        defaultEnumValue: $2.TripType.UNKNOWN_TRIP_TYPE)
     ..aOM<$6.Duration>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1243,9 +1272,10 @@ class ListVehiclesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'vehicleTypeCategories',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $1.Vehicle_VehicleType_Category.valueOf,
-        enumValues: $1.Vehicle_VehicleType_Category.values)
+        enumValues: $1.Vehicle_VehicleType_Category.values,
+        defaultEnumValue: $1.Vehicle_VehicleType_Category.UNKNOWN)
     ..pPS(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')

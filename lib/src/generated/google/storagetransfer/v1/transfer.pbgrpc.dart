@@ -3,7 +3,7 @@
 //  source: google/storagetransfer/v1/transfer.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -59,6 +59,32 @@ class StorageTransferServiceClient extends $grpc.Client {
           '/google.storagetransfer.v1.StorageTransferService/RunTransferJob',
           ($2.RunTransferJobRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$createAgentPool =
+      $grpc.ClientMethod<$2.CreateAgentPoolRequest, $3.AgentPool>(
+          '/google.storagetransfer.v1.StorageTransferService/CreateAgentPool',
+          ($2.CreateAgentPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.AgentPool.fromBuffer(value));
+  static final _$updateAgentPool =
+      $grpc.ClientMethod<$2.UpdateAgentPoolRequest, $3.AgentPool>(
+          '/google.storagetransfer.v1.StorageTransferService/UpdateAgentPool',
+          ($2.UpdateAgentPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.AgentPool.fromBuffer(value));
+  static final _$getAgentPool =
+      $grpc.ClientMethod<$2.GetAgentPoolRequest, $3.AgentPool>(
+          '/google.storagetransfer.v1.StorageTransferService/GetAgentPool',
+          ($2.GetAgentPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.AgentPool.fromBuffer(value));
+  static final _$listAgentPools =
+      $grpc.ClientMethod<$2.ListAgentPoolsRequest, $2.ListAgentPoolsResponse>(
+          '/google.storagetransfer.v1.StorageTransferService/ListAgentPools',
+          ($2.ListAgentPoolsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.ListAgentPoolsResponse.fromBuffer(value));
+  static final _$deleteAgentPool =
+      $grpc.ClientMethod<$2.DeleteAgentPoolRequest, $1.Empty>(
+          '/google.storagetransfer.v1.StorageTransferService/DeleteAgentPool',
+          ($2.DeleteAgentPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   StorageTransferServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -114,6 +140,36 @@ class StorageTransferServiceClient extends $grpc.Client {
       $2.RunTransferJobRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$runTransferJob, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.AgentPool> createAgentPool(
+      $2.CreateAgentPoolRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAgentPool, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.AgentPool> updateAgentPool(
+      $2.UpdateAgentPoolRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateAgentPool, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.AgentPool> getAgentPool(
+      $2.GetAgentPoolRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAgentPool, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.ListAgentPoolsResponse> listAgentPools(
+      $2.ListAgentPoolsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAgentPools, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteAgentPool(
+      $2.DeleteAgentPoolRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAgentPool, request, options: options);
   }
 }
 
@@ -187,6 +243,47 @@ abstract class StorageTransferServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.RunTransferJobRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateAgentPoolRequest, $3.AgentPool>(
+        'CreateAgentPool',
+        createAgentPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.CreateAgentPoolRequest.fromBuffer(value),
+        ($3.AgentPool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateAgentPoolRequest, $3.AgentPool>(
+        'UpdateAgentPool',
+        updateAgentPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.UpdateAgentPoolRequest.fromBuffer(value),
+        ($3.AgentPool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetAgentPoolRequest, $3.AgentPool>(
+        'GetAgentPool',
+        getAgentPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetAgentPoolRequest.fromBuffer(value),
+        ($3.AgentPool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListAgentPoolsRequest,
+            $2.ListAgentPoolsResponse>(
+        'ListAgentPools',
+        listAgentPools_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ListAgentPoolsRequest.fromBuffer(value),
+        ($2.ListAgentPoolsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteAgentPoolRequest, $1.Empty>(
+        'DeleteAgentPool',
+        deleteAgentPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.DeleteAgentPoolRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$3.GoogleServiceAccount> getGoogleServiceAccount_Pre(
@@ -231,6 +328,32 @@ abstract class StorageTransferServiceBase extends $grpc.Service {
     return runTransferJob(call, await request);
   }
 
+  $async.Future<$3.AgentPool> createAgentPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateAgentPoolRequest> request) async {
+    return createAgentPool(call, await request);
+  }
+
+  $async.Future<$3.AgentPool> updateAgentPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateAgentPoolRequest> request) async {
+    return updateAgentPool(call, await request);
+  }
+
+  $async.Future<$3.AgentPool> getAgentPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetAgentPoolRequest> request) async {
+    return getAgentPool(call, await request);
+  }
+
+  $async.Future<$2.ListAgentPoolsResponse> listAgentPools_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListAgentPoolsRequest> request) async {
+    return listAgentPools(call, await request);
+  }
+
+  $async.Future<$1.Empty> deleteAgentPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteAgentPoolRequest> request) async {
+    return deleteAgentPool(call, await request);
+  }
+
   $async.Future<$3.GoogleServiceAccount> getGoogleServiceAccount(
       $grpc.ServiceCall call, $2.GetGoogleServiceAccountRequest request);
   $async.Future<$3.TransferJob> createTransferJob(
@@ -247,4 +370,14 @@ abstract class StorageTransferServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ResumeTransferOperationRequest request);
   $async.Future<$0.Operation> runTransferJob(
       $grpc.ServiceCall call, $2.RunTransferJobRequest request);
+  $async.Future<$3.AgentPool> createAgentPool(
+      $grpc.ServiceCall call, $2.CreateAgentPoolRequest request);
+  $async.Future<$3.AgentPool> updateAgentPool(
+      $grpc.ServiceCall call, $2.UpdateAgentPoolRequest request);
+  $async.Future<$3.AgentPool> getAgentPool(
+      $grpc.ServiceCall call, $2.GetAgentPoolRequest request);
+  $async.Future<$2.ListAgentPoolsResponse> listAgentPools(
+      $grpc.ServiceCall call, $2.ListAgentPoolsRequest request);
+  $async.Future<$1.Empty> deleteAgentPool(
+      $grpc.ServiceCall call, $2.DeleteAgentPoolRequest request);
 }

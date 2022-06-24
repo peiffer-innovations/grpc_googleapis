@@ -3,7 +3,7 @@
 //  source: google/spanner/v1/spanner.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -121,6 +121,7 @@ const Session$json = const {
       '8': const {},
       '10': 'approximateLastUseTime'
     },
+    const {'1': 'creator_role', '3': 5, '4': 1, '5': 9, '10': 'creatorRole'},
   ],
   '3': const [Session_LabelsEntry$json],
   '7': const {},
@@ -138,7 +139,7 @@ const Session_LabelsEntry$json = const {
 
 /// Descriptor for `Session`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sessionDescriptor = $convert.base64Decode(
-    'CgdTZXNzaW9uEhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRI+CgZsYWJlbHMYAiADKAsyJi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9uLkxhYmVsc0VudHJ5UgZsYWJlbHMSQAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSWgoZYXBwcm94aW1hdGVfbGFzdF91c2VfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IWYXBwcm94aW1hdGVMYXN0VXNlVGltZRo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBOnTqQXEKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJPcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9L3Nlc3Npb25zL3tzZXNzaW9ufQ==');
+    'CgdTZXNzaW9uEhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRI+CgZsYWJlbHMYAiADKAsyJi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9uLkxhYmVsc0VudHJ5UgZsYWJlbHMSQAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSWgoZYXBwcm94aW1hdGVfbGFzdF91c2VfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IWYXBwcm94aW1hdGVMYXN0VXNlVGltZRIhCgxjcmVhdG9yX3JvbGUYBSABKAlSC2NyZWF0b3JSb2xlGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE6dOpBcQoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEk9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vc2Vzc2lvbnMve3Nlc3Npb259');
 @$core.Deprecated('Use getSessionRequestDescriptor instead')
 const GetSessionRequest$json = const {
   '1': 'GetSessionRequest',

@@ -3,7 +3,7 @@
 //  source: google/pubsub/v1/pubsub.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -15,6 +15,9 @@ import '../../protobuf/timestamp.pb.dart' as $4;
 import '../../protobuf/field_mask.pb.dart' as $5;
 
 import 'schema.pbenum.dart' as $0;
+import 'pubsub.pbenum.dart';
+
+export 'pubsub.pbenum.dart';
 
 class MessageStoragePolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1672,6 +1675,21 @@ class Subscription extends $pb.GeneratedMessage {
             ? ''
             : 'topicMessageRetentionDuration',
         subBuilder: $3.Duration.create)
+    ..aOM<BigQueryConfig>(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bigqueryConfig',
+        subBuilder: BigQueryConfig.create)
+    ..e<Subscription_State>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Subscription_State.STATE_UNSPECIFIED,
+        valueOf: Subscription_State.valueOf,
+        enumValues: Subscription_State.values)
     ..hasRequiredFields = false;
 
   Subscription._() : super();
@@ -1691,6 +1709,8 @@ class Subscription extends $pb.GeneratedMessage {
     $core.bool? detached,
     $core.bool? enableExactlyOnceDelivery,
     $3.Duration? topicMessageRetentionDuration,
+    BigQueryConfig? bigqueryConfig,
+    Subscription_State? state,
   }) {
     final _result = create();
     if (name != null) {
@@ -1737,6 +1757,12 @@ class Subscription extends $pb.GeneratedMessage {
     }
     if (topicMessageRetentionDuration != null) {
       _result.topicMessageRetentionDuration = topicMessageRetentionDuration;
+    }
+    if (bigqueryConfig != null) {
+      _result.bigqueryConfig = bigqueryConfig;
+    }
+    if (state != null) {
+      _result.state = state;
     }
     return _result;
   }
@@ -1949,6 +1975,32 @@ class Subscription extends $pb.GeneratedMessage {
   void clearTopicMessageRetentionDuration() => clearField(17);
   @$pb.TagNumber(17)
   $3.Duration ensureTopicMessageRetentionDuration() => $_ensure(14);
+
+  @$pb.TagNumber(18)
+  BigQueryConfig get bigqueryConfig => $_getN(15);
+  @$pb.TagNumber(18)
+  set bigqueryConfig(BigQueryConfig v) {
+    setField(18, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasBigqueryConfig() => $_has(15);
+  @$pb.TagNumber(18)
+  void clearBigqueryConfig() => clearField(18);
+  @$pb.TagNumber(18)
+  BigQueryConfig ensureBigqueryConfig() => $_ensure(15);
+
+  @$pb.TagNumber(19)
+  Subscription_State get state => $_getN(16);
+  @$pb.TagNumber(19)
+  set state(Subscription_State v) {
+    setField(19, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasState() => $_has(16);
+  @$pb.TagNumber(19)
+  void clearState() => clearField(19);
 }
 
 class RetryPolicy extends $pb.GeneratedMessage {
@@ -2408,6 +2460,161 @@ class PushConfig extends $pb.GeneratedMessage {
   void clearOidcToken() => clearField(3);
   @$pb.TagNumber(3)
   PushConfig_OidcToken ensureOidcToken() => $_ensure(2);
+}
+
+class BigQueryConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BigQueryConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'table')
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'useTopicSchema')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'writeMetadata')
+    ..aOB(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dropUnknownFields')
+    ..e<BigQueryConfig_State>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: BigQueryConfig_State.STATE_UNSPECIFIED,
+        valueOf: BigQueryConfig_State.valueOf,
+        enumValues: BigQueryConfig_State.values)
+    ..hasRequiredFields = false;
+
+  BigQueryConfig._() : super();
+  factory BigQueryConfig({
+    $core.String? table,
+    $core.bool? useTopicSchema,
+    $core.bool? writeMetadata,
+    $core.bool? dropUnknownFields,
+    BigQueryConfig_State? state,
+  }) {
+    final _result = create();
+    if (table != null) {
+      _result.table = table;
+    }
+    if (useTopicSchema != null) {
+      _result.useTopicSchema = useTopicSchema;
+    }
+    if (writeMetadata != null) {
+      _result.writeMetadata = writeMetadata;
+    }
+    if (dropUnknownFields != null) {
+      _result.dropUnknownFields = dropUnknownFields;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    return _result;
+  }
+  factory BigQueryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BigQueryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BigQueryConfig clone() => BigQueryConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BigQueryConfig copyWith(void Function(BigQueryConfig) updates) =>
+      super.copyWith((message) => updates(message as BigQueryConfig))
+          as BigQueryConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BigQueryConfig create() => BigQueryConfig._();
+  BigQueryConfig createEmptyInstance() => create();
+  static $pb.PbList<BigQueryConfig> createRepeated() =>
+      $pb.PbList<BigQueryConfig>();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryConfig>(create);
+  static BigQueryConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get table => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set table($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTable() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTable() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get useTopicSchema => $_getBF(1);
+  @$pb.TagNumber(2)
+  set useTopicSchema($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUseTopicSchema() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUseTopicSchema() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get writeMetadata => $_getBF(2);
+  @$pb.TagNumber(3)
+  set writeMetadata($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasWriteMetadata() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearWriteMetadata() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get dropUnknownFields => $_getBF(3);
+  @$pb.TagNumber(4)
+  set dropUnknownFields($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDropUnknownFields() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDropUnknownFields() => clearField(4);
+
+  @$pb.TagNumber(5)
+  BigQueryConfig_State get state => $_getN(4);
+  @$pb.TagNumber(5)
+  set state(BigQueryConfig_State v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasState() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearState() => clearField(5);
 }
 
 class ReceivedMessage extends $pb.GeneratedMessage {
@@ -3427,7 +3634,7 @@ class StreamingPullRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'modifyDeadlineSeconds',
-        $pb.PbFieldType.P3)
+        $pb.PbFieldType.K3)
     ..pPS(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')

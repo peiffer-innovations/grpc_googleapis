@@ -3,7 +3,7 @@
 //  source: google/datastore/v1/query.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -22,6 +22,14 @@ const EntityResult$json = const {
       '10': 'entity'
     },
     const {'1': 'version', '3': 4, '4': 1, '5': 3, '10': 'version'},
+    const {
+      '1': 'update_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
     const {'1': 'cursor', '3': 3, '4': 1, '5': 12, '10': 'cursor'},
   ],
   '4': const [EntityResult_ResultType$json],
@@ -40,7 +48,7 @@ const EntityResult_ResultType$json = const {
 
 /// Descriptor for `EntityResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List entityResultDescriptor = $convert.base64Decode(
-    'CgxFbnRpdHlSZXN1bHQSMwoGZW50aXR5GAEgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSBmVudGl0eRIYCgd2ZXJzaW9uGAQgASgDUgd2ZXJzaW9uEhYKBmN1cnNvchgDIAEoDFIGY3Vyc29yIlEKClJlc3VsdFR5cGUSGwoXUkVTVUxUX1RZUEVfVU5TUEVDSUZJRUQQABIICgRGVUxMEAESDgoKUFJPSkVDVElPThACEgwKCEtFWV9PTkxZEAM=');
+    'CgxFbnRpdHlSZXN1bHQSMwoGZW50aXR5GAEgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSBmVudGl0eRIYCgd2ZXJzaW9uGAQgASgDUgd2ZXJzaW9uEjsKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKdXBkYXRlVGltZRIWCgZjdXJzb3IYAyABKAxSBmN1cnNvciJRCgpSZXN1bHRUeXBlEhsKF1JFU1VMVF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEg4KClBST0pFQ1RJT04QAhIMCghLRVlfT05MWRAD');
 @$core.Deprecated('Use queryDescriptor instead')
 const Query$json = const {
   '1': 'Query',
@@ -288,13 +296,16 @@ const PropertyFilter_Operator$json = const {
     const {'1': 'GREATER_THAN', '2': 3},
     const {'1': 'GREATER_THAN_OR_EQUAL', '2': 4},
     const {'1': 'EQUAL', '2': 5},
+    const {'1': 'IN', '2': 6},
+    const {'1': 'NOT_EQUAL', '2': 9},
     const {'1': 'HAS_ANCESTOR', '2': 11},
+    const {'1': 'NOT_IN', '2': 13},
   ],
 };
 
 /// Descriptor for `PropertyFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List propertyFilterDescriptor = $convert.base64Decode(
-    'Cg5Qcm9wZXJ0eUZpbHRlchJCCghwcm9wZXJ0eRgBIAEoCzImLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlSZWZlcmVuY2VSCHByb3BlcnR5EjwKAm9wGAIgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eUZpbHRlci5PcGVyYXRvclICb3ASMAoFdmFsdWUYAyABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYxLlZhbHVlUgV2YWx1ZSKVAQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFVQUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFVQUwQBBIJCgVFUVVBTBAFEhAKDEhBU19BTkNFU1RPUhAL');
+    'Cg5Qcm9wZXJ0eUZpbHRlchJCCghwcm9wZXJ0eRgBIAEoCzImLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlSZWZlcmVuY2VSCHByb3BlcnR5EjwKAm9wGAIgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eUZpbHRlci5PcGVyYXRvclICb3ASMAoFdmFsdWUYAyABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYxLlZhbHVlUgV2YWx1ZSK4AQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFVQUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFVQUwQBBIJCgVFUVVBTBAFEgYKAklOEAYSDQoJTk9UX0VRVUFMEAkSEAoMSEFTX0FOQ0VTVE9SEAsSCgoGTk9UX0lOEA0=');
 @$core.Deprecated('Use gqlQueryDescriptor instead')
 const GqlQuery$json = const {
   '1': 'GqlQuery',
@@ -420,6 +431,14 @@ const QueryResultBatch$json = const {
       '5': 3,
       '10': 'snapshotVersion'
     },
+    const {
+      '1': 'read_time',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'readTime'
+    },
   ],
   '4': const [QueryResultBatch_MoreResultsType$json],
 };
@@ -438,4 +457,4 @@ const QueryResultBatch_MoreResultsType$json = const {
 
 /// Descriptor for `QueryResultBatch`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryResultBatchDescriptor = $convert.base64Decode(
-    'ChBRdWVyeVJlc3VsdEJhdGNoEicKD3NraXBwZWRfcmVzdWx0cxgGIAEoBVIOc2tpcHBlZFJlc3VsdHMSJQoOc2tpcHBlZF9jdXJzb3IYAyABKAxSDXNraXBwZWRDdXJzb3ISWgoSZW50aXR5X3Jlc3VsdF90eXBlGAEgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSZXN1bHQuUmVzdWx0VHlwZVIQZW50aXR5UmVzdWx0VHlwZRJICg5lbnRpdHlfcmVzdWx0cxgCIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5UmVzdWx0Ug1lbnRpdHlSZXN1bHRzEh0KCmVuZF9jdXJzb3IYBCABKAxSCWVuZEN1cnNvchJYCgxtb3JlX3Jlc3VsdHMYBSABKA4yNS5nb29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5UmVzdWx0QmF0Y2guTW9yZVJlc3VsdHNUeXBlUgttb3JlUmVzdWx0cxIpChBzbmFwc2hvdF92ZXJzaW9uGAcgASgDUg9zbmFwc2hvdFZlcnNpb24imAEKD01vcmVSZXN1bHRzVHlwZRIhCh1NT1JFX1JFU1VMVFNfVFlQRV9VTlNQRUNJRklFRBAAEhAKDE5PVF9GSU5JU0hFRBABEhwKGE1PUkVfUkVTVUxUU19BRlRFUl9MSU1JVBACEh0KGU1PUkVfUkVTVUxUU19BRlRFUl9DVVJTT1IQBBITCg9OT19NT1JFX1JFU1VMVFMQAw==');
+    'ChBRdWVyeVJlc3VsdEJhdGNoEicKD3NraXBwZWRfcmVzdWx0cxgGIAEoBVIOc2tpcHBlZFJlc3VsdHMSJQoOc2tpcHBlZF9jdXJzb3IYAyABKAxSDXNraXBwZWRDdXJzb3ISWgoSZW50aXR5X3Jlc3VsdF90eXBlGAEgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSZXN1bHQuUmVzdWx0VHlwZVIQZW50aXR5UmVzdWx0VHlwZRJICg5lbnRpdHlfcmVzdWx0cxgCIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5UmVzdWx0Ug1lbnRpdHlSZXN1bHRzEh0KCmVuZF9jdXJzb3IYBCABKAxSCWVuZEN1cnNvchJYCgxtb3JlX3Jlc3VsdHMYBSABKA4yNS5nb29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5UmVzdWx0QmF0Y2guTW9yZVJlc3VsdHNUeXBlUgttb3JlUmVzdWx0cxIpChBzbmFwc2hvdF92ZXJzaW9uGAcgASgDUg9zbmFwc2hvdFZlcnNpb24SNwoJcmVhZF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIIcmVhZFRpbWUimAEKD01vcmVSZXN1bHRzVHlwZRIhCh1NT1JFX1JFU1VMVFNfVFlQRV9VTlNQRUNJRklFRBAAEhAKDE5PVF9GSU5JU0hFRBABEhwKGE1PUkVfUkVTVUxUU19BRlRFUl9MSU1JVBACEh0KGU1PUkVfUkVTVUxUU19BRlRFUl9DVVJTT1IQBBITCg9OT19NT1JFX1JFU1VMVFMQAw==');

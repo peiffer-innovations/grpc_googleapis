@@ -3,7 +3,7 @@
 //  source: google/privacy/dlp/v2/dlp.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -686,9 +686,10 @@ class InspectConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'contentOptions',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: ContentOption.valueOf,
-        enumValues: ContentOption.values)
+        enumValues: ContentOption.values,
+        defaultEnumValue: ContentOption.CONTENT_UNSPECIFIED)
     ..pc<InspectionRuleSet>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -4885,9 +4886,10 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'supportedBy',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: InfoTypeSupportedBy.valueOf,
-        enumValues: InfoTypeSupportedBy.values)
+        enumValues: InfoTypeSupportedBy.values,
+        defaultEnumValue: InfoTypeSupportedBy.ENUM_TYPE_UNSPECIFIED)
     ..aOS(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -16474,6 +16476,554 @@ class InspectJobConfig extends $pb.GeneratedMessage {
   $core.List<Action> get actions => $_getList(3);
 }
 
+class DataProfileAction_Export extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfileAction.Export',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.BigQueryTable>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'profileTable',
+        subBuilder: $2.BigQueryTable.create)
+    ..hasRequiredFields = false;
+
+  DataProfileAction_Export._() : super();
+  factory DataProfileAction_Export({
+    $2.BigQueryTable? profileTable,
+  }) {
+    final _result = create();
+    if (profileTable != null) {
+      _result.profileTable = profileTable;
+    }
+    return _result;
+  }
+  factory DataProfileAction_Export.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfileAction_Export.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfileAction_Export clone() =>
+      DataProfileAction_Export()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfileAction_Export copyWith(
+          void Function(DataProfileAction_Export) updates) =>
+      super.copyWith((message) => updates(message as DataProfileAction_Export))
+          as DataProfileAction_Export; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfileAction_Export create() => DataProfileAction_Export._();
+  DataProfileAction_Export createEmptyInstance() => create();
+  static $pb.PbList<DataProfileAction_Export> createRepeated() =>
+      $pb.PbList<DataProfileAction_Export>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfileAction_Export getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfileAction_Export>(create);
+  static DataProfileAction_Export? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.BigQueryTable get profileTable => $_getN(0);
+  @$pb.TagNumber(1)
+  set profileTable($2.BigQueryTable v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProfileTable() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProfileTable() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.BigQueryTable ensureProfileTable() => $_ensure(0);
+}
+
+class DataProfileAction_PubSubNotification extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfileAction.PubSubNotification',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'topic')
+    ..e<DataProfileAction_EventType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'event',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DataProfileAction_EventType.EVENT_TYPE_UNSPECIFIED,
+        valueOf: DataProfileAction_EventType.valueOf,
+        enumValues: DataProfileAction_EventType.values)
+    ..aOM<DataProfilePubSubCondition>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pubsubCondition',
+        subBuilder: DataProfilePubSubCondition.create)
+    ..e<DataProfileAction_PubSubNotification_DetailLevel>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'detailOfMessage',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DataProfileAction_PubSubNotification_DetailLevel
+            .DETAIL_LEVEL_UNSPECIFIED,
+        valueOf: DataProfileAction_PubSubNotification_DetailLevel.valueOf,
+        enumValues: DataProfileAction_PubSubNotification_DetailLevel.values)
+    ..hasRequiredFields = false;
+
+  DataProfileAction_PubSubNotification._() : super();
+  factory DataProfileAction_PubSubNotification({
+    $core.String? topic,
+    DataProfileAction_EventType? event,
+    DataProfilePubSubCondition? pubsubCondition,
+    DataProfileAction_PubSubNotification_DetailLevel? detailOfMessage,
+  }) {
+    final _result = create();
+    if (topic != null) {
+      _result.topic = topic;
+    }
+    if (event != null) {
+      _result.event = event;
+    }
+    if (pubsubCondition != null) {
+      _result.pubsubCondition = pubsubCondition;
+    }
+    if (detailOfMessage != null) {
+      _result.detailOfMessage = detailOfMessage;
+    }
+    return _result;
+  }
+  factory DataProfileAction_PubSubNotification.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfileAction_PubSubNotification.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfileAction_PubSubNotification clone() =>
+      DataProfileAction_PubSubNotification()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfileAction_PubSubNotification copyWith(
+          void Function(DataProfileAction_PubSubNotification) updates) =>
+      super.copyWith((message) =>
+              updates(message as DataProfileAction_PubSubNotification))
+          as DataProfileAction_PubSubNotification; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfileAction_PubSubNotification create() =>
+      DataProfileAction_PubSubNotification._();
+  DataProfileAction_PubSubNotification createEmptyInstance() => create();
+  static $pb.PbList<DataProfileAction_PubSubNotification> createRepeated() =>
+      $pb.PbList<DataProfileAction_PubSubNotification>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfileAction_PubSubNotification getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          DataProfileAction_PubSubNotification>(create);
+  static DataProfileAction_PubSubNotification? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set topic($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTopic() => clearField(1);
+
+  @$pb.TagNumber(2)
+  DataProfileAction_EventType get event => $_getN(1);
+  @$pb.TagNumber(2)
+  set event(DataProfileAction_EventType v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEvent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEvent() => clearField(2);
+
+  @$pb.TagNumber(3)
+  DataProfilePubSubCondition get pubsubCondition => $_getN(2);
+  @$pb.TagNumber(3)
+  set pubsubCondition(DataProfilePubSubCondition v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPubsubCondition() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPubsubCondition() => clearField(3);
+  @$pb.TagNumber(3)
+  DataProfilePubSubCondition ensurePubsubCondition() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  DataProfileAction_PubSubNotification_DetailLevel get detailOfMessage =>
+      $_getN(3);
+  @$pb.TagNumber(4)
+  set detailOfMessage(DataProfileAction_PubSubNotification_DetailLevel v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDetailOfMessage() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDetailOfMessage() => clearField(4);
+}
+
+enum DataProfileAction_Action { exportData, pubSubNotification, notSet }
+
+class DataProfileAction extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DataProfileAction_Action>
+      _DataProfileAction_ActionByTag = {
+    1: DataProfileAction_Action.exportData,
+    2: DataProfileAction_Action.pubSubNotification,
+    0: DataProfileAction_Action.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfileAction',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<DataProfileAction_Export>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'exportData',
+        subBuilder: DataProfileAction_Export.create)
+    ..aOM<DataProfileAction_PubSubNotification>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pubSubNotification',
+        subBuilder: DataProfileAction_PubSubNotification.create)
+    ..hasRequiredFields = false;
+
+  DataProfileAction._() : super();
+  factory DataProfileAction({
+    DataProfileAction_Export? exportData,
+    DataProfileAction_PubSubNotification? pubSubNotification,
+  }) {
+    final _result = create();
+    if (exportData != null) {
+      _result.exportData = exportData;
+    }
+    if (pubSubNotification != null) {
+      _result.pubSubNotification = pubSubNotification;
+    }
+    return _result;
+  }
+  factory DataProfileAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfileAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfileAction clone() => DataProfileAction()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfileAction copyWith(void Function(DataProfileAction) updates) =>
+      super.copyWith((message) => updates(message as DataProfileAction))
+          as DataProfileAction; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfileAction create() => DataProfileAction._();
+  DataProfileAction createEmptyInstance() => create();
+  static $pb.PbList<DataProfileAction> createRepeated() =>
+      $pb.PbList<DataProfileAction>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfileAction getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfileAction>(create);
+  static DataProfileAction? _defaultInstance;
+
+  DataProfileAction_Action whichAction() =>
+      _DataProfileAction_ActionByTag[$_whichOneof(0)]!;
+  void clearAction() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  DataProfileAction_Export get exportData => $_getN(0);
+  @$pb.TagNumber(1)
+  set exportData(DataProfileAction_Export v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasExportData() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearExportData() => clearField(1);
+  @$pb.TagNumber(1)
+  DataProfileAction_Export ensureExportData() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  DataProfileAction_PubSubNotification get pubSubNotification => $_getN(1);
+  @$pb.TagNumber(2)
+  set pubSubNotification(DataProfileAction_PubSubNotification v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPubSubNotification() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPubSubNotification() => clearField(2);
+  @$pb.TagNumber(2)
+  DataProfileAction_PubSubNotification ensurePubSubNotification() =>
+      $_ensure(1);
+}
+
+class DataProfileJobConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfileJobConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<DataProfileLocation>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'location',
+        subBuilder: DataProfileLocation.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..pc<DataProfileAction>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataProfileActions',
+        $pb.PbFieldType.PM,
+        subBuilder: DataProfileAction.create)
+    ..pPS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'inspectTemplates')
+    ..hasRequiredFields = false;
+
+  DataProfileJobConfig._() : super();
+  factory DataProfileJobConfig({
+    DataProfileLocation? location,
+    $core.String? projectId,
+    $core.Iterable<DataProfileAction>? dataProfileActions,
+    $core.Iterable<$core.String>? inspectTemplates,
+  }) {
+    final _result = create();
+    if (location != null) {
+      _result.location = location;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (dataProfileActions != null) {
+      _result.dataProfileActions.addAll(dataProfileActions);
+    }
+    if (inspectTemplates != null) {
+      _result.inspectTemplates.addAll(inspectTemplates);
+    }
+    return _result;
+  }
+  factory DataProfileJobConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfileJobConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfileJobConfig clone() =>
+      DataProfileJobConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfileJobConfig copyWith(void Function(DataProfileJobConfig) updates) =>
+      super.copyWith((message) => updates(message as DataProfileJobConfig))
+          as DataProfileJobConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfileJobConfig create() => DataProfileJobConfig._();
+  DataProfileJobConfig createEmptyInstance() => create();
+  static $pb.PbList<DataProfileJobConfig> createRepeated() =>
+      $pb.PbList<DataProfileJobConfig>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfileJobConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfileJobConfig>(create);
+  static DataProfileJobConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DataProfileLocation get location => $_getN(0);
+  @$pb.TagNumber(1)
+  set location(DataProfileLocation v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLocation() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLocation() => clearField(1);
+  @$pb.TagNumber(1)
+  DataProfileLocation ensureLocation() => $_ensure(0);
+
+  @$pb.TagNumber(5)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(5)
+  set projectId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(5)
+  void clearProjectId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.List<DataProfileAction> get dataProfileActions => $_getList(2);
+
+  @$pb.TagNumber(7)
+  $core.List<$core.String> get inspectTemplates => $_getList(3);
+}
+
+enum DataProfileLocation_Location { organizationId, folderId, notSet }
+
+class DataProfileLocation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DataProfileLocation_Location>
+      _DataProfileLocation_LocationByTag = {
+    1: DataProfileLocation_Location.organizationId,
+    2: DataProfileLocation_Location.folderId,
+    0: DataProfileLocation_Location.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfileLocation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'organizationId')
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'folderId')
+    ..hasRequiredFields = false;
+
+  DataProfileLocation._() : super();
+  factory DataProfileLocation({
+    $fixnum.Int64? organizationId,
+    $fixnum.Int64? folderId,
+  }) {
+    final _result = create();
+    if (organizationId != null) {
+      _result.organizationId = organizationId;
+    }
+    if (folderId != null) {
+      _result.folderId = folderId;
+    }
+    return _result;
+  }
+  factory DataProfileLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfileLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfileLocation clone() => DataProfileLocation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfileLocation copyWith(void Function(DataProfileLocation) updates) =>
+      super.copyWith((message) => updates(message as DataProfileLocation))
+          as DataProfileLocation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfileLocation create() => DataProfileLocation._();
+  DataProfileLocation createEmptyInstance() => create();
+  static $pb.PbList<DataProfileLocation> createRepeated() =>
+      $pb.PbList<DataProfileLocation>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfileLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfileLocation>(create);
+  static DataProfileLocation? _defaultInstance;
+
+  DataProfileLocation_Location whichLocation() =>
+      _DataProfileLocation_LocationByTag[$_whichOneof(0)]!;
+  void clearLocation() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get organizationId => $_getI64(0);
+  @$pb.TagNumber(1)
+  set organizationId($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasOrganizationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOrganizationId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get folderId => $_getI64(1);
+  @$pb.TagNumber(2)
+  set folderId($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFolderId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFolderId() => clearField(2);
+}
+
 enum DlpJob_Details { riskDetails, inspectDetails, notSet }
 
 class DlpJob extends $pb.GeneratedMessage {
@@ -19795,4 +20345,1467 @@ class HybridInspectResponse extends $pb.GeneratedMessage {
   static HybridInspectResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<HybridInspectResponse>(create);
   static HybridInspectResponse? _defaultInstance;
+}
+
+class SensitivityScore extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SensitivityScore',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<SensitivityScore_SensitivityScoreLevel>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'score',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: SensitivityScore_SensitivityScoreLevel
+            .SENSITIVITY_SCORE_UNSPECIFIED,
+        valueOf: SensitivityScore_SensitivityScoreLevel.valueOf,
+        enumValues: SensitivityScore_SensitivityScoreLevel.values)
+    ..hasRequiredFields = false;
+
+  SensitivityScore._() : super();
+  factory SensitivityScore({
+    SensitivityScore_SensitivityScoreLevel? score,
+  }) {
+    final _result = create();
+    if (score != null) {
+      _result.score = score;
+    }
+    return _result;
+  }
+  factory SensitivityScore.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SensitivityScore.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SensitivityScore clone() => SensitivityScore()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SensitivityScore copyWith(void Function(SensitivityScore) updates) =>
+      super.copyWith((message) => updates(message as SensitivityScore))
+          as SensitivityScore; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SensitivityScore create() => SensitivityScore._();
+  SensitivityScore createEmptyInstance() => create();
+  static $pb.PbList<SensitivityScore> createRepeated() =>
+      $pb.PbList<SensitivityScore>();
+  @$core.pragma('dart2js:noInline')
+  static SensitivityScore getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SensitivityScore>(create);
+  static SensitivityScore? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  SensitivityScore_SensitivityScoreLevel get score => $_getN(0);
+  @$pb.TagNumber(1)
+  set score(SensitivityScore_SensitivityScoreLevel v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasScore() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearScore() => clearField(1);
+}
+
+class DataRiskLevel extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataRiskLevel',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<DataRiskLevel_DataRiskLevelScore>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'score',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DataRiskLevel_DataRiskLevelScore.RISK_SCORE_UNSPECIFIED,
+        valueOf: DataRiskLevel_DataRiskLevelScore.valueOf,
+        enumValues: DataRiskLevel_DataRiskLevelScore.values)
+    ..hasRequiredFields = false;
+
+  DataRiskLevel._() : super();
+  factory DataRiskLevel({
+    DataRiskLevel_DataRiskLevelScore? score,
+  }) {
+    final _result = create();
+    if (score != null) {
+      _result.score = score;
+    }
+    return _result;
+  }
+  factory DataRiskLevel.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataRiskLevel.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataRiskLevel clone() => DataRiskLevel()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataRiskLevel copyWith(void Function(DataRiskLevel) updates) =>
+      super.copyWith((message) => updates(message as DataRiskLevel))
+          as DataRiskLevel; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataRiskLevel create() => DataRiskLevel._();
+  DataRiskLevel createEmptyInstance() => create();
+  static $pb.PbList<DataRiskLevel> createRepeated() =>
+      $pb.PbList<DataRiskLevel>();
+  @$core.pragma('dart2js:noInline')
+  static DataRiskLevel getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataRiskLevel>(create);
+  static DataRiskLevel? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DataRiskLevel_DataRiskLevelScore get score => $_getN(0);
+  @$pb.TagNumber(1)
+  set score(DataRiskLevel_DataRiskLevelScore v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasScore() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearScore() => clearField(1);
+}
+
+class DataProfileConfigSnapshot extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfileConfigSnapshot',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<InspectConfig>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'inspectConfig',
+        subBuilder: InspectConfig.create)
+    ..aOM<DataProfileJobConfig>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataProfileJob',
+        subBuilder: DataProfileJobConfig.create)
+    ..hasRequiredFields = false;
+
+  DataProfileConfigSnapshot._() : super();
+  factory DataProfileConfigSnapshot({
+    InspectConfig? inspectConfig,
+    DataProfileJobConfig? dataProfileJob,
+  }) {
+    final _result = create();
+    if (inspectConfig != null) {
+      _result.inspectConfig = inspectConfig;
+    }
+    if (dataProfileJob != null) {
+      _result.dataProfileJob = dataProfileJob;
+    }
+    return _result;
+  }
+  factory DataProfileConfigSnapshot.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfileConfigSnapshot.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfileConfigSnapshot clone() =>
+      DataProfileConfigSnapshot()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfileConfigSnapshot copyWith(
+          void Function(DataProfileConfigSnapshot) updates) =>
+      super.copyWith((message) => updates(message as DataProfileConfigSnapshot))
+          as DataProfileConfigSnapshot; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfileConfigSnapshot create() => DataProfileConfigSnapshot._();
+  DataProfileConfigSnapshot createEmptyInstance() => create();
+  static $pb.PbList<DataProfileConfigSnapshot> createRepeated() =>
+      $pb.PbList<DataProfileConfigSnapshot>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfileConfigSnapshot getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfileConfigSnapshot>(create);
+  static DataProfileConfigSnapshot? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  InspectConfig get inspectConfig => $_getN(0);
+  @$pb.TagNumber(2)
+  set inspectConfig(InspectConfig v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasInspectConfig() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearInspectConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectConfig ensureInspectConfig() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  DataProfileJobConfig get dataProfileJob => $_getN(1);
+  @$pb.TagNumber(3)
+  set dataProfileJob(DataProfileJobConfig v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDataProfileJob() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearDataProfileJob() => clearField(3);
+  @$pb.TagNumber(3)
+  DataProfileJobConfig ensureDataProfileJob() => $_ensure(1);
+}
+
+class TableDataProfile extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TableDataProfile',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectDataProfile')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fullResource')
+    ..aOM<SensitivityScore>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sensitivityScore',
+        subBuilder: SensitivityScore.create)
+    ..aOM<DataRiskLevel>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataRiskLevel',
+        subBuilder: DataRiskLevel.create)
+    ..aOM<DataProfileConfigSnapshot>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'configSnapshot',
+        subBuilder: DataProfileConfigSnapshot.create)
+    ..aOM<$3.Timestamp>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lastModifiedTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'expirationTime',
+        subBuilder: $3.Timestamp.create)
+    ..aInt64(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'scannedColumnCount')
+    ..aInt64(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'failedColumnCount')
+    ..aInt64(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tableSizeBytes')
+    ..aInt64(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rowCount')
+    ..e<EncryptionStatus>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'encryptionStatus',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: EncryptionStatus.ENCRYPTION_STATUS_UNSPECIFIED,
+        valueOf: EncryptionStatus.valueOf,
+        enumValues: EncryptionStatus.values)
+    ..e<ResourceVisibility>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resourceVisibility',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: ResourceVisibility.RESOURCE_VISIBILITY_UNSPECIFIED,
+        valueOf: ResourceVisibility.valueOf,
+        enumValues: ResourceVisibility.values)
+    ..aOM<$3.Timestamp>(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'profileLastGenerated',
+        subBuilder: $3.Timestamp.create)
+    ..m<$core.String, $core.String>(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resourceLabels',
+        entryClassName: 'TableDataProfile.ResourceLabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..aOM<ProfileStatus>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'profileStatus',
+        subBuilder: ProfileStatus.create)
+    ..e<TableDataProfile_State>(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TableDataProfile_State.STATE_UNSPECIFIED,
+        valueOf: TableDataProfile_State.valueOf,
+        enumValues: TableDataProfile_State.values)
+    ..aOM<$3.Timestamp>(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOS(
+        24,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'datasetProjectId')
+    ..aOS(
+        25,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'datasetId')
+    ..aOS(
+        26,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tableId')
+    ..pc<InfoTypeSummary>(
+        27,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'predictedInfoTypes',
+        $pb.PbFieldType.PM,
+        subBuilder: InfoTypeSummary.create)
+    ..pc<OtherInfoTypeSummary>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'otherInfoTypes',
+        $pb.PbFieldType.PM,
+        subBuilder: OtherInfoTypeSummary.create)
+    ..aOS(
+        29,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'datasetLocation')
+    ..hasRequiredFields = false;
+
+  TableDataProfile._() : super();
+  factory TableDataProfile({
+    $core.String? name,
+    $core.String? projectDataProfile,
+    $core.String? fullResource,
+    SensitivityScore? sensitivityScore,
+    DataRiskLevel? dataRiskLevel,
+    DataProfileConfigSnapshot? configSnapshot,
+    $3.Timestamp? lastModifiedTime,
+    $3.Timestamp? expirationTime,
+    $fixnum.Int64? scannedColumnCount,
+    $fixnum.Int64? failedColumnCount,
+    $fixnum.Int64? tableSizeBytes,
+    $fixnum.Int64? rowCount,
+    EncryptionStatus? encryptionStatus,
+    ResourceVisibility? resourceVisibility,
+    $3.Timestamp? profileLastGenerated,
+    $core.Map<$core.String, $core.String>? resourceLabels,
+    ProfileStatus? profileStatus,
+    TableDataProfile_State? state,
+    $3.Timestamp? createTime,
+    $core.String? datasetProjectId,
+    $core.String? datasetId,
+    $core.String? tableId,
+    $core.Iterable<InfoTypeSummary>? predictedInfoTypes,
+    $core.Iterable<OtherInfoTypeSummary>? otherInfoTypes,
+    $core.String? datasetLocation,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (projectDataProfile != null) {
+      _result.projectDataProfile = projectDataProfile;
+    }
+    if (fullResource != null) {
+      _result.fullResource = fullResource;
+    }
+    if (sensitivityScore != null) {
+      _result.sensitivityScore = sensitivityScore;
+    }
+    if (dataRiskLevel != null) {
+      _result.dataRiskLevel = dataRiskLevel;
+    }
+    if (configSnapshot != null) {
+      _result.configSnapshot = configSnapshot;
+    }
+    if (lastModifiedTime != null) {
+      _result.lastModifiedTime = lastModifiedTime;
+    }
+    if (expirationTime != null) {
+      _result.expirationTime = expirationTime;
+    }
+    if (scannedColumnCount != null) {
+      _result.scannedColumnCount = scannedColumnCount;
+    }
+    if (failedColumnCount != null) {
+      _result.failedColumnCount = failedColumnCount;
+    }
+    if (tableSizeBytes != null) {
+      _result.tableSizeBytes = tableSizeBytes;
+    }
+    if (rowCount != null) {
+      _result.rowCount = rowCount;
+    }
+    if (encryptionStatus != null) {
+      _result.encryptionStatus = encryptionStatus;
+    }
+    if (resourceVisibility != null) {
+      _result.resourceVisibility = resourceVisibility;
+    }
+    if (profileLastGenerated != null) {
+      _result.profileLastGenerated = profileLastGenerated;
+    }
+    if (resourceLabels != null) {
+      _result.resourceLabels.addAll(resourceLabels);
+    }
+    if (profileStatus != null) {
+      _result.profileStatus = profileStatus;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (datasetProjectId != null) {
+      _result.datasetProjectId = datasetProjectId;
+    }
+    if (datasetId != null) {
+      _result.datasetId = datasetId;
+    }
+    if (tableId != null) {
+      _result.tableId = tableId;
+    }
+    if (predictedInfoTypes != null) {
+      _result.predictedInfoTypes.addAll(predictedInfoTypes);
+    }
+    if (otherInfoTypes != null) {
+      _result.otherInfoTypes.addAll(otherInfoTypes);
+    }
+    if (datasetLocation != null) {
+      _result.datasetLocation = datasetLocation;
+    }
+    return _result;
+  }
+  factory TableDataProfile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TableDataProfile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TableDataProfile clone() => TableDataProfile()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TableDataProfile copyWith(void Function(TableDataProfile) updates) =>
+      super.copyWith((message) => updates(message as TableDataProfile))
+          as TableDataProfile; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TableDataProfile create() => TableDataProfile._();
+  TableDataProfile createEmptyInstance() => create();
+  static $pb.PbList<TableDataProfile> createRepeated() =>
+      $pb.PbList<TableDataProfile>();
+  @$core.pragma('dart2js:noInline')
+  static TableDataProfile getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableDataProfile>(create);
+  static TableDataProfile? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get projectDataProfile => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set projectDataProfile($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProjectDataProfile() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProjectDataProfile() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get fullResource => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set fullResource($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasFullResource() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFullResource() => clearField(3);
+
+  @$pb.TagNumber(5)
+  SensitivityScore get sensitivityScore => $_getN(3);
+  @$pb.TagNumber(5)
+  set sensitivityScore(SensitivityScore v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSensitivityScore() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearSensitivityScore() => clearField(5);
+  @$pb.TagNumber(5)
+  SensitivityScore ensureSensitivityScore() => $_ensure(3);
+
+  @$pb.TagNumber(6)
+  DataRiskLevel get dataRiskLevel => $_getN(4);
+  @$pb.TagNumber(6)
+  set dataRiskLevel(DataRiskLevel v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasDataRiskLevel() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearDataRiskLevel() => clearField(6);
+  @$pb.TagNumber(6)
+  DataRiskLevel ensureDataRiskLevel() => $_ensure(4);
+
+  @$pb.TagNumber(7)
+  DataProfileConfigSnapshot get configSnapshot => $_getN(5);
+  @$pb.TagNumber(7)
+  set configSnapshot(DataProfileConfigSnapshot v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasConfigSnapshot() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearConfigSnapshot() => clearField(7);
+  @$pb.TagNumber(7)
+  DataProfileConfigSnapshot ensureConfigSnapshot() => $_ensure(5);
+
+  @$pb.TagNumber(8)
+  $3.Timestamp get lastModifiedTime => $_getN(6);
+  @$pb.TagNumber(8)
+  set lastModifiedTime($3.Timestamp v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasLastModifiedTime() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearLastModifiedTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $3.Timestamp ensureLastModifiedTime() => $_ensure(6);
+
+  @$pb.TagNumber(9)
+  $3.Timestamp get expirationTime => $_getN(7);
+  @$pb.TagNumber(9)
+  set expirationTime($3.Timestamp v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasExpirationTime() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearExpirationTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $3.Timestamp ensureExpirationTime() => $_ensure(7);
+
+  @$pb.TagNumber(10)
+  $fixnum.Int64 get scannedColumnCount => $_getI64(8);
+  @$pb.TagNumber(10)
+  set scannedColumnCount($fixnum.Int64 v) {
+    $_setInt64(8, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasScannedColumnCount() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearScannedColumnCount() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $fixnum.Int64 get failedColumnCount => $_getI64(9);
+  @$pb.TagNumber(11)
+  set failedColumnCount($fixnum.Int64 v) {
+    $_setInt64(9, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasFailedColumnCount() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearFailedColumnCount() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $fixnum.Int64 get tableSizeBytes => $_getI64(10);
+  @$pb.TagNumber(12)
+  set tableSizeBytes($fixnum.Int64 v) {
+    $_setInt64(10, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasTableSizeBytes() => $_has(10);
+  @$pb.TagNumber(12)
+  void clearTableSizeBytes() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $fixnum.Int64 get rowCount => $_getI64(11);
+  @$pb.TagNumber(13)
+  set rowCount($fixnum.Int64 v) {
+    $_setInt64(11, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasRowCount() => $_has(11);
+  @$pb.TagNumber(13)
+  void clearRowCount() => clearField(13);
+
+  @$pb.TagNumber(14)
+  EncryptionStatus get encryptionStatus => $_getN(12);
+  @$pb.TagNumber(14)
+  set encryptionStatus(EncryptionStatus v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasEncryptionStatus() => $_has(12);
+  @$pb.TagNumber(14)
+  void clearEncryptionStatus() => clearField(14);
+
+  @$pb.TagNumber(15)
+  ResourceVisibility get resourceVisibility => $_getN(13);
+  @$pb.TagNumber(15)
+  set resourceVisibility(ResourceVisibility v) {
+    setField(15, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasResourceVisibility() => $_has(13);
+  @$pb.TagNumber(15)
+  void clearResourceVisibility() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $3.Timestamp get profileLastGenerated => $_getN(14);
+  @$pb.TagNumber(16)
+  set profileLastGenerated($3.Timestamp v) {
+    setField(16, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasProfileLastGenerated() => $_has(14);
+  @$pb.TagNumber(16)
+  void clearProfileLastGenerated() => clearField(16);
+  @$pb.TagNumber(16)
+  $3.Timestamp ensureProfileLastGenerated() => $_ensure(14);
+
+  @$pb.TagNumber(17)
+  $core.Map<$core.String, $core.String> get resourceLabels => $_getMap(15);
+
+  @$pb.TagNumber(21)
+  ProfileStatus get profileStatus => $_getN(16);
+  @$pb.TagNumber(21)
+  set profileStatus(ProfileStatus v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasProfileStatus() => $_has(16);
+  @$pb.TagNumber(21)
+  void clearProfileStatus() => clearField(21);
+  @$pb.TagNumber(21)
+  ProfileStatus ensureProfileStatus() => $_ensure(16);
+
+  @$pb.TagNumber(22)
+  TableDataProfile_State get state => $_getN(17);
+  @$pb.TagNumber(22)
+  set state(TableDataProfile_State v) {
+    setField(22, v);
+  }
+
+  @$pb.TagNumber(22)
+  $core.bool hasState() => $_has(17);
+  @$pb.TagNumber(22)
+  void clearState() => clearField(22);
+
+  @$pb.TagNumber(23)
+  $3.Timestamp get createTime => $_getN(18);
+  @$pb.TagNumber(23)
+  set createTime($3.Timestamp v) {
+    setField(23, v);
+  }
+
+  @$pb.TagNumber(23)
+  $core.bool hasCreateTime() => $_has(18);
+  @$pb.TagNumber(23)
+  void clearCreateTime() => clearField(23);
+  @$pb.TagNumber(23)
+  $3.Timestamp ensureCreateTime() => $_ensure(18);
+
+  @$pb.TagNumber(24)
+  $core.String get datasetProjectId => $_getSZ(19);
+  @$pb.TagNumber(24)
+  set datasetProjectId($core.String v) {
+    $_setString(19, v);
+  }
+
+  @$pb.TagNumber(24)
+  $core.bool hasDatasetProjectId() => $_has(19);
+  @$pb.TagNumber(24)
+  void clearDatasetProjectId() => clearField(24);
+
+  @$pb.TagNumber(25)
+  $core.String get datasetId => $_getSZ(20);
+  @$pb.TagNumber(25)
+  set datasetId($core.String v) {
+    $_setString(20, v);
+  }
+
+  @$pb.TagNumber(25)
+  $core.bool hasDatasetId() => $_has(20);
+  @$pb.TagNumber(25)
+  void clearDatasetId() => clearField(25);
+
+  @$pb.TagNumber(26)
+  $core.String get tableId => $_getSZ(21);
+  @$pb.TagNumber(26)
+  set tableId($core.String v) {
+    $_setString(21, v);
+  }
+
+  @$pb.TagNumber(26)
+  $core.bool hasTableId() => $_has(21);
+  @$pb.TagNumber(26)
+  void clearTableId() => clearField(26);
+
+  @$pb.TagNumber(27)
+  $core.List<InfoTypeSummary> get predictedInfoTypes => $_getList(22);
+
+  @$pb.TagNumber(28)
+  $core.List<OtherInfoTypeSummary> get otherInfoTypes => $_getList(23);
+
+  @$pb.TagNumber(29)
+  $core.String get datasetLocation => $_getSZ(24);
+  @$pb.TagNumber(29)
+  set datasetLocation($core.String v) {
+    $_setString(24, v);
+  }
+
+  @$pb.TagNumber(29)
+  $core.bool hasDatasetLocation() => $_has(24);
+  @$pb.TagNumber(29)
+  void clearDatasetLocation() => clearField(29);
+}
+
+class ProfileStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ProfileStatus',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$7.Status>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        subBuilder: $7.Status.create)
+    ..aOM<$3.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'timestamp',
+        subBuilder: $3.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  ProfileStatus._() : super();
+  factory ProfileStatus({
+    $7.Status? status,
+    $3.Timestamp? timestamp,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    return _result;
+  }
+  factory ProfileStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProfileStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ProfileStatus clone() => ProfileStatus()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ProfileStatus copyWith(void Function(ProfileStatus) updates) =>
+      super.copyWith((message) => updates(message as ProfileStatus))
+          as ProfileStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ProfileStatus create() => ProfileStatus._();
+  ProfileStatus createEmptyInstance() => create();
+  static $pb.PbList<ProfileStatus> createRepeated() =>
+      $pb.PbList<ProfileStatus>();
+  @$core.pragma('dart2js:noInline')
+  static ProfileStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProfileStatus>(create);
+  static ProfileStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $7.Status get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status($7.Status v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.Status ensureStatus() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $3.Timestamp get timestamp => $_getN(1);
+  @$pb.TagNumber(3)
+  set timestamp($3.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTimestamp() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearTimestamp() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Timestamp ensureTimestamp() => $_ensure(1);
+}
+
+class InfoTypeSummary extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'InfoTypeSummary',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.InfoType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'infoType',
+        subBuilder: $2.InfoType.create)
+    ..hasRequiredFields = false;
+
+  InfoTypeSummary._() : super();
+  factory InfoTypeSummary({
+    $2.InfoType? infoType,
+  }) {
+    final _result = create();
+    if (infoType != null) {
+      _result.infoType = infoType;
+    }
+    return _result;
+  }
+  factory InfoTypeSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InfoTypeSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  InfoTypeSummary clone() => InfoTypeSummary()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  InfoTypeSummary copyWith(void Function(InfoTypeSummary) updates) =>
+      super.copyWith((message) => updates(message as InfoTypeSummary))
+          as InfoTypeSummary; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeSummary create() => InfoTypeSummary._();
+  InfoTypeSummary createEmptyInstance() => create();
+  static $pb.PbList<InfoTypeSummary> createRepeated() =>
+      $pb.PbList<InfoTypeSummary>();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeSummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InfoTypeSummary>(create);
+  static InfoTypeSummary? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.InfoType get infoType => $_getN(0);
+  @$pb.TagNumber(1)
+  set infoType($2.InfoType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasInfoType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearInfoType() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.InfoType ensureInfoType() => $_ensure(0);
+}
+
+class OtherInfoTypeSummary extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'OtherInfoTypeSummary',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.InfoType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'infoType',
+        subBuilder: $2.InfoType.create)
+    ..hasRequiredFields = false;
+
+  OtherInfoTypeSummary._() : super();
+  factory OtherInfoTypeSummary({
+    $2.InfoType? infoType,
+  }) {
+    final _result = create();
+    if (infoType != null) {
+      _result.infoType = infoType;
+    }
+    return _result;
+  }
+  factory OtherInfoTypeSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OtherInfoTypeSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  OtherInfoTypeSummary clone() =>
+      OtherInfoTypeSummary()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  OtherInfoTypeSummary copyWith(void Function(OtherInfoTypeSummary) updates) =>
+      super.copyWith((message) => updates(message as OtherInfoTypeSummary))
+          as OtherInfoTypeSummary; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OtherInfoTypeSummary create() => OtherInfoTypeSummary._();
+  OtherInfoTypeSummary createEmptyInstance() => create();
+  static $pb.PbList<OtherInfoTypeSummary> createRepeated() =>
+      $pb.PbList<OtherInfoTypeSummary>();
+  @$core.pragma('dart2js:noInline')
+  static OtherInfoTypeSummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OtherInfoTypeSummary>(create);
+  static OtherInfoTypeSummary? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.InfoType get infoType => $_getN(0);
+  @$pb.TagNumber(1)
+  set infoType($2.InfoType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasInfoType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearInfoType() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.InfoType ensureInfoType() => $_ensure(0);
+}
+
+enum DataProfilePubSubCondition_PubSubCondition_Value {
+  minimumRiskScore,
+  minimumSensitivityScore,
+  notSet
+}
+
+class DataProfilePubSubCondition_PubSubCondition extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, DataProfilePubSubCondition_PubSubCondition_Value>
+      _DataProfilePubSubCondition_PubSubCondition_ValueByTag = {
+    1: DataProfilePubSubCondition_PubSubCondition_Value.minimumRiskScore,
+    2: DataProfilePubSubCondition_PubSubCondition_Value.minimumSensitivityScore,
+    0: DataProfilePubSubCondition_PubSubCondition_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfilePubSubCondition.PubSubCondition',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..e<DataProfilePubSubCondition_ProfileScoreBucket>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minimumRiskScore',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DataProfilePubSubCondition_ProfileScoreBucket
+            .PROFILE_SCORE_BUCKET_UNSPECIFIED,
+        valueOf: DataProfilePubSubCondition_ProfileScoreBucket.valueOf,
+        enumValues: DataProfilePubSubCondition_ProfileScoreBucket.values)
+    ..e<DataProfilePubSubCondition_ProfileScoreBucket>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minimumSensitivityScore',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DataProfilePubSubCondition_ProfileScoreBucket
+            .PROFILE_SCORE_BUCKET_UNSPECIFIED,
+        valueOf: DataProfilePubSubCondition_ProfileScoreBucket.valueOf,
+        enumValues: DataProfilePubSubCondition_ProfileScoreBucket.values)
+    ..hasRequiredFields = false;
+
+  DataProfilePubSubCondition_PubSubCondition._() : super();
+  factory DataProfilePubSubCondition_PubSubCondition({
+    DataProfilePubSubCondition_ProfileScoreBucket? minimumRiskScore,
+    DataProfilePubSubCondition_ProfileScoreBucket? minimumSensitivityScore,
+  }) {
+    final _result = create();
+    if (minimumRiskScore != null) {
+      _result.minimumRiskScore = minimumRiskScore;
+    }
+    if (minimumSensitivityScore != null) {
+      _result.minimumSensitivityScore = minimumSensitivityScore;
+    }
+    return _result;
+  }
+  factory DataProfilePubSubCondition_PubSubCondition.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfilePubSubCondition_PubSubCondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubCondition_PubSubCondition clone() =>
+      DataProfilePubSubCondition_PubSubCondition()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubCondition_PubSubCondition copyWith(
+          void Function(DataProfilePubSubCondition_PubSubCondition) updates) =>
+      super.copyWith((message) =>
+              updates(message as DataProfilePubSubCondition_PubSubCondition))
+          as DataProfilePubSubCondition_PubSubCondition; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubCondition_PubSubCondition create() =>
+      DataProfilePubSubCondition_PubSubCondition._();
+  DataProfilePubSubCondition_PubSubCondition createEmptyInstance() => create();
+  static $pb.PbList<DataProfilePubSubCondition_PubSubCondition>
+      createRepeated() =>
+          $pb.PbList<DataProfilePubSubCondition_PubSubCondition>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubCondition_PubSubCondition getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          DataProfilePubSubCondition_PubSubCondition>(create);
+  static DataProfilePubSubCondition_PubSubCondition? _defaultInstance;
+
+  DataProfilePubSubCondition_PubSubCondition_Value whichValue() =>
+      _DataProfilePubSubCondition_PubSubCondition_ValueByTag[$_whichOneof(0)]!;
+  void clearValue() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  DataProfilePubSubCondition_ProfileScoreBucket get minimumRiskScore =>
+      $_getN(0);
+  @$pb.TagNumber(1)
+  set minimumRiskScore(DataProfilePubSubCondition_ProfileScoreBucket v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMinimumRiskScore() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMinimumRiskScore() => clearField(1);
+
+  @$pb.TagNumber(2)
+  DataProfilePubSubCondition_ProfileScoreBucket get minimumSensitivityScore =>
+      $_getN(1);
+  @$pb.TagNumber(2)
+  set minimumSensitivityScore(DataProfilePubSubCondition_ProfileScoreBucket v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMinimumSensitivityScore() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMinimumSensitivityScore() => clearField(2);
+}
+
+class DataProfilePubSubCondition_PubSubExpressions
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfilePubSubCondition.PubSubExpressions',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logicalOperator',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+                .LOGICAL_OPERATOR_UNSPECIFIED,
+        valueOf:
+            DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+                .valueOf,
+        enumValues:
+            DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+                .values)
+    ..pc<DataProfilePubSubCondition_PubSubCondition>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'conditions',
+        $pb.PbFieldType.PM,
+        subBuilder: DataProfilePubSubCondition_PubSubCondition.create)
+    ..hasRequiredFields = false;
+
+  DataProfilePubSubCondition_PubSubExpressions._() : super();
+  factory DataProfilePubSubCondition_PubSubExpressions({
+    DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator?
+        logicalOperator,
+    $core.Iterable<DataProfilePubSubCondition_PubSubCondition>? conditions,
+  }) {
+    final _result = create();
+    if (logicalOperator != null) {
+      _result.logicalOperator = logicalOperator;
+    }
+    if (conditions != null) {
+      _result.conditions.addAll(conditions);
+    }
+    return _result;
+  }
+  factory DataProfilePubSubCondition_PubSubExpressions.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfilePubSubCondition_PubSubExpressions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubCondition_PubSubExpressions clone() =>
+      DataProfilePubSubCondition_PubSubExpressions()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubCondition_PubSubExpressions copyWith(
+          void Function(DataProfilePubSubCondition_PubSubExpressions)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as DataProfilePubSubCondition_PubSubExpressions))
+          as DataProfilePubSubCondition_PubSubExpressions; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubCondition_PubSubExpressions create() =>
+      DataProfilePubSubCondition_PubSubExpressions._();
+  DataProfilePubSubCondition_PubSubExpressions createEmptyInstance() =>
+      create();
+  static $pb.PbList<DataProfilePubSubCondition_PubSubExpressions>
+      createRepeated() =>
+          $pb.PbList<DataProfilePubSubCondition_PubSubExpressions>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubCondition_PubSubExpressions getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          DataProfilePubSubCondition_PubSubExpressions>(create);
+  static DataProfilePubSubCondition_PubSubExpressions? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator
+      get logicalOperator => $_getN(0);
+  @$pb.TagNumber(1)
+  set logicalOperator(
+      DataProfilePubSubCondition_PubSubExpressions_PubSubLogicalOperator v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLogicalOperator() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLogicalOperator() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<DataProfilePubSubCondition_PubSubCondition> get conditions =>
+      $_getList(1);
+}
+
+class DataProfilePubSubCondition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfilePubSubCondition',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<DataProfilePubSubCondition_PubSubExpressions>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'expressions',
+        subBuilder: DataProfilePubSubCondition_PubSubExpressions.create)
+    ..hasRequiredFields = false;
+
+  DataProfilePubSubCondition._() : super();
+  factory DataProfilePubSubCondition({
+    DataProfilePubSubCondition_PubSubExpressions? expressions,
+  }) {
+    final _result = create();
+    if (expressions != null) {
+      _result.expressions = expressions;
+    }
+    return _result;
+  }
+  factory DataProfilePubSubCondition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfilePubSubCondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubCondition clone() =>
+      DataProfilePubSubCondition()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubCondition copyWith(
+          void Function(DataProfilePubSubCondition) updates) =>
+      super.copyWith(
+              (message) => updates(message as DataProfilePubSubCondition))
+          as DataProfilePubSubCondition; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubCondition create() => DataProfilePubSubCondition._();
+  DataProfilePubSubCondition createEmptyInstance() => create();
+  static $pb.PbList<DataProfilePubSubCondition> createRepeated() =>
+      $pb.PbList<DataProfilePubSubCondition>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubCondition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfilePubSubCondition>(create);
+  static DataProfilePubSubCondition? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DataProfilePubSubCondition_PubSubExpressions get expressions => $_getN(0);
+  @$pb.TagNumber(1)
+  set expressions(DataProfilePubSubCondition_PubSubExpressions v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasExpressions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearExpressions() => clearField(1);
+  @$pb.TagNumber(1)
+  DataProfilePubSubCondition_PubSubExpressions ensureExpressions() =>
+      $_ensure(0);
+}
+
+class DataProfilePubSubMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DataProfilePubSubMessage',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<TableDataProfile>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'profile',
+        subBuilder: TableDataProfile.create)
+    ..e<DataProfileAction_EventType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'event',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: DataProfileAction_EventType.EVENT_TYPE_UNSPECIFIED,
+        valueOf: DataProfileAction_EventType.valueOf,
+        enumValues: DataProfileAction_EventType.values)
+    ..hasRequiredFields = false;
+
+  DataProfilePubSubMessage._() : super();
+  factory DataProfilePubSubMessage({
+    TableDataProfile? profile,
+    DataProfileAction_EventType? event,
+  }) {
+    final _result = create();
+    if (profile != null) {
+      _result.profile = profile;
+    }
+    if (event != null) {
+      _result.event = event;
+    }
+    return _result;
+  }
+  factory DataProfilePubSubMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataProfilePubSubMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubMessage clone() =>
+      DataProfilePubSubMessage()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DataProfilePubSubMessage copyWith(
+          void Function(DataProfilePubSubMessage) updates) =>
+      super.copyWith((message) => updates(message as DataProfilePubSubMessage))
+          as DataProfilePubSubMessage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubMessage create() => DataProfilePubSubMessage._();
+  DataProfilePubSubMessage createEmptyInstance() => create();
+  static $pb.PbList<DataProfilePubSubMessage> createRepeated() =>
+      $pb.PbList<DataProfilePubSubMessage>();
+  @$core.pragma('dart2js:noInline')
+  static DataProfilePubSubMessage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DataProfilePubSubMessage>(create);
+  static DataProfilePubSubMessage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TableDataProfile get profile => $_getN(0);
+  @$pb.TagNumber(1)
+  set profile(TableDataProfile v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProfile() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProfile() => clearField(1);
+  @$pb.TagNumber(1)
+  TableDataProfile ensureProfile() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  DataProfileAction_EventType get event => $_getN(1);
+  @$pb.TagNumber(2)
+  set event(DataProfileAction_EventType v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEvent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEvent() => clearField(2);
 }

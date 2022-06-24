@@ -3,7 +3,7 @@
 //  source: grafeas/v1/intoto_statement.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -11,14 +11,21 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'intoto_provenance.pb.dart' as $0;
 import 'slsa_provenance.pb.dart' as $1;
+import 'slsa_provenance_zero_two.pb.dart' as $2;
 
-enum InTotoStatement_Predicate { provenance, slsaProvenance, notSet }
+enum InTotoStatement_Predicate {
+  provenance,
+  slsaProvenance,
+  slsaProvenanceZeroTwo,
+  notSet
+}
 
 class InTotoStatement extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, InTotoStatement_Predicate>
       _InTotoStatement_PredicateByTag = {
     4: InTotoStatement_Predicate.provenance,
     5: InTotoStatement_Predicate.slsaProvenance,
+    6: InTotoStatement_Predicate.slsaProvenanceZeroTwo,
     0: InTotoStatement_Predicate.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -30,7 +37,7 @@ class InTotoStatement extends $pb.GeneratedMessage {
               ? ''
               : 'grafeas.v1'),
       createEmptyInstance: create)
-    ..oo(0, [4, 5])
+    ..oo(0, [4, 5, 6])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -61,6 +68,12 @@ class InTotoStatement extends $pb.GeneratedMessage {
             ? ''
             : 'slsaProvenance',
         subBuilder: $1.SlsaProvenance.create)
+    ..aOM<$2.SlsaProvenanceZeroTwo>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'slsaProvenanceZeroTwo',
+        subBuilder: $2.SlsaProvenanceZeroTwo.create)
     ..hasRequiredFields = false;
 
   InTotoStatement._() : super();
@@ -70,6 +83,7 @@ class InTotoStatement extends $pb.GeneratedMessage {
     $core.String? predicateType,
     $0.InTotoProvenance? provenance,
     $1.SlsaProvenance? slsaProvenance,
+    $2.SlsaProvenanceZeroTwo? slsaProvenanceZeroTwo,
   }) {
     final _result = create();
     if (type != null) {
@@ -86,6 +100,9 @@ class InTotoStatement extends $pb.GeneratedMessage {
     }
     if (slsaProvenance != null) {
       _result.slsaProvenance = slsaProvenance;
+    }
+    if (slsaProvenanceZeroTwo != null) {
+      _result.slsaProvenanceZeroTwo = slsaProvenanceZeroTwo;
     }
     return _result;
   }
@@ -174,6 +191,20 @@ class InTotoStatement extends $pb.GeneratedMessage {
   void clearSlsaProvenance() => clearField(5);
   @$pb.TagNumber(5)
   $1.SlsaProvenance ensureSlsaProvenance() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $2.SlsaProvenanceZeroTwo get slsaProvenanceZeroTwo => $_getN(5);
+  @$pb.TagNumber(6)
+  set slsaProvenanceZeroTwo($2.SlsaProvenanceZeroTwo v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasSlsaProvenanceZeroTwo() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSlsaProvenanceZeroTwo() => clearField(6);
+  @$pb.TagNumber(6)
+  $2.SlsaProvenanceZeroTwo ensureSlsaProvenanceZeroTwo() => $_ensure(5);
 }
 
 class Subject extends $pb.GeneratedMessage {

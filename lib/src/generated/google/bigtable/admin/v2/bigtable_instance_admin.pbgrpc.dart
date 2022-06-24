@@ -3,7 +3,7 @@
 //  source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -121,6 +121,12 @@ class BigtableInstanceAdminClient extends $grpc.Client {
       ($0.TestIamPermissionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.TestIamPermissionsResponse.fromBuffer(value));
+  static final _$listHotTablets =
+      $grpc.ClientMethod<$4.ListHotTabletsRequest, $4.ListHotTabletsResponse>(
+          '/google.bigtable.admin.v2.BigtableInstanceAdmin/ListHotTablets',
+          ($4.ListHotTabletsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $4.ListHotTabletsResponse.fromBuffer(value));
 
   BigtableInstanceAdminClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -238,6 +244,12 @@ class BigtableInstanceAdminClient extends $grpc.Client {
       $0.TestIamPermissionsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$testIamPermissions, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListHotTabletsResponse> listHotTablets(
+      $4.ListHotTabletsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listHotTablets, request, options: options);
   }
 }
 
@@ -408,6 +420,15 @@ abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.TestIamPermissionsRequest.fromBuffer(value),
         ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListHotTabletsRequest,
+            $4.ListHotTabletsResponse>(
+        'ListHotTablets',
+        listHotTablets_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListHotTabletsRequest.fromBuffer(value),
+        ($4.ListHotTabletsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.Operation> createInstance_Pre($grpc.ServiceCall call,
@@ -514,6 +535,12 @@ abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
     return testIamPermissions(call, await request);
   }
 
+  $async.Future<$4.ListHotTabletsResponse> listHotTablets_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListHotTabletsRequest> request) async {
+    return listHotTablets(call, await request);
+  }
+
   $async.Future<$2.Operation> createInstance(
       $grpc.ServiceCall call, $4.CreateInstanceRequest request);
   $async.Future<$5.Instance> getInstance(
@@ -554,4 +581,6 @@ abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SetIamPolicyRequest request);
   $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
+  $async.Future<$4.ListHotTabletsResponse> listHotTablets(
+      $grpc.ServiceCall call, $4.ListHotTabletsRequest request);
 }

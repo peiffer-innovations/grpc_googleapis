@@ -3,7 +3,7 @@
 //  source: google/appengine/v1/version.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -145,5 +145,41 @@ class EndpointsApiService_RolloutStrategy extends $pb.ProtobufEnum {
       _byValue[value];
 
   const EndpointsApiService_RolloutStrategy._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class VpcAccessConnector_EgressSetting extends $pb.ProtobufEnum {
+  static const VpcAccessConnector_EgressSetting EGRESS_SETTING_UNSPECIFIED =
+      VpcAccessConnector_EgressSetting._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EGRESS_SETTING_UNSPECIFIED');
+  static const VpcAccessConnector_EgressSetting ALL_TRAFFIC =
+      VpcAccessConnector_EgressSetting._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ALL_TRAFFIC');
+  static const VpcAccessConnector_EgressSetting PRIVATE_IP_RANGES =
+      VpcAccessConnector_EgressSetting._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PRIVATE_IP_RANGES');
+
+  static const $core.List<VpcAccessConnector_EgressSetting> values =
+      <VpcAccessConnector_EgressSetting>[
+    EGRESS_SETTING_UNSPECIFIED,
+    ALL_TRAFFIC,
+    PRIVATE_IP_RANGES,
+  ];
+
+  static final $core.Map<$core.int, VpcAccessConnector_EgressSetting> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static VpcAccessConnector_EgressSetting? valueOf($core.int value) =>
+      _byValue[value];
+
+  const VpcAccessConnector_EgressSetting._($core.int v, $core.String n)
       : super(v, n);
 }

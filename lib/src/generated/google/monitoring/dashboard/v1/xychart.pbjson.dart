@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/xychart.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -55,6 +55,14 @@ const XyChart$json = const {
       '10': 'yAxis'
     },
     const {
+      '1': 'y2_axis',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.monitoring.dashboard.v1.XyChart.Axis',
+      '10': 'y2Axis'
+    },
+    const {
       '1': 'chart_options',
       '3': 8,
       '4': 1,
@@ -103,8 +111,17 @@ const XyChart_DataSet$json = const {
       '8': const {},
       '10': 'minAlignmentPeriod'
     },
+    const {
+      '1': 'target_axis',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.monitoring.dashboard.v1.XyChart.DataSet.TargetAxis',
+      '8': const {},
+      '10': 'targetAxis'
+    },
   ],
-  '4': const [XyChart_DataSet_PlotType$json],
+  '4': const [XyChart_DataSet_PlotType$json, XyChart_DataSet_TargetAxis$json],
 };
 
 @$core.Deprecated('Use xyChartDescriptor instead')
@@ -116,6 +133,16 @@ const XyChart_DataSet_PlotType$json = const {
     const {'1': 'STACKED_AREA', '2': 2},
     const {'1': 'STACKED_BAR', '2': 3},
     const {'1': 'HEATMAP', '2': 4},
+  ],
+};
+
+@$core.Deprecated('Use xyChartDescriptor instead')
+const XyChart_DataSet_TargetAxis$json = const {
+  '1': 'TargetAxis',
+  '2': const [
+    const {'1': 'TARGET_AXIS_UNSPECIFIED', '2': 0},
+    const {'1': 'Y1', '2': 1},
+    const {'1': 'Y2', '2': 2},
   ],
 };
 
@@ -148,7 +175,7 @@ const XyChart_Axis_Scale$json = const {
 
 /// Descriptor for `XyChart`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List xyChartDescriptor = $convert.base64Decode(
-    'CgdYeUNoYXJ0ElEKCWRhdGFfc2V0cxgBIAMoCzIvLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5YeUNoYXJ0LkRhdGFTZXRCA+BBAlIIZGF0YVNldHMSSAoSdGltZXNoaWZ0X2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhF0aW1lc2hpZnREdXJhdGlvbhJJCgp0aHJlc2hvbGRzGAUgAygLMikuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRocmVzaG9sZFIKdGhyZXNob2xkcxJDCgZ4X2F4aXMYBiABKAsyLC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydC5BeGlzUgV4QXhpcxJDCgZ5X2F4aXMYByABKAsyLC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydC5BeGlzUgV5QXhpcxJRCg1jaGFydF9vcHRpb25zGAggASgLMiwuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLkNoYXJ0T3B0aW9uc1IMY2hhcnRPcHRpb25zGp4DCgdEYXRhU2V0EmAKEXRpbWVfc2VyaWVzX3F1ZXJ5GAEgASgLMi8uZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRpbWVTZXJpZXNRdWVyeUID4EECUg90aW1lU2VyaWVzUXVlcnkSVQoJcGxvdF90eXBlGAIgASgOMjguZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlh5Q2hhcnQuRGF0YVNldC5QbG90VHlwZVIIcGxvdFR5cGUSJwoPbGVnZW5kX3RlbXBsYXRlGAMgASgJUg5sZWdlbmRUZW1wbGF0ZRJQChRtaW5fYWxpZ25tZW50X3BlcmlvZBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBUhJtaW5BbGlnbm1lbnRQZXJpb2QiXwoIUGxvdFR5cGUSGQoVUExPVF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoETElORRABEhAKDFNUQUNLRURfQVJFQRACEg8KC1NUQUNLRURfQkFSEAMSCwoHSEVBVE1BUBAEGp0BCgRBeGlzEhQKBWxhYmVsGAEgASgJUgVsYWJlbBJICgVzY2FsZRgCIAEoDjIyLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5YeUNoYXJ0LkF4aXMuU2NhbGVSBXNjYWxlIjUKBVNjYWxlEhUKEVNDQUxFX1VOU1BFQ0lGSUVEEAASCgoGTElORUFSEAESCQoFTE9HMTAQAg==');
+    'CgdYeUNoYXJ0ElEKCWRhdGFfc2V0cxgBIAMoCzIvLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5YeUNoYXJ0LkRhdGFTZXRCA+BBAlIIZGF0YVNldHMSSAoSdGltZXNoaWZ0X2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhF0aW1lc2hpZnREdXJhdGlvbhJJCgp0aHJlc2hvbGRzGAUgAygLMikuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRocmVzaG9sZFIKdGhyZXNob2xkcxJDCgZ4X2F4aXMYBiABKAsyLC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydC5BeGlzUgV4QXhpcxJDCgZ5X2F4aXMYByABKAsyLC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydC5BeGlzUgV5QXhpcxJFCgd5Ml9heGlzGAkgASgLMiwuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlh5Q2hhcnQuQXhpc1IGeTJBeGlzElEKDWNoYXJ0X29wdGlvbnMYCCABKAsyLC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuQ2hhcnRPcHRpb25zUgxjaGFydE9wdGlvbnMauwQKB0RhdGFTZXQSYAoRdGltZV9zZXJpZXNfcXVlcnkYASABKAsyLy5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGltZVNlcmllc1F1ZXJ5QgPgQQJSD3RpbWVTZXJpZXNRdWVyeRJVCglwbG90X3R5cGUYAiABKA4yOC5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuWHlDaGFydC5EYXRhU2V0LlBsb3RUeXBlUghwbG90VHlwZRInCg9sZWdlbmRfdGVtcGxhdGUYAyABKAlSDmxlZ2VuZFRlbXBsYXRlElAKFG1pbl9hbGlnbm1lbnRfcGVyaW9kGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFSEm1pbkFsaWdubWVudFBlcmlvZBJgCgt0YXJnZXRfYXhpcxgFIAEoDjI6Lmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5YeUNoYXJ0LkRhdGFTZXQuVGFyZ2V0QXhpc0ID4EEBUgp0YXJnZXRBeGlzIl8KCFBsb3RUeXBlEhkKFVBMT1RfVFlQRV9VTlNQRUNJRklFRBAAEggKBExJTkUQARIQCgxTVEFDS0VEX0FSRUEQAhIPCgtTVEFDS0VEX0JBUhADEgsKB0hFQVRNQVAQBCI5CgpUYXJnZXRBeGlzEhsKF1RBUkdFVF9BWElTX1VOU1BFQ0lGSUVEEAASBgoCWTEQARIGCgJZMhACGp0BCgRBeGlzEhQKBWxhYmVsGAEgASgJUgVsYWJlbBJICgVzY2FsZRgCIAEoDjIyLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5YeUNoYXJ0LkF4aXMuU2NhbGVSBXNjYWxlIjUKBVNjYWxlEhUKEVNDQUxFX1VOU1BFQ0lGSUVEEAASCgoGTElORUFSEAESCQoFTE9HMTAQAg==');
 @$core.Deprecated('Use chartOptionsDescriptor instead')
 const ChartOptions$json = const {
   '1': 'ChartOptions',

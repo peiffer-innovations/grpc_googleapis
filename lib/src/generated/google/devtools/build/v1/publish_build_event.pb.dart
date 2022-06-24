@@ -3,7 +3,7 @@
 //  source: google/devtools/build/v1/publish_build_event.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -59,6 +59,11 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOB(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'checkPrecedingLifecycleEventsPresent')
     ..hasRequiredFields = false;
 
   PublishLifecycleEventRequest._() : super();
@@ -68,6 +73,7 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
     $2.Duration? streamTimeout,
     $core.Iterable<$core.String>? notificationKeywords,
     $core.String? projectId,
+    $core.bool? checkPrecedingLifecycleEventsPresent,
   }) {
     final _result = create();
     if (serviceLevel != null) {
@@ -84,6 +90,10 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (checkPrecedingLifecycleEventsPresent != null) {
+      _result.checkPrecedingLifecycleEventsPresent =
+          checkPrecedingLifecycleEventsPresent;
     }
     return _result;
   }
@@ -172,6 +182,18 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(4);
   @$pb.TagNumber(6)
   void clearProjectId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get checkPrecedingLifecycleEventsPresent => $_getBF(5);
+  @$pb.TagNumber(7)
+  set checkPrecedingLifecycleEventsPresent($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasCheckPrecedingLifecycleEventsPresent() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearCheckPrecedingLifecycleEventsPresent() => clearField(7);
 }
 
 class PublishBuildToolEventStreamResponse extends $pb.GeneratedMessage {
@@ -412,6 +434,11 @@ class PublishBuildToolEventStreamRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOB(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'checkPrecedingLifecycleEventsPresent')
     ..hasRequiredFields = false;
 
   PublishBuildToolEventStreamRequest._() : super();
@@ -419,6 +446,7 @@ class PublishBuildToolEventStreamRequest extends $pb.GeneratedMessage {
     OrderedBuildEvent? orderedBuildEvent,
     $core.Iterable<$core.String>? notificationKeywords,
     $core.String? projectId,
+    $core.bool? checkPrecedingLifecycleEventsPresent,
   }) {
     final _result = create();
     if (orderedBuildEvent != null) {
@@ -429,6 +457,10 @@ class PublishBuildToolEventStreamRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (checkPrecedingLifecycleEventsPresent != null) {
+      _result.checkPrecedingLifecycleEventsPresent =
+          checkPrecedingLifecycleEventsPresent;
     }
     return _result;
   }
@@ -492,4 +524,16 @@ class PublishBuildToolEventStreamRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(2);
   @$pb.TagNumber(6)
   void clearProjectId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get checkPrecedingLifecycleEventsPresent => $_getBF(3);
+  @$pb.TagNumber(7)
+  set checkPrecedingLifecycleEventsPresent($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasCheckPrecedingLifecycleEventsPresent() => $_has(3);
+  @$pb.TagNumber(7)
+  void clearCheckPrecedingLifecycleEventsPresent() => clearField(7);
 }

@@ -3,7 +3,7 @@
 //  source: grafeas/v1/compliance.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -330,12 +330,18 @@ class ComplianceVersion extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'version')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'benchmarkDocument')
     ..hasRequiredFields = false;
 
   ComplianceVersion._() : super();
   factory ComplianceVersion({
     $core.String? cpeUri,
     $core.String? version,
+    $core.String? benchmarkDocument,
   }) {
     final _result = create();
     if (cpeUri != null) {
@@ -343,6 +349,9 @@ class ComplianceVersion extends $pb.GeneratedMessage {
     }
     if (version != null) {
       _result.version = version;
+    }
+    if (benchmarkDocument != null) {
+      _result.benchmarkDocument = benchmarkDocument;
     }
     return _result;
   }
@@ -396,6 +405,18 @@ class ComplianceVersion extends $pb.GeneratedMessage {
   $core.bool hasVersion() => $_has(1);
   @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get benchmarkDocument => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set benchmarkDocument($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasBenchmarkDocument() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBenchmarkDocument() => clearField(3);
 }
 
 class ComplianceOccurrence extends $pb.GeneratedMessage {

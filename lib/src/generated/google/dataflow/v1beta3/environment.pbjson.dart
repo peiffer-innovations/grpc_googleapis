@@ -3,7 +3,7 @@
 //  source: google/dataflow/v1beta3/environment.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -423,13 +423,14 @@ const SdkHarnessContainerImage$json = const {
       '5': 9,
       '10': 'environmentId'
     },
+    const {'1': 'capabilities', '3': 4, '4': 3, '5': 9, '10': 'capabilities'},
   ],
 };
 
 /// Descriptor for `SdkHarnessContainerImage`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sdkHarnessContainerImageDescriptor =
     $convert.base64Decode(
-        'ChhTZGtIYXJuZXNzQ29udGFpbmVySW1hZ2USJwoPY29udGFpbmVyX2ltYWdlGAEgASgJUg5jb250YWluZXJJbWFnZRJACh11c2Vfc2luZ2xlX2NvcmVfcGVyX2NvbnRhaW5lchgCIAEoCFIZdXNlU2luZ2xlQ29yZVBlckNvbnRhaW5lchIlCg5lbnZpcm9ubWVudF9pZBgDIAEoCVINZW52aXJvbm1lbnRJZA==');
+        'ChhTZGtIYXJuZXNzQ29udGFpbmVySW1hZ2USJwoPY29udGFpbmVyX2ltYWdlGAEgASgJUg5jb250YWluZXJJbWFnZRJACh11c2Vfc2luZ2xlX2NvcmVfcGVyX2NvbnRhaW5lchgCIAEoCFIZdXNlU2luZ2xlQ29yZVBlckNvbnRhaW5lchIlCg5lbnZpcm9ubWVudF9pZBgDIAEoCVINZW52aXJvbm1lbnRJZBIiCgxjYXBhYmlsaXRpZXMYBCADKAlSDGNhcGFiaWxpdGllcw==');
 @$core.Deprecated('Use workerPoolDescriptor instead')
 const WorkerPool$json = const {
   '1': 'WorkerPool',

@@ -3,7 +3,7 @@
 //  source: google/firestore/admin/v1/database.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -51,6 +51,21 @@ class Database extends $pb.GeneratedMessage {
         defaultOrMaker: Database_ConcurrencyMode.CONCURRENCY_MODE_UNSPECIFIED,
         valueOf: Database_ConcurrencyMode.valueOf,
         enumValues: Database_ConcurrencyMode.values)
+    ..e<Database_AppEngineIntegrationMode>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'appEngineIntegrationMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Database_AppEngineIntegrationMode
+            .APP_ENGINE_INTEGRATION_MODE_UNSPECIFIED,
+        valueOf: Database_AppEngineIntegrationMode.valueOf,
+        enumValues: Database_AppEngineIntegrationMode.values)
+    ..aOS(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'keyPrefix')
     ..aOS(
         99,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -64,6 +79,8 @@ class Database extends $pb.GeneratedMessage {
     $core.String? locationId,
     Database_DatabaseType? type,
     Database_ConcurrencyMode? concurrencyMode,
+    Database_AppEngineIntegrationMode? appEngineIntegrationMode,
+    $core.String? keyPrefix,
     $core.String? etag,
   }) {
     final _result = create();
@@ -78,6 +95,12 @@ class Database extends $pb.GeneratedMessage {
     }
     if (concurrencyMode != null) {
       _result.concurrencyMode = concurrencyMode;
+    }
+    if (appEngineIntegrationMode != null) {
+      _result.appEngineIntegrationMode = appEngineIntegrationMode;
+    }
+    if (keyPrefix != null) {
+      _result.keyPrefix = keyPrefix;
     }
     if (etag != null) {
       _result.etag = etag;
@@ -158,15 +181,39 @@ class Database extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   void clearConcurrencyMode() => clearField(15);
 
+  @$pb.TagNumber(19)
+  Database_AppEngineIntegrationMode get appEngineIntegrationMode => $_getN(4);
+  @$pb.TagNumber(19)
+  set appEngineIntegrationMode(Database_AppEngineIntegrationMode v) {
+    setField(19, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasAppEngineIntegrationMode() => $_has(4);
+  @$pb.TagNumber(19)
+  void clearAppEngineIntegrationMode() => clearField(19);
+
+  @$pb.TagNumber(20)
+  $core.String get keyPrefix => $_getSZ(5);
+  @$pb.TagNumber(20)
+  set keyPrefix($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasKeyPrefix() => $_has(5);
+  @$pb.TagNumber(20)
+  void clearKeyPrefix() => clearField(20);
+
   @$pb.TagNumber(99)
-  $core.String get etag => $_getSZ(4);
+  $core.String get etag => $_getSZ(6);
   @$pb.TagNumber(99)
   set etag($core.String v) {
-    $_setString(4, v);
+    $_setString(6, v);
   }
 
   @$pb.TagNumber(99)
-  $core.bool hasEtag() => $_has(4);
+  $core.bool hasEtag() => $_has(6);
   @$pb.TagNumber(99)
   void clearEtag() => clearField(99);
 }

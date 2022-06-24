@@ -3,7 +3,7 @@
 //  source: google/appengine/v1/service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -24,6 +24,14 @@ const Service$json = const {
       '10': 'split'
     },
     const {
+      '1': 'labels',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.Service.LabelsEntry',
+      '10': 'labels'
+    },
+    const {
       '1': 'network_settings',
       '3': 6,
       '4': 1,
@@ -32,11 +40,22 @@ const Service$json = const {
       '10': 'networkSettings'
     },
   ],
+  '3': const [Service_LabelsEntry$json],
+};
+
+@$core.Deprecated('Use serviceDescriptor instead')
+const Service_LabelsEntry$json = const {
+  '1': 'LabelsEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
 };
 
 /// Descriptor for `Service`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceDescriptor = $convert.base64Decode(
-    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEjcKBXNwbGl0GAMgASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXRSBXNwbGl0Ek8KEG5ldHdvcmtfc2V0dGluZ3MYBiABKAsyJC5nb29nbGUuYXBwZW5naW5lLnYxLk5ldHdvcmtTZXR0aW5nc1IPbmV0d29ya1NldHRpbmdz');
+    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEjcKBXNwbGl0GAMgASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXRSBXNwbGl0EkAKBmxhYmVscxgEIAMoCzIoLmdvb2dsZS5hcHBlbmdpbmUudjEuU2VydmljZS5MYWJlbHNFbnRyeVIGbGFiZWxzEk8KEG5ldHdvcmtfc2V0dGluZ3MYBiABKAsyJC5nb29nbGUuYXBwZW5naW5lLnYxLk5ldHdvcmtTZXR0aW5nc1IPbmV0d29ya1NldHRpbmdzGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use trafficSplitDescriptor instead')
 const TrafficSplit$json = const {
   '1': 'TrafficSplit',

@@ -3,14 +3,14 @@
 //  source: google/devtools/containeranalysis/v1/containeranalysis.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../grafeas/v1/severity.pbenum.dart' as $5;
+import '../../../../grafeas/v1/severity.pbenum.dart' as $3;
 
 class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -123,15 +123,15 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'resourceUri')
-    ..e<$5.Severity>(
+    ..e<$3.Severity>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'severity',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $5.Severity.SEVERITY_UNSPECIFIED,
-        valueOf: $5.Severity.valueOf,
-        enumValues: $5.Severity.values)
+        defaultOrMaker: $3.Severity.SEVERITY_UNSPECIFIED,
+        valueOf: $3.Severity.valueOf,
+        enumValues: $3.Severity.values)
     ..aInt64(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -147,7 +147,7 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   VulnerabilityOccurrencesSummary_FixableTotalByDigest._() : super();
   factory VulnerabilityOccurrencesSummary_FixableTotalByDigest({
     $core.String? resourceUri,
-    $5.Severity? severity,
+    $3.Severity? severity,
     $fixnum.Int64? fixableCount,
     $fixnum.Int64? totalCount,
   }) {
@@ -217,9 +217,9 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   void clearResourceUri() => clearField(1);
 
   @$pb.TagNumber(2)
-  $5.Severity get severity => $_getN(1);
+  $3.Severity get severity => $_getN(1);
   @$pb.TagNumber(2)
-  set severity($5.Severity v) {
+  set severity($3.Severity v) {
     setField(2, v);
   }
 

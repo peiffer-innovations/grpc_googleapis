@@ -3,7 +3,7 @@
 //  source: google/firestore/admin/v1/operation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -106,6 +106,47 @@ class FieldOperationMetadata_IndexConfigDelta_ChangeType
       _byValue[value];
 
   const FieldOperationMetadata_IndexConfigDelta_ChangeType._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class FieldOperationMetadata_TtlConfigDelta_ChangeType
+    extends $pb.ProtobufEnum {
+  static const FieldOperationMetadata_TtlConfigDelta_ChangeType
+      CHANGE_TYPE_UNSPECIFIED =
+      FieldOperationMetadata_TtlConfigDelta_ChangeType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANGE_TYPE_UNSPECIFIED');
+  static const FieldOperationMetadata_TtlConfigDelta_ChangeType ADD =
+      FieldOperationMetadata_TtlConfigDelta_ChangeType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ADD');
+  static const FieldOperationMetadata_TtlConfigDelta_ChangeType REMOVE =
+      FieldOperationMetadata_TtlConfigDelta_ChangeType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REMOVE');
+
+  static const $core.List<FieldOperationMetadata_TtlConfigDelta_ChangeType>
+      values = <FieldOperationMetadata_TtlConfigDelta_ChangeType>[
+    CHANGE_TYPE_UNSPECIFIED,
+    ADD,
+    REMOVE,
+  ];
+
+  static final $core
+          .Map<$core.int, FieldOperationMetadata_TtlConfigDelta_ChangeType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FieldOperationMetadata_TtlConfigDelta_ChangeType? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const FieldOperationMetadata_TtlConfigDelta_ChangeType._(
       $core.int v, $core.String n)
       : super(v, n);
 }

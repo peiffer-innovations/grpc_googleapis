@@ -3,7 +3,7 @@
 //  source: google/appengine/v1/application.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -308,6 +308,11 @@ class Application extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'defaultBucket')
+    ..aOS(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'serviceAccount')
     ..aOM<Application_IdentityAwareProxy>(
         14,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -348,6 +353,7 @@ class Application extends $pb.GeneratedMessage {
     Application_ServingStatus? servingStatus,
     $core.String? defaultHostname,
     $core.String? defaultBucket,
+    $core.String? serviceAccount,
     Application_IdentityAwareProxy? iap,
     $core.String? gcrDomain,
     Application_DatabaseType? databaseType,
@@ -383,6 +389,9 @@ class Application extends $pb.GeneratedMessage {
     }
     if (defaultBucket != null) {
       _result.defaultBucket = defaultBucket;
+    }
+    if (serviceAccount != null) {
+      _result.serviceAccount = serviceAccount;
     }
     if (iap != null) {
       _result.iap = iap;
@@ -537,57 +546,69 @@ class Application extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearDefaultBucket() => clearField(12);
 
+  @$pb.TagNumber(13)
+  $core.String get serviceAccount => $_getSZ(10);
+  @$pb.TagNumber(13)
+  set serviceAccount($core.String v) {
+    $_setString(10, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasServiceAccount() => $_has(10);
+  @$pb.TagNumber(13)
+  void clearServiceAccount() => clearField(13);
+
   @$pb.TagNumber(14)
-  Application_IdentityAwareProxy get iap => $_getN(10);
+  Application_IdentityAwareProxy get iap => $_getN(11);
   @$pb.TagNumber(14)
   set iap(Application_IdentityAwareProxy v) {
     setField(14, v);
   }
 
   @$pb.TagNumber(14)
-  $core.bool hasIap() => $_has(10);
+  $core.bool hasIap() => $_has(11);
   @$pb.TagNumber(14)
   void clearIap() => clearField(14);
   @$pb.TagNumber(14)
-  Application_IdentityAwareProxy ensureIap() => $_ensure(10);
+  Application_IdentityAwareProxy ensureIap() => $_ensure(11);
 
   @$pb.TagNumber(16)
-  $core.String get gcrDomain => $_getSZ(11);
+  $core.String get gcrDomain => $_getSZ(12);
   @$pb.TagNumber(16)
   set gcrDomain($core.String v) {
-    $_setString(11, v);
+    $_setString(12, v);
   }
 
   @$pb.TagNumber(16)
-  $core.bool hasGcrDomain() => $_has(11);
+  $core.bool hasGcrDomain() => $_has(12);
   @$pb.TagNumber(16)
   void clearGcrDomain() => clearField(16);
 
   @$pb.TagNumber(17)
-  Application_DatabaseType get databaseType => $_getN(12);
+  Application_DatabaseType get databaseType => $_getN(13);
   @$pb.TagNumber(17)
   set databaseType(Application_DatabaseType v) {
     setField(17, v);
   }
 
   @$pb.TagNumber(17)
-  $core.bool hasDatabaseType() => $_has(12);
+  $core.bool hasDatabaseType() => $_has(13);
   @$pb.TagNumber(17)
   void clearDatabaseType() => clearField(17);
 
   @$pb.TagNumber(18)
-  Application_FeatureSettings get featureSettings => $_getN(13);
+  Application_FeatureSettings get featureSettings => $_getN(14);
   @$pb.TagNumber(18)
   set featureSettings(Application_FeatureSettings v) {
     setField(18, v);
   }
 
   @$pb.TagNumber(18)
-  $core.bool hasFeatureSettings() => $_has(13);
+  $core.bool hasFeatureSettings() => $_has(14);
   @$pb.TagNumber(18)
   void clearFeatureSettings() => clearField(18);
   @$pb.TagNumber(18)
-  Application_FeatureSettings ensureFeatureSettings() => $_ensure(13);
+  Application_FeatureSettings ensureFeatureSettings() => $_ensure(14);
 }
 
 class UrlDispatchRule extends $pb.GeneratedMessage {

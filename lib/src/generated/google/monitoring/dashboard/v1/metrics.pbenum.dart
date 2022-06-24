@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/metrics.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -98,4 +98,29 @@ class Threshold_Direction extends $pb.ProtobufEnum {
   static Threshold_Direction? valueOf($core.int value) => _byValue[value];
 
   const Threshold_Direction._($core.int v, $core.String n) : super(v, n);
+}
+
+class Threshold_TargetAxis extends $pb.ProtobufEnum {
+  static const Threshold_TargetAxis TARGET_AXIS_UNSPECIFIED =
+      Threshold_TargetAxis._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TARGET_AXIS_UNSPECIFIED');
+  static const Threshold_TargetAxis Y1 = Threshold_TargetAxis._(1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Y1');
+  static const Threshold_TargetAxis Y2 = Threshold_TargetAxis._(2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Y2');
+
+  static const $core.List<Threshold_TargetAxis> values = <Threshold_TargetAxis>[
+    TARGET_AXIS_UNSPECIFIED,
+    Y1,
+    Y2,
+  ];
+
+  static final $core.Map<$core.int, Threshold_TargetAxis> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Threshold_TargetAxis? valueOf($core.int value) => _byValue[value];
+
+  const Threshold_TargetAxis._($core.int v, $core.String n) : super(v, n);
 }

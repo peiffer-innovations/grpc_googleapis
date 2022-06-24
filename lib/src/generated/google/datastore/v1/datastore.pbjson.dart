@@ -3,7 +3,7 @@
 //  source: google/datastore/v1/datastore.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -72,12 +72,20 @@ const LookupResponse$json = const {
       '6': '.google.datastore.v1.Key',
       '10': 'deferred'
     },
+    const {
+      '1': 'read_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'readTime'
+    },
   ],
 };
 
 /// Descriptor for `LookupResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List lookupResponseDescriptor = $convert.base64Decode(
-    'Cg5Mb29rdXBSZXNwb25zZRI3CgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5UmVzdWx0UgVmb3VuZBI7CgdtaXNzaW5nGAIgAygLMiEuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSZXN1bHRSB21pc3NpbmcSNAoIZGVmZXJyZWQYAyADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleVIIZGVmZXJyZWQ=');
+    'Cg5Mb29rdXBSZXNwb25zZRI3CgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5UmVzdWx0UgVmb3VuZBI7CgdtaXNzaW5nGAIgAygLMiEuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSZXN1bHRSB21pc3NpbmcSNAoIZGVmZXJyZWQYAyADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleVIIZGVmZXJyZWQSNwoJcmVhZF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIIcmVhZFRpbWU=');
 @$core.Deprecated('Use runQueryRequestDescriptor instead')
 const RunQueryRequest$json = const {
   '1': 'RunQueryRequest',
@@ -301,12 +309,20 @@ const CommitResponse$json = const {
       '10': 'mutationResults'
     },
     const {'1': 'index_updates', '3': 4, '4': 1, '5': 5, '10': 'indexUpdates'},
+    const {
+      '1': 'commit_time',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'commitTime'
+    },
   ],
 };
 
 /// Descriptor for `CommitResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List commitResponseDescriptor = $convert.base64Decode(
-    'Cg5Db21taXRSZXNwb25zZRJOChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdFIPbXV0YXRpb25SZXN1bHRzEiMKDWluZGV4X3VwZGF0ZXMYBCABKAVSDGluZGV4VXBkYXRlcw==');
+    'Cg5Db21taXRSZXNwb25zZRJOChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdFIPbXV0YXRpb25SZXN1bHRzEiMKDWluZGV4X3VwZGF0ZXMYBCABKAVSDGluZGV4VXBkYXRlcxI7Cgtjb21taXRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNvbW1pdFRpbWU=');
 @$core.Deprecated('Use allocateIdsRequestDescriptor instead')
 const AllocateIdsRequest$json = const {
   '1': 'AllocateIdsRequest',
@@ -436,6 +452,15 @@ const Mutation$json = const {
       '9': 1,
       '10': 'baseVersion'
     },
+    const {
+      '1': 'update_time',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'updateTime'
+    },
   ],
   '8': const [
     const {'1': 'operation'},
@@ -445,7 +470,7 @@ const Mutation$json = const {
 
 /// Descriptor for `Mutation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mutationDescriptor = $convert.base64Decode(
-    'CghNdXRhdGlvbhI1CgZpbnNlcnQYBCABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgAUgZpbnNlcnQSNQoGdXBkYXRlGAUgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIAFIGdXBkYXRlEjUKBnVwc2VydBgGIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5SABSBnVwc2VydBIyCgZkZWxldGUYByABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUgAUgZkZWxldGUSIwoMYmFzZV92ZXJzaW9uGAggASgDSAFSC2Jhc2VWZXJzaW9uQgsKCW9wZXJhdGlvbkIdChtjb25mbGljdF9kZXRlY3Rpb25fc3RyYXRlZ3k=');
+    'CghNdXRhdGlvbhI1CgZpbnNlcnQYBCABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgAUgZpbnNlcnQSNQoGdXBkYXRlGAUgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIAFIGdXBkYXRlEjUKBnVwc2VydBgGIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5SABSBnVwc2VydBIyCgZkZWxldGUYByABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUgAUgZkZWxldGUSIwoMYmFzZV92ZXJzaW9uGAggASgDSAFSC2Jhc2VWZXJzaW9uEj0KC3VwZGF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUgp1cGRhdGVUaW1lQgsKCW9wZXJhdGlvbkIdChtjb25mbGljdF9kZXRlY3Rpb25fc3RyYXRlZ3k=');
 @$core.Deprecated('Use mutationResultDescriptor instead')
 const MutationResult$json = const {
   '1': 'MutationResult',
@@ -460,6 +485,14 @@ const MutationResult$json = const {
     },
     const {'1': 'version', '3': 4, '4': 1, '5': 3, '10': 'version'},
     const {
+      '1': 'update_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
+    const {
       '1': 'conflict_detected',
       '3': 5,
       '4': 1,
@@ -471,7 +504,7 @@ const MutationResult$json = const {
 
 /// Descriptor for `MutationResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mutationResultDescriptor = $convert.base64Decode(
-    'Cg5NdXRhdGlvblJlc3VsdBIqCgNrZXkYAyABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleVIDa2V5EhgKB3ZlcnNpb24YBCABKANSB3ZlcnNpb24SKwoRY29uZmxpY3RfZGV0ZWN0ZWQYBSABKAhSEGNvbmZsaWN0RGV0ZWN0ZWQ=');
+    'Cg5NdXRhdGlvblJlc3VsdBIqCgNrZXkYAyABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleVIDa2V5EhgKB3ZlcnNpb24YBCABKANSB3ZlcnNpb24SOwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEisKEWNvbmZsaWN0X2RldGVjdGVkGAUgASgIUhBjb25mbGljdERldGVjdGVk');
 @$core.Deprecated('Use readOptionsDescriptor instead')
 const ReadOptions$json = const {
   '1': 'ReadOptions',
@@ -493,6 +526,15 @@ const ReadOptions$json = const {
       '9': 0,
       '10': 'transaction'
     },
+    const {
+      '1': 'read_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'readTime'
+    },
   ],
   '4': const [ReadOptions_ReadConsistency$json],
   '8': const [
@@ -512,7 +554,7 @@ const ReadOptions_ReadConsistency$json = const {
 
 /// Descriptor for `ReadOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List readOptionsDescriptor = $convert.base64Decode(
-    'CgtSZWFkT3B0aW9ucxJdChByZWFkX2NvbnNpc3RlbmN5GAEgASgOMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0aW9ucy5SZWFkQ29uc2lzdGVuY3lIAFIPcmVhZENvbnNpc3RlbmN5EiIKC3RyYW5zYWN0aW9uGAIgASgMSABSC3RyYW5zYWN0aW9uIk0KD1JlYWRDb25zaXN0ZW5jeRIgChxSRUFEX0NPTlNJU1RFTkNZX1VOU1BFQ0lGSUVEEAASCgoGU1RST05HEAESDAoIRVZFTlRVQUwQAkISChBjb25zaXN0ZW5jeV90eXBl');
+    'CgtSZWFkT3B0aW9ucxJdChByZWFkX2NvbnNpc3RlbmN5GAEgASgOMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0aW9ucy5SZWFkQ29uc2lzdGVuY3lIAFIPcmVhZENvbnNpc3RlbmN5EiIKC3RyYW5zYWN0aW9uGAIgASgMSABSC3RyYW5zYWN0aW9uEjkKCXJlYWRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIIcmVhZFRpbWUiTQoPUmVhZENvbnNpc3RlbmN5EiAKHFJFQURfQ09OU0lTVEVOQ1lfVU5TUEVDSUZJRUQQABIKCgZTVFJPTkcQARIMCghFVkVOVFVBTBACQhIKEGNvbnNpc3RlbmN5X3R5cGU=');
 @$core.Deprecated('Use transactionOptionsDescriptor instead')
 const TransactionOptions$json = const {
   '1': 'TransactionOptions',
@@ -562,8 +604,18 @@ const TransactionOptions_ReadWrite$json = const {
 @$core.Deprecated('Use transactionOptionsDescriptor instead')
 const TransactionOptions_ReadOnly$json = const {
   '1': 'ReadOnly',
+  '2': const [
+    const {
+      '1': 'read_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'readTime'
+    },
+  ],
 };
 
 /// Descriptor for `TransactionOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List transactionOptionsDescriptor = $convert.base64Decode(
-    'ChJUcmFuc2FjdGlvbk9wdGlvbnMSUgoKcmVhZF93cml0ZRgBIAEoCzIxLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRXcml0ZUgAUglyZWFkV3JpdGUSTwoJcmVhZF9vbmx5GAIgASgLMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlIAFIIcmVhZE9ubHkaPgoJUmVhZFdyaXRlEjEKFHByZXZpb3VzX3RyYW5zYWN0aW9uGAEgASgMUhNwcmV2aW91c1RyYW5zYWN0aW9uGgoKCFJlYWRPbmx5QgYKBG1vZGU=');
+    'ChJUcmFuc2FjdGlvbk9wdGlvbnMSUgoKcmVhZF93cml0ZRgBIAEoCzIxLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRXcml0ZUgAUglyZWFkV3JpdGUSTwoJcmVhZF9vbmx5GAIgASgLMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlIAFIIcmVhZE9ubHkaPgoJUmVhZFdyaXRlEjEKFHByZXZpb3VzX3RyYW5zYWN0aW9uGAEgASgMUhNwcmV2aW91c1RyYW5zYWN0aW9uGkMKCFJlYWRPbmx5EjcKCXJlYWRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCHJlYWRUaW1lQgYKBG1vZGU=');

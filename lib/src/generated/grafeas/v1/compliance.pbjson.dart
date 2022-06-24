@@ -3,7 +3,7 @@
 //  source: grafeas/v1/compliance.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -72,13 +72,20 @@ const ComplianceVersion$json = const {
   '1': 'ComplianceVersion',
   '2': const [
     const {'1': 'cpe_uri', '3': 1, '4': 1, '5': 9, '10': 'cpeUri'},
+    const {
+      '1': 'benchmark_document',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'benchmarkDocument'
+    },
     const {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
   ],
 };
 
 /// Descriptor for `ComplianceVersion`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List complianceVersionDescriptor = $convert.base64Decode(
-    'ChFDb21wbGlhbmNlVmVyc2lvbhIXCgdjcGVfdXJpGAEgASgJUgZjcGVVcmkSGAoHdmVyc2lvbhgCIAEoCVIHdmVyc2lvbg==');
+    'ChFDb21wbGlhbmNlVmVyc2lvbhIXCgdjcGVfdXJpGAEgASgJUgZjcGVVcmkSLQoSYmVuY2htYXJrX2RvY3VtZW50GAMgASgJUhFiZW5jaG1hcmtEb2N1bWVudBIYCgd2ZXJzaW9uGAIgASgJUgd2ZXJzaW9u');
 @$core.Deprecated('Use complianceOccurrenceDescriptor instead')
 const ComplianceOccurrence$json = const {
   '1': 'ComplianceOccurrence',

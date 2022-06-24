@@ -3,7 +3,7 @@
 //  source: google/api/serviceusage/v1beta1/serviceusage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -965,9 +965,10 @@ class CreateAdminOverrideRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   CreateAdminOverrideRequest._() : super();
@@ -1101,9 +1102,10 @@ class UpdateAdminOverrideRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   UpdateAdminOverrideRequest._() : super();
@@ -1243,9 +1245,10 @@ class DeleteAdminOverrideRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   DeleteAdminOverrideRequest._() : super();
@@ -1624,9 +1627,10 @@ class ImportAdminOverridesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   ImportAdminOverridesRequest._() : super();
@@ -1869,9 +1873,10 @@ class CreateConsumerOverrideRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   CreateConsumerOverrideRequest._() : super();
@@ -2006,9 +2011,10 @@ class UpdateConsumerOverrideRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   UpdateConsumerOverrideRequest._() : super();
@@ -2149,9 +2155,10 @@ class DeleteConsumerOverrideRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   DeleteConsumerOverrideRequest._() : super();
@@ -2535,9 +2542,10 @@ class ImportConsumerOverridesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'forceOnly',
-        $pb.PbFieldType.PE,
+        $pb.PbFieldType.KE,
         valueOf: $3.QuotaSafetyCheck.valueOf,
-        enumValues: $3.QuotaSafetyCheck.values)
+        enumValues: $3.QuotaSafetyCheck.values,
+        defaultEnumValue: $3.QuotaSafetyCheck.QUOTA_SAFETY_CHECK_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   ImportConsumerOverridesRequest._() : super();

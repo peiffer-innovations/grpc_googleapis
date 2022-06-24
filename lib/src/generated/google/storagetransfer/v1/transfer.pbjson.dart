@@ -3,7 +3,7 @@
 //  source: google/storagetransfer/v1/transfer.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -215,3 +215,138 @@ const RunTransferJobRequest$json = const {
 /// Descriptor for `RunTransferJobRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List runTransferJobRequestDescriptor = $convert.base64Decode(
     'ChVSdW5UcmFuc2ZlckpvYlJlcXVlc3QSHgoIam9iX25hbWUYASABKAlCA+BBAlIHam9iTmFtZRIiCgpwcm9qZWN0X2lkGAIgASgJQgPgQQJSCXByb2plY3RJZA==');
+@$core.Deprecated('Use createAgentPoolRequestDescriptor instead')
+const CreateAgentPoolRequest$json = const {
+  '1': 'CreateAgentPoolRequest',
+  '2': const [
+    const {
+      '1': 'project_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'projectId'
+    },
+    const {
+      '1': 'agent_pool',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.AgentPool',
+      '8': const {},
+      '10': 'agentPool'
+    },
+    const {
+      '1': 'agent_pool_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'agentPoolId'
+    },
+  ],
+};
+
+/// Descriptor for `CreateAgentPoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAgentPoolRequestDescriptor =
+    $convert.base64Decode(
+        'ChZDcmVhdGVBZ2VudFBvb2xSZXF1ZXN0EiIKCnByb2plY3RfaWQYASABKAlCA+BBAlIJcHJvamVjdElkEkgKCmFnZW50X3Bvb2wYAiABKAsyJC5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbEID4EECUglhZ2VudFBvb2wSJwoNYWdlbnRfcG9vbF9pZBgDIAEoCUID4EECUgthZ2VudFBvb2xJZA==');
+@$core.Deprecated('Use updateAgentPoolRequestDescriptor instead')
+const UpdateAgentPoolRequest$json = const {
+  '1': 'UpdateAgentPoolRequest',
+  '2': const [
+    const {
+      '1': 'agent_pool',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.AgentPool',
+      '8': const {},
+      '10': 'agentPool'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateAgentPoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateAgentPoolRequestDescriptor =
+    $convert.base64Decode(
+        'ChZVcGRhdGVBZ2VudFBvb2xSZXF1ZXN0EkgKCmFnZW50X3Bvb2wYASABKAsyJC5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbEID4EECUglhZ2VudFBvb2wSOwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrUgp1cGRhdGVNYXNr');
+@$core.Deprecated('Use getAgentPoolRequestDescriptor instead')
+const GetAgentPoolRequest$json = const {
+  '1': 'GetAgentPoolRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetAgentPoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAgentPoolRequestDescriptor =
+    $convert.base64Decode(
+        'ChNHZXRBZ2VudFBvb2xSZXF1ZXN0EhcKBG5hbWUYASABKAlCA+BBAlIEbmFtZQ==');
+@$core.Deprecated('Use deleteAgentPoolRequestDescriptor instead')
+const DeleteAgentPoolRequest$json = const {
+  '1': 'DeleteAgentPoolRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteAgentPoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteAgentPoolRequestDescriptor =
+    $convert.base64Decode(
+        'ChZEZWxldGVBZ2VudFBvb2xSZXF1ZXN0EhcKBG5hbWUYASABKAlCA+BBAlIEbmFtZQ==');
+@$core.Deprecated('Use listAgentPoolsRequestDescriptor instead')
+const ListAgentPoolsRequest$json = const {
+  '1': 'ListAgentPoolsRequest',
+  '2': const [
+    const {
+      '1': 'project_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'projectId'
+    },
+    const {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListAgentPoolsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAgentPoolsRequestDescriptor = $convert.base64Decode(
+    'ChVMaXN0QWdlbnRQb29sc1JlcXVlc3QSIgoKcHJvamVjdF9pZBgBIAEoCUID4EECUglwcm9qZWN0SWQSFgoGZmlsdGVyGAIgASgJUgZmaWx0ZXISGwoJcGFnZV9zaXplGAMgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAQgASgJUglwYWdlVG9rZW4=');
+@$core.Deprecated('Use listAgentPoolsResponseDescriptor instead')
+const ListAgentPoolsResponse$json = const {
+  '1': 'ListAgentPoolsResponse',
+  '2': const [
+    const {
+      '1': 'agent_pools',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.AgentPool',
+      '10': 'agentPools'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListAgentPoolsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAgentPoolsResponseDescriptor =
+    $convert.base64Decode(
+        'ChZMaXN0QWdlbnRQb29sc1Jlc3BvbnNlEkUKC2FnZW50X3Bvb2xzGAEgAygLMiQuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5BZ2VudFBvb2xSCmFnZW50UG9vbHMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');

@@ -3,7 +3,7 @@
 //  source: google/pubsub/v1/pubsub.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -390,6 +390,14 @@ const Subscription$json = const {
       '10': 'pushConfig'
     },
     const {
+      '1': 'bigquery_config',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.BigQueryConfig',
+      '10': 'bigqueryConfig'
+    },
+    const {
       '1': 'ack_deadline_seconds',
       '3': 5,
       '4': 1,
@@ -468,8 +476,18 @@ const Subscription$json = const {
       '8': const {},
       '10': 'topicMessageRetentionDuration'
     },
+    const {
+      '1': 'state',
+      '3': 19,
+      '4': 1,
+      '5': 14,
+      '6': '.google.pubsub.v1.Subscription.State',
+      '8': const {},
+      '10': 'state'
+    },
   ],
   '3': const [Subscription_LabelsEntry$json],
+  '4': const [Subscription_State$json],
   '7': const {},
 };
 
@@ -483,9 +501,19 @@ const Subscription_LabelsEntry$json = const {
   '7': const {'7': true},
 };
 
+@$core.Deprecated('Use subscriptionDescriptor instead')
+const Subscription_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'ACTIVE', '2': 1},
+    const {'1': 'RESOURCE_ERROR', '2': 2},
+  ],
+};
+
 /// Descriptor for `Subscription`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List subscriptionDescriptor = $convert.base64Decode(
-    'CgxTdWJzY3JpcHRpb24SFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjkKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSPQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWdSCnB1c2hDb25maWcSMAoUYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAVSEmFja0RlYWRsaW5lU2Vjb25kcxIyChVyZXRhaW5fYWNrZWRfbWVzc2FnZXMYByABKAhSE3JldGFpbkFja2VkTWVzc2FnZXMSVwoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SGG1lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhJCCgZsYWJlbHMYCSADKAsyKi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbi5MYWJlbHNFbnRyeVIGbGFiZWxzEjYKF2VuYWJsZV9tZXNzYWdlX29yZGVyaW5nGAogASgIUhVlbmFibGVNZXNzYWdlT3JkZXJpbmcSTwoRZXhwaXJhdGlvbl9wb2xpY3kYCyABKAsyIi5nb29nbGUucHVic3ViLnYxLkV4cGlyYXRpb25Qb2xpY3lSEGV4cGlyYXRpb25Qb2xpY3kSFgoGZmlsdGVyGAwgASgJUgZmaWx0ZXISUAoSZGVhZF9sZXR0ZXJfcG9saWN5GA0gASgLMiIuZ29vZ2xlLnB1YnN1Yi52MS5EZWFkTGV0dGVyUG9saWN5UhBkZWFkTGV0dGVyUG9saWN5EkAKDHJldHJ5X3BvbGljeRgOIAEoCzIdLmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3lSC3JldHJ5UG9saWN5EhoKCGRldGFjaGVkGA8gASgIUghkZXRhY2hlZBI/ChxlbmFibGVfZXhhY3RseV9vbmNlX2RlbGl2ZXJ5GBAgASgIUhllbmFibGVFeGFjdGx5T25jZURlbGl2ZXJ5EmcKIHRvcGljX21lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQNSHXRvcGljTWVzc2FnZVJldGVudGlvbkR1cmF0aW9uGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE6WOpBVQoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvcHJvamVjdHMve3Byb2plY3R9L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbn0=');
+    'CgxTdWJzY3JpcHRpb24SFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjkKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSPQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWdSCnB1c2hDb25maWcSSQoPYmlncXVlcnlfY29uZmlnGBIgASgLMiAuZ29vZ2xlLnB1YnN1Yi52MS5CaWdRdWVyeUNvbmZpZ1IOYmlncXVlcnlDb25maWcSMAoUYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAVSEmFja0RlYWRsaW5lU2Vjb25kcxIyChVyZXRhaW5fYWNrZWRfbWVzc2FnZXMYByABKAhSE3JldGFpbkFja2VkTWVzc2FnZXMSVwoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SGG1lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhJCCgZsYWJlbHMYCSADKAsyKi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbi5MYWJlbHNFbnRyeVIGbGFiZWxzEjYKF2VuYWJsZV9tZXNzYWdlX29yZGVyaW5nGAogASgIUhVlbmFibGVNZXNzYWdlT3JkZXJpbmcSTwoRZXhwaXJhdGlvbl9wb2xpY3kYCyABKAsyIi5nb29nbGUucHVic3ViLnYxLkV4cGlyYXRpb25Qb2xpY3lSEGV4cGlyYXRpb25Qb2xpY3kSFgoGZmlsdGVyGAwgASgJUgZmaWx0ZXISUAoSZGVhZF9sZXR0ZXJfcG9saWN5GA0gASgLMiIuZ29vZ2xlLnB1YnN1Yi52MS5EZWFkTGV0dGVyUG9saWN5UhBkZWFkTGV0dGVyUG9saWN5EkAKDHJldHJ5X3BvbGljeRgOIAEoCzIdLmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3lSC3JldHJ5UG9saWN5EhoKCGRldGFjaGVkGA8gASgIUghkZXRhY2hlZBI/ChxlbmFibGVfZXhhY3RseV9vbmNlX2RlbGl2ZXJ5GBAgASgIUhllbmFibGVFeGFjdGx5T25jZURlbGl2ZXJ5EmcKIHRvcGljX21lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQNSHXRvcGljTWVzc2FnZVJldGVudGlvbkR1cmF0aW9uEj8KBXN0YXRlGBMgASgOMiQuZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24uU3RhdGVCA+BBA1IFc3RhdGUaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASI+CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEhIKDlJFU09VUkNFX0VSUk9SEAI6WOpBVQoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvcHJvamVjdHMve3Byb2plY3R9L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbn0=');
 @$core.Deprecated('Use retryPolicyDescriptor instead')
 const RetryPolicy$json = const {
   '1': 'RetryPolicy',
@@ -611,6 +639,60 @@ const PushConfig_AttributesEntry$json = const {
 /// Descriptor for `PushConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pushConfigDescriptor = $convert.base64Decode(
     'CgpQdXNoQ29uZmlnEiMKDXB1c2hfZW5kcG9pbnQYASABKAlSDHB1c2hFbmRwb2ludBJMCgphdHRyaWJ1dGVzGAIgAygLMiwuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLkF0dHJpYnV0ZXNFbnRyeVIKYXR0cmlidXRlcxJHCgpvaWRjX3Rva2VuGAMgASgLMiYuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLk9pZGNUb2tlbkgAUglvaWRjVG9rZW4aWwoJT2lkY1Rva2VuEjIKFXNlcnZpY2VfYWNjb3VudF9lbWFpbBgBIAEoCVITc2VydmljZUFjY291bnRFbWFpbBIaCghhdWRpZW5jZRgCIAEoCVIIYXVkaWVuY2UaPQoPQXR0cmlidXRlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAFCFwoVYXV0aGVudGljYXRpb25fbWV0aG9k');
+@$core.Deprecated('Use bigQueryConfigDescriptor instead')
+const BigQueryConfig$json = const {
+  '1': 'BigQueryConfig',
+  '2': const [
+    const {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
+    const {
+      '1': 'use_topic_schema',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'useTopicSchema'
+    },
+    const {
+      '1': 'write_metadata',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '10': 'writeMetadata'
+    },
+    const {
+      '1': 'drop_unknown_fields',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '10': 'dropUnknownFields'
+    },
+    const {
+      '1': 'state',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.pubsub.v1.BigQueryConfig.State',
+      '8': const {},
+      '10': 'state'
+    },
+  ],
+  '4': const [BigQueryConfig_State$json],
+};
+
+@$core.Deprecated('Use bigQueryConfigDescriptor instead')
+const BigQueryConfig_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'ACTIVE', '2': 1},
+    const {'1': 'PERMISSION_DENIED', '2': 2},
+    const {'1': 'NOT_FOUND', '2': 3},
+    const {'1': 'SCHEMA_MISMATCH', '2': 4},
+  ],
+};
+
+/// Descriptor for `BigQueryConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bigQueryConfigDescriptor = $convert.base64Decode(
+    'Cg5CaWdRdWVyeUNvbmZpZxIUCgV0YWJsZRgBIAEoCVIFdGFibGUSKAoQdXNlX3RvcGljX3NjaGVtYRgCIAEoCFIOdXNlVG9waWNTY2hlbWESJQoOd3JpdGVfbWV0YWRhdGEYAyABKAhSDXdyaXRlTWV0YWRhdGESLgoTZHJvcF91bmtub3duX2ZpZWxkcxgEIAEoCFIRZHJvcFVua25vd25GaWVsZHMSQQoFc3RhdGUYBSABKA4yJi5nb29nbGUucHVic3ViLnYxLkJpZ1F1ZXJ5Q29uZmlnLlN0YXRlQgPgQQNSBXN0YXRlImUKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESFQoRUEVSTUlTU0lPTl9ERU5JRUQQAhINCglOT1RfRk9VTkQQAxITCg9TQ0hFTUFfTUlTTUFUQ0gQBA==');
 @$core.Deprecated('Use receivedMessageDescriptor instead')
 const ReceivedMessage$json = const {
   '1': 'ReceivedMessage',

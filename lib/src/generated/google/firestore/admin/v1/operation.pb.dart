@@ -3,7 +3,7 @@
 //  source: google/firestore/admin/v1/operation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -310,6 +310,84 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
   $1.Index ensureIndex() => $_ensure(1);
 }
 
+class FieldOperationMetadata_TtlConfigDelta extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'FieldOperationMetadata.TtlConfigDelta',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..e<FieldOperationMetadata_TtlConfigDelta_ChangeType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'changeType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: FieldOperationMetadata_TtlConfigDelta_ChangeType
+            .CHANGE_TYPE_UNSPECIFIED,
+        valueOf: FieldOperationMetadata_TtlConfigDelta_ChangeType.valueOf,
+        enumValues: FieldOperationMetadata_TtlConfigDelta_ChangeType.values)
+    ..hasRequiredFields = false;
+
+  FieldOperationMetadata_TtlConfigDelta._() : super();
+  factory FieldOperationMetadata_TtlConfigDelta({
+    FieldOperationMetadata_TtlConfigDelta_ChangeType? changeType,
+  }) {
+    final _result = create();
+    if (changeType != null) {
+      _result.changeType = changeType;
+    }
+    return _result;
+  }
+  factory FieldOperationMetadata_TtlConfigDelta.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FieldOperationMetadata_TtlConfigDelta.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FieldOperationMetadata_TtlConfigDelta clone() =>
+      FieldOperationMetadata_TtlConfigDelta()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FieldOperationMetadata_TtlConfigDelta copyWith(
+          void Function(FieldOperationMetadata_TtlConfigDelta) updates) =>
+      super.copyWith((message) =>
+              updates(message as FieldOperationMetadata_TtlConfigDelta))
+          as FieldOperationMetadata_TtlConfigDelta; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FieldOperationMetadata_TtlConfigDelta create() =>
+      FieldOperationMetadata_TtlConfigDelta._();
+  FieldOperationMetadata_TtlConfigDelta createEmptyInstance() => create();
+  static $pb.PbList<FieldOperationMetadata_TtlConfigDelta> createRepeated() =>
+      $pb.PbList<FieldOperationMetadata_TtlConfigDelta>();
+  @$core.pragma('dart2js:noInline')
+  static FieldOperationMetadata_TtlConfigDelta getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          FieldOperationMetadata_TtlConfigDelta>(create);
+  static FieldOperationMetadata_TtlConfigDelta? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  FieldOperationMetadata_TtlConfigDelta_ChangeType get changeType => $_getN(0);
+  @$pb.TagNumber(1)
+  set changeType(FieldOperationMetadata_TtlConfigDelta_ChangeType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasChangeType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChangeType() => clearField(1);
+}
+
 class FieldOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -365,6 +443,12 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'progressBytes',
         subBuilder: Progress.create)
+    ..aOM<FieldOperationMetadata_TtlConfigDelta>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ttlConfigDelta',
+        subBuilder: FieldOperationMetadata_TtlConfigDelta.create)
     ..hasRequiredFields = false;
 
   FieldOperationMetadata._() : super();
@@ -376,6 +460,7 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
     OperationState? state,
     Progress? progressDocuments,
     Progress? progressBytes,
+    FieldOperationMetadata_TtlConfigDelta? ttlConfigDelta,
   }) {
     final _result = create();
     if (startTime != null) {
@@ -398,6 +483,9 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
     }
     if (progressBytes != null) {
       _result.progressBytes = progressBytes;
+    }
+    if (ttlConfigDelta != null) {
+      _result.ttlConfigDelta = ttlConfigDelta;
     }
     return _result;
   }
@@ -513,6 +601,20 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   void clearProgressBytes() => clearField(7);
   @$pb.TagNumber(7)
   Progress ensureProgressBytes() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  FieldOperationMetadata_TtlConfigDelta get ttlConfigDelta => $_getN(7);
+  @$pb.TagNumber(8)
+  set ttlConfigDelta(FieldOperationMetadata_TtlConfigDelta v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasTtlConfigDelta() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearTtlConfigDelta() => clearField(8);
+  @$pb.TagNumber(8)
+  FieldOperationMetadata_TtlConfigDelta ensureTtlConfigDelta() => $_ensure(7);
 }
 
 class ExportDocumentsMetadata extends $pb.GeneratedMessage {

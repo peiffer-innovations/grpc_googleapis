@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/xychart.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -52,6 +52,15 @@ class XyChart_DataSet extends $pb.GeneratedMessage {
             ? ''
             : 'minAlignmentPeriod',
         subBuilder: $0.Duration.create)
+    ..e<XyChart_DataSet_TargetAxis>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetAxis',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: XyChart_DataSet_TargetAxis.TARGET_AXIS_UNSPECIFIED,
+        valueOf: XyChart_DataSet_TargetAxis.valueOf,
+        enumValues: XyChart_DataSet_TargetAxis.values)
     ..hasRequiredFields = false;
 
   XyChart_DataSet._() : super();
@@ -60,6 +69,7 @@ class XyChart_DataSet extends $pb.GeneratedMessage {
     XyChart_DataSet_PlotType? plotType,
     $core.String? legendTemplate,
     $0.Duration? minAlignmentPeriod,
+    XyChart_DataSet_TargetAxis? targetAxis,
   }) {
     final _result = create();
     if (timeSeriesQuery != null) {
@@ -73,6 +83,9 @@ class XyChart_DataSet extends $pb.GeneratedMessage {
     }
     if (minAlignmentPeriod != null) {
       _result.minAlignmentPeriod = minAlignmentPeriod;
+    }
+    if (targetAxis != null) {
+      _result.targetAxis = targetAxis;
     }
     return _result;
   }
@@ -154,6 +167,18 @@ class XyChart_DataSet extends $pb.GeneratedMessage {
   void clearMinAlignmentPeriod() => clearField(4);
   @$pb.TagNumber(4)
   $0.Duration ensureMinAlignmentPeriod() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  XyChart_DataSet_TargetAxis get targetAxis => $_getN(4);
+  @$pb.TagNumber(5)
+  set targetAxis(XyChart_DataSet_TargetAxis v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTargetAxis() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTargetAxis() => clearField(5);
 }
 
 class XyChart_Axis extends $pb.GeneratedMessage {
@@ -296,6 +321,12 @@ class XyChart extends $pb.GeneratedMessage {
             ? ''
             : 'chartOptions',
         subBuilder: ChartOptions.create)
+    ..aOM<XyChart_Axis>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'y2Axis',
+        subBuilder: XyChart_Axis.create)
     ..hasRequiredFields = false;
 
   XyChart._() : super();
@@ -306,6 +337,7 @@ class XyChart extends $pb.GeneratedMessage {
     XyChart_Axis? xAxis,
     XyChart_Axis? yAxis,
     ChartOptions? chartOptions,
+    XyChart_Axis? y2Axis,
   }) {
     final _result = create();
     if (dataSets != null) {
@@ -325,6 +357,9 @@ class XyChart extends $pb.GeneratedMessage {
     }
     if (chartOptions != null) {
       _result.chartOptions = chartOptions;
+    }
+    if (y2Axis != null) {
+      _result.y2Axis = y2Axis;
     }
     return _result;
   }
@@ -415,6 +450,20 @@ class XyChart extends $pb.GeneratedMessage {
   void clearChartOptions() => clearField(8);
   @$pb.TagNumber(8)
   ChartOptions ensureChartOptions() => $_ensure(5);
+
+  @$pb.TagNumber(9)
+  XyChart_Axis get y2Axis => $_getN(6);
+  @$pb.TagNumber(9)
+  set y2Axis(XyChart_Axis v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasY2Axis() => $_has(6);
+  @$pb.TagNumber(9)
+  void clearY2Axis() => clearField(9);
+  @$pb.TagNumber(9)
+  XyChart_Axis ensureY2Axis() => $_ensure(6);
 }
 
 class ChartOptions extends $pb.GeneratedMessage {

@@ -3,7 +3,7 @@
 //  source: google/privacy/dlp/v2/storage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
@@ -103,6 +103,16 @@ class FileType extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'TSV');
+  static const FileType POWERPOINT = FileType._(
+      11,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'POWERPOINT');
+  static const FileType EXCEL = FileType._(
+      12,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'EXCEL');
 
   static const $core.List<FileType> values = <FileType>[
     FILE_TYPE_UNSPECIFIED,
@@ -114,6 +124,8 @@ class FileType extends $pb.ProtobufEnum {
     AVRO,
     CSV,
     TSV,
+    POWERPOINT,
+    EXCEL,
   ];
 
   static final $core.Map<$core.int, FileType> _byValue =

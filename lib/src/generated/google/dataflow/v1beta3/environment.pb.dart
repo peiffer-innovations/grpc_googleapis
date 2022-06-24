@@ -3,7 +3,7 @@
 //  source: google/dataflow/v1beta3/environment.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -1341,6 +1341,11 @@ class SdkHarnessContainerImage extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'environmentId')
+    ..pPS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'capabilities')
     ..hasRequiredFields = false;
 
   SdkHarnessContainerImage._() : super();
@@ -1348,6 +1353,7 @@ class SdkHarnessContainerImage extends $pb.GeneratedMessage {
     $core.String? containerImage,
     $core.bool? useSingleCorePerContainer,
     $core.String? environmentId,
+    $core.Iterable<$core.String>? capabilities,
   }) {
     final _result = create();
     if (containerImage != null) {
@@ -1358,6 +1364,9 @@ class SdkHarnessContainerImage extends $pb.GeneratedMessage {
     }
     if (environmentId != null) {
       _result.environmentId = environmentId;
+    }
+    if (capabilities != null) {
+      _result.capabilities.addAll(capabilities);
     }
     return _result;
   }
@@ -1425,6 +1434,9 @@ class SdkHarnessContainerImage extends $pb.GeneratedMessage {
   $core.bool hasEnvironmentId() => $_has(2);
   @$pb.TagNumber(3)
   void clearEnvironmentId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.String> get capabilities => $_getList(3);
 }
 
 class WorkerPool extends $pb.GeneratedMessage {

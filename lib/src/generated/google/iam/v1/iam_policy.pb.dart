@@ -3,14 +3,15 @@
 //  source: google/iam/v1/iam_policy.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'policy.pb.dart' as $1;
-import 'options.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $2;
+import 'options.pb.dart' as $3;
 
 class SetIamPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -33,12 +34,19 @@ class SetIamPolicyRequest extends $pb.GeneratedMessage {
             ? ''
             : 'policy',
         subBuilder: $1.Policy.create)
+    ..aOM<$2.FieldMask>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   SetIamPolicyRequest._() : super();
   factory SetIamPolicyRequest({
     $core.String? resource,
     $1.Policy? policy,
+    $2.FieldMask? updateMask,
   }) {
     final _result = create();
     if (resource != null) {
@@ -46,6 +54,9 @@ class SetIamPolicyRequest extends $pb.GeneratedMessage {
     }
     if (policy != null) {
       _result.policy = policy;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
     }
     return _result;
   }
@@ -101,6 +112,20 @@ class SetIamPolicyRequest extends $pb.GeneratedMessage {
   void clearPolicy() => clearField(2);
   @$pb.TagNumber(2)
   $1.Policy ensurePolicy() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $2.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
+  set updateMask($2.FieldMask v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetIamPolicyRequest extends $pb.GeneratedMessage {
@@ -118,18 +143,18 @@ class GetIamPolicyRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'resource')
-    ..aOM<$2.GetPolicyOptions>(
+    ..aOM<$3.GetPolicyOptions>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'options',
-        subBuilder: $2.GetPolicyOptions.create)
+        subBuilder: $3.GetPolicyOptions.create)
     ..hasRequiredFields = false;
 
   GetIamPolicyRequest._() : super();
   factory GetIamPolicyRequest({
     $core.String? resource,
-    $2.GetPolicyOptions? options,
+    $3.GetPolicyOptions? options,
   }) {
     final _result = create();
     if (resource != null) {
@@ -180,9 +205,9 @@ class GetIamPolicyRequest extends $pb.GeneratedMessage {
   void clearResource() => clearField(1);
 
   @$pb.TagNumber(2)
-  $2.GetPolicyOptions get options => $_getN(1);
+  $3.GetPolicyOptions get options => $_getN(1);
   @$pb.TagNumber(2)
-  set options($2.GetPolicyOptions v) {
+  set options($3.GetPolicyOptions v) {
     setField(2, v);
   }
 
@@ -191,7 +216,7 @@ class GetIamPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOptions() => clearField(2);
   @$pb.TagNumber(2)
-  $2.GetPolicyOptions ensureOptions() => $_ensure(1);
+  $3.GetPolicyOptions ensureOptions() => $_ensure(1);
 }
 
 class TestIamPermissionsRequest extends $pb.GeneratedMessage {

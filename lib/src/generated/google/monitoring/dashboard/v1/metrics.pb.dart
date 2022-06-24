@@ -3,7 +3,7 @@
 //  source: google/monitoring/dashboard/v1/metrics.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -686,6 +686,15 @@ class Threshold extends $pb.GeneratedMessage {
         defaultOrMaker: Threshold_Direction.DIRECTION_UNSPECIFIED,
         valueOf: Threshold_Direction.valueOf,
         enumValues: Threshold_Direction.values)
+    ..e<Threshold_TargetAxis>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetAxis',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Threshold_TargetAxis.TARGET_AXIS_UNSPECIFIED,
+        valueOf: Threshold_TargetAxis.valueOf,
+        enumValues: Threshold_TargetAxis.values)
     ..hasRequiredFields = false;
 
   Threshold._() : super();
@@ -694,6 +703,7 @@ class Threshold extends $pb.GeneratedMessage {
     $core.double? value,
     Threshold_Color? color,
     Threshold_Direction? direction,
+    Threshold_TargetAxis? targetAxis,
   }) {
     final _result = create();
     if (label != null) {
@@ -707,6 +717,9 @@ class Threshold extends $pb.GeneratedMessage {
     }
     if (direction != null) {
       _result.direction = direction;
+    }
+    if (targetAxis != null) {
+      _result.targetAxis = targetAxis;
     }
     return _result;
   }
@@ -783,4 +796,16 @@ class Threshold extends $pb.GeneratedMessage {
   $core.bool hasDirection() => $_has(3);
   @$pb.TagNumber(4)
   void clearDirection() => clearField(4);
+
+  @$pb.TagNumber(5)
+  Threshold_TargetAxis get targetAxis => $_getN(4);
+  @$pb.TagNumber(5)
+  set targetAxis(Threshold_TargetAxis v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTargetAxis() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTargetAxis() => clearField(5);
 }

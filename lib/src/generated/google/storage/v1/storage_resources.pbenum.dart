@@ -3,11 +3,51 @@
 //  source: google/storage/v1/storage_resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
+
+class Bucket_IamConfiguration_PublicAccessPrevention extends $pb.ProtobufEnum {
+  static const Bucket_IamConfiguration_PublicAccessPrevention
+      PUBLIC_ACCESS_PREVENTION_UNSPECIFIED =
+      Bucket_IamConfiguration_PublicAccessPrevention._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PUBLIC_ACCESS_PREVENTION_UNSPECIFIED');
+  static const Bucket_IamConfiguration_PublicAccessPrevention ENFORCED =
+      Bucket_IamConfiguration_PublicAccessPrevention._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ENFORCED');
+  static const Bucket_IamConfiguration_PublicAccessPrevention INHERITED =
+      Bucket_IamConfiguration_PublicAccessPrevention._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INHERITED');
+
+  static const $core.List<Bucket_IamConfiguration_PublicAccessPrevention>
+      values = <Bucket_IamConfiguration_PublicAccessPrevention>[
+    PUBLIC_ACCESS_PREVENTION_UNSPECIFIED,
+    ENFORCED,
+    INHERITED,
+  ];
+
+  static final $core
+          .Map<$core.int, Bucket_IamConfiguration_PublicAccessPrevention>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Bucket_IamConfiguration_PublicAccessPrevention? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Bucket_IamConfiguration_PublicAccessPrevention._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
 
 class CommonEnums_Projection extends $pb.ProtobufEnum {
   static const CommonEnums_Projection PROJECTION_UNSPECIFIED =

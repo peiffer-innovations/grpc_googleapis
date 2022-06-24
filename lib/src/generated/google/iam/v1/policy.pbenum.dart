@@ -3,11 +3,49 @@
 //  source: google/iam/v1/policy.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
+
+class AuditLogConfig_LogType extends $pb.ProtobufEnum {
+  static const AuditLogConfig_LogType LOG_TYPE_UNSPECIFIED =
+      AuditLogConfig_LogType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LOG_TYPE_UNSPECIFIED');
+  static const AuditLogConfig_LogType ADMIN_READ = AuditLogConfig_LogType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ADMIN_READ');
+  static const AuditLogConfig_LogType DATA_WRITE = AuditLogConfig_LogType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DATA_WRITE');
+  static const AuditLogConfig_LogType DATA_READ = AuditLogConfig_LogType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DATA_READ');
+
+  static const $core.List<AuditLogConfig_LogType> values =
+      <AuditLogConfig_LogType>[
+    LOG_TYPE_UNSPECIFIED,
+    ADMIN_READ,
+    DATA_WRITE,
+    DATA_READ,
+  ];
+
+  static final $core.Map<$core.int, AuditLogConfig_LogType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AuditLogConfig_LogType? valueOf($core.int value) => _byValue[value];
+
+  const AuditLogConfig_LogType._($core.int v, $core.String n) : super(v, n);
+}
 
 class BindingDelta_Action extends $pb.ProtobufEnum {
   static const BindingDelta_Action ACTION_UNSPECIFIED = BindingDelta_Action._(

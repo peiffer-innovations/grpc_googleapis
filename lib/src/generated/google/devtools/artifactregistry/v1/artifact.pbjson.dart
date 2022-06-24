@@ -3,7 +3,7 @@
 //  source: google/devtools/artifactregistry/v1/artifact.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -94,3 +94,14 @@ const ListDockerImagesResponse$json = const {
 final $typed_data.Uint8List listDockerImagesResponseDescriptor =
     $convert.base64Decode(
         'ChhMaXN0RG9ja2VySW1hZ2VzUmVzcG9uc2USVQoNZG9ja2VyX2ltYWdlcxgBIAMoCzIwLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLkRvY2tlckltYWdlUgxkb2NrZXJJbWFnZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+@$core.Deprecated('Use getDockerImageRequestDescriptor instead')
+const GetDockerImageRequest$json = const {
+  '1': 'GetDockerImageRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetDockerImageRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDockerImageRequestDescriptor = $convert.base64Decode(
+    'ChVHZXREb2NrZXJJbWFnZVJlcXVlc3QSRwoEbmFtZRgBIAEoCUIz4EEC+kEtCithcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0RvY2tlckltYWdlUgRuYW1l');

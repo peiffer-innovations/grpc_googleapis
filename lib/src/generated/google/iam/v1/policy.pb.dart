@@ -3,7 +3,7 @@
 //  source: google/iam/v1/policy.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -44,6 +44,13 @@ class Policy extends $pb.GeneratedMessage {
             : 'bindings',
         $pb.PbFieldType.PM,
         subBuilder: Binding.create)
+    ..pc<AuditConfig>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'auditConfigs',
+        $pb.PbFieldType.PM,
+        subBuilder: AuditConfig.create)
     ..hasRequiredFields = false;
 
   Policy._() : super();
@@ -51,6 +58,7 @@ class Policy extends $pb.GeneratedMessage {
     $core.int? version,
     $core.List<$core.int>? etag,
     $core.Iterable<Binding>? bindings,
+    $core.Iterable<AuditConfig>? auditConfigs,
   }) {
     final _result = create();
     if (version != null) {
@@ -61,6 +69,9 @@ class Policy extends $pb.GeneratedMessage {
     }
     if (bindings != null) {
       _result.bindings.addAll(bindings);
+    }
+    if (auditConfigs != null) {
+      _result.auditConfigs.addAll(auditConfigs);
     }
     return _result;
   }
@@ -116,6 +127,9 @@ class Policy extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(4)
   $core.List<Binding> get bindings => $_getList(2);
+
+  @$pb.TagNumber(6)
+  $core.List<AuditConfig> get auditConfigs => $_getList(3);
 }
 
 class Binding extends $pb.GeneratedMessage {
@@ -218,6 +232,169 @@ class Binding extends $pb.GeneratedMessage {
   void clearCondition() => clearField(3);
   @$pb.TagNumber(3)
   $0.Expr ensureCondition() => $_ensure(2);
+}
+
+class AuditConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AuditConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'service')
+    ..pc<AuditLogConfig>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'auditLogConfigs',
+        $pb.PbFieldType.PM,
+        subBuilder: AuditLogConfig.create)
+    ..hasRequiredFields = false;
+
+  AuditConfig._() : super();
+  factory AuditConfig({
+    $core.String? service,
+    $core.Iterable<AuditLogConfig>? auditLogConfigs,
+  }) {
+    final _result = create();
+    if (service != null) {
+      _result.service = service;
+    }
+    if (auditLogConfigs != null) {
+      _result.auditLogConfigs.addAll(auditLogConfigs);
+    }
+    return _result;
+  }
+  factory AuditConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuditConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AuditConfig clone() => AuditConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AuditConfig copyWith(void Function(AuditConfig) updates) =>
+      super.copyWith((message) => updates(message as AuditConfig))
+          as AuditConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AuditConfig create() => AuditConfig._();
+  AuditConfig createEmptyInstance() => create();
+  static $pb.PbList<AuditConfig> createRepeated() => $pb.PbList<AuditConfig>();
+  @$core.pragma('dart2js:noInline')
+  static AuditConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AuditConfig>(create);
+  static AuditConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get service => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set service($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasService() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearService() => clearField(1);
+
+  @$pb.TagNumber(3)
+  $core.List<AuditLogConfig> get auditLogConfigs => $_getList(1);
+}
+
+class AuditLogConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AuditLogConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
+      createEmptyInstance: create)
+    ..e<AuditLogConfig_LogType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: AuditLogConfig_LogType.LOG_TYPE_UNSPECIFIED,
+        valueOf: AuditLogConfig_LogType.valueOf,
+        enumValues: AuditLogConfig_LogType.values)
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'exemptedMembers')
+    ..hasRequiredFields = false;
+
+  AuditLogConfig._() : super();
+  factory AuditLogConfig({
+    AuditLogConfig_LogType? logType,
+    $core.Iterable<$core.String>? exemptedMembers,
+  }) {
+    final _result = create();
+    if (logType != null) {
+      _result.logType = logType;
+    }
+    if (exemptedMembers != null) {
+      _result.exemptedMembers.addAll(exemptedMembers);
+    }
+    return _result;
+  }
+  factory AuditLogConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuditLogConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AuditLogConfig clone() => AuditLogConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AuditLogConfig copyWith(void Function(AuditLogConfig) updates) =>
+      super.copyWith((message) => updates(message as AuditLogConfig))
+          as AuditLogConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AuditLogConfig create() => AuditLogConfig._();
+  AuditLogConfig createEmptyInstance() => create();
+  static $pb.PbList<AuditLogConfig> createRepeated() =>
+      $pb.PbList<AuditLogConfig>();
+  @$core.pragma('dart2js:noInline')
+  static AuditLogConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AuditLogConfig>(create);
+  static AuditLogConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  AuditLogConfig_LogType get logType => $_getN(0);
+  @$pb.TagNumber(1)
+  set logType(AuditLogConfig_LogType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLogType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLogType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get exemptedMembers => $_getList(1);
 }
 
 class PolicyDelta extends $pb.GeneratedMessage {

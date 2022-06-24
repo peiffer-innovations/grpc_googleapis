@@ -3,7 +3,7 @@
 //  source: grafeas/v1/intoto_statement.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
@@ -47,6 +47,15 @@ const InTotoStatement$json = const {
       '9': 0,
       '10': 'slsaProvenance'
     },
+    const {
+      '1': 'slsa_provenance_zero_two',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.grafeas.v1.SlsaProvenanceZeroTwo',
+      '9': 0,
+      '10': 'slsaProvenanceZeroTwo'
+    },
   ],
   '8': const [
     const {'1': 'predicate'},
@@ -55,7 +64,7 @@ const InTotoStatement$json = const {
 
 /// Descriptor for `InTotoStatement`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List inTotoStatementDescriptor = $convert.base64Decode(
-    'Cg9JblRvdG9TdGF0ZW1lbnQSEwoEdHlwZRgBIAEoCVIFX3R5cGUSLQoHc3ViamVjdBgCIAMoCzITLmdyYWZlYXMudjEuU3ViamVjdFIHc3ViamVjdBIlCg5wcmVkaWNhdGVfdHlwZRgDIAEoCVINcHJlZGljYXRlVHlwZRI+Cgpwcm92ZW5hbmNlGAQgASgLMhwuZ3JhZmVhcy52MS5JblRvdG9Qcm92ZW5hbmNlSABSCnByb3ZlbmFuY2USRQoPc2xzYV9wcm92ZW5hbmNlGAUgASgLMhouZ3JhZmVhcy52MS5TbHNhUHJvdmVuYW5jZUgAUg5zbHNhUHJvdmVuYW5jZUILCglwcmVkaWNhdGU=');
+    'Cg9JblRvdG9TdGF0ZW1lbnQSEwoEdHlwZRgBIAEoCVIFX3R5cGUSLQoHc3ViamVjdBgCIAMoCzITLmdyYWZlYXMudjEuU3ViamVjdFIHc3ViamVjdBIlCg5wcmVkaWNhdGVfdHlwZRgDIAEoCVINcHJlZGljYXRlVHlwZRI+Cgpwcm92ZW5hbmNlGAQgASgLMhwuZ3JhZmVhcy52MS5JblRvdG9Qcm92ZW5hbmNlSABSCnByb3ZlbmFuY2USRQoPc2xzYV9wcm92ZW5hbmNlGAUgASgLMhouZ3JhZmVhcy52MS5TbHNhUHJvdmVuYW5jZUgAUg5zbHNhUHJvdmVuYW5jZRJcChhzbHNhX3Byb3ZlbmFuY2VfemVyb190d28YBiABKAsyIS5ncmFmZWFzLnYxLlNsc2FQcm92ZW5hbmNlWmVyb1R3b0gAUhVzbHNhUHJvdmVuYW5jZVplcm9Ud29CCwoJcHJlZGljYXRl');
 @$core.Deprecated('Use subjectDescriptor instead')
 const Subject$json = const {
   '1': 'Subject',
