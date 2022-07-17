@@ -313,6 +313,44 @@ const DeleteTableRequest$json = const {
 /// Descriptor for `DeleteTableRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteTableRequestDescriptor = $convert.base64Decode(
     'ChJEZWxldGVUYWJsZVJlcXVlc3QSPgoEbmFtZRgBIAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlUgRuYW1l');
+@$core.Deprecated('Use undeleteTableRequestDescriptor instead')
+const UndeleteTableRequest$json = const {
+  '1': 'UndeleteTableRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `UndeleteTableRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List undeleteTableRequestDescriptor = $convert.base64Decode(
+    'ChRVbmRlbGV0ZVRhYmxlUmVxdWVzdBI+CgRuYW1lGAEgASgJQirgQQL6QSQKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGVSBG5hbWU=');
+@$core.Deprecated('Use undeleteTableMetadataDescriptor instead')
+const UndeleteTableMetadata$json = const {
+  '1': 'UndeleteTableMetadata',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+  ],
+};
+
+/// Descriptor for `UndeleteTableMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List undeleteTableMetadataDescriptor = $convert.base64Decode(
+    'ChVVbmRlbGV0ZVRhYmxlTWV0YWRhdGESEgoEbmFtZRgBIAEoCVIEbmFtZRI5CgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJc3RhcnRUaW1lEjUKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHZW5kVGltZQ==');
 @$core.Deprecated('Use modifyColumnFamiliesRequestDescriptor instead')
 const ModifyColumnFamiliesRequest$json = const {
   '1': 'ModifyColumnFamiliesRequest',

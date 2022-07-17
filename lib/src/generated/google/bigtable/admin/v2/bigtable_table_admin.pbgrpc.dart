@@ -44,6 +44,11 @@ class BigtableTableAdminClient extends $grpc.Client {
           '/google.bigtable.admin.v2.BigtableTableAdmin/DeleteTable',
           ($4.DeleteTableRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$undeleteTable =
+      $grpc.ClientMethod<$4.UndeleteTableRequest, $2.Operation>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/UndeleteTable',
+          ($4.UndeleteTableRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$modifyColumnFamilies =
       $grpc.ClientMethod<$4.ModifyColumnFamiliesRequest, $5.Table>(
           '/google.bigtable.admin.v2.BigtableTableAdmin/ModifyColumnFamilies',
@@ -166,6 +171,12 @@ class BigtableTableAdminClient extends $grpc.Client {
   $grpc.ResponseFuture<$3.Empty> deleteTable($4.DeleteTableRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteTable, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> undeleteTable(
+      $4.UndeleteTableRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$undeleteTable, request, options: options);
   }
 
   $grpc.ResponseFuture<$5.Table> modifyColumnFamilies(
@@ -308,6 +319,14 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.DeleteTableRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UndeleteTableRequest, $2.Operation>(
+        'UndeleteTable',
+        undeleteTable_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.UndeleteTableRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.ModifyColumnFamiliesRequest, $5.Table>(
         'ModifyColumnFamilies',
         modifyColumnFamilies_Pre,
@@ -476,6 +495,11 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
     return deleteTable(call, await request);
   }
 
+  $async.Future<$2.Operation> undeleteTable_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UndeleteTableRequest> request) async {
+    return undeleteTable(call, await request);
+  }
+
   $async.Future<$5.Table> modifyColumnFamilies_Pre($grpc.ServiceCall call,
       $async.Future<$4.ModifyColumnFamiliesRequest> request) async {
     return modifyColumnFamilies(call, await request);
@@ -575,6 +599,8 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.GetTableRequest request);
   $async.Future<$3.Empty> deleteTable(
       $grpc.ServiceCall call, $4.DeleteTableRequest request);
+  $async.Future<$2.Operation> undeleteTable(
+      $grpc.ServiceCall call, $4.UndeleteTableRequest request);
   $async.Future<$5.Table> modifyColumnFamilies(
       $grpc.ServiceCall call, $4.ModifyColumnFamiliesRequest request);
   $async.Future<$3.Empty> dropRowRange(

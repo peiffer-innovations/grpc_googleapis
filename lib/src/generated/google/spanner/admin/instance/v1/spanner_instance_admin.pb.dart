@@ -9,8 +9,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/field_mask.pb.dart' as $5;
-import '../../../../protobuf/timestamp.pb.dart' as $6;
+import '../../../../protobuf/timestamp.pb.dart' as $5;
+import '../../../../protobuf/field_mask.pb.dart' as $6;
 
 import 'spanner_instance_admin.pbenum.dart';
 
@@ -302,6 +302,18 @@ class Instance extends $pb.GeneratedMessage {
             ? ''
             : 'processingUnits',
         $pb.PbFieldType.O3)
+    ..aOM<$5.Timestamp>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateTime',
+        subBuilder: $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   Instance._() : super();
@@ -314,6 +326,8 @@ class Instance extends $pb.GeneratedMessage {
     $core.Map<$core.String, $core.String>? labels,
     $core.Iterable<$core.String>? endpointUris,
     $core.int? processingUnits,
+    $5.Timestamp? createTime,
+    $5.Timestamp? updateTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -339,6 +353,12 @@ class Instance extends $pb.GeneratedMessage {
     }
     if (processingUnits != null) {
       _result.processingUnits = processingUnits;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (updateTime != null) {
+      _result.updateTime = updateTime;
     }
     return _result;
   }
@@ -445,6 +465,34 @@ class Instance extends $pb.GeneratedMessage {
   $core.bool hasProcessingUnits() => $_has(7);
   @$pb.TagNumber(9)
   void clearProcessingUnits() => clearField(9);
+
+  @$pb.TagNumber(11)
+  $5.Timestamp get createTime => $_getN(8);
+  @$pb.TagNumber(11)
+  set createTime($5.Timestamp v) {
+    setField(11, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasCreateTime() => $_has(8);
+  @$pb.TagNumber(11)
+  void clearCreateTime() => clearField(11);
+  @$pb.TagNumber(11)
+  $5.Timestamp ensureCreateTime() => $_ensure(8);
+
+  @$pb.TagNumber(12)
+  $5.Timestamp get updateTime => $_getN(9);
+  @$pb.TagNumber(12)
+  set updateTime($5.Timestamp v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasUpdateTime() => $_has(9);
+  @$pb.TagNumber(12)
+  void clearUpdateTime() => clearField(12);
+  @$pb.TagNumber(12)
+  $5.Timestamp ensureUpdateTime() => $_ensure(9);
 }
 
 class ListInstanceConfigsRequest extends $pb.GeneratedMessage {
@@ -729,18 +777,18 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
-    ..aOM<$5.FieldMask>(
+    ..aOM<$6.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fieldMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetInstanceRequest._() : super();
   factory GetInstanceRequest({
     $core.String? name,
-    $5.FieldMask? fieldMask,
+    $6.FieldMask? fieldMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -791,9 +839,9 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $5.FieldMask get fieldMask => $_getN(1);
+  $6.FieldMask get fieldMask => $_getN(1);
   @$pb.TagNumber(2)
-  set fieldMask($5.FieldMask v) {
+  set fieldMask($6.FieldMask v) {
     setField(2, v);
   }
 
@@ -802,7 +850,7 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
   @$pb.TagNumber(2)
-  $5.FieldMask ensureFieldMask() => $_ensure(1);
+  $6.FieldMask ensureFieldMask() => $_ensure(1);
 }
 
 class CreateInstanceRequest extends $pb.GeneratedMessage {
@@ -1150,18 +1198,18 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
             ? ''
             : 'instance',
         subBuilder: Instance.create)
-    ..aOM<$5.FieldMask>(
+    ..aOM<$6.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fieldMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceRequest._() : super();
   factory UpdateInstanceRequest({
     Instance? instance,
-    $5.FieldMask? fieldMask,
+    $6.FieldMask? fieldMask,
   }) {
     final _result = create();
     if (instance != null) {
@@ -1216,9 +1264,9 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
   Instance ensureInstance() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $5.FieldMask get fieldMask => $_getN(1);
+  $6.FieldMask get fieldMask => $_getN(1);
   @$pb.TagNumber(2)
-  set fieldMask($5.FieldMask v) {
+  set fieldMask($6.FieldMask v) {
     setField(2, v);
   }
 
@@ -1227,7 +1275,7 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
   @$pb.TagNumber(2)
-  $5.FieldMask ensureFieldMask() => $_ensure(1);
+  $6.FieldMask ensureFieldMask() => $_ensure(1);
 }
 
 class DeleteInstanceRequest extends $pb.GeneratedMessage {
@@ -1315,32 +1363,32 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'instance',
         subBuilder: Instance.create)
-    ..aOM<$6.Timestamp>(
+    ..aOM<$5.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $6.Timestamp.create)
-    ..aOM<$6.Timestamp>(
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'cancelTime',
-        subBuilder: $6.Timestamp.create)
-    ..aOM<$6.Timestamp>(
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endTime',
-        subBuilder: $6.Timestamp.create)
+        subBuilder: $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateInstanceMetadata._() : super();
   factory CreateInstanceMetadata({
     Instance? instance,
-    $6.Timestamp? startTime,
-    $6.Timestamp? cancelTime,
-    $6.Timestamp? endTime,
+    $5.Timestamp? startTime,
+    $5.Timestamp? cancelTime,
+    $5.Timestamp? endTime,
   }) {
     final _result = create();
     if (instance != null) {
@@ -1401,9 +1449,9 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   Instance ensureInstance() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $6.Timestamp get startTime => $_getN(1);
+  $5.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($6.Timestamp v) {
+  set startTime($5.Timestamp v) {
     setField(2, v);
   }
 
@@ -1412,12 +1460,12 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Timestamp ensureStartTime() => $_ensure(1);
+  $5.Timestamp ensureStartTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Timestamp get cancelTime => $_getN(2);
+  $5.Timestamp get cancelTime => $_getN(2);
   @$pb.TagNumber(3)
-  set cancelTime($6.Timestamp v) {
+  set cancelTime($5.Timestamp v) {
     setField(3, v);
   }
 
@@ -1426,12 +1474,12 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCancelTime() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Timestamp ensureCancelTime() => $_ensure(2);
+  $5.Timestamp ensureCancelTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $6.Timestamp get endTime => $_getN(3);
+  $5.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
-  set endTime($6.Timestamp v) {
+  set endTime($5.Timestamp v) {
     setField(4, v);
   }
 
@@ -1440,7 +1488,7 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearEndTime() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Timestamp ensureEndTime() => $_ensure(3);
+  $5.Timestamp ensureEndTime() => $_ensure(3);
 }
 
 class UpdateInstanceMetadata extends $pb.GeneratedMessage {
@@ -1459,32 +1507,32 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'instance',
         subBuilder: Instance.create)
-    ..aOM<$6.Timestamp>(
+    ..aOM<$5.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $6.Timestamp.create)
-    ..aOM<$6.Timestamp>(
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'cancelTime',
-        subBuilder: $6.Timestamp.create)
-    ..aOM<$6.Timestamp>(
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endTime',
-        subBuilder: $6.Timestamp.create)
+        subBuilder: $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceMetadata._() : super();
   factory UpdateInstanceMetadata({
     Instance? instance,
-    $6.Timestamp? startTime,
-    $6.Timestamp? cancelTime,
-    $6.Timestamp? endTime,
+    $5.Timestamp? startTime,
+    $5.Timestamp? cancelTime,
+    $5.Timestamp? endTime,
   }) {
     final _result = create();
     if (instance != null) {
@@ -1545,9 +1593,9 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   Instance ensureInstance() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $6.Timestamp get startTime => $_getN(1);
+  $5.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($6.Timestamp v) {
+  set startTime($5.Timestamp v) {
     setField(2, v);
   }
 
@@ -1556,12 +1604,12 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Timestamp ensureStartTime() => $_ensure(1);
+  $5.Timestamp ensureStartTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Timestamp get cancelTime => $_getN(2);
+  $5.Timestamp get cancelTime => $_getN(2);
   @$pb.TagNumber(3)
-  set cancelTime($6.Timestamp v) {
+  set cancelTime($5.Timestamp v) {
     setField(3, v);
   }
 
@@ -1570,12 +1618,12 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCancelTime() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Timestamp ensureCancelTime() => $_ensure(2);
+  $5.Timestamp ensureCancelTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $6.Timestamp get endTime => $_getN(3);
+  $5.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
-  set endTime($6.Timestamp v) {
+  set endTime($5.Timestamp v) {
     setField(4, v);
   }
 
@@ -1584,5 +1632,5 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearEndTime() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Timestamp ensureEndTime() => $_ensure(3);
+  $5.Timestamp ensureEndTime() => $_ensure(3);
 }

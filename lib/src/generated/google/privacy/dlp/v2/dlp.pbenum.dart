@@ -492,6 +492,422 @@ class OutputStorageConfig_OutputSchema extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+class InfoTypeCategory_LocationCategory extends $pb.ProtobufEnum {
+  static const InfoTypeCategory_LocationCategory LOCATION_UNSPECIFIED =
+      InfoTypeCategory_LocationCategory._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LOCATION_UNSPECIFIED');
+  static const InfoTypeCategory_LocationCategory GLOBAL =
+      InfoTypeCategory_LocationCategory._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GLOBAL');
+  static const InfoTypeCategory_LocationCategory ARGENTINA =
+      InfoTypeCategory_LocationCategory._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ARGENTINA');
+  static const InfoTypeCategory_LocationCategory AUSTRALIA =
+      InfoTypeCategory_LocationCategory._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'AUSTRALIA');
+  static const InfoTypeCategory_LocationCategory BELGIUM =
+      InfoTypeCategory_LocationCategory._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BELGIUM');
+  static const InfoTypeCategory_LocationCategory BRAZIL =
+      InfoTypeCategory_LocationCategory._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BRAZIL');
+  static const InfoTypeCategory_LocationCategory CANADA =
+      InfoTypeCategory_LocationCategory._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CANADA');
+  static const InfoTypeCategory_LocationCategory CHILE =
+      InfoTypeCategory_LocationCategory._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHILE');
+  static const InfoTypeCategory_LocationCategory CHINA =
+      InfoTypeCategory_LocationCategory._(
+          8,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHINA');
+  static const InfoTypeCategory_LocationCategory COLOMBIA =
+      InfoTypeCategory_LocationCategory._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COLOMBIA');
+  static const InfoTypeCategory_LocationCategory DENMARK =
+      InfoTypeCategory_LocationCategory._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DENMARK');
+  static const InfoTypeCategory_LocationCategory FRANCE =
+      InfoTypeCategory_LocationCategory._(
+          11,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FRANCE');
+  static const InfoTypeCategory_LocationCategory FINLAND =
+      InfoTypeCategory_LocationCategory._(
+          12,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FINLAND');
+  static const InfoTypeCategory_LocationCategory GERMANY =
+      InfoTypeCategory_LocationCategory._(
+          13,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GERMANY');
+  static const InfoTypeCategory_LocationCategory HONG_KONG =
+      InfoTypeCategory_LocationCategory._(
+          14,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'HONG_KONG');
+  static const InfoTypeCategory_LocationCategory INDIA =
+      InfoTypeCategory_LocationCategory._(
+          15,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INDIA');
+  static const InfoTypeCategory_LocationCategory INDONESIA =
+      InfoTypeCategory_LocationCategory._(
+          16,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INDONESIA');
+  static const InfoTypeCategory_LocationCategory IRELAND =
+      InfoTypeCategory_LocationCategory._(
+          17,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'IRELAND');
+  static const InfoTypeCategory_LocationCategory ISRAEL =
+      InfoTypeCategory_LocationCategory._(
+          18,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ISRAEL');
+  static const InfoTypeCategory_LocationCategory ITALY =
+      InfoTypeCategory_LocationCategory._(
+          19,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ITALY');
+  static const InfoTypeCategory_LocationCategory JAPAN =
+      InfoTypeCategory_LocationCategory._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'JAPAN');
+  static const InfoTypeCategory_LocationCategory KOREA =
+      InfoTypeCategory_LocationCategory._(
+          21,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'KOREA');
+  static const InfoTypeCategory_LocationCategory MEXICO =
+      InfoTypeCategory_LocationCategory._(
+          22,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MEXICO');
+  static const InfoTypeCategory_LocationCategory THE_NETHERLANDS =
+      InfoTypeCategory_LocationCategory._(
+          23,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'THE_NETHERLANDS');
+  static const InfoTypeCategory_LocationCategory NORWAY =
+      InfoTypeCategory_LocationCategory._(
+          24,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NORWAY');
+  static const InfoTypeCategory_LocationCategory PARAGUAY =
+      InfoTypeCategory_LocationCategory._(
+          25,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PARAGUAY');
+  static const InfoTypeCategory_LocationCategory PERU =
+      InfoTypeCategory_LocationCategory._(
+          26,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PERU');
+  static const InfoTypeCategory_LocationCategory POLAND =
+      InfoTypeCategory_LocationCategory._(
+          27,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'POLAND');
+  static const InfoTypeCategory_LocationCategory PORTUGAL =
+      InfoTypeCategory_LocationCategory._(
+          28,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PORTUGAL');
+  static const InfoTypeCategory_LocationCategory SINGAPORE =
+      InfoTypeCategory_LocationCategory._(
+          29,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SINGAPORE');
+  static const InfoTypeCategory_LocationCategory SOUTH_AFRICA =
+      InfoTypeCategory_LocationCategory._(
+          30,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SOUTH_AFRICA');
+  static const InfoTypeCategory_LocationCategory SPAIN =
+      InfoTypeCategory_LocationCategory._(
+          31,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SPAIN');
+  static const InfoTypeCategory_LocationCategory SWEDEN =
+      InfoTypeCategory_LocationCategory._(
+          32,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SWEDEN');
+  static const InfoTypeCategory_LocationCategory TAIWAN =
+      InfoTypeCategory_LocationCategory._(
+          33,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TAIWAN');
+  static const InfoTypeCategory_LocationCategory THAILAND =
+      InfoTypeCategory_LocationCategory._(
+          34,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'THAILAND');
+  static const InfoTypeCategory_LocationCategory TURKEY =
+      InfoTypeCategory_LocationCategory._(
+          35,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TURKEY');
+  static const InfoTypeCategory_LocationCategory UNITED_KINGDOM =
+      InfoTypeCategory_LocationCategory._(
+          36,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UNITED_KINGDOM');
+  static const InfoTypeCategory_LocationCategory UNITED_STATES =
+      InfoTypeCategory_LocationCategory._(
+          37,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UNITED_STATES');
+  static const InfoTypeCategory_LocationCategory URUGUAY =
+      InfoTypeCategory_LocationCategory._(
+          38,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'URUGUAY');
+  static const InfoTypeCategory_LocationCategory VENEZUELA =
+      InfoTypeCategory_LocationCategory._(
+          39,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'VENEZUELA');
+  static const InfoTypeCategory_LocationCategory INTERNAL =
+      InfoTypeCategory_LocationCategory._(
+          40,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INTERNAL');
+
+  static const $core.List<InfoTypeCategory_LocationCategory> values =
+      <InfoTypeCategory_LocationCategory>[
+    LOCATION_UNSPECIFIED,
+    GLOBAL,
+    ARGENTINA,
+    AUSTRALIA,
+    BELGIUM,
+    BRAZIL,
+    CANADA,
+    CHILE,
+    CHINA,
+    COLOMBIA,
+    DENMARK,
+    FRANCE,
+    FINLAND,
+    GERMANY,
+    HONG_KONG,
+    INDIA,
+    INDONESIA,
+    IRELAND,
+    ISRAEL,
+    ITALY,
+    JAPAN,
+    KOREA,
+    MEXICO,
+    THE_NETHERLANDS,
+    NORWAY,
+    PARAGUAY,
+    PERU,
+    POLAND,
+    PORTUGAL,
+    SINGAPORE,
+    SOUTH_AFRICA,
+    SPAIN,
+    SWEDEN,
+    TAIWAN,
+    THAILAND,
+    TURKEY,
+    UNITED_KINGDOM,
+    UNITED_STATES,
+    URUGUAY,
+    VENEZUELA,
+    INTERNAL,
+  ];
+
+  static final $core.Map<$core.int, InfoTypeCategory_LocationCategory>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static InfoTypeCategory_LocationCategory? valueOf($core.int value) =>
+      _byValue[value];
+
+  const InfoTypeCategory_LocationCategory._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class InfoTypeCategory_IndustryCategory extends $pb.ProtobufEnum {
+  static const InfoTypeCategory_IndustryCategory INDUSTRY_UNSPECIFIED =
+      InfoTypeCategory_IndustryCategory._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INDUSTRY_UNSPECIFIED');
+  static const InfoTypeCategory_IndustryCategory FINANCE =
+      InfoTypeCategory_IndustryCategory._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FINANCE');
+  static const InfoTypeCategory_IndustryCategory HEALTH =
+      InfoTypeCategory_IndustryCategory._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'HEALTH');
+  static const InfoTypeCategory_IndustryCategory TELECOMMUNICATIONS =
+      InfoTypeCategory_IndustryCategory._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TELECOMMUNICATIONS');
+
+  static const $core.List<InfoTypeCategory_IndustryCategory> values =
+      <InfoTypeCategory_IndustryCategory>[
+    INDUSTRY_UNSPECIFIED,
+    FINANCE,
+    HEALTH,
+    TELECOMMUNICATIONS,
+  ];
+
+  static final $core.Map<$core.int, InfoTypeCategory_IndustryCategory>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static InfoTypeCategory_IndustryCategory? valueOf($core.int value) =>
+      _byValue[value];
+
+  const InfoTypeCategory_IndustryCategory._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class InfoTypeCategory_TypeCategory extends $pb.ProtobufEnum {
+  static const InfoTypeCategory_TypeCategory TYPE_UNSPECIFIED =
+      InfoTypeCategory_TypeCategory._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TYPE_UNSPECIFIED');
+  static const InfoTypeCategory_TypeCategory PII =
+      InfoTypeCategory_TypeCategory._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PII');
+  static const InfoTypeCategory_TypeCategory SPII =
+      InfoTypeCategory_TypeCategory._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SPII');
+  static const InfoTypeCategory_TypeCategory DEMOGRAPHIC =
+      InfoTypeCategory_TypeCategory._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DEMOGRAPHIC');
+  static const InfoTypeCategory_TypeCategory CREDENTIAL =
+      InfoTypeCategory_TypeCategory._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CREDENTIAL');
+  static const InfoTypeCategory_TypeCategory GOVERNMENT_ID =
+      InfoTypeCategory_TypeCategory._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GOVERNMENT_ID');
+  static const InfoTypeCategory_TypeCategory DOCUMENT =
+      InfoTypeCategory_TypeCategory._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DOCUMENT');
+  static const InfoTypeCategory_TypeCategory CONTEXTUAL_INFORMATION =
+      InfoTypeCategory_TypeCategory._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CONTEXTUAL_INFORMATION');
+
+  static const $core.List<InfoTypeCategory_TypeCategory> values =
+      <InfoTypeCategory_TypeCategory>[
+    TYPE_UNSPECIFIED,
+    PII,
+    SPII,
+    DEMOGRAPHIC,
+    CREDENTIAL,
+    GOVERNMENT_ID,
+    DOCUMENT,
+    CONTEXTUAL_INFORMATION,
+  ];
+
+  static final $core.Map<$core.int, InfoTypeCategory_TypeCategory> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static InfoTypeCategory_TypeCategory? valueOf($core.int value) =>
+      _byValue[value];
+
+  const InfoTypeCategory_TypeCategory._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class TimePartConfig_TimePart extends $pb.ProtobufEnum {
   static const TimePartConfig_TimePart TIME_PART_UNSPECIFIED =
       TimePartConfig_TimePart._(

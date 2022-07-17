@@ -4895,6 +4895,13 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'description')
+    ..pc<InfoTypeCategory>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'categories',
+        $pb.PbFieldType.PM,
+        subBuilder: InfoTypeCategory.create)
     ..hasRequiredFields = false;
 
   InfoTypeDescription._() : super();
@@ -4903,6 +4910,7 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
     $core.String? displayName,
     $core.Iterable<InfoTypeSupportedBy>? supportedBy,
     $core.String? description,
+    $core.Iterable<InfoTypeCategory>? categories,
   }) {
     final _result = create();
     if (name != null) {
@@ -4916,6 +4924,9 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
     }
     if (description != null) {
       _result.description = description;
+    }
+    if (categories != null) {
+      _result.categories.addAll(categories);
     }
     return _result;
   }
@@ -4984,6 +4995,149 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(3);
   @$pb.TagNumber(4)
   void clearDescription() => clearField(4);
+
+  @$pb.TagNumber(10)
+  $core.List<InfoTypeCategory> get categories => $_getList(4);
+}
+
+enum InfoTypeCategory_Category {
+  locationCategory,
+  industryCategory,
+  typeCategory,
+  notSet
+}
+
+class InfoTypeCategory extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, InfoTypeCategory_Category>
+      _InfoTypeCategory_CategoryByTag = {
+    1: InfoTypeCategory_Category.locationCategory,
+    2: InfoTypeCategory_Category.industryCategory,
+    3: InfoTypeCategory_Category.typeCategory,
+    0: InfoTypeCategory_Category.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'InfoTypeCategory',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2, 3])
+    ..e<InfoTypeCategory_LocationCategory>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'locationCategory',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: InfoTypeCategory_LocationCategory.LOCATION_UNSPECIFIED,
+        valueOf: InfoTypeCategory_LocationCategory.valueOf,
+        enumValues: InfoTypeCategory_LocationCategory.values)
+    ..e<InfoTypeCategory_IndustryCategory>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'industryCategory',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: InfoTypeCategory_IndustryCategory.INDUSTRY_UNSPECIFIED,
+        valueOf: InfoTypeCategory_IndustryCategory.valueOf,
+        enumValues: InfoTypeCategory_IndustryCategory.values)
+    ..e<InfoTypeCategory_TypeCategory>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'typeCategory',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: InfoTypeCategory_TypeCategory.TYPE_UNSPECIFIED,
+        valueOf: InfoTypeCategory_TypeCategory.valueOf,
+        enumValues: InfoTypeCategory_TypeCategory.values)
+    ..hasRequiredFields = false;
+
+  InfoTypeCategory._() : super();
+  factory InfoTypeCategory({
+    InfoTypeCategory_LocationCategory? locationCategory,
+    InfoTypeCategory_IndustryCategory? industryCategory,
+    InfoTypeCategory_TypeCategory? typeCategory,
+  }) {
+    final _result = create();
+    if (locationCategory != null) {
+      _result.locationCategory = locationCategory;
+    }
+    if (industryCategory != null) {
+      _result.industryCategory = industryCategory;
+    }
+    if (typeCategory != null) {
+      _result.typeCategory = typeCategory;
+    }
+    return _result;
+  }
+  factory InfoTypeCategory.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InfoTypeCategory.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  InfoTypeCategory clone() => InfoTypeCategory()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  InfoTypeCategory copyWith(void Function(InfoTypeCategory) updates) =>
+      super.copyWith((message) => updates(message as InfoTypeCategory))
+          as InfoTypeCategory; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeCategory create() => InfoTypeCategory._();
+  InfoTypeCategory createEmptyInstance() => create();
+  static $pb.PbList<InfoTypeCategory> createRepeated() =>
+      $pb.PbList<InfoTypeCategory>();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeCategory getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InfoTypeCategory>(create);
+  static InfoTypeCategory? _defaultInstance;
+
+  InfoTypeCategory_Category whichCategory() =>
+      _InfoTypeCategory_CategoryByTag[$_whichOneof(0)]!;
+  void clearCategory() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  InfoTypeCategory_LocationCategory get locationCategory => $_getN(0);
+  @$pb.TagNumber(1)
+  set locationCategory(InfoTypeCategory_LocationCategory v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLocationCategory() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLocationCategory() => clearField(1);
+
+  @$pb.TagNumber(2)
+  InfoTypeCategory_IndustryCategory get industryCategory => $_getN(1);
+  @$pb.TagNumber(2)
+  set industryCategory(InfoTypeCategory_IndustryCategory v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasIndustryCategory() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIndustryCategory() => clearField(2);
+
+  @$pb.TagNumber(3)
+  InfoTypeCategory_TypeCategory get typeCategory => $_getN(2);
+  @$pb.TagNumber(3)
+  set typeCategory(InfoTypeCategory_TypeCategory v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTypeCategory() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTypeCategory() => clearField(3);
 }
 
 class ListInfoTypesRequest extends $pb.GeneratedMessage {

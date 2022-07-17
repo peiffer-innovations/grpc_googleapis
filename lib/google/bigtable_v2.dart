@@ -5,3 +5,6 @@ export '../src/generated/google/bigtable/v2/bigtable.pbjson.dart';
 export '../src/generated/google/bigtable/v2/data.pb.dart';
 export '../src/generated/google/bigtable/v2/data.pbenum.dart';
 export '../src/generated/google/bigtable/v2/data.pbjson.dart';
+export '../src/generated/google/bigtable/v2/response_params.pb.dart';
+export '../src/generated/google/bigtable/v2/response_params.pbenum.dart';
+export '../src/generated/google/bigtable/v2/response_params.pbjson.dart';

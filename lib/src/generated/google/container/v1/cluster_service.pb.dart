@@ -12,10 +12,11 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../protobuf/wrappers.pb.dart' as $2;
 import '../../rpc/status.pb.dart' as $3;
-import '../../protobuf/timestamp.pb.dart' as $4;
+import '../../protobuf/duration.pb.dart' as $4;
+import '../../protobuf/timestamp.pb.dart' as $5;
 
 import 'cluster_service.pbenum.dart';
-import '../../rpc/code.pbenum.dart' as $5;
+import '../../rpc/code.pbenum.dart' as $6;
 
 export 'cluster_service.pbenum.dart';
 
@@ -107,6 +108,11 @@ class NodeKubeletConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'cpuCfsQuotaPeriod')
+    ..aInt64(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'podPidsLimit')
     ..hasRequiredFields = false;
 
   NodeKubeletConfig._() : super();
@@ -114,6 +120,7 @@ class NodeKubeletConfig extends $pb.GeneratedMessage {
     $core.String? cpuManagerPolicy,
     $2.BoolValue? cpuCfsQuota,
     $core.String? cpuCfsQuotaPeriod,
+    $fixnum.Int64? podPidsLimit,
   }) {
     final _result = create();
     if (cpuManagerPolicy != null) {
@@ -124,6 +131,9 @@ class NodeKubeletConfig extends $pb.GeneratedMessage {
     }
     if (cpuCfsQuotaPeriod != null) {
       _result.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
+    }
+    if (podPidsLimit != null) {
+      _result.podPidsLimit = podPidsLimit;
     }
     return _result;
   }
@@ -191,6 +201,18 @@ class NodeKubeletConfig extends $pb.GeneratedMessage {
   $core.bool hasCpuCfsQuotaPeriod() => $_has(2);
   @$pb.TagNumber(3)
   void clearCpuCfsQuotaPeriod() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get podPidsLimit => $_getI64(3);
+  @$pb.TagNumber(4)
+  set podPidsLimit($fixnum.Int64 v) {
+    $_setInt64(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPodPidsLimit() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPodPidsLimit() => clearField(4);
 }
 
 class NodeConfig extends $pb.GeneratedMessage {
@@ -351,6 +373,17 @@ class NodeConfig extends $pb.GeneratedMessage {
             ? ''
             : 'gvnic',
         subBuilder: VirtualNIC.create)
+    ..aOB(
+        32,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'spot')
+    ..aOM<ConfidentialNodes>(
+        35,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'confidentialNodes',
+        subBuilder: ConfidentialNodes.create)
     ..hasRequiredFields = false;
 
   NodeConfig._() : super();
@@ -380,6 +413,8 @@ class NodeConfig extends $pb.GeneratedMessage {
     GcfsConfig? gcfsConfig,
     AdvancedMachineFeatures? advancedMachineFeatures,
     VirtualNIC? gvnic,
+    $core.bool? spot,
+    ConfidentialNodes? confidentialNodes,
   }) {
     final _result = create();
     if (machineType != null) {
@@ -456,6 +491,12 @@ class NodeConfig extends $pb.GeneratedMessage {
     }
     if (gvnic != null) {
       _result.gvnic = gvnic;
+    }
+    if (spot != null) {
+      _result.spot = spot;
+    }
+    if (confidentialNodes != null) {
+      _result.confidentialNodes = confidentialNodes;
     }
     return _result;
   }
@@ -748,6 +789,32 @@ class NodeConfig extends $pb.GeneratedMessage {
   void clearGvnic() => clearField(29);
   @$pb.TagNumber(29)
   VirtualNIC ensureGvnic() => $_ensure(24);
+
+  @$pb.TagNumber(32)
+  $core.bool get spot => $_getBF(25);
+  @$pb.TagNumber(32)
+  set spot($core.bool v) {
+    $_setBool(25, v);
+  }
+
+  @$pb.TagNumber(32)
+  $core.bool hasSpot() => $_has(25);
+  @$pb.TagNumber(32)
+  void clearSpot() => clearField(32);
+
+  @$pb.TagNumber(35)
+  ConfidentialNodes get confidentialNodes => $_getN(26);
+  @$pb.TagNumber(35)
+  set confidentialNodes(ConfidentialNodes v) {
+    setField(35, v);
+  }
+
+  @$pb.TagNumber(35)
+  $core.bool hasConfidentialNodes() => $_has(26);
+  @$pb.TagNumber(35)
+  void clearConfidentialNodes() => clearField(35);
+  @$pb.TagNumber(35)
+  ConfidentialNodes ensureConfidentialNodes() => $_ensure(26);
 }
 
 class AdvancedMachineFeatures extends $pb.GeneratedMessage {
@@ -819,6 +886,87 @@ class AdvancedMachineFeatures extends $pb.GeneratedMessage {
   void clearThreadsPerCore() => clearField(1);
 }
 
+class NodeNetworkConfig_NetworkPerformanceConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodeNetworkConfig.NetworkPerformanceConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..e<NodeNetworkConfig_NetworkPerformanceConfig_Tier>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'totalEgressBandwidthTier',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            NodeNetworkConfig_NetworkPerformanceConfig_Tier.TIER_UNSPECIFIED,
+        valueOf: NodeNetworkConfig_NetworkPerformanceConfig_Tier.valueOf,
+        enumValues: NodeNetworkConfig_NetworkPerformanceConfig_Tier.values)
+    ..hasRequiredFields = false;
+
+  NodeNetworkConfig_NetworkPerformanceConfig._() : super();
+  factory NodeNetworkConfig_NetworkPerformanceConfig({
+    NodeNetworkConfig_NetworkPerformanceConfig_Tier? totalEgressBandwidthTier,
+  }) {
+    final _result = create();
+    if (totalEgressBandwidthTier != null) {
+      _result.totalEgressBandwidthTier = totalEgressBandwidthTier;
+    }
+    return _result;
+  }
+  factory NodeNetworkConfig_NetworkPerformanceConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeNetworkConfig_NetworkPerformanceConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodeNetworkConfig_NetworkPerformanceConfig clone() =>
+      NodeNetworkConfig_NetworkPerformanceConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodeNetworkConfig_NetworkPerformanceConfig copyWith(
+          void Function(NodeNetworkConfig_NetworkPerformanceConfig) updates) =>
+      super.copyWith((message) =>
+              updates(message as NodeNetworkConfig_NetworkPerformanceConfig))
+          as NodeNetworkConfig_NetworkPerformanceConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodeNetworkConfig_NetworkPerformanceConfig create() =>
+      NodeNetworkConfig_NetworkPerformanceConfig._();
+  NodeNetworkConfig_NetworkPerformanceConfig createEmptyInstance() => create();
+  static $pb.PbList<NodeNetworkConfig_NetworkPerformanceConfig>
+      createRepeated() =>
+          $pb.PbList<NodeNetworkConfig_NetworkPerformanceConfig>();
+  @$core.pragma('dart2js:noInline')
+  static NodeNetworkConfig_NetworkPerformanceConfig getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          NodeNetworkConfig_NetworkPerformanceConfig>(create);
+  static NodeNetworkConfig_NetworkPerformanceConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  NodeNetworkConfig_NetworkPerformanceConfig_Tier
+      get totalEgressBandwidthTier => $_getN(0);
+  @$pb.TagNumber(1)
+  set totalEgressBandwidthTier(
+      NodeNetworkConfig_NetworkPerformanceConfig_Tier v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTotalEgressBandwidthTier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTotalEgressBandwidthTier() => clearField(1);
+}
+
 class NodeNetworkConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -844,6 +992,12 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'podIpv4CidrBlock')
+    ..aOM<NodeNetworkConfig_NetworkPerformanceConfig>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'networkPerformanceConfig',
+        subBuilder: NodeNetworkConfig_NetworkPerformanceConfig.create)
     ..hasRequiredFields = false;
 
   NodeNetworkConfig._() : super();
@@ -851,6 +1005,7 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
     $core.bool? createPodRange,
     $core.String? podRange,
     $core.String? podIpv4CidrBlock,
+    NodeNetworkConfig_NetworkPerformanceConfig? networkPerformanceConfig,
   }) {
     final _result = create();
     if (createPodRange != null) {
@@ -861,6 +1016,9 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
     }
     if (podIpv4CidrBlock != null) {
       _result.podIpv4CidrBlock = podIpv4CidrBlock;
+    }
+    if (networkPerformanceConfig != null) {
+      _result.networkPerformanceConfig = networkPerformanceConfig;
     }
     return _result;
   }
@@ -926,6 +1084,22 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
   $core.bool hasPodIpv4CidrBlock() => $_has(2);
   @$pb.TagNumber(6)
   void clearPodIpv4CidrBlock() => clearField(6);
+
+  @$pb.TagNumber(11)
+  NodeNetworkConfig_NetworkPerformanceConfig get networkPerformanceConfig =>
+      $_getN(3);
+  @$pb.TagNumber(11)
+  set networkPerformanceConfig(NodeNetworkConfig_NetworkPerformanceConfig v) {
+    setField(11, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasNetworkPerformanceConfig() => $_has(3);
+  @$pb.TagNumber(11)
+  void clearNetworkPerformanceConfig() => clearField(11);
+  @$pb.TagNumber(11)
+  NodeNetworkConfig_NetworkPerformanceConfig ensureNetworkPerformanceConfig() =>
+      $_ensure(3);
 }
 
 class ShieldedInstanceConfig extends $pb.GeneratedMessage {
@@ -1369,6 +1543,183 @@ class NodeTaint extends $pb.GeneratedMessage {
   $core.bool hasEffect() => $_has(2);
   @$pb.TagNumber(3)
   void clearEffect() => clearField(3);
+}
+
+class NodeTaints extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodeTaints',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..pc<NodeTaint>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'taints',
+        $pb.PbFieldType.PM,
+        subBuilder: NodeTaint.create)
+    ..hasRequiredFields = false;
+
+  NodeTaints._() : super();
+  factory NodeTaints({
+    $core.Iterable<NodeTaint>? taints,
+  }) {
+    final _result = create();
+    if (taints != null) {
+      _result.taints.addAll(taints);
+    }
+    return _result;
+  }
+  factory NodeTaints.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeTaints.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodeTaints clone() => NodeTaints()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodeTaints copyWith(void Function(NodeTaints) updates) =>
+      super.copyWith((message) => updates(message as NodeTaints))
+          as NodeTaints; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodeTaints create() => NodeTaints._();
+  NodeTaints createEmptyInstance() => create();
+  static $pb.PbList<NodeTaints> createRepeated() => $pb.PbList<NodeTaints>();
+  @$core.pragma('dart2js:noInline')
+  static NodeTaints getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NodeTaints>(create);
+  static NodeTaints? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<NodeTaint> get taints => $_getList(0);
+}
+
+class NodeLabels extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodeLabels',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..m<$core.String, $core.String>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels',
+        entryClassName: 'NodeLabels.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.container.v1'))
+    ..hasRequiredFields = false;
+
+  NodeLabels._() : super();
+  factory NodeLabels({
+    $core.Map<$core.String, $core.String>? labels,
+  }) {
+    final _result = create();
+    if (labels != null) {
+      _result.labels.addAll(labels);
+    }
+    return _result;
+  }
+  factory NodeLabels.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeLabels.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodeLabels clone() => NodeLabels()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodeLabels copyWith(void Function(NodeLabels) updates) =>
+      super.copyWith((message) => updates(message as NodeLabels))
+          as NodeLabels; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodeLabels create() => NodeLabels._();
+  NodeLabels createEmptyInstance() => create();
+  static $pb.PbList<NodeLabels> createRepeated() => $pb.PbList<NodeLabels>();
+  @$core.pragma('dart2js:noInline')
+  static NodeLabels getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NodeLabels>(create);
+  static NodeLabels? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $core.String> get labels => $_getMap(0);
+}
+
+class NetworkTags extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NetworkTags',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tags')
+    ..hasRequiredFields = false;
+
+  NetworkTags._() : super();
+  factory NetworkTags({
+    $core.Iterable<$core.String>? tags,
+  }) {
+    final _result = create();
+    if (tags != null) {
+      _result.tags.addAll(tags);
+    }
+    return _result;
+  }
+  factory NetworkTags.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NetworkTags.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NetworkTags clone() => NetworkTags()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NetworkTags copyWith(void Function(NetworkTags) updates) =>
+      super.copyWith((message) => updates(message as NetworkTags))
+          as NetworkTags; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NetworkTags create() => NetworkTags._();
+  NetworkTags createEmptyInstance() => create();
+  static $pb.PbList<NetworkTags> createRepeated() => $pb.PbList<NetworkTags>();
+  @$core.pragma('dart2js:noInline')
+  static NetworkTags getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NetworkTags>(create);
+  static NetworkTags? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get tags => $_getList(0);
 }
 
 class MasterAuth extends $pb.GeneratedMessage {
@@ -3255,15 +3606,29 @@ class BinaryAuthorization extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'enabled')
+    ..e<BinaryAuthorization_EvaluationMode>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'evaluationMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            BinaryAuthorization_EvaluationMode.EVALUATION_MODE_UNSPECIFIED,
+        valueOf: BinaryAuthorization_EvaluationMode.valueOf,
+        enumValues: BinaryAuthorization_EvaluationMode.values)
     ..hasRequiredFields = false;
 
   BinaryAuthorization._() : super();
   factory BinaryAuthorization({
     $core.bool? enabled,
+    BinaryAuthorization_EvaluationMode? evaluationMode,
   }) {
     final _result = create();
     if (enabled != null) {
       _result.enabled = enabled;
+    }
+    if (evaluationMode != null) {
+      _result.evaluationMode = evaluationMode;
     }
     return _result;
   }
@@ -3305,6 +3670,18 @@ class BinaryAuthorization extends $pb.GeneratedMessage {
   $core.bool hasEnabled() => $_has(0);
   @$pb.TagNumber(1)
   void clearEnabled() => clearField(1);
+
+  @$pb.TagNumber(2)
+  BinaryAuthorization_EvaluationMode get evaluationMode => $_getN(1);
+  @$pb.TagNumber(2)
+  set evaluationMode(BinaryAuthorization_EvaluationMode v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEvaluationMode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEvaluationMode() => clearField(2);
 }
 
 class IPAllocationPolicy extends $pb.GeneratedMessage {
@@ -3857,6 +4234,12 @@ class Cluster extends $pb.GeneratedMessage {
             ? ''
             : 'confidentialNodes',
         subBuilder: ConfidentialNodes.create)
+    ..aOM<IdentityServiceConfig>(
+        54,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'identityServiceConfig',
+        subBuilder: IdentityServiceConfig.create)
     ..aOM<MeshCertificates>(
         67,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3990,6 +4373,12 @@ class Cluster extends $pb.GeneratedMessage {
             ? ''
             : 'monitoringConfig',
         subBuilder: MonitoringConfig.create)
+    ..aOM<NodePoolAutoConfig>(
+        136,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nodePoolAutoConfig',
+        subBuilder: NodePoolAutoConfig.create)
     ..hasRequiredFields = false;
 
   Cluster._() : super();
@@ -4029,6 +4418,7 @@ class Cluster extends $pb.GeneratedMessage {
     WorkloadIdentityConfig? workloadIdentityConfig,
     NotificationConfig? notificationConfig,
     ConfidentialNodes? confidentialNodes,
+    IdentityServiceConfig? identityServiceConfig,
     MeshCertificates? meshCertificates,
     $core.String? selfLink,
     @$core.Deprecated('This field is deprecated.') $core.String? zone,
@@ -4055,6 +4445,7 @@ class Cluster extends $pb.GeneratedMessage {
     NodePoolDefaults? nodePoolDefaults,
     LoggingConfig? loggingConfig,
     MonitoringConfig? monitoringConfig,
+    NodePoolAutoConfig? nodePoolAutoConfig,
   }) {
     final _result = create();
     if (name != null) {
@@ -4164,6 +4555,9 @@ class Cluster extends $pb.GeneratedMessage {
     if (confidentialNodes != null) {
       _result.confidentialNodes = confidentialNodes;
     }
+    if (identityServiceConfig != null) {
+      _result.identityServiceConfig = identityServiceConfig;
+    }
     if (meshCertificates != null) {
       _result.meshCertificates = meshCertificates;
     }
@@ -4240,6 +4634,9 @@ class Cluster extends $pb.GeneratedMessage {
     }
     if (monitoringConfig != null) {
       _result.monitoringConfig = monitoringConfig;
+    }
+    if (nodePoolAutoConfig != null) {
+      _result.nodePoolAutoConfig = nodePoolAutoConfig;
     }
     return _result;
   }
@@ -4717,302 +5114,400 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(50)
   ConfidentialNodes ensureConfidentialNodes() => $_ensure(34);
 
+  @$pb.TagNumber(54)
+  IdentityServiceConfig get identityServiceConfig => $_getN(35);
+  @$pb.TagNumber(54)
+  set identityServiceConfig(IdentityServiceConfig v) {
+    setField(54, v);
+  }
+
+  @$pb.TagNumber(54)
+  $core.bool hasIdentityServiceConfig() => $_has(35);
+  @$pb.TagNumber(54)
+  void clearIdentityServiceConfig() => clearField(54);
+  @$pb.TagNumber(54)
+  IdentityServiceConfig ensureIdentityServiceConfig() => $_ensure(35);
+
   @$pb.TagNumber(67)
-  MeshCertificates get meshCertificates => $_getN(35);
+  MeshCertificates get meshCertificates => $_getN(36);
   @$pb.TagNumber(67)
   set meshCertificates(MeshCertificates v) {
     setField(67, v);
   }
 
   @$pb.TagNumber(67)
-  $core.bool hasMeshCertificates() => $_has(35);
+  $core.bool hasMeshCertificates() => $_has(36);
   @$pb.TagNumber(67)
   void clearMeshCertificates() => clearField(67);
   @$pb.TagNumber(67)
-  MeshCertificates ensureMeshCertificates() => $_ensure(35);
+  MeshCertificates ensureMeshCertificates() => $_ensure(36);
 
   @$pb.TagNumber(100)
-  $core.String get selfLink => $_getSZ(36);
+  $core.String get selfLink => $_getSZ(37);
   @$pb.TagNumber(100)
   set selfLink($core.String v) {
-    $_setString(36, v);
+    $_setString(37, v);
   }
 
   @$pb.TagNumber(100)
-  $core.bool hasSelfLink() => $_has(36);
+  $core.bool hasSelfLink() => $_has(37);
   @$pb.TagNumber(100)
   void clearSelfLink() => clearField(100);
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(101)
-  $core.String get zone => $_getSZ(37);
+  $core.String get zone => $_getSZ(38);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(101)
   set zone($core.String v) {
-    $_setString(37, v);
+    $_setString(38, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(101)
-  $core.bool hasZone() => $_has(37);
+  $core.bool hasZone() => $_has(38);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(101)
   void clearZone() => clearField(101);
 
   @$pb.TagNumber(102)
-  $core.String get endpoint => $_getSZ(38);
+  $core.String get endpoint => $_getSZ(39);
   @$pb.TagNumber(102)
   set endpoint($core.String v) {
-    $_setString(38, v);
+    $_setString(39, v);
   }
 
   @$pb.TagNumber(102)
-  $core.bool hasEndpoint() => $_has(38);
+  $core.bool hasEndpoint() => $_has(39);
   @$pb.TagNumber(102)
   void clearEndpoint() => clearField(102);
 
   @$pb.TagNumber(103)
-  $core.String get initialClusterVersion => $_getSZ(39);
+  $core.String get initialClusterVersion => $_getSZ(40);
   @$pb.TagNumber(103)
   set initialClusterVersion($core.String v) {
-    $_setString(39, v);
+    $_setString(40, v);
   }
 
   @$pb.TagNumber(103)
-  $core.bool hasInitialClusterVersion() => $_has(39);
+  $core.bool hasInitialClusterVersion() => $_has(40);
   @$pb.TagNumber(103)
   void clearInitialClusterVersion() => clearField(103);
 
   @$pb.TagNumber(104)
-  $core.String get currentMasterVersion => $_getSZ(40);
+  $core.String get currentMasterVersion => $_getSZ(41);
   @$pb.TagNumber(104)
   set currentMasterVersion($core.String v) {
-    $_setString(40, v);
+    $_setString(41, v);
   }
 
   @$pb.TagNumber(104)
-  $core.bool hasCurrentMasterVersion() => $_has(40);
+  $core.bool hasCurrentMasterVersion() => $_has(41);
   @$pb.TagNumber(104)
   void clearCurrentMasterVersion() => clearField(104);
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(105)
-  $core.String get currentNodeVersion => $_getSZ(41);
+  $core.String get currentNodeVersion => $_getSZ(42);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(105)
   set currentNodeVersion($core.String v) {
-    $_setString(41, v);
+    $_setString(42, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(105)
-  $core.bool hasCurrentNodeVersion() => $_has(41);
+  $core.bool hasCurrentNodeVersion() => $_has(42);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(105)
   void clearCurrentNodeVersion() => clearField(105);
 
   @$pb.TagNumber(106)
-  $core.String get createTime => $_getSZ(42);
+  $core.String get createTime => $_getSZ(43);
   @$pb.TagNumber(106)
   set createTime($core.String v) {
-    $_setString(42, v);
+    $_setString(43, v);
   }
 
   @$pb.TagNumber(106)
-  $core.bool hasCreateTime() => $_has(42);
+  $core.bool hasCreateTime() => $_has(43);
   @$pb.TagNumber(106)
   void clearCreateTime() => clearField(106);
 
   @$pb.TagNumber(107)
-  Cluster_Status get status => $_getN(43);
+  Cluster_Status get status => $_getN(44);
   @$pb.TagNumber(107)
   set status(Cluster_Status v) {
     setField(107, v);
   }
 
   @$pb.TagNumber(107)
-  $core.bool hasStatus() => $_has(43);
+  $core.bool hasStatus() => $_has(44);
   @$pb.TagNumber(107)
   void clearStatus() => clearField(107);
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(108)
-  $core.String get statusMessage => $_getSZ(44);
+  $core.String get statusMessage => $_getSZ(45);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(108)
   set statusMessage($core.String v) {
-    $_setString(44, v);
+    $_setString(45, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(108)
-  $core.bool hasStatusMessage() => $_has(44);
+  $core.bool hasStatusMessage() => $_has(45);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(108)
   void clearStatusMessage() => clearField(108);
 
   @$pb.TagNumber(109)
-  $core.int get nodeIpv4CidrSize => $_getIZ(45);
+  $core.int get nodeIpv4CidrSize => $_getIZ(46);
   @$pb.TagNumber(109)
   set nodeIpv4CidrSize($core.int v) {
-    $_setSignedInt32(45, v);
+    $_setSignedInt32(46, v);
   }
 
   @$pb.TagNumber(109)
-  $core.bool hasNodeIpv4CidrSize() => $_has(45);
+  $core.bool hasNodeIpv4CidrSize() => $_has(46);
   @$pb.TagNumber(109)
   void clearNodeIpv4CidrSize() => clearField(109);
 
   @$pb.TagNumber(110)
-  $core.String get servicesIpv4Cidr => $_getSZ(46);
+  $core.String get servicesIpv4Cidr => $_getSZ(47);
   @$pb.TagNumber(110)
   set servicesIpv4Cidr($core.String v) {
-    $_setString(46, v);
+    $_setString(47, v);
   }
 
   @$pb.TagNumber(110)
-  $core.bool hasServicesIpv4Cidr() => $_has(46);
+  $core.bool hasServicesIpv4Cidr() => $_has(47);
   @$pb.TagNumber(110)
   void clearServicesIpv4Cidr() => clearField(110);
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(111)
-  $core.List<$core.String> get instanceGroupUrls => $_getList(47);
+  $core.List<$core.String> get instanceGroupUrls => $_getList(48);
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(112)
-  $core.int get currentNodeCount => $_getIZ(48);
+  $core.int get currentNodeCount => $_getIZ(49);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(112)
   set currentNodeCount($core.int v) {
-    $_setSignedInt32(48, v);
+    $_setSignedInt32(49, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(112)
-  $core.bool hasCurrentNodeCount() => $_has(48);
+  $core.bool hasCurrentNodeCount() => $_has(49);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(112)
   void clearCurrentNodeCount() => clearField(112);
 
   @$pb.TagNumber(113)
-  $core.String get expireTime => $_getSZ(49);
+  $core.String get expireTime => $_getSZ(50);
   @$pb.TagNumber(113)
   set expireTime($core.String v) {
-    $_setString(49, v);
+    $_setString(50, v);
   }
 
   @$pb.TagNumber(113)
-  $core.bool hasExpireTime() => $_has(49);
+  $core.bool hasExpireTime() => $_has(50);
   @$pb.TagNumber(113)
   void clearExpireTime() => clearField(113);
 
   @$pb.TagNumber(114)
-  $core.String get location => $_getSZ(50);
+  $core.String get location => $_getSZ(51);
   @$pb.TagNumber(114)
   set location($core.String v) {
-    $_setString(50, v);
+    $_setString(51, v);
   }
 
   @$pb.TagNumber(114)
-  $core.bool hasLocation() => $_has(50);
+  $core.bool hasLocation() => $_has(51);
   @$pb.TagNumber(114)
   void clearLocation() => clearField(114);
 
   @$pb.TagNumber(115)
-  $core.bool get enableTpu => $_getBF(51);
+  $core.bool get enableTpu => $_getBF(52);
   @$pb.TagNumber(115)
   set enableTpu($core.bool v) {
-    $_setBool(51, v);
+    $_setBool(52, v);
   }
 
   @$pb.TagNumber(115)
-  $core.bool hasEnableTpu() => $_has(51);
+  $core.bool hasEnableTpu() => $_has(52);
   @$pb.TagNumber(115)
   void clearEnableTpu() => clearField(115);
 
   @$pb.TagNumber(116)
-  $core.String get tpuIpv4CidrBlock => $_getSZ(52);
+  $core.String get tpuIpv4CidrBlock => $_getSZ(53);
   @$pb.TagNumber(116)
   set tpuIpv4CidrBlock($core.String v) {
-    $_setString(52, v);
+    $_setString(53, v);
   }
 
   @$pb.TagNumber(116)
-  $core.bool hasTpuIpv4CidrBlock() => $_has(52);
+  $core.bool hasTpuIpv4CidrBlock() => $_has(53);
   @$pb.TagNumber(116)
   void clearTpuIpv4CidrBlock() => clearField(116);
 
   @$pb.TagNumber(118)
-  $core.List<StatusCondition> get conditions => $_getList(53);
+  $core.List<StatusCondition> get conditions => $_getList(54);
 
   @$pb.TagNumber(128)
-  Autopilot get autopilot => $_getN(54);
+  Autopilot get autopilot => $_getN(55);
   @$pb.TagNumber(128)
   set autopilot(Autopilot v) {
     setField(128, v);
   }
 
   @$pb.TagNumber(128)
-  $core.bool hasAutopilot() => $_has(54);
+  $core.bool hasAutopilot() => $_has(55);
   @$pb.TagNumber(128)
   void clearAutopilot() => clearField(128);
   @$pb.TagNumber(128)
-  Autopilot ensureAutopilot() => $_ensure(54);
+  Autopilot ensureAutopilot() => $_ensure(55);
 
   @$pb.TagNumber(129)
-  $core.String get id => $_getSZ(55);
+  $core.String get id => $_getSZ(56);
   @$pb.TagNumber(129)
   set id($core.String v) {
-    $_setString(55, v);
+    $_setString(56, v);
   }
 
   @$pb.TagNumber(129)
-  $core.bool hasId() => $_has(55);
+  $core.bool hasId() => $_has(56);
   @$pb.TagNumber(129)
   void clearId() => clearField(129);
 
   @$pb.TagNumber(131)
-  NodePoolDefaults get nodePoolDefaults => $_getN(56);
+  NodePoolDefaults get nodePoolDefaults => $_getN(57);
   @$pb.TagNumber(131)
   set nodePoolDefaults(NodePoolDefaults v) {
     setField(131, v);
   }
 
   @$pb.TagNumber(131)
-  $core.bool hasNodePoolDefaults() => $_has(56);
+  $core.bool hasNodePoolDefaults() => $_has(57);
   @$pb.TagNumber(131)
   void clearNodePoolDefaults() => clearField(131);
   @$pb.TagNumber(131)
-  NodePoolDefaults ensureNodePoolDefaults() => $_ensure(56);
+  NodePoolDefaults ensureNodePoolDefaults() => $_ensure(57);
 
   @$pb.TagNumber(132)
-  LoggingConfig get loggingConfig => $_getN(57);
+  LoggingConfig get loggingConfig => $_getN(58);
   @$pb.TagNumber(132)
   set loggingConfig(LoggingConfig v) {
     setField(132, v);
   }
 
   @$pb.TagNumber(132)
-  $core.bool hasLoggingConfig() => $_has(57);
+  $core.bool hasLoggingConfig() => $_has(58);
   @$pb.TagNumber(132)
   void clearLoggingConfig() => clearField(132);
   @$pb.TagNumber(132)
-  LoggingConfig ensureLoggingConfig() => $_ensure(57);
+  LoggingConfig ensureLoggingConfig() => $_ensure(58);
 
   @$pb.TagNumber(133)
-  MonitoringConfig get monitoringConfig => $_getN(58);
+  MonitoringConfig get monitoringConfig => $_getN(59);
   @$pb.TagNumber(133)
   set monitoringConfig(MonitoringConfig v) {
     setField(133, v);
   }
 
   @$pb.TagNumber(133)
-  $core.bool hasMonitoringConfig() => $_has(58);
+  $core.bool hasMonitoringConfig() => $_has(59);
   @$pb.TagNumber(133)
   void clearMonitoringConfig() => clearField(133);
   @$pb.TagNumber(133)
-  MonitoringConfig ensureMonitoringConfig() => $_ensure(58);
+  MonitoringConfig ensureMonitoringConfig() => $_ensure(59);
+
+  @$pb.TagNumber(136)
+  NodePoolAutoConfig get nodePoolAutoConfig => $_getN(60);
+  @$pb.TagNumber(136)
+  set nodePoolAutoConfig(NodePoolAutoConfig v) {
+    setField(136, v);
+  }
+
+  @$pb.TagNumber(136)
+  $core.bool hasNodePoolAutoConfig() => $_has(60);
+  @$pb.TagNumber(136)
+  void clearNodePoolAutoConfig() => clearField(136);
+  @$pb.TagNumber(136)
+  NodePoolAutoConfig ensureNodePoolAutoConfig() => $_ensure(60);
+}
+
+class NodePoolAutoConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodePoolAutoConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOM<NetworkTags>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'networkTags',
+        subBuilder: NetworkTags.create)
+    ..hasRequiredFields = false;
+
+  NodePoolAutoConfig._() : super();
+  factory NodePoolAutoConfig({
+    NetworkTags? networkTags,
+  }) {
+    final _result = create();
+    if (networkTags != null) {
+      _result.networkTags = networkTags;
+    }
+    return _result;
+  }
+  factory NodePoolAutoConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodePoolAutoConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodePoolAutoConfig clone() => NodePoolAutoConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodePoolAutoConfig copyWith(void Function(NodePoolAutoConfig) updates) =>
+      super.copyWith((message) => updates(message as NodePoolAutoConfig))
+          as NodePoolAutoConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodePoolAutoConfig create() => NodePoolAutoConfig._();
+  NodePoolAutoConfig createEmptyInstance() => create();
+  static $pb.PbList<NodePoolAutoConfig> createRepeated() =>
+      $pb.PbList<NodePoolAutoConfig>();
+  @$core.pragma('dart2js:noInline')
+  static NodePoolAutoConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NodePoolAutoConfig>(create);
+  static NodePoolAutoConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  NetworkTags get networkTags => $_getN(0);
+  @$pb.TagNumber(1)
+  set networkTags(NetworkTags v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasNetworkTags() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNetworkTags() => clearField(1);
+  @$pb.TagNumber(1)
+  NetworkTags ensureNetworkTags() => $_ensure(0);
 }
 
 class NodePoolDefaults extends $pb.GeneratedMessage {
@@ -5340,6 +5835,12 @@ class ClusterUpdate extends $pb.GeneratedMessage {
             ? ''
             : 'desiredMonitoringConfig',
         subBuilder: MonitoringConfig.create)
+    ..aOM<IdentityServiceConfig>(
+        66,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'desiredIdentityServiceConfig',
+        subBuilder: IdentityServiceConfig.create)
     ..aOM<MeshCertificates>(
         67,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -5357,6 +5858,12 @@ class ClusterUpdate extends $pb.GeneratedMessage {
             ? ''
             : 'desiredGcfsConfig',
         subBuilder: GcfsConfig.create)
+    ..aOM<NetworkTags>(
+        110,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'desiredNodePoolAutoConfigNetworkTags',
+        subBuilder: NetworkTags.create)
     ..hasRequiredFields = false;
 
   ClusterUpdate._() : super();
@@ -5390,9 +5897,11 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     AuthenticatorGroupsConfig? desiredAuthenticatorGroupsConfig,
     LoggingConfig? desiredLoggingConfig,
     MonitoringConfig? desiredMonitoringConfig,
+    IdentityServiceConfig? desiredIdentityServiceConfig,
     MeshCertificates? desiredMeshCertificates,
     $core.String? desiredMasterVersion,
     GcfsConfig? desiredGcfsConfig,
+    NetworkTags? desiredNodePoolAutoConfigNetworkTags,
   }) {
     final _result = create();
     if (desiredNodeVersion != null) {
@@ -5486,6 +5995,9 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     if (desiredMonitoringConfig != null) {
       _result.desiredMonitoringConfig = desiredMonitoringConfig;
     }
+    if (desiredIdentityServiceConfig != null) {
+      _result.desiredIdentityServiceConfig = desiredIdentityServiceConfig;
+    }
     if (desiredMeshCertificates != null) {
       _result.desiredMeshCertificates = desiredMeshCertificates;
     }
@@ -5494,6 +6006,10 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     }
     if (desiredGcfsConfig != null) {
       _result.desiredGcfsConfig = desiredGcfsConfig;
+    }
+    if (desiredNodePoolAutoConfigNetworkTags != null) {
+      _result.desiredNodePoolAutoConfigNetworkTags =
+          desiredNodePoolAutoConfigNetworkTags;
     }
     return _result;
   }
@@ -5911,45 +6427,73 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(65)
   MonitoringConfig ensureDesiredMonitoringConfig() => $_ensure(28);
 
+  @$pb.TagNumber(66)
+  IdentityServiceConfig get desiredIdentityServiceConfig => $_getN(29);
+  @$pb.TagNumber(66)
+  set desiredIdentityServiceConfig(IdentityServiceConfig v) {
+    setField(66, v);
+  }
+
+  @$pb.TagNumber(66)
+  $core.bool hasDesiredIdentityServiceConfig() => $_has(29);
+  @$pb.TagNumber(66)
+  void clearDesiredIdentityServiceConfig() => clearField(66);
+  @$pb.TagNumber(66)
+  IdentityServiceConfig ensureDesiredIdentityServiceConfig() => $_ensure(29);
+
   @$pb.TagNumber(67)
-  MeshCertificates get desiredMeshCertificates => $_getN(29);
+  MeshCertificates get desiredMeshCertificates => $_getN(30);
   @$pb.TagNumber(67)
   set desiredMeshCertificates(MeshCertificates v) {
     setField(67, v);
   }
 
   @$pb.TagNumber(67)
-  $core.bool hasDesiredMeshCertificates() => $_has(29);
+  $core.bool hasDesiredMeshCertificates() => $_has(30);
   @$pb.TagNumber(67)
   void clearDesiredMeshCertificates() => clearField(67);
   @$pb.TagNumber(67)
-  MeshCertificates ensureDesiredMeshCertificates() => $_ensure(29);
+  MeshCertificates ensureDesiredMeshCertificates() => $_ensure(30);
 
   @$pb.TagNumber(100)
-  $core.String get desiredMasterVersion => $_getSZ(30);
+  $core.String get desiredMasterVersion => $_getSZ(31);
   @$pb.TagNumber(100)
   set desiredMasterVersion($core.String v) {
-    $_setString(30, v);
+    $_setString(31, v);
   }
 
   @$pb.TagNumber(100)
-  $core.bool hasDesiredMasterVersion() => $_has(30);
+  $core.bool hasDesiredMasterVersion() => $_has(31);
   @$pb.TagNumber(100)
   void clearDesiredMasterVersion() => clearField(100);
 
   @$pb.TagNumber(109)
-  GcfsConfig get desiredGcfsConfig => $_getN(31);
+  GcfsConfig get desiredGcfsConfig => $_getN(32);
   @$pb.TagNumber(109)
   set desiredGcfsConfig(GcfsConfig v) {
     setField(109, v);
   }
 
   @$pb.TagNumber(109)
-  $core.bool hasDesiredGcfsConfig() => $_has(31);
+  $core.bool hasDesiredGcfsConfig() => $_has(32);
   @$pb.TagNumber(109)
   void clearDesiredGcfsConfig() => clearField(109);
   @$pb.TagNumber(109)
-  GcfsConfig ensureDesiredGcfsConfig() => $_ensure(31);
+  GcfsConfig ensureDesiredGcfsConfig() => $_ensure(32);
+
+  @$pb.TagNumber(110)
+  NetworkTags get desiredNodePoolAutoConfigNetworkTags => $_getN(33);
+  @$pb.TagNumber(110)
+  set desiredNodePoolAutoConfigNetworkTags(NetworkTags v) {
+    setField(110, v);
+  }
+
+  @$pb.TagNumber(110)
+  $core.bool hasDesiredNodePoolAutoConfigNetworkTags() => $_has(33);
+  @$pb.TagNumber(110)
+  void clearDesiredNodePoolAutoConfigNetworkTags() => clearField(110);
+  @$pb.TagNumber(110)
+  NetworkTags ensureDesiredNodePoolAutoConfigNetworkTags() => $_ensure(33);
 }
 
 class Operation extends $pb.GeneratedMessage {
@@ -7121,6 +7665,24 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
             ? ''
             : 'upgradeSettings',
         subBuilder: NodePool_UpgradeSettings.create)
+    ..aOM<NetworkTags>(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tags',
+        subBuilder: NetworkTags.create)
+    ..aOM<NodeTaints>(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'taints',
+        subBuilder: NodeTaints.create)
+    ..aOM<NodeLabels>(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels',
+        subBuilder: NodeLabels.create)
     ..aOM<LinuxNodeConfig>(
         19,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -7133,12 +7695,24 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
             ? ''
             : 'kubeletConfig',
         subBuilder: NodeKubeletConfig.create)
+    ..aOM<NodeNetworkConfig>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nodeNetworkConfig',
+        subBuilder: NodeNetworkConfig.create)
     ..aOM<GcfsConfig>(
         22,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gcfsConfig',
         subBuilder: GcfsConfig.create)
+    ..aOM<ConfidentialNodes>(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'confidentialNodes',
+        subBuilder: ConfidentialNodes.create)
     ..aOM<VirtualNIC>(
         29,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -7159,9 +7733,14 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? locations,
     WorkloadMetadataConfig? workloadMetadataConfig,
     NodePool_UpgradeSettings? upgradeSettings,
+    NetworkTags? tags,
+    NodeTaints? taints,
+    NodeLabels? labels,
     LinuxNodeConfig? linuxNodeConfig,
     NodeKubeletConfig? kubeletConfig,
+    NodeNetworkConfig? nodeNetworkConfig,
     GcfsConfig? gcfsConfig,
+    ConfidentialNodes? confidentialNodes,
     VirtualNIC? gvnic,
   }) {
     final _result = create();
@@ -7199,14 +7778,29 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
     if (upgradeSettings != null) {
       _result.upgradeSettings = upgradeSettings;
     }
+    if (tags != null) {
+      _result.tags = tags;
+    }
+    if (taints != null) {
+      _result.taints = taints;
+    }
+    if (labels != null) {
+      _result.labels = labels;
+    }
     if (linuxNodeConfig != null) {
       _result.linuxNodeConfig = linuxNodeConfig;
     }
     if (kubeletConfig != null) {
       _result.kubeletConfig = kubeletConfig;
     }
+    if (nodeNetworkConfig != null) {
+      _result.nodeNetworkConfig = nodeNetworkConfig;
+    }
     if (gcfsConfig != null) {
       _result.gcfsConfig = gcfsConfig;
+    }
+    if (confidentialNodes != null) {
+      _result.confidentialNodes = confidentialNodes;
     }
     if (gvnic != null) {
       _result.gvnic = gvnic;
@@ -7373,61 +7967,131 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   NodePool_UpgradeSettings ensureUpgradeSettings() => $_ensure(9);
 
+  @$pb.TagNumber(16)
+  NetworkTags get tags => $_getN(10);
+  @$pb.TagNumber(16)
+  set tags(NetworkTags v) {
+    setField(16, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasTags() => $_has(10);
+  @$pb.TagNumber(16)
+  void clearTags() => clearField(16);
+  @$pb.TagNumber(16)
+  NetworkTags ensureTags() => $_ensure(10);
+
+  @$pb.TagNumber(17)
+  NodeTaints get taints => $_getN(11);
+  @$pb.TagNumber(17)
+  set taints(NodeTaints v) {
+    setField(17, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasTaints() => $_has(11);
+  @$pb.TagNumber(17)
+  void clearTaints() => clearField(17);
+  @$pb.TagNumber(17)
+  NodeTaints ensureTaints() => $_ensure(11);
+
+  @$pb.TagNumber(18)
+  NodeLabels get labels => $_getN(12);
+  @$pb.TagNumber(18)
+  set labels(NodeLabels v) {
+    setField(18, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasLabels() => $_has(12);
+  @$pb.TagNumber(18)
+  void clearLabels() => clearField(18);
+  @$pb.TagNumber(18)
+  NodeLabels ensureLabels() => $_ensure(12);
+
   @$pb.TagNumber(19)
-  LinuxNodeConfig get linuxNodeConfig => $_getN(10);
+  LinuxNodeConfig get linuxNodeConfig => $_getN(13);
   @$pb.TagNumber(19)
   set linuxNodeConfig(LinuxNodeConfig v) {
     setField(19, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasLinuxNodeConfig() => $_has(10);
+  $core.bool hasLinuxNodeConfig() => $_has(13);
   @$pb.TagNumber(19)
   void clearLinuxNodeConfig() => clearField(19);
   @$pb.TagNumber(19)
-  LinuxNodeConfig ensureLinuxNodeConfig() => $_ensure(10);
+  LinuxNodeConfig ensureLinuxNodeConfig() => $_ensure(13);
 
   @$pb.TagNumber(20)
-  NodeKubeletConfig get kubeletConfig => $_getN(11);
+  NodeKubeletConfig get kubeletConfig => $_getN(14);
   @$pb.TagNumber(20)
   set kubeletConfig(NodeKubeletConfig v) {
     setField(20, v);
   }
 
   @$pb.TagNumber(20)
-  $core.bool hasKubeletConfig() => $_has(11);
+  $core.bool hasKubeletConfig() => $_has(14);
   @$pb.TagNumber(20)
   void clearKubeletConfig() => clearField(20);
   @$pb.TagNumber(20)
-  NodeKubeletConfig ensureKubeletConfig() => $_ensure(11);
+  NodeKubeletConfig ensureKubeletConfig() => $_ensure(14);
+
+  @$pb.TagNumber(21)
+  NodeNetworkConfig get nodeNetworkConfig => $_getN(15);
+  @$pb.TagNumber(21)
+  set nodeNetworkConfig(NodeNetworkConfig v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasNodeNetworkConfig() => $_has(15);
+  @$pb.TagNumber(21)
+  void clearNodeNetworkConfig() => clearField(21);
+  @$pb.TagNumber(21)
+  NodeNetworkConfig ensureNodeNetworkConfig() => $_ensure(15);
 
   @$pb.TagNumber(22)
-  GcfsConfig get gcfsConfig => $_getN(12);
+  GcfsConfig get gcfsConfig => $_getN(16);
   @$pb.TagNumber(22)
   set gcfsConfig(GcfsConfig v) {
     setField(22, v);
   }
 
   @$pb.TagNumber(22)
-  $core.bool hasGcfsConfig() => $_has(12);
+  $core.bool hasGcfsConfig() => $_has(16);
   @$pb.TagNumber(22)
   void clearGcfsConfig() => clearField(22);
   @$pb.TagNumber(22)
-  GcfsConfig ensureGcfsConfig() => $_ensure(12);
+  GcfsConfig ensureGcfsConfig() => $_ensure(16);
+
+  @$pb.TagNumber(23)
+  ConfidentialNodes get confidentialNodes => $_getN(17);
+  @$pb.TagNumber(23)
+  set confidentialNodes(ConfidentialNodes v) {
+    setField(23, v);
+  }
+
+  @$pb.TagNumber(23)
+  $core.bool hasConfidentialNodes() => $_has(17);
+  @$pb.TagNumber(23)
+  void clearConfidentialNodes() => clearField(23);
+  @$pb.TagNumber(23)
+  ConfidentialNodes ensureConfidentialNodes() => $_ensure(17);
 
   @$pb.TagNumber(29)
-  VirtualNIC get gvnic => $_getN(13);
+  VirtualNIC get gvnic => $_getN(18);
   @$pb.TagNumber(29)
   set gvnic(VirtualNIC v) {
     setField(29, v);
   }
 
   @$pb.TagNumber(29)
-  $core.bool hasGvnic() => $_has(13);
+  $core.bool hasGvnic() => $_has(18);
   @$pb.TagNumber(29)
   void clearGvnic() => clearField(29);
   @$pb.TagNumber(29)
-  VirtualNIC ensureGvnic() => $_ensure(13);
+  VirtualNIC ensureGvnic() => $_ensure(18);
 }
 
 class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
@@ -10510,6 +11174,254 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+enum BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSize {
+  batchPercentage,
+  batchNodeCount,
+  notSet
+}
+
+class BlueGreenSettings_StandardRolloutPolicy extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int,
+          BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSize>
+      _BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSizeByTag = {
+    1: BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSize.batchPercentage,
+    2: BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSize.batchNodeCount,
+    0: BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSize.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BlueGreenSettings.StandardRolloutPolicy',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..a<$core.double>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'batchPercentage',
+        $pb.PbFieldType.OF)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'batchNodeCount',
+        $pb.PbFieldType.O3)
+    ..aOM<$4.Duration>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'batchSoakDuration',
+        subBuilder: $4.Duration.create)
+    ..hasRequiredFields = false;
+
+  BlueGreenSettings_StandardRolloutPolicy._() : super();
+  factory BlueGreenSettings_StandardRolloutPolicy({
+    $core.double? batchPercentage,
+    $core.int? batchNodeCount,
+    $4.Duration? batchSoakDuration,
+  }) {
+    final _result = create();
+    if (batchPercentage != null) {
+      _result.batchPercentage = batchPercentage;
+    }
+    if (batchNodeCount != null) {
+      _result.batchNodeCount = batchNodeCount;
+    }
+    if (batchSoakDuration != null) {
+      _result.batchSoakDuration = batchSoakDuration;
+    }
+    return _result;
+  }
+  factory BlueGreenSettings_StandardRolloutPolicy.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BlueGreenSettings_StandardRolloutPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BlueGreenSettings_StandardRolloutPolicy clone() =>
+      BlueGreenSettings_StandardRolloutPolicy()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BlueGreenSettings_StandardRolloutPolicy copyWith(
+          void Function(BlueGreenSettings_StandardRolloutPolicy) updates) =>
+      super.copyWith((message) =>
+              updates(message as BlueGreenSettings_StandardRolloutPolicy))
+          as BlueGreenSettings_StandardRolloutPolicy; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlueGreenSettings_StandardRolloutPolicy create() =>
+      BlueGreenSettings_StandardRolloutPolicy._();
+  BlueGreenSettings_StandardRolloutPolicy createEmptyInstance() => create();
+  static $pb.PbList<BlueGreenSettings_StandardRolloutPolicy> createRepeated() =>
+      $pb.PbList<BlueGreenSettings_StandardRolloutPolicy>();
+  @$core.pragma('dart2js:noInline')
+  static BlueGreenSettings_StandardRolloutPolicy getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          BlueGreenSettings_StandardRolloutPolicy>(create);
+  static BlueGreenSettings_StandardRolloutPolicy? _defaultInstance;
+
+  BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSize
+      whichUpdateBatchSize() =>
+          _BlueGreenSettings_StandardRolloutPolicy_UpdateBatchSizeByTag[
+              $_whichOneof(0)]!;
+  void clearUpdateBatchSize() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.double get batchPercentage => $_getN(0);
+  @$pb.TagNumber(1)
+  set batchPercentage($core.double v) {
+    $_setFloat(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBatchPercentage() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBatchPercentage() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get batchNodeCount => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set batchNodeCount($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasBatchNodeCount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBatchNodeCount() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $4.Duration get batchSoakDuration => $_getN(2);
+  @$pb.TagNumber(3)
+  set batchSoakDuration($4.Duration v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasBatchSoakDuration() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBatchSoakDuration() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.Duration ensureBatchSoakDuration() => $_ensure(2);
+}
+
+enum BlueGreenSettings_RolloutPolicy { standardRolloutPolicy, notSet }
+
+class BlueGreenSettings extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, BlueGreenSettings_RolloutPolicy>
+      _BlueGreenSettings_RolloutPolicyByTag = {
+    1: BlueGreenSettings_RolloutPolicy.standardRolloutPolicy,
+    0: BlueGreenSettings_RolloutPolicy.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BlueGreenSettings',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<BlueGreenSettings_StandardRolloutPolicy>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'standardRolloutPolicy',
+        subBuilder: BlueGreenSettings_StandardRolloutPolicy.create)
+    ..aOM<$4.Duration>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nodePoolSoakDuration',
+        subBuilder: $4.Duration.create)
+    ..hasRequiredFields = false;
+
+  BlueGreenSettings._() : super();
+  factory BlueGreenSettings({
+    BlueGreenSettings_StandardRolloutPolicy? standardRolloutPolicy,
+    $4.Duration? nodePoolSoakDuration,
+  }) {
+    final _result = create();
+    if (standardRolloutPolicy != null) {
+      _result.standardRolloutPolicy = standardRolloutPolicy;
+    }
+    if (nodePoolSoakDuration != null) {
+      _result.nodePoolSoakDuration = nodePoolSoakDuration;
+    }
+    return _result;
+  }
+  factory BlueGreenSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BlueGreenSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BlueGreenSettings clone() => BlueGreenSettings()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BlueGreenSettings copyWith(void Function(BlueGreenSettings) updates) =>
+      super.copyWith((message) => updates(message as BlueGreenSettings))
+          as BlueGreenSettings; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlueGreenSettings create() => BlueGreenSettings._();
+  BlueGreenSettings createEmptyInstance() => create();
+  static $pb.PbList<BlueGreenSettings> createRepeated() =>
+      $pb.PbList<BlueGreenSettings>();
+  @$core.pragma('dart2js:noInline')
+  static BlueGreenSettings getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BlueGreenSettings>(create);
+  static BlueGreenSettings? _defaultInstance;
+
+  BlueGreenSettings_RolloutPolicy whichRolloutPolicy() =>
+      _BlueGreenSettings_RolloutPolicyByTag[$_whichOneof(0)]!;
+  void clearRolloutPolicy() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  BlueGreenSettings_StandardRolloutPolicy get standardRolloutPolicy =>
+      $_getN(0);
+  @$pb.TagNumber(1)
+  set standardRolloutPolicy(BlueGreenSettings_StandardRolloutPolicy v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStandardRolloutPolicy() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStandardRolloutPolicy() => clearField(1);
+  @$pb.TagNumber(1)
+  BlueGreenSettings_StandardRolloutPolicy ensureStandardRolloutPolicy() =>
+      $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $4.Duration get nodePoolSoakDuration => $_getN(1);
+  @$pb.TagNumber(2)
+  set nodePoolSoakDuration($4.Duration v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNodePoolSoakDuration() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNodePoolSoakDuration() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.Duration ensureNodePoolSoakDuration() => $_ensure(1);
+}
+
 class NodePool_UpgradeSettings extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -10532,12 +11444,30 @@ class NodePool_UpgradeSettings extends $pb.GeneratedMessage {
             ? ''
             : 'maxUnavailable',
         $pb.PbFieldType.O3)
+    ..e<NodePoolUpdateStrategy>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'strategy',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            NodePoolUpdateStrategy.NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED,
+        valueOf: NodePoolUpdateStrategy.valueOf,
+        enumValues: NodePoolUpdateStrategy.values)
+    ..aOM<BlueGreenSettings>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blueGreenSettings',
+        subBuilder: BlueGreenSettings.create)
     ..hasRequiredFields = false;
 
   NodePool_UpgradeSettings._() : super();
   factory NodePool_UpgradeSettings({
     $core.int? maxSurge,
     $core.int? maxUnavailable,
+    NodePoolUpdateStrategy? strategy,
+    BlueGreenSettings? blueGreenSettings,
   }) {
     final _result = create();
     if (maxSurge != null) {
@@ -10545,6 +11475,12 @@ class NodePool_UpgradeSettings extends $pb.GeneratedMessage {
     }
     if (maxUnavailable != null) {
       _result.maxUnavailable = maxUnavailable;
+    }
+    if (strategy != null) {
+      _result.strategy = strategy;
+    }
+    if (blueGreenSettings != null) {
+      _result.blueGreenSettings = blueGreenSettings;
     }
     return _result;
   }
@@ -10600,6 +11536,245 @@ class NodePool_UpgradeSettings extends $pb.GeneratedMessage {
   $core.bool hasMaxUnavailable() => $_has(1);
   @$pb.TagNumber(2)
   void clearMaxUnavailable() => clearField(2);
+
+  @$pb.TagNumber(3)
+  NodePoolUpdateStrategy get strategy => $_getN(2);
+  @$pb.TagNumber(3)
+  set strategy(NodePoolUpdateStrategy v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasStrategy() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStrategy() => clearField(3);
+
+  @$pb.TagNumber(4)
+  BlueGreenSettings get blueGreenSettings => $_getN(3);
+  @$pb.TagNumber(4)
+  set blueGreenSettings(BlueGreenSettings v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasBlueGreenSettings() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBlueGreenSettings() => clearField(4);
+  @$pb.TagNumber(4)
+  BlueGreenSettings ensureBlueGreenSettings() => $_ensure(3);
+}
+
+class NodePool_UpdateInfo_BlueGreenInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodePool.UpdateInfo.BlueGreenInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..e<NodePool_UpdateInfo_BlueGreenInfo_Phase>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'phase',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            NodePool_UpdateInfo_BlueGreenInfo_Phase.PHASE_UNSPECIFIED,
+        valueOf: NodePool_UpdateInfo_BlueGreenInfo_Phase.valueOf,
+        enumValues: NodePool_UpdateInfo_BlueGreenInfo_Phase.values)
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blueInstanceGroupUrls')
+    ..pPS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'greenInstanceGroupUrls')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bluePoolDeletionStartTime')
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'greenPoolVersion')
+    ..hasRequiredFields = false;
+
+  NodePool_UpdateInfo_BlueGreenInfo._() : super();
+  factory NodePool_UpdateInfo_BlueGreenInfo({
+    NodePool_UpdateInfo_BlueGreenInfo_Phase? phase,
+    $core.Iterable<$core.String>? blueInstanceGroupUrls,
+    $core.Iterable<$core.String>? greenInstanceGroupUrls,
+    $core.String? bluePoolDeletionStartTime,
+    $core.String? greenPoolVersion,
+  }) {
+    final _result = create();
+    if (phase != null) {
+      _result.phase = phase;
+    }
+    if (blueInstanceGroupUrls != null) {
+      _result.blueInstanceGroupUrls.addAll(blueInstanceGroupUrls);
+    }
+    if (greenInstanceGroupUrls != null) {
+      _result.greenInstanceGroupUrls.addAll(greenInstanceGroupUrls);
+    }
+    if (bluePoolDeletionStartTime != null) {
+      _result.bluePoolDeletionStartTime = bluePoolDeletionStartTime;
+    }
+    if (greenPoolVersion != null) {
+      _result.greenPoolVersion = greenPoolVersion;
+    }
+    return _result;
+  }
+  factory NodePool_UpdateInfo_BlueGreenInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodePool_UpdateInfo_BlueGreenInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodePool_UpdateInfo_BlueGreenInfo clone() =>
+      NodePool_UpdateInfo_BlueGreenInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodePool_UpdateInfo_BlueGreenInfo copyWith(
+          void Function(NodePool_UpdateInfo_BlueGreenInfo) updates) =>
+      super.copyWith((message) =>
+              updates(message as NodePool_UpdateInfo_BlueGreenInfo))
+          as NodePool_UpdateInfo_BlueGreenInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodePool_UpdateInfo_BlueGreenInfo create() =>
+      NodePool_UpdateInfo_BlueGreenInfo._();
+  NodePool_UpdateInfo_BlueGreenInfo createEmptyInstance() => create();
+  static $pb.PbList<NodePool_UpdateInfo_BlueGreenInfo> createRepeated() =>
+      $pb.PbList<NodePool_UpdateInfo_BlueGreenInfo>();
+  @$core.pragma('dart2js:noInline')
+  static NodePool_UpdateInfo_BlueGreenInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NodePool_UpdateInfo_BlueGreenInfo>(
+          create);
+  static NodePool_UpdateInfo_BlueGreenInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  NodePool_UpdateInfo_BlueGreenInfo_Phase get phase => $_getN(0);
+  @$pb.TagNumber(1)
+  set phase(NodePool_UpdateInfo_BlueGreenInfo_Phase v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPhase() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPhase() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get blueInstanceGroupUrls => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get greenInstanceGroupUrls => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.String get bluePoolDeletionStartTime => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set bluePoolDeletionStartTime($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasBluePoolDeletionStartTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBluePoolDeletionStartTime() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get greenPoolVersion => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set greenPoolVersion($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasGreenPoolVersion() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearGreenPoolVersion() => clearField(5);
+}
+
+class NodePool_UpdateInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NodePool.UpdateInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOM<NodePool_UpdateInfo_BlueGreenInfo>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blueGreenInfo',
+        subBuilder: NodePool_UpdateInfo_BlueGreenInfo.create)
+    ..hasRequiredFields = false;
+
+  NodePool_UpdateInfo._() : super();
+  factory NodePool_UpdateInfo({
+    NodePool_UpdateInfo_BlueGreenInfo? blueGreenInfo,
+  }) {
+    final _result = create();
+    if (blueGreenInfo != null) {
+      _result.blueGreenInfo = blueGreenInfo;
+    }
+    return _result;
+  }
+  factory NodePool_UpdateInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodePool_UpdateInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NodePool_UpdateInfo clone() => NodePool_UpdateInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodePool_UpdateInfo copyWith(void Function(NodePool_UpdateInfo) updates) =>
+      super.copyWith((message) => updates(message as NodePool_UpdateInfo))
+          as NodePool_UpdateInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static NodePool_UpdateInfo create() => NodePool_UpdateInfo._();
+  NodePool_UpdateInfo createEmptyInstance() => create();
+  static $pb.PbList<NodePool_UpdateInfo> createRepeated() =>
+      $pb.PbList<NodePool_UpdateInfo>();
+  @$core.pragma('dart2js:noInline')
+  static NodePool_UpdateInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NodePool_UpdateInfo>(create);
+  static NodePool_UpdateInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  NodePool_UpdateInfo_BlueGreenInfo get blueGreenInfo => $_getN(0);
+  @$pb.TagNumber(1)
+  set blueGreenInfo(NodePool_UpdateInfo_BlueGreenInfo v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBlueGreenInfo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBlueGreenInfo() => clearField(1);
+  @$pb.TagNumber(1)
+  NodePool_UpdateInfo_BlueGreenInfo ensureBlueGreenInfo() => $_ensure(0);
 }
 
 class NodePool extends $pb.GeneratedMessage {
@@ -10706,6 +11881,12 @@ class NodePool extends $pb.GeneratedMessage {
             ? ''
             : 'upgradeSettings',
         subBuilder: NodePool_UpgradeSettings.create)
+    ..aOM<NodePool_UpdateInfo>(
+        109,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateInfo',
+        subBuilder: NodePool_UpdateInfo.create)
     ..hasRequiredFields = false;
 
   NodePool._() : super();
@@ -10726,6 +11907,7 @@ class NodePool extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.') $core.String? statusMessage,
     $core.Iterable<StatusCondition>? conditions,
     NodePool_UpgradeSettings? upgradeSettings,
+    NodePool_UpdateInfo? updateInfo,
   }) {
     final _result = create();
     if (name != null) {
@@ -10776,6 +11958,9 @@ class NodePool extends $pb.GeneratedMessage {
     }
     if (upgradeSettings != null) {
       _result.upgradeSettings = upgradeSettings;
+    }
+    if (updateInfo != null) {
+      _result.updateInfo = updateInfo;
     }
     return _result;
   }
@@ -10985,6 +12170,20 @@ class NodePool extends $pb.GeneratedMessage {
   void clearUpgradeSettings() => clearField(107);
   @$pb.TagNumber(107)
   NodePool_UpgradeSettings ensureUpgradeSettings() => $_ensure(15);
+
+  @$pb.TagNumber(109)
+  NodePool_UpdateInfo get updateInfo => $_getN(16);
+  @$pb.TagNumber(109)
+  set updateInfo(NodePool_UpdateInfo v) {
+    setField(109, v);
+  }
+
+  @$pb.TagNumber(109)
+  $core.bool hasUpdateInfo() => $_has(16);
+  @$pb.TagNumber(109)
+  void clearUpdateInfo() => clearField(109);
+  @$pb.TagNumber(109)
+  NodePool_UpdateInfo ensureUpdateInfo() => $_ensure(16);
 }
 
 class NodeManagement extends $pb.GeneratedMessage {
@@ -11424,18 +12623,18 @@ class TimeWindow extends $pb.GeneratedMessage {
               : 'google.container.v1'),
       createEmptyInstance: create)
     ..oo(0, [3])
-    ..aOM<$4.Timestamp>(
+    ..aOM<$5.Timestamp>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $4.Timestamp.create)
-    ..aOM<$4.Timestamp>(
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endTime',
-        subBuilder: $4.Timestamp.create)
+        subBuilder: $5.Timestamp.create)
     ..aOM<MaintenanceExclusionOptions>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -11446,8 +12645,8 @@ class TimeWindow extends $pb.GeneratedMessage {
 
   TimeWindow._() : super();
   factory TimeWindow({
-    $4.Timestamp? startTime,
-    $4.Timestamp? endTime,
+    $5.Timestamp? startTime,
+    $5.Timestamp? endTime,
     MaintenanceExclusionOptions? maintenanceExclusionOptions,
   }) {
     final _result = create();
@@ -11493,9 +12692,9 @@ class TimeWindow extends $pb.GeneratedMessage {
   void clearOptions() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $4.Timestamp get startTime => $_getN(0);
+  $5.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($4.Timestamp v) {
+  set startTime($5.Timestamp v) {
     setField(1, v);
   }
 
@@ -11504,12 +12703,12 @@ class TimeWindow extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStartTime() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Timestamp ensureStartTime() => $_ensure(0);
+  $5.Timestamp ensureStartTime() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $4.Timestamp get endTime => $_getN(1);
+  $5.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($4.Timestamp v) {
+  set endTime($5.Timestamp v) {
     setField(2, v);
   }
 
@@ -11518,7 +12717,7 @@ class TimeWindow extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEndTime() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Timestamp ensureEndTime() => $_ensure(1);
+  $5.Timestamp ensureEndTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
   MaintenanceExclusionOptions get maintenanceExclusionOptions => $_getN(2);
@@ -12186,6 +13385,77 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+class CompleteNodePoolUpgradeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CompleteNodePoolUpgradeRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  CompleteNodePoolUpgradeRequest._() : super();
+  factory CompleteNodePoolUpgradeRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory CompleteNodePoolUpgradeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompleteNodePoolUpgradeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CompleteNodePoolUpgradeRequest clone() =>
+      CompleteNodePoolUpgradeRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CompleteNodePoolUpgradeRequest copyWith(
+          void Function(CompleteNodePoolUpgradeRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CompleteNodePoolUpgradeRequest))
+          as CompleteNodePoolUpgradeRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CompleteNodePoolUpgradeRequest create() =>
+      CompleteNodePoolUpgradeRequest._();
+  CompleteNodePoolUpgradeRequest createEmptyInstance() => create();
+  static $pb.PbList<CompleteNodePoolUpgradeRequest> createRepeated() =>
+      $pb.PbList<CompleteNodePoolUpgradeRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CompleteNodePoolUpgradeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CompleteNodePoolUpgradeRequest>(create);
+  static CompleteNodePoolUpgradeRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
 class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -12221,6 +13491,11 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
+    ..aOB(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respectPdb')
     ..hasRequiredFields = false;
 
   RollbackNodePoolUpgradeRequest._() : super();
@@ -12230,6 +13505,7 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.') $core.String? clusterId,
     @$core.Deprecated('This field is deprecated.') $core.String? nodePoolId,
     $core.String? name,
+    $core.bool? respectPdb,
   }) {
     final _result = create();
     if (projectId != null) {
@@ -12250,6 +13526,9 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
     }
     if (name != null) {
       _result.name = name;
+    }
+    if (respectPdb != null) {
+      _result.respectPdb = respectPdb;
     }
     return _result;
   }
@@ -12359,6 +13638,18 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(4);
   @$pb.TagNumber(6)
   void clearName() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get respectPdb => $_getBF(5);
+  @$pb.TagNumber(7)
+  set respectPdb($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasRespectPdb() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearRespectPdb() => clearField(7);
 }
 
 class ListNodePoolsResponse extends $pb.GeneratedMessage {
@@ -12641,7 +13932,7 @@ class AutoprovisioningNodePoolDefaults extends $pb.GeneratedMessage {
     $core.String? serviceAccount,
     NodePool_UpgradeSettings? upgradeSettings,
     NodeManagement? management,
-    $core.String? minCpuPlatform,
+    @$core.Deprecated('This field is deprecated.') $core.String? minCpuPlatform,
     $core.int? diskSizeGb,
     $core.String? diskType,
     ShieldedInstanceConfig? shieldedInstanceConfig,
@@ -12662,6 +13953,7 @@ class AutoprovisioningNodePoolDefaults extends $pb.GeneratedMessage {
       _result.management = management;
     }
     if (minCpuPlatform != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.minCpuPlatform = minCpuPlatform;
     }
     if (diskSizeGb != null) {
@@ -12756,15 +14048,19 @@ class AutoprovisioningNodePoolDefaults extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   NodeManagement ensureManagement() => $_ensure(3);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.String get minCpuPlatform => $_getSZ(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   set minCpuPlatform($core.String v) {
     $_setString(4, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasMinCpuPlatform() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   void clearMinCpuPlatform() => clearField(5);
 
@@ -12972,6 +14268,28 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'autoprovisioned')
+    ..e<NodePoolAutoscaling_LocationPolicy>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'locationPolicy',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            NodePoolAutoscaling_LocationPolicy.LOCATION_POLICY_UNSPECIFIED,
+        valueOf: NodePoolAutoscaling_LocationPolicy.valueOf,
+        enumValues: NodePoolAutoscaling_LocationPolicy.values)
+    ..a<$core.int>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'totalMinNodeCount',
+        $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'totalMaxNodeCount',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   NodePoolAutoscaling._() : super();
@@ -12980,6 +14298,9 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
     $core.int? minNodeCount,
     $core.int? maxNodeCount,
     $core.bool? autoprovisioned,
+    NodePoolAutoscaling_LocationPolicy? locationPolicy,
+    $core.int? totalMinNodeCount,
+    $core.int? totalMaxNodeCount,
   }) {
     final _result = create();
     if (enabled != null) {
@@ -12993,6 +14314,15 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
     }
     if (autoprovisioned != null) {
       _result.autoprovisioned = autoprovisioned;
+    }
+    if (locationPolicy != null) {
+      _result.locationPolicy = locationPolicy;
+    }
+    if (totalMinNodeCount != null) {
+      _result.totalMinNodeCount = totalMinNodeCount;
+    }
+    if (totalMaxNodeCount != null) {
+      _result.totalMaxNodeCount = totalMaxNodeCount;
     }
     return _result;
   }
@@ -13070,6 +14400,42 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
   $core.bool hasAutoprovisioned() => $_has(3);
   @$pb.TagNumber(4)
   void clearAutoprovisioned() => clearField(4);
+
+  @$pb.TagNumber(5)
+  NodePoolAutoscaling_LocationPolicy get locationPolicy => $_getN(4);
+  @$pb.TagNumber(5)
+  set locationPolicy(NodePoolAutoscaling_LocationPolicy v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasLocationPolicy() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLocationPolicy() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get totalMinNodeCount => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set totalMinNodeCount($core.int v) {
+    $_setSignedInt32(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasTotalMinNodeCount() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearTotalMinNodeCount() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get totalMaxNodeCount => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set totalMaxNodeCount($core.int v) {
+    $_setSignedInt32(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasTotalMaxNodeCount() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTotalMaxNodeCount() => clearField(7);
 }
 
 class SetLabelsRequest extends $pb.GeneratedMessage {
@@ -13761,6 +15127,12 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gpuPartitionSize')
+    ..aOM<GPUSharingConfig>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gpuSharingConfig',
+        subBuilder: GPUSharingConfig.create)
     ..hasRequiredFields = false;
 
   AcceleratorConfig._() : super();
@@ -13768,6 +15140,7 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
     $fixnum.Int64? acceleratorCount,
     $core.String? acceleratorType,
     $core.String? gpuPartitionSize,
+    GPUSharingConfig? gpuSharingConfig,
   }) {
     final _result = create();
     if (acceleratorCount != null) {
@@ -13778,6 +15151,9 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
     }
     if (gpuPartitionSize != null) {
       _result.gpuPartitionSize = gpuPartitionSize;
+    }
+    if (gpuSharingConfig != null) {
+      _result.gpuSharingConfig = gpuSharingConfig;
     }
     return _result;
   }
@@ -13843,6 +15219,113 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
   $core.bool hasGpuPartitionSize() => $_has(2);
   @$pb.TagNumber(3)
   void clearGpuPartitionSize() => clearField(3);
+
+  @$pb.TagNumber(5)
+  GPUSharingConfig get gpuSharingConfig => $_getN(3);
+  @$pb.TagNumber(5)
+  set gpuSharingConfig(GPUSharingConfig v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasGpuSharingConfig() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearGpuSharingConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  GPUSharingConfig ensureGpuSharingConfig() => $_ensure(3);
+}
+
+class GPUSharingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GPUSharingConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxSharedClientsPerGpu')
+    ..e<GPUSharingConfig_GPUSharingStrategy>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gpuSharingStrategy',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: GPUSharingConfig_GPUSharingStrategy
+            .GPU_SHARING_STRATEGY_UNSPECIFIED,
+        valueOf: GPUSharingConfig_GPUSharingStrategy.valueOf,
+        enumValues: GPUSharingConfig_GPUSharingStrategy.values)
+    ..hasRequiredFields = false;
+
+  GPUSharingConfig._() : super();
+  factory GPUSharingConfig({
+    $fixnum.Int64? maxSharedClientsPerGpu,
+    GPUSharingConfig_GPUSharingStrategy? gpuSharingStrategy,
+  }) {
+    final _result = create();
+    if (maxSharedClientsPerGpu != null) {
+      _result.maxSharedClientsPerGpu = maxSharedClientsPerGpu;
+    }
+    if (gpuSharingStrategy != null) {
+      _result.gpuSharingStrategy = gpuSharingStrategy;
+    }
+    return _result;
+  }
+  factory GPUSharingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GPUSharingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GPUSharingConfig clone() => GPUSharingConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GPUSharingConfig copyWith(void Function(GPUSharingConfig) updates) =>
+      super.copyWith((message) => updates(message as GPUSharingConfig))
+          as GPUSharingConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GPUSharingConfig create() => GPUSharingConfig._();
+  GPUSharingConfig createEmptyInstance() => create();
+  static $pb.PbList<GPUSharingConfig> createRepeated() =>
+      $pb.PbList<GPUSharingConfig>();
+  @$core.pragma('dart2js:noInline')
+  static GPUSharingConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GPUSharingConfig>(create);
+  static GPUSharingConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get maxSharedClientsPerGpu => $_getI64(0);
+  @$pb.TagNumber(1)
+  set maxSharedClientsPerGpu($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMaxSharedClientsPerGpu() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMaxSharedClientsPerGpu() => clearField(1);
+
+  @$pb.TagNumber(2)
+  GPUSharingConfig_GPUSharingStrategy get gpuSharingStrategy => $_getN(1);
+  @$pb.TagNumber(2)
+  set gpuSharingStrategy(GPUSharingConfig_GPUSharingStrategy v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasGpuSharingStrategy() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearGpuSharingStrategy() => clearField(2);
 }
 
 class WorkloadMetadataConfig extends $pb.GeneratedMessage {
@@ -14271,22 +15754,22 @@ class StatusCondition extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'message')
-    ..e<$5.Code>(
+    ..e<$6.Code>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'canonicalCode',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $5.Code.OK,
-        valueOf: $5.Code.valueOf,
-        enumValues: $5.Code.values)
+        defaultOrMaker: $6.Code.OK,
+        valueOf: $6.Code.valueOf,
+        enumValues: $6.Code.values)
     ..hasRequiredFields = false;
 
   StatusCondition._() : super();
   factory StatusCondition({
     @$core.Deprecated('This field is deprecated.') StatusCondition_Code? code,
     $core.String? message,
-    $5.Code? canonicalCode,
+    $6.Code? canonicalCode,
   }) {
     final _result = create();
     if (code != null) {
@@ -14357,9 +15840,9 @@ class StatusCondition extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
 
   @$pb.TagNumber(3)
-  $5.Code get canonicalCode => $_getN(2);
+  $6.Code get canonicalCode => $_getN(2);
   @$pb.TagNumber(3)
-  set canonicalCode($5.Code v) {
+  set canonicalCode($6.Code v) {
     setField(3, v);
   }
 
@@ -15733,6 +17216,75 @@ class WorkloadIdentityConfig extends $pb.GeneratedMessage {
   $core.bool hasWorkloadPool() => $_has(0);
   @$pb.TagNumber(2)
   void clearWorkloadPool() => clearField(2);
+}
+
+class IdentityServiceConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'IdentityServiceConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enabled')
+    ..hasRequiredFields = false;
+
+  IdentityServiceConfig._() : super();
+  factory IdentityServiceConfig({
+    $core.bool? enabled,
+  }) {
+    final _result = create();
+    if (enabled != null) {
+      _result.enabled = enabled;
+    }
+    return _result;
+  }
+  factory IdentityServiceConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IdentityServiceConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  IdentityServiceConfig clone() =>
+      IdentityServiceConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  IdentityServiceConfig copyWith(
+          void Function(IdentityServiceConfig) updates) =>
+      super.copyWith((message) => updates(message as IdentityServiceConfig))
+          as IdentityServiceConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static IdentityServiceConfig create() => IdentityServiceConfig._();
+  IdentityServiceConfig createEmptyInstance() => create();
+  static $pb.PbList<IdentityServiceConfig> createRepeated() =>
+      $pb.PbList<IdentityServiceConfig>();
+  @$core.pragma('dart2js:noInline')
+  static IdentityServiceConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IdentityServiceConfig>(create);
+  static IdentityServiceConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get enabled => $_getBF(0);
+  @$pb.TagNumber(1)
+  set enabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasEnabled() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEnabled() => clearField(1);
 }
 
 class MeshCertificates extends $pb.GeneratedMessage {
@@ -17266,12 +18818,12 @@ class UpgradeEvent extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'operation')
-    ..aOM<$4.Timestamp>(
+    ..aOM<$5.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'operationStartTime',
-        subBuilder: $4.Timestamp.create)
+        subBuilder: $5.Timestamp.create)
     ..aOS(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -17293,7 +18845,7 @@ class UpgradeEvent extends $pb.GeneratedMessage {
   factory UpgradeEvent({
     UpgradeResourceType? resourceType,
     $core.String? operation,
-    $4.Timestamp? operationStartTime,
+    $5.Timestamp? operationStartTime,
     $core.String? currentVersion,
     $core.String? targetVersion,
     $core.String? resource,
@@ -17371,9 +18923,9 @@ class UpgradeEvent extends $pb.GeneratedMessage {
   void clearOperation() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.Timestamp get operationStartTime => $_getN(2);
+  $5.Timestamp get operationStartTime => $_getN(2);
   @$pb.TagNumber(3)
-  set operationStartTime($4.Timestamp v) {
+  set operationStartTime($5.Timestamp v) {
     setField(3, v);
   }
 
@@ -17382,7 +18934,7 @@ class UpgradeEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOperationStartTime() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Timestamp ensureOperationStartTime() => $_ensure(2);
+  $5.Timestamp ensureOperationStartTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get currentVersion => $_getSZ(3);
@@ -18009,15 +19561,25 @@ class MonitoringConfig extends $pb.GeneratedMessage {
             ? ''
             : 'componentConfig',
         subBuilder: MonitoringComponentConfig.create)
+    ..aOM<ManagedPrometheusConfig>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'managedPrometheusConfig',
+        subBuilder: ManagedPrometheusConfig.create)
     ..hasRequiredFields = false;
 
   MonitoringConfig._() : super();
   factory MonitoringConfig({
     MonitoringComponentConfig? componentConfig,
+    ManagedPrometheusConfig? managedPrometheusConfig,
   }) {
     final _result = create();
     if (componentConfig != null) {
       _result.componentConfig = componentConfig;
+    }
+    if (managedPrometheusConfig != null) {
+      _result.managedPrometheusConfig = managedPrometheusConfig;
     }
     return _result;
   }
@@ -18061,6 +19623,20 @@ class MonitoringConfig extends $pb.GeneratedMessage {
   void clearComponentConfig() => clearField(1);
   @$pb.TagNumber(1)
   MonitoringComponentConfig ensureComponentConfig() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  ManagedPrometheusConfig get managedPrometheusConfig => $_getN(1);
+  @$pb.TagNumber(2)
+  set managedPrometheusConfig(ManagedPrometheusConfig v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasManagedPrometheusConfig() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearManagedPrometheusConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  ManagedPrometheusConfig ensureManagedPrometheusConfig() => $_ensure(1);
 }
 
 class MonitoringComponentConfig extends $pb.GeneratedMessage {
@@ -18127,4 +19703,73 @@ class MonitoringComponentConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<MonitoringComponentConfig_Component> get enableComponents =>
       $_getList(0);
+}
+
+class ManagedPrometheusConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ManagedPrometheusConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enabled')
+    ..hasRequiredFields = false;
+
+  ManagedPrometheusConfig._() : super();
+  factory ManagedPrometheusConfig({
+    $core.bool? enabled,
+  }) {
+    final _result = create();
+    if (enabled != null) {
+      _result.enabled = enabled;
+    }
+    return _result;
+  }
+  factory ManagedPrometheusConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManagedPrometheusConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ManagedPrometheusConfig clone() =>
+      ManagedPrometheusConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ManagedPrometheusConfig copyWith(
+          void Function(ManagedPrometheusConfig) updates) =>
+      super.copyWith((message) => updates(message as ManagedPrometheusConfig))
+          as ManagedPrometheusConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ManagedPrometheusConfig create() => ManagedPrometheusConfig._();
+  ManagedPrometheusConfig createEmptyInstance() => create();
+  static $pb.PbList<ManagedPrometheusConfig> createRepeated() =>
+      $pb.PbList<ManagedPrometheusConfig>();
+  @$core.pragma('dart2js:noInline')
+  static ManagedPrometheusConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ManagedPrometheusConfig>(create);
+  static ManagedPrometheusConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get enabled => $_getBF(0);
+  @$pb.TagNumber(1)
+  set enabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasEnabled() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEnabled() => clearField(1);
 }

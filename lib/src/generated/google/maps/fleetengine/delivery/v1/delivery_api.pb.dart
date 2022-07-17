@@ -660,6 +660,175 @@ class UpdateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   $5.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+class BatchCreateTasksRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BatchCreateTasksRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.delivery.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.DeliveryRequestHeader>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'header',
+        subBuilder: $3.DeliveryRequestHeader.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..pc<CreateTaskRequest>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requests',
+        $pb.PbFieldType.PM,
+        subBuilder: CreateTaskRequest.create)
+    ..hasRequiredFields = false;
+
+  BatchCreateTasksRequest._() : super();
+  factory BatchCreateTasksRequest({
+    $3.DeliveryRequestHeader? header,
+    $core.String? parent,
+    $core.Iterable<CreateTaskRequest>? requests,
+  }) {
+    final _result = create();
+    if (header != null) {
+      _result.header = header;
+    }
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (requests != null) {
+      _result.requests.addAll(requests);
+    }
+    return _result;
+  }
+  factory BatchCreateTasksRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateTasksRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BatchCreateTasksRequest clone() =>
+      BatchCreateTasksRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BatchCreateTasksRequest copyWith(
+          void Function(BatchCreateTasksRequest) updates) =>
+      super.copyWith((message) => updates(message as BatchCreateTasksRequest))
+          as BatchCreateTasksRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateTasksRequest create() => BatchCreateTasksRequest._();
+  BatchCreateTasksRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateTasksRequest> createRepeated() =>
+      $pb.PbList<BatchCreateTasksRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateTasksRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchCreateTasksRequest>(create);
+  static BatchCreateTasksRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.DeliveryRequestHeader get header => $_getN(0);
+  @$pb.TagNumber(1)
+  set header($3.DeliveryRequestHeader v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasHeader() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearHeader() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set parent($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearParent() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<CreateTaskRequest> get requests => $_getList(2);
+}
+
+class BatchCreateTasksResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BatchCreateTasksResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.delivery.v1'),
+      createEmptyInstance: create)
+    ..pc<$2.Task>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tasks',
+        $pb.PbFieldType.PM,
+        subBuilder: $2.Task.create)
+    ..hasRequiredFields = false;
+
+  BatchCreateTasksResponse._() : super();
+  factory BatchCreateTasksResponse({
+    $core.Iterable<$2.Task>? tasks,
+  }) {
+    final _result = create();
+    if (tasks != null) {
+      _result.tasks.addAll(tasks);
+    }
+    return _result;
+  }
+  factory BatchCreateTasksResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateTasksResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BatchCreateTasksResponse clone() =>
+      BatchCreateTasksResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BatchCreateTasksResponse copyWith(
+          void Function(BatchCreateTasksResponse) updates) =>
+      super.copyWith((message) => updates(message as BatchCreateTasksResponse))
+          as BatchCreateTasksResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateTasksResponse create() => BatchCreateTasksResponse._();
+  BatchCreateTasksResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateTasksResponse> createRepeated() =>
+      $pb.PbList<BatchCreateTasksResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateTasksResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchCreateTasksResponse>(create);
+  static BatchCreateTasksResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$2.Task> get tasks => $_getList(0);
+}
+
 class CreateTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

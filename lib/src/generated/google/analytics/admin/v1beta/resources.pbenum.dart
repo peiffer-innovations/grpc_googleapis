@@ -1,0 +1,715 @@
+///
+//  Generated code. Do not modify.
+//  source: google/analytics/admin/v1beta/resources.proto
+//
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: UNDEFINED_SHOWN_NAME
+import 'dart:core' as $core;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+class IndustryCategory extends $pb.ProtobufEnum {
+  static const IndustryCategory INDUSTRY_CATEGORY_UNSPECIFIED =
+      IndustryCategory._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INDUSTRY_CATEGORY_UNSPECIFIED');
+  static const IndustryCategory AUTOMOTIVE = IndustryCategory._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'AUTOMOTIVE');
+  static const IndustryCategory BUSINESS_AND_INDUSTRIAL_MARKETS =
+      IndustryCategory._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BUSINESS_AND_INDUSTRIAL_MARKETS');
+  static const IndustryCategory FINANCE = IndustryCategory._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'FINANCE');
+  static const IndustryCategory HEALTHCARE = IndustryCategory._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'HEALTHCARE');
+  static const IndustryCategory TECHNOLOGY = IndustryCategory._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TECHNOLOGY');
+  static const IndustryCategory TRAVEL = IndustryCategory._(
+      6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TRAVEL');
+  static const IndustryCategory OTHER = IndustryCategory._(
+      7,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OTHER');
+  static const IndustryCategory ARTS_AND_ENTERTAINMENT = IndustryCategory._(
+      8,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ARTS_AND_ENTERTAINMENT');
+  static const IndustryCategory BEAUTY_AND_FITNESS = IndustryCategory._(
+      9,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'BEAUTY_AND_FITNESS');
+  static const IndustryCategory BOOKS_AND_LITERATURE = IndustryCategory._(
+      10,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'BOOKS_AND_LITERATURE');
+  static const IndustryCategory FOOD_AND_DRINK = IndustryCategory._(
+      11,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'FOOD_AND_DRINK');
+  static const IndustryCategory GAMES = IndustryCategory._(
+      12,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GAMES');
+  static const IndustryCategory HOBBIES_AND_LEISURE = IndustryCategory._(
+      13,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'HOBBIES_AND_LEISURE');
+  static const IndustryCategory HOME_AND_GARDEN = IndustryCategory._(
+      14,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'HOME_AND_GARDEN');
+  static const IndustryCategory INTERNET_AND_TELECOM = IndustryCategory._(
+      15,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'INTERNET_AND_TELECOM');
+  static const IndustryCategory LAW_AND_GOVERNMENT = IndustryCategory._(
+      16,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'LAW_AND_GOVERNMENT');
+  static const IndustryCategory NEWS = IndustryCategory._(
+      17,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NEWS');
+  static const IndustryCategory ONLINE_COMMUNITIES = IndustryCategory._(
+      18,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ONLINE_COMMUNITIES');
+  static const IndustryCategory PEOPLE_AND_SOCIETY = IndustryCategory._(
+      19,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PEOPLE_AND_SOCIETY');
+  static const IndustryCategory PETS_AND_ANIMALS = IndustryCategory._(
+      20,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PETS_AND_ANIMALS');
+  static const IndustryCategory REAL_ESTATE = IndustryCategory._(
+      21,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REAL_ESTATE');
+  static const IndustryCategory REFERENCE = IndustryCategory._(
+      22,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REFERENCE');
+  static const IndustryCategory SCIENCE = IndustryCategory._(
+      23,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SCIENCE');
+  static const IndustryCategory SPORTS = IndustryCategory._(
+      24,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SPORTS');
+  static const IndustryCategory JOBS_AND_EDUCATION = IndustryCategory._(
+      25,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'JOBS_AND_EDUCATION');
+  static const IndustryCategory SHOPPING = IndustryCategory._(
+      26,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SHOPPING');
+
+  static const $core.List<IndustryCategory> values = <IndustryCategory>[
+    INDUSTRY_CATEGORY_UNSPECIFIED,
+    AUTOMOTIVE,
+    BUSINESS_AND_INDUSTRIAL_MARKETS,
+    FINANCE,
+    HEALTHCARE,
+    TECHNOLOGY,
+    TRAVEL,
+    OTHER,
+    ARTS_AND_ENTERTAINMENT,
+    BEAUTY_AND_FITNESS,
+    BOOKS_AND_LITERATURE,
+    FOOD_AND_DRINK,
+    GAMES,
+    HOBBIES_AND_LEISURE,
+    HOME_AND_GARDEN,
+    INTERNET_AND_TELECOM,
+    LAW_AND_GOVERNMENT,
+    NEWS,
+    ONLINE_COMMUNITIES,
+    PEOPLE_AND_SOCIETY,
+    PETS_AND_ANIMALS,
+    REAL_ESTATE,
+    REFERENCE,
+    SCIENCE,
+    SPORTS,
+    JOBS_AND_EDUCATION,
+    SHOPPING,
+  ];
+
+  static final $core.Map<$core.int, IndustryCategory> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static IndustryCategory? valueOf($core.int value) => _byValue[value];
+
+  const IndustryCategory._($core.int v, $core.String n) : super(v, n);
+}
+
+class ServiceLevel extends $pb.ProtobufEnum {
+  static const ServiceLevel SERVICE_LEVEL_UNSPECIFIED = ServiceLevel._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SERVICE_LEVEL_UNSPECIFIED');
+  static const ServiceLevel GOOGLE_ANALYTICS_STANDARD = ServiceLevel._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GOOGLE_ANALYTICS_STANDARD');
+  static const ServiceLevel GOOGLE_ANALYTICS_360 = ServiceLevel._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GOOGLE_ANALYTICS_360');
+
+  static const $core.List<ServiceLevel> values = <ServiceLevel>[
+    SERVICE_LEVEL_UNSPECIFIED,
+    GOOGLE_ANALYTICS_STANDARD,
+    GOOGLE_ANALYTICS_360,
+  ];
+
+  static final $core.Map<$core.int, ServiceLevel> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ServiceLevel? valueOf($core.int value) => _byValue[value];
+
+  const ServiceLevel._($core.int v, $core.String n) : super(v, n);
+}
+
+class ActorType extends $pb.ProtobufEnum {
+  static const ActorType ACTOR_TYPE_UNSPECIFIED = ActorType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ACTOR_TYPE_UNSPECIFIED');
+  static const ActorType USER = ActorType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'USER');
+  static const ActorType SYSTEM = ActorType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SYSTEM');
+  static const ActorType SUPPORT = ActorType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SUPPORT');
+
+  static const $core.List<ActorType> values = <ActorType>[
+    ACTOR_TYPE_UNSPECIFIED,
+    USER,
+    SYSTEM,
+    SUPPORT,
+  ];
+
+  static final $core.Map<$core.int, ActorType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ActorType? valueOf($core.int value) => _byValue[value];
+
+  const ActorType._($core.int v, $core.String n) : super(v, n);
+}
+
+class ActionType extends $pb.ProtobufEnum {
+  static const ActionType ACTION_TYPE_UNSPECIFIED = ActionType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ACTION_TYPE_UNSPECIFIED');
+  static const ActionType CREATED = ActionType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CREATED');
+  static const ActionType UPDATED = ActionType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'UPDATED');
+  static const ActionType DELETED = ActionType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DELETED');
+
+  static const $core.List<ActionType> values = <ActionType>[
+    ACTION_TYPE_UNSPECIFIED,
+    CREATED,
+    UPDATED,
+    DELETED,
+  ];
+
+  static final $core.Map<$core.int, ActionType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ActionType? valueOf($core.int value) => _byValue[value];
+
+  const ActionType._($core.int v, $core.String n) : super(v, n);
+}
+
+class ChangeHistoryResourceType extends $pb.ProtobufEnum {
+  static const ChangeHistoryResourceType
+      CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED = ChangeHistoryResourceType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED');
+  static const ChangeHistoryResourceType ACCOUNT = ChangeHistoryResourceType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ACCOUNT');
+  static const ChangeHistoryResourceType PROPERTY = ChangeHistoryResourceType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY');
+  static const ChangeHistoryResourceType FIREBASE_LINK =
+      ChangeHistoryResourceType._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FIREBASE_LINK');
+  static const ChangeHistoryResourceType GOOGLE_ADS_LINK =
+      ChangeHistoryResourceType._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GOOGLE_ADS_LINK');
+  static const ChangeHistoryResourceType GOOGLE_SIGNALS_SETTINGS =
+      ChangeHistoryResourceType._(
+          8,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GOOGLE_SIGNALS_SETTINGS');
+  static const ChangeHistoryResourceType CONVERSION_EVENT =
+      ChangeHistoryResourceType._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CONVERSION_EVENT');
+  static const ChangeHistoryResourceType MEASUREMENT_PROTOCOL_SECRET =
+      ChangeHistoryResourceType._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MEASUREMENT_PROTOCOL_SECRET');
+  static const ChangeHistoryResourceType DATA_RETENTION_SETTINGS =
+      ChangeHistoryResourceType._(
+          13,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DATA_RETENTION_SETTINGS');
+  static const ChangeHistoryResourceType DISPLAY_VIDEO_360_ADVERTISER_LINK =
+      ChangeHistoryResourceType._(
+          14,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DISPLAY_VIDEO_360_ADVERTISER_LINK');
+  static const ChangeHistoryResourceType
+      DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL = ChangeHistoryResourceType._(
+          15,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL');
+  static const ChangeHistoryResourceType DATA_STREAM =
+      ChangeHistoryResourceType._(
+          18,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DATA_STREAM');
+  static const ChangeHistoryResourceType ATTRIBUTION_SETTINGS =
+      ChangeHistoryResourceType._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ATTRIBUTION_SETTINGS');
+
+  static const $core.List<ChangeHistoryResourceType> values =
+      <ChangeHistoryResourceType>[
+    CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED,
+    ACCOUNT,
+    PROPERTY,
+    FIREBASE_LINK,
+    GOOGLE_ADS_LINK,
+    GOOGLE_SIGNALS_SETTINGS,
+    CONVERSION_EVENT,
+    MEASUREMENT_PROTOCOL_SECRET,
+    DATA_RETENTION_SETTINGS,
+    DISPLAY_VIDEO_360_ADVERTISER_LINK,
+    DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL,
+    DATA_STREAM,
+    ATTRIBUTION_SETTINGS,
+  ];
+
+  static final $core.Map<$core.int, ChangeHistoryResourceType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ChangeHistoryResourceType? valueOf($core.int value) => _byValue[value];
+
+  const ChangeHistoryResourceType._($core.int v, $core.String n) : super(v, n);
+}
+
+class PropertyType extends $pb.ProtobufEnum {
+  static const PropertyType PROPERTY_TYPE_UNSPECIFIED = PropertyType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_UNSPECIFIED');
+  static const PropertyType PROPERTY_TYPE_ORDINARY = PropertyType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_ORDINARY');
+  static const PropertyType PROPERTY_TYPE_SUBPROPERTY = PropertyType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_SUBPROPERTY');
+  static const PropertyType PROPERTY_TYPE_ROLLUP = PropertyType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_ROLLUP');
+
+  static const $core.List<PropertyType> values = <PropertyType>[
+    PROPERTY_TYPE_UNSPECIFIED,
+    PROPERTY_TYPE_ORDINARY,
+    PROPERTY_TYPE_SUBPROPERTY,
+    PROPERTY_TYPE_ROLLUP,
+  ];
+
+  static final $core.Map<$core.int, PropertyType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PropertyType? valueOf($core.int value) => _byValue[value];
+
+  const PropertyType._($core.int v, $core.String n) : super(v, n);
+}
+
+class DataStream_DataStreamType extends $pb.ProtobufEnum {
+  static const DataStream_DataStreamType DATA_STREAM_TYPE_UNSPECIFIED =
+      DataStream_DataStreamType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DATA_STREAM_TYPE_UNSPECIFIED');
+  static const DataStream_DataStreamType WEB_DATA_STREAM =
+      DataStream_DataStreamType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'WEB_DATA_STREAM');
+  static const DataStream_DataStreamType ANDROID_APP_DATA_STREAM =
+      DataStream_DataStreamType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ANDROID_APP_DATA_STREAM');
+  static const DataStream_DataStreamType IOS_APP_DATA_STREAM =
+      DataStream_DataStreamType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'IOS_APP_DATA_STREAM');
+
+  static const $core.List<DataStream_DataStreamType> values =
+      <DataStream_DataStreamType>[
+    DATA_STREAM_TYPE_UNSPECIFIED,
+    WEB_DATA_STREAM,
+    ANDROID_APP_DATA_STREAM,
+    IOS_APP_DATA_STREAM,
+  ];
+
+  static final $core.Map<$core.int, DataStream_DataStreamType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DataStream_DataStreamType? valueOf($core.int value) => _byValue[value];
+
+  const DataStream_DataStreamType._($core.int v, $core.String n) : super(v, n);
+}
+
+class CustomDimension_DimensionScope extends $pb.ProtobufEnum {
+  static const CustomDimension_DimensionScope DIMENSION_SCOPE_UNSPECIFIED =
+      CustomDimension_DimensionScope._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DIMENSION_SCOPE_UNSPECIFIED');
+  static const CustomDimension_DimensionScope EVENT =
+      CustomDimension_DimensionScope._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVENT');
+  static const CustomDimension_DimensionScope USER =
+      CustomDimension_DimensionScope._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'USER');
+
+  static const $core.List<CustomDimension_DimensionScope> values =
+      <CustomDimension_DimensionScope>[
+    DIMENSION_SCOPE_UNSPECIFIED,
+    EVENT,
+    USER,
+  ];
+
+  static final $core.Map<$core.int, CustomDimension_DimensionScope> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CustomDimension_DimensionScope? valueOf($core.int value) =>
+      _byValue[value];
+
+  const CustomDimension_DimensionScope._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class CustomMetric_MeasurementUnit extends $pb.ProtobufEnum {
+  static const CustomMetric_MeasurementUnit MEASUREMENT_UNIT_UNSPECIFIED =
+      CustomMetric_MeasurementUnit._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MEASUREMENT_UNIT_UNSPECIFIED');
+  static const CustomMetric_MeasurementUnit STANDARD =
+      CustomMetric_MeasurementUnit._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STANDARD');
+  static const CustomMetric_MeasurementUnit CURRENCY =
+      CustomMetric_MeasurementUnit._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CURRENCY');
+  static const CustomMetric_MeasurementUnit FEET =
+      CustomMetric_MeasurementUnit._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FEET');
+  static const CustomMetric_MeasurementUnit METERS =
+      CustomMetric_MeasurementUnit._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'METERS');
+  static const CustomMetric_MeasurementUnit KILOMETERS =
+      CustomMetric_MeasurementUnit._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'KILOMETERS');
+  static const CustomMetric_MeasurementUnit MILES =
+      CustomMetric_MeasurementUnit._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MILES');
+  static const CustomMetric_MeasurementUnit MILLISECONDS =
+      CustomMetric_MeasurementUnit._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MILLISECONDS');
+  static const CustomMetric_MeasurementUnit SECONDS =
+      CustomMetric_MeasurementUnit._(
+          8,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SECONDS');
+  static const CustomMetric_MeasurementUnit MINUTES =
+      CustomMetric_MeasurementUnit._(
+          9,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MINUTES');
+  static const CustomMetric_MeasurementUnit HOURS =
+      CustomMetric_MeasurementUnit._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'HOURS');
+
+  static const $core.List<CustomMetric_MeasurementUnit> values =
+      <CustomMetric_MeasurementUnit>[
+    MEASUREMENT_UNIT_UNSPECIFIED,
+    STANDARD,
+    CURRENCY,
+    FEET,
+    METERS,
+    KILOMETERS,
+    MILES,
+    MILLISECONDS,
+    SECONDS,
+    MINUTES,
+    HOURS,
+  ];
+
+  static final $core.Map<$core.int, CustomMetric_MeasurementUnit> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CustomMetric_MeasurementUnit? valueOf($core.int value) =>
+      _byValue[value];
+
+  const CustomMetric_MeasurementUnit._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class CustomMetric_MetricScope extends $pb.ProtobufEnum {
+  static const CustomMetric_MetricScope METRIC_SCOPE_UNSPECIFIED =
+      CustomMetric_MetricScope._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'METRIC_SCOPE_UNSPECIFIED');
+  static const CustomMetric_MetricScope EVENT = CustomMetric_MetricScope._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'EVENT');
+
+  static const $core.List<CustomMetric_MetricScope> values =
+      <CustomMetric_MetricScope>[
+    METRIC_SCOPE_UNSPECIFIED,
+    EVENT,
+  ];
+
+  static final $core.Map<$core.int, CustomMetric_MetricScope> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CustomMetric_MetricScope? valueOf($core.int value) => _byValue[value];
+
+  const CustomMetric_MetricScope._($core.int v, $core.String n) : super(v, n);
+}
+
+class CustomMetric_RestrictedMetricType extends $pb.ProtobufEnum {
+  static const CustomMetric_RestrictedMetricType
+      RESTRICTED_METRIC_TYPE_UNSPECIFIED = CustomMetric_RestrictedMetricType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RESTRICTED_METRIC_TYPE_UNSPECIFIED');
+  static const CustomMetric_RestrictedMetricType COST_DATA =
+      CustomMetric_RestrictedMetricType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COST_DATA');
+  static const CustomMetric_RestrictedMetricType REVENUE_DATA =
+      CustomMetric_RestrictedMetricType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REVENUE_DATA');
+
+  static const $core.List<CustomMetric_RestrictedMetricType> values =
+      <CustomMetric_RestrictedMetricType>[
+    RESTRICTED_METRIC_TYPE_UNSPECIFIED,
+    COST_DATA,
+    REVENUE_DATA,
+  ];
+
+  static final $core.Map<$core.int, CustomMetric_RestrictedMetricType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CustomMetric_RestrictedMetricType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const CustomMetric_RestrictedMetricType._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class DataRetentionSettings_RetentionDuration extends $pb.ProtobufEnum {
+  static const DataRetentionSettings_RetentionDuration
+      RETENTION_DURATION_UNSPECIFIED =
+      DataRetentionSettings_RetentionDuration._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'RETENTION_DURATION_UNSPECIFIED');
+  static const DataRetentionSettings_RetentionDuration TWO_MONTHS =
+      DataRetentionSettings_RetentionDuration._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TWO_MONTHS');
+  static const DataRetentionSettings_RetentionDuration FOURTEEN_MONTHS =
+      DataRetentionSettings_RetentionDuration._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FOURTEEN_MONTHS');
+  static const DataRetentionSettings_RetentionDuration TWENTY_SIX_MONTHS =
+      DataRetentionSettings_RetentionDuration._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TWENTY_SIX_MONTHS');
+  static const DataRetentionSettings_RetentionDuration THIRTY_EIGHT_MONTHS =
+      DataRetentionSettings_RetentionDuration._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'THIRTY_EIGHT_MONTHS');
+  static const DataRetentionSettings_RetentionDuration FIFTY_MONTHS =
+      DataRetentionSettings_RetentionDuration._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FIFTY_MONTHS');
+
+  static const $core.List<DataRetentionSettings_RetentionDuration> values =
+      <DataRetentionSettings_RetentionDuration>[
+    RETENTION_DURATION_UNSPECIFIED,
+    TWO_MONTHS,
+    FOURTEEN_MONTHS,
+    TWENTY_SIX_MONTHS,
+    THIRTY_EIGHT_MONTHS,
+    FIFTY_MONTHS,
+  ];
+
+  static final $core.Map<$core.int, DataRetentionSettings_RetentionDuration>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DataRetentionSettings_RetentionDuration? valueOf($core.int value) =>
+      _byValue[value];
+
+  const DataRetentionSettings_RetentionDuration._($core.int v, $core.String n)
+      : super(v, n);
+}

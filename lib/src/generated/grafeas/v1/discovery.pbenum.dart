@@ -84,6 +84,8 @@ class DiscoveryOccurrence_AnalysisStatus extends $pb.ProtobufEnum {
               ? ''
               : 'FINISHED_UNSUPPORTED');
 
+  static const DiscoveryOccurrence_AnalysisStatus COMPLETE = FINISHED_SUCCESS;
+
   static const $core.List<DiscoveryOccurrence_AnalysisStatus> values =
       <DiscoveryOccurrence_AnalysisStatus>[
     ANALYSIS_STATUS_UNSPECIFIED,

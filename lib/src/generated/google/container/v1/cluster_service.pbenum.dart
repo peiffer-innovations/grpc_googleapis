@@ -50,6 +50,37 @@ class PrivateIPv6GoogleAccess extends $pb.ProtobufEnum {
   const PrivateIPv6GoogleAccess._($core.int v, $core.String n) : super(v, n);
 }
 
+class UpgradeResourceType extends $pb.ProtobufEnum {
+  static const UpgradeResourceType UPGRADE_RESOURCE_TYPE_UNSPECIFIED =
+      UpgradeResourceType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPGRADE_RESOURCE_TYPE_UNSPECIFIED');
+  static const UpgradeResourceType MASTER = UpgradeResourceType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MASTER');
+  static const UpgradeResourceType NODE_POOL = UpgradeResourceType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NODE_POOL');
+
+  static const $core.List<UpgradeResourceType> values = <UpgradeResourceType>[
+    UPGRADE_RESOURCE_TYPE_UNSPECIFIED,
+    MASTER,
+    NODE_POOL,
+  ];
+
+  static final $core.Map<$core.int, UpgradeResourceType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static UpgradeResourceType? valueOf($core.int value) => _byValue[value];
+
+  const UpgradeResourceType._($core.int v, $core.String n) : super(v, n);
+}
+
 class DatapathProvider extends $pb.ProtobufEnum {
   static const DatapathProvider DATAPATH_PROVIDER_UNSPECIFIED =
       DatapathProvider._(
@@ -81,35 +112,68 @@ class DatapathProvider extends $pb.ProtobufEnum {
   const DatapathProvider._($core.int v, $core.String n) : super(v, n);
 }
 
-class UpgradeResourceType extends $pb.ProtobufEnum {
-  static const UpgradeResourceType UPGRADE_RESOURCE_TYPE_UNSPECIFIED =
-      UpgradeResourceType._(
+class NodePoolUpdateStrategy extends $pb.ProtobufEnum {
+  static const NodePoolUpdateStrategy NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED =
+      NodePoolUpdateStrategy._(
           0,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
-              : 'UPGRADE_RESOURCE_TYPE_UNSPECIFIED');
-  static const UpgradeResourceType MASTER = UpgradeResourceType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MASTER');
-  static const UpgradeResourceType NODE_POOL = UpgradeResourceType._(
+              : 'NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED');
+  static const NodePoolUpdateStrategy BLUE_GREEN = NodePoolUpdateStrategy._(
       2,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
-          : 'NODE_POOL');
+          : 'BLUE_GREEN');
+  static const NodePoolUpdateStrategy SURGE = NodePoolUpdateStrategy._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SURGE');
 
-  static const $core.List<UpgradeResourceType> values = <UpgradeResourceType>[
-    UPGRADE_RESOURCE_TYPE_UNSPECIFIED,
-    MASTER,
-    NODE_POOL,
+  static const $core.List<NodePoolUpdateStrategy> values =
+      <NodePoolUpdateStrategy>[
+    NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED,
+    BLUE_GREEN,
+    SURGE,
   ];
 
-  static final $core.Map<$core.int, UpgradeResourceType> _byValue =
+  static final $core.Map<$core.int, NodePoolUpdateStrategy> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static UpgradeResourceType? valueOf($core.int value) => _byValue[value];
+  static NodePoolUpdateStrategy? valueOf($core.int value) => _byValue[value];
 
-  const UpgradeResourceType._($core.int v, $core.String n) : super(v, n);
+  const NodePoolUpdateStrategy._($core.int v, $core.String n) : super(v, n);
+}
+
+class NodeNetworkConfig_NetworkPerformanceConfig_Tier extends $pb.ProtobufEnum {
+  static const NodeNetworkConfig_NetworkPerformanceConfig_Tier
+      TIER_UNSPECIFIED = NodeNetworkConfig_NetworkPerformanceConfig_Tier._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TIER_UNSPECIFIED');
+  static const NodeNetworkConfig_NetworkPerformanceConfig_Tier TIER_1 =
+      NodeNetworkConfig_NetworkPerformanceConfig_Tier._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TIER_1');
+
+  static const $core.List<NodeNetworkConfig_NetworkPerformanceConfig_Tier>
+      values = <NodeNetworkConfig_NetworkPerformanceConfig_Tier>[
+    TIER_UNSPECIFIED,
+    TIER_1,
+  ];
+
+  static final $core
+          .Map<$core.int, NodeNetworkConfig_NetworkPerformanceConfig_Tier>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static NodeNetworkConfig_NetworkPerformanceConfig_Tier? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const NodeNetworkConfig_NetworkPerformanceConfig_Tier._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
 
 class SandboxConfig_Type extends $pb.ProtobufEnum {
@@ -273,6 +337,42 @@ class NetworkPolicy_Provider extends $pb.ProtobufEnum {
   static NetworkPolicy_Provider? valueOf($core.int value) => _byValue[value];
 
   const NetworkPolicy_Provider._($core.int v, $core.String n) : super(v, n);
+}
+
+class BinaryAuthorization_EvaluationMode extends $pb.ProtobufEnum {
+  static const BinaryAuthorization_EvaluationMode EVALUATION_MODE_UNSPECIFIED =
+      BinaryAuthorization_EvaluationMode._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVALUATION_MODE_UNSPECIFIED');
+  static const BinaryAuthorization_EvaluationMode DISABLED =
+      BinaryAuthorization_EvaluationMode._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DISABLED');
+  static const BinaryAuthorization_EvaluationMode
+      PROJECT_SINGLETON_POLICY_ENFORCE = BinaryAuthorization_EvaluationMode._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PROJECT_SINGLETON_POLICY_ENFORCE');
+
+  static const $core.List<BinaryAuthorization_EvaluationMode> values =
+      <BinaryAuthorization_EvaluationMode>[
+    EVALUATION_MODE_UNSPECIFIED,
+    DISABLED,
+    PROJECT_SINGLETON_POLICY_ENFORCE,
+  ];
+
+  static final $core.Map<$core.int, BinaryAuthorization_EvaluationMode>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static BinaryAuthorization_EvaluationMode? valueOf($core.int value) =>
+      _byValue[value];
+
+  const BinaryAuthorization_EvaluationMode._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class Cluster_Status extends $pb.ProtobufEnum {
@@ -582,6 +682,77 @@ class NodePool_Status extends $pb.ProtobufEnum {
   const NodePool_Status._($core.int v, $core.String n) : super(v, n);
 }
 
+class NodePool_UpdateInfo_BlueGreenInfo_Phase extends $pb.ProtobufEnum {
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase PHASE_UNSPECIFIED =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PHASE_UNSPECIFIED');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase UPDATE_STARTED =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UPDATE_STARTED');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase CREATING_GREEN_POOL =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CREATING_GREEN_POOL');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase CORDONING_BLUE_POOL =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CORDONING_BLUE_POOL');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase DRAINING_BLUE_POOL =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DRAINING_BLUE_POOL');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase NODE_POOL_SOAKING =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NODE_POOL_SOAKING');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase DELETING_BLUE_POOL =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DELETING_BLUE_POOL');
+  static const NodePool_UpdateInfo_BlueGreenInfo_Phase ROLLBACK_STARTED =
+      NodePool_UpdateInfo_BlueGreenInfo_Phase._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ROLLBACK_STARTED');
+
+  static const $core.List<NodePool_UpdateInfo_BlueGreenInfo_Phase> values =
+      <NodePool_UpdateInfo_BlueGreenInfo_Phase>[
+    PHASE_UNSPECIFIED,
+    UPDATE_STARTED,
+    CREATING_GREEN_POOL,
+    CORDONING_BLUE_POOL,
+    DRAINING_BLUE_POOL,
+    NODE_POOL_SOAKING,
+    DELETING_BLUE_POOL,
+    ROLLBACK_STARTED,
+  ];
+
+  static final $core.Map<$core.int, NodePool_UpdateInfo_BlueGreenInfo_Phase>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static NodePool_UpdateInfo_BlueGreenInfo_Phase? valueOf($core.int value) =>
+      _byValue[value];
+
+  const NodePool_UpdateInfo_BlueGreenInfo_Phase._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class MaintenanceExclusionOptions_Scope extends $pb.ProtobufEnum {
   static const MaintenanceExclusionOptions_Scope NO_UPGRADES =
       MaintenanceExclusionOptions_Scope._(
@@ -651,6 +822,71 @@ class ClusterAutoscaling_AutoscalingProfile extends $pb.ProtobufEnum {
       _byValue[value];
 
   const ClusterAutoscaling_AutoscalingProfile._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class NodePoolAutoscaling_LocationPolicy extends $pb.ProtobufEnum {
+  static const NodePoolAutoscaling_LocationPolicy LOCATION_POLICY_UNSPECIFIED =
+      NodePoolAutoscaling_LocationPolicy._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LOCATION_POLICY_UNSPECIFIED');
+  static const NodePoolAutoscaling_LocationPolicy BALANCED =
+      NodePoolAutoscaling_LocationPolicy._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BALANCED');
+  static const NodePoolAutoscaling_LocationPolicy ANY =
+      NodePoolAutoscaling_LocationPolicy._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ANY');
+
+  static const $core.List<NodePoolAutoscaling_LocationPolicy> values =
+      <NodePoolAutoscaling_LocationPolicy>[
+    LOCATION_POLICY_UNSPECIFIED,
+    BALANCED,
+    ANY,
+  ];
+
+  static final $core.Map<$core.int, NodePoolAutoscaling_LocationPolicy>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static NodePoolAutoscaling_LocationPolicy? valueOf($core.int value) =>
+      _byValue[value];
+
+  const NodePoolAutoscaling_LocationPolicy._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class GPUSharingConfig_GPUSharingStrategy extends $pb.ProtobufEnum {
+  static const GPUSharingConfig_GPUSharingStrategy
+      GPU_SHARING_STRATEGY_UNSPECIFIED = GPUSharingConfig_GPUSharingStrategy._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GPU_SHARING_STRATEGY_UNSPECIFIED');
+  static const GPUSharingConfig_GPUSharingStrategy TIME_SHARING =
+      GPUSharingConfig_GPUSharingStrategy._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TIME_SHARING');
+
+  static const $core.List<GPUSharingConfig_GPUSharingStrategy> values =
+      <GPUSharingConfig_GPUSharingStrategy>[
+    GPU_SHARING_STRATEGY_UNSPECIFIED,
+    TIME_SHARING,
+  ];
+
+  static final $core.Map<$core.int, GPUSharingConfig_GPUSharingStrategy>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static GPUSharingConfig_GPUSharingStrategy? valueOf($core.int value) =>
+      _byValue[value];
+
+  const GPUSharingConfig_GPUSharingStrategy._($core.int v, $core.String n)
       : super(v, n);
 }
 
@@ -1010,11 +1246,32 @@ class MonitoringComponentConfig_Component extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'SYSTEM_COMPONENTS');
+  static const MonitoringComponentConfig_Component APISERVER =
+      MonitoringComponentConfig_Component._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'APISERVER');
+  static const MonitoringComponentConfig_Component SCHEDULER =
+      MonitoringComponentConfig_Component._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SCHEDULER');
+  static const MonitoringComponentConfig_Component CONTROLLER_MANAGER =
+      MonitoringComponentConfig_Component._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CONTROLLER_MANAGER');
 
   static const $core.List<MonitoringComponentConfig_Component> values =
       <MonitoringComponentConfig_Component>[
     COMPONENT_UNSPECIFIED,
     SYSTEM_COMPONENTS,
+    APISERVER,
+    SCHEDULER,
+    CONTROLLER_MANAGER,
   ];
 
   static final $core.Map<$core.int, MonitoringComponentConfig_Component>

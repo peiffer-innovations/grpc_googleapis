@@ -88,6 +88,70 @@ class DiscoveryNote extends $pb.GeneratedMessage {
   void clearAnalysisKind() => clearField(1);
 }
 
+class DiscoveryOccurrence_AnalysisCompleted extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DiscoveryOccurrence.AnalysisCompleted',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'analysisType')
+    ..hasRequiredFields = false;
+
+  DiscoveryOccurrence_AnalysisCompleted._() : super();
+  factory DiscoveryOccurrence_AnalysisCompleted({
+    $core.Iterable<$core.String>? analysisType,
+  }) {
+    final _result = create();
+    if (analysisType != null) {
+      _result.analysisType.addAll(analysisType);
+    }
+    return _result;
+  }
+  factory DiscoveryOccurrence_AnalysisCompleted.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DiscoveryOccurrence_AnalysisCompleted.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DiscoveryOccurrence_AnalysisCompleted clone() =>
+      DiscoveryOccurrence_AnalysisCompleted()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DiscoveryOccurrence_AnalysisCompleted copyWith(
+          void Function(DiscoveryOccurrence_AnalysisCompleted) updates) =>
+      super.copyWith((message) =>
+              updates(message as DiscoveryOccurrence_AnalysisCompleted))
+          as DiscoveryOccurrence_AnalysisCompleted; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DiscoveryOccurrence_AnalysisCompleted create() =>
+      DiscoveryOccurrence_AnalysisCompleted._();
+  DiscoveryOccurrence_AnalysisCompleted createEmptyInstance() => create();
+  static $pb.PbList<DiscoveryOccurrence_AnalysisCompleted> createRepeated() =>
+      $pb.PbList<DiscoveryOccurrence_AnalysisCompleted>();
+  @$core.pragma('dart2js:noInline')
+  static DiscoveryOccurrence_AnalysisCompleted getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          DiscoveryOccurrence_AnalysisCompleted>(create);
+  static DiscoveryOccurrence_AnalysisCompleted? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get analysisType => $_getList(0);
+}
+
 class DiscoveryOccurrence extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -141,6 +205,19 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
             ? ''
             : 'archiveTime',
         subBuilder: $1.Timestamp.create)
+    ..aOM<DiscoveryOccurrence_AnalysisCompleted>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'analysisCompleted',
+        subBuilder: DiscoveryOccurrence_AnalysisCompleted.create)
+    ..pc<$0.Status>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'analysisError',
+        $pb.PbFieldType.PM,
+        subBuilder: $0.Status.create)
     ..hasRequiredFields = false;
 
   DiscoveryOccurrence._() : super();
@@ -151,6 +228,8 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
     $core.String? cpe,
     $1.Timestamp? lastScanTime,
     $1.Timestamp? archiveTime,
+    DiscoveryOccurrence_AnalysisCompleted? analysisCompleted,
+    $core.Iterable<$0.Status>? analysisError,
   }) {
     final _result = create();
     if (continuousAnalysis != null) {
@@ -170,6 +249,12 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
     }
     if (archiveTime != null) {
       _result.archiveTime = archiveTime;
+    }
+    if (analysisCompleted != null) {
+      _result.analysisCompleted = analysisCompleted;
+    }
+    if (analysisError != null) {
+      _result.analysisError.addAll(analysisError);
     }
     return _result;
   }
@@ -277,4 +362,22 @@ class DiscoveryOccurrence extends $pb.GeneratedMessage {
   void clearArchiveTime() => clearField(6);
   @$pb.TagNumber(6)
   $1.Timestamp ensureArchiveTime() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  DiscoveryOccurrence_AnalysisCompleted get analysisCompleted => $_getN(6);
+  @$pb.TagNumber(7)
+  set analysisCompleted(DiscoveryOccurrence_AnalysisCompleted v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasAnalysisCompleted() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearAnalysisCompleted() => clearField(7);
+  @$pb.TagNumber(7)
+  DiscoveryOccurrence_AnalysisCompleted ensureAnalysisCompleted() =>
+      $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $core.List<$0.Status> get analysisError => $_getList(7);
 }

@@ -129,6 +129,11 @@ class ClusterManagerClient extends $grpc.Client {
           '/google.container.v1beta1.ClusterManager/DeleteNodePool',
           ($0.DeleteNodePoolRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$completeNodePoolUpgrade =
+      $grpc.ClientMethod<$0.CompleteNodePoolUpgradeRequest, $1.Empty>(
+          '/google.container.v1beta1.ClusterManager/CompleteNodePoolUpgrade',
+          ($0.CompleteNodePoolUpgradeRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$rollbackNodePoolUpgrade =
       $grpc.ClientMethod<$0.RollbackNodePoolUpgradeRequest, $0.Operation>(
           '/google.container.v1beta1.ClusterManager/RollbackNodePoolUpgrade',
@@ -321,6 +326,13 @@ class ClusterManagerClient extends $grpc.Client {
       $0.DeleteNodePoolRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteNodePool, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> completeNodePoolUpgrade(
+      $0.CompleteNodePoolUpgradeRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$completeNodePoolUpgrade, request,
+        options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> rollbackNodePoolUpgrade(
@@ -575,6 +587,14 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.DeleteNodePoolRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CompleteNodePoolUpgradeRequest, $1.Empty>(
+        'CompleteNodePoolUpgrade',
+        completeNodePoolUpgrade_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CompleteNodePoolUpgradeRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.RollbackNodePoolUpgradeRequest, $0.Operation>(
             'RollbackNodePoolUpgrade',
@@ -783,6 +803,11 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
     return deleteNodePool(call, await request);
   }
 
+  $async.Future<$1.Empty> completeNodePoolUpgrade_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CompleteNodePoolUpgradeRequest> request) async {
+    return completeNodePoolUpgrade(call, await request);
+  }
+
   $async.Future<$0.Operation> rollbackNodePoolUpgrade_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.RollbackNodePoolUpgradeRequest> request) async {
@@ -885,6 +910,8 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.CreateNodePoolRequest request);
   $async.Future<$0.Operation> deleteNodePool(
       $grpc.ServiceCall call, $0.DeleteNodePoolRequest request);
+  $async.Future<$1.Empty> completeNodePoolUpgrade(
+      $grpc.ServiceCall call, $0.CompleteNodePoolUpgradeRequest request);
   $async.Future<$0.Operation> rollbackNodePoolUpgrade(
       $grpc.ServiceCall call, $0.RollbackNodePoolUpgradeRequest request);
   $async.Future<$0.Operation> setNodePoolManagement(

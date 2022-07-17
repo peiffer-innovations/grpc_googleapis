@@ -201,6 +201,62 @@ const UpdateDeliveryVehicleRequest$json = const {
 final $typed_data.Uint8List updateDeliveryVehicleRequestDescriptor =
     $convert.base64Decode(
         'ChxVcGRhdGVEZWxpdmVyeVZlaGljbGVSZXF1ZXN0ElAKBmhlYWRlchgBIAEoCzIzLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVhZGVyQgPgQQFSBmhlYWRlchJdChBkZWxpdmVyeV92ZWhpY2xlGAMgASgLMi0ubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVCA+BBAlIPZGVsaXZlcnlWZWhpY2xlEkAKC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECUgp1cGRhdGVNYXNr');
+@$core.Deprecated('Use batchCreateTasksRequestDescriptor instead')
+const BatchCreateTasksRequest$json = const {
+  '1': 'BatchCreateTasksRequest',
+  '2': const [
+    const {
+      '1': 'header',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
+      '8': const {},
+      '10': 'header'
+    },
+    const {
+      '1': 'parent',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'requests',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.maps.fleetengine.delivery.v1.CreateTaskRequest',
+      '8': const {},
+      '10': 'requests'
+    },
+  ],
+};
+
+/// Descriptor for `BatchCreateTasksRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchCreateTasksRequestDescriptor =
+    $convert.base64Decode(
+        'ChdCYXRjaENyZWF0ZVRhc2tzUmVxdWVzdBJQCgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISPwoGcGFyZW50GAMgASgJQifgQQL6QSESH2ZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Rhc2tSBnBhcmVudBJQCghyZXF1ZXN0cxgEIAMoCzIvLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuQ3JlYXRlVGFza1JlcXVlc3RCA+BBAlIIcmVxdWVzdHM=');
+@$core.Deprecated('Use batchCreateTasksResponseDescriptor instead')
+const BatchCreateTasksResponse$json = const {
+  '1': 'BatchCreateTasksResponse',
+  '2': const [
+    const {
+      '1': 'tasks',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.maps.fleetengine.delivery.v1.Task',
+      '10': 'tasks'
+    },
+  ],
+};
+
+/// Descriptor for `BatchCreateTasksResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchCreateTasksResponseDescriptor =
+    $convert.base64Decode(
+        'ChhCYXRjaENyZWF0ZVRhc2tzUmVzcG9uc2USOAoFdGFza3MYASADKAsyIi5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlRhc2tSBXRhc2tz');
 @$core.Deprecated('Use createTaskRequestDescriptor instead')
 const CreateTaskRequest$json = const {
   '1': 'CreateTaskRequest',

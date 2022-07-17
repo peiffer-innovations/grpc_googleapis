@@ -1443,12 +1443,139 @@ const InfoTypeDescription$json = const {
       '10': 'supportedBy'
     },
     const {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
+    const {
+      '1': 'categories',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.InfoTypeCategory',
+      '10': 'categories'
+    },
   ],
 };
 
 /// Descriptor for `InfoTypeDescription`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List infoTypeDescriptionDescriptor = $convert.base64Decode(
-    'ChNJbmZvVHlwZURlc2NyaXB0aW9uEhIKBG5hbWUYASABKAlSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJNCgxzdXBwb3J0ZWRfYnkYAyADKA4yKi5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGVTdXBwb3J0ZWRCeVILc3VwcG9ydGVkQnkSIAoLZGVzY3JpcHRpb24YBCABKAlSC2Rlc2NyaXB0aW9u');
+    'ChNJbmZvVHlwZURlc2NyaXB0aW9uEhIKBG5hbWUYASABKAlSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJNCgxzdXBwb3J0ZWRfYnkYAyADKA4yKi5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGVTdXBwb3J0ZWRCeVILc3VwcG9ydGVkQnkSIAoLZGVzY3JpcHRpb24YBCABKAlSC2Rlc2NyaXB0aW9uEkcKCmNhdGVnb3JpZXMYCiADKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGVDYXRlZ29yeVIKY2F0ZWdvcmllcw==');
+@$core.Deprecated('Use infoTypeCategoryDescriptor instead')
+const InfoTypeCategory$json = const {
+  '1': 'InfoTypeCategory',
+  '2': const [
+    const {
+      '1': 'location_category',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.InfoTypeCategory.LocationCategory',
+      '9': 0,
+      '10': 'locationCategory'
+    },
+    const {
+      '1': 'industry_category',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.InfoTypeCategory.IndustryCategory',
+      '9': 0,
+      '10': 'industryCategory'
+    },
+    const {
+      '1': 'type_category',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.InfoTypeCategory.TypeCategory',
+      '9': 0,
+      '10': 'typeCategory'
+    },
+  ],
+  '4': const [
+    InfoTypeCategory_LocationCategory$json,
+    InfoTypeCategory_IndustryCategory$json,
+    InfoTypeCategory_TypeCategory$json
+  ],
+  '8': const [
+    const {'1': 'category'},
+  ],
+};
+
+@$core.Deprecated('Use infoTypeCategoryDescriptor instead')
+const InfoTypeCategory_LocationCategory$json = const {
+  '1': 'LocationCategory',
+  '2': const [
+    const {'1': 'LOCATION_UNSPECIFIED', '2': 0},
+    const {'1': 'GLOBAL', '2': 1},
+    const {'1': 'ARGENTINA', '2': 2},
+    const {'1': 'AUSTRALIA', '2': 3},
+    const {'1': 'BELGIUM', '2': 4},
+    const {'1': 'BRAZIL', '2': 5},
+    const {'1': 'CANADA', '2': 6},
+    const {'1': 'CHILE', '2': 7},
+    const {'1': 'CHINA', '2': 8},
+    const {'1': 'COLOMBIA', '2': 9},
+    const {'1': 'DENMARK', '2': 10},
+    const {'1': 'FRANCE', '2': 11},
+    const {'1': 'FINLAND', '2': 12},
+    const {'1': 'GERMANY', '2': 13},
+    const {'1': 'HONG_KONG', '2': 14},
+    const {'1': 'INDIA', '2': 15},
+    const {'1': 'INDONESIA', '2': 16},
+    const {'1': 'IRELAND', '2': 17},
+    const {'1': 'ISRAEL', '2': 18},
+    const {'1': 'ITALY', '2': 19},
+    const {'1': 'JAPAN', '2': 20},
+    const {'1': 'KOREA', '2': 21},
+    const {'1': 'MEXICO', '2': 22},
+    const {'1': 'THE_NETHERLANDS', '2': 23},
+    const {'1': 'NORWAY', '2': 24},
+    const {'1': 'PARAGUAY', '2': 25},
+    const {'1': 'PERU', '2': 26},
+    const {'1': 'POLAND', '2': 27},
+    const {'1': 'PORTUGAL', '2': 28},
+    const {'1': 'SINGAPORE', '2': 29},
+    const {'1': 'SOUTH_AFRICA', '2': 30},
+    const {'1': 'SPAIN', '2': 31},
+    const {'1': 'SWEDEN', '2': 32},
+    const {'1': 'TAIWAN', '2': 33},
+    const {'1': 'THAILAND', '2': 34},
+    const {'1': 'TURKEY', '2': 35},
+    const {'1': 'UNITED_KINGDOM', '2': 36},
+    const {'1': 'UNITED_STATES', '2': 37},
+    const {'1': 'URUGUAY', '2': 38},
+    const {'1': 'VENEZUELA', '2': 39},
+    const {'1': 'INTERNAL', '2': 40},
+  ],
+};
+
+@$core.Deprecated('Use infoTypeCategoryDescriptor instead')
+const InfoTypeCategory_IndustryCategory$json = const {
+  '1': 'IndustryCategory',
+  '2': const [
+    const {'1': 'INDUSTRY_UNSPECIFIED', '2': 0},
+    const {'1': 'FINANCE', '2': 1},
+    const {'1': 'HEALTH', '2': 2},
+    const {'1': 'TELECOMMUNICATIONS', '2': 3},
+  ],
+};
+
+@$core.Deprecated('Use infoTypeCategoryDescriptor instead')
+const InfoTypeCategory_TypeCategory$json = const {
+  '1': 'TypeCategory',
+  '2': const [
+    const {'1': 'TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'PII', '2': 1},
+    const {'1': 'SPII', '2': 2},
+    const {'1': 'DEMOGRAPHIC', '2': 3},
+    const {'1': 'CREDENTIAL', '2': 4},
+    const {'1': 'GOVERNMENT_ID', '2': 5},
+    const {'1': 'DOCUMENT', '2': 6},
+    const {'1': 'CONTEXTUAL_INFORMATION', '2': 7},
+  ],
+};
+
+/// Descriptor for `InfoTypeCategory`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List infoTypeCategoryDescriptor = $convert.base64Decode(
+    'ChBJbmZvVHlwZUNhdGVnb3J5EmcKEWxvY2F0aW9uX2NhdGVnb3J5GAEgASgOMjguZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9UeXBlQ2F0ZWdvcnkuTG9jYXRpb25DYXRlZ29yeUgAUhBsb2NhdGlvbkNhdGVnb3J5EmcKEWluZHVzdHJ5X2NhdGVnb3J5GAIgASgOMjguZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9UeXBlQ2F0ZWdvcnkuSW5kdXN0cnlDYXRlZ29yeUgAUhBpbmR1c3RyeUNhdGVnb3J5ElsKDXR5cGVfY2F0ZWdvcnkYAyABKA4yNC5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGVDYXRlZ29yeS5UeXBlQ2F0ZWdvcnlIAFIMdHlwZUNhdGVnb3J5IsMEChBMb2NhdGlvbkNhdGVnb3J5EhgKFExPQ0FUSU9OX1VOU1BFQ0lGSUVEEAASCgoGR0xPQkFMEAESDQoJQVJHRU5USU5BEAISDQoJQVVTVFJBTElBEAMSCwoHQkVMR0lVTRAEEgoKBkJSQVpJTBAFEgoKBkNBTkFEQRAGEgkKBUNISUxFEAcSCQoFQ0hJTkEQCBIMCghDT0xPTUJJQRAJEgsKB0RFTk1BUksQChIKCgZGUkFOQ0UQCxILCgdGSU5MQU5EEAwSCwoHR0VSTUFOWRANEg0KCUhPTkdfS09ORxAOEgkKBUlORElBEA8SDQoJSU5ET05FU0lBEBASCwoHSVJFTEFORBAREgoKBklTUkFFTBASEgkKBUlUQUxZEBMSCQoFSkFQQU4QFBIJCgVLT1JFQRAVEgoKBk1FWElDTxAWEhMKD1RIRV9ORVRIRVJMQU5EUxAXEgoKBk5PUldBWRAYEgwKCFBBUkFHVUFZEBkSCAoEUEVSVRAaEgoKBlBPTEFORBAbEgwKCFBPUlRVR0FMEBwSDQoJU0lOR0FQT1JFEB0SEAoMU09VVEhfQUZSSUNBEB4SCQoFU1BBSU4QHxIKCgZTV0VERU4QIBIKCgZUQUlXQU4QIRIMCghUSEFJTEFORBAiEgoKBlRVUktFWRAjEhIKDlVOSVRFRF9LSU5HRE9NECQSEQoNVU5JVEVEX1NUQVRFUxAlEgsKB1VSVUdVQVkQJhINCglWRU5FWlVFTEEQJxIMCghJTlRFUk5BTBAoIl0KEEluZHVzdHJ5Q2F0ZWdvcnkSGAoUSU5EVVNUUllfVU5TUEVDSUZJRUQQABILCgdGSU5BTkNFEAESCgoGSEVBTFRIEAISFgoSVEVMRUNPTU1VTklDQVRJT05TEAMilQEKDFR5cGVDYXRlZ29yeRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASBwoDUElJEAESCAoEU1BJSRACEg8KC0RFTU9HUkFQSElDEAMSDgoKQ1JFREVOVElBTBAEEhEKDUdPVkVSTk1FTlRfSUQQBRIMCghET0NVTUVOVBAGEhoKFkNPTlRFWFRVQUxfSU5GT1JNQVRJT04QB0IKCghjYXRlZ29yeQ==');
 @$core.Deprecated('Use listInfoTypesRequestDescriptor instead')
 const ListInfoTypesRequest$json = const {
   '1': 'ListInfoTypesRequest',

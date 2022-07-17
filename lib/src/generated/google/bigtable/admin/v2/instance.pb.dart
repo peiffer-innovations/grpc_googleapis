@@ -209,15 +209,25 @@ class AutoscalingTargets extends $pb.GeneratedMessage {
             ? ''
             : 'cpuUtilizationPercent',
         $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'storageUtilizationGibPerNode',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   AutoscalingTargets._() : super();
   factory AutoscalingTargets({
     $core.int? cpuUtilizationPercent,
+    $core.int? storageUtilizationGibPerNode,
   }) {
     final _result = create();
     if (cpuUtilizationPercent != null) {
       _result.cpuUtilizationPercent = cpuUtilizationPercent;
+    }
+    if (storageUtilizationGibPerNode != null) {
+      _result.storageUtilizationGibPerNode = storageUtilizationGibPerNode;
     }
     return _result;
   }
@@ -259,6 +269,18 @@ class AutoscalingTargets extends $pb.GeneratedMessage {
   $core.bool hasCpuUtilizationPercent() => $_has(0);
   @$pb.TagNumber(2)
   void clearCpuUtilizationPercent() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get storageUtilizationGibPerNode => $_getIZ(1);
+  @$pb.TagNumber(3)
+  set storageUtilizationGibPerNode($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasStorageUtilizationGibPerNode() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearStorageUtilizationGibPerNode() => clearField(3);
 }
 
 class AutoscalingLimits extends $pb.GeneratedMessage {

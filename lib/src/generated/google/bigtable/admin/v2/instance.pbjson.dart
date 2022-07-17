@@ -105,12 +105,19 @@ const AutoscalingTargets$json = const {
       '5': 5,
       '10': 'cpuUtilizationPercent'
     },
+    const {
+      '1': 'storage_utilization_gib_per_node',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '10': 'storageUtilizationGibPerNode'
+    },
   ],
 };
 
 /// Descriptor for `AutoscalingTargets`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List autoscalingTargetsDescriptor = $convert.base64Decode(
-    'ChJBdXRvc2NhbGluZ1RhcmdldHMSNgoXY3B1X3V0aWxpemF0aW9uX3BlcmNlbnQYAiABKAVSFWNwdVV0aWxpemF0aW9uUGVyY2VudA==');
+    'ChJBdXRvc2NhbGluZ1RhcmdldHMSNgoXY3B1X3V0aWxpemF0aW9uX3BlcmNlbnQYAiABKAVSFWNwdVV0aWxpemF0aW9uUGVyY2VudBJGCiBzdG9yYWdlX3V0aWxpemF0aW9uX2dpYl9wZXJfbm9kZRgDIAEoBVIcc3RvcmFnZVV0aWxpemF0aW9uR2liUGVyTm9kZQ==');
 @$core.Deprecated('Use autoscalingLimitsDescriptor instead')
 const AutoscalingLimits$json = const {
   '1': 'AutoscalingLimits',

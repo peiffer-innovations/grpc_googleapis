@@ -48,6 +48,22 @@ const DiscoveryOccurrence$json = const {
       '10': 'analysisStatus'
     },
     const {
+      '1': 'analysis_completed',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.grafeas.v1.DiscoveryOccurrence.AnalysisCompleted',
+      '10': 'analysisCompleted'
+    },
+    const {
+      '1': 'analysis_error',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'analysisError'
+    },
+    const {
       '1': 'analysis_status_error',
       '3': 3,
       '4': 1,
@@ -74,9 +90,18 @@ const DiscoveryOccurrence$json = const {
       '10': 'archiveTime'
     },
   ],
+  '3': const [DiscoveryOccurrence_AnalysisCompleted$json],
   '4': const [
     DiscoveryOccurrence_ContinuousAnalysis$json,
     DiscoveryOccurrence_AnalysisStatus$json
+  ],
+};
+
+@$core.Deprecated('Use discoveryOccurrenceDescriptor instead')
+const DiscoveryOccurrence_AnalysisCompleted$json = const {
+  '1': 'AnalysisCompleted',
+  '2': const [
+    const {'1': 'analysis_type', '3': 1, '4': 3, '5': 9, '10': 'analysisType'},
   ],
 };
 
@@ -98,11 +123,13 @@ const DiscoveryOccurrence_AnalysisStatus$json = const {
     const {'1': 'PENDING', '2': 1},
     const {'1': 'SCANNING', '2': 2},
     const {'1': 'FINISHED_SUCCESS', '2': 3},
+    const {'1': 'COMPLETE', '2': 3},
     const {'1': 'FINISHED_FAILED', '2': 4},
     const {'1': 'FINISHED_UNSUPPORTED', '2': 5},
   ],
+  '3': const {'2': true},
 };
 
 /// Descriptor for `DiscoveryOccurrence`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List discoveryOccurrenceDescriptor = $convert.base64Decode(
-    'ChNEaXNjb3ZlcnlPY2N1cnJlbmNlEmMKE2NvbnRpbnVvdXNfYW5hbHlzaXMYASABKA4yMi5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuQ29udGludW91c0FuYWx5c2lzUhJjb250aW51b3VzQW5hbHlzaXMSVwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLkFuYWx5c2lzU3RhdHVzUg5hbmFseXNpc1N0YXR1cxJGChVhbmFseXNpc19zdGF0dXNfZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1c1ITYW5hbHlzaXNTdGF0dXNFcnJvchIQCgNjcGUYBCABKAlSA2NwZRJACg5sYXN0X3NjYW5fdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDGxhc3RTY2FuVGltZRJCCgxhcmNoaXZlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSC2FyY2hpdmVUaW1lIlMKEkNvbnRpbnVvdXNBbmFseXNpcxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAiKRAQoOQW5hbHlzaXNTdGF0dXMSHwobQU5BTFlTSVNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCFNDQU5OSU5HEAISFAoQRklOSVNIRURfU1VDQ0VTUxADEhMKD0ZJTklTSEVEX0ZBSUxFRBAEEhgKFEZJTklTSEVEX1VOU1VQUE9SVEVEEAU=');
+    'ChNEaXNjb3ZlcnlPY2N1cnJlbmNlEmMKE2NvbnRpbnVvdXNfYW5hbHlzaXMYASABKA4yMi5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuQ29udGludW91c0FuYWx5c2lzUhJjb250aW51b3VzQW5hbHlzaXMSVwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLkFuYWx5c2lzU3RhdHVzUg5hbmFseXNpc1N0YXR1cxJgChJhbmFseXNpc19jb21wbGV0ZWQYByABKAsyMS5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuQW5hbHlzaXNDb21wbGV0ZWRSEWFuYWx5c2lzQ29tcGxldGVkEjkKDmFuYWx5c2lzX2Vycm9yGAggAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXNSDWFuYWx5c2lzRXJyb3ISRgoVYW5hbHlzaXNfc3RhdHVzX2Vycm9yGAMgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNSE2FuYWx5c2lzU3RhdHVzRXJyb3ISEAoDY3BlGAQgASgJUgNjcGUSQAoObGFzdF9zY2FuX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgxsYXN0U2NhblRpbWUSQgoMYXJjaGl2ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgthcmNoaXZlVGltZRo4ChFBbmFseXNpc0NvbXBsZXRlZBIjCg1hbmFseXNpc190eXBlGAEgAygJUgxhbmFseXNpc1R5cGUiUwoSQ29udGludW91c0FuYWx5c2lzEiMKH0NPTlRJTlVPVVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRACIqMBCg5BbmFseXNpc1N0YXR1cxIfChtBTkFMWVNJU19TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIU0NBTk5JTkcQAhIUChBGSU5JU0hFRF9TVUNDRVNTEAMSDAoIQ09NUExFVEUQAxITCg9GSU5JU0hFRF9GQUlMRUQQBBIYChRGSU5JU0hFRF9VTlNVUFBPUlRFRBAFGgIQAQ==');

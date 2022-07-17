@@ -34,6 +34,12 @@ class DeliveryServiceClient extends $grpc.Client {
           ($0.UpdateDeliveryVehicleRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.DeliveryVehicle.fromBuffer(value));
+  static final _$batchCreateTasks = $grpc.ClientMethod<
+          $0.BatchCreateTasksRequest, $0.BatchCreateTasksResponse>(
+      '/maps.fleetengine.delivery.v1.DeliveryService/BatchCreateTasks',
+      ($0.BatchCreateTasksRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BatchCreateTasksResponse.fromBuffer(value));
   static final _$createTask = $grpc.ClientMethod<$0.CreateTaskRequest, $2.Task>(
       '/maps.fleetengine.delivery.v1.DeliveryService/CreateTask',
       ($0.CreateTaskRequest value) => value.writeToBuffer(),
@@ -86,6 +92,12 @@ class DeliveryServiceClient extends $grpc.Client {
       $0.UpdateDeliveryVehicleRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateDeliveryVehicle, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BatchCreateTasksResponse> batchCreateTasks(
+      $0.BatchCreateTasksRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchCreateTasks, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Task> createTask($0.CreateTaskRequest request,
@@ -153,6 +165,15 @@ abstract class DeliveryServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdateDeliveryVehicleRequest.fromBuffer(value),
         ($1.DeliveryVehicle value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchCreateTasksRequest,
+            $0.BatchCreateTasksResponse>(
+        'BatchCreateTasks',
+        batchCreateTasks_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BatchCreateTasksRequest.fromBuffer(value),
+        ($0.BatchCreateTasksResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.CreateTaskRequest, $2.Task>(
         'CreateTask',
         createTask_Pre,
@@ -219,6 +240,12 @@ abstract class DeliveryServiceBase extends $grpc.Service {
     return updateDeliveryVehicle(call, await request);
   }
 
+  $async.Future<$0.BatchCreateTasksResponse> batchCreateTasks_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.BatchCreateTasksRequest> request) async {
+    return batchCreateTasks(call, await request);
+  }
+
   $async.Future<$2.Task> createTask_Pre($grpc.ServiceCall call,
       $async.Future<$0.CreateTaskRequest> request) async {
     return createTask(call, await request);
@@ -256,6 +283,8 @@ abstract class DeliveryServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetDeliveryVehicleRequest request);
   $async.Future<$1.DeliveryVehicle> updateDeliveryVehicle(
       $grpc.ServiceCall call, $0.UpdateDeliveryVehicleRequest request);
+  $async.Future<$0.BatchCreateTasksResponse> batchCreateTasks(
+      $grpc.ServiceCall call, $0.BatchCreateTasksRequest request);
   $async.Future<$2.Task> createTask(
       $grpc.ServiceCall call, $0.CreateTaskRequest request);
   $async.Future<$2.Task> getTask(
