@@ -4,7 +4,7 @@ version: 1.2.0
 homepage: https://github.com/peiffer-innovations/grpc_googleapis
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: '>=2.18.0 <3.0.0'
 
 # dependencies:
 #   fixnum: ^1.0.0
@@ -13,3 +13,29 @@ environment:
 
 dev_dependencies:
   test: ^1.20.1
+
+ignore_updates:
+  - 'archive'
+  - 'async'
+  - 'boolean_selector'
+  - 'characters'
+  - 'charcode'
+  - 'collection'
+  - 'clock'
+  - 'crypto'
+  - 'fake_async'
+  - 'file'
+  - 'matcher'
+  - 'material_color_utilities'
+  - 'meta'
+  - 'path'
+  - 'source_span'
+  - 'stack_trace'
+  - 'stream_channel'
+  - 'string_scanner'
+  - 'sync_http'
+  - 'term_glyph'
+  - 'test_api'
+  - 'typed_data'
+  - 'vector_math'
+  - 'webdriver'
