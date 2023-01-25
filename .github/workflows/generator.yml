@@ -47,10 +47,10 @@ jobs:
       - name: Generate Dart Files
         run: |
           export PATH="$PATH":"$HOME/.pub-cache/bin"
-          pub global activate protoc_plugin
+          dart pub global activate protoc_plugin
           ls -l ~/.pub-cache/bin
           echo "$PATH"
-          pub get
+          dart pub get
           mkdir generated
           cd generated
           git clone https://github.com/peiffer-innovations/grpc_googleapis .
