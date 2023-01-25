@@ -29,6 +29,15 @@ jobs:
       - name: Install Protoc
         uses: arduino/setup-protoc@v1
 
+      - name: Setup Git
+        shell: bash
+        run: |
+          set -e
+
+          git config --global user.email "noop@github.com"
+          git config --global user.name "action"
+          git config --global url."https://action:${{ inputs.token }}@github.com/".insteadOf https://github.com/
+
       - name: Get Dependencies
         run: |
           mkdir deps
