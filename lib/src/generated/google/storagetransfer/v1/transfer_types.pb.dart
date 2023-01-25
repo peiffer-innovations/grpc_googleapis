@@ -918,6 +918,321 @@ class PosixFilesystem extends $pb.GeneratedMessage {
   void clearRootDirectory() => clearField(1);
 }
 
+enum AwsS3CompatibleData_DataProvider { s3Metadata, notSet }
+
+class AwsS3CompatibleData extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AwsS3CompatibleData_DataProvider>
+      _AwsS3CompatibleData_DataProviderByTag = {
+    4: AwsS3CompatibleData_DataProvider.s3Metadata,
+    0: AwsS3CompatibleData_DataProvider.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AwsS3CompatibleData',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [4])
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bucketName')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'path')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endpoint')
+    ..aOM<S3CompatibleMetadata>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 's3Metadata',
+        subBuilder: S3CompatibleMetadata.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'region')
+    ..hasRequiredFields = false;
+
+  AwsS3CompatibleData._() : super();
+  factory AwsS3CompatibleData({
+    $core.String? bucketName,
+    $core.String? path,
+    $core.String? endpoint,
+    S3CompatibleMetadata? s3Metadata,
+    $core.String? region,
+  }) {
+    final _result = create();
+    if (bucketName != null) {
+      _result.bucketName = bucketName;
+    }
+    if (path != null) {
+      _result.path = path;
+    }
+    if (endpoint != null) {
+      _result.endpoint = endpoint;
+    }
+    if (s3Metadata != null) {
+      _result.s3Metadata = s3Metadata;
+    }
+    if (region != null) {
+      _result.region = region;
+    }
+    return _result;
+  }
+  factory AwsS3CompatibleData.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AwsS3CompatibleData.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AwsS3CompatibleData clone() => AwsS3CompatibleData()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AwsS3CompatibleData copyWith(void Function(AwsS3CompatibleData) updates) =>
+      super.copyWith((message) => updates(message as AwsS3CompatibleData))
+          as AwsS3CompatibleData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AwsS3CompatibleData create() => AwsS3CompatibleData._();
+  AwsS3CompatibleData createEmptyInstance() => create();
+  static $pb.PbList<AwsS3CompatibleData> createRepeated() =>
+      $pb.PbList<AwsS3CompatibleData>();
+  @$core.pragma('dart2js:noInline')
+  static AwsS3CompatibleData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AwsS3CompatibleData>(create);
+  static AwsS3CompatibleData? _defaultInstance;
+
+  AwsS3CompatibleData_DataProvider whichDataProvider() =>
+      _AwsS3CompatibleData_DataProviderByTag[$_whichOneof(0)]!;
+  void clearDataProvider() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get bucketName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set bucketName($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBucketName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBucketName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get path => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set path($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPath() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPath() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get endpoint => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set endpoint($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEndpoint() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEndpoint() => clearField(3);
+
+  @$pb.TagNumber(4)
+  S3CompatibleMetadata get s3Metadata => $_getN(3);
+  @$pb.TagNumber(4)
+  set s3Metadata(S3CompatibleMetadata v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasS3Metadata() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearS3Metadata() => clearField(4);
+  @$pb.TagNumber(4)
+  S3CompatibleMetadata ensureS3Metadata() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get region => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set region($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasRegion() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRegion() => clearField(5);
+}
+
+class S3CompatibleMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'S3CompatibleMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..e<S3CompatibleMetadata_AuthMethod>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'authMethod',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: S3CompatibleMetadata_AuthMethod.AUTH_METHOD_UNSPECIFIED,
+        valueOf: S3CompatibleMetadata_AuthMethod.valueOf,
+        enumValues: S3CompatibleMetadata_AuthMethod.values)
+    ..e<S3CompatibleMetadata_RequestModel>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requestModel',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            S3CompatibleMetadata_RequestModel.REQUEST_MODEL_UNSPECIFIED,
+        valueOf: S3CompatibleMetadata_RequestModel.valueOf,
+        enumValues: S3CompatibleMetadata_RequestModel.values)
+    ..e<S3CompatibleMetadata_NetworkProtocol>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'protocol',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            S3CompatibleMetadata_NetworkProtocol.NETWORK_PROTOCOL_UNSPECIFIED,
+        valueOf: S3CompatibleMetadata_NetworkProtocol.valueOf,
+        enumValues: S3CompatibleMetadata_NetworkProtocol.values)
+    ..e<S3CompatibleMetadata_ListApi>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'listApi',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: S3CompatibleMetadata_ListApi.LIST_API_UNSPECIFIED,
+        valueOf: S3CompatibleMetadata_ListApi.valueOf,
+        enumValues: S3CompatibleMetadata_ListApi.values)
+    ..hasRequiredFields = false;
+
+  S3CompatibleMetadata._() : super();
+  factory S3CompatibleMetadata({
+    S3CompatibleMetadata_AuthMethod? authMethod,
+    S3CompatibleMetadata_RequestModel? requestModel,
+    S3CompatibleMetadata_NetworkProtocol? protocol,
+    S3CompatibleMetadata_ListApi? listApi,
+  }) {
+    final _result = create();
+    if (authMethod != null) {
+      _result.authMethod = authMethod;
+    }
+    if (requestModel != null) {
+      _result.requestModel = requestModel;
+    }
+    if (protocol != null) {
+      _result.protocol = protocol;
+    }
+    if (listApi != null) {
+      _result.listApi = listApi;
+    }
+    return _result;
+  }
+  factory S3CompatibleMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory S3CompatibleMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  S3CompatibleMetadata clone() =>
+      S3CompatibleMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  S3CompatibleMetadata copyWith(void Function(S3CompatibleMetadata) updates) =>
+      super.copyWith((message) => updates(message as S3CompatibleMetadata))
+          as S3CompatibleMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static S3CompatibleMetadata create() => S3CompatibleMetadata._();
+  S3CompatibleMetadata createEmptyInstance() => create();
+  static $pb.PbList<S3CompatibleMetadata> createRepeated() =>
+      $pb.PbList<S3CompatibleMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static S3CompatibleMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<S3CompatibleMetadata>(create);
+  static S3CompatibleMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  S3CompatibleMetadata_AuthMethod get authMethod => $_getN(0);
+  @$pb.TagNumber(1)
+  set authMethod(S3CompatibleMetadata_AuthMethod v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAuthMethod() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAuthMethod() => clearField(1);
+
+  @$pb.TagNumber(2)
+  S3CompatibleMetadata_RequestModel get requestModel => $_getN(1);
+  @$pb.TagNumber(2)
+  set requestModel(S3CompatibleMetadata_RequestModel v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRequestModel() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRequestModel() => clearField(2);
+
+  @$pb.TagNumber(3)
+  S3CompatibleMetadata_NetworkProtocol get protocol => $_getN(2);
+  @$pb.TagNumber(3)
+  set protocol(S3CompatibleMetadata_NetworkProtocol v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasProtocol() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearProtocol() => clearField(3);
+
+  @$pb.TagNumber(4)
+  S3CompatibleMetadata_ListApi get listApi => $_getN(3);
+  @$pb.TagNumber(4)
+  set listApi(S3CompatibleMetadata_ListApi v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasListApi() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearListApi() => clearField(4);
+}
+
 class AgentPool_BandwidthLimit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1292,6 +1607,7 @@ enum TransferSpec_DataSource {
   httpDataSource,
   azureBlobStorageDataSource,
   posixDataSource,
+  awsS3CompatibleDataSource,
   notSet
 }
 
@@ -1314,6 +1630,7 @@ class TransferSpec extends $pb.GeneratedMessage {
     3: TransferSpec_DataSource.httpDataSource,
     8: TransferSpec_DataSource.azureBlobStorageDataSource,
     14: TransferSpec_DataSource.posixDataSource,
+    19: TransferSpec_DataSource.awsS3CompatibleDataSource,
     0: TransferSpec_DataSource.notSet
   };
   static const $core.Map<$core.int, TransferSpec_IntermediateDataLocation>
@@ -1331,7 +1648,7 @@ class TransferSpec extends $pb.GeneratedMessage {
               : 'google.storagetransfer.v1'),
       createEmptyInstance: create)
     ..oo(0, [4, 13])
-    ..oo(1, [1, 2, 3, 8, 14])
+    ..oo(1, [1, 2, 3, 8, 14, 19])
     ..oo(2, [16])
     ..aOM<GcsData>(
         1,
@@ -1409,6 +1726,12 @@ class TransferSpec extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sinkAgentPoolName')
+    ..aOM<AwsS3CompatibleData>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'awsS3CompatibleDataSource',
+        subBuilder: AwsS3CompatibleData.create)
     ..hasRequiredFields = false;
 
   TransferSpec._() : super();
@@ -1426,6 +1749,7 @@ class TransferSpec extends $pb.GeneratedMessage {
     GcsData? gcsIntermediateDataLocation,
     $core.String? sourceAgentPoolName,
     $core.String? sinkAgentPoolName,
+    AwsS3CompatibleData? awsS3CompatibleDataSource,
   }) {
     final _result = create();
     if (gcsDataSource != null) {
@@ -1466,6 +1790,9 @@ class TransferSpec extends $pb.GeneratedMessage {
     }
     if (sinkAgentPoolName != null) {
       _result.sinkAgentPoolName = sinkAgentPoolName;
+    }
+    if (awsS3CompatibleDataSource != null) {
+      _result.awsS3CompatibleDataSource = awsS3CompatibleDataSource;
     }
     return _result;
   }
@@ -1685,6 +2012,20 @@ class TransferSpec extends $pb.GeneratedMessage {
   $core.bool hasSinkAgentPoolName() => $_has(12);
   @$pb.TagNumber(18)
   void clearSinkAgentPoolName() => clearField(18);
+
+  @$pb.TagNumber(19)
+  AwsS3CompatibleData get awsS3CompatibleDataSource => $_getN(13);
+  @$pb.TagNumber(19)
+  set awsS3CompatibleDataSource(AwsS3CompatibleData v) {
+    setField(19, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasAwsS3CompatibleDataSource() => $_has(13);
+  @$pb.TagNumber(19)
+  void clearAwsS3CompatibleDataSource() => clearField(19);
+  @$pb.TagNumber(19)
+  AwsS3CompatibleData ensureAwsS3CompatibleDataSource() => $_ensure(13);
 }
 
 class MetadataOptions extends $pb.GeneratedMessage {

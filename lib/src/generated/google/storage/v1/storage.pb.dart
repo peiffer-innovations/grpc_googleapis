@@ -10,14 +10,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'storage_resources.pb.dart' as $4;
-import '../../protobuf/field_mask.pb.dart' as $5;
-import '../../protobuf/wrappers.pb.dart' as $6;
+import 'storage_resources.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
+import '../../protobuf/wrappers.pb.dart' as $4;
 import '../../iam/v1/iam_policy.pb.dart' as $0;
 
-import 'storage_resources.pbenum.dart' as $4;
-
-export 'storage.pbenum.dart';
+import 'storage_resources.pbenum.dart' as $2;
 
 class DeleteBucketAccessControlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -267,12 +265,12 @@ class InsertBucketAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$4.BucketAccessControl>(
+    ..aOM<$2.BucketAccessControl>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucketAccessControl',
-        subBuilder: $4.BucketAccessControl.create)
+        subBuilder: $2.BucketAccessControl.create)
     ..aOM<CommonRequestParams>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -284,7 +282,7 @@ class InsertBucketAccessControlRequest extends $pb.GeneratedMessage {
   InsertBucketAccessControlRequest._() : super();
   factory InsertBucketAccessControlRequest({
     $core.String? bucket,
-    $4.BucketAccessControl? bucketAccessControl,
+    $2.BucketAccessControl? bucketAccessControl,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -344,9 +342,9 @@ class InsertBucketAccessControlRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(3)
-  $4.BucketAccessControl get bucketAccessControl => $_getN(1);
+  $2.BucketAccessControl get bucketAccessControl => $_getN(1);
   @$pb.TagNumber(3)
-  set bucketAccessControl($4.BucketAccessControl v) {
+  set bucketAccessControl($2.BucketAccessControl v) {
     setField(3, v);
   }
 
@@ -355,7 +353,7 @@ class InsertBucketAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearBucketAccessControl() => clearField(3);
   @$pb.TagNumber(3)
-  $4.BucketAccessControl ensureBucketAccessControl() => $_ensure(1);
+  $2.BucketAccessControl ensureBucketAccessControl() => $_ensure(1);
 
   @$pb.TagNumber(4)
   CommonRequestParams get commonRequestParams => $_getN(2);
@@ -488,18 +486,18 @@ class PatchBucketAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'entity')
-    ..aOM<$4.BucketAccessControl>(
+    ..aOM<$2.BucketAccessControl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucketAccessControl',
-        subBuilder: $4.BucketAccessControl.create)
-    ..aOM<$5.FieldMask>(
+        subBuilder: $2.BucketAccessControl.create)
+    ..aOM<$3.FieldMask>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..aOM<CommonRequestParams>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -512,8 +510,8 @@ class PatchBucketAccessControlRequest extends $pb.GeneratedMessage {
   factory PatchBucketAccessControlRequest({
     $core.String? bucket,
     $core.String? entity,
-    $4.BucketAccessControl? bucketAccessControl,
-    $5.FieldMask? updateMask,
+    $2.BucketAccessControl? bucketAccessControl,
+    $3.FieldMask? updateMask,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -591,9 +589,9 @@ class PatchBucketAccessControlRequest extends $pb.GeneratedMessage {
   void clearEntity() => clearField(2);
 
   @$pb.TagNumber(4)
-  $4.BucketAccessControl get bucketAccessControl => $_getN(2);
+  $2.BucketAccessControl get bucketAccessControl => $_getN(2);
   @$pb.TagNumber(4)
-  set bucketAccessControl($4.BucketAccessControl v) {
+  set bucketAccessControl($2.BucketAccessControl v) {
     setField(4, v);
   }
 
@@ -602,12 +600,12 @@ class PatchBucketAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBucketAccessControl() => clearField(4);
   @$pb.TagNumber(4)
-  $4.BucketAccessControl ensureBucketAccessControl() => $_ensure(2);
+  $2.BucketAccessControl ensureBucketAccessControl() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $5.FieldMask get updateMask => $_getN(3);
+  $3.FieldMask get updateMask => $_getN(3);
   @$pb.TagNumber(5)
-  set updateMask($5.FieldMask v) {
+  set updateMask($3.FieldMask v) {
     setField(5, v);
   }
 
@@ -616,7 +614,7 @@ class PatchBucketAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearUpdateMask() => clearField(5);
   @$pb.TagNumber(5)
-  $5.FieldMask ensureUpdateMask() => $_ensure(3);
+  $3.FieldMask ensureUpdateMask() => $_ensure(3);
 
   @$pb.TagNumber(6)
   CommonRequestParams get commonRequestParams => $_getN(4);
@@ -653,12 +651,12 @@ class UpdateBucketAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'entity')
-    ..aOM<$4.BucketAccessControl>(
+    ..aOM<$2.BucketAccessControl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucketAccessControl',
-        subBuilder: $4.BucketAccessControl.create)
+        subBuilder: $2.BucketAccessControl.create)
     ..aOM<CommonRequestParams>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -671,7 +669,7 @@ class UpdateBucketAccessControlRequest extends $pb.GeneratedMessage {
   factory UpdateBucketAccessControlRequest({
     $core.String? bucket,
     $core.String? entity,
-    $4.BucketAccessControl? bucketAccessControl,
+    $2.BucketAccessControl? bucketAccessControl,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -746,9 +744,9 @@ class UpdateBucketAccessControlRequest extends $pb.GeneratedMessage {
   void clearEntity() => clearField(2);
 
   @$pb.TagNumber(4)
-  $4.BucketAccessControl get bucketAccessControl => $_getN(2);
+  $2.BucketAccessControl get bucketAccessControl => $_getN(2);
   @$pb.TagNumber(4)
-  set bucketAccessControl($4.BucketAccessControl v) {
+  set bucketAccessControl($2.BucketAccessControl v) {
     setField(4, v);
   }
 
@@ -757,7 +755,7 @@ class UpdateBucketAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBucketAccessControl() => clearField(4);
   @$pb.TagNumber(4)
-  $4.BucketAccessControl ensureBucketAccessControl() => $_ensure(2);
+  $2.BucketAccessControl ensureBucketAccessControl() => $_ensure(2);
 
   @$pb.TagNumber(5)
   CommonRequestParams get commonRequestParams => $_getN(3);
@@ -789,18 +787,18 @@ class DeleteBucketRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..aOM<CommonRequestParams>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -812,8 +810,8 @@ class DeleteBucketRequest extends $pb.GeneratedMessage {
   DeleteBucketRequest._() : super();
   factory DeleteBucketRequest({
     $core.String? bucket,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -871,9 +869,9 @@ class DeleteBucketRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(1);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(1);
   @$pb.TagNumber(2)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(2, v);
   }
 
@@ -882,12 +880,12 @@ class DeleteBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIfMetagenerationMatch() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(2);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(2);
   @$pb.TagNumber(3)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(3, v);
   }
 
@@ -896,7 +894,7 @@ class DeleteBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIfMetagenerationNotMatch() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
 
   @$pb.TagNumber(5)
   CommonRequestParams get commonRequestParams => $_getN(3);
@@ -928,27 +926,27 @@ class GetBucketRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_Projection>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_Projection>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..aOM<CommonRequestParams>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -960,9 +958,9 @@ class GetBucketRequest extends $pb.GeneratedMessage {
   GetBucketRequest._() : super();
   factory GetBucketRequest({
     $core.String? bucket,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_Projection? projection,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_Projection? projection,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -1023,9 +1021,9 @@ class GetBucketRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(1);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(1);
   @$pb.TagNumber(2)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(2, v);
   }
 
@@ -1034,12 +1032,12 @@ class GetBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIfMetagenerationMatch() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(2);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(2);
   @$pb.TagNumber(3)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(3, v);
   }
 
@@ -1048,12 +1046,12 @@ class GetBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIfMetagenerationNotMatch() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $4.CommonEnums_Projection get projection => $_getN(3);
+  $2.CommonEnums_Projection get projection => $_getN(3);
   @$pb.TagNumber(4)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(4, v);
   }
 
@@ -1087,46 +1085,46 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.storage.v1'),
       createEmptyInstance: create)
-    ..e<$4.CommonEnums_PredefinedBucketAcl>(
+    ..e<$2.CommonEnums_PredefinedBucketAcl>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedBucketAcl.PREDEFINED_BUCKET_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedBucketAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedBucketAcl.values)
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+        valueOf: $2.CommonEnums_PredefinedBucketAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedBucketAcl.values)
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedDefaultObjectAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'project')
-    ..e<$4.CommonEnums_Projection>(
+    ..e<$2.CommonEnums_Projection>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
-    ..aOM<$4.Bucket>(
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
+    ..aOM<$2.Bucket>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket',
-        subBuilder: $4.Bucket.create)
+        subBuilder: $2.Bucket.create)
     ..aOM<CommonRequestParams>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1137,11 +1135,11 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
 
   InsertBucketRequest._() : super();
   factory InsertBucketRequest({
-    $4.CommonEnums_PredefinedBucketAcl? predefinedAcl,
-    $4.CommonEnums_PredefinedObjectAcl? predefinedDefaultObjectAcl,
+    $2.CommonEnums_PredefinedBucketAcl? predefinedAcl,
+    $2.CommonEnums_PredefinedObjectAcl? predefinedDefaultObjectAcl,
     $core.String? project,
-    $4.CommonEnums_Projection? projection,
-    $4.Bucket? bucket,
+    $2.CommonEnums_Projection? projection,
+    $2.Bucket? bucket,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -1193,9 +1191,9 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
   static InsertBucketRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.CommonEnums_PredefinedBucketAcl get predefinedAcl => $_getN(0);
+  $2.CommonEnums_PredefinedBucketAcl get predefinedAcl => $_getN(0);
   @$pb.TagNumber(1)
-  set predefinedAcl($4.CommonEnums_PredefinedBucketAcl v) {
+  set predefinedAcl($2.CommonEnums_PredefinedBucketAcl v) {
     setField(1, v);
   }
 
@@ -1205,10 +1203,10 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
   void clearPredefinedAcl() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.CommonEnums_PredefinedObjectAcl get predefinedDefaultObjectAcl =>
+  $2.CommonEnums_PredefinedObjectAcl get predefinedDefaultObjectAcl =>
       $_getN(1);
   @$pb.TagNumber(2)
-  set predefinedDefaultObjectAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set predefinedDefaultObjectAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(2, v);
   }
 
@@ -1230,9 +1228,9 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
   void clearProject() => clearField(3);
 
   @$pb.TagNumber(4)
-  $4.CommonEnums_Projection get projection => $_getN(3);
+  $2.CommonEnums_Projection get projection => $_getN(3);
   @$pb.TagNumber(4)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(4, v);
   }
 
@@ -1242,9 +1240,9 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
   void clearProjection() => clearField(4);
 
   @$pb.TagNumber(6)
-  $4.Bucket get bucket => $_getN(4);
+  $2.Bucket get bucket => $_getN(4);
   @$pb.TagNumber(6)
-  set bucket($4.Bucket v) {
+  set bucket($2.Bucket v) {
     setField(6, v);
   }
 
@@ -1253,7 +1251,7 @@ class InsertBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearBucket() => clearField(6);
   @$pb.TagNumber(6)
-  $4.Bucket ensureBucket() => $_ensure(4);
+  $2.Bucket ensureBucket() => $_ensure(4);
 
   @$pb.TagNumber(7)
   CommonRequestParams get commonRequestParams => $_getN(5);
@@ -1392,15 +1390,15 @@ class ListBucketsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'project')
-    ..e<$4.CommonEnums_Projection>(
+    ..e<$2.CommonEnums_Projection>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..aOM<CommonRequestParams>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1415,7 +1413,7 @@ class ListBucketsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? prefix,
     $core.String? project,
-    $4.CommonEnums_Projection? projection,
+    $2.CommonEnums_Projection? projection,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -1515,9 +1513,9 @@ class ListBucketsRequest extends $pb.GeneratedMessage {
   void clearProject() => clearField(4);
 
   @$pb.TagNumber(5)
-  $4.CommonEnums_Projection get projection => $_getN(4);
+  $2.CommonEnums_Projection get projection => $_getN(4);
   @$pb.TagNumber(5)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(5, v);
   }
 
@@ -1671,59 +1669,59 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_PredefinedBucketAcl>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_PredefinedBucketAcl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedBucketAcl.PREDEFINED_BUCKET_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedBucketAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedBucketAcl.values)
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+        valueOf: $2.CommonEnums_PredefinedBucketAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedBucketAcl.values)
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedDefaultObjectAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..e<$4.CommonEnums_Projection>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..e<$2.CommonEnums_Projection>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
-    ..aOM<$4.Bucket>(
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
+    ..aOM<$2.Bucket>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.Bucket.create)
-    ..aOM<$5.FieldMask>(
+        subBuilder: $2.Bucket.create)
+    ..aOM<$3.FieldMask>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..aOM<CommonRequestParams>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1735,13 +1733,13 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   PatchBucketRequest._() : super();
   factory PatchBucketRequest({
     $core.String? bucket,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_PredefinedBucketAcl? predefinedAcl,
-    $4.CommonEnums_PredefinedObjectAcl? predefinedDefaultObjectAcl,
-    $4.CommonEnums_Projection? projection,
-    $4.Bucket? metadata,
-    $5.FieldMask? updateMask,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_PredefinedBucketAcl? predefinedAcl,
+    $2.CommonEnums_PredefinedObjectAcl? predefinedDefaultObjectAcl,
+    $2.CommonEnums_Projection? projection,
+    $2.Bucket? metadata,
+    $3.FieldMask? updateMask,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -1814,9 +1812,9 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(1);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(1);
   @$pb.TagNumber(2)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(2, v);
   }
 
@@ -1825,12 +1823,12 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIfMetagenerationMatch() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(2);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(2);
   @$pb.TagNumber(3)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(3, v);
   }
 
@@ -1839,12 +1837,12 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIfMetagenerationNotMatch() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $4.CommonEnums_PredefinedBucketAcl get predefinedAcl => $_getN(3);
+  $2.CommonEnums_PredefinedBucketAcl get predefinedAcl => $_getN(3);
   @$pb.TagNumber(4)
-  set predefinedAcl($4.CommonEnums_PredefinedBucketAcl v) {
+  set predefinedAcl($2.CommonEnums_PredefinedBucketAcl v) {
     setField(4, v);
   }
 
@@ -1854,10 +1852,10 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   void clearPredefinedAcl() => clearField(4);
 
   @$pb.TagNumber(5)
-  $4.CommonEnums_PredefinedObjectAcl get predefinedDefaultObjectAcl =>
+  $2.CommonEnums_PredefinedObjectAcl get predefinedDefaultObjectAcl =>
       $_getN(4);
   @$pb.TagNumber(5)
-  set predefinedDefaultObjectAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set predefinedDefaultObjectAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(5, v);
   }
 
@@ -1867,9 +1865,9 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   void clearPredefinedDefaultObjectAcl() => clearField(5);
 
   @$pb.TagNumber(6)
-  $4.CommonEnums_Projection get projection => $_getN(5);
+  $2.CommonEnums_Projection get projection => $_getN(5);
   @$pb.TagNumber(6)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(6, v);
   }
 
@@ -1879,9 +1877,9 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   void clearProjection() => clearField(6);
 
   @$pb.TagNumber(8)
-  $4.Bucket get metadata => $_getN(6);
+  $2.Bucket get metadata => $_getN(6);
   @$pb.TagNumber(8)
-  set metadata($4.Bucket v) {
+  set metadata($2.Bucket v) {
     setField(8, v);
   }
 
@@ -1890,12 +1888,12 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearMetadata() => clearField(8);
   @$pb.TagNumber(8)
-  $4.Bucket ensureMetadata() => $_ensure(6);
+  $2.Bucket ensureMetadata() => $_ensure(6);
 
   @$pb.TagNumber(9)
-  $5.FieldMask get updateMask => $_getN(7);
+  $3.FieldMask get updateMask => $_getN(7);
   @$pb.TagNumber(9)
-  set updateMask($5.FieldMask v) {
+  set updateMask($3.FieldMask v) {
     setField(9, v);
   }
 
@@ -1904,7 +1902,7 @@ class PatchBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearUpdateMask() => clearField(9);
   @$pb.TagNumber(9)
-  $5.FieldMask ensureUpdateMask() => $_ensure(7);
+  $3.FieldMask ensureUpdateMask() => $_ensure(7);
 
   @$pb.TagNumber(10)
   CommonRequestParams get commonRequestParams => $_getN(8);
@@ -1936,53 +1934,53 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_PredefinedBucketAcl>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_PredefinedBucketAcl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedBucketAcl.PREDEFINED_BUCKET_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedBucketAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedBucketAcl.values)
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+        valueOf: $2.CommonEnums_PredefinedBucketAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedBucketAcl.values)
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedDefaultObjectAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..e<$4.CommonEnums_Projection>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..e<$2.CommonEnums_Projection>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
-    ..aOM<$4.Bucket>(
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
+    ..aOM<$2.Bucket>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.Bucket.create)
+        subBuilder: $2.Bucket.create)
     ..aOM<CommonRequestParams>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1994,12 +1992,12 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   UpdateBucketRequest._() : super();
   factory UpdateBucketRequest({
     $core.String? bucket,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_PredefinedBucketAcl? predefinedAcl,
-    $4.CommonEnums_PredefinedObjectAcl? predefinedDefaultObjectAcl,
-    $4.CommonEnums_Projection? projection,
-    $4.Bucket? metadata,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_PredefinedBucketAcl? predefinedAcl,
+    $2.CommonEnums_PredefinedObjectAcl? predefinedDefaultObjectAcl,
+    $2.CommonEnums_Projection? projection,
+    $2.Bucket? metadata,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -2069,9 +2067,9 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(1);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(1);
   @$pb.TagNumber(2)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(2, v);
   }
 
@@ -2080,12 +2078,12 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIfMetagenerationMatch() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(2);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(2);
   @$pb.TagNumber(3)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(3, v);
   }
 
@@ -2094,12 +2092,12 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIfMetagenerationNotMatch() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $4.CommonEnums_PredefinedBucketAcl get predefinedAcl => $_getN(3);
+  $2.CommonEnums_PredefinedBucketAcl get predefinedAcl => $_getN(3);
   @$pb.TagNumber(4)
-  set predefinedAcl($4.CommonEnums_PredefinedBucketAcl v) {
+  set predefinedAcl($2.CommonEnums_PredefinedBucketAcl v) {
     setField(4, v);
   }
 
@@ -2109,10 +2107,10 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   void clearPredefinedAcl() => clearField(4);
 
   @$pb.TagNumber(5)
-  $4.CommonEnums_PredefinedObjectAcl get predefinedDefaultObjectAcl =>
+  $2.CommonEnums_PredefinedObjectAcl get predefinedDefaultObjectAcl =>
       $_getN(4);
   @$pb.TagNumber(5)
-  set predefinedDefaultObjectAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set predefinedDefaultObjectAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(5, v);
   }
 
@@ -2122,9 +2120,9 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   void clearPredefinedDefaultObjectAcl() => clearField(5);
 
   @$pb.TagNumber(6)
-  $4.CommonEnums_Projection get projection => $_getN(5);
+  $2.CommonEnums_Projection get projection => $_getN(5);
   @$pb.TagNumber(6)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(6, v);
   }
 
@@ -2134,9 +2132,9 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   void clearProjection() => clearField(6);
 
   @$pb.TagNumber(8)
-  $4.Bucket get metadata => $_getN(6);
+  $2.Bucket get metadata => $_getN(6);
   @$pb.TagNumber(8)
-  set metadata($4.Bucket v) {
+  set metadata($2.Bucket v) {
     setField(8, v);
   }
 
@@ -2145,7 +2143,7 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearMetadata() => clearField(8);
   @$pb.TagNumber(8)
-  $4.Bucket ensureMetadata() => $_ensure(6);
+  $2.Bucket ensureMetadata() => $_ensure(6);
 
   @$pb.TagNumber(9)
   CommonRequestParams get commonRequestParams => $_getN(7);
@@ -2172,12 +2170,12 @@ class StopChannelRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.storage.v1'),
       createEmptyInstance: create)
-    ..aOM<$4.Channel>(
+    ..aOM<$2.Channel>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'channel',
-        subBuilder: $4.Channel.create)
+        subBuilder: $2.Channel.create)
     ..aOM<CommonRequestParams>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2188,7 +2186,7 @@ class StopChannelRequest extends $pb.GeneratedMessage {
 
   StopChannelRequest._() : super();
   factory StopChannelRequest({
-    $4.Channel? channel,
+    $2.Channel? channel,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -2228,9 +2226,9 @@ class StopChannelRequest extends $pb.GeneratedMessage {
   static StopChannelRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.Channel get channel => $_getN(0);
+  $2.Channel get channel => $_getN(0);
   @$pb.TagNumber(1)
-  set channel($4.Channel v) {
+  set channel($2.Channel v) {
     setField(1, v);
   }
 
@@ -2239,7 +2237,7 @@ class StopChannelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearChannel() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Channel ensureChannel() => $_ensure(0);
+  $2.Channel ensureChannel() => $_ensure(0);
 
   @$pb.TagNumber(2)
   CommonRequestParams get commonRequestParams => $_getN(1);
@@ -2507,12 +2505,12 @@ class InsertDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$4.ObjectAccessControl>(
+    ..aOM<$2.ObjectAccessControl>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectAccessControl',
-        subBuilder: $4.ObjectAccessControl.create)
+        subBuilder: $2.ObjectAccessControl.create)
     ..aOM<CommonRequestParams>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2524,7 +2522,7 @@ class InsertDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   InsertDefaultObjectAccessControlRequest._() : super();
   factory InsertDefaultObjectAccessControlRequest({
     $core.String? bucket,
-    $4.ObjectAccessControl? objectAccessControl,
+    $2.ObjectAccessControl? objectAccessControl,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -2585,9 +2583,9 @@ class InsertDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(3)
-  $4.ObjectAccessControl get objectAccessControl => $_getN(1);
+  $2.ObjectAccessControl get objectAccessControl => $_getN(1);
   @$pb.TagNumber(3)
-  set objectAccessControl($4.ObjectAccessControl v) {
+  set objectAccessControl($2.ObjectAccessControl v) {
     setField(3, v);
   }
 
@@ -2596,7 +2594,7 @@ class InsertDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearObjectAccessControl() => clearField(3);
   @$pb.TagNumber(3)
-  $4.ObjectAccessControl ensureObjectAccessControl() => $_ensure(1);
+  $2.ObjectAccessControl ensureObjectAccessControl() => $_ensure(1);
 
   @$pb.TagNumber(4)
   CommonRequestParams get commonRequestParams => $_getN(2);
@@ -2628,18 +2626,18 @@ class ListDefaultObjectAccessControlsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..aOM<CommonRequestParams>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2651,8 +2649,8 @@ class ListDefaultObjectAccessControlsRequest extends $pb.GeneratedMessage {
   ListDefaultObjectAccessControlsRequest._() : super();
   factory ListDefaultObjectAccessControlsRequest({
     $core.String? bucket,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -2716,9 +2714,9 @@ class ListDefaultObjectAccessControlsRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(1);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(1);
   @$pb.TagNumber(2)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(2, v);
   }
 
@@ -2727,12 +2725,12 @@ class ListDefaultObjectAccessControlsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIfMetagenerationMatch() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(2);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(2);
   @$pb.TagNumber(3)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(3, v);
   }
 
@@ -2741,7 +2739,7 @@ class ListDefaultObjectAccessControlsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIfMetagenerationNotMatch() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(2);
 
   @$pb.TagNumber(5)
   CommonRequestParams get commonRequestParams => $_getN(3);
@@ -2778,18 +2776,18 @@ class PatchDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'entity')
-    ..aOM<$4.ObjectAccessControl>(
+    ..aOM<$2.ObjectAccessControl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectAccessControl',
-        subBuilder: $4.ObjectAccessControl.create)
-    ..aOM<$5.FieldMask>(
+        subBuilder: $2.ObjectAccessControl.create)
+    ..aOM<$3.FieldMask>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..aOM<CommonRequestParams>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2802,8 +2800,8 @@ class PatchDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   factory PatchDefaultObjectAccessControlRequest({
     $core.String? bucket,
     $core.String? entity,
-    $4.ObjectAccessControl? objectAccessControl,
-    $5.FieldMask? updateMask,
+    $2.ObjectAccessControl? objectAccessControl,
+    $3.FieldMask? updateMask,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -2882,9 +2880,9 @@ class PatchDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   void clearEntity() => clearField(2);
 
   @$pb.TagNumber(4)
-  $4.ObjectAccessControl get objectAccessControl => $_getN(2);
+  $2.ObjectAccessControl get objectAccessControl => $_getN(2);
   @$pb.TagNumber(4)
-  set objectAccessControl($4.ObjectAccessControl v) {
+  set objectAccessControl($2.ObjectAccessControl v) {
     setField(4, v);
   }
 
@@ -2893,12 +2891,12 @@ class PatchDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearObjectAccessControl() => clearField(4);
   @$pb.TagNumber(4)
-  $4.ObjectAccessControl ensureObjectAccessControl() => $_ensure(2);
+  $2.ObjectAccessControl ensureObjectAccessControl() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $5.FieldMask get updateMask => $_getN(3);
+  $3.FieldMask get updateMask => $_getN(3);
   @$pb.TagNumber(5)
-  set updateMask($5.FieldMask v) {
+  set updateMask($3.FieldMask v) {
     setField(5, v);
   }
 
@@ -2907,7 +2905,7 @@ class PatchDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearUpdateMask() => clearField(5);
   @$pb.TagNumber(5)
-  $5.FieldMask ensureUpdateMask() => $_ensure(3);
+  $3.FieldMask ensureUpdateMask() => $_ensure(3);
 
   @$pb.TagNumber(6)
   CommonRequestParams get commonRequestParams => $_getN(4);
@@ -2944,12 +2942,12 @@ class UpdateDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'entity')
-    ..aOM<$4.ObjectAccessControl>(
+    ..aOM<$2.ObjectAccessControl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectAccessControl',
-        subBuilder: $4.ObjectAccessControl.create)
+        subBuilder: $2.ObjectAccessControl.create)
     ..aOM<CommonRequestParams>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2962,7 +2960,7 @@ class UpdateDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   factory UpdateDefaultObjectAccessControlRequest({
     $core.String? bucket,
     $core.String? entity,
-    $4.ObjectAccessControl? objectAccessControl,
+    $2.ObjectAccessControl? objectAccessControl,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -3038,9 +3036,9 @@ class UpdateDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   void clearEntity() => clearField(2);
 
   @$pb.TagNumber(4)
-  $4.ObjectAccessControl get objectAccessControl => $_getN(2);
+  $2.ObjectAccessControl get objectAccessControl => $_getN(2);
   @$pb.TagNumber(4)
-  set objectAccessControl($4.ObjectAccessControl v) {
+  set objectAccessControl($2.ObjectAccessControl v) {
     setField(4, v);
   }
 
@@ -3049,7 +3047,7 @@ class UpdateDefaultObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearObjectAccessControl() => clearField(4);
   @$pb.TagNumber(4)
-  $4.ObjectAccessControl ensureObjectAccessControl() => $_ensure(2);
+  $2.ObjectAccessControl ensureObjectAccessControl() => $_ensure(2);
 
   @$pb.TagNumber(5)
   CommonRequestParams get commonRequestParams => $_getN(3);
@@ -3309,12 +3307,12 @@ class InsertNotificationRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bucket')
-    ..aOM<$4.Notification>(
+    ..aOM<$2.Notification>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'notification',
-        subBuilder: $4.Notification.create)
+        subBuilder: $2.Notification.create)
     ..aOM<CommonRequestParams>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3326,7 +3324,7 @@ class InsertNotificationRequest extends $pb.GeneratedMessage {
   InsertNotificationRequest._() : super();
   factory InsertNotificationRequest({
     $core.String? bucket,
-    $4.Notification? notification,
+    $2.Notification? notification,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -3383,9 +3381,9 @@ class InsertNotificationRequest extends $pb.GeneratedMessage {
   void clearBucket() => clearField(1);
 
   @$pb.TagNumber(3)
-  $4.Notification get notification => $_getN(1);
+  $2.Notification get notification => $_getN(1);
   @$pb.TagNumber(3)
-  set notification($4.Notification v) {
+  set notification($2.Notification v) {
     setField(3, v);
   }
 
@@ -3394,7 +3392,7 @@ class InsertNotificationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearNotification() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Notification ensureNotification() => $_ensure(1);
+  $2.Notification ensureNotification() => $_ensure(1);
 
   @$pb.TagNumber(4)
   CommonRequestParams get commonRequestParams => $_getN(2);
@@ -3846,12 +3844,12 @@ class InsertObjectAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$4.ObjectAccessControl>(
+    ..aOM<$2.ObjectAccessControl>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectAccessControl',
-        subBuilder: $4.ObjectAccessControl.create)
+        subBuilder: $2.ObjectAccessControl.create)
     ..aOM<CommonRequestParams>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3865,7 +3863,7 @@ class InsertObjectAccessControlRequest extends $pb.GeneratedMessage {
     $core.String? bucket,
     $core.String? object,
     $fixnum.Int64? generation,
-    $4.ObjectAccessControl? objectAccessControl,
+    $2.ObjectAccessControl? objectAccessControl,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -3955,9 +3953,9 @@ class InsertObjectAccessControlRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(3);
 
   @$pb.TagNumber(5)
-  $4.ObjectAccessControl get objectAccessControl => $_getN(3);
+  $2.ObjectAccessControl get objectAccessControl => $_getN(3);
   @$pb.TagNumber(5)
-  set objectAccessControl($4.ObjectAccessControl v) {
+  set objectAccessControl($2.ObjectAccessControl v) {
     setField(5, v);
   }
 
@@ -3966,7 +3964,7 @@ class InsertObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearObjectAccessControl() => clearField(5);
   @$pb.TagNumber(5)
-  $4.ObjectAccessControl ensureObjectAccessControl() => $_ensure(3);
+  $2.ObjectAccessControl ensureObjectAccessControl() => $_ensure(3);
 
   @$pb.TagNumber(6)
   CommonRequestParams get commonRequestParams => $_getN(4);
@@ -4151,24 +4149,24 @@ class PatchObjectAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$4.ObjectAccessControl>(
+    ..aOM<$2.ObjectAccessControl>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectAccessControl',
-        subBuilder: $4.ObjectAccessControl.create)
+        subBuilder: $2.ObjectAccessControl.create)
     ..aOM<CommonRequestParams>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'commonRequestParams',
         subBuilder: CommonRequestParams.create)
-    ..aOM<$5.FieldMask>(
+    ..aOM<$3.FieldMask>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   PatchObjectAccessControlRequest._() : super();
@@ -4177,9 +4175,9 @@ class PatchObjectAccessControlRequest extends $pb.GeneratedMessage {
     $core.String? entity,
     $core.String? object,
     $fixnum.Int64? generation,
-    $4.ObjectAccessControl? objectAccessControl,
+    $2.ObjectAccessControl? objectAccessControl,
     CommonRequestParams? commonRequestParams,
-    $5.FieldMask? updateMask,
+    $3.FieldMask? updateMask,
   }) {
     final _result = create();
     if (bucket != null) {
@@ -4286,9 +4284,9 @@ class PatchObjectAccessControlRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(4);
 
   @$pb.TagNumber(5)
-  $4.ObjectAccessControl get objectAccessControl => $_getN(4);
+  $2.ObjectAccessControl get objectAccessControl => $_getN(4);
   @$pb.TagNumber(5)
-  set objectAccessControl($4.ObjectAccessControl v) {
+  set objectAccessControl($2.ObjectAccessControl v) {
     setField(5, v);
   }
 
@@ -4297,7 +4295,7 @@ class PatchObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearObjectAccessControl() => clearField(5);
   @$pb.TagNumber(5)
-  $4.ObjectAccessControl ensureObjectAccessControl() => $_ensure(4);
+  $2.ObjectAccessControl ensureObjectAccessControl() => $_ensure(4);
 
   @$pb.TagNumber(6)
   CommonRequestParams get commonRequestParams => $_getN(5);
@@ -4314,9 +4312,9 @@ class PatchObjectAccessControlRequest extends $pb.GeneratedMessage {
   CommonRequestParams ensureCommonRequestParams() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $5.FieldMask get updateMask => $_getN(6);
+  $3.FieldMask get updateMask => $_getN(6);
   @$pb.TagNumber(7)
-  set updateMask($5.FieldMask v) {
+  set updateMask($3.FieldMask v) {
     setField(7, v);
   }
 
@@ -4325,7 +4323,7 @@ class PatchObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearUpdateMask() => clearField(7);
   @$pb.TagNumber(7)
-  $5.FieldMask ensureUpdateMask() => $_ensure(6);
+  $3.FieldMask ensureUpdateMask() => $_ensure(6);
 }
 
 class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
@@ -4358,24 +4356,24 @@ class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$4.ObjectAccessControl>(
+    ..aOM<$2.ObjectAccessControl>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectAccessControl',
-        subBuilder: $4.ObjectAccessControl.create)
+        subBuilder: $2.ObjectAccessControl.create)
     ..aOM<CommonRequestParams>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'commonRequestParams',
         subBuilder: CommonRequestParams.create)
-    ..aOM<$5.FieldMask>(
+    ..aOM<$3.FieldMask>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateObjectAccessControlRequest._() : super();
@@ -4384,9 +4382,9 @@ class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
     $core.String? entity,
     $core.String? object,
     $fixnum.Int64? generation,
-    $4.ObjectAccessControl? objectAccessControl,
+    $2.ObjectAccessControl? objectAccessControl,
     CommonRequestParams? commonRequestParams,
-    $5.FieldMask? updateMask,
+    $3.FieldMask? updateMask,
   }) {
     final _result = create();
     if (bucket != null) {
@@ -4493,9 +4491,9 @@ class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(4);
 
   @$pb.TagNumber(6)
-  $4.ObjectAccessControl get objectAccessControl => $_getN(4);
+  $2.ObjectAccessControl get objectAccessControl => $_getN(4);
   @$pb.TagNumber(6)
-  set objectAccessControl($4.ObjectAccessControl v) {
+  set objectAccessControl($2.ObjectAccessControl v) {
     setField(6, v);
   }
 
@@ -4504,7 +4502,7 @@ class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearObjectAccessControl() => clearField(6);
   @$pb.TagNumber(6)
-  $4.ObjectAccessControl ensureObjectAccessControl() => $_ensure(4);
+  $2.ObjectAccessControl ensureObjectAccessControl() => $_ensure(4);
 
   @$pb.TagNumber(7)
   CommonRequestParams get commonRequestParams => $_getN(5);
@@ -4521,9 +4519,9 @@ class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
   CommonRequestParams ensureCommonRequestParams() => $_ensure(5);
 
   @$pb.TagNumber(8)
-  $5.FieldMask get updateMask => $_getN(6);
+  $3.FieldMask get updateMask => $_getN(6);
   @$pb.TagNumber(8)
-  set updateMask($5.FieldMask v) {
+  set updateMask($3.FieldMask v) {
     setField(8, v);
   }
 
@@ -4532,7 +4530,7 @@ class UpdateObjectAccessControlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearUpdateMask() => clearField(8);
   @$pb.TagNumber(8)
-  $5.FieldMask ensureUpdateMask() => $_ensure(6);
+  $3.FieldMask ensureUpdateMask() => $_ensure(6);
 }
 
 class ComposeObjectRequest_SourceObjects_ObjectPreconditions
@@ -4546,17 +4544,17 @@ class ComposeObjectRequest_SourceObjects_ObjectPreconditions
               ? ''
               : 'google.storage.v1'),
       createEmptyInstance: create)
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..hasRequiredFields = false;
 
   ComposeObjectRequest_SourceObjects_ObjectPreconditions._() : super();
   factory ComposeObjectRequest_SourceObjects_ObjectPreconditions({
-    $6.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationMatch,
   }) {
     final _result = create();
     if (ifGenerationMatch != null) {
@@ -4604,9 +4602,9 @@ class ComposeObjectRequest_SourceObjects_ObjectPreconditions
       _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.Int64Value get ifGenerationMatch => $_getN(0);
+  $4.Int64Value get ifGenerationMatch => $_getN(0);
   @$pb.TagNumber(1)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(1, v);
   }
 
@@ -4615,7 +4613,7 @@ class ComposeObjectRequest_SourceObjects_ObjectPreconditions
   @$pb.TagNumber(1)
   void clearIfGenerationMatch() => clearField(1);
   @$pb.TagNumber(1)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(0);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(0);
 }
 
 class ComposeObjectRequest_SourceObjects extends $pb.GeneratedMessage {
@@ -4759,28 +4757,28 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationObject')
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationPredefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..aOM<$6.Int64Value>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..aOM<$4.Int64Value>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..aOS(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -4798,12 +4796,12 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
             ? ''
             : 'commonRequestParams',
         subBuilder: CommonRequestParams.create)
-    ..aOM<$4.Object>(
+    ..aOM<$2.Object>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destination',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..pc<ComposeObjectRequest_SourceObjects>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -4817,13 +4815,13 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   factory ComposeObjectRequest({
     $core.String? destinationBucket,
     $core.String? destinationObject,
-    $4.CommonEnums_PredefinedObjectAcl? destinationPredefinedAcl,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifMetagenerationMatch,
+    $2.CommonEnums_PredefinedObjectAcl? destinationPredefinedAcl,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifMetagenerationMatch,
     $core.String? kmsKeyName,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
-    $4.Object? destination,
+    $2.Object? destination,
     $core.Iterable<ComposeObjectRequest_SourceObjects>? sourceObjects,
   }) {
     final _result = create();
@@ -4912,9 +4910,9 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   void clearDestinationObject() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.CommonEnums_PredefinedObjectAcl get destinationPredefinedAcl => $_getN(2);
+  $2.CommonEnums_PredefinedObjectAcl get destinationPredefinedAcl => $_getN(2);
   @$pb.TagNumber(3)
-  set destinationPredefinedAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set destinationPredefinedAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(3, v);
   }
 
@@ -4924,9 +4922,9 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   void clearDestinationPredefinedAcl() => clearField(3);
 
   @$pb.TagNumber(4)
-  $6.Int64Value get ifGenerationMatch => $_getN(3);
+  $4.Int64Value get ifGenerationMatch => $_getN(3);
   @$pb.TagNumber(4)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(4, v);
   }
 
@@ -4935,12 +4933,12 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIfGenerationMatch() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(3);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(4);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -4949,7 +4947,7 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfMetagenerationMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(4);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.String get kmsKeyName => $_getSZ(5);
@@ -4992,9 +4990,9 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   CommonRequestParams ensureCommonRequestParams() => $_ensure(7);
 
   @$pb.TagNumber(11)
-  $4.Object get destination => $_getN(8);
+  $2.Object get destination => $_getN(8);
   @$pb.TagNumber(11)
-  set destination($4.Object v) {
+  set destination($2.Object v) {
     setField(11, v);
   }
 
@@ -5003,7 +5001,7 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearDestination() => clearField(11);
   @$pb.TagNumber(11)
-  $4.Object ensureDestination() => $_ensure(8);
+  $2.Object ensureDestination() => $_ensure(8);
 
   @$pb.TagNumber(12)
   $core.List<ComposeObjectRequest_SourceObjects> get sourceObjects =>
@@ -5030,73 +5028,73 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationObject')
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationPredefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..aOM<$6.Int64Value>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..aOM<$4.Int64Value>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_Projection>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_Projection>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..aOS(
         13,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -5112,12 +5110,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sourceGeneration')
-    ..aOM<$4.Object>(
+    ..aOM<$2.Object>(
         17,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destination',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..aOM<CommonObjectRequestParams>(
         18,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -5141,20 +5139,20 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   factory CopyObjectRequest({
     $core.String? destinationBucket,
     $core.String? destinationObject,
-    $4.CommonEnums_PredefinedObjectAcl? destinationPredefinedAcl,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $6.Int64Value? ifSourceGenerationMatch,
-    $6.Int64Value? ifSourceGenerationNotMatch,
-    $6.Int64Value? ifSourceMetagenerationMatch,
-    $6.Int64Value? ifSourceMetagenerationNotMatch,
-    $4.CommonEnums_Projection? projection,
+    $2.CommonEnums_PredefinedObjectAcl? destinationPredefinedAcl,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $4.Int64Value? ifSourceGenerationMatch,
+    $4.Int64Value? ifSourceGenerationNotMatch,
+    $4.Int64Value? ifSourceMetagenerationMatch,
+    $4.Int64Value? ifSourceMetagenerationNotMatch,
+    $2.CommonEnums_Projection? projection,
     $core.String? sourceBucket,
     $core.String? sourceObject,
     $fixnum.Int64? sourceGeneration,
-    $4.Object? destination,
+    $2.Object? destination,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
     $core.String? destinationKmsKeyName,
@@ -5271,9 +5269,9 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   void clearDestinationObject() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.CommonEnums_PredefinedObjectAcl get destinationPredefinedAcl => $_getN(2);
+  $2.CommonEnums_PredefinedObjectAcl get destinationPredefinedAcl => $_getN(2);
   @$pb.TagNumber(3)
-  set destinationPredefinedAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set destinationPredefinedAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(3, v);
   }
 
@@ -5283,9 +5281,9 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   void clearDestinationPredefinedAcl() => clearField(3);
 
   @$pb.TagNumber(4)
-  $6.Int64Value get ifGenerationMatch => $_getN(3);
+  $4.Int64Value get ifGenerationMatch => $_getN(3);
   @$pb.TagNumber(4)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(4, v);
   }
 
@@ -5294,12 +5292,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIfGenerationMatch() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(3);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(4);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -5308,12 +5306,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfGenerationNotMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(5);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -5322,12 +5320,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfMetagenerationMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(6);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -5336,12 +5334,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfMetagenerationNotMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $6.Int64Value get ifSourceGenerationMatch => $_getN(7);
+  $4.Int64Value get ifSourceGenerationMatch => $_getN(7);
   @$pb.TagNumber(8)
-  set ifSourceGenerationMatch($6.Int64Value v) {
+  set ifSourceGenerationMatch($4.Int64Value v) {
     setField(8, v);
   }
 
@@ -5350,12 +5348,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearIfSourceGenerationMatch() => clearField(8);
   @$pb.TagNumber(8)
-  $6.Int64Value ensureIfSourceGenerationMatch() => $_ensure(7);
+  $4.Int64Value ensureIfSourceGenerationMatch() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $6.Int64Value get ifSourceGenerationNotMatch => $_getN(8);
+  $4.Int64Value get ifSourceGenerationNotMatch => $_getN(8);
   @$pb.TagNumber(9)
-  set ifSourceGenerationNotMatch($6.Int64Value v) {
+  set ifSourceGenerationNotMatch($4.Int64Value v) {
     setField(9, v);
   }
 
@@ -5364,12 +5362,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearIfSourceGenerationNotMatch() => clearField(9);
   @$pb.TagNumber(9)
-  $6.Int64Value ensureIfSourceGenerationNotMatch() => $_ensure(8);
+  $4.Int64Value ensureIfSourceGenerationNotMatch() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $6.Int64Value get ifSourceMetagenerationMatch => $_getN(9);
+  $4.Int64Value get ifSourceMetagenerationMatch => $_getN(9);
   @$pb.TagNumber(10)
-  set ifSourceMetagenerationMatch($6.Int64Value v) {
+  set ifSourceMetagenerationMatch($4.Int64Value v) {
     setField(10, v);
   }
 
@@ -5378,12 +5376,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearIfSourceMetagenerationMatch() => clearField(10);
   @$pb.TagNumber(10)
-  $6.Int64Value ensureIfSourceMetagenerationMatch() => $_ensure(9);
+  $4.Int64Value ensureIfSourceMetagenerationMatch() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $6.Int64Value get ifSourceMetagenerationNotMatch => $_getN(10);
+  $4.Int64Value get ifSourceMetagenerationNotMatch => $_getN(10);
   @$pb.TagNumber(11)
-  set ifSourceMetagenerationNotMatch($6.Int64Value v) {
+  set ifSourceMetagenerationNotMatch($4.Int64Value v) {
     setField(11, v);
   }
 
@@ -5392,12 +5390,12 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearIfSourceMetagenerationNotMatch() => clearField(11);
   @$pb.TagNumber(11)
-  $6.Int64Value ensureIfSourceMetagenerationNotMatch() => $_ensure(10);
+  $4.Int64Value ensureIfSourceMetagenerationNotMatch() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $4.CommonEnums_Projection get projection => $_getN(11);
+  $2.CommonEnums_Projection get projection => $_getN(11);
   @$pb.TagNumber(12)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(12, v);
   }
 
@@ -5443,9 +5441,9 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   void clearSourceGeneration() => clearField(15);
 
   @$pb.TagNumber(17)
-  $4.Object get destination => $_getN(15);
+  $2.Object get destination => $_getN(15);
   @$pb.TagNumber(17)
-  set destination($4.Object v) {
+  set destination($2.Object v) {
     setField(17, v);
   }
 
@@ -5454,7 +5452,7 @@ class CopyObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   void clearDestination() => clearField(17);
   @$pb.TagNumber(17)
-  $4.Object ensureDestination() => $_ensure(15);
+  $2.Object ensureDestination() => $_ensure(15);
 
   @$pb.TagNumber(18)
   CommonObjectRequestParams get commonObjectRequestParams => $_getN(16);
@@ -5527,30 +5525,30 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..aOM<CommonObjectRequestParams>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -5571,10 +5569,10 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
     $core.String? object,
     $core.String? uploadId,
     $fixnum.Int64? generation,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
   }) {
@@ -5687,9 +5685,9 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(4);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifGenerationMatch => $_getN(4);
+  $4.Int64Value get ifGenerationMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -5698,12 +5696,12 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfGenerationMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(4);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(5);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -5712,12 +5710,12 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfGenerationNotMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(5);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(6);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -5726,12 +5724,12 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfMetagenerationMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(6);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(7);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(7);
   @$pb.TagNumber(8)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(8, v);
   }
 
@@ -5740,7 +5738,7 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearIfMetagenerationNotMatch() => clearField(8);
   @$pb.TagNumber(8)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(7);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(7);
 
   @$pb.TagNumber(10)
   CommonObjectRequestParams get commonObjectRequestParams => $_getN(8);
@@ -5806,30 +5804,30 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'readLimit')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..aOM<CommonObjectRequestParams>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -5851,10 +5849,10 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? generation,
     $fixnum.Int64? readOffset,
     $fixnum.Int64? readLimit,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
   }) {
@@ -5984,9 +5982,9 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
   void clearReadLimit() => clearField(5);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifGenerationMatch => $_getN(5);
+  $4.Int64Value get ifGenerationMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -5995,12 +5993,12 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfGenerationMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(5);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(6);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -6009,12 +6007,12 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfGenerationNotMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(6);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(7);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(7);
   @$pb.TagNumber(8)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(8, v);
   }
 
@@ -6023,12 +6021,12 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearIfMetagenerationMatch() => clearField(8);
   @$pb.TagNumber(8)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(7);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(8);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(8);
   @$pb.TagNumber(9)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(9, v);
   }
 
@@ -6037,7 +6035,7 @@ class GetObjectMediaRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearIfMetagenerationNotMatch() => clearField(9);
   @$pb.TagNumber(9)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(8);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(8);
 
   @$pb.TagNumber(11)
   CommonObjectRequestParams get commonObjectRequestParams => $_getN(9);
@@ -6093,39 +6091,39 @@ class GetObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_Projection>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_Projection>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..aOM<CommonObjectRequestParams>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -6145,11 +6143,11 @@ class GetObjectRequest extends $pb.GeneratedMessage {
     $core.String? bucket,
     $core.String? object,
     $fixnum.Int64? generation,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_Projection? projection,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_Projection? projection,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
   }) {
@@ -6250,9 +6248,9 @@ class GetObjectRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(3);
 
   @$pb.TagNumber(4)
-  $6.Int64Value get ifGenerationMatch => $_getN(3);
+  $4.Int64Value get ifGenerationMatch => $_getN(3);
   @$pb.TagNumber(4)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(4, v);
   }
 
@@ -6261,12 +6259,12 @@ class GetObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIfGenerationMatch() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(3);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(4);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -6275,12 +6273,12 @@ class GetObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfGenerationNotMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(5);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -6289,12 +6287,12 @@ class GetObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfMetagenerationMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(6);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -6303,12 +6301,12 @@ class GetObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfMetagenerationNotMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $4.CommonEnums_Projection get projection => $_getN(7);
+  $2.CommonEnums_Projection get projection => $_getN(7);
   @$pb.TagNumber(8)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(8, v);
   }
 
@@ -6356,38 +6354,38 @@ class GetObjectMediaResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.storage.v1'),
       createEmptyInstance: create)
-    ..aOM<$4.ChecksummedData>(
+    ..aOM<$2.ChecksummedData>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'checksummedData',
-        subBuilder: $4.ChecksummedData.create)
-    ..aOM<$4.ObjectChecksums>(
+        subBuilder: $2.ChecksummedData.create)
+    ..aOM<$2.ObjectChecksums>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectChecksums',
-        subBuilder: $4.ObjectChecksums.create)
-    ..aOM<$4.ContentRange>(
+        subBuilder: $2.ObjectChecksums.create)
+    ..aOM<$2.ContentRange>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'contentRange',
-        subBuilder: $4.ContentRange.create)
-    ..aOM<$4.Object>(
+        subBuilder: $2.ContentRange.create)
+    ..aOM<$2.Object>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..hasRequiredFields = false;
 
   GetObjectMediaResponse._() : super();
   factory GetObjectMediaResponse({
-    $4.ChecksummedData? checksummedData,
-    $4.ObjectChecksums? objectChecksums,
-    $4.ContentRange? contentRange,
-    $4.Object? metadata,
+    $2.ChecksummedData? checksummedData,
+    $2.ObjectChecksums? objectChecksums,
+    $2.ContentRange? contentRange,
+    $2.Object? metadata,
   }) {
     final _result = create();
     if (checksummedData != null) {
@@ -6434,9 +6432,9 @@ class GetObjectMediaResponse extends $pb.GeneratedMessage {
   static GetObjectMediaResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.ChecksummedData get checksummedData => $_getN(0);
+  $2.ChecksummedData get checksummedData => $_getN(0);
   @$pb.TagNumber(1)
-  set checksummedData($4.ChecksummedData v) {
+  set checksummedData($2.ChecksummedData v) {
     setField(1, v);
   }
 
@@ -6445,12 +6443,12 @@ class GetObjectMediaResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearChecksummedData() => clearField(1);
   @$pb.TagNumber(1)
-  $4.ChecksummedData ensureChecksummedData() => $_ensure(0);
+  $2.ChecksummedData ensureChecksummedData() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $4.ObjectChecksums get objectChecksums => $_getN(1);
+  $2.ObjectChecksums get objectChecksums => $_getN(1);
   @$pb.TagNumber(2)
-  set objectChecksums($4.ObjectChecksums v) {
+  set objectChecksums($2.ObjectChecksums v) {
     setField(2, v);
   }
 
@@ -6459,12 +6457,12 @@ class GetObjectMediaResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearObjectChecksums() => clearField(2);
   @$pb.TagNumber(2)
-  $4.ObjectChecksums ensureObjectChecksums() => $_ensure(1);
+  $2.ObjectChecksums ensureObjectChecksums() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $4.ContentRange get contentRange => $_getN(2);
+  $2.ContentRange get contentRange => $_getN(2);
   @$pb.TagNumber(3)
-  set contentRange($4.ContentRange v) {
+  set contentRange($2.ContentRange v) {
     setField(3, v);
   }
 
@@ -6473,12 +6471,12 @@ class GetObjectMediaResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearContentRange() => clearField(3);
   @$pb.TagNumber(3)
-  $4.ContentRange ensureContentRange() => $_ensure(2);
+  $2.ContentRange ensureContentRange() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $4.Object get metadata => $_getN(3);
+  $2.Object get metadata => $_getN(3);
   @$pb.TagNumber(4)
-  set metadata($4.Object v) {
+  set metadata($2.Object v) {
     setField(4, v);
   }
 
@@ -6487,7 +6485,7 @@ class GetObjectMediaResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMetadata() => clearField(4);
   @$pb.TagNumber(4)
-  $4.Object ensureMetadata() => $_ensure(3);
+  $2.Object ensureMetadata() => $_ensure(3);
 }
 
 class InsertObjectSpec extends $pb.GeneratedMessage {
@@ -6500,66 +6498,66 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
               ? ''
               : 'google.storage.v1'),
       createEmptyInstance: create)
-    ..aOM<$4.Object>(
+    ..aOM<$2.Object>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'resource',
-        subBuilder: $4.Object.create)
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+        subBuilder: $2.Object.create)
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..aOM<$6.Int64Value>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..aOM<$4.Int64Value>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_Projection>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_Projection>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..hasRequiredFields = false;
 
   InsertObjectSpec._() : super();
   factory InsertObjectSpec({
-    $4.Object? resource,
-    $4.CommonEnums_PredefinedObjectAcl? predefinedAcl,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_Projection? projection,
+    $2.Object? resource,
+    $2.CommonEnums_PredefinedObjectAcl? predefinedAcl,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_Projection? projection,
   }) {
     final _result = create();
     if (resource != null) {
@@ -6613,9 +6611,9 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   static InsertObjectSpec? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.Object get resource => $_getN(0);
+  $2.Object get resource => $_getN(0);
   @$pb.TagNumber(1)
-  set resource($4.Object v) {
+  set resource($2.Object v) {
     setField(1, v);
   }
 
@@ -6624,12 +6622,12 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResource() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Object ensureResource() => $_ensure(0);
+  $2.Object ensureResource() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $4.CommonEnums_PredefinedObjectAcl get predefinedAcl => $_getN(1);
+  $2.CommonEnums_PredefinedObjectAcl get predefinedAcl => $_getN(1);
   @$pb.TagNumber(2)
-  set predefinedAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set predefinedAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(2, v);
   }
 
@@ -6639,9 +6637,9 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   void clearPredefinedAcl() => clearField(2);
 
   @$pb.TagNumber(3)
-  $6.Int64Value get ifGenerationMatch => $_getN(2);
+  $4.Int64Value get ifGenerationMatch => $_getN(2);
   @$pb.TagNumber(3)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(3, v);
   }
 
@@ -6650,12 +6648,12 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIfGenerationMatch() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(2);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(3);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(3);
   @$pb.TagNumber(4)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(4, v);
   }
 
@@ -6664,12 +6662,12 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIfGenerationNotMatch() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(3);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(4);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -6678,12 +6676,12 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfMetagenerationMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(4);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(5);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -6692,12 +6690,12 @@ class InsertObjectSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfMetagenerationNotMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(5);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $4.CommonEnums_Projection get projection => $_getN(6);
+  $2.CommonEnums_Projection get projection => $_getN(6);
   @$pb.TagNumber(7)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(7, v);
   }
 
@@ -6751,24 +6749,24 @@ class InsertObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'writeOffset')
-    ..aOM<$4.ChecksummedData>(
+    ..aOM<$2.ChecksummedData>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'checksummedData',
-        subBuilder: $4.ChecksummedData.create)
+        subBuilder: $2.ChecksummedData.create)
     ..aOM<GetObjectMediaRequest>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'reference',
         subBuilder: GetObjectMediaRequest.create)
-    ..aOM<$4.ObjectChecksums>(
+    ..aOM<$2.ObjectChecksums>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'objectChecksums',
-        subBuilder: $4.ObjectChecksums.create)
+        subBuilder: $2.ObjectChecksums.create)
     ..aOB(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -6793,9 +6791,9 @@ class InsertObjectRequest extends $pb.GeneratedMessage {
     $core.String? uploadId,
     InsertObjectSpec? insertObjectSpec,
     $fixnum.Int64? writeOffset,
-    $4.ChecksummedData? checksummedData,
+    $2.ChecksummedData? checksummedData,
     GetObjectMediaRequest? reference,
-    $4.ObjectChecksums? objectChecksums,
+    $2.ObjectChecksums? objectChecksums,
     $core.bool? finishWrite,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
@@ -6904,9 +6902,9 @@ class InsertObjectRequest extends $pb.GeneratedMessage {
   void clearWriteOffset() => clearField(3);
 
   @$pb.TagNumber(4)
-  $4.ChecksummedData get checksummedData => $_getN(3);
+  $2.ChecksummedData get checksummedData => $_getN(3);
   @$pb.TagNumber(4)
-  set checksummedData($4.ChecksummedData v) {
+  set checksummedData($2.ChecksummedData v) {
     setField(4, v);
   }
 
@@ -6915,7 +6913,7 @@ class InsertObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearChecksummedData() => clearField(4);
   @$pb.TagNumber(4)
-  $4.ChecksummedData ensureChecksummedData() => $_ensure(3);
+  $2.ChecksummedData ensureChecksummedData() => $_ensure(3);
 
   @$pb.TagNumber(5)
   GetObjectMediaRequest get reference => $_getN(4);
@@ -6932,9 +6930,9 @@ class InsertObjectRequest extends $pb.GeneratedMessage {
   GetObjectMediaRequest ensureReference() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $4.ObjectChecksums get objectChecksums => $_getN(5);
+  $2.ObjectChecksums get objectChecksums => $_getN(5);
   @$pb.TagNumber(6)
-  set objectChecksums($4.ObjectChecksums v) {
+  set objectChecksums($2.ObjectChecksums v) {
     setField(6, v);
   }
 
@@ -6943,7 +6941,7 @@ class InsertObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearObjectChecksums() => clearField(6);
   @$pb.TagNumber(6)
-  $4.ObjectChecksums ensureObjectChecksums() => $_ensure(5);
+  $2.ObjectChecksums ensureObjectChecksums() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.bool get finishWrite => $_getBF(6);
@@ -7027,15 +7025,15 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'prefix')
-    ..e<$4.CommonEnums_Projection>(
+    ..e<$2.CommonEnums_Projection>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..aOB(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -7067,7 +7065,7 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
     $core.int? maxResults,
     $core.String? pageToken,
     $core.String? prefix,
-    $4.CommonEnums_Projection? projection,
+    $2.CommonEnums_Projection? projection,
     $core.bool? versions,
     CommonRequestParams? commonRequestParams,
     $core.String? lexicographicStart,
@@ -7209,9 +7207,9 @@ class ListObjectsRequest extends $pb.GeneratedMessage {
   void clearPrefix() => clearField(6);
 
   @$pb.TagNumber(7)
-  $4.CommonEnums_Projection get projection => $_getN(6);
+  $2.CommonEnums_Projection get projection => $_getN(6);
   @$pb.TagNumber(7)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(7, v);
   }
 
@@ -7408,19 +7406,19 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'complete')
-    ..aOM<$4.Object>(
+    ..aOM<$2.Object>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'resource',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..hasRequiredFields = false;
 
   QueryWriteStatusResponse._() : super();
   factory QueryWriteStatusResponse({
     $fixnum.Int64? committedSize,
     $core.bool? complete,
-    $4.Object? resource,
+    $2.Object? resource,
   }) {
     final _result = create();
     if (committedSize != null) {
@@ -7488,9 +7486,9 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
   void clearComplete() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.Object get resource => $_getN(2);
+  $2.Object get resource => $_getN(2);
   @$pb.TagNumber(3)
-  set resource($4.Object v) {
+  set resource($2.Object v) {
     setField(3, v);
   }
 
@@ -7499,7 +7497,7 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearResource() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Object ensureResource() => $_ensure(2);
+  $2.Object ensureResource() => $_ensure(2);
 }
 
 class RewriteObjectRequest extends $pb.GeneratedMessage {
@@ -7527,78 +7525,78 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationKmsKeyName')
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationPredefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..aOM<$6.Int64Value>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifSourceMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
+        subBuilder: $4.Int64Value.create)
     ..aInt64(
         13,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'maxBytesRewrittenPerCall')
-    ..e<$4.CommonEnums_Projection>(
+    ..e<$2.CommonEnums_Projection>(
         14,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
     ..aOS(
         15,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -7619,12 +7617,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sourceGeneration')
-    ..aOM<$4.Object>(
+    ..aOM<$2.Object>(
         20,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'object',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..aOS(
         21,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -7659,22 +7657,22 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
     $core.String? destinationBucket,
     $core.String? destinationObject,
     $core.String? destinationKmsKeyName,
-    $4.CommonEnums_PredefinedObjectAcl? destinationPredefinedAcl,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $6.Int64Value? ifSourceGenerationMatch,
-    $6.Int64Value? ifSourceGenerationNotMatch,
-    $6.Int64Value? ifSourceMetagenerationMatch,
-    $6.Int64Value? ifSourceMetagenerationNotMatch,
+    $2.CommonEnums_PredefinedObjectAcl? destinationPredefinedAcl,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $4.Int64Value? ifSourceGenerationMatch,
+    $4.Int64Value? ifSourceGenerationNotMatch,
+    $4.Int64Value? ifSourceMetagenerationMatch,
+    $4.Int64Value? ifSourceMetagenerationNotMatch,
     $fixnum.Int64? maxBytesRewrittenPerCall,
-    $4.CommonEnums_Projection? projection,
+    $2.CommonEnums_Projection? projection,
     $core.String? rewriteToken,
     $core.String? sourceBucket,
     $core.String? sourceObject,
     $fixnum.Int64? sourceGeneration,
-    $4.Object? object,
+    $2.Object? object,
     $core.String? copySourceEncryptionAlgorithm,
     $core.String? copySourceEncryptionKey,
     $core.String? copySourceEncryptionKeySha256,
@@ -7821,9 +7819,9 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   void clearDestinationKmsKeyName() => clearField(3);
 
   @$pb.TagNumber(4)
-  $4.CommonEnums_PredefinedObjectAcl get destinationPredefinedAcl => $_getN(3);
+  $2.CommonEnums_PredefinedObjectAcl get destinationPredefinedAcl => $_getN(3);
   @$pb.TagNumber(4)
-  set destinationPredefinedAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set destinationPredefinedAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(4, v);
   }
 
@@ -7833,9 +7831,9 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   void clearDestinationPredefinedAcl() => clearField(4);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifGenerationMatch => $_getN(4);
+  $4.Int64Value get ifGenerationMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -7844,12 +7842,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfGenerationMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(4);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(5);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -7858,12 +7856,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfGenerationNotMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(5);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(6);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -7872,12 +7870,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfMetagenerationMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(6);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(7);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(7);
   @$pb.TagNumber(8)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(8, v);
   }
 
@@ -7886,12 +7884,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearIfMetagenerationNotMatch() => clearField(8);
   @$pb.TagNumber(8)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(7);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $6.Int64Value get ifSourceGenerationMatch => $_getN(8);
+  $4.Int64Value get ifSourceGenerationMatch => $_getN(8);
   @$pb.TagNumber(9)
-  set ifSourceGenerationMatch($6.Int64Value v) {
+  set ifSourceGenerationMatch($4.Int64Value v) {
     setField(9, v);
   }
 
@@ -7900,12 +7898,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearIfSourceGenerationMatch() => clearField(9);
   @$pb.TagNumber(9)
-  $6.Int64Value ensureIfSourceGenerationMatch() => $_ensure(8);
+  $4.Int64Value ensureIfSourceGenerationMatch() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $6.Int64Value get ifSourceGenerationNotMatch => $_getN(9);
+  $4.Int64Value get ifSourceGenerationNotMatch => $_getN(9);
   @$pb.TagNumber(10)
-  set ifSourceGenerationNotMatch($6.Int64Value v) {
+  set ifSourceGenerationNotMatch($4.Int64Value v) {
     setField(10, v);
   }
 
@@ -7914,12 +7912,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearIfSourceGenerationNotMatch() => clearField(10);
   @$pb.TagNumber(10)
-  $6.Int64Value ensureIfSourceGenerationNotMatch() => $_ensure(9);
+  $4.Int64Value ensureIfSourceGenerationNotMatch() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $6.Int64Value get ifSourceMetagenerationMatch => $_getN(10);
+  $4.Int64Value get ifSourceMetagenerationMatch => $_getN(10);
   @$pb.TagNumber(11)
-  set ifSourceMetagenerationMatch($6.Int64Value v) {
+  set ifSourceMetagenerationMatch($4.Int64Value v) {
     setField(11, v);
   }
 
@@ -7928,12 +7926,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearIfSourceMetagenerationMatch() => clearField(11);
   @$pb.TagNumber(11)
-  $6.Int64Value ensureIfSourceMetagenerationMatch() => $_ensure(10);
+  $4.Int64Value ensureIfSourceMetagenerationMatch() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $6.Int64Value get ifSourceMetagenerationNotMatch => $_getN(11);
+  $4.Int64Value get ifSourceMetagenerationNotMatch => $_getN(11);
   @$pb.TagNumber(12)
-  set ifSourceMetagenerationNotMatch($6.Int64Value v) {
+  set ifSourceMetagenerationNotMatch($4.Int64Value v) {
     setField(12, v);
   }
 
@@ -7942,7 +7940,7 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearIfSourceMetagenerationNotMatch() => clearField(12);
   @$pb.TagNumber(12)
-  $6.Int64Value ensureIfSourceMetagenerationNotMatch() => $_ensure(11);
+  $4.Int64Value ensureIfSourceMetagenerationNotMatch() => $_ensure(11);
 
   @$pb.TagNumber(13)
   $fixnum.Int64 get maxBytesRewrittenPerCall => $_getI64(12);
@@ -7957,9 +7955,9 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   void clearMaxBytesRewrittenPerCall() => clearField(13);
 
   @$pb.TagNumber(14)
-  $4.CommonEnums_Projection get projection => $_getN(13);
+  $2.CommonEnums_Projection get projection => $_getN(13);
   @$pb.TagNumber(14)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(14, v);
   }
 
@@ -8017,9 +8015,9 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   void clearSourceGeneration() => clearField(18);
 
   @$pb.TagNumber(20)
-  $4.Object get object => $_getN(18);
+  $2.Object get object => $_getN(18);
   @$pb.TagNumber(20)
-  set object($4.Object v) {
+  set object($2.Object v) {
     setField(20, v);
   }
 
@@ -8028,7 +8026,7 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   void clearObject() => clearField(20);
   @$pb.TagNumber(20)
-  $4.Object ensureObject() => $_ensure(18);
+  $2.Object ensureObject() => $_ensure(18);
 
   @$pb.TagNumber(21)
   $core.String get copySourceEncryptionAlgorithm => $_getSZ(19);
@@ -8125,12 +8123,12 @@ class RewriteResponse extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'rewriteToken')
-    ..aOM<$4.Object>(
+    ..aOM<$2.Object>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'resource',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..hasRequiredFields = false;
 
   RewriteResponse._() : super();
@@ -8139,7 +8137,7 @@ class RewriteResponse extends $pb.GeneratedMessage {
     $fixnum.Int64? objectSize,
     $core.bool? done,
     $core.String? rewriteToken,
-    $4.Object? resource,
+    $2.Object? resource,
   }) {
     final _result = create();
     if (totalBytesRewritten != null) {
@@ -8235,9 +8233,9 @@ class RewriteResponse extends $pb.GeneratedMessage {
   void clearRewriteToken() => clearField(4);
 
   @$pb.TagNumber(5)
-  $4.Object get resource => $_getN(4);
+  $2.Object get resource => $_getN(4);
   @$pb.TagNumber(5)
-  set resource($4.Object v) {
+  set resource($2.Object v) {
     setField(5, v);
   }
 
@@ -8246,7 +8244,7 @@ class RewriteResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearResource() => clearField(5);
   @$pb.TagNumber(5)
-  $4.Object ensureResource() => $_ensure(4);
+  $2.Object ensureResource() => $_ensure(4);
 }
 
 class StartResumableWriteRequest extends $pb.GeneratedMessage {
@@ -8466,61 +8464,61 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..e<$4.CommonEnums_Projection>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..e<$2.CommonEnums_Projection>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
-    ..aOM<$4.Object>(
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
+    ..aOM<$2.Object>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.Object.create)
-    ..aOM<$5.FieldMask>(
+        subBuilder: $2.Object.create)
+    ..aOM<$3.FieldMask>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..aOM<CommonObjectRequestParams>(
         13,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -8540,14 +8538,14 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
     $core.String? bucket,
     $core.String? object,
     $fixnum.Int64? generation,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_PredefinedObjectAcl? predefinedAcl,
-    $4.CommonEnums_Projection? projection,
-    $4.Object? metadata,
-    $5.FieldMask? updateMask,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_PredefinedObjectAcl? predefinedAcl,
+    $2.CommonEnums_Projection? projection,
+    $2.Object? metadata,
+    $3.FieldMask? updateMask,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
   }) {
@@ -8657,9 +8655,9 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(3);
 
   @$pb.TagNumber(4)
-  $6.Int64Value get ifGenerationMatch => $_getN(3);
+  $4.Int64Value get ifGenerationMatch => $_getN(3);
   @$pb.TagNumber(4)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(4, v);
   }
 
@@ -8668,12 +8666,12 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIfGenerationMatch() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(3);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(4);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -8682,12 +8680,12 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfGenerationNotMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(5);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -8696,12 +8694,12 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfMetagenerationMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(6);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -8710,12 +8708,12 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfMetagenerationNotMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $4.CommonEnums_PredefinedObjectAcl get predefinedAcl => $_getN(7);
+  $2.CommonEnums_PredefinedObjectAcl get predefinedAcl => $_getN(7);
   @$pb.TagNumber(8)
-  set predefinedAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set predefinedAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(8, v);
   }
 
@@ -8725,9 +8723,9 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   void clearPredefinedAcl() => clearField(8);
 
   @$pb.TagNumber(9)
-  $4.CommonEnums_Projection get projection => $_getN(8);
+  $2.CommonEnums_Projection get projection => $_getN(8);
   @$pb.TagNumber(9)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(9, v);
   }
 
@@ -8737,9 +8735,9 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   void clearProjection() => clearField(9);
 
   @$pb.TagNumber(11)
-  $4.Object get metadata => $_getN(9);
+  $2.Object get metadata => $_getN(9);
   @$pb.TagNumber(11)
-  set metadata($4.Object v) {
+  set metadata($2.Object v) {
     setField(11, v);
   }
 
@@ -8748,12 +8746,12 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearMetadata() => clearField(11);
   @$pb.TagNumber(11)
-  $4.Object ensureMetadata() => $_ensure(9);
+  $2.Object ensureMetadata() => $_ensure(9);
 
   @$pb.TagNumber(12)
-  $5.FieldMask get updateMask => $_getN(10);
+  $3.FieldMask get updateMask => $_getN(10);
   @$pb.TagNumber(12)
-  set updateMask($5.FieldMask v) {
+  set updateMask($3.FieldMask v) {
     setField(12, v);
   }
 
@@ -8762,7 +8760,7 @@ class PatchObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearUpdateMask() => clearField(12);
   @$pb.TagNumber(12)
-  $5.FieldMask ensureUpdateMask() => $_ensure(10);
+  $3.FieldMask ensureUpdateMask() => $_ensure(10);
 
   @$pb.TagNumber(13)
   CommonObjectRequestParams get commonObjectRequestParams => $_getN(11);
@@ -8818,55 +8816,55 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'generation')
-    ..aOM<$6.Int64Value>(
+    ..aOM<$4.Int64Value>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifGenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationMatch',
-        subBuilder: $6.Int64Value.create)
-    ..aOM<$6.Int64Value>(
+        subBuilder: $4.Int64Value.create)
+    ..aOM<$4.Int64Value>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ifMetagenerationNotMatch',
-        subBuilder: $6.Int64Value.create)
-    ..e<$4.CommonEnums_PredefinedObjectAcl>(
+        subBuilder: $4.Int64Value.create)
+    ..e<$2.CommonEnums_PredefinedObjectAcl>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4
+        defaultOrMaker: $2
             .CommonEnums_PredefinedObjectAcl.PREDEFINED_OBJECT_ACL_UNSPECIFIED,
-        valueOf: $4.CommonEnums_PredefinedObjectAcl.valueOf,
-        enumValues: $4.CommonEnums_PredefinedObjectAcl.values)
-    ..e<$4.CommonEnums_Projection>(
+        valueOf: $2.CommonEnums_PredefinedObjectAcl.valueOf,
+        enumValues: $2.CommonEnums_PredefinedObjectAcl.values)
+    ..e<$2.CommonEnums_Projection>(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
-    ..aOM<$4.Object>(
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
+    ..aOM<$2.Object>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.Object.create)
+        subBuilder: $2.Object.create)
     ..aOM<CommonObjectRequestParams>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -8886,13 +8884,13 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
     $core.String? bucket,
     $core.String? object,
     $fixnum.Int64? generation,
-    $6.Int64Value? ifGenerationMatch,
-    $6.Int64Value? ifGenerationNotMatch,
-    $6.Int64Value? ifMetagenerationMatch,
-    $6.Int64Value? ifMetagenerationNotMatch,
-    $4.CommonEnums_PredefinedObjectAcl? predefinedAcl,
-    $4.CommonEnums_Projection? projection,
-    $4.Object? metadata,
+    $4.Int64Value? ifGenerationMatch,
+    $4.Int64Value? ifGenerationNotMatch,
+    $4.Int64Value? ifMetagenerationMatch,
+    $4.Int64Value? ifMetagenerationNotMatch,
+    $2.CommonEnums_PredefinedObjectAcl? predefinedAcl,
+    $2.CommonEnums_Projection? projection,
+    $2.Object? metadata,
     CommonObjectRequestParams? commonObjectRequestParams,
     CommonRequestParams? commonRequestParams,
   }) {
@@ -8999,9 +8997,9 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(3);
 
   @$pb.TagNumber(4)
-  $6.Int64Value get ifGenerationMatch => $_getN(3);
+  $4.Int64Value get ifGenerationMatch => $_getN(3);
   @$pb.TagNumber(4)
-  set ifGenerationMatch($6.Int64Value v) {
+  set ifGenerationMatch($4.Int64Value v) {
     setField(4, v);
   }
 
@@ -9010,12 +9008,12 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIfGenerationMatch() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Int64Value ensureIfGenerationMatch() => $_ensure(3);
+  $4.Int64Value ensureIfGenerationMatch() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.Int64Value get ifGenerationNotMatch => $_getN(4);
+  $4.Int64Value get ifGenerationNotMatch => $_getN(4);
   @$pb.TagNumber(5)
-  set ifGenerationNotMatch($6.Int64Value v) {
+  set ifGenerationNotMatch($4.Int64Value v) {
     setField(5, v);
   }
 
@@ -9024,12 +9022,12 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIfGenerationNotMatch() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
+  $4.Int64Value ensureIfGenerationNotMatch() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.Int64Value get ifMetagenerationMatch => $_getN(5);
+  $4.Int64Value get ifMetagenerationMatch => $_getN(5);
   @$pb.TagNumber(6)
-  set ifMetagenerationMatch($6.Int64Value v) {
+  set ifMetagenerationMatch($4.Int64Value v) {
     setField(6, v);
   }
 
@@ -9038,12 +9036,12 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIfMetagenerationMatch() => clearField(6);
   @$pb.TagNumber(6)
-  $6.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
+  $4.Int64Value ensureIfMetagenerationMatch() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $6.Int64Value get ifMetagenerationNotMatch => $_getN(6);
+  $4.Int64Value get ifMetagenerationNotMatch => $_getN(6);
   @$pb.TagNumber(7)
-  set ifMetagenerationNotMatch($6.Int64Value v) {
+  set ifMetagenerationNotMatch($4.Int64Value v) {
     setField(7, v);
   }
 
@@ -9052,12 +9050,12 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearIfMetagenerationNotMatch() => clearField(7);
   @$pb.TagNumber(7)
-  $6.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
+  $4.Int64Value ensureIfMetagenerationNotMatch() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $4.CommonEnums_PredefinedObjectAcl get predefinedAcl => $_getN(7);
+  $2.CommonEnums_PredefinedObjectAcl get predefinedAcl => $_getN(7);
   @$pb.TagNumber(8)
-  set predefinedAcl($4.CommonEnums_PredefinedObjectAcl v) {
+  set predefinedAcl($2.CommonEnums_PredefinedObjectAcl v) {
     setField(8, v);
   }
 
@@ -9067,9 +9065,9 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   void clearPredefinedAcl() => clearField(8);
 
   @$pb.TagNumber(9)
-  $4.CommonEnums_Projection get projection => $_getN(8);
+  $2.CommonEnums_Projection get projection => $_getN(8);
   @$pb.TagNumber(9)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(9, v);
   }
 
@@ -9079,9 +9077,9 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   void clearProjection() => clearField(9);
 
   @$pb.TagNumber(11)
-  $4.Object get metadata => $_getN(9);
+  $2.Object get metadata => $_getN(9);
   @$pb.TagNumber(11)
-  set metadata($4.Object v) {
+  set metadata($2.Object v) {
     setField(11, v);
   }
 
@@ -9090,7 +9088,7 @@ class UpdateObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearMetadata() => clearField(11);
   @$pb.TagNumber(11)
-  $4.Object ensureMetadata() => $_ensure(9);
+  $2.Object ensureMetadata() => $_ensure(9);
 
   @$pb.TagNumber(12)
   CommonObjectRequestParams get commonObjectRequestParams => $_getN(10);
@@ -9167,21 +9165,21 @@ class WatchAllObjectsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'pageToken')
-    ..e<$4.CommonEnums_Projection>(
+    ..e<$2.CommonEnums_Projection>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projection',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $4.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
-        valueOf: $4.CommonEnums_Projection.valueOf,
-        enumValues: $4.CommonEnums_Projection.values)
-    ..aOM<$4.Channel>(
+        defaultOrMaker: $2.CommonEnums_Projection.PROJECTION_UNSPECIFIED,
+        valueOf: $2.CommonEnums_Projection.valueOf,
+        enumValues: $2.CommonEnums_Projection.values)
+    ..aOM<$2.Channel>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'channel',
-        subBuilder: $4.Channel.create)
+        subBuilder: $2.Channel.create)
     ..aOM<CommonRequestParams>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -9199,8 +9197,8 @@ class WatchAllObjectsRequest extends $pb.GeneratedMessage {
     $core.String? prefix,
     $core.bool? includeTrailingDelimiter,
     $core.String? pageToken,
-    $4.CommonEnums_Projection? projection,
-    $4.Channel? channel,
+    $2.CommonEnums_Projection? projection,
+    $2.Channel? channel,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -9350,9 +9348,9 @@ class WatchAllObjectsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(7);
 
   @$pb.TagNumber(8)
-  $4.CommonEnums_Projection get projection => $_getN(7);
+  $2.CommonEnums_Projection get projection => $_getN(7);
   @$pb.TagNumber(8)
-  set projection($4.CommonEnums_Projection v) {
+  set projection($2.CommonEnums_Projection v) {
     setField(8, v);
   }
 
@@ -9362,9 +9360,9 @@ class WatchAllObjectsRequest extends $pb.GeneratedMessage {
   void clearProjection() => clearField(8);
 
   @$pb.TagNumber(10)
-  $4.Channel get channel => $_getN(8);
+  $2.Channel get channel => $_getN(8);
   @$pb.TagNumber(10)
-  set channel($4.Channel v) {
+  set channel($2.Channel v) {
     setField(10, v);
   }
 
@@ -9373,7 +9371,7 @@ class WatchAllObjectsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearChannel() => clearField(10);
   @$pb.TagNumber(10)
-  $4.Channel ensureChannel() => $_ensure(8);
+  $2.Channel ensureChannel() => $_ensure(8);
 
   @$pb.TagNumber(11)
   CommonRequestParams get commonRequestParams => $_getN(9);
@@ -9609,12 +9607,12 @@ class CreateHmacKeyResponse extends $pb.GeneratedMessage {
               ? ''
               : 'google.storage.v1'),
       createEmptyInstance: create)
-    ..aOM<$4.HmacKeyMetadata>(
+    ..aOM<$2.HmacKeyMetadata>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.HmacKeyMetadata.create)
+        subBuilder: $2.HmacKeyMetadata.create)
     ..aOS(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -9624,7 +9622,7 @@ class CreateHmacKeyResponse extends $pb.GeneratedMessage {
 
   CreateHmacKeyResponse._() : super();
   factory CreateHmacKeyResponse({
-    $4.HmacKeyMetadata? metadata,
+    $2.HmacKeyMetadata? metadata,
     $core.String? secret,
   }) {
     final _result = create();
@@ -9666,9 +9664,9 @@ class CreateHmacKeyResponse extends $pb.GeneratedMessage {
   static CreateHmacKeyResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.HmacKeyMetadata get metadata => $_getN(0);
+  $2.HmacKeyMetadata get metadata => $_getN(0);
   @$pb.TagNumber(1)
-  set metadata($4.HmacKeyMetadata v) {
+  set metadata($2.HmacKeyMetadata v) {
     setField(1, v);
   }
 
@@ -9677,7 +9675,7 @@ class CreateHmacKeyResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMetadata() => clearField(1);
   @$pb.TagNumber(1)
-  $4.HmacKeyMetadata ensureMetadata() => $_ensure(0);
+  $2.HmacKeyMetadata ensureMetadata() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get secret => $_getSZ(1);
@@ -10108,19 +10106,19 @@ class ListHmacKeysResponse extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'nextPageToken')
-    ..pc<$4.HmacKeyMetadata>(
+    ..pc<$2.HmacKeyMetadata>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'items',
         $pb.PbFieldType.PM,
-        subBuilder: $4.HmacKeyMetadata.create)
+        subBuilder: $2.HmacKeyMetadata.create)
     ..hasRequiredFields = false;
 
   ListHmacKeysResponse._() : super();
   factory ListHmacKeysResponse({
     $core.String? nextPageToken,
-    $core.Iterable<$4.HmacKeyMetadata>? items,
+    $core.Iterable<$2.HmacKeyMetadata>? items,
   }) {
     final _result = create();
     if (nextPageToken != null) {
@@ -10172,7 +10170,7 @@ class ListHmacKeysResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$4.HmacKeyMetadata> get items => $_getList(1);
+  $core.List<$2.HmacKeyMetadata> get items => $_getList(1);
 }
 
 class UpdateHmacKeyRequest extends $pb.GeneratedMessage {
@@ -10195,12 +10193,12 @@ class UpdateHmacKeyRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
-    ..aOM<$4.HmacKeyMetadata>(
+    ..aOM<$2.HmacKeyMetadata>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'metadata',
-        subBuilder: $4.HmacKeyMetadata.create)
+        subBuilder: $2.HmacKeyMetadata.create)
     ..aOM<CommonRequestParams>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -10213,7 +10211,7 @@ class UpdateHmacKeyRequest extends $pb.GeneratedMessage {
   factory UpdateHmacKeyRequest({
     $core.String? accessId,
     $core.String? projectId,
-    $4.HmacKeyMetadata? metadata,
+    $2.HmacKeyMetadata? metadata,
     CommonRequestParams? commonRequestParams,
   }) {
     final _result = create();
@@ -10284,9 +10282,9 @@ class UpdateHmacKeyRequest extends $pb.GeneratedMessage {
   void clearProjectId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.HmacKeyMetadata get metadata => $_getN(2);
+  $2.HmacKeyMetadata get metadata => $_getN(2);
   @$pb.TagNumber(3)
-  set metadata($4.HmacKeyMetadata v) {
+  set metadata($2.HmacKeyMetadata v) {
     setField(3, v);
   }
 
@@ -10295,7 +10293,7 @@ class UpdateHmacKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMetadata() => clearField(3);
   @$pb.TagNumber(3)
-  $4.HmacKeyMetadata ensureMetadata() => $_ensure(2);
+  $2.HmacKeyMetadata ensureMetadata() => $_ensure(2);
 
   @$pb.TagNumber(5)
   CommonRequestParams get commonRequestParams => $_getN(3);
@@ -10727,19 +10725,19 @@ class CommonRequestParams extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'quotaUser')
-    ..aOM<$5.FieldMask>(
+    ..aOM<$3.FieldMask>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fields',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   CommonRequestParams._() : super();
   factory CommonRequestParams({
     $core.String? userProject,
     $core.String? quotaUser,
-    $5.FieldMask? fields,
+    $3.FieldMask? fields,
   }) {
     final _result = create();
     if (userProject != null) {
@@ -10805,9 +10803,9 @@ class CommonRequestParams extends $pb.GeneratedMessage {
   void clearQuotaUser() => clearField(2);
 
   @$pb.TagNumber(4)
-  $5.FieldMask get fields => $_getN(2);
+  $3.FieldMask get fields => $_getN(2);
   @$pb.TagNumber(4)
-  set fields($5.FieldMask v) {
+  set fields($3.FieldMask v) {
     setField(4, v);
   }
 
@@ -10816,47 +10814,5 @@ class CommonRequestParams extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFields() => clearField(4);
   @$pb.TagNumber(4)
-  $5.FieldMask ensureFields() => $_ensure(2);
-}
-
-class ServiceConstants extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceConstants',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  ServiceConstants._() : super();
-  factory ServiceConstants() => create();
-  factory ServiceConstants.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServiceConstants.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServiceConstants clone() => ServiceConstants()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ServiceConstants copyWith(void Function(ServiceConstants) updates) =>
-      super.copyWith((message) => updates(message as ServiceConstants))
-          as ServiceConstants; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static ServiceConstants create() => ServiceConstants._();
-  ServiceConstants createEmptyInstance() => create();
-  static $pb.PbList<ServiceConstants> createRepeated() =>
-      $pb.PbList<ServiceConstants>();
-  @$core.pragma('dart2js:noInline')
-  static ServiceConstants getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ServiceConstants>(create);
-  static ServiceConstants? _defaultInstance;
+  $3.FieldMask ensureFields() => $_ensure(2);
 }

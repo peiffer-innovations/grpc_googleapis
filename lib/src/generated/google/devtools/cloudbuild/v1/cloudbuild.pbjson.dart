@@ -205,6 +205,62 @@ const BuiltImage$json = const {
 /// Descriptor for `BuiltImage`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List builtImageDescriptor = $convert.base64Decode(
     'CgpCdWlsdEltYWdlEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGZGlnZXN0GAMgASgJUgZkaWdlc3QSTQoLcHVzaF90aW1pbmcYBCABKAsyJy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5UaW1lU3BhbkID4EEDUgpwdXNoVGltaW5n');
+@$core.Deprecated('Use uploadedPythonPackageDescriptor instead')
+const UploadedPythonPackage$json = const {
+  '1': 'UploadedPythonPackage',
+  '2': const [
+    const {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+    const {
+      '1': 'file_hashes',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.FileHashes',
+      '10': 'fileHashes'
+    },
+    const {
+      '1': 'push_timing',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.TimeSpan',
+      '8': const {},
+      '10': 'pushTiming'
+    },
+  ],
+};
+
+/// Descriptor for `UploadedPythonPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadedPythonPackageDescriptor = $convert.base64Decode(
+    'ChVVcGxvYWRlZFB5dGhvblBhY2thZ2USEAoDdXJpGAEgASgJUgN1cmkSSgoLZmlsZV9oYXNoZXMYAiABKAsyKS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5GaWxlSGFzaGVzUgpmaWxlSGFzaGVzEk0KC3B1c2hfdGltaW5nGAMgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVGltZVNwYW5CA+BBA1IKcHVzaFRpbWluZw==');
+@$core.Deprecated('Use uploadedMavenArtifactDescriptor instead')
+const UploadedMavenArtifact$json = const {
+  '1': 'UploadedMavenArtifact',
+  '2': const [
+    const {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+    const {
+      '1': 'file_hashes',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.FileHashes',
+      '10': 'fileHashes'
+    },
+    const {
+      '1': 'push_timing',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.TimeSpan',
+      '8': const {},
+      '10': 'pushTiming'
+    },
+  ],
+};
+
+/// Descriptor for `UploadedMavenArtifact`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadedMavenArtifactDescriptor = $convert.base64Decode(
+    'ChVVcGxvYWRlZE1hdmVuQXJ0aWZhY3QSEAoDdXJpGAEgASgJUgN1cmkSSgoLZmlsZV9oYXNoZXMYAiABKAsyKS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5GaWxlSGFzaGVzUgpmaWxlSGFzaGVzEk0KC3B1c2hfdGltaW5nGAMgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVGltZVNwYW5CA+BBA1IKcHVzaFRpbWluZw==');
 @$core.Deprecated('Use buildStepDescriptor instead')
 const BuildStep$json = const {
   '1': 'BuildStep',
@@ -260,13 +316,29 @@ const BuildStep$json = const {
       '8': const {},
       '10': 'status'
     },
+    const {'1': 'allow_failure', '3': 14, '4': 1, '5': 8, '10': 'allowFailure'},
+    const {
+      '1': 'exit_code',
+      '3': 16,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'exitCode'
+    },
+    const {
+      '1': 'allow_exit_codes',
+      '3': 18,
+      '4': 3,
+      '5': 5,
+      '10': 'allowExitCodes'
+    },
     const {'1': 'script', '3': 19, '4': 1, '5': 9, '10': 'script'},
   ],
 };
 
 /// Descriptor for `BuildStep`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List buildStepDescriptor = $convert.base64Decode(
-    'CglCdWlsZFN0ZXASEgoEbmFtZRgBIAEoCVIEbmFtZRIQCgNlbnYYAiADKAlSA2VudhISCgRhcmdzGAMgAygJUgRhcmdzEhAKA2RpchgEIAEoCVIDZGlyEg4KAmlkGAUgASgJUgJpZBIZCgh3YWl0X2ZvchgGIAMoCVIHd2FpdEZvchIeCgplbnRyeXBvaW50GAcgASgJUgplbnRyeXBvaW50Eh0KCnNlY3JldF9lbnYYCCADKAlSCXNlY3JldEVudhI/Cgd2b2x1bWVzGAkgAygLMiUuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVm9sdW1lUgd2b2x1bWVzEkQKBnRpbWluZxgKIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlRpbWVTcGFuQgPgQQNSBnRpbWluZxJNCgtwdWxsX3RpbWluZxgNIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlRpbWVTcGFuQgPgQQNSCnB1bGxUaW1pbmcSMwoHdGltZW91dBgLIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIHdGltZW91dBJICgZzdGF0dXMYDCABKA4yKy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZC5TdGF0dXNCA+BBA1IGc3RhdHVzEhYKBnNjcmlwdBgTIAEoCVIGc2NyaXB0');
+    'CglCdWlsZFN0ZXASEgoEbmFtZRgBIAEoCVIEbmFtZRIQCgNlbnYYAiADKAlSA2VudhISCgRhcmdzGAMgAygJUgRhcmdzEhAKA2RpchgEIAEoCVIDZGlyEg4KAmlkGAUgASgJUgJpZBIZCgh3YWl0X2ZvchgGIAMoCVIHd2FpdEZvchIeCgplbnRyeXBvaW50GAcgASgJUgplbnRyeXBvaW50Eh0KCnNlY3JldF9lbnYYCCADKAlSCXNlY3JldEVudhI/Cgd2b2x1bWVzGAkgAygLMiUuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVm9sdW1lUgd2b2x1bWVzEkQKBnRpbWluZxgKIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlRpbWVTcGFuQgPgQQNSBnRpbWluZxJNCgtwdWxsX3RpbWluZxgNIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlRpbWVTcGFuQgPgQQNSCnB1bGxUaW1pbmcSMwoHdGltZW91dBgLIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIHdGltZW91dBJICgZzdGF0dXMYDCABKA4yKy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZC5TdGF0dXNCA+BBA1IGc3RhdHVzEiMKDWFsbG93X2ZhaWx1cmUYDiABKAhSDGFsbG93RmFpbHVyZRIgCglleGl0X2NvZGUYECABKAVCA+BBA1IIZXhpdENvZGUSKAoQYWxsb3dfZXhpdF9jb2RlcxgSIAMoBVIOYWxsb3dFeGl0Q29kZXMSFgoGc2NyaXB0GBMgASgJUgZzY3JpcHQ=');
 @$core.Deprecated('Use volumeDescriptor instead')
 const Volume$json = const {
   '1': 'Volume',
@@ -321,12 +393,28 @@ const Results$json = const {
       '6': '.google.devtools.cloudbuild.v1.TimeSpan',
       '10': 'artifactTiming'
     },
+    const {
+      '1': 'python_packages',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.UploadedPythonPackage',
+      '10': 'pythonPackages'
+    },
+    const {
+      '1': 'maven_artifacts',
+      '3': 9,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.UploadedMavenArtifact',
+      '10': 'mavenArtifacts'
+    },
   ],
 };
 
 /// Descriptor for `Results`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resultsDescriptor = $convert.base64Decode(
-    'CgdSZXN1bHRzEkEKBmltYWdlcxgCIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWx0SW1hZ2VSBmltYWdlcxIqChFidWlsZF9zdGVwX2ltYWdlcxgDIAMoCVIPYnVpbGRTdGVwSW1hZ2VzEisKEWFydGlmYWN0X21hbmlmZXN0GAQgASgJUhBhcnRpZmFjdE1hbmlmZXN0EiMKDW51bV9hcnRpZmFjdHMYBSABKANSDG51bUFydGlmYWN0cxIsChJidWlsZF9zdGVwX291dHB1dHMYBiADKAxSEGJ1aWxkU3RlcE91dHB1dHMSUAoPYXJ0aWZhY3RfdGltaW5nGAcgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVGltZVNwYW5SDmFydGlmYWN0VGltaW5n');
+    'CgdSZXN1bHRzEkEKBmltYWdlcxgCIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWx0SW1hZ2VSBmltYWdlcxIqChFidWlsZF9zdGVwX2ltYWdlcxgDIAMoCVIPYnVpbGRTdGVwSW1hZ2VzEisKEWFydGlmYWN0X21hbmlmZXN0GAQgASgJUhBhcnRpZmFjdE1hbmlmZXN0EiMKDW51bV9hcnRpZmFjdHMYBSABKANSDG51bUFydGlmYWN0cxIsChJidWlsZF9zdGVwX291dHB1dHMYBiADKAxSEGJ1aWxkU3RlcE91dHB1dHMSUAoPYXJ0aWZhY3RfdGltaW5nGAcgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVGltZVNwYW5SDmFydGlmYWN0VGltaW5nEl0KD3B5dGhvbl9wYWNrYWdlcxgIIAMoCzI0Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlVwbG9hZGVkUHl0aG9uUGFja2FnZVIOcHl0aG9uUGFja2FnZXMSXQoPbWF2ZW5fYXJ0aWZhY3RzGAkgAygLMjQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVXBsb2FkZWRNYXZlbkFydGlmYWN0Ug5tYXZlbkFydGlmYWN0cw==');
 @$core.Deprecated('Use artifactResultDescriptor instead')
 const ArtifactResult$json = const {
   '1': 'ArtifactResult',
@@ -687,8 +775,28 @@ const Artifacts$json = const {
       '6': '.google.devtools.cloudbuild.v1.Artifacts.ArtifactObjects',
       '10': 'objects'
     },
+    const {
+      '1': 'maven_artifacts',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.Artifacts.MavenArtifact',
+      '10': 'mavenArtifacts'
+    },
+    const {
+      '1': 'python_packages',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.Artifacts.PythonPackage',
+      '10': 'pythonPackages'
+    },
   ],
-  '3': const [Artifacts_ArtifactObjects$json],
+  '3': const [
+    Artifacts_ArtifactObjects$json,
+    Artifacts_MavenArtifact$json,
+    Artifacts_PythonPackage$json
+  ],
 };
 
 @$core.Deprecated('Use artifactsDescriptor instead')
@@ -709,9 +817,30 @@ const Artifacts_ArtifactObjects$json = const {
   ],
 };
 
+@$core.Deprecated('Use artifactsDescriptor instead')
+const Artifacts_MavenArtifact$json = const {
+  '1': 'MavenArtifact',
+  '2': const [
+    const {'1': 'repository', '3': 1, '4': 1, '5': 9, '10': 'repository'},
+    const {'1': 'path', '3': 2, '4': 1, '5': 9, '10': 'path'},
+    const {'1': 'artifact_id', '3': 3, '4': 1, '5': 9, '10': 'artifactId'},
+    const {'1': 'group_id', '3': 4, '4': 1, '5': 9, '10': 'groupId'},
+    const {'1': 'version', '3': 5, '4': 1, '5': 9, '10': 'version'},
+  ],
+};
+
+@$core.Deprecated('Use artifactsDescriptor instead')
+const Artifacts_PythonPackage$json = const {
+  '1': 'PythonPackage',
+  '2': const [
+    const {'1': 'repository', '3': 1, '4': 1, '5': 9, '10': 'repository'},
+    const {'1': 'paths', '3': 2, '4': 3, '5': 9, '10': 'paths'},
+  ],
+};
+
 /// Descriptor for `Artifacts`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List artifactsDescriptor = $convert.base64Decode(
-    'CglBcnRpZmFjdHMSFgoGaW1hZ2VzGAEgAygJUgZpbWFnZXMSUgoHb2JqZWN0cxgCIAEoCzI4Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkFydGlmYWN0cy5BcnRpZmFjdE9iamVjdHNSB29iamVjdHMaiQEKD0FydGlmYWN0T2JqZWN0cxIaCghsb2NhdGlvbhgBIAEoCVIIbG9jYXRpb24SFAoFcGF0aHMYAiADKAlSBXBhdGhzEkQKBnRpbWluZxgDIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlRpbWVTcGFuQgPgQQNSBnRpbWluZw==');
+    'CglBcnRpZmFjdHMSFgoGaW1hZ2VzGAEgAygJUgZpbWFnZXMSUgoHb2JqZWN0cxgCIAEoCzI4Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkFydGlmYWN0cy5BcnRpZmFjdE9iamVjdHNSB29iamVjdHMSXwoPbWF2ZW5fYXJ0aWZhY3RzGAMgAygLMjYuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQXJ0aWZhY3RzLk1hdmVuQXJ0aWZhY3RSDm1hdmVuQXJ0aWZhY3RzEl8KD3B5dGhvbl9wYWNrYWdlcxgFIAMoCzI2Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkFydGlmYWN0cy5QeXRob25QYWNrYWdlUg5weXRob25QYWNrYWdlcxqJAQoPQXJ0aWZhY3RPYmplY3RzEhoKCGxvY2F0aW9uGAEgASgJUghsb2NhdGlvbhIUCgVwYXRocxgCIAMoCVIFcGF0aHMSRAoGdGltaW5nGAMgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVGltZVNwYW5CA+BBA1IGdGltaW5nGpkBCg1NYXZlbkFydGlmYWN0Eh4KCnJlcG9zaXRvcnkYASABKAlSCnJlcG9zaXRvcnkSEgoEcGF0aBgCIAEoCVIEcGF0aBIfCgthcnRpZmFjdF9pZBgDIAEoCVIKYXJ0aWZhY3RJZBIZCghncm91cF9pZBgEIAEoCVIHZ3JvdXBJZBIYCgd2ZXJzaW9uGAUgASgJUgd2ZXJzaW9uGkUKDVB5dGhvblBhY2thZ2USHgoKcmVwb3NpdG9yeRgBIAEoCVIKcmVwb3NpdG9yeRIUCgVwYXRocxgCIAMoCVIFcGF0aHM=');
 @$core.Deprecated('Use timeSpanDescriptor instead')
 const TimeSpan$json = const {
   '1': 'TimeSpan',

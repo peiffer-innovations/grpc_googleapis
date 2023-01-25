@@ -364,12 +364,24 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL');
+  static const ChangeHistoryResourceType SEARCH_ADS_360_LINK =
+      ChangeHistoryResourceType._(
+          16,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SEARCH_ADS_360_LINK');
   static const ChangeHistoryResourceType DATA_STREAM =
       ChangeHistoryResourceType._(
           18,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'DATA_STREAM');
+  static const ChangeHistoryResourceType ATTRIBUTION_SETTINGS =
+      ChangeHistoryResourceType._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ATTRIBUTION_SETTINGS');
 
   static const $core.List<ChangeHistoryResourceType> values =
       <ChangeHistoryResourceType>[
@@ -386,7 +398,9 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
     DATA_RETENTION_SETTINGS,
     DISPLAY_VIDEO_360_ADVERTISER_LINK,
     DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL,
+    SEARCH_ADS_360_LINK,
     DATA_STREAM,
+    ATTRIBUTION_SETTINGS,
   ];
 
   static final $core.Map<$core.int, ChangeHistoryResourceType> _byValue =
@@ -553,6 +567,42 @@ class LinkProposalState extends $pb.ProtobufEnum {
   static LinkProposalState? valueOf($core.int value) => _byValue[value];
 
   const LinkProposalState._($core.int v, $core.String n) : super(v, n);
+}
+
+class PropertyType extends $pb.ProtobufEnum {
+  static const PropertyType PROPERTY_TYPE_UNSPECIFIED = PropertyType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_UNSPECIFIED');
+  static const PropertyType PROPERTY_TYPE_ORDINARY = PropertyType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_ORDINARY');
+  static const PropertyType PROPERTY_TYPE_SUBPROPERTY = PropertyType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_SUBPROPERTY');
+  static const PropertyType PROPERTY_TYPE_ROLLUP = PropertyType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PROPERTY_TYPE_ROLLUP');
+
+  static const $core.List<PropertyType> values = <PropertyType>[
+    PROPERTY_TYPE_UNSPECIFIED,
+    PROPERTY_TYPE_ORDINARY,
+    PROPERTY_TYPE_SUBPROPERTY,
+    PROPERTY_TYPE_ROLLUP,
+  ];
+
+  static final $core.Map<$core.int, PropertyType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PropertyType? valueOf($core.int value) => _byValue[value];
+
+  const PropertyType._($core.int v, $core.String n) : super(v, n);
 }
 
 class DataStream_DataStreamType extends $pb.ProtobufEnum {
@@ -841,5 +891,182 @@ class DataRetentionSettings_RetentionDuration extends $pb.ProtobufEnum {
       _byValue[value];
 
   const DataRetentionSettings_RetentionDuration._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class AttributionSettings_AcquisitionConversionEventLookbackWindow
+    extends $pb.ProtobufEnum {
+  static const AttributionSettings_AcquisitionConversionEventLookbackWindow
+      ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED =
+      AttributionSettings_AcquisitionConversionEventLookbackWindow._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED');
+  static const AttributionSettings_AcquisitionConversionEventLookbackWindow
+      ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_7_DAYS =
+      AttributionSettings_AcquisitionConversionEventLookbackWindow._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_7_DAYS');
+  static const AttributionSettings_AcquisitionConversionEventLookbackWindow
+      ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS =
+      AttributionSettings_AcquisitionConversionEventLookbackWindow._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS');
+
+  static const $core
+          .List<AttributionSettings_AcquisitionConversionEventLookbackWindow>
+      values = <AttributionSettings_AcquisitionConversionEventLookbackWindow>[
+    ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED,
+    ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_7_DAYS,
+    ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS,
+  ];
+
+  static final $core.Map<$core.int,
+          AttributionSettings_AcquisitionConversionEventLookbackWindow>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AttributionSettings_AcquisitionConversionEventLookbackWindow? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const AttributionSettings_AcquisitionConversionEventLookbackWindow._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class AttributionSettings_OtherConversionEventLookbackWindow
+    extends $pb.ProtobufEnum {
+  static const AttributionSettings_OtherConversionEventLookbackWindow
+      OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED =
+      AttributionSettings_OtherConversionEventLookbackWindow._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED');
+  static const AttributionSettings_OtherConversionEventLookbackWindow
+      OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS =
+      AttributionSettings_OtherConversionEventLookbackWindow._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS');
+  static const AttributionSettings_OtherConversionEventLookbackWindow
+      OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_60_DAYS =
+      AttributionSettings_OtherConversionEventLookbackWindow._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_60_DAYS');
+  static const AttributionSettings_OtherConversionEventLookbackWindow
+      OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_90_DAYS =
+      AttributionSettings_OtherConversionEventLookbackWindow._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_90_DAYS');
+
+  static const $core
+          .List<AttributionSettings_OtherConversionEventLookbackWindow>
+      values = <AttributionSettings_OtherConversionEventLookbackWindow>[
+    OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED,
+    OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS,
+    OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_60_DAYS,
+    OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_90_DAYS,
+  ];
+
+  static final $core.Map<$core.int,
+          AttributionSettings_OtherConversionEventLookbackWindow> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AttributionSettings_OtherConversionEventLookbackWindow? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const AttributionSettings_OtherConversionEventLookbackWindow._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class AttributionSettings_ReportingAttributionModel extends $pb.ProtobufEnum {
+  static const AttributionSettings_ReportingAttributionModel
+      REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED =
+      AttributionSettings_ReportingAttributionModel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED');
+  static const AttributionSettings_ReportingAttributionModel
+      CROSS_CHANNEL_DATA_DRIVEN =
+      AttributionSettings_ReportingAttributionModel._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CROSS_CHANNEL_DATA_DRIVEN');
+  static const AttributionSettings_ReportingAttributionModel
+      CROSS_CHANNEL_LAST_CLICK =
+      AttributionSettings_ReportingAttributionModel._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CROSS_CHANNEL_LAST_CLICK');
+  static const AttributionSettings_ReportingAttributionModel
+      CROSS_CHANNEL_FIRST_CLICK =
+      AttributionSettings_ReportingAttributionModel._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CROSS_CHANNEL_FIRST_CLICK');
+  static const AttributionSettings_ReportingAttributionModel
+      CROSS_CHANNEL_LINEAR = AttributionSettings_ReportingAttributionModel._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CROSS_CHANNEL_LINEAR');
+  static const AttributionSettings_ReportingAttributionModel
+      CROSS_CHANNEL_POSITION_BASED =
+      AttributionSettings_ReportingAttributionModel._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CROSS_CHANNEL_POSITION_BASED');
+  static const AttributionSettings_ReportingAttributionModel
+      CROSS_CHANNEL_TIME_DECAY =
+      AttributionSettings_ReportingAttributionModel._(
+          6,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CROSS_CHANNEL_TIME_DECAY');
+  static const AttributionSettings_ReportingAttributionModel
+      ADS_PREFERRED_LAST_CLICK =
+      AttributionSettings_ReportingAttributionModel._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ADS_PREFERRED_LAST_CLICK');
+
+  static const $core.List<AttributionSettings_ReportingAttributionModel>
+      values = <AttributionSettings_ReportingAttributionModel>[
+    REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED,
+    CROSS_CHANNEL_DATA_DRIVEN,
+    CROSS_CHANNEL_LAST_CLICK,
+    CROSS_CHANNEL_FIRST_CLICK,
+    CROSS_CHANNEL_LINEAR,
+    CROSS_CHANNEL_POSITION_BASED,
+    CROSS_CHANNEL_TIME_DECAY,
+    ADS_PREFERRED_LAST_CLICK,
+  ];
+
+  static final $core
+          .Map<$core.int, AttributionSettings_ReportingAttributionModel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AttributionSettings_ReportingAttributionModel? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const AttributionSettings_ReportingAttributionModel._(
+      $core.int v, $core.String n)
       : super(v, n);
 }

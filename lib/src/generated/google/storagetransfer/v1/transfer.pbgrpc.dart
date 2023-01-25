@@ -59,6 +59,11 @@ class StorageTransferServiceClient extends $grpc.Client {
           '/google.storagetransfer.v1.StorageTransferService/RunTransferJob',
           ($2.RunTransferJobRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$deleteTransferJob =
+      $grpc.ClientMethod<$2.DeleteTransferJobRequest, $1.Empty>(
+          '/google.storagetransfer.v1.StorageTransferService/DeleteTransferJob',
+          ($2.DeleteTransferJobRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$createAgentPool =
       $grpc.ClientMethod<$2.CreateAgentPoolRequest, $3.AgentPool>(
           '/google.storagetransfer.v1.StorageTransferService/CreateAgentPool',
@@ -140,6 +145,12 @@ class StorageTransferServiceClient extends $grpc.Client {
       $2.RunTransferJobRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$runTransferJob, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteTransferJob(
+      $2.DeleteTransferJobRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteTransferJob, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.AgentPool> createAgentPool(
@@ -243,6 +254,14 @@ abstract class StorageTransferServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.RunTransferJobRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteTransferJobRequest, $1.Empty>(
+        'DeleteTransferJob',
+        deleteTransferJob_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.DeleteTransferJobRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.CreateAgentPoolRequest, $3.AgentPool>(
         'CreateAgentPool',
         createAgentPool_Pre,
@@ -328,6 +347,11 @@ abstract class StorageTransferServiceBase extends $grpc.Service {
     return runTransferJob(call, await request);
   }
 
+  $async.Future<$1.Empty> deleteTransferJob_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteTransferJobRequest> request) async {
+    return deleteTransferJob(call, await request);
+  }
+
   $async.Future<$3.AgentPool> createAgentPool_Pre($grpc.ServiceCall call,
       $async.Future<$2.CreateAgentPoolRequest> request) async {
     return createAgentPool(call, await request);
@@ -370,6 +394,8 @@ abstract class StorageTransferServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ResumeTransferOperationRequest request);
   $async.Future<$0.Operation> runTransferJob(
       $grpc.ServiceCall call, $2.RunTransferJobRequest request);
+  $async.Future<$1.Empty> deleteTransferJob(
+      $grpc.ServiceCall call, $2.DeleteTransferJobRequest request);
   $async.Future<$3.AgentPool> createAgentPool(
       $grpc.ServiceCall call, $2.CreateAgentPoolRequest request);
   $async.Future<$3.AgentPool> updateAgentPool(

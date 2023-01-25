@@ -14,13 +14,14 @@ const PartitionId$json = const {
   '1': 'PartitionId',
   '2': const [
     const {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
+    const {'1': 'database_id', '3': 3, '4': 1, '5': 9, '10': 'databaseId'},
     const {'1': 'namespace_id', '3': 4, '4': 1, '5': 9, '10': 'namespaceId'},
   ],
 };
 
 /// Descriptor for `PartitionId`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List partitionIdDescriptor = $convert.base64Decode(
-    'CgtQYXJ0aXRpb25JZBIdCgpwcm9qZWN0X2lkGAIgASgJUglwcm9qZWN0SWQSIQoMbmFtZXNwYWNlX2lkGAQgASgJUgtuYW1lc3BhY2VJZA==');
+    'CgtQYXJ0aXRpb25JZBIdCgpwcm9qZWN0X2lkGAIgASgJUglwcm9qZWN0SWQSHwoLZGF0YWJhc2VfaWQYAyABKAlSCmRhdGFiYXNlSWQSIQoMbmFtZXNwYWNlX2lkGAQgASgJUgtuYW1lc3BhY2VJZA==');
 @$core.Deprecated('Use keyDescriptor instead')
 const Key$json = const {
   '1': 'Key',

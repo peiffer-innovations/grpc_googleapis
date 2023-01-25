@@ -46,6 +46,12 @@ class DeliveryVehicleLocationSensor extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'FUSED_LOCATION_PROVIDER');
+  static const DeliveryVehicleLocationSensor CORE_LOCATION =
+      DeliveryVehicleLocationSensor._(
+          200,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CORE_LOCATION');
 
   static const $core.List<DeliveryVehicleLocationSensor> values =
       <DeliveryVehicleLocationSensor>[
@@ -55,6 +61,7 @@ class DeliveryVehicleLocationSensor extends $pb.ProtobufEnum {
     PASSIVE,
     ROAD_SNAPPED_LOCATION_PROVIDER,
     FUSED_LOCATION_PROVIDER,
+    CORE_LOCATION,
   ];
 
   static final $core.Map<$core.int, DeliveryVehicleLocationSensor> _byValue =

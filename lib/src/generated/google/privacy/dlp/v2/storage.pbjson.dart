@@ -58,6 +58,36 @@ const InfoType$json = const {
 /// Descriptor for `InfoType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List infoTypeDescriptor = $convert.base64Decode(
     'CghJbmZvVHlwZRISCgRuYW1lGAEgASgJUgRuYW1lEhgKB3ZlcnNpb24YAiABKAlSB3ZlcnNpb24=');
+@$core.Deprecated('Use sensitivityScoreDescriptor instead')
+const SensitivityScore$json = const {
+  '1': 'SensitivityScore',
+  '2': const [
+    const {
+      '1': 'score',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.privacy.dlp.v2.SensitivityScore.SensitivityScoreLevel',
+      '10': 'score'
+    },
+  ],
+  '4': const [SensitivityScore_SensitivityScoreLevel$json],
+};
+
+@$core.Deprecated('Use sensitivityScoreDescriptor instead')
+const SensitivityScore_SensitivityScoreLevel$json = const {
+  '1': 'SensitivityScoreLevel',
+  '2': const [
+    const {'1': 'SENSITIVITY_SCORE_UNSPECIFIED', '2': 0},
+    const {'1': 'SENSITIVITY_LOW', '2': 10},
+    const {'1': 'SENSITIVITY_MODERATE', '2': 20},
+    const {'1': 'SENSITIVITY_HIGH', '2': 30},
+  ],
+};
+
+/// Descriptor for `SensitivityScore`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sensitivityScoreDescriptor = $convert.base64Decode(
+    'ChBTZW5zaXRpdml0eVNjb3JlElMKBXNjb3JlGAEgASgOMj0uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlNlbnNpdGl2aXR5U2NvcmUuU2Vuc2l0aXZpdHlTY29yZUxldmVsUgVzY29yZSJ/ChVTZW5zaXRpdml0eVNjb3JlTGV2ZWwSIQodU0VOU0lUSVZJVFlfU0NPUkVfVU5TUEVDSUZJRUQQABITCg9TRU5TSVRJVklUWV9MT1cQChIYChRTRU5TSVRJVklUWV9NT0RFUkFURRAUEhQKEFNFTlNJVElWSVRZX0hJR0gQHg==');
 @$core.Deprecated('Use storedTypeDescriptor instead')
 const StoredType$json = const {
   '1': 'StoredType',

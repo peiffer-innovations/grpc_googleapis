@@ -11,6 +11,109 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../protobuf/duration.pb.dart' as $0;
 
+class ErrorInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ErrorInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.rpc'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'reason')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'domain')
+    ..m<$core.String, $core.String>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metadata',
+        entryClassName: 'ErrorInfo.MetadataEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.rpc'))
+    ..hasRequiredFields = false;
+
+  ErrorInfo._() : super();
+  factory ErrorInfo({
+    $core.String? reason,
+    $core.String? domain,
+    $core.Map<$core.String, $core.String>? metadata,
+  }) {
+    final _result = create();
+    if (reason != null) {
+      _result.reason = reason;
+    }
+    if (domain != null) {
+      _result.domain = domain;
+    }
+    if (metadata != null) {
+      _result.metadata.addAll(metadata);
+    }
+    return _result;
+  }
+  factory ErrorInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ErrorInfo clone() => ErrorInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ErrorInfo copyWith(void Function(ErrorInfo) updates) =>
+      super.copyWith((message) => updates(message as ErrorInfo))
+          as ErrorInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ErrorInfo create() => ErrorInfo._();
+  ErrorInfo createEmptyInstance() => create();
+  static $pb.PbList<ErrorInfo> createRepeated() => $pb.PbList<ErrorInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ErrorInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ErrorInfo>(create);
+  static ErrorInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get reason => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set reason($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasReason() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearReason() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get domain => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set domain($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDomain() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDomain() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.Map<$core.String, $core.String> get metadata => $_getMap(2);
+}
+
 class RetryInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -306,109 +409,6 @@ class QuotaFailure extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<QuotaFailure_Violation> get violations => $_getList(0);
-}
-
-class ErrorInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.rpc'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reason')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'domain')
-    ..m<$core.String, $core.String>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        entryClassName: 'ErrorInfo.MetadataEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.rpc'))
-    ..hasRequiredFields = false;
-
-  ErrorInfo._() : super();
-  factory ErrorInfo({
-    $core.String? reason,
-    $core.String? domain,
-    $core.Map<$core.String, $core.String>? metadata,
-  }) {
-    final _result = create();
-    if (reason != null) {
-      _result.reason = reason;
-    }
-    if (domain != null) {
-      _result.domain = domain;
-    }
-    if (metadata != null) {
-      _result.metadata.addAll(metadata);
-    }
-    return _result;
-  }
-  factory ErrorInfo.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ErrorInfo.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ErrorInfo clone() => ErrorInfo()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ErrorInfo copyWith(void Function(ErrorInfo) updates) =>
-      super.copyWith((message) => updates(message as ErrorInfo))
-          as ErrorInfo; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static ErrorInfo create() => ErrorInfo._();
-  ErrorInfo createEmptyInstance() => create();
-  static $pb.PbList<ErrorInfo> createRepeated() => $pb.PbList<ErrorInfo>();
-  @$core.pragma('dart2js:noInline')
-  static ErrorInfo getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ErrorInfo>(create);
-  static ErrorInfo? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get reason => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set reason($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasReason() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearReason() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get domain => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set domain($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasDomain() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearDomain() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.Map<$core.String, $core.String> get metadata => $_getMap(2);
 }
 
 class PreconditionFailure_Violation extends $pb.GeneratedMessage {

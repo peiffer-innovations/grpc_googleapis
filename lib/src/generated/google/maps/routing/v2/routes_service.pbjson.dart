@@ -133,12 +133,54 @@ const ComputeRoutesRequest$json = const {
       '8': const {},
       '10': 'units'
     },
+    const {
+      '1': 'requested_reference_routes',
+      '3': 14,
+      '4': 3,
+      '5': 14,
+      '6': '.google.maps.routing.v2.ComputeRoutesRequest.ReferenceRoute',
+      '8': const {},
+      '10': 'requestedReferenceRoutes'
+    },
+    const {
+      '1': 'extra_computations',
+      '3': 15,
+      '4': 3,
+      '5': 14,
+      '6': '.google.maps.routing.v2.ComputeRoutesRequest.ExtraComputation',
+      '8': const {},
+      '10': 'extraComputations'
+    },
+  ],
+  '4': const [
+    ComputeRoutesRequest_ReferenceRoute$json,
+    ComputeRoutesRequest_ExtraComputation$json
+  ],
+};
+
+@$core.Deprecated('Use computeRoutesRequestDescriptor instead')
+const ComputeRoutesRequest_ReferenceRoute$json = const {
+  '1': 'ReferenceRoute',
+  '2': const [
+    const {'1': 'REFERENCE_ROUTE_UNSPECIFIED', '2': 0},
+    const {'1': 'FUEL_EFFICIENT', '2': 1},
+  ],
+};
+
+@$core.Deprecated('Use computeRoutesRequestDescriptor instead')
+const ComputeRoutesRequest_ExtraComputation$json = const {
+  '1': 'ExtraComputation',
+  '2': const [
+    const {'1': 'EXTRA_COMPUTATION_UNSPECIFIED', '2': 0},
+    const {'1': 'TOLLS', '2': 1},
+    const {'1': 'FUEL_CONSUMPTION', '2': 2},
+    const {'1': 'TRAFFIC_ON_POLYLINE', '2': 3},
   ],
 };
 
 /// Descriptor for `ComputeRoutesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List computeRoutesRequestDescriptor = $convert.base64Decode(
-    'ChRDb21wdXRlUm91dGVzUmVxdWVzdBI9CgZvcmlnaW4YASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQJSBm9yaWdpbhJHCgtkZXN0aW5hdGlvbhgCIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAlILZGVzdGluYXRpb24SSwoNaW50ZXJtZWRpYXRlcxgDIAMoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAVINaW50ZXJtZWRpYXRlcxJNCgt0cmF2ZWxfbW9kZRgEIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAUgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJXChBwb2x5bGluZV9xdWFsaXR5GAYgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZVF1YWxpdHlCA+BBAVIPcG9seWxpbmVRdWFsaXR5EloKEXBvbHlsaW5lX2VuY29kaW5nGAwgASgOMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZUVuY29kaW5nQgPgQQFSEHBvbHlsaW5lRW5jb2RpbmcSRgoOZGVwYXJ0dXJlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFSDWRlcGFydHVyZVRpbWUSQQoaY29tcHV0ZV9hbHRlcm5hdGl2ZV9yb3V0ZXMYCCABKAhCA+BBAVIYY29tcHV0ZUFsdGVybmF0aXZlUm91dGVzElQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBAVIOcm91dGVNb2RpZmllcnMSKAoNbGFuZ3VhZ2VfY29kZRgKIAEoCUID4EEBUgxsYW5ndWFnZUNvZGUSOAoFdW5pdHMYCyABKA4yHS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlVuaXRzQgPgQQFSBXVuaXRz');
+    'ChRDb21wdXRlUm91dGVzUmVxdWVzdBI9CgZvcmlnaW4YASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQJSBm9yaWdpbhJHCgtkZXN0aW5hdGlvbhgCIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAlILZGVzdGluYXRpb24SSwoNaW50ZXJtZWRpYXRlcxgDIAMoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAVINaW50ZXJtZWRpYXRlcxJNCgt0cmF2ZWxfbW9kZRgEIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAUgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJXChBwb2x5bGluZV9xdWFsaXR5GAYgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZVF1YWxpdHlCA+BBAVIPcG9seWxpbmVRdWFsaXR5EloKEXBvbHlsaW5lX2VuY29kaW5nGAwgASgOMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZUVuY29kaW5nQgPgQQFSEHBvbHlsaW5lRW5jb2RpbmcSRgoOZGVwYXJ0dXJlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFSDWRlcGFydHVyZVRpbWUSQQoaY29tcHV0ZV9hbHRlcm5hdGl2ZV9yb3V0ZXMYCCABKAhCA+BBAVIYY29tcHV0ZUFsdGVybmF0aXZlUm91dGVzElQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBAVIOcm91dGVNb2RpZmllcnMSKAoNbGFuZ3VhZ2VfY29kZRgKIAEoCUID4EEBUgxsYW5ndWFnZUNvZGUSOAoFdW5pdHMYCyABKA4yHS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlVuaXRzQgPgQQFSBXVuaXRzEn4KGnJlcXVlc3RlZF9yZWZlcmVuY2Vfcm91dGVzGA4gAygOMjsuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVzUmVxdWVzdC5SZWZlcmVuY2VSb3V0ZUID4EEBUhhyZXF1ZXN0ZWRSZWZlcmVuY2VSb3V0ZXMScQoSZXh0cmFfY29tcHV0YXRpb25zGA8gAygOMj0uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVzUmVxdWVzdC5FeHRyYUNvbXB1dGF0aW9uQgPgQQFSEWV4dHJhQ29tcHV0YXRpb25zIkUKDlJlZmVyZW5jZVJvdXRlEh8KG1JFRkVSRU5DRV9ST1VURV9VTlNQRUNJRklFRBAAEhIKDkZVRUxfRUZGSUNJRU5UEAEibwoQRXh0cmFDb21wdXRhdGlvbhIhCh1FWFRSQV9DT01QVVRBVElPTl9VTlNQRUNJRklFRBAAEgkKBVRPTExTEAESFAoQRlVFTF9DT05TVU1QVElPThACEhcKE1RSQUZGSUNfT05fUE9MWUxJTkUQAw==');
 @$core.Deprecated('Use computeRoutesResponseDescriptor instead')
 const ComputeRoutesResponse$json = const {
   '1': 'ComputeRoutesResponse',
@@ -214,13 +256,32 @@ const ComputeRouteMatrixRequest$json = const {
       '8': const {},
       '10': 'departureTime'
     },
+    const {
+      '1': 'extra_computations',
+      '3': 8,
+      '4': 3,
+      '5': 14,
+      '6': '.google.maps.routing.v2.ComputeRouteMatrixRequest.ExtraComputation',
+      '8': const {},
+      '10': 'extraComputations'
+    },
+  ],
+  '4': const [ComputeRouteMatrixRequest_ExtraComputation$json],
+};
+
+@$core.Deprecated('Use computeRouteMatrixRequestDescriptor instead')
+const ComputeRouteMatrixRequest_ExtraComputation$json = const {
+  '1': 'ExtraComputation',
+  '2': const [
+    const {'1': 'EXTRA_COMPUTATION_UNSPECIFIED', '2': 0},
+    const {'1': 'TOLLS', '2': 1},
   ],
 };
 
 /// Descriptor for `ComputeRouteMatrixRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List computeRouteMatrixRequestDescriptor =
     $convert.base64Decode(
-        'ChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0EkgKB29yaWdpbnMYASADKAsyKS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4T3JpZ2luQgPgQQJSB29yaWdpbnMSVwoMZGVzdGluYXRpb25zGAIgAygLMi4uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeERlc3RpbmF0aW9uQgPgQQJSDGRlc3RpbmF0aW9ucxJNCgt0cmF2ZWxfbW9kZRgDIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAQgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJGCg5kZXBhcnR1cmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAVINZGVwYXJ0dXJlVGltZQ==');
+        'ChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0EkgKB29yaWdpbnMYASADKAsyKS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4T3JpZ2luQgPgQQJSB29yaWdpbnMSVwoMZGVzdGluYXRpb25zGAIgAygLMi4uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeERlc3RpbmF0aW9uQgPgQQJSDGRlc3RpbmF0aW9ucxJNCgt0cmF2ZWxfbW9kZRgDIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAQgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJGCg5kZXBhcnR1cmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAVINZGVwYXJ0dXJlVGltZRJ2ChJleHRyYV9jb21wdXRhdGlvbnMYCCADKA4yQi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QuRXh0cmFDb21wdXRhdGlvbkID4EEBUhFleHRyYUNvbXB1dGF0aW9ucyJAChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVYVFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQAQ==');
 @$core.Deprecated('Use routeMatrixOriginDescriptor instead')
 const RouteMatrixOrigin$json = const {
   '1': 'RouteMatrixOrigin',
@@ -273,13 +334,23 @@ final $typed_data.Uint8List routeMatrixDestinationDescriptor =
 const RouteMatrixElement$json = const {
   '1': 'RouteMatrixElement',
   '2': const [
-    const {'1': 'origin_index', '3': 1, '4': 1, '5': 5, '10': 'originIndex'},
+    const {
+      '1': 'origin_index',
+      '3': 1,
+      '4': 1,
+      '5': 5,
+      '9': 0,
+      '10': 'originIndex',
+      '17': true
+    },
     const {
       '1': 'destination_index',
       '3': 2,
       '4': 1,
       '5': 5,
-      '10': 'destinationIndex'
+      '9': 1,
+      '10': 'destinationIndex',
+      '17': true
     },
     const {
       '1': 'status',
@@ -337,8 +408,12 @@ const RouteMatrixElement$json = const {
       '10': 'fallbackInfo'
     },
   ],
+  '8': const [
+    const {'1': '_origin_index'},
+    const {'1': '_destination_index'},
+  ],
 };
 
 /// Descriptor for `RouteMatrixElement`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List routeMatrixElementDescriptor = $convert.base64Decode(
-    'ChJSb3V0ZU1hdHJpeEVsZW1lbnQSIQoMb3JpZ2luX2luZGV4GAEgASgFUgtvcmlnaW5JbmRleBIrChFkZXN0aW5hdGlvbl9pbmRleBgCIAEoBVIQZGVzdGluYXRpb25JbmRleBIqCgZzdGF0dXMYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1c1IGc3RhdHVzElEKCWNvbmRpdGlvbhgJIAEoDjIzLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0aW9uUgljb25kaXRpb24SJwoPZGlzdGFuY2VfbWV0ZXJzGAQgASgFUg5kaXN0YW5jZU1ldGVycxI1CghkdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIIZHVyYXRpb24SQgoPc3RhdGljX2R1cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUg5zdGF0aWNEdXJhdGlvbhJUCg90cmF2ZWxfYWR2aXNvcnkYByABKAsyKy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlVHJhdmVsQWR2aXNvcnlSDnRyYXZlbEFkdmlzb3J5EkkKDWZhbGxiYWNrX2luZm8YCCABKAsyJC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkZhbGxiYWNrSW5mb1IMZmFsbGJhY2tJbmZv');
+    'ChJSb3V0ZU1hdHJpeEVsZW1lbnQSJgoMb3JpZ2luX2luZGV4GAEgASgFSABSC29yaWdpbkluZGV4iAEBEjAKEWRlc3RpbmF0aW9uX2luZGV4GAIgASgFSAFSEGRlc3RpbmF0aW9uSW5kZXiIAQESKgoGc3RhdHVzGAMgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNSBnN0YXR1cxJRCgljb25kaXRpb24YCSABKA4yMy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4RWxlbWVudENvbmRpdGlvblIJY29uZGl0aW9uEicKD2Rpc3RhbmNlX21ldGVycxgEIAEoBVIOZGlzdGFuY2VNZXRlcnMSNQoIZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SCGR1cmF0aW9uEkIKD3N0YXRpY19kdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIOc3RhdGljRHVyYXRpb24SVAoPdHJhdmVsX2Fkdmlzb3J5GAcgASgLMisuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5Ug50cmF2ZWxBZHZpc29yeRJJCg1mYWxsYmFja19pbmZvGAggASgLMiQuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5GYWxsYmFja0luZm9SDGZhbGxiYWNrSW5mb0IPCg1fb3JpZ2luX2luZGV4QhQKEl9kZXN0aW5hdGlvbl9pbmRleA==');

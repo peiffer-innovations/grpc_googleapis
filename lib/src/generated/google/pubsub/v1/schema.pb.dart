@@ -9,6 +9,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../protobuf/timestamp.pb.dart' as $2;
+
 import 'schema.pbenum.dart';
 
 export 'schema.pbenum.dart';
@@ -42,6 +44,17 @@ class Schema extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'definition')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'revisionId')
+    ..aOM<$2.Timestamp>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'revisionCreateTime',
+        subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   Schema._() : super();
@@ -49,6 +62,8 @@ class Schema extends $pb.GeneratedMessage {
     $core.String? name,
     Schema_Type? type,
     $core.String? definition,
+    $core.String? revisionId,
+    $2.Timestamp? revisionCreateTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -59,6 +74,12 @@ class Schema extends $pb.GeneratedMessage {
     }
     if (definition != null) {
       _result.definition = definition;
+    }
+    if (revisionId != null) {
+      _result.revisionId = revisionId;
+    }
+    if (revisionCreateTime != null) {
+      _result.revisionCreateTime = revisionCreateTime;
     }
     return _result;
   }
@@ -123,6 +144,32 @@ class Schema extends $pb.GeneratedMessage {
   $core.bool hasDefinition() => $_has(2);
   @$pb.TagNumber(3)
   void clearDefinition() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get revisionId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set revisionId($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasRevisionId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRevisionId() => clearField(4);
+
+  @$pb.TagNumber(6)
+  $2.Timestamp get revisionCreateTime => $_getN(4);
+  @$pb.TagNumber(6)
+  set revisionCreateTime($2.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasRevisionCreateTime() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearRevisionCreateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $2.Timestamp ensureRevisionCreateTime() => $_ensure(4);
 }
 
 class CreateSchemaRequest extends $pb.GeneratedMessage {
@@ -543,6 +590,502 @@ class ListSchemasResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
+}
+
+class ListSchemaRevisionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListSchemaRevisionsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..e<SchemaView>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'view',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: SchemaView.SCHEMA_VIEW_UNSPECIFIED,
+        valueOf: SchemaView.valueOf,
+        enumValues: SchemaView.values)
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListSchemaRevisionsRequest._() : super();
+  factory ListSchemaRevisionsRequest({
+    $core.String? name,
+    SchemaView? view,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (view != null) {
+      _result.view = view;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListSchemaRevisionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSchemaRevisionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListSchemaRevisionsRequest clone() =>
+      ListSchemaRevisionsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListSchemaRevisionsRequest copyWith(
+          void Function(ListSchemaRevisionsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListSchemaRevisionsRequest))
+          as ListSchemaRevisionsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaRevisionsRequest create() => ListSchemaRevisionsRequest._();
+  ListSchemaRevisionsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSchemaRevisionsRequest> createRepeated() =>
+      $pb.PbList<ListSchemaRevisionsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaRevisionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSchemaRevisionsRequest>(create);
+  static ListSchemaRevisionsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  SchemaView get view => $_getN(1);
+  @$pb.TagNumber(2)
+  set view(SchemaView v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasView() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearView() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set pageSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set pageToken($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPageToken() => clearField(4);
+}
+
+class ListSchemaRevisionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListSchemaRevisionsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pc<Schema>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'schemas',
+        $pb.PbFieldType.PM,
+        subBuilder: Schema.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListSchemaRevisionsResponse._() : super();
+  factory ListSchemaRevisionsResponse({
+    $core.Iterable<Schema>? schemas,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (schemas != null) {
+      _result.schemas.addAll(schemas);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListSchemaRevisionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSchemaRevisionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListSchemaRevisionsResponse clone() =>
+      ListSchemaRevisionsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListSchemaRevisionsResponse copyWith(
+          void Function(ListSchemaRevisionsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListSchemaRevisionsResponse))
+          as ListSchemaRevisionsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaRevisionsResponse create() =>
+      ListSchemaRevisionsResponse._();
+  ListSchemaRevisionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSchemaRevisionsResponse> createRepeated() =>
+      $pb.PbList<ListSchemaRevisionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaRevisionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSchemaRevisionsResponse>(create);
+  static ListSchemaRevisionsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Schema> get schemas => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class CommitSchemaRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CommitSchemaRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOM<Schema>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'schema',
+        subBuilder: Schema.create)
+    ..hasRequiredFields = false;
+
+  CommitSchemaRequest._() : super();
+  factory CommitSchemaRequest({
+    $core.String? name,
+    Schema? schema,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (schema != null) {
+      _result.schema = schema;
+    }
+    return _result;
+  }
+  factory CommitSchemaRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommitSchemaRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CommitSchemaRequest clone() => CommitSchemaRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CommitSchemaRequest copyWith(void Function(CommitSchemaRequest) updates) =>
+      super.copyWith((message) => updates(message as CommitSchemaRequest))
+          as CommitSchemaRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CommitSchemaRequest create() => CommitSchemaRequest._();
+  CommitSchemaRequest createEmptyInstance() => create();
+  static $pb.PbList<CommitSchemaRequest> createRepeated() =>
+      $pb.PbList<CommitSchemaRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CommitSchemaRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommitSchemaRequest>(create);
+  static CommitSchemaRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Schema get schema => $_getN(1);
+  @$pb.TagNumber(2)
+  set schema(Schema v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasSchema() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchema() => clearField(2);
+  @$pb.TagNumber(2)
+  Schema ensureSchema() => $_ensure(1);
+}
+
+class RollbackSchemaRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RollbackSchemaRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'revisionId')
+    ..hasRequiredFields = false;
+
+  RollbackSchemaRequest._() : super();
+  factory RollbackSchemaRequest({
+    $core.String? name,
+    $core.String? revisionId,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (revisionId != null) {
+      _result.revisionId = revisionId;
+    }
+    return _result;
+  }
+  factory RollbackSchemaRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RollbackSchemaRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RollbackSchemaRequest clone() =>
+      RollbackSchemaRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RollbackSchemaRequest copyWith(
+          void Function(RollbackSchemaRequest) updates) =>
+      super.copyWith((message) => updates(message as RollbackSchemaRequest))
+          as RollbackSchemaRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RollbackSchemaRequest create() => RollbackSchemaRequest._();
+  RollbackSchemaRequest createEmptyInstance() => create();
+  static $pb.PbList<RollbackSchemaRequest> createRepeated() =>
+      $pb.PbList<RollbackSchemaRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RollbackSchemaRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RollbackSchemaRequest>(create);
+  static RollbackSchemaRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get revisionId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set revisionId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRevisionId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRevisionId() => clearField(2);
+}
+
+class DeleteSchemaRevisionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteSchemaRevisionRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'revisionId')
+    ..hasRequiredFields = false;
+
+  DeleteSchemaRevisionRequest._() : super();
+  factory DeleteSchemaRevisionRequest({
+    $core.String? name,
+    $core.String? revisionId,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (revisionId != null) {
+      _result.revisionId = revisionId;
+    }
+    return _result;
+  }
+  factory DeleteSchemaRevisionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteSchemaRevisionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteSchemaRevisionRequest clone() =>
+      DeleteSchemaRevisionRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteSchemaRevisionRequest copyWith(
+          void Function(DeleteSchemaRevisionRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeleteSchemaRevisionRequest))
+          as DeleteSchemaRevisionRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeleteSchemaRevisionRequest create() =>
+      DeleteSchemaRevisionRequest._();
+  DeleteSchemaRevisionRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSchemaRevisionRequest> createRepeated() =>
+      $pb.PbList<DeleteSchemaRevisionRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSchemaRevisionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSchemaRevisionRequest>(create);
+  static DeleteSchemaRevisionRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get revisionId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set revisionId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRevisionId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRevisionId() => clearField(2);
 }
 
 class DeleteSchemaRequest extends $pb.GeneratedMessage {

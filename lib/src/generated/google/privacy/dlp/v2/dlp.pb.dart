@@ -15,8 +15,8 @@ import '../../../protobuf/timestamp.pb.dart' as $3;
 import '../../../protobuf/empty.pb.dart' as $1;
 import '../../../type/timeofday.pb.dart' as $4;
 import '../../../type/date.pb.dart' as $5;
-import '../../../protobuf/duration.pb.dart' as $6;
-import '../../../rpc/status.pb.dart' as $7;
+import '../../../rpc/status.pb.dart' as $6;
+import '../../../protobuf/duration.pb.dart' as $7;
 import '../../../protobuf/field_mask.pb.dart' as $8;
 
 import 'dlp.pbenum.dart';
@@ -85,7 +85,107 @@ class ExcludeInfoTypes extends $pb.GeneratedMessage {
   $core.List<$2.InfoType> get infoTypes => $_getList(0);
 }
 
-enum ExclusionRule_Type { dictionary, regex, excludeInfoTypes, notSet }
+class ExcludeByHotword extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ExcludeByHotword',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.CustomInfoType_Regex>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'hotwordRegex',
+        subBuilder: $2.CustomInfoType_Regex.create)
+    ..aOM<$2.CustomInfoType_DetectionRule_Proximity>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'proximity',
+        subBuilder: $2.CustomInfoType_DetectionRule_Proximity.create)
+    ..hasRequiredFields = false;
+
+  ExcludeByHotword._() : super();
+  factory ExcludeByHotword({
+    $2.CustomInfoType_Regex? hotwordRegex,
+    $2.CustomInfoType_DetectionRule_Proximity? proximity,
+  }) {
+    final _result = create();
+    if (hotwordRegex != null) {
+      _result.hotwordRegex = hotwordRegex;
+    }
+    if (proximity != null) {
+      _result.proximity = proximity;
+    }
+    return _result;
+  }
+  factory ExcludeByHotword.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExcludeByHotword.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ExcludeByHotword clone() => ExcludeByHotword()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ExcludeByHotword copyWith(void Function(ExcludeByHotword) updates) =>
+      super.copyWith((message) => updates(message as ExcludeByHotword))
+          as ExcludeByHotword; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ExcludeByHotword create() => ExcludeByHotword._();
+  ExcludeByHotword createEmptyInstance() => create();
+  static $pb.PbList<ExcludeByHotword> createRepeated() =>
+      $pb.PbList<ExcludeByHotword>();
+  @$core.pragma('dart2js:noInline')
+  static ExcludeByHotword getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExcludeByHotword>(create);
+  static ExcludeByHotword? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.CustomInfoType_Regex get hotwordRegex => $_getN(0);
+  @$pb.TagNumber(1)
+  set hotwordRegex($2.CustomInfoType_Regex v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasHotwordRegex() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearHotwordRegex() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.CustomInfoType_Regex ensureHotwordRegex() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $2.CustomInfoType_DetectionRule_Proximity get proximity => $_getN(1);
+  @$pb.TagNumber(2)
+  set proximity($2.CustomInfoType_DetectionRule_Proximity v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProximity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProximity() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.CustomInfoType_DetectionRule_Proximity ensureProximity() => $_ensure(1);
+}
+
+enum ExclusionRule_Type {
+  dictionary,
+  regex,
+  excludeInfoTypes,
+  excludeByHotword,
+  notSet
+}
 
 class ExclusionRule extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, ExclusionRule_Type>
@@ -93,6 +193,7 @@ class ExclusionRule extends $pb.GeneratedMessage {
     1: ExclusionRule_Type.dictionary,
     2: ExclusionRule_Type.regex,
     3: ExclusionRule_Type.excludeInfoTypes,
+    5: ExclusionRule_Type.excludeByHotword,
     0: ExclusionRule_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -104,7 +205,7 @@ class ExclusionRule extends $pb.GeneratedMessage {
               ? ''
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3])
+    ..oo(0, [1, 2, 3, 5])
     ..aOM<$2.CustomInfoType_Dictionary>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -132,6 +233,12 @@ class ExclusionRule extends $pb.GeneratedMessage {
         defaultOrMaker: MatchingType.MATCHING_TYPE_UNSPECIFIED,
         valueOf: MatchingType.valueOf,
         enumValues: MatchingType.values)
+    ..aOM<ExcludeByHotword>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'excludeByHotword',
+        subBuilder: ExcludeByHotword.create)
     ..hasRequiredFields = false;
 
   ExclusionRule._() : super();
@@ -140,6 +247,7 @@ class ExclusionRule extends $pb.GeneratedMessage {
     $2.CustomInfoType_Regex? regex,
     ExcludeInfoTypes? excludeInfoTypes,
     MatchingType? matchingType,
+    ExcludeByHotword? excludeByHotword,
   }) {
     final _result = create();
     if (dictionary != null) {
@@ -153,6 +261,9 @@ class ExclusionRule extends $pb.GeneratedMessage {
     }
     if (matchingType != null) {
       _result.matchingType = matchingType;
+    }
+    if (excludeByHotword != null) {
+      _result.excludeByHotword = excludeByHotword;
     }
     return _result;
   }
@@ -239,6 +350,20 @@ class ExclusionRule extends $pb.GeneratedMessage {
   $core.bool hasMatchingType() => $_has(3);
   @$pb.TagNumber(4)
   void clearMatchingType() => clearField(4);
+
+  @$pb.TagNumber(5)
+  ExcludeByHotword get excludeByHotword => $_getN(4);
+  @$pb.TagNumber(5)
+  set excludeByHotword(ExcludeByHotword v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasExcludeByHotword() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearExcludeByHotword() => clearField(5);
+  @$pb.TagNumber(5)
+  ExcludeByHotword ensureExcludeByHotword() => $_ensure(4);
 }
 
 enum InspectionRule_Type { hotwordRule, exclusionRule, notSet }
@@ -4895,6 +5020,13 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'description')
+    ..pc<VersionDescription>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'versions',
+        $pb.PbFieldType.PM,
+        subBuilder: VersionDescription.create)
     ..pc<InfoTypeCategory>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -4910,6 +5042,7 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
     $core.String? displayName,
     $core.Iterable<InfoTypeSupportedBy>? supportedBy,
     $core.String? description,
+    $core.Iterable<VersionDescription>? versions,
     $core.Iterable<InfoTypeCategory>? categories,
   }) {
     final _result = create();
@@ -4924,6 +5057,9 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
     }
     if (description != null) {
       _result.description = description;
+    }
+    if (versions != null) {
+      _result.versions.addAll(versions);
     }
     if (categories != null) {
       _result.categories.addAll(categories);
@@ -4996,8 +5132,11 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDescription() => clearField(4);
 
+  @$pb.TagNumber(9)
+  $core.List<VersionDescription> get versions => $_getList(4);
+
   @$pb.TagNumber(10)
-  $core.List<InfoTypeCategory> get categories => $_getList(4);
+  $core.List<InfoTypeCategory> get categories => $_getList(5);
 }
 
 enum InfoTypeCategory_Category {
@@ -5138,6 +5277,94 @@ class InfoTypeCategory extends $pb.GeneratedMessage {
   $core.bool hasTypeCategory() => $_has(2);
   @$pb.TagNumber(3)
   void clearTypeCategory() => clearField(3);
+}
+
+class VersionDescription extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'VersionDescription',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'description')
+    ..hasRequiredFields = false;
+
+  VersionDescription._() : super();
+  factory VersionDescription({
+    $core.String? version,
+    $core.String? description,
+  }) {
+    final _result = create();
+    if (version != null) {
+      _result.version = version;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    return _result;
+  }
+  factory VersionDescription.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VersionDescription.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  VersionDescription clone() => VersionDescription()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  VersionDescription copyWith(void Function(VersionDescription) updates) =>
+      super.copyWith((message) => updates(message as VersionDescription))
+          as VersionDescription; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VersionDescription create() => VersionDescription._();
+  VersionDescription createEmptyInstance() => create();
+  static $pb.PbList<VersionDescription> createRepeated() =>
+      $pb.PbList<VersionDescription>();
+  @$core.pragma('dart2js:noInline')
+  static VersionDescription getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VersionDescription>(create);
+  static VersionDescription? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get version => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set version($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasVersion() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVersion() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
 }
 
 class ListInfoTypesRequest extends $pb.GeneratedMessage {
@@ -9791,6 +10018,7 @@ class DateTime extends $pb.GeneratedMessage {
 enum DeidentifyConfig_Transformation {
   infoTypeTransformations,
   recordTransformations,
+  imageTransformations,
   notSet
 }
 
@@ -9799,6 +10027,7 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
       _DeidentifyConfig_TransformationByTag = {
     1: DeidentifyConfig_Transformation.infoTypeTransformations,
     2: DeidentifyConfig_Transformation.recordTransformations,
+    4: DeidentifyConfig_Transformation.imageTransformations,
     0: DeidentifyConfig_Transformation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -9810,7 +10039,7 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
               ? ''
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 4])
     ..aOM<InfoTypeTransformations>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -9829,6 +10058,12 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
             ? ''
             : 'transformationErrorHandling',
         subBuilder: TransformationErrorHandling.create)
+    ..aOM<ImageTransformations>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'imageTransformations',
+        subBuilder: ImageTransformations.create)
     ..hasRequiredFields = false;
 
   DeidentifyConfig._() : super();
@@ -9836,6 +10071,7 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
     InfoTypeTransformations? infoTypeTransformations,
     RecordTransformations? recordTransformations,
     TransformationErrorHandling? transformationErrorHandling,
+    ImageTransformations? imageTransformations,
   }) {
     final _result = create();
     if (infoTypeTransformations != null) {
@@ -9846,6 +10082,9 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
     }
     if (transformationErrorHandling != null) {
       _result.transformationErrorHandling = transformationErrorHandling;
+    }
+    if (imageTransformations != null) {
+      _result.imageTransformations = imageTransformations;
     }
     return _result;
   }
@@ -9922,6 +10161,443 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   TransformationErrorHandling ensureTransformationErrorHandling() =>
       $_ensure(2);
+
+  @$pb.TagNumber(4)
+  ImageTransformations get imageTransformations => $_getN(3);
+  @$pb.TagNumber(4)
+  set imageTransformations(ImageTransformations v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasImageTransformations() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearImageTransformations() => clearField(4);
+  @$pb.TagNumber(4)
+  ImageTransformations ensureImageTransformations() => $_ensure(3);
+}
+
+class ImageTransformations_ImageTransformation_SelectedInfoTypes
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ImageTransformations.ImageTransformation.SelectedInfoTypes',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.InfoType>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'infoTypes',
+        $pb.PbFieldType.PM,
+        subBuilder: $2.InfoType.create)
+    ..hasRequiredFields = false;
+
+  ImageTransformations_ImageTransformation_SelectedInfoTypes._() : super();
+  factory ImageTransformations_ImageTransformation_SelectedInfoTypes({
+    $core.Iterable<$2.InfoType>? infoTypes,
+  }) {
+    final _result = create();
+    if (infoTypes != null) {
+      _result.infoTypes.addAll(infoTypes);
+    }
+    return _result;
+  }
+  factory ImageTransformations_ImageTransformation_SelectedInfoTypes.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageTransformations_ImageTransformation_SelectedInfoTypes.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation_SelectedInfoTypes clone() =>
+      ImageTransformations_ImageTransformation_SelectedInfoTypes()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation_SelectedInfoTypes copyWith(
+          void Function(
+                  ImageTransformations_ImageTransformation_SelectedInfoTypes)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as ImageTransformations_ImageTransformation_SelectedInfoTypes))
+          as ImageTransformations_ImageTransformation_SelectedInfoTypes; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation_SelectedInfoTypes create() =>
+      ImageTransformations_ImageTransformation_SelectedInfoTypes._();
+  ImageTransformations_ImageTransformation_SelectedInfoTypes
+      createEmptyInstance() => create();
+  static $pb.PbList<ImageTransformations_ImageTransformation_SelectedInfoTypes>
+      createRepeated() => $pb.PbList<
+          ImageTransformations_ImageTransformation_SelectedInfoTypes>();
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation_SelectedInfoTypes
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ImageTransformations_ImageTransformation_SelectedInfoTypes>(create);
+  static ImageTransformations_ImageTransformation_SelectedInfoTypes?
+      _defaultInstance;
+
+  @$pb.TagNumber(5)
+  $core.List<$2.InfoType> get infoTypes => $_getList(0);
+}
+
+class ImageTransformations_ImageTransformation_AllInfoTypes
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ImageTransformations.ImageTransformation.AllInfoTypes',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  ImageTransformations_ImageTransformation_AllInfoTypes._() : super();
+  factory ImageTransformations_ImageTransformation_AllInfoTypes() => create();
+  factory ImageTransformations_ImageTransformation_AllInfoTypes.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageTransformations_ImageTransformation_AllInfoTypes.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation_AllInfoTypes clone() =>
+      ImageTransformations_ImageTransformation_AllInfoTypes()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation_AllInfoTypes copyWith(
+          void Function(ImageTransformations_ImageTransformation_AllInfoTypes)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as ImageTransformations_ImageTransformation_AllInfoTypes))
+          as ImageTransformations_ImageTransformation_AllInfoTypes; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation_AllInfoTypes create() =>
+      ImageTransformations_ImageTransformation_AllInfoTypes._();
+  ImageTransformations_ImageTransformation_AllInfoTypes createEmptyInstance() =>
+      create();
+  static $pb.PbList<ImageTransformations_ImageTransformation_AllInfoTypes>
+      createRepeated() =>
+          $pb.PbList<ImageTransformations_ImageTransformation_AllInfoTypes>();
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation_AllInfoTypes getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ImageTransformations_ImageTransformation_AllInfoTypes>(create);
+  static ImageTransformations_ImageTransformation_AllInfoTypes?
+      _defaultInstance;
+}
+
+class ImageTransformations_ImageTransformation_AllText
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ImageTransformations.ImageTransformation.AllText',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  ImageTransformations_ImageTransformation_AllText._() : super();
+  factory ImageTransformations_ImageTransformation_AllText() => create();
+  factory ImageTransformations_ImageTransformation_AllText.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageTransformations_ImageTransformation_AllText.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation_AllText clone() =>
+      ImageTransformations_ImageTransformation_AllText()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation_AllText copyWith(
+          void Function(ImageTransformations_ImageTransformation_AllText)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as ImageTransformations_ImageTransformation_AllText))
+          as ImageTransformations_ImageTransformation_AllText; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation_AllText create() =>
+      ImageTransformations_ImageTransformation_AllText._();
+  ImageTransformations_ImageTransformation_AllText createEmptyInstance() =>
+      create();
+  static $pb.PbList<ImageTransformations_ImageTransformation_AllText>
+      createRepeated() =>
+          $pb.PbList<ImageTransformations_ImageTransformation_AllText>();
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation_AllText getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ImageTransformations_ImageTransformation_AllText>(create);
+  static ImageTransformations_ImageTransformation_AllText? _defaultInstance;
+}
+
+enum ImageTransformations_ImageTransformation_Target {
+  selectedInfoTypes,
+  allInfoTypes,
+  allText,
+  notSet
+}
+
+class ImageTransformations_ImageTransformation extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, ImageTransformations_ImageTransformation_Target>
+      _ImageTransformations_ImageTransformation_TargetByTag = {
+    4: ImageTransformations_ImageTransformation_Target.selectedInfoTypes,
+    5: ImageTransformations_ImageTransformation_Target.allInfoTypes,
+    6: ImageTransformations_ImageTransformation_Target.allText,
+    0: ImageTransformations_ImageTransformation_Target.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ImageTransformations.ImageTransformation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5, 6])
+    ..aOM<Color>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'redactionColor',
+        subBuilder: Color.create)
+    ..aOM<ImageTransformations_ImageTransformation_SelectedInfoTypes>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'selectedInfoTypes',
+        subBuilder:
+            ImageTransformations_ImageTransformation_SelectedInfoTypes.create)
+    ..aOM<ImageTransformations_ImageTransformation_AllInfoTypes>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allInfoTypes',
+        subBuilder:
+            ImageTransformations_ImageTransformation_AllInfoTypes.create)
+    ..aOM<ImageTransformations_ImageTransformation_AllText>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allText',
+        subBuilder: ImageTransformations_ImageTransformation_AllText.create)
+    ..hasRequiredFields = false;
+
+  ImageTransformations_ImageTransformation._() : super();
+  factory ImageTransformations_ImageTransformation({
+    Color? redactionColor,
+    ImageTransformations_ImageTransformation_SelectedInfoTypes?
+        selectedInfoTypes,
+    ImageTransformations_ImageTransformation_AllInfoTypes? allInfoTypes,
+    ImageTransformations_ImageTransformation_AllText? allText,
+  }) {
+    final _result = create();
+    if (redactionColor != null) {
+      _result.redactionColor = redactionColor;
+    }
+    if (selectedInfoTypes != null) {
+      _result.selectedInfoTypes = selectedInfoTypes;
+    }
+    if (allInfoTypes != null) {
+      _result.allInfoTypes = allInfoTypes;
+    }
+    if (allText != null) {
+      _result.allText = allText;
+    }
+    return _result;
+  }
+  factory ImageTransformations_ImageTransformation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageTransformations_ImageTransformation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation clone() =>
+      ImageTransformations_ImageTransformation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ImageTransformations_ImageTransformation copyWith(
+          void Function(ImageTransformations_ImageTransformation) updates) =>
+      super.copyWith((message) =>
+              updates(message as ImageTransformations_ImageTransformation))
+          as ImageTransformations_ImageTransformation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation create() =>
+      ImageTransformations_ImageTransformation._();
+  ImageTransformations_ImageTransformation createEmptyInstance() => create();
+  static $pb.PbList<ImageTransformations_ImageTransformation>
+      createRepeated() =>
+          $pb.PbList<ImageTransformations_ImageTransformation>();
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations_ImageTransformation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ImageTransformations_ImageTransformation>(create);
+  static ImageTransformations_ImageTransformation? _defaultInstance;
+
+  ImageTransformations_ImageTransformation_Target whichTarget() =>
+      _ImageTransformations_ImageTransformation_TargetByTag[$_whichOneof(0)]!;
+  void clearTarget() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(3)
+  Color get redactionColor => $_getN(0);
+  @$pb.TagNumber(3)
+  set redactionColor(Color v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasRedactionColor() => $_has(0);
+  @$pb.TagNumber(3)
+  void clearRedactionColor() => clearField(3);
+  @$pb.TagNumber(3)
+  Color ensureRedactionColor() => $_ensure(0);
+
+  @$pb.TagNumber(4)
+  ImageTransformations_ImageTransformation_SelectedInfoTypes
+      get selectedInfoTypes => $_getN(1);
+  @$pb.TagNumber(4)
+  set selectedInfoTypes(
+      ImageTransformations_ImageTransformation_SelectedInfoTypes v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasSelectedInfoTypes() => $_has(1);
+  @$pb.TagNumber(4)
+  void clearSelectedInfoTypes() => clearField(4);
+  @$pb.TagNumber(4)
+  ImageTransformations_ImageTransformation_SelectedInfoTypes
+      ensureSelectedInfoTypes() => $_ensure(1);
+
+  @$pb.TagNumber(5)
+  ImageTransformations_ImageTransformation_AllInfoTypes get allInfoTypes =>
+      $_getN(2);
+  @$pb.TagNumber(5)
+  set allInfoTypes(ImageTransformations_ImageTransformation_AllInfoTypes v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasAllInfoTypes() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearAllInfoTypes() => clearField(5);
+  @$pb.TagNumber(5)
+  ImageTransformations_ImageTransformation_AllInfoTypes ensureAllInfoTypes() =>
+      $_ensure(2);
+
+  @$pb.TagNumber(6)
+  ImageTransformations_ImageTransformation_AllText get allText => $_getN(3);
+  @$pb.TagNumber(6)
+  set allText(ImageTransformations_ImageTransformation_AllText v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasAllText() => $_has(3);
+  @$pb.TagNumber(6)
+  void clearAllText() => clearField(6);
+  @$pb.TagNumber(6)
+  ImageTransformations_ImageTransformation_AllText ensureAllText() =>
+      $_ensure(3);
+}
+
+class ImageTransformations extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ImageTransformations',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<ImageTransformations_ImageTransformation>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transforms',
+        $pb.PbFieldType.PM,
+        subBuilder: ImageTransformations_ImageTransformation.create)
+    ..hasRequiredFields = false;
+
+  ImageTransformations._() : super();
+  factory ImageTransformations({
+    $core.Iterable<ImageTransformations_ImageTransformation>? transforms,
+  }) {
+    final _result = create();
+    if (transforms != null) {
+      _result.transforms.addAll(transforms);
+    }
+    return _result;
+  }
+  factory ImageTransformations.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageTransformations.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ImageTransformations clone() =>
+      ImageTransformations()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ImageTransformations copyWith(void Function(ImageTransformations) updates) =>
+      super.copyWith((message) => updates(message as ImageTransformations))
+          as ImageTransformations; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations create() => ImageTransformations._();
+  ImageTransformations createEmptyInstance() => create();
+  static $pb.PbList<ImageTransformations> createRepeated() =>
+      $pb.PbList<ImageTransformations>();
+  @$core.pragma('dart2js:noInline')
+  static ImageTransformations getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImageTransformations>(create);
+  static ImageTransformations? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.List<ImageTransformations_ImageTransformation> get transforms =>
+      $_getList(0);
 }
 
 class TransformationErrorHandling_ThrowError extends $pb.GeneratedMessage {
@@ -13472,6 +14148,754 @@ class TransformationSummary extends $pb.GeneratedMessage {
   void clearTransformedBytes() => clearField(7);
 }
 
+class TransformationDescription extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransformationDescription',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<TransformationType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'type',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TransformationType.TRANSFORMATION_TYPE_UNSPECIFIED,
+        valueOf: TransformationType.valueOf,
+        enumValues: TransformationType.values)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'description')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'condition')
+    ..aOM<$2.InfoType>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'infoType',
+        subBuilder: $2.InfoType.create)
+    ..hasRequiredFields = false;
+
+  TransformationDescription._() : super();
+  factory TransformationDescription({
+    TransformationType? type,
+    $core.String? description,
+    $core.String? condition,
+    $2.InfoType? infoType,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (condition != null) {
+      _result.condition = condition;
+    }
+    if (infoType != null) {
+      _result.infoType = infoType;
+    }
+    return _result;
+  }
+  factory TransformationDescription.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationDescription.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransformationDescription clone() =>
+      TransformationDescription()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransformationDescription copyWith(
+          void Function(TransformationDescription) updates) =>
+      super.copyWith((message) => updates(message as TransformationDescription))
+          as TransformationDescription; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransformationDescription create() => TransformationDescription._();
+  TransformationDescription createEmptyInstance() => create();
+  static $pb.PbList<TransformationDescription> createRepeated() =>
+      $pb.PbList<TransformationDescription>();
+  @$core.pragma('dart2js:noInline')
+  static TransformationDescription getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationDescription>(create);
+  static TransformationDescription? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TransformationType get type => $_getN(0);
+  @$pb.TagNumber(1)
+  set type(TransformationType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get condition => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set condition($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCondition() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCondition() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $2.InfoType get infoType => $_getN(3);
+  @$pb.TagNumber(4)
+  set infoType($2.InfoType v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasInfoType() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearInfoType() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.InfoType ensureInfoType() => $_ensure(3);
+}
+
+class TransformationDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransformationDetails',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resourceName')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'containerName')
+    ..pc<TransformationDescription>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transformation',
+        $pb.PbFieldType.PM,
+        subBuilder: TransformationDescription.create)
+    ..aOM<TransformationResultStatus>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'statusDetails',
+        subBuilder: TransformationResultStatus.create)
+    ..aInt64(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transformedBytes')
+    ..aOM<TransformationLocation>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transformationLocation',
+        subBuilder: TransformationLocation.create)
+    ..hasRequiredFields = false;
+
+  TransformationDetails._() : super();
+  factory TransformationDetails({
+    $core.String? resourceName,
+    $core.String? containerName,
+    $core.Iterable<TransformationDescription>? transformation,
+    TransformationResultStatus? statusDetails,
+    $fixnum.Int64? transformedBytes,
+    TransformationLocation? transformationLocation,
+  }) {
+    final _result = create();
+    if (resourceName != null) {
+      _result.resourceName = resourceName;
+    }
+    if (containerName != null) {
+      _result.containerName = containerName;
+    }
+    if (transformation != null) {
+      _result.transformation.addAll(transformation);
+    }
+    if (statusDetails != null) {
+      _result.statusDetails = statusDetails;
+    }
+    if (transformedBytes != null) {
+      _result.transformedBytes = transformedBytes;
+    }
+    if (transformationLocation != null) {
+      _result.transformationLocation = transformationLocation;
+    }
+    return _result;
+  }
+  factory TransformationDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransformationDetails clone() =>
+      TransformationDetails()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransformationDetails copyWith(
+          void Function(TransformationDetails) updates) =>
+      super.copyWith((message) => updates(message as TransformationDetails))
+          as TransformationDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransformationDetails create() => TransformationDetails._();
+  TransformationDetails createEmptyInstance() => create();
+  static $pb.PbList<TransformationDetails> createRepeated() =>
+      $pb.PbList<TransformationDetails>();
+  @$core.pragma('dart2js:noInline')
+  static TransformationDetails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationDetails>(create);
+  static TransformationDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get containerName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set containerName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasContainerName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearContainerName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<TransformationDescription> get transformation => $_getList(2);
+
+  @$pb.TagNumber(4)
+  TransformationResultStatus get statusDetails => $_getN(3);
+  @$pb.TagNumber(4)
+  set statusDetails(TransformationResultStatus v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasStatusDetails() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStatusDetails() => clearField(4);
+  @$pb.TagNumber(4)
+  TransformationResultStatus ensureStatusDetails() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get transformedBytes => $_getI64(4);
+  @$pb.TagNumber(5)
+  set transformedBytes($fixnum.Int64 v) {
+    $_setInt64(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTransformedBytes() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTransformedBytes() => clearField(5);
+
+  @$pb.TagNumber(6)
+  TransformationLocation get transformationLocation => $_getN(5);
+  @$pb.TagNumber(6)
+  set transformationLocation(TransformationLocation v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasTransformationLocation() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearTransformationLocation() => clearField(6);
+  @$pb.TagNumber(6)
+  TransformationLocation ensureTransformationLocation() => $_ensure(5);
+}
+
+enum TransformationLocation_LocationType {
+  findingId,
+  recordTransformation,
+  notSet
+}
+
+class TransformationLocation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, TransformationLocation_LocationType>
+      _TransformationLocation_LocationTypeByTag = {
+    1: TransformationLocation_LocationType.findingId,
+    2: TransformationLocation_LocationType.recordTransformation,
+    0: TransformationLocation_LocationType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransformationLocation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'findingId')
+    ..aOM<RecordTransformation>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'recordTransformation',
+        subBuilder: RecordTransformation.create)
+    ..e<TransformationContainerType>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'containerType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TransformationContainerType.TRANSFORM_UNKNOWN_CONTAINER,
+        valueOf: TransformationContainerType.valueOf,
+        enumValues: TransformationContainerType.values)
+    ..hasRequiredFields = false;
+
+  TransformationLocation._() : super();
+  factory TransformationLocation({
+    $core.String? findingId,
+    RecordTransformation? recordTransformation,
+    TransformationContainerType? containerType,
+  }) {
+    final _result = create();
+    if (findingId != null) {
+      _result.findingId = findingId;
+    }
+    if (recordTransformation != null) {
+      _result.recordTransformation = recordTransformation;
+    }
+    if (containerType != null) {
+      _result.containerType = containerType;
+    }
+    return _result;
+  }
+  factory TransformationLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransformationLocation clone() =>
+      TransformationLocation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransformationLocation copyWith(
+          void Function(TransformationLocation) updates) =>
+      super.copyWith((message) => updates(message as TransformationLocation))
+          as TransformationLocation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransformationLocation create() => TransformationLocation._();
+  TransformationLocation createEmptyInstance() => create();
+  static $pb.PbList<TransformationLocation> createRepeated() =>
+      $pb.PbList<TransformationLocation>();
+  @$core.pragma('dart2js:noInline')
+  static TransformationLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationLocation>(create);
+  static TransformationLocation? _defaultInstance;
+
+  TransformationLocation_LocationType whichLocationType() =>
+      _TransformationLocation_LocationTypeByTag[$_whichOneof(0)]!;
+  void clearLocationType() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get findingId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set findingId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasFindingId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFindingId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  RecordTransformation get recordTransformation => $_getN(1);
+  @$pb.TagNumber(2)
+  set recordTransformation(RecordTransformation v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRecordTransformation() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRecordTransformation() => clearField(2);
+  @$pb.TagNumber(2)
+  RecordTransformation ensureRecordTransformation() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  TransformationContainerType get containerType => $_getN(2);
+  @$pb.TagNumber(3)
+  set containerType(TransformationContainerType v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasContainerType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContainerType() => clearField(3);
+}
+
+class RecordTransformation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RecordTransformation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.FieldId>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fieldId',
+        subBuilder: $2.FieldId.create)
+    ..aOM<$3.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'containerTimestamp',
+        subBuilder: $3.Timestamp.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'containerVersion')
+    ..hasRequiredFields = false;
+
+  RecordTransformation._() : super();
+  factory RecordTransformation({
+    $2.FieldId? fieldId,
+    $3.Timestamp? containerTimestamp,
+    $core.String? containerVersion,
+  }) {
+    final _result = create();
+    if (fieldId != null) {
+      _result.fieldId = fieldId;
+    }
+    if (containerTimestamp != null) {
+      _result.containerTimestamp = containerTimestamp;
+    }
+    if (containerVersion != null) {
+      _result.containerVersion = containerVersion;
+    }
+    return _result;
+  }
+  factory RecordTransformation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordTransformation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RecordTransformation clone() =>
+      RecordTransformation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RecordTransformation copyWith(void Function(RecordTransformation) updates) =>
+      super.copyWith((message) => updates(message as RecordTransformation))
+          as RecordTransformation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RecordTransformation create() => RecordTransformation._();
+  RecordTransformation createEmptyInstance() => create();
+  static $pb.PbList<RecordTransformation> createRepeated() =>
+      $pb.PbList<RecordTransformation>();
+  @$core.pragma('dart2js:noInline')
+  static RecordTransformation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordTransformation>(create);
+  static RecordTransformation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.FieldId get fieldId => $_getN(0);
+  @$pb.TagNumber(1)
+  set fieldId($2.FieldId v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasFieldId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFieldId() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureFieldId() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $3.Timestamp get containerTimestamp => $_getN(1);
+  @$pb.TagNumber(2)
+  set containerTimestamp($3.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasContainerTimestamp() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearContainerTimestamp() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureContainerTimestamp() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get containerVersion => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set containerVersion($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasContainerVersion() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContainerVersion() => clearField(3);
+}
+
+class TransformationResultStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransformationResultStatus',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<TransformationResultStatusType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resultStatusType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TransformationResultStatusType.STATE_TYPE_UNSPECIFIED,
+        valueOf: TransformationResultStatusType.valueOf,
+        enumValues: TransformationResultStatusType.values)
+    ..aOM<$6.Status>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'details',
+        subBuilder: $6.Status.create)
+    ..hasRequiredFields = false;
+
+  TransformationResultStatus._() : super();
+  factory TransformationResultStatus({
+    TransformationResultStatusType? resultStatusType,
+    $6.Status? details,
+  }) {
+    final _result = create();
+    if (resultStatusType != null) {
+      _result.resultStatusType = resultStatusType;
+    }
+    if (details != null) {
+      _result.details = details;
+    }
+    return _result;
+  }
+  factory TransformationResultStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationResultStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransformationResultStatus clone() =>
+      TransformationResultStatus()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransformationResultStatus copyWith(
+          void Function(TransformationResultStatus) updates) =>
+      super.copyWith(
+              (message) => updates(message as TransformationResultStatus))
+          as TransformationResultStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransformationResultStatus create() => TransformationResultStatus._();
+  TransformationResultStatus createEmptyInstance() => create();
+  static $pb.PbList<TransformationResultStatus> createRepeated() =>
+      $pb.PbList<TransformationResultStatus>();
+  @$core.pragma('dart2js:noInline')
+  static TransformationResultStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationResultStatus>(create);
+  static TransformationResultStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TransformationResultStatusType get resultStatusType => $_getN(0);
+  @$pb.TagNumber(1)
+  set resultStatusType(TransformationResultStatusType v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasResultStatusType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResultStatusType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $6.Status get details => $_getN(1);
+  @$pb.TagNumber(2)
+  set details($6.Status v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDetails() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDetails() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Status ensureDetails() => $_ensure(1);
+}
+
+enum TransformationDetailsStorageConfig_Type { table, notSet }
+
+class TransformationDetailsStorageConfig extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, TransformationDetailsStorageConfig_Type>
+      _TransformationDetailsStorageConfig_TypeByTag = {
+    1: TransformationDetailsStorageConfig_Type.table,
+    0: TransformationDetailsStorageConfig_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransformationDetailsStorageConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<$2.BigQueryTable>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'table',
+        subBuilder: $2.BigQueryTable.create)
+    ..hasRequiredFields = false;
+
+  TransformationDetailsStorageConfig._() : super();
+  factory TransformationDetailsStorageConfig({
+    $2.BigQueryTable? table,
+  }) {
+    final _result = create();
+    if (table != null) {
+      _result.table = table;
+    }
+    return _result;
+  }
+  factory TransformationDetailsStorageConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationDetailsStorageConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransformationDetailsStorageConfig clone() =>
+      TransformationDetailsStorageConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransformationDetailsStorageConfig copyWith(
+          void Function(TransformationDetailsStorageConfig) updates) =>
+      super.copyWith((message) =>
+              updates(message as TransformationDetailsStorageConfig))
+          as TransformationDetailsStorageConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransformationDetailsStorageConfig create() =>
+      TransformationDetailsStorageConfig._();
+  TransformationDetailsStorageConfig createEmptyInstance() => create();
+  static $pb.PbList<TransformationDetailsStorageConfig> createRepeated() =>
+      $pb.PbList<TransformationDetailsStorageConfig>();
+  @$core.pragma('dart2js:noInline')
+  static TransformationDetailsStorageConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationDetailsStorageConfig>(
+          create);
+  static TransformationDetailsStorageConfig? _defaultInstance;
+
+  TransformationDetailsStorageConfig_Type whichType() =>
+      _TransformationDetailsStorageConfig_TypeByTag[$_whichOneof(0)]!;
+  void clearType() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $2.BigQueryTable get table => $_getN(0);
+  @$pb.TagNumber(1)
+  set table($2.BigQueryTable v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTable() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTable() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.BigQueryTable ensureTable() => $_ensure(0);
+}
+
 enum Schedule_Option { recurrencePeriodDuration, notSet }
 
 class Schedule extends $pb.GeneratedMessage {
@@ -13489,17 +14913,17 @@ class Schedule extends $pb.GeneratedMessage {
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
     ..oo(0, [1])
-    ..aOM<$6.Duration>(
+    ..aOM<$7.Duration>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'recurrencePeriodDuration',
-        subBuilder: $6.Duration.create)
+        subBuilder: $7.Duration.create)
     ..hasRequiredFields = false;
 
   Schedule._() : super();
   factory Schedule({
-    $6.Duration? recurrencePeriodDuration,
+    $7.Duration? recurrencePeriodDuration,
   }) {
     final _result = create();
     if (recurrencePeriodDuration != null) {
@@ -13537,9 +14961,9 @@ class Schedule extends $pb.GeneratedMessage {
   void clearOption() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $6.Duration get recurrencePeriodDuration => $_getN(0);
+  $7.Duration get recurrencePeriodDuration => $_getN(0);
   @$pb.TagNumber(1)
-  set recurrencePeriodDuration($6.Duration v) {
+  set recurrencePeriodDuration($7.Duration v) {
     setField(1, v);
   }
 
@@ -13548,7 +14972,7 @@ class Schedule extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRecurrencePeriodDuration() => clearField(1);
   @$pb.TagNumber(1)
-  $6.Duration ensureRecurrencePeriodDuration() => $_ensure(0);
+  $7.Duration ensureRecurrencePeriodDuration() => $_ensure(0);
 }
 
 class Manual extends $pb.GeneratedMessage {
@@ -13964,12 +15388,12 @@ class Error extends $pb.GeneratedMessage {
               ? ''
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
-    ..aOM<$7.Status>(
+    ..aOM<$6.Status>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'details',
-        subBuilder: $7.Status.create)
+        subBuilder: $6.Status.create)
     ..pc<$3.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -13981,7 +15405,7 @@ class Error extends $pb.GeneratedMessage {
 
   Error._() : super();
   factory Error({
-    $7.Status? details,
+    $6.Status? details,
     $core.Iterable<$3.Timestamp>? timestamps,
   }) {
     final _result = create();
@@ -14020,9 +15444,9 @@ class Error extends $pb.GeneratedMessage {
   static Error? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.Status get details => $_getN(0);
+  $6.Status get details => $_getN(0);
   @$pb.TagNumber(1)
-  set details($7.Status v) {
+  set details($6.Status v) {
     setField(1, v);
   }
 
@@ -14031,7 +15455,7 @@ class Error extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDetails() => clearField(1);
   @$pb.TagNumber(1)
-  $7.Status ensureDetails() => $_ensure(0);
+  $6.Status ensureDetails() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$3.Timestamp> get timestamps => $_getList(1);
@@ -14645,6 +16069,152 @@ class Action_PublishFindingsToCloudDataCatalog extends $pb.GeneratedMessage {
   static Action_PublishFindingsToCloudDataCatalog? _defaultInstance;
 }
 
+enum Action_Deidentify_Output { cloudStorageOutput, notSet }
+
+class Action_Deidentify extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Action_Deidentify_Output>
+      _Action_Deidentify_OutputByTag = {
+    9: Action_Deidentify_Output.cloudStorageOutput,
+    0: Action_Deidentify_Output.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Action.Deidentify',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [9])
+    ..aOM<TransformationDetailsStorageConfig>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transformationDetailsStorageConfig',
+        subBuilder: TransformationDetailsStorageConfig.create)
+    ..aOM<TransformationConfig>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transformationConfig',
+        subBuilder: TransformationConfig.create)
+    ..pc<$2.FileType>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fileTypesToTransform',
+        $pb.PbFieldType.KE,
+        valueOf: $2.FileType.valueOf,
+        enumValues: $2.FileType.values,
+        defaultEnumValue: $2.FileType.FILE_TYPE_UNSPECIFIED)
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cloudStorageOutput')
+    ..hasRequiredFields = false;
+
+  Action_Deidentify._() : super();
+  factory Action_Deidentify({
+    TransformationDetailsStorageConfig? transformationDetailsStorageConfig,
+    TransformationConfig? transformationConfig,
+    $core.Iterable<$2.FileType>? fileTypesToTransform,
+    $core.String? cloudStorageOutput,
+  }) {
+    final _result = create();
+    if (transformationDetailsStorageConfig != null) {
+      _result.transformationDetailsStorageConfig =
+          transformationDetailsStorageConfig;
+    }
+    if (transformationConfig != null) {
+      _result.transformationConfig = transformationConfig;
+    }
+    if (fileTypesToTransform != null) {
+      _result.fileTypesToTransform.addAll(fileTypesToTransform);
+    }
+    if (cloudStorageOutput != null) {
+      _result.cloudStorageOutput = cloudStorageOutput;
+    }
+    return _result;
+  }
+  factory Action_Deidentify.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_Deidentify.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Action_Deidentify clone() => Action_Deidentify()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Action_Deidentify copyWith(void Function(Action_Deidentify) updates) =>
+      super.copyWith((message) => updates(message as Action_Deidentify))
+          as Action_Deidentify; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Action_Deidentify create() => Action_Deidentify._();
+  Action_Deidentify createEmptyInstance() => create();
+  static $pb.PbList<Action_Deidentify> createRepeated() =>
+      $pb.PbList<Action_Deidentify>();
+  @$core.pragma('dart2js:noInline')
+  static Action_Deidentify getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Action_Deidentify>(create);
+  static Action_Deidentify? _defaultInstance;
+
+  Action_Deidentify_Output whichOutput() =>
+      _Action_Deidentify_OutputByTag[$_whichOneof(0)]!;
+  void clearOutput() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(3)
+  TransformationDetailsStorageConfig get transformationDetailsStorageConfig =>
+      $_getN(0);
+  @$pb.TagNumber(3)
+  set transformationDetailsStorageConfig(TransformationDetailsStorageConfig v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTransformationDetailsStorageConfig() => $_has(0);
+  @$pb.TagNumber(3)
+  void clearTransformationDetailsStorageConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  TransformationDetailsStorageConfig
+      ensureTransformationDetailsStorageConfig() => $_ensure(0);
+
+  @$pb.TagNumber(7)
+  TransformationConfig get transformationConfig => $_getN(1);
+  @$pb.TagNumber(7)
+  set transformationConfig(TransformationConfig v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasTransformationConfig() => $_has(1);
+  @$pb.TagNumber(7)
+  void clearTransformationConfig() => clearField(7);
+  @$pb.TagNumber(7)
+  TransformationConfig ensureTransformationConfig() => $_ensure(1);
+
+  @$pb.TagNumber(8)
+  $core.List<$2.FileType> get fileTypesToTransform => $_getList(2);
+
+  @$pb.TagNumber(9)
+  $core.String get cloudStorageOutput => $_getSZ(3);
+  @$pb.TagNumber(9)
+  set cloudStorageOutput($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasCloudStorageOutput() => $_has(3);
+  @$pb.TagNumber(9)
+  void clearCloudStorageOutput() => clearField(9);
+}
+
 class Action_JobNotificationEmails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -14742,6 +16312,7 @@ enum Action_Action {
   pubSub,
   publishSummaryToCscc,
   publishFindingsToCloudDataCatalog,
+  deidentify,
   jobNotificationEmails,
   publishToStackdriver,
   notSet
@@ -14753,6 +16324,7 @@ class Action extends $pb.GeneratedMessage {
     2: Action_Action.pubSub,
     3: Action_Action.publishSummaryToCscc,
     5: Action_Action.publishFindingsToCloudDataCatalog,
+    7: Action_Action.deidentify,
     8: Action_Action.jobNotificationEmails,
     9: Action_Action.publishToStackdriver,
     0: Action_Action.notSet
@@ -14766,7 +16338,7 @@ class Action extends $pb.GeneratedMessage {
               ? ''
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 5, 8, 9])
+    ..oo(0, [1, 2, 3, 5, 7, 8, 9])
     ..aOM<Action_SaveFindings>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -14791,6 +16363,12 @@ class Action extends $pb.GeneratedMessage {
             ? ''
             : 'publishFindingsToCloudDataCatalog',
         subBuilder: Action_PublishFindingsToCloudDataCatalog.create)
+    ..aOM<Action_Deidentify>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deidentify',
+        subBuilder: Action_Deidentify.create)
     ..aOM<Action_JobNotificationEmails>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -14811,6 +16389,7 @@ class Action extends $pb.GeneratedMessage {
     Action_PublishToPubSub? pubSub,
     Action_PublishSummaryToCscc? publishSummaryToCscc,
     Action_PublishFindingsToCloudDataCatalog? publishFindingsToCloudDataCatalog,
+    Action_Deidentify? deidentify,
     Action_JobNotificationEmails? jobNotificationEmails,
     Action_PublishToStackdriver? publishToStackdriver,
   }) {
@@ -14827,6 +16406,9 @@ class Action extends $pb.GeneratedMessage {
     if (publishFindingsToCloudDataCatalog != null) {
       _result.publishFindingsToCloudDataCatalog =
           publishFindingsToCloudDataCatalog;
+    }
+    if (deidentify != null) {
+      _result.deidentify = deidentify;
     }
     if (jobNotificationEmails != null) {
       _result.jobNotificationEmails = jobNotificationEmails;
@@ -14924,33 +16506,157 @@ class Action extends $pb.GeneratedMessage {
   Action_PublishFindingsToCloudDataCatalog
       ensurePublishFindingsToCloudDataCatalog() => $_ensure(3);
 
+  @$pb.TagNumber(7)
+  Action_Deidentify get deidentify => $_getN(4);
+  @$pb.TagNumber(7)
+  set deidentify(Action_Deidentify v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasDeidentify() => $_has(4);
+  @$pb.TagNumber(7)
+  void clearDeidentify() => clearField(7);
+  @$pb.TagNumber(7)
+  Action_Deidentify ensureDeidentify() => $_ensure(4);
+
   @$pb.TagNumber(8)
-  Action_JobNotificationEmails get jobNotificationEmails => $_getN(4);
+  Action_JobNotificationEmails get jobNotificationEmails => $_getN(5);
   @$pb.TagNumber(8)
   set jobNotificationEmails(Action_JobNotificationEmails v) {
     setField(8, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasJobNotificationEmails() => $_has(4);
+  $core.bool hasJobNotificationEmails() => $_has(5);
   @$pb.TagNumber(8)
   void clearJobNotificationEmails() => clearField(8);
   @$pb.TagNumber(8)
-  Action_JobNotificationEmails ensureJobNotificationEmails() => $_ensure(4);
+  Action_JobNotificationEmails ensureJobNotificationEmails() => $_ensure(5);
 
   @$pb.TagNumber(9)
-  Action_PublishToStackdriver get publishToStackdriver => $_getN(5);
+  Action_PublishToStackdriver get publishToStackdriver => $_getN(6);
   @$pb.TagNumber(9)
   set publishToStackdriver(Action_PublishToStackdriver v) {
     setField(9, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasPublishToStackdriver() => $_has(5);
+  $core.bool hasPublishToStackdriver() => $_has(6);
   @$pb.TagNumber(9)
   void clearPublishToStackdriver() => clearField(9);
   @$pb.TagNumber(9)
-  Action_PublishToStackdriver ensurePublishToStackdriver() => $_ensure(5);
+  Action_PublishToStackdriver ensurePublishToStackdriver() => $_ensure(6);
+}
+
+class TransformationConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransformationConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deidentifyTemplate')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'structuredDeidentifyTemplate')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'imageRedactTemplate')
+    ..hasRequiredFields = false;
+
+  TransformationConfig._() : super();
+  factory TransformationConfig({
+    $core.String? deidentifyTemplate,
+    $core.String? structuredDeidentifyTemplate,
+    $core.String? imageRedactTemplate,
+  }) {
+    final _result = create();
+    if (deidentifyTemplate != null) {
+      _result.deidentifyTemplate = deidentifyTemplate;
+    }
+    if (structuredDeidentifyTemplate != null) {
+      _result.structuredDeidentifyTemplate = structuredDeidentifyTemplate;
+    }
+    if (imageRedactTemplate != null) {
+      _result.imageRedactTemplate = imageRedactTemplate;
+    }
+    return _result;
+  }
+  factory TransformationConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TransformationConfig clone() =>
+      TransformationConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TransformationConfig copyWith(void Function(TransformationConfig) updates) =>
+      super.copyWith((message) => updates(message as TransformationConfig))
+          as TransformationConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransformationConfig create() => TransformationConfig._();
+  TransformationConfig createEmptyInstance() => create();
+  static $pb.PbList<TransformationConfig> createRepeated() =>
+      $pb.PbList<TransformationConfig>();
+  @$core.pragma('dart2js:noInline')
+  static TransformationConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationConfig>(create);
+  static TransformationConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get deidentifyTemplate => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set deidentifyTemplate($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDeidentifyTemplate() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDeidentifyTemplate() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get structuredDeidentifyTemplate => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set structuredDeidentifyTemplate($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStructuredDeidentifyTemplate() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStructuredDeidentifyTemplate() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.String get imageRedactTemplate => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set imageRedactTemplate($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasImageRedactTemplate() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearImageRedactTemplate() => clearField(4);
 }
 
 class CreateInspectTemplateRequest extends $pb.GeneratedMessage {
@@ -20501,78 +22207,6 @@ class HybridInspectResponse extends $pb.GeneratedMessage {
   static HybridInspectResponse? _defaultInstance;
 }
 
-class SensitivityScore extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SensitivityScore',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.privacy.dlp.v2'),
-      createEmptyInstance: create)
-    ..e<SensitivityScore_SensitivityScoreLevel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'score',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: SensitivityScore_SensitivityScoreLevel
-            .SENSITIVITY_SCORE_UNSPECIFIED,
-        valueOf: SensitivityScore_SensitivityScoreLevel.valueOf,
-        enumValues: SensitivityScore_SensitivityScoreLevel.values)
-    ..hasRequiredFields = false;
-
-  SensitivityScore._() : super();
-  factory SensitivityScore({
-    SensitivityScore_SensitivityScoreLevel? score,
-  }) {
-    final _result = create();
-    if (score != null) {
-      _result.score = score;
-    }
-    return _result;
-  }
-  factory SensitivityScore.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SensitivityScore.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SensitivityScore clone() => SensitivityScore()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  SensitivityScore copyWith(void Function(SensitivityScore) updates) =>
-      super.copyWith((message) => updates(message as SensitivityScore))
-          as SensitivityScore; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SensitivityScore create() => SensitivityScore._();
-  SensitivityScore createEmptyInstance() => create();
-  static $pb.PbList<SensitivityScore> createRepeated() =>
-      $pb.PbList<SensitivityScore>();
-  @$core.pragma('dart2js:noInline')
-  static SensitivityScore getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SensitivityScore>(create);
-  static SensitivityScore? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  SensitivityScore_SensitivityScoreLevel get score => $_getN(0);
-  @$pb.TagNumber(1)
-  set score(SensitivityScore_SensitivityScoreLevel v) {
-    setField(1, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasScore() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearScore() => clearField(1);
-}
-
 class DataRiskLevel extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -20765,12 +22399,12 @@ class TableDataProfile extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'fullResource')
-    ..aOM<SensitivityScore>(
+    ..aOM<$2.SensitivityScore>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sensitivityScore',
-        subBuilder: SensitivityScore.create)
+        subBuilder: $2.SensitivityScore.create)
     ..aOM<DataRiskLevel>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -20910,7 +22544,7 @@ class TableDataProfile extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? projectDataProfile,
     $core.String? fullResource,
-    SensitivityScore? sensitivityScore,
+    $2.SensitivityScore? sensitivityScore,
     DataRiskLevel? dataRiskLevel,
     DataProfileConfigSnapshot? configSnapshot,
     $3.Timestamp? lastModifiedTime,
@@ -21075,9 +22709,9 @@ class TableDataProfile extends $pb.GeneratedMessage {
   void clearFullResource() => clearField(3);
 
   @$pb.TagNumber(5)
-  SensitivityScore get sensitivityScore => $_getN(3);
+  $2.SensitivityScore get sensitivityScore => $_getN(3);
   @$pb.TagNumber(5)
-  set sensitivityScore(SensitivityScore v) {
+  set sensitivityScore($2.SensitivityScore v) {
     setField(5, v);
   }
 
@@ -21086,7 +22720,7 @@ class TableDataProfile extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSensitivityScore() => clearField(5);
   @$pb.TagNumber(5)
-  SensitivityScore ensureSensitivityScore() => $_ensure(3);
+  $2.SensitivityScore ensureSensitivityScore() => $_ensure(3);
 
   @$pb.TagNumber(6)
   DataRiskLevel get dataRiskLevel => $_getN(4);
@@ -21338,12 +22972,12 @@ class ProfileStatus extends $pb.GeneratedMessage {
               ? ''
               : 'google.privacy.dlp.v2'),
       createEmptyInstance: create)
-    ..aOM<$7.Status>(
+    ..aOM<$6.Status>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
-        subBuilder: $7.Status.create)
+        subBuilder: $6.Status.create)
     ..aOM<$3.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -21354,7 +22988,7 @@ class ProfileStatus extends $pb.GeneratedMessage {
 
   ProfileStatus._() : super();
   factory ProfileStatus({
-    $7.Status? status,
+    $6.Status? status,
     $3.Timestamp? timestamp,
   }) {
     final _result = create();
@@ -21394,9 +23028,9 @@ class ProfileStatus extends $pb.GeneratedMessage {
   static ProfileStatus? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.Status get status => $_getN(0);
+  $6.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($7.Status v) {
+  set status($6.Status v) {
     setField(1, v);
   }
 
@@ -21405,7 +23039,7 @@ class ProfileStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $7.Status ensureStatus() => $_ensure(0);
+  $6.Status ensureStatus() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $3.Timestamp get timestamp => $_getN(1);
@@ -21438,15 +23072,27 @@ class InfoTypeSummary extends $pb.GeneratedMessage {
             ? ''
             : 'infoType',
         subBuilder: $2.InfoType.create)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'estimatedPrevalence',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   InfoTypeSummary._() : super();
   factory InfoTypeSummary({
     $2.InfoType? infoType,
+    @$core.Deprecated('This field is deprecated.')
+        $core.int? estimatedPrevalence,
   }) {
     final _result = create();
     if (infoType != null) {
       _result.infoType = infoType;
+    }
+    if (estimatedPrevalence != null) {
+      // ignore: deprecated_member_use_from_same_package
+      _result.estimatedPrevalence = estimatedPrevalence;
     }
     return _result;
   }
@@ -21490,6 +23136,22 @@ class InfoTypeSummary extends $pb.GeneratedMessage {
   void clearInfoType() => clearField(1);
   @$pb.TagNumber(1)
   $2.InfoType ensureInfoType() => $_ensure(0);
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  $core.int get estimatedPrevalence => $_getIZ(1);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  set estimatedPrevalence($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  $core.bool hasEstimatedPrevalence() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  void clearEstimatedPrevalence() => clearField(2);
 }
 
 class OtherInfoTypeSummary extends $pb.GeneratedMessage {
@@ -21508,15 +23170,25 @@ class OtherInfoTypeSummary extends $pb.GeneratedMessage {
             ? ''
             : 'infoType',
         subBuilder: $2.InfoType.create)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'estimatedPrevalence',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   OtherInfoTypeSummary._() : super();
   factory OtherInfoTypeSummary({
     $2.InfoType? infoType,
+    $core.int? estimatedPrevalence,
   }) {
     final _result = create();
     if (infoType != null) {
       _result.infoType = infoType;
+    }
+    if (estimatedPrevalence != null) {
+      _result.estimatedPrevalence = estimatedPrevalence;
     }
     return _result;
   }
@@ -21561,6 +23233,18 @@ class OtherInfoTypeSummary extends $pb.GeneratedMessage {
   void clearInfoType() => clearField(1);
   @$pb.TagNumber(1)
   $2.InfoType ensureInfoType() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.int get estimatedPrevalence => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set estimatedPrevalence($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEstimatedPrevalence() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEstimatedPrevalence() => clearField(2);
 }
 
 enum DataProfilePubSubCondition_PubSubCondition_Value {

@@ -9,6 +9,36 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class CVSSVersion extends $pb.ProtobufEnum {
+  static const CVSSVersion CVSS_VERSION_UNSPECIFIED = CVSSVersion._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CVSS_VERSION_UNSPECIFIED');
+  static const CVSSVersion CVSS_VERSION_2 = CVSSVersion._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CVSS_VERSION_2');
+  static const CVSSVersion CVSS_VERSION_3 = CVSSVersion._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CVSS_VERSION_3');
+
+  static const $core.List<CVSSVersion> values = <CVSSVersion>[
+    CVSS_VERSION_UNSPECIFIED,
+    CVSS_VERSION_2,
+    CVSS_VERSION_3,
+  ];
+
+  static final $core.Map<$core.int, CVSSVersion> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CVSSVersion? valueOf($core.int value) => _byValue[value];
+
+  const CVSSVersion._($core.int v, $core.String n) : super(v, n);
+}
+
 class CVSSv3_AttackVector extends $pb.ProtobufEnum {
   static const CVSSv3_AttackVector ATTACK_VECTOR_UNSPECIFIED =
       CVSSv3_AttackVector._(

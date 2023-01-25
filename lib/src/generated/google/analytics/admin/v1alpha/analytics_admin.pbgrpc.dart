@@ -13,6 +13,7 @@ import 'package:grpc/service_api.dart' as $grpc;
 import 'analytics_admin.pb.dart' as $0;
 import 'resources.pb.dart' as $1;
 import '../../../protobuf/empty.pb.dart' as $2;
+import 'audience.pb.dart' as $3;
 export 'analytics_admin.pb.dart';
 
 class AnalyticsAdminServiceClient extends $grpc.Client {
@@ -436,6 +437,50 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
           '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetDataStream',
           ($0.GetDataStreamRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.DataStream.fromBuffer(value));
+  static final _$getAudience =
+      $grpc.ClientMethod<$0.GetAudienceRequest, $3.Audience>(
+          '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetAudience',
+          ($0.GetAudienceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.Audience.fromBuffer(value));
+  static final _$listAudiences =
+      $grpc.ClientMethod<$0.ListAudiencesRequest, $0.ListAudiencesResponse>(
+          '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListAudiences',
+          ($0.ListAudiencesRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ListAudiencesResponse.fromBuffer(value));
+  static final _$createAudience = $grpc.ClientMethod<$0.CreateAudienceRequest,
+          $3.Audience>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateAudience',
+      ($0.CreateAudienceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Audience.fromBuffer(value));
+  static final _$updateAudience = $grpc.ClientMethod<$0.UpdateAudienceRequest,
+          $3.Audience>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateAudience',
+      ($0.UpdateAudienceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Audience.fromBuffer(value));
+  static final _$archiveAudience = $grpc.ClientMethod<$0.ArchiveAudienceRequest,
+          $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ArchiveAudience',
+      ($0.ArchiveAudienceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$getAttributionSettings = $grpc.ClientMethod<
+          $0.GetAttributionSettingsRequest, $1.AttributionSettings>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetAttributionSettings',
+      ($0.GetAttributionSettingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.AttributionSettings.fromBuffer(value));
+  static final _$updateAttributionSettings = $grpc.ClientMethod<
+          $0.UpdateAttributionSettingsRequest, $1.AttributionSettings>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateAttributionSettings',
+      ($0.UpdateAttributionSettingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.AttributionSettings.fromBuffer(value));
+  static final _$runAccessReport = $grpc.ClientMethod<$0.RunAccessReportRequest,
+          $0.RunAccessReportResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/RunAccessReport',
+      ($0.RunAccessReportRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.RunAccessReportResponse.fromBuffer(value));
 
   AnalyticsAdminServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -906,6 +951,55 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.GetDataStreamRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getDataStream, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Audience> getAudience($0.GetAudienceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAudience, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListAudiencesResponse> listAudiences(
+      $0.ListAudiencesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAudiences, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Audience> createAudience(
+      $0.CreateAudienceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAudience, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Audience> updateAudience(
+      $0.UpdateAudienceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateAudience, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> archiveAudience(
+      $0.ArchiveAudienceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$archiveAudience, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AttributionSettings> getAttributionSettings(
+      $0.GetAttributionSettingsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAttributionSettings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AttributionSettings> updateAttributionSettings(
+      $0.UpdateAttributionSettingsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateAttributionSettings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.RunAccessReportResponse> runAccessReport(
+      $0.RunAccessReportRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$runAccessReport, request, options: options);
   }
 }
 
@@ -1551,6 +1645,74 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetDataStreamRequest.fromBuffer(value),
         ($1.DataStream value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetAudienceRequest, $3.Audience>(
+        'GetAudience',
+        getAudience_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetAudienceRequest.fromBuffer(value),
+        ($3.Audience value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListAudiencesRequest, $0.ListAudiencesResponse>(
+            'ListAudiences',
+            listAudiences_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListAudiencesRequest.fromBuffer(value),
+            ($0.ListAudiencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateAudienceRequest, $3.Audience>(
+        'CreateAudience',
+        createAudience_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateAudienceRequest.fromBuffer(value),
+        ($3.Audience value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateAudienceRequest, $3.Audience>(
+        'UpdateAudience',
+        updateAudience_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateAudienceRequest.fromBuffer(value),
+        ($3.Audience value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ArchiveAudienceRequest, $2.Empty>(
+        'ArchiveAudience',
+        archiveAudience_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ArchiveAudienceRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetAttributionSettingsRequest,
+            $1.AttributionSettings>(
+        'GetAttributionSettings',
+        getAttributionSettings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetAttributionSettingsRequest.fromBuffer(value),
+        ($1.AttributionSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateAttributionSettingsRequest,
+            $1.AttributionSettings>(
+        'UpdateAttributionSettings',
+        updateAttributionSettings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateAttributionSettingsRequest.fromBuffer(value),
+        ($1.AttributionSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RunAccessReportRequest,
+            $0.RunAccessReportResponse>(
+        'RunAccessReport',
+        runAccessReport_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RunAccessReportRequest.fromBuffer(value),
+        ($0.RunAccessReportResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Account> getAccount_Pre($grpc.ServiceCall call,
@@ -1981,6 +2143,50 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return getDataStream(call, await request);
   }
 
+  $async.Future<$3.Audience> getAudience_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetAudienceRequest> request) async {
+    return getAudience(call, await request);
+  }
+
+  $async.Future<$0.ListAudiencesResponse> listAudiences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListAudiencesRequest> request) async {
+    return listAudiences(call, await request);
+  }
+
+  $async.Future<$3.Audience> createAudience_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateAudienceRequest> request) async {
+    return createAudience(call, await request);
+  }
+
+  $async.Future<$3.Audience> updateAudience_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateAudienceRequest> request) async {
+    return updateAudience(call, await request);
+  }
+
+  $async.Future<$2.Empty> archiveAudience_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ArchiveAudienceRequest> request) async {
+    return archiveAudience(call, await request);
+  }
+
+  $async.Future<$1.AttributionSettings> getAttributionSettings_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetAttributionSettingsRequest> request) async {
+    return getAttributionSettings(call, await request);
+  }
+
+  $async.Future<$1.AttributionSettings> updateAttributionSettings_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateAttributionSettingsRequest> request) async {
+    return updateAttributionSettings(call, await request);
+  }
+
+  $async.Future<$0.RunAccessReportResponse> runAccessReport_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.RunAccessReportRequest> request) async {
+    return runAccessReport(call, await request);
+  }
+
   $async.Future<$1.Account> getAccount(
       $grpc.ServiceCall call, $0.GetAccountRequest request);
   $async.Future<$0.ListAccountsResponse> listAccounts(
@@ -2139,4 +2345,20 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.ListDataStreamsRequest request);
   $async.Future<$1.DataStream> getDataStream(
       $grpc.ServiceCall call, $0.GetDataStreamRequest request);
+  $async.Future<$3.Audience> getAudience(
+      $grpc.ServiceCall call, $0.GetAudienceRequest request);
+  $async.Future<$0.ListAudiencesResponse> listAudiences(
+      $grpc.ServiceCall call, $0.ListAudiencesRequest request);
+  $async.Future<$3.Audience> createAudience(
+      $grpc.ServiceCall call, $0.CreateAudienceRequest request);
+  $async.Future<$3.Audience> updateAudience(
+      $grpc.ServiceCall call, $0.UpdateAudienceRequest request);
+  $async.Future<$2.Empty> archiveAudience(
+      $grpc.ServiceCall call, $0.ArchiveAudienceRequest request);
+  $async.Future<$1.AttributionSettings> getAttributionSettings(
+      $grpc.ServiceCall call, $0.GetAttributionSettingsRequest request);
+  $async.Future<$1.AttributionSettings> updateAttributionSettings(
+      $grpc.ServiceCall call, $0.UpdateAttributionSettingsRequest request);
+  $async.Future<$0.RunAccessReportResponse> runAccessReport(
+      $grpc.ServiceCall call, $0.RunAccessReportRequest request);
 }

@@ -9,6 +9,120 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use runAccessReportRequestDescriptor instead')
+const RunAccessReportRequest$json = const {
+  '1': 'RunAccessReportRequest',
+  '2': const [
+    const {'1': 'entity', '3': 1, '4': 1, '5': 9, '10': 'entity'},
+    const {
+      '1': 'dimensions',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessDimension',
+      '10': 'dimensions'
+    },
+    const {
+      '1': 'metrics',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessMetric',
+      '10': 'metrics'
+    },
+    const {
+      '1': 'date_ranges',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessDateRange',
+      '10': 'dateRanges'
+    },
+    const {
+      '1': 'dimension_filter',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessFilterExpression',
+      '10': 'dimensionFilter'
+    },
+    const {
+      '1': 'metric_filter',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessFilterExpression',
+      '10': 'metricFilter'
+    },
+    const {'1': 'offset', '3': 7, '4': 1, '5': 3, '10': 'offset'},
+    const {'1': 'limit', '3': 8, '4': 1, '5': 3, '10': 'limit'},
+    const {'1': 'time_zone', '3': 9, '4': 1, '5': 9, '10': 'timeZone'},
+    const {
+      '1': 'order_bys',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessOrderBy',
+      '10': 'orderBys'
+    },
+    const {
+      '1': 'return_entity_quota',
+      '3': 11,
+      '4': 1,
+      '5': 8,
+      '10': 'returnEntityQuota'
+    },
+  ],
+};
+
+/// Descriptor for `RunAccessReportRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List runAccessReportRequestDescriptor =
+    $convert.base64Decode(
+        'ChZSdW5BY2Nlc3NSZXBvcnRSZXF1ZXN0EhYKBmVudGl0eRgBIAEoCVIGZW50aXR5Ek8KCmRpbWVuc2lvbnMYAiADKAsyLy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzRGltZW5zaW9uUgpkaW1lbnNpb25zEkYKB21ldHJpY3MYAyADKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzTWV0cmljUgdtZXRyaWNzElAKC2RhdGVfcmFuZ2VzGAQgAygLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0RhdGVSYW5nZVIKZGF0ZVJhbmdlcxJhChBkaW1lbnNpb25fZmlsdGVyGAUgASgLMjYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0ZpbHRlckV4cHJlc3Npb25SD2RpbWVuc2lvbkZpbHRlchJbCg1tZXRyaWNfZmlsdGVyGAYgASgLMjYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0ZpbHRlckV4cHJlc3Npb25SDG1ldHJpY0ZpbHRlchIWCgZvZmZzZXQYByABKANSBm9mZnNldBIUCgVsaW1pdBgIIAEoA1IFbGltaXQSGwoJdGltZV96b25lGAkgASgJUgh0aW1lWm9uZRJKCglvcmRlcl9ieXMYCiADKAsyLS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzT3JkZXJCeVIIb3JkZXJCeXMSLgoTcmV0dXJuX2VudGl0eV9xdW90YRgLIAEoCFIRcmV0dXJuRW50aXR5UXVvdGE=');
+@$core.Deprecated('Use runAccessReportResponseDescriptor instead')
+const RunAccessReportResponse$json = const {
+  '1': 'RunAccessReportResponse',
+  '2': const [
+    const {
+      '1': 'dimension_headers',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessDimensionHeader',
+      '10': 'dimensionHeaders'
+    },
+    const {
+      '1': 'metric_headers',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessMetricHeader',
+      '10': 'metricHeaders'
+    },
+    const {
+      '1': 'rows',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessRow',
+      '10': 'rows'
+    },
+    const {'1': 'row_count', '3': 4, '4': 1, '5': 5, '10': 'rowCount'},
+    const {
+      '1': 'quota',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessQuota',
+      '10': 'quota'
+    },
+  ],
+};
+
+/// Descriptor for `RunAccessReportResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List runAccessReportResponseDescriptor =
+    $convert.base64Decode(
+        'ChdSdW5BY2Nlc3NSZXBvcnRSZXNwb25zZRJiChFkaW1lbnNpb25faGVhZGVycxgBIAMoCzI1Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NEaW1lbnNpb25IZWFkZXJSEGRpbWVuc2lvbkhlYWRlcnMSWQoObWV0cmljX2hlYWRlcnMYAiADKAsyMi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzTWV0cmljSGVhZGVyUg1tZXRyaWNIZWFkZXJzEj0KBHJvd3MYAyADKAsyKS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzUm93UgRyb3dzEhsKCXJvd19jb3VudBgEIAEoBVIIcm93Q291bnQSQQoFcXVvdGEYBSABKAsyKy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzUXVvdGFSBXF1b3Rh');
 @$core.Deprecated('Use getAccountRequestDescriptor instead')
 const GetAccountRequest$json = const {
   '1': 'GetAccountRequest',
@@ -1990,3 +2104,167 @@ const GetDataStreamRequest$json = const {
 /// Descriptor for `GetDataStreamRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getDataStreamRequestDescriptor = $convert.base64Decode(
     'ChRHZXREYXRhU3RyZWFtUmVxdWVzdBJECgRuYW1lGAEgASgJQjDgQQL6QSoKKGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFTdHJlYW1SBG5hbWU=');
+@$core.Deprecated('Use getAudienceRequestDescriptor instead')
+const GetAudienceRequest$json = const {
+  '1': 'GetAudienceRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetAudienceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAudienceRequestDescriptor = $convert.base64Decode(
+    'ChJHZXRBdWRpZW5jZVJlcXVlc3QSQgoEbmFtZRgBIAEoCUIu4EEC+kEoCiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BdWRpZW5jZVIEbmFtZQ==');
+@$core.Deprecated('Use listAudiencesRequestDescriptor instead')
+const ListAudiencesRequest$json = const {
+  '1': 'ListAudiencesRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListAudiencesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAudiencesRequestDescriptor = $convert.base64Decode(
+    'ChRMaXN0QXVkaWVuY2VzUmVxdWVzdBJGCgZwYXJlbnQYASABKAlCLuBBAvpBKBImYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXVkaWVuY2VSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbg==');
+@$core.Deprecated('Use listAudiencesResponseDescriptor instead')
+const ListAudiencesResponse$json = const {
+  '1': 'ListAudiencesResponse',
+  '2': const [
+    const {
+      '1': 'audiences',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.Audience',
+      '10': 'audiences'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListAudiencesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAudiencesResponseDescriptor = $convert.base64Decode(
+    'ChVMaXN0QXVkaWVuY2VzUmVzcG9uc2USRgoJYXVkaWVuY2VzGAEgAygLMiguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlUglhdWRpZW5jZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+@$core.Deprecated('Use createAudienceRequestDescriptor instead')
+const CreateAudienceRequest$json = const {
+  '1': 'CreateAudienceRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'audience',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.Audience',
+      '8': const {},
+      '10': 'audience'
+    },
+  ],
+};
+
+/// Descriptor for `CreateAudienceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAudienceRequestDescriptor = $convert.base64Decode(
+    'ChVDcmVhdGVBdWRpZW5jZVJlcXVlc3QSRgoGcGFyZW50GAEgASgJQi7gQQL6QSgSJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0F1ZGllbmNlUgZwYXJlbnQSSQoIYXVkaWVuY2UYAiABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VCA+BBAlIIYXVkaWVuY2U=');
+@$core.Deprecated('Use updateAudienceRequestDescriptor instead')
+const UpdateAudienceRequest$json = const {
+  '1': 'UpdateAudienceRequest',
+  '2': const [
+    const {
+      '1': 'audience',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.Audience',
+      '8': const {},
+      '10': 'audience'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateAudienceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateAudienceRequestDescriptor = $convert.base64Decode(
+    'ChVVcGRhdGVBdWRpZW5jZVJlcXVlc3QSSQoIYXVkaWVuY2UYASABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VCA+BBAlIIYXVkaWVuY2USQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use archiveAudienceRequestDescriptor instead')
+const ArchiveAudienceRequest$json = const {
+  '1': 'ArchiveAudienceRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `ArchiveAudienceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List archiveAudienceRequestDescriptor =
+    $convert.base64Decode(
+        'ChZBcmNoaXZlQXVkaWVuY2VSZXF1ZXN0EkIKBG5hbWUYASABKAlCLuBBAvpBKBImYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXVkaWVuY2VSBG5hbWU=');
+@$core.Deprecated('Use getAttributionSettingsRequestDescriptor instead')
+const GetAttributionSettingsRequest$json = const {
+  '1': 'GetAttributionSettingsRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetAttributionSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAttributionSettingsRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRBdHRyaWJ1dGlvblNldHRpbmdzUmVxdWVzdBJNCgRuYW1lGAEgASgJQjngQQL6QTMKMWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0F0dHJpYnV0aW9uU2V0dGluZ3NSBG5hbWU=');
+@$core.Deprecated('Use updateAttributionSettingsRequestDescriptor instead')
+const UpdateAttributionSettingsRequest$json = const {
+  '1': 'UpdateAttributionSettingsRequest',
+  '2': const [
+    const {
+      '1': 'attribution_settings',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AttributionSettings',
+      '8': const {},
+      '10': 'attributionSettings'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateAttributionSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateAttributionSettingsRequestDescriptor =
+    $convert.base64Decode(
+        'CiBVcGRhdGVBdHRyaWJ1dGlvblNldHRpbmdzUmVxdWVzdBJrChRhdHRyaWJ1dGlvbl9zZXR0aW5ncxgBIAEoCzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRyaWJ1dGlvblNldHRpbmdzQgPgQQJSE2F0dHJpYnV0aW9uU2V0dGluZ3MSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');

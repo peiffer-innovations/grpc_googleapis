@@ -110,6 +110,26 @@ class TollPass extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'IN_LOCAL_HP_PLATE_EXEMPT');
+  static const TollPass MX_IAVE = TollPass._(
+      90,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MX_IAVE');
+  static const TollPass MX_PASE = TollPass._(
+      91,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MX_PASE');
+  static const TollPass MX_QUICKPASS = TollPass._(
+      93,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MX_QUICKPASS');
+  static const TollPass MX_SISTEMA_TELEPEAJE_CHIHUAHUA = TollPass._(
+      89,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MX_SISTEMA_TELEPEAJE_CHIHUAHUA');
   static const TollPass MX_TAG_IAVE = TollPass._(
       12,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
@@ -120,6 +140,11 @@ class TollPass extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'MX_TAG_TELEVIA');
+  static const TollPass MX_TELEVIA = TollPass._(
+      92,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MX_TELEVIA');
   static const TollPass MX_VIAPASS = TollPass._(
       14,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
@@ -470,8 +495,13 @@ class TollPass extends $pb.ProtobufEnum {
     ID_E_TOLL,
     IN_FASTAG,
     IN_LOCAL_HP_PLATE_EXEMPT,
+    MX_IAVE,
+    MX_PASE,
+    MX_QUICKPASS,
+    MX_SISTEMA_TELEPEAJE_CHIHUAHUA,
     MX_TAG_IAVE,
     MX_TAG_TELEVIA,
+    MX_TELEVIA,
     MX_VIAPASS,
     US_AL_FREEDOM_PASS,
     US_AK_ANTON_ANDERSON_TUNNEL_BOOK_OF_10_TICKETS,

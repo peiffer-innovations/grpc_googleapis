@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'resources.pb.dart' as $2;
 import '../../../rpc/status.pb.dart' as $3;
 import '../../../protobuf/field_mask.pb.dart' as $4;
+import '../../../longrunning/operations.pb.dart' as $0;
 
 import 'rpcmessages.pbenum.dart';
 
@@ -1044,6 +1045,295 @@ class BatchDeletePhotosRequest extends $pb.GeneratedMessage {
   $core.List<$core.String> get photoIds => $_getList(0);
 }
 
+class CreatePhotoSequenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreatePhotoSequenceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.PhotoSequence>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'photoSequence',
+        subBuilder: $2.PhotoSequence.create)
+    ..e<CreatePhotoSequenceRequest_InputType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'inputType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            CreatePhotoSequenceRequest_InputType.INPUT_TYPE_UNSPECIFIED,
+        valueOf: CreatePhotoSequenceRequest_InputType.valueOf,
+        enumValues: CreatePhotoSequenceRequest_InputType.values)
+    ..hasRequiredFields = false;
+
+  CreatePhotoSequenceRequest._() : super();
+  factory CreatePhotoSequenceRequest({
+    $2.PhotoSequence? photoSequence,
+    CreatePhotoSequenceRequest_InputType? inputType,
+  }) {
+    final _result = create();
+    if (photoSequence != null) {
+      _result.photoSequence = photoSequence;
+    }
+    if (inputType != null) {
+      _result.inputType = inputType;
+    }
+    return _result;
+  }
+  factory CreatePhotoSequenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreatePhotoSequenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreatePhotoSequenceRequest clone() =>
+      CreatePhotoSequenceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreatePhotoSequenceRequest copyWith(
+          void Function(CreatePhotoSequenceRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreatePhotoSequenceRequest))
+          as CreatePhotoSequenceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreatePhotoSequenceRequest create() => CreatePhotoSequenceRequest._();
+  CreatePhotoSequenceRequest createEmptyInstance() => create();
+  static $pb.PbList<CreatePhotoSequenceRequest> createRepeated() =>
+      $pb.PbList<CreatePhotoSequenceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreatePhotoSequenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreatePhotoSequenceRequest>(create);
+  static CreatePhotoSequenceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.PhotoSequence get photoSequence => $_getN(0);
+  @$pb.TagNumber(1)
+  set photoSequence($2.PhotoSequence v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPhotoSequence() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPhotoSequence() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.PhotoSequence ensurePhotoSequence() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  CreatePhotoSequenceRequest_InputType get inputType => $_getN(1);
+  @$pb.TagNumber(2)
+  set inputType(CreatePhotoSequenceRequest_InputType v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasInputType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearInputType() => clearField(2);
+}
+
+class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetPhotoSequenceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sequenceId')
+    ..e<PhotoView>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'view',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: PhotoView.BASIC,
+        valueOf: PhotoView.valueOf,
+        enumValues: PhotoView.values)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
+    ..hasRequiredFields = false;
+
+  GetPhotoSequenceRequest._() : super();
+  factory GetPhotoSequenceRequest({
+    $core.String? sequenceId,
+    @$core.Deprecated('This field is deprecated.') PhotoView? view,
+    $core.String? filter,
+  }) {
+    final _result = create();
+    if (sequenceId != null) {
+      _result.sequenceId = sequenceId;
+    }
+    if (view != null) {
+      // ignore: deprecated_member_use_from_same_package
+      _result.view = view;
+    }
+    if (filter != null) {
+      _result.filter = filter;
+    }
+    return _result;
+  }
+  factory GetPhotoSequenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetPhotoSequenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetPhotoSequenceRequest clone() =>
+      GetPhotoSequenceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetPhotoSequenceRequest copyWith(
+          void Function(GetPhotoSequenceRequest) updates) =>
+      super.copyWith((message) => updates(message as GetPhotoSequenceRequest))
+          as GetPhotoSequenceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetPhotoSequenceRequest create() => GetPhotoSequenceRequest._();
+  GetPhotoSequenceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetPhotoSequenceRequest> createRepeated() =>
+      $pb.PbList<GetPhotoSequenceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetPhotoSequenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetPhotoSequenceRequest>(create);
+  static GetPhotoSequenceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sequenceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sequenceId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSequenceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSequenceId() => clearField(1);
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  PhotoView get view => $_getN(1);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  set view(PhotoView v) {
+    setField(2, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  $core.bool hasView() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(2)
+  void clearView() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set filter($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFilter() => clearField(3);
+}
+
+class DeletePhotoSequenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeletePhotoSequenceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sequenceId')
+    ..hasRequiredFields = false;
+
+  DeletePhotoSequenceRequest._() : super();
+  factory DeletePhotoSequenceRequest({
+    $core.String? sequenceId,
+  }) {
+    final _result = create();
+    if (sequenceId != null) {
+      _result.sequenceId = sequenceId;
+    }
+    return _result;
+  }
+  factory DeletePhotoSequenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeletePhotoSequenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeletePhotoSequenceRequest clone() =>
+      DeletePhotoSequenceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeletePhotoSequenceRequest copyWith(
+          void Function(DeletePhotoSequenceRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeletePhotoSequenceRequest))
+          as DeletePhotoSequenceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeletePhotoSequenceRequest create() => DeletePhotoSequenceRequest._();
+  DeletePhotoSequenceRequest createEmptyInstance() => create();
+  static $pb.PbList<DeletePhotoSequenceRequest> createRepeated() =>
+      $pb.PbList<DeletePhotoSequenceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeletePhotoSequenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeletePhotoSequenceRequest>(create);
+  static DeletePhotoSequenceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sequenceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sequenceId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSequenceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSequenceId() => clearField(1);
+}
+
 class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1104,4 +1394,200 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$3.Status> get status => $_getList(0);
+}
+
+class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListPhotoSequencesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filter')
+    ..hasRequiredFields = false;
+
+  ListPhotoSequencesRequest._() : super();
+  factory ListPhotoSequencesRequest({
+    $core.int? pageSize,
+    $core.String? pageToken,
+    $core.String? filter,
+  }) {
+    final _result = create();
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    if (filter != null) {
+      _result.filter = filter;
+    }
+    return _result;
+  }
+  factory ListPhotoSequencesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPhotoSequencesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListPhotoSequencesRequest clone() =>
+      ListPhotoSequencesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListPhotoSequencesRequest copyWith(
+          void Function(ListPhotoSequencesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListPhotoSequencesRequest))
+          as ListPhotoSequencesRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListPhotoSequencesRequest create() => ListPhotoSequencesRequest._();
+  ListPhotoSequencesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListPhotoSequencesRequest> createRepeated() =>
+      $pb.PbList<ListPhotoSequencesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListPhotoSequencesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListPhotoSequencesRequest>(create);
+  static ListPhotoSequencesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set pageSize($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPageSize() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set pageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageToken() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set filter($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearFilter() => clearField(4);
+}
+
+class ListPhotoSequencesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListPhotoSequencesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<$0.Operation>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'photoSequences',
+        $pb.PbFieldType.PM,
+        subBuilder: $0.Operation.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListPhotoSequencesResponse._() : super();
+  factory ListPhotoSequencesResponse({
+    $core.Iterable<$0.Operation>? photoSequences,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (photoSequences != null) {
+      _result.photoSequences.addAll(photoSequences);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListPhotoSequencesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPhotoSequencesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListPhotoSequencesResponse clone() =>
+      ListPhotoSequencesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListPhotoSequencesResponse copyWith(
+          void Function(ListPhotoSequencesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListPhotoSequencesResponse))
+          as ListPhotoSequencesResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListPhotoSequencesResponse create() => ListPhotoSequencesResponse._();
+  ListPhotoSequencesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListPhotoSequencesResponse> createRepeated() =>
+      $pb.PbList<ListPhotoSequencesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListPhotoSequencesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListPhotoSequencesResponse>(create);
+  static ListPhotoSequencesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$0.Operation> get photoSequences => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
 }

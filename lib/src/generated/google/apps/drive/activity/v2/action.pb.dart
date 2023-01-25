@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'actor.pb.dart' as $0;
@@ -206,6 +207,7 @@ enum ActionDetail_ActionDetail {
   dlpChange,
   reference,
   settingsChange,
+  appliedLabelChange,
   notSet
 }
 
@@ -223,6 +225,7 @@ class ActionDetail extends $pb.GeneratedMessage {
     9: ActionDetail_ActionDetail.dlpChange,
     12: ActionDetail_ActionDetail.reference,
     13: ActionDetail_ActionDetail.settingsChange,
+    19: ActionDetail_ActionDetail.appliedLabelChange,
     0: ActionDetail_ActionDetail.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -234,7 +237,7 @@ class ActionDetail extends $pb.GeneratedMessage {
               ? ''
               : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 19])
     ..aOM<Create>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -301,6 +304,12 @@ class ActionDetail extends $pb.GeneratedMessage {
             ? ''
             : 'settingsChange',
         subBuilder: SettingsChange.create)
+    ..aOM<AppliedLabelChange>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'appliedLabelChange',
+        subBuilder: AppliedLabelChange.create)
     ..hasRequiredFields = false;
 
   ActionDetail._() : super();
@@ -316,6 +325,7 @@ class ActionDetail extends $pb.GeneratedMessage {
     DataLeakPreventionChange? dlpChange,
     ApplicationReference? reference,
     SettingsChange? settingsChange,
+    AppliedLabelChange? appliedLabelChange,
   }) {
     final _result = create();
     if (create_1 != null) {
@@ -350,6 +360,9 @@ class ActionDetail extends $pb.GeneratedMessage {
     }
     if (settingsChange != null) {
       _result.settingsChange = settingsChange;
+    }
+    if (appliedLabelChange != null) {
+      _result.appliedLabelChange = appliedLabelChange;
     }
     return _result;
   }
@@ -537,6 +550,20 @@ class ActionDetail extends $pb.GeneratedMessage {
   void clearSettingsChange() => clearField(13);
   @$pb.TagNumber(13)
   SettingsChange ensureSettingsChange() => $_ensure(10);
+
+  @$pb.TagNumber(19)
+  AppliedLabelChange get appliedLabelChange => $_getN(11);
+  @$pb.TagNumber(19)
+  set appliedLabelChange(AppliedLabelChange v) {
+    setField(19, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasAppliedLabelChange() => $_has(11);
+  @$pb.TagNumber(19)
+  void clearAppliedLabelChange() => clearField(19);
+  @$pb.TagNumber(19)
+  AppliedLabelChange ensureAppliedLabelChange() => $_ensure(11);
 }
 
 class Create_New extends $pb.GeneratedMessage {
@@ -2163,5 +2190,1436 @@ class SettingsChange extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<SettingsChange_RestrictionChange> get restrictionChanges =>
+      $_getList(0);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.Text',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value')
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text({
+    $core.String? value,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get value => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set value($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.TextList',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'values',
+        $pb.PbFieldType.PM,
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+                .create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList({
+    $core.Iterable<
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>?
+        values,
+  }) {
+    final _result = create();
+    if (values != null) {
+      _result.values.addAll(values);
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>
+      get values => $_getList(0);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.Selection',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection({
+    $core.String? value,
+    $core.String? displayName,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get value => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set value($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set displayName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDisplayName() => clearField(2);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.SelectionList',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'values',
+        $pb.PbFieldType.PM,
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+                .create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList({
+    $core.Iterable<
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>?
+        values,
+  }) {
+    final _result = create();
+    if (values != null) {
+      _result.values.addAll(values);
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>
+      get values => $_getList(0);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.Integer',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value')
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer({
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get value => $_getI64(0);
+  @$pb.TagNumber(1)
+  set value($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.SingleUser',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value')
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser({
+    $core.String? value,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get value => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set value($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.UserList',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'values',
+        $pb.PbFieldType.PM,
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+                .create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList({
+    $core.Iterable<
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>?
+        values,
+  }) {
+    final _result = create();
+    if (values != null) {
+      _result.values.addAll(values);
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>
+      get values => $_getList(0);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue.Date',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value',
+        subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date({
+    $2.Timestamp? value,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.Timestamp get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($2.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Timestamp ensureValue() => $_ensure(0);
+}
+
+enum AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value {
+  text,
+  textList,
+  selection,
+  selectionList,
+  integer,
+  user,
+  userList,
+  date,
+  notSet
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+    extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int,
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value>
+      _AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_ValueByTag =
+      {
+    1: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .text,
+    3: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .textList,
+    4: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .selection,
+    5: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .selectionList,
+    6: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .integer,
+    7: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .user,
+    8: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .userList,
+    9: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .date,
+    0: AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+        .notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange.FieldValue',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 3, 4, 5, 6, 7, 8, 9])
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'text',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'textList',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'selection',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'selectionList',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'integer',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'user',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'userList',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'date',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+                .create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue._()
+      : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue({
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text?
+        text,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList?
+        textList,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection?
+        selection,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList?
+        selectionList,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer?
+        integer,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser?
+        user,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList?
+        userList,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date?
+        date,
+  }) {
+    final _result = create();
+    if (text != null) {
+      _result.text = text;
+    }
+    if (textList != null) {
+      _result.textList = textList;
+    }
+    if (selection != null) {
+      _result.selection = selection;
+    }
+    if (selectionList != null) {
+      _result.selectionList = selectionList;
+    }
+    if (integer != null) {
+      _result.integer = integer;
+    }
+    if (user != null) {
+      _result.user = user;
+    }
+    if (userList != null) {
+      _result.userList = userList;
+    }
+    if (date != null) {
+      _result.date = date;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      clone() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue()
+            ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+              ._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>(
+          create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue?
+      _defaultInstance;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
+      whichValue() =>
+          _AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_ValueByTag[
+              $_whichOneof(0)]!;
+  void clearValue() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+      get text => $_getN(0);
+  @$pb.TagNumber(1)
+  set text(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+          v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasText() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearText() => clearField(1);
+  @$pb.TagNumber(1)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+      ensureText() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+      get textList => $_getN(1);
+  @$pb.TagNumber(3)
+  set textList(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+          v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTextList() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearTextList() => clearField(3);
+  @$pb.TagNumber(3)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+      ensureTextList() => $_ensure(1);
+
+  @$pb.TagNumber(4)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+      get selection => $_getN(2);
+  @$pb.TagNumber(4)
+  set selection(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+          v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasSelection() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearSelection() => clearField(4);
+  @$pb.TagNumber(4)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+      ensureSelection() => $_ensure(2);
+
+  @$pb.TagNumber(5)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+      get selectionList => $_getN(3);
+  @$pb.TagNumber(5)
+  set selectionList(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+          v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSelectionList() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearSelectionList() => clearField(5);
+  @$pb.TagNumber(5)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+      ensureSelectionList() => $_ensure(3);
+
+  @$pb.TagNumber(6)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+      get integer => $_getN(4);
+  @$pb.TagNumber(6)
+  set integer(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+          v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasInteger() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearInteger() => clearField(6);
+  @$pb.TagNumber(6)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+      ensureInteger() => $_ensure(4);
+
+  @$pb.TagNumber(7)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+      get user => $_getN(5);
+  @$pb.TagNumber(7)
+  set user(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+          v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasUser() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearUser() => clearField(7);
+  @$pb.TagNumber(7)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+      ensureUser() => $_ensure(5);
+
+  @$pb.TagNumber(8)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+      get userList => $_getN(6);
+  @$pb.TagNumber(8)
+  set userList(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+          v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasUserList() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearUserList() => clearField(8);
+  @$pb.TagNumber(8)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+      ensureUserList() => $_ensure(6);
+
+  @$pb.TagNumber(9)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+      get date => $_getN(7);
+  @$pb.TagNumber(9)
+  set date(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+          v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDate() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearDate() => clearField(9);
+  @$pb.TagNumber(9)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+      ensureDate() => $_ensure(7);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail.FieldValueChange',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fieldId')
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'oldValue',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+                .create)
+    ..aOM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'newValue',
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+                .create)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange._() : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange({
+    $core.String? fieldId,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue?
+        oldValue,
+    AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue?
+        newValue,
+    $core.String? displayName,
+  }) {
+    final _result = create();
+    if (fieldId != null) {
+      _result.fieldId = fieldId;
+    }
+    if (oldValue != null) {
+      _result.oldValue = oldValue;
+    }
+    if (newValue != null) {
+      _result.newValue = newValue;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange clone() =>
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange copyWith(
+          void Function(
+                  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange)
+              updates) =>
+      super.copyWith((message) => updates(message
+              as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange))
+          as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
+      create() =>
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange._();
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
+      createEmptyInstance() => create();
+  static $pb
+          .PbList<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>
+      createRepeated() => $pb.PbList<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>(create);
+  static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get fieldId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set fieldId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasFieldId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFieldId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      get oldValue => $_getN(1);
+  @$pb.TagNumber(2)
+  set oldValue(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+          v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasOldValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOldValue() => clearField(2);
+  @$pb.TagNumber(2)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      ensureOldValue() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      get newValue => $_getN(2);
+  @$pb.TagNumber(3)
+  set newValue(
+      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+          v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasNewValue() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNewValue() => clearField(3);
+  @$pb.TagNumber(3)
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+      ensureNewValue() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get displayName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set displayName($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDisplayName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDisplayName() => clearField(4);
+}
+
+class AppliedLabelChange_AppliedLabelChangeDetail extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange.AppliedLabelChangeDetail',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'label')
+    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_Type>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'types',
+        $pb.PbFieldType.KE,
+        valueOf: AppliedLabelChange_AppliedLabelChangeDetail_Type.valueOf,
+        enumValues: AppliedLabelChange_AppliedLabelChangeDetail_Type.values,
+        defaultEnumValue:
+            AppliedLabelChange_AppliedLabelChangeDetail_Type.TYPE_UNSPECIFIED)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'title')
+    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fieldChanges',
+        $pb.PbFieldType.PM,
+        subBuilder:
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange.create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange_AppliedLabelChangeDetail._() : super();
+  factory AppliedLabelChange_AppliedLabelChangeDetail({
+    $core.String? label,
+    $core.Iterable<AppliedLabelChange_AppliedLabelChangeDetail_Type>? types,
+    $core.String? title,
+    $core.Iterable<
+            AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>?
+        fieldChanges,
+  }) {
+    final _result = create();
+    if (label != null) {
+      _result.label = label;
+    }
+    if (types != null) {
+      _result.types.addAll(types);
+    }
+    if (title != null) {
+      _result.title = title;
+    }
+    if (fieldChanges != null) {
+      _result.fieldChanges.addAll(fieldChanges);
+    }
+    return _result;
+  }
+  factory AppliedLabelChange_AppliedLabelChangeDetail.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange_AppliedLabelChangeDetail.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail clone() =>
+      AppliedLabelChange_AppliedLabelChangeDetail()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange_AppliedLabelChangeDetail copyWith(
+          void Function(AppliedLabelChange_AppliedLabelChangeDetail) updates) =>
+      super.copyWith((message) =>
+              updates(message as AppliedLabelChange_AppliedLabelChangeDetail))
+          as AppliedLabelChange_AppliedLabelChangeDetail; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail create() =>
+      AppliedLabelChange_AppliedLabelChangeDetail._();
+  AppliedLabelChange_AppliedLabelChangeDetail createEmptyInstance() => create();
+  static $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail>
+      createRepeated() =>
+          $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange_AppliedLabelChangeDetail getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AppliedLabelChange_AppliedLabelChangeDetail>(create);
+  static AppliedLabelChange_AppliedLabelChangeDetail? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get label => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set label($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLabel() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLabel() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<AppliedLabelChange_AppliedLabelChangeDetail_Type> get types =>
+      $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get title => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set title($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTitle() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTitle() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>
+      get fieldChanges => $_getList(3);
+}
+
+class AppliedLabelChange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AppliedLabelChange',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..pc<AppliedLabelChange_AppliedLabelChangeDetail>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'changes',
+        $pb.PbFieldType.PM,
+        subBuilder: AppliedLabelChange_AppliedLabelChangeDetail.create)
+    ..hasRequiredFields = false;
+
+  AppliedLabelChange._() : super();
+  factory AppliedLabelChange({
+    $core.Iterable<AppliedLabelChange_AppliedLabelChangeDetail>? changes,
+  }) {
+    final _result = create();
+    if (changes != null) {
+      _result.changes.addAll(changes);
+    }
+    return _result;
+  }
+  factory AppliedLabelChange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppliedLabelChange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange clone() => AppliedLabelChange()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AppliedLabelChange copyWith(void Function(AppliedLabelChange) updates) =>
+      super.copyWith((message) => updates(message as AppliedLabelChange))
+          as AppliedLabelChange; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange create() => AppliedLabelChange._();
+  AppliedLabelChange createEmptyInstance() => create();
+  static $pb.PbList<AppliedLabelChange> createRepeated() =>
+      $pb.PbList<AppliedLabelChange>();
+  @$core.pragma('dart2js:noInline')
+  static AppliedLabelChange getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AppliedLabelChange>(create);
+  static AppliedLabelChange? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<AppliedLabelChange_AppliedLabelChangeDetail> get changes =>
       $_getList(0);
 }

@@ -17,9 +17,10 @@ const VehicleEmissionType$json = const {
     const {'1': 'GASOLINE', '2': 1},
     const {'1': 'ELECTRIC', '2': 2},
     const {'1': 'HYBRID', '2': 3},
+    const {'1': 'DIESEL', '2': 4},
   ],
 };
 
 /// Descriptor for `VehicleEmissionType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List vehicleEmissionTypeDescriptor = $convert.base64Decode(
-    'ChNWZWhpY2xlRW1pc3Npb25UeXBlEiUKIVZFSElDTEVfRU1JU1NJT05fVFlQRV9VTlNQRUNJRklFRBAAEgwKCEdBU09MSU5FEAESDAoIRUxFQ1RSSUMQAhIKCgZIWUJSSUQQAw==');
+    'ChNWZWhpY2xlRW1pc3Npb25UeXBlEiUKIVZFSElDTEVfRU1JU1NJT05fVFlQRV9VTlNQRUNJRklFRBAAEgwKCEdBU09MSU5FEAESDAoIRUxFQ1RSSUMQAhIKCgZIWUJSSUQQAxIKCgZESUVTRUwQBA==');

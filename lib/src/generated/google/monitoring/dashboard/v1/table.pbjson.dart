@@ -22,8 +22,31 @@ const TimeSeriesTable$json = const {
       '8': const {},
       '10': 'dataSets'
     },
+    const {
+      '1': 'metric_visualization',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.monitoring.dashboard.v1.TimeSeriesTable.MetricVisualization',
+      '8': const {},
+      '10': 'metricVisualization'
+    },
+    const {
+      '1': 'column_settings',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.monitoring.dashboard.v1.TimeSeriesTable.ColumnSettings',
+      '8': const {},
+      '10': 'columnSettings'
+    },
   ],
-  '3': const [TimeSeriesTable_TableDataSet$json],
+  '3': const [
+    TimeSeriesTable_TableDataSet$json,
+    TimeSeriesTable_ColumnSettings$json
+  ],
+  '4': const [TimeSeriesTable_MetricVisualization$json],
 };
 
 @$core.Deprecated('Use timeSeriesTableDescriptor instead')
@@ -68,6 +91,39 @@ const TimeSeriesTable_TableDataSet$json = const {
   ],
 };
 
+@$core.Deprecated('Use timeSeriesTableDescriptor instead')
+const TimeSeriesTable_ColumnSettings$json = const {
+  '1': 'ColumnSettings',
+  '2': const [
+    const {
+      '1': 'column',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'column'
+    },
+    const {
+      '1': 'visible',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'visible'
+    },
+  ],
+};
+
+@$core.Deprecated('Use timeSeriesTableDescriptor instead')
+const TimeSeriesTable_MetricVisualization$json = const {
+  '1': 'MetricVisualization',
+  '2': const [
+    const {'1': 'METRIC_VISUALIZATION_UNSPECIFIED', '2': 0},
+    const {'1': 'NUMBER', '2': 1},
+    const {'1': 'BAR', '2': 2},
+  ],
+};
+
 /// Descriptor for `TimeSeriesTable`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List timeSeriesTableDescriptor = $convert.base64Decode(
-    'Cg9UaW1lU2VyaWVzVGFibGUSXgoJZGF0YV9zZXRzGAEgAygLMjwuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRpbWVTZXJpZXNUYWJsZS5UYWJsZURhdGFTZXRCA+BBAlIIZGF0YVNldHMa3AIKDFRhYmxlRGF0YVNldBJgChF0aW1lX3Nlcmllc19xdWVyeRgBIAEoCzIvLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UaW1lU2VyaWVzUXVlcnlCA+BBAlIPdGltZVNlcmllc1F1ZXJ5EioKDnRhYmxlX3RlbXBsYXRlGAIgASgJQgPgQQFSDXRhYmxlVGVtcGxhdGUSUAoUbWluX2FsaWdubWVudF9wZXJpb2QYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAVISbWluQWxpZ25tZW50UGVyaW9kEmwKFXRhYmxlX2Rpc3BsYXlfb3B0aW9ucxgEIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLmRhc2hib2FyZC52MS5UYWJsZURpc3BsYXlPcHRpb25zQgPgQQFSE3RhYmxlRGlzcGxheU9wdGlvbnM=');
+    'Cg9UaW1lU2VyaWVzVGFibGUSXgoJZGF0YV9zZXRzGAEgAygLMjwuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRpbWVTZXJpZXNUYWJsZS5UYWJsZURhdGFTZXRCA+BBAlIIZGF0YVNldHMSewoUbWV0cmljX3Zpc3VhbGl6YXRpb24YAiABKA4yQy5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGltZVNlcmllc1RhYmxlLk1ldHJpY1Zpc3VhbGl6YXRpb25CA+BBAVITbWV0cmljVmlzdWFsaXphdGlvbhJsCg9jb2x1bW5fc2V0dGluZ3MYBCADKAsyPi5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGltZVNlcmllc1RhYmxlLkNvbHVtblNldHRpbmdzQgPgQQFSDmNvbHVtblNldHRpbmdzGtwCCgxUYWJsZURhdGFTZXQSYAoRdGltZV9zZXJpZXNfcXVlcnkYASABKAsyLy5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGltZVNlcmllc1F1ZXJ5QgPgQQJSD3RpbWVTZXJpZXNRdWVyeRIqCg50YWJsZV90ZW1wbGF0ZRgCIAEoCUID4EEBUg10YWJsZVRlbXBsYXRlElAKFG1pbl9hbGlnbm1lbnRfcGVyaW9kGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFSEm1pbkFsaWdubWVudFBlcmlvZBJsChV0YWJsZV9kaXNwbGF5X29wdGlvbnMYBCABKAsyMy5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGFibGVEaXNwbGF5T3B0aW9uc0ID4EEBUhN0YWJsZURpc3BsYXlPcHRpb25zGkwKDkNvbHVtblNldHRpbmdzEhsKBmNvbHVtbhgBIAEoCUID4EECUgZjb2x1bW4SHQoHdmlzaWJsZRgCIAEoCEID4EECUgd2aXNpYmxlIlAKE01ldHJpY1Zpc3VhbGl6YXRpb24SJAogTUVUUklDX1ZJU1VBTElaQVRJT05fVU5TUEVDSUZJRUQQABIKCgZOVU1CRVIQARIHCgNCQVIQAg==');

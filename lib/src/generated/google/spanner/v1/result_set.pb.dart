@@ -295,12 +295,19 @@ class ResultSetMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'transaction',
         subBuilder: $2.Transaction.create)
+    ..aOM<$1.StructType>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'undeclaredParameters',
+        subBuilder: $1.StructType.create)
     ..hasRequiredFields = false;
 
   ResultSetMetadata._() : super();
   factory ResultSetMetadata({
     $1.StructType? rowType,
     $2.Transaction? transaction,
+    $1.StructType? undeclaredParameters,
   }) {
     final _result = create();
     if (rowType != null) {
@@ -308,6 +315,9 @@ class ResultSetMetadata extends $pb.GeneratedMessage {
     }
     if (transaction != null) {
       _result.transaction = transaction;
+    }
+    if (undeclaredParameters != null) {
+      _result.undeclaredParameters = undeclaredParameters;
     }
     return _result;
   }
@@ -365,6 +375,20 @@ class ResultSetMetadata extends $pb.GeneratedMessage {
   void clearTransaction() => clearField(2);
   @$pb.TagNumber(2)
   $2.Transaction ensureTransaction() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $1.StructType get undeclaredParameters => $_getN(2);
+  @$pb.TagNumber(3)
+  set undeclaredParameters($1.StructType v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasUndeclaredParameters() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUndeclaredParameters() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.StructType ensureUndeclaredParameters() => $_ensure(2);
 }
 
 enum ResultSetStats_RowCount { rowCountExact, rowCountLowerBound, notSet }

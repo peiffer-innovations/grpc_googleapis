@@ -1022,6 +1022,296 @@ class StructuredQuery extends $pb.GeneratedMessage {
   Cursor ensureEndAt() => $_ensure(7);
 }
 
+class StructuredAggregationQuery_Aggregation_Count
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StructuredAggregationQuery.Aggregation.Count',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'upTo',
+        subBuilder: $0.Int64Value.create)
+    ..hasRequiredFields = false;
+
+  StructuredAggregationQuery_Aggregation_Count._() : super();
+  factory StructuredAggregationQuery_Aggregation_Count({
+    $0.Int64Value? upTo,
+  }) {
+    final _result = create();
+    if (upTo != null) {
+      _result.upTo = upTo;
+    }
+    return _result;
+  }
+  factory StructuredAggregationQuery_Aggregation_Count.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredAggregationQuery_Aggregation_Count.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StructuredAggregationQuery_Aggregation_Count clone() =>
+      StructuredAggregationQuery_Aggregation_Count()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StructuredAggregationQuery_Aggregation_Count copyWith(
+          void Function(StructuredAggregationQuery_Aggregation_Count)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as StructuredAggregationQuery_Aggregation_Count))
+          as StructuredAggregationQuery_Aggregation_Count; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StructuredAggregationQuery_Aggregation_Count create() =>
+      StructuredAggregationQuery_Aggregation_Count._();
+  StructuredAggregationQuery_Aggregation_Count createEmptyInstance() =>
+      create();
+  static $pb.PbList<StructuredAggregationQuery_Aggregation_Count>
+      createRepeated() =>
+          $pb.PbList<StructuredAggregationQuery_Aggregation_Count>();
+  @$core.pragma('dart2js:noInline')
+  static StructuredAggregationQuery_Aggregation_Count getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          StructuredAggregationQuery_Aggregation_Count>(create);
+  static StructuredAggregationQuery_Aggregation_Count? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Int64Value get upTo => $_getN(0);
+  @$pb.TagNumber(1)
+  set upTo($0.Int64Value v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUpTo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUpTo() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureUpTo() => $_ensure(0);
+}
+
+enum StructuredAggregationQuery_Aggregation_Operator { count, notSet }
+
+class StructuredAggregationQuery_Aggregation extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, StructuredAggregationQuery_Aggregation_Operator>
+      _StructuredAggregationQuery_Aggregation_OperatorByTag = {
+    1: StructuredAggregationQuery_Aggregation_Operator.count,
+    0: StructuredAggregationQuery_Aggregation_Operator.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StructuredAggregationQuery.Aggregation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<StructuredAggregationQuery_Aggregation_Count>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'count',
+        subBuilder: StructuredAggregationQuery_Aggregation_Count.create)
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'alias')
+    ..hasRequiredFields = false;
+
+  StructuredAggregationQuery_Aggregation._() : super();
+  factory StructuredAggregationQuery_Aggregation({
+    StructuredAggregationQuery_Aggregation_Count? count,
+    $core.String? alias,
+  }) {
+    final _result = create();
+    if (count != null) {
+      _result.count = count;
+    }
+    if (alias != null) {
+      _result.alias = alias;
+    }
+    return _result;
+  }
+  factory StructuredAggregationQuery_Aggregation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredAggregationQuery_Aggregation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StructuredAggregationQuery_Aggregation clone() =>
+      StructuredAggregationQuery_Aggregation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StructuredAggregationQuery_Aggregation copyWith(
+          void Function(StructuredAggregationQuery_Aggregation) updates) =>
+      super.copyWith((message) =>
+              updates(message as StructuredAggregationQuery_Aggregation))
+          as StructuredAggregationQuery_Aggregation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StructuredAggregationQuery_Aggregation create() =>
+      StructuredAggregationQuery_Aggregation._();
+  StructuredAggregationQuery_Aggregation createEmptyInstance() => create();
+  static $pb.PbList<StructuredAggregationQuery_Aggregation> createRepeated() =>
+      $pb.PbList<StructuredAggregationQuery_Aggregation>();
+  @$core.pragma('dart2js:noInline')
+  static StructuredAggregationQuery_Aggregation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          StructuredAggregationQuery_Aggregation>(create);
+  static StructuredAggregationQuery_Aggregation? _defaultInstance;
+
+  StructuredAggregationQuery_Aggregation_Operator whichOperator() =>
+      _StructuredAggregationQuery_Aggregation_OperatorByTag[$_whichOneof(0)]!;
+  void clearOperator() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  StructuredAggregationQuery_Aggregation_Count get count => $_getN(0);
+  @$pb.TagNumber(1)
+  set count(StructuredAggregationQuery_Aggregation_Count v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCount() => clearField(1);
+  @$pb.TagNumber(1)
+  StructuredAggregationQuery_Aggregation_Count ensureCount() => $_ensure(0);
+
+  @$pb.TagNumber(7)
+  $core.String get alias => $_getSZ(1);
+  @$pb.TagNumber(7)
+  set alias($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasAlias() => $_has(1);
+  @$pb.TagNumber(7)
+  void clearAlias() => clearField(7);
+}
+
+enum StructuredAggregationQuery_QueryType { structuredQuery, notSet }
+
+class StructuredAggregationQuery extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, StructuredAggregationQuery_QueryType>
+      _StructuredAggregationQuery_QueryTypeByTag = {
+    1: StructuredAggregationQuery_QueryType.structuredQuery,
+    0: StructuredAggregationQuery_QueryType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StructuredAggregationQuery',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.firestore.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<StructuredQuery>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'structuredQuery',
+        subBuilder: StructuredQuery.create)
+    ..pc<StructuredAggregationQuery_Aggregation>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'aggregations',
+        $pb.PbFieldType.PM,
+        subBuilder: StructuredAggregationQuery_Aggregation.create)
+    ..hasRequiredFields = false;
+
+  StructuredAggregationQuery._() : super();
+  factory StructuredAggregationQuery({
+    StructuredQuery? structuredQuery,
+    $core.Iterable<StructuredAggregationQuery_Aggregation>? aggregations,
+  }) {
+    final _result = create();
+    if (structuredQuery != null) {
+      _result.structuredQuery = structuredQuery;
+    }
+    if (aggregations != null) {
+      _result.aggregations.addAll(aggregations);
+    }
+    return _result;
+  }
+  factory StructuredAggregationQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredAggregationQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StructuredAggregationQuery clone() =>
+      StructuredAggregationQuery()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StructuredAggregationQuery copyWith(
+          void Function(StructuredAggregationQuery) updates) =>
+      super.copyWith(
+              (message) => updates(message as StructuredAggregationQuery))
+          as StructuredAggregationQuery; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StructuredAggregationQuery create() => StructuredAggregationQuery._();
+  StructuredAggregationQuery createEmptyInstance() => create();
+  static $pb.PbList<StructuredAggregationQuery> createRepeated() =>
+      $pb.PbList<StructuredAggregationQuery>();
+  @$core.pragma('dart2js:noInline')
+  static StructuredAggregationQuery getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StructuredAggregationQuery>(create);
+  static StructuredAggregationQuery? _defaultInstance;
+
+  StructuredAggregationQuery_QueryType whichQueryType() =>
+      _StructuredAggregationQuery_QueryTypeByTag[$_whichOneof(0)]!;
+  void clearQueryType() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  StructuredQuery get structuredQuery => $_getN(0);
+  @$pb.TagNumber(1)
+  set structuredQuery(StructuredQuery v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStructuredQuery() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStructuredQuery() => clearField(1);
+  @$pb.TagNumber(1)
+  StructuredQuery ensureStructuredQuery() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $core.List<StructuredAggregationQuery_Aggregation> get aggregations =>
+      $_getList(1);
+}
+
 class Cursor extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

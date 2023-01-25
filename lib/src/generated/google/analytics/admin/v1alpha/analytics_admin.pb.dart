@@ -7,13 +7,409 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'access_report.pb.dart' as $4;
 import 'resources.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $3;
-import '../../../protobuf/timestamp.pb.dart' as $4;
+import '../../../protobuf/field_mask.pb.dart' as $5;
+import '../../../protobuf/timestamp.pb.dart' as $6;
+import 'audience.pb.dart' as $3;
 
 import 'resources.pbenum.dart' as $1;
+
+class RunAccessReportRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RunAccessReportRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'entity')
+    ..pc<$4.AccessDimension>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dimensions',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessDimension.create)
+    ..pc<$4.AccessMetric>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metrics',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessMetric.create)
+    ..pc<$4.AccessDateRange>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dateRanges',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessDateRange.create)
+    ..aOM<$4.AccessFilterExpression>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dimensionFilter',
+        subBuilder: $4.AccessFilterExpression.create)
+    ..aOM<$4.AccessFilterExpression>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metricFilter',
+        subBuilder: $4.AccessFilterExpression.create)
+    ..aInt64(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'offset')
+    ..aInt64(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'limit')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'timeZone')
+    ..pc<$4.AccessOrderBy>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'orderBys',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessOrderBy.create)
+    ..aOB(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'returnEntityQuota')
+    ..hasRequiredFields = false;
+
+  RunAccessReportRequest._() : super();
+  factory RunAccessReportRequest({
+    $core.String? entity,
+    $core.Iterable<$4.AccessDimension>? dimensions,
+    $core.Iterable<$4.AccessMetric>? metrics,
+    $core.Iterable<$4.AccessDateRange>? dateRanges,
+    $4.AccessFilterExpression? dimensionFilter,
+    $4.AccessFilterExpression? metricFilter,
+    $fixnum.Int64? offset,
+    $fixnum.Int64? limit,
+    $core.String? timeZone,
+    $core.Iterable<$4.AccessOrderBy>? orderBys,
+    $core.bool? returnEntityQuota,
+  }) {
+    final _result = create();
+    if (entity != null) {
+      _result.entity = entity;
+    }
+    if (dimensions != null) {
+      _result.dimensions.addAll(dimensions);
+    }
+    if (metrics != null) {
+      _result.metrics.addAll(metrics);
+    }
+    if (dateRanges != null) {
+      _result.dateRanges.addAll(dateRanges);
+    }
+    if (dimensionFilter != null) {
+      _result.dimensionFilter = dimensionFilter;
+    }
+    if (metricFilter != null) {
+      _result.metricFilter = metricFilter;
+    }
+    if (offset != null) {
+      _result.offset = offset;
+    }
+    if (limit != null) {
+      _result.limit = limit;
+    }
+    if (timeZone != null) {
+      _result.timeZone = timeZone;
+    }
+    if (orderBys != null) {
+      _result.orderBys.addAll(orderBys);
+    }
+    if (returnEntityQuota != null) {
+      _result.returnEntityQuota = returnEntityQuota;
+    }
+    return _result;
+  }
+  factory RunAccessReportRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunAccessReportRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RunAccessReportRequest clone() =>
+      RunAccessReportRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RunAccessReportRequest copyWith(
+          void Function(RunAccessReportRequest) updates) =>
+      super.copyWith((message) => updates(message as RunAccessReportRequest))
+          as RunAccessReportRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RunAccessReportRequest create() => RunAccessReportRequest._();
+  RunAccessReportRequest createEmptyInstance() => create();
+  static $pb.PbList<RunAccessReportRequest> createRepeated() =>
+      $pb.PbList<RunAccessReportRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RunAccessReportRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunAccessReportRequest>(create);
+  static RunAccessReportRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get entity => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set entity($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasEntity() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEntity() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$4.AccessDimension> get dimensions => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$4.AccessMetric> get metrics => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$4.AccessDateRange> get dateRanges => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $4.AccessFilterExpression get dimensionFilter => $_getN(4);
+  @$pb.TagNumber(5)
+  set dimensionFilter($4.AccessFilterExpression v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDimensionFilter() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDimensionFilter() => clearField(5);
+  @$pb.TagNumber(5)
+  $4.AccessFilterExpression ensureDimensionFilter() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $4.AccessFilterExpression get metricFilter => $_getN(5);
+  @$pb.TagNumber(6)
+  set metricFilter($4.AccessFilterExpression v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasMetricFilter() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMetricFilter() => clearField(6);
+  @$pb.TagNumber(6)
+  $4.AccessFilterExpression ensureMetricFilter() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get offset => $_getI64(6);
+  @$pb.TagNumber(7)
+  set offset($fixnum.Int64 v) {
+    $_setInt64(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasOffset() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearOffset() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get limit => $_getI64(7);
+  @$pb.TagNumber(8)
+  set limit($fixnum.Int64 v) {
+    $_setInt64(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasLimit() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearLimit() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get timeZone => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set timeZone($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasTimeZone() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearTimeZone() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.List<$4.AccessOrderBy> get orderBys => $_getList(9);
+
+  @$pb.TagNumber(11)
+  $core.bool get returnEntityQuota => $_getBF(10);
+  @$pb.TagNumber(11)
+  set returnEntityQuota($core.bool v) {
+    $_setBool(10, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasReturnEntityQuota() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearReturnEntityQuota() => clearField(11);
+}
+
+class RunAccessReportResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RunAccessReportResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$4.AccessDimensionHeader>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dimensionHeaders',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessDimensionHeader.create)
+    ..pc<$4.AccessMetricHeader>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metricHeaders',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessMetricHeader.create)
+    ..pc<$4.AccessRow>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rows',
+        $pb.PbFieldType.PM,
+        subBuilder: $4.AccessRow.create)
+    ..a<$core.int>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rowCount',
+        $pb.PbFieldType.O3)
+    ..aOM<$4.AccessQuota>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'quota',
+        subBuilder: $4.AccessQuota.create)
+    ..hasRequiredFields = false;
+
+  RunAccessReportResponse._() : super();
+  factory RunAccessReportResponse({
+    $core.Iterable<$4.AccessDimensionHeader>? dimensionHeaders,
+    $core.Iterable<$4.AccessMetricHeader>? metricHeaders,
+    $core.Iterable<$4.AccessRow>? rows,
+    $core.int? rowCount,
+    $4.AccessQuota? quota,
+  }) {
+    final _result = create();
+    if (dimensionHeaders != null) {
+      _result.dimensionHeaders.addAll(dimensionHeaders);
+    }
+    if (metricHeaders != null) {
+      _result.metricHeaders.addAll(metricHeaders);
+    }
+    if (rows != null) {
+      _result.rows.addAll(rows);
+    }
+    if (rowCount != null) {
+      _result.rowCount = rowCount;
+    }
+    if (quota != null) {
+      _result.quota = quota;
+    }
+    return _result;
+  }
+  factory RunAccessReportResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunAccessReportResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RunAccessReportResponse clone() =>
+      RunAccessReportResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RunAccessReportResponse copyWith(
+          void Function(RunAccessReportResponse) updates) =>
+      super.copyWith((message) => updates(message as RunAccessReportResponse))
+          as RunAccessReportResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RunAccessReportResponse create() => RunAccessReportResponse._();
+  RunAccessReportResponse createEmptyInstance() => create();
+  static $pb.PbList<RunAccessReportResponse> createRepeated() =>
+      $pb.PbList<RunAccessReportResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RunAccessReportResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunAccessReportResponse>(create);
+  static RunAccessReportResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$4.AccessDimensionHeader> get dimensionHeaders => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$4.AccessMetricHeader> get metricHeaders => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$4.AccessRow> get rows => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.int get rowCount => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set rowCount($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasRowCount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRowCount() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $4.AccessQuota get quota => $_getN(4);
+  @$pb.TagNumber(5)
+  set quota($4.AccessQuota v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasQuota() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearQuota() => clearField(5);
+  @$pb.TagNumber(5)
+  $4.AccessQuota ensureQuota() => $_ensure(4);
+}
 
 class GetAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -358,18 +754,18 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
             ? ''
             : 'account',
         subBuilder: $1.Account.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateAccountRequest._() : super();
   factory UpdateAccountRequest({
     $1.Account? account,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (account != null) {
@@ -423,9 +819,9 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   $1.Account ensureAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -434,7 +830,7 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ProvisionAccountTicketRequest extends $pb.GeneratedMessage {
@@ -902,18 +1298,18 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
             ? ''
             : 'property',
         subBuilder: $1.Property.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdatePropertyRequest._() : super();
   factory UpdatePropertyRequest({
     $1.Property? property,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (property != null) {
@@ -968,9 +1364,9 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
   $1.Property ensureProperty() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -979,7 +1375,7 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class CreatePropertyRequest extends $pb.GeneratedMessage {
@@ -2917,18 +3313,18 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
             ? ''
             : 'googleAdsLink',
         subBuilder: $1.GoogleAdsLink.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateGoogleAdsLinkRequest._() : super();
   factory UpdateGoogleAdsLinkRequest({
     $1.GoogleAdsLink? googleAdsLink,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (googleAdsLink != null) {
@@ -2984,9 +3380,9 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   $1.GoogleAdsLink ensureGoogleAdsLink() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -2995,7 +3391,7 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteGoogleAdsLinkRequest extends $pb.GeneratedMessage {
@@ -3699,18 +4095,18 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'actorEmail')
-    ..aOM<$4.Timestamp>(
+    ..aOM<$6.Timestamp>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'earliestChangeTime',
-        subBuilder: $4.Timestamp.create)
-    ..aOM<$4.Timestamp>(
+        subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'latestChangeTime',
-        subBuilder: $4.Timestamp.create)
+        subBuilder: $6.Timestamp.create)
     ..a<$core.int>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3731,8 +4127,8 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
     $core.Iterable<$1.ChangeHistoryResourceType>? resourceType,
     $core.Iterable<$1.ActionType>? action,
     $core.Iterable<$core.String>? actorEmail,
-    $4.Timestamp? earliestChangeTime,
-    $4.Timestamp? latestChangeTime,
+    $6.Timestamp? earliestChangeTime,
+    $6.Timestamp? latestChangeTime,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
@@ -3832,9 +4228,9 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   $core.List<$core.String> get actorEmail => $_getList(4);
 
   @$pb.TagNumber(6)
-  $4.Timestamp get earliestChangeTime => $_getN(5);
+  $6.Timestamp get earliestChangeTime => $_getN(5);
   @$pb.TagNumber(6)
-  set earliestChangeTime($4.Timestamp v) {
+  set earliestChangeTime($6.Timestamp v) {
     setField(6, v);
   }
 
@@ -3843,12 +4239,12 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearEarliestChangeTime() => clearField(6);
   @$pb.TagNumber(6)
-  $4.Timestamp ensureEarliestChangeTime() => $_ensure(5);
+  $6.Timestamp ensureEarliestChangeTime() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $4.Timestamp get latestChangeTime => $_getN(6);
+  $6.Timestamp get latestChangeTime => $_getN(6);
   @$pb.TagNumber(7)
-  set latestChangeTime($4.Timestamp v) {
+  set latestChangeTime($6.Timestamp v) {
     setField(7, v);
   }
 
@@ -3857,7 +4253,7 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearLatestChangeTime() => clearField(7);
   @$pb.TagNumber(7)
-  $4.Timestamp ensureLatestChangeTime() => $_ensure(6);
+  $6.Timestamp ensureLatestChangeTime() => $_ensure(6);
 
   @$pb.TagNumber(8)
   $core.int get pageSize => $_getIZ(7);
@@ -4229,18 +4625,18 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
             ? ''
             : 'measurementProtocolSecret',
         subBuilder: $1.MeasurementProtocolSecret.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateMeasurementProtocolSecretRequest._() : super();
   factory UpdateMeasurementProtocolSecretRequest({
     $1.MeasurementProtocolSecret? measurementProtocolSecret,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (measurementProtocolSecret != null) {
@@ -4299,9 +4695,9 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   $1.MeasurementProtocolSecret ensureMeasurementProtocolSecret() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -4310,7 +4706,7 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
@@ -4605,18 +5001,18 @@ class UpdateGoogleSignalsSettingsRequest extends $pb.GeneratedMessage {
             ? ''
             : 'googleSignalsSettings',
         subBuilder: $1.GoogleSignalsSettings.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateGoogleSignalsSettingsRequest._() : super();
   factory UpdateGoogleSignalsSettingsRequest({
     $1.GoogleSignalsSettings? googleSignalsSettings,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (googleSignalsSettings != null) {
@@ -4674,9 +5070,9 @@ class UpdateGoogleSignalsSettingsRequest extends $pb.GeneratedMessage {
   $1.GoogleSignalsSettings ensureGoogleSignalsSettings() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -4685,7 +5081,7 @@ class UpdateGoogleSignalsSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class CreateConversionEventRequest extends $pb.GeneratedMessage {
@@ -5596,18 +5992,18 @@ class UpdateDisplayVideo360AdvertiserLinkRequest extends $pb.GeneratedMessage {
             : 'displayVideo360AdvertiserLink',
         protoName: 'display_video_360_advertiser_link',
         subBuilder: $1.DisplayVideo360AdvertiserLink.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDisplayVideo360AdvertiserLinkRequest._() : super();
   factory UpdateDisplayVideo360AdvertiserLinkRequest({
     $1.DisplayVideo360AdvertiserLink? displayVideo360AdvertiserLink,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (displayVideo360AdvertiserLink != null) {
@@ -5669,9 +6065,9 @@ class UpdateDisplayVideo360AdvertiserLinkRequest extends $pb.GeneratedMessage {
       $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -5680,7 +6076,7 @@ class UpdateDisplayVideo360AdvertiserLinkRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class GetDisplayVideo360AdvertiserLinkProposalRequest
@@ -6522,18 +6918,18 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
             ? ''
             : 'customDimension',
         subBuilder: $1.CustomDimension.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCustomDimensionRequest._() : super();
   factory UpdateCustomDimensionRequest({
     $1.CustomDimension? customDimension,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (customDimension != null) {
@@ -6590,9 +6986,9 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
   $1.CustomDimension ensureCustomDimension() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -6601,7 +6997,7 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
@@ -7052,18 +7448,18 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
             ? ''
             : 'customMetric',
         subBuilder: $1.CustomMetric.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCustomMetricRequest._() : super();
   factory UpdateCustomMetricRequest({
     $1.CustomMetric? customMetric,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (customMetric != null) {
@@ -7118,9 +7514,9 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
   $1.CustomMetric ensureCustomMetric() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -7129,7 +7525,7 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListCustomMetricsRequest extends $pb.GeneratedMessage {
@@ -7554,18 +7950,18 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
             ? ''
             : 'dataRetentionSettings',
         subBuilder: $1.DataRetentionSettings.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDataRetentionSettingsRequest._() : super();
   factory UpdateDataRetentionSettingsRequest({
     $1.DataRetentionSettings? dataRetentionSettings,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (dataRetentionSettings != null) {
@@ -7623,9 +8019,9 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
   $1.DataRetentionSettings ensureDataRetentionSettings() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -7634,7 +8030,7 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class CreateDataStreamRequest extends $pb.GeneratedMessage {
@@ -7815,18 +8211,18 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
             ? ''
             : 'dataStream',
         subBuilder: $1.DataStream.create)
-    ..aOM<$3.FieldMask>(
+    ..aOM<$5.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+        subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDataStreamRequest._() : super();
   factory UpdateDataStreamRequest({
     $1.DataStream? dataStream,
-    $3.FieldMask? updateMask,
+    $5.FieldMask? updateMask,
   }) {
     final _result = create();
     if (dataStream != null) {
@@ -7881,9 +8277,9 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
   $1.DataStream ensureDataStream() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -7892,7 +8288,7 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListDataStreamsRequest extends $pb.GeneratedMessage {
@@ -8156,4 +8552,693 @@ class GetDataStreamRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
+}
+
+class GetAudienceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetAudienceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetAudienceRequest._() : super();
+  factory GetAudienceRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetAudienceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAudienceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetAudienceRequest clone() => GetAudienceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetAudienceRequest copyWith(void Function(GetAudienceRequest) updates) =>
+      super.copyWith((message) => updates(message as GetAudienceRequest))
+          as GetAudienceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetAudienceRequest create() => GetAudienceRequest._();
+  GetAudienceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAudienceRequest> createRepeated() =>
+      $pb.PbList<GetAudienceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAudienceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAudienceRequest>(create);
+  static GetAudienceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class ListAudiencesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListAudiencesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
+
+  ListAudiencesRequest._() : super();
+  factory ListAudiencesRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListAudiencesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAudiencesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListAudiencesRequest clone() =>
+      ListAudiencesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListAudiencesRequest copyWith(void Function(ListAudiencesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListAudiencesRequest))
+          as ListAudiencesRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListAudiencesRequest create() => ListAudiencesRequest._();
+  ListAudiencesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListAudiencesRequest> createRepeated() =>
+      $pb.PbList<ListAudiencesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListAudiencesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAudiencesRequest>(create);
+  static ListAudiencesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => clearField(3);
+}
+
+class ListAudiencesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListAudiencesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$3.Audience>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'audiences',
+        $pb.PbFieldType.PM,
+        subBuilder: $3.Audience.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListAudiencesResponse._() : super();
+  factory ListAudiencesResponse({
+    $core.Iterable<$3.Audience>? audiences,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (audiences != null) {
+      _result.audiences.addAll(audiences);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListAudiencesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAudiencesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListAudiencesResponse clone() =>
+      ListAudiencesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListAudiencesResponse copyWith(
+          void Function(ListAudiencesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListAudiencesResponse))
+          as ListAudiencesResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListAudiencesResponse create() => ListAudiencesResponse._();
+  ListAudiencesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAudiencesResponse> createRepeated() =>
+      $pb.PbList<ListAudiencesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListAudiencesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAudiencesResponse>(create);
+  static ListAudiencesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$3.Audience> get audiences => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class CreateAudienceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateAudienceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<$3.Audience>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'audience',
+        subBuilder: $3.Audience.create)
+    ..hasRequiredFields = false;
+
+  CreateAudienceRequest._() : super();
+  factory CreateAudienceRequest({
+    $core.String? parent,
+    $3.Audience? audience,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (audience != null) {
+      _result.audience = audience;
+    }
+    return _result;
+  }
+  factory CreateAudienceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAudienceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateAudienceRequest clone() =>
+      CreateAudienceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateAudienceRequest copyWith(
+          void Function(CreateAudienceRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateAudienceRequest))
+          as CreateAudienceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateAudienceRequest create() => CreateAudienceRequest._();
+  CreateAudienceRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAudienceRequest> createRepeated() =>
+      $pb.PbList<CreateAudienceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateAudienceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateAudienceRequest>(create);
+  static CreateAudienceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $3.Audience get audience => $_getN(1);
+  @$pb.TagNumber(2)
+  set audience($3.Audience v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAudience() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAudience() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Audience ensureAudience() => $_ensure(1);
+}
+
+class UpdateAudienceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateAudienceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOM<$3.Audience>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'audience',
+        subBuilder: $3.Audience.create)
+    ..aOM<$5.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $5.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateAudienceRequest._() : super();
+  factory UpdateAudienceRequest({
+    $3.Audience? audience,
+    $5.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (audience != null) {
+      _result.audience = audience;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateAudienceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAudienceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateAudienceRequest clone() =>
+      UpdateAudienceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateAudienceRequest copyWith(
+          void Function(UpdateAudienceRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateAudienceRequest))
+          as UpdateAudienceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateAudienceRequest create() => UpdateAudienceRequest._();
+  UpdateAudienceRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAudienceRequest> createRepeated() =>
+      $pb.PbList<UpdateAudienceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAudienceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAudienceRequest>(create);
+  static UpdateAudienceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.Audience get audience => $_getN(0);
+  @$pb.TagNumber(1)
+  set audience($3.Audience v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAudience() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAudience() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Audience ensureAudience() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $5.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($5.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class ArchiveAudienceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ArchiveAudienceRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  ArchiveAudienceRequest._() : super();
+  factory ArchiveAudienceRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory ArchiveAudienceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ArchiveAudienceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ArchiveAudienceRequest clone() =>
+      ArchiveAudienceRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ArchiveAudienceRequest copyWith(
+          void Function(ArchiveAudienceRequest) updates) =>
+      super.copyWith((message) => updates(message as ArchiveAudienceRequest))
+          as ArchiveAudienceRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ArchiveAudienceRequest create() => ArchiveAudienceRequest._();
+  ArchiveAudienceRequest createEmptyInstance() => create();
+  static $pb.PbList<ArchiveAudienceRequest> createRepeated() =>
+      $pb.PbList<ArchiveAudienceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ArchiveAudienceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ArchiveAudienceRequest>(create);
+  static ArchiveAudienceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class GetAttributionSettingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetAttributionSettingsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetAttributionSettingsRequest._() : super();
+  factory GetAttributionSettingsRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetAttributionSettingsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAttributionSettingsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetAttributionSettingsRequest clone() =>
+      GetAttributionSettingsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetAttributionSettingsRequest copyWith(
+          void Function(GetAttributionSettingsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetAttributionSettingsRequest))
+          as GetAttributionSettingsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetAttributionSettingsRequest create() =>
+      GetAttributionSettingsRequest._();
+  GetAttributionSettingsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAttributionSettingsRequest> createRepeated() =>
+      $pb.PbList<GetAttributionSettingsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAttributionSettingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAttributionSettingsRequest>(create);
+  static GetAttributionSettingsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class UpdateAttributionSettingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateAttributionSettingsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOM<$1.AttributionSettings>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'attributionSettings',
+        subBuilder: $1.AttributionSettings.create)
+    ..aOM<$5.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $5.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateAttributionSettingsRequest._() : super();
+  factory UpdateAttributionSettingsRequest({
+    $1.AttributionSettings? attributionSettings,
+    $5.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (attributionSettings != null) {
+      _result.attributionSettings = attributionSettings;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateAttributionSettingsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAttributionSettingsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateAttributionSettingsRequest clone() =>
+      UpdateAttributionSettingsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateAttributionSettingsRequest copyWith(
+          void Function(UpdateAttributionSettingsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateAttributionSettingsRequest))
+          as UpdateAttributionSettingsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateAttributionSettingsRequest create() =>
+      UpdateAttributionSettingsRequest._();
+  UpdateAttributionSettingsRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAttributionSettingsRequest> createRepeated() =>
+      $pb.PbList<UpdateAttributionSettingsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAttributionSettingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAttributionSettingsRequest>(
+          create);
+  static UpdateAttributionSettingsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.AttributionSettings get attributionSettings => $_getN(0);
+  @$pb.TagNumber(1)
+  set attributionSettings($1.AttributionSettings v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAttributionSettings() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAttributionSettings() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.AttributionSettings ensureAttributionSettings() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $5.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($5.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }

@@ -51,3 +51,52 @@ class AlertPolicy_ConditionCombinerType extends $pb.ProtobufEnum {
   const AlertPolicy_ConditionCombinerType._($core.int v, $core.String n)
       : super(v, n);
 }
+
+class AlertPolicy_Condition_EvaluationMissingData extends $pb.ProtobufEnum {
+  static const AlertPolicy_Condition_EvaluationMissingData
+      EVALUATION_MISSING_DATA_UNSPECIFIED =
+      AlertPolicy_Condition_EvaluationMissingData._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVALUATION_MISSING_DATA_UNSPECIFIED');
+  static const AlertPolicy_Condition_EvaluationMissingData
+      EVALUATION_MISSING_DATA_INACTIVE =
+      AlertPolicy_Condition_EvaluationMissingData._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVALUATION_MISSING_DATA_INACTIVE');
+  static const AlertPolicy_Condition_EvaluationMissingData
+      EVALUATION_MISSING_DATA_ACTIVE =
+      AlertPolicy_Condition_EvaluationMissingData._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVALUATION_MISSING_DATA_ACTIVE');
+  static const AlertPolicy_Condition_EvaluationMissingData
+      EVALUATION_MISSING_DATA_NO_OP =
+      AlertPolicy_Condition_EvaluationMissingData._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVALUATION_MISSING_DATA_NO_OP');
+
+  static const $core.List<AlertPolicy_Condition_EvaluationMissingData> values =
+      <AlertPolicy_Condition_EvaluationMissingData>[
+    EVALUATION_MISSING_DATA_UNSPECIFIED,
+    EVALUATION_MISSING_DATA_INACTIVE,
+    EVALUATION_MISSING_DATA_ACTIVE,
+    EVALUATION_MISSING_DATA_NO_OP,
+  ];
+
+  static final $core.Map<$core.int, AlertPolicy_Condition_EvaluationMissingData>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AlertPolicy_Condition_EvaluationMissingData? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const AlertPolicy_Condition_EvaluationMissingData._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}

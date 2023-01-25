@@ -31,6 +31,11 @@ class PartitionId extends $pb.GeneratedMessage {
             ? ''
             : 'projectId')
     ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
+    ..aOS(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
@@ -40,11 +45,15 @@ class PartitionId extends $pb.GeneratedMessage {
   PartitionId._() : super();
   factory PartitionId({
     $core.String? projectId,
+    $core.String? databaseId,
     $core.String? namespaceId,
   }) {
     final _result = create();
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
     }
     if (namespaceId != null) {
       _result.namespaceId = namespaceId;
@@ -89,15 +98,27 @@ class PartitionId extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 
-  @$pb.TagNumber(4)
-  $core.String get namespaceId => $_getSZ(1);
-  @$pb.TagNumber(4)
-  set namespaceId($core.String v) {
+  @$pb.TagNumber(3)
+  $core.String get databaseId => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set databaseId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
+  $core.bool hasDatabaseId() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearDatabaseId() => clearField(3);
+
   @$pb.TagNumber(4)
-  $core.bool hasNamespaceId() => $_has(1);
+  $core.String get namespaceId => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set namespaceId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasNamespaceId() => $_has(2);
   @$pb.TagNumber(4)
   void clearNamespaceId() => clearField(4);
 }

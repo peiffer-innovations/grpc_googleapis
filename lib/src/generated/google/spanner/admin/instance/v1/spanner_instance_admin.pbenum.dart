@@ -47,6 +47,66 @@ class ReplicaInfo_ReplicaType extends $pb.ProtobufEnum {
   const ReplicaInfo_ReplicaType._($core.int v, $core.String n) : super(v, n);
 }
 
+class InstanceConfig_Type extends $pb.ProtobufEnum {
+  static const InstanceConfig_Type TYPE_UNSPECIFIED = InstanceConfig_Type._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TYPE_UNSPECIFIED');
+  static const InstanceConfig_Type GOOGLE_MANAGED = InstanceConfig_Type._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GOOGLE_MANAGED');
+  static const InstanceConfig_Type USER_MANAGED = InstanceConfig_Type._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'USER_MANAGED');
+
+  static const $core.List<InstanceConfig_Type> values = <InstanceConfig_Type>[
+    TYPE_UNSPECIFIED,
+    GOOGLE_MANAGED,
+    USER_MANAGED,
+  ];
+
+  static final $core.Map<$core.int, InstanceConfig_Type> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static InstanceConfig_Type? valueOf($core.int value) => _byValue[value];
+
+  const InstanceConfig_Type._($core.int v, $core.String n) : super(v, n);
+}
+
+class InstanceConfig_State extends $pb.ProtobufEnum {
+  static const InstanceConfig_State STATE_UNSPECIFIED = InstanceConfig_State._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'STATE_UNSPECIFIED');
+  static const InstanceConfig_State CREATING = InstanceConfig_State._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CREATING');
+  static const InstanceConfig_State READY = InstanceConfig_State._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'READY');
+
+  static const $core.List<InstanceConfig_State> values = <InstanceConfig_State>[
+    STATE_UNSPECIFIED,
+    CREATING,
+    READY,
+  ];
+
+  static final $core.Map<$core.int, InstanceConfig_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static InstanceConfig_State? valueOf($core.int value) => _byValue[value];
+
+  const InstanceConfig_State._($core.int v, $core.String n) : super(v, n);
+}
+
 class Instance_State extends $pb.ProtobufEnum {
   static const Instance_State STATE_UNSPECIFIED = Instance_State._(
       0,

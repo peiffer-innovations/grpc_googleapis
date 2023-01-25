@@ -278,6 +278,16 @@ class AlertPolicy_Condition_MetricThreshold extends $pb.GeneratedMessage {
             : 'denominatorAggregations',
         $pb.PbFieldType.PM,
         subBuilder: $4.Aggregation.create)
+    ..e<AlertPolicy_Condition_EvaluationMissingData>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'evaluationMissingData',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: AlertPolicy_Condition_EvaluationMissingData
+            .EVALUATION_MISSING_DATA_UNSPECIFIED,
+        valueOf: AlertPolicy_Condition_EvaluationMissingData.valueOf,
+        enumValues: AlertPolicy_Condition_EvaluationMissingData.values)
     ..hasRequiredFields = false;
 
   AlertPolicy_Condition_MetricThreshold._() : super();
@@ -290,6 +300,7 @@ class AlertPolicy_Condition_MetricThreshold extends $pb.GeneratedMessage {
     $core.Iterable<$4.Aggregation>? aggregations,
     $core.String? denominatorFilter,
     $core.Iterable<$4.Aggregation>? denominatorAggregations,
+    AlertPolicy_Condition_EvaluationMissingData? evaluationMissingData,
   }) {
     final _result = create();
     if (filter != null) {
@@ -315,6 +326,9 @@ class AlertPolicy_Condition_MetricThreshold extends $pb.GeneratedMessage {
     }
     if (denominatorAggregations != null) {
       _result.denominatorAggregations.addAll(denominatorAggregations);
+    }
+    if (evaluationMissingData != null) {
+      _result.evaluationMissingData = evaluationMissingData;
     }
     return _result;
   }
@@ -432,6 +446,19 @@ class AlertPolicy_Condition_MetricThreshold extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(10)
   $core.List<$4.Aggregation> get denominatorAggregations => $_getList(7);
+
+  @$pb.TagNumber(11)
+  AlertPolicy_Condition_EvaluationMissingData get evaluationMissingData =>
+      $_getN(8);
+  @$pb.TagNumber(11)
+  set evaluationMissingData(AlertPolicy_Condition_EvaluationMissingData v) {
+    setField(11, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasEvaluationMissingData() => $_has(8);
+  @$pb.TagNumber(11)
+  void clearEvaluationMissingData() => clearField(11);
 }
 
 class AlertPolicy_Condition_MetricAbsence extends $pb.GeneratedMessage {
@@ -684,6 +711,16 @@ class AlertPolicy_Condition_MonitoringQueryLanguageCondition
             ? ''
             : 'trigger',
         subBuilder: AlertPolicy_Condition_Trigger.create)
+    ..e<AlertPolicy_Condition_EvaluationMissingData>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'evaluationMissingData',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: AlertPolicy_Condition_EvaluationMissingData
+            .EVALUATION_MISSING_DATA_UNSPECIFIED,
+        valueOf: AlertPolicy_Condition_EvaluationMissingData.valueOf,
+        enumValues: AlertPolicy_Condition_EvaluationMissingData.values)
     ..hasRequiredFields = false;
 
   AlertPolicy_Condition_MonitoringQueryLanguageCondition._() : super();
@@ -691,6 +728,7 @@ class AlertPolicy_Condition_MonitoringQueryLanguageCondition
     $core.String? query,
     $3.Duration? duration,
     AlertPolicy_Condition_Trigger? trigger,
+    AlertPolicy_Condition_EvaluationMissingData? evaluationMissingData,
   }) {
     final _result = create();
     if (query != null) {
@@ -701,6 +739,9 @@ class AlertPolicy_Condition_MonitoringQueryLanguageCondition
     }
     if (trigger != null) {
       _result.trigger = trigger;
+    }
+    if (evaluationMissingData != null) {
+      _result.evaluationMissingData = evaluationMissingData;
     }
     return _result;
   }
@@ -782,6 +823,19 @@ class AlertPolicy_Condition_MonitoringQueryLanguageCondition
   void clearTrigger() => clearField(3);
   @$pb.TagNumber(3)
   AlertPolicy_Condition_Trigger ensureTrigger() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  AlertPolicy_Condition_EvaluationMissingData get evaluationMissingData =>
+      $_getN(3);
+  @$pb.TagNumber(4)
+  set evaluationMissingData(AlertPolicy_Condition_EvaluationMissingData v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasEvaluationMissingData() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearEvaluationMissingData() => clearField(4);
 }
 
 enum AlertPolicy_Condition_Condition {

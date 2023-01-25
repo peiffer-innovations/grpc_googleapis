@@ -54,6 +54,15 @@ const InstanceConfig$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
     const {
+      '1': 'config_type',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig.Type',
+      '8': const {},
+      '10': 'configType'
+    },
+    const {
       '1': 'replicas',
       '3': 3,
       '4': 3,
@@ -62,19 +71,94 @@ const InstanceConfig$json = const {
       '10': 'replicas'
     },
     const {
+      '1': 'optional_replicas',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.ReplicaInfo',
+      '8': const {},
+      '10': 'optionalReplicas'
+    },
+    const {
+      '1': 'base_config',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'baseConfig'
+    },
+    const {
+      '1': 'labels',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig.LabelsEntry',
+      '10': 'labels'
+    },
+    const {'1': 'etag', '3': 9, '4': 1, '5': 9, '10': 'etag'},
+    const {
       '1': 'leader_options',
       '3': 4,
       '4': 3,
       '5': 9,
       '10': 'leaderOptions'
     },
+    const {
+      '1': 'reconciling',
+      '3': 10,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'reconciling'
+    },
+    const {
+      '1': 'state',
+      '3': 11,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig.State',
+      '8': const {},
+      '10': 'state'
+    },
   ],
+  '3': const [InstanceConfig_LabelsEntry$json],
+  '4': const [InstanceConfig_Type$json, InstanceConfig_State$json],
   '7': const {},
+};
+
+@$core.Deprecated('Use instanceConfigDescriptor instead')
+const InstanceConfig_LabelsEntry$json = const {
+  '1': 'LabelsEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use instanceConfigDescriptor instead')
+const InstanceConfig_Type$json = const {
+  '1': 'Type',
+  '2': const [
+    const {'1': 'TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'GOOGLE_MANAGED', '2': 1},
+    const {'1': 'USER_MANAGED', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use instanceConfigDescriptor instead')
+const InstanceConfig_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'CREATING', '2': 1},
+    const {'1': 'READY', '2': 2},
+  ],
 };
 
 /// Descriptor for `InstanceConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List instanceConfigDescriptor = $convert.base64Decode(
-    'Cg5JbnN0YW5jZUNvbmZpZxISCgRuYW1lGAEgASgJUgRuYW1lEiEKDGRpc3BsYXlfbmFtZRgCIAEoCVILZGlzcGxheU5hbWUSSQoIcmVwbGljYXMYAyADKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5SZXBsaWNhSW5mb1IIcmVwbGljYXMSJQoObGVhZGVyX29wdGlvbnMYBCADKAlSDWxlYWRlck9wdGlvbnM6YOpBXQolc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZUNvbmZpZxI0cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlQ29uZmlncy97aW5zdGFuY2VfY29uZmlnfQ==');
+    'Cg5JbnN0YW5jZUNvbmZpZxISCgRuYW1lGAEgASgJUgRuYW1lEiEKDGRpc3BsYXlfbmFtZRgCIAEoCVILZGlzcGxheU5hbWUSWwoLY29uZmlnX3R5cGUYBSABKA4yNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZy5UeXBlQgPgQQNSCmNvbmZpZ1R5cGUSSQoIcmVwbGljYXMYAyADKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5SZXBsaWNhSW5mb1IIcmVwbGljYXMSXwoRb3B0aW9uYWxfcmVwbGljYXMYBiADKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5SZXBsaWNhSW5mb0ID4EEDUhBvcHRpb25hbFJlcGxpY2FzEksKC2Jhc2VfY29uZmlnGAcgASgJQir6QScKJXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWdSCmJhc2VDb25maWcSVAoGbGFiZWxzGAggAygLMjwuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VDb25maWcuTGFiZWxzRW50cnlSBmxhYmVscxISCgRldGFnGAkgASgJUgRldGFnEiUKDmxlYWRlcl9vcHRpb25zGAQgAygJUg1sZWFkZXJPcHRpb25zEiUKC3JlY29uY2lsaW5nGAogASgIQgPgQQNSC3JlY29uY2lsaW5nElEKBXN0YXRlGAsgASgOMjYuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VDb25maWcuU3RhdGVCA+BBA1IFc3RhdGUaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASJCCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABISCg5HT09HTEVfTUFOQUdFRBABEhAKDFVTRVJfTUFOQUdFRBACIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOmDqQV0KJXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWcSNHByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZUNvbmZpZ3Mve2luc3RhbmNlX2NvbmZpZ30=');
 @$core.Deprecated('Use instanceDescriptor instead')
 const Instance$json = const {
   '1': 'Instance',
@@ -228,6 +312,135 @@ const GetInstanceConfigRequest$json = const {
 final $typed_data.Uint8List getInstanceConfigRequestDescriptor =
     $convert.base64Decode(
         'ChhHZXRJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSQQoEbmFtZRgBIAEoCUIt4EEC+kEnCiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnUgRuYW1l');
+@$core.Deprecated('Use createInstanceConfigRequestDescriptor instead')
+const CreateInstanceConfigRequest$json = const {
+  '1': 'CreateInstanceConfigRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'instance_config_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'instanceConfigId'
+    },
+    const {
+      '1': 'instance_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig',
+      '8': const {},
+      '10': 'instanceConfig'
+    },
+    const {'1': 'validate_only', '3': 4, '4': 1, '5': 8, '10': 'validateOnly'},
+  ],
+};
+
+/// Descriptor for `CreateInstanceConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createInstanceConfigRequestDescriptor =
+    $convert.base64Decode(
+        'ChtDcmVhdGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSSwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3RSBnBhcmVudBIxChJpbnN0YW5jZV9jb25maWdfaWQYAiABKAlCA+BBAlIQaW5zdGFuY2VDb25maWdJZBJeCg9pbnN0YW5jZV9jb25maWcYAyABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZ0ID4EECUg5pbnN0YW5jZUNvbmZpZxIjCg12YWxpZGF0ZV9vbmx5GAQgASgIUgx2YWxpZGF0ZU9ubHk=');
+@$core.Deprecated('Use updateInstanceConfigRequestDescriptor instead')
+const UpdateInstanceConfigRequest$json = const {
+  '1': 'UpdateInstanceConfigRequest',
+  '2': const [
+    const {
+      '1': 'instance_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig',
+      '8': const {},
+      '10': 'instanceConfig'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+    const {'1': 'validate_only', '3': 3, '4': 1, '5': 8, '10': 'validateOnly'},
+  ],
+};
+
+/// Descriptor for `UpdateInstanceConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateInstanceConfigRequestDescriptor =
+    $convert.base64Decode(
+        'ChtVcGRhdGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSXgoPaW5zdGFuY2VfY29uZmlnGAEgASgLMjAuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VDb25maWdCA+BBAlIOaW5zdGFuY2VDb25maWcSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2sSIwoNdmFsaWRhdGVfb25seRgDIAEoCFIMdmFsaWRhdGVPbmx5');
+@$core.Deprecated('Use deleteInstanceConfigRequestDescriptor instead')
+const DeleteInstanceConfigRequest$json = const {
+  '1': 'DeleteInstanceConfigRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {'1': 'etag', '3': 2, '4': 1, '5': 9, '10': 'etag'},
+    const {'1': 'validate_only', '3': 3, '4': 1, '5': 8, '10': 'validateOnly'},
+  ],
+};
+
+/// Descriptor for `DeleteInstanceConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteInstanceConfigRequestDescriptor =
+    $convert.base64Decode(
+        'ChtEZWxldGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSQQoEbmFtZRgBIAEoCUIt4EEC+kEnCiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnUgRuYW1lEhIKBGV0YWcYAiABKAlSBGV0YWcSIwoNdmFsaWRhdGVfb25seRgDIAEoCFIMdmFsaWRhdGVPbmx5');
+@$core.Deprecated('Use listInstanceConfigOperationsRequestDescriptor instead')
+const ListInstanceConfigOperationsRequest$json = const {
+  '1': 'ListInstanceConfigOperationsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListInstanceConfigOperationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listInstanceConfigOperationsRequestDescriptor =
+    $convert.base64Decode(
+        'CiNMaXN0SW5zdGFuY2VDb25maWdPcGVyYXRpb25zUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdFIGcGFyZW50EhYKBmZpbHRlchgCIAEoCVIGZmlsdGVyEhsKCXBhZ2Vfc2l6ZRgDIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgEIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listInstanceConfigOperationsResponseDescriptor instead')
+const ListInstanceConfigOperationsResponse$json = const {
+  '1': 'ListInstanceConfigOperationsResponse',
+  '2': const [
+    const {
+      '1': 'operations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.longrunning.Operation',
+      '10': 'operations'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListInstanceConfigOperationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listInstanceConfigOperationsResponseDescriptor =
+    $convert.base64Decode(
+        'CiRMaXN0SW5zdGFuY2VDb25maWdPcGVyYXRpb25zUmVzcG9uc2USPQoKb3BlcmF0aW9ucxgBIAMoCzIdLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb25SCm9wZXJhdGlvbnMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
 @$core.Deprecated('Use getInstanceRequestDescriptor instead')
 const GetInstanceRequest$json = const {
   '1': 'GetInstanceRequest',
@@ -453,3 +666,73 @@ const UpdateInstanceMetadata$json = const {
 final $typed_data.Uint8List updateInstanceMetadataDescriptor =
     $convert.base64Decode(
         'ChZVcGRhdGVJbnN0YW5jZU1ldGFkYXRhEkYKCGluc3RhbmNlGAEgASgLMiouZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VSCGluc3RhbmNlEjkKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSOwoLY2FuY2VsX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjYW5jZWxUaW1lEjUKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHZW5kVGltZQ==');
+@$core.Deprecated('Use createInstanceConfigMetadataDescriptor instead')
+const CreateInstanceConfigMetadata$json = const {
+  '1': 'CreateInstanceConfigMetadata',
+  '2': const [
+    const {
+      '1': 'instance_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig',
+      '10': 'instanceConfig'
+    },
+    const {
+      '1': 'progress',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.OperationProgress',
+      '10': 'progress'
+    },
+    const {
+      '1': 'cancel_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'cancelTime'
+    },
+  ],
+};
+
+/// Descriptor for `CreateInstanceConfigMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createInstanceConfigMetadataDescriptor =
+    $convert.base64Decode(
+        'ChxDcmVhdGVJbnN0YW5jZUNvbmZpZ01ldGFkYXRhElkKD2luc3RhbmNlX2NvbmZpZxgBIAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmlnUg5pbnN0YW5jZUNvbmZpZxJPCghwcm9ncmVzcxgCIAEoCzIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblByb2dyZXNzUghwcm9ncmVzcxI7CgtjYW5jZWxfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNhbmNlbFRpbWU=');
+@$core.Deprecated('Use updateInstanceConfigMetadataDescriptor instead')
+const UpdateInstanceConfigMetadata$json = const {
+  '1': 'UpdateInstanceConfigMetadata',
+  '2': const [
+    const {
+      '1': 'instance_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.InstanceConfig',
+      '10': 'instanceConfig'
+    },
+    const {
+      '1': 'progress',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.OperationProgress',
+      '10': 'progress'
+    },
+    const {
+      '1': 'cancel_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'cancelTime'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateInstanceConfigMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateInstanceConfigMetadataDescriptor =
+    $convert.base64Decode(
+        'ChxVcGRhdGVJbnN0YW5jZUNvbmZpZ01ldGFkYXRhElkKD2luc3RhbmNlX2NvbmZpZxgBIAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmlnUg5pbnN0YW5jZUNvbmZpZxJPCghwcm9ncmVzcxgCIAEoCzIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblByb2dyZXNzUghwcm9ncmVzcxI7CgtjYW5jZWxfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNhbmNlbFRpbWU=');

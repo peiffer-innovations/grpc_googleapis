@@ -1,6 +1,6 @@
 name: grpc_googleapis
 description: Generated GRPC Dart files for the Google APIs
-version: 2.0.22
+version: 2.0.31
 homepage: https://github.com/peiffer-innovations/grpc_googleapis
 
 environment:

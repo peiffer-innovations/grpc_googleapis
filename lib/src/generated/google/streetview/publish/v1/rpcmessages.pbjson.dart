@@ -328,6 +328,101 @@ const BatchDeletePhotosRequest$json = const {
 final $typed_data.Uint8List batchDeletePhotosRequestDescriptor =
     $convert.base64Decode(
         'ChhCYXRjaERlbGV0ZVBob3Rvc1JlcXVlc3QSIAoJcGhvdG9faWRzGAEgAygJQgPgQQJSCHBob3RvSWRz');
+@$core.Deprecated('Use createPhotoSequenceRequestDescriptor instead')
+const CreatePhotoSequenceRequest$json = const {
+  '1': 'CreatePhotoSequenceRequest',
+  '2': const [
+    const {
+      '1': 'photo_sequence',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.PhotoSequence',
+      '8': const {},
+      '10': 'photoSequence'
+    },
+    const {
+      '1': 'input_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.streetview.publish.v1.CreatePhotoSequenceRequest.InputType',
+      '8': const {},
+      '10': 'inputType'
+    },
+  ],
+  '4': const [CreatePhotoSequenceRequest_InputType$json],
+};
+
+@$core.Deprecated('Use createPhotoSequenceRequestDescriptor instead')
+const CreatePhotoSequenceRequest_InputType$json = const {
+  '1': 'InputType',
+  '2': const [
+    const {'1': 'INPUT_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'VIDEO', '2': 1},
+    const {'1': 'XDM', '2': 2},
+  ],
+};
+
+/// Descriptor for `CreatePhotoSequenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createPhotoSequenceRequestDescriptor =
+    $convert.base64Decode(
+        'ChpDcmVhdGVQaG90b1NlcXVlbmNlUmVxdWVzdBJXCg5waG90b19zZXF1ZW5jZRgBIAEoCzIrLmdvb2dsZS5zdHJlZXR2aWV3LnB1Ymxpc2gudjEuUGhvdG9TZXF1ZW5jZUID4EECUg1waG90b1NlcXVlbmNlEmYKCmlucHV0X3R5cGUYAiABKA4yQi5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLkNyZWF0ZVBob3RvU2VxdWVuY2VSZXF1ZXN0LklucHV0VHlwZUID4EECUglpbnB1dFR5cGUiOwoJSW5wdXRUeXBlEhoKFklOUFVUX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVWSURFTxABEgcKA1hETRAC');
+@$core.Deprecated('Use getPhotoSequenceRequestDescriptor instead')
+const GetPhotoSequenceRequest$json = const {
+  '1': 'GetPhotoSequenceRequest',
+  '2': const [
+    const {
+      '1': 'sequence_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'sequenceId'
+    },
+    const {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.streetview.publish.v1.PhotoView',
+      '8': const {'3': true},
+      '10': 'view',
+    },
+    const {
+      '1': 'filter',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'filter'
+    },
+  ],
+};
+
+/// Descriptor for `GetPhotoSequenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPhotoSequenceRequestDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRQaG90b1NlcXVlbmNlUmVxdWVzdBIkCgtzZXF1ZW5jZV9pZBgBIAEoCUID4EECUgpzZXF1ZW5jZUlkEj8KBHZpZXcYAiABKA4yJy5nb29nbGUuc3RyZWV0dmlldy5wdWJsaXNoLnYxLlBob3RvVmlld0ICGAFSBHZpZXcSGwoGZmlsdGVyGAMgASgJQgPgQQFSBmZpbHRlcg==');
+@$core.Deprecated('Use deletePhotoSequenceRequestDescriptor instead')
+const DeletePhotoSequenceRequest$json = const {
+  '1': 'DeletePhotoSequenceRequest',
+  '2': const [
+    const {
+      '1': 'sequence_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'sequenceId'
+    },
+  ],
+};
+
+/// Descriptor for `DeletePhotoSequenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deletePhotoSequenceRequestDescriptor =
+    $convert.base64Decode(
+        'ChpEZWxldGVQaG90b1NlcXVlbmNlUmVxdWVzdBIkCgtzZXF1ZW5jZV9pZBgBIAEoCUID4EECUgpzZXF1ZW5jZUlk');
 @$core.Deprecated('Use batchDeletePhotosResponseDescriptor instead')
 const BatchDeletePhotosResponse$json = const {
   '1': 'BatchDeletePhotosResponse',
@@ -347,3 +442,64 @@ const BatchDeletePhotosResponse$json = const {
 final $typed_data.Uint8List batchDeletePhotosResponseDescriptor =
     $convert.base64Decode(
         'ChlCYXRjaERlbGV0ZVBob3Rvc1Jlc3BvbnNlEioKBnN0YXR1cxgBIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzUgZzdGF0dXM=');
+@$core.Deprecated('Use listPhotoSequencesRequestDescriptor instead')
+const ListPhotoSequencesRequest$json = const {
+  '1': 'ListPhotoSequencesRequest',
+  '2': const [
+    const {
+      '1': 'page_size',
+      '3': 1,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+    const {
+      '1': 'page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+    const {
+      '1': 'filter',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'filter'
+    },
+  ],
+};
+
+/// Descriptor for `ListPhotoSequencesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listPhotoSequencesRequestDescriptor =
+    $convert.base64Decode(
+        'ChlMaXN0UGhvdG9TZXF1ZW5jZXNSZXF1ZXN0EiAKCXBhZ2Vfc2l6ZRgBIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2VuGAIgASgJQgPgQQFSCXBhZ2VUb2tlbhIbCgZmaWx0ZXIYBCABKAlCA+BBAVIGZmlsdGVy');
+@$core.Deprecated('Use listPhotoSequencesResponseDescriptor instead')
+const ListPhotoSequencesResponse$json = const {
+  '1': 'ListPhotoSequencesResponse',
+  '2': const [
+    const {
+      '1': 'photo_sequences',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.longrunning.Operation',
+      '10': 'photoSequences'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListPhotoSequencesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listPhotoSequencesResponseDescriptor =
+    $convert.base64Decode(
+        'ChpMaXN0UGhvdG9TZXF1ZW5jZXNSZXNwb25zZRJGCg9waG90b19zZXF1ZW5jZXMYASADKAsyHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uUg5waG90b1NlcXVlbmNlcxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');

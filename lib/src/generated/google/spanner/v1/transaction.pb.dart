@@ -12,6 +12,10 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../protobuf/timestamp.pb.dart' as $0;
 import '../../protobuf/duration.pb.dart' as $1;
 
+import 'transaction.pbenum.dart';
+
+export 'transaction.pbenum.dart';
+
 class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -22,10 +26,28 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
               ? ''
               : 'google.spanner.v1'),
       createEmptyInstance: create)
+    ..e<TransactionOptions_ReadWrite_ReadLockMode>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readLockMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TransactionOptions_ReadWrite_ReadLockMode
+            .READ_LOCK_MODE_UNSPECIFIED,
+        valueOf: TransactionOptions_ReadWrite_ReadLockMode.valueOf,
+        enumValues: TransactionOptions_ReadWrite_ReadLockMode.values)
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadWrite._() : super();
-  factory TransactionOptions_ReadWrite() => create();
+  factory TransactionOptions_ReadWrite({
+    TransactionOptions_ReadWrite_ReadLockMode? readLockMode,
+  }) {
+    final _result = create();
+    if (readLockMode != null) {
+      _result.readLockMode = readLockMode;
+    }
+    return _result;
+  }
   factory TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -56,6 +78,18 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   static TransactionOptions_ReadWrite getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadWrite>(create);
   static TransactionOptions_ReadWrite? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TransactionOptions_ReadWrite_ReadLockMode get readLockMode => $_getN(0);
+  @$pb.TagNumber(1)
+  set readLockMode(TransactionOptions_ReadWrite_ReadLockMode v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasReadLockMode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearReadLockMode() => clearField(1);
 }
 
 class TransactionOptions_PartitionedDml extends $pb.GeneratedMessage {

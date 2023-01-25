@@ -13,6 +13,7 @@ import 'package:grpc/service_api.dart' as $grpc;
 import '../../../protobuf/empty.pb.dart' as $1;
 import 'resources.pb.dart' as $2;
 import 'rpcmessages.pb.dart' as $3;
+import '../../../longrunning/operations.pb.dart' as $0;
 export 'streetview_publish.pb.dart';
 
 class StreetViewPublishServiceClient extends $grpc.Client {
@@ -63,6 +64,32 @@ class StreetViewPublishServiceClient extends $grpc.Client {
       ($3.BatchDeletePhotosRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $3.BatchDeletePhotosResponse.fromBuffer(value));
+  static final _$startPhotoSequenceUpload = $grpc.ClientMethod<$1.Empty,
+          $2.UploadRef>(
+      '/google.streetview.publish.v1.StreetViewPublishService/StartPhotoSequenceUpload',
+      ($1.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UploadRef.fromBuffer(value));
+  static final _$createPhotoSequence = $grpc.ClientMethod<
+          $3.CreatePhotoSequenceRequest, $0.Operation>(
+      '/google.streetview.publish.v1.StreetViewPublishService/CreatePhotoSequence',
+      ($3.CreatePhotoSequenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$getPhotoSequence = $grpc.ClientMethod<
+          $3.GetPhotoSequenceRequest, $0.Operation>(
+      '/google.streetview.publish.v1.StreetViewPublishService/GetPhotoSequence',
+      ($3.GetPhotoSequenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$listPhotoSequences = $grpc.ClientMethod<
+          $3.ListPhotoSequencesRequest, $3.ListPhotoSequencesResponse>(
+      '/google.streetview.publish.v1.StreetViewPublishService/ListPhotoSequences',
+      ($3.ListPhotoSequencesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $3.ListPhotoSequencesResponse.fromBuffer(value));
+  static final _$deletePhotoSequence = $grpc.ClientMethod<
+          $3.DeletePhotoSequenceRequest, $1.Empty>(
+      '/google.streetview.publish.v1.StreetViewPublishService/DeletePhotoSequence',
+      ($3.DeletePhotoSequenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   StreetViewPublishServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -116,6 +143,36 @@ class StreetViewPublishServiceClient extends $grpc.Client {
       $3.BatchDeletePhotosRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$batchDeletePhotos, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.UploadRef> startPhotoSequenceUpload($1.Empty request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$startPhotoSequenceUpload, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> createPhotoSequence(
+      $3.CreatePhotoSequenceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createPhotoSequence, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> getPhotoSequence(
+      $3.GetPhotoSequenceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPhotoSequence, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.ListPhotoSequencesResponse> listPhotoSequences(
+      $3.ListPhotoSequencesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listPhotoSequences, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deletePhotoSequence(
+      $3.DeletePhotoSequenceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deletePhotoSequence, request, options: options);
   }
 }
 
@@ -196,6 +253,46 @@ abstract class StreetViewPublishServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $3.BatchDeletePhotosRequest.fromBuffer(value),
         ($3.BatchDeletePhotosResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.Empty, $2.UploadRef>(
+        'StartPhotoSequenceUpload',
+        startPhotoSequenceUpload_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.Empty.fromBuffer(value),
+        ($2.UploadRef value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.CreatePhotoSequenceRequest, $0.Operation>(
+        'CreatePhotoSequence',
+        createPhotoSequence_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.CreatePhotoSequenceRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetPhotoSequenceRequest, $0.Operation>(
+        'GetPhotoSequence',
+        getPhotoSequence_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetPhotoSequenceRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListPhotoSequencesRequest,
+            $3.ListPhotoSequencesResponse>(
+        'ListPhotoSequences',
+        listPhotoSequences_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.ListPhotoSequencesRequest.fromBuffer(value),
+        ($3.ListPhotoSequencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.DeletePhotoSequenceRequest, $1.Empty>(
+        'DeletePhotoSequence',
+        deletePhotoSequence_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.DeletePhotoSequenceRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.UploadRef> startUpload_Pre(
@@ -246,6 +343,32 @@ abstract class StreetViewPublishServiceBase extends $grpc.Service {
     return batchDeletePhotos(call, await request);
   }
 
+  $async.Future<$2.UploadRef> startPhotoSequenceUpload_Pre(
+      $grpc.ServiceCall call, $async.Future<$1.Empty> request) async {
+    return startPhotoSequenceUpload(call, await request);
+  }
+
+  $async.Future<$0.Operation> createPhotoSequence_Pre($grpc.ServiceCall call,
+      $async.Future<$3.CreatePhotoSequenceRequest> request) async {
+    return createPhotoSequence(call, await request);
+  }
+
+  $async.Future<$0.Operation> getPhotoSequence_Pre($grpc.ServiceCall call,
+      $async.Future<$3.GetPhotoSequenceRequest> request) async {
+    return getPhotoSequence(call, await request);
+  }
+
+  $async.Future<$3.ListPhotoSequencesResponse> listPhotoSequences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$3.ListPhotoSequencesRequest> request) async {
+    return listPhotoSequences(call, await request);
+  }
+
+  $async.Future<$1.Empty> deletePhotoSequence_Pre($grpc.ServiceCall call,
+      $async.Future<$3.DeletePhotoSequenceRequest> request) async {
+    return deletePhotoSequence(call, await request);
+  }
+
   $async.Future<$2.UploadRef> startUpload(
       $grpc.ServiceCall call, $1.Empty request);
   $async.Future<$2.Photo> createPhoto(
@@ -264,4 +387,14 @@ abstract class StreetViewPublishServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $3.DeletePhotoRequest request);
   $async.Future<$3.BatchDeletePhotosResponse> batchDeletePhotos(
       $grpc.ServiceCall call, $3.BatchDeletePhotosRequest request);
+  $async.Future<$2.UploadRef> startPhotoSequenceUpload(
+      $grpc.ServiceCall call, $1.Empty request);
+  $async.Future<$0.Operation> createPhotoSequence(
+      $grpc.ServiceCall call, $3.CreatePhotoSequenceRequest request);
+  $async.Future<$0.Operation> getPhotoSequence(
+      $grpc.ServiceCall call, $3.GetPhotoSequenceRequest request);
+  $async.Future<$3.ListPhotoSequencesResponse> listPhotoSequences(
+      $grpc.ServiceCall call, $3.ListPhotoSequencesRequest request);
+  $async.Future<$1.Empty> deletePhotoSequence(
+      $grpc.ServiceCall call, $3.DeletePhotoSequenceRequest request);
 }

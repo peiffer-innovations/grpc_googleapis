@@ -370,6 +370,284 @@ class Query extends $pb.GeneratedMessage {
   $2.Int32Value ensureLimit() => $_ensure(8);
 }
 
+class AggregationQuery_Aggregation_Count extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AggregationQuery.Aggregation.Count',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Int64Value>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'upTo',
+        subBuilder: $2.Int64Value.create)
+    ..hasRequiredFields = false;
+
+  AggregationQuery_Aggregation_Count._() : super();
+  factory AggregationQuery_Aggregation_Count({
+    $2.Int64Value? upTo,
+  }) {
+    final _result = create();
+    if (upTo != null) {
+      _result.upTo = upTo;
+    }
+    return _result;
+  }
+  factory AggregationQuery_Aggregation_Count.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AggregationQuery_Aggregation_Count.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AggregationQuery_Aggregation_Count clone() =>
+      AggregationQuery_Aggregation_Count()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AggregationQuery_Aggregation_Count copyWith(
+          void Function(AggregationQuery_Aggregation_Count) updates) =>
+      super.copyWith((message) =>
+              updates(message as AggregationQuery_Aggregation_Count))
+          as AggregationQuery_Aggregation_Count; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AggregationQuery_Aggregation_Count create() =>
+      AggregationQuery_Aggregation_Count._();
+  AggregationQuery_Aggregation_Count createEmptyInstance() => create();
+  static $pb.PbList<AggregationQuery_Aggregation_Count> createRepeated() =>
+      $pb.PbList<AggregationQuery_Aggregation_Count>();
+  @$core.pragma('dart2js:noInline')
+  static AggregationQuery_Aggregation_Count getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AggregationQuery_Aggregation_Count>(
+          create);
+  static AggregationQuery_Aggregation_Count? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.Int64Value get upTo => $_getN(0);
+  @$pb.TagNumber(1)
+  set upTo($2.Int64Value v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUpTo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUpTo() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Int64Value ensureUpTo() => $_ensure(0);
+}
+
+enum AggregationQuery_Aggregation_Operator { count, notSet }
+
+class AggregationQuery_Aggregation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AggregationQuery_Aggregation_Operator>
+      _AggregationQuery_Aggregation_OperatorByTag = {
+    1: AggregationQuery_Aggregation_Operator.count,
+    0: AggregationQuery_Aggregation_Operator.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AggregationQuery.Aggregation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<AggregationQuery_Aggregation_Count>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'count',
+        subBuilder: AggregationQuery_Aggregation_Count.create)
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'alias')
+    ..hasRequiredFields = false;
+
+  AggregationQuery_Aggregation._() : super();
+  factory AggregationQuery_Aggregation({
+    AggregationQuery_Aggregation_Count? count,
+    $core.String? alias,
+  }) {
+    final _result = create();
+    if (count != null) {
+      _result.count = count;
+    }
+    if (alias != null) {
+      _result.alias = alias;
+    }
+    return _result;
+  }
+  factory AggregationQuery_Aggregation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AggregationQuery_Aggregation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AggregationQuery_Aggregation clone() =>
+      AggregationQuery_Aggregation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AggregationQuery_Aggregation copyWith(
+          void Function(AggregationQuery_Aggregation) updates) =>
+      super.copyWith(
+              (message) => updates(message as AggregationQuery_Aggregation))
+          as AggregationQuery_Aggregation; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AggregationQuery_Aggregation create() =>
+      AggregationQuery_Aggregation._();
+  AggregationQuery_Aggregation createEmptyInstance() => create();
+  static $pb.PbList<AggregationQuery_Aggregation> createRepeated() =>
+      $pb.PbList<AggregationQuery_Aggregation>();
+  @$core.pragma('dart2js:noInline')
+  static AggregationQuery_Aggregation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AggregationQuery_Aggregation>(create);
+  static AggregationQuery_Aggregation? _defaultInstance;
+
+  AggregationQuery_Aggregation_Operator whichOperator() =>
+      _AggregationQuery_Aggregation_OperatorByTag[$_whichOneof(0)]!;
+  void clearOperator() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  AggregationQuery_Aggregation_Count get count => $_getN(0);
+  @$pb.TagNumber(1)
+  set count(AggregationQuery_Aggregation_Count v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCount() => clearField(1);
+  @$pb.TagNumber(1)
+  AggregationQuery_Aggregation_Count ensureCount() => $_ensure(0);
+
+  @$pb.TagNumber(7)
+  $core.String get alias => $_getSZ(1);
+  @$pb.TagNumber(7)
+  set alias($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasAlias() => $_has(1);
+  @$pb.TagNumber(7)
+  void clearAlias() => clearField(7);
+}
+
+enum AggregationQuery_QueryType { nestedQuery, notSet }
+
+class AggregationQuery extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AggregationQuery_QueryType>
+      _AggregationQuery_QueryTypeByTag = {
+    1: AggregationQuery_QueryType.nestedQuery,
+    0: AggregationQuery_QueryType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AggregationQuery',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Query>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nestedQuery',
+        subBuilder: Query.create)
+    ..pc<AggregationQuery_Aggregation>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'aggregations',
+        $pb.PbFieldType.PM,
+        subBuilder: AggregationQuery_Aggregation.create)
+    ..hasRequiredFields = false;
+
+  AggregationQuery._() : super();
+  factory AggregationQuery({
+    Query? nestedQuery,
+    $core.Iterable<AggregationQuery_Aggregation>? aggregations,
+  }) {
+    final _result = create();
+    if (nestedQuery != null) {
+      _result.nestedQuery = nestedQuery;
+    }
+    if (aggregations != null) {
+      _result.aggregations.addAll(aggregations);
+    }
+    return _result;
+  }
+  factory AggregationQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AggregationQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AggregationQuery clone() => AggregationQuery()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AggregationQuery copyWith(void Function(AggregationQuery) updates) =>
+      super.copyWith((message) => updates(message as AggregationQuery))
+          as AggregationQuery; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AggregationQuery create() => AggregationQuery._();
+  AggregationQuery createEmptyInstance() => create();
+  static $pb.PbList<AggregationQuery> createRepeated() =>
+      $pb.PbList<AggregationQuery>();
+  @$core.pragma('dart2js:noInline')
+  static AggregationQuery getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AggregationQuery>(create);
+  static AggregationQuery? _defaultInstance;
+
+  AggregationQuery_QueryType whichQueryType() =>
+      _AggregationQuery_QueryTypeByTag[$_whichOneof(0)]!;
+  void clearQueryType() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Query get nestedQuery => $_getN(0);
+  @$pb.TagNumber(1)
+  set nestedQuery(Query v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasNestedQuery() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNestedQuery() => clearField(1);
+  @$pb.TagNumber(1)
+  Query ensureNestedQuery() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $core.List<AggregationQuery_Aggregation> get aggregations => $_getList(1);
+}
+
 class KindExpression extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

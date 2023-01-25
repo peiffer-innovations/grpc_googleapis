@@ -945,6 +945,240 @@ class BuiltImage extends $pb.GeneratedMessage {
   TimeSpan ensurePushTiming() => $_ensure(2);
 }
 
+class UploadedPythonPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UploadedPythonPackage',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uri')
+    ..aOM<FileHashes>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fileHashes',
+        subBuilder: FileHashes.create)
+    ..aOM<TimeSpan>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pushTiming',
+        subBuilder: TimeSpan.create)
+    ..hasRequiredFields = false;
+
+  UploadedPythonPackage._() : super();
+  factory UploadedPythonPackage({
+    $core.String? uri,
+    FileHashes? fileHashes,
+    TimeSpan? pushTiming,
+  }) {
+    final _result = create();
+    if (uri != null) {
+      _result.uri = uri;
+    }
+    if (fileHashes != null) {
+      _result.fileHashes = fileHashes;
+    }
+    if (pushTiming != null) {
+      _result.pushTiming = pushTiming;
+    }
+    return _result;
+  }
+  factory UploadedPythonPackage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UploadedPythonPackage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UploadedPythonPackage clone() =>
+      UploadedPythonPackage()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UploadedPythonPackage copyWith(
+          void Function(UploadedPythonPackage) updates) =>
+      super.copyWith((message) => updates(message as UploadedPythonPackage))
+          as UploadedPythonPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UploadedPythonPackage create() => UploadedPythonPackage._();
+  UploadedPythonPackage createEmptyInstance() => create();
+  static $pb.PbList<UploadedPythonPackage> createRepeated() =>
+      $pb.PbList<UploadedPythonPackage>();
+  @$core.pragma('dart2js:noInline')
+  static UploadedPythonPackage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadedPythonPackage>(create);
+  static UploadedPythonPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uri => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uri($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUri() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUri() => clearField(1);
+
+  @$pb.TagNumber(2)
+  FileHashes get fileHashes => $_getN(1);
+  @$pb.TagNumber(2)
+  set fileHashes(FileHashes v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFileHashes() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFileHashes() => clearField(2);
+  @$pb.TagNumber(2)
+  FileHashes ensureFileHashes() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  TimeSpan get pushTiming => $_getN(2);
+  @$pb.TagNumber(3)
+  set pushTiming(TimeSpan v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPushTiming() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPushTiming() => clearField(3);
+  @$pb.TagNumber(3)
+  TimeSpan ensurePushTiming() => $_ensure(2);
+}
+
+class UploadedMavenArtifact extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UploadedMavenArtifact',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uri')
+    ..aOM<FileHashes>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fileHashes',
+        subBuilder: FileHashes.create)
+    ..aOM<TimeSpan>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pushTiming',
+        subBuilder: TimeSpan.create)
+    ..hasRequiredFields = false;
+
+  UploadedMavenArtifact._() : super();
+  factory UploadedMavenArtifact({
+    $core.String? uri,
+    FileHashes? fileHashes,
+    TimeSpan? pushTiming,
+  }) {
+    final _result = create();
+    if (uri != null) {
+      _result.uri = uri;
+    }
+    if (fileHashes != null) {
+      _result.fileHashes = fileHashes;
+    }
+    if (pushTiming != null) {
+      _result.pushTiming = pushTiming;
+    }
+    return _result;
+  }
+  factory UploadedMavenArtifact.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UploadedMavenArtifact.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UploadedMavenArtifact clone() =>
+      UploadedMavenArtifact()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UploadedMavenArtifact copyWith(
+          void Function(UploadedMavenArtifact) updates) =>
+      super.copyWith((message) => updates(message as UploadedMavenArtifact))
+          as UploadedMavenArtifact; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UploadedMavenArtifact create() => UploadedMavenArtifact._();
+  UploadedMavenArtifact createEmptyInstance() => create();
+  static $pb.PbList<UploadedMavenArtifact> createRepeated() =>
+      $pb.PbList<UploadedMavenArtifact>();
+  @$core.pragma('dart2js:noInline')
+  static UploadedMavenArtifact getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadedMavenArtifact>(create);
+  static UploadedMavenArtifact? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uri => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uri($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUri() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUri() => clearField(1);
+
+  @$pb.TagNumber(2)
+  FileHashes get fileHashes => $_getN(1);
+  @$pb.TagNumber(2)
+  set fileHashes(FileHashes v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFileHashes() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFileHashes() => clearField(2);
+  @$pb.TagNumber(2)
+  FileHashes ensureFileHashes() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  TimeSpan get pushTiming => $_getN(2);
+  @$pb.TagNumber(3)
+  set pushTiming(TimeSpan v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPushTiming() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPushTiming() => clearField(3);
+  @$pb.TagNumber(3)
+  TimeSpan ensurePushTiming() => $_ensure(2);
+}
+
 class BuildStep extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1029,6 +1263,23 @@ class BuildStep extends $pb.GeneratedMessage {
             ? ''
             : 'pullTiming',
         subBuilder: TimeSpan.create)
+    ..aOB(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowFailure')
+    ..a<$core.int>(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'exitCode',
+        $pb.PbFieldType.O3)
+    ..p<$core.int>(
+        18,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'allowExitCodes',
+        $pb.PbFieldType.K3)
     ..aOS(
         19,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1051,6 +1302,9 @@ class BuildStep extends $pb.GeneratedMessage {
     $3.Duration? timeout,
     Build_Status? status,
     TimeSpan? pullTiming,
+    $core.bool? allowFailure,
+    $core.int? exitCode,
+    $core.Iterable<$core.int>? allowExitCodes,
     $core.String? script,
   }) {
     final _result = create();
@@ -1092,6 +1346,15 @@ class BuildStep extends $pb.GeneratedMessage {
     }
     if (pullTiming != null) {
       _result.pullTiming = pullTiming;
+    }
+    if (allowFailure != null) {
+      _result.allowFailure = allowFailure;
+    }
+    if (exitCode != null) {
+      _result.exitCode = exitCode;
+    }
+    if (allowExitCodes != null) {
+      _result.allowExitCodes.addAll(allowExitCodes);
     }
     if (script != null) {
       _result.script = script;
@@ -1241,15 +1504,42 @@ class BuildStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   TimeSpan ensurePullTiming() => $_ensure(12);
 
+  @$pb.TagNumber(14)
+  $core.bool get allowFailure => $_getBF(13);
+  @$pb.TagNumber(14)
+  set allowFailure($core.bool v) {
+    $_setBool(13, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasAllowFailure() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearAllowFailure() => clearField(14);
+
+  @$pb.TagNumber(16)
+  $core.int get exitCode => $_getIZ(14);
+  @$pb.TagNumber(16)
+  set exitCode($core.int v) {
+    $_setSignedInt32(14, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasExitCode() => $_has(14);
+  @$pb.TagNumber(16)
+  void clearExitCode() => clearField(16);
+
+  @$pb.TagNumber(18)
+  $core.List<$core.int> get allowExitCodes => $_getList(15);
+
   @$pb.TagNumber(19)
-  $core.String get script => $_getSZ(13);
+  $core.String get script => $_getSZ(16);
   @$pb.TagNumber(19)
   set script($core.String v) {
-    $_setString(13, v);
+    $_setString(16, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasScript() => $_has(13);
+  $core.bool hasScript() => $_has(16);
   @$pb.TagNumber(19)
   void clearScript() => clearField(19);
 }
@@ -1385,6 +1675,20 @@ class Results extends $pb.GeneratedMessage {
             ? ''
             : 'artifactTiming',
         subBuilder: TimeSpan.create)
+    ..pc<UploadedPythonPackage>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pythonPackages',
+        $pb.PbFieldType.PM,
+        subBuilder: UploadedPythonPackage.create)
+    ..pc<UploadedMavenArtifact>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mavenArtifacts',
+        $pb.PbFieldType.PM,
+        subBuilder: UploadedMavenArtifact.create)
     ..hasRequiredFields = false;
 
   Results._() : super();
@@ -1395,6 +1699,8 @@ class Results extends $pb.GeneratedMessage {
     $fixnum.Int64? numArtifacts,
     $core.Iterable<$core.List<$core.int>>? buildStepOutputs,
     TimeSpan? artifactTiming,
+    $core.Iterable<UploadedPythonPackage>? pythonPackages,
+    $core.Iterable<UploadedMavenArtifact>? mavenArtifacts,
   }) {
     final _result = create();
     if (images != null) {
@@ -1414,6 +1720,12 @@ class Results extends $pb.GeneratedMessage {
     }
     if (artifactTiming != null) {
       _result.artifactTiming = artifactTiming;
+    }
+    if (pythonPackages != null) {
+      _result.pythonPackages.addAll(pythonPackages);
+    }
+    if (mavenArtifacts != null) {
+      _result.mavenArtifacts.addAll(mavenArtifacts);
     }
     return _result;
   }
@@ -1489,6 +1801,12 @@ class Results extends $pb.GeneratedMessage {
   void clearArtifactTiming() => clearField(7);
   @$pb.TagNumber(7)
   TimeSpan ensureArtifactTiming() => $_ensure(5);
+
+  @$pb.TagNumber(8)
+  $core.List<UploadedPythonPackage> get pythonPackages => $_getList(6);
+
+  @$pb.TagNumber(9)
+  $core.List<UploadedMavenArtifact> get mavenArtifacts => $_getList(7);
 }
 
 class ArtifactResult extends $pb.GeneratedMessage {
@@ -2510,6 +2828,240 @@ class Artifacts_ArtifactObjects extends $pb.GeneratedMessage {
   TimeSpan ensureTiming() => $_ensure(2);
 }
 
+class Artifacts_MavenArtifact extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Artifacts.MavenArtifact',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'repository')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'path')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'artifactId')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'groupId')
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version')
+    ..hasRequiredFields = false;
+
+  Artifacts_MavenArtifact._() : super();
+  factory Artifacts_MavenArtifact({
+    $core.String? repository,
+    $core.String? path,
+    $core.String? artifactId,
+    $core.String? groupId,
+    $core.String? version,
+  }) {
+    final _result = create();
+    if (repository != null) {
+      _result.repository = repository;
+    }
+    if (path != null) {
+      _result.path = path;
+    }
+    if (artifactId != null) {
+      _result.artifactId = artifactId;
+    }
+    if (groupId != null) {
+      _result.groupId = groupId;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    return _result;
+  }
+  factory Artifacts_MavenArtifact.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Artifacts_MavenArtifact.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Artifacts_MavenArtifact clone() =>
+      Artifacts_MavenArtifact()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Artifacts_MavenArtifact copyWith(
+          void Function(Artifacts_MavenArtifact) updates) =>
+      super.copyWith((message) => updates(message as Artifacts_MavenArtifact))
+          as Artifacts_MavenArtifact; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Artifacts_MavenArtifact create() => Artifacts_MavenArtifact._();
+  Artifacts_MavenArtifact createEmptyInstance() => create();
+  static $pb.PbList<Artifacts_MavenArtifact> createRepeated() =>
+      $pb.PbList<Artifacts_MavenArtifact>();
+  @$core.pragma('dart2js:noInline')
+  static Artifacts_MavenArtifact getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Artifacts_MavenArtifact>(create);
+  static Artifacts_MavenArtifact? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get repository => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set repository($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRepository() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRepository() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get path => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set path($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPath() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPath() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get artifactId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set artifactId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasArtifactId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearArtifactId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get groupId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set groupId($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasGroupId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearGroupId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get version => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set version($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasVersion() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearVersion() => clearField(5);
+}
+
+class Artifacts_PythonPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Artifacts.PythonPackage',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'repository')
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'paths')
+    ..hasRequiredFields = false;
+
+  Artifacts_PythonPackage._() : super();
+  factory Artifacts_PythonPackage({
+    $core.String? repository,
+    $core.Iterable<$core.String>? paths,
+  }) {
+    final _result = create();
+    if (repository != null) {
+      _result.repository = repository;
+    }
+    if (paths != null) {
+      _result.paths.addAll(paths);
+    }
+    return _result;
+  }
+  factory Artifacts_PythonPackage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Artifacts_PythonPackage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Artifacts_PythonPackage clone() =>
+      Artifacts_PythonPackage()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Artifacts_PythonPackage copyWith(
+          void Function(Artifacts_PythonPackage) updates) =>
+      super.copyWith((message) => updates(message as Artifacts_PythonPackage))
+          as Artifacts_PythonPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Artifacts_PythonPackage create() => Artifacts_PythonPackage._();
+  Artifacts_PythonPackage createEmptyInstance() => create();
+  static $pb.PbList<Artifacts_PythonPackage> createRepeated() =>
+      $pb.PbList<Artifacts_PythonPackage>();
+  @$core.pragma('dart2js:noInline')
+  static Artifacts_PythonPackage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Artifacts_PythonPackage>(create);
+  static Artifacts_PythonPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get repository => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set repository($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRepository() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRepository() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get paths => $_getList(1);
+}
+
 class Artifacts extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -2531,12 +3083,28 @@ class Artifacts extends $pb.GeneratedMessage {
             ? ''
             : 'objects',
         subBuilder: Artifacts_ArtifactObjects.create)
+    ..pc<Artifacts_MavenArtifact>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mavenArtifacts',
+        $pb.PbFieldType.PM,
+        subBuilder: Artifacts_MavenArtifact.create)
+    ..pc<Artifacts_PythonPackage>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pythonPackages',
+        $pb.PbFieldType.PM,
+        subBuilder: Artifacts_PythonPackage.create)
     ..hasRequiredFields = false;
 
   Artifacts._() : super();
   factory Artifacts({
     $core.Iterable<$core.String>? images,
     Artifacts_ArtifactObjects? objects,
+    $core.Iterable<Artifacts_MavenArtifact>? mavenArtifacts,
+    $core.Iterable<Artifacts_PythonPackage>? pythonPackages,
   }) {
     final _result = create();
     if (images != null) {
@@ -2544,6 +3112,12 @@ class Artifacts extends $pb.GeneratedMessage {
     }
     if (objects != null) {
       _result.objects = objects;
+    }
+    if (mavenArtifacts != null) {
+      _result.mavenArtifacts.addAll(mavenArtifacts);
+    }
+    if (pythonPackages != null) {
+      _result.pythonPackages.addAll(pythonPackages);
     }
     return _result;
   }
@@ -2589,6 +3163,12 @@ class Artifacts extends $pb.GeneratedMessage {
   void clearObjects() => clearField(2);
   @$pb.TagNumber(2)
   Artifacts_ArtifactObjects ensureObjects() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.List<Artifacts_MavenArtifact> get mavenArtifacts => $_getList(2);
+
+  @$pb.TagNumber(5)
+  $core.List<Artifacts_PythonPackage> get pythonPackages => $_getList(3);
 }
 
 class TimeSpan extends $pb.GeneratedMessage {

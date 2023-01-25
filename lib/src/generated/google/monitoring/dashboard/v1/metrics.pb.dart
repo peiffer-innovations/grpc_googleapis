@@ -19,6 +19,7 @@ enum TimeSeriesQuery_Source {
   timeSeriesFilter,
   timeSeriesFilterRatio,
   timeSeriesQueryLanguage,
+  prometheusQuery,
   notSet
 }
 
@@ -28,6 +29,7 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
     1: TimeSeriesQuery_Source.timeSeriesFilter,
     2: TimeSeriesQuery_Source.timeSeriesFilterRatio,
     3: TimeSeriesQuery_Source.timeSeriesQueryLanguage,
+    6: TimeSeriesQuery_Source.prometheusQuery,
     0: TimeSeriesQuery_Source.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -39,7 +41,7 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
               ? ''
               : 'google.monitoring.dashboard.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3])
+    ..oo(0, [1, 2, 3, 6])
     ..aOM<TimeSeriesFilter>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -62,6 +64,11 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'unitOverride')
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'prometheusQuery')
     ..hasRequiredFields = false;
 
   TimeSeriesQuery._() : super();
@@ -70,6 +77,7 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
     TimeSeriesFilterRatio? timeSeriesFilterRatio,
     $core.String? timeSeriesQueryLanguage,
     $core.String? unitOverride,
+    $core.String? prometheusQuery,
   }) {
     final _result = create();
     if (timeSeriesFilter != null) {
@@ -83,6 +91,9 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
     }
     if (unitOverride != null) {
       _result.unitOverride = unitOverride;
+    }
+    if (prometheusQuery != null) {
+      _result.prometheusQuery = prometheusQuery;
     }
     return _result;
   }
@@ -168,6 +179,18 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
   $core.bool hasUnitOverride() => $_has(3);
   @$pb.TagNumber(5)
   void clearUnitOverride() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get prometheusQuery => $_getSZ(4);
+  @$pb.TagNumber(6)
+  set prometheusQuery($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasPrometheusQuery() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearPrometheusQuery() => clearField(6);
 }
 
 enum TimeSeriesFilter_OutputFilter {

@@ -13,6 +13,10 @@ import 'metrics.pb.dart' as $0;
 import '../../../protobuf/duration.pb.dart' as $1;
 import 'table_display_options.pb.dart' as $2;
 
+import 'table.pbenum.dart';
+
+export 'table.pbenum.dart';
+
 class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -156,6 +160,98 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
   $2.TableDisplayOptions ensureTableDisplayOptions() => $_ensure(3);
 }
 
+class TimeSeriesTable_ColumnSettings extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TimeSeriesTable.ColumnSettings',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'column')
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'visible')
+    ..hasRequiredFields = false;
+
+  TimeSeriesTable_ColumnSettings._() : super();
+  factory TimeSeriesTable_ColumnSettings({
+    $core.String? column,
+    $core.bool? visible,
+  }) {
+    final _result = create();
+    if (column != null) {
+      _result.column = column;
+    }
+    if (visible != null) {
+      _result.visible = visible;
+    }
+    return _result;
+  }
+  factory TimeSeriesTable_ColumnSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimeSeriesTable_ColumnSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TimeSeriesTable_ColumnSettings clone() =>
+      TimeSeriesTable_ColumnSettings()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TimeSeriesTable_ColumnSettings copyWith(
+          void Function(TimeSeriesTable_ColumnSettings) updates) =>
+      super.copyWith(
+              (message) => updates(message as TimeSeriesTable_ColumnSettings))
+          as TimeSeriesTable_ColumnSettings; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TimeSeriesTable_ColumnSettings create() =>
+      TimeSeriesTable_ColumnSettings._();
+  TimeSeriesTable_ColumnSettings createEmptyInstance() => create();
+  static $pb.PbList<TimeSeriesTable_ColumnSettings> createRepeated() =>
+      $pb.PbList<TimeSeriesTable_ColumnSettings>();
+  @$core.pragma('dart2js:noInline')
+  static TimeSeriesTable_ColumnSettings getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimeSeriesTable_ColumnSettings>(create);
+  static TimeSeriesTable_ColumnSettings? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get column => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set column($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasColumn() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearColumn() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get visible => $_getBF(1);
+  @$pb.TagNumber(2)
+  set visible($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasVisible() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearVisible() => clearField(2);
+}
+
 class TimeSeriesTable extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -173,15 +269,40 @@ class TimeSeriesTable extends $pb.GeneratedMessage {
             : 'dataSets',
         $pb.PbFieldType.PM,
         subBuilder: TimeSeriesTable_TableDataSet.create)
+    ..e<TimeSeriesTable_MetricVisualization>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metricVisualization',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: TimeSeriesTable_MetricVisualization
+            .METRIC_VISUALIZATION_UNSPECIFIED,
+        valueOf: TimeSeriesTable_MetricVisualization.valueOf,
+        enumValues: TimeSeriesTable_MetricVisualization.values)
+    ..pc<TimeSeriesTable_ColumnSettings>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'columnSettings',
+        $pb.PbFieldType.PM,
+        subBuilder: TimeSeriesTable_ColumnSettings.create)
     ..hasRequiredFields = false;
 
   TimeSeriesTable._() : super();
   factory TimeSeriesTable({
     $core.Iterable<TimeSeriesTable_TableDataSet>? dataSets,
+    TimeSeriesTable_MetricVisualization? metricVisualization,
+    $core.Iterable<TimeSeriesTable_ColumnSettings>? columnSettings,
   }) {
     final _result = create();
     if (dataSets != null) {
       _result.dataSets.addAll(dataSets);
+    }
+    if (metricVisualization != null) {
+      _result.metricVisualization = metricVisualization;
+    }
+    if (columnSettings != null) {
+      _result.columnSettings.addAll(columnSettings);
     }
     return _result;
   }
@@ -214,4 +335,19 @@ class TimeSeriesTable extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<TimeSeriesTable_TableDataSet> get dataSets => $_getList(0);
+
+  @$pb.TagNumber(2)
+  TimeSeriesTable_MetricVisualization get metricVisualization => $_getN(1);
+  @$pb.TagNumber(2)
+  set metricVisualization(TimeSeriesTable_MetricVisualization v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMetricVisualization() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMetricVisualization() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.List<TimeSeriesTable_ColumnSettings> get columnSettings => $_getList(2);
 }

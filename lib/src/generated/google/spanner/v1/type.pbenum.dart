@@ -105,10 +105,16 @@ class TypeAnnotationCode extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'PG_NUMERIC');
+  static const TypeAnnotationCode PG_JSONB = TypeAnnotationCode._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'PG_JSONB');
 
   static const $core.List<TypeAnnotationCode> values = <TypeAnnotationCode>[
     TYPE_ANNOTATION_CODE_UNSPECIFIED,
     PG_NUMERIC,
+    PG_JSONB,
   ];
 
   static final $core.Map<$core.int, TypeAnnotationCode> _byValue =

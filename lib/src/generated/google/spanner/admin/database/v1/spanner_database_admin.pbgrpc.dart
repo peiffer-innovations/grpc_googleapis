@@ -114,6 +114,12 @@ class DatabaseAdminClient extends $grpc.Client {
       ($5.ListBackupOperationsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $5.ListBackupOperationsResponse.fromBuffer(value));
+  static final _$listDatabaseRoles = $grpc.ClientMethod<
+          $4.ListDatabaseRolesRequest, $4.ListDatabaseRolesResponse>(
+      '/google.spanner.admin.database.v1.DatabaseAdmin/ListDatabaseRoles',
+      ($4.ListDatabaseRolesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListDatabaseRolesResponse.fromBuffer(value));
 
   DatabaseAdminClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -219,6 +225,12 @@ class DatabaseAdminClient extends $grpc.Client {
       $5.ListBackupOperationsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listBackupOperations, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListDatabaseRolesResponse> listDatabaseRoles(
+      $4.ListDatabaseRolesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listDatabaseRoles, request, options: options);
   }
 }
 
@@ -374,6 +386,15 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.ListBackupOperationsRequest.fromBuffer(value),
         ($5.ListBackupOperationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListDatabaseRolesRequest,
+            $4.ListDatabaseRolesResponse>(
+        'ListDatabaseRoles',
+        listDatabaseRoles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListDatabaseRolesRequest.fromBuffer(value),
+        ($4.ListDatabaseRolesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$4.ListDatabasesResponse> listDatabases_Pre(
@@ -471,6 +492,12 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
     return listBackupOperations(call, await request);
   }
 
+  $async.Future<$4.ListDatabaseRolesResponse> listDatabaseRoles_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListDatabaseRolesRequest> request) async {
+    return listDatabaseRoles(call, await request);
+  }
+
   $async.Future<$4.ListDatabasesResponse> listDatabases(
       $grpc.ServiceCall call, $4.ListDatabasesRequest request);
   $async.Future<$2.Operation> createDatabase(
@@ -507,4 +534,6 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.ListDatabaseOperationsRequest request);
   $async.Future<$5.ListBackupOperationsResponse> listBackupOperations(
       $grpc.ServiceCall call, $5.ListBackupOperationsRequest request);
+  $async.Future<$4.ListDatabaseRolesResponse> listDatabaseRoles(
+      $grpc.ServiceCall call, $4.ListDatabaseRolesRequest request);
 }

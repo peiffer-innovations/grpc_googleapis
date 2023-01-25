@@ -381,6 +381,7 @@ const GetServiceAccountKeyRequest$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.iam.admin.v1.ServiceAccountPublicKeyType',
+      '8': const {},
       '10': 'publicKeyType'
     },
   ],
@@ -389,7 +390,7 @@ const GetServiceAccountKeyRequest$json = const {
 /// Descriptor for `GetServiceAccountKeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getServiceAccountKeyRequestDescriptor =
     $convert.base64Decode(
-        'ChtHZXRTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSMgoEbmFtZRgBIAEoCUIe4EEC+kEYChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5UgRuYW1lElgKD3B1YmxpY19rZXlfdHlwZRgCIAEoDjIwLmdvb2dsZS5pYW0uYWRtaW4udjEuU2VydmljZUFjY291bnRQdWJsaWNLZXlUeXBlUg1wdWJsaWNLZXlUeXBl');
+        'ChtHZXRTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSMgoEbmFtZRgBIAEoCUIe4EEC+kEYChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5UgRuYW1lEl0KD3B1YmxpY19rZXlfdHlwZRgCIAEoDjIwLmdvb2dsZS5pYW0uYWRtaW4udjEuU2VydmljZUFjY291bnRQdWJsaWNLZXlUeXBlQgPgQQFSDXB1YmxpY0tleVR5cGU=');
 @$core.Deprecated('Use serviceAccountKeyDescriptor instead')
 const ServiceAccountKey$json = const {
   '1': 'ServiceAccountKey',
@@ -457,13 +458,14 @@ const ServiceAccountKey$json = const {
       '6': '.google.iam.admin.v1.ListServiceAccountKeysRequest.KeyType',
       '10': 'keyType'
     },
+    const {'1': 'disabled', '3': 11, '4': 1, '5': 8, '10': 'disabled'},
   ],
   '7': const {},
 };
 
 /// Descriptor for `ServiceAccountKey`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceAccountKeyDescriptor = $convert.base64Decode(
-    'ChFTZXJ2aWNlQWNjb3VudEtleRISCgRuYW1lGAEgASgJUgRuYW1lElsKEHByaXZhdGVfa2V5X3R5cGUYAiABKA4yMS5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50UHJpdmF0ZUtleVR5cGVSDnByaXZhdGVLZXlUeXBlElQKDWtleV9hbGdvcml0aG0YCCABKA4yLy5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50S2V5QWxnb3JpdGhtUgxrZXlBbGdvcml0aG0SKAoQcHJpdmF0ZV9rZXlfZGF0YRgDIAEoDFIOcHJpdmF0ZUtleURhdGESJgoPcHVibGljX2tleV9kYXRhGAcgASgMUg1wdWJsaWNLZXlEYXRhEkQKEHZhbGlkX2FmdGVyX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg52YWxpZEFmdGVyVGltZRJGChF2YWxpZF9iZWZvcmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSD3ZhbGlkQmVmb3JlVGltZRJLCgprZXlfb3JpZ2luGAkgASgOMiwuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNjb3VudEtleU9yaWdpblIJa2V5T3JpZ2luElUKCGtleV90eXBlGAogASgOMjouZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0U2VydmljZUFjY291bnRLZXlzUmVxdWVzdC5LZXlUeXBlUgdrZXlUeXBlOlzqQVkKFmlhbS5nb29nbGVhcGlzLmNvbS9LZXkSP3Byb2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlQWNjb3VudHMve3NlcnZpY2VfYWNjb3VudH0va2V5cy97a2V5fQ==');
+    'ChFTZXJ2aWNlQWNjb3VudEtleRISCgRuYW1lGAEgASgJUgRuYW1lElsKEHByaXZhdGVfa2V5X3R5cGUYAiABKA4yMS5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50UHJpdmF0ZUtleVR5cGVSDnByaXZhdGVLZXlUeXBlElQKDWtleV9hbGdvcml0aG0YCCABKA4yLy5nb29nbGUuaWFtLmFkbWluLnYxLlNlcnZpY2VBY2NvdW50S2V5QWxnb3JpdGhtUgxrZXlBbGdvcml0aG0SKAoQcHJpdmF0ZV9rZXlfZGF0YRgDIAEoDFIOcHJpdmF0ZUtleURhdGESJgoPcHVibGljX2tleV9kYXRhGAcgASgMUg1wdWJsaWNLZXlEYXRhEkQKEHZhbGlkX2FmdGVyX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg52YWxpZEFmdGVyVGltZRJGChF2YWxpZF9iZWZvcmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSD3ZhbGlkQmVmb3JlVGltZRJLCgprZXlfb3JpZ2luGAkgASgOMiwuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNjb3VudEtleU9yaWdpblIJa2V5T3JpZ2luElUKCGtleV90eXBlGAogASgOMjouZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0U2VydmljZUFjY291bnRLZXlzUmVxdWVzdC5LZXlUeXBlUgdrZXlUeXBlEhoKCGRpc2FibGVkGAsgASgIUghkaXNhYmxlZDpc6kFZChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5Ej9wcm9qZWN0cy97cHJvamVjdH0vc2VydmljZUFjY291bnRzL3tzZXJ2aWNlX2FjY291bnR9L2tleXMve2tleX0=');
 @$core.Deprecated('Use createServiceAccountKeyRequestDescriptor instead')
 const CreateServiceAccountKeyRequest$json = const {
   '1': 'CreateServiceAccountKeyRequest',
@@ -523,6 +525,30 @@ const DeleteServiceAccountKeyRequest$json = const {
 final $typed_data.Uint8List deleteServiceAccountKeyRequestDescriptor =
     $convert.base64Decode(
         'Ch5EZWxldGVTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSMgoEbmFtZRgBIAEoCUIe4EEC+kEYChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5UgRuYW1l');
+@$core.Deprecated('Use disableServiceAccountKeyRequestDescriptor instead')
+const DisableServiceAccountKeyRequest$json = const {
+  '1': 'DisableServiceAccountKeyRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DisableServiceAccountKeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List disableServiceAccountKeyRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9EaXNhYmxlU2VydmljZUFjY291bnRLZXlSZXF1ZXN0EjIKBG5hbWUYASABKAlCHuBBAvpBGAoWaWFtLmdvb2dsZWFwaXMuY29tL0tleVIEbmFtZQ==');
+@$core.Deprecated('Use enableServiceAccountKeyRequestDescriptor instead')
+const EnableServiceAccountKeyRequest$json = const {
+  '1': 'EnableServiceAccountKeyRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `EnableServiceAccountKeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enableServiceAccountKeyRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5FbmFibGVTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QSMgoEbmFtZRgBIAEoCUIe4EEC+kEYChZpYW0uZ29vZ2xlYXBpcy5jb20vS2V5UgRuYW1l');
 @$core.Deprecated('Use signBlobRequestDescriptor instead')
 const SignBlobRequest$json = const {
   '1': 'SignBlobRequest',

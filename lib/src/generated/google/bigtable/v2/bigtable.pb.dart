@@ -11,8 +11,13 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'data.pb.dart' as $1;
-import '../../protobuf/wrappers.pb.dart' as $2;
-import '../../rpc/status.pb.dart' as $3;
+import 'request_stats.pb.dart' as $2;
+import '../../protobuf/wrappers.pb.dart' as $3;
+import '../../rpc/status.pb.dart' as $4;
+
+import 'bigtable.pbenum.dart';
+
+export 'bigtable.pbenum.dart';
 
 class ReadRowsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -51,6 +56,16 @@ class ReadRowsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'appProfileId')
+    ..e<ReadRowsRequest_RequestStatsView>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requestStatsView',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ReadRowsRequest_RequestStatsView.REQUEST_STATS_VIEW_UNSPECIFIED,
+        valueOf: ReadRowsRequest_RequestStatsView.valueOf,
+        enumValues: ReadRowsRequest_RequestStatsView.values)
     ..hasRequiredFields = false;
 
   ReadRowsRequest._() : super();
@@ -60,6 +75,7 @@ class ReadRowsRequest extends $pb.GeneratedMessage {
     $1.RowFilter? filter,
     $fixnum.Int64? rowsLimit,
     $core.String? appProfileId,
+    ReadRowsRequest_RequestStatsView? requestStatsView,
   }) {
     final _result = create();
     if (tableName != null) {
@@ -76,6 +92,9 @@ class ReadRowsRequest extends $pb.GeneratedMessage {
     }
     if (appProfileId != null) {
       _result.appProfileId = appProfileId;
+    }
+    if (requestStatsView != null) {
+      _result.requestStatsView = requestStatsView;
     }
     return _result;
   }
@@ -169,6 +188,18 @@ class ReadRowsRequest extends $pb.GeneratedMessage {
   $core.bool hasAppProfileId() => $_has(4);
   @$pb.TagNumber(5)
   void clearAppProfileId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  ReadRowsRequest_RequestStatsView get requestStatsView => $_getN(5);
+  @$pb.TagNumber(6)
+  set requestStatsView(ReadRowsRequest_RequestStatsView v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasRequestStatsView() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRequestStatsView() => clearField(6);
 }
 
 enum ReadRowsResponse_CellChunk_RowStatus { resetRow, commitRow, notSet }
@@ -196,18 +227,18 @@ class ReadRowsResponse_CellChunk extends $pb.GeneratedMessage {
             ? ''
             : 'rowKey',
         $pb.PbFieldType.OY)
-    ..aOM<$2.StringValue>(
+    ..aOM<$3.StringValue>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'familyName',
-        subBuilder: $2.StringValue.create)
-    ..aOM<$2.BytesValue>(
+        subBuilder: $3.StringValue.create)
+    ..aOM<$3.BytesValue>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'qualifier',
-        subBuilder: $2.BytesValue.create)
+        subBuilder: $3.BytesValue.create)
     ..aInt64(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -245,8 +276,8 @@ class ReadRowsResponse_CellChunk extends $pb.GeneratedMessage {
   ReadRowsResponse_CellChunk._() : super();
   factory ReadRowsResponse_CellChunk({
     $core.List<$core.int>? rowKey,
-    $2.StringValue? familyName,
-    $2.BytesValue? qualifier,
+    $3.StringValue? familyName,
+    $3.BytesValue? qualifier,
     $fixnum.Int64? timestampMicros,
     $core.Iterable<$core.String>? labels,
     $core.List<$core.int>? value,
@@ -331,9 +362,9 @@ class ReadRowsResponse_CellChunk extends $pb.GeneratedMessage {
   void clearRowKey() => clearField(1);
 
   @$pb.TagNumber(2)
-  $2.StringValue get familyName => $_getN(1);
+  $3.StringValue get familyName => $_getN(1);
   @$pb.TagNumber(2)
-  set familyName($2.StringValue v) {
+  set familyName($3.StringValue v) {
     setField(2, v);
   }
 
@@ -342,12 +373,12 @@ class ReadRowsResponse_CellChunk extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFamilyName() => clearField(2);
   @$pb.TagNumber(2)
-  $2.StringValue ensureFamilyName() => $_ensure(1);
+  $3.StringValue ensureFamilyName() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $2.BytesValue get qualifier => $_getN(2);
+  $3.BytesValue get qualifier => $_getN(2);
   @$pb.TagNumber(3)
-  set qualifier($2.BytesValue v) {
+  set qualifier($3.BytesValue v) {
     setField(3, v);
   }
 
@@ -356,7 +387,7 @@ class ReadRowsResponse_CellChunk extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearQualifier() => clearField(3);
   @$pb.TagNumber(3)
-  $2.BytesValue ensureQualifier() => $_ensure(2);
+  $3.BytesValue ensureQualifier() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $fixnum.Int64 get timestampMicros => $_getI64(3);
@@ -445,12 +476,19 @@ class ReadRowsResponse extends $pb.GeneratedMessage {
             ? ''
             : 'lastScannedRowKey',
         $pb.PbFieldType.OY)
+    ..aOM<$2.RequestStats>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requestStats',
+        subBuilder: $2.RequestStats.create)
     ..hasRequiredFields = false;
 
   ReadRowsResponse._() : super();
   factory ReadRowsResponse({
     $core.Iterable<ReadRowsResponse_CellChunk>? chunks,
     $core.List<$core.int>? lastScannedRowKey,
+    $2.RequestStats? requestStats,
   }) {
     final _result = create();
     if (chunks != null) {
@@ -458,6 +496,9 @@ class ReadRowsResponse extends $pb.GeneratedMessage {
     }
     if (lastScannedRowKey != null) {
       _result.lastScannedRowKey = lastScannedRowKey;
+    }
+    if (requestStats != null) {
+      _result.requestStats = requestStats;
     }
     return _result;
   }
@@ -502,6 +543,20 @@ class ReadRowsResponse extends $pb.GeneratedMessage {
   $core.bool hasLastScannedRowKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearLastScannedRowKey() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $2.RequestStats get requestStats => $_getN(2);
+  @$pb.TagNumber(3)
+  set requestStats($2.RequestStats v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasRequestStats() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRequestStats() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.RequestStats ensureRequestStats() => $_ensure(2);
 }
 
 class SampleRowKeysRequest extends $pb.GeneratedMessage {
@@ -1051,18 +1106,18 @@ class MutateRowsResponse_Entry extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'index')
-    ..aOM<$3.Status>(
+    ..aOM<$4.Status>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
-        subBuilder: $3.Status.create)
+        subBuilder: $4.Status.create)
     ..hasRequiredFields = false;
 
   MutateRowsResponse_Entry._() : super();
   factory MutateRowsResponse_Entry({
     $fixnum.Int64? index,
-    $3.Status? status,
+    $4.Status? status,
   }) {
     final _result = create();
     if (index != null) {
@@ -1115,9 +1170,9 @@ class MutateRowsResponse_Entry extends $pb.GeneratedMessage {
   void clearIndex() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Status get status => $_getN(1);
+  $4.Status get status => $_getN(1);
   @$pb.TagNumber(2)
-  set status($3.Status v) {
+  set status($4.Status v) {
     setField(2, v);
   }
 
@@ -1126,7 +1181,7 @@ class MutateRowsResponse_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStatus() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Status ensureStatus() => $_ensure(1);
+  $4.Status ensureStatus() => $_ensure(1);
 }
 
 class MutateRowsResponse extends $pb.GeneratedMessage {

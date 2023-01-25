@@ -9,6 +9,37 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use errorInfoDescriptor instead')
+const ErrorInfo$json = const {
+  '1': 'ErrorInfo',
+  '2': const [
+    const {'1': 'reason', '3': 1, '4': 1, '5': 9, '10': 'reason'},
+    const {'1': 'domain', '3': 2, '4': 1, '5': 9, '10': 'domain'},
+    const {
+      '1': 'metadata',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.ErrorInfo.MetadataEntry',
+      '10': 'metadata'
+    },
+  ],
+  '3': const [ErrorInfo_MetadataEntry$json],
+};
+
+@$core.Deprecated('Use errorInfoDescriptor instead')
+const ErrorInfo_MetadataEntry$json = const {
+  '1': 'MetadataEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+/// Descriptor for `ErrorInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List errorInfoDescriptor = $convert.base64Decode(
+    'CglFcnJvckluZm8SFgoGcmVhc29uGAEgASgJUgZyZWFzb24SFgoGZG9tYWluGAIgASgJUgZkb21haW4SPwoIbWV0YWRhdGEYAyADKAsyIy5nb29nbGUucnBjLkVycm9ySW5mby5NZXRhZGF0YUVudHJ5UghtZXRhZGF0YRo7Cg1NZXRhZGF0YUVudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use retryInfoDescriptor instead')
 const RetryInfo$json = const {
   '1': 'RetryInfo',
@@ -67,37 +98,6 @@ const QuotaFailure_Violation$json = const {
 /// Descriptor for `QuotaFailure`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List quotaFailureDescriptor = $convert.base64Decode(
     'CgxRdW90YUZhaWx1cmUSQgoKdmlvbGF0aW9ucxgBIAMoCzIiLmdvb2dsZS5ycGMuUXVvdGFGYWlsdXJlLlZpb2xhdGlvblIKdmlvbGF0aW9ucxpHCglWaW9sYXRpb24SGAoHc3ViamVjdBgBIAEoCVIHc3ViamVjdBIgCgtkZXNjcmlwdGlvbhgCIAEoCVILZGVzY3JpcHRpb24=');
-@$core.Deprecated('Use errorInfoDescriptor instead')
-const ErrorInfo$json = const {
-  '1': 'ErrorInfo',
-  '2': const [
-    const {'1': 'reason', '3': 1, '4': 1, '5': 9, '10': 'reason'},
-    const {'1': 'domain', '3': 2, '4': 1, '5': 9, '10': 'domain'},
-    const {
-      '1': 'metadata',
-      '3': 3,
-      '4': 3,
-      '5': 11,
-      '6': '.google.rpc.ErrorInfo.MetadataEntry',
-      '10': 'metadata'
-    },
-  ],
-  '3': const [ErrorInfo_MetadataEntry$json],
-};
-
-@$core.Deprecated('Use errorInfoDescriptor instead')
-const ErrorInfo_MetadataEntry$json = const {
-  '1': 'MetadataEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
-  ],
-  '7': const {'7': true},
-};
-
-/// Descriptor for `ErrorInfo`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List errorInfoDescriptor = $convert.base64Decode(
-    'CglFcnJvckluZm8SFgoGcmVhc29uGAEgASgJUgZyZWFzb24SFgoGZG9tYWluGAIgASgJUgZkb21haW4SPwoIbWV0YWRhdGEYAyADKAsyIy5nb29nbGUucnBjLkVycm9ySW5mby5NZXRhZGF0YUVudHJ5UghtZXRhZGF0YRo7Cg1NZXRhZGF0YUVudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
 @$core.Deprecated('Use preconditionFailureDescriptor instead')
 const PreconditionFailure$json = const {
   '1': 'PreconditionFailure',

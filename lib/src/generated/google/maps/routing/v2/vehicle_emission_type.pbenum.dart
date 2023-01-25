@@ -31,12 +31,18 @@ class VehicleEmissionType extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'HYBRID');
+  static const VehicleEmissionType DIESEL = VehicleEmissionType._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DIESEL');
 
   static const $core.List<VehicleEmissionType> values = <VehicleEmissionType>[
     VEHICLE_EMISSION_TYPE_UNSPECIFIED,
     GASOLINE,
     ELECTRIC,
     HYBRID,
+    DIESEL,
   ];
 
   static final $core.Map<$core.int, VehicleEmissionType> _byValue =

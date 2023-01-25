@@ -383,6 +383,96 @@ class GetTransferJobRequest extends $pb.GeneratedMessage {
   void clearProjectId() => clearField(2);
 }
 
+class DeleteTransferJobRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteTransferJobRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'jobName')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..hasRequiredFields = false;
+
+  DeleteTransferJobRequest._() : super();
+  factory DeleteTransferJobRequest({
+    $core.String? jobName,
+    $core.String? projectId,
+  }) {
+    final _result = create();
+    if (jobName != null) {
+      _result.jobName = jobName;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    return _result;
+  }
+  factory DeleteTransferJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteTransferJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteTransferJobRequest clone() =>
+      DeleteTransferJobRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteTransferJobRequest copyWith(
+          void Function(DeleteTransferJobRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteTransferJobRequest))
+          as DeleteTransferJobRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeleteTransferJobRequest create() => DeleteTransferJobRequest._();
+  DeleteTransferJobRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteTransferJobRequest> createRepeated() =>
+      $pb.PbList<DeleteTransferJobRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTransferJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteTransferJobRequest>(create);
+  static DeleteTransferJobRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get jobName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set jobName($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasJobName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearJobName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set projectId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProjectId() => clearField(2);
+}
+
 class ListTransferJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

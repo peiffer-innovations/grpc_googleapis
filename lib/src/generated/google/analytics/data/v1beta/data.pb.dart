@@ -2741,6 +2741,11 @@ class ResponseMetaData extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'emptyReason')
+    ..aOB(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'subjectToThresholding')
     ..hasRequiredFields = false;
 
   ResponseMetaData._() : super();
@@ -2750,6 +2755,7 @@ class ResponseMetaData extends $pb.GeneratedMessage {
     $core.String? currencyCode,
     $core.String? timeZone,
     $core.String? emptyReason,
+    $core.bool? subjectToThresholding,
   }) {
     final _result = create();
     if (dataLossFromOtherRow != null) {
@@ -2766,6 +2772,9 @@ class ResponseMetaData extends $pb.GeneratedMessage {
     }
     if (emptyReason != null) {
       _result.emptyReason = emptyReason;
+    }
+    if (subjectToThresholding != null) {
+      _result.subjectToThresholding = subjectToThresholding;
     }
     return _result;
   }
@@ -2859,6 +2868,18 @@ class ResponseMetaData extends $pb.GeneratedMessage {
   $core.bool hasEmptyReason() => $_has(4);
   @$pb.TagNumber(7)
   void clearEmptyReason() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get subjectToThresholding => $_getBF(5);
+  @$pb.TagNumber(8)
+  set subjectToThresholding($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasSubjectToThresholding() => $_has(5);
+  @$pb.TagNumber(8)
+  void clearSubjectToThresholding() => clearField(8);
 }
 
 class DimensionHeader extends $pb.GeneratedMessage {
@@ -3534,6 +3555,12 @@ class PropertyQuota extends $pb.GeneratedMessage {
             ? ''
             : 'potentiallyThresholdedRequestsPerHour',
         subBuilder: QuotaStatus.create)
+    ..aOM<QuotaStatus>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tokensPerProjectPerHour',
+        subBuilder: QuotaStatus.create)
     ..hasRequiredFields = false;
 
   PropertyQuota._() : super();
@@ -3543,6 +3570,7 @@ class PropertyQuota extends $pb.GeneratedMessage {
     QuotaStatus? concurrentRequests,
     QuotaStatus? serverErrorsPerProjectPerHour,
     QuotaStatus? potentiallyThresholdedRequestsPerHour,
+    QuotaStatus? tokensPerProjectPerHour,
   }) {
     final _result = create();
     if (tokensPerDay != null) {
@@ -3560,6 +3588,9 @@ class PropertyQuota extends $pb.GeneratedMessage {
     if (potentiallyThresholdedRequestsPerHour != null) {
       _result.potentiallyThresholdedRequestsPerHour =
           potentiallyThresholdedRequestsPerHour;
+    }
+    if (tokensPerProjectPerHour != null) {
+      _result.tokensPerProjectPerHour = tokensPerProjectPerHour;
     }
     return _result;
   }
@@ -3659,6 +3690,20 @@ class PropertyQuota extends $pb.GeneratedMessage {
   void clearPotentiallyThresholdedRequestsPerHour() => clearField(5);
   @$pb.TagNumber(5)
   QuotaStatus ensurePotentiallyThresholdedRequestsPerHour() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  QuotaStatus get tokensPerProjectPerHour => $_getN(5);
+  @$pb.TagNumber(6)
+  set tokensPerProjectPerHour(QuotaStatus v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasTokensPerProjectPerHour() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearTokensPerProjectPerHour() => clearField(6);
+  @$pb.TagNumber(6)
+  QuotaStatus ensureTokensPerProjectPerHour() => $_ensure(5);
 }
 
 class QuotaStatus extends $pb.GeneratedMessage {

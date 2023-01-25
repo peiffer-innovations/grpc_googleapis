@@ -11,9 +11,9 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'table.pb.dart' as $5;
 import 'common.pb.dart' as $6;
-import '../../../protobuf/timestamp.pb.dart' as $7;
-import '../../../protobuf/duration.pb.dart' as $8;
-import '../../../protobuf/field_mask.pb.dart' as $9;
+import '../../../protobuf/field_mask.pb.dart' as $7;
+import '../../../protobuf/timestamp.pb.dart' as $8;
+import '../../../protobuf/duration.pb.dart' as $9;
 
 import 'table.pbenum.dart' as $5;
 
@@ -1147,6 +1147,215 @@ class GetTableRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(2);
 }
 
+class UpdateTableRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateTableRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Table>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'table',
+        subBuilder: $5.Table.create)
+    ..aOM<$7.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $7.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateTableRequest._() : super();
+  factory UpdateTableRequest({
+    $5.Table? table,
+    $7.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (table != null) {
+      _result.table = table;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateTableRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateTableRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateTableRequest clone() => UpdateTableRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateTableRequest copyWith(void Function(UpdateTableRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateTableRequest))
+          as UpdateTableRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateTableRequest create() => UpdateTableRequest._();
+  UpdateTableRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateTableRequest> createRepeated() =>
+      $pb.PbList<UpdateTableRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTableRequest>(create);
+  static UpdateTableRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $5.Table get table => $_getN(0);
+  @$pb.TagNumber(1)
+  set table($5.Table v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTable() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTable() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Table ensureTable() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $7.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($7.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class UpdateTableMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateTableMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOM<$8.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $8.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  UpdateTableMetadata._() : super();
+  factory UpdateTableMetadata({
+    $core.String? name,
+    $8.Timestamp? startTime,
+    $8.Timestamp? endTime,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    return _result;
+  }
+  factory UpdateTableMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateTableMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateTableMetadata clone() => UpdateTableMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateTableMetadata copyWith(void Function(UpdateTableMetadata) updates) =>
+      super.copyWith((message) => updates(message as UpdateTableMetadata))
+          as UpdateTableMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateTableMetadata create() => UpdateTableMetadata._();
+  UpdateTableMetadata createEmptyInstance() => create();
+  static $pb.PbList<UpdateTableMetadata> createRepeated() =>
+      $pb.PbList<UpdateTableMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTableMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTableMetadata>(create);
+  static UpdateTableMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $8.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set startTime($8.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureStartTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $8.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set endTime($8.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEndTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.Timestamp ensureEndTime() => $_ensure(2);
+}
+
 class DeleteTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1297,25 +1506,25 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
-    ..aOM<$7.Timestamp>(
+    ..aOM<$8.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endTime',
-        subBuilder: $7.Timestamp.create)
+        subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
   UndeleteTableMetadata._() : super();
   factory UndeleteTableMetadata({
     $core.String? name,
-    $7.Timestamp? startTime,
-    $7.Timestamp? endTime,
+    $8.Timestamp? startTime,
+    $8.Timestamp? endTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -1371,9 +1580,9 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $7.Timestamp get startTime => $_getN(1);
+  $8.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($7.Timestamp v) {
+  set startTime($8.Timestamp v) {
     setField(2, v);
   }
 
@@ -1382,12 +1591,12 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
   @$pb.TagNumber(2)
-  $7.Timestamp ensureStartTime() => $_ensure(1);
+  $8.Timestamp ensureStartTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $7.Timestamp get endTime => $_getN(2);
+  $8.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
-  set endTime($7.Timestamp v) {
+  set endTime($8.Timestamp v) {
     setField(3, v);
   }
 
@@ -1396,7 +1605,7 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearEndTime() => clearField(3);
   @$pb.TagNumber(3)
-  $7.Timestamp ensureEndTime() => $_ensure(2);
+  $8.Timestamp ensureEndTime() => $_ensure(2);
 }
 
 enum ModifyColumnFamiliesRequest_Modification_Mod {
@@ -1976,12 +2185,12 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'snapshotId')
-    ..aOM<$8.Duration>(
+    ..aOM<$9.Duration>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'ttl',
-        subBuilder: $8.Duration.create)
+        subBuilder: $9.Duration.create)
     ..aOS(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1994,7 +2203,7 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? cluster,
     $core.String? snapshotId,
-    $8.Duration? ttl,
+    $9.Duration? ttl,
     $core.String? description,
   }) {
     final _result = create();
@@ -2080,9 +2289,9 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   void clearSnapshotId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $8.Duration get ttl => $_getN(3);
+  $9.Duration get ttl => $_getN(3);
   @$pb.TagNumber(4)
-  set ttl($8.Duration v) {
+  set ttl($9.Duration v) {
     setField(4, v);
   }
 
@@ -2091,7 +2300,7 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearTtl() => clearField(4);
   @$pb.TagNumber(4)
-  $8.Duration ensureTtl() => $_ensure(3);
+  $9.Duration ensureTtl() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get description => $_getSZ(4);
@@ -2452,25 +2661,25 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'originalRequest',
         subBuilder: SnapshotTableRequest.create)
-    ..aOM<$7.Timestamp>(
+    ..aOM<$8.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'finishTime',
-        subBuilder: $7.Timestamp.create)
+        subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
   SnapshotTableMetadata._() : super();
   factory SnapshotTableMetadata({
     SnapshotTableRequest? originalRequest,
-    $7.Timestamp? requestTime,
-    $7.Timestamp? finishTime,
+    $8.Timestamp? requestTime,
+    $8.Timestamp? finishTime,
   }) {
     final _result = create();
     if (originalRequest != null) {
@@ -2528,9 +2737,9 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   SnapshotTableRequest ensureOriginalRequest() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $7.Timestamp get requestTime => $_getN(1);
+  $8.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
-  set requestTime($7.Timestamp v) {
+  set requestTime($8.Timestamp v) {
     setField(2, v);
   }
 
@@ -2539,12 +2748,12 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRequestTime() => clearField(2);
   @$pb.TagNumber(2)
-  $7.Timestamp ensureRequestTime() => $_ensure(1);
+  $8.Timestamp ensureRequestTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $7.Timestamp get finishTime => $_getN(2);
+  $8.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
-  set finishTime($7.Timestamp v) {
+  set finishTime($8.Timestamp v) {
     setField(3, v);
   }
 
@@ -2553,7 +2762,7 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFinishTime() => clearField(3);
   @$pb.TagNumber(3)
-  $7.Timestamp ensureFinishTime() => $_ensure(2);
+  $8.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
 class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
@@ -2572,25 +2781,25 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
             ? ''
             : 'originalRequest',
         subBuilder: CreateTableFromSnapshotRequest.create)
-    ..aOM<$7.Timestamp>(
+    ..aOM<$8.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'finishTime',
-        subBuilder: $7.Timestamp.create)
+        subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateTableFromSnapshotMetadata._() : super();
   factory CreateTableFromSnapshotMetadata({
     CreateTableFromSnapshotRequest? originalRequest,
-    $7.Timestamp? requestTime,
-    $7.Timestamp? finishTime,
+    $8.Timestamp? requestTime,
+    $8.Timestamp? finishTime,
   }) {
     final _result = create();
     if (originalRequest != null) {
@@ -2651,9 +2860,9 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   CreateTableFromSnapshotRequest ensureOriginalRequest() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $7.Timestamp get requestTime => $_getN(1);
+  $8.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
-  set requestTime($7.Timestamp v) {
+  set requestTime($8.Timestamp v) {
     setField(2, v);
   }
 
@@ -2662,12 +2871,12 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRequestTime() => clearField(2);
   @$pb.TagNumber(2)
-  $7.Timestamp ensureRequestTime() => $_ensure(1);
+  $8.Timestamp ensureRequestTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $7.Timestamp get finishTime => $_getN(2);
+  $8.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
-  set finishTime($7.Timestamp v) {
+  set finishTime($8.Timestamp v) {
     setField(3, v);
   }
 
@@ -2676,7 +2885,7 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFinishTime() => clearField(3);
   @$pb.TagNumber(3)
-  $7.Timestamp ensureFinishTime() => $_ensure(2);
+  $8.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
 class CreateBackupRequest extends $pb.GeneratedMessage {
@@ -2811,26 +3020,26 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sourceTable')
-    ..aOM<$7.Timestamp>(
+    ..aOM<$8.Timestamp>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'startTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endTime',
-        subBuilder: $7.Timestamp.create)
+        subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateBackupMetadata._() : super();
   factory CreateBackupMetadata({
     $core.String? name,
     $core.String? sourceTable,
-    $7.Timestamp? startTime,
-    $7.Timestamp? endTime,
+    $8.Timestamp? startTime,
+    $8.Timestamp? endTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -2900,9 +3109,9 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
   void clearSourceTable() => clearField(2);
 
   @$pb.TagNumber(3)
-  $7.Timestamp get startTime => $_getN(2);
+  $8.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
-  set startTime($7.Timestamp v) {
+  set startTime($8.Timestamp v) {
     setField(3, v);
   }
 
@@ -2911,12 +3120,12 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearStartTime() => clearField(3);
   @$pb.TagNumber(3)
-  $7.Timestamp ensureStartTime() => $_ensure(2);
+  $8.Timestamp ensureStartTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $7.Timestamp get endTime => $_getN(3);
+  $8.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
-  set endTime($7.Timestamp v) {
+  set endTime($8.Timestamp v) {
     setField(4, v);
   }
 
@@ -2925,7 +3134,7 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearEndTime() => clearField(4);
   @$pb.TagNumber(4)
-  $7.Timestamp ensureEndTime() => $_ensure(3);
+  $8.Timestamp ensureEndTime() => $_ensure(3);
 }
 
 class UpdateBackupRequest extends $pb.GeneratedMessage {
@@ -2944,18 +3153,18 @@ class UpdateBackupRequest extends $pb.GeneratedMessage {
             ? ''
             : 'backup',
         subBuilder: $5.Backup.create)
-    ..aOM<$9.FieldMask>(
+    ..aOM<$7.FieldMask>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $9.FieldMask.create)
+        subBuilder: $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateBackupRequest._() : super();
   factory UpdateBackupRequest({
     $5.Backup? backup,
-    $9.FieldMask? updateMask,
+    $7.FieldMask? updateMask,
   }) {
     final _result = create();
     if (backup != null) {
@@ -3008,9 +3217,9 @@ class UpdateBackupRequest extends $pb.GeneratedMessage {
   $5.Backup ensureBackup() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $9.FieldMask get updateMask => $_getN(1);
+  $7.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($9.FieldMask v) {
+  set updateMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -3019,7 +3228,7 @@ class UpdateBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $9.FieldMask ensureUpdateMask() => $_ensure(1);
+  $7.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class GetBackupRequest extends $pb.GeneratedMessage {

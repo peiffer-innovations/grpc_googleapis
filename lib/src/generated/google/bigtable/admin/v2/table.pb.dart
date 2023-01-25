@@ -260,6 +260,11 @@ class Table extends $pb.GeneratedMessage {
             ? ''
             : 'restoreInfo',
         subBuilder: RestoreInfo.create)
+    ..aOB(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deletionProtection')
     ..hasRequiredFields = false;
 
   Table._() : super();
@@ -269,6 +274,7 @@ class Table extends $pb.GeneratedMessage {
     $core.Map<$core.String, ColumnFamily>? columnFamilies,
     Table_TimestampGranularity? granularity,
     RestoreInfo? restoreInfo,
+    $core.bool? deletionProtection,
   }) {
     final _result = create();
     if (name != null) {
@@ -285,6 +291,9 @@ class Table extends $pb.GeneratedMessage {
     }
     if (restoreInfo != null) {
       _result.restoreInfo = restoreInfo;
+    }
+    if (deletionProtection != null) {
+      _result.deletionProtection = deletionProtection;
     }
     return _result;
   }
@@ -357,6 +366,18 @@ class Table extends $pb.GeneratedMessage {
   void clearRestoreInfo() => clearField(6);
   @$pb.TagNumber(6)
   RestoreInfo ensureRestoreInfo() => $_ensure(4);
+
+  @$pb.TagNumber(9)
+  $core.bool get deletionProtection => $_getBF(5);
+  @$pb.TagNumber(9)
+  set deletionProtection($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDeletionProtection() => $_has(5);
+  @$pb.TagNumber(9)
+  void clearDeletionProtection() => clearField(9);
 }
 
 class ColumnFamily extends $pb.GeneratedMessage {

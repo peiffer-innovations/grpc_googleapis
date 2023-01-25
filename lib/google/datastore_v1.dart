@@ -1,3 +1,6 @@
+export '../src/generated/google/datastore/v1/aggregation_result.pb.dart';
+export '../src/generated/google/datastore/v1/aggregation_result.pbenum.dart';
+export '../src/generated/google/datastore/v1/aggregation_result.pbjson.dart';
 export '../src/generated/google/datastore/v1/datastore.pb.dart';
 export '../src/generated/google/datastore/v1/datastore.pbenum.dart';
 export '../src/generated/google/datastore/v1/datastore.pbgrpc.dart';

@@ -74,12 +74,13 @@ const LocationSensor$json = const {
     const {'1': 'PASSIVE', '2': 3},
     const {'1': 'ROAD_SNAPPED_LOCATION_PROVIDER', '2': 4},
     const {'1': 'FUSED_LOCATION_PROVIDER', '2': 100},
+    const {'1': 'CORE_LOCATION', '2': 200},
   ],
 };
 
 /// Descriptor for `LocationSensor`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List locationSensorDescriptor = $convert.base64Decode(
-    'Cg5Mb2NhdGlvblNlbnNvchISCg5VTktOT1dOX1NFTlNPUhAAEgcKA0dQUxABEgsKB05FVFdPUksQAhILCgdQQVNTSVZFEAMSIgoeUk9BRF9TTkFQUEVEX0xPQ0FUSU9OX1BST1ZJREVSEAQSGwoXRlVTRURfTE9DQVRJT05fUFJPVklERVIQZA==');
+    'Cg5Mb2NhdGlvblNlbnNvchISCg5VTktOT1dOX1NFTlNPUhAAEgcKA0dQUxABEgsKB05FVFdPUksQAhILCgdQQVNTSVZFEAMSIgoeUk9BRF9TTkFQUEVEX0xPQ0FUSU9OX1BST1ZJREVSEAQSGwoXRlVTRURfTE9DQVRJT05fUFJPVklERVIQZBISCg1DT1JFX0xPQ0FUSU9OEMgB');
 @$core.Deprecated('Use terminalPointIdDescriptor instead')
 const TerminalPointId$json = const {
   '1': 'TerminalPointId',

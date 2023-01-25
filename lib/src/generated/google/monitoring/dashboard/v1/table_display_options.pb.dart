@@ -28,10 +28,12 @@ class TableDisplayOptions extends $pb.GeneratedMessage {
 
   TableDisplayOptions._() : super();
   factory TableDisplayOptions({
-    $core.Iterable<$core.String>? shownColumns,
+    @$core.Deprecated('This field is deprecated.')
+        $core.Iterable<$core.String>? shownColumns,
   }) {
     final _result = create();
     if (shownColumns != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.shownColumns.addAll(shownColumns);
     }
     return _result;
@@ -63,6 +65,7 @@ class TableDisplayOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TableDisplayOptions>(create);
   static TableDisplayOptions? _defaultInstance;
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.List<$core.String> get shownColumns => $_getList(0);
 }

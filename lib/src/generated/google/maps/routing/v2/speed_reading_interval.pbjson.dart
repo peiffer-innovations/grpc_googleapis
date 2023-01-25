@@ -18,14 +18,18 @@ const SpeedReadingInterval$json = const {
       '3': 1,
       '4': 1,
       '5': 5,
-      '10': 'startPolylinePointIndex'
+      '9': 0,
+      '10': 'startPolylinePointIndex',
+      '17': true
     },
     const {
       '1': 'end_polyline_point_index',
       '3': 2,
       '4': 1,
       '5': 5,
-      '10': 'endPolylinePointIndex'
+      '9': 1,
+      '10': 'endPolylinePointIndex',
+      '17': true
     },
     const {
       '1': 'speed',
@@ -37,6 +41,10 @@ const SpeedReadingInterval$json = const {
     },
   ],
   '4': const [SpeedReadingInterval_Speed$json],
+  '8': const [
+    const {'1': '_start_polyline_point_index'},
+    const {'1': '_end_polyline_point_index'},
+  ],
 };
 
 @$core.Deprecated('Use speedReadingIntervalDescriptor instead')
@@ -52,4 +60,4 @@ const SpeedReadingInterval_Speed$json = const {
 
 /// Descriptor for `SpeedReadingInterval`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List speedReadingIntervalDescriptor = $convert.base64Decode(
-    'ChRTcGVlZFJlYWRpbmdJbnRlcnZhbBI7ChpzdGFydF9wb2x5bGluZV9wb2ludF9pbmRleBgBIAEoBVIXc3RhcnRQb2x5bGluZVBvaW50SW5kZXgSNwoYZW5kX3BvbHlsaW5lX3BvaW50X2luZGV4GAIgASgFUhVlbmRQb2x5bGluZVBvaW50SW5kZXgSSAoFc3BlZWQYAyABKA4yMi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlNwZWVkUmVhZGluZ0ludGVydmFsLlNwZWVkUgVzcGVlZCJFCgVTcGVlZBIVChFTUEVFRF9VTlNQRUNJRklFRBAAEgoKBk5PUk1BTBABEggKBFNMT1cQAhIPCgtUUkFGRklDX0pBTRAD');
+    'ChRTcGVlZFJlYWRpbmdJbnRlcnZhbBJAChpzdGFydF9wb2x5bGluZV9wb2ludF9pbmRleBgBIAEoBUgAUhdzdGFydFBvbHlsaW5lUG9pbnRJbmRleIgBARI8ChhlbmRfcG9seWxpbmVfcG9pbnRfaW5kZXgYAiABKAVIAVIVZW5kUG9seWxpbmVQb2ludEluZGV4iAEBEkgKBXNwZWVkGAMgASgOMjIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5TcGVlZFJlYWRpbmdJbnRlcnZhbC5TcGVlZFIFc3BlZWQiRQoFU3BlZWQSFQoRU1BFRURfVU5TUEVDSUZJRUQQABIKCgZOT1JNQUwQARIICgRTTE9XEAISDwoLVFJBRkZJQ19KQU0QA0IdChtfc3RhcnRfcG9seWxpbmVfcG9pbnRfaW5kZXhCGwoZX2VuZF9wb2x5bGluZV9wb2ludF9pbmRleA==');

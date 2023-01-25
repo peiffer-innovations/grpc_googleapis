@@ -37,12 +37,13 @@ const TypeAnnotationCode$json = const {
   '2': const [
     const {'1': 'TYPE_ANNOTATION_CODE_UNSPECIFIED', '2': 0},
     const {'1': 'PG_NUMERIC', '2': 2},
+    const {'1': 'PG_JSONB', '2': 3},
   ],
 };
 
 /// Descriptor for `TypeAnnotationCode`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List typeAnnotationCodeDescriptor = $convert.base64Decode(
-    'ChJUeXBlQW5ub3RhdGlvbkNvZGUSJAogVFlQRV9BTk5PVEFUSU9OX0NPREVfVU5TUEVDSUZJRUQQABIOCgpQR19OVU1FUklDEAI=');
+    'ChJUeXBlQW5ub3RhdGlvbkNvZGUSJAogVFlQRV9BTk5PVEFUSU9OX0NPREVfVU5TUEVDSUZJRUQQABIOCgpQR19OVU1FUklDEAISDAoIUEdfSlNPTkIQAw==');
 @$core.Deprecated('Use typeDescriptor instead')
 const Type$json = const {
   '1': 'Type',

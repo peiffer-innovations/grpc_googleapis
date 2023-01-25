@@ -13,6 +13,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../protobuf/field_mask.pb.dart' as $4;
 import '../../protobuf/timestamp.pb.dart' as $5;
 import '../../type/date.pb.dart' as $6;
+import '../../protobuf/duration.pb.dart' as $7;
 
 export 'storage.pbenum.dart';
 
@@ -1595,6 +1596,12 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationPredefinedAcl')
+    ..aOM<ObjectChecksums>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'objectChecksums',
+        subBuilder: ObjectChecksums.create)
     ..hasRequiredFields = false;
 
   ComposeObjectRequest._() : super();
@@ -1606,6 +1613,7 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
     $core.String? kmsKey,
     CommonObjectRequestParams? commonObjectRequestParams,
     $core.String? destinationPredefinedAcl,
+    ObjectChecksums? objectChecksums,
   }) {
     final _result = create();
     if (destination != null) {
@@ -1628,6 +1636,9 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
     }
     if (destinationPredefinedAcl != null) {
       _result.destinationPredefinedAcl = destinationPredefinedAcl;
+    }
+    if (objectChecksums != null) {
+      _result.objectChecksums = objectChecksums;
     }
     return _result;
   }
@@ -1738,6 +1749,20 @@ class ComposeObjectRequest extends $pb.GeneratedMessage {
   $core.bool hasDestinationPredefinedAcl() => $_has(6);
   @$pb.TagNumber(9)
   void clearDestinationPredefinedAcl() => clearField(9);
+
+  @$pb.TagNumber(10)
+  ObjectChecksums get objectChecksums => $_getN(7);
+  @$pb.TagNumber(10)
+  set objectChecksums(ObjectChecksums v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasObjectChecksums() => $_has(7);
+  @$pb.TagNumber(10)
+  void clearObjectChecksums() => clearField(10);
+  @$pb.TagNumber(10)
+  ObjectChecksums ensureObjectChecksums() => $_ensure(7);
 }
 
 class DeleteObjectRequest extends $pb.GeneratedMessage {
@@ -1760,11 +1785,6 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'object')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uploadId')
     ..aInt64(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1802,7 +1822,6 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   factory DeleteObjectRequest({
     $core.String? bucket,
     $core.String? object,
-    $core.String? uploadId,
     $fixnum.Int64? generation,
     $fixnum.Int64? ifGenerationMatch,
     $fixnum.Int64? ifGenerationNotMatch,
@@ -1816,9 +1835,6 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
     }
     if (object != null) {
       _result.object = object;
-    }
-    if (uploadId != null) {
-      _result.uploadId = uploadId;
     }
     if (generation != null) {
       _result.generation = generation;
@@ -1891,91 +1907,196 @@ class DeleteObjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearObject() => clearField(2);
 
-  @$pb.TagNumber(3)
-  $core.String get uploadId => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set uploadId($core.String v) {
-    $_setString(2, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasUploadId() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearUploadId() => clearField(3);
-
   @$pb.TagNumber(4)
-  $fixnum.Int64 get generation => $_getI64(3);
+  $fixnum.Int64 get generation => $_getI64(2);
   @$pb.TagNumber(4)
   set generation($fixnum.Int64 v) {
-    $_setInt64(3, v);
+    $_setInt64(2, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasGeneration() => $_has(3);
+  $core.bool hasGeneration() => $_has(2);
   @$pb.TagNumber(4)
   void clearGeneration() => clearField(4);
 
   @$pb.TagNumber(5)
-  $fixnum.Int64 get ifGenerationMatch => $_getI64(4);
+  $fixnum.Int64 get ifGenerationMatch => $_getI64(3);
   @$pb.TagNumber(5)
   set ifGenerationMatch($fixnum.Int64 v) {
-    $_setInt64(4, v);
+    $_setInt64(3, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasIfGenerationMatch() => $_has(4);
+  $core.bool hasIfGenerationMatch() => $_has(3);
   @$pb.TagNumber(5)
   void clearIfGenerationMatch() => clearField(5);
 
   @$pb.TagNumber(6)
-  $fixnum.Int64 get ifGenerationNotMatch => $_getI64(5);
+  $fixnum.Int64 get ifGenerationNotMatch => $_getI64(4);
   @$pb.TagNumber(6)
   set ifGenerationNotMatch($fixnum.Int64 v) {
-    $_setInt64(5, v);
+    $_setInt64(4, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasIfGenerationNotMatch() => $_has(5);
+  $core.bool hasIfGenerationNotMatch() => $_has(4);
   @$pb.TagNumber(6)
   void clearIfGenerationNotMatch() => clearField(6);
 
   @$pb.TagNumber(7)
-  $fixnum.Int64 get ifMetagenerationMatch => $_getI64(6);
+  $fixnum.Int64 get ifMetagenerationMatch => $_getI64(5);
   @$pb.TagNumber(7)
   set ifMetagenerationMatch($fixnum.Int64 v) {
-    $_setInt64(6, v);
+    $_setInt64(5, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasIfMetagenerationMatch() => $_has(6);
+  $core.bool hasIfMetagenerationMatch() => $_has(5);
   @$pb.TagNumber(7)
   void clearIfMetagenerationMatch() => clearField(7);
 
   @$pb.TagNumber(8)
-  $fixnum.Int64 get ifMetagenerationNotMatch => $_getI64(7);
+  $fixnum.Int64 get ifMetagenerationNotMatch => $_getI64(6);
   @$pb.TagNumber(8)
   set ifMetagenerationNotMatch($fixnum.Int64 v) {
-    $_setInt64(7, v);
+    $_setInt64(6, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasIfMetagenerationNotMatch() => $_has(7);
+  $core.bool hasIfMetagenerationNotMatch() => $_has(6);
   @$pb.TagNumber(8)
   void clearIfMetagenerationNotMatch() => clearField(8);
 
   @$pb.TagNumber(10)
-  CommonObjectRequestParams get commonObjectRequestParams => $_getN(8);
+  CommonObjectRequestParams get commonObjectRequestParams => $_getN(7);
   @$pb.TagNumber(10)
   set commonObjectRequestParams(CommonObjectRequestParams v) {
     setField(10, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasCommonObjectRequestParams() => $_has(8);
+  $core.bool hasCommonObjectRequestParams() => $_has(7);
   @$pb.TagNumber(10)
   void clearCommonObjectRequestParams() => clearField(10);
   @$pb.TagNumber(10)
-  CommonObjectRequestParams ensureCommonObjectRequestParams() => $_ensure(8);
+  CommonObjectRequestParams ensureCommonObjectRequestParams() => $_ensure(7);
+}
+
+class CancelResumableWriteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CancelResumableWriteRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storage.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uploadId')
+    ..hasRequiredFields = false;
+
+  CancelResumableWriteRequest._() : super();
+  factory CancelResumableWriteRequest({
+    $core.String? uploadId,
+  }) {
+    final _result = create();
+    if (uploadId != null) {
+      _result.uploadId = uploadId;
+    }
+    return _result;
+  }
+  factory CancelResumableWriteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CancelResumableWriteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CancelResumableWriteRequest clone() =>
+      CancelResumableWriteRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CancelResumableWriteRequest copyWith(
+          void Function(CancelResumableWriteRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CancelResumableWriteRequest))
+          as CancelResumableWriteRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CancelResumableWriteRequest create() =>
+      CancelResumableWriteRequest._();
+  CancelResumableWriteRequest createEmptyInstance() => create();
+  static $pb.PbList<CancelResumableWriteRequest> createRepeated() =>
+      $pb.PbList<CancelResumableWriteRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CancelResumableWriteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CancelResumableWriteRequest>(create);
+  static CancelResumableWriteRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uploadId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uploadId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUploadId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUploadId() => clearField(1);
+}
+
+class CancelResumableWriteResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CancelResumableWriteResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.storage.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  CancelResumableWriteResponse._() : super();
+  factory CancelResumableWriteResponse() => create();
+  factory CancelResumableWriteResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CancelResumableWriteResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CancelResumableWriteResponse clone() =>
+      CancelResumableWriteResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CancelResumableWriteResponse copyWith(
+          void Function(CancelResumableWriteResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as CancelResumableWriteResponse))
+          as CancelResumableWriteResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CancelResumableWriteResponse create() =>
+      CancelResumableWriteResponse._();
+  CancelResumableWriteResponse createEmptyInstance() => create();
+  static $pb.PbList<CancelResumableWriteResponse> createRepeated() =>
+      $pb.PbList<CancelResumableWriteResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CancelResumableWriteResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CancelResumableWriteResponse>(create);
+  static CancelResumableWriteResponse? _defaultInstance;
 }
 
 class ReadObjectRequest extends $pb.GeneratedMessage {
@@ -2685,6 +2806,11 @@ class WriteObjectSpec extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'predefinedAcl')
+    ..aInt64(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'objectSize')
     ..hasRequiredFields = false;
 
   WriteObjectSpec._() : super();
@@ -2695,6 +2821,7 @@ class WriteObjectSpec extends $pb.GeneratedMessage {
     $fixnum.Int64? ifMetagenerationMatch,
     $fixnum.Int64? ifMetagenerationNotMatch,
     $core.String? predefinedAcl,
+    $fixnum.Int64? objectSize,
   }) {
     final _result = create();
     if (resource != null) {
@@ -2714,6 +2841,9 @@ class WriteObjectSpec extends $pb.GeneratedMessage {
     }
     if (predefinedAcl != null) {
       _result.predefinedAcl = predefinedAcl;
+    }
+    if (objectSize != null) {
+      _result.objectSize = objectSize;
     }
     return _result;
   }
@@ -2817,6 +2947,18 @@ class WriteObjectSpec extends $pb.GeneratedMessage {
   $core.bool hasPredefinedAcl() => $_has(5);
   @$pb.TagNumber(7)
   void clearPredefinedAcl() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get objectSize => $_getI64(6);
+  @$pb.TagNumber(8)
+  set objectSize($fixnum.Int64 v) {
+    $_setInt64(6, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasObjectSize() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearObjectSize() => clearField(8);
 }
 
 enum WriteObjectRequest_FirstMessage { uploadId, writeObjectSpec, notSet }
@@ -3736,6 +3878,12 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'destinationPredefinedAcl')
+    ..aOM<ObjectChecksums>(
+        29,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'objectChecksums',
+        subBuilder: ObjectChecksums.create)
     ..hasRequiredFields = false;
 
   RewriteObjectRequest._() : super();
@@ -3762,6 +3910,7 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
     $core.String? destinationBucket,
     $core.String? destinationKmsKey,
     $core.String? destinationPredefinedAcl,
+    ObjectChecksums? objectChecksums,
   }) {
     final _result = create();
     if (destination != null) {
@@ -3830,6 +3979,9 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
     }
     if (destinationPredefinedAcl != null) {
       _result.destinationPredefinedAcl = destinationPredefinedAcl;
+    }
+    if (objectChecksums != null) {
+      _result.objectChecksums = objectChecksums;
     }
     return _result;
   }
@@ -4128,6 +4280,20 @@ class RewriteObjectRequest extends $pb.GeneratedMessage {
   $core.bool hasDestinationPredefinedAcl() => $_has(21);
   @$pb.TagNumber(28)
   void clearDestinationPredefinedAcl() => clearField(28);
+
+  @$pb.TagNumber(29)
+  ObjectChecksums get objectChecksums => $_getN(22);
+  @$pb.TagNumber(29)
+  set objectChecksums(ObjectChecksums v) {
+    setField(29, v);
+  }
+
+  @$pb.TagNumber(29)
+  $core.bool hasObjectChecksums() => $_has(22);
+  @$pb.TagNumber(29)
+  void clearObjectChecksums() => clearField(29);
+  @$pb.TagNumber(29)
+  ObjectChecksums ensureObjectChecksums() => $_ensure(22);
 }
 
 class RewriteResponse extends $pb.GeneratedMessage {
@@ -4306,12 +4472,19 @@ class StartResumableWriteRequest extends $pb.GeneratedMessage {
             ? ''
             : 'commonObjectRequestParams',
         subBuilder: CommonObjectRequestParams.create)
+    ..aOM<ObjectChecksums>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'objectChecksums',
+        subBuilder: ObjectChecksums.create)
     ..hasRequiredFields = false;
 
   StartResumableWriteRequest._() : super();
   factory StartResumableWriteRequest({
     WriteObjectSpec? writeObjectSpec,
     CommonObjectRequestParams? commonObjectRequestParams,
+    ObjectChecksums? objectChecksums,
   }) {
     final _result = create();
     if (writeObjectSpec != null) {
@@ -4319,6 +4492,9 @@ class StartResumableWriteRequest extends $pb.GeneratedMessage {
     }
     if (commonObjectRequestParams != null) {
       _result.commonObjectRequestParams = commonObjectRequestParams;
+    }
+    if (objectChecksums != null) {
+      _result.objectChecksums = objectChecksums;
     }
     return _result;
   }
@@ -4379,6 +4555,20 @@ class StartResumableWriteRequest extends $pb.GeneratedMessage {
   void clearCommonObjectRequestParams() => clearField(3);
   @$pb.TagNumber(3)
   CommonObjectRequestParams ensureCommonObjectRequestParams() => $_ensure(1);
+
+  @$pb.TagNumber(5)
+  ObjectChecksums get objectChecksums => $_getN(2);
+  @$pb.TagNumber(5)
+  set objectChecksums(ObjectChecksums v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasObjectChecksums() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearObjectChecksums() => clearField(5);
+  @$pb.TagNumber(5)
+  ObjectChecksums ensureObjectChecksums() => $_ensure(2);
 }
 
 class StartResumableWriteResponse extends $pb.GeneratedMessage {
@@ -6646,6 +6836,12 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'retentionPeriod')
+    ..aOM<$7.Duration>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'retentionDuration',
+        subBuilder: $7.Duration.create)
     ..hasRequiredFields = false;
 
   Bucket_RetentionPolicy._() : super();
@@ -6653,6 +6849,7 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
     $5.Timestamp? effectiveTime,
     $core.bool? isLocked,
     $fixnum.Int64? retentionPeriod,
+    $7.Duration? retentionDuration,
   }) {
     final _result = create();
     if (effectiveTime != null) {
@@ -6663,6 +6860,9 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
     }
     if (retentionPeriod != null) {
       _result.retentionPeriod = retentionPeriod;
+    }
+    if (retentionDuration != null) {
+      _result.retentionDuration = retentionDuration;
     }
     return _result;
   }
@@ -6732,6 +6932,20 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   $core.bool hasRetentionPeriod() => $_has(2);
   @$pb.TagNumber(3)
   void clearRetentionPeriod() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $7.Duration get retentionDuration => $_getN(3);
+  @$pb.TagNumber(4)
+  set retentionDuration($7.Duration v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasRetentionDuration() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRetentionDuration() => clearField(4);
+  @$pb.TagNumber(4)
+  $7.Duration ensureRetentionDuration() => $_ensure(3);
 }
 
 class Bucket_Versioning extends $pb.GeneratedMessage {
@@ -7739,6 +7953,11 @@ class BucketAccessControl extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'etag')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'entityAlt')
     ..hasRequiredFields = false;
 
   BucketAccessControl._() : super();
@@ -7751,6 +7970,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
     $core.String? domain,
     ProjectTeam? projectTeam,
     $core.String? etag,
+    $core.String? entityAlt,
   }) {
     final _result = create();
     if (role != null) {
@@ -7776,6 +7996,9 @@ class BucketAccessControl extends $pb.GeneratedMessage {
     }
     if (etag != null) {
       _result.etag = etag;
+    }
+    if (entityAlt != null) {
+      _result.entityAlt = entityAlt;
     }
     return _result;
   }
@@ -7903,6 +8126,18 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   $core.bool hasEtag() => $_has(7);
   @$pb.TagNumber(8)
   void clearEtag() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get entityAlt => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set entityAlt($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasEntityAlt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearEntityAlt() => clearField(9);
 }
 
 class ChecksummedData extends $pb.GeneratedMessage {
@@ -9252,6 +9487,11 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'etag')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'entityAlt')
     ..hasRequiredFields = false;
 
   ObjectAccessControl._() : super();
@@ -9264,6 +9504,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
     $core.String? domain,
     ProjectTeam? projectTeam,
     $core.String? etag,
+    $core.String? entityAlt,
   }) {
     final _result = create();
     if (role != null) {
@@ -9289,6 +9530,9 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
     }
     if (etag != null) {
       _result.etag = etag;
+    }
+    if (entityAlt != null) {
+      _result.entityAlt = entityAlt;
     }
     return _result;
   }
@@ -9416,6 +9660,18 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   $core.bool hasEtag() => $_has(7);
   @$pb.TagNumber(8)
   void clearEtag() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get entityAlt => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set entityAlt($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasEntityAlt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearEntityAlt() => clearField(9);
 }
 
 class ListObjectsResponse extends $pb.GeneratedMessage {

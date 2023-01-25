@@ -25,6 +25,12 @@ class DatastoreClient extends $grpc.Client {
           ($0.RunQueryRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.RunQueryResponse.fromBuffer(value));
+  static final _$runAggregationQuery = $grpc.ClientMethod<
+          $0.RunAggregationQueryRequest, $0.RunAggregationQueryResponse>(
+      '/google.datastore.v1.Datastore/RunAggregationQuery',
+      ($0.RunAggregationQueryRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.RunAggregationQueryResponse.fromBuffer(value));
   static final _$beginTransaction = $grpc.ClientMethod<
           $0.BeginTransactionRequest, $0.BeginTransactionResponse>(
       '/google.datastore.v1.Datastore/BeginTransaction',
@@ -68,6 +74,12 @@ class DatastoreClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.RunQueryResponse> runQuery($0.RunQueryRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$runQuery, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.RunAggregationQueryResponse> runAggregationQuery(
+      $0.RunAggregationQueryRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$runAggregationQuery, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.BeginTransactionResponse> beginTransaction(
@@ -117,6 +129,15 @@ abstract class DatastoreServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.RunQueryRequest.fromBuffer(value),
         ($0.RunQueryResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RunAggregationQueryRequest,
+            $0.RunAggregationQueryResponse>(
+        'RunAggregationQuery',
+        runAggregationQuery_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RunAggregationQueryRequest.fromBuffer(value),
+        ($0.RunAggregationQueryResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.BeginTransactionRequest,
             $0.BeginTransactionResponse>(
         'BeginTransaction',
@@ -168,6 +189,12 @@ abstract class DatastoreServiceBase extends $grpc.Service {
     return runQuery(call, await request);
   }
 
+  $async.Future<$0.RunAggregationQueryResponse> runAggregationQuery_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.RunAggregationQueryRequest> request) async {
+    return runAggregationQuery(call, await request);
+  }
+
   $async.Future<$0.BeginTransactionResponse> beginTransaction_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.BeginTransactionRequest> request) async {
@@ -198,6 +225,8 @@ abstract class DatastoreServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.LookupRequest request);
   $async.Future<$0.RunQueryResponse> runQuery(
       $grpc.ServiceCall call, $0.RunQueryRequest request);
+  $async.Future<$0.RunAggregationQueryResponse> runAggregationQuery(
+      $grpc.ServiceCall call, $0.RunAggregationQueryRequest request);
   $async.Future<$0.BeginTransactionResponse> beginTransaction(
       $grpc.ServiceCall call, $0.BeginTransactionRequest request);
   $async.Future<$0.CommitResponse> commit(

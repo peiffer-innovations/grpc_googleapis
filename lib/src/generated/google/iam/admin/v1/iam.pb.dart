@@ -1421,6 +1421,11 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
             ListServiceAccountKeysRequest_KeyType.KEY_TYPE_UNSPECIFIED,
         valueOf: ListServiceAccountKeysRequest_KeyType.valueOf,
         enumValues: ListServiceAccountKeysRequest_KeyType.values)
+    ..aOB(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disabled')
     ..hasRequiredFields = false;
 
   ServiceAccountKey._() : super();
@@ -1434,6 +1439,7 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
     ServiceAccountKeyAlgorithm? keyAlgorithm,
     ServiceAccountKeyOrigin? keyOrigin,
     ListServiceAccountKeysRequest_KeyType? keyType,
+    $core.bool? disabled,
   }) {
     final _result = create();
     if (name != null) {
@@ -1462,6 +1468,9 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
     }
     if (keyType != null) {
       _result.keyType = keyType;
+    }
+    if (disabled != null) {
+      _result.disabled = disabled;
     }
     return _result;
   }
@@ -1603,6 +1612,18 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   $core.bool hasKeyType() => $_has(8);
   @$pb.TagNumber(10)
   void clearKeyType() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.bool get disabled => $_getBF(9);
+  @$pb.TagNumber(11)
+  set disabled($core.bool v) {
+    $_setBool(9, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasDisabled() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearDisabled() => clearField(11);
 }
 
 class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
@@ -1876,6 +1897,149 @@ class DeleteServiceAccountKeyRequest extends $pb.GeneratedMessage {
   static DeleteServiceAccountKeyRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteServiceAccountKeyRequest>(create);
   static DeleteServiceAccountKeyRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class DisableServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DisableServiceAccountKeyRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  DisableServiceAccountKeyRequest._() : super();
+  factory DisableServiceAccountKeyRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DisableServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DisableServiceAccountKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DisableServiceAccountKeyRequest clone() =>
+      DisableServiceAccountKeyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DisableServiceAccountKeyRequest copyWith(
+          void Function(DisableServiceAccountKeyRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DisableServiceAccountKeyRequest))
+          as DisableServiceAccountKeyRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DisableServiceAccountKeyRequest create() =>
+      DisableServiceAccountKeyRequest._();
+  DisableServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<DisableServiceAccountKeyRequest> createRepeated() =>
+      $pb.PbList<DisableServiceAccountKeyRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DisableServiceAccountKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DisableServiceAccountKeyRequest>(
+          create);
+  static DisableServiceAccountKeyRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class EnableServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'EnableServiceAccountKeyRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  EnableServiceAccountKeyRequest._() : super();
+  factory EnableServiceAccountKeyRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory EnableServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnableServiceAccountKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EnableServiceAccountKeyRequest clone() =>
+      EnableServiceAccountKeyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EnableServiceAccountKeyRequest copyWith(
+          void Function(EnableServiceAccountKeyRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as EnableServiceAccountKeyRequest))
+          as EnableServiceAccountKeyRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EnableServiceAccountKeyRequest create() =>
+      EnableServiceAccountKeyRequest._();
+  EnableServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<EnableServiceAccountKeyRequest> createRepeated() =>
+      $pb.PbList<EnableServiceAccountKeyRequest>();
+  @$core.pragma('dart2js:noInline')
+  static EnableServiceAccountKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnableServiceAccountKeyRequest>(create);
+  static EnableServiceAccountKeyRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);

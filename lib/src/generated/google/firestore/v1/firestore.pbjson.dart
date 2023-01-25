@@ -540,6 +540,92 @@ const RunQueryResponse$json = const {
 /// Descriptor for `RunQueryResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List runQueryResponseDescriptor = $convert.base64Decode(
     'ChBSdW5RdWVyeVJlc3BvbnNlEiAKC3RyYW5zYWN0aW9uGAIgASgMUgt0cmFuc2FjdGlvbhI5Cghkb2N1bWVudBgBIAEoCzIdLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRSCGRvY3VtZW50EjcKCXJlYWRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCHJlYWRUaW1lEicKD3NraXBwZWRfcmVzdWx0cxgEIAEoBVIOc2tpcHBlZFJlc3VsdHMSFAoEZG9uZRgGIAEoCEgAUgRkb25lQhcKFWNvbnRpbnVhdGlvbl9zZWxlY3Rvcg==');
+@$core.Deprecated('Use runAggregationQueryRequestDescriptor instead')
+const RunAggregationQueryRequest$json = const {
+  '1': 'RunAggregationQueryRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'structured_aggregation_query',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.v1.StructuredAggregationQuery',
+      '9': 0,
+      '10': 'structuredAggregationQuery'
+    },
+    const {
+      '1': 'transaction',
+      '3': 4,
+      '4': 1,
+      '5': 12,
+      '9': 1,
+      '10': 'transaction'
+    },
+    const {
+      '1': 'new_transaction',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.v1.TransactionOptions',
+      '9': 1,
+      '10': 'newTransaction'
+    },
+    const {
+      '1': 'read_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'readTime'
+    },
+  ],
+  '8': const [
+    const {'1': 'query_type'},
+    const {'1': 'consistency_selector'},
+  ],
+};
+
+/// Descriptor for `RunAggregationQueryRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List runAggregationQueryRequestDescriptor =
+    $convert.base64Decode(
+        'ChpSdW5BZ2dyZWdhdGlvblF1ZXJ5UmVxdWVzdBIbCgZwYXJlbnQYASABKAlCA+BBAlIGcGFyZW50EnMKHHN0cnVjdHVyZWRfYWdncmVnYXRpb25fcXVlcnkYAiABKAsyLy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRBZ2dyZWdhdGlvblF1ZXJ5SABSGnN0cnVjdHVyZWRBZ2dyZWdhdGlvblF1ZXJ5EiIKC3RyYW5zYWN0aW9uGAQgASgMSAFSC3RyYW5zYWN0aW9uElIKD25ld190cmFuc2FjdGlvbhgFIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zSAFSDm5ld1RyYW5zYWN0aW9uEjkKCXJlYWRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIIcmVhZFRpbWVCDAoKcXVlcnlfdHlwZUIWChRjb25zaXN0ZW5jeV9zZWxlY3Rvcg==');
+@$core.Deprecated('Use runAggregationQueryResponseDescriptor instead')
+const RunAggregationQueryResponse$json = const {
+  '1': 'RunAggregationQueryResponse',
+  '2': const [
+    const {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.v1.AggregationResult',
+      '10': 'result'
+    },
+    const {'1': 'transaction', '3': 2, '4': 1, '5': 12, '10': 'transaction'},
+    const {
+      '1': 'read_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'readTime'
+    },
+  ],
+};
+
+/// Descriptor for `RunAggregationQueryResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List runAggregationQueryResponseDescriptor =
+    $convert.base64Decode(
+        'ChtSdW5BZ2dyZWdhdGlvblF1ZXJ5UmVzcG9uc2USPgoGcmVzdWx0GAEgASgLMiYuZ29vZ2xlLmZpcmVzdG9yZS52MS5BZ2dyZWdhdGlvblJlc3VsdFIGcmVzdWx0EiAKC3RyYW5zYWN0aW9uGAIgASgMUgt0cmFuc2FjdGlvbhI3CglyZWFkX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUghyZWFkVGltZQ==');
 @$core.Deprecated('Use partitionQueryRequestDescriptor instead')
 const PartitionQueryRequest$json = const {
   '1': 'PartitionQueryRequest',

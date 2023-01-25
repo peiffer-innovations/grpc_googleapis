@@ -479,3 +479,59 @@ class SettingsChange_RestrictionChange_Restriction extends $pb.ProtobufEnum {
       $core.int v, $core.String n)
       : super(v, n);
 }
+
+class AppliedLabelChange_AppliedLabelChangeDetail_Type
+    extends $pb.ProtobufEnum {
+  static const AppliedLabelChange_AppliedLabelChangeDetail_Type
+      TYPE_UNSPECIFIED = AppliedLabelChange_AppliedLabelChangeDetail_Type._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TYPE_UNSPECIFIED');
+  static const AppliedLabelChange_AppliedLabelChangeDetail_Type LABEL_ADDED =
+      AppliedLabelChange_AppliedLabelChangeDetail_Type._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LABEL_ADDED');
+  static const AppliedLabelChange_AppliedLabelChangeDetail_Type LABEL_REMOVED =
+      AppliedLabelChange_AppliedLabelChangeDetail_Type._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LABEL_REMOVED');
+  static const AppliedLabelChange_AppliedLabelChangeDetail_Type
+      LABEL_FIELD_VALUE_CHANGED =
+      AppliedLabelChange_AppliedLabelChangeDetail_Type._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LABEL_FIELD_VALUE_CHANGED');
+  static const AppliedLabelChange_AppliedLabelChangeDetail_Type
+      LABEL_APPLIED_BY_ITEM_CREATE =
+      AppliedLabelChange_AppliedLabelChangeDetail_Type._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LABEL_APPLIED_BY_ITEM_CREATE');
+
+  static const $core.List<AppliedLabelChange_AppliedLabelChangeDetail_Type>
+      values = <AppliedLabelChange_AppliedLabelChangeDetail_Type>[
+    TYPE_UNSPECIFIED,
+    LABEL_ADDED,
+    LABEL_REMOVED,
+    LABEL_FIELD_VALUE_CHANGED,
+    LABEL_APPLIED_BY_ITEM_CREATE,
+  ];
+
+  static final $core
+          .Map<$core.int, AppliedLabelChange_AppliedLabelChangeDetail_Type>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AppliedLabelChange_AppliedLabelChangeDetail_Type? valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const AppliedLabelChange_AppliedLabelChangeDetail_Type._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}

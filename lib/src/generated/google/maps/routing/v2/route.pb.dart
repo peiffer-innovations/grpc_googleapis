@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/duration.pb.dart' as $0;
@@ -16,6 +17,8 @@ import 'toll_info.pb.dart' as $3;
 import 'speed_reading_interval.pb.dart' as $4;
 import 'location.pb.dart' as $5;
 import 'navigation_instruction.pb.dart' as $6;
+
+import 'route_label.pbenum.dart' as $7;
 
 class Route extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -80,6 +83,20 @@ class Route extends $pb.GeneratedMessage {
             ? ''
             : 'travelAdvisory',
         subBuilder: RouteTravelAdvisory.create)
+    ..aOS(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'routeToken')
+    ..pc<$7.RouteLabel>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'routeLabels',
+        $pb.PbFieldType.KE,
+        valueOf: $7.RouteLabel.valueOf,
+        enumValues: $7.RouteLabel.values,
+        defaultEnumValue: $7.RouteLabel.ROUTE_LABEL_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   Route._() : super();
@@ -93,6 +110,8 @@ class Route extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? warnings,
     $2.Viewport? viewport,
     RouteTravelAdvisory? travelAdvisory,
+    $core.String? routeToken,
+    $core.Iterable<$7.RouteLabel>? routeLabels,
   }) {
     final _result = create();
     if (legs != null) {
@@ -121,6 +140,12 @@ class Route extends $pb.GeneratedMessage {
     }
     if (travelAdvisory != null) {
       _result.travelAdvisory = travelAdvisory;
+    }
+    if (routeToken != null) {
+      _result.routeToken = routeToken;
+    }
+    if (routeLabels != null) {
+      _result.routeLabels.addAll(routeLabels);
     }
     return _result;
   }
@@ -249,6 +274,21 @@ class Route extends $pb.GeneratedMessage {
   void clearTravelAdvisory() => clearField(9);
   @$pb.TagNumber(9)
   RouteTravelAdvisory ensureTravelAdvisory() => $_ensure(8);
+
+  @$pb.TagNumber(12)
+  $core.String get routeToken => $_getSZ(9);
+  @$pb.TagNumber(12)
+  set routeToken($core.String v) {
+    $_setString(9, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasRouteToken() => $_has(9);
+  @$pb.TagNumber(12)
+  void clearRouteToken() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.List<$7.RouteLabel> get routeLabels => $_getList(10);
 }
 
 class RouteTravelAdvisory extends $pb.GeneratedMessage {
@@ -274,12 +314,18 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
             : 'speedReadingIntervals',
         $pb.PbFieldType.PM,
         subBuilder: $4.SpeedReadingInterval.create)
+    ..aInt64(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fuelConsumptionMicroliters')
     ..hasRequiredFields = false;
 
   RouteTravelAdvisory._() : super();
   factory RouteTravelAdvisory({
     $3.TollInfo? tollInfo,
     $core.Iterable<$4.SpeedReadingInterval>? speedReadingIntervals,
+    $fixnum.Int64? fuelConsumptionMicroliters,
   }) {
     final _result = create();
     if (tollInfo != null) {
@@ -287,6 +333,9 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
     }
     if (speedReadingIntervals != null) {
       _result.speedReadingIntervals.addAll(speedReadingIntervals);
+    }
+    if (fuelConsumptionMicroliters != null) {
+      _result.fuelConsumptionMicroliters = fuelConsumptionMicroliters;
     }
     return _result;
   }
@@ -333,6 +382,18 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$4.SpeedReadingInterval> get speedReadingIntervals => $_getList(1);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get fuelConsumptionMicroliters => $_getI64(2);
+  @$pb.TagNumber(5)
+  set fuelConsumptionMicroliters($fixnum.Int64 v) {
+    $_setInt64(2, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasFuelConsumptionMicroliters() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearFuelConsumptionMicroliters() => clearField(5);
 }
 
 class RouteLegTravelAdvisory extends $pb.GeneratedMessage {

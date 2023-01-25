@@ -39,6 +39,11 @@ class BigtableTableAdminClient extends $grpc.Client {
       '/google.bigtable.admin.v2.BigtableTableAdmin/GetTable',
       ($4.GetTableRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $5.Table.fromBuffer(value));
+  static final _$updateTable =
+      $grpc.ClientMethod<$4.UpdateTableRequest, $2.Operation>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/UpdateTable',
+          ($4.UpdateTableRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$deleteTable =
       $grpc.ClientMethod<$4.DeleteTableRequest, $3.Empty>(
           '/google.bigtable.admin.v2.BigtableTableAdmin/DeleteTable',
@@ -166,6 +171,11 @@ class BigtableTableAdminClient extends $grpc.Client {
   $grpc.ResponseFuture<$5.Table> getTable($4.GetTableRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getTable, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> updateTable($4.UpdateTableRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateTable, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Empty> deleteTable($4.DeleteTableRequest request,
@@ -311,6 +321,14 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $4.GetTableRequest.fromBuffer(value),
         ($5.Table value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateTableRequest, $2.Operation>(
+        'UpdateTable',
+        updateTable_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.UpdateTableRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.DeleteTableRequest, $3.Empty>(
         'DeleteTable',
         deleteTable_Pre,
@@ -490,6 +508,11 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
     return getTable(call, await request);
   }
 
+  $async.Future<$2.Operation> updateTable_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateTableRequest> request) async {
+    return updateTable(call, await request);
+  }
+
   $async.Future<$3.Empty> deleteTable_Pre($grpc.ServiceCall call,
       $async.Future<$4.DeleteTableRequest> request) async {
     return deleteTable(call, await request);
@@ -597,6 +620,8 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.ListTablesRequest request);
   $async.Future<$5.Table> getTable(
       $grpc.ServiceCall call, $4.GetTableRequest request);
+  $async.Future<$2.Operation> updateTable(
+      $grpc.ServiceCall call, $4.UpdateTableRequest request);
   $async.Future<$3.Empty> deleteTable(
       $grpc.ServiceCall call, $4.DeleteTableRequest request);
   $async.Future<$2.Operation> undeleteTable(

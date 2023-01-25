@@ -205,6 +205,20 @@ const EvalResponse$json = const {
 /// Descriptor for `EvalResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List evalResponseDescriptor = $convert.base64Decode(
     'CgxFdmFsUmVzcG9uc2USOwoGcmVzdWx0GAEgASgLMiMuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHJWYWx1ZVIGcmVzdWx0EioKBmlzc3VlcxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzUgZpc3N1ZXM=');
+@$core.Deprecated('Use sourcePositionDescriptor instead')
+const SourcePosition$json = const {
+  '1': 'SourcePosition',
+  '2': const [
+    const {'1': 'location', '3': 1, '4': 1, '5': 9, '10': 'location'},
+    const {'1': 'offset', '3': 2, '4': 1, '5': 5, '10': 'offset'},
+    const {'1': 'line', '3': 3, '4': 1, '5': 5, '10': 'line'},
+    const {'1': 'column', '3': 4, '4': 1, '5': 5, '10': 'column'},
+  ],
+};
+
+/// Descriptor for `SourcePosition`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sourcePositionDescriptor = $convert.base64Decode(
+    'Cg5Tb3VyY2VQb3NpdGlvbhIaCghsb2NhdGlvbhgBIAEoCVIIbG9jYXRpb24SFgoGb2Zmc2V0GAIgASgFUgZvZmZzZXQSEgoEbGluZRgDIAEoBVIEbGluZRIWCgZjb2x1bW4YBCABKAVSBmNvbHVtbg==');
 @$core.Deprecated('Use issueDetailsDescriptor instead')
 const IssueDetails$json = const {
   '1': 'IssueDetails',
@@ -222,7 +236,7 @@ const IssueDetails$json = const {
       '3': 2,
       '4': 1,
       '5': 11,
-      '6': '.google.api.expr.v1alpha1.SourcePosition',
+      '6': '.google.api.expr.conformance.v1alpha1.SourcePosition',
       '10': 'position'
     },
     const {'1': 'id', '3': 3, '4': 1, '5': 3, '10': 'id'},
@@ -243,4 +257,4 @@ const IssueDetails_Severity$json = const {
 
 /// Descriptor for `IssueDetails`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List issueDetailsDescriptor = $convert.base64Decode(
-    'CgxJc3N1ZURldGFpbHMSVwoIc2V2ZXJpdHkYASABKA4yOy5nb29nbGUuYXBpLmV4cHIuY29uZm9ybWFuY2UudjFhbHBoYTEuSXNzdWVEZXRhaWxzLlNldmVyaXR5UghzZXZlcml0eRJECghwb3NpdGlvbhgCIAEoCzIoLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5Tb3VyY2VQb3NpdGlvblIIcG9zaXRpb24SDgoCaWQYAyABKANSAmlkIk0KCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDwoLREVQUkVDQVRJT04QARILCgdXQVJOSU5HEAISCQoFRVJST1IQAw==');
+    'CgxJc3N1ZURldGFpbHMSVwoIc2V2ZXJpdHkYASABKA4yOy5nb29nbGUuYXBpLmV4cHIuY29uZm9ybWFuY2UudjFhbHBoYTEuSXNzdWVEZXRhaWxzLlNldmVyaXR5UghzZXZlcml0eRJQCghwb3NpdGlvbhgCIAEoCzI0Lmdvb2dsZS5hcGkuZXhwci5jb25mb3JtYW5jZS52MWFscGhhMS5Tb3VyY2VQb3NpdGlvblIIcG9zaXRpb24SDgoCaWQYAyABKANSAmlkIk0KCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDwoLREVQUkVDQVRJT04QARILCgdXQVJOSU5HEAISCQoFRVJST1IQAw==');

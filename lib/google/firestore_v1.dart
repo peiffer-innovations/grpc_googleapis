@@ -1,3 +1,6 @@
+export '../src/generated/google/firestore/v1/aggregation_result.pb.dart';
+export '../src/generated/google/firestore/v1/aggregation_result.pbenum.dart';
+export '../src/generated/google/firestore/v1/aggregation_result.pbjson.dart';
 export '../src/generated/google/firestore/v1/common.pb.dart';
 export '../src/generated/google/firestore/v1/common.pbenum.dart';
 export '../src/generated/google/firestore/v1/common.pbjson.dart';

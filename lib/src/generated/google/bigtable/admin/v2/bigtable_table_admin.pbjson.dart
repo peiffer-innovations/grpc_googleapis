@@ -302,6 +302,61 @@ const GetTableRequest$json = const {
 /// Descriptor for `GetTableRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTableRequestDescriptor = $convert.base64Decode(
     'Cg9HZXRUYWJsZVJlcXVlc3QSPgoEbmFtZRgBIAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlUgRuYW1lEjgKBHZpZXcYAiABKA4yJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuVmlld1IEdmlldw==');
+@$core.Deprecated('Use updateTableRequestDescriptor instead')
+const UpdateTableRequest$json = const {
+  '1': 'UpdateTableRequest',
+  '2': const [
+    const {
+      '1': 'table',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.Table',
+      '8': const {},
+      '10': 'table'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateTableRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateTableRequestDescriptor = $convert.base64Decode(
+    'ChJVcGRhdGVUYWJsZVJlcXVlc3QSOgoFdGFibGUYASABKAsyHy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGVCA+BBAlIFdGFibGUSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use updateTableMetadataDescriptor instead')
+const UpdateTableMetadata$json = const {
+  '1': 'UpdateTableMetadata',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateTableMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateTableMetadataDescriptor = $convert.base64Decode(
+    'ChNVcGRhdGVUYWJsZU1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSOQoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRI1CghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2VuZFRpbWU=');
 @$core.Deprecated('Use deleteTableRequestDescriptor instead')
 const DeleteTableRequest$json = const {
   '1': 'DeleteTableRequest',

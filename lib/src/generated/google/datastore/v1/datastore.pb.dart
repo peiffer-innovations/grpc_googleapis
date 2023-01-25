@@ -13,6 +13,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'entity.pb.dart' as $1;
 import 'query.pb.dart' as $2;
 import '../../protobuf/timestamp.pb.dart' as $3;
+import 'aggregation_result.pb.dart' as $4;
 
 import 'datastore.pbenum.dart';
 
@@ -46,6 +47,11 @@ class LookupRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
     ..hasRequiredFields = false;
 
   LookupRequest._() : super();
@@ -53,6 +59,7 @@ class LookupRequest extends $pb.GeneratedMessage {
     ReadOptions? readOptions,
     $core.Iterable<$1.Key>? keys,
     $core.String? projectId,
+    $core.String? databaseId,
   }) {
     final _result = create();
     if (readOptions != null) {
@@ -63,6 +70,9 @@ class LookupRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
     }
     return _result;
   }
@@ -121,6 +131,18 @@ class LookupRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(2);
   @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(3);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(3);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
 }
 
 class LookupResponse extends $pb.GeneratedMessage {
@@ -154,6 +176,12 @@ class LookupResponse extends $pb.GeneratedMessage {
             : 'deferred',
         $pb.PbFieldType.PM,
         subBuilder: $1.Key.create)
+    ..a<$core.List<$core.int>>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transaction',
+        $pb.PbFieldType.OY)
     ..aOM<$3.Timestamp>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -167,6 +195,7 @@ class LookupResponse extends $pb.GeneratedMessage {
     $core.Iterable<$2.EntityResult>? found,
     $core.Iterable<$2.EntityResult>? missing,
     $core.Iterable<$1.Key>? deferred,
+    $core.List<$core.int>? transaction,
     $3.Timestamp? readTime,
   }) {
     final _result = create();
@@ -178,6 +207,9 @@ class LookupResponse extends $pb.GeneratedMessage {
     }
     if (deferred != null) {
       _result.deferred.addAll(deferred);
+    }
+    if (transaction != null) {
+      _result.transaction = transaction;
     }
     if (readTime != null) {
       _result.readTime = readTime;
@@ -220,19 +252,31 @@ class LookupResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.List<$1.Key> get deferred => $_getList(2);
 
+  @$pb.TagNumber(5)
+  $core.List<$core.int> get transaction => $_getN(3);
+  @$pb.TagNumber(5)
+  set transaction($core.List<$core.int> v) {
+    $_setBytes(3, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTransaction() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearTransaction() => clearField(5);
+
   @$pb.TagNumber(7)
-  $3.Timestamp get readTime => $_getN(3);
+  $3.Timestamp get readTime => $_getN(4);
   @$pb.TagNumber(7)
   set readTime($3.Timestamp v) {
     setField(7, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasReadTime() => $_has(3);
+  $core.bool hasReadTime() => $_has(4);
   @$pb.TagNumber(7)
   void clearReadTime() => clearField(7);
   @$pb.TagNumber(7)
-  $3.Timestamp ensureReadTime() => $_ensure(3);
+  $3.Timestamp ensureReadTime() => $_ensure(4);
 }
 
 enum RunQueryRequest_QueryType { query, gqlQuery, notSet }
@@ -283,6 +327,11 @@ class RunQueryRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
     ..hasRequiredFields = false;
 
   RunQueryRequest._() : super();
@@ -292,6 +341,7 @@ class RunQueryRequest extends $pb.GeneratedMessage {
     $2.Query? query,
     $2.GqlQuery? gqlQuery,
     $core.String? projectId,
+    $core.String? databaseId,
   }) {
     final _result = create();
     if (readOptions != null) {
@@ -308,6 +358,9 @@ class RunQueryRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
     }
     return _result;
   }
@@ -409,6 +462,18 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(4);
   @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(5);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(5);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
 }
 
 class RunQueryResponse extends $pb.GeneratedMessage {
@@ -433,12 +498,19 @@ class RunQueryResponse extends $pb.GeneratedMessage {
             ? ''
             : 'query',
         subBuilder: $2.Query.create)
+    ..a<$core.List<$core.int>>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transaction',
+        $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   RunQueryResponse._() : super();
   factory RunQueryResponse({
     $2.QueryResultBatch? batch,
     $2.Query? query,
+    $core.List<$core.int>? transaction,
   }) {
     final _result = create();
     if (batch != null) {
@@ -446,6 +518,9 @@ class RunQueryResponse extends $pb.GeneratedMessage {
     }
     if (query != null) {
       _result.query = query;
+    }
+    if (transaction != null) {
+      _result.transaction = transaction;
     }
     return _result;
   }
@@ -503,6 +578,338 @@ class RunQueryResponse extends $pb.GeneratedMessage {
   void clearQuery() => clearField(2);
   @$pb.TagNumber(2)
   $2.Query ensureQuery() => $_ensure(1);
+
+  @$pb.TagNumber(5)
+  $core.List<$core.int> get transaction => $_getN(2);
+  @$pb.TagNumber(5)
+  set transaction($core.List<$core.int> v) {
+    $_setBytes(2, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTransaction() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearTransaction() => clearField(5);
+}
+
+enum RunAggregationQueryRequest_QueryType { aggregationQuery, gqlQuery, notSet }
+
+class RunAggregationQueryRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RunAggregationQueryRequest_QueryType>
+      _RunAggregationQueryRequest_QueryTypeByTag = {
+    3: RunAggregationQueryRequest_QueryType.aggregationQuery,
+    7: RunAggregationQueryRequest_QueryType.gqlQuery,
+    0: RunAggregationQueryRequest_QueryType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RunAggregationQueryRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [3, 7])
+    ..aOM<ReadOptions>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readOptions',
+        subBuilder: ReadOptions.create)
+    ..aOM<$1.PartitionId>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'partitionId',
+        subBuilder: $1.PartitionId.create)
+    ..aOM<$2.AggregationQuery>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'aggregationQuery',
+        subBuilder: $2.AggregationQuery.create)
+    ..aOM<$2.GqlQuery>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gqlQuery',
+        subBuilder: $2.GqlQuery.create)
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
+    ..hasRequiredFields = false;
+
+  RunAggregationQueryRequest._() : super();
+  factory RunAggregationQueryRequest({
+    ReadOptions? readOptions,
+    $1.PartitionId? partitionId,
+    $2.AggregationQuery? aggregationQuery,
+    $2.GqlQuery? gqlQuery,
+    $core.String? projectId,
+    $core.String? databaseId,
+  }) {
+    final _result = create();
+    if (readOptions != null) {
+      _result.readOptions = readOptions;
+    }
+    if (partitionId != null) {
+      _result.partitionId = partitionId;
+    }
+    if (aggregationQuery != null) {
+      _result.aggregationQuery = aggregationQuery;
+    }
+    if (gqlQuery != null) {
+      _result.gqlQuery = gqlQuery;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
+    }
+    return _result;
+  }
+  factory RunAggregationQueryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunAggregationQueryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RunAggregationQueryRequest clone() =>
+      RunAggregationQueryRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RunAggregationQueryRequest copyWith(
+          void Function(RunAggregationQueryRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as RunAggregationQueryRequest))
+          as RunAggregationQueryRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RunAggregationQueryRequest create() => RunAggregationQueryRequest._();
+  RunAggregationQueryRequest createEmptyInstance() => create();
+  static $pb.PbList<RunAggregationQueryRequest> createRepeated() =>
+      $pb.PbList<RunAggregationQueryRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RunAggregationQueryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunAggregationQueryRequest>(create);
+  static RunAggregationQueryRequest? _defaultInstance;
+
+  RunAggregationQueryRequest_QueryType whichQueryType() =>
+      _RunAggregationQueryRequest_QueryTypeByTag[$_whichOneof(0)]!;
+  void clearQueryType() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  ReadOptions get readOptions => $_getN(0);
+  @$pb.TagNumber(1)
+  set readOptions(ReadOptions v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasReadOptions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearReadOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  ReadOptions ensureReadOptions() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $1.PartitionId get partitionId => $_getN(1);
+  @$pb.TagNumber(2)
+  set partitionId($1.PartitionId v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPartitionId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPartitionId() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.PartitionId ensurePartitionId() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $2.AggregationQuery get aggregationQuery => $_getN(2);
+  @$pb.TagNumber(3)
+  set aggregationQuery($2.AggregationQuery v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasAggregationQuery() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAggregationQuery() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.AggregationQuery ensureAggregationQuery() => $_ensure(2);
+
+  @$pb.TagNumber(7)
+  $2.GqlQuery get gqlQuery => $_getN(3);
+  @$pb.TagNumber(7)
+  set gqlQuery($2.GqlQuery v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasGqlQuery() => $_has(3);
+  @$pb.TagNumber(7)
+  void clearGqlQuery() => clearField(7);
+  @$pb.TagNumber(7)
+  $2.GqlQuery ensureGqlQuery() => $_ensure(3);
+
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(4);
+  @$pb.TagNumber(8)
+  set projectId($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasProjectId() => $_has(4);
+  @$pb.TagNumber(8)
+  void clearProjectId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(5);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(5);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
+}
+
+class RunAggregationQueryResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RunAggregationQueryResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.AggregationResultBatch>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'batch',
+        subBuilder: $4.AggregationResultBatch.create)
+    ..aOM<$2.AggregationQuery>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'query',
+        subBuilder: $2.AggregationQuery.create)
+    ..a<$core.List<$core.int>>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transaction',
+        $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  RunAggregationQueryResponse._() : super();
+  factory RunAggregationQueryResponse({
+    $4.AggregationResultBatch? batch,
+    $2.AggregationQuery? query,
+    $core.List<$core.int>? transaction,
+  }) {
+    final _result = create();
+    if (batch != null) {
+      _result.batch = batch;
+    }
+    if (query != null) {
+      _result.query = query;
+    }
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    return _result;
+  }
+  factory RunAggregationQueryResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunAggregationQueryResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  RunAggregationQueryResponse clone() =>
+      RunAggregationQueryResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  RunAggregationQueryResponse copyWith(
+          void Function(RunAggregationQueryResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RunAggregationQueryResponse))
+          as RunAggregationQueryResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RunAggregationQueryResponse create() =>
+      RunAggregationQueryResponse._();
+  RunAggregationQueryResponse createEmptyInstance() => create();
+  static $pb.PbList<RunAggregationQueryResponse> createRepeated() =>
+      $pb.PbList<RunAggregationQueryResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RunAggregationQueryResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunAggregationQueryResponse>(create);
+  static RunAggregationQueryResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $4.AggregationResultBatch get batch => $_getN(0);
+  @$pb.TagNumber(1)
+  set batch($4.AggregationResultBatch v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBatch() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBatch() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.AggregationResultBatch ensureBatch() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $2.AggregationQuery get query => $_getN(1);
+  @$pb.TagNumber(2)
+  set query($2.AggregationQuery v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasQuery() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearQuery() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.AggregationQuery ensureQuery() => $_ensure(1);
+
+  @$pb.TagNumber(5)
+  $core.List<$core.int> get transaction => $_getN(2);
+  @$pb.TagNumber(5)
+  set transaction($core.List<$core.int> v) {
+    $_setBytes(2, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTransaction() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearTransaction() => clearField(5);
 }
 
 class BeginTransactionRequest extends $pb.GeneratedMessage {
@@ -520,6 +927,11 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
     ..aOM<TransactionOptions>(
         10,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -531,11 +943,15 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   BeginTransactionRequest._() : super();
   factory BeginTransactionRequest({
     $core.String? projectId,
+    $core.String? databaseId,
     TransactionOptions? transactionOptions,
   }) {
     final _result = create();
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
     }
     if (transactionOptions != null) {
       _result.transactionOptions = transactionOptions;
@@ -583,19 +999,31 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(1);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(1);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
+
   @$pb.TagNumber(10)
-  TransactionOptions get transactionOptions => $_getN(1);
+  TransactionOptions get transactionOptions => $_getN(2);
   @$pb.TagNumber(10)
   set transactionOptions(TransactionOptions v) {
     setField(10, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasTransactionOptions() => $_has(1);
+  $core.bool hasTransactionOptions() => $_has(2);
   @$pb.TagNumber(10)
   void clearTransactionOptions() => clearField(10);
   @$pb.TagNumber(10)
-  TransactionOptions ensureTransactionOptions() => $_ensure(1);
+  TransactionOptions ensureTransactionOptions() => $_ensure(2);
 }
 
 class BeginTransactionResponse extends $pb.GeneratedMessage {
@@ -689,12 +1117,18 @@ class RollbackRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
     ..hasRequiredFields = false;
 
   RollbackRequest._() : super();
   factory RollbackRequest({
     $core.List<$core.int>? transaction,
     $core.String? projectId,
+    $core.String? databaseId,
   }) {
     final _result = create();
     if (transaction != null) {
@@ -702,6 +1136,9 @@ class RollbackRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
     }
     return _result;
   }
@@ -755,6 +1192,18 @@ class RollbackRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(1);
   @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(2);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(2);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
 }
 
 class RollbackResponse extends $pb.GeneratedMessage {
@@ -799,12 +1248,17 @@ class RollbackResponse extends $pb.GeneratedMessage {
   static RollbackResponse? _defaultInstance;
 }
 
-enum CommitRequest_TransactionSelector { transaction, notSet }
+enum CommitRequest_TransactionSelector {
+  transaction,
+  singleUseTransaction,
+  notSet
+}
 
 class CommitRequest extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, CommitRequest_TransactionSelector>
       _CommitRequest_TransactionSelectorByTag = {
     1: CommitRequest_TransactionSelector.transaction,
+    10: CommitRequest_TransactionSelector.singleUseTransaction,
     0: CommitRequest_TransactionSelector.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -816,7 +1270,7 @@ class CommitRequest extends $pb.GeneratedMessage {
               ? ''
               : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1])
+    ..oo(0, [1, 10])
     ..a<$core.List<$core.int>>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -844,6 +1298,17 @@ class CommitRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
+    ..aOM<TransactionOptions>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'singleUseTransaction',
+        subBuilder: TransactionOptions.create)
     ..hasRequiredFields = false;
 
   CommitRequest._() : super();
@@ -852,6 +1317,8 @@ class CommitRequest extends $pb.GeneratedMessage {
     CommitRequest_Mode? mode,
     $core.Iterable<Mutation>? mutations,
     $core.String? projectId,
+    $core.String? databaseId,
+    TransactionOptions? singleUseTransaction,
   }) {
     final _result = create();
     if (transaction != null) {
@@ -865,6 +1332,12 @@ class CommitRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
+    }
+    if (singleUseTransaction != null) {
+      _result.singleUseTransaction = singleUseTransaction;
     }
     return _result;
   }
@@ -937,6 +1410,32 @@ class CommitRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(3);
   @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(4);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(4);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
+
+  @$pb.TagNumber(10)
+  TransactionOptions get singleUseTransaction => $_getN(5);
+  @$pb.TagNumber(10)
+  set singleUseTransaction(TransactionOptions v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasSingleUseTransaction() => $_has(5);
+  @$pb.TagNumber(10)
+  void clearSingleUseTransaction() => clearField(10);
+  @$pb.TagNumber(10)
+  TransactionOptions ensureSingleUseTransaction() => $_ensure(5);
 }
 
 class CommitResponse extends $pb.GeneratedMessage {
@@ -1067,12 +1566,18 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'projectId')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'databaseId')
     ..hasRequiredFields = false;
 
   AllocateIdsRequest._() : super();
   factory AllocateIdsRequest({
     $core.Iterable<$1.Key>? keys,
     $core.String? projectId,
+    $core.String? databaseId,
   }) {
     final _result = create();
     if (keys != null) {
@@ -1080,6 +1585,9 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
     }
     if (projectId != null) {
       _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
     }
     return _result;
   }
@@ -1124,6 +1632,18 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
   $core.bool hasProjectId() => $_has(1);
   @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(2);
+  @$pb.TagNumber(9)
+  set databaseId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasDatabaseId() => $_has(2);
+  @$pb.TagNumber(9)
+  void clearDatabaseId() => clearField(9);
 }
 
 class AllocateIdsResponse extends $pb.GeneratedMessage {
@@ -1683,6 +2203,7 @@ class MutationResult extends $pb.GeneratedMessage {
 enum ReadOptions_ConsistencyType {
   readConsistency,
   transaction,
+  newTransaction,
   readTime,
   notSet
 }
@@ -1692,6 +2213,7 @@ class ReadOptions extends $pb.GeneratedMessage {
       _ReadOptions_ConsistencyTypeByTag = {
     1: ReadOptions_ConsistencyType.readConsistency,
     2: ReadOptions_ConsistencyType.transaction,
+    3: ReadOptions_ConsistencyType.newTransaction,
     4: ReadOptions_ConsistencyType.readTime,
     0: ReadOptions_ConsistencyType.notSet
   };
@@ -1704,7 +2226,7 @@ class ReadOptions extends $pb.GeneratedMessage {
               ? ''
               : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 4])
+    ..oo(0, [1, 2, 3, 4])
     ..e<ReadOptions_ReadConsistency>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1721,6 +2243,12 @@ class ReadOptions extends $pb.GeneratedMessage {
             ? ''
             : 'transaction',
         $pb.PbFieldType.OY)
+    ..aOM<TransactionOptions>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'newTransaction',
+        subBuilder: TransactionOptions.create)
     ..aOM<$3.Timestamp>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1733,6 +2261,7 @@ class ReadOptions extends $pb.GeneratedMessage {
   factory ReadOptions({
     ReadOptions_ReadConsistency? readConsistency,
     $core.List<$core.int>? transaction,
+    TransactionOptions? newTransaction,
     $3.Timestamp? readTime,
   }) {
     final _result = create();
@@ -1741,6 +2270,9 @@ class ReadOptions extends $pb.GeneratedMessage {
     }
     if (transaction != null) {
       _result.transaction = transaction;
+    }
+    if (newTransaction != null) {
+      _result.newTransaction = newTransaction;
     }
     if (readTime != null) {
       _result.readTime = readTime;
@@ -1801,19 +2333,33 @@ class ReadOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
 
+  @$pb.TagNumber(3)
+  TransactionOptions get newTransaction => $_getN(2);
+  @$pb.TagNumber(3)
+  set newTransaction(TransactionOptions v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasNewTransaction() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNewTransaction() => clearField(3);
+  @$pb.TagNumber(3)
+  TransactionOptions ensureNewTransaction() => $_ensure(2);
+
   @$pb.TagNumber(4)
-  $3.Timestamp get readTime => $_getN(2);
+  $3.Timestamp get readTime => $_getN(3);
   @$pb.TagNumber(4)
   set readTime($3.Timestamp v) {
     setField(4, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasReadTime() => $_has(2);
+  $core.bool hasReadTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearReadTime() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Timestamp ensureReadTime() => $_ensure(2);
+  $3.Timestamp ensureReadTime() => $_ensure(3);
 }
 
 class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {

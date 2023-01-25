@@ -52,6 +52,14 @@ const TimeSeriesQuery$json = const {
       '9': 0,
       '10': 'timeSeriesQueryLanguage'
     },
+    const {
+      '1': 'prometheus_query',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'prometheusQuery'
+    },
     const {'1': 'unit_override', '3': 5, '4': 1, '5': 9, '10': 'unitOverride'},
   ],
   '8': const [
@@ -61,7 +69,7 @@ const TimeSeriesQuery$json = const {
 
 /// Descriptor for `TimeSeriesQuery`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List timeSeriesQueryDescriptor = $convert.base64Decode(
-    'Cg9UaW1lU2VyaWVzUXVlcnkSYAoSdGltZV9zZXJpZXNfZmlsdGVyGAEgASgLMjAuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRpbWVTZXJpZXNGaWx0ZXJIAFIQdGltZVNlcmllc0ZpbHRlchJwChh0aW1lX3Nlcmllc19maWx0ZXJfcmF0aW8YAiABKAsyNS5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGltZVNlcmllc0ZpbHRlclJhdGlvSABSFXRpbWVTZXJpZXNGaWx0ZXJSYXRpbxI9Chp0aW1lX3Nlcmllc19xdWVyeV9sYW5ndWFnZRgDIAEoCUgAUhd0aW1lU2VyaWVzUXVlcnlMYW5ndWFnZRIjCg11bml0X292ZXJyaWRlGAUgASgJUgx1bml0T3ZlcnJpZGVCCAoGc291cmNl');
+    'Cg9UaW1lU2VyaWVzUXVlcnkSYAoSdGltZV9zZXJpZXNfZmlsdGVyGAEgASgLMjAuZ29vZ2xlLm1vbml0b3JpbmcuZGFzaGJvYXJkLnYxLlRpbWVTZXJpZXNGaWx0ZXJIAFIQdGltZVNlcmllc0ZpbHRlchJwChh0aW1lX3Nlcmllc19maWx0ZXJfcmF0aW8YAiABKAsyNS5nb29nbGUubW9uaXRvcmluZy5kYXNoYm9hcmQudjEuVGltZVNlcmllc0ZpbHRlclJhdGlvSABSFXRpbWVTZXJpZXNGaWx0ZXJSYXRpbxI9Chp0aW1lX3Nlcmllc19xdWVyeV9sYW5ndWFnZRgDIAEoCUgAUhd0aW1lU2VyaWVzUXVlcnlMYW5ndWFnZRIrChBwcm9tZXRoZXVzX3F1ZXJ5GAYgASgJSABSD3Byb21ldGhldXNRdWVyeRIjCg11bml0X292ZXJyaWRlGAUgASgJUgx1bml0T3ZlcnJpZGVCCAoGc291cmNl');
 @$core.Deprecated('Use timeSeriesFilterDescriptor instead')
 const TimeSeriesFilter$json = const {
   '1': 'TimeSeriesFilter',

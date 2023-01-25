@@ -102,12 +102,24 @@ class SchemaSettings extends $pb.GeneratedMessage {
         defaultOrMaker: $0.Encoding.ENCODING_UNSPECIFIED,
         valueOf: $0.Encoding.valueOf,
         enumValues: $0.Encoding.values)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'firstRevisionId')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lastRevisionId')
     ..hasRequiredFields = false;
 
   SchemaSettings._() : super();
   factory SchemaSettings({
     $core.String? schema,
     $0.Encoding? encoding,
+    $core.String? firstRevisionId,
+    $core.String? lastRevisionId,
   }) {
     final _result = create();
     if (schema != null) {
@@ -115,6 +127,12 @@ class SchemaSettings extends $pb.GeneratedMessage {
     }
     if (encoding != null) {
       _result.encoding = encoding;
+    }
+    if (firstRevisionId != null) {
+      _result.firstRevisionId = firstRevisionId;
+    }
+    if (lastRevisionId != null) {
+      _result.lastRevisionId = lastRevisionId;
     }
     return _result;
   }
@@ -168,6 +186,30 @@ class SchemaSettings extends $pb.GeneratedMessage {
   $core.bool hasEncoding() => $_has(1);
   @$pb.TagNumber(2)
   void clearEncoding() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstRevisionId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstRevisionId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasFirstRevisionId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstRevisionId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get lastRevisionId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set lastRevisionId($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasLastRevisionId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLastRevisionId() => clearField(4);
 }
 
 class Topic extends $pb.GeneratedMessage {

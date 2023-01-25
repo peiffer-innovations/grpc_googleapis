@@ -144,6 +144,137 @@ class NodePoolUpdateStrategy extends $pb.ProtobufEnum {
   const NodePoolUpdateStrategy._($core.int v, $core.String n) : super(v, n);
 }
 
+class StackType extends $pb.ProtobufEnum {
+  static const StackType STACK_TYPE_UNSPECIFIED = StackType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'STACK_TYPE_UNSPECIFIED');
+  static const StackType IPV4 = StackType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'IPV4');
+  static const StackType IPV4_IPV6 = StackType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'IPV4_IPV6');
+
+  static const $core.List<StackType> values = <StackType>[
+    STACK_TYPE_UNSPECIFIED,
+    IPV4,
+    IPV4_IPV6,
+  ];
+
+  static final $core.Map<$core.int, StackType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static StackType? valueOf($core.int value) => _byValue[value];
+
+  const StackType._($core.int v, $core.String n) : super(v, n);
+}
+
+class IPv6AccessType extends $pb.ProtobufEnum {
+  static const IPv6AccessType IPV6_ACCESS_TYPE_UNSPECIFIED = IPv6AccessType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'IPV6_ACCESS_TYPE_UNSPECIFIED');
+  static const IPv6AccessType INTERNAL = IPv6AccessType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'INTERNAL');
+  static const IPv6AccessType EXTERNAL = IPv6AccessType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'EXTERNAL');
+
+  static const $core.List<IPv6AccessType> values = <IPv6AccessType>[
+    IPV6_ACCESS_TYPE_UNSPECIFIED,
+    INTERNAL,
+    EXTERNAL,
+  ];
+
+  static final $core.Map<$core.int, IPv6AccessType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static IPv6AccessType? valueOf($core.int value) => _byValue[value];
+
+  const IPv6AccessType._($core.int v, $core.String n) : super(v, n);
+}
+
+class LinuxNodeConfig_CgroupMode extends $pb.ProtobufEnum {
+  static const LinuxNodeConfig_CgroupMode CGROUP_MODE_UNSPECIFIED =
+      LinuxNodeConfig_CgroupMode._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CGROUP_MODE_UNSPECIFIED');
+  static const LinuxNodeConfig_CgroupMode CGROUP_MODE_V1 =
+      LinuxNodeConfig_CgroupMode._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CGROUP_MODE_V1');
+  static const LinuxNodeConfig_CgroupMode CGROUP_MODE_V2 =
+      LinuxNodeConfig_CgroupMode._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CGROUP_MODE_V2');
+
+  static const $core.List<LinuxNodeConfig_CgroupMode> values =
+      <LinuxNodeConfig_CgroupMode>[
+    CGROUP_MODE_UNSPECIFIED,
+    CGROUP_MODE_V1,
+    CGROUP_MODE_V2,
+  ];
+
+  static final $core.Map<$core.int, LinuxNodeConfig_CgroupMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static LinuxNodeConfig_CgroupMode? valueOf($core.int value) =>
+      _byValue[value];
+
+  const LinuxNodeConfig_CgroupMode._($core.int v, $core.String n) : super(v, n);
+}
+
+class WindowsNodeConfig_OSVersion extends $pb.ProtobufEnum {
+  static const WindowsNodeConfig_OSVersion OS_VERSION_UNSPECIFIED =
+      WindowsNodeConfig_OSVersion._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OS_VERSION_UNSPECIFIED');
+  static const WindowsNodeConfig_OSVersion OS_VERSION_LTSC2019 =
+      WindowsNodeConfig_OSVersion._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OS_VERSION_LTSC2019');
+  static const WindowsNodeConfig_OSVersion OS_VERSION_LTSC2022 =
+      WindowsNodeConfig_OSVersion._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OS_VERSION_LTSC2022');
+
+  static const $core.List<WindowsNodeConfig_OSVersion> values =
+      <WindowsNodeConfig_OSVersion>[
+    OS_VERSION_UNSPECIFIED,
+    OS_VERSION_LTSC2019,
+    OS_VERSION_LTSC2022,
+  ];
+
+  static final $core.Map<$core.int, WindowsNodeConfig_OSVersion> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static WindowsNodeConfig_OSVersion? valueOf($core.int value) =>
+      _byValue[value];
+
+  const WindowsNodeConfig_OSVersion._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class NodeNetworkConfig_NetworkPerformanceConfig_Tier extends $pb.ProtobufEnum {
   static const NodeNetworkConfig_NetworkPerformanceConfig_Tier
       TIER_UNSPECIFIED = NodeNetworkConfig_NetworkPerformanceConfig_Tier._(
@@ -753,6 +884,35 @@ class NodePool_UpdateInfo_BlueGreenInfo_Phase extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+class NodePool_PlacementPolicy_Type extends $pb.ProtobufEnum {
+  static const NodePool_PlacementPolicy_Type TYPE_UNSPECIFIED =
+      NodePool_PlacementPolicy_Type._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TYPE_UNSPECIFIED');
+  static const NodePool_PlacementPolicy_Type COMPACT =
+      NodePool_PlacementPolicy_Type._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'COMPACT');
+
+  static const $core.List<NodePool_PlacementPolicy_Type> values =
+      <NodePool_PlacementPolicy_Type>[
+    TYPE_UNSPECIFIED,
+    COMPACT,
+  ];
+
+  static final $core.Map<$core.int, NodePool_PlacementPolicy_Type> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static NodePool_PlacementPolicy_Type? valueOf($core.int value) =>
+      _byValue[value];
+
+  const NodePool_PlacementPolicy_Type._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class MaintenanceExclusionOptions_Scope extends $pb.ProtobufEnum {
   static const MaintenanceExclusionOptions_Scope NO_UPGRADES =
       MaintenanceExclusionOptions_Scope._(
@@ -982,6 +1142,47 @@ class StatusCondition_Code extends $pb.ProtobufEnum {
   const StatusCondition_Code._($core.int v, $core.String n) : super(v, n);
 }
 
+class GatewayAPIConfig_Channel extends $pb.ProtobufEnum {
+  static const GatewayAPIConfig_Channel CHANNEL_UNSPECIFIED =
+      GatewayAPIConfig_Channel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANNEL_UNSPECIFIED');
+  static const GatewayAPIConfig_Channel CHANNEL_DISABLED =
+      GatewayAPIConfig_Channel._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANNEL_DISABLED');
+  static const GatewayAPIConfig_Channel CHANNEL_EXPERIMENTAL =
+      GatewayAPIConfig_Channel._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANNEL_EXPERIMENTAL');
+  static const GatewayAPIConfig_Channel CHANNEL_STANDARD =
+      GatewayAPIConfig_Channel._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANNEL_STANDARD');
+
+  static const $core.List<GatewayAPIConfig_Channel> values =
+      <GatewayAPIConfig_Channel>[
+    CHANNEL_UNSPECIFIED,
+    CHANNEL_DISABLED,
+    CHANNEL_EXPERIMENTAL,
+    CHANNEL_STANDARD,
+  ];
+
+  static final $core.Map<$core.int, GatewayAPIConfig_Channel> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static GatewayAPIConfig_Channel? valueOf($core.int value) => _byValue[value];
+
+  const GatewayAPIConfig_Channel._($core.int v, $core.String n) : super(v, n);
+}
+
 class ReleaseChannel_Channel extends $pb.ProtobufEnum {
   static const ReleaseChannel_Channel UNSPECIFIED = ReleaseChannel_Channel._(
       0,
@@ -1055,6 +1256,11 @@ class DNSConfig_DNSScope extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'DNS_SCOPE_UNSPECIFIED');
+  static const DNSConfig_DNSScope CLUSTER_SCOPE = DNSConfig_DNSScope._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CLUSTER_SCOPE');
   static const DNSConfig_DNSScope VPC_SCOPE = DNSConfig_DNSScope._(
       2,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
@@ -1063,6 +1269,7 @@ class DNSConfig_DNSScope extends $pb.ProtobufEnum {
 
   static const $core.List<DNSConfig_DNSScope> values = <DNSConfig_DNSScope>[
     DNS_SCOPE_UNSPECIFIED,
+    CLUSTER_SCOPE,
     VPC_SCOPE,
   ];
 
@@ -1216,12 +1423,33 @@ class LoggingComponentConfig_Component extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'WORKLOADS');
+  static const LoggingComponentConfig_Component APISERVER =
+      LoggingComponentConfig_Component._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'APISERVER');
+  static const LoggingComponentConfig_Component SCHEDULER =
+      LoggingComponentConfig_Component._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SCHEDULER');
+  static const LoggingComponentConfig_Component CONTROLLER_MANAGER =
+      LoggingComponentConfig_Component._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CONTROLLER_MANAGER');
 
   static const $core.List<LoggingComponentConfig_Component> values =
       <LoggingComponentConfig_Component>[
     COMPONENT_UNSPECIFIED,
     SYSTEM_COMPONENTS,
     WORKLOADS,
+    APISERVER,
+    SCHEDULER,
+    CONTROLLER_MANAGER,
   ];
 
   static final $core.Map<$core.int, LoggingComponentConfig_Component> _byValue =
@@ -1230,6 +1458,42 @@ class LoggingComponentConfig_Component extends $pb.ProtobufEnum {
       _byValue[value];
 
   const LoggingComponentConfig_Component._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class LoggingVariantConfig_Variant extends $pb.ProtobufEnum {
+  static const LoggingVariantConfig_Variant VARIANT_UNSPECIFIED =
+      LoggingVariantConfig_Variant._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'VARIANT_UNSPECIFIED');
+  static const LoggingVariantConfig_Variant DEFAULT =
+      LoggingVariantConfig_Variant._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DEFAULT');
+  static const LoggingVariantConfig_Variant MAX_THROUGHPUT =
+      LoggingVariantConfig_Variant._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'MAX_THROUGHPUT');
+
+  static const $core.List<LoggingVariantConfig_Variant> values =
+      <LoggingVariantConfig_Variant>[
+    VARIANT_UNSPECIFIED,
+    DEFAULT,
+    MAX_THROUGHPUT,
+  ];
+
+  static final $core.Map<$core.int, LoggingVariantConfig_Variant> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static LoggingVariantConfig_Variant? valueOf($core.int value) =>
+      _byValue[value];
+
+  const LoggingVariantConfig_Variant._($core.int v, $core.String n)
       : super(v, n);
 }
 

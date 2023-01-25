@@ -52,6 +52,11 @@ class BuildStatus extends $pb.GeneratedMessage {
             ? ''
             : 'buildToolExitCode',
         subBuilder: $1.Int32Value.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'errorMessage')
     ..hasRequiredFields = false;
 
   BuildStatus._() : super();
@@ -60,6 +65,7 @@ class BuildStatus extends $pb.GeneratedMessage {
     $0.Any? details,
     $core.String? finalInvocationId,
     $1.Int32Value? buildToolExitCode,
+    $core.String? errorMessage,
   }) {
     final _result = create();
     if (result != null) {
@@ -73,6 +79,9 @@ class BuildStatus extends $pb.GeneratedMessage {
     }
     if (buildToolExitCode != null) {
       _result.buildToolExitCode = buildToolExitCode;
+    }
+    if (errorMessage != null) {
+      _result.errorMessage = errorMessage;
     }
     return _result;
   }
@@ -153,4 +162,16 @@ class BuildStatus extends $pb.GeneratedMessage {
   void clearBuildToolExitCode() => clearField(4);
   @$pb.TagNumber(4)
   $1.Int32Value ensureBuildToolExitCode() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get errorMessage => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set errorMessage($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasErrorMessage() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearErrorMessage() => clearField(5);
 }

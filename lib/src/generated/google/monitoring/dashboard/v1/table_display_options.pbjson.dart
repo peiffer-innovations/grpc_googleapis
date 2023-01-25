@@ -18,12 +18,12 @@ const TableDisplayOptions$json = const {
       '3': 1,
       '4': 3,
       '5': 9,
-      '8': const {},
-      '10': 'shownColumns'
+      '8': const {'3': true},
+      '10': 'shownColumns',
     },
   ],
 };
 
 /// Descriptor for `TableDisplayOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tableDisplayOptionsDescriptor = $convert.base64Decode(
-    'ChNUYWJsZURpc3BsYXlPcHRpb25zEigKDXNob3duX2NvbHVtbnMYASADKAlCA+BBAVIMc2hvd25Db2x1bW5z');
+    'ChNUYWJsZURpc3BsYXlPcHRpb25zEioKDXNob3duX2NvbHVtbnMYASADKAlCBRgB4EEBUgxzaG93bkNvbHVtbnM=');

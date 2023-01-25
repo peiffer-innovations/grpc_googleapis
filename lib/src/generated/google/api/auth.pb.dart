@@ -209,12 +209,13 @@ class AuthenticationRule extends $pb.GeneratedMessage {
   $core.List<AuthRequirement> get requirements => $_getList(3);
 }
 
-enum JwtLocation_In { header, query, notSet }
+enum JwtLocation_In { header, query, cookie, notSet }
 
 class JwtLocation extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, JwtLocation_In> _JwtLocation_InByTag = {
     1: JwtLocation_In.header,
     2: JwtLocation_In.query,
+    4: JwtLocation_In.cookie,
     0: JwtLocation_In.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -226,7 +227,7 @@ class JwtLocation extends $pb.GeneratedMessage {
               ? ''
               : 'google.api'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 4])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -242,6 +243,11 @@ class JwtLocation extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'valuePrefix')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cookie')
     ..hasRequiredFields = false;
 
   JwtLocation._() : super();
@@ -249,6 +255,7 @@ class JwtLocation extends $pb.GeneratedMessage {
     $core.String? header,
     $core.String? query,
     $core.String? valuePrefix,
+    $core.String? cookie,
   }) {
     final _result = create();
     if (header != null) {
@@ -259,6 +266,9 @@ class JwtLocation extends $pb.GeneratedMessage {
     }
     if (valuePrefix != null) {
       _result.valuePrefix = valuePrefix;
+    }
+    if (cookie != null) {
+      _result.cookie = cookie;
     }
     return _result;
   }
@@ -326,6 +336,18 @@ class JwtLocation extends $pb.GeneratedMessage {
   $core.bool hasValuePrefix() => $_has(2);
   @$pb.TagNumber(3)
   void clearValuePrefix() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get cookie => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set cookie($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCookie() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCookie() => clearField(4);
 }
 
 class AuthProvider extends $pb.GeneratedMessage {

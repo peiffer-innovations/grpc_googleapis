@@ -46,12 +46,26 @@ const SchemaSettings$json = const {
       '6': '.google.pubsub.v1.Encoding',
       '10': 'encoding'
     },
+    const {
+      '1': 'first_revision_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'firstRevisionId'
+    },
+    const {
+      '1': 'last_revision_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'lastRevisionId'
+    },
   ],
 };
 
 /// Descriptor for `SchemaSettings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List schemaSettingsDescriptor = $convert.base64Decode(
-    'Cg5TY2hlbWFTZXR0aW5ncxI8CgZzY2hlbWEYASABKAlCJOBBAvpBHgoccHVic3ViLmdvb2dsZWFwaXMuY29tL1NjaGVtYVIGc2NoZW1hEjYKCGVuY29kaW5nGAIgASgOMhouZ29vZ2xlLnB1YnN1Yi52MS5FbmNvZGluZ1IIZW5jb2Rpbmc=');
+    'Cg5TY2hlbWFTZXR0aW5ncxI8CgZzY2hlbWEYASABKAlCJOBBAvpBHgoccHVic3ViLmdvb2dsZWFwaXMuY29tL1NjaGVtYVIGc2NoZW1hEjYKCGVuY29kaW5nGAIgASgOMhouZ29vZ2xlLnB1YnN1Yi52MS5FbmNvZGluZ1IIZW5jb2RpbmcSKgoRZmlyc3RfcmV2aXNpb25faWQYAyABKAlSD2ZpcnN0UmV2aXNpb25JZBIoChBsYXN0X3JldmlzaW9uX2lkGAQgASgJUg5sYXN0UmV2aXNpb25JZA==');
 @$core.Deprecated('Use topicDescriptor instead')
 const Topic$json = const {
   '1': 'Topic',
@@ -1082,29 +1096,20 @@ const StreamingPullResponse$json = const {
 const StreamingPullResponse_AcknowledgeConfirmation$json = const {
   '1': 'AcknowledgeConfirmation',
   '2': const [
-    const {
-      '1': 'ack_ids',
-      '3': 1,
-      '4': 3,
-      '5': 9,
-      '8': const {'1': 1},
-      '10': 'ackIds',
-    },
+    const {'1': 'ack_ids', '3': 1, '4': 3, '5': 9, '10': 'ackIds'},
     const {
       '1': 'invalid_ack_ids',
       '3': 2,
       '4': 3,
       '5': 9,
-      '8': const {'1': 1},
-      '10': 'invalidAckIds',
+      '10': 'invalidAckIds'
     },
     const {
       '1': 'unordered_ack_ids',
       '3': 3,
       '4': 3,
       '5': 9,
-      '8': const {'1': 1},
-      '10': 'unorderedAckIds',
+      '10': 'unorderedAckIds'
     },
   ],
 };
@@ -1113,21 +1118,13 @@ const StreamingPullResponse_AcknowledgeConfirmation$json = const {
 const StreamingPullResponse_ModifyAckDeadlineConfirmation$json = const {
   '1': 'ModifyAckDeadlineConfirmation',
   '2': const [
-    const {
-      '1': 'ack_ids',
-      '3': 1,
-      '4': 3,
-      '5': 9,
-      '8': const {'1': 1},
-      '10': 'ackIds',
-    },
+    const {'1': 'ack_ids', '3': 1, '4': 3, '5': 9, '10': 'ackIds'},
     const {
       '1': 'invalid_ack_ids',
       '3': 2,
       '4': 3,
       '5': 9,
-      '8': const {'1': 1},
-      '10': 'invalidAckIds',
+      '10': 'invalidAckIds'
     },
   ],
 };
@@ -1155,7 +1152,7 @@ const StreamingPullResponse_SubscriptionProperties$json = const {
 
 /// Descriptor for `StreamingPullResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List streamingPullResponseDescriptor = $convert.base64Decode(
-    'ChVTdHJlYW1pbmdQdWxsUmVzcG9uc2USTgoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsyIS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZVIQcmVjZWl2ZWRNZXNzYWdlcxJ6ChhhY2tub3dsZWRnZV9jb25maXJtYXRpb24YBSABKAsyPy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25zZS5BY2tub3dsZWRnZUNvbmZpcm1hdGlvblIXYWNrbm93bGVkZ2VDb25maXJtYXRpb24SjgEKIG1vZGlmeV9hY2tfZGVhZGxpbmVfY29uZmlybWF0aW9uGAMgASgLMkUuZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuTW9kaWZ5QWNrRGVhZGxpbmVDb25maXJtYXRpb25SHW1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEncKF3N1YnNjcmlwdGlvbl9wcm9wZXJ0aWVzGAQgASgLMj4uZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuU3Vic2NyaXB0aW9uUHJvcGVydGllc1IWc3Vic2NyaXB0aW9uUHJvcGVydGllcxqSAQoXQWNrbm93bGVkZ2VDb25maXJtYXRpb24SGwoHYWNrX2lkcxgBIAMoCUICCAFSBmFja0lkcxIqCg9pbnZhbGlkX2Fja19pZHMYAiADKAlCAggBUg1pbnZhbGlkQWNrSWRzEi4KEXVub3JkZXJlZF9hY2tfaWRzGAMgAygJQgIIAVIPdW5vcmRlcmVkQWNrSWRzGmgKHU1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEhsKB2Fja19pZHMYASADKAlCAggBUgZhY2tJZHMSKgoPaW52YWxpZF9hY2tfaWRzGAIgAygJQgIIAVINaW52YWxpZEFja0lkcxqVAQoWU3Vic2NyaXB0aW9uUHJvcGVydGllcxJBCh1leGFjdGx5X29uY2VfZGVsaXZlcnlfZW5hYmxlZBgBIAEoCFIaZXhhY3RseU9uY2VEZWxpdmVyeUVuYWJsZWQSOAoYbWVzc2FnZV9vcmRlcmluZ19lbmFibGVkGAIgASgIUhZtZXNzYWdlT3JkZXJpbmdFbmFibGVkSgQIAhAD');
+    'ChVTdHJlYW1pbmdQdWxsUmVzcG9uc2USTgoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsyIS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZVIQcmVjZWl2ZWRNZXNzYWdlcxJ6ChhhY2tub3dsZWRnZV9jb25maXJtYXRpb24YBSABKAsyPy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25zZS5BY2tub3dsZWRnZUNvbmZpcm1hdGlvblIXYWNrbm93bGVkZ2VDb25maXJtYXRpb24SjgEKIG1vZGlmeV9hY2tfZGVhZGxpbmVfY29uZmlybWF0aW9uGAMgASgLMkUuZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuTW9kaWZ5QWNrRGVhZGxpbmVDb25maXJtYXRpb25SHW1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEncKF3N1YnNjcmlwdGlvbl9wcm9wZXJ0aWVzGAQgASgLMj4uZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuU3Vic2NyaXB0aW9uUHJvcGVydGllc1IWc3Vic2NyaXB0aW9uUHJvcGVydGllcxqGAQoXQWNrbm93bGVkZ2VDb25maXJtYXRpb24SFwoHYWNrX2lkcxgBIAMoCVIGYWNrSWRzEiYKD2ludmFsaWRfYWNrX2lkcxgCIAMoCVINaW52YWxpZEFja0lkcxIqChF1bm9yZGVyZWRfYWNrX2lkcxgDIAMoCVIPdW5vcmRlcmVkQWNrSWRzGmAKHU1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEhcKB2Fja19pZHMYASADKAlSBmFja0lkcxImCg9pbnZhbGlkX2Fja19pZHMYAiADKAlSDWludmFsaWRBY2tJZHMalQEKFlN1YnNjcmlwdGlvblByb3BlcnRpZXMSQQodZXhhY3RseV9vbmNlX2RlbGl2ZXJ5X2VuYWJsZWQYASABKAhSGmV4YWN0bHlPbmNlRGVsaXZlcnlFbmFibGVkEjgKGG1lc3NhZ2Vfb3JkZXJpbmdfZW5hYmxlZBgCIAEoCFIWbWVzc2FnZU9yZGVyaW5nRW5hYmxlZEoECAIQAw==');
 @$core.Deprecated('Use createSnapshotRequestDescriptor instead')
 const CreateSnapshotRequest$json = const {
   '1': 'CreateSnapshotRequest',

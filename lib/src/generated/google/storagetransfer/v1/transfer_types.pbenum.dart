@@ -9,6 +9,150 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class S3CompatibleMetadata_AuthMethod extends $pb.ProtobufEnum {
+  static const S3CompatibleMetadata_AuthMethod AUTH_METHOD_UNSPECIFIED =
+      S3CompatibleMetadata_AuthMethod._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'AUTH_METHOD_UNSPECIFIED');
+  static const S3CompatibleMetadata_AuthMethod AUTH_METHOD_AWS_SIGNATURE_V4 =
+      S3CompatibleMetadata_AuthMethod._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'AUTH_METHOD_AWS_SIGNATURE_V4');
+  static const S3CompatibleMetadata_AuthMethod AUTH_METHOD_AWS_SIGNATURE_V2 =
+      S3CompatibleMetadata_AuthMethod._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'AUTH_METHOD_AWS_SIGNATURE_V2');
+
+  static const $core.List<S3CompatibleMetadata_AuthMethod> values =
+      <S3CompatibleMetadata_AuthMethod>[
+    AUTH_METHOD_UNSPECIFIED,
+    AUTH_METHOD_AWS_SIGNATURE_V4,
+    AUTH_METHOD_AWS_SIGNATURE_V2,
+  ];
+
+  static final $core.Map<$core.int, S3CompatibleMetadata_AuthMethod> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static S3CompatibleMetadata_AuthMethod? valueOf($core.int value) =>
+      _byValue[value];
+
+  const S3CompatibleMetadata_AuthMethod._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class S3CompatibleMetadata_RequestModel extends $pb.ProtobufEnum {
+  static const S3CompatibleMetadata_RequestModel REQUEST_MODEL_UNSPECIFIED =
+      S3CompatibleMetadata_RequestModel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REQUEST_MODEL_UNSPECIFIED');
+  static const S3CompatibleMetadata_RequestModel
+      REQUEST_MODEL_VIRTUAL_HOSTED_STYLE = S3CompatibleMetadata_RequestModel._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REQUEST_MODEL_VIRTUAL_HOSTED_STYLE');
+  static const S3CompatibleMetadata_RequestModel REQUEST_MODEL_PATH_STYLE =
+      S3CompatibleMetadata_RequestModel._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REQUEST_MODEL_PATH_STYLE');
+
+  static const $core.List<S3CompatibleMetadata_RequestModel> values =
+      <S3CompatibleMetadata_RequestModel>[
+    REQUEST_MODEL_UNSPECIFIED,
+    REQUEST_MODEL_VIRTUAL_HOSTED_STYLE,
+    REQUEST_MODEL_PATH_STYLE,
+  ];
+
+  static final $core.Map<$core.int, S3CompatibleMetadata_RequestModel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static S3CompatibleMetadata_RequestModel? valueOf($core.int value) =>
+      _byValue[value];
+
+  const S3CompatibleMetadata_RequestModel._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class S3CompatibleMetadata_NetworkProtocol extends $pb.ProtobufEnum {
+  static const S3CompatibleMetadata_NetworkProtocol
+      NETWORK_PROTOCOL_UNSPECIFIED = S3CompatibleMetadata_NetworkProtocol._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NETWORK_PROTOCOL_UNSPECIFIED');
+  static const S3CompatibleMetadata_NetworkProtocol NETWORK_PROTOCOL_HTTPS =
+      S3CompatibleMetadata_NetworkProtocol._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NETWORK_PROTOCOL_HTTPS');
+  static const S3CompatibleMetadata_NetworkProtocol NETWORK_PROTOCOL_HTTP =
+      S3CompatibleMetadata_NetworkProtocol._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NETWORK_PROTOCOL_HTTP');
+
+  static const $core.List<S3CompatibleMetadata_NetworkProtocol> values =
+      <S3CompatibleMetadata_NetworkProtocol>[
+    NETWORK_PROTOCOL_UNSPECIFIED,
+    NETWORK_PROTOCOL_HTTPS,
+    NETWORK_PROTOCOL_HTTP,
+  ];
+
+  static final $core.Map<$core.int, S3CompatibleMetadata_NetworkProtocol>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static S3CompatibleMetadata_NetworkProtocol? valueOf($core.int value) =>
+      _byValue[value];
+
+  const S3CompatibleMetadata_NetworkProtocol._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class S3CompatibleMetadata_ListApi extends $pb.ProtobufEnum {
+  static const S3CompatibleMetadata_ListApi LIST_API_UNSPECIFIED =
+      S3CompatibleMetadata_ListApi._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LIST_API_UNSPECIFIED');
+  static const S3CompatibleMetadata_ListApi LIST_OBJECTS_V2 =
+      S3CompatibleMetadata_ListApi._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LIST_OBJECTS_V2');
+  static const S3CompatibleMetadata_ListApi LIST_OBJECTS =
+      S3CompatibleMetadata_ListApi._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'LIST_OBJECTS');
+
+  static const $core.List<S3CompatibleMetadata_ListApi> values =
+      <S3CompatibleMetadata_ListApi>[
+    LIST_API_UNSPECIFIED,
+    LIST_OBJECTS_V2,
+    LIST_OBJECTS,
+  ];
+
+  static final $core.Map<$core.int, S3CompatibleMetadata_ListApi> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static S3CompatibleMetadata_ListApi? valueOf($core.int value) =>
+      _byValue[value];
+
+  const S3CompatibleMetadata_ListApi._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class AgentPool_State extends $pb.ProtobufEnum {
   static const AgentPool_State STATE_UNSPECIFIED = AgentPool_State._(
       0,

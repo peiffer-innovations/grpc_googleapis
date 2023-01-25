@@ -99,12 +99,20 @@ const ResultSetMetadata$json = const {
       '6': '.google.spanner.v1.Transaction',
       '10': 'transaction'
     },
+    const {
+      '1': 'undeclared_parameters',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.StructType',
+      '10': 'undeclaredParameters'
+    },
   ],
 };
 
 /// Descriptor for `ResultSetMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resultSetMetadataDescriptor = $convert.base64Decode(
-    'ChFSZXN1bHRTZXRNZXRhZGF0YRI4Cghyb3dfdHlwZRgBIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5cGVSB3Jvd1R5cGUSQAoLdHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblILdHJhbnNhY3Rpb24=');
+    'ChFSZXN1bHRTZXRNZXRhZGF0YRI4Cghyb3dfdHlwZRgBIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5cGVSB3Jvd1R5cGUSQAoLdHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblILdHJhbnNhY3Rpb24SUgoVdW5kZWNsYXJlZF9wYXJhbWV0ZXJzGAMgASgLMh0uZ29vZ2xlLnNwYW5uZXIudjEuU3RydWN0VHlwZVIUdW5kZWNsYXJlZFBhcmFtZXRlcnM=');
 @$core.Deprecated('Use resultSetStatsDescriptor instead')
 const ResultSetStats$json = const {
   '1': 'ResultSetStats',

@@ -29,6 +29,28 @@ class InstanceAdminClient extends $grpc.Client {
           '/google.spanner.admin.instance.v1.InstanceAdmin/GetInstanceConfig',
           ($4.GetInstanceConfigRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $4.InstanceConfig.fromBuffer(value));
+  static final _$createInstanceConfig = $grpc.ClientMethod<
+          $4.CreateInstanceConfigRequest, $2.Operation>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/CreateInstanceConfig',
+      ($4.CreateInstanceConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$updateInstanceConfig = $grpc.ClientMethod<
+          $4.UpdateInstanceConfigRequest, $2.Operation>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/UpdateInstanceConfig',
+      ($4.UpdateInstanceConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$deleteInstanceConfig = $grpc.ClientMethod<
+          $4.DeleteInstanceConfigRequest, $3.Empty>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/DeleteInstanceConfig',
+      ($4.DeleteInstanceConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$listInstanceConfigOperations = $grpc.ClientMethod<
+          $4.ListInstanceConfigOperationsRequest,
+          $4.ListInstanceConfigOperationsResponse>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/ListInstanceConfigOperations',
+      ($4.ListInstanceConfigOperationsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListInstanceConfigOperationsResponse.fromBuffer(value));
   static final _$listInstances =
       $grpc.ClientMethod<$4.ListInstancesRequest, $4.ListInstancesResponse>(
           '/google.spanner.admin.instance.v1.InstanceAdmin/ListInstances',
@@ -87,6 +109,32 @@ class InstanceAdminClient extends $grpc.Client {
       $4.GetInstanceConfigRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getInstanceConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> createInstanceConfig(
+      $4.CreateInstanceConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createInstanceConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> updateInstanceConfig(
+      $4.UpdateInstanceConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateInstanceConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteInstanceConfig(
+      $4.DeleteInstanceConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteInstanceConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListInstanceConfigOperationsResponse>
+      listInstanceConfigOperations(
+          $4.ListInstanceConfigOperationsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listInstanceConfigOperations, request,
+        options: options);
   }
 
   $grpc.ResponseFuture<$4.ListInstancesResponse> listInstances(
@@ -157,6 +205,42 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $4.GetInstanceConfigRequest.fromBuffer(value),
             ($4.InstanceConfig value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.CreateInstanceConfigRequest, $2.Operation>(
+            'CreateInstanceConfig',
+            createInstanceConfig_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.CreateInstanceConfigRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.UpdateInstanceConfigRequest, $2.Operation>(
+            'UpdateInstanceConfig',
+            updateInstanceConfig_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.UpdateInstanceConfigRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.DeleteInstanceConfigRequest, $3.Empty>(
+        'DeleteInstanceConfig',
+        deleteInstanceConfig_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.DeleteInstanceConfigRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListInstanceConfigOperationsRequest,
+            $4.ListInstanceConfigOperationsResponse>(
+        'ListInstanceConfigOperations',
+        listInstanceConfigOperations_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListInstanceConfigOperationsRequest.fromBuffer(value),
+        ($4.ListInstanceConfigOperationsResponse value) =>
+            value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$4.ListInstancesRequest, $4.ListInstancesResponse>(
             'ListInstances',
@@ -236,6 +320,27 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
     return getInstanceConfig(call, await request);
   }
 
+  $async.Future<$2.Operation> createInstanceConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$4.CreateInstanceConfigRequest> request) async {
+    return createInstanceConfig(call, await request);
+  }
+
+  $async.Future<$2.Operation> updateInstanceConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateInstanceConfigRequest> request) async {
+    return updateInstanceConfig(call, await request);
+  }
+
+  $async.Future<$3.Empty> deleteInstanceConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$4.DeleteInstanceConfigRequest> request) async {
+    return deleteInstanceConfig(call, await request);
+  }
+
+  $async.Future<$4.ListInstanceConfigOperationsResponse>
+      listInstanceConfigOperations_Pre($grpc.ServiceCall call,
+          $async.Future<$4.ListInstanceConfigOperationsRequest> request) async {
+    return listInstanceConfigOperations(call, await request);
+  }
+
   $async.Future<$4.ListInstancesResponse> listInstances_Pre(
       $grpc.ServiceCall call,
       $async.Future<$4.ListInstancesRequest> request) async {
@@ -282,6 +387,15 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.ListInstanceConfigsRequest request);
   $async.Future<$4.InstanceConfig> getInstanceConfig(
       $grpc.ServiceCall call, $4.GetInstanceConfigRequest request);
+  $async.Future<$2.Operation> createInstanceConfig(
+      $grpc.ServiceCall call, $4.CreateInstanceConfigRequest request);
+  $async.Future<$2.Operation> updateInstanceConfig(
+      $grpc.ServiceCall call, $4.UpdateInstanceConfigRequest request);
+  $async.Future<$3.Empty> deleteInstanceConfig(
+      $grpc.ServiceCall call, $4.DeleteInstanceConfigRequest request);
+  $async.Future<$4.ListInstanceConfigOperationsResponse>
+      listInstanceConfigOperations($grpc.ServiceCall call,
+          $4.ListInstanceConfigOperationsRequest request);
   $async.Future<$4.ListInstancesResponse> listInstances(
       $grpc.ServiceCall call, $4.ListInstancesRequest request);
   $async.Future<$4.Instance> getInstance(

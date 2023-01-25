@@ -613,3 +613,62 @@ const OptimizeRestoredDatabaseMetadata$json = const {
 final $typed_data.Uint8List optimizeRestoredDatabaseMetadataDescriptor =
     $convert.base64Decode(
         'CiBPcHRpbWl6ZVJlc3RvcmVkRGF0YWJhc2VNZXRhZGF0YRI4CgRuYW1lGAEgASgJQiT6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSBG5hbWUSTwoIcHJvZ3Jlc3MYAiABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5PcGVyYXRpb25Qcm9ncmVzc1IIcHJvZ3Jlc3M=');
+@$core.Deprecated('Use databaseRoleDescriptor instead')
+const DatabaseRole$json = const {
+  '1': 'DatabaseRole',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+  '7': const {},
+};
+
+/// Descriptor for `DatabaseRole`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List databaseRoleDescriptor = $convert.base64Decode(
+    'CgxEYXRhYmFzZVJvbGUSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lOnvqQXgKI3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSb2xlElFwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vZGF0YWJhc2VSb2xlcy97cm9sZX0=');
+@$core.Deprecated('Use listDatabaseRolesRequestDescriptor instead')
+const ListDatabaseRolesRequest$json = const {
+  '1': 'ListDatabaseRolesRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListDatabaseRolesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listDatabaseRolesRequestDescriptor =
+    $convert.base64Decode(
+        'ChhMaXN0RGF0YWJhc2VSb2xlc1JlcXVlc3QSPwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2VSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbg==');
+@$core.Deprecated('Use listDatabaseRolesResponseDescriptor instead')
+const ListDatabaseRolesResponse$json = const {
+  '1': 'ListDatabaseRolesResponse',
+  '2': const [
+    const {
+      '1': 'database_roles',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.spanner.admin.database.v1.DatabaseRole',
+      '10': 'databaseRoles'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListDatabaseRolesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listDatabaseRolesResponseDescriptor =
+    $convert.base64Decode(
+        'ChlMaXN0RGF0YWJhc2VSb2xlc1Jlc3BvbnNlElUKDmRhdGFiYXNlX3JvbGVzGAEgAygLMi4uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2VSb2xlUg1kYXRhYmFzZVJvbGVzEiYKD25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');

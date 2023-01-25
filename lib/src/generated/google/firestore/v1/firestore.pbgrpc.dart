@@ -64,6 +64,12 @@ class FirestoreClient extends $grpc.Client {
           ($0.RunQueryRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.RunQueryResponse.fromBuffer(value));
+  static final _$runAggregationQuery = $grpc.ClientMethod<
+          $0.RunAggregationQueryRequest, $0.RunAggregationQueryResponse>(
+      '/google.firestore.v1.Firestore/RunAggregationQuery',
+      ($0.RunAggregationQueryRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.RunAggregationQueryResponse.fromBuffer(value));
   static final _$partitionQuery =
       $grpc.ClientMethod<$0.PartitionQueryRequest, $0.PartitionQueryResponse>(
           '/google.firestore.v1.Firestore/PartitionQuery',
@@ -153,6 +159,14 @@ class FirestoreClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
         _$runQuery, $async.Stream.fromIterable([request]),
+        options: options);
+  }
+
+  $grpc.ResponseStream<$0.RunAggregationQueryResponse> runAggregationQuery(
+      $0.RunAggregationQueryRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$runAggregationQuery, $async.Stream.fromIterable([request]),
         options: options);
   }
 
@@ -269,6 +283,15 @@ abstract class FirestoreServiceBase extends $grpc.Service {
         true,
         ($core.List<$core.int> value) => $0.RunQueryRequest.fromBuffer(value),
         ($0.RunQueryResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RunAggregationQueryRequest,
+            $0.RunAggregationQueryResponse>(
+        'RunAggregationQuery',
+        runAggregationQuery_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.RunAggregationQueryRequest.fromBuffer(value),
+        ($0.RunAggregationQueryResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.PartitionQueryRequest,
             $0.PartitionQueryResponse>(
         'PartitionQuery',
@@ -366,6 +389,12 @@ abstract class FirestoreServiceBase extends $grpc.Service {
     yield* runQuery(call, await request);
   }
 
+  $async.Stream<$0.RunAggregationQueryResponse> runAggregationQuery_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.RunAggregationQueryRequest> request) async* {
+    yield* runAggregationQuery(call, await request);
+  }
+
   $async.Future<$0.PartitionQueryResponse> partitionQuery_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.PartitionQueryRequest> request) async {
@@ -406,6 +435,8 @@ abstract class FirestoreServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.RollbackRequest request);
   $async.Stream<$0.RunQueryResponse> runQuery(
       $grpc.ServiceCall call, $0.RunQueryRequest request);
+  $async.Stream<$0.RunAggregationQueryResponse> runAggregationQuery(
+      $grpc.ServiceCall call, $0.RunAggregationQueryRequest request);
   $async.Future<$0.PartitionQueryResponse> partitionQuery(
       $grpc.ServiceCall call, $0.PartitionQueryRequest request);
   $async.Stream<$0.WriteResponse> write(

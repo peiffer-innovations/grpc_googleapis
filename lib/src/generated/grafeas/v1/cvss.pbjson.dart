@@ -9,6 +9,19 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use cVSSVersionDescriptor instead')
+const CVSSVersion$json = const {
+  '1': 'CVSSVersion',
+  '2': const [
+    const {'1': 'CVSS_VERSION_UNSPECIFIED', '2': 0},
+    const {'1': 'CVSS_VERSION_2', '2': 1},
+    const {'1': 'CVSS_VERSION_3', '2': 2},
+  ],
+};
+
+/// Descriptor for `CVSSVersion`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List cVSSVersionDescriptor = $convert.base64Decode(
+    'CgtDVlNTVmVyc2lvbhIcChhDVlNTX1ZFUlNJT05fVU5TUEVDSUZJRUQQABISCg5DVlNTX1ZFUlNJT05fMhABEhIKDkNWU1NfVkVSU0lPTl8zEAI=');
 @$core.Deprecated('Use cVSSv3Descriptor instead')
 const CVSSv3$json = const {
   '1': 'CVSSv3',

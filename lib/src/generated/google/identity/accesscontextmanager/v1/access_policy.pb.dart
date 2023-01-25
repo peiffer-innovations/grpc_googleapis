@@ -53,6 +53,11 @@ class AccessPolicy extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'etag')
+    ..pPS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'scopes')
     ..hasRequiredFields = false;
 
   AccessPolicy._() : super();
@@ -63,6 +68,7 @@ class AccessPolicy extends $pb.GeneratedMessage {
     $0.Timestamp? createTime,
     $0.Timestamp? updateTime,
     $core.String? etag,
+    $core.Iterable<$core.String>? scopes,
   }) {
     final _result = create();
     if (name != null) {
@@ -82,6 +88,9 @@ class AccessPolicy extends $pb.GeneratedMessage {
     }
     if (etag != null) {
       _result.etag = etag;
+    }
+    if (scopes != null) {
+      _result.scopes.addAll(scopes);
     }
     return _result;
   }
@@ -187,4 +196,7 @@ class AccessPolicy extends $pb.GeneratedMessage {
   $core.bool hasEtag() => $_has(5);
   @$pb.TagNumber(6)
   void clearEtag() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.List<$core.String> get scopes => $_getList(6);
 }

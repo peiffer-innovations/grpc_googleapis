@@ -240,6 +240,134 @@ const PosixFilesystem$json = const {
 /// Descriptor for `PosixFilesystem`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List posixFilesystemDescriptor = $convert.base64Decode(
     'Cg9Qb3NpeEZpbGVzeXN0ZW0SJQoOcm9vdF9kaXJlY3RvcnkYASABKAlSDXJvb3REaXJlY3Rvcnk=');
+@$core.Deprecated('Use awsS3CompatibleDataDescriptor instead')
+const AwsS3CompatibleData$json = const {
+  '1': 'AwsS3CompatibleData',
+  '2': const [
+    const {
+      '1': 'bucket_name',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'bucketName'
+    },
+    const {'1': 'path', '3': 2, '4': 1, '5': 9, '10': 'path'},
+    const {
+      '1': 'endpoint',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'endpoint'
+    },
+    const {'1': 'region', '3': 5, '4': 1, '5': 9, '10': 'region'},
+    const {
+      '1': 's3_metadata',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.S3CompatibleMetadata',
+      '9': 0,
+      '10': 's3Metadata'
+    },
+  ],
+  '8': const [
+    const {'1': 'data_provider'},
+  ],
+};
+
+/// Descriptor for `AwsS3CompatibleData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List awsS3CompatibleDataDescriptor = $convert.base64Decode(
+    'ChNBd3NTM0NvbXBhdGlibGVEYXRhEiQKC2J1Y2tldF9uYW1lGAEgASgJQgPgQQJSCmJ1Y2tldE5hbWUSEgoEcGF0aBgCIAEoCVIEcGF0aBIfCghlbmRwb2ludBgDIAEoCUID4EECUghlbmRwb2ludBIWCgZyZWdpb24YBSABKAlSBnJlZ2lvbhJSCgtzM19tZXRhZGF0YRgEIAEoCzIvLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuUzNDb21wYXRpYmxlTWV0YWRhdGFIAFIKczNNZXRhZGF0YUIPCg1kYXRhX3Byb3ZpZGVy');
+@$core.Deprecated('Use s3CompatibleMetadataDescriptor instead')
+const S3CompatibleMetadata$json = const {
+  '1': 'S3CompatibleMetadata',
+  '2': const [
+    const {
+      '1': 'auth_method',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.storagetransfer.v1.S3CompatibleMetadata.AuthMethod',
+      '10': 'authMethod'
+    },
+    const {
+      '1': 'request_model',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.storagetransfer.v1.S3CompatibleMetadata.RequestModel',
+      '10': 'requestModel'
+    },
+    const {
+      '1': 'protocol',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.storagetransfer.v1.S3CompatibleMetadata.NetworkProtocol',
+      '10': 'protocol'
+    },
+    const {
+      '1': 'list_api',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.storagetransfer.v1.S3CompatibleMetadata.ListApi',
+      '10': 'listApi'
+    },
+  ],
+  '4': const [
+    S3CompatibleMetadata_AuthMethod$json,
+    S3CompatibleMetadata_RequestModel$json,
+    S3CompatibleMetadata_NetworkProtocol$json,
+    S3CompatibleMetadata_ListApi$json
+  ],
+};
+
+@$core.Deprecated('Use s3CompatibleMetadataDescriptor instead')
+const S3CompatibleMetadata_AuthMethod$json = const {
+  '1': 'AuthMethod',
+  '2': const [
+    const {'1': 'AUTH_METHOD_UNSPECIFIED', '2': 0},
+    const {'1': 'AUTH_METHOD_AWS_SIGNATURE_V4', '2': 1},
+    const {'1': 'AUTH_METHOD_AWS_SIGNATURE_V2', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use s3CompatibleMetadataDescriptor instead')
+const S3CompatibleMetadata_RequestModel$json = const {
+  '1': 'RequestModel',
+  '2': const [
+    const {'1': 'REQUEST_MODEL_UNSPECIFIED', '2': 0},
+    const {'1': 'REQUEST_MODEL_VIRTUAL_HOSTED_STYLE', '2': 1},
+    const {'1': 'REQUEST_MODEL_PATH_STYLE', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use s3CompatibleMetadataDescriptor instead')
+const S3CompatibleMetadata_NetworkProtocol$json = const {
+  '1': 'NetworkProtocol',
+  '2': const [
+    const {'1': 'NETWORK_PROTOCOL_UNSPECIFIED', '2': 0},
+    const {'1': 'NETWORK_PROTOCOL_HTTPS', '2': 1},
+    const {'1': 'NETWORK_PROTOCOL_HTTP', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use s3CompatibleMetadataDescriptor instead')
+const S3CompatibleMetadata_ListApi$json = const {
+  '1': 'ListApi',
+  '2': const [
+    const {'1': 'LIST_API_UNSPECIFIED', '2': 0},
+    const {'1': 'LIST_OBJECTS_V2', '2': 1},
+    const {'1': 'LIST_OBJECTS', '2': 2},
+  ],
+};
+
+/// Descriptor for `S3CompatibleMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List s3CompatibleMetadataDescriptor = $convert.base64Decode(
+    'ChRTM0NvbXBhdGlibGVNZXRhZGF0YRJbCgthdXRoX21ldGhvZBgBIAEoDjI6Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuUzNDb21wYXRpYmxlTWV0YWRhdGEuQXV0aE1ldGhvZFIKYXV0aE1ldGhvZBJhCg1yZXF1ZXN0X21vZGVsGAIgASgOMjwuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5TM0NvbXBhdGlibGVNZXRhZGF0YS5SZXF1ZXN0TW9kZWxSDHJlcXVlc3RNb2RlbBJbCghwcm90b2NvbBgDIAEoDjI/Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuUzNDb21wYXRpYmxlTWV0YWRhdGEuTmV0d29ya1Byb3RvY29sUghwcm90b2NvbBJSCghsaXN0X2FwaRgEIAEoDjI3Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuUzNDb21wYXRpYmxlTWV0YWRhdGEuTGlzdEFwaVIHbGlzdEFwaSJtCgpBdXRoTWV0aG9kEhsKF0FVVEhfTUVUSE9EX1VOU1BFQ0lGSUVEEAASIAocQVVUSF9NRVRIT0RfQVdTX1NJR05BVFVSRV9WNBABEiAKHEFVVEhfTUVUSE9EX0FXU19TSUdOQVRVUkVfVjIQAiJzCgxSZXF1ZXN0TW9kZWwSHQoZUkVRVUVTVF9NT0RFTF9VTlNQRUNJRklFRBAAEiYKIlJFUVVFU1RfTU9ERUxfVklSVFVBTF9IT1NURURfU1RZTEUQARIcChhSRVFVRVNUX01PREVMX1BBVEhfU1RZTEUQAiJqCg9OZXR3b3JrUHJvdG9jb2wSIAocTkVUV09SS19QUk9UT0NPTF9VTlNQRUNJRklFRBAAEhoKFk5FVFdPUktfUFJPVE9DT0xfSFRUUFMQARIZChVORVRXT1JLX1BST1RPQ09MX0hUVFAQAiJKCgdMaXN0QXBpEhgKFExJU1RfQVBJX1VOU1BFQ0lGSUVEEAASEwoPTElTVF9PQkpFQ1RTX1YyEAESEAoMTElTVF9PQkpFQ1RTEAI=');
 @$core.Deprecated('Use agentPoolDescriptor instead')
 const AgentPool$json = const {
   '1': 'AgentPool',
@@ -418,6 +546,15 @@ const TransferSpec$json = const {
       '10': 'azureBlobStorageDataSource'
     },
     const {
+      '1': 'aws_s3_compatible_data_source',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.AwsS3CompatibleData',
+      '9': 1,
+      '10': 'awsS3CompatibleDataSource'
+    },
+    const {
       '1': 'gcs_intermediate_data_location',
       '3': 16,
       '4': 1,
@@ -474,7 +611,7 @@ const TransferSpec$json = const {
 
 /// Descriptor for `TransferSpec`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List transferSpecDescriptor = $convert.base64Decode(
-    'CgxUcmFuc2ZlclNwZWMSSAoNZ2NzX2RhdGFfc2luaxgEIAEoCzIiLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuR2NzRGF0YUgAUgtnY3NEYXRhU2luaxJUCg9wb3NpeF9kYXRhX3NpbmsYDSABKAsyKi5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlBvc2l4RmlsZXN5c3RlbUgAUg1wb3NpeERhdGFTaW5rEkwKD2djc19kYXRhX3NvdXJjZRgBIAEoCzIiLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuR2NzRGF0YUgBUg1nY3NEYXRhU291cmNlElMKEmF3c19zM19kYXRhX3NvdXJjZRgCIAEoCzIkLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuQXdzUzNEYXRhSAFSD2F3c1MzRGF0YVNvdXJjZRJPChBodHRwX2RhdGFfc291cmNlGAMgASgLMiMuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5IdHRwRGF0YUgBUg5odHRwRGF0YVNvdXJjZRJYChFwb3NpeF9kYXRhX3NvdXJjZRgOIAEoCzIqLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuUG9zaXhGaWxlc3lzdGVtSAFSD3Bvc2l4RGF0YVNvdXJjZRJ1Ch5henVyZV9ibG9iX3N0b3JhZ2VfZGF0YV9zb3VyY2UYCCABKAsyLy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkF6dXJlQmxvYlN0b3JhZ2VEYXRhSAFSGmF6dXJlQmxvYlN0b3JhZ2VEYXRhU291cmNlEmkKHmdjc19pbnRlcm1lZGlhdGVfZGF0YV9sb2NhdGlvbhgQIAEoCzIiLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuR2NzRGF0YUgCUhtnY3NJbnRlcm1lZGlhdGVEYXRhTG9jYXRpb24SWAoRb2JqZWN0X2NvbmRpdGlvbnMYBSABKAsyKy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLk9iamVjdENvbmRpdGlvbnNSEG9iamVjdENvbmRpdGlvbnMSVQoQdHJhbnNmZXJfb3B0aW9ucxgGIAEoCzIqLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuVHJhbnNmZXJPcHRpb25zUg90cmFuc2Zlck9wdGlvbnMSWAoRdHJhbnNmZXJfbWFuaWZlc3QYDyABKAsyKy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlRyYW5zZmVyTWFuaWZlc3RSEHRyYW5zZmVyTWFuaWZlc3QSMwoWc291cmNlX2FnZW50X3Bvb2xfbmFtZRgRIAEoCVITc291cmNlQWdlbnRQb29sTmFtZRIvChRzaW5rX2FnZW50X3Bvb2xfbmFtZRgSIAEoCVIRc2lua0FnZW50UG9vbE5hbWVCCwoJZGF0YV9zaW5rQg0KC2RhdGFfc291cmNlQhwKGmludGVybWVkaWF0ZV9kYXRhX2xvY2F0aW9u');
+    'CgxUcmFuc2ZlclNwZWMSSAoNZ2NzX2RhdGFfc2luaxgEIAEoCzIiLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuR2NzRGF0YUgAUgtnY3NEYXRhU2luaxJUCg9wb3NpeF9kYXRhX3NpbmsYDSABKAsyKi5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlBvc2l4RmlsZXN5c3RlbUgAUg1wb3NpeERhdGFTaW5rEkwKD2djc19kYXRhX3NvdXJjZRgBIAEoCzIiLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuR2NzRGF0YUgBUg1nY3NEYXRhU291cmNlElMKEmF3c19zM19kYXRhX3NvdXJjZRgCIAEoCzIkLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuQXdzUzNEYXRhSAFSD2F3c1MzRGF0YVNvdXJjZRJPChBodHRwX2RhdGFfc291cmNlGAMgASgLMiMuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5IdHRwRGF0YUgBUg5odHRwRGF0YVNvdXJjZRJYChFwb3NpeF9kYXRhX3NvdXJjZRgOIAEoCzIqLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuUG9zaXhGaWxlc3lzdGVtSAFSD3Bvc2l4RGF0YVNvdXJjZRJ1Ch5henVyZV9ibG9iX3N0b3JhZ2VfZGF0YV9zb3VyY2UYCCABKAsyLy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkF6dXJlQmxvYlN0b3JhZ2VEYXRhSAFSGmF6dXJlQmxvYlN0b3JhZ2VEYXRhU291cmNlEnIKHWF3c19zM19jb21wYXRpYmxlX2RhdGFfc291cmNlGBMgASgLMi4uZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5Bd3NTM0NvbXBhdGlibGVEYXRhSAFSGWF3c1MzQ29tcGF0aWJsZURhdGFTb3VyY2USaQoeZ2NzX2ludGVybWVkaWF0ZV9kYXRhX2xvY2F0aW9uGBAgASgLMiIuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5HY3NEYXRhSAJSG2djc0ludGVybWVkaWF0ZURhdGFMb2NhdGlvbhJYChFvYmplY3RfY29uZGl0aW9ucxgFIAEoCzIrLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuT2JqZWN0Q29uZGl0aW9uc1IQb2JqZWN0Q29uZGl0aW9ucxJVChB0cmFuc2Zlcl9vcHRpb25zGAYgASgLMiouZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5UcmFuc2Zlck9wdGlvbnNSD3RyYW5zZmVyT3B0aW9ucxJYChF0cmFuc2Zlcl9tYW5pZmVzdBgPIAEoCzIrLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuVHJhbnNmZXJNYW5pZmVzdFIQdHJhbnNmZXJNYW5pZmVzdBIzChZzb3VyY2VfYWdlbnRfcG9vbF9uYW1lGBEgASgJUhNzb3VyY2VBZ2VudFBvb2xOYW1lEi8KFHNpbmtfYWdlbnRfcG9vbF9uYW1lGBIgASgJUhFzaW5rQWdlbnRQb29sTmFtZUILCglkYXRhX3NpbmtCDQoLZGF0YV9zb3VyY2VCHAoaaW50ZXJtZWRpYXRlX2RhdGFfbG9jYXRpb24=');
 @$core.Deprecated('Use metadataOptionsDescriptor instead')
 const MetadataOptions$json = const {
   '1': 'MetadataOptions',

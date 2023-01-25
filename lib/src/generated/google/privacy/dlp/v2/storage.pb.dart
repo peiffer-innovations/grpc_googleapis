@@ -103,6 +103,78 @@ class InfoType extends $pb.GeneratedMessage {
   void clearVersion() => clearField(2);
 }
 
+class SensitivityScore extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SensitivityScore',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<SensitivityScore_SensitivityScoreLevel>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'score',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: SensitivityScore_SensitivityScoreLevel
+            .SENSITIVITY_SCORE_UNSPECIFIED,
+        valueOf: SensitivityScore_SensitivityScoreLevel.valueOf,
+        enumValues: SensitivityScore_SensitivityScoreLevel.values)
+    ..hasRequiredFields = false;
+
+  SensitivityScore._() : super();
+  factory SensitivityScore({
+    SensitivityScore_SensitivityScoreLevel? score,
+  }) {
+    final _result = create();
+    if (score != null) {
+      _result.score = score;
+    }
+    return _result;
+  }
+  factory SensitivityScore.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SensitivityScore.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SensitivityScore clone() => SensitivityScore()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SensitivityScore copyWith(void Function(SensitivityScore) updates) =>
+      super.copyWith((message) => updates(message as SensitivityScore))
+          as SensitivityScore; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SensitivityScore create() => SensitivityScore._();
+  SensitivityScore createEmptyInstance() => create();
+  static $pb.PbList<SensitivityScore> createRepeated() =>
+      $pb.PbList<SensitivityScore>();
+  @$core.pragma('dart2js:noInline')
+  static SensitivityScore getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SensitivityScore>(create);
+  static SensitivityScore? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  SensitivityScore_SensitivityScoreLevel get score => $_getN(0);
+  @$pb.TagNumber(1)
+  set score(SensitivityScore_SensitivityScoreLevel v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasScore() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearScore() => clearField(1);
+}
+
 class StoredType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

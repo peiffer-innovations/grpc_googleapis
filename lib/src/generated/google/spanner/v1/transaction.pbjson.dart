@@ -54,6 +54,27 @@ const TransactionOptions$json = const {
 @$core.Deprecated('Use transactionOptionsDescriptor instead')
 const TransactionOptions_ReadWrite$json = const {
   '1': 'ReadWrite',
+  '2': const [
+    const {
+      '1': 'read_lock_mode',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.spanner.v1.TransactionOptions.ReadWrite.ReadLockMode',
+      '10': 'readLockMode'
+    },
+  ],
+  '4': const [TransactionOptions_ReadWrite_ReadLockMode$json],
+};
+
+@$core.Deprecated('Use transactionOptionsDescriptor instead')
+const TransactionOptions_ReadWrite_ReadLockMode$json = const {
+  '1': 'ReadLockMode',
+  '2': const [
+    const {'1': 'READ_LOCK_MODE_UNSPECIFIED', '2': 0},
+    const {'1': 'PESSIMISTIC', '2': 1},
+    const {'1': 'OPTIMISTIC', '2': 2},
+  ],
 };
 
 @$core.Deprecated('Use transactionOptionsDescriptor instead')
@@ -117,7 +138,7 @@ const TransactionOptions_ReadOnly$json = const {
 
 /// Descriptor for `TransactionOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List transactionOptionsDescriptor = $convert.base64Decode(
-    'ChJUcmFuc2FjdGlvbk9wdGlvbnMSUAoKcmVhZF93cml0ZRgBIAEoCzIvLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5SZWFkV3JpdGVIAFIJcmVhZFdyaXRlEl8KD3BhcnRpdGlvbmVkX2RtbBgDIAEoCzI0Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5QYXJ0aXRpb25lZERtbEgAUg5wYXJ0aXRpb25lZERtbBJNCglyZWFkX29ubHkYAiABKAsyLi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlIAFIIcmVhZE9ubHkaCwoJUmVhZFdyaXRlGhAKDlBhcnRpdGlvbmVkRG1sGoQDCghSZWFkT25seRIYCgZzdHJvbmcYASABKAhIAFIGc3Ryb25nEkoKEm1pbl9yZWFkX3RpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIQbWluUmVhZFRpbWVzdGFtcBJACg1tYXhfc3RhbGVuZXNzGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSABSDG1heFN0YWxlbmVzcxJDCg5yZWFkX3RpbWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFINcmVhZFRpbWVzdGFtcBJECg9leGFjdF9zdGFsZW5lc3MYBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IAFIOZXhhY3RTdGFsZW5lc3MSMgoVcmV0dXJuX3JlYWRfdGltZXN0YW1wGAYgASgIUhNyZXR1cm5SZWFkVGltZXN0YW1wQhEKD3RpbWVzdGFtcF9ib3VuZEIGCgRtb2Rl');
+    'ChJUcmFuc2FjdGlvbk9wdGlvbnMSUAoKcmVhZF93cml0ZRgBIAEoCzIvLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5SZWFkV3JpdGVIAFIJcmVhZFdyaXRlEl8KD3BhcnRpdGlvbmVkX2RtbBgDIAEoCzI0Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5QYXJ0aXRpb25lZERtbEgAUg5wYXJ0aXRpb25lZERtbBJNCglyZWFkX29ubHkYAiABKAsyLi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlIAFIIcmVhZE9ubHkawAEKCVJlYWRXcml0ZRJiCg5yZWFkX2xvY2tfbW9kZRgBIAEoDjI8Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5SZWFkV3JpdGUuUmVhZExvY2tNb2RlUgxyZWFkTG9ja01vZGUiTwoMUmVhZExvY2tNb2RlEh4KGlJFQURfTE9DS19NT0RFX1VOU1BFQ0lGSUVEEAASDwoLUEVTU0lNSVNUSUMQARIOCgpPUFRJTUlTVElDEAIaEAoOUGFydGl0aW9uZWREbWwahAMKCFJlYWRPbmx5EhgKBnN0cm9uZxgBIAEoCEgAUgZzdHJvbmcSSgoSbWluX3JlYWRfdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAUhBtaW5SZWFkVGltZXN0YW1wEkAKDW1heF9zdGFsZW5lc3MYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IAFIMbWF4U3RhbGVuZXNzEkMKDnJlYWRfdGltZXN0YW1wGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAUg1yZWFkVGltZXN0YW1wEkQKD2V4YWN0X3N0YWxlbmVzcxgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAUg5leGFjdFN0YWxlbmVzcxIyChVyZXR1cm5fcmVhZF90aW1lc3RhbXAYBiABKAhSE3JldHVyblJlYWRUaW1lc3RhbXBCEQoPdGltZXN0YW1wX2JvdW5kQgYKBG1vZGU=');
 @$core.Deprecated('Use transactionDescriptor instead')
 const Transaction$json = const {
   '1': 'Transaction',

@@ -151,7 +151,7 @@ class BackendRule extends $pb.GeneratedMessage {
     $core.String? selector,
     $core.String? address,
     $core.double? deadline,
-    $core.double? minDeadline,
+    @$core.Deprecated('This field is deprecated.') $core.double? minDeadline,
     $core.double? operationDeadline,
     BackendRule_PathTranslation? pathTranslation,
     $core.String? jwtAudience,
@@ -169,6 +169,7 @@ class BackendRule extends $pb.GeneratedMessage {
       _result.deadline = deadline;
     }
     if (minDeadline != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.minDeadline = minDeadline;
     }
     if (operationDeadline != null) {
@@ -254,15 +255,19 @@ class BackendRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDeadline() => clearField(3);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.double get minDeadline => $_getN(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   set minDeadline($core.double v) {
     $_setDouble(3, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.bool hasMinDeadline() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   void clearMinDeadline() => clearField(4);
 

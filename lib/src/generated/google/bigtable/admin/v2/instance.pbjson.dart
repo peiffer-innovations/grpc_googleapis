@@ -55,10 +55,23 @@ const Instance$json = const {
       '8': const {},
       '10': 'createTime'
     },
+    const {
+      '1': 'satisfies_pzs',
+      '3': 8,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '9': 0,
+      '10': 'satisfiesPzs',
+      '17': true
+    },
   ],
   '3': const [Instance_LabelsEntry$json],
   '4': const [Instance_State$json, Instance_Type$json],
   '7': const {},
+  '8': const [
+    const {'1': '_satisfies_pzs'},
+  ],
 };
 
 @$core.Deprecated('Use instanceDescriptor instead')
@@ -93,7 +106,7 @@ const Instance_Type$json = const {
 
 /// Descriptor for `Instance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List instanceDescriptor = $convert.base64Decode(
-    'CghJbnN0YW5jZRISCgRuYW1lGAEgASgJUgRuYW1lEiYKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECUgtkaXNwbGF5TmFtZRI+CgVzdGF0ZRgDIAEoDjIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5TdGF0ZVIFc3RhdGUSOwoEdHlwZRgEIAEoDjInLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5UeXBlUgR0eXBlEkYKBmxhYmVscxgFIAMoCzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5MYWJlbHNFbnRyeVIGbGFiZWxzEkAKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiNQoFU3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACIj0KBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg4KClBST0RVQ1RJT04QARIPCgtERVZFTE9QTUVOVBACOlPqQVAKJWJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USJ3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfQ==');
+    'CghJbnN0YW5jZRISCgRuYW1lGAEgASgJUgRuYW1lEiYKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECUgtkaXNwbGF5TmFtZRI+CgVzdGF0ZRgDIAEoDjIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5TdGF0ZVIFc3RhdGUSOwoEdHlwZRgEIAEoDjInLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5UeXBlUgR0eXBlEkYKBmxhYmVscxgFIAMoCzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5MYWJlbHNFbnRyeVIGbGFiZWxzEkAKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEi0KDXNhdGlzZmllc19wenMYCCABKAhCA+BBA0gAUgxzYXRpc2ZpZXNQenOIAQEaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASI1CgVTdGF0ZRITCg9TVEFURV9OT1RfS05PV04QABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAIiPQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDgoKUFJPRFVDVElPThABEg8KC0RFVkVMT1BNRU5UEAI6U+pBUAolYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9QhAKDl9zYXRpc2ZpZXNfcHpz');
 @$core.Deprecated('Use autoscalingTargetsDescriptor instead')
 const AutoscalingTargets$json = const {
   '1': 'AutoscalingTargets',

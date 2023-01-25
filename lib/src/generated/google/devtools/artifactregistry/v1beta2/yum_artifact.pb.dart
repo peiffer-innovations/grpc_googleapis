@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../rpc/status.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $0;
 
 import 'yum_artifact.pbenum.dart';
 
@@ -360,18 +360,18 @@ class ImportYumArtifactsErrorInfo extends $pb.GeneratedMessage {
             ? ''
             : 'gcsSource',
         subBuilder: ImportYumArtifactsGcsSource.create)
-    ..aOM<$2.Status>(
+    ..aOM<$0.Status>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'error',
-        subBuilder: $2.Status.create)
+        subBuilder: $0.Status.create)
     ..hasRequiredFields = false;
 
   ImportYumArtifactsErrorInfo._() : super();
   factory ImportYumArtifactsErrorInfo({
     ImportYumArtifactsGcsSource? gcsSource,
-    $2.Status? error,
+    $0.Status? error,
   }) {
     final _result = create();
     if (gcsSource != null) {
@@ -432,9 +432,9 @@ class ImportYumArtifactsErrorInfo extends $pb.GeneratedMessage {
   ImportYumArtifactsGcsSource ensureGcsSource() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $2.Status get error => $_getN(1);
+  $0.Status get error => $_getN(1);
   @$pb.TagNumber(2)
-  set error($2.Status v) {
+  set error($0.Status v) {
     setField(2, v);
   }
 
@@ -443,7 +443,7 @@ class ImportYumArtifactsErrorInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearError() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Status ensureError() => $_ensure(1);
+  $0.Status ensureError() => $_ensure(1);
 }
 
 class ImportYumArtifactsResponse extends $pb.GeneratedMessage {

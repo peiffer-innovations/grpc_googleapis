@@ -49,6 +49,23 @@ const Schema$json = const {
       '10': 'type'
     },
     const {'1': 'definition', '3': 3, '4': 1, '5': 9, '10': 'definition'},
+    const {
+      '1': 'revision_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'revisionId'
+    },
+    const {
+      '1': 'revision_create_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'revisionCreateTime'
+    },
   ],
   '4': const [Schema_Type$json],
   '7': const {},
@@ -66,7 +83,7 @@ const Schema_Type$json = const {
 
 /// Descriptor for `Schema`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List schemaDescriptor = $convert.base64Decode(
-    'CgZTY2hlbWESFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjEKBHR5cGUYAiABKA4yHS5nb29nbGUucHVic3ViLnYxLlNjaGVtYS5UeXBlUgR0eXBlEh4KCmRlZmluaXRpb24YAyABKAlSCmRlZmluaXRpb24iOwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASEwoPUFJPVE9DT0xfQlVGRkVSEAESCAoEQVZSTxACOkbqQUMKHHB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TY2hlbWESI3Byb2plY3RzL3twcm9qZWN0fS9zY2hlbWFzL3tzY2hlbWF9');
+    'CgZTY2hlbWESFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjEKBHR5cGUYAiABKA4yHS5nb29nbGUucHVic3ViLnYxLlNjaGVtYS5UeXBlUgR0eXBlEh4KCmRlZmluaXRpb24YAyABKAlSCmRlZmluaXRpb24SJwoLcmV2aXNpb25faWQYBCABKAlCBuBBBeBBA1IKcmV2aXNpb25JZBJRChRyZXZpc2lvbl9jcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IScmV2aXNpb25DcmVhdGVUaW1lIjsKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhMKD1BST1RPQ09MX0JVRkZFUhABEggKBEFWUk8QAjpG6kFDChxwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU2NoZW1hEiNwcm9qZWN0cy97cHJvamVjdH0vc2NoZW1hcy97c2NoZW1hfQ==');
 @$core.Deprecated('Use createSchemaRequestDescriptor instead')
 const CreateSchemaRequest$json = const {
   '1': 'CreateSchemaRequest',
@@ -167,6 +184,113 @@ const ListSchemasResponse$json = const {
 /// Descriptor for `ListSchemasResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listSchemasResponseDescriptor = $convert.base64Decode(
     'ChNMaXN0U2NoZW1hc1Jlc3BvbnNlEjIKB3NjaGVtYXMYASADKAsyGC5nb29nbGUucHVic3ViLnYxLlNjaGVtYVIHc2NoZW1hcxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+@$core.Deprecated('Use listSchemaRevisionsRequestDescriptor instead')
+const ListSchemaRevisionsRequest$json = const {
+  '1': 'ListSchemaRevisionsRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.pubsub.v1.SchemaView',
+      '10': 'view'
+    },
+    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListSchemaRevisionsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSchemaRevisionsRequestDescriptor =
+    $convert.base64Decode(
+        'ChpMaXN0U2NoZW1hUmV2aXNpb25zUmVxdWVzdBI4CgRuYW1lGAEgASgJQiTgQQL6QR4KHHB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TY2hlbWFSBG5hbWUSMAoEdmlldxgCIAEoDjIcLmdvb2dsZS5wdWJzdWIudjEuU2NoZW1hVmlld1IEdmlldxIbCglwYWdlX3NpemUYAyABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YBCABKAlSCXBhZ2VUb2tlbg==');
+@$core.Deprecated('Use listSchemaRevisionsResponseDescriptor instead')
+const ListSchemaRevisionsResponse$json = const {
+  '1': 'ListSchemaRevisionsResponse',
+  '2': const [
+    const {
+      '1': 'schemas',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.pubsub.v1.Schema',
+      '10': 'schemas'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListSchemaRevisionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSchemaRevisionsResponseDescriptor =
+    $convert.base64Decode(
+        'ChtMaXN0U2NoZW1hUmV2aXNpb25zUmVzcG9uc2USMgoHc2NoZW1hcxgBIAMoCzIYLmdvb2dsZS5wdWJzdWIudjEuU2NoZW1hUgdzY2hlbWFzEiYKD25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');
+@$core.Deprecated('Use commitSchemaRequestDescriptor instead')
+const CommitSchemaRequest$json = const {
+  '1': 'CommitSchemaRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'schema',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.Schema',
+      '8': const {},
+      '10': 'schema'
+    },
+  ],
+};
+
+/// Descriptor for `CommitSchemaRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List commitSchemaRequestDescriptor = $convert.base64Decode(
+    'ChNDb21taXRTY2hlbWFSZXF1ZXN0EjgKBG5hbWUYASABKAlCJOBBAvpBHgoccHVic3ViLmdvb2dsZWFwaXMuY29tL1NjaGVtYVIEbmFtZRI1CgZzY2hlbWEYAiABKAsyGC5nb29nbGUucHVic3ViLnYxLlNjaGVtYUID4EECUgZzY2hlbWE=');
+@$core.Deprecated('Use rollbackSchemaRequestDescriptor instead')
+const RollbackSchemaRequest$json = const {
+  '1': 'RollbackSchemaRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'revision_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'revisionId'
+    },
+  ],
+};
+
+/// Descriptor for `RollbackSchemaRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rollbackSchemaRequestDescriptor = $convert.base64Decode(
+    'ChVSb2xsYmFja1NjaGVtYVJlcXVlc3QSOAoEbmFtZRgBIAEoCUIk4EEC+kEeChxwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU2NoZW1hUgRuYW1lEiQKC3JldmlzaW9uX2lkGAIgASgJQgPgQQJSCnJldmlzaW9uSWQ=');
+@$core.Deprecated('Use deleteSchemaRevisionRequestDescriptor instead')
+const DeleteSchemaRevisionRequest$json = const {
+  '1': 'DeleteSchemaRevisionRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+    const {
+      '1': 'revision_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'revisionId'
+    },
+  ],
+};
+
+/// Descriptor for `DeleteSchemaRevisionRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteSchemaRevisionRequestDescriptor =
+    $convert.base64Decode(
+        'ChtEZWxldGVTY2hlbWFSZXZpc2lvblJlcXVlc3QSOAoEbmFtZRgBIAEoCUIk4EEC+kEeChxwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU2NoZW1hUgRuYW1lEiQKC3JldmlzaW9uX2lkGAIgASgJQgPgQQJSCnJldmlzaW9uSWQ=');
 @$core.Deprecated('Use deleteSchemaRequestDescriptor instead')
 const DeleteSchemaRequest$json = const {
   '1': 'DeleteSchemaRequest',

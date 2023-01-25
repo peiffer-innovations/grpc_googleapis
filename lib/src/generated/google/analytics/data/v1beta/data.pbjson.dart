@@ -762,6 +762,15 @@ const ResponseMetaData$json = const {
       '10': 'emptyReason',
       '17': true
     },
+    const {
+      '1': 'subject_to_thresholding',
+      '3': 8,
+      '4': 1,
+      '5': 8,
+      '9': 4,
+      '10': 'subjectToThresholding',
+      '17': true
+    },
   ],
   '3': const [ResponseMetaData_SchemaRestrictionResponse$json],
   '8': const [
@@ -769,6 +778,7 @@ const ResponseMetaData$json = const {
     const {'1': '_currency_code'},
     const {'1': '_time_zone'},
     const {'1': '_empty_reason'},
+    const {'1': '_subject_to_thresholding'},
   ],
 };
 
@@ -821,7 +831,7 @@ const ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction$json =
 
 /// Descriptor for `ResponseMetaData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List responseMetaDataDescriptor = $convert.base64Decode(
-    'ChBSZXNwb25zZU1ldGFEYXRhEjYKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCFIUZGF0YUxvc3NGcm9tT3RoZXJSb3cSjQEKG3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlSABSGXNjaGVtYVJlc3RyaWN0aW9uUmVzcG9uc2WIAQESKAoNY3VycmVuY3lfY29kZRgFIAEoCUgBUgxjdXJyZW5jeUNvZGWIAQESIAoJdGltZV96b25lGAYgASgJSAJSCHRpbWVab25liAEBEiYKDGVtcHR5X3JlYXNvbhgHIAEoCUgDUgtlbXB0eVJlYXNvbogBARr6AgoZU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZRKeAQoaYWN0aXZlX21ldHJpY19yZXN0cmljdGlvbnMYASADKAsyYC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZS5BY3RpdmVNZXRyaWNSZXN0cmljdGlvblIYYWN0aXZlTWV0cmljUmVzdHJpY3Rpb25zGrsBChdBY3RpdmVNZXRyaWNSZXN0cmljdGlvbhIkCgttZXRyaWNfbmFtZRgBIAEoCUgAUgptZXRyaWNOYW1liAEBEmoKF3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlwZVIVcmVzdHJpY3RlZE1ldHJpY1R5cGVzQg4KDF9tZXRyaWNfbmFtZUIeChxfc2NoZW1hX3Jlc3RyaWN0aW9uX3Jlc3BvbnNlQhAKDl9jdXJyZW5jeV9jb2RlQgwKCl90aW1lX3pvbmVCDwoNX2VtcHR5X3JlYXNvbg==');
+    'ChBSZXNwb25zZU1ldGFEYXRhEjYKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCFIUZGF0YUxvc3NGcm9tT3RoZXJSb3cSjQEKG3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlSABSGXNjaGVtYVJlc3RyaWN0aW9uUmVzcG9uc2WIAQESKAoNY3VycmVuY3lfY29kZRgFIAEoCUgBUgxjdXJyZW5jeUNvZGWIAQESIAoJdGltZV96b25lGAYgASgJSAJSCHRpbWVab25liAEBEiYKDGVtcHR5X3JlYXNvbhgHIAEoCUgDUgtlbXB0eVJlYXNvbogBARI7ChdzdWJqZWN0X3RvX3RocmVzaG9sZGluZxgIIAEoCEgEUhVzdWJqZWN0VG9UaHJlc2hvbGRpbmeIAQEa+gIKGVNjaGVtYVJlc3RyaWN0aW9uUmVzcG9uc2USngEKGmFjdGl2ZV9tZXRyaWNfcmVzdHJpY3Rpb25zGAEgAygLMmAuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXNwb25zZU1ldGFEYXRhLlNjaGVtYVJlc3RyaWN0aW9uUmVzcG9uc2UuQWN0aXZlTWV0cmljUmVzdHJpY3Rpb25SGGFjdGl2ZU1ldHJpY1Jlc3RyaWN0aW9ucxq7AQoXQWN0aXZlTWV0cmljUmVzdHJpY3Rpb24SJAoLbWV0cmljX25hbWUYASABKAlIAFIKbWV0cmljTmFtZYgBARJqChdyZXN0cmljdGVkX21ldHJpY190eXBlcxgCIAMoDjIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzdHJpY3RlZE1ldHJpY1R5cGVSFXJlc3RyaWN0ZWRNZXRyaWNUeXBlc0IOCgxfbWV0cmljX25hbWVCHgocX3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZUIQCg5fY3VycmVuY3lfY29kZUIMCgpfdGltZV96b25lQg8KDV9lbXB0eV9yZWFzb25CGgoYX3N1YmplY3RfdG9fdGhyZXNob2xkaW5n');
 @$core.Deprecated('Use dimensionHeaderDescriptor instead')
 const DimensionHeader$json = const {
   '1': 'DimensionHeader',
@@ -1016,12 +1026,20 @@ const PropertyQuota$json = const {
       '6': '.google.analytics.data.v1beta.QuotaStatus',
       '10': 'potentiallyThresholdedRequestsPerHour'
     },
+    const {
+      '1': 'tokens_per_project_per_hour',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.data.v1beta.QuotaStatus',
+      '10': 'tokensPerProjectPerHour'
+    },
   ],
 };
 
 /// Descriptor for `PropertyQuota`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List propertyQuotaDescriptor = $convert.base64Decode(
-    'Cg1Qcm9wZXJ0eVF1b3RhEk8KDnRva2Vuc19wZXJfZGF5GAEgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1c1IMdG9rZW5zUGVyRGF5ElEKD3Rva2Vuc19wZXJfaG91chgCIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXNSDXRva2Vuc1BlckhvdXISWgoTY29uY3VycmVudF9yZXF1ZXN0cxgDIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXNSEmNvbmN1cnJlbnRSZXF1ZXN0cxJ0CiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAQgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1c1Idc2VydmVyRXJyb3JzUGVyUHJvamVjdFBlckhvdXISgwEKKXBvdGVudGlhbGx5X3RocmVzaG9sZGVkX3JlcXVlc3RzX3Blcl9ob3VyGAUgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1c1IlcG90ZW50aWFsbHlUaHJlc2hvbGRlZFJlcXVlc3RzUGVySG91cg==');
+    'Cg1Qcm9wZXJ0eVF1b3RhEk8KDnRva2Vuc19wZXJfZGF5GAEgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1c1IMdG9rZW5zUGVyRGF5ElEKD3Rva2Vuc19wZXJfaG91chgCIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXNSDXRva2Vuc1BlckhvdXISWgoTY29uY3VycmVudF9yZXF1ZXN0cxgDIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXNSEmNvbmN1cnJlbnRSZXF1ZXN0cxJ0CiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAQgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1c1Idc2VydmVyRXJyb3JzUGVyUHJvamVjdFBlckhvdXISgwEKKXBvdGVudGlhbGx5X3RocmVzaG9sZGVkX3JlcXVlc3RzX3Blcl9ob3VyGAUgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1c1IlcG90ZW50aWFsbHlUaHJlc2hvbGRlZFJlcXVlc3RzUGVySG91chJnCht0b2tlbnNfcGVyX3Byb2plY3RfcGVyX2hvdXIYBiABKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzUhd0b2tlbnNQZXJQcm9qZWN0UGVySG91cg==');
 @$core.Deprecated('Use quotaStatusDescriptor instead')
 const QuotaStatus$json = const {
   '1': 'QuotaStatus',

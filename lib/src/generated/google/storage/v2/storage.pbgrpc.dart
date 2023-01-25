@@ -94,6 +94,12 @@ class StorageClient extends $grpc.Client {
           '/google.storage.v2.Storage/DeleteObject',
           ($2.DeleteObjectRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$cancelResumableWrite = $grpc.ClientMethod<
+          $2.CancelResumableWriteRequest, $2.CancelResumableWriteResponse>(
+      '/google.storage.v2.Storage/CancelResumableWrite',
+      ($2.CancelResumableWriteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $2.CancelResumableWriteResponse.fromBuffer(value));
   static final _$getObject = $grpc.ClientMethod<$2.GetObjectRequest, $2.Object>(
       '/google.storage.v2.Storage/GetObject',
       ($2.GetObjectRequest value) => value.writeToBuffer(),
@@ -260,6 +266,12 @@ class StorageClient extends $grpc.Client {
   $grpc.ResponseFuture<$3.Empty> deleteObject($2.DeleteObjectRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteObject, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.CancelResumableWriteResponse> cancelResumableWrite(
+      $2.CancelResumableWriteRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$cancelResumableWrite, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Object> getObject($2.GetObjectRequest request,
@@ -475,6 +487,15 @@ abstract class StorageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.DeleteObjectRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CancelResumableWriteRequest,
+            $2.CancelResumableWriteResponse>(
+        'CancelResumableWrite',
+        cancelResumableWrite_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.CancelResumableWriteRequest.fromBuffer(value),
+        ($2.CancelResumableWriteResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetObjectRequest, $2.Object>(
         'GetObject',
         getObject_Pre,
@@ -670,6 +691,12 @@ abstract class StorageServiceBase extends $grpc.Service {
     return deleteObject(call, await request);
   }
 
+  $async.Future<$2.CancelResumableWriteResponse> cancelResumableWrite_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.CancelResumableWriteRequest> request) async {
+    return cancelResumableWrite(call, await request);
+  }
+
   $async.Future<$2.Object> getObject_Pre($grpc.ServiceCall call,
       $async.Future<$2.GetObjectRequest> request) async {
     return getObject(call, await request);
@@ -769,6 +796,8 @@ abstract class StorageServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ComposeObjectRequest request);
   $async.Future<$3.Empty> deleteObject(
       $grpc.ServiceCall call, $2.DeleteObjectRequest request);
+  $async.Future<$2.CancelResumableWriteResponse> cancelResumableWrite(
+      $grpc.ServiceCall call, $2.CancelResumableWriteRequest request);
   $async.Future<$2.Object> getObject(
       $grpc.ServiceCall call, $2.GetObjectRequest request);
   $async.Stream<$2.ReadObjectResponse> readObject(

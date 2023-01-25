@@ -91,6 +91,16 @@ class IAMClient extends $grpc.Client {
           '/google.iam.admin.v1.IAM/DeleteServiceAccountKey',
           ($2.DeleteServiceAccountKeyRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$disableServiceAccountKey =
+      $grpc.ClientMethod<$2.DisableServiceAccountKeyRequest, $3.Empty>(
+          '/google.iam.admin.v1.IAM/DisableServiceAccountKey',
+          ($2.DisableServiceAccountKeyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$enableServiceAccountKey =
+      $grpc.ClientMethod<$2.EnableServiceAccountKeyRequest, $3.Empty>(
+          '/google.iam.admin.v1.IAM/EnableServiceAccountKey',
+          ($2.EnableServiceAccountKeyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
   static final _$signBlob =
       $grpc.ClientMethod<$2.SignBlobRequest, $2.SignBlobResponse>(
           '/google.iam.admin.v1.IAM/SignBlob',
@@ -263,6 +273,20 @@ class IAMClient extends $grpc.Client {
       $2.DeleteServiceAccountKeyRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteServiceAccountKey, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> disableServiceAccountKey(
+      $2.DisableServiceAccountKeyRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$disableServiceAccountKey, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> enableServiceAccountKey(
+      $2.EnableServiceAccountKeyRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$enableServiceAccountKey, request,
         options: options);
   }
 
@@ -474,6 +498,23 @@ abstract class IAMServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.DeleteServiceAccountKeyRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.DisableServiceAccountKeyRequest, $3.Empty>(
+            'DisableServiceAccountKey',
+            disableServiceAccountKey_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.DisableServiceAccountKeyRequest.fromBuffer(value),
+            ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.EnableServiceAccountKeyRequest, $3.Empty>(
+        'EnableServiceAccountKey',
+        enableServiceAccountKey_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.EnableServiceAccountKeyRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.SignBlobRequest, $2.SignBlobResponse>(
         'SignBlob',
         signBlob_Pre,
@@ -670,6 +711,16 @@ abstract class IAMServiceBase extends $grpc.Service {
     return deleteServiceAccountKey(call, await request);
   }
 
+  $async.Future<$3.Empty> disableServiceAccountKey_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DisableServiceAccountKeyRequest> request) async {
+    return disableServiceAccountKey(call, await request);
+  }
+
+  $async.Future<$3.Empty> enableServiceAccountKey_Pre($grpc.ServiceCall call,
+      $async.Future<$2.EnableServiceAccountKeyRequest> request) async {
+    return enableServiceAccountKey(call, await request);
+  }
+
   $async.Future<$2.SignBlobResponse> signBlob_Pre(
       $grpc.ServiceCall call, $async.Future<$2.SignBlobRequest> request) async {
     return signBlob(call, await request);
@@ -777,6 +828,10 @@ abstract class IAMServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.UploadServiceAccountKeyRequest request);
   $async.Future<$3.Empty> deleteServiceAccountKey(
       $grpc.ServiceCall call, $2.DeleteServiceAccountKeyRequest request);
+  $async.Future<$3.Empty> disableServiceAccountKey(
+      $grpc.ServiceCall call, $2.DisableServiceAccountKeyRequest request);
+  $async.Future<$3.Empty> enableServiceAccountKey(
+      $grpc.ServiceCall call, $2.EnableServiceAccountKeyRequest request);
   $async.Future<$2.SignBlobResponse> signBlob(
       $grpc.ServiceCall call, $2.SignBlobRequest request);
   $async.Future<$2.SignJwtResponse> signJwt(

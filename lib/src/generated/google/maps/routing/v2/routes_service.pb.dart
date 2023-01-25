@@ -121,6 +121,26 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         defaultOrMaker: $10.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
         valueOf: $10.PolylineEncoding.valueOf,
         enumValues: $10.PolylineEncoding.values)
+    ..pc<ComputeRoutesRequest_ReferenceRoute>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requestedReferenceRoutes',
+        $pb.PbFieldType.KE,
+        valueOf: ComputeRoutesRequest_ReferenceRoute.valueOf,
+        enumValues: ComputeRoutesRequest_ReferenceRoute.values,
+        defaultEnumValue:
+            ComputeRoutesRequest_ReferenceRoute.REFERENCE_ROUTE_UNSPECIFIED)
+    ..pc<ComputeRoutesRequest_ExtraComputation>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'extraComputations',
+        $pb.PbFieldType.KE,
+        valueOf: ComputeRoutesRequest_ExtraComputation.valueOf,
+        enumValues: ComputeRoutesRequest_ExtraComputation.values,
+        defaultEnumValue:
+            ComputeRoutesRequest_ExtraComputation.EXTRA_COMPUTATION_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   ComputeRoutesRequest._() : super();
@@ -137,6 +157,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     $core.String? languageCode,
     $11.Units? units,
     $10.PolylineEncoding? polylineEncoding,
+    $core.Iterable<ComputeRoutesRequest_ReferenceRoute>?
+        requestedReferenceRoutes,
+    $core.Iterable<ComputeRoutesRequest_ExtraComputation>? extraComputations,
   }) {
     final _result = create();
     if (origin != null) {
@@ -174,6 +197,12 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     }
     if (polylineEncoding != null) {
       _result.polylineEncoding = polylineEncoding;
+    }
+    if (requestedReferenceRoutes != null) {
+      _result.requestedReferenceRoutes.addAll(requestedReferenceRoutes);
+    }
+    if (extraComputations != null) {
+      _result.extraComputations.addAll(extraComputations);
     }
     return _result;
   }
@@ -347,6 +376,14 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   $core.bool hasPolylineEncoding() => $_has(11);
   @$pb.TagNumber(12)
   void clearPolylineEncoding() => clearField(12);
+
+  @$pb.TagNumber(14)
+  $core.List<ComputeRoutesRequest_ReferenceRoute>
+      get requestedReferenceRoutes => $_getList(12);
+
+  @$pb.TagNumber(15)
+  $core.List<ComputeRoutesRequest_ExtraComputation> get extraComputations =>
+      $_getList(13);
 }
 
 class ComputeRoutesResponse extends $pb.GeneratedMessage {
@@ -483,6 +520,16 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
             ? ''
             : 'departureTime',
         subBuilder: $2.Timestamp.create)
+    ..pc<ComputeRouteMatrixRequest_ExtraComputation>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'extraComputations',
+        $pb.PbFieldType.KE,
+        valueOf: ComputeRouteMatrixRequest_ExtraComputation.valueOf,
+        enumValues: ComputeRouteMatrixRequest_ExtraComputation.values,
+        defaultEnumValue: ComputeRouteMatrixRequest_ExtraComputation
+            .EXTRA_COMPUTATION_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   ComputeRouteMatrixRequest._() : super();
@@ -492,6 +539,8 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
     $8.RouteTravelMode? travelMode,
     $9.RoutingPreference? routingPreference,
     $2.Timestamp? departureTime,
+    $core.Iterable<ComputeRouteMatrixRequest_ExtraComputation>?
+        extraComputations,
   }) {
     final _result = create();
     if (origins != null) {
@@ -508,6 +557,9 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
     }
     if (departureTime != null) {
       _result.departureTime = departureTime;
+    }
+    if (extraComputations != null) {
+      _result.extraComputations.addAll(extraComputations);
     }
     return _result;
   }
@@ -583,6 +635,10 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   void clearDepartureTime() => clearField(5);
   @$pb.TagNumber(5)
   $2.Timestamp ensureDepartureTime() => $_ensure(4);
+
+  @$pb.TagNumber(8)
+  $core.List<ComputeRouteMatrixRequest_ExtraComputation>
+      get extraComputations => $_getList(5);
 }
 
 class RouteMatrixOrigin extends $pb.GeneratedMessage {

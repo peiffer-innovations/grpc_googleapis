@@ -9,6 +9,203 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class TransformationResultStatusType extends $pb.ProtobufEnum {
+  static const TransformationResultStatusType STATE_TYPE_UNSPECIFIED =
+      TransformationResultStatusType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STATE_TYPE_UNSPECIFIED');
+  static const TransformationResultStatusType INVALID_TRANSFORM =
+      TransformationResultStatusType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'INVALID_TRANSFORM');
+  static const TransformationResultStatusType BIGQUERY_MAX_ROW_SIZE_EXCEEDED =
+      TransformationResultStatusType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BIGQUERY_MAX_ROW_SIZE_EXCEEDED');
+  static const TransformationResultStatusType METADATA_UNRETRIEVABLE =
+      TransformationResultStatusType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'METADATA_UNRETRIEVABLE');
+  static const TransformationResultStatusType SUCCESS =
+      TransformationResultStatusType._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SUCCESS');
+
+  static const $core.List<TransformationResultStatusType> values =
+      <TransformationResultStatusType>[
+    STATE_TYPE_UNSPECIFIED,
+    INVALID_TRANSFORM,
+    BIGQUERY_MAX_ROW_SIZE_EXCEEDED,
+    METADATA_UNRETRIEVABLE,
+    SUCCESS,
+  ];
+
+  static final $core.Map<$core.int, TransformationResultStatusType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static TransformationResultStatusType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const TransformationResultStatusType._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class TransformationContainerType extends $pb.ProtobufEnum {
+  static const TransformationContainerType TRANSFORM_UNKNOWN_CONTAINER =
+      TransformationContainerType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TRANSFORM_UNKNOWN_CONTAINER');
+  static const TransformationContainerType TRANSFORM_BODY =
+      TransformationContainerType._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TRANSFORM_BODY');
+  static const TransformationContainerType TRANSFORM_METADATA =
+      TransformationContainerType._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TRANSFORM_METADATA');
+  static const TransformationContainerType TRANSFORM_TABLE =
+      TransformationContainerType._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TRANSFORM_TABLE');
+
+  static const $core.List<TransformationContainerType> values =
+      <TransformationContainerType>[
+    TRANSFORM_UNKNOWN_CONTAINER,
+    TRANSFORM_BODY,
+    TRANSFORM_METADATA,
+    TRANSFORM_TABLE,
+  ];
+
+  static final $core.Map<$core.int, TransformationContainerType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static TransformationContainerType? valueOf($core.int value) =>
+      _byValue[value];
+
+  const TransformationContainerType._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class TransformationType extends $pb.ProtobufEnum {
+  static const TransformationType TRANSFORMATION_TYPE_UNSPECIFIED =
+      TransformationType._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TRANSFORMATION_TYPE_UNSPECIFIED');
+  static const TransformationType RECORD_SUPPRESSION = TransformationType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RECORD_SUPPRESSION');
+  static const TransformationType REPLACE_VALUE = TransformationType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REPLACE_VALUE');
+  static const TransformationType REPLACE_DICTIONARY = TransformationType._(
+      15,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REPLACE_DICTIONARY');
+  static const TransformationType REDACT = TransformationType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REDACT');
+  static const TransformationType CHARACTER_MASK = TransformationType._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CHARACTER_MASK');
+  static const TransformationType CRYPTO_REPLACE_FFX_FPE = TransformationType._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CRYPTO_REPLACE_FFX_FPE');
+  static const TransformationType FIXED_SIZE_BUCKETING = TransformationType._(
+      6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'FIXED_SIZE_BUCKETING');
+  static const TransformationType BUCKETING = TransformationType._(
+      7,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'BUCKETING');
+  static const TransformationType REPLACE_WITH_INFO_TYPE = TransformationType._(
+      8,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REPLACE_WITH_INFO_TYPE');
+  static const TransformationType TIME_PART = TransformationType._(
+      9,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TIME_PART');
+  static const TransformationType CRYPTO_HASH = TransformationType._(
+      10,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CRYPTO_HASH');
+  static const TransformationType DATE_SHIFT = TransformationType._(
+      12,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DATE_SHIFT');
+  static const TransformationType CRYPTO_DETERMINISTIC_CONFIG =
+      TransformationType._(
+          13,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CRYPTO_DETERMINISTIC_CONFIG');
+  static const TransformationType REDACT_IMAGE = TransformationType._(
+      14,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'REDACT_IMAGE');
+
+  static const $core.List<TransformationType> values = <TransformationType>[
+    TRANSFORMATION_TYPE_UNSPECIFIED,
+    RECORD_SUPPRESSION,
+    REPLACE_VALUE,
+    REPLACE_DICTIONARY,
+    REDACT,
+    CHARACTER_MASK,
+    CRYPTO_REPLACE_FFX_FPE,
+    FIXED_SIZE_BUCKETING,
+    BUCKETING,
+    REPLACE_WITH_INFO_TYPE,
+    TIME_PART,
+    CRYPTO_HASH,
+    DATE_SHIFT,
+    CRYPTO_DETERMINISTIC_CONFIG,
+    REDACT_IMAGE,
+  ];
+
+  static final $core.Map<$core.int, TransformationType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static TransformationType? valueOf($core.int value) => _byValue[value];
+
+  const TransformationType._($core.int v, $core.String n) : super(v, n);
+}
+
 class RelationalOperator extends $pb.ProtobufEnum {
   static const RelationalOperator RELATIONAL_OPERATOR_UNSPECIFIED =
       RelationalOperator._(
@@ -739,6 +936,12 @@ class InfoTypeCategory_LocationCategory extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'INTERNAL');
+  static const InfoTypeCategory_LocationCategory NEW_ZEALAND =
+      InfoTypeCategory_LocationCategory._(
+          41,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'NEW_ZEALAND');
 
   static const $core.List<InfoTypeCategory_LocationCategory> values =
       <InfoTypeCategory_LocationCategory>[
@@ -783,6 +986,7 @@ class InfoTypeCategory_LocationCategory extends $pb.ProtobufEnum {
     URUGUAY,
     VENEZUELA,
     INTERNAL,
+    NEW_ZEALAND,
   ];
 
   static final $core.Map<$core.int, InfoTypeCategory_LocationCategory>
@@ -1328,49 +1532,6 @@ class DlpJob_JobState extends $pb.ProtobufEnum {
   static DlpJob_JobState? valueOf($core.int value) => _byValue[value];
 
   const DlpJob_JobState._($core.int v, $core.String n) : super(v, n);
-}
-
-class SensitivityScore_SensitivityScoreLevel extends $pb.ProtobufEnum {
-  static const SensitivityScore_SensitivityScoreLevel
-      SENSITIVITY_SCORE_UNSPECIFIED = SensitivityScore_SensitivityScoreLevel._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SENSITIVITY_SCORE_UNSPECIFIED');
-  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_LOW =
-      SensitivityScore_SensitivityScoreLevel._(
-          10,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SENSITIVITY_LOW');
-  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_MODERATE =
-      SensitivityScore_SensitivityScoreLevel._(
-          20,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SENSITIVITY_MODERATE');
-  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_HIGH =
-      SensitivityScore_SensitivityScoreLevel._(
-          30,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SENSITIVITY_HIGH');
-
-  static const $core.List<SensitivityScore_SensitivityScoreLevel> values =
-      <SensitivityScore_SensitivityScoreLevel>[
-    SENSITIVITY_SCORE_UNSPECIFIED,
-    SENSITIVITY_LOW,
-    SENSITIVITY_MODERATE,
-    SENSITIVITY_HIGH,
-  ];
-
-  static final $core.Map<$core.int, SensitivityScore_SensitivityScoreLevel>
-      _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SensitivityScore_SensitivityScoreLevel? valueOf($core.int value) =>
-      _byValue[value];
-
-  const SensitivityScore_SensitivityScoreLevel._($core.int v, $core.String n)
-      : super(v, n);
 }
 
 class DataRiskLevel_DataRiskLevelScore extends $pb.ProtobufEnum {

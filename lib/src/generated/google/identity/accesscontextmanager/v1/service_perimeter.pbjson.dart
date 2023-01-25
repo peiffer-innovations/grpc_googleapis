@@ -127,12 +127,12 @@ const ServicePerimeterConfig$json = const {
     ServicePerimeterConfig_MethodSelector$json,
     ServicePerimeterConfig_ApiOperation$json,
     ServicePerimeterConfig_IngressSource$json,
-    ServicePerimeterConfig_EgressTo$json,
     ServicePerimeterConfig_IngressFrom$json,
     ServicePerimeterConfig_IngressTo$json,
     ServicePerimeterConfig_IngressPolicy$json,
-    ServicePerimeterConfig_EgressPolicy$json,
-    ServicePerimeterConfig_EgressFrom$json
+    ServicePerimeterConfig_EgressFrom$json,
+    ServicePerimeterConfig_EgressTo$json,
+    ServicePerimeterConfig_EgressPolicy$json
   ],
   '4': const [ServicePerimeterConfig_IdentityType$json],
 };
@@ -214,23 +214,6 @@ const ServicePerimeterConfig_IngressSource$json = const {
 };
 
 @$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
-const ServicePerimeterConfig_EgressTo$json = const {
-  '1': 'EgressTo',
-  '2': const [
-    const {'1': 'resources', '3': 1, '4': 3, '5': 9, '10': 'resources'},
-    const {
-      '1': 'operations',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6':
-          '.google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation',
-      '10': 'operations'
-    },
-  ],
-};
-
-@$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
 const ServicePerimeterConfig_IngressFrom$json = const {
   '1': 'IngressFrom',
   '2': const [
@@ -299,6 +282,47 @@ const ServicePerimeterConfig_IngressPolicy$json = const {
 };
 
 @$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
+const ServicePerimeterConfig_EgressFrom$json = const {
+  '1': 'EgressFrom',
+  '2': const [
+    const {'1': 'identities', '3': 1, '4': 3, '5': 9, '10': 'identities'},
+    const {
+      '1': 'identity_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IdentityType',
+      '10': 'identityType'
+    },
+  ],
+};
+
+@$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
+const ServicePerimeterConfig_EgressTo$json = const {
+  '1': 'EgressTo',
+  '2': const [
+    const {'1': 'resources', '3': 1, '4': 3, '5': 9, '10': 'resources'},
+    const {
+      '1': 'operations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation',
+      '10': 'operations'
+    },
+    const {
+      '1': 'external_resources',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '10': 'externalResources'
+    },
+  ],
+};
+
+@$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
 const ServicePerimeterConfig_EgressPolicy$json = const {
   '1': 'EgressPolicy',
   '2': const [
@@ -324,23 +348,6 @@ const ServicePerimeterConfig_EgressPolicy$json = const {
 };
 
 @$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
-const ServicePerimeterConfig_EgressFrom$json = const {
-  '1': 'EgressFrom',
-  '2': const [
-    const {'1': 'identities', '3': 1, '4': 3, '5': 9, '10': 'identities'},
-    const {
-      '1': 'identity_type',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6':
-          '.google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IdentityType',
-      '10': 'identityType'
-    },
-  ],
-};
-
-@$core.Deprecated('Use servicePerimeterConfigDescriptor instead')
 const ServicePerimeterConfig_IdentityType$json = const {
   '1': 'IdentityType',
   '2': const [
@@ -354,4 +361,4 @@ const ServicePerimeterConfig_IdentityType$json = const {
 /// Descriptor for `ServicePerimeterConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List servicePerimeterConfigDescriptor =
     $convert.base64Decode(
-        'ChZTZXJ2aWNlUGVyaW1ldGVyQ29uZmlnEhwKCXJlc291cmNlcxgBIAMoCVIJcmVzb3VyY2VzEiMKDWFjY2Vzc19sZXZlbHMYAiADKAlSDGFjY2Vzc0xldmVscxIvChNyZXN0cmljdGVkX3NlcnZpY2VzGAQgAygJUhJyZXN0cmljdGVkU2VydmljZXMSjQEKF3ZwY19hY2Nlc3NpYmxlX3NlcnZpY2VzGAogASgLMlUuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuVnBjQWNjZXNzaWJsZVNlcnZpY2VzUhV2cGNBY2Nlc3NpYmxlU2VydmljZXMSeAoQaW5ncmVzc19wb2xpY2llcxgIIAMoCzJNLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkluZ3Jlc3NQb2xpY3lSD2luZ3Jlc3NQb2xpY2llcxJ1Cg9lZ3Jlc3NfcG9saWNpZXMYCSADKAsyTC5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5FZ3Jlc3NQb2xpY3lSDmVncmVzc1BvbGljaWVzGnEKFVZwY0FjY2Vzc2libGVTZXJ2aWNlcxItChJlbmFibGVfcmVzdHJpY3Rpb24YASABKAhSEWVuYWJsZVJlc3RyaWN0aW9uEikKEGFsbG93ZWRfc2VydmljZXMYAiADKAlSD2FsbG93ZWRTZXJ2aWNlcxpUCg5NZXRob2RTZWxlY3RvchIYCgZtZXRob2QYASABKAlIAFIGbWV0aG9kEiAKCnBlcm1pc3Npb24YAiABKAlIAFIKcGVybWlzc2lvbkIGCgRraW5kGqwBCgxBcGlPcGVyYXRpb24SIQoMc2VydmljZV9uYW1lGAEgASgJUgtzZXJ2aWNlTmFtZRJ5ChBtZXRob2Rfc2VsZWN0b3JzGAIgAygLMk4uZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuTWV0aG9kU2VsZWN0b3JSD21ldGhvZFNlbGVjdG9ycxpcCg1JbmdyZXNzU291cmNlEiMKDGFjY2Vzc19sZXZlbBgBIAEoCUgAUgthY2Nlc3NMZXZlbBIcCghyZXNvdXJjZRgCIAEoCUgAUghyZXNvdXJjZUIICgZzb3VyY2UalgEKCEVncmVzc1RvEhwKCXJlc291cmNlcxgBIAMoCVIJcmVzb3VyY2VzEmwKCm9wZXJhdGlvbnMYAiADKAsyTC5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5BcGlPcGVyYXRpb25SCm9wZXJhdGlvbnMaiQIKC0luZ3Jlc3NGcm9tEmcKB3NvdXJjZXMYASADKAsyTS5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5JbmdyZXNzU291cmNlUgdzb3VyY2VzEh4KCmlkZW50aXRpZXMYAiADKAlSCmlkZW50aXRpZXMScQoNaWRlbnRpdHlfdHlwZRgDIAEoDjJMLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLklkZW50aXR5VHlwZVIMaWRlbnRpdHlUeXBlGpcBCglJbmdyZXNzVG8SbAoKb3BlcmF0aW9ucxgBIAMoCzJMLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkFwaU9wZXJhdGlvblIKb3BlcmF0aW9ucxIcCglyZXNvdXJjZXMYAiADKAlSCXJlc291cmNlcxrpAQoNSW5ncmVzc1BvbGljeRJuCgxpbmdyZXNzX2Zyb20YASABKAsySy5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5JbmdyZXNzRnJvbVILaW5ncmVzc0Zyb20SaAoKaW5ncmVzc190bxgCIAEoCzJJLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkluZ3Jlc3NUb1IJaW5ncmVzc1RvGuIBCgxFZ3Jlc3NQb2xpY3kSawoLZWdyZXNzX2Zyb20YASABKAsySi5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5FZ3Jlc3NGcm9tUgplZ3Jlc3NGcm9tEmUKCWVncmVzc190bxgCIAEoCzJILmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkVncmVzc1RvUghlZ3Jlc3NUbxqfAQoKRWdyZXNzRnJvbRIeCgppZGVudGl0aWVzGAEgAygJUgppZGVudGl0aWVzEnEKDWlkZW50aXR5X3R5cGUYAiABKA4yTC5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5JZGVudGl0eVR5cGVSDGlkZW50aXR5VHlwZSJuCgxJZGVudGl0eVR5cGUSHQoZSURFTlRJVFlfVFlQRV9VTlNQRUNJRklFRBAAEhAKDEFOWV9JREVOVElUWRABEhQKEEFOWV9VU0VSX0FDQ09VTlQQAhIXChNBTllfU0VSVklDRV9BQ0NPVU5UEAM=');
+        'ChZTZXJ2aWNlUGVyaW1ldGVyQ29uZmlnEhwKCXJlc291cmNlcxgBIAMoCVIJcmVzb3VyY2VzEiMKDWFjY2Vzc19sZXZlbHMYAiADKAlSDGFjY2Vzc0xldmVscxIvChNyZXN0cmljdGVkX3NlcnZpY2VzGAQgAygJUhJyZXN0cmljdGVkU2VydmljZXMSjQEKF3ZwY19hY2Nlc3NpYmxlX3NlcnZpY2VzGAogASgLMlUuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuVnBjQWNjZXNzaWJsZVNlcnZpY2VzUhV2cGNBY2Nlc3NpYmxlU2VydmljZXMSeAoQaW5ncmVzc19wb2xpY2llcxgIIAMoCzJNLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkluZ3Jlc3NQb2xpY3lSD2luZ3Jlc3NQb2xpY2llcxJ1Cg9lZ3Jlc3NfcG9saWNpZXMYCSADKAsyTC5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5FZ3Jlc3NQb2xpY3lSDmVncmVzc1BvbGljaWVzGnEKFVZwY0FjY2Vzc2libGVTZXJ2aWNlcxItChJlbmFibGVfcmVzdHJpY3Rpb24YASABKAhSEWVuYWJsZVJlc3RyaWN0aW9uEikKEGFsbG93ZWRfc2VydmljZXMYAiADKAlSD2FsbG93ZWRTZXJ2aWNlcxpUCg5NZXRob2RTZWxlY3RvchIYCgZtZXRob2QYASABKAlIAFIGbWV0aG9kEiAKCnBlcm1pc3Npb24YAiABKAlIAFIKcGVybWlzc2lvbkIGCgRraW5kGqwBCgxBcGlPcGVyYXRpb24SIQoMc2VydmljZV9uYW1lGAEgASgJUgtzZXJ2aWNlTmFtZRJ5ChBtZXRob2Rfc2VsZWN0b3JzGAIgAygLMk4uZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuTWV0aG9kU2VsZWN0b3JSD21ldGhvZFNlbGVjdG9ycxpcCg1JbmdyZXNzU291cmNlEiMKDGFjY2Vzc19sZXZlbBgBIAEoCUgAUgthY2Nlc3NMZXZlbBIcCghyZXNvdXJjZRgCIAEoCUgAUghyZXNvdXJjZUIICgZzb3VyY2UaiQIKC0luZ3Jlc3NGcm9tEmcKB3NvdXJjZXMYASADKAsyTS5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5JbmdyZXNzU291cmNlUgdzb3VyY2VzEh4KCmlkZW50aXRpZXMYAiADKAlSCmlkZW50aXRpZXMScQoNaWRlbnRpdHlfdHlwZRgDIAEoDjJMLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLklkZW50aXR5VHlwZVIMaWRlbnRpdHlUeXBlGpcBCglJbmdyZXNzVG8SbAoKb3BlcmF0aW9ucxgBIAMoCzJMLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkFwaU9wZXJhdGlvblIKb3BlcmF0aW9ucxIcCglyZXNvdXJjZXMYAiADKAlSCXJlc291cmNlcxrpAQoNSW5ncmVzc1BvbGljeRJuCgxpbmdyZXNzX2Zyb20YASABKAsySy5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5JbmdyZXNzRnJvbVILaW5ncmVzc0Zyb20SaAoKaW5ncmVzc190bxgCIAEoCzJJLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkluZ3Jlc3NUb1IJaW5ncmVzc1RvGp8BCgpFZ3Jlc3NGcm9tEh4KCmlkZW50aXRpZXMYASADKAlSCmlkZW50aXRpZXMScQoNaWRlbnRpdHlfdHlwZRgCIAEoDjJMLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLklkZW50aXR5VHlwZVIMaWRlbnRpdHlUeXBlGsUBCghFZ3Jlc3NUbxIcCglyZXNvdXJjZXMYASADKAlSCXJlc291cmNlcxJsCgpvcGVyYXRpb25zGAIgAygLMkwuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuQXBpT3BlcmF0aW9uUgpvcGVyYXRpb25zEi0KEmV4dGVybmFsX3Jlc291cmNlcxgDIAMoCVIRZXh0ZXJuYWxSZXNvdXJjZXMa4gEKDEVncmVzc1BvbGljeRJrCgtlZ3Jlc3NfZnJvbRgBIAEoCzJKLmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdlci52MS5TZXJ2aWNlUGVyaW1ldGVyQ29uZmlnLkVncmVzc0Zyb21SCmVncmVzc0Zyb20SZQoJZWdyZXNzX3RvGAIgASgLMkguZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJDb25maWcuRWdyZXNzVG9SCGVncmVzc1RvIm4KDElkZW50aXR5VHlwZRIdChlJREVOVElUWV9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMQU5ZX0lERU5USVRZEAESFAoQQU5ZX1VTRVJfQUNDT1VOVBACEhcKE0FOWV9TRVJWSUNFX0FDQ09VTlQQAw==');

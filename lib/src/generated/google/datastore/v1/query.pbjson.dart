@@ -110,6 +110,75 @@ const Query$json = const {
 /// Descriptor for `Query`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryDescriptor = $convert.base64Decode(
     'CgVRdWVyeRI/Cgpwcm9qZWN0aW9uGAIgAygLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9qZWN0aW9uUgpwcm9qZWN0aW9uEjcKBGtpbmQYAyADKAsyIy5nb29nbGUuZGF0YXN0b3JlLnYxLktpbmRFeHByZXNzaW9uUgRraW5kEjMKBmZpbHRlchgEIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRmlsdGVyUgZmaWx0ZXISOAoFb3JkZXIYBSADKAsyIi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5T3JkZXJSBW9yZGVyEkcKC2Rpc3RpbmN0X29uGAYgAygLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZVIKZGlzdGluY3RPbhIhCgxzdGFydF9jdXJzb3IYByABKAxSC3N0YXJ0Q3Vyc29yEh0KCmVuZF9jdXJzb3IYCCABKAxSCWVuZEN1cnNvchIWCgZvZmZzZXQYCiABKAVSBm9mZnNldBIxCgVsaW1pdBgMIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlUgVsaW1pdA==');
+@$core.Deprecated('Use aggregationQueryDescriptor instead')
+const AggregationQuery$json = const {
+  '1': 'AggregationQuery',
+  '2': const [
+    const {
+      '1': 'nested_query',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.datastore.v1.Query',
+      '9': 0,
+      '10': 'nestedQuery'
+    },
+    const {
+      '1': 'aggregations',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.datastore.v1.AggregationQuery.Aggregation',
+      '8': const {},
+      '10': 'aggregations'
+    },
+  ],
+  '3': const [AggregationQuery_Aggregation$json],
+  '8': const [
+    const {'1': 'query_type'},
+  ],
+};
+
+@$core.Deprecated('Use aggregationQueryDescriptor instead')
+const AggregationQuery_Aggregation$json = const {
+  '1': 'Aggregation',
+  '2': const [
+    const {
+      '1': 'count',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.datastore.v1.AggregationQuery.Aggregation.Count',
+      '9': 0,
+      '10': 'count'
+    },
+    const {'1': 'alias', '3': 7, '4': 1, '5': 9, '8': const {}, '10': 'alias'},
+  ],
+  '3': const [AggregationQuery_Aggregation_Count$json],
+  '8': const [
+    const {'1': 'operator'},
+  ],
+};
+
+@$core.Deprecated('Use aggregationQueryDescriptor instead')
+const AggregationQuery_Aggregation_Count$json = const {
+  '1': 'Count',
+  '2': const [
+    const {
+      '1': 'up_to',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '8': const {},
+      '10': 'upTo'
+    },
+  ],
+};
+
+/// Descriptor for `AggregationQuery`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List aggregationQueryDescriptor = $convert.base64Decode(
+    'ChBBZ2dyZWdhdGlvblF1ZXJ5Ej8KDG5lc3RlZF9xdWVyeRgBIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuUXVlcnlIAFILbmVzdGVkUXVlcnkSWgoMYWdncmVnYXRpb25zGAMgAygLMjEuZ29vZ2xlLmRhdGFzdG9yZS52MS5BZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uQgPgQQFSDGFnZ3JlZ2F0aW9ucxrFAQoLQWdncmVnYXRpb24STwoFY291bnQYASABKAsyNy5nb29nbGUuZGF0YXN0b3JlLnYxLkFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb24uQ291bnRIAFIFY291bnQSGQoFYWxpYXMYByABKAlCA+BBAVIFYWxpYXMaPgoFQ291bnQSNQoFdXBfdG8YASABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUID4EEBUgR1cFRvQgoKCG9wZXJhdG9yQgwKCnF1ZXJ5X3R5cGU=');
 @$core.Deprecated('Use kindExpressionDescriptor instead')
 const KindExpression$json = const {
   '1': 'KindExpression',

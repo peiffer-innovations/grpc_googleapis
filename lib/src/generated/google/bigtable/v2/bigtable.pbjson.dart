@@ -39,12 +39,31 @@ const ReadRowsRequest$json = const {
       '10': 'filter'
     },
     const {'1': 'rows_limit', '3': 4, '4': 1, '5': 3, '10': 'rowsLimit'},
+    const {
+      '1': 'request_stats_view',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.bigtable.v2.ReadRowsRequest.RequestStatsView',
+      '10': 'requestStatsView'
+    },
+  ],
+  '4': const [ReadRowsRequest_RequestStatsView$json],
+};
+
+@$core.Deprecated('Use readRowsRequestDescriptor instead')
+const ReadRowsRequest_RequestStatsView$json = const {
+  '1': 'RequestStatsView',
+  '2': const [
+    const {'1': 'REQUEST_STATS_VIEW_UNSPECIFIED', '2': 0},
+    const {'1': 'REQUEST_STATS_NONE', '2': 1},
+    const {'1': 'REQUEST_STATS_FULL', '2': 2},
   ],
 };
 
 /// Descriptor for `ReadRowsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List readRowsRequestDescriptor = $convert.base64Decode(
-    'Cg9SZWFkUm93c1JlcXVlc3QSSQoKdGFibGVfbmFtZRgBIAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlUgl0YWJsZU5hbWUSJAoOYXBwX3Byb2ZpbGVfaWQYBSABKAlSDGFwcFByb2ZpbGVJZBIuCgRyb3dzGAIgASgLMhouZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd1NldFIEcm93cxI1CgZmaWx0ZXIYAyABKAsyHS5nb29nbGUuYmlndGFibGUudjIuUm93RmlsdGVyUgZmaWx0ZXISHQoKcm93c19saW1pdBgEIAEoA1IJcm93c0xpbWl0');
+    'Cg9SZWFkUm93c1JlcXVlc3QSSQoKdGFibGVfbmFtZRgBIAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlUgl0YWJsZU5hbWUSJAoOYXBwX3Byb2ZpbGVfaWQYBSABKAlSDGFwcFByb2ZpbGVJZBIuCgRyb3dzGAIgASgLMhouZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd1NldFIEcm93cxI1CgZmaWx0ZXIYAyABKAsyHS5nb29nbGUuYmlndGFibGUudjIuUm93RmlsdGVyUgZmaWx0ZXISHQoKcm93c19saW1pdBgEIAEoA1IJcm93c0xpbWl0EmIKEnJlcXVlc3Rfc3RhdHNfdmlldxgGIAEoDjI0Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1JlcXVlc3QuUmVxdWVzdFN0YXRzVmlld1IQcmVxdWVzdFN0YXRzVmlldyJmChBSZXF1ZXN0U3RhdHNWaWV3EiIKHlJFUVVFU1RfU1RBVFNfVklFV19VTlNQRUNJRklFRBAAEhYKElJFUVVFU1RfU1RBVFNfTk9ORRABEhYKElJFUVVFU1RfU1RBVFNfRlVMTBAC');
 @$core.Deprecated('Use readRowsResponseDescriptor instead')
 const ReadRowsResponse$json = const {
   '1': 'ReadRowsResponse',
@@ -63,6 +82,14 @@ const ReadRowsResponse$json = const {
       '4': 1,
       '5': 12,
       '10': 'lastScannedRowKey'
+    },
+    const {
+      '1': 'request_stats',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.RequestStats',
+      '10': 'requestStats'
     },
   ],
   '3': const [ReadRowsResponse_CellChunk$json],
@@ -116,7 +143,7 @@ const ReadRowsResponse_CellChunk$json = const {
 
 /// Descriptor for `ReadRowsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List readRowsResponseDescriptor = $convert.base64Decode(
-    'ChBSZWFkUm93c1Jlc3BvbnNlEkYKBmNodW5rcxgBIAMoCzIuLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1Jlc3BvbnNlLkNlbGxDaHVua1IGY2h1bmtzEi8KFGxhc3Rfc2Nhbm5lZF9yb3dfa2V5GAIgASgMUhFsYXN0U2Nhbm5lZFJvd0tleRrkAgoJQ2VsbENodW5rEhcKB3Jvd19rZXkYASABKAxSBnJvd0tleRI9CgtmYW1pbHlfbmFtZRgCIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIKZmFtaWx5TmFtZRI5CglxdWFsaWZpZXIYAyABKAsyGy5nb29nbGUucHJvdG9idWYuQnl0ZXNWYWx1ZVIJcXVhbGlmaWVyEikKEHRpbWVzdGFtcF9taWNyb3MYBCABKANSD3RpbWVzdGFtcE1pY3JvcxIWCgZsYWJlbHMYBSADKAlSBmxhYmVscxIUCgV2YWx1ZRgGIAEoDFIFdmFsdWUSHQoKdmFsdWVfc2l6ZRgHIAEoBVIJdmFsdWVTaXplEh0KCXJlc2V0X3JvdxgIIAEoCEgAUghyZXNldFJvdxIfCgpjb21taXRfcm93GAkgASgISABSCWNvbW1pdFJvd0IMCgpyb3dfc3RhdHVz');
+    'ChBSZWFkUm93c1Jlc3BvbnNlEkYKBmNodW5rcxgBIAMoCzIuLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1Jlc3BvbnNlLkNlbGxDaHVua1IGY2h1bmtzEi8KFGxhc3Rfc2Nhbm5lZF9yb3dfa2V5GAIgASgMUhFsYXN0U2Nhbm5lZFJvd0tleRJFCg1yZXF1ZXN0X3N0YXRzGAMgASgLMiAuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlcXVlc3RTdGF0c1IMcmVxdWVzdFN0YXRzGuQCCglDZWxsQ2h1bmsSFwoHcm93X2tleRgBIAEoDFIGcm93S2V5Ej0KC2ZhbWlseV9uYW1lGAIgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlUgpmYW1pbHlOYW1lEjkKCXF1YWxpZmllchgDIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5CeXRlc1ZhbHVlUglxdWFsaWZpZXISKQoQdGltZXN0YW1wX21pY3JvcxgEIAEoA1IPdGltZXN0YW1wTWljcm9zEhYKBmxhYmVscxgFIAMoCVIGbGFiZWxzEhQKBXZhbHVlGAYgASgMUgV2YWx1ZRIdCgp2YWx1ZV9zaXplGAcgASgFUgl2YWx1ZVNpemUSHQoJcmVzZXRfcm93GAggASgISABSCHJlc2V0Um93Eh8KCmNvbW1pdF9yb3cYCSABKAhIAFIJY29tbWl0Um93QgwKCnJvd19zdGF0dXM=');
 @$core.Deprecated('Use sampleRowKeysRequestDescriptor instead')
 const SampleRowKeysRequest$json = const {
   '1': 'SampleRowKeysRequest',

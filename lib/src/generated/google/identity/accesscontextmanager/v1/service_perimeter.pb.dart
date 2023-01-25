@@ -661,84 +661,6 @@ class ServicePerimeterConfig_IngressSource extends $pb.GeneratedMessage {
   void clearResource() => clearField(2);
 }
 
-class ServicePerimeterConfig_EgressTo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServicePerimeterConfig.EgressTo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resources')
-    ..pc<ServicePerimeterConfig_ApiOperation>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operations',
-        $pb.PbFieldType.PM,
-        subBuilder: ServicePerimeterConfig_ApiOperation.create)
-    ..hasRequiredFields = false;
-
-  ServicePerimeterConfig_EgressTo._() : super();
-  factory ServicePerimeterConfig_EgressTo({
-    $core.Iterable<$core.String>? resources,
-    $core.Iterable<ServicePerimeterConfig_ApiOperation>? operations,
-  }) {
-    final _result = create();
-    if (resources != null) {
-      _result.resources.addAll(resources);
-    }
-    if (operations != null) {
-      _result.operations.addAll(operations);
-    }
-    return _result;
-  }
-  factory ServicePerimeterConfig_EgressTo.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServicePerimeterConfig_EgressTo.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServicePerimeterConfig_EgressTo clone() =>
-      ServicePerimeterConfig_EgressTo()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ServicePerimeterConfig_EgressTo copyWith(
-          void Function(ServicePerimeterConfig_EgressTo) updates) =>
-      super.copyWith(
-              (message) => updates(message as ServicePerimeterConfig_EgressTo))
-          as ServicePerimeterConfig_EgressTo; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static ServicePerimeterConfig_EgressTo create() =>
-      ServicePerimeterConfig_EgressTo._();
-  ServicePerimeterConfig_EgressTo createEmptyInstance() => create();
-  static $pb.PbList<ServicePerimeterConfig_EgressTo> createRepeated() =>
-      $pb.PbList<ServicePerimeterConfig_EgressTo>();
-  @$core.pragma('dart2js:noInline')
-  static ServicePerimeterConfig_EgressTo getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ServicePerimeterConfig_EgressTo>(
-          create);
-  static ServicePerimeterConfig_EgressTo? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<$core.String> get resources => $_getList(0);
-
-  @$pb.TagNumber(2)
-  $core.List<ServicePerimeterConfig_ApiOperation> get operations =>
-      $_getList(1);
-}
-
 class ServicePerimeterConfig_IngressFrom extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1020,6 +942,185 @@ class ServicePerimeterConfig_IngressPolicy extends $pb.GeneratedMessage {
   ServicePerimeterConfig_IngressTo ensureIngressTo() => $_ensure(1);
 }
 
+class ServicePerimeterConfig_EgressFrom extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ServicePerimeterConfig.EgressFrom',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'identities')
+    ..e<ServicePerimeterConfig_IdentityType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'identityType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ServicePerimeterConfig_IdentityType.IDENTITY_TYPE_UNSPECIFIED,
+        valueOf: ServicePerimeterConfig_IdentityType.valueOf,
+        enumValues: ServicePerimeterConfig_IdentityType.values)
+    ..hasRequiredFields = false;
+
+  ServicePerimeterConfig_EgressFrom._() : super();
+  factory ServicePerimeterConfig_EgressFrom({
+    $core.Iterable<$core.String>? identities,
+    ServicePerimeterConfig_IdentityType? identityType,
+  }) {
+    final _result = create();
+    if (identities != null) {
+      _result.identities.addAll(identities);
+    }
+    if (identityType != null) {
+      _result.identityType = identityType;
+    }
+    return _result;
+  }
+  factory ServicePerimeterConfig_EgressFrom.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ServicePerimeterConfig_EgressFrom.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ServicePerimeterConfig_EgressFrom clone() =>
+      ServicePerimeterConfig_EgressFrom()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ServicePerimeterConfig_EgressFrom copyWith(
+          void Function(ServicePerimeterConfig_EgressFrom) updates) =>
+      super.copyWith((message) =>
+              updates(message as ServicePerimeterConfig_EgressFrom))
+          as ServicePerimeterConfig_EgressFrom; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ServicePerimeterConfig_EgressFrom create() =>
+      ServicePerimeterConfig_EgressFrom._();
+  ServicePerimeterConfig_EgressFrom createEmptyInstance() => create();
+  static $pb.PbList<ServicePerimeterConfig_EgressFrom> createRepeated() =>
+      $pb.PbList<ServicePerimeterConfig_EgressFrom>();
+  @$core.pragma('dart2js:noInline')
+  static ServicePerimeterConfig_EgressFrom getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ServicePerimeterConfig_EgressFrom>(
+          create);
+  static ServicePerimeterConfig_EgressFrom? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get identities => $_getList(0);
+
+  @$pb.TagNumber(2)
+  ServicePerimeterConfig_IdentityType get identityType => $_getN(1);
+  @$pb.TagNumber(2)
+  set identityType(ServicePerimeterConfig_IdentityType v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasIdentityType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIdentityType() => clearField(2);
+}
+
+class ServicePerimeterConfig_EgressTo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ServicePerimeterConfig.EgressTo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resources')
+    ..pc<ServicePerimeterConfig_ApiOperation>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'operations',
+        $pb.PbFieldType.PM,
+        subBuilder: ServicePerimeterConfig_ApiOperation.create)
+    ..pPS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'externalResources')
+    ..hasRequiredFields = false;
+
+  ServicePerimeterConfig_EgressTo._() : super();
+  factory ServicePerimeterConfig_EgressTo({
+    $core.Iterable<$core.String>? resources,
+    $core.Iterable<ServicePerimeterConfig_ApiOperation>? operations,
+    $core.Iterable<$core.String>? externalResources,
+  }) {
+    final _result = create();
+    if (resources != null) {
+      _result.resources.addAll(resources);
+    }
+    if (operations != null) {
+      _result.operations.addAll(operations);
+    }
+    if (externalResources != null) {
+      _result.externalResources.addAll(externalResources);
+    }
+    return _result;
+  }
+  factory ServicePerimeterConfig_EgressTo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ServicePerimeterConfig_EgressTo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ServicePerimeterConfig_EgressTo clone() =>
+      ServicePerimeterConfig_EgressTo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ServicePerimeterConfig_EgressTo copyWith(
+          void Function(ServicePerimeterConfig_EgressTo) updates) =>
+      super.copyWith(
+              (message) => updates(message as ServicePerimeterConfig_EgressTo))
+          as ServicePerimeterConfig_EgressTo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ServicePerimeterConfig_EgressTo create() =>
+      ServicePerimeterConfig_EgressTo._();
+  ServicePerimeterConfig_EgressTo createEmptyInstance() => create();
+  static $pb.PbList<ServicePerimeterConfig_EgressTo> createRepeated() =>
+      $pb.PbList<ServicePerimeterConfig_EgressTo>();
+  @$core.pragma('dart2js:noInline')
+  static ServicePerimeterConfig_EgressTo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ServicePerimeterConfig_EgressTo>(
+          create);
+  static ServicePerimeterConfig_EgressTo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get resources => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<ServicePerimeterConfig_ApiOperation> get operations =>
+      $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get externalResources => $_getList(2);
+}
+
 class ServicePerimeterConfig_EgressPolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -1118,95 +1219,6 @@ class ServicePerimeterConfig_EgressPolicy extends $pb.GeneratedMessage {
   void clearEgressTo() => clearField(2);
   @$pb.TagNumber(2)
   ServicePerimeterConfig_EgressTo ensureEgressTo() => $_ensure(1);
-}
-
-class ServicePerimeterConfig_EgressFrom extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServicePerimeterConfig.EgressFrom',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'identities')
-    ..e<ServicePerimeterConfig_IdentityType>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'identityType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            ServicePerimeterConfig_IdentityType.IDENTITY_TYPE_UNSPECIFIED,
-        valueOf: ServicePerimeterConfig_IdentityType.valueOf,
-        enumValues: ServicePerimeterConfig_IdentityType.values)
-    ..hasRequiredFields = false;
-
-  ServicePerimeterConfig_EgressFrom._() : super();
-  factory ServicePerimeterConfig_EgressFrom({
-    $core.Iterable<$core.String>? identities,
-    ServicePerimeterConfig_IdentityType? identityType,
-  }) {
-    final _result = create();
-    if (identities != null) {
-      _result.identities.addAll(identities);
-    }
-    if (identityType != null) {
-      _result.identityType = identityType;
-    }
-    return _result;
-  }
-  factory ServicePerimeterConfig_EgressFrom.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServicePerimeterConfig_EgressFrom.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServicePerimeterConfig_EgressFrom clone() =>
-      ServicePerimeterConfig_EgressFrom()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ServicePerimeterConfig_EgressFrom copyWith(
-          void Function(ServicePerimeterConfig_EgressFrom) updates) =>
-      super.copyWith((message) =>
-              updates(message as ServicePerimeterConfig_EgressFrom))
-          as ServicePerimeterConfig_EgressFrom; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static ServicePerimeterConfig_EgressFrom create() =>
-      ServicePerimeterConfig_EgressFrom._();
-  ServicePerimeterConfig_EgressFrom createEmptyInstance() => create();
-  static $pb.PbList<ServicePerimeterConfig_EgressFrom> createRepeated() =>
-      $pb.PbList<ServicePerimeterConfig_EgressFrom>();
-  @$core.pragma('dart2js:noInline')
-  static ServicePerimeterConfig_EgressFrom getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ServicePerimeterConfig_EgressFrom>(
-          create);
-  static ServicePerimeterConfig_EgressFrom? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<$core.String> get identities => $_getList(0);
-
-  @$pb.TagNumber(2)
-  ServicePerimeterConfig_IdentityType get identityType => $_getN(1);
-  @$pb.TagNumber(2)
-  set identityType(ServicePerimeterConfig_IdentityType v) {
-    setField(2, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasIdentityType() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearIdentityType() => clearField(2);
 }
 
 class ServicePerimeterConfig extends $pb.GeneratedMessage {

@@ -63,7 +63,6 @@ const Policy$json = const {
     },
   ],
   '3': const [Policy_AnnotationsEntry$json],
-  '7': const {},
 };
 
 @$core.Deprecated('Use policyDescriptor instead')
@@ -78,7 +77,7 @@ const Policy_AnnotationsEntry$json = const {
 
 /// Descriptor for `Policy`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List policyDescriptor = $convert.base64Decode(
-    'CgZQb2xpY3kSFwoEbmFtZRgBIAEoCUID4EEFUgRuYW1lEhUKA3VpZBgCIAEoCUID4EEFUgN1aWQSFwoEa2luZBgDIAEoCUID4EEDUgRraW5kEiEKDGRpc3BsYXlfbmFtZRgEIAEoCVILZGlzcGxheU5hbWUSTAoLYW5ub3RhdGlvbnMYBSADKAsyKi5nb29nbGUuaWFtLnYyYmV0YS5Qb2xpY3kuQW5ub3RhdGlvbnNFbnRyeVILYW5ub3RhdGlvbnMSEgoEZXRhZxgGIAEoCVIEZXRhZxJACgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRJACgtkZWxldGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKZGVsZXRlVGltZRIzCgVydWxlcxgKIAMoCzIdLmdvb2dsZS5pYW0udjJiZXRhLlBvbGljeVJ1bGVSBXJ1bGVzGj4KEEFubm90YXRpb25zRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ATox6kEuChlpYW0uZ29vZ2xlYXBpcy5jb20vUG9saWN5EhFwb2xpY2llcy97cG9saWN5fQ==');
+    'CgZQb2xpY3kSFwoEbmFtZRgBIAEoCUID4EEFUgRuYW1lEhUKA3VpZBgCIAEoCUID4EEFUgN1aWQSFwoEa2luZBgDIAEoCUID4EEDUgRraW5kEiEKDGRpc3BsYXlfbmFtZRgEIAEoCVILZGlzcGxheU5hbWUSTAoLYW5ub3RhdGlvbnMYBSADKAsyKi5nb29nbGUuaWFtLnYyYmV0YS5Qb2xpY3kuQW5ub3RhdGlvbnNFbnRyeVILYW5ub3RhdGlvbnMSEgoEZXRhZxgGIAEoCVIEZXRhZxJACgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRJACgtkZWxldGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKZGVsZXRlVGltZRIzCgVydWxlcxgKIAMoCzIdLmdvb2dsZS5pYW0udjJiZXRhLlBvbGljeVJ1bGVSBXJ1bGVzGj4KEEFubm90YXRpb25zRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4AQ==');
 @$core.Deprecated('Use policyRuleDescriptor instead')
 const PolicyRule$json = const {
   '1': 'PolicyRule',
@@ -157,7 +156,7 @@ const GetPolicyRequest$json = const {
 
 /// Descriptor for `GetPolicyRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getPolicyRequestDescriptor = $convert.base64Decode(
-    'ChBHZXRQb2xpY3lSZXF1ZXN0EjUKBG5hbWUYASABKAlCIeBBAvpBGwoZaWFtLmdvb2dsZWFwaXMuY29tL1BvbGljeVIEbmFtZQ==');
+    'ChBHZXRQb2xpY3lSZXF1ZXN0EhcKBG5hbWUYASABKAlCA+BBAlIEbmFtZQ==');
 @$core.Deprecated('Use createPolicyRequestDescriptor instead')
 const CreatePolicyRequest$json = const {
   '1': 'CreatePolicyRequest',
@@ -216,7 +215,7 @@ const DeletePolicyRequest$json = const {
 
 /// Descriptor for `DeletePolicyRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deletePolicyRequestDescriptor = $convert.base64Decode(
-    'ChNEZWxldGVQb2xpY3lSZXF1ZXN0EjUKBG5hbWUYASABKAlCIeBBAvpBGwoZaWFtLmdvb2dsZWFwaXMuY29tL1BvbGljeVIEbmFtZRIXCgRldGFnGAIgASgJQgPgQQFSBGV0YWc=');
+    'ChNEZWxldGVQb2xpY3lSZXF1ZXN0EhcKBG5hbWUYASABKAlCA+BBAlIEbmFtZRIXCgRldGFnGAIgASgJQgPgQQFSBGV0YWc=');
 @$core.Deprecated('Use policyOperationMetadataDescriptor instead')
 const PolicyOperationMetadata$json = const {
   '1': 'PolicyOperationMetadata',

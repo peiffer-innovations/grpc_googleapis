@@ -118,6 +118,33 @@ const GetTransferJobRequest$json = const {
 /// Descriptor for `GetTransferJobRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTransferJobRequestDescriptor = $convert.base64Decode(
     'ChVHZXRUcmFuc2ZlckpvYlJlcXVlc3QSHgoIam9iX25hbWUYASABKAlCA+BBAlIHam9iTmFtZRIiCgpwcm9qZWN0X2lkGAIgASgJQgPgQQJSCXByb2plY3RJZA==');
+@$core.Deprecated('Use deleteTransferJobRequestDescriptor instead')
+const DeleteTransferJobRequest$json = const {
+  '1': 'DeleteTransferJobRequest',
+  '2': const [
+    const {
+      '1': 'job_name',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'jobName'
+    },
+    const {
+      '1': 'project_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'projectId'
+    },
+  ],
+};
+
+/// Descriptor for `DeleteTransferJobRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteTransferJobRequestDescriptor =
+    $convert.base64Decode(
+        'ChhEZWxldGVUcmFuc2ZlckpvYlJlcXVlc3QSHgoIam9iX25hbWUYASABKAlCA+BBAlIHam9iTmFtZRIiCgpwcm9qZWN0X2lkGAIgASgJQgPgQQJSCXByb2plY3RJZA==');
 @$core.Deprecated('Use listTransferJobsRequestDescriptor instead')
 const ListTransferJobsRequest$json = const {
   '1': 'ListTransferJobsRequest',

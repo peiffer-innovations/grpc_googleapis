@@ -275,6 +275,15 @@ class Property extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'account')
+    ..e<PropertyType>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'propertyType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: PropertyType.PROPERTY_TYPE_UNSPECIFIED,
+        valueOf: PropertyType.valueOf,
+        enumValues: PropertyType.values)
     ..hasRequiredFields = false;
 
   Property._() : super();
@@ -291,6 +300,7 @@ class Property extends $pb.GeneratedMessage {
     $0.Timestamp? deleteTime,
     $0.Timestamp? expireTime,
     $core.String? account,
+    PropertyType? propertyType,
   }) {
     final _result = create();
     if (name != null) {
@@ -328,6 +338,9 @@ class Property extends $pb.GeneratedMessage {
     }
     if (account != null) {
       _result.account = account;
+    }
+    if (propertyType != null) {
+      _result.propertyType = propertyType;
     }
     return _result;
   }
@@ -508,6 +521,18 @@ class Property extends $pb.GeneratedMessage {
   $core.bool hasAccount() => $_has(11);
   @$pb.TagNumber(13)
   void clearAccount() => clearField(13);
+
+  @$pb.TagNumber(14)
+  PropertyType get propertyType => $_getN(12);
+  @$pb.TagNumber(14)
+  set propertyType(PropertyType v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasPropertyType() => $_has(12);
+  @$pb.TagNumber(14)
+  void clearPropertyType() => clearField(14);
 }
 
 class DataStream_WebStreamData extends $pb.GeneratedMessage {
@@ -1988,12 +2013,28 @@ class PropertySummary extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'displayName')
+    ..e<PropertyType>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'propertyType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: PropertyType.PROPERTY_TYPE_UNSPECIFIED,
+        valueOf: PropertyType.valueOf,
+        enumValues: PropertyType.values)
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
     ..hasRequiredFields = false;
 
   PropertySummary._() : super();
   factory PropertySummary({
     $core.String? property,
     $core.String? displayName,
+    PropertyType? propertyType,
+    $core.String? parent,
   }) {
     final _result = create();
     if (property != null) {
@@ -2001,6 +2042,12 @@ class PropertySummary extends $pb.GeneratedMessage {
     }
     if (displayName != null) {
       _result.displayName = displayName;
+    }
+    if (propertyType != null) {
+      _result.propertyType = propertyType;
+    }
+    if (parent != null) {
+      _result.parent = parent;
     }
     return _result;
   }
@@ -2054,6 +2101,30 @@ class PropertySummary extends $pb.GeneratedMessage {
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  PropertyType get propertyType => $_getN(2);
+  @$pb.TagNumber(3)
+  set propertyType(PropertyType v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPropertyType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPropertyType() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get parent => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set parent($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasParent() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearParent() => clearField(4);
 }
 
 class MeasurementProtocolSecret extends $pb.GeneratedMessage {
@@ -2353,6 +2424,7 @@ enum ChangeHistoryChange_ChangeHistoryResource_Resource {
   customMetric,
   dataRetentionSettings,
   dataStream,
+  attributionSettings,
   notSet
 }
 
@@ -2377,6 +2449,7 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     15: ChangeHistoryChange_ChangeHistoryResource_Resource
         .dataRetentionSettings,
     18: ChangeHistoryChange_ChangeHistoryResource_Resource.dataStream,
+    20: ChangeHistoryChange_ChangeHistoryResource_Resource.attributionSettings,
     0: ChangeHistoryChange_ChangeHistoryResource_Resource.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -2388,7 +2461,7 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
               ? ''
               : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18])
+    ..oo(0, [1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 20])
     ..aOM<Account>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2469,6 +2542,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
             ? ''
             : 'dataStream',
         subBuilder: DataStream.create)
+    ..aOM<AttributionSettings>(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'attributionSettings',
+        subBuilder: AttributionSettings.create)
     ..hasRequiredFields = false;
 
   ChangeHistoryChange_ChangeHistoryResource._() : super();
@@ -2487,6 +2566,7 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     CustomMetric? customMetric,
     DataRetentionSettings? dataRetentionSettings,
     DataStream? dataStream,
+    AttributionSettings? attributionSettings,
   }) {
     final _result = create();
     if (account != null) {
@@ -2528,6 +2608,9 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     }
     if (dataStream != null) {
       _result.dataStream = dataStream;
+    }
+    if (attributionSettings != null) {
+      _result.attributionSettings = attributionSettings;
     }
     return _result;
   }
@@ -2755,6 +2838,20 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   void clearDataStream() => clearField(18);
   @$pb.TagNumber(18)
   DataStream ensureDataStream() => $_ensure(12);
+
+  @$pb.TagNumber(20)
+  AttributionSettings get attributionSettings => $_getN(13);
+  @$pb.TagNumber(20)
+  set attributionSettings(AttributionSettings v) {
+    setField(20, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasAttributionSettings() => $_has(13);
+  @$pb.TagNumber(20)
+  void clearAttributionSettings() => clearField(20);
+  @$pb.TagNumber(20)
+  AttributionSettings ensureAttributionSettings() => $_ensure(13);
 }
 
 class ChangeHistoryChange extends $pb.GeneratedMessage {
@@ -4201,4 +4298,163 @@ class DataRetentionSettings extends $pb.GeneratedMessage {
   $core.bool hasResetUserDataOnNewActivity() => $_has(2);
   @$pb.TagNumber(3)
   void clearResetUserDataOnNewActivity() => clearField(3);
+}
+
+class AttributionSettings extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AttributionSettings',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..e<AttributionSettings_AcquisitionConversionEventLookbackWindow>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acquisitionConversionEventLookbackWindow',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            AttributionSettings_AcquisitionConversionEventLookbackWindow
+                .ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED,
+        valueOf: AttributionSettings_AcquisitionConversionEventLookbackWindow
+            .valueOf,
+        enumValues:
+            AttributionSettings_AcquisitionConversionEventLookbackWindow.values)
+    ..e<AttributionSettings_OtherConversionEventLookbackWindow>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'otherConversionEventLookbackWindow',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: AttributionSettings_OtherConversionEventLookbackWindow
+            .OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED,
+        valueOf: AttributionSettings_OtherConversionEventLookbackWindow.valueOf,
+        enumValues:
+            AttributionSettings_OtherConversionEventLookbackWindow.values)
+    ..e<AttributionSettings_ReportingAttributionModel>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'reportingAttributionModel',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: AttributionSettings_ReportingAttributionModel
+            .REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED,
+        valueOf: AttributionSettings_ReportingAttributionModel.valueOf,
+        enumValues: AttributionSettings_ReportingAttributionModel.values)
+    ..hasRequiredFields = false;
+
+  AttributionSettings._() : super();
+  factory AttributionSettings({
+    $core.String? name,
+    AttributionSettings_AcquisitionConversionEventLookbackWindow?
+        acquisitionConversionEventLookbackWindow,
+    AttributionSettings_OtherConversionEventLookbackWindow?
+        otherConversionEventLookbackWindow,
+    AttributionSettings_ReportingAttributionModel? reportingAttributionModel,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (acquisitionConversionEventLookbackWindow != null) {
+      _result.acquisitionConversionEventLookbackWindow =
+          acquisitionConversionEventLookbackWindow;
+    }
+    if (otherConversionEventLookbackWindow != null) {
+      _result.otherConversionEventLookbackWindow =
+          otherConversionEventLookbackWindow;
+    }
+    if (reportingAttributionModel != null) {
+      _result.reportingAttributionModel = reportingAttributionModel;
+    }
+    return _result;
+  }
+  factory AttributionSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AttributionSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AttributionSettings clone() => AttributionSettings()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AttributionSettings copyWith(void Function(AttributionSettings) updates) =>
+      super.copyWith((message) => updates(message as AttributionSettings))
+          as AttributionSettings; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AttributionSettings create() => AttributionSettings._();
+  AttributionSettings createEmptyInstance() => create();
+  static $pb.PbList<AttributionSettings> createRepeated() =>
+      $pb.PbList<AttributionSettings>();
+  @$core.pragma('dart2js:noInline')
+  static AttributionSettings getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AttributionSettings>(create);
+  static AttributionSettings? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  AttributionSettings_AcquisitionConversionEventLookbackWindow
+      get acquisitionConversionEventLookbackWindow => $_getN(1);
+  @$pb.TagNumber(2)
+  set acquisitionConversionEventLookbackWindow(
+      AttributionSettings_AcquisitionConversionEventLookbackWindow v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAcquisitionConversionEventLookbackWindow() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAcquisitionConversionEventLookbackWindow() => clearField(2);
+
+  @$pb.TagNumber(3)
+  AttributionSettings_OtherConversionEventLookbackWindow
+      get otherConversionEventLookbackWindow => $_getN(2);
+  @$pb.TagNumber(3)
+  set otherConversionEventLookbackWindow(
+      AttributionSettings_OtherConversionEventLookbackWindow v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasOtherConversionEventLookbackWindow() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOtherConversionEventLookbackWindow() => clearField(3);
+
+  @$pb.TagNumber(4)
+  AttributionSettings_ReportingAttributionModel get reportingAttributionModel =>
+      $_getN(3);
+  @$pb.TagNumber(4)
+  set reportingAttributionModel(
+      AttributionSettings_ReportingAttributionModel v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasReportingAttributionModel() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearReportingAttributionModel() => clearField(4);
 }

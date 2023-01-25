@@ -69,6 +69,11 @@ class Instance extends $pb.GeneratedMessage {
             ? ''
             : 'createTime',
         subBuilder: $0.Timestamp.create)
+    ..aOB(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'satisfiesPzs')
     ..hasRequiredFields = false;
 
   Instance._() : super();
@@ -79,6 +84,7 @@ class Instance extends $pb.GeneratedMessage {
     Instance_Type? type,
     $core.Map<$core.String, $core.String>? labels,
     $0.Timestamp? createTime,
+    $core.bool? satisfiesPzs,
   }) {
     final _result = create();
     if (name != null) {
@@ -98,6 +104,9 @@ class Instance extends $pb.GeneratedMessage {
     }
     if (createTime != null) {
       _result.createTime = createTime;
+    }
+    if (satisfiesPzs != null) {
+      _result.satisfiesPzs = satisfiesPzs;
     }
     return _result;
   }
@@ -191,6 +200,18 @@ class Instance extends $pb.GeneratedMessage {
   void clearCreateTime() => clearField(7);
   @$pb.TagNumber(7)
   $0.Timestamp ensureCreateTime() => $_ensure(5);
+
+  @$pb.TagNumber(8)
+  $core.bool get satisfiesPzs => $_getBF(6);
+  @$pb.TagNumber(8)
+  set satisfiesPzs($core.bool v) {
+    $_setBool(6, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasSatisfiesPzs() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearSatisfiesPzs() => clearField(8);
 }
 
 class AutoscalingTargets extends $pb.GeneratedMessage {

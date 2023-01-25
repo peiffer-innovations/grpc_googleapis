@@ -110,6 +110,46 @@ class ErrorReason extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'ACCESS_TOKEN_TYPE_UNSUPPORTED');
+  static const ErrorReason CREDENTIALS_MISSING = ErrorReason._(
+      20,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CREDENTIALS_MISSING');
+  static const ErrorReason RESOURCE_PROJECT_INVALID = ErrorReason._(
+      21,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RESOURCE_PROJECT_INVALID');
+  static const ErrorReason SESSION_COOKIE_INVALID = ErrorReason._(
+      23,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SESSION_COOKIE_INVALID');
+  static const ErrorReason USER_BLOCKED_BY_ADMIN = ErrorReason._(
+      24,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'USER_BLOCKED_BY_ADMIN');
+  static const ErrorReason RESOURCE_USAGE_RESTRICTION_VIOLATED = ErrorReason._(
+      25,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RESOURCE_USAGE_RESTRICTION_VIOLATED');
+  static const ErrorReason SYSTEM_PARAMETER_UNSUPPORTED = ErrorReason._(
+      26,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SYSTEM_PARAMETER_UNSUPPORTED');
+  static const ErrorReason ORG_RESTRICTION_VIOLATION = ErrorReason._(
+      27,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ORG_RESTRICTION_VIOLATION');
+  static const ErrorReason ORG_RESTRICTION_HEADER_INVALID = ErrorReason._(
+      28,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ORG_RESTRICTION_HEADER_INVALID');
 
   static const $core.List<ErrorReason> values = <ErrorReason>[
     ERROR_REASON_UNSPECIFIED,
@@ -132,6 +172,14 @@ class ErrorReason extends $pb.ProtobufEnum {
     ACCESS_TOKEN_SCOPE_INSUFFICIENT,
     ACCOUNT_STATE_INVALID,
     ACCESS_TOKEN_TYPE_UNSUPPORTED,
+    CREDENTIALS_MISSING,
+    RESOURCE_PROJECT_INVALID,
+    SESSION_COOKIE_INVALID,
+    USER_BLOCKED_BY_ADMIN,
+    RESOURCE_USAGE_RESTRICTION_VIOLATED,
+    SYSTEM_PARAMETER_UNSUPPORTED,
+    ORG_RESTRICTION_VIOLATION,
+    ORG_RESTRICTION_HEADER_INVALID,
   ];
 
   static final $core.Map<$core.int, ErrorReason> _byValue =

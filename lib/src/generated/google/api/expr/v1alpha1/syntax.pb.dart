@@ -406,15 +406,25 @@ class Expr_CreateList extends $pb.GeneratedMessage {
             : 'elements',
         $pb.PbFieldType.PM,
         subBuilder: Expr.create)
+    ..p<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'optionalIndices',
+        $pb.PbFieldType.K3)
     ..hasRequiredFields = false;
 
   Expr_CreateList._() : super();
   factory Expr_CreateList({
     $core.Iterable<Expr>? elements,
+    $core.Iterable<$core.int>? optionalIndices,
   }) {
     final _result = create();
     if (elements != null) {
       _result.elements.addAll(elements);
+    }
+    if (optionalIndices != null) {
+      _result.optionalIndices.addAll(optionalIndices);
     }
     return _result;
   }
@@ -447,6 +457,9 @@ class Expr_CreateList extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<Expr> get elements => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get optionalIndices => $_getList(1);
 }
 
 enum Expr_CreateStruct_Entry_KeyKind { fieldKey, mapKey, notSet }
@@ -490,6 +503,11 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
             ? ''
             : 'value',
         subBuilder: Expr.create)
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'optionalEntry')
     ..hasRequiredFields = false;
 
   Expr_CreateStruct_Entry._() : super();
@@ -498,6 +516,7 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
     $core.String? fieldKey,
     Expr? mapKey,
     Expr? value,
+    $core.bool? optionalEntry,
   }) {
     final _result = create();
     if (id != null) {
@@ -511,6 +530,9 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
     }
     if (value != null) {
       _result.value = value;
+    }
+    if (optionalEntry != null) {
+      _result.optionalEntry = optionalEntry;
     }
     return _result;
   }
@@ -598,6 +620,18 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   void clearValue() => clearField(4);
   @$pb.TagNumber(4)
   Expr ensureValue() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.bool get optionalEntry => $_getBF(4);
+  @$pb.TagNumber(5)
+  set optionalEntry($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasOptionalEntry() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearOptionalEntry() => clearField(5);
 }
 
 class Expr_CreateStruct extends $pb.GeneratedMessage {

@@ -135,6 +135,49 @@ class FileType extends $pb.ProtobufEnum {
   const FileType._($core.int v, $core.String n) : super(v, n);
 }
 
+class SensitivityScore_SensitivityScoreLevel extends $pb.ProtobufEnum {
+  static const SensitivityScore_SensitivityScoreLevel
+      SENSITIVITY_SCORE_UNSPECIFIED = SensitivityScore_SensitivityScoreLevel._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_SCORE_UNSPECIFIED');
+  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_LOW =
+      SensitivityScore_SensitivityScoreLevel._(
+          10,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_LOW');
+  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_MODERATE =
+      SensitivityScore_SensitivityScoreLevel._(
+          20,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_MODERATE');
+  static const SensitivityScore_SensitivityScoreLevel SENSITIVITY_HIGH =
+      SensitivityScore_SensitivityScoreLevel._(
+          30,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SENSITIVITY_HIGH');
+
+  static const $core.List<SensitivityScore_SensitivityScoreLevel> values =
+      <SensitivityScore_SensitivityScoreLevel>[
+    SENSITIVITY_SCORE_UNSPECIFIED,
+    SENSITIVITY_LOW,
+    SENSITIVITY_MODERATE,
+    SENSITIVITY_HIGH,
+  ];
+
+  static final $core.Map<$core.int, SensitivityScore_SensitivityScoreLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SensitivityScore_SensitivityScoreLevel? valueOf($core.int value) =>
+      _byValue[value];
+
+  const SensitivityScore_SensitivityScoreLevel._($core.int v, $core.String n)
+      : super(v, n);
+}
+
 class CustomInfoType_ExclusionType extends $pb.ProtobufEnum {
   static const CustomInfoType_ExclusionType EXCLUSION_TYPE_UNSPECIFIED =
       CustomInfoType_ExclusionType._(

@@ -75,6 +75,7 @@ const JwtLocation$json = const {
   '2': const [
     const {'1': 'header', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'header'},
     const {'1': 'query', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'query'},
+    const {'1': 'cookie', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'cookie'},
     const {'1': 'value_prefix', '3': 3, '4': 1, '5': 9, '10': 'valuePrefix'},
   ],
   '8': const [
@@ -84,7 +85,7 @@ const JwtLocation$json = const {
 
 /// Descriptor for `JwtLocation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List jwtLocationDescriptor = $convert.base64Decode(
-    'CgtKd3RMb2NhdGlvbhIYCgZoZWFkZXIYASABKAlIAFIGaGVhZGVyEhYKBXF1ZXJ5GAIgASgJSABSBXF1ZXJ5EiEKDHZhbHVlX3ByZWZpeBgDIAEoCVILdmFsdWVQcmVmaXhCBAoCaW4=');
+    'CgtKd3RMb2NhdGlvbhIYCgZoZWFkZXIYASABKAlIAFIGaGVhZGVyEhYKBXF1ZXJ5GAIgASgJSABSBXF1ZXJ5EhgKBmNvb2tpZRgEIAEoCUgAUgZjb29raWUSIQoMdmFsdWVfcHJlZml4GAMgASgJUgt2YWx1ZVByZWZpeEIECgJpbg==');
 @$core.Deprecated('Use authProviderDescriptor instead')
 const AuthProvider$json = const {
   '1': 'AuthProvider',

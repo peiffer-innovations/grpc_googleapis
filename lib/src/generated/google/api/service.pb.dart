@@ -29,6 +29,7 @@ import 'logging.pb.dart' as $16;
 import 'monitoring.pb.dart' as $17;
 import 'system_parameter.pb.dart' as $18;
 import 'source_info.pb.dart' as $19;
+import 'client.pb.dart' as $20;
 
 class Service extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -193,6 +194,12 @@ class Service extends $pb.GeneratedMessage {
             ? ''
             : 'sourceInfo',
         subBuilder: $19.SourceInfo.create)
+    ..aOM<$20.Publishing>(
+        45,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'publishing',
+        subBuilder: $20.Publishing.create)
     ..hasRequiredFields = false;
 
   Service._() : super();
@@ -210,8 +217,7 @@ class Service extends $pb.GeneratedMessage {
     $7.Context? context,
     $8.Usage? usage,
     $core.Iterable<$9.Endpoint>? endpoints,
-    @$core.Deprecated('This field is deprecated.')
-        $10.UInt32Value? configVersion,
+    $10.UInt32Value? configVersion,
     $11.Control? control,
     $core.String? producerProjectId,
     $core.Iterable<$12.LogDescriptor>? logs,
@@ -223,6 +229,7 @@ class Service extends $pb.GeneratedMessage {
     $18.SystemParameters? systemParameters,
     $core.String? id,
     $19.SourceInfo? sourceInfo,
+    $20.Publishing? publishing,
   }) {
     final _result = create();
     if (name != null) {
@@ -265,7 +272,6 @@ class Service extends $pb.GeneratedMessage {
       _result.endpoints.addAll(endpoints);
     }
     if (configVersion != null) {
-      // ignore: deprecated_member_use_from_same_package
       _result.configVersion = configVersion;
     }
     if (control != null) {
@@ -300,6 +306,9 @@ class Service extends $pb.GeneratedMessage {
     }
     if (sourceInfo != null) {
       _result.sourceInfo = sourceInfo;
+    }
+    if (publishing != null) {
+      _result.publishing = publishing;
     }
     return _result;
   }
@@ -463,22 +472,17 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $core.List<$9.Endpoint> get endpoints => $_getList(12);
 
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $10.UInt32Value get configVersion => $_getN(13);
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   set configVersion($10.UInt32Value v) {
     setField(20, v);
   }
 
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $core.bool hasConfigVersion() => $_has(13);
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   void clearConfigVersion() => clearField(20);
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $10.UInt32Value ensureConfigVersion() => $_ensure(13);
 
@@ -599,4 +603,18 @@ class Service extends $pb.GeneratedMessage {
   void clearSourceInfo() => clearField(37);
   @$pb.TagNumber(37)
   $19.SourceInfo ensureSourceInfo() => $_ensure(24);
+
+  @$pb.TagNumber(45)
+  $20.Publishing get publishing => $_getN(25);
+  @$pb.TagNumber(45)
+  set publishing($20.Publishing v) {
+    setField(45, v);
+  }
+
+  @$pb.TagNumber(45)
+  $core.bool hasPublishing() => $_has(25);
+  @$pb.TagNumber(45)
+  void clearPublishing() => clearField(45);
+  @$pb.TagNumber(45)
+  $20.Publishing ensurePublishing() => $_ensure(25);
 }
