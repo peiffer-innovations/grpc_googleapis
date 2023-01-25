@@ -1,3 +1,8 @@
+## [1.2.1] - January 24th, 2023
+
+* Flutter 3.7
+
+
 ## [1.2.0] - June 24th, 2022
 
 * Version bump to trigger build
