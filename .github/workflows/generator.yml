@@ -36,7 +36,7 @@ jobs:
 
           git config --global user.email "noop@github.com"
           git config --global user.name "action"
-          git config --global url."https://action:${{ inputs.token }}@github.com/".insteadOf https://github.com/
+          git config --global url."https://${{ secrets.REPO_USER }}:${{ secrets.REPO_TOKEN }}@github.com/".insteadOf https://github.com/
 
       - name: Get Dependencies
         run: |
