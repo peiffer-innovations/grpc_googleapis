@@ -8,11 +8,12 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    container:
-      image: google/dart:latest
     outputs:
       buildnumber: ${{ steps.buildnumber.outputs.build_number }}
     steps:
+      - name: Validate
+        uses: peiffer-innovations/actions-flutter-validate@v1
+
       - name: Generate Build Number
         id: buildnumber
         uses: einaregilsson/build-number@v3
