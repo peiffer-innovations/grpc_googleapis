@@ -21,7 +21,9 @@ import 'upgrade.pb.dart' as $10;
 import 'compliance.pb.dart' as $11;
 import 'dsse_attestation.pb.dart' as $12;
 import 'common.pb.dart' as $13;
-import '../../google/protobuf/field_mask.pb.dart' as $14;
+import 'sbom.pb.dart' as $14;
+import 'vex.pb.dart' as $15;
+import '../../google/protobuf/field_mask.pb.dart' as $16;
 
 import 'common.pbenum.dart' as $13;
 
@@ -36,6 +38,7 @@ enum Occurrence_Details {
   upgrade,
   compliance,
   dsseAttestation,
+  sbomReference,
   notSet
 }
 
@@ -52,6 +55,7 @@ class Occurrence extends $pb.GeneratedMessage {
     15: Occurrence_Details.upgrade,
     16: Occurrence_Details.compliance,
     17: Occurrence_Details.dsseAttestation,
+    19: Occurrence_Details.sbomReference,
     0: Occurrence_Details.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -63,7 +67,7 @@ class Occurrence extends $pb.GeneratedMessage {
               ? ''
               : 'grafeas.v1'),
       createEmptyInstance: create)
-    ..oo(0, [8, 9, 10, 11, 12, 13, 14, 15, 16, 17])
+    ..oo(0, [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -171,6 +175,12 @@ class Occurrence extends $pb.GeneratedMessage {
             ? ''
             : 'envelope',
         subBuilder: $13.Envelope.create)
+    ..aOM<$14.SBOMReferenceOccurrence>(
+        19,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sbomReference',
+        subBuilder: $14.SBOMReferenceOccurrence.create)
     ..hasRequiredFields = false;
 
   Occurrence._() : super();
@@ -193,6 +203,7 @@ class Occurrence extends $pb.GeneratedMessage {
     $11.ComplianceOccurrence? compliance,
     $12.DSSEAttestationOccurrence? dsseAttestation,
     $13.Envelope? envelope,
+    $14.SBOMReferenceOccurrence? sbomReference,
   }) {
     final _result = create();
     if (name != null) {
@@ -248,6 +259,9 @@ class Occurrence extends $pb.GeneratedMessage {
     }
     if (envelope != null) {
       _result.envelope = envelope;
+    }
+    if (sbomReference != null) {
+      _result.sbomReference = sbomReference;
     }
     return _result;
   }
@@ -522,6 +536,20 @@ class Occurrence extends $pb.GeneratedMessage {
   void clearEnvelope() => clearField(18);
   @$pb.TagNumber(18)
   $13.Envelope ensureEnvelope() => $_ensure(17);
+
+  @$pb.TagNumber(19)
+  $14.SBOMReferenceOccurrence get sbomReference => $_getN(18);
+  @$pb.TagNumber(19)
+  set sbomReference($14.SBOMReferenceOccurrence v) {
+    setField(19, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasSbomReference() => $_has(18);
+  @$pb.TagNumber(19)
+  void clearSbomReference() => clearField(19);
+  @$pb.TagNumber(19)
+  $14.SBOMReferenceOccurrence ensureSbomReference() => $_ensure(18);
 }
 
 enum Note_Type {
@@ -535,6 +563,8 @@ enum Note_Type {
   upgrade,
   compliance,
   dsseAttestation,
+  vulnerabilityAssessment,
+  sbomReference,
   notSet
 }
 
@@ -550,6 +580,8 @@ class Note extends $pb.GeneratedMessage {
     17: Note_Type.upgrade,
     18: Note_Type.compliance,
     19: Note_Type.dsseAttestation,
+    20: Note_Type.vulnerabilityAssessment,
+    21: Note_Type.sbomReference,
     0: Note_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -561,7 +593,7 @@ class Note extends $pb.GeneratedMessage {
               ? ''
               : 'grafeas.v1'),
       createEmptyInstance: create)
-    ..oo(0, [10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
+    ..oo(0, [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -676,6 +708,18 @@ class Note extends $pb.GeneratedMessage {
             ? ''
             : 'dsseAttestation',
         subBuilder: $12.DSSEAttestationNote.create)
+    ..aOM<$15.VulnerabilityAssessmentNote>(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'vulnerabilityAssessment',
+        subBuilder: $15.VulnerabilityAssessmentNote.create)
+    ..aOM<$14.SBOMReferenceNote>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sbomReference',
+        subBuilder: $14.SBOMReferenceNote.create)
     ..hasRequiredFields = false;
 
   Note._() : super();
@@ -699,6 +743,8 @@ class Note extends $pb.GeneratedMessage {
     $10.UpgradeNote? upgrade,
     $11.ComplianceNote? compliance,
     $12.DSSEAttestationNote? dsseAttestation,
+    $15.VulnerabilityAssessmentNote? vulnerabilityAssessment,
+    $14.SBOMReferenceNote? sbomReference,
   }) {
     final _result = create();
     if (name != null) {
@@ -757,6 +803,12 @@ class Note extends $pb.GeneratedMessage {
     }
     if (dsseAttestation != null) {
       _result.dsseAttestation = dsseAttestation;
+    }
+    if (vulnerabilityAssessment != null) {
+      _result.vulnerabilityAssessment = vulnerabilityAssessment;
+    }
+    if (sbomReference != null) {
+      _result.sbomReference = sbomReference;
     }
     return _result;
   }
@@ -1024,6 +1076,35 @@ class Note extends $pb.GeneratedMessage {
   void clearDsseAttestation() => clearField(19);
   @$pb.TagNumber(19)
   $12.DSSEAttestationNote ensureDsseAttestation() => $_ensure(18);
+
+  @$pb.TagNumber(20)
+  $15.VulnerabilityAssessmentNote get vulnerabilityAssessment => $_getN(19);
+  @$pb.TagNumber(20)
+  set vulnerabilityAssessment($15.VulnerabilityAssessmentNote v) {
+    setField(20, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasVulnerabilityAssessment() => $_has(19);
+  @$pb.TagNumber(20)
+  void clearVulnerabilityAssessment() => clearField(20);
+  @$pb.TagNumber(20)
+  $15.VulnerabilityAssessmentNote ensureVulnerabilityAssessment() =>
+      $_ensure(19);
+
+  @$pb.TagNumber(21)
+  $14.SBOMReferenceNote get sbomReference => $_getN(20);
+  @$pb.TagNumber(21)
+  set sbomReference($14.SBOMReferenceNote v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasSbomReference() => $_has(20);
+  @$pb.TagNumber(21)
+  void clearSbomReference() => clearField(21);
+  @$pb.TagNumber(21)
+  $14.SBOMReferenceNote ensureSbomReference() => $_ensure(20);
 }
 
 class GetOccurrenceRequest extends $pb.GeneratedMessage {
@@ -1493,19 +1574,19 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
             ? ''
             : 'occurrence',
         subBuilder: Occurrence.create)
-    ..aOM<$14.FieldMask>(
+    ..aOM<$16.FieldMask>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $14.FieldMask.create)
+        subBuilder: $16.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOccurrenceRequest._() : super();
   factory UpdateOccurrenceRequest({
     $core.String? name,
     Occurrence? occurrence,
-    $14.FieldMask? updateMask,
+    $16.FieldMask? updateMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -1575,9 +1656,9 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   Occurrence ensureOccurrence() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $14.FieldMask get updateMask => $_getN(2);
+  $16.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($14.FieldMask v) {
+  set updateMask($16.FieldMask v) {
     setField(3, v);
   }
 
@@ -1586,7 +1667,7 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $14.FieldMask ensureUpdateMask() => $_ensure(2);
+  $16.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetNoteRequest extends $pb.GeneratedMessage {
@@ -2137,19 +2218,19 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
             ? ''
             : 'note',
         subBuilder: Note.create)
-    ..aOM<$14.FieldMask>(
+    ..aOM<$16.FieldMask>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $14.FieldMask.create)
+        subBuilder: $16.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateNoteRequest._() : super();
   factory UpdateNoteRequest({
     $core.String? name,
     Note? note,
-    $14.FieldMask? updateMask,
+    $16.FieldMask? updateMask,
   }) {
     final _result = create();
     if (name != null) {
@@ -2217,9 +2298,9 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   Note ensureNote() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $14.FieldMask get updateMask => $_getN(2);
+  $16.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($14.FieldMask v) {
+  set updateMask($16.FieldMask v) {
     setField(3, v);
   }
 
@@ -2228,7 +2309,7 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $14.FieldMask ensureUpdateMask() => $_ensure(2);
+  $16.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {

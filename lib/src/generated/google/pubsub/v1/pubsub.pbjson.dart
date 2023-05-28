@@ -412,6 +412,14 @@ const Subscription$json = const {
       '10': 'bigqueryConfig'
     },
     const {
+      '1': 'cloud_storage_config',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.CloudStorageConfig',
+      '10': 'cloudStorageConfig'
+    },
+    const {
       '1': 'ack_deadline_seconds',
       '3': 5,
       '4': 1,
@@ -527,7 +535,7 @@ const Subscription_State$json = const {
 
 /// Descriptor for `Subscription`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List subscriptionDescriptor = $convert.base64Decode(
-    'CgxTdWJzY3JpcHRpb24SFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjkKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSPQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWdSCnB1c2hDb25maWcSSQoPYmlncXVlcnlfY29uZmlnGBIgASgLMiAuZ29vZ2xlLnB1YnN1Yi52MS5CaWdRdWVyeUNvbmZpZ1IOYmlncXVlcnlDb25maWcSMAoUYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAVSEmFja0RlYWRsaW5lU2Vjb25kcxIyChVyZXRhaW5fYWNrZWRfbWVzc2FnZXMYByABKAhSE3JldGFpbkFja2VkTWVzc2FnZXMSVwoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SGG1lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhJCCgZsYWJlbHMYCSADKAsyKi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbi5MYWJlbHNFbnRyeVIGbGFiZWxzEjYKF2VuYWJsZV9tZXNzYWdlX29yZGVyaW5nGAogASgIUhVlbmFibGVNZXNzYWdlT3JkZXJpbmcSTwoRZXhwaXJhdGlvbl9wb2xpY3kYCyABKAsyIi5nb29nbGUucHVic3ViLnYxLkV4cGlyYXRpb25Qb2xpY3lSEGV4cGlyYXRpb25Qb2xpY3kSFgoGZmlsdGVyGAwgASgJUgZmaWx0ZXISUAoSZGVhZF9sZXR0ZXJfcG9saWN5GA0gASgLMiIuZ29vZ2xlLnB1YnN1Yi52MS5EZWFkTGV0dGVyUG9saWN5UhBkZWFkTGV0dGVyUG9saWN5EkAKDHJldHJ5X3BvbGljeRgOIAEoCzIdLmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3lSC3JldHJ5UG9saWN5EhoKCGRldGFjaGVkGA8gASgIUghkZXRhY2hlZBI/ChxlbmFibGVfZXhhY3RseV9vbmNlX2RlbGl2ZXJ5GBAgASgIUhllbmFibGVFeGFjdGx5T25jZURlbGl2ZXJ5EmcKIHRvcGljX21lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQNSHXRvcGljTWVzc2FnZVJldGVudGlvbkR1cmF0aW9uEj8KBXN0YXRlGBMgASgOMiQuZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24uU3RhdGVCA+BBA1IFc3RhdGUaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASI+CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEhIKDlJFU09VUkNFX0VSUk9SEAI6WOpBVQoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvcHJvamVjdHMve3Byb2plY3R9L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbn0=');
+    'CgxTdWJzY3JpcHRpb24SFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEjkKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSPQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWdSCnB1c2hDb25maWcSSQoPYmlncXVlcnlfY29uZmlnGBIgASgLMiAuZ29vZ2xlLnB1YnN1Yi52MS5CaWdRdWVyeUNvbmZpZ1IOYmlncXVlcnlDb25maWcSVgoUY2xvdWRfc3RvcmFnZV9jb25maWcYFiABKAsyJC5nb29nbGUucHVic3ViLnYxLkNsb3VkU3RvcmFnZUNvbmZpZ1ISY2xvdWRTdG9yYWdlQ29uZmlnEjAKFGFja19kZWFkbGluZV9zZWNvbmRzGAUgASgFUhJhY2tEZWFkbGluZVNlY29uZHMSMgoVcmV0YWluX2Fja2VkX21lc3NhZ2VzGAcgASgIUhNyZXRhaW5BY2tlZE1lc3NhZ2VzElcKGm1lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUhhtZXNzYWdlUmV0ZW50aW9uRHVyYXRpb24SQgoGbGFiZWxzGAkgAygLMiouZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24uTGFiZWxzRW50cnlSBmxhYmVscxI2ChdlbmFibGVfbWVzc2FnZV9vcmRlcmluZxgKIAEoCFIVZW5hYmxlTWVzc2FnZU9yZGVyaW5nEk8KEWV4cGlyYXRpb25fcG9saWN5GAsgASgLMiIuZ29vZ2xlLnB1YnN1Yi52MS5FeHBpcmF0aW9uUG9saWN5UhBleHBpcmF0aW9uUG9saWN5EhYKBmZpbHRlchgMIAEoCVIGZmlsdGVyElAKEmRlYWRfbGV0dGVyX3BvbGljeRgNIAEoCzIiLmdvb2dsZS5wdWJzdWIudjEuRGVhZExldHRlclBvbGljeVIQZGVhZExldHRlclBvbGljeRJACgxyZXRyeV9wb2xpY3kYDiABKAsyHS5nb29nbGUucHVic3ViLnYxLlJldHJ5UG9saWN5UgtyZXRyeVBvbGljeRIaCghkZXRhY2hlZBgPIAEoCFIIZGV0YWNoZWQSPwocZW5hYmxlX2V4YWN0bHlfb25jZV9kZWxpdmVyeRgQIAEoCFIZZW5hYmxlRXhhY3RseU9uY2VEZWxpdmVyeRJnCiB0b3BpY19tZXNzYWdlX3JldGVudGlvbl9kdXJhdGlvbhgRIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDUh10b3BpY01lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhI/CgVzdGF0ZRgTIAEoDjIkLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uLlN0YXRlQgPgQQNSBXN0YXRlGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiPgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARISCg5SRVNPVVJDRV9FUlJPUhACOljqQVUKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SL3Byb2plY3RzL3twcm9qZWN0fS9zdWJzY3JpcHRpb25zL3tzdWJzY3JpcHRpb259');
 @$core.Deprecated('Use retryPolicyDescriptor instead')
 const RetryPolicy$json = const {
   '1': 'RetryPolicy',
@@ -618,10 +626,34 @@ const PushConfig$json = const {
       '9': 0,
       '10': 'oidcToken'
     },
+    const {
+      '1': 'pubsub_wrapper',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.PushConfig.PubsubWrapper',
+      '9': 1,
+      '10': 'pubsubWrapper'
+    },
+    const {
+      '1': 'no_wrapper',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.PushConfig.NoWrapper',
+      '9': 1,
+      '10': 'noWrapper'
+    },
   ],
-  '3': const [PushConfig_OidcToken$json, PushConfig_AttributesEntry$json],
+  '3': const [
+    PushConfig_OidcToken$json,
+    PushConfig_PubsubWrapper$json,
+    PushConfig_NoWrapper$json,
+    PushConfig_AttributesEntry$json
+  ],
   '8': const [
     const {'1': 'authentication_method'},
+    const {'1': 'wrapper'},
   ],
 };
 
@@ -641,6 +673,25 @@ const PushConfig_OidcToken$json = const {
 };
 
 @$core.Deprecated('Use pushConfigDescriptor instead')
+const PushConfig_PubsubWrapper$json = const {
+  '1': 'PubsubWrapper',
+};
+
+@$core.Deprecated('Use pushConfigDescriptor instead')
+const PushConfig_NoWrapper$json = const {
+  '1': 'NoWrapper',
+  '2': const [
+    const {
+      '1': 'write_metadata',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'writeMetadata'
+    },
+  ],
+};
+
+@$core.Deprecated('Use pushConfigDescriptor instead')
 const PushConfig_AttributesEntry$json = const {
   '1': 'AttributesEntry',
   '2': const [
@@ -652,7 +703,7 @@ const PushConfig_AttributesEntry$json = const {
 
 /// Descriptor for `PushConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pushConfigDescriptor = $convert.base64Decode(
-    'CgpQdXNoQ29uZmlnEiMKDXB1c2hfZW5kcG9pbnQYASABKAlSDHB1c2hFbmRwb2ludBJMCgphdHRyaWJ1dGVzGAIgAygLMiwuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLkF0dHJpYnV0ZXNFbnRyeVIKYXR0cmlidXRlcxJHCgpvaWRjX3Rva2VuGAMgASgLMiYuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLk9pZGNUb2tlbkgAUglvaWRjVG9rZW4aWwoJT2lkY1Rva2VuEjIKFXNlcnZpY2VfYWNjb3VudF9lbWFpbBgBIAEoCVITc2VydmljZUFjY291bnRFbWFpbBIaCghhdWRpZW5jZRgCIAEoCVIIYXVkaWVuY2UaPQoPQXR0cmlidXRlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAFCFwoVYXV0aGVudGljYXRpb25fbWV0aG9k');
+    'CgpQdXNoQ29uZmlnEiMKDXB1c2hfZW5kcG9pbnQYASABKAlSDHB1c2hFbmRwb2ludBJMCgphdHRyaWJ1dGVzGAIgAygLMiwuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLkF0dHJpYnV0ZXNFbnRyeVIKYXR0cmlidXRlcxJHCgpvaWRjX3Rva2VuGAMgASgLMiYuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLk9pZGNUb2tlbkgAUglvaWRjVG9rZW4SUwoOcHVic3ViX3dyYXBwZXIYBCABKAsyKi5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWcuUHVic3ViV3JhcHBlckgBUg1wdWJzdWJXcmFwcGVyEkcKCm5vX3dyYXBwZXIYBSABKAsyJi5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWcuTm9XcmFwcGVySAFSCW5vV3JhcHBlchpbCglPaWRjVG9rZW4SMgoVc2VydmljZV9hY2NvdW50X2VtYWlsGAEgASgJUhNzZXJ2aWNlQWNjb3VudEVtYWlsEhoKCGF1ZGllbmNlGAIgASgJUghhdWRpZW5jZRoPCg1QdWJzdWJXcmFwcGVyGjIKCU5vV3JhcHBlchIlCg53cml0ZV9tZXRhZGF0YRgBIAEoCFINd3JpdGVNZXRhZGF0YRo9Cg9BdHRyaWJ1dGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4AUIXChVhdXRoZW50aWNhdGlvbl9tZXRob2RCCQoHd3JhcHBlcg==');
 @$core.Deprecated('Use bigQueryConfigDescriptor instead')
 const BigQueryConfig$json = const {
   '1': 'BigQueryConfig',
@@ -707,6 +758,112 @@ const BigQueryConfig_State$json = const {
 /// Descriptor for `BigQueryConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List bigQueryConfigDescriptor = $convert.base64Decode(
     'Cg5CaWdRdWVyeUNvbmZpZxIUCgV0YWJsZRgBIAEoCVIFdGFibGUSKAoQdXNlX3RvcGljX3NjaGVtYRgCIAEoCFIOdXNlVG9waWNTY2hlbWESJQoOd3JpdGVfbWV0YWRhdGEYAyABKAhSDXdyaXRlTWV0YWRhdGESLgoTZHJvcF91bmtub3duX2ZpZWxkcxgEIAEoCFIRZHJvcFVua25vd25GaWVsZHMSQQoFc3RhdGUYBSABKA4yJi5nb29nbGUucHVic3ViLnYxLkJpZ1F1ZXJ5Q29uZmlnLlN0YXRlQgPgQQNSBXN0YXRlImUKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESFQoRUEVSTUlTU0lPTl9ERU5JRUQQAhINCglOT1RfRk9VTkQQAxITCg9TQ0hFTUFfTUlTTUFUQ0gQBA==');
+@$core.Deprecated('Use cloudStorageConfigDescriptor instead')
+const CloudStorageConfig$json = const {
+  '1': 'CloudStorageConfig',
+  '2': const [
+    const {
+      '1': 'bucket',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'bucket'
+    },
+    const {
+      '1': 'filename_prefix',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'filenamePrefix'
+    },
+    const {
+      '1': 'filename_suffix',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'filenameSuffix'
+    },
+    const {
+      '1': 'text_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.CloudStorageConfig.TextConfig',
+      '9': 0,
+      '10': 'textConfig'
+    },
+    const {
+      '1': 'avro_config',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.CloudStorageConfig.AvroConfig',
+      '9': 0,
+      '10': 'avroConfig'
+    },
+    const {
+      '1': 'max_duration',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'maxDuration'
+    },
+    const {'1': 'max_bytes', '3': 7, '4': 1, '5': 3, '10': 'maxBytes'},
+    const {
+      '1': 'state',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.pubsub.v1.CloudStorageConfig.State',
+      '8': const {},
+      '10': 'state'
+    },
+  ],
+  '3': const [
+    CloudStorageConfig_TextConfig$json,
+    CloudStorageConfig_AvroConfig$json
+  ],
+  '4': const [CloudStorageConfig_State$json],
+  '8': const [
+    const {'1': 'output_format'},
+  ],
+};
+
+@$core.Deprecated('Use cloudStorageConfigDescriptor instead')
+const CloudStorageConfig_TextConfig$json = const {
+  '1': 'TextConfig',
+};
+
+@$core.Deprecated('Use cloudStorageConfigDescriptor instead')
+const CloudStorageConfig_AvroConfig$json = const {
+  '1': 'AvroConfig',
+  '2': const [
+    const {
+      '1': 'write_metadata',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'writeMetadata'
+    },
+  ],
+};
+
+@$core.Deprecated('Use cloudStorageConfigDescriptor instead')
+const CloudStorageConfig_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'ACTIVE', '2': 1},
+    const {'1': 'PERMISSION_DENIED', '2': 2},
+    const {'1': 'NOT_FOUND', '2': 3},
+  ],
+};
+
+/// Descriptor for `CloudStorageConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cloudStorageConfigDescriptor = $convert.base64Decode(
+    'ChJDbG91ZFN0b3JhZ2VDb25maWcSGwoGYnVja2V0GAEgASgJQgPgQQJSBmJ1Y2tldBInCg9maWxlbmFtZV9wcmVmaXgYAiABKAlSDmZpbGVuYW1lUHJlZml4EicKD2ZpbGVuYW1lX3N1ZmZpeBgDIAEoCVIOZmlsZW5hbWVTdWZmaXgSUgoLdGV4dF9jb25maWcYBCABKAsyLy5nb29nbGUucHVic3ViLnYxLkNsb3VkU3RvcmFnZUNvbmZpZy5UZXh0Q29uZmlnSABSCnRleHRDb25maWcSUgoLYXZyb19jb25maWcYBSABKAsyLy5nb29nbGUucHVic3ViLnYxLkNsb3VkU3RvcmFnZUNvbmZpZy5BdnJvQ29uZmlnSABSCmF2cm9Db25maWcSPAoMbWF4X2R1cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uUgttYXhEdXJhdGlvbhIbCgltYXhfYnl0ZXMYByABKANSCG1heEJ5dGVzEkUKBXN0YXRlGAkgASgOMiouZ29vZ2xlLnB1YnN1Yi52MS5DbG91ZFN0b3JhZ2VDb25maWcuU3RhdGVCA+BBA1IFc3RhdGUaDAoKVGV4dENvbmZpZxozCgpBdnJvQ29uZmlnEiUKDndyaXRlX21ldGFkYXRhGAEgASgIUg13cml0ZU1ldGFkYXRhIlAKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESFQoRUEVSTUlTU0lPTl9ERU5JRUQQAhINCglOT1RfRk9VTkQQA0IPCg1vdXRwdXRfZm9ybWF0');
 @$core.Deprecated('Use receivedMessageDescriptor instead')
 const ReceivedMessage$json = const {
   '1': 'ReceivedMessage',
@@ -1087,9 +1244,6 @@ const StreamingPullResponse$json = const {
     StreamingPullResponse_ModifyAckDeadlineConfirmation$json,
     StreamingPullResponse_SubscriptionProperties$json
   ],
-  '9': const [
-    const {'1': 2, '2': 3},
-  ],
 };
 
 @$core.Deprecated('Use streamingPullResponseDescriptor instead')
@@ -1111,6 +1265,13 @@ const StreamingPullResponse_AcknowledgeConfirmation$json = const {
       '5': 9,
       '10': 'unorderedAckIds'
     },
+    const {
+      '1': 'temporary_failed_ack_ids',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '10': 'temporaryFailedAckIds'
+    },
   ],
 };
 
@@ -1125,6 +1286,13 @@ const StreamingPullResponse_ModifyAckDeadlineConfirmation$json = const {
       '4': 3,
       '5': 9,
       '10': 'invalidAckIds'
+    },
+    const {
+      '1': 'temporary_failed_ack_ids',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '10': 'temporaryFailedAckIds'
     },
   ],
 };
@@ -1152,7 +1320,7 @@ const StreamingPullResponse_SubscriptionProperties$json = const {
 
 /// Descriptor for `StreamingPullResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List streamingPullResponseDescriptor = $convert.base64Decode(
-    'ChVTdHJlYW1pbmdQdWxsUmVzcG9uc2USTgoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsyIS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZVIQcmVjZWl2ZWRNZXNzYWdlcxJ6ChhhY2tub3dsZWRnZV9jb25maXJtYXRpb24YBSABKAsyPy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25zZS5BY2tub3dsZWRnZUNvbmZpcm1hdGlvblIXYWNrbm93bGVkZ2VDb25maXJtYXRpb24SjgEKIG1vZGlmeV9hY2tfZGVhZGxpbmVfY29uZmlybWF0aW9uGAMgASgLMkUuZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuTW9kaWZ5QWNrRGVhZGxpbmVDb25maXJtYXRpb25SHW1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEncKF3N1YnNjcmlwdGlvbl9wcm9wZXJ0aWVzGAQgASgLMj4uZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuU3Vic2NyaXB0aW9uUHJvcGVydGllc1IWc3Vic2NyaXB0aW9uUHJvcGVydGllcxqGAQoXQWNrbm93bGVkZ2VDb25maXJtYXRpb24SFwoHYWNrX2lkcxgBIAMoCVIGYWNrSWRzEiYKD2ludmFsaWRfYWNrX2lkcxgCIAMoCVINaW52YWxpZEFja0lkcxIqChF1bm9yZGVyZWRfYWNrX2lkcxgDIAMoCVIPdW5vcmRlcmVkQWNrSWRzGmAKHU1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEhcKB2Fja19pZHMYASADKAlSBmFja0lkcxImCg9pbnZhbGlkX2Fja19pZHMYAiADKAlSDWludmFsaWRBY2tJZHMalQEKFlN1YnNjcmlwdGlvblByb3BlcnRpZXMSQQodZXhhY3RseV9vbmNlX2RlbGl2ZXJ5X2VuYWJsZWQYASABKAhSGmV4YWN0bHlPbmNlRGVsaXZlcnlFbmFibGVkEjgKGG1lc3NhZ2Vfb3JkZXJpbmdfZW5hYmxlZBgCIAEoCFIWbWVzc2FnZU9yZGVyaW5nRW5hYmxlZEoECAIQAw==');
+    'ChVTdHJlYW1pbmdQdWxsUmVzcG9uc2USTgoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsyIS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZVIQcmVjZWl2ZWRNZXNzYWdlcxJ6ChhhY2tub3dsZWRnZV9jb25maXJtYXRpb24YBSABKAsyPy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25zZS5BY2tub3dsZWRnZUNvbmZpcm1hdGlvblIXYWNrbm93bGVkZ2VDb25maXJtYXRpb24SjgEKIG1vZGlmeV9hY2tfZGVhZGxpbmVfY29uZmlybWF0aW9uGAMgASgLMkUuZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuTW9kaWZ5QWNrRGVhZGxpbmVDb25maXJtYXRpb25SHW1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0aW9uEncKF3N1YnNjcmlwdGlvbl9wcm9wZXJ0aWVzGAQgASgLMj4uZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuU3Vic2NyaXB0aW9uUHJvcGVydGllc1IWc3Vic2NyaXB0aW9uUHJvcGVydGllcxq/AQoXQWNrbm93bGVkZ2VDb25maXJtYXRpb24SFwoHYWNrX2lkcxgBIAMoCVIGYWNrSWRzEiYKD2ludmFsaWRfYWNrX2lkcxgCIAMoCVINaW52YWxpZEFja0lkcxIqChF1bm9yZGVyZWRfYWNrX2lkcxgDIAMoCVIPdW5vcmRlcmVkQWNrSWRzEjcKGHRlbXBvcmFyeV9mYWlsZWRfYWNrX2lkcxgEIAMoCVIVdGVtcG9yYXJ5RmFpbGVkQWNrSWRzGpkBCh1Nb2RpZnlBY2tEZWFkbGluZUNvbmZpcm1hdGlvbhIXCgdhY2tfaWRzGAEgAygJUgZhY2tJZHMSJgoPaW52YWxpZF9hY2tfaWRzGAIgAygJUg1pbnZhbGlkQWNrSWRzEjcKGHRlbXBvcmFyeV9mYWlsZWRfYWNrX2lkcxgDIAMoCVIVdGVtcG9yYXJ5RmFpbGVkQWNrSWRzGpUBChZTdWJzY3JpcHRpb25Qcm9wZXJ0aWVzEkEKHWV4YWN0bHlfb25jZV9kZWxpdmVyeV9lbmFibGVkGAEgASgIUhpleGFjdGx5T25jZURlbGl2ZXJ5RW5hYmxlZBI4ChhtZXNzYWdlX29yZGVyaW5nX2VuYWJsZWQYAiABKAhSFm1lc3NhZ2VPcmRlcmluZ0VuYWJsZWQ=');
 @$core.Deprecated('Use createSnapshotRequestDescriptor instead')
 const CreateSnapshotRequest$json = const {
   '1': 'CreateSnapshotRequest',

@@ -322,12 +322,19 @@ class CVSS_AttackComplexity extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'ATTACK_COMPLEXITY_HIGH');
+  static const CVSS_AttackComplexity ATTACK_COMPLEXITY_MEDIUM =
+      CVSS_AttackComplexity._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ATTACK_COMPLEXITY_MEDIUM');
 
   static const $core.List<CVSS_AttackComplexity> values =
       <CVSS_AttackComplexity>[
     ATTACK_COMPLEXITY_UNSPECIFIED,
     ATTACK_COMPLEXITY_LOW,
     ATTACK_COMPLEXITY_HIGH,
+    ATTACK_COMPLEXITY_MEDIUM,
   ];
 
   static final $core.Map<$core.int, CVSS_AttackComplexity> _byValue =
@@ -501,12 +508,24 @@ class CVSS_Impact extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'IMPACT_NONE');
+  static const CVSS_Impact IMPACT_PARTIAL = CVSS_Impact._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'IMPACT_PARTIAL');
+  static const CVSS_Impact IMPACT_COMPLETE = CVSS_Impact._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'IMPACT_COMPLETE');
 
   static const $core.List<CVSS_Impact> values = <CVSS_Impact>[
     IMPACT_UNSPECIFIED,
     IMPACT_HIGH,
     IMPACT_LOW,
     IMPACT_NONE,
+    IMPACT_PARTIAL,
+    IMPACT_COMPLETE,
   ];
 
   static final $core.Map<$core.int, CVSS_Impact> _byValue =

@@ -31,12 +31,43 @@ class UiDetectionRequest extends $pb.GeneratedMessage {
             ? ''
             : 'request',
         subBuilder: DetectionRequest.create)
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resizeImage')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'testId')
+    ..aOM<TestMetadata>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'testMetadata',
+        subBuilder: TestMetadata.create)
+    ..aOB(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'forceImageResizing')
+    ..aOB(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'returnTransformedImage')
     ..hasRequiredFields = false;
 
   UiDetectionRequest._() : super();
   factory UiDetectionRequest({
     $core.List<$core.int>? imagePng,
     DetectionRequest? request,
+    $core.bool? resizeImage,
+    @$core.Deprecated('This field is deprecated.') $core.String? testId,
+    TestMetadata? testMetadata,
+    $core.bool? forceImageResizing,
+    $core.bool? returnTransformedImage,
   }) {
     final _result = create();
     if (imagePng != null) {
@@ -44,6 +75,22 @@ class UiDetectionRequest extends $pb.GeneratedMessage {
     }
     if (request != null) {
       _result.request = request;
+    }
+    if (resizeImage != null) {
+      _result.resizeImage = resizeImage;
+    }
+    if (testId != null) {
+      // ignore: deprecated_member_use_from_same_package
+      _result.testId = testId;
+    }
+    if (testMetadata != null) {
+      _result.testMetadata = testMetadata;
+    }
+    if (forceImageResizing != null) {
+      _result.forceImageResizing = forceImageResizing;
+    }
+    if (returnTransformedImage != null) {
+      _result.returnTransformedImage = returnTransformedImage;
     }
     return _result;
   }
@@ -99,6 +146,72 @@ class UiDetectionRequest extends $pb.GeneratedMessage {
   void clearRequest() => clearField(2);
   @$pb.TagNumber(2)
   DetectionRequest ensureRequest() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.bool get resizeImage => $_getBF(2);
+  @$pb.TagNumber(3)
+  set resizeImage($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasResizeImage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearResizeImage() => clearField(3);
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
+  $core.String get testId => $_getSZ(3);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
+  set testId($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
+  $core.bool hasTestId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
+  void clearTestId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  TestMetadata get testMetadata => $_getN(4);
+  @$pb.TagNumber(5)
+  set testMetadata(TestMetadata v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTestMetadata() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTestMetadata() => clearField(5);
+  @$pb.TagNumber(5)
+  TestMetadata ensureTestMetadata() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.bool get forceImageResizing => $_getBF(5);
+  @$pb.TagNumber(6)
+  set forceImageResizing($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasForceImageResizing() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearForceImageResizing() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get returnTransformedImage => $_getBF(6);
+  @$pb.TagNumber(7)
+  set returnTransformedImage($core.bool v) {
+    $_setBool(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasReturnTransformedImage() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearReturnTransformedImage() => clearField(7);
 }
 
 enum DetectionRequest_DetectionRequestType {
@@ -236,6 +349,136 @@ class DetectionRequest extends $pb.GeneratedMessage {
   void clearCustomIconDetectionRequest() => clearField(3);
   @$pb.TagNumber(3)
   CustomIconDetectionRequest ensureCustomIconDetectionRequest() => $_ensure(2);
+}
+
+class TestMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TestMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.chromeos.uidetection.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'testId')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'board')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'model')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'crosBuild')
+    ..hasRequiredFields = false;
+
+  TestMetadata._() : super();
+  factory TestMetadata({
+    $core.String? testId,
+    $core.String? board,
+    $core.String? model,
+    $core.String? crosBuild,
+  }) {
+    final _result = create();
+    if (testId != null) {
+      _result.testId = testId;
+    }
+    if (board != null) {
+      _result.board = board;
+    }
+    if (model != null) {
+      _result.model = model;
+    }
+    if (crosBuild != null) {
+      _result.crosBuild = crosBuild;
+    }
+    return _result;
+  }
+  factory TestMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TestMetadata clone() => TestMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TestMetadata copyWith(void Function(TestMetadata) updates) =>
+      super.copyWith((message) => updates(message as TestMetadata))
+          as TestMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TestMetadata create() => TestMetadata._();
+  TestMetadata createEmptyInstance() => create();
+  static $pb.PbList<TestMetadata> createRepeated() =>
+      $pb.PbList<TestMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static TestMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TestMetadata>(create);
+  static TestMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get testId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set testId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTestId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTestId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get board => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set board($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasBoard() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBoard() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get model => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set model($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasModel() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearModel() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get crosBuild => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set crosBuild($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCrosBuild() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCrosBuild() => clearField(4);
 }
 
 class WordDetectionRequest extends $pb.GeneratedMessage {
@@ -401,6 +644,11 @@ class TextBlockDetectionRequest extends $pb.GeneratedMessage {
             ? ''
             : 'maxEditDistance',
         $pb.PbFieldType.O3)
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'specifiedWordsOnly')
     ..hasRequiredFields = false;
 
   TextBlockDetectionRequest._() : super();
@@ -409,6 +657,7 @@ class TextBlockDetectionRequest extends $pb.GeneratedMessage {
     $core.bool? regexMode,
     $core.bool? disableApproxMatch,
     $core.int? maxEditDistance,
+    $core.bool? specifiedWordsOnly,
   }) {
     final _result = create();
     if (words != null) {
@@ -422,6 +671,9 @@ class TextBlockDetectionRequest extends $pb.GeneratedMessage {
     }
     if (maxEditDistance != null) {
       _result.maxEditDistance = maxEditDistance;
+    }
+    if (specifiedWordsOnly != null) {
+      _result.specifiedWordsOnly = specifiedWordsOnly;
     }
     return _result;
   }
@@ -492,6 +744,18 @@ class TextBlockDetectionRequest extends $pb.GeneratedMessage {
   $core.bool hasMaxEditDistance() => $_has(3);
   @$pb.TagNumber(4)
   void clearMaxEditDistance() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get specifiedWordsOnly => $_getBF(4);
+  @$pb.TagNumber(5)
+  set specifiedWordsOnly($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSpecifiedWordsOnly() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSpecifiedWordsOnly() => clearField(5);
 }
 
 class CustomIconDetectionRequest extends $pb.GeneratedMessage {
@@ -626,15 +890,35 @@ class UiDetectionResponse extends $pb.GeneratedMessage {
             : 'boundingBoxes',
         $pb.PbFieldType.PM,
         subBuilder: BoundingBox.create)
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transformedImagePng',
+        $pb.PbFieldType.OY)
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resizingScaleFactor',
+        $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   UiDetectionResponse._() : super();
   factory UiDetectionResponse({
     $core.Iterable<BoundingBox>? boundingBoxes,
+    $core.List<$core.int>? transformedImagePng,
+    $core.double? resizingScaleFactor,
   }) {
     final _result = create();
     if (boundingBoxes != null) {
       _result.boundingBoxes.addAll(boundingBoxes);
+    }
+    if (transformedImagePng != null) {
+      _result.transformedImagePng = transformedImagePng;
+    }
+    if (resizingScaleFactor != null) {
+      _result.resizingScaleFactor = resizingScaleFactor;
     }
     return _result;
   }
@@ -667,6 +951,30 @@ class UiDetectionResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<BoundingBox> get boundingBoxes => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get transformedImagePng => $_getN(1);
+  @$pb.TagNumber(2)
+  set transformedImagePng($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTransformedImagePng() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTransformedImagePng() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get resizingScaleFactor => $_getN(2);
+  @$pb.TagNumber(3)
+  set resizingScaleFactor($core.double v) {
+    $_setFloat(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasResizingScaleFactor() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearResizingScaleFactor() => clearField(3);
 }
 
 class BoundingBox extends $pb.GeneratedMessage {

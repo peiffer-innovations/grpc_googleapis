@@ -218,7 +218,7 @@ class TargetReference extends $pb.GeneratedMessage {
   factory TargetReference({
     DriveItemReference? driveItem,
     @$core.Deprecated('This field is deprecated.')
-        TeamDriveReference? teamDrive,
+    TeamDriveReference? teamDrive,
     DriveReference? drive,
   }) {
     final _result = create();
@@ -974,7 +974,7 @@ class Owner extends $pb.GeneratedMessage {
   factory Owner({
     $0.User? user,
     @$core.Deprecated('This field is deprecated.')
-        TeamDriveReference? teamDrive,
+    TeamDriveReference? teamDrive,
     $1.Domain? domain,
     DriveReference? drive,
   }) {

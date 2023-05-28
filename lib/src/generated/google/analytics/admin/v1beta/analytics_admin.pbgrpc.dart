@@ -278,6 +278,12 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
           '/google.analytics.admin.v1beta.AnalyticsAdminService/GetDataStream',
           ($0.GetDataStreamRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.DataStream.fromBuffer(value));
+  static final _$runAccessReport = $grpc.ClientMethod<$0.RunAccessReportRequest,
+          $0.RunAccessReportResponse>(
+      '/google.analytics.admin.v1beta.AnalyticsAdminService/RunAccessReport',
+      ($0.RunAccessReportRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.RunAccessReportResponse.fromBuffer(value));
 
   AnalyticsAdminServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -578,6 +584,12 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.GetDataStreamRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getDataStream, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.RunAccessReportResponse> runAccessReport(
+      $0.RunAccessReportRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$runAccessReport, request, options: options);
   }
 }
 
@@ -993,6 +1005,15 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetDataStreamRequest.fromBuffer(value),
         ($1.DataStream value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RunAccessReportRequest,
+            $0.RunAccessReportResponse>(
+        'RunAccessReport',
+        runAccessReport_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RunAccessReportRequest.fromBuffer(value),
+        ($0.RunAccessReportResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Account> getAccount_Pre($grpc.ServiceCall call,
@@ -1265,6 +1286,12 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return getDataStream(call, await request);
   }
 
+  $async.Future<$0.RunAccessReportResponse> runAccessReport_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.RunAccessReportRequest> request) async {
+    return runAccessReport(call, await request);
+  }
+
   $async.Future<$1.Account> getAccount(
       $grpc.ServiceCall call, $0.GetAccountRequest request);
   $async.Future<$0.ListAccountsResponse> listAccounts(
@@ -1364,4 +1391,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.ListDataStreamsRequest request);
   $async.Future<$1.DataStream> getDataStream(
       $grpc.ServiceCall call, $0.GetDataStreamRequest request);
+  $async.Future<$0.RunAccessReportResponse> runAccessReport(
+      $grpc.ServiceCall call, $0.RunAccessReportRequest request);
 }

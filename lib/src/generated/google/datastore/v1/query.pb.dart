@@ -51,6 +51,12 @@ class EntityResult extends $pb.GeneratedMessage {
             ? ''
             : 'updateTime',
         subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   EntityResult._() : super();
@@ -59,6 +65,7 @@ class EntityResult extends $pb.GeneratedMessage {
     $core.List<$core.int>? cursor,
     $fixnum.Int64? version,
     $1.Timestamp? updateTime,
+    $1.Timestamp? createTime,
   }) {
     final _result = create();
     if (entity != null) {
@@ -72,6 +79,9 @@ class EntityResult extends $pb.GeneratedMessage {
     }
     if (updateTime != null) {
       _result.updateTime = updateTime;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
     }
     return _result;
   }
@@ -153,6 +163,20 @@ class EntityResult extends $pb.GeneratedMessage {
   void clearUpdateTime() => clearField(5);
   @$pb.TagNumber(5)
   $1.Timestamp ensureUpdateTime() => $_ensure(3);
+
+  @$pb.TagNumber(6)
+  $1.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(6)
+  set createTime($1.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasCreateTime() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearCreateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.Timestamp ensureCreateTime() => $_ensure(4);
 }
 
 class Query extends $pb.GeneratedMessage {

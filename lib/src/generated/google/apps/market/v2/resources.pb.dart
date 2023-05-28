@@ -188,7 +188,7 @@ class CustomerLicense extends $pb.GeneratedMessage {
     $core.String? state,
     $core.String? applicationId,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<CustomerLicense_Editions>? editions,
+    $core.Iterable<CustomerLicense_Editions>? editions,
     $core.String? id,
     $core.String? customerId,
   }) {

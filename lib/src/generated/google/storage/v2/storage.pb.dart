@@ -920,11 +920,11 @@ class UpdateBucketRequest extends $pb.GeneratedMessage {
   void clearPredefinedDefaultObjectAcl() => clearField(9);
 }
 
-class DeleteNotificationRequest extends $pb.GeneratedMessage {
+class DeleteNotificationConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'DeleteNotificationRequest',
+          : 'DeleteNotificationConfigRequest',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -937,8 +937,8 @@ class DeleteNotificationRequest extends $pb.GeneratedMessage {
             : 'name')
     ..hasRequiredFields = false;
 
-  DeleteNotificationRequest._() : super();
-  factory DeleteNotificationRequest({
+  DeleteNotificationConfigRequest._() : super();
+  factory DeleteNotificationConfigRequest({
     $core.String? name,
   }) {
     final _result = create();
@@ -947,34 +947,37 @@ class DeleteNotificationRequest extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory DeleteNotificationRequest.fromBuffer($core.List<$core.int> i,
+  factory DeleteNotificationConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory DeleteNotificationRequest.fromJson($core.String i,
+  factory DeleteNotificationConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  DeleteNotificationRequest clone() =>
-      DeleteNotificationRequest()..mergeFromMessage(this);
+  DeleteNotificationConfigRequest clone() =>
+      DeleteNotificationConfigRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  DeleteNotificationRequest copyWith(
-          void Function(DeleteNotificationRequest) updates) =>
-      super.copyWith((message) => updates(message as DeleteNotificationRequest))
-          as DeleteNotificationRequest; // ignore: deprecated_member_use
+  DeleteNotificationConfigRequest copyWith(
+          void Function(DeleteNotificationConfigRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeleteNotificationConfigRequest))
+          as DeleteNotificationConfigRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static DeleteNotificationRequest create() => DeleteNotificationRequest._();
-  DeleteNotificationRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteNotificationRequest> createRepeated() =>
-      $pb.PbList<DeleteNotificationRequest>();
+  static DeleteNotificationConfigRequest create() =>
+      DeleteNotificationConfigRequest._();
+  DeleteNotificationConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteNotificationConfigRequest> createRepeated() =>
+      $pb.PbList<DeleteNotificationConfigRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteNotificationRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DeleteNotificationRequest>(create);
-  static DeleteNotificationRequest? _defaultInstance;
+  static DeleteNotificationConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteNotificationConfigRequest>(
+          create);
+  static DeleteNotificationConfigRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -989,11 +992,11 @@ class DeleteNotificationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
-class GetNotificationRequest extends $pb.GeneratedMessage {
+class GetNotificationConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'GetNotificationRequest',
+          : 'GetNotificationConfigRequest',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -1006,8 +1009,8 @@ class GetNotificationRequest extends $pb.GeneratedMessage {
             : 'name')
     ..hasRequiredFields = false;
 
-  GetNotificationRequest._() : super();
-  factory GetNotificationRequest({
+  GetNotificationConfigRequest._() : super();
+  factory GetNotificationConfigRequest({
     $core.String? name,
   }) {
     final _result = create();
@@ -1016,34 +1019,36 @@ class GetNotificationRequest extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory GetNotificationRequest.fromBuffer($core.List<$core.int> i,
+  factory GetNotificationConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory GetNotificationRequest.fromJson($core.String i,
+  factory GetNotificationConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  GetNotificationRequest clone() =>
-      GetNotificationRequest()..mergeFromMessage(this);
+  GetNotificationConfigRequest clone() =>
+      GetNotificationConfigRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  GetNotificationRequest copyWith(
-          void Function(GetNotificationRequest) updates) =>
-      super.copyWith((message) => updates(message as GetNotificationRequest))
-          as GetNotificationRequest; // ignore: deprecated_member_use
+  GetNotificationConfigRequest copyWith(
+          void Function(GetNotificationConfigRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetNotificationConfigRequest))
+          as GetNotificationConfigRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static GetNotificationRequest create() => GetNotificationRequest._();
-  GetNotificationRequest createEmptyInstance() => create();
-  static $pb.PbList<GetNotificationRequest> createRepeated() =>
-      $pb.PbList<GetNotificationRequest>();
+  static GetNotificationConfigRequest create() =>
+      GetNotificationConfigRequest._();
+  GetNotificationConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetNotificationConfigRequest> createRepeated() =>
+      $pb.PbList<GetNotificationConfigRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetNotificationRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<GetNotificationRequest>(create);
-  static GetNotificationRequest? _defaultInstance;
+  static GetNotificationConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetNotificationConfigRequest>(create);
+  static GetNotificationConfigRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -1058,11 +1063,11 @@ class GetNotificationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
-class CreateNotificationRequest extends $pb.GeneratedMessage {
+class CreateNotificationConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'CreateNotificationRequest',
+          : 'CreateNotificationConfigRequest',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -1073,56 +1078,59 @@ class CreateNotificationRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'parent')
-    ..aOM<Notification>(
+    ..aOM<NotificationConfig>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'notification',
-        subBuilder: Notification.create)
+            : 'notificationConfig',
+        subBuilder: NotificationConfig.create)
     ..hasRequiredFields = false;
 
-  CreateNotificationRequest._() : super();
-  factory CreateNotificationRequest({
+  CreateNotificationConfigRequest._() : super();
+  factory CreateNotificationConfigRequest({
     $core.String? parent,
-    Notification? notification,
+    NotificationConfig? notificationConfig,
   }) {
     final _result = create();
     if (parent != null) {
       _result.parent = parent;
     }
-    if (notification != null) {
-      _result.notification = notification;
+    if (notificationConfig != null) {
+      _result.notificationConfig = notificationConfig;
     }
     return _result;
   }
-  factory CreateNotificationRequest.fromBuffer($core.List<$core.int> i,
+  factory CreateNotificationConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CreateNotificationRequest.fromJson($core.String i,
+  factory CreateNotificationConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CreateNotificationRequest clone() =>
-      CreateNotificationRequest()..mergeFromMessage(this);
+  CreateNotificationConfigRequest clone() =>
+      CreateNotificationConfigRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CreateNotificationRequest copyWith(
-          void Function(CreateNotificationRequest) updates) =>
-      super.copyWith((message) => updates(message as CreateNotificationRequest))
-          as CreateNotificationRequest; // ignore: deprecated_member_use
+  CreateNotificationConfigRequest copyWith(
+          void Function(CreateNotificationConfigRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreateNotificationConfigRequest))
+          as CreateNotificationConfigRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static CreateNotificationRequest create() => CreateNotificationRequest._();
-  CreateNotificationRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateNotificationRequest> createRepeated() =>
-      $pb.PbList<CreateNotificationRequest>();
+  static CreateNotificationConfigRequest create() =>
+      CreateNotificationConfigRequest._();
+  CreateNotificationConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateNotificationConfigRequest> createRepeated() =>
+      $pb.PbList<CreateNotificationConfigRequest>();
   @$core.pragma('dart2js:noInline')
-  static CreateNotificationRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CreateNotificationRequest>(create);
-  static CreateNotificationRequest? _defaultInstance;
+  static CreateNotificationConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateNotificationConfigRequest>(
+          create);
+  static CreateNotificationConfigRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
@@ -1137,25 +1145,25 @@ class CreateNotificationRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(1);
 
   @$pb.TagNumber(2)
-  Notification get notification => $_getN(1);
+  NotificationConfig get notificationConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set notification(Notification v) {
+  set notificationConfig(NotificationConfig v) {
     setField(2, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasNotification() => $_has(1);
+  $core.bool hasNotificationConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNotification() => clearField(2);
+  void clearNotificationConfig() => clearField(2);
   @$pb.TagNumber(2)
-  Notification ensureNotification() => $_ensure(1);
+  NotificationConfig ensureNotificationConfig() => $_ensure(1);
 }
 
-class ListNotificationsRequest extends $pb.GeneratedMessage {
+class ListNotificationConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'ListNotificationsRequest',
+          : 'ListNotificationConfigsRequest',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -1179,8 +1187,8 @@ class ListNotificationsRequest extends $pb.GeneratedMessage {
             : 'pageToken')
     ..hasRequiredFields = false;
 
-  ListNotificationsRequest._() : super();
-  factory ListNotificationsRequest({
+  ListNotificationConfigsRequest._() : super();
+  factory ListNotificationConfigsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
@@ -1197,34 +1205,36 @@ class ListNotificationsRequest extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory ListNotificationsRequest.fromBuffer($core.List<$core.int> i,
+  factory ListNotificationConfigsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ListNotificationsRequest.fromJson($core.String i,
+  factory ListNotificationConfigsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ListNotificationsRequest clone() =>
-      ListNotificationsRequest()..mergeFromMessage(this);
+  ListNotificationConfigsRequest clone() =>
+      ListNotificationConfigsRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ListNotificationsRequest copyWith(
-          void Function(ListNotificationsRequest) updates) =>
-      super.copyWith((message) => updates(message as ListNotificationsRequest))
-          as ListNotificationsRequest; // ignore: deprecated_member_use
+  ListNotificationConfigsRequest copyWith(
+          void Function(ListNotificationConfigsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListNotificationConfigsRequest))
+          as ListNotificationConfigsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ListNotificationsRequest create() => ListNotificationsRequest._();
-  ListNotificationsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListNotificationsRequest> createRepeated() =>
-      $pb.PbList<ListNotificationsRequest>();
+  static ListNotificationConfigsRequest create() =>
+      ListNotificationConfigsRequest._();
+  ListNotificationConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListNotificationConfigsRequest> createRepeated() =>
+      $pb.PbList<ListNotificationConfigsRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListNotificationsRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ListNotificationsRequest>(create);
-  static ListNotificationsRequest? _defaultInstance;
+  static ListNotificationConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotificationConfigsRequest>(create);
+  static ListNotificationConfigsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
@@ -1263,23 +1273,23 @@ class ListNotificationsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
-class ListNotificationsResponse extends $pb.GeneratedMessage {
+class ListNotificationConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'ListNotificationsResponse',
+          : 'ListNotificationConfigsResponse',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'google.storage.v2'),
       createEmptyInstance: create)
-    ..pc<Notification>(
+    ..pc<NotificationConfig>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'notifications',
+            : 'notificationConfigs',
         $pb.PbFieldType.PM,
-        subBuilder: Notification.create)
+        subBuilder: NotificationConfig.create)
     ..aOS(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1287,51 +1297,54 @@ class ListNotificationsResponse extends $pb.GeneratedMessage {
             : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListNotificationsResponse._() : super();
-  factory ListNotificationsResponse({
-    $core.Iterable<Notification>? notifications,
+  ListNotificationConfigsResponse._() : super();
+  factory ListNotificationConfigsResponse({
+    $core.Iterable<NotificationConfig>? notificationConfigs,
     $core.String? nextPageToken,
   }) {
     final _result = create();
-    if (notifications != null) {
-      _result.notifications.addAll(notifications);
+    if (notificationConfigs != null) {
+      _result.notificationConfigs.addAll(notificationConfigs);
     }
     if (nextPageToken != null) {
       _result.nextPageToken = nextPageToken;
     }
     return _result;
   }
-  factory ListNotificationsResponse.fromBuffer($core.List<$core.int> i,
+  factory ListNotificationConfigsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ListNotificationsResponse.fromJson($core.String i,
+  factory ListNotificationConfigsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ListNotificationsResponse clone() =>
-      ListNotificationsResponse()..mergeFromMessage(this);
+  ListNotificationConfigsResponse clone() =>
+      ListNotificationConfigsResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ListNotificationsResponse copyWith(
-          void Function(ListNotificationsResponse) updates) =>
-      super.copyWith((message) => updates(message as ListNotificationsResponse))
-          as ListNotificationsResponse; // ignore: deprecated_member_use
+  ListNotificationConfigsResponse copyWith(
+          void Function(ListNotificationConfigsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListNotificationConfigsResponse))
+          as ListNotificationConfigsResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ListNotificationsResponse create() => ListNotificationsResponse._();
-  ListNotificationsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListNotificationsResponse> createRepeated() =>
-      $pb.PbList<ListNotificationsResponse>();
+  static ListNotificationConfigsResponse create() =>
+      ListNotificationConfigsResponse._();
+  ListNotificationConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListNotificationConfigsResponse> createRepeated() =>
+      $pb.PbList<ListNotificationConfigsResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListNotificationsResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ListNotificationsResponse>(create);
-  static ListNotificationsResponse? _defaultInstance;
+  static ListNotificationConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotificationConfigsResponse>(
+          create);
+  static ListNotificationConfigsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<Notification> get notifications => $_getList(0);
+  $core.List<NotificationConfig> get notificationConfigs => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
@@ -6831,11 +6844,6 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'isLocked')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'retentionPeriod')
     ..aOM<$7.Duration>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -6848,7 +6856,6 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   factory Bucket_RetentionPolicy({
     $5.Timestamp? effectiveTime,
     $core.bool? isLocked,
-    $fixnum.Int64? retentionPeriod,
     $7.Duration? retentionDuration,
   }) {
     final _result = create();
@@ -6857,9 +6864,6 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
     }
     if (isLocked != null) {
       _result.isLocked = isLocked;
-    }
-    if (retentionPeriod != null) {
-      _result.retentionPeriod = retentionPeriod;
     }
     if (retentionDuration != null) {
       _result.retentionDuration = retentionDuration;
@@ -6921,31 +6925,19 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIsLocked() => clearField(2);
 
-  @$pb.TagNumber(3)
-  $fixnum.Int64 get retentionPeriod => $_getI64(2);
-  @$pb.TagNumber(3)
-  set retentionPeriod($fixnum.Int64 v) {
-    $_setInt64(2, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasRetentionPeriod() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearRetentionPeriod() => clearField(3);
-
   @$pb.TagNumber(4)
-  $7.Duration get retentionDuration => $_getN(3);
+  $7.Duration get retentionDuration => $_getN(2);
   @$pb.TagNumber(4)
   set retentionDuration($7.Duration v) {
     setField(4, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasRetentionDuration() => $_has(3);
+  $core.bool hasRetentionDuration() => $_has(2);
   @$pb.TagNumber(4)
   void clearRetentionDuration() => clearField(4);
   @$pb.TagNumber(4)
-  $7.Duration ensureRetentionDuration() => $_ensure(3);
+  $7.Duration ensureRetentionDuration() => $_ensure(2);
 }
 
 class Bucket_Versioning extends $pb.GeneratedMessage {
@@ -8540,11 +8532,11 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   void clearEtag() => clearField(8);
 }
 
-class Notification extends $pb.GeneratedMessage {
+class NotificationConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'Notification',
+          : 'NotificationConfig',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -8570,7 +8562,7 @@ class Notification extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'customAttributes',
-        entryClassName: 'Notification.CustomAttributesEntry',
+        entryClassName: 'NotificationConfig.CustomAttributesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('google.storage.v2'))
@@ -8591,8 +8583,8 @@ class Notification extends $pb.GeneratedMessage {
             : 'etag')
     ..hasRequiredFields = false;
 
-  Notification._() : super();
-  factory Notification({
+  NotificationConfig._() : super();
+  factory NotificationConfig({
     $core.String? name,
     $core.String? topic,
     $core.Iterable<$core.String>? eventTypes,
@@ -8625,32 +8617,32 @@ class Notification extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Notification.fromBuffer($core.List<$core.int> i,
+  factory NotificationConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory Notification.fromJson($core.String i,
+  factory NotificationConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  Notification clone() => Notification()..mergeFromMessage(this);
+  NotificationConfig clone() => NotificationConfig()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  Notification copyWith(void Function(Notification) updates) =>
-      super.copyWith((message) => updates(message as Notification))
-          as Notification; // ignore: deprecated_member_use
+  NotificationConfig copyWith(void Function(NotificationConfig) updates) =>
+      super.copyWith((message) => updates(message as NotificationConfig))
+          as NotificationConfig; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Notification create() => Notification._();
-  Notification createEmptyInstance() => create();
-  static $pb.PbList<Notification> createRepeated() =>
-      $pb.PbList<Notification>();
+  static NotificationConfig create() => NotificationConfig._();
+  NotificationConfig createEmptyInstance() => create();
+  static $pb.PbList<NotificationConfig> createRepeated() =>
+      $pb.PbList<NotificationConfig>();
   @$core.pragma('dart2js:noInline')
-  static Notification getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Notification>(create);
-  static Notification? _defaultInstance;
+  static NotificationConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NotificationConfig>(create);
+  static NotificationConfig? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);

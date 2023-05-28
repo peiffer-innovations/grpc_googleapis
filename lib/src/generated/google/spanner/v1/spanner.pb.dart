@@ -1080,6 +1080,11 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
             ? ''
             : 'requestOptions',
         subBuilder: RequestOptions.create)
+    ..aOB(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataBoostEnabled')
     ..hasRequiredFields = false;
 
   ExecuteSqlRequest._() : super();
@@ -1095,6 +1100,7 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? seqno,
     ExecuteSqlRequest_QueryOptions? queryOptions,
     RequestOptions? requestOptions,
+    $core.bool? dataBoostEnabled,
   }) {
     final _result = create();
     if (session != null) {
@@ -1129,6 +1135,9 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
     }
     if (requestOptions != null) {
       _result.requestOptions = requestOptions;
+    }
+    if (dataBoostEnabled != null) {
+      _result.dataBoostEnabled = dataBoostEnabled;
     }
     return _result;
   }
@@ -1289,6 +1298,18 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   void clearRequestOptions() => clearField(11);
   @$pb.TagNumber(11)
   RequestOptions ensureRequestOptions() => $_ensure(10);
+
+  @$pb.TagNumber(16)
+  $core.bool get dataBoostEnabled => $_getBF(11);
+  @$pb.TagNumber(16)
+  set dataBoostEnabled($core.bool v) {
+    $_setBool(11, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasDataBoostEnabled() => $_has(11);
+  @$pb.TagNumber(16)
+  void clearDataBoostEnabled() => clearField(16);
 }
 
 class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
@@ -2319,6 +2340,11 @@ class ReadRequest extends $pb.GeneratedMessage {
             ? ''
             : 'requestOptions',
         subBuilder: RequestOptions.create)
+    ..aOB(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dataBoostEnabled')
     ..hasRequiredFields = false;
 
   ReadRequest._() : super();
@@ -2333,6 +2359,7 @@ class ReadRequest extends $pb.GeneratedMessage {
     $core.List<$core.int>? resumeToken,
     $core.List<$core.int>? partitionToken,
     RequestOptions? requestOptions,
+    $core.bool? dataBoostEnabled,
   }) {
     final _result = create();
     if (session != null) {
@@ -2364,6 +2391,9 @@ class ReadRequest extends $pb.GeneratedMessage {
     }
     if (requestOptions != null) {
       _result.requestOptions = requestOptions;
+    }
+    if (dataBoostEnabled != null) {
+      _result.dataBoostEnabled = dataBoostEnabled;
     }
     return _result;
   }
@@ -2509,6 +2539,18 @@ class ReadRequest extends $pb.GeneratedMessage {
   void clearRequestOptions() => clearField(11);
   @$pb.TagNumber(11)
   RequestOptions ensureRequestOptions() => $_ensure(9);
+
+  @$pb.TagNumber(15)
+  $core.bool get dataBoostEnabled => $_getBF(10);
+  @$pb.TagNumber(15)
+  set dataBoostEnabled($core.bool v) {
+    $_setBool(10, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasDataBoostEnabled() => $_has(10);
+  @$pb.TagNumber(15)
+  void clearDataBoostEnabled() => clearField(15);
 }
 
 class BeginTransactionRequest extends $pb.GeneratedMessage {

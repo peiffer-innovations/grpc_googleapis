@@ -1237,6 +1237,12 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
             ? ''
             : 'networkPerformanceConfig',
         subBuilder: NodeNetworkConfig_NetworkPerformanceConfig.create)
+    ..aOM<PodCIDROverprovisionConfig>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'podCidrOverprovisionConfig',
+        subBuilder: PodCIDROverprovisionConfig.create)
     ..hasRequiredFields = false;
 
   NodeNetworkConfig._() : super();
@@ -1246,6 +1252,7 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
     $core.String? podIpv4CidrBlock,
     $core.bool? enablePrivateNodes,
     NodeNetworkConfig_NetworkPerformanceConfig? networkPerformanceConfig,
+    PodCIDROverprovisionConfig? podCidrOverprovisionConfig,
   }) {
     final _result = create();
     if (createPodRange != null) {
@@ -1262,6 +1269,9 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
     }
     if (networkPerformanceConfig != null) {
       _result.networkPerformanceConfig = networkPerformanceConfig;
+    }
+    if (podCidrOverprovisionConfig != null) {
+      _result.podCidrOverprovisionConfig = podCidrOverprovisionConfig;
     }
     return _result;
   }
@@ -1355,6 +1365,20 @@ class NodeNetworkConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   NodeNetworkConfig_NetworkPerformanceConfig ensureNetworkPerformanceConfig() =>
       $_ensure(4);
+
+  @$pb.TagNumber(13)
+  PodCIDROverprovisionConfig get podCidrOverprovisionConfig => $_getN(5);
+  @$pb.TagNumber(13)
+  set podCidrOverprovisionConfig(PodCIDROverprovisionConfig v) {
+    setField(13, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasPodCidrOverprovisionConfig() => $_has(5);
+  @$pb.TagNumber(13)
+  void clearPodCidrOverprovisionConfig() => clearField(13);
+  @$pb.TagNumber(13)
+  PodCIDROverprovisionConfig ensurePodCidrOverprovisionConfig() => $_ensure(5);
 }
 
 class ShieldedInstanceConfig extends $pb.GeneratedMessage {
@@ -2369,7 +2393,7 @@ class AddonsConfig extends $pb.GeneratedMessage {
     HttpLoadBalancing? httpLoadBalancing,
     HorizontalPodAutoscaling? horizontalPodAutoscaling,
     @$core.Deprecated('This field is deprecated.')
-        KubernetesDashboard? kubernetesDashboard,
+    KubernetesDashboard? kubernetesDashboard,
     NetworkPolicyConfig? networkPolicyConfig,
     CloudRunConfig? cloudRunConfig,
     DnsCacheConfig? dnsCacheConfig,
@@ -4140,6 +4164,76 @@ class BinaryAuthorization extends $pb.GeneratedMessage {
   void clearEvaluationMode() => clearField(2);
 }
 
+class PodCIDROverprovisionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PodCIDROverprovisionConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'disable')
+    ..hasRequiredFields = false;
+
+  PodCIDROverprovisionConfig._() : super();
+  factory PodCIDROverprovisionConfig({
+    $core.bool? disable,
+  }) {
+    final _result = create();
+    if (disable != null) {
+      _result.disable = disable;
+    }
+    return _result;
+  }
+  factory PodCIDROverprovisionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PodCIDROverprovisionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PodCIDROverprovisionConfig clone() =>
+      PodCIDROverprovisionConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PodCIDROverprovisionConfig copyWith(
+          void Function(PodCIDROverprovisionConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as PodCIDROverprovisionConfig))
+          as PodCIDROverprovisionConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PodCIDROverprovisionConfig create() => PodCIDROverprovisionConfig._();
+  PodCIDROverprovisionConfig createEmptyInstance() => create();
+  static $pb.PbList<PodCIDROverprovisionConfig> createRepeated() =>
+      $pb.PbList<PodCIDROverprovisionConfig>();
+  @$core.pragma('dart2js:noInline')
+  static PodCIDROverprovisionConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PodCIDROverprovisionConfig>(create);
+  static PodCIDROverprovisionConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get disable => $_getBF(0);
+  @$pb.TagNumber(1)
+  set disable($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDisable() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDisable() => clearField(1);
+}
+
 class IPAllocationPolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -4233,6 +4327,12 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
         defaultOrMaker: IPv6AccessType.IPV6_ACCESS_TYPE_UNSPECIFIED,
         valueOf: IPv6AccessType.valueOf,
         enumValues: IPv6AccessType.values)
+    ..aOM<PodCIDROverprovisionConfig>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'podCidrOverprovisionConfig',
+        subBuilder: PodCIDROverprovisionConfig.create)
     ..aOS(
         22,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -4243,6 +4343,12 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'servicesIpv6CidrBlock')
+    ..aOM<AdditionalPodRangesConfig>(
+        24,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'additionalPodRangesConfig',
+        subBuilder: AdditionalPodRangesConfig.create)
     ..hasRequiredFields = false;
 
   IPAllocationPolicy._() : super();
@@ -4251,10 +4357,10 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
     $core.bool? createSubnetwork,
     $core.String? subnetworkName,
     @$core.Deprecated('This field is deprecated.')
-        $core.String? clusterIpv4Cidr,
+    $core.String? clusterIpv4Cidr,
     @$core.Deprecated('This field is deprecated.') $core.String? nodeIpv4Cidr,
     @$core.Deprecated('This field is deprecated.')
-        $core.String? servicesIpv4Cidr,
+    $core.String? servicesIpv4Cidr,
     $core.String? clusterSecondaryRangeName,
     $core.String? servicesSecondaryRangeName,
     $core.String? clusterIpv4CidrBlock,
@@ -4264,8 +4370,10 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
     $core.bool? useRoutes,
     StackType? stackType,
     IPv6AccessType? ipv6AccessType,
+    PodCIDROverprovisionConfig? podCidrOverprovisionConfig,
     $core.String? subnetIpv6CidrBlock,
     $core.String? servicesIpv6CidrBlock,
+    AdditionalPodRangesConfig? additionalPodRangesConfig,
   }) {
     final _result = create();
     if (useIpAliases != null) {
@@ -4316,11 +4424,17 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
     if (ipv6AccessType != null) {
       _result.ipv6AccessType = ipv6AccessType;
     }
+    if (podCidrOverprovisionConfig != null) {
+      _result.podCidrOverprovisionConfig = podCidrOverprovisionConfig;
+    }
     if (subnetIpv6CidrBlock != null) {
       _result.subnetIpv6CidrBlock = subnetIpv6CidrBlock;
     }
     if (servicesIpv6CidrBlock != null) {
       _result.servicesIpv6CidrBlock = servicesIpv6CidrBlock;
+    }
+    if (additionalPodRangesConfig != null) {
+      _result.additionalPodRangesConfig = additionalPodRangesConfig;
     }
     return _result;
   }
@@ -4543,29 +4657,57 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   void clearIpv6AccessType() => clearField(17);
 
+  @$pb.TagNumber(21)
+  PodCIDROverprovisionConfig get podCidrOverprovisionConfig => $_getN(15);
+  @$pb.TagNumber(21)
+  set podCidrOverprovisionConfig(PodCIDROverprovisionConfig v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasPodCidrOverprovisionConfig() => $_has(15);
+  @$pb.TagNumber(21)
+  void clearPodCidrOverprovisionConfig() => clearField(21);
+  @$pb.TagNumber(21)
+  PodCIDROverprovisionConfig ensurePodCidrOverprovisionConfig() => $_ensure(15);
+
   @$pb.TagNumber(22)
-  $core.String get subnetIpv6CidrBlock => $_getSZ(15);
+  $core.String get subnetIpv6CidrBlock => $_getSZ(16);
   @$pb.TagNumber(22)
   set subnetIpv6CidrBlock($core.String v) {
-    $_setString(15, v);
+    $_setString(16, v);
   }
 
   @$pb.TagNumber(22)
-  $core.bool hasSubnetIpv6CidrBlock() => $_has(15);
+  $core.bool hasSubnetIpv6CidrBlock() => $_has(16);
   @$pb.TagNumber(22)
   void clearSubnetIpv6CidrBlock() => clearField(22);
 
   @$pb.TagNumber(23)
-  $core.String get servicesIpv6CidrBlock => $_getSZ(16);
+  $core.String get servicesIpv6CidrBlock => $_getSZ(17);
   @$pb.TagNumber(23)
   set servicesIpv6CidrBlock($core.String v) {
-    $_setString(16, v);
+    $_setString(17, v);
   }
 
   @$pb.TagNumber(23)
-  $core.bool hasServicesIpv6CidrBlock() => $_has(16);
+  $core.bool hasServicesIpv6CidrBlock() => $_has(17);
   @$pb.TagNumber(23)
   void clearServicesIpv6CidrBlock() => clearField(23);
+
+  @$pb.TagNumber(24)
+  AdditionalPodRangesConfig get additionalPodRangesConfig => $_getN(18);
+  @$pb.TagNumber(24)
+  set additionalPodRangesConfig(AdditionalPodRangesConfig v) {
+    setField(24, v);
+  }
+
+  @$pb.TagNumber(24)
+  $core.bool hasAdditionalPodRangesConfig() => $_has(18);
+  @$pb.TagNumber(24)
+  void clearAdditionalPodRangesConfig() => clearField(24);
+  @$pb.TagNumber(24)
+  AdditionalPodRangesConfig ensureAdditionalPodRangesConfig() => $_ensure(18);
 }
 
 class Cluster extends $pb.GeneratedMessage {
@@ -4938,6 +5080,12 @@ class Cluster extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'etag')
+    ..aOM<Fleet>(
+        140,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fleet',
+        subBuilder: Fleet.create)
     ..hasRequiredFields = false;
 
   Cluster._() : super();
@@ -4986,14 +5134,14 @@ class Cluster extends $pb.GeneratedMessage {
     $core.String? initialClusterVersion,
     $core.String? currentMasterVersion,
     @$core.Deprecated('This field is deprecated.')
-        $core.String? currentNodeVersion,
+    $core.String? currentNodeVersion,
     $core.String? createTime,
     Cluster_Status? status,
     @$core.Deprecated('This field is deprecated.') $core.String? statusMessage,
     $core.int? nodeIpv4CidrSize,
     $core.String? servicesIpv4Cidr,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$core.String>? instanceGroupUrls,
+    $core.Iterable<$core.String>? instanceGroupUrls,
     @$core.Deprecated('This field is deprecated.') $core.int? currentNodeCount,
     $core.String? expireTime,
     $core.String? location,
@@ -5007,6 +5155,7 @@ class Cluster extends $pb.GeneratedMessage {
     MonitoringConfig? monitoringConfig,
     NodePoolAutoConfig? nodePoolAutoConfig,
     $core.String? etag,
+    Fleet? fleet,
   }) {
     final _result = create();
     if (name != null) {
@@ -5204,6 +5353,9 @@ class Cluster extends $pb.GeneratedMessage {
     }
     if (etag != null) {
       _result.etag = etag;
+    }
+    if (fleet != null) {
+      _result.fleet = fleet;
     }
     return _result;
   }
@@ -6031,6 +6183,20 @@ class Cluster extends $pb.GeneratedMessage {
   $core.bool hasEtag() => $_has(62);
   @$pb.TagNumber(139)
   void clearEtag() => clearField(139);
+
+  @$pb.TagNumber(140)
+  Fleet get fleet => $_getN(63);
+  @$pb.TagNumber(140)
+  set fleet(Fleet v) {
+    setField(140, v);
+  }
+
+  @$pb.TagNumber(140)
+  $core.bool hasFleet() => $_has(63);
+  @$pb.TagNumber(140)
+  void clearFleet() => clearField(140);
+  @$pb.TagNumber(140)
+  Fleet ensureFleet() => $_ensure(63);
 }
 
 class NodePoolAutoConfig extends $pb.GeneratedMessage {
@@ -6509,6 +6675,12 @@ class ClusterUpdate extends $pb.GeneratedMessage {
             ? ''
             : 'desiredNodePoolLoggingConfig',
         subBuilder: NodePoolLoggingConfig.create)
+    ..aOM<Fleet>(
+        117,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'desiredFleet',
+        subBuilder: Fleet.create)
     ..e<StackType>(
         119,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -6518,6 +6690,18 @@ class ClusterUpdate extends $pb.GeneratedMessage {
         defaultOrMaker: StackType.STACK_TYPE_UNSPECIFIED,
         valueOf: StackType.valueOf,
         enumValues: StackType.values)
+    ..aOM<AdditionalPodRangesConfig>(
+        120,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'additionalPodRangesConfig',
+        subBuilder: AdditionalPodRangesConfig.create)
+    ..aOM<AdditionalPodRangesConfig>(
+        121,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'removedAdditionalPodRangesConfig',
+        subBuilder: AdditionalPodRangesConfig.create)
     ..hasRequiredFields = false;
 
   ClusterUpdate._() : super();
@@ -6561,7 +6745,10 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     GatewayAPIConfig? desiredGatewayApiConfig,
     $core.String? etag,
     NodePoolLoggingConfig? desiredNodePoolLoggingConfig,
+    Fleet? desiredFleet,
     StackType? desiredStackType,
+    AdditionalPodRangesConfig? additionalPodRangesConfig,
+    AdditionalPodRangesConfig? removedAdditionalPodRangesConfig,
   }) {
     final _result = create();
     if (desiredNodeVersion != null) {
@@ -6686,8 +6873,18 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     if (desiredNodePoolLoggingConfig != null) {
       _result.desiredNodePoolLoggingConfig = desiredNodePoolLoggingConfig;
     }
+    if (desiredFleet != null) {
+      _result.desiredFleet = desiredFleet;
+    }
     if (desiredStackType != null) {
       _result.desiredStackType = desiredStackType;
+    }
+    if (additionalPodRangesConfig != null) {
+      _result.additionalPodRangesConfig = additionalPodRangesConfig;
+    }
+    if (removedAdditionalPodRangesConfig != null) {
+      _result.removedAdditionalPodRangesConfig =
+          removedAdditionalPodRangesConfig;
     }
     return _result;
   }
@@ -7239,17 +7436,120 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(116)
   NodePoolLoggingConfig ensureDesiredNodePoolLoggingConfig() => $_ensure(38);
 
+  @$pb.TagNumber(117)
+  Fleet get desiredFleet => $_getN(39);
+  @$pb.TagNumber(117)
+  set desiredFleet(Fleet v) {
+    setField(117, v);
+  }
+
+  @$pb.TagNumber(117)
+  $core.bool hasDesiredFleet() => $_has(39);
+  @$pb.TagNumber(117)
+  void clearDesiredFleet() => clearField(117);
+  @$pb.TagNumber(117)
+  Fleet ensureDesiredFleet() => $_ensure(39);
+
   @$pb.TagNumber(119)
-  StackType get desiredStackType => $_getN(39);
+  StackType get desiredStackType => $_getN(40);
   @$pb.TagNumber(119)
   set desiredStackType(StackType v) {
     setField(119, v);
   }
 
   @$pb.TagNumber(119)
-  $core.bool hasDesiredStackType() => $_has(39);
+  $core.bool hasDesiredStackType() => $_has(40);
   @$pb.TagNumber(119)
   void clearDesiredStackType() => clearField(119);
+
+  @$pb.TagNumber(120)
+  AdditionalPodRangesConfig get additionalPodRangesConfig => $_getN(41);
+  @$pb.TagNumber(120)
+  set additionalPodRangesConfig(AdditionalPodRangesConfig v) {
+    setField(120, v);
+  }
+
+  @$pb.TagNumber(120)
+  $core.bool hasAdditionalPodRangesConfig() => $_has(41);
+  @$pb.TagNumber(120)
+  void clearAdditionalPodRangesConfig() => clearField(120);
+  @$pb.TagNumber(120)
+  AdditionalPodRangesConfig ensureAdditionalPodRangesConfig() => $_ensure(41);
+
+  @$pb.TagNumber(121)
+  AdditionalPodRangesConfig get removedAdditionalPodRangesConfig => $_getN(42);
+  @$pb.TagNumber(121)
+  set removedAdditionalPodRangesConfig(AdditionalPodRangesConfig v) {
+    setField(121, v);
+  }
+
+  @$pb.TagNumber(121)
+  $core.bool hasRemovedAdditionalPodRangesConfig() => $_has(42);
+  @$pb.TagNumber(121)
+  void clearRemovedAdditionalPodRangesConfig() => clearField(121);
+  @$pb.TagNumber(121)
+  AdditionalPodRangesConfig ensureRemovedAdditionalPodRangesConfig() =>
+      $_ensure(42);
+}
+
+class AdditionalPodRangesConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AdditionalPodRangesConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'podRangeNames')
+    ..hasRequiredFields = false;
+
+  AdditionalPodRangesConfig._() : super();
+  factory AdditionalPodRangesConfig({
+    $core.Iterable<$core.String>? podRangeNames,
+  }) {
+    final _result = create();
+    if (podRangeNames != null) {
+      _result.podRangeNames.addAll(podRangeNames);
+    }
+    return _result;
+  }
+  factory AdditionalPodRangesConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdditionalPodRangesConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AdditionalPodRangesConfig clone() =>
+      AdditionalPodRangesConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AdditionalPodRangesConfig copyWith(
+          void Function(AdditionalPodRangesConfig) updates) =>
+      super.copyWith((message) => updates(message as AdditionalPodRangesConfig))
+          as AdditionalPodRangesConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AdditionalPodRangesConfig create() => AdditionalPodRangesConfig._();
+  AdditionalPodRangesConfig createEmptyInstance() => create();
+  static $pb.PbList<AdditionalPodRangesConfig> createRepeated() =>
+      $pb.PbList<AdditionalPodRangesConfig>();
+  @$core.pragma('dart2js:noInline')
+  static AdditionalPodRangesConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdditionalPodRangesConfig>(create);
+  static AdditionalPodRangesConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get podRangeNames => $_getList(0);
 }
 
 class Operation extends $pb.GeneratedMessage {
@@ -7368,9 +7668,9 @@ class Operation extends $pb.GeneratedMessage {
     $core.String? endTime,
     OperationProgress? progress,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<StatusCondition>? clusterConditions,
+    $core.Iterable<StatusCondition>? clusterConditions,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<StatusCondition>? nodepoolConditions,
+    $core.Iterable<StatusCondition>? nodepoolConditions,
     $3.Status? error,
   }) {
     final _result = create();
@@ -21136,6 +21436,114 @@ class ManagedPrometheusConfig extends $pb.GeneratedMessage {
   $core.bool hasEnabled() => $_has(0);
   @$pb.TagNumber(1)
   void clearEnabled() => clearField(1);
+}
+
+class Fleet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Fleet',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.container.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'project')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'membership')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'preRegistered')
+    ..hasRequiredFields = false;
+
+  Fleet._() : super();
+  factory Fleet({
+    $core.String? project,
+    $core.String? membership,
+    $core.bool? preRegistered,
+  }) {
+    final _result = create();
+    if (project != null) {
+      _result.project = project;
+    }
+    if (membership != null) {
+      _result.membership = membership;
+    }
+    if (preRegistered != null) {
+      _result.preRegistered = preRegistered;
+    }
+    return _result;
+  }
+  factory Fleet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Fleet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Fleet clone() => Fleet()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Fleet copyWith(void Function(Fleet) updates) =>
+      super.copyWith((message) => updates(message as Fleet))
+          as Fleet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Fleet create() => Fleet._();
+  Fleet createEmptyInstance() => create();
+  static $pb.PbList<Fleet> createRepeated() => $pb.PbList<Fleet>();
+  @$core.pragma('dart2js:noInline')
+  static Fleet getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Fleet>(create);
+  static Fleet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get project => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set project($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasProject() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProject() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get membership => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set membership($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMembership() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMembership() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get preRegistered => $_getBF(2);
+  @$pb.TagNumber(3)
+  set preRegistered($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPreRegistered() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPreRegistered() => clearField(3);
 }
 
 class LocalNvmeSsdBlockConfig extends $pb.GeneratedMessage {

@@ -63,27 +63,28 @@ class StorageClient extends $grpc.Client {
           '/google.storage.v2.Storage/UpdateBucket',
           ($2.UpdateBucketRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Bucket.fromBuffer(value));
-  static final _$deleteNotification =
-      $grpc.ClientMethod<$2.DeleteNotificationRequest, $3.Empty>(
-          '/google.storage.v2.Storage/DeleteNotification',
-          ($2.DeleteNotificationRequest value) => value.writeToBuffer(),
+  static final _$deleteNotificationConfig =
+      $grpc.ClientMethod<$2.DeleteNotificationConfigRequest, $3.Empty>(
+          '/google.storage.v2.Storage/DeleteNotificationConfig',
+          ($2.DeleteNotificationConfigRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
-  static final _$getNotification =
-      $grpc.ClientMethod<$2.GetNotificationRequest, $2.Notification>(
-          '/google.storage.v2.Storage/GetNotification',
-          ($2.GetNotificationRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $2.Notification.fromBuffer(value));
-  static final _$createNotification =
-      $grpc.ClientMethod<$2.CreateNotificationRequest, $2.Notification>(
-          '/google.storage.v2.Storage/CreateNotification',
-          ($2.CreateNotificationRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $2.Notification.fromBuffer(value));
-  static final _$listNotifications = $grpc.ClientMethod<
-          $2.ListNotificationsRequest, $2.ListNotificationsResponse>(
-      '/google.storage.v2.Storage/ListNotifications',
-      ($2.ListNotificationsRequest value) => value.writeToBuffer(),
+  static final _$getNotificationConfig = $grpc.ClientMethod<
+          $2.GetNotificationConfigRequest, $2.NotificationConfig>(
+      '/google.storage.v2.Storage/GetNotificationConfig',
+      ($2.GetNotificationConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.NotificationConfig.fromBuffer(value));
+  static final _$createNotificationConfig = $grpc.ClientMethod<
+          $2.CreateNotificationConfigRequest, $2.NotificationConfig>(
+      '/google.storage.v2.Storage/CreateNotificationConfig',
+      ($2.CreateNotificationConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.NotificationConfig.fromBuffer(value));
+  static final _$listNotificationConfigs = $grpc.ClientMethod<
+          $2.ListNotificationConfigsRequest,
+          $2.ListNotificationConfigsResponse>(
+      '/google.storage.v2.Storage/ListNotificationConfigs',
+      ($2.ListNotificationConfigsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $2.ListNotificationsResponse.fromBuffer(value));
+          $2.ListNotificationConfigsResponse.fromBuffer(value));
   static final _$composeObject =
       $grpc.ClientMethod<$2.ComposeObjectRequest, $2.Object>(
           '/google.storage.v2.Storage/ComposeObject',
@@ -234,28 +235,31 @@ class StorageClient extends $grpc.Client {
     return $createUnaryCall(_$updateBucket, request, options: options);
   }
 
-  $grpc.ResponseFuture<$3.Empty> deleteNotification(
-      $2.DeleteNotificationRequest request,
+  $grpc.ResponseFuture<$3.Empty> deleteNotificationConfig(
+      $2.DeleteNotificationConfigRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteNotification, request, options: options);
+    return $createUnaryCall(_$deleteNotificationConfig, request,
+        options: options);
   }
 
-  $grpc.ResponseFuture<$2.Notification> getNotification(
-      $2.GetNotificationRequest request,
+  $grpc.ResponseFuture<$2.NotificationConfig> getNotificationConfig(
+      $2.GetNotificationConfigRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getNotification, request, options: options);
+    return $createUnaryCall(_$getNotificationConfig, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.Notification> createNotification(
-      $2.CreateNotificationRequest request,
+  $grpc.ResponseFuture<$2.NotificationConfig> createNotificationConfig(
+      $2.CreateNotificationConfigRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createNotification, request, options: options);
+    return $createUnaryCall(_$createNotificationConfig, request,
+        options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListNotificationsResponse> listNotifications(
-      $2.ListNotificationsRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listNotifications, request, options: options);
+  $grpc.ResponseFuture<$2.ListNotificationConfigsResponse>
+      listNotificationConfigs($2.ListNotificationConfigsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listNotificationConfigs, request,
+        options: options);
   }
 
   $grpc.ResponseFuture<$2.Object> composeObject($2.ComposeObjectRequest request,
@@ -437,40 +441,42 @@ abstract class StorageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.UpdateBucketRequest.fromBuffer(value),
         ($2.Bucket value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.DeleteNotificationRequest, $3.Empty>(
-        'DeleteNotification',
-        deleteNotification_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.DeleteNotificationRequest.fromBuffer(value),
-        ($3.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetNotificationRequest, $2.Notification>(
-        'GetNotification',
-        getNotification_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.GetNotificationRequest.fromBuffer(value),
-        ($2.Notification value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$2.CreateNotificationRequest, $2.Notification>(
-            'CreateNotification',
-            createNotification_Pre,
+        $grpc.ServiceMethod<$2.DeleteNotificationConfigRequest, $3.Empty>(
+            'DeleteNotificationConfig',
+            deleteNotificationConfig_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                $2.CreateNotificationRequest.fromBuffer(value),
-            ($2.Notification value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.ListNotificationsRequest,
-            $2.ListNotificationsResponse>(
-        'ListNotifications',
-        listNotifications_Pre,
+                $2.DeleteNotificationConfigRequest.fromBuffer(value),
+            ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetNotificationConfigRequest,
+            $2.NotificationConfig>(
+        'GetNotificationConfig',
+        getNotificationConfig_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.ListNotificationsRequest.fromBuffer(value),
-        ($2.ListNotificationsResponse value) => value.writeToBuffer()));
+            $2.GetNotificationConfigRequest.fromBuffer(value),
+        ($2.NotificationConfig value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateNotificationConfigRequest,
+            $2.NotificationConfig>(
+        'CreateNotificationConfig',
+        createNotificationConfig_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.CreateNotificationConfigRequest.fromBuffer(value),
+        ($2.NotificationConfig value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListNotificationConfigsRequest,
+            $2.ListNotificationConfigsResponse>(
+        'ListNotificationConfigs',
+        listNotificationConfigs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ListNotificationConfigsRequest.fromBuffer(value),
+        ($2.ListNotificationConfigsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.ComposeObjectRequest, $2.Object>(
         'ComposeObject',
         composeObject_Pre,
@@ -660,25 +666,27 @@ abstract class StorageServiceBase extends $grpc.Service {
     return updateBucket(call, await request);
   }
 
-  $async.Future<$3.Empty> deleteNotification_Pre($grpc.ServiceCall call,
-      $async.Future<$2.DeleteNotificationRequest> request) async {
-    return deleteNotification(call, await request);
+  $async.Future<$3.Empty> deleteNotificationConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteNotificationConfigRequest> request) async {
+    return deleteNotificationConfig(call, await request);
   }
 
-  $async.Future<$2.Notification> getNotification_Pre($grpc.ServiceCall call,
-      $async.Future<$2.GetNotificationRequest> request) async {
-    return getNotification(call, await request);
-  }
-
-  $async.Future<$2.Notification> createNotification_Pre($grpc.ServiceCall call,
-      $async.Future<$2.CreateNotificationRequest> request) async {
-    return createNotification(call, await request);
-  }
-
-  $async.Future<$2.ListNotificationsResponse> listNotifications_Pre(
+  $async.Future<$2.NotificationConfig> getNotificationConfig_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$2.ListNotificationsRequest> request) async {
-    return listNotifications(call, await request);
+      $async.Future<$2.GetNotificationConfigRequest> request) async {
+    return getNotificationConfig(call, await request);
+  }
+
+  $async.Future<$2.NotificationConfig> createNotificationConfig_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.CreateNotificationConfigRequest> request) async {
+    return createNotificationConfig(call, await request);
+  }
+
+  $async.Future<$2.ListNotificationConfigsResponse> listNotificationConfigs_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListNotificationConfigsRequest> request) async {
+    return listNotificationConfigs(call, await request);
   }
 
   $async.Future<$2.Object> composeObject_Pre($grpc.ServiceCall call,
@@ -784,14 +792,14 @@ abstract class StorageServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
   $async.Future<$2.Bucket> updateBucket(
       $grpc.ServiceCall call, $2.UpdateBucketRequest request);
-  $async.Future<$3.Empty> deleteNotification(
-      $grpc.ServiceCall call, $2.DeleteNotificationRequest request);
-  $async.Future<$2.Notification> getNotification(
-      $grpc.ServiceCall call, $2.GetNotificationRequest request);
-  $async.Future<$2.Notification> createNotification(
-      $grpc.ServiceCall call, $2.CreateNotificationRequest request);
-  $async.Future<$2.ListNotificationsResponse> listNotifications(
-      $grpc.ServiceCall call, $2.ListNotificationsRequest request);
+  $async.Future<$3.Empty> deleteNotificationConfig(
+      $grpc.ServiceCall call, $2.DeleteNotificationConfigRequest request);
+  $async.Future<$2.NotificationConfig> getNotificationConfig(
+      $grpc.ServiceCall call, $2.GetNotificationConfigRequest request);
+  $async.Future<$2.NotificationConfig> createNotificationConfig(
+      $grpc.ServiceCall call, $2.CreateNotificationConfigRequest request);
+  $async.Future<$2.ListNotificationConfigsResponse> listNotificationConfigs(
+      $grpc.ServiceCall call, $2.ListNotificationConfigsRequest request);
   $async.Future<$2.Object> composeObject(
       $grpc.ServiceCall call, $2.ComposeObjectRequest request);
   $async.Future<$3.Empty> deleteObject(

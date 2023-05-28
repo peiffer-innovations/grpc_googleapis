@@ -83,7 +83,7 @@ class NotificationChannelDescriptor extends $pb.GeneratedMessage {
     $core.String? description,
     $core.Iterable<$0.LabelDescriptor>? labels,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$3.ServiceTier>? supportedTiers,
+    $core.Iterable<$3.ServiceTier>? supportedTiers,
     $core.String? name,
     $4.LaunchStage? launchStage,
   }) {

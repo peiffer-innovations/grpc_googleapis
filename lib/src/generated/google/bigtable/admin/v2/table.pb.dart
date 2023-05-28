@@ -124,6 +124,76 @@ class RestoreInfo extends $pb.GeneratedMessage {
   BackupInfo ensureBackupInfo() => $_ensure(1);
 }
 
+class ChangeStreamConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ChangeStreamConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Duration>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'retentionPeriod',
+        subBuilder: $0.Duration.create)
+    ..hasRequiredFields = false;
+
+  ChangeStreamConfig._() : super();
+  factory ChangeStreamConfig({
+    $0.Duration? retentionPeriod,
+  }) {
+    final _result = create();
+    if (retentionPeriod != null) {
+      _result.retentionPeriod = retentionPeriod;
+    }
+    return _result;
+  }
+  factory ChangeStreamConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ChangeStreamConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ChangeStreamConfig clone() => ChangeStreamConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ChangeStreamConfig copyWith(void Function(ChangeStreamConfig) updates) =>
+      super.copyWith((message) => updates(message as ChangeStreamConfig))
+          as ChangeStreamConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ChangeStreamConfig create() => ChangeStreamConfig._();
+  ChangeStreamConfig createEmptyInstance() => create();
+  static $pb.PbList<ChangeStreamConfig> createRepeated() =>
+      $pb.PbList<ChangeStreamConfig>();
+  @$core.pragma('dart2js:noInline')
+  static ChangeStreamConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ChangeStreamConfig>(create);
+  static ChangeStreamConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Duration get retentionPeriod => $_getN(0);
+  @$pb.TagNumber(1)
+  set retentionPeriod($0.Duration v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRetentionPeriod() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRetentionPeriod() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Duration ensureRetentionPeriod() => $_ensure(0);
+}
+
 class Table_ClusterState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -260,6 +330,12 @@ class Table extends $pb.GeneratedMessage {
             ? ''
             : 'restoreInfo',
         subBuilder: RestoreInfo.create)
+    ..aOM<ChangeStreamConfig>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'changeStreamConfig',
+        subBuilder: ChangeStreamConfig.create)
     ..aOB(
         9,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -274,6 +350,7 @@ class Table extends $pb.GeneratedMessage {
     $core.Map<$core.String, ColumnFamily>? columnFamilies,
     Table_TimestampGranularity? granularity,
     RestoreInfo? restoreInfo,
+    ChangeStreamConfig? changeStreamConfig,
     $core.bool? deletionProtection,
   }) {
     final _result = create();
@@ -291,6 +368,9 @@ class Table extends $pb.GeneratedMessage {
     }
     if (restoreInfo != null) {
       _result.restoreInfo = restoreInfo;
+    }
+    if (changeStreamConfig != null) {
+      _result.changeStreamConfig = changeStreamConfig;
     }
     if (deletionProtection != null) {
       _result.deletionProtection = deletionProtection;
@@ -367,15 +447,29 @@ class Table extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   RestoreInfo ensureRestoreInfo() => $_ensure(4);
 
+  @$pb.TagNumber(8)
+  ChangeStreamConfig get changeStreamConfig => $_getN(5);
+  @$pb.TagNumber(8)
+  set changeStreamConfig(ChangeStreamConfig v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasChangeStreamConfig() => $_has(5);
+  @$pb.TagNumber(8)
+  void clearChangeStreamConfig() => clearField(8);
+  @$pb.TagNumber(8)
+  ChangeStreamConfig ensureChangeStreamConfig() => $_ensure(5);
+
   @$pb.TagNumber(9)
-  $core.bool get deletionProtection => $_getBF(5);
+  $core.bool get deletionProtection => $_getBF(6);
   @$pb.TagNumber(9)
   set deletionProtection($core.bool v) {
-    $_setBool(5, v);
+    $_setBool(6, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasDeletionProtection() => $_has(5);
+  $core.bool hasDeletionProtection() => $_has(6);
   @$pb.TagNumber(9)
   void clearDeletionProtection() => clearField(9);
 }

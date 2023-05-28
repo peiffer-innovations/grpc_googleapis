@@ -969,10 +969,11 @@ class SystraceSetup extends $pb.GeneratedMessage {
 
   SystraceSetup._() : super();
   factory SystraceSetup({
-    $core.int? durationSeconds,
+    @$core.Deprecated('This field is deprecated.') $core.int? durationSeconds,
   }) {
     final _result = create();
     if (durationSeconds != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.durationSeconds = durationSeconds;
     }
     return _result;
@@ -1004,15 +1005,19 @@ class SystraceSetup extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SystraceSetup>(create);
   static SystraceSetup? _defaultInstance;
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.int get durationSeconds => $_getIZ(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   set durationSeconds($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.bool hasDurationSeconds() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   void clearDurationSeconds() => clearField(1);
 }
@@ -1085,7 +1090,7 @@ class TestSetup extends $pb.GeneratedMessage {
     Account? account,
     $core.String? networkProfile,
     $core.Iterable<EnvironmentVariable>? environmentVariables,
-    SystraceSetup? systrace,
+    @$core.Deprecated('This field is deprecated.') SystraceSetup? systrace,
     $core.bool? dontAutograntPermissions,
   }) {
     final _result = create();
@@ -1108,6 +1113,7 @@ class TestSetup extends $pb.GeneratedMessage {
       _result.environmentVariables.addAll(environmentVariables);
     }
     if (systrace != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.systrace = systrace;
     }
     if (dontAutograntPermissions != null) {
@@ -1179,17 +1185,22 @@ class TestSetup extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.List<EnvironmentVariable> get environmentVariables => $_getList(5);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
   SystraceSetup get systrace => $_getN(6);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
   set systrace(SystraceSetup v) {
     setField(9, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
   $core.bool hasSystrace() => $_has(6);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
   void clearSystrace() => clearField(9);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
   SystraceSetup ensureSystrace() => $_ensure(6);
 
@@ -2822,6 +2833,15 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
             ? ''
             : 'roboScript',
         subBuilder: FileReference.create)
+    ..e<RoboMode>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'roboMode',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: RoboMode.ROBO_MODE_UNSPECIFIED,
+        valueOf: RoboMode.valueOf,
+        enumValues: RoboMode.values)
     ..pc<RoboStartingIntent>(
         15,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2846,6 +2866,7 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.') $core.int? maxSteps,
     $core.Iterable<RoboDirective>? roboDirectives,
     FileReference? roboScript,
+    RoboMode? roboMode,
     $core.Iterable<RoboStartingIntent>? startingIntents,
     AppBundle? appBundle,
   }) {
@@ -2872,6 +2893,9 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
     }
     if (roboScript != null) {
       _result.roboScript = roboScript;
+    }
+    if (roboMode != null) {
+      _result.roboMode = roboMode;
     }
     if (startingIntents != null) {
       _result.startingIntents.addAll(startingIntents);
@@ -2999,22 +3023,34 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   FileReference ensureRoboScript() => $_ensure(6);
 
+  @$pb.TagNumber(14)
+  RoboMode get roboMode => $_getN(7);
+  @$pb.TagNumber(14)
+  set roboMode(RoboMode v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasRoboMode() => $_has(7);
+  @$pb.TagNumber(14)
+  void clearRoboMode() => clearField(14);
+
   @$pb.TagNumber(15)
-  $core.List<RoboStartingIntent> get startingIntents => $_getList(7);
+  $core.List<RoboStartingIntent> get startingIntents => $_getList(8);
 
   @$pb.TagNumber(16)
-  AppBundle get appBundle => $_getN(8);
+  AppBundle get appBundle => $_getN(9);
   @$pb.TagNumber(16)
   set appBundle(AppBundle v) {
     setField(16, v);
   }
 
   @$pb.TagNumber(16)
-  $core.bool hasAppBundle() => $_has(8);
+  $core.bool hasAppBundle() => $_has(9);
   @$pb.TagNumber(16)
   void clearAppBundle() => clearField(16);
   @$pb.TagNumber(16)
-  AppBundle ensureAppBundle() => $_ensure(8);
+  AppBundle ensureAppBundle() => $_ensure(9);
 }
 
 class RoboDirective extends $pb.GeneratedMessage {
@@ -5055,13 +5091,19 @@ class InvalidRequestDetail extends $pb.GeneratedMessage {
   void clearReason() => clearField(1);
 }
 
-enum ShardingOption_Option { uniformSharding, manualSharding, notSet }
+enum ShardingOption_Option {
+  uniformSharding,
+  manualSharding,
+  smartSharding,
+  notSet
+}
 
 class ShardingOption extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, ShardingOption_Option>
       _ShardingOption_OptionByTag = {
     1: ShardingOption_Option.uniformSharding,
     2: ShardingOption_Option.manualSharding,
+    3: ShardingOption_Option.smartSharding,
     0: ShardingOption_Option.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -5073,7 +5115,7 @@ class ShardingOption extends $pb.GeneratedMessage {
               ? ''
               : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 3])
     ..aOM<UniformSharding>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -5086,12 +5128,19 @@ class ShardingOption extends $pb.GeneratedMessage {
             ? ''
             : 'manualSharding',
         subBuilder: ManualSharding.create)
+    ..aOM<SmartSharding>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'smartSharding',
+        subBuilder: SmartSharding.create)
     ..hasRequiredFields = false;
 
   ShardingOption._() : super();
   factory ShardingOption({
     UniformSharding? uniformSharding,
     ManualSharding? manualSharding,
+    SmartSharding? smartSharding,
   }) {
     final _result = create();
     if (uniformSharding != null) {
@@ -5099,6 +5148,9 @@ class ShardingOption extends $pb.GeneratedMessage {
     }
     if (manualSharding != null) {
       _result.manualSharding = manualSharding;
+    }
+    if (smartSharding != null) {
+      _result.smartSharding = smartSharding;
     }
     return _result;
   }
@@ -5160,6 +5212,20 @@ class ShardingOption extends $pb.GeneratedMessage {
   void clearManualSharding() => clearField(2);
   @$pb.TagNumber(2)
   ManualSharding ensureManualSharding() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  SmartSharding get smartSharding => $_getN(2);
+  @$pb.TagNumber(3)
+  set smartSharding(SmartSharding v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasSmartSharding() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSmartSharding() => clearField(3);
+  @$pb.TagNumber(3)
+  SmartSharding ensureSmartSharding() => $_ensure(2);
 }
 
 class UniformSharding extends $pb.GeneratedMessage {
@@ -5346,6 +5412,76 @@ class TestTargetsForShard extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get testTargets => $_getList(0);
+}
+
+class SmartSharding extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SmartSharding',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Duration>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetedShardDuration',
+        subBuilder: $2.Duration.create)
+    ..hasRequiredFields = false;
+
+  SmartSharding._() : super();
+  factory SmartSharding({
+    $2.Duration? targetedShardDuration,
+  }) {
+    final _result = create();
+    if (targetedShardDuration != null) {
+      _result.targetedShardDuration = targetedShardDuration;
+    }
+    return _result;
+  }
+  factory SmartSharding.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SmartSharding.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SmartSharding clone() => SmartSharding()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SmartSharding copyWith(void Function(SmartSharding) updates) =>
+      super.copyWith((message) => updates(message as SmartSharding))
+          as SmartSharding; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SmartSharding create() => SmartSharding._();
+  SmartSharding createEmptyInstance() => create();
+  static $pb.PbList<SmartSharding> createRepeated() =>
+      $pb.PbList<SmartSharding>();
+  @$core.pragma('dart2js:noInline')
+  static SmartSharding getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SmartSharding>(create);
+  static SmartSharding? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.Duration get targetedShardDuration => $_getN(0);
+  @$pb.TagNumber(1)
+  set targetedShardDuration($2.Duration v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasTargetedShardDuration() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTargetedShardDuration() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Duration ensureTargetedShardDuration() => $_ensure(0);
 }
 
 class Shard extends $pb.GeneratedMessage {

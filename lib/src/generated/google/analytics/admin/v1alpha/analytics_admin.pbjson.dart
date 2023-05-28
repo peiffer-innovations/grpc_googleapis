@@ -1683,6 +1683,133 @@ final $typed_data.Uint8List
     cancelDisplayVideo360AdvertiserLinkProposalRequestDescriptor =
     $convert.base64Decode(
         'CjJDYW5jZWxEaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2VyTGlua1Byb3Bvc2FsUmVxdWVzdBJfCgRuYW1lGAEgASgJQkvgQQL6QUUKQ2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxSBG5hbWU=');
+@$core.Deprecated('Use getSearchAds360LinkRequestDescriptor instead')
+const GetSearchAds360LinkRequest$json = const {
+  '1': 'GetSearchAds360LinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetSearchAds360LinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSearchAds360LinkRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRTZWFyY2hBZHMzNjBMaW5rUmVxdWVzdBJKCgRuYW1lGAEgASgJQjbgQQL6QTAKLmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1NlYXJjaEFkczM2MExpbmtSBG5hbWU=');
+@$core.Deprecated('Use listSearchAds360LinksRequestDescriptor instead')
+const ListSearchAds360LinksRequest$json = const {
+  '1': 'ListSearchAds360LinksRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListSearchAds360LinksRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSearchAds360LinksRequestDescriptor =
+    $convert.base64Decode(
+        'ChxMaXN0U2VhcmNoQWRzMzYwTGlua3NSZXF1ZXN0Ek4KBnBhcmVudBgBIAEoCUI24EEC+kEwEi5hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9TZWFyY2hBZHMzNjBMaW5rUgZwYXJlbnQSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4=');
+@$core.Deprecated('Use listSearchAds360LinksResponseDescriptor instead')
+const ListSearchAds360LinksResponse$json = const {
+  '1': 'ListSearchAds360LinksResponse',
+  '2': const [
+    const {
+      '1': 'search_ads_360_links',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.SearchAds360Link',
+      '10': 'searchAds360Links'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListSearchAds360LinksResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSearchAds360LinksResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1MaXN0U2VhcmNoQWRzMzYwTGlua3NSZXNwb25zZRJhChRzZWFyY2hfYWRzXzM2MF9saW5rcxgBIAMoCzIwLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TZWFyY2hBZHMzNjBMaW5rUhFzZWFyY2hBZHMzNjBMaW5rcxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+@$core.Deprecated('Use createSearchAds360LinkRequestDescriptor instead')
+const CreateSearchAds360LinkRequest$json = const {
+  '1': 'CreateSearchAds360LinkRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'search_ads_360_link',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.SearchAds360Link',
+      '8': const {},
+      '10': 'searchAds360Link'
+    },
+  ],
+};
+
+/// Descriptor for `CreateSearchAds360LinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSearchAds360LinkRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1DcmVhdGVTZWFyY2hBZHMzNjBMaW5rUmVxdWVzdBJOCgZwYXJlbnQYASABKAlCNuBBAvpBMBIuYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vU2VhcmNoQWRzMzYwTGlua1IGcGFyZW50EmQKE3NlYXJjaF9hZHNfMzYwX2xpbmsYAiABKAsyMC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuU2VhcmNoQWRzMzYwTGlua0ID4EECUhBzZWFyY2hBZHMzNjBMaW5r');
+@$core.Deprecated('Use deleteSearchAds360LinkRequestDescriptor instead')
+const DeleteSearchAds360LinkRequest$json = const {
+  '1': 'DeleteSearchAds360LinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteSearchAds360LinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteSearchAds360LinkRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1EZWxldGVTZWFyY2hBZHMzNjBMaW5rUmVxdWVzdBJKCgRuYW1lGAEgASgJQjbgQQL6QTAKLmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1NlYXJjaEFkczM2MExpbmtSBG5hbWU=');
+@$core.Deprecated('Use updateSearchAds360LinkRequestDescriptor instead')
+const UpdateSearchAds360LinkRequest$json = const {
+  '1': 'UpdateSearchAds360LinkRequest',
+  '2': const [
+    const {
+      '1': 'search_ads_360_link',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.SearchAds360Link',
+      '10': 'searchAds360Link'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateSearchAds360LinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSearchAds360LinkRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1VcGRhdGVTZWFyY2hBZHMzNjBMaW5rUmVxdWVzdBJfChNzZWFyY2hfYWRzXzM2MF9saW5rGAEgASgLMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlNlYXJjaEFkczM2MExpbmtSEHNlYXJjaEFkczM2MExpbmsSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
 @$core.Deprecated('Use createCustomDimensionRequestDescriptor instead')
 const CreateCustomDimensionRequest$json = const {
   '1': 'CreateCustomDimensionRequest',
@@ -2268,3 +2395,1044 @@ const UpdateAttributionSettingsRequest$json = const {
 final $typed_data.Uint8List updateAttributionSettingsRequestDescriptor =
     $convert.base64Decode(
         'CiBVcGRhdGVBdHRyaWJ1dGlvblNldHRpbmdzUmVxdWVzdBJrChRhdHRyaWJ1dGlvbl9zZXR0aW5ncxgBIAEoCzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRyaWJ1dGlvblNldHRpbmdzQgPgQQJSE2F0dHJpYnV0aW9uU2V0dGluZ3MSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use getAccessBindingRequestDescriptor instead')
+const GetAccessBindingRequest$json = const {
+  '1': 'GetAccessBindingRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetAccessBindingRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAccessBindingRequestDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRBY2Nlc3NCaW5kaW5nUmVxdWVzdBJHCgRuYW1lGAEgASgJQjPgQQL6QS0KK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY2Vzc0JpbmRpbmdSBG5hbWU=');
+@$core.Deprecated('Use batchGetAccessBindingsRequestDescriptor instead')
+const BatchGetAccessBindingsRequest$json = const {
+  '1': 'BatchGetAccessBindingsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'names', '3': 2, '4': 3, '5': 9, '8': const {}, '10': 'names'},
+  ],
+};
+
+/// Descriptor for `BatchGetAccessBindingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchGetAccessBindingsRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1CYXRjaEdldEFjY2Vzc0JpbmRpbmdzUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjZXNzQmluZGluZ1IGcGFyZW50EkkKBW5hbWVzGAIgAygJQjPgQQL6QS0KK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY2Vzc0JpbmRpbmdSBW5hbWVz');
+@$core.Deprecated('Use batchGetAccessBindingsResponseDescriptor instead')
+const BatchGetAccessBindingsResponse$json = const {
+  '1': 'BatchGetAccessBindingsResponse',
+  '2': const [
+    const {
+      '1': 'access_bindings',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessBinding',
+      '10': 'accessBindings'
+    },
+  ],
+};
+
+/// Descriptor for `BatchGetAccessBindingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchGetAccessBindingsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5CYXRjaEdldEFjY2Vzc0JpbmRpbmdzUmVzcG9uc2USVgoPYWNjZXNzX2JpbmRpbmdzGAEgAygLMi0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0JpbmRpbmdSDmFjY2Vzc0JpbmRpbmdz');
+@$core.Deprecated('Use listAccessBindingsRequestDescriptor instead')
+const ListAccessBindingsRequest$json = const {
+  '1': 'ListAccessBindingsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListAccessBindingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAccessBindingsRequestDescriptor =
+    $convert.base64Decode(
+        'ChlMaXN0QWNjZXNzQmluZGluZ3NSZXF1ZXN0EksKBnBhcmVudBgBIAEoCUIz4EEC+kEtEithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2Nlc3NCaW5kaW5nUgZwYXJlbnQSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4=');
+@$core.Deprecated('Use listAccessBindingsResponseDescriptor instead')
+const ListAccessBindingsResponse$json = const {
+  '1': 'ListAccessBindingsResponse',
+  '2': const [
+    const {
+      '1': 'access_bindings',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessBinding',
+      '10': 'accessBindings'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListAccessBindingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAccessBindingsResponseDescriptor =
+    $convert.base64Decode(
+        'ChpMaXN0QWNjZXNzQmluZGluZ3NSZXNwb25zZRJWCg9hY2Nlc3NfYmluZGluZ3MYASADKAsyLS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzQmluZGluZ1IOYWNjZXNzQmluZGluZ3MSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+@$core.Deprecated('Use createAccessBindingRequestDescriptor instead')
+const CreateAccessBindingRequest$json = const {
+  '1': 'CreateAccessBindingRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'access_binding',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessBinding',
+      '8': const {},
+      '10': 'accessBinding'
+    },
+  ],
+};
+
+/// Descriptor for `CreateAccessBindingRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAccessBindingRequestDescriptor =
+    $convert.base64Decode(
+        'ChpDcmVhdGVBY2Nlc3NCaW5kaW5nUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjZXNzQmluZGluZ1IGcGFyZW50ElkKDmFjY2Vzc19iaW5kaW5nGAIgASgLMi0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0JpbmRpbmdCA+BBAlINYWNjZXNzQmluZGluZw==');
+@$core.Deprecated('Use batchCreateAccessBindingsRequestDescriptor instead')
+const BatchCreateAccessBindingsRequest$json = const {
+  '1': 'BatchCreateAccessBindingsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'requests',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.CreateAccessBindingRequest',
+      '8': const {},
+      '10': 'requests'
+    },
+  ],
+};
+
+/// Descriptor for `BatchCreateAccessBindingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchCreateAccessBindingsRequestDescriptor =
+    $convert.base64Decode(
+        'CiBCYXRjaENyZWF0ZUFjY2Vzc0JpbmRpbmdzUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjZXNzQmluZGluZ1IGcGFyZW50ElsKCHJlcXVlc3RzGAMgAygLMjouZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNyZWF0ZUFjY2Vzc0JpbmRpbmdSZXF1ZXN0QgPgQQJSCHJlcXVlc3Rz');
+@$core.Deprecated('Use batchCreateAccessBindingsResponseDescriptor instead')
+const BatchCreateAccessBindingsResponse$json = const {
+  '1': 'BatchCreateAccessBindingsResponse',
+  '2': const [
+    const {
+      '1': 'access_bindings',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessBinding',
+      '10': 'accessBindings'
+    },
+  ],
+};
+
+/// Descriptor for `BatchCreateAccessBindingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchCreateAccessBindingsResponseDescriptor =
+    $convert.base64Decode(
+        'CiFCYXRjaENyZWF0ZUFjY2Vzc0JpbmRpbmdzUmVzcG9uc2USVgoPYWNjZXNzX2JpbmRpbmdzGAEgAygLMi0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0JpbmRpbmdSDmFjY2Vzc0JpbmRpbmdz');
+@$core.Deprecated('Use updateAccessBindingRequestDescriptor instead')
+const UpdateAccessBindingRequest$json = const {
+  '1': 'UpdateAccessBindingRequest',
+  '2': const [
+    const {
+      '1': 'access_binding',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessBinding',
+      '8': const {},
+      '10': 'accessBinding'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateAccessBindingRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateAccessBindingRequestDescriptor =
+    $convert.base64Decode(
+        'ChpVcGRhdGVBY2Nlc3NCaW5kaW5nUmVxdWVzdBJZCg5hY2Nlc3NfYmluZGluZxgBIAEoCzItLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NCaW5kaW5nQgPgQQJSDWFjY2Vzc0JpbmRpbmc=');
+@$core.Deprecated('Use batchUpdateAccessBindingsRequestDescriptor instead')
+const BatchUpdateAccessBindingsRequest$json = const {
+  '1': 'BatchUpdateAccessBindingsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'requests',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.UpdateAccessBindingRequest',
+      '8': const {},
+      '10': 'requests'
+    },
+  ],
+};
+
+/// Descriptor for `BatchUpdateAccessBindingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchUpdateAccessBindingsRequestDescriptor =
+    $convert.base64Decode(
+        'CiBCYXRjaFVwZGF0ZUFjY2Vzc0JpbmRpbmdzUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjZXNzQmluZGluZ1IGcGFyZW50ElsKCHJlcXVlc3RzGAIgAygLMjouZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlVwZGF0ZUFjY2Vzc0JpbmRpbmdSZXF1ZXN0QgPgQQJSCHJlcXVlc3Rz');
+@$core.Deprecated('Use batchUpdateAccessBindingsResponseDescriptor instead')
+const BatchUpdateAccessBindingsResponse$json = const {
+  '1': 'BatchUpdateAccessBindingsResponse',
+  '2': const [
+    const {
+      '1': 'access_bindings',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessBinding',
+      '10': 'accessBindings'
+    },
+  ],
+};
+
+/// Descriptor for `BatchUpdateAccessBindingsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchUpdateAccessBindingsResponseDescriptor =
+    $convert.base64Decode(
+        'CiFCYXRjaFVwZGF0ZUFjY2Vzc0JpbmRpbmdzUmVzcG9uc2USVgoPYWNjZXNzX2JpbmRpbmdzGAEgAygLMi0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc0JpbmRpbmdSDmFjY2Vzc0JpbmRpbmdz');
+@$core.Deprecated('Use deleteAccessBindingRequestDescriptor instead')
+const DeleteAccessBindingRequest$json = const {
+  '1': 'DeleteAccessBindingRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteAccessBindingRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteAccessBindingRequestDescriptor =
+    $convert.base64Decode(
+        'ChpEZWxldGVBY2Nlc3NCaW5kaW5nUmVxdWVzdBJHCgRuYW1lGAEgASgJQjPgQQL6QS0KK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY2Vzc0JpbmRpbmdSBG5hbWU=');
+@$core.Deprecated('Use batchDeleteAccessBindingsRequestDescriptor instead')
+const BatchDeleteAccessBindingsRequest$json = const {
+  '1': 'BatchDeleteAccessBindingsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'requests',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.DeleteAccessBindingRequest',
+      '8': const {},
+      '10': 'requests'
+    },
+  ],
+};
+
+/// Descriptor for `BatchDeleteAccessBindingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchDeleteAccessBindingsRequestDescriptor =
+    $convert.base64Decode(
+        'CiBCYXRjaERlbGV0ZUFjY2Vzc0JpbmRpbmdzUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjZXNzQmluZGluZ1IGcGFyZW50ElsKCHJlcXVlc3RzGAIgAygLMjouZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRlbGV0ZUFjY2Vzc0JpbmRpbmdSZXF1ZXN0QgPgQQJSCHJlcXVlc3Rz');
+@$core.Deprecated('Use createExpandedDataSetRequestDescriptor instead')
+const CreateExpandedDataSetRequest$json = const {
+  '1': 'CreateExpandedDataSetRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'expanded_data_set',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ExpandedDataSet',
+      '8': const {},
+      '10': 'expandedDataSet'
+    },
+  ],
+};
+
+/// Descriptor for `CreateExpandedDataSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createExpandedDataSetRequestDescriptor =
+    $convert.base64Decode(
+        'ChxDcmVhdGVFeHBhbmRlZERhdGFTZXRSZXF1ZXN0Ek0KBnBhcmVudBgBIAEoCUI14EEC+kEvEi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9FeHBhbmRlZERhdGFTZXRSBnBhcmVudBJgChFleHBhbmRlZF9kYXRhX3NldBgCIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FeHBhbmRlZERhdGFTZXRCA+BBAlIPZXhwYW5kZWREYXRhU2V0');
+@$core.Deprecated('Use updateExpandedDataSetRequestDescriptor instead')
+const UpdateExpandedDataSetRequest$json = const {
+  '1': 'UpdateExpandedDataSetRequest',
+  '2': const [
+    const {
+      '1': 'expanded_data_set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ExpandedDataSet',
+      '8': const {},
+      '10': 'expandedDataSet'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateExpandedDataSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateExpandedDataSetRequestDescriptor =
+    $convert.base64Decode(
+        'ChxVcGRhdGVFeHBhbmRlZERhdGFTZXRSZXF1ZXN0EmAKEWV4cGFuZGVkX2RhdGFfc2V0GAEgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkV4cGFuZGVkRGF0YVNldEID4EECUg9leHBhbmRlZERhdGFTZXQSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use deleteExpandedDataSetRequestDescriptor instead')
+const DeleteExpandedDataSetRequest$json = const {
+  '1': 'DeleteExpandedDataSetRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteExpandedDataSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteExpandedDataSetRequestDescriptor =
+    $convert.base64Decode(
+        'ChxEZWxldGVFeHBhbmRlZERhdGFTZXRSZXF1ZXN0EkkKBG5hbWUYASABKAlCNeBBAvpBLwotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXhwYW5kZWREYXRhU2V0UgRuYW1l');
+@$core.Deprecated('Use getExpandedDataSetRequestDescriptor instead')
+const GetExpandedDataSetRequest$json = const {
+  '1': 'GetExpandedDataSetRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetExpandedDataSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getExpandedDataSetRequestDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRFeHBhbmRlZERhdGFTZXRSZXF1ZXN0EkkKBG5hbWUYASABKAlCNeBBAvpBLwotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXhwYW5kZWREYXRhU2V0UgRuYW1l');
+@$core.Deprecated('Use listExpandedDataSetsRequestDescriptor instead')
+const ListExpandedDataSetsRequest$json = const {
+  '1': 'ListExpandedDataSetsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListExpandedDataSetsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listExpandedDataSetsRequestDescriptor =
+    $convert.base64Decode(
+        'ChtMaXN0RXhwYW5kZWREYXRhU2V0c1JlcXVlc3QSTQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0V4cGFuZGVkRGF0YVNldFIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listExpandedDataSetsResponseDescriptor instead')
+const ListExpandedDataSetsResponse$json = const {
+  '1': 'ListExpandedDataSetsResponse',
+  '2': const [
+    const {
+      '1': 'expanded_data_sets',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ExpandedDataSet',
+      '10': 'expandedDataSets'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListExpandedDataSetsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listExpandedDataSetsResponseDescriptor =
+    $convert.base64Decode(
+        'ChxMaXN0RXhwYW5kZWREYXRhU2V0c1Jlc3BvbnNlEl0KEmV4cGFuZGVkX2RhdGFfc2V0cxgBIAMoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FeHBhbmRlZERhdGFTZXRSEGV4cGFuZGVkRGF0YVNldHMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+@$core.Deprecated('Use createChannelGroupRequestDescriptor instead')
+const CreateChannelGroupRequest$json = const {
+  '1': 'CreateChannelGroupRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'channel_group',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ChannelGroup',
+      '8': const {},
+      '10': 'channelGroup'
+    },
+  ],
+};
+
+/// Descriptor for `CreateChannelGroupRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createChannelGroupRequestDescriptor =
+    $convert.base64Decode(
+        'ChlDcmVhdGVDaGFubmVsR3JvdXBSZXF1ZXN0EkoKBnBhcmVudBgBIAEoCUIy4EEC+kEsEiphbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DaGFubmVsR3JvdXBSBnBhcmVudBJWCg1jaGFubmVsX2dyb3VwGAIgASgLMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNoYW5uZWxHcm91cEID4EECUgxjaGFubmVsR3JvdXA=');
+@$core.Deprecated('Use updateChannelGroupRequestDescriptor instead')
+const UpdateChannelGroupRequest$json = const {
+  '1': 'UpdateChannelGroupRequest',
+  '2': const [
+    const {
+      '1': 'channel_group',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ChannelGroup',
+      '8': const {},
+      '10': 'channelGroup'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateChannelGroupRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateChannelGroupRequestDescriptor =
+    $convert.base64Decode(
+        'ChlVcGRhdGVDaGFubmVsR3JvdXBSZXF1ZXN0ElYKDWNoYW5uZWxfZ3JvdXAYASABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hhbm5lbEdyb3VwQgPgQQJSDGNoYW5uZWxHcm91cBJACgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAlIKdXBkYXRlTWFzaw==');
+@$core.Deprecated('Use deleteChannelGroupRequestDescriptor instead')
+const DeleteChannelGroupRequest$json = const {
+  '1': 'DeleteChannelGroupRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteChannelGroupRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteChannelGroupRequestDescriptor =
+    $convert.base64Decode(
+        'ChlEZWxldGVDaGFubmVsR3JvdXBSZXF1ZXN0EkYKBG5hbWUYASABKAlCMuBBAvpBLAoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ2hhbm5lbEdyb3VwUgRuYW1l');
+@$core.Deprecated('Use getChannelGroupRequestDescriptor instead')
+const GetChannelGroupRequest$json = const {
+  '1': 'GetChannelGroupRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetChannelGroupRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getChannelGroupRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRDaGFubmVsR3JvdXBSZXF1ZXN0EkYKBG5hbWUYASABKAlCMuBBAvpBLAoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ2hhbm5lbEdyb3VwUgRuYW1l');
+@$core.Deprecated('Use listChannelGroupsRequestDescriptor instead')
+const ListChannelGroupsRequest$json = const {
+  '1': 'ListChannelGroupsRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListChannelGroupsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listChannelGroupsRequestDescriptor =
+    $convert.base64Decode(
+        'ChhMaXN0Q2hhbm5lbEdyb3Vwc1JlcXVlc3QSSgoGcGFyZW50GAEgASgJQjLgQQL6QSwSKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0NoYW5uZWxHcm91cFIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listChannelGroupsResponseDescriptor instead')
+const ListChannelGroupsResponse$json = const {
+  '1': 'ListChannelGroupsResponse',
+  '2': const [
+    const {
+      '1': 'channel_groups',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ChannelGroup',
+      '10': 'channelGroups'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListChannelGroupsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listChannelGroupsResponseDescriptor =
+    $convert.base64Decode(
+        'ChlMaXN0Q2hhbm5lbEdyb3Vwc1Jlc3BvbnNlElMKDmNoYW5uZWxfZ3JvdXBzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNoYW5uZWxHcm91cFINY2hhbm5lbEdyb3VwcxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+@$core.Deprecated(
+    'Use setAutomatedGa4ConfigurationOptOutRequestDescriptor instead')
+const SetAutomatedGa4ConfigurationOptOutRequest$json = const {
+  '1': 'SetAutomatedGa4ConfigurationOptOutRequest',
+  '2': const [
+    const {
+      '1': 'property',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'property'
+    },
+    const {'1': 'opt_out', '3': 2, '4': 1, '5': 8, '10': 'optOut'},
+  ],
+};
+
+/// Descriptor for `SetAutomatedGa4ConfigurationOptOutRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    setAutomatedGa4ConfigurationOptOutRequestDescriptor = $convert.base64Decode(
+        'CilTZXRBdXRvbWF0ZWRHYTRDb25maWd1cmF0aW9uT3B0T3V0UmVxdWVzdBIfCghwcm9wZXJ0eRgBIAEoCUID4EECUghwcm9wZXJ0eRIXCgdvcHRfb3V0GAIgASgIUgZvcHRPdXQ=');
+@$core.Deprecated(
+    'Use setAutomatedGa4ConfigurationOptOutResponseDescriptor instead')
+const SetAutomatedGa4ConfigurationOptOutResponse$json = const {
+  '1': 'SetAutomatedGa4ConfigurationOptOutResponse',
+};
+
+/// Descriptor for `SetAutomatedGa4ConfigurationOptOutResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    setAutomatedGa4ConfigurationOptOutResponseDescriptor =
+    $convert.base64Decode(
+        'CipTZXRBdXRvbWF0ZWRHYTRDb25maWd1cmF0aW9uT3B0T3V0UmVzcG9uc2U=');
+@$core.Deprecated(
+    'Use fetchAutomatedGa4ConfigurationOptOutRequestDescriptor instead')
+const FetchAutomatedGa4ConfigurationOptOutRequest$json = const {
+  '1': 'FetchAutomatedGa4ConfigurationOptOutRequest',
+  '2': const [
+    const {
+      '1': 'property',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'property'
+    },
+  ],
+};
+
+/// Descriptor for `FetchAutomatedGa4ConfigurationOptOutRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    fetchAutomatedGa4ConfigurationOptOutRequestDescriptor =
+    $convert.base64Decode(
+        'CitGZXRjaEF1dG9tYXRlZEdhNENvbmZpZ3VyYXRpb25PcHRPdXRSZXF1ZXN0Eh8KCHByb3BlcnR5GAEgASgJQgPgQQJSCHByb3BlcnR5');
+@$core.Deprecated(
+    'Use fetchAutomatedGa4ConfigurationOptOutResponseDescriptor instead')
+const FetchAutomatedGa4ConfigurationOptOutResponse$json = const {
+  '1': 'FetchAutomatedGa4ConfigurationOptOutResponse',
+  '2': const [
+    const {'1': 'opt_out', '3': 1, '4': 1, '5': 8, '10': 'optOut'},
+  ],
+};
+
+/// Descriptor for `FetchAutomatedGa4ConfigurationOptOutResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    fetchAutomatedGa4ConfigurationOptOutResponseDescriptor =
+    $convert.base64Decode(
+        'CixGZXRjaEF1dG9tYXRlZEdhNENvbmZpZ3VyYXRpb25PcHRPdXRSZXNwb25zZRIXCgdvcHRfb3V0GAEgASgIUgZvcHRPdXQ=');
+@$core.Deprecated('Use getBigQueryLinkRequestDescriptor instead')
+const GetBigQueryLinkRequest$json = const {
+  '1': 'GetBigQueryLinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetBigQueryLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBigQueryLinkRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRCaWdRdWVyeUxpbmtSZXF1ZXN0EkYKBG5hbWUYASABKAlCMuBBAvpBLAoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQmlnUXVlcnlMaW5rUgRuYW1l');
+@$core.Deprecated('Use listBigQueryLinksRequestDescriptor instead')
+const ListBigQueryLinksRequest$json = const {
+  '1': 'ListBigQueryLinksRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListBigQueryLinksRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listBigQueryLinksRequestDescriptor =
+    $convert.base64Decode(
+        'ChhMaXN0QmlnUXVlcnlMaW5rc1JlcXVlc3QSSgoGcGFyZW50GAEgASgJQjLgQQL6QSwSKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0JpZ1F1ZXJ5TGlua1IGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listBigQueryLinksResponseDescriptor instead')
+const ListBigQueryLinksResponse$json = const {
+  '1': 'ListBigQueryLinksResponse',
+  '2': const [
+    const {
+      '1': 'bigquery_links',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.BigQueryLink',
+      '10': 'bigqueryLinks'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListBigQueryLinksResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listBigQueryLinksResponseDescriptor =
+    $convert.base64Decode(
+        'ChlMaXN0QmlnUXVlcnlMaW5rc1Jlc3BvbnNlElMKDmJpZ3F1ZXJ5X2xpbmtzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkJpZ1F1ZXJ5TGlua1INYmlncXVlcnlMaW5rcxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+@$core.Deprecated('Use getEnhancedMeasurementSettingsRequestDescriptor instead')
+const GetEnhancedMeasurementSettingsRequest$json = const {
+  '1': 'GetEnhancedMeasurementSettingsRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetEnhancedMeasurementSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEnhancedMeasurementSettingsRequestDescriptor =
+    $convert.base64Decode(
+        'CiVHZXRFbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3NSZXF1ZXN0ElUKBG5hbWUYASABKAlCQeBBAvpBOwo5YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRW5oYW5jZWRNZWFzdXJlbWVudFNldHRpbmdzUgRuYW1l');
+@$core.Deprecated(
+    'Use updateEnhancedMeasurementSettingsRequestDescriptor instead')
+const UpdateEnhancedMeasurementSettingsRequest$json = const {
+  '1': 'UpdateEnhancedMeasurementSettingsRequest',
+  '2': const [
+    const {
+      '1': 'enhanced_measurement_settings',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.EnhancedMeasurementSettings',
+      '8': const {},
+      '10': 'enhancedMeasurementSettings'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateEnhancedMeasurementSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateEnhancedMeasurementSettingsRequestDescriptor =
+    $convert.base64Decode(
+        'CihVcGRhdGVFbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3NSZXF1ZXN0EoQBCh1lbmhhbmNlZF9tZWFzdXJlbWVudF9zZXR0aW5ncxgBIAEoCzI7Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3NCA+BBAlIbZW5oYW5jZWRNZWFzdXJlbWVudFNldHRpbmdzEkAKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECUgp1cGRhdGVNYXNr');
+@$core.Deprecated('Use createConnectedSiteTagRequestDescriptor instead')
+const CreateConnectedSiteTagRequest$json = const {
+  '1': 'CreateConnectedSiteTagRequest',
+  '2': const [
+    const {'1': 'property', '3': 1, '4': 1, '5': 9, '10': 'property'},
+    const {
+      '1': 'connected_site_tag',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ConnectedSiteTag',
+      '8': const {},
+      '10': 'connectedSiteTag'
+    },
+  ],
+};
+
+/// Descriptor for `CreateConnectedSiteTagRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createConnectedSiteTagRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1DcmVhdGVDb25uZWN0ZWRTaXRlVGFnUmVxdWVzdBIaCghwcm9wZXJ0eRgBIAEoCVIIcHJvcGVydHkSYwoSY29ubmVjdGVkX3NpdGVfdGFnGAIgASgLMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNvbm5lY3RlZFNpdGVUYWdCA+BBAlIQY29ubmVjdGVkU2l0ZVRhZw==');
+@$core.Deprecated('Use createConnectedSiteTagResponseDescriptor instead')
+const CreateConnectedSiteTagResponse$json = const {
+  '1': 'CreateConnectedSiteTagResponse',
+};
+
+/// Descriptor for `CreateConnectedSiteTagResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createConnectedSiteTagResponseDescriptor =
+    $convert.base64Decode('Ch5DcmVhdGVDb25uZWN0ZWRTaXRlVGFnUmVzcG9uc2U=');
+@$core.Deprecated('Use deleteConnectedSiteTagRequestDescriptor instead')
+const DeleteConnectedSiteTagRequest$json = const {
+  '1': 'DeleteConnectedSiteTagRequest',
+  '2': const [
+    const {'1': 'property', '3': 1, '4': 1, '5': 9, '10': 'property'},
+    const {'1': 'tag_id', '3': 2, '4': 1, '5': 9, '10': 'tagId'},
+  ],
+};
+
+/// Descriptor for `DeleteConnectedSiteTagRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteConnectedSiteTagRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1EZWxldGVDb25uZWN0ZWRTaXRlVGFnUmVxdWVzdBIaCghwcm9wZXJ0eRgBIAEoCVIIcHJvcGVydHkSFQoGdGFnX2lkGAIgASgJUgV0YWdJZA==');
+@$core.Deprecated('Use listConnectedSiteTagsRequestDescriptor instead')
+const ListConnectedSiteTagsRequest$json = const {
+  '1': 'ListConnectedSiteTagsRequest',
+  '2': const [
+    const {'1': 'property', '3': 1, '4': 1, '5': 9, '10': 'property'},
+  ],
+};
+
+/// Descriptor for `ListConnectedSiteTagsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listConnectedSiteTagsRequestDescriptor =
+    $convert.base64Decode(
+        'ChxMaXN0Q29ubmVjdGVkU2l0ZVRhZ3NSZXF1ZXN0EhoKCHByb3BlcnR5GAEgASgJUghwcm9wZXJ0eQ==');
+@$core.Deprecated('Use listConnectedSiteTagsResponseDescriptor instead')
+const ListConnectedSiteTagsResponse$json = const {
+  '1': 'ListConnectedSiteTagsResponse',
+  '2': const [
+    const {
+      '1': 'connected_site_tags',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ConnectedSiteTag',
+      '10': 'connectedSiteTags'
+    },
+  ],
+};
+
+/// Descriptor for `ListConnectedSiteTagsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listConnectedSiteTagsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1MaXN0Q29ubmVjdGVkU2l0ZVRhZ3NSZXNwb25zZRJgChNjb25uZWN0ZWRfc2l0ZV90YWdzGAEgAygLMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNvbm5lY3RlZFNpdGVUYWdSEWNvbm5lY3RlZFNpdGVUYWdz');
+@$core.Deprecated('Use createAdSenseLinkRequestDescriptor instead')
+const CreateAdSenseLinkRequest$json = const {
+  '1': 'CreateAdSenseLinkRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'adsense_link',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AdSenseLink',
+      '8': const {},
+      '10': 'adsenseLink'
+    },
+  ],
+};
+
+/// Descriptor for `CreateAdSenseLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAdSenseLinkRequestDescriptor =
+    $convert.base64Decode(
+        'ChhDcmVhdGVBZFNlbnNlTGlua1JlcXVlc3QSSQoGcGFyZW50GAEgASgJQjHgQQL6QSsSKWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FkU2Vuc2VMaW5rUgZwYXJlbnQSUwoMYWRzZW5zZV9saW5rGAIgASgLMisuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFkU2Vuc2VMaW5rQgPgQQJSC2Fkc2Vuc2VMaW5r');
+@$core.Deprecated('Use getAdSenseLinkRequestDescriptor instead')
+const GetAdSenseLinkRequest$json = const {
+  '1': 'GetAdSenseLinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetAdSenseLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAdSenseLinkRequestDescriptor = $convert.base64Decode(
+    'ChVHZXRBZFNlbnNlTGlua1JlcXVlc3QSRQoEbmFtZRgBIAEoCUIx4EEC+kErCilhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BZFNlbnNlTGlua1IEbmFtZQ==');
+@$core.Deprecated('Use deleteAdSenseLinkRequestDescriptor instead')
+const DeleteAdSenseLinkRequest$json = const {
+  '1': 'DeleteAdSenseLinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteAdSenseLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteAdSenseLinkRequestDescriptor =
+    $convert.base64Decode(
+        'ChhEZWxldGVBZFNlbnNlTGlua1JlcXVlc3QSRQoEbmFtZRgBIAEoCUIx4EEC+kErCilhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BZFNlbnNlTGlua1IEbmFtZQ==');
+@$core.Deprecated('Use listAdSenseLinksRequestDescriptor instead')
+const ListAdSenseLinksRequest$json = const {
+  '1': 'ListAdSenseLinksRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListAdSenseLinksRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAdSenseLinksRequestDescriptor =
+    $convert.base64Decode(
+        'ChdMaXN0QWRTZW5zZUxpbmtzUmVxdWVzdBJJCgZwYXJlbnQYASABKAlCMeBBAvpBKxIpYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWRTZW5zZUxpbmtSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbg==');
+@$core.Deprecated('Use listAdSenseLinksResponseDescriptor instead')
+const ListAdSenseLinksResponse$json = const {
+  '1': 'ListAdSenseLinksResponse',
+  '2': const [
+    const {
+      '1': 'adsense_links',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AdSenseLink',
+      '10': 'adsenseLinks'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListAdSenseLinksResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAdSenseLinksResponseDescriptor =
+    $convert.base64Decode(
+        'ChhMaXN0QWRTZW5zZUxpbmtzUmVzcG9uc2USUAoNYWRzZW5zZV9saW5rcxgBIAMoCzIrLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BZFNlbnNlTGlua1IMYWRzZW5zZUxpbmtzEiYKD25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');
+@$core.Deprecated('Use fetchConnectedGa4PropertyRequestDescriptor instead')
+const FetchConnectedGa4PropertyRequest$json = const {
+  '1': 'FetchConnectedGa4PropertyRequest',
+  '2': const [
+    const {
+      '1': 'property',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'property'
+    },
+  ],
+};
+
+/// Descriptor for `FetchConnectedGa4PropertyRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fetchConnectedGa4PropertyRequestDescriptor =
+    $convert.base64Decode(
+        'CiBGZXRjaENvbm5lY3RlZEdhNFByb3BlcnR5UmVxdWVzdBJKCghwcm9wZXJ0eRgBIAEoCUIu4EEC+kEoCiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eVIIcHJvcGVydHk=');
+@$core.Deprecated('Use fetchConnectedGa4PropertyResponseDescriptor instead')
+const FetchConnectedGa4PropertyResponse$json = const {
+  '1': 'FetchConnectedGa4PropertyResponse',
+  '2': const [
+    const {
+      '1': 'property',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'property'
+    },
+  ],
+};
+
+/// Descriptor for `FetchConnectedGa4PropertyResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fetchConnectedGa4PropertyResponseDescriptor =
+    $convert.base64Decode(
+        'CiFGZXRjaENvbm5lY3RlZEdhNFByb3BlcnR5UmVzcG9uc2USRwoIcHJvcGVydHkYASABKAlCK/pBKAomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHlSCHByb3BlcnR5');
+@$core.Deprecated('Use createEventCreateRuleRequestDescriptor instead')
+const CreateEventCreateRuleRequest$json = const {
+  '1': 'CreateEventCreateRuleRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'event_create_rule',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.EventCreateRule',
+      '8': const {},
+      '10': 'eventCreateRule'
+    },
+  ],
+};
+
+/// Descriptor for `CreateEventCreateRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createEventCreateRuleRequestDescriptor =
+    $convert.base64Decode(
+        'ChxDcmVhdGVFdmVudENyZWF0ZVJ1bGVSZXF1ZXN0Ek0KBnBhcmVudBgBIAEoCUI14EEC+kEvEi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9FdmVudENyZWF0ZVJ1bGVSBnBhcmVudBJgChFldmVudF9jcmVhdGVfcnVsZRgCIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FdmVudENyZWF0ZVJ1bGVCA+BBAlIPZXZlbnRDcmVhdGVSdWxl');
+@$core.Deprecated('Use updateEventCreateRuleRequestDescriptor instead')
+const UpdateEventCreateRuleRequest$json = const {
+  '1': 'UpdateEventCreateRuleRequest',
+  '2': const [
+    const {
+      '1': 'event_create_rule',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.EventCreateRule',
+      '8': const {},
+      '10': 'eventCreateRule'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateEventCreateRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateEventCreateRuleRequestDescriptor =
+    $convert.base64Decode(
+        'ChxVcGRhdGVFdmVudENyZWF0ZVJ1bGVSZXF1ZXN0EmAKEWV2ZW50X2NyZWF0ZV9ydWxlGAEgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkV2ZW50Q3JlYXRlUnVsZUID4EECUg9ldmVudENyZWF0ZVJ1bGUSQAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
+@$core.Deprecated('Use deleteEventCreateRuleRequestDescriptor instead')
+const DeleteEventCreateRuleRequest$json = const {
+  '1': 'DeleteEventCreateRuleRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteEventCreateRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteEventCreateRuleRequestDescriptor =
+    $convert.base64Decode(
+        'ChxEZWxldGVFdmVudENyZWF0ZVJ1bGVSZXF1ZXN0EkkKBG5hbWUYASABKAlCNeBBAvpBLwotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXZlbnRDcmVhdGVSdWxlUgRuYW1l');
+@$core.Deprecated('Use getEventCreateRuleRequestDescriptor instead')
+const GetEventCreateRuleRequest$json = const {
+  '1': 'GetEventCreateRuleRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetEventCreateRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEventCreateRuleRequestDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRFdmVudENyZWF0ZVJ1bGVSZXF1ZXN0EkkKBG5hbWUYASABKAlCNeBBAvpBLwotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXZlbnRDcmVhdGVSdWxlUgRuYW1l');
+@$core.Deprecated('Use listEventCreateRulesRequestDescriptor instead')
+const ListEventCreateRulesRequest$json = const {
+  '1': 'ListEventCreateRulesRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListEventCreateRulesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listEventCreateRulesRequestDescriptor =
+    $convert.base64Decode(
+        'ChtMaXN0RXZlbnRDcmVhdGVSdWxlc1JlcXVlc3QSTQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0V2ZW50Q3JlYXRlUnVsZVIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listEventCreateRulesResponseDescriptor instead')
+const ListEventCreateRulesResponse$json = const {
+  '1': 'ListEventCreateRulesResponse',
+  '2': const [
+    const {
+      '1': 'event_create_rules',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.EventCreateRule',
+      '10': 'eventCreateRules'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListEventCreateRulesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listEventCreateRulesResponseDescriptor =
+    $convert.base64Decode(
+        'ChxMaXN0RXZlbnRDcmVhdGVSdWxlc1Jlc3BvbnNlEl0KEmV2ZW50X2NyZWF0ZV9ydWxlcxgBIAMoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FdmVudENyZWF0ZVJ1bGVSEGV2ZW50Q3JlYXRlUnVsZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');

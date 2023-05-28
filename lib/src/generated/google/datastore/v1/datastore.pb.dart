@@ -2096,6 +2096,12 @@ class MutationResult extends $pb.GeneratedMessage {
             ? ''
             : 'updateTime',
         subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   MutationResult._() : super();
@@ -2104,6 +2110,7 @@ class MutationResult extends $pb.GeneratedMessage {
     $fixnum.Int64? version,
     $core.bool? conflictDetected,
     $3.Timestamp? updateTime,
+    $3.Timestamp? createTime,
   }) {
     final _result = create();
     if (key != null) {
@@ -2117,6 +2124,9 @@ class MutationResult extends $pb.GeneratedMessage {
     }
     if (updateTime != null) {
       _result.updateTime = updateTime;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
     }
     return _result;
   }
@@ -2198,6 +2208,20 @@ class MutationResult extends $pb.GeneratedMessage {
   void clearUpdateTime() => clearField(6);
   @$pb.TagNumber(6)
   $3.Timestamp ensureUpdateTime() => $_ensure(3);
+
+  @$pb.TagNumber(7)
+  $3.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(7)
+  set createTime($3.Timestamp v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasCreateTime() => $_has(4);
+  @$pb.TagNumber(7)
+  void clearCreateTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $3.Timestamp ensureCreateTime() => $_ensure(4);
 }
 
 enum ReadOptions_ConsistencyType {

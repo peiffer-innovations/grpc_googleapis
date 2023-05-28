@@ -200,7 +200,7 @@ class TerminalLocation extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.') $core.String? accessPointId,
     @$core.Deprecated('This field is deprecated.') $core.String? tripId,
     @$core.Deprecated('This field is deprecated.')
-        WaypointType? terminalLocationType,
+    WaypointType? terminalLocationType,
   }) {
     final _result = create();
     if (point != null) {
@@ -860,11 +860,11 @@ class VehicleLocation extends $pb.GeneratedMessage {
     $1.DoubleValue? speed,
     $1.DoubleValue? speedAccuracy,
     @$core.Deprecated('This field is deprecated.')
-        $1.DoubleValue? horizontalAccuracy,
+    $1.DoubleValue? horizontalAccuracy,
     @$core.Deprecated('This field is deprecated.')
-        $1.DoubleValue? verticalAccuracy,
+    $1.DoubleValue? verticalAccuracy,
     @$core.Deprecated('This field is deprecated.')
-        $1.DoubleValue? bearingAccuracy,
+    $1.DoubleValue? bearingAccuracy,
     LocationSensor? locationSensor,
     $1.BoolValue? isGpsSensorEnabled,
     $2.Timestamp? serverTime,

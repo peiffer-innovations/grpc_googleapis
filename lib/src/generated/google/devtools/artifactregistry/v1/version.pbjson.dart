@@ -153,3 +153,21 @@ const DeleteVersionRequest$json = const {
 /// Descriptor for `DeleteVersionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteVersionRequestDescriptor = $convert.base64Decode(
     'ChREZWxldGVWZXJzaW9uUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEhQKBWZvcmNlGAIgASgIUgVmb3JjZQ==');
+@$core.Deprecated('Use batchDeleteVersionsMetadataDescriptor instead')
+const BatchDeleteVersionsMetadata$json = const {
+  '1': 'BatchDeleteVersionsMetadata',
+  '2': const [
+    const {
+      '1': 'failed_versions',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '10': 'failedVersions'
+    },
+  ],
+};
+
+/// Descriptor for `BatchDeleteVersionsMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List batchDeleteVersionsMetadataDescriptor =
+    $convert.base64Decode(
+        'ChtCYXRjaERlbGV0ZVZlcnNpb25zTWV0YWRhdGESJwoPZmFpbGVkX3ZlcnNpb25zGAIgAygJUg5mYWlsZWRWZXJzaW9ucw==');

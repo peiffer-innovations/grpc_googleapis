@@ -1,6 +1,9 @@
 export '../src/generated/google/maps/routing/v2/fallback_info.pb.dart';
 export '../src/generated/google/maps/routing/v2/fallback_info.pbenum.dart';
 export '../src/generated/google/maps/routing/v2/fallback_info.pbjson.dart';
+export '../src/generated/google/maps/routing/v2/geocoding_results.pb.dart';
+export '../src/generated/google/maps/routing/v2/geocoding_results.pbenum.dart';
+export '../src/generated/google/maps/routing/v2/geocoding_results.pbjson.dart';
 export '../src/generated/google/maps/routing/v2/location.pb.dart';
 export '../src/generated/google/maps/routing/v2/location.pbenum.dart';
 export '../src/generated/google/maps/routing/v2/location.pbjson.dart';

@@ -135,6 +135,21 @@ const Database$json = const {
       '8': const {},
       '10': 'databaseDialect'
     },
+    const {
+      '1': 'enable_drop_protection',
+      '3': 11,
+      '4': 1,
+      '5': 8,
+      '10': 'enableDropProtection'
+    },
+    const {
+      '1': 'reconciling',
+      '3': 12,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'reconciling'
+    },
   ],
   '4': const [Database_State$json],
   '7': const {},
@@ -153,7 +168,7 @@ const Database_State$json = const {
 
 /// Descriptor for `Database`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List databaseDescriptor = $convert.base64Decode(
-    'CghEYXRhYmFzZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSSwoFc3RhdGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZS5TdGF0ZUID4EEDUgVzdGF0ZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJVCgxyZXN0b3JlX2luZm8YBCABKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5SZXN0b3JlSW5mb0ID4EEDUgtyZXN0b3JlSW5mbxJkChFlbmNyeXB0aW9uX2NvbmZpZxgFIAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25Db25maWdCA+BBA1IQZW5jcnlwdGlvbkNvbmZpZxJeCg9lbmNyeXB0aW9uX2luZm8YCCADKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5FbmNyeXB0aW9uSW5mb0ID4EEDUg5lbmNyeXB0aW9uSW5mbxI9Chh2ZXJzaW9uX3JldGVudGlvbl9wZXJpb2QYBiABKAlCA+BBA1IWdmVyc2lvblJldGVudGlvblBlcmlvZBJTChVlYXJsaWVzdF92ZXJzaW9uX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSE2VhcmxpZXN0VmVyc2lvblRpbWUSKgoOZGVmYXVsdF9sZWFkZXIYCSABKAlCA+BBA1INZGVmYXVsdExlYWRlchJhChBkYXRhYmFzZV9kaWFsZWN0GAogASgOMjEuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2VEaWFsZWN0QgPgQQNSD2RhdGFiYXNlRGlhbGVjdCJNCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIUChBSRUFEWV9PUFRJTUlaSU5HEAM6YupBXwofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9');
+    'CghEYXRhYmFzZRIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSSwoFc3RhdGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZS5TdGF0ZUID4EEDUgVzdGF0ZRJACgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJVCgxyZXN0b3JlX2luZm8YBCABKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5SZXN0b3JlSW5mb0ID4EEDUgtyZXN0b3JlSW5mbxJkChFlbmNyeXB0aW9uX2NvbmZpZxgFIAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkVuY3J5cHRpb25Db25maWdCA+BBA1IQZW5jcnlwdGlvbkNvbmZpZxJeCg9lbmNyeXB0aW9uX2luZm8YCCADKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5FbmNyeXB0aW9uSW5mb0ID4EEDUg5lbmNyeXB0aW9uSW5mbxI9Chh2ZXJzaW9uX3JldGVudGlvbl9wZXJpb2QYBiABKAlCA+BBA1IWdmVyc2lvblJldGVudGlvblBlcmlvZBJTChVlYXJsaWVzdF92ZXJzaW9uX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSE2VhcmxpZXN0VmVyc2lvblRpbWUSKgoOZGVmYXVsdF9sZWFkZXIYCSABKAlCA+BBA1INZGVmYXVsdExlYWRlchJhChBkYXRhYmFzZV9kaWFsZWN0GAogASgOMjEuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2VEaWFsZWN0QgPgQQNSD2RhdGFiYXNlRGlhbGVjdBI0ChZlbmFibGVfZHJvcF9wcm90ZWN0aW9uGAsgASgIUhRlbmFibGVEcm9wUHJvdGVjdGlvbhIlCgtyZWNvbmNpbGluZxgMIAEoCEID4EEDUgtyZWNvbmNpbGluZyJNCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIUChBSRUFEWV9PUFRJTUlaSU5HEAM6YupBXwofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9');
 @$core.Deprecated('Use listDatabasesRequestDescriptor instead')
 const ListDatabasesRequest$json = const {
   '1': 'ListDatabasesRequest',
@@ -281,6 +296,69 @@ const GetDatabaseRequest$json = const {
 /// Descriptor for `GetDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getDatabaseRequestDescriptor = $convert.base64Decode(
     'ChJHZXREYXRhYmFzZVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUgRuYW1l');
+@$core.Deprecated('Use updateDatabaseRequestDescriptor instead')
+const UpdateDatabaseRequest$json = const {
+  '1': 'UpdateDatabaseRequest',
+  '2': const [
+    const {
+      '1': 'database',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.database.v1.Database',
+      '8': const {},
+      '10': 'database'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': const {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateDatabaseRequestDescriptor = $convert.base64Decode(
+    'ChVVcGRhdGVEYXRhYmFzZVJlcXVlc3QSSwoIZGF0YWJhc2UYASABKAsyKi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5EYXRhYmFzZUID4EECUghkYXRhYmFzZRJACgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAlIKdXBkYXRlTWFzaw==');
+@$core.Deprecated('Use updateDatabaseMetadataDescriptor instead')
+const UpdateDatabaseMetadata$json = const {
+  '1': 'UpdateDatabaseMetadata',
+  '2': const [
+    const {
+      '1': 'request',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.database.v1.UpdateDatabaseRequest',
+      '10': 'request'
+    },
+    const {
+      '1': 'progress',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.database.v1.OperationProgress',
+      '10': 'progress'
+    },
+    const {
+      '1': 'cancel_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'cancelTime'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateDatabaseMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateDatabaseMetadataDescriptor =
+    $convert.base64Decode(
+        'ChZVcGRhdGVEYXRhYmFzZU1ldGFkYXRhElEKB3JlcXVlc3QYASABKAsyNy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5VcGRhdGVEYXRhYmFzZVJlcXVlc3RSB3JlcXVlc3QSTwoIcHJvZ3Jlc3MYAiABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5PcGVyYXRpb25Qcm9ncmVzc1IIcHJvZ3Jlc3MSOwoLY2FuY2VsX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjYW5jZWxUaW1l');
 @$core.Deprecated('Use updateDatabaseDdlRequestDescriptor instead')
 const UpdateDatabaseDdlRequest$json = const {
   '1': 'UpdateDatabaseDdlRequest',

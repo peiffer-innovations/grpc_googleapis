@@ -587,6 +587,14 @@ const MutationResult$json = const {
     },
     const {'1': 'version', '3': 4, '4': 1, '5': 3, '10': 'version'},
     const {
+      '1': 'create_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    const {
       '1': 'update_time',
       '3': 6,
       '4': 1,
@@ -606,7 +614,7 @@ const MutationResult$json = const {
 
 /// Descriptor for `MutationResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mutationResultDescriptor = $convert.base64Decode(
-    'Cg5NdXRhdGlvblJlc3VsdBIqCgNrZXkYAyABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleVIDa2V5EhgKB3ZlcnNpb24YBCABKANSB3ZlcnNpb24SOwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEisKEWNvbmZsaWN0X2RldGVjdGVkGAUgASgIUhBjb25mbGljdERldGVjdGVk');
+    'Cg5NdXRhdGlvblJlc3VsdBIqCgNrZXkYAyABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleVIDa2V5EhgKB3ZlcnNpb24YBCABKANSB3ZlcnNpb24SOwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjcmVhdGVUaW1lEjsKC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKdXBkYXRlVGltZRIrChFjb25mbGljdF9kZXRlY3RlZBgFIAEoCFIQY29uZmxpY3REZXRlY3RlZA==');
 @$core.Deprecated('Use readOptionsDescriptor instead')
 const ReadOptions$json = const {
   '1': 'ReadOptions',

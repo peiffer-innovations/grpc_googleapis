@@ -2435,3 +2435,228 @@ class ReadModifyWriteRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIncrementAmount() => clearField(4);
 }
+
+class StreamPartition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StreamPartition',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.v2'),
+      createEmptyInstance: create)
+    ..aOM<RowRange>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rowRange',
+        subBuilder: RowRange.create)
+    ..hasRequiredFields = false;
+
+  StreamPartition._() : super();
+  factory StreamPartition({
+    RowRange? rowRange,
+  }) {
+    final _result = create();
+    if (rowRange != null) {
+      _result.rowRange = rowRange;
+    }
+    return _result;
+  }
+  factory StreamPartition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamPartition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamPartition clone() => StreamPartition()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamPartition copyWith(void Function(StreamPartition) updates) =>
+      super.copyWith((message) => updates(message as StreamPartition))
+          as StreamPartition; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamPartition create() => StreamPartition._();
+  StreamPartition createEmptyInstance() => create();
+  static $pb.PbList<StreamPartition> createRepeated() =>
+      $pb.PbList<StreamPartition>();
+  @$core.pragma('dart2js:noInline')
+  static StreamPartition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamPartition>(create);
+  static StreamPartition? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  RowRange get rowRange => $_getN(0);
+  @$pb.TagNumber(1)
+  set rowRange(RowRange v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRowRange() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowRange() => clearField(1);
+  @$pb.TagNumber(1)
+  RowRange ensureRowRange() => $_ensure(0);
+}
+
+class StreamContinuationTokens extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StreamContinuationTokens',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.v2'),
+      createEmptyInstance: create)
+    ..pc<StreamContinuationToken>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tokens',
+        $pb.PbFieldType.PM,
+        subBuilder: StreamContinuationToken.create)
+    ..hasRequiredFields = false;
+
+  StreamContinuationTokens._() : super();
+  factory StreamContinuationTokens({
+    $core.Iterable<StreamContinuationToken>? tokens,
+  }) {
+    final _result = create();
+    if (tokens != null) {
+      _result.tokens.addAll(tokens);
+    }
+    return _result;
+  }
+  factory StreamContinuationTokens.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamContinuationTokens.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamContinuationTokens clone() =>
+      StreamContinuationTokens()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamContinuationTokens copyWith(
+          void Function(StreamContinuationTokens) updates) =>
+      super.copyWith((message) => updates(message as StreamContinuationTokens))
+          as StreamContinuationTokens; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamContinuationTokens create() => StreamContinuationTokens._();
+  StreamContinuationTokens createEmptyInstance() => create();
+  static $pb.PbList<StreamContinuationTokens> createRepeated() =>
+      $pb.PbList<StreamContinuationTokens>();
+  @$core.pragma('dart2js:noInline')
+  static StreamContinuationTokens getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamContinuationTokens>(create);
+  static StreamContinuationTokens? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<StreamContinuationToken> get tokens => $_getList(0);
+}
+
+class StreamContinuationToken extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StreamContinuationToken',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.bigtable.v2'),
+      createEmptyInstance: create)
+    ..aOM<StreamPartition>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'partition',
+        subBuilder: StreamPartition.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'token')
+    ..hasRequiredFields = false;
+
+  StreamContinuationToken._() : super();
+  factory StreamContinuationToken({
+    StreamPartition? partition,
+    $core.String? token,
+  }) {
+    final _result = create();
+    if (partition != null) {
+      _result.partition = partition;
+    }
+    if (token != null) {
+      _result.token = token;
+    }
+    return _result;
+  }
+  factory StreamContinuationToken.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamContinuationToken.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamContinuationToken clone() =>
+      StreamContinuationToken()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamContinuationToken copyWith(
+          void Function(StreamContinuationToken) updates) =>
+      super.copyWith((message) => updates(message as StreamContinuationToken))
+          as StreamContinuationToken; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamContinuationToken create() => StreamContinuationToken._();
+  StreamContinuationToken createEmptyInstance() => create();
+  static $pb.PbList<StreamContinuationToken> createRepeated() =>
+      $pb.PbList<StreamContinuationToken>();
+  @$core.pragma('dart2js:noInline')
+  static StreamContinuationToken getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamContinuationToken>(create);
+  static StreamContinuationToken? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  StreamPartition get partition => $_getN(0);
+  @$pb.TagNumber(1)
+  set partition(StreamPartition v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPartition() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPartition() => clearField(1);
+  @$pb.TagNumber(1)
+  StreamPartition ensurePartition() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get token => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set token($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearToken() => clearField(2);
+}

@@ -152,6 +152,12 @@ class File extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'owner')
+    ..aOM<$0.Timestamp>(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fetchTime',
+        subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   File._() : super();
@@ -162,6 +168,7 @@ class File extends $pb.GeneratedMessage {
     $0.Timestamp? createTime,
     $0.Timestamp? updateTime,
     $core.String? owner,
+    $0.Timestamp? fetchTime,
   }) {
     final _result = create();
     if (name != null) {
@@ -181,6 +188,9 @@ class File extends $pb.GeneratedMessage {
     }
     if (owner != null) {
       _result.owner = owner;
+    }
+    if (fetchTime != null) {
+      _result.fetchTime = fetchTime;
     }
     return _result;
   }
@@ -276,6 +286,20 @@ class File extends $pb.GeneratedMessage {
   $core.bool hasOwner() => $_has(5);
   @$pb.TagNumber(7)
   void clearOwner() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $0.Timestamp get fetchTime => $_getN(6);
+  @$pb.TagNumber(8)
+  set fetchTime($0.Timestamp v) {
+    setField(8, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasFetchTime() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearFetchTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $0.Timestamp ensureFetchTime() => $_ensure(6);
 }
 
 class ListFilesRequest extends $pb.GeneratedMessage {

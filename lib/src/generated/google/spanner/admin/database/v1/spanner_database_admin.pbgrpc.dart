@@ -35,6 +35,11 @@ class DatabaseAdminClient extends $grpc.Client {
           '/google.spanner.admin.database.v1.DatabaseAdmin/GetDatabase',
           ($4.GetDatabaseRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $4.Database.fromBuffer(value));
+  static final _$updateDatabase =
+      $grpc.ClientMethod<$4.UpdateDatabaseRequest, $2.Operation>(
+          '/google.spanner.admin.database.v1.DatabaseAdmin/UpdateDatabase',
+          ($4.UpdateDatabaseRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$updateDatabaseDdl =
       $grpc.ClientMethod<$4.UpdateDatabaseDdlRequest, $2.Operation>(
           '/google.spanner.admin.database.v1.DatabaseAdmin/UpdateDatabaseDdl',
@@ -141,6 +146,12 @@ class DatabaseAdminClient extends $grpc.Client {
   $grpc.ResponseFuture<$4.Database> getDatabase($4.GetDatabaseRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getDatabase, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> updateDatabase(
+      $4.UpdateDatabaseRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateDatabase, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> updateDatabaseDdl(
@@ -263,6 +274,14 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.GetDatabaseRequest.fromBuffer(value),
         ($4.Database value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateDatabaseRequest, $2.Operation>(
+        'UpdateDatabase',
+        updateDatabase_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.UpdateDatabaseRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.UpdateDatabaseDdlRequest, $2.Operation>(
         'UpdateDatabaseDdl',
         updateDatabaseDdl_Pre,
@@ -413,6 +432,11 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
     return getDatabase(call, await request);
   }
 
+  $async.Future<$2.Operation> updateDatabase_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateDatabaseRequest> request) async {
+    return updateDatabase(call, await request);
+  }
+
   $async.Future<$2.Operation> updateDatabaseDdl_Pre($grpc.ServiceCall call,
       $async.Future<$4.UpdateDatabaseDdlRequest> request) async {
     return updateDatabaseDdl(call, await request);
@@ -504,6 +528,8 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.CreateDatabaseRequest request);
   $async.Future<$4.Database> getDatabase(
       $grpc.ServiceCall call, $4.GetDatabaseRequest request);
+  $async.Future<$2.Operation> updateDatabase(
+      $grpc.ServiceCall call, $4.UpdateDatabaseRequest request);
   $async.Future<$2.Operation> updateDatabaseDdl(
       $grpc.ServiceCall call, $4.UpdateDatabaseDdlRequest request);
   $async.Future<$3.Empty> dropDatabase(

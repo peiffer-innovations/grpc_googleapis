@@ -511,3 +511,24 @@ const ListTasksResponse$json = const {
 /// Descriptor for `ListTasksResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listTasksResponseDescriptor = $convert.base64Decode(
     'ChFMaXN0VGFza3NSZXNwb25zZRI4CgV0YXNrcxgBIAMoCzIiLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGFza1IFdGFza3MSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2VuEh0KCnRvdGFsX3NpemUYAyABKANSCXRvdGFsU2l6ZQ==');
+@$core.Deprecated('Use getTaskTrackingInfoRequestDescriptor instead')
+const GetTaskTrackingInfoRequest$json = const {
+  '1': 'GetTaskTrackingInfoRequest',
+  '2': const [
+    const {
+      '1': 'header',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.delivery.v1.DeliveryRequestHeader',
+      '8': const {},
+      '10': 'header'
+    },
+    const {'1': 'name', '3': 3, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetTaskTrackingInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTaskTrackingInfoRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRUYXNrVHJhY2tpbmdJbmZvUmVxdWVzdBJQCgZoZWFkZXIYASABKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVzdEhlYWRlckID4EEBUgZoZWFkZXISRwoEbmFtZRgDIAEoCUIz4EEC+kEtCitmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9UYXNrVHJhY2tpbmdJbmZvUgRuYW1l');

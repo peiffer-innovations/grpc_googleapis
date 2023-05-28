@@ -17,6 +17,121 @@ import 'logging_config.pbenum.dart';
 
 export 'logging_config.pbenum.dart';
 
+class IndexConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'IndexConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fieldPath')
+    ..e<IndexType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'type',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: IndexType.INDEX_TYPE_UNSPECIFIED,
+        valueOf: IndexType.valueOf,
+        enumValues: IndexType.values)
+    ..aOM<$3.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $3.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  IndexConfig._() : super();
+  factory IndexConfig({
+    $core.String? fieldPath,
+    IndexType? type,
+    $3.Timestamp? createTime,
+  }) {
+    final _result = create();
+    if (fieldPath != null) {
+      _result.fieldPath = fieldPath;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    return _result;
+  }
+  factory IndexConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IndexConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  IndexConfig clone() => IndexConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  IndexConfig copyWith(void Function(IndexConfig) updates) =>
+      super.copyWith((message) => updates(message as IndexConfig))
+          as IndexConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static IndexConfig create() => IndexConfig._();
+  IndexConfig createEmptyInstance() => create();
+  static $pb.PbList<IndexConfig> createRepeated() => $pb.PbList<IndexConfig>();
+  @$core.pragma('dart2js:noInline')
+  static IndexConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IndexConfig>(create);
+  static IndexConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get fieldPath => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set fieldPath($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasFieldPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFieldPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  IndexType get type => $_getN(1);
+  @$pb.TagNumber(2)
+  set type(IndexType v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearType() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $3.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set createTime($3.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCreateTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCreateTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Timestamp ensureCreateTime() => $_ensure(2);
+}
+
 class LogBucket extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -69,11 +184,23 @@ class LogBucket extends $pb.GeneratedMessage {
         defaultOrMaker: LifecycleState.LIFECYCLE_STATE_UNSPECIFIED,
         valueOf: LifecycleState.valueOf,
         enumValues: LifecycleState.values)
+    ..aOB(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'analyticsEnabled')
     ..pPS(
         15,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'restrictedFields')
+    ..pc<IndexConfig>(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'indexConfigs',
+        $pb.PbFieldType.PM,
+        subBuilder: IndexConfig.create)
     ..aOM<CmekSettings>(
         19,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -91,7 +218,9 @@ class LogBucket extends $pb.GeneratedMessage {
     $core.bool? locked,
     $core.int? retentionDays,
     LifecycleState? lifecycleState,
+    $core.bool? analyticsEnabled,
     $core.Iterable<$core.String>? restrictedFields,
+    $core.Iterable<IndexConfig>? indexConfigs,
     CmekSettings? cmekSettings,
   }) {
     final _result = create();
@@ -116,8 +245,14 @@ class LogBucket extends $pb.GeneratedMessage {
     if (lifecycleState != null) {
       _result.lifecycleState = lifecycleState;
     }
+    if (analyticsEnabled != null) {
+      _result.analyticsEnabled = analyticsEnabled;
+    }
     if (restrictedFields != null) {
       _result.restrictedFields.addAll(restrictedFields);
+    }
+    if (indexConfigs != null) {
+      _result.indexConfigs.addAll(indexConfigs);
     }
     if (cmekSettings != null) {
       _result.cmekSettings = cmekSettings;
@@ -238,22 +373,37 @@ class LogBucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearLifecycleState() => clearField(12);
 
+  @$pb.TagNumber(14)
+  $core.bool get analyticsEnabled => $_getBF(7);
+  @$pb.TagNumber(14)
+  set analyticsEnabled($core.bool v) {
+    $_setBool(7, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasAnalyticsEnabled() => $_has(7);
+  @$pb.TagNumber(14)
+  void clearAnalyticsEnabled() => clearField(14);
+
   @$pb.TagNumber(15)
-  $core.List<$core.String> get restrictedFields => $_getList(7);
+  $core.List<$core.String> get restrictedFields => $_getList(8);
+
+  @$pb.TagNumber(17)
+  $core.List<IndexConfig> get indexConfigs => $_getList(9);
 
   @$pb.TagNumber(19)
-  CmekSettings get cmekSettings => $_getN(8);
+  CmekSettings get cmekSettings => $_getN(10);
   @$pb.TagNumber(19)
   set cmekSettings(CmekSettings v) {
     setField(19, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasCmekSettings() => $_has(8);
+  $core.bool hasCmekSettings() => $_has(10);
   @$pb.TagNumber(19)
   void clearCmekSettings() => clearField(19);
   @$pb.TagNumber(19)
-  CmekSettings ensureCmekSettings() => $_ensure(8);
+  CmekSettings ensureCmekSettings() => $_ensure(10);
 }
 
 class LogView extends $pb.GeneratedMessage {
@@ -506,7 +656,7 @@ class LogSink extends $pb.GeneratedMessage {
     $core.String? destination,
     $core.String? filter,
     @$core.Deprecated('This field is deprecated.')
-        LogSink_VersionFormat? outputVersionFormat,
+    LogSink_VersionFormat? outputVersionFormat,
     $core.String? writerIdentity,
     $core.bool? includeChildren,
     BigQueryOptions? bigqueryOptions,
@@ -729,6 +879,233 @@ class LogSink extends $pb.GeneratedMessage {
   $core.bool hasDisabled() => $_has(11);
   @$pb.TagNumber(19)
   void clearDisabled() => clearField(19);
+}
+
+class BigQueryDataset extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BigQueryDataset',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'datasetId')
+    ..hasRequiredFields = false;
+
+  BigQueryDataset._() : super();
+  factory BigQueryDataset({
+    $core.String? datasetId,
+  }) {
+    final _result = create();
+    if (datasetId != null) {
+      _result.datasetId = datasetId;
+    }
+    return _result;
+  }
+  factory BigQueryDataset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BigQueryDataset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BigQueryDataset clone() => BigQueryDataset()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BigQueryDataset copyWith(void Function(BigQueryDataset) updates) =>
+      super.copyWith((message) => updates(message as BigQueryDataset))
+          as BigQueryDataset; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BigQueryDataset create() => BigQueryDataset._();
+  BigQueryDataset createEmptyInstance() => create();
+  static $pb.PbList<BigQueryDataset> createRepeated() =>
+      $pb.PbList<BigQueryDataset>();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryDataset getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryDataset>(create);
+  static BigQueryDataset? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get datasetId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set datasetId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDatasetId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDatasetId() => clearField(1);
+}
+
+class Link extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Link',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'description')
+    ..aOM<$3.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $3.Timestamp.create)
+    ..e<LifecycleState>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lifecycleState',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: LifecycleState.LIFECYCLE_STATE_UNSPECIFIED,
+        valueOf: LifecycleState.valueOf,
+        enumValues: LifecycleState.values)
+    ..aOM<BigQueryDataset>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bigqueryDataset',
+        subBuilder: BigQueryDataset.create)
+    ..hasRequiredFields = false;
+
+  Link._() : super();
+  factory Link({
+    $core.String? name,
+    $core.String? description,
+    $3.Timestamp? createTime,
+    LifecycleState? lifecycleState,
+    BigQueryDataset? bigqueryDataset,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (lifecycleState != null) {
+      _result.lifecycleState = lifecycleState;
+    }
+    if (bigqueryDataset != null) {
+      _result.bigqueryDataset = bigqueryDataset;
+    }
+    return _result;
+  }
+  factory Link.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Link.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Link clone() => Link()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Link copyWith(void Function(Link) updates) =>
+      super.copyWith((message) => updates(message as Link))
+          as Link; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Link create() => Link._();
+  Link createEmptyInstance() => create();
+  static $pb.PbList<Link> createRepeated() => $pb.PbList<Link>();
+  @$core.pragma('dart2js:noInline')
+  static Link getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Link>(create);
+  static Link? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $3.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set createTime($3.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCreateTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCreateTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Timestamp ensureCreateTime() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  LifecycleState get lifecycleState => $_getN(3);
+  @$pb.TagNumber(4)
+  set lifecycleState(LifecycleState v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasLifecycleState() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLifecycleState() => clearField(4);
+
+  @$pb.TagNumber(5)
+  BigQueryDataset get bigqueryDataset => $_getN(4);
+  @$pb.TagNumber(5)
+  set bigqueryDataset(BigQueryDataset v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasBigqueryDataset() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearBigqueryDataset() => clearField(5);
+  @$pb.TagNumber(5)
+  BigQueryDataset ensureBigqueryDataset() => $_ensure(4);
 }
 
 class BigQueryOptions extends $pb.GeneratedMessage {
@@ -2565,6 +2942,443 @@ class DeleteSinkRequest extends $pb.GeneratedMessage {
   void clearSinkName() => clearField(1);
 }
 
+class CreateLinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateLinkRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<Link>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'link',
+        subBuilder: Link.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'linkId')
+    ..hasRequiredFields = false;
+
+  CreateLinkRequest._() : super();
+  factory CreateLinkRequest({
+    $core.String? parent,
+    Link? link,
+    $core.String? linkId,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (link != null) {
+      _result.link = link;
+    }
+    if (linkId != null) {
+      _result.linkId = linkId;
+    }
+    return _result;
+  }
+  factory CreateLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateLinkRequest clone() => CreateLinkRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateLinkRequest copyWith(void Function(CreateLinkRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateLinkRequest))
+          as CreateLinkRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateLinkRequest create() => CreateLinkRequest._();
+  CreateLinkRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateLinkRequest> createRepeated() =>
+      $pb.PbList<CreateLinkRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateLinkRequest>(create);
+  static CreateLinkRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Link get link => $_getN(1);
+  @$pb.TagNumber(2)
+  set link(Link v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasLink() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLink() => clearField(2);
+  @$pb.TagNumber(2)
+  Link ensureLink() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get linkId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set linkId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasLinkId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLinkId() => clearField(3);
+}
+
+class DeleteLinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteLinkRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  DeleteLinkRequest._() : super();
+  factory DeleteLinkRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DeleteLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteLinkRequest clone() => DeleteLinkRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteLinkRequest copyWith(void Function(DeleteLinkRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteLinkRequest))
+          as DeleteLinkRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeleteLinkRequest create() => DeleteLinkRequest._();
+  DeleteLinkRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteLinkRequest> createRepeated() =>
+      $pb.PbList<DeleteLinkRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteLinkRequest>(create);
+  static DeleteLinkRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+class ListLinksRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListLinksRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  ListLinksRequest._() : super();
+  factory ListLinksRequest({
+    $core.String? parent,
+    $core.String? pageToken,
+    $core.int? pageSize,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    return _result;
+  }
+  factory ListLinksRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLinksRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListLinksRequest clone() => ListLinksRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListLinksRequest copyWith(void Function(ListLinksRequest) updates) =>
+      super.copyWith((message) => updates(message as ListLinksRequest))
+          as ListLinksRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListLinksRequest create() => ListLinksRequest._();
+  ListLinksRequest createEmptyInstance() => create();
+  static $pb.PbList<ListLinksRequest> createRepeated() =>
+      $pb.PbList<ListLinksRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListLinksRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListLinksRequest>(create);
+  static ListLinksRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set pageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageToken() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set pageSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageSize() => clearField(3);
+}
+
+class ListLinksResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListLinksResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..pc<Link>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'links',
+        $pb.PbFieldType.PM,
+        subBuilder: Link.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  ListLinksResponse._() : super();
+  factory ListLinksResponse({
+    $core.Iterable<Link>? links,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (links != null) {
+      _result.links.addAll(links);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListLinksResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLinksResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListLinksResponse clone() => ListLinksResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListLinksResponse copyWith(void Function(ListLinksResponse) updates) =>
+      super.copyWith((message) => updates(message as ListLinksResponse))
+          as ListLinksResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListLinksResponse create() => ListLinksResponse._();
+  ListLinksResponse createEmptyInstance() => create();
+  static $pb.PbList<ListLinksResponse> createRepeated() =>
+      $pb.PbList<ListLinksResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListLinksResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListLinksResponse>(create);
+  static ListLinksResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Link> get links => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+class GetLinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetLinkRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetLinkRequest._() : super();
+  factory GetLinkRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetLinkRequest clone() => GetLinkRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetLinkRequest copyWith(void Function(GetLinkRequest) updates) =>
+      super.copyWith((message) => updates(message as GetLinkRequest))
+          as GetLinkRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetLinkRequest create() => GetLinkRequest._();
+  GetLinkRequest createEmptyInstance() => create();
+  static $pb.PbList<GetLinkRequest> createRepeated() =>
+      $pb.PbList<GetLinkRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLinkRequest>(create);
+  static GetLinkRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
 class LogExclusion extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -3495,6 +4309,11 @@ class CmekSettings extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'serviceAccountId')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kmsKeyVersionName')
     ..hasRequiredFields = false;
 
   CmekSettings._() : super();
@@ -3502,6 +4321,7 @@ class CmekSettings extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? kmsKeyName,
     $core.String? serviceAccountId,
+    $core.String? kmsKeyVersionName,
   }) {
     final _result = create();
     if (name != null) {
@@ -3512,6 +4332,9 @@ class CmekSettings extends $pb.GeneratedMessage {
     }
     if (serviceAccountId != null) {
       _result.serviceAccountId = serviceAccountId;
+    }
+    if (kmsKeyVersionName != null) {
+      _result.kmsKeyVersionName = kmsKeyVersionName;
     }
     return _result;
   }
@@ -3577,6 +4400,18 @@ class CmekSettings extends $pb.GeneratedMessage {
   $core.bool hasServiceAccountId() => $_has(2);
   @$pb.TagNumber(3)
   void clearServiceAccountId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get kmsKeyVersionName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set kmsKeyVersionName($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasKmsKeyVersionName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearKmsKeyVersionName() => clearField(4);
 }
 
 class GetSettingsRequest extends $pb.GeneratedMessage {
@@ -4300,4 +5135,431 @@ class CopyLogEntriesResponse extends $pb.GeneratedMessage {
   $core.bool hasLogEntriesCopiedCount() => $_has(0);
   @$pb.TagNumber(1)
   void clearLogEntriesCopiedCount() => clearField(1);
+}
+
+enum BucketMetadata_Request { createBucketRequest, updateBucketRequest, notSet }
+
+class BucketMetadata extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, BucketMetadata_Request>
+      _BucketMetadata_RequestByTag = {
+    4: BucketMetadata_Request.createBucketRequest,
+    5: BucketMetadata_Request.updateBucketRequest,
+    0: BucketMetadata_Request.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BucketMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5])
+    ..aOM<$3.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $3.Timestamp.create)
+    ..e<OperationState>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOM<CreateBucketRequest>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createBucketRequest',
+        subBuilder: CreateBucketRequest.create)
+    ..aOM<UpdateBucketRequest>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateBucketRequest',
+        subBuilder: UpdateBucketRequest.create)
+    ..hasRequiredFields = false;
+
+  BucketMetadata._() : super();
+  factory BucketMetadata({
+    $3.Timestamp? startTime,
+    $3.Timestamp? endTime,
+    OperationState? state,
+    CreateBucketRequest? createBucketRequest,
+    UpdateBucketRequest? updateBucketRequest,
+  }) {
+    final _result = create();
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (createBucketRequest != null) {
+      _result.createBucketRequest = createBucketRequest;
+    }
+    if (updateBucketRequest != null) {
+      _result.updateBucketRequest = updateBucketRequest;
+    }
+    return _result;
+  }
+  factory BucketMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BucketMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BucketMetadata clone() => BucketMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BucketMetadata copyWith(void Function(BucketMetadata) updates) =>
+      super.copyWith((message) => updates(message as BucketMetadata))
+          as BucketMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BucketMetadata create() => BucketMetadata._();
+  BucketMetadata createEmptyInstance() => create();
+  static $pb.PbList<BucketMetadata> createRepeated() =>
+      $pb.PbList<BucketMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static BucketMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BucketMetadata>(create);
+  static BucketMetadata? _defaultInstance;
+
+  BucketMetadata_Request whichRequest() =>
+      _BucketMetadata_RequestByTag[$_whichOneof(0)]!;
+  void clearRequest() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $3.Timestamp get startTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set startTime($3.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStartTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Timestamp ensureStartTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $3.Timestamp get endTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set endTime($3.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEndTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureEndTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  OperationState get state => $_getN(2);
+  @$pb.TagNumber(3)
+  set state(OperationState v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearState() => clearField(3);
+
+  @$pb.TagNumber(4)
+  CreateBucketRequest get createBucketRequest => $_getN(3);
+  @$pb.TagNumber(4)
+  set createBucketRequest(CreateBucketRequest v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCreateBucketRequest() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCreateBucketRequest() => clearField(4);
+  @$pb.TagNumber(4)
+  CreateBucketRequest ensureCreateBucketRequest() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  UpdateBucketRequest get updateBucketRequest => $_getN(4);
+  @$pb.TagNumber(5)
+  set updateBucketRequest(UpdateBucketRequest v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasUpdateBucketRequest() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUpdateBucketRequest() => clearField(5);
+  @$pb.TagNumber(5)
+  UpdateBucketRequest ensureUpdateBucketRequest() => $_ensure(4);
+}
+
+enum LinkMetadata_Request { createLinkRequest, deleteLinkRequest, notSet }
+
+class LinkMetadata extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, LinkMetadata_Request>
+      _LinkMetadata_RequestByTag = {
+    4: LinkMetadata_Request.createLinkRequest,
+    5: LinkMetadata_Request.deleteLinkRequest,
+    0: LinkMetadata_Request.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LinkMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5])
+    ..aOM<$3.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $3.Timestamp.create)
+    ..e<OperationState>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOM<CreateLinkRequest>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createLinkRequest',
+        subBuilder: CreateLinkRequest.create)
+    ..aOM<DeleteLinkRequest>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deleteLinkRequest',
+        subBuilder: DeleteLinkRequest.create)
+    ..hasRequiredFields = false;
+
+  LinkMetadata._() : super();
+  factory LinkMetadata({
+    $3.Timestamp? startTime,
+    $3.Timestamp? endTime,
+    OperationState? state,
+    CreateLinkRequest? createLinkRequest,
+    DeleteLinkRequest? deleteLinkRequest,
+  }) {
+    final _result = create();
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (createLinkRequest != null) {
+      _result.createLinkRequest = createLinkRequest;
+    }
+    if (deleteLinkRequest != null) {
+      _result.deleteLinkRequest = deleteLinkRequest;
+    }
+    return _result;
+  }
+  factory LinkMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LinkMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  LinkMetadata clone() => LinkMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  LinkMetadata copyWith(void Function(LinkMetadata) updates) =>
+      super.copyWith((message) => updates(message as LinkMetadata))
+          as LinkMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static LinkMetadata create() => LinkMetadata._();
+  LinkMetadata createEmptyInstance() => create();
+  static $pb.PbList<LinkMetadata> createRepeated() =>
+      $pb.PbList<LinkMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static LinkMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LinkMetadata>(create);
+  static LinkMetadata? _defaultInstance;
+
+  LinkMetadata_Request whichRequest() =>
+      _LinkMetadata_RequestByTag[$_whichOneof(0)]!;
+  void clearRequest() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $3.Timestamp get startTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set startTime($3.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStartTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Timestamp ensureStartTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $3.Timestamp get endTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set endTime($3.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEndTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureEndTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  OperationState get state => $_getN(2);
+  @$pb.TagNumber(3)
+  set state(OperationState v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearState() => clearField(3);
+
+  @$pb.TagNumber(4)
+  CreateLinkRequest get createLinkRequest => $_getN(3);
+  @$pb.TagNumber(4)
+  set createLinkRequest(CreateLinkRequest v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCreateLinkRequest() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCreateLinkRequest() => clearField(4);
+  @$pb.TagNumber(4)
+  CreateLinkRequest ensureCreateLinkRequest() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  DeleteLinkRequest get deleteLinkRequest => $_getN(4);
+  @$pb.TagNumber(5)
+  set deleteLinkRequest(DeleteLinkRequest v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDeleteLinkRequest() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDeleteLinkRequest() => clearField(5);
+  @$pb.TagNumber(5)
+  DeleteLinkRequest ensureDeleteLinkRequest() => $_ensure(4);
+}
+
+class LocationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LocationMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.logging.v2'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'logAnalyticsEnabled')
+    ..hasRequiredFields = false;
+
+  LocationMetadata._() : super();
+  factory LocationMetadata({
+    $core.bool? logAnalyticsEnabled,
+  }) {
+    final _result = create();
+    if (logAnalyticsEnabled != null) {
+      _result.logAnalyticsEnabled = logAnalyticsEnabled;
+    }
+    return _result;
+  }
+  factory LocationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LocationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  LocationMetadata clone() => LocationMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  LocationMetadata copyWith(void Function(LocationMetadata) updates) =>
+      super.copyWith((message) => updates(message as LocationMetadata))
+          as LocationMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static LocationMetadata create() => LocationMetadata._();
+  LocationMetadata createEmptyInstance() => create();
+  static $pb.PbList<LocationMetadata> createRepeated() =>
+      $pb.PbList<LocationMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static LocationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocationMetadata>(create);
+  static LocationMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get logAnalyticsEnabled => $_getBF(0);
+  @$pb.TagNumber(1)
+  set logAnalyticsEnabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLogAnalyticsEnabled() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLogAnalyticsEnabled() => clearField(1);
 }

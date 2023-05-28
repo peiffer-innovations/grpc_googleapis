@@ -94,6 +94,11 @@ class LogMetric extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'disabled')
+    ..aOS(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bucketName')
     ..hasRequiredFields = false;
 
   LogMetric._() : super();
@@ -102,7 +107,7 @@ class LogMetric extends $pb.GeneratedMessage {
     $core.String? description,
     $core.String? filter,
     @$core.Deprecated('This field is deprecated.')
-        LogMetric_ApiVersion? version,
+    LogMetric_ApiVersion? version,
     $2.MetricDescriptor? metricDescriptor,
     $core.String? valueExtractor,
     $core.Map<$core.String, $core.String>? labelExtractors,
@@ -110,6 +115,7 @@ class LogMetric extends $pb.GeneratedMessage {
     $4.Timestamp? createTime,
     $4.Timestamp? updateTime,
     $core.bool? disabled,
+    $core.String? bucketName,
   }) {
     final _result = create();
     if (name != null) {
@@ -145,6 +151,9 @@ class LogMetric extends $pb.GeneratedMessage {
     }
     if (disabled != null) {
       _result.disabled = disabled;
+    }
+    if (bucketName != null) {
+      _result.bucketName = bucketName;
     }
     return _result;
   }
@@ -308,6 +317,18 @@ class LogMetric extends $pb.GeneratedMessage {
   $core.bool hasDisabled() => $_has(10);
   @$pb.TagNumber(12)
   void clearDisabled() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get bucketName => $_getSZ(11);
+  @$pb.TagNumber(13)
+  set bucketName($core.String v) {
+    $_setString(11, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasBucketName() => $_has(11);
+  @$pb.TagNumber(13)
+  void clearBucketName() => clearField(13);
 }
 
 class ListLogMetricsRequest extends $pb.GeneratedMessage {

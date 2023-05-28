@@ -9,36 +9,6 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class LifecycleState extends $pb.ProtobufEnum {
-  static const LifecycleState LIFECYCLE_STATE_UNSPECIFIED = LifecycleState._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LIFECYCLE_STATE_UNSPECIFIED');
-  static const LifecycleState ACTIVE = LifecycleState._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ACTIVE');
-  static const LifecycleState DELETE_REQUESTED = LifecycleState._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DELETE_REQUESTED');
-
-  static const $core.List<LifecycleState> values = <LifecycleState>[
-    LIFECYCLE_STATE_UNSPECIFIED,
-    ACTIVE,
-    DELETE_REQUESTED,
-  ];
-
-  static final $core.Map<$core.int, LifecycleState> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static LifecycleState? valueOf($core.int value) => _byValue[value];
-
-  const LifecycleState._($core.int v, $core.String n) : super(v, n);
-}
-
 class OperationState extends $pb.ProtobufEnum {
   static const OperationState OPERATION_STATE_UNSPECIFIED = OperationState._(
       0,
@@ -92,6 +62,84 @@ class OperationState extends $pb.ProtobufEnum {
   static OperationState? valueOf($core.int value) => _byValue[value];
 
   const OperationState._($core.int v, $core.String n) : super(v, n);
+}
+
+class LifecycleState extends $pb.ProtobufEnum {
+  static const LifecycleState LIFECYCLE_STATE_UNSPECIFIED = LifecycleState._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'LIFECYCLE_STATE_UNSPECIFIED');
+  static const LifecycleState ACTIVE = LifecycleState._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ACTIVE');
+  static const LifecycleState DELETE_REQUESTED = LifecycleState._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DELETE_REQUESTED');
+  static const LifecycleState UPDATING = LifecycleState._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'UPDATING');
+  static const LifecycleState CREATING = LifecycleState._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CREATING');
+  static const LifecycleState FAILED = LifecycleState._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'FAILED');
+
+  static const $core.List<LifecycleState> values = <LifecycleState>[
+    LIFECYCLE_STATE_UNSPECIFIED,
+    ACTIVE,
+    DELETE_REQUESTED,
+    UPDATING,
+    CREATING,
+    FAILED,
+  ];
+
+  static final $core.Map<$core.int, LifecycleState> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static LifecycleState? valueOf($core.int value) => _byValue[value];
+
+  const LifecycleState._($core.int v, $core.String n) : super(v, n);
+}
+
+class IndexType extends $pb.ProtobufEnum {
+  static const IndexType INDEX_TYPE_UNSPECIFIED = IndexType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'INDEX_TYPE_UNSPECIFIED');
+  static const IndexType INDEX_TYPE_STRING = IndexType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'INDEX_TYPE_STRING');
+  static const IndexType INDEX_TYPE_INTEGER = IndexType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'INDEX_TYPE_INTEGER');
+
+  static const $core.List<IndexType> values = <IndexType>[
+    INDEX_TYPE_UNSPECIFIED,
+    INDEX_TYPE_STRING,
+    INDEX_TYPE_INTEGER,
+  ];
+
+  static final $core.Map<$core.int, IndexType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static IndexType? valueOf($core.int value) => _byValue[value];
+
+  const IndexType._($core.int v, $core.String n) : super(v, n);
 }
 
 class LogSink_VersionFormat extends $pb.ProtobufEnum {

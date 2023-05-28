@@ -306,3 +306,31 @@ const DeliveryVehicleLocation$json = const {
 final $typed_data.Uint8List deliveryVehicleLocationDescriptor =
     $convert.base64Decode(
         'ChdEZWxpdmVyeVZlaGljbGVMb2NhdGlvbhIvCghsb2NhdGlvbhgBIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ1IIbG9jYXRpb24SUQoTaG9yaXpvbnRhbF9hY2N1cmFjeRgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZUICGAFSEmhvcml6b250YWxBY2N1cmFjeRJFCg9sYXRsbmdfYWNjdXJhY3kYFiABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWVSDmxhdGxuZ0FjY3VyYWN5EjUKB2hlYWRpbmcYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIHaGVhZGluZxJLChBiZWFyaW5nX2FjY3VyYWN5GAogASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlQgIYAVIPYmVhcmluZ0FjY3VyYWN5EkcKEGhlYWRpbmdfYWNjdXJhY3kYFyABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWVSD2hlYWRpbmdBY2N1cmFjeRI4CghhbHRpdHVkZRgFIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZVIIYWx0aXR1ZGUSTQoRdmVydGljYWxfYWNjdXJhY3kYCSABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWVCAhgBUhB2ZXJ0aWNhbEFjY3VyYWN5EkkKEWFsdGl0dWRlX2FjY3VyYWN5GBggASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlUhBhbHRpdHVkZUFjY3VyYWN5Ej4KCnNwZWVkX2ttcGgYAyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUICGAFSCXNwZWVkS21waBIyCgVzcGVlZBgGIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZVIFc3BlZWQSQwoOc3BlZWRfYWNjdXJhY3kYByABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWVSDXNwZWVkQWNjdXJhY3kSOwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEkAKC3NlcnZlcl90aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpzZXJ2ZXJUaW1lEmQKD2xvY2F0aW9uX3NlbnNvchgLIAEoDjI7Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlTG9jYXRpb25TZW5zb3JSDmxvY2F0aW9uU2Vuc29yEkIKD2lzX3JvYWRfc25hcHBlZBgbIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVSDWlzUm9hZFNuYXBwZWQSUgoVaXNfZ3BzX3NlbnNvcl9lbmFibGVkGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUID4EEEUhJpc0dwc1NlbnNvckVuYWJsZWQSTAoRdGltZV9zaW5jZV91cGRhdGUYDiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEEUg90aW1lU2luY2VVcGRhdGUSTAoRbnVtX3N0YWxlX3VwZGF0ZXMYDyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEEUg9udW1TdGFsZVVwZGF0ZXMSNgoMcmF3X2xvY2F0aW9uGBAgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nUgtyYXdMb2NhdGlvbhJLChFyYXdfbG9jYXRpb25fdGltZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBBFIPcmF3TG9jYXRpb25UaW1lEnAKE3Jhd19sb2NhdGlvbl9zZW5zb3IYHCABKA4yOy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5VmVoaWNsZUxvY2F0aW9uU2Vuc29yQgPgQQRSEXJhd0xvY2F0aW9uU2Vuc29yElUKFXJhd19sb2NhdGlvbl9hY2N1cmFjeRgZIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZUID4EEEUhNyYXdMb2NhdGlvbkFjY3VyYWN5Ek0KFXN1cHBsZW1lbnRhbF9sb2NhdGlvbhgSIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID4EEEUhRzdXBwbGVtZW50YWxMb2NhdGlvbhJdChpzdXBwbGVtZW50YWxfbG9jYXRpb25fdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBBFIYc3VwcGxlbWVudGFsTG9jYXRpb25UaW1lEoIBChxzdXBwbGVtZW50YWxfbG9jYXRpb25fc2Vuc29yGBQgASgOMjsubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVMb2NhdGlvblNlbnNvckID4EEEUhpzdXBwbGVtZW50YWxMb2NhdGlvblNlbnNvchJnCh5zdXBwbGVtZW50YWxfbG9jYXRpb25fYWNjdXJhY3kYFSABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWVCA+BBBFIcc3VwcGxlbWVudGFsTG9jYXRpb25BY2N1cmFjeRIlCgxyb2FkX3NuYXBwZWQYGiABKAhCAhgBUgtyb2FkU25hcHBlZA==');
+@$core.Deprecated('Use timeWindowDescriptor instead')
+const TimeWindow$json = const {
+  '1': 'TimeWindow',
+  '2': const [
+    const {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'endTime'
+    },
+  ],
+};
+
+/// Descriptor for `TimeWindow`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List timeWindowDescriptor = $convert.base64Decode(
+    'CgpUaW1lV2luZG93Ej4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQJSCXN0YXJ0VGltZRI6CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAlIHZW5kVGltZQ==');

@@ -37,6 +37,22 @@ class ClientLibraryOrganization extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'STREET_VIEW');
+  static const ClientLibraryOrganization SHOPPING = ClientLibraryOrganization._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SHOPPING');
+  static const ClientLibraryOrganization GEO = ClientLibraryOrganization._(
+      6,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GEO');
+  static const ClientLibraryOrganization GENERATIVE_AI =
+      ClientLibraryOrganization._(
+          7,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'GENERATIVE_AI');
 
   static const $core.List<ClientLibraryOrganization> values =
       <ClientLibraryOrganization>[
@@ -45,6 +61,9 @@ class ClientLibraryOrganization extends $pb.ProtobufEnum {
     ADS,
     PHOTOS,
     STREET_VIEW,
+    SHOPPING,
+    GEO,
+    GENERATIVE_AI,
   ];
 
   static final $core.Map<$core.int, ClientLibraryOrganization> _byValue =

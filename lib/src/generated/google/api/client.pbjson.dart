@@ -18,13 +18,16 @@ const ClientLibraryOrganization$json = const {
     const {'1': 'ADS', '2': 2},
     const {'1': 'PHOTOS', '2': 3},
     const {'1': 'STREET_VIEW', '2': 4},
+    const {'1': 'SHOPPING', '2': 5},
+    const {'1': 'GEO', '2': 6},
+    const {'1': 'GENERATIVE_AI', '2': 7},
   ],
 };
 
 /// Descriptor for `ClientLibraryOrganization`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List clientLibraryOrganizationDescriptor =
     $convert.base64Decode(
-        'ChlDbGllbnRMaWJyYXJ5T3JnYW5pemF0aW9uEisKJ0NMSUVOVF9MSUJSQVJZX09SR0FOSVpBVElPTl9VTlNQRUNJRklFRBAAEgkKBUNMT1VEEAESBwoDQURTEAISCgoGUEhPVE9TEAMSDwoLU1RSRUVUX1ZJRVcQBA==');
+        'ChlDbGllbnRMaWJyYXJ5T3JnYW5pemF0aW9uEisKJ0NMSUVOVF9MSUJSQVJZX09SR0FOSVpBVElPTl9VTlNQRUNJRklFRBAAEgkKBUNMT1VEEAESBwoDQURTEAISCgoGUEhPVE9TEAMSDwoLU1RSRUVUX1ZJRVcQBBIMCghTSE9QUElORxAFEgcKA0dFTxAGEhEKDUdFTkVSQVRJVkVfQUkQBw==');
 @$core.Deprecated('Use clientLibraryDestinationDescriptor instead')
 const ClientLibraryDestination$json = const {
   '1': 'ClientLibraryDestination',
@@ -214,12 +217,19 @@ const Publishing$json = const {
       '6': '.google.api.ClientLibrarySettings',
       '10': 'librarySettings'
     },
+    const {
+      '1': 'proto_reference_documentation_uri',
+      '3': 110,
+      '4': 1,
+      '5': 9,
+      '10': 'protoReferenceDocumentationUri'
+    },
   ],
 };
 
 /// Descriptor for `Publishing`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List publishingDescriptor = $convert.base64Decode(
-    'CgpQdWJsaXNoaW5nEkMKD21ldGhvZF9zZXR0aW5ncxgCIAMoCzIaLmdvb2dsZS5hcGkuTWV0aG9kU2V0dGluZ3NSDm1ldGhvZFNldHRpbmdzEiIKDW5ld19pc3N1ZV91cmkYZSABKAlSC25ld0lzc3VlVXJpEisKEWRvY3VtZW50YXRpb25fdXJpGGYgASgJUhBkb2N1bWVudGF0aW9uVXJpEiQKDmFwaV9zaG9ydF9uYW1lGGcgASgJUgxhcGlTaG9ydE5hbWUSIQoMZ2l0aHViX2xhYmVsGGggASgJUgtnaXRodWJMYWJlbBI0ChZjb2Rlb3duZXJfZ2l0aHViX3RlYW1zGGkgAygJUhRjb2Rlb3duZXJHaXRodWJUZWFtcxIkCg5kb2NfdGFnX3ByZWZpeBhqIAEoCVIMZG9jVGFnUHJlZml4EkkKDG9yZ2FuaXphdGlvbhhrIAEoDjIlLmdvb2dsZS5hcGkuQ2xpZW50TGlicmFyeU9yZ2FuaXphdGlvblIMb3JnYW5pemF0aW9uEkwKEGxpYnJhcnlfc2V0dGluZ3MYbSADKAsyIS5nb29nbGUuYXBpLkNsaWVudExpYnJhcnlTZXR0aW5nc1IPbGlicmFyeVNldHRpbmdz');
+    'CgpQdWJsaXNoaW5nEkMKD21ldGhvZF9zZXR0aW5ncxgCIAMoCzIaLmdvb2dsZS5hcGkuTWV0aG9kU2V0dGluZ3NSDm1ldGhvZFNldHRpbmdzEiIKDW5ld19pc3N1ZV91cmkYZSABKAlSC25ld0lzc3VlVXJpEisKEWRvY3VtZW50YXRpb25fdXJpGGYgASgJUhBkb2N1bWVudGF0aW9uVXJpEiQKDmFwaV9zaG9ydF9uYW1lGGcgASgJUgxhcGlTaG9ydE5hbWUSIQoMZ2l0aHViX2xhYmVsGGggASgJUgtnaXRodWJMYWJlbBI0ChZjb2Rlb3duZXJfZ2l0aHViX3RlYW1zGGkgAygJUhRjb2Rlb3duZXJHaXRodWJUZWFtcxIkCg5kb2NfdGFnX3ByZWZpeBhqIAEoCVIMZG9jVGFnUHJlZml4EkkKDG9yZ2FuaXphdGlvbhhrIAEoDjIlLmdvb2dsZS5hcGkuQ2xpZW50TGlicmFyeU9yZ2FuaXphdGlvblIMb3JnYW5pemF0aW9uEkwKEGxpYnJhcnlfc2V0dGluZ3MYbSADKAsyIS5nb29nbGUuYXBpLkNsaWVudExpYnJhcnlTZXR0aW5nc1IPbGlicmFyeVNldHRpbmdzEkkKIXByb3RvX3JlZmVyZW5jZV9kb2N1bWVudGF0aW9uX3VyaRhuIAEoCVIecHJvdG9SZWZlcmVuY2VEb2N1bWVudGF0aW9uVXJp');
 @$core.Deprecated('Use javaSettingsDescriptor instead')
 const JavaSettings$json = const {
   '1': 'JavaSettings',
@@ -348,12 +358,73 @@ const DotnetSettings$json = const {
       '6': '.google.api.CommonLanguageSettings',
       '10': 'common'
     },
+    const {
+      '1': 'renamed_services',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.DotnetSettings.RenamedServicesEntry',
+      '10': 'renamedServices'
+    },
+    const {
+      '1': 'renamed_resources',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.DotnetSettings.RenamedResourcesEntry',
+      '10': 'renamedResources'
+    },
+    const {
+      '1': 'ignored_resources',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '10': 'ignoredResources'
+    },
+    const {
+      '1': 'forced_namespace_aliases',
+      '3': 5,
+      '4': 3,
+      '5': 9,
+      '10': 'forcedNamespaceAliases'
+    },
+    const {
+      '1': 'handwritten_signatures',
+      '3': 6,
+      '4': 3,
+      '5': 9,
+      '10': 'handwrittenSignatures'
+    },
   ],
+  '3': const [
+    DotnetSettings_RenamedServicesEntry$json,
+    DotnetSettings_RenamedResourcesEntry$json
+  ],
+};
+
+@$core.Deprecated('Use dotnetSettingsDescriptor instead')
+const DotnetSettings_RenamedServicesEntry$json = const {
+  '1': 'RenamedServicesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
+};
+
+@$core.Deprecated('Use dotnetSettingsDescriptor instead')
+const DotnetSettings_RenamedResourcesEntry$json = const {
+  '1': 'RenamedResourcesEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': const {'7': true},
 };
 
 /// Descriptor for `DotnetSettings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dotnetSettingsDescriptor = $convert.base64Decode(
-    'Cg5Eb3RuZXRTZXR0aW5ncxI6CgZjb21tb24YASABKAsyIi5nb29nbGUuYXBpLkNvbW1vbkxhbmd1YWdlU2V0dGluZ3NSBmNvbW1vbg==');
+    'Cg5Eb3RuZXRTZXR0aW5ncxI6CgZjb21tb24YASABKAsyIi5nb29nbGUuYXBpLkNvbW1vbkxhbmd1YWdlU2V0dGluZ3NSBmNvbW1vbhJaChByZW5hbWVkX3NlcnZpY2VzGAIgAygLMi8uZ29vZ2xlLmFwaS5Eb3RuZXRTZXR0aW5ncy5SZW5hbWVkU2VydmljZXNFbnRyeVIPcmVuYW1lZFNlcnZpY2VzEl0KEXJlbmFtZWRfcmVzb3VyY2VzGAMgAygLMjAuZ29vZ2xlLmFwaS5Eb3RuZXRTZXR0aW5ncy5SZW5hbWVkUmVzb3VyY2VzRW50cnlSEHJlbmFtZWRSZXNvdXJjZXMSKwoRaWdub3JlZF9yZXNvdXJjZXMYBCADKAlSEGlnbm9yZWRSZXNvdXJjZXMSOAoYZm9yY2VkX25hbWVzcGFjZV9hbGlhc2VzGAUgAygJUhZmb3JjZWROYW1lc3BhY2VBbGlhc2VzEjUKFmhhbmR3cml0dGVuX3NpZ25hdHVyZXMYBiADKAlSFWhhbmR3cml0dGVuU2lnbmF0dXJlcxpCChRSZW5hbWVkU2VydmljZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGkMKFVJlbmFtZWRSZXNvdXJjZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
 @$core.Deprecated('Use rubySettingsDescriptor instead')
 const RubySettings$json = const {
   '1': 'RubySettings',

@@ -1732,6 +1732,12 @@ class Subscription extends $pb.GeneratedMessage {
         defaultOrMaker: Subscription_State.STATE_UNSPECIFIED,
         valueOf: Subscription_State.valueOf,
         enumValues: Subscription_State.values)
+    ..aOM<CloudStorageConfig>(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cloudStorageConfig',
+        subBuilder: CloudStorageConfig.create)
     ..hasRequiredFields = false;
 
   Subscription._() : super();
@@ -1753,6 +1759,7 @@ class Subscription extends $pb.GeneratedMessage {
     $3.Duration? topicMessageRetentionDuration,
     BigQueryConfig? bigqueryConfig,
     Subscription_State? state,
+    CloudStorageConfig? cloudStorageConfig,
   }) {
     final _result = create();
     if (name != null) {
@@ -1805,6 +1812,9 @@ class Subscription extends $pb.GeneratedMessage {
     }
     if (state != null) {
       _result.state = state;
+    }
+    if (cloudStorageConfig != null) {
+      _result.cloudStorageConfig = cloudStorageConfig;
     }
     return _result;
   }
@@ -2043,6 +2053,20 @@ class Subscription extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(16);
   @$pb.TagNumber(19)
   void clearState() => clearField(19);
+
+  @$pb.TagNumber(22)
+  CloudStorageConfig get cloudStorageConfig => $_getN(17);
+  @$pb.TagNumber(22)
+  set cloudStorageConfig(CloudStorageConfig v) {
+    setField(22, v);
+  }
+
+  @$pb.TagNumber(22)
+  $core.bool hasCloudStorageConfig() => $_has(17);
+  @$pb.TagNumber(22)
+  void clearCloudStorageConfig() => clearField(22);
+  @$pb.TagNumber(22)
+  CloudStorageConfig ensureCloudStorageConfig() => $_ensure(17);
 }
 
 class RetryPolicy extends $pb.GeneratedMessage {
@@ -2386,13 +2410,133 @@ class PushConfig_OidcToken extends $pb.GeneratedMessage {
   void clearAudience() => clearField(2);
 }
 
+class PushConfig_PubsubWrapper extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PushConfig.PubsubWrapper',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  PushConfig_PubsubWrapper._() : super();
+  factory PushConfig_PubsubWrapper() => create();
+  factory PushConfig_PubsubWrapper.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PushConfig_PubsubWrapper.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PushConfig_PubsubWrapper clone() =>
+      PushConfig_PubsubWrapper()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PushConfig_PubsubWrapper copyWith(
+          void Function(PushConfig_PubsubWrapper) updates) =>
+      super.copyWith((message) => updates(message as PushConfig_PubsubWrapper))
+          as PushConfig_PubsubWrapper; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PushConfig_PubsubWrapper create() => PushConfig_PubsubWrapper._();
+  PushConfig_PubsubWrapper createEmptyInstance() => create();
+  static $pb.PbList<PushConfig_PubsubWrapper> createRepeated() =>
+      $pb.PbList<PushConfig_PubsubWrapper>();
+  @$core.pragma('dart2js:noInline')
+  static PushConfig_PubsubWrapper getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PushConfig_PubsubWrapper>(create);
+  static PushConfig_PubsubWrapper? _defaultInstance;
+}
+
+class PushConfig_NoWrapper extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PushConfig.NoWrapper',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'writeMetadata')
+    ..hasRequiredFields = false;
+
+  PushConfig_NoWrapper._() : super();
+  factory PushConfig_NoWrapper({
+    $core.bool? writeMetadata,
+  }) {
+    final _result = create();
+    if (writeMetadata != null) {
+      _result.writeMetadata = writeMetadata;
+    }
+    return _result;
+  }
+  factory PushConfig_NoWrapper.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PushConfig_NoWrapper.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PushConfig_NoWrapper clone() =>
+      PushConfig_NoWrapper()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PushConfig_NoWrapper copyWith(void Function(PushConfig_NoWrapper) updates) =>
+      super.copyWith((message) => updates(message as PushConfig_NoWrapper))
+          as PushConfig_NoWrapper; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PushConfig_NoWrapper create() => PushConfig_NoWrapper._();
+  PushConfig_NoWrapper createEmptyInstance() => create();
+  static $pb.PbList<PushConfig_NoWrapper> createRepeated() =>
+      $pb.PbList<PushConfig_NoWrapper>();
+  @$core.pragma('dart2js:noInline')
+  static PushConfig_NoWrapper getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PushConfig_NoWrapper>(create);
+  static PushConfig_NoWrapper? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get writeMetadata => $_getBF(0);
+  @$pb.TagNumber(1)
+  set writeMetadata($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasWriteMetadata() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearWriteMetadata() => clearField(1);
+}
+
 enum PushConfig_AuthenticationMethod { oidcToken, notSet }
+
+enum PushConfig_Wrapper { pubsubWrapper, noWrapper, notSet }
 
 class PushConfig extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, PushConfig_AuthenticationMethod>
       _PushConfig_AuthenticationMethodByTag = {
     3: PushConfig_AuthenticationMethod.oidcToken,
     0: PushConfig_AuthenticationMethod.notSet
+  };
+  static const $core.Map<$core.int, PushConfig_Wrapper>
+      _PushConfig_WrapperByTag = {
+    4: PushConfig_Wrapper.pubsubWrapper,
+    5: PushConfig_Wrapper.noWrapper,
+    0: PushConfig_Wrapper.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -2404,6 +2548,7 @@ class PushConfig extends $pb.GeneratedMessage {
               : 'google.pubsub.v1'),
       createEmptyInstance: create)
     ..oo(0, [3])
+    ..oo(1, [4, 5])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2424,6 +2569,18 @@ class PushConfig extends $pb.GeneratedMessage {
             ? ''
             : 'oidcToken',
         subBuilder: PushConfig_OidcToken.create)
+    ..aOM<PushConfig_PubsubWrapper>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pubsubWrapper',
+        subBuilder: PushConfig_PubsubWrapper.create)
+    ..aOM<PushConfig_NoWrapper>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'noWrapper',
+        subBuilder: PushConfig_NoWrapper.create)
     ..hasRequiredFields = false;
 
   PushConfig._() : super();
@@ -2431,6 +2588,8 @@ class PushConfig extends $pb.GeneratedMessage {
     $core.String? pushEndpoint,
     $core.Map<$core.String, $core.String>? attributes,
     PushConfig_OidcToken? oidcToken,
+    PushConfig_PubsubWrapper? pubsubWrapper,
+    PushConfig_NoWrapper? noWrapper,
   }) {
     final _result = create();
     if (pushEndpoint != null) {
@@ -2441,6 +2600,12 @@ class PushConfig extends $pb.GeneratedMessage {
     }
     if (oidcToken != null) {
       _result.oidcToken = oidcToken;
+    }
+    if (pubsubWrapper != null) {
+      _result.pubsubWrapper = pubsubWrapper;
+    }
+    if (noWrapper != null) {
+      _result.noWrapper = noWrapper;
     }
     return _result;
   }
@@ -2474,6 +2639,10 @@ class PushConfig extends $pb.GeneratedMessage {
       _PushConfig_AuthenticationMethodByTag[$_whichOneof(0)]!;
   void clearAuthenticationMethod() => clearField($_whichOneof(0));
 
+  PushConfig_Wrapper whichWrapper() =>
+      _PushConfig_WrapperByTag[$_whichOneof(1)]!;
+  void clearWrapper() => clearField($_whichOneof(1));
+
   @$pb.TagNumber(1)
   $core.String get pushEndpoint => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2502,6 +2671,34 @@ class PushConfig extends $pb.GeneratedMessage {
   void clearOidcToken() => clearField(3);
   @$pb.TagNumber(3)
   PushConfig_OidcToken ensureOidcToken() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  PushConfig_PubsubWrapper get pubsubWrapper => $_getN(3);
+  @$pb.TagNumber(4)
+  set pubsubWrapper(PushConfig_PubsubWrapper v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPubsubWrapper() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPubsubWrapper() => clearField(4);
+  @$pb.TagNumber(4)
+  PushConfig_PubsubWrapper ensurePubsubWrapper() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  PushConfig_NoWrapper get noWrapper => $_getN(4);
+  @$pb.TagNumber(5)
+  set noWrapper(PushConfig_NoWrapper v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasNoWrapper() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearNoWrapper() => clearField(5);
+  @$pb.TagNumber(5)
+  PushConfig_NoWrapper ensureNoWrapper() => $_ensure(4);
 }
 
 class BigQueryConfig extends $pb.GeneratedMessage {
@@ -2657,6 +2854,363 @@ class BigQueryConfig extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(4);
   @$pb.TagNumber(5)
   void clearState() => clearField(5);
+}
+
+class CloudStorageConfig_TextConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CloudStorageConfig.TextConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  CloudStorageConfig_TextConfig._() : super();
+  factory CloudStorageConfig_TextConfig() => create();
+  factory CloudStorageConfig_TextConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudStorageConfig_TextConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CloudStorageConfig_TextConfig clone() =>
+      CloudStorageConfig_TextConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CloudStorageConfig_TextConfig copyWith(
+          void Function(CloudStorageConfig_TextConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as CloudStorageConfig_TextConfig))
+          as CloudStorageConfig_TextConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CloudStorageConfig_TextConfig create() =>
+      CloudStorageConfig_TextConfig._();
+  CloudStorageConfig_TextConfig createEmptyInstance() => create();
+  static $pb.PbList<CloudStorageConfig_TextConfig> createRepeated() =>
+      $pb.PbList<CloudStorageConfig_TextConfig>();
+  @$core.pragma('dart2js:noInline')
+  static CloudStorageConfig_TextConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloudStorageConfig_TextConfig>(create);
+  static CloudStorageConfig_TextConfig? _defaultInstance;
+}
+
+class CloudStorageConfig_AvroConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CloudStorageConfig.AvroConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'writeMetadata')
+    ..hasRequiredFields = false;
+
+  CloudStorageConfig_AvroConfig._() : super();
+  factory CloudStorageConfig_AvroConfig({
+    $core.bool? writeMetadata,
+  }) {
+    final _result = create();
+    if (writeMetadata != null) {
+      _result.writeMetadata = writeMetadata;
+    }
+    return _result;
+  }
+  factory CloudStorageConfig_AvroConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudStorageConfig_AvroConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CloudStorageConfig_AvroConfig clone() =>
+      CloudStorageConfig_AvroConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CloudStorageConfig_AvroConfig copyWith(
+          void Function(CloudStorageConfig_AvroConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as CloudStorageConfig_AvroConfig))
+          as CloudStorageConfig_AvroConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CloudStorageConfig_AvroConfig create() =>
+      CloudStorageConfig_AvroConfig._();
+  CloudStorageConfig_AvroConfig createEmptyInstance() => create();
+  static $pb.PbList<CloudStorageConfig_AvroConfig> createRepeated() =>
+      $pb.PbList<CloudStorageConfig_AvroConfig>();
+  @$core.pragma('dart2js:noInline')
+  static CloudStorageConfig_AvroConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloudStorageConfig_AvroConfig>(create);
+  static CloudStorageConfig_AvroConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get writeMetadata => $_getBF(0);
+  @$pb.TagNumber(1)
+  set writeMetadata($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasWriteMetadata() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearWriteMetadata() => clearField(1);
+}
+
+enum CloudStorageConfig_OutputFormat { textConfig, avroConfig, notSet }
+
+class CloudStorageConfig extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, CloudStorageConfig_OutputFormat>
+      _CloudStorageConfig_OutputFormatByTag = {
+    4: CloudStorageConfig_OutputFormat.textConfig,
+    5: CloudStorageConfig_OutputFormat.avroConfig,
+    0: CloudStorageConfig_OutputFormat.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CloudStorageConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5])
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bucket')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filenamePrefix')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filenameSuffix')
+    ..aOM<CloudStorageConfig_TextConfig>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'textConfig',
+        subBuilder: CloudStorageConfig_TextConfig.create)
+    ..aOM<CloudStorageConfig_AvroConfig>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'avroConfig',
+        subBuilder: CloudStorageConfig_AvroConfig.create)
+    ..aOM<$3.Duration>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxDuration',
+        subBuilder: $3.Duration.create)
+    ..aInt64(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'maxBytes')
+    ..e<CloudStorageConfig_State>(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'state',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: CloudStorageConfig_State.STATE_UNSPECIFIED,
+        valueOf: CloudStorageConfig_State.valueOf,
+        enumValues: CloudStorageConfig_State.values)
+    ..hasRequiredFields = false;
+
+  CloudStorageConfig._() : super();
+  factory CloudStorageConfig({
+    $core.String? bucket,
+    $core.String? filenamePrefix,
+    $core.String? filenameSuffix,
+    CloudStorageConfig_TextConfig? textConfig,
+    CloudStorageConfig_AvroConfig? avroConfig,
+    $3.Duration? maxDuration,
+    $fixnum.Int64? maxBytes,
+    CloudStorageConfig_State? state,
+  }) {
+    final _result = create();
+    if (bucket != null) {
+      _result.bucket = bucket;
+    }
+    if (filenamePrefix != null) {
+      _result.filenamePrefix = filenamePrefix;
+    }
+    if (filenameSuffix != null) {
+      _result.filenameSuffix = filenameSuffix;
+    }
+    if (textConfig != null) {
+      _result.textConfig = textConfig;
+    }
+    if (avroConfig != null) {
+      _result.avroConfig = avroConfig;
+    }
+    if (maxDuration != null) {
+      _result.maxDuration = maxDuration;
+    }
+    if (maxBytes != null) {
+      _result.maxBytes = maxBytes;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    return _result;
+  }
+  factory CloudStorageConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudStorageConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CloudStorageConfig clone() => CloudStorageConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CloudStorageConfig copyWith(void Function(CloudStorageConfig) updates) =>
+      super.copyWith((message) => updates(message as CloudStorageConfig))
+          as CloudStorageConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CloudStorageConfig create() => CloudStorageConfig._();
+  CloudStorageConfig createEmptyInstance() => create();
+  static $pb.PbList<CloudStorageConfig> createRepeated() =>
+      $pb.PbList<CloudStorageConfig>();
+  @$core.pragma('dart2js:noInline')
+  static CloudStorageConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloudStorageConfig>(create);
+  static CloudStorageConfig? _defaultInstance;
+
+  CloudStorageConfig_OutputFormat whichOutputFormat() =>
+      _CloudStorageConfig_OutputFormatByTag[$_whichOneof(0)]!;
+  void clearOutputFormat() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get bucket => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set bucket($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBucket() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBucket() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get filenamePrefix => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set filenamePrefix($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFilenamePrefix() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFilenamePrefix() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get filenameSuffix => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set filenameSuffix($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasFilenameSuffix() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFilenameSuffix() => clearField(3);
+
+  @$pb.TagNumber(4)
+  CloudStorageConfig_TextConfig get textConfig => $_getN(3);
+  @$pb.TagNumber(4)
+  set textConfig(CloudStorageConfig_TextConfig v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasTextConfig() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTextConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  CloudStorageConfig_TextConfig ensureTextConfig() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  CloudStorageConfig_AvroConfig get avroConfig => $_getN(4);
+  @$pb.TagNumber(5)
+  set avroConfig(CloudStorageConfig_AvroConfig v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasAvroConfig() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAvroConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  CloudStorageConfig_AvroConfig ensureAvroConfig() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $3.Duration get maxDuration => $_getN(5);
+  @$pb.TagNumber(6)
+  set maxDuration($3.Duration v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasMaxDuration() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMaxDuration() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Duration ensureMaxDuration() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get maxBytes => $_getI64(6);
+  @$pb.TagNumber(7)
+  set maxBytes($fixnum.Int64 v) {
+    $_setInt64(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasMaxBytes() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearMaxBytes() => clearField(7);
+
+  @$pb.TagNumber(9)
+  CloudStorageConfig_State get state => $_getN(7);
+  @$pb.TagNumber(9)
+  set state(CloudStorageConfig_State v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasState() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearState() => clearField(9);
 }
 
 class ReceivedMessage extends $pb.GeneratedMessage {
@@ -3326,7 +3880,7 @@ class PullRequest extends $pb.GeneratedMessage {
   factory PullRequest({
     $core.String? subscription,
     @$core.Deprecated('This field is deprecated.')
-        $core.bool? returnImmediately,
+    $core.bool? returnImmediately,
     $core.int? maxMessages,
   }) {
     final _result = create();
@@ -3867,6 +4421,11 @@ class StreamingPullResponse_AcknowledgeConfirmation
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'unorderedAckIds')
+    ..pPS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'temporaryFailedAckIds')
     ..hasRequiredFields = false;
 
   StreamingPullResponse_AcknowledgeConfirmation._() : super();
@@ -3874,6 +4433,7 @@ class StreamingPullResponse_AcknowledgeConfirmation
     $core.Iterable<$core.String>? ackIds,
     $core.Iterable<$core.String>? invalidAckIds,
     $core.Iterable<$core.String>? unorderedAckIds,
+    $core.Iterable<$core.String>? temporaryFailedAckIds,
   }) {
     final _result = create();
     if (ackIds != null) {
@@ -3884,6 +4444,9 @@ class StreamingPullResponse_AcknowledgeConfirmation
     }
     if (unorderedAckIds != null) {
       _result.unorderedAckIds.addAll(unorderedAckIds);
+    }
+    if (temporaryFailedAckIds != null) {
+      _result.temporaryFailedAckIds.addAll(temporaryFailedAckIds);
     }
     return _result;
   }
@@ -3931,6 +4494,9 @@ class StreamingPullResponse_AcknowledgeConfirmation
 
   @$pb.TagNumber(3)
   $core.List<$core.String> get unorderedAckIds => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.String> get temporaryFailedAckIds => $_getList(3);
 }
 
 class StreamingPullResponse_ModifyAckDeadlineConfirmation
@@ -3954,12 +4520,18 @@ class StreamingPullResponse_ModifyAckDeadlineConfirmation
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'invalidAckIds')
+    ..pPS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'temporaryFailedAckIds')
     ..hasRequiredFields = false;
 
   StreamingPullResponse_ModifyAckDeadlineConfirmation._() : super();
   factory StreamingPullResponse_ModifyAckDeadlineConfirmation({
     $core.Iterable<$core.String>? ackIds,
     $core.Iterable<$core.String>? invalidAckIds,
+    $core.Iterable<$core.String>? temporaryFailedAckIds,
   }) {
     final _result = create();
     if (ackIds != null) {
@@ -3967,6 +4539,9 @@ class StreamingPullResponse_ModifyAckDeadlineConfirmation
     }
     if (invalidAckIds != null) {
       _result.invalidAckIds.addAll(invalidAckIds);
+    }
+    if (temporaryFailedAckIds != null) {
+      _result.temporaryFailedAckIds.addAll(temporaryFailedAckIds);
     }
     return _result;
   }
@@ -4013,6 +4588,9 @@ class StreamingPullResponse_ModifyAckDeadlineConfirmation
 
   @$pb.TagNumber(2)
   $core.List<$core.String> get invalidAckIds => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get temporaryFailedAckIds => $_getList(2);
 }
 
 class StreamingPullResponse_SubscriptionProperties

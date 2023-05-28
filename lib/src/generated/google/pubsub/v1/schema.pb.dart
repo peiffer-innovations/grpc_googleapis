@@ -1021,13 +1021,14 @@ class DeleteSchemaRevisionRequest extends $pb.GeneratedMessage {
   DeleteSchemaRevisionRequest._() : super();
   factory DeleteSchemaRevisionRequest({
     $core.String? name,
-    $core.String? revisionId,
+    @$core.Deprecated('This field is deprecated.') $core.String? revisionId,
   }) {
     final _result = create();
     if (name != null) {
       _result.name = name;
     }
     if (revisionId != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.revisionId = revisionId;
     }
     return _result;
@@ -1075,15 +1076,19 @@ class DeleteSchemaRevisionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.String get revisionId => $_getSZ(1);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   set revisionId($core.String v) {
     $_setString(1, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.bool hasRevisionId() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   void clearRevisionId() => clearField(2);
 }

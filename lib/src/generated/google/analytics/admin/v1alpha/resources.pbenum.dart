@@ -382,6 +382,41 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'ATTRIBUTION_SETTINGS');
+  static const ChangeHistoryResourceType EXPANDED_DATA_SET =
+      ChangeHistoryResourceType._(
+          21,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EXPANDED_DATA_SET');
+  static const ChangeHistoryResourceType CHANNEL_GROUP =
+      ChangeHistoryResourceType._(
+          22,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'CHANNEL_GROUP');
+  static const ChangeHistoryResourceType ENHANCED_MEASUREMENT_SETTINGS =
+      ChangeHistoryResourceType._(
+          24,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ENHANCED_MEASUREMENT_SETTINGS');
+  static const ChangeHistoryResourceType ADSENSE_LINK =
+      ChangeHistoryResourceType._(
+          27,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ADSENSE_LINK');
+  static const ChangeHistoryResourceType AUDIENCE = ChangeHistoryResourceType._(
+      28,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'AUDIENCE');
+  static const ChangeHistoryResourceType EVENT_CREATE_RULE =
+      ChangeHistoryResourceType._(
+          29,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EVENT_CREATE_RULE');
 
   static const $core.List<ChangeHistoryResourceType> values =
       <ChangeHistoryResourceType>[
@@ -401,6 +436,12 @@ class ChangeHistoryResourceType extends $pb.ProtobufEnum {
     SEARCH_ADS_360_LINK,
     DATA_STREAM,
     ATTRIBUTION_SETTINGS,
+    EXPANDED_DATA_SET,
+    CHANNEL_GROUP,
+    ENHANCED_MEASUREMENT_SETTINGS,
+    ADSENSE_LINK,
+    AUDIENCE,
+    EVENT_CREATE_RULE,
   ];
 
   static final $core.Map<$core.int, ChangeHistoryResourceType> _byValue =
@@ -665,12 +706,19 @@ class CustomDimension_DimensionScope extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'USER');
+  static const CustomDimension_DimensionScope ITEM =
+      CustomDimension_DimensionScope._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ITEM');
 
   static const $core.List<CustomDimension_DimensionScope> values =
       <CustomDimension_DimensionScope>[
     DIMENSION_SCOPE_UNSPECIFIED,
     EVENT,
     USER,
+    ITEM,
   ];
 
   static final $core.Map<$core.int, CustomDimension_DimensionScope> _byValue =

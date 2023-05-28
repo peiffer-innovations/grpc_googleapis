@@ -150,6 +150,16 @@ class ErrorReason extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'ORG_RESTRICTION_HEADER_INVALID');
+  static const ErrorReason SERVICE_NOT_VISIBLE = ErrorReason._(
+      29,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SERVICE_NOT_VISIBLE');
+  static const ErrorReason GCP_SUSPENDED = ErrorReason._(
+      30,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'GCP_SUSPENDED');
 
   static const $core.List<ErrorReason> values = <ErrorReason>[
     ERROR_REASON_UNSPECIFIED,
@@ -180,6 +190,8 @@ class ErrorReason extends $pb.ProtobufEnum {
     SYSTEM_PARAMETER_UNSUPPORTED,
     ORG_RESTRICTION_VIOLATION,
     ORG_RESTRICTION_HEADER_INVALID,
+    SERVICE_NOT_VISIBLE,
+    GCP_SUSPENDED,
   ];
 
   static final $core.Map<$core.int, ErrorReason> _byValue =

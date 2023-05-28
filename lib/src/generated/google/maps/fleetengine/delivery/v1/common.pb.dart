@@ -305,11 +305,11 @@ class DeliveryVehicleLocation extends $pb.GeneratedMessage {
     $1.DoubleValue? speed,
     $1.DoubleValue? speedAccuracy,
     @$core.Deprecated('This field is deprecated.')
-        $1.DoubleValue? horizontalAccuracy,
+    $1.DoubleValue? horizontalAccuracy,
     @$core.Deprecated('This field is deprecated.')
-        $1.DoubleValue? verticalAccuracy,
+    $1.DoubleValue? verticalAccuracy,
     @$core.Deprecated('This field is deprecated.')
-        $1.DoubleValue? bearingAccuracy,
+    $1.DoubleValue? bearingAccuracy,
     DeliveryVehicleLocationSensor? locationSensor,
     $1.BoolValue? isGpsSensorEnabled,
     $2.Timestamp? serverTime,
@@ -857,4 +857,97 @@ class DeliveryVehicleLocation extends $pb.GeneratedMessage {
   $core.bool hasRawLocationSensor() => $_has(27);
   @$pb.TagNumber(28)
   void clearRawLocationSensor() => clearField(28);
+}
+
+class TimeWindow extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TimeWindow',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.delivery.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Timestamp>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'startTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'endTime',
+        subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  TimeWindow._() : super();
+  factory TimeWindow({
+    $2.Timestamp? startTime,
+    $2.Timestamp? endTime,
+  }) {
+    final _result = create();
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    return _result;
+  }
+  factory TimeWindow.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimeWindow.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  TimeWindow clone() => TimeWindow()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  TimeWindow copyWith(void Function(TimeWindow) updates) =>
+      super.copyWith((message) => updates(message as TimeWindow))
+          as TimeWindow; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TimeWindow create() => TimeWindow._();
+  TimeWindow createEmptyInstance() => create();
+  static $pb.PbList<TimeWindow> createRepeated() => $pb.PbList<TimeWindow>();
+  @$core.pragma('dart2js:noInline')
+  static TimeWindow getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimeWindow>(create);
+  static TimeWindow? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.Timestamp get startTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set startTime($2.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStartTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Timestamp ensureStartTime() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $2.Timestamp get endTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set endTime($2.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasEndTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Timestamp ensureEndTime() => $_ensure(1);
 }

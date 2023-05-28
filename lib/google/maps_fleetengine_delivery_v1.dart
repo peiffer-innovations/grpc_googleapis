@@ -11,6 +11,9 @@ export '../src/generated/google/maps/fleetengine/delivery/v1/delivery_vehicles.p
 export '../src/generated/google/maps/fleetengine/delivery/v1/header.pb.dart';
 export '../src/generated/google/maps/fleetengine/delivery/v1/header.pbenum.dart';
 export '../src/generated/google/maps/fleetengine/delivery/v1/header.pbjson.dart';
+export '../src/generated/google/maps/fleetengine/delivery/v1/task_tracking_info.pb.dart';
+export '../src/generated/google/maps/fleetengine/delivery/v1/task_tracking_info.pbenum.dart';
+export '../src/generated/google/maps/fleetengine/delivery/v1/task_tracking_info.pbjson.dart';
 export '../src/generated/google/maps/fleetengine/delivery/v1/tasks.pb.dart';
 export '../src/generated/google/maps/fleetengine/delivery/v1/tasks.pbenum.dart';
 export '../src/generated/google/maps/fleetengine/delivery/v1/tasks.pbjson.dart';

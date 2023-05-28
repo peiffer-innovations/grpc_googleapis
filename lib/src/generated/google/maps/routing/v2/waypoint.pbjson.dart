@@ -23,6 +23,7 @@ const Waypoint$json = const {
       '10': 'location'
     },
     const {'1': 'place_id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'placeId'},
+    const {'1': 'address', '3': 7, '4': 1, '5': 9, '9': 0, '10': 'address'},
     const {'1': 'via', '3': 3, '4': 1, '5': 8, '10': 'via'},
     const {
       '1': 'vehicle_stopover',
@@ -40,4 +41,4 @@ const Waypoint$json = const {
 
 /// Descriptor for `Waypoint`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List waypointDescriptor = $convert.base64Decode(
-    'CghXYXlwb2ludBI+Cghsb2NhdGlvbhgBIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuTG9jYXRpb25IAFIIbG9jYXRpb24SGwoIcGxhY2VfaWQYAiABKAlIAFIHcGxhY2VJZBIQCgN2aWEYAyABKAhSA3ZpYRIpChB2ZWhpY2xlX3N0b3BvdmVyGAQgASgIUg92ZWhpY2xlU3RvcG92ZXISIAoMc2lkZV9vZl9yb2FkGAUgASgIUgpzaWRlT2ZSb2FkQg8KDWxvY2F0aW9uX3R5cGU=');
+    'CghXYXlwb2ludBI+Cghsb2NhdGlvbhgBIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuTG9jYXRpb25IAFIIbG9jYXRpb24SGwoIcGxhY2VfaWQYAiABKAlIAFIHcGxhY2VJZBIaCgdhZGRyZXNzGAcgASgJSABSB2FkZHJlc3MSEAoDdmlhGAMgASgIUgN2aWESKQoQdmVoaWNsZV9zdG9wb3ZlchgEIAEoCFIPdmVoaWNsZVN0b3BvdmVyEiAKDHNpZGVfb2Zfcm9hZBgFIAEoCFIKc2lkZU9mUm9hZEIPCg1sb2NhdGlvbl90eXBl');

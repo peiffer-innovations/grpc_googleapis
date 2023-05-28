@@ -23,6 +23,14 @@ const EntityResult$json = const {
     },
     const {'1': 'version', '3': 4, '4': 1, '5': 3, '10': 'version'},
     const {
+      '1': 'create_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    const {
       '1': 'update_time',
       '3': 5,
       '4': 1,
@@ -48,7 +56,7 @@ const EntityResult_ResultType$json = const {
 
 /// Descriptor for `EntityResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List entityResultDescriptor = $convert.base64Decode(
-    'CgxFbnRpdHlSZXN1bHQSMwoGZW50aXR5GAEgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSBmVudGl0eRIYCgd2ZXJzaW9uGAQgASgDUgd2ZXJzaW9uEjsKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKdXBkYXRlVGltZRIWCgZjdXJzb3IYAyABKAxSBmN1cnNvciJRCgpSZXN1bHRUeXBlEhsKF1JFU1VMVF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEg4KClBST0pFQ1RJT04QAhIMCghLRVlfT05MWRAD');
+    'CgxFbnRpdHlSZXN1bHQSMwoGZW50aXR5GAEgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSBmVudGl0eRIYCgd2ZXJzaW9uGAQgASgDUgd2ZXJzaW9uEjsKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRI7Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCnVwZGF0ZVRpbWUSFgoGY3Vyc29yGAMgASgMUgZjdXJzb3IiUQoKUmVzdWx0VHlwZRIbChdSRVNVTFRfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZVTEwQARIOCgpQUk9KRUNUSU9OEAISDAoIS0VZX09OTFkQAw==');
 @$core.Deprecated('Use queryDescriptor instead')
 const Query$json = const {
   '1': 'Query',
@@ -317,12 +325,13 @@ const CompositeFilter_Operator$json = const {
   '2': const [
     const {'1': 'OPERATOR_UNSPECIFIED', '2': 0},
     const {'1': 'AND', '2': 1},
+    const {'1': 'OR', '2': 2},
   ],
 };
 
 /// Descriptor for `CompositeFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List compositeFilterDescriptor = $convert.base64Decode(
-    'Cg9Db21wb3NpdGVGaWx0ZXISPQoCb3AYASABKA4yLS5nb29nbGUuZGF0YXN0b3JlLnYxLkNvbXBvc2l0ZUZpbHRlci5PcGVyYXRvclICb3ASNQoHZmlsdGVycxgCIAMoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRmlsdGVyUgdmaWx0ZXJzIi0KCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAE=');
+    'Cg9Db21wb3NpdGVGaWx0ZXISPQoCb3AYASABKA4yLS5nb29nbGUuZGF0YXN0b3JlLnYxLkNvbXBvc2l0ZUZpbHRlci5PcGVyYXRvclICb3ASNQoHZmlsdGVycxgCIAMoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRmlsdGVyUgdmaWx0ZXJzIjUKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAg==');
 @$core.Deprecated('Use propertyFilterDescriptor instead')
 const PropertyFilter$json = const {
   '1': 'PropertyFilter',

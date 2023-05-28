@@ -130,3 +130,21 @@ const ReportResponse$json = const {
 /// Descriptor for `ReportResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List reportResponseDescriptor =
     $convert.base64Decode('Cg5SZXBvcnRSZXNwb25zZQ==');
+@$core.Deprecated('Use resourceInfoListDescriptor instead')
+const ResourceInfoList$json = const {
+  '1': 'ResourceInfoList',
+  '2': const [
+    const {
+      '1': 'resources',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.servicecontrol.v2.ResourceInfo',
+      '10': 'resources'
+    },
+  ],
+};
+
+/// Descriptor for `ResourceInfoList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List resourceInfoListDescriptor = $convert.base64Decode(
+    'ChBSZXNvdXJjZUluZm9MaXN0EkgKCXJlc291cmNlcxgBIAMoCzIqLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjIuUmVzb3VyY2VJbmZvUglyZXNvdXJjZXM=');

@@ -74,11 +74,37 @@ const BackendRule$json = const {
       '10': 'disableAuth'
     },
     const {'1': 'protocol', '3': 9, '4': 1, '5': 9, '10': 'protocol'},
+    const {
+      '1': 'overrides_by_request_protocol',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.BackendRule.OverridesByRequestProtocolEntry',
+      '10': 'overridesByRequestProtocol'
+    },
   ],
+  '3': const [BackendRule_OverridesByRequestProtocolEntry$json],
   '4': const [BackendRule_PathTranslation$json],
   '8': const [
     const {'1': 'authentication'},
   ],
+};
+
+@$core.Deprecated('Use backendRuleDescriptor instead')
+const BackendRule_OverridesByRequestProtocolEntry$json = const {
+  '1': 'OverridesByRequestProtocolEntry',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.BackendRule',
+      '10': 'value'
+    },
+  ],
+  '7': const {'7': true},
 };
 
 @$core.Deprecated('Use backendRuleDescriptor instead')
@@ -93,4 +119,4 @@ const BackendRule_PathTranslation$json = const {
 
 /// Descriptor for `BackendRule`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List backendRuleDescriptor = $convert.base64Decode(
-    'CgtCYWNrZW5kUnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISGAoHYWRkcmVzcxgCIAEoCVIHYWRkcmVzcxIaCghkZWFkbGluZRgDIAEoAVIIZGVhZGxpbmUSJQoMbWluX2RlYWRsaW5lGAQgASgBQgIYAVILbWluRGVhZGxpbmUSLQoSb3BlcmF0aW9uX2RlYWRsaW5lGAUgASgBUhFvcGVyYXRpb25EZWFkbGluZRJSChBwYXRoX3RyYW5zbGF0aW9uGAYgASgOMicuZ29vZ2xlLmFwaS5CYWNrZW5kUnVsZS5QYXRoVHJhbnNsYXRpb25SD3BhdGhUcmFuc2xhdGlvbhIjCgxqd3RfYXVkaWVuY2UYByABKAlIAFILand0QXVkaWVuY2USIwoMZGlzYWJsZV9hdXRoGAggASgISABSC2Rpc2FibGVBdXRoEhoKCHByb3RvY29sGAkgASgJUghwcm90b2NvbCJlCg9QYXRoVHJhbnNsYXRpb24SIAocUEFUSF9UUkFOU0xBVElPTl9VTlNQRUNJRklFRBAAEhQKEENPTlNUQU5UX0FERFJFU1MQARIaChZBUFBFTkRfUEFUSF9UT19BRERSRVNTEAJCEAoOYXV0aGVudGljYXRpb24=');
+    'CgtCYWNrZW5kUnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISGAoHYWRkcmVzcxgCIAEoCVIHYWRkcmVzcxIaCghkZWFkbGluZRgDIAEoAVIIZGVhZGxpbmUSJQoMbWluX2RlYWRsaW5lGAQgASgBQgIYAVILbWluRGVhZGxpbmUSLQoSb3BlcmF0aW9uX2RlYWRsaW5lGAUgASgBUhFvcGVyYXRpb25EZWFkbGluZRJSChBwYXRoX3RyYW5zbGF0aW9uGAYgASgOMicuZ29vZ2xlLmFwaS5CYWNrZW5kUnVsZS5QYXRoVHJhbnNsYXRpb25SD3BhdGhUcmFuc2xhdGlvbhIjCgxqd3RfYXVkaWVuY2UYByABKAlIAFILand0QXVkaWVuY2USIwoMZGlzYWJsZV9hdXRoGAggASgISABSC2Rpc2FibGVBdXRoEhoKCHByb3RvY29sGAkgASgJUghwcm90b2NvbBJ6Ch1vdmVycmlkZXNfYnlfcmVxdWVzdF9wcm90b2NvbBgKIAMoCzI3Lmdvb2dsZS5hcGkuQmFja2VuZFJ1bGUuT3ZlcnJpZGVzQnlSZXF1ZXN0UHJvdG9jb2xFbnRyeVIab3ZlcnJpZGVzQnlSZXF1ZXN0UHJvdG9jb2waZgofT3ZlcnJpZGVzQnlSZXF1ZXN0UHJvdG9jb2xFbnRyeRIQCgNrZXkYASABKAlSA2tleRItCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5hcGkuQmFja2VuZFJ1bGVSBXZhbHVlOgI4ASJlCg9QYXRoVHJhbnNsYXRpb24SIAocUEFUSF9UUkFOU0xBVElPTl9VTlNQRUNJRklFRBAAEhQKEENPTlNUQU5UX0FERFJFU1MQARIaChZBUFBFTkRfUEFUSF9UT19BRERSRVNTEAJCEAoOYXV0aGVudGljYXRpb24=');

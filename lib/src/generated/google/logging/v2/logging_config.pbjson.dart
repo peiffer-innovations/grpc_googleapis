@@ -9,19 +9,6 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use lifecycleStateDescriptor instead')
-const LifecycleState$json = const {
-  '1': 'LifecycleState',
-  '2': const [
-    const {'1': 'LIFECYCLE_STATE_UNSPECIFIED', '2': 0},
-    const {'1': 'ACTIVE', '2': 1},
-    const {'1': 'DELETE_REQUESTED', '2': 2},
-  ],
-};
-
-/// Descriptor for `LifecycleState`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List lifecycleStateDescriptor = $convert.base64Decode(
-    'Cg5MaWZlY3ljbGVTdGF0ZRIfChtMSUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIUChBERUxFVEVfUkVRVUVTVEVEEAI=');
 @$core.Deprecated('Use operationStateDescriptor instead')
 const OperationState$json = const {
   '1': 'OperationState',
@@ -39,6 +26,71 @@ const OperationState$json = const {
 /// Descriptor for `OperationState`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List operationStateDescriptor = $convert.base64Decode(
     'Cg5PcGVyYXRpb25TdGF0ZRIfChtPUEVSQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIdChlPUEVSQVRJT05fU1RBVEVfU0NIRURVTEVEEAESKwonT1BFUkFUSU9OX1NUQVRFX1dBSVRJTkdfRk9SX1BFUk1JU1NJT05TEAISGwoXT1BFUkFUSU9OX1NUQVRFX1JVTk5JTkcQAxIdChlPUEVSQVRJT05fU1RBVEVfU1VDQ0VFREVEEAQSGgoWT1BFUkFUSU9OX1NUQVRFX0ZBSUxFRBAFEh0KGU9QRVJBVElPTl9TVEFURV9DQU5DRUxMRUQQBg==');
+@$core.Deprecated('Use lifecycleStateDescriptor instead')
+const LifecycleState$json = const {
+  '1': 'LifecycleState',
+  '2': const [
+    const {'1': 'LIFECYCLE_STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'ACTIVE', '2': 1},
+    const {'1': 'DELETE_REQUESTED', '2': 2},
+    const {'1': 'UPDATING', '2': 3},
+    const {'1': 'CREATING', '2': 4},
+    const {'1': 'FAILED', '2': 5},
+  ],
+};
+
+/// Descriptor for `LifecycleState`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List lifecycleStateDescriptor = $convert.base64Decode(
+    'Cg5MaWZlY3ljbGVTdGF0ZRIfChtMSUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIUChBERUxFVEVfUkVRVUVTVEVEEAISDAoIVVBEQVRJTkcQAxIMCghDUkVBVElORxAEEgoKBkZBSUxFRBAF');
+@$core.Deprecated('Use indexTypeDescriptor instead')
+const IndexType$json = const {
+  '1': 'IndexType',
+  '2': const [
+    const {'1': 'INDEX_TYPE_UNSPECIFIED', '2': 0},
+    const {'1': 'INDEX_TYPE_STRING', '2': 1},
+    const {'1': 'INDEX_TYPE_INTEGER', '2': 2},
+  ],
+};
+
+/// Descriptor for `IndexType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List indexTypeDescriptor = $convert.base64Decode(
+    'CglJbmRleFR5cGUSGgoWSU5ERVhfVFlQRV9VTlNQRUNJRklFRBAAEhUKEUlOREVYX1RZUEVfU1RSSU5HEAESFgoSSU5ERVhfVFlQRV9JTlRFR0VSEAI=');
+@$core.Deprecated('Use indexConfigDescriptor instead')
+const IndexConfig$json = const {
+  '1': 'IndexConfig',
+  '2': const [
+    const {
+      '1': 'field_path',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'fieldPath'
+    },
+    const {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.logging.v2.IndexType',
+      '8': const {},
+      '10': 'type'
+    },
+    const {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'createTime'
+    },
+  ],
+};
+
+/// Descriptor for `IndexConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List indexConfigDescriptor = $convert.base64Decode(
+    'CgtJbmRleENvbmZpZxIiCgpmaWVsZF9wYXRoGAEgASgJQgPgQQJSCWZpZWxkUGF0aBI1CgR0eXBlGAIgASgOMhwuZ29vZ2xlLmxvZ2dpbmcudjIuSW5kZXhUeXBlQgPgQQJSBHR5cGUSQAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWU=');
 @$core.Deprecated('Use logBucketDescriptor instead')
 const LogBucket$json = const {
   '1': 'LogBucket',
@@ -81,11 +133,26 @@ const LogBucket$json = const {
       '10': 'lifecycleState'
     },
     const {
+      '1': 'analytics_enabled',
+      '3': 14,
+      '4': 1,
+      '5': 8,
+      '10': 'analyticsEnabled'
+    },
+    const {
       '1': 'restricted_fields',
       '3': 15,
       '4': 3,
       '5': 9,
       '10': 'restrictedFields'
+    },
+    const {
+      '1': 'index_configs',
+      '3': 17,
+      '4': 3,
+      '5': 11,
+      '6': '.google.logging.v2.IndexConfig',
+      '10': 'indexConfigs'
     },
     const {
       '1': 'cmek_settings',
@@ -101,7 +168,7 @@ const LogBucket$json = const {
 
 /// Descriptor for `LogBucket`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List logBucketDescriptor = $convert.base64Decode(
-    'CglMb2dCdWNrZXQSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhJACgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRIlCg5yZXRlbnRpb25fZGF5cxgLIAEoBVINcmV0ZW50aW9uRGF5cxIWCgZsb2NrZWQYCSABKAhSBmxvY2tlZBJPCg9saWZlY3ljbGVfc3RhdGUYDCABKA4yIS5nb29nbGUubG9nZ2luZy52Mi5MaWZlY3ljbGVTdGF0ZUID4EEDUg5saWZlY3ljbGVTdGF0ZRIrChFyZXN0cmljdGVkX2ZpZWxkcxgPIAMoCVIQcmVzdHJpY3RlZEZpZWxkcxJECg1jbWVrX3NldHRpbmdzGBMgASgLMh8uZ29vZ2xlLmxvZ2dpbmcudjIuQ21la1NldHRpbmdzUgxjbWVrU2V0dGluZ3M6pQLqQaECCiBsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZ0J1Y2tldBI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0SQm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fRI2Zm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9idWNrZXRzL3tidWNrZXR9EkdiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fQ==');
+    'CglMb2dCdWNrZXQSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhJACgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRIlCg5yZXRlbnRpb25fZGF5cxgLIAEoBVINcmV0ZW50aW9uRGF5cxIWCgZsb2NrZWQYCSABKAhSBmxvY2tlZBJPCg9saWZlY3ljbGVfc3RhdGUYDCABKA4yIS5nb29nbGUubG9nZ2luZy52Mi5MaWZlY3ljbGVTdGF0ZUID4EEDUg5saWZlY3ljbGVTdGF0ZRIrChFhbmFseXRpY3NfZW5hYmxlZBgOIAEoCFIQYW5hbHl0aWNzRW5hYmxlZBIrChFyZXN0cmljdGVkX2ZpZWxkcxgPIAMoCVIQcmVzdHJpY3RlZEZpZWxkcxJDCg1pbmRleF9jb25maWdzGBEgAygLMh4uZ29vZ2xlLmxvZ2dpbmcudjIuSW5kZXhDb25maWdSDGluZGV4Q29uZmlncxJECg1jbWVrX3NldHRpbmdzGBMgASgLMh8uZ29vZ2xlLmxvZ2dpbmcudjIuQ21la1NldHRpbmdzUgxjbWVrU2V0dGluZ3M6pQLqQaECCiBsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZ0J1Y2tldBI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0SQm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fRI2Zm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9idWNrZXRzL3tidWNrZXR9EkdiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fQ==');
 @$core.Deprecated('Use logViewDescriptor instead')
 const LogView$json = const {
   '1': 'LogView',
@@ -254,6 +321,63 @@ const LogSink_VersionFormat$json = const {
 /// Descriptor for `LogSink`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List logSinkDescriptor = $convert.base64Decode(
     'CgdMb2dTaW5rEhcKBG5hbWUYASABKAlCA+BBAlIEbmFtZRIrCgtkZXN0aW5hdGlvbhgDIAEoCUIJ4EEC+kEDCgEqUgtkZXN0aW5hdGlvbhIbCgZmaWx0ZXIYBSABKAlCA+BBAVIGZmlsdGVyEiUKC2Rlc2NyaXB0aW9uGBIgASgJQgPgQQFSC2Rlc2NyaXB0aW9uEh8KCGRpc2FibGVkGBMgASgIQgPgQQFSCGRpc2FibGVkEkQKCmV4Y2x1c2lvbnMYECADKAsyHy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFeGNsdXNpb25CA+BBAVIKZXhjbHVzaW9ucxJgChVvdXRwdXRfdmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rLlZlcnNpb25Gb3JtYXRCAhgBUhNvdXRwdXRWZXJzaW9uRm9ybWF0EiwKD3dyaXRlcl9pZGVudGl0eRgIIAEoCUID4EEDUg53cml0ZXJJZGVudGl0eRIuChBpbmNsdWRlX2NoaWxkcmVuGAkgASgIQgPgQQFSD2luY2x1ZGVDaGlsZHJlbhJUChBiaWdxdWVyeV9vcHRpb25zGAwgASgLMiIuZ29vZ2xlLmxvZ2dpbmcudjIuQmlnUXVlcnlPcHRpb25zQgPgQQFIAFIPYmlncXVlcnlPcHRpb25zEkAKC2NyZWF0ZV90aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEkAKC3VwZGF0ZV90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lIj8KDVZlcnNpb25Gb3JtYXQSHgoaVkVSU0lPTl9GT1JNQVRfVU5TUEVDSUZJRUQQABIGCgJWMhABEgYKAlYxEAI6vwHqQbsBCh5sb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZ1NpbmsSH3Byb2plY3RzL3twcm9qZWN0fS9zaW5rcy97c2lua30SKW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc2lua3Mve3Npbmt9Eh1mb2xkZXJzL3tmb2xkZXJ9L3NpbmtzL3tzaW5rfRIuYmlsbGluZ0FjY291bnRzL3tiaWxsaW5nX2FjY291bnR9L3NpbmtzL3tzaW5rfUIJCgdvcHRpb25z');
+@$core.Deprecated('Use bigQueryDatasetDescriptor instead')
+const BigQueryDataset$json = const {
+  '1': 'BigQueryDataset',
+  '2': const [
+    const {
+      '1': 'dataset_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'datasetId'
+    },
+  ],
+};
+
+/// Descriptor for `BigQueryDataset`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bigQueryDatasetDescriptor = $convert.base64Decode(
+    'Cg9CaWdRdWVyeURhdGFzZXQSIgoKZGF0YXNldF9pZBgBIAEoCUID4EEDUglkYXRhc2V0SWQ=');
+@$core.Deprecated('Use linkDescriptor instead')
+const Link$json = const {
+  '1': 'Link',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    const {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'createTime'
+    },
+    const {
+      '1': 'lifecycle_state',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.logging.v2.LifecycleState',
+      '8': const {},
+      '10': 'lifecycleState'
+    },
+    const {
+      '1': 'bigquery_dataset',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.BigQueryDataset',
+      '10': 'bigqueryDataset'
+    },
+  ],
+  '7': const {},
+};
+
+/// Descriptor for `Link`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List linkDescriptor = $convert.base64Decode(
+    'CgRMaW5rEhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEkAKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgpjcmVhdGVUaW1lEk8KD2xpZmVjeWNsZV9zdGF0ZRgEIAEoDjIhLmdvb2dsZS5sb2dnaW5nLnYyLkxpZmVjeWNsZVN0YXRlQgPgQQNSDmxpZmVjeWNsZVN0YXRlEk0KEGJpZ3F1ZXJ5X2RhdGFzZXQYBSABKAsyIi5nb29nbGUubG9nZ2luZy52Mi5CaWdRdWVyeURhdGFzZXRSD2JpZ3F1ZXJ5RGF0YXNldDrUAupB0AIKG2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTGluaxJFcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0vbGlua3Mve2xpbmt9Ek9vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0vbGlua3Mve2xpbmt9EkNmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1Y2tldHMve2J1Y2tldH0vbGlua3Mve2xpbmt9ElRiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYnVja2V0cy97YnVja2V0fS9saW5rcy97bGlua30=');
 @$core.Deprecated('Use bigQueryOptionsDescriptor instead')
 const BigQueryOptions$json = const {
   '1': 'BigQueryOptions',
@@ -755,6 +879,122 @@ const DeleteSinkRequest$json = const {
 /// Descriptor for `DeleteSinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteSinkRequestDescriptor = $convert.base64Decode(
     'ChFEZWxldGVTaW5rUmVxdWVzdBJDCglzaW5rX25hbWUYASABKAlCJuBBAvpBIAoebG9nZ2luZy5nb29nbGVhcGlzLmNvbS9Mb2dTaW5rUghzaW5rTmFtZQ==');
+@$core.Deprecated('Use createLinkRequestDescriptor instead')
+const CreateLinkRequest$json = const {
+  '1': 'CreateLinkRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'link',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.Link',
+      '8': const {},
+      '10': 'link'
+    },
+    const {
+      '1': 'link_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'linkId'
+    },
+  ],
+};
+
+/// Descriptor for `CreateLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createLinkRequestDescriptor = $convert.base64Decode(
+    'ChFDcmVhdGVMaW5rUmVxdWVzdBI7CgZwYXJlbnQYASABKAlCI+BBAvpBHRIbbG9nZ2luZy5nb29nbGVhcGlzLmNvbS9MaW5rUgZwYXJlbnQSMAoEbGluaxgCIAEoCzIXLmdvb2dsZS5sb2dnaW5nLnYyLkxpbmtCA+BBAlIEbGluaxIcCgdsaW5rX2lkGAMgASgJQgPgQQJSBmxpbmtJZA==');
+@$core.Deprecated('Use deleteLinkRequestDescriptor instead')
+const DeleteLinkRequest$json = const {
+  '1': 'DeleteLinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteLinkRequestDescriptor = $convert.base64Decode(
+    'ChFEZWxldGVMaW5rUmVxdWVzdBI3CgRuYW1lGAEgASgJQiPgQQL6QR0KG2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTGlua1IEbmFtZQ==');
+@$core.Deprecated('Use listLinksRequestDescriptor instead')
+const ListLinksRequest$json = const {
+  '1': 'ListLinksRequest',
+  '2': const [
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
+    const {
+      '1': 'page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+    const {
+      '1': 'page_size',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+  ],
+};
+
+/// Descriptor for `ListLinksRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listLinksRequestDescriptor = $convert.base64Decode(
+    'ChBMaXN0TGlua3NSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIj4EEC+kEdEhtsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xpbmtSBnBhcmVudBIiCgpwYWdlX3Rva2VuGAIgASgJQgPgQQFSCXBhZ2VUb2tlbhIgCglwYWdlX3NpemUYAyABKAVCA+BBAVIIcGFnZVNpemU=');
+@$core.Deprecated('Use listLinksResponseDescriptor instead')
+const ListLinksResponse$json = const {
+  '1': 'ListLinksResponse',
+  '2': const [
+    const {
+      '1': 'links',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.logging.v2.Link',
+      '10': 'links'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
+  ],
+};
+
+/// Descriptor for `ListLinksResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listLinksResponseDescriptor = $convert.base64Decode(
+    'ChFMaXN0TGlua3NSZXNwb25zZRItCgVsaW5rcxgBIAMoCzIXLmdvb2dsZS5sb2dnaW5nLnYyLkxpbmtSBWxpbmtzEiYKD25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');
+@$core.Deprecated('Use getLinkRequestDescriptor instead')
+const GetLinkRequest$json = const {
+  '1': 'GetLinkRequest',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetLinkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getLinkRequestDescriptor = $convert.base64Decode(
+    'Cg5HZXRMaW5rUmVxdWVzdBI3CgRuYW1lGAEgASgJQiPgQQL6QR0KG2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTGlua1IEbmFtZQ==');
 @$core.Deprecated('Use logExclusionDescriptor instead')
 const LogExclusion$json = const {
   '1': 'LogExclusion',
@@ -999,6 +1239,13 @@ const CmekSettings$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
     const {'1': 'kms_key_name', '3': 2, '4': 1, '5': 9, '10': 'kmsKeyName'},
     const {
+      '1': 'kms_key_version_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'kmsKeyVersionName'
+    },
+    const {
       '1': 'service_account_id',
       '3': 3,
       '4': 1,
@@ -1012,7 +1259,7 @@ const CmekSettings$json = const {
 
 /// Descriptor for `CmekSettings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cmekSettingsDescriptor = $convert.base64Decode(
-    'CgxDbWVrU2V0dGluZ3MSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiAKDGttc19rZXlfbmFtZRgCIAEoCVIKa21zS2V5TmFtZRIxChJzZXJ2aWNlX2FjY291bnRfaWQYAyABKAlCA+BBA1IQc2VydmljZUFjY291bnRJZDrEAepBwAEKI2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vQ21la1NldHRpbmdzEh9wcm9qZWN0cy97cHJvamVjdH0vY21la1NldHRpbmdzEilvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2NtZWtTZXR0aW5ncxIdZm9sZGVycy97Zm9sZGVyfS9jbWVrU2V0dGluZ3MSLmJpbGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9jbWVrU2V0dGluZ3M=');
+    'CgxDbWVrU2V0dGluZ3MSFwoEbmFtZRgBIAEoCUID4EEDUgRuYW1lEiAKDGttc19rZXlfbmFtZRgCIAEoCVIKa21zS2V5TmFtZRIvChRrbXNfa2V5X3ZlcnNpb25fbmFtZRgEIAEoCVIRa21zS2V5VmVyc2lvbk5hbWUSMQoSc2VydmljZV9hY2NvdW50X2lkGAMgASgJQgPgQQNSEHNlcnZpY2VBY2NvdW50SWQ6xAHqQcABCiNsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0NtZWtTZXR0aW5ncxIfcHJvamVjdHMve3Byb2plY3R9L2NtZWtTZXR0aW5ncxIpb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9jbWVrU2V0dGluZ3MSHWZvbGRlcnMve2ZvbGRlcn0vY21la1NldHRpbmdzEi5iaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vY21la1NldHRpbmdz');
 @$core.Deprecated('Use getSettingsRequestDescriptor instead')
 const GetSettingsRequest$json = const {
   '1': 'GetSettingsRequest',
@@ -1200,3 +1447,130 @@ const CopyLogEntriesResponse$json = const {
 final $typed_data.Uint8List copyLogEntriesResponseDescriptor =
     $convert.base64Decode(
         'ChZDb3B5TG9nRW50cmllc1Jlc3BvbnNlEjcKGGxvZ19lbnRyaWVzX2NvcGllZF9jb3VudBgBIAEoA1IVbG9nRW50cmllc0NvcGllZENvdW50');
+@$core.Deprecated('Use bucketMetadataDescriptor instead')
+const BucketMetadata$json = const {
+  '1': 'BucketMetadata',
+  '2': const [
+    const {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    const {
+      '1': 'state',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.logging.v2.OperationState',
+      '10': 'state'
+    },
+    const {
+      '1': 'create_bucket_request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.CreateBucketRequest',
+      '9': 0,
+      '10': 'createBucketRequest'
+    },
+    const {
+      '1': 'update_bucket_request',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.UpdateBucketRequest',
+      '9': 0,
+      '10': 'updateBucketRequest'
+    },
+  ],
+  '8': const [
+    const {'1': 'request'},
+  ],
+};
+
+/// Descriptor for `BucketMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bucketMetadataDescriptor = $convert.base64Decode(
+    'Cg5CdWNrZXRNZXRhZGF0YRI5CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJc3RhcnRUaW1lEjUKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHZW5kVGltZRI3CgVzdGF0ZRgDIAEoDjIhLmdvb2dsZS5sb2dnaW5nLnYyLk9wZXJhdGlvblN0YXRlUgVzdGF0ZRJcChVjcmVhdGVfYnVja2V0X3JlcXVlc3QYBCABKAsyJi5nb29nbGUubG9nZ2luZy52Mi5DcmVhdGVCdWNrZXRSZXF1ZXN0SABSE2NyZWF0ZUJ1Y2tldFJlcXVlc3QSXAoVdXBkYXRlX2J1Y2tldF9yZXF1ZXN0GAUgASgLMiYuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRlQnVja2V0UmVxdWVzdEgAUhN1cGRhdGVCdWNrZXRSZXF1ZXN0QgkKB3JlcXVlc3Q=');
+@$core.Deprecated('Use linkMetadataDescriptor instead')
+const LinkMetadata$json = const {
+  '1': 'LinkMetadata',
+  '2': const [
+    const {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    const {
+      '1': 'state',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.logging.v2.OperationState',
+      '10': 'state'
+    },
+    const {
+      '1': 'create_link_request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.CreateLinkRequest',
+      '9': 0,
+      '10': 'createLinkRequest'
+    },
+    const {
+      '1': 'delete_link_request',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.DeleteLinkRequest',
+      '9': 0,
+      '10': 'deleteLinkRequest'
+    },
+  ],
+  '8': const [
+    const {'1': 'request'},
+  ],
+};
+
+/// Descriptor for `LinkMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List linkMetadataDescriptor = $convert.base64Decode(
+    'CgxMaW5rTWV0YWRhdGESOQoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRI1CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2VuZFRpbWUSNwoFc3RhdGUYAyABKA4yIS5nb29nbGUubG9nZ2luZy52Mi5PcGVyYXRpb25TdGF0ZVIFc3RhdGUSVgoTY3JlYXRlX2xpbmtfcmVxdWVzdBgEIAEoCzIkLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0ZUxpbmtSZXF1ZXN0SABSEWNyZWF0ZUxpbmtSZXF1ZXN0ElYKE2RlbGV0ZV9saW5rX3JlcXVlc3QYBSABKAsyJC5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVMaW5rUmVxdWVzdEgAUhFkZWxldGVMaW5rUmVxdWVzdEIJCgdyZXF1ZXN0');
+@$core.Deprecated('Use locationMetadataDescriptor instead')
+const LocationMetadata$json = const {
+  '1': 'LocationMetadata',
+  '2': const [
+    const {
+      '1': 'log_analytics_enabled',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'logAnalyticsEnabled'
+    },
+  ],
+};
+
+/// Descriptor for `LocationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List locationMetadataDescriptor = $convert.base64Decode(
+    'ChBMb2NhdGlvbk1ldGFkYXRhEjIKFWxvZ19hbmFseXRpY3NfZW5hYmxlZBgBIAEoCFITbG9nQW5hbHl0aWNzRW5hYmxlZA==');

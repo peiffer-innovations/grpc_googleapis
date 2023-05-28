@@ -75,12 +75,30 @@ const ApkManifest$json = const {
       '5': 9,
       '10': 'usesPermission'
     },
+    const {'1': 'version_code', '3': 8, '4': 1, '5': 3, '10': 'versionCode'},
+    const {'1': 'version_name', '3': 9, '4': 1, '5': 9, '10': 'versionName'},
+    const {
+      '1': 'metadata',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.testing.v1.Metadata',
+      '10': 'metadata'
+    },
+    const {
+      '1': 'uses_feature',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.testing.v1.UsesFeature',
+      '10': 'usesFeature'
+    },
   ],
 };
 
 /// Descriptor for `ApkManifest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List apkManifestDescriptor = $convert.base64Decode(
-    'CgtBcGtNYW5pZmVzdBIhCgxwYWNrYWdlX25hbWUYASABKAlSC3BhY2thZ2VOYW1lEiYKD21pbl9zZGtfdmVyc2lvbhgCIAEoBVINbWluU2RrVmVyc2lvbhImCg9tYXhfc2RrX3ZlcnNpb24YAyABKAVSDW1heFNka1ZlcnNpb24SLAoSdGFyZ2V0X3Nka192ZXJzaW9uGAYgASgFUhB0YXJnZXRTZGtWZXJzaW9uEisKEWFwcGxpY2F0aW9uX2xhYmVsGAQgASgJUhBhcHBsaWNhdGlvbkxhYmVsEk8KDmludGVudF9maWx0ZXJzGAUgAygLMiguZ29vZ2xlLmRldnRvb2xzLnRlc3RpbmcudjEuSW50ZW50RmlsdGVyUg1pbnRlbnRGaWx0ZXJzEicKD3VzZXNfcGVybWlzc2lvbhgHIAMoCVIOdXNlc1Blcm1pc3Npb24=');
+    'CgtBcGtNYW5pZmVzdBIhCgxwYWNrYWdlX25hbWUYASABKAlSC3BhY2thZ2VOYW1lEiYKD21pbl9zZGtfdmVyc2lvbhgCIAEoBVINbWluU2RrVmVyc2lvbhImCg9tYXhfc2RrX3ZlcnNpb24YAyABKAVSDW1heFNka1ZlcnNpb24SLAoSdGFyZ2V0X3Nka192ZXJzaW9uGAYgASgFUhB0YXJnZXRTZGtWZXJzaW9uEisKEWFwcGxpY2F0aW9uX2xhYmVsGAQgASgJUhBhcHBsaWNhdGlvbkxhYmVsEk8KDmludGVudF9maWx0ZXJzGAUgAygLMiguZ29vZ2xlLmRldnRvb2xzLnRlc3RpbmcudjEuSW50ZW50RmlsdGVyUg1pbnRlbnRGaWx0ZXJzEicKD3VzZXNfcGVybWlzc2lvbhgHIAMoCVIOdXNlc1Blcm1pc3Npb24SIQoMdmVyc2lvbl9jb2RlGAggASgDUgt2ZXJzaW9uQ29kZRIhCgx2ZXJzaW9uX25hbWUYCSABKAlSC3ZlcnNpb25OYW1lEkAKCG1ldGFkYXRhGAogAygLMiQuZ29vZ2xlLmRldnRvb2xzLnRlc3RpbmcudjEuTWV0YWRhdGFSCG1ldGFkYXRhEkoKDHVzZXNfZmVhdHVyZRgLIAMoCzInLmdvb2dsZS5kZXZ0b29scy50ZXN0aW5nLnYxLlVzZXNGZWF0dXJlUgt1c2VzRmVhdHVyZQ==');
 @$core.Deprecated('Use intentFilterDescriptor instead')
 const IntentFilter$json = const {
   '1': 'IntentFilter',
@@ -100,6 +118,30 @@ const IntentFilter$json = const {
 /// Descriptor for `IntentFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List intentFilterDescriptor = $convert.base64Decode(
     'CgxJbnRlbnRGaWx0ZXISIQoMYWN0aW9uX25hbWVzGAEgAygJUgthY3Rpb25OYW1lcxIlCg5jYXRlZ29yeV9uYW1lcxgCIAMoCVINY2F0ZWdvcnlOYW1lcxIbCgltaW1lX3R5cGUYAyABKAlSCG1pbWVUeXBl');
+@$core.Deprecated('Use metadataDescriptor instead')
+const Metadata$json = const {
+  '1': 'Metadata',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+};
+
+/// Descriptor for `Metadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List metadataDescriptor = $convert.base64Decode(
+    'CghNZXRhZGF0YRISCgRuYW1lGAEgASgJUgRuYW1lEhQKBXZhbHVlGAIgASgJUgV2YWx1ZQ==');
+@$core.Deprecated('Use usesFeatureDescriptor instead')
+const UsesFeature$json = const {
+  '1': 'UsesFeature',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'is_required', '3': 2, '4': 1, '5': 8, '10': 'isRequired'},
+  ],
+};
+
+/// Descriptor for `UsesFeature`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List usesFeatureDescriptor = $convert.base64Decode(
+    'CgtVc2VzRmVhdHVyZRISCgRuYW1lGAEgASgJUgRuYW1lEh8KC2lzX3JlcXVpcmVkGAIgASgIUgppc1JlcXVpcmVk');
 @$core.Deprecated('Use getApkDetailsRequestDescriptor instead')
 const GetApkDetailsRequest$json = const {
   '1': 'GetApkDetailsRequest',

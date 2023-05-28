@@ -1004,7 +1004,7 @@ class KeyRangeLocation extends $pb.GeneratedMessage {
     $core.String? end,
     $core.String? deliveryEndpoint,
     @$core.Deprecated('This field is deprecated.')
-        $core.String? deprecatedPersistentDirectory,
+    $core.String? deprecatedPersistentDirectory,
     $core.String? dataDisk,
   }) {
     final _result = create();

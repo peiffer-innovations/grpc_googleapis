@@ -1,3 +1,6 @@
+export '../src/generated/google/analytics/admin/v1beta/access_report.pb.dart';
+export '../src/generated/google/analytics/admin/v1beta/access_report.pbenum.dart';
+export '../src/generated/google/analytics/admin/v1beta/access_report.pbjson.dart';
 export '../src/generated/google/analytics/admin/v1beta/analytics_admin.pb.dart';
 export '../src/generated/google/analytics/admin/v1beta/analytics_admin.pbenum.dart';
 export '../src/generated/google/analytics/admin/v1beta/analytics_admin.pbgrpc.dart';

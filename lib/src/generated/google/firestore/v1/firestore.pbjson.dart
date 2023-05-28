@@ -68,15 +68,37 @@ const ListDocumentsRequest$json = const {
       '8': const {},
       '10': 'collectionId'
     },
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'order_by', '3': 6, '4': 1, '5': 9, '10': 'orderBy'},
+    const {
+      '1': 'page_size',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '8': const {},
+      '10': 'pageSize'
+    },
+    const {
+      '1': 'page_token',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'pageToken'
+    },
+    const {
+      '1': 'order_by',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'orderBy'
+    },
     const {
       '1': 'mask',
       '3': 7,
       '4': 1,
       '5': 11,
       '6': '.google.firestore.v1.DocumentMask',
+      '8': const {},
       '10': 'mask'
     },
     const {
@@ -105,7 +127,7 @@ const ListDocumentsRequest$json = const {
 
 /// Descriptor for `ListDocumentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listDocumentsRequestDescriptor = $convert.base64Decode(
-    'ChRMaXN0RG9jdW1lbnRzUmVxdWVzdBIbCgZwYXJlbnQYASABKAlCA+BBAlIGcGFyZW50EigKDWNvbGxlY3Rpb25faWQYAiABKAlCA+BBAlIMY29sbGVjdGlvbklkEhsKCXBhZ2Vfc2l6ZRgDIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgEIAEoCVIJcGFnZVRva2VuEhkKCG9yZGVyX2J5GAYgASgJUgdvcmRlckJ5EjUKBG1hc2sYByABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFza1IEbWFzaxIiCgt0cmFuc2FjdGlvbhgIIAEoDEgAUgt0cmFuc2FjdGlvbhI5CglyZWFkX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSCHJlYWRUaW1lEiEKDHNob3dfbWlzc2luZxgMIAEoCFILc2hvd01pc3NpbmdCFgoUY29uc2lzdGVuY3lfc2VsZWN0b3I=');
+    'ChRMaXN0RG9jdW1lbnRzUmVxdWVzdBIbCgZwYXJlbnQYASABKAlCA+BBAlIGcGFyZW50EigKDWNvbGxlY3Rpb25faWQYAiABKAlCA+BBAVIMY29sbGVjdGlvbklkEiAKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2VuGAQgASgJQgPgQQFSCXBhZ2VUb2tlbhIeCghvcmRlcl9ieRgGIAEoCUID4EEBUgdvcmRlckJ5EjoKBG1hc2sYByABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFza0ID4EEBUgRtYXNrEiIKC3RyYW5zYWN0aW9uGAggASgMSABSC3RyYW5zYWN0aW9uEjkKCXJlYWRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIIcmVhZFRpbWUSIQoMc2hvd19taXNzaW5nGAwgASgIUgtzaG93TWlzc2luZ0IWChRjb25zaXN0ZW5jeV9zZWxlY3Rvcg==');
 @$core.Deprecated('Use listDocumentsResponseDescriptor instead')
 const ListDocumentsResponse$json = const {
   '1': 'ListDocumentsResponse',
@@ -932,6 +954,14 @@ const Target$json = const {
     },
     const {'1': 'target_id', '3': 5, '4': 1, '5': 5, '10': 'targetId'},
     const {'1': 'once', '3': 6, '4': 1, '5': 8, '10': 'once'},
+    const {
+      '1': 'expected_count',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int32Value',
+      '10': 'expectedCount'
+    },
   ],
   '3': const [Target_DocumentsTarget$json, Target_QueryTarget$json],
   '8': const [
@@ -970,7 +1000,7 @@ const Target_QueryTarget$json = const {
 
 /// Descriptor for `Target`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List targetDescriptor = $convert.base64Decode(
-    'CgZUYXJnZXQSPwoFcXVlcnkYAiABKAsyJy5nb29nbGUuZmlyZXN0b3JlLnYxLlRhcmdldC5RdWVyeVRhcmdldEgAUgVxdWVyeRJLCglkb2N1bWVudHMYAyABKAsyKy5nb29nbGUuZmlyZXN0b3JlLnYxLlRhcmdldC5Eb2N1bWVudHNUYXJnZXRIAFIJZG9jdW1lbnRzEiMKDHJlc3VtZV90b2tlbhgEIAEoDEgBUgtyZXN1bWVUb2tlbhI5CglyZWFkX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSCHJlYWRUaW1lEhsKCXRhcmdldF9pZBgFIAEoBVIIdGFyZ2V0SWQSEgoEb25jZRgGIAEoCFIEb25jZRovCg9Eb2N1bWVudHNUYXJnZXQSHAoJZG9jdW1lbnRzGAIgAygJUglkb2N1bWVudHMahgEKC1F1ZXJ5VGFyZ2V0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50ElEKEHN0cnVjdHVyZWRfcXVlcnkYAiABKAsyJC5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeUgAUg9zdHJ1Y3R1cmVkUXVlcnlCDAoKcXVlcnlfdHlwZUINCgt0YXJnZXRfdHlwZUINCgtyZXN1bWVfdHlwZQ==');
+    'CgZUYXJnZXQSPwoFcXVlcnkYAiABKAsyJy5nb29nbGUuZmlyZXN0b3JlLnYxLlRhcmdldC5RdWVyeVRhcmdldEgAUgVxdWVyeRJLCglkb2N1bWVudHMYAyABKAsyKy5nb29nbGUuZmlyZXN0b3JlLnYxLlRhcmdldC5Eb2N1bWVudHNUYXJnZXRIAFIJZG9jdW1lbnRzEiMKDHJlc3VtZV90b2tlbhgEIAEoDEgBUgtyZXN1bWVUb2tlbhI5CglyZWFkX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSCHJlYWRUaW1lEhsKCXRhcmdldF9pZBgFIAEoBVIIdGFyZ2V0SWQSEgoEb25jZRgGIAEoCFIEb25jZRJCCg5leHBlY3RlZF9jb3VudBgMIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlUg1leHBlY3RlZENvdW50Gi8KD0RvY3VtZW50c1RhcmdldBIcCglkb2N1bWVudHMYAiADKAlSCWRvY3VtZW50cxqGAQoLUXVlcnlUYXJnZXQSFgoGcGFyZW50GAEgASgJUgZwYXJlbnQSUQoQc3RydWN0dXJlZF9xdWVyeRgCIAEoCzIkLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5SABSD3N0cnVjdHVyZWRRdWVyeUIMCgpxdWVyeV90eXBlQg0KC3RhcmdldF90eXBlQg0KC3Jlc3VtZV90eXBl');
 @$core.Deprecated('Use targetChangeDescriptor instead')
 const TargetChange$json = const {
   '1': 'TargetChange',

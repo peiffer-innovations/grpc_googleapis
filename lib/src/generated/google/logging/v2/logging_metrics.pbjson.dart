@@ -31,6 +31,14 @@ const LogMetric$json = const {
       '10': 'filter'
     },
     const {
+      '1': 'bucket_name',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'bucketName'
+    },
+    const {
       '1': 'disabled',
       '3': 12,
       '4': 1,
@@ -127,7 +135,7 @@ const LogMetric_ApiVersion$json = const {
 
 /// Descriptor for `LogMetric`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List logMetricDescriptor = $convert.base64Decode(
-    'CglMb2dNZXRyaWMSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEiUKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQFSC2Rlc2NyaXB0aW9uEhsKBmZpbHRlchgDIAEoCUID4EECUgZmaWx0ZXISHwoIZGlzYWJsZWQYDCABKAhCA+BBAVIIZGlzYWJsZWQSTgoRbWV0cmljX2Rlc2NyaXB0b3IYBSABKAsyHC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3JCA+BBAVIQbWV0cmljRGVzY3JpcHRvchIsCg92YWx1ZV9leHRyYWN0b3IYBiABKAlCA+BBAVIOdmFsdWVFeHRyYWN0b3ISYQoQbGFiZWxfZXh0cmFjdG9ycxgHIAMoCzIxLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5MYWJlbEV4dHJhY3RvcnNFbnRyeUID4EEBUg9sYWJlbEV4dHJhY3RvcnMSUgoOYnVja2V0X29wdGlvbnMYCCABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlvbi5CdWNrZXRPcHRpb25zQgPgQQFSDWJ1Y2tldE9wdGlvbnMSQAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSQAoLdXBkYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSRQoHdmVyc2lvbhgEIAEoDjInLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5BcGlWZXJzaW9uQgIYAVIHdmVyc2lvbhpCChRMYWJlbEV4dHJhY3RvcnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIhwKCkFwaVZlcnNpb24SBgoCVjIQABIGCgJWMRABOkrqQUcKIGxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljEiNwcm9qZWN0cy97cHJvamVjdH0vbWV0cmljcy97bWV0cmljfQ==');
+    'CglMb2dNZXRyaWMSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEiUKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQFSC2Rlc2NyaXB0aW9uEhsKBmZpbHRlchgDIAEoCUID4EECUgZmaWx0ZXISJAoLYnVja2V0X25hbWUYDSABKAlCA+BBAVIKYnVja2V0TmFtZRIfCghkaXNhYmxlZBgMIAEoCEID4EEBUghkaXNhYmxlZBJOChFtZXRyaWNfZGVzY3JpcHRvchgFIAEoCzIcLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvckID4EEBUhBtZXRyaWNEZXNjcmlwdG9yEiwKD3ZhbHVlX2V4dHJhY3RvchgGIAEoCUID4EEBUg52YWx1ZUV4dHJhY3RvchJhChBsYWJlbF9leHRyYWN0b3JzGAcgAygLMjEuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljLkxhYmVsRXh0cmFjdG9yc0VudHJ5QgPgQQFSD2xhYmVsRXh0cmFjdG9ycxJSCg5idWNrZXRfb3B0aW9ucxgIIAEoCzImLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uLkJ1Y2tldE9wdGlvbnNCA+BBAVINYnVja2V0T3B0aW9ucxJACgtjcmVhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRJFCgd2ZXJzaW9uGAQgASgOMicuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljLkFwaVZlcnNpb25CAhgBUgd2ZXJzaW9uGkIKFExhYmVsRXh0cmFjdG9yc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiHAoKQXBpVmVyc2lvbhIGCgJWMhAAEgYKAlYxEAE6SupBRwogbG9nZ2luZy5nb29nbGVhcGlzLmNvbS9Mb2dNZXRyaWMSI3Byb2plY3RzL3twcm9qZWN0fS9tZXRyaWNzL3ttZXRyaWN9');
 @$core.Deprecated('Use listLogMetricsRequestDescriptor instead')
 const ListLogMetricsRequest$json = const {
   '1': 'ListLogMetricsRequest',

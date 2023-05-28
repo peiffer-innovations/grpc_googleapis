@@ -41,6 +41,36 @@ class OrchestratorOption extends $pb.ProtobufEnum {
   const OrchestratorOption._($core.int v, $core.String n) : super(v, n);
 }
 
+class RoboMode extends $pb.ProtobufEnum {
+  static const RoboMode ROBO_MODE_UNSPECIFIED = RoboMode._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ROBO_MODE_UNSPECIFIED');
+  static const RoboMode ROBO_VERSION_1 = RoboMode._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ROBO_VERSION_1');
+  static const RoboMode ROBO_VERSION_2 = RoboMode._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ROBO_VERSION_2');
+
+  static const $core.List<RoboMode> values = <RoboMode>[
+    ROBO_MODE_UNSPECIFIED,
+    ROBO_VERSION_1,
+    ROBO_VERSION_2,
+  ];
+
+  static final $core.Map<$core.int, RoboMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static RoboMode? valueOf($core.int value) => _byValue[value];
+
+  const RoboMode._($core.int v, $core.String n) : super(v, n);
+}
+
 class RoboActionType extends $pb.ProtobufEnum {
   static const RoboActionType ACTION_TYPE_UNSPECIFIED = RoboActionType._(
       0,
@@ -276,6 +306,29 @@ class InvalidMatrixDetails extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'INVALID_APK_PREVIEW_SDK');
+  static const InvalidMatrixDetails MATRIX_TOO_LARGE = InvalidMatrixDetails._(
+      37,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'MATRIX_TOO_LARGE');
+  static const InvalidMatrixDetails TEST_QUOTA_EXCEEDED =
+      InvalidMatrixDetails._(
+          39,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'TEST_QUOTA_EXCEEDED');
+  static const InvalidMatrixDetails SERVICE_NOT_ACTIVATED =
+      InvalidMatrixDetails._(
+          40,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'SERVICE_NOT_ACTIVATED');
+  static const InvalidMatrixDetails UNKNOWN_PERMISSION_ERROR =
+      InvalidMatrixDetails._(
+          41,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'UNKNOWN_PERMISSION_ERROR');
 
   static const $core.List<InvalidMatrixDetails> values = <InvalidMatrixDetails>[
     INVALID_MATRIX_DETAILS_UNSPECIFIED,
@@ -313,6 +366,10 @@ class InvalidMatrixDetails extends $pb.ProtobufEnum {
     NO_CODE_APK,
     INVALID_INPUT_APK,
     INVALID_APK_PREVIEW_SDK,
+    MATRIX_TOO_LARGE,
+    TEST_QUOTA_EXCEEDED,
+    SERVICE_NOT_ACTIVATED,
+    UNKNOWN_PERMISSION_ERROR,
   ];
 
   static final $core.Map<$core.int, InvalidMatrixDetails> _byValue =

@@ -254,7 +254,7 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
     $0.Aggregation? secondaryAggregation,
     $0.PickTimeSeriesFilter? pickTimeSeriesFilter,
     @$core.Deprecated('This field is deprecated.')
-        $0.StatisticalTimeSeriesFilter? statisticalTimeSeriesFilter,
+    $0.StatisticalTimeSeriesFilter? statisticalTimeSeriesFilter,
   }) {
     final _result = create();
     if (filter != null) {
@@ -539,7 +539,7 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
     $0.Aggregation? secondaryAggregation,
     $0.PickTimeSeriesFilter? pickTimeSeriesFilter,
     @$core.Deprecated('This field is deprecated.')
-        $0.StatisticalTimeSeriesFilter? statisticalTimeSeriesFilter,
+    $0.StatisticalTimeSeriesFilter? statisticalTimeSeriesFilter,
   }) {
     final _result = create();
     if (numerator != null) {

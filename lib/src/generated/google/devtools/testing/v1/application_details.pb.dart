@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'test_execution.pb.dart' as $0;
@@ -130,6 +131,30 @@ class ApkManifest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'usesPermission')
+    ..aInt64(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'versionCode')
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'versionName')
+    ..pc<Metadata>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metadata',
+        $pb.PbFieldType.PM,
+        subBuilder: Metadata.create)
+    ..pc<UsesFeature>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'usesFeature',
+        $pb.PbFieldType.PM,
+        subBuilder: UsesFeature.create)
     ..hasRequiredFields = false;
 
   ApkManifest._() : super();
@@ -141,6 +166,10 @@ class ApkManifest extends $pb.GeneratedMessage {
     $core.Iterable<IntentFilter>? intentFilters,
     $core.int? targetSdkVersion,
     $core.Iterable<$core.String>? usesPermission,
+    $fixnum.Int64? versionCode,
+    $core.String? versionName,
+    $core.Iterable<Metadata>? metadata,
+    $core.Iterable<UsesFeature>? usesFeature,
   }) {
     final _result = create();
     if (packageName != null) {
@@ -163,6 +192,18 @@ class ApkManifest extends $pb.GeneratedMessage {
     }
     if (usesPermission != null) {
       _result.usesPermission.addAll(usesPermission);
+    }
+    if (versionCode != null) {
+      _result.versionCode = versionCode;
+    }
+    if (versionName != null) {
+      _result.versionName = versionName;
+    }
+    if (metadata != null) {
+      _result.metadata.addAll(metadata);
+    }
+    if (usesFeature != null) {
+      _result.usesFeature.addAll(usesFeature);
     }
     return _result;
   }
@@ -257,6 +298,36 @@ class ApkManifest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(7)
   $core.List<$core.String> get usesPermission => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get versionCode => $_getI64(7);
+  @$pb.TagNumber(8)
+  set versionCode($fixnum.Int64 v) {
+    $_setInt64(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasVersionCode() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearVersionCode() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get versionName => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set versionName($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasVersionName() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearVersionName() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.List<Metadata> get metadata => $_getList(9);
+
+  @$pb.TagNumber(11)
+  $core.List<UsesFeature> get usesFeature => $_getList(10);
 }
 
 class IntentFilter extends $pb.GeneratedMessage {
@@ -348,6 +419,180 @@ class IntentFilter extends $pb.GeneratedMessage {
   $core.bool hasMimeType() => $_has(2);
   @$pb.TagNumber(3)
   void clearMimeType() => clearField(3);
+}
+
+class Metadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Metadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value')
+    ..hasRequiredFields = false;
+
+  Metadata._() : super();
+  factory Metadata({
+    $core.String? name,
+    $core.String? value,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory Metadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Metadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Metadata clone() => Metadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Metadata copyWith(void Function(Metadata) updates) =>
+      super.copyWith((message) => updates(message as Metadata))
+          as Metadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Metadata create() => Metadata._();
+  Metadata createEmptyInstance() => create();
+  static $pb.PbList<Metadata> createRepeated() => $pb.PbList<Metadata>();
+  @$core.pragma('dart2js:noInline')
+  static Metadata getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Metadata>(create);
+  static Metadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set value($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValue() => clearField(2);
+}
+
+class UsesFeature extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UsesFeature',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'isRequired')
+    ..hasRequiredFields = false;
+
+  UsesFeature._() : super();
+  factory UsesFeature({
+    $core.String? name,
+    $core.bool? isRequired,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (isRequired != null) {
+      _result.isRequired = isRequired;
+    }
+    return _result;
+  }
+  factory UsesFeature.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UsesFeature.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UsesFeature clone() => UsesFeature()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UsesFeature copyWith(void Function(UsesFeature) updates) =>
+      super.copyWith((message) => updates(message as UsesFeature))
+          as UsesFeature; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UsesFeature create() => UsesFeature._();
+  UsesFeature createEmptyInstance() => create();
+  static $pb.PbList<UsesFeature> createRepeated() => $pb.PbList<UsesFeature>();
+  @$core.pragma('dart2js:noInline')
+  static UsesFeature getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UsesFeature>(create);
+  static UsesFeature? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get isRequired => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isRequired($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasIsRequired() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsRequired() => clearField(2);
 }
 
 class GetApkDetailsRequest extends $pb.GeneratedMessage {

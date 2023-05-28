@@ -80,3 +80,42 @@ class BigQueryConfig_State extends $pb.ProtobufEnum {
 
   const BigQueryConfig_State._($core.int v, $core.String n) : super(v, n);
 }
+
+class CloudStorageConfig_State extends $pb.ProtobufEnum {
+  static const CloudStorageConfig_State STATE_UNSPECIFIED =
+      CloudStorageConfig_State._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'STATE_UNSPECIFIED');
+  static const CloudStorageConfig_State ACTIVE = CloudStorageConfig_State._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ACTIVE');
+  static const CloudStorageConfig_State PERMISSION_DENIED =
+      CloudStorageConfig_State._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'PERMISSION_DENIED');
+  static const CloudStorageConfig_State NOT_FOUND = CloudStorageConfig_State._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'NOT_FOUND');
+
+  static const $core.List<CloudStorageConfig_State> values =
+      <CloudStorageConfig_State>[
+    STATE_UNSPECIFIED,
+    ACTIVE,
+    PERMISSION_DENIED,
+    NOT_FOUND,
+  ];
+
+  static final $core.Map<$core.int, CloudStorageConfig_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CloudStorageConfig_State? valueOf($core.int value) => _byValue[value];
+
+  const CloudStorageConfig_State._($core.int v, $core.String n) : super(v, n);
+}

@@ -13,6 +13,7 @@ import 'package:grpc/service_api.dart' as $grpc;
 import 'delivery_api.pb.dart' as $0;
 import 'delivery_vehicles.pb.dart' as $1;
 import 'tasks.pb.dart' as $2;
+import 'task_tracking_info.pb.dart' as $3;
 export 'delivery_api.pb.dart';
 
 class DeliveryServiceClient extends $grpc.Client {
@@ -64,6 +65,12 @@ class DeliveryServiceClient extends $grpc.Client {
           ($0.ListTasksRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.ListTasksResponse.fromBuffer(value));
+  static final _$getTaskTrackingInfo =
+      $grpc.ClientMethod<$0.GetTaskTrackingInfoRequest, $3.TaskTrackingInfo>(
+          '/maps.fleetengine.delivery.v1.DeliveryService/GetTaskTrackingInfo',
+          ($0.GetTaskTrackingInfoRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $3.TaskTrackingInfo.fromBuffer(value));
   static final _$listDeliveryVehicles = $grpc.ClientMethod<
           $0.ListDeliveryVehiclesRequest, $0.ListDeliveryVehiclesResponse>(
       '/maps.fleetengine.delivery.v1.DeliveryService/ListDeliveryVehicles',
@@ -125,6 +132,12 @@ class DeliveryServiceClient extends $grpc.Client {
       $0.ListTasksRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listTasks, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.TaskTrackingInfo> getTaskTrackingInfo(
+      $0.GetTaskTrackingInfoRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getTaskTrackingInfo, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ListDeliveryVehiclesResponse> listDeliveryVehicles(
@@ -211,6 +224,15 @@ abstract class DeliveryServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ListTasksRequest.fromBuffer(value),
         ($0.ListTasksResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetTaskTrackingInfoRequest, $3.TaskTrackingInfo>(
+            'GetTaskTrackingInfo',
+            getTaskTrackingInfo_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetTaskTrackingInfoRequest.fromBuffer(value),
+            ($3.TaskTrackingInfo value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListDeliveryVehiclesRequest,
             $0.ListDeliveryVehiclesResponse>(
         'ListDeliveryVehicles',
@@ -271,6 +293,12 @@ abstract class DeliveryServiceBase extends $grpc.Service {
     return listTasks(call, await request);
   }
 
+  $async.Future<$3.TaskTrackingInfo> getTaskTrackingInfo_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetTaskTrackingInfoRequest> request) async {
+    return getTaskTrackingInfo(call, await request);
+  }
+
   $async.Future<$0.ListDeliveryVehiclesResponse> listDeliveryVehicles_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.ListDeliveryVehiclesRequest> request) async {
@@ -295,6 +323,8 @@ abstract class DeliveryServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.UpdateTaskRequest request);
   $async.Future<$0.ListTasksResponse> listTasks(
       $grpc.ServiceCall call, $0.ListTasksRequest request);
+  $async.Future<$3.TaskTrackingInfo> getTaskTrackingInfo(
+      $grpc.ServiceCall call, $0.GetTaskTrackingInfoRequest request);
   $async.Future<$0.ListDeliveryVehiclesResponse> listDeliveryVehicles(
       $grpc.ServiceCall call, $0.ListDeliveryVehiclesRequest request);
 }

@@ -83,6 +83,7 @@ const Build$json = const {
       '5': 9,
       '10': 'rwFirmwareVersion'
     },
+    const {'1': 'labels', '3': 8, '4': 3, '5': 9, '10': 'labels'},
   ],
   '4': const [Build_BuildStatus$json, Build_BuildType$json],
   '7': const {},
@@ -112,7 +113,7 @@ const Build_BuildType$json = const {
 
 /// Descriptor for `Build`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List buildDescriptor = $convert.base64Decode(
-    'CgVCdWlsZBISCgRuYW1lGAEgASgJUgRuYW1lEkoKCW1pbGVzdG9uZRgCIAEoCUIs+kEpCidjaHJvbWVvc21vYmxhYi5nb29nbGVhcGlzLmNvbS9NaWxlc3RvbmVSCW1pbGVzdG9uZRIjCg1idWlsZF92ZXJzaW9uGAMgASgJUgxidWlsZFZlcnNpb24SSQoGc3RhdHVzGAQgASgOMjEuZ29vZ2xlLmNocm9tZW9zLm1vYmxhYi52MWJldGExLkJ1aWxkLkJ1aWxkU3RhdHVzUgZzdGF0dXMSQwoEdHlwZRgFIAEoDjIvLmdvb2dsZS5jaHJvbWVvcy5tb2JsYWIudjFiZXRhMS5CdWlsZC5CdWlsZFR5cGVSBHR5cGUSFgoGYnJhbmNoGAYgASgJUgZicmFuY2gSLgoTcndfZmlybXdhcmVfdmVyc2lvbhgHIAEoCVIRcndGaXJtd2FyZVZlcnNpb24iWQoLQnVpbGRTdGF0dXMSHAoYQlVJTERfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCAoEUEFTUxABEggKBEZBSUwQAhILCgdSVU5OSU5HEAMSCwoHQUJPUlRFRBAEIkIKCUJ1aWxkVHlwZRIaChZCVUlMRF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHUkVMRUFTRRABEgwKCEZJUk1XQVJFEAI6Y+pBYAojY2hyb21lb3Ntb2JsYWIuZ29vZ2xlYXBpcy5jb20vQnVpbGQSOWJ1aWxkVGFyZ2V0cy97YnVpbGRfdGFyZ2V0fS9tb2RlbHMve21vZGVsfS9idWlsZHMve2J1aWxkfQ==');
+    'CgVCdWlsZBISCgRuYW1lGAEgASgJUgRuYW1lEkoKCW1pbGVzdG9uZRgCIAEoCUIs+kEpCidjaHJvbWVvc21vYmxhYi5nb29nbGVhcGlzLmNvbS9NaWxlc3RvbmVSCW1pbGVzdG9uZRIjCg1idWlsZF92ZXJzaW9uGAMgASgJUgxidWlsZFZlcnNpb24SSQoGc3RhdHVzGAQgASgOMjEuZ29vZ2xlLmNocm9tZW9zLm1vYmxhYi52MWJldGExLkJ1aWxkLkJ1aWxkU3RhdHVzUgZzdGF0dXMSQwoEdHlwZRgFIAEoDjIvLmdvb2dsZS5jaHJvbWVvcy5tb2JsYWIudjFiZXRhMS5CdWlsZC5CdWlsZFR5cGVSBHR5cGUSFgoGYnJhbmNoGAYgASgJUgZicmFuY2gSLgoTcndfZmlybXdhcmVfdmVyc2lvbhgHIAEoCVIRcndGaXJtd2FyZVZlcnNpb24SFgoGbGFiZWxzGAggAygJUgZsYWJlbHMiWQoLQnVpbGRTdGF0dXMSHAoYQlVJTERfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCAoEUEFTUxABEggKBEZBSUwQAhILCgdSVU5OSU5HEAMSCwoHQUJPUlRFRBAEIkIKCUJ1aWxkVHlwZRIaChZCVUlMRF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHUkVMRUFTRRABEgwKCEZJUk1XQVJFEAI6Y+pBYAojY2hyb21lb3Ntb2JsYWIuZ29vZ2xlYXBpcy5jb20vQnVpbGQSOWJ1aWxkVGFyZ2V0cy97YnVpbGRfdGFyZ2V0fS9tb2RlbHMve21vZGVsfS9idWlsZHMve2J1aWxkfQ==');
 @$core.Deprecated('Use buildArtifactDescriptor instead')
 const BuildArtifact$json = const {
   '1': 'BuildArtifact',

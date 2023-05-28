@@ -16,7 +16,8 @@ import 'document.pb.dart' as $1;
 import 'write.pb.dart' as $5;
 import 'query.pb.dart' as $6;
 import 'aggregation_result.pb.dart' as $7;
-import '../../rpc/status.pb.dart' as $8;
+import '../../protobuf/wrappers.pb.dart' as $8;
+import '../../rpc/status.pb.dart' as $9;
 
 import 'firestore.pbenum.dart';
 
@@ -3486,6 +3487,12 @@ class Target extends $pb.GeneratedMessage {
             ? ''
             : 'readTime',
         subBuilder: $4.Timestamp.create)
+    ..aOM<$8.Int32Value>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'expectedCount',
+        subBuilder: $8.Int32Value.create)
     ..hasRequiredFields = false;
 
   Target._() : super();
@@ -3496,6 +3503,7 @@ class Target extends $pb.GeneratedMessage {
     $core.int? targetId,
     $core.bool? once,
     $4.Timestamp? readTime,
+    $8.Int32Value? expectedCount,
   }) {
     final _result = create();
     if (query != null) {
@@ -3515,6 +3523,9 @@ class Target extends $pb.GeneratedMessage {
     }
     if (readTime != null) {
       _result.readTime = readTime;
+    }
+    if (expectedCount != null) {
+      _result.expectedCount = expectedCount;
     }
     return _result;
   }
@@ -3629,6 +3640,20 @@ class Target extends $pb.GeneratedMessage {
   void clearReadTime() => clearField(11);
   @$pb.TagNumber(11)
   $4.Timestamp ensureReadTime() => $_ensure(5);
+
+  @$pb.TagNumber(12)
+  $8.Int32Value get expectedCount => $_getN(6);
+  @$pb.TagNumber(12)
+  set expectedCount($8.Int32Value v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasExpectedCount() => $_has(6);
+  @$pb.TagNumber(12)
+  void clearExpectedCount() => clearField(12);
+  @$pb.TagNumber(12)
+  $8.Int32Value ensureExpectedCount() => $_ensure(6);
 }
 
 class TargetChange extends $pb.GeneratedMessage {
@@ -3656,12 +3681,12 @@ class TargetChange extends $pb.GeneratedMessage {
             ? ''
             : 'targetIds',
         $pb.PbFieldType.K3)
-    ..aOM<$8.Status>(
+    ..aOM<$9.Status>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'cause',
-        subBuilder: $8.Status.create)
+        subBuilder: $9.Status.create)
     ..a<$core.List<$core.int>>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -3680,7 +3705,7 @@ class TargetChange extends $pb.GeneratedMessage {
   factory TargetChange({
     TargetChange_TargetChangeType? targetChangeType,
     $core.Iterable<$core.int>? targetIds,
-    $8.Status? cause,
+    $9.Status? cause,
     $core.List<$core.int>? resumeToken,
     $4.Timestamp? readTime,
   }) {
@@ -3745,9 +3770,9 @@ class TargetChange extends $pb.GeneratedMessage {
   $core.List<$core.int> get targetIds => $_getList(1);
 
   @$pb.TagNumber(3)
-  $8.Status get cause => $_getN(2);
+  $9.Status get cause => $_getN(2);
   @$pb.TagNumber(3)
-  set cause($8.Status v) {
+  set cause($9.Status v) {
     setField(3, v);
   }
 
@@ -3756,7 +3781,7 @@ class TargetChange extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCause() => clearField(3);
   @$pb.TagNumber(3)
-  $8.Status ensureCause() => $_ensure(2);
+  $9.Status ensureCause() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get resumeToken => $_getN(3);
@@ -4129,19 +4154,19 @@ class BatchWriteResponse extends $pb.GeneratedMessage {
             : 'writeResults',
         $pb.PbFieldType.PM,
         subBuilder: $5.WriteResult.create)
-    ..pc<$8.Status>(
+    ..pc<$9.Status>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
         $pb.PbFieldType.PM,
-        subBuilder: $8.Status.create)
+        subBuilder: $9.Status.create)
     ..hasRequiredFields = false;
 
   BatchWriteResponse._() : super();
   factory BatchWriteResponse({
     $core.Iterable<$5.WriteResult>? writeResults,
-    $core.Iterable<$8.Status>? status,
+    $core.Iterable<$9.Status>? status,
   }) {
     final _result = create();
     if (writeResults != null) {
@@ -4183,5 +4208,5 @@ class BatchWriteResponse extends $pb.GeneratedMessage {
   $core.List<$5.WriteResult> get writeResults => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<$8.Status> get status => $_getList(1);
+  $core.List<$9.Status> get status => $_getList(1);
 }

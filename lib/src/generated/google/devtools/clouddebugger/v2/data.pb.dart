@@ -1066,7 +1066,7 @@ class Debuggee extends $pb.GeneratedMessage {
     $core.Iterable<$2.SourceContext>? sourceContexts,
     $core.Map<$core.String, $core.String>? labels,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$2.ExtendedSourceContext>? extSourceContexts,
+    $core.Iterable<$2.ExtendedSourceContext>? extSourceContexts,
   }) {
     final _result = create();
     if (id != null) {

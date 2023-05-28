@@ -219,6 +219,12 @@ class Task extends $pb.GeneratedMessage {
             .TASK_OUTCOME_LOCATION_SOURCE_UNSPECIFIED,
         valueOf: Task_TaskOutcomeLocationSource.valueOf,
         enumValues: Task_TaskOutcomeLocationSource.values)
+    ..aOM<$3.TimeWindow>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetTimeWindow',
+        subBuilder: $3.TimeWindow.create)
     ..hasRequiredFields = false;
 
   Task._() : super();
@@ -235,6 +241,7 @@ class Task extends $pb.GeneratedMessage {
     $2.Timestamp? taskOutcomeTime,
     $0.LocationInfo? taskOutcomeLocation,
     Task_TaskOutcomeLocationSource? taskOutcomeLocationSource,
+    $3.TimeWindow? targetTimeWindow,
   }) {
     final _result = create();
     if (name != null) {
@@ -272,6 +279,9 @@ class Task extends $pb.GeneratedMessage {
     }
     if (taskOutcomeLocationSource != null) {
       _result.taskOutcomeLocationSource = taskOutcomeLocationSource;
+    }
+    if (targetTimeWindow != null) {
+      _result.targetTimeWindow = targetTimeWindow;
     }
     return _result;
   }
@@ -454,4 +464,18 @@ class Task extends $pb.GeneratedMessage {
   $core.bool hasTaskOutcomeLocationSource() => $_has(11);
   @$pb.TagNumber(12)
   void clearTaskOutcomeLocationSource() => clearField(12);
+
+  @$pb.TagNumber(14)
+  $3.TimeWindow get targetTimeWindow => $_getN(12);
+  @$pb.TagNumber(14)
+  set targetTimeWindow($3.TimeWindow v) {
+    setField(14, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasTargetTimeWindow() => $_has(12);
+  @$pb.TagNumber(14)
+  void clearTargetTimeWindow() => clearField(14);
+  @$pb.TagNumber(14)
+  $3.TimeWindow ensureTargetTimeWindow() => $_ensure(12);
 }

@@ -144,6 +144,16 @@ class BackendRule extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'protocol')
+    ..m<$core.String, BackendRule>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'overridesByRequestProtocol',
+        entryClassName: 'BackendRule.OverridesByRequestProtocolEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: BackendRule.create,
+        packageName: const $pb.PackageName('google.api'))
     ..hasRequiredFields = false;
 
   BackendRule._() : super();
@@ -157,6 +167,7 @@ class BackendRule extends $pb.GeneratedMessage {
     $core.String? jwtAudience,
     $core.bool? disableAuth,
     $core.String? protocol,
+    $core.Map<$core.String, BackendRule>? overridesByRequestProtocol,
   }) {
     final _result = create();
     if (selector != null) {
@@ -186,6 +197,9 @@ class BackendRule extends $pb.GeneratedMessage {
     }
     if (protocol != null) {
       _result.protocol = protocol;
+    }
+    if (overridesByRequestProtocol != null) {
+      _result.overridesByRequestProtocol.addAll(overridesByRequestProtocol);
     }
     return _result;
   }
@@ -330,4 +344,8 @@ class BackendRule extends $pb.GeneratedMessage {
   $core.bool hasProtocol() => $_has(8);
   @$pb.TagNumber(9)
   void clearProtocol() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.Map<$core.String, BackendRule> get overridesByRequestProtocol =>
+      $_getMap(9);
 }

@@ -23,6 +23,14 @@ const Index$json = const {
       '10': 'queryScope'
     },
     const {
+      '1': 'api_scope',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.firestore.admin.v1.Index.ApiScope',
+      '10': 'apiScope'
+    },
+    const {
       '1': 'fields',
       '3': 3,
       '4': 3,
@@ -40,7 +48,7 @@ const Index$json = const {
     },
   ],
   '3': const [Index_IndexField$json],
-  '4': const [Index_QueryScope$json, Index_State$json],
+  '4': const [Index_QueryScope$json, Index_ApiScope$json, Index_State$json],
   '7': const {},
 };
 
@@ -100,6 +108,16 @@ const Index_QueryScope$json = const {
     const {'1': 'QUERY_SCOPE_UNSPECIFIED', '2': 0},
     const {'1': 'COLLECTION', '2': 1},
     const {'1': 'COLLECTION_GROUP', '2': 2},
+    const {'1': 'COLLECTION_RECURSIVE', '2': 3},
+  ],
+};
+
+@$core.Deprecated('Use indexDescriptor instead')
+const Index_ApiScope$json = const {
+  '1': 'ApiScope',
+  '2': const [
+    const {'1': 'ANY_API', '2': 0},
+    const {'1': 'DATASTORE_MODE_API', '2': 1},
   ],
 };
 
@@ -116,4 +134,4 @@ const Index_State$json = const {
 
 /// Descriptor for `Index`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List indexDescriptor = $convert.base64Decode(
-    'CgVJbmRleBISCgRuYW1lGAEgASgJUgRuYW1lEkwKC3F1ZXJ5X3Njb3BlGAIgASgOMisuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVyeVNjb3BlUgpxdWVyeVNjb3BlEkMKBmZpZWxkcxgDIAMoCzIrLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZFIGZmllbGRzEjwKBXN0YXRlGAQgASgOMiYuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZVIFc3RhdGUa3AIKCkluZGV4RmllbGQSHQoKZmllbGRfcGF0aBgBIAEoCVIJZmllbGRQYXRoEkkKBW9yZGVyGAIgASgOMjEuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLk9yZGVySABSBW9yZGVyElwKDGFycmF5X2NvbmZpZxgDIAEoDjI3Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5BcnJheUNvbmZpZ0gAUgthcnJheUNvbmZpZyI9CgVPcmRlchIVChFPUkRFUl9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQAiI5CgtBcnJheUNvbmZpZxIcChhBUlJBWV9DT05GSUdfVU5TUEVDSUZJRUQQABIMCghDT05UQUlOUxABQgwKCnZhbHVlX21vZGUiTwoKUXVlcnlTY29wZRIbChdRVUVSWV9TQ09QRV9VTlNQRUNJRklFRBAAEg4KCkNPTExFQ1RJT04QARIUChBDT0xMRUNUSU9OX0dST1VQEAIiSQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISEAoMTkVFRFNfUkVQQUlSEAM6eupBdwoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0luZGV4ElVwcm9qZWN0cy97cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vwcy97Y29sbGVjdGlvbn0vaW5kZXhlcy97aW5kZXh9');
+    'CgVJbmRleBISCgRuYW1lGAEgASgJUgRuYW1lEkwKC3F1ZXJ5X3Njb3BlGAIgASgOMisuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVyeVNjb3BlUgpxdWVyeVNjb3BlEkYKCWFwaV9zY29wZRgFIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguQXBpU2NvcGVSCGFwaVNjb3BlEkMKBmZpZWxkcxgDIAMoCzIrLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZFIGZmllbGRzEjwKBXN0YXRlGAQgASgOMiYuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZVIFc3RhdGUa3AIKCkluZGV4RmllbGQSHQoKZmllbGRfcGF0aBgBIAEoCVIJZmllbGRQYXRoEkkKBW9yZGVyGAIgASgOMjEuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLk9yZGVySABSBW9yZGVyElwKDGFycmF5X2NvbmZpZxgDIAEoDjI3Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5BcnJheUNvbmZpZ0gAUgthcnJheUNvbmZpZyI9CgVPcmRlchIVChFPUkRFUl9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQAiI5CgtBcnJheUNvbmZpZxIcChhBUlJBWV9DT05GSUdfVU5TUEVDSUZJRUQQABIMCghDT05UQUlOUxABQgwKCnZhbHVlX21vZGUiaQoKUXVlcnlTY29wZRIbChdRVUVSWV9TQ09QRV9VTlNQRUNJRklFRBAAEg4KCkNPTExFQ1RJT04QARIUChBDT0xMRUNUSU9OX0dST1VQEAISGAoUQ09MTEVDVElPTl9SRUNVUlNJVkUQAyIvCghBcGlTY29wZRILCgdBTllfQVBJEAASFgoSREFUQVNUT1JFX01PREVfQVBJEAEiSQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISEAoMTkVFRFNfUkVQQUlSEAM6eupBdwoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0luZGV4ElVwcm9qZWN0cy97cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vwcy97Y29sbGVjdGlvbn0vaW5kZXhlcy97aW5kZXh9');

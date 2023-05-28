@@ -608,3 +608,65 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearForce() => clearField(2);
 }
+
+class BatchDeleteVersionsMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BatchDeleteVersionsMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.artifactregistry.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'failedVersions')
+    ..hasRequiredFields = false;
+
+  BatchDeleteVersionsMetadata._() : super();
+  factory BatchDeleteVersionsMetadata({
+    $core.Iterable<$core.String>? failedVersions,
+  }) {
+    final _result = create();
+    if (failedVersions != null) {
+      _result.failedVersions.addAll(failedVersions);
+    }
+    return _result;
+  }
+  factory BatchDeleteVersionsMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchDeleteVersionsMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BatchDeleteVersionsMetadata clone() =>
+      BatchDeleteVersionsMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BatchDeleteVersionsMetadata copyWith(
+          void Function(BatchDeleteVersionsMetadata) updates) =>
+      super.copyWith(
+              (message) => updates(message as BatchDeleteVersionsMetadata))
+          as BatchDeleteVersionsMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BatchDeleteVersionsMetadata create() =>
+      BatchDeleteVersionsMetadata._();
+  BatchDeleteVersionsMetadata createEmptyInstance() => create();
+  static $pb.PbList<BatchDeleteVersionsMetadata> createRepeated() =>
+      $pb.PbList<BatchDeleteVersionsMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeleteVersionsMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchDeleteVersionsMetadata>(create);
+  static BatchDeleteVersionsMetadata? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get failedVersions => $_getList(0);
+}

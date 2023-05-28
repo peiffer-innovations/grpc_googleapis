@@ -37,6 +37,21 @@ const DeviceFormFactor$json = const {
 /// Descriptor for `DeviceFormFactor`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List deviceFormFactorDescriptor = $convert.base64Decode(
     'ChBEZXZpY2VGb3JtRmFjdG9yEiIKHkRFVklDRV9GT1JNX0ZBQ1RPUl9VTlNQRUNJRklFRBAAEgkKBVBIT05FEAESCgoGVEFCTEVUEAISDAoIV0VBUkFCTEUQAw==');
+@$core.Deprecated('Use deviceCapacityDescriptor instead')
+const DeviceCapacity$json = const {
+  '1': 'DeviceCapacity',
+  '2': const [
+    const {'1': 'DEVICE_CAPACITY_UNSPECIFIED', '2': 0},
+    const {'1': 'DEVICE_CAPACITY_HIGH', '2': 1},
+    const {'1': 'DEVICE_CAPACITY_MEDIUM', '2': 2},
+    const {'1': 'DEVICE_CAPACITY_LOW', '2': 3},
+    const {'1': 'DEVICE_CAPACITY_NONE', '2': 4},
+  ],
+};
+
+/// Descriptor for `DeviceCapacity`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List deviceCapacityDescriptor = $convert.base64Decode(
+    'Cg5EZXZpY2VDYXBhY2l0eRIfChtERVZJQ0VfQ0FQQUNJVFlfVU5TUEVDSUZJRUQQABIYChRERVZJQ0VfQ0FQQUNJVFlfSElHSBABEhoKFkRFVklDRV9DQVBBQ0lUWV9NRURJVU0QAhIXChNERVZJQ0VfQ0FQQUNJVFlfTE9XEAMSGAoUREVWSUNFX0NBUEFDSVRZX05PTkUQBA==');
 @$core.Deprecated('Use deviceIpBlockDescriptor instead')
 const DeviceIpBlock$json = const {
   '1': 'DeviceIpBlock',
@@ -262,6 +277,14 @@ const AndroidModel$json = const {
       '6': '.google.devtools.testing.v1.DeviceFormFactor',
       '10': 'formFactor'
     },
+    const {
+      '1': 'per_version_info',
+      '3': 21,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.testing.v1.PerAndroidVersionInfo',
+      '10': 'perVersionInfo'
+    },
     const {'1': 'screen_x', '3': 5, '4': 1, '5': 5, '10': 'screenX'},
     const {'1': 'screen_y', '3': 6, '4': 1, '5': 5, '10': 'screenY'},
     const {
@@ -299,7 +322,7 @@ const AndroidModel$json = const {
 
 /// Descriptor for `AndroidModel`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List androidModelDescriptor = $convert.base64Decode(
-    'CgxBbmRyb2lkTW9kZWwSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIgoMbWFudWZhY3R1cmVyGAMgASgJUgxtYW51ZmFjdHVyZXISFAoFYnJhbmQYCSABKAlSBWJyYW5kEhoKCGNvZGVuYW1lGAogASgJUghjb2RlbmFtZRI6CgRmb3JtGAQgASgOMiYuZ29vZ2xlLmRldnRvb2xzLnRlc3RpbmcudjEuRGV2aWNlRm9ybVIEZm9ybRJNCgtmb3JtX2ZhY3RvchgQIAEoDjIsLmdvb2dsZS5kZXZ0b29scy50ZXN0aW5nLnYxLkRldmljZUZvcm1GYWN0b3JSCmZvcm1GYWN0b3ISGQoIc2NyZWVuX3gYBSABKAVSB3NjcmVlblgSGQoIc2NyZWVuX3kYBiABKAVSB3NjcmVlblkSJQoOc2NyZWVuX2RlbnNpdHkYDCABKAVSDXNjcmVlbkRlbnNpdHkSNQoXbG93X2Zwc192aWRlb19yZWNvcmRpbmcYESABKAhSFGxvd0Zwc1ZpZGVvUmVjb3JkaW5nEjIKFXN1cHBvcnRlZF92ZXJzaW9uX2lkcxgHIAMoCVITc3VwcG9ydGVkVmVyc2lvbklkcxIlCg5zdXBwb3J0ZWRfYWJpcxgLIAMoCVINc3VwcG9ydGVkQWJpcxISCgR0YWdzGAggAygJUgR0YWdzEiMKDXRodW1ibmFpbF91cmwYEyABKAlSDHRodW1ibmFpbFVybA==');
+    'CgxBbmRyb2lkTW9kZWwSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIgoMbWFudWZhY3R1cmVyGAMgASgJUgxtYW51ZmFjdHVyZXISFAoFYnJhbmQYCSABKAlSBWJyYW5kEhoKCGNvZGVuYW1lGAogASgJUghjb2RlbmFtZRI6CgRmb3JtGAQgASgOMiYuZ29vZ2xlLmRldnRvb2xzLnRlc3RpbmcudjEuRGV2aWNlRm9ybVIEZm9ybRJNCgtmb3JtX2ZhY3RvchgQIAEoDjIsLmdvb2dsZS5kZXZ0b29scy50ZXN0aW5nLnYxLkRldmljZUZvcm1GYWN0b3JSCmZvcm1GYWN0b3ISWwoQcGVyX3ZlcnNpb25faW5mbxgVIAMoCzIxLmdvb2dsZS5kZXZ0b29scy50ZXN0aW5nLnYxLlBlckFuZHJvaWRWZXJzaW9uSW5mb1IOcGVyVmVyc2lvbkluZm8SGQoIc2NyZWVuX3gYBSABKAVSB3NjcmVlblgSGQoIc2NyZWVuX3kYBiABKAVSB3NjcmVlblkSJQoOc2NyZWVuX2RlbnNpdHkYDCABKAVSDXNjcmVlbkRlbnNpdHkSNQoXbG93X2Zwc192aWRlb19yZWNvcmRpbmcYESABKAhSFGxvd0Zwc1ZpZGVvUmVjb3JkaW5nEjIKFXN1cHBvcnRlZF92ZXJzaW9uX2lkcxgHIAMoCVITc3VwcG9ydGVkVmVyc2lvbklkcxIlCg5zdXBwb3J0ZWRfYWJpcxgLIAMoCVINc3VwcG9ydGVkQWJpcxISCgR0YWdzGAggAygJUgR0YWdzEiMKDXRodW1ibmFpbF91cmwYEyABKAlSDHRodW1ibmFpbFVybA==');
 @$core.Deprecated('Use androidVersionDescriptor instead')
 const AndroidVersion$json = const {
   '1': 'AndroidVersion',
@@ -337,6 +360,25 @@ const AndroidVersion$json = const {
 /// Descriptor for `AndroidVersion`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List androidVersionDescriptor = $convert.base64Decode(
     'Cg5BbmRyb2lkVmVyc2lvbhIOCgJpZBgBIAEoCVICaWQSJQoOdmVyc2lvbl9zdHJpbmcYAiABKAlSDXZlcnNpb25TdHJpbmcSGwoJYXBpX2xldmVsGAMgASgFUghhcGlMZXZlbBIbCgljb2RlX25hbWUYBCABKAlSCGNvZGVOYW1lEjQKDHJlbGVhc2VfZGF0ZRgFIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVSC3JlbGVhc2VEYXRlEkwKDGRpc3RyaWJ1dGlvbhgGIAEoCzIoLmdvb2dsZS5kZXZ0b29scy50ZXN0aW5nLnYxLkRpc3RyaWJ1dGlvblIMZGlzdHJpYnV0aW9uEhIKBHRhZ3MYByADKAlSBHRhZ3M=');
+@$core.Deprecated('Use perAndroidVersionInfoDescriptor instead')
+const PerAndroidVersionInfo$json = const {
+  '1': 'PerAndroidVersionInfo',
+  '2': const [
+    const {'1': 'version_id', '3': 1, '4': 1, '5': 9, '10': 'versionId'},
+    const {
+      '1': 'device_capacity',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.testing.v1.DeviceCapacity',
+      '10': 'deviceCapacity'
+    },
+  ],
+};
+
+/// Descriptor for `PerAndroidVersionInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List perAndroidVersionInfoDescriptor = $convert.base64Decode(
+    'ChVQZXJBbmRyb2lkVmVyc2lvbkluZm8SHQoKdmVyc2lvbl9pZBgBIAEoCVIJdmVyc2lvbklkElMKD2RldmljZV9jYXBhY2l0eRgCIAEoDjIqLmdvb2dsZS5kZXZ0b29scy50ZXN0aW5nLnYxLkRldmljZUNhcGFjaXR5Ug5kZXZpY2VDYXBhY2l0eQ==');
 @$core.Deprecated('Use distributionDescriptor instead')
 const Distribution$json = const {
   '1': 'Distribution',
@@ -463,12 +505,20 @@ const IosModel$json = const {
       '6': '.google.devtools.testing.v1.DeviceFormFactor',
       '10': 'formFactor'
     },
+    const {
+      '1': 'per_version_info',
+      '3': 14,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.testing.v1.PerIosVersionInfo',
+      '10': 'perVersionInfo'
+    },
   ],
 };
 
 /// Descriptor for `IosModel`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List iosModelDescriptor = $convert.base64Decode(
-    'CghJb3NNb2RlbBIOCgJpZBgBIAEoCVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIyChVzdXBwb3J0ZWRfdmVyc2lvbl9pZHMYAyADKAlSE3N1cHBvcnRlZFZlcnNpb25JZHMSEgoEdGFncxgEIAMoCVIEdGFncxIvChNkZXZpY2VfY2FwYWJpbGl0aWVzGAUgAygJUhJkZXZpY2VDYXBhYmlsaXRpZXMSGQoIc2NyZWVuX3gYByABKAVSB3NjcmVlblgSGQoIc2NyZWVuX3kYCCABKAVSB3NjcmVlblkSJQoOc2NyZWVuX2RlbnNpdHkYCSABKAVSDXNjcmVlbkRlbnNpdHkSTQoLZm9ybV9mYWN0b3IYBiABKA4yLC5nb29nbGUuZGV2dG9vbHMudGVzdGluZy52MS5EZXZpY2VGb3JtRmFjdG9yUgpmb3JtRmFjdG9y');
+    'CghJb3NNb2RlbBIOCgJpZBgBIAEoCVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIyChVzdXBwb3J0ZWRfdmVyc2lvbl9pZHMYAyADKAlSE3N1cHBvcnRlZFZlcnNpb25JZHMSEgoEdGFncxgEIAMoCVIEdGFncxIvChNkZXZpY2VfY2FwYWJpbGl0aWVzGAUgAygJUhJkZXZpY2VDYXBhYmlsaXRpZXMSGQoIc2NyZWVuX3gYByABKAVSB3NjcmVlblgSGQoIc2NyZWVuX3kYCCABKAVSB3NjcmVlblkSJQoOc2NyZWVuX2RlbnNpdHkYCSABKAVSDXNjcmVlbkRlbnNpdHkSTQoLZm9ybV9mYWN0b3IYBiABKA4yLC5nb29nbGUuZGV2dG9vbHMudGVzdGluZy52MS5EZXZpY2VGb3JtRmFjdG9yUgpmb3JtRmFjdG9yElcKEHBlcl92ZXJzaW9uX2luZm8YDiADKAsyLS5nb29nbGUuZGV2dG9vbHMudGVzdGluZy52MS5QZXJJb3NWZXJzaW9uSW5mb1IOcGVyVmVyc2lvbkluZm8=');
 @$core.Deprecated('Use iosVersionDescriptor instead')
 const IosVersion$json = const {
   '1': 'IosVersion',
@@ -490,6 +540,25 @@ const IosVersion$json = const {
 /// Descriptor for `IosVersion`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List iosVersionDescriptor = $convert.base64Decode(
     'CgpJb3NWZXJzaW9uEg4KAmlkGAEgASgJUgJpZBIjCg1tYWpvcl92ZXJzaW9uGAIgASgFUgxtYWpvclZlcnNpb24SIwoNbWlub3JfdmVyc2lvbhgEIAEoBVIMbWlub3JWZXJzaW9uEhIKBHRhZ3MYAyADKAlSBHRhZ3MSPQobc3VwcG9ydGVkX3hjb2RlX3ZlcnNpb25faWRzGAUgAygJUhhzdXBwb3J0ZWRYY29kZVZlcnNpb25JZHM=');
+@$core.Deprecated('Use perIosVersionInfoDescriptor instead')
+const PerIosVersionInfo$json = const {
+  '1': 'PerIosVersionInfo',
+  '2': const [
+    const {'1': 'version_id', '3': 1, '4': 1, '5': 9, '10': 'versionId'},
+    const {
+      '1': 'device_capacity',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.testing.v1.DeviceCapacity',
+      '10': 'deviceCapacity'
+    },
+  ],
+};
+
+/// Descriptor for `PerIosVersionInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List perIosVersionInfoDescriptor = $convert.base64Decode(
+    'ChFQZXJJb3NWZXJzaW9uSW5mbxIdCgp2ZXJzaW9uX2lkGAEgASgJUgl2ZXJzaW9uSWQSUwoPZGV2aWNlX2NhcGFjaXR5GAIgASgOMiouZ29vZ2xlLmRldnRvb2xzLnRlc3RpbmcudjEuRGV2aWNlQ2FwYWNpdHlSDmRldmljZUNhcGFjaXR5');
 @$core.Deprecated('Use localeDescriptor instead')
 const Locale$json = const {
   '1': 'Locale',
@@ -618,7 +687,8 @@ const ProvidedSoftwareCatalog$json = const {
       '3': 1,
       '4': 1,
       '5': 9,
-      '10': 'orchestratorVersion'
+      '8': const {'3': true},
+      '10': 'orchestratorVersion',
     },
     const {
       '1': 'androidx_orchestrator_version',
@@ -633,4 +703,4 @@ const ProvidedSoftwareCatalog$json = const {
 /// Descriptor for `ProvidedSoftwareCatalog`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List providedSoftwareCatalogDescriptor =
     $convert.base64Decode(
-        'ChdQcm92aWRlZFNvZnR3YXJlQ2F0YWxvZxIxChRvcmNoZXN0cmF0b3JfdmVyc2lvbhgBIAEoCVITb3JjaGVzdHJhdG9yVmVyc2lvbhJCCh1hbmRyb2lkeF9vcmNoZXN0cmF0b3JfdmVyc2lvbhgCIAEoCVIbYW5kcm9pZHhPcmNoZXN0cmF0b3JWZXJzaW9u');
+        'ChdQcm92aWRlZFNvZnR3YXJlQ2F0YWxvZxI1ChRvcmNoZXN0cmF0b3JfdmVyc2lvbhgBIAEoCUICGAFSE29yY2hlc3RyYXRvclZlcnNpb24SQgodYW5kcm9pZHhfb3JjaGVzdHJhdG9yX3ZlcnNpb24YAiABKAlSG2FuZHJvaWR4T3JjaGVzdHJhdG9yVmVyc2lvbg==');

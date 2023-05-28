@@ -30,12 +30,57 @@ const UiDetectionRequest$json = const {
       '8': const {},
       '10': 'request'
     },
+    const {
+      '1': 'resize_image',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '9': 0,
+      '10': 'resizeImage',
+      '17': true
+    },
+    const {
+      '1': 'test_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': const {'3': true},
+      '10': 'testId',
+    },
+    const {
+      '1': 'test_metadata',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.chromeos.uidetection.v1.TestMetadata',
+      '8': const {},
+      '10': 'testMetadata'
+    },
+    const {
+      '1': 'force_image_resizing',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'forceImageResizing'
+    },
+    const {
+      '1': 'return_transformed_image',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '8': const {},
+      '10': 'returnTransformedImage'
+    },
+  ],
+  '8': const [
+    const {'1': '_resize_image'},
   ],
 };
 
 /// Descriptor for `UiDetectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List uiDetectionRequestDescriptor = $convert.base64Decode(
-    'ChJVaURldGVjdGlvblJlcXVlc3QSIAoJaW1hZ2VfcG5nGAEgASgMQgPgQQJSCGltYWdlUG5nEk8KB3JlcXVlc3QYAiABKAsyMC5nb29nbGUuY2hyb21lb3MudWlkZXRlY3Rpb24udjEuRGV0ZWN0aW9uUmVxdWVzdEID4EECUgdyZXF1ZXN0');
+    'ChJVaURldGVjdGlvblJlcXVlc3QSIAoJaW1hZ2VfcG5nGAEgASgMQgPgQQJSCGltYWdlUG5nEk8KB3JlcXVlc3QYAiABKAsyMC5nb29nbGUuY2hyb21lb3MudWlkZXRlY3Rpb24udjEuRGV0ZWN0aW9uUmVxdWVzdEID4EECUgdyZXF1ZXN0EiYKDHJlc2l6ZV9pbWFnZRgDIAEoCEgAUgtyZXNpemVJbWFnZYgBARIbCgd0ZXN0X2lkGAQgASgJQgIYAVIGdGVzdElkElYKDXRlc3RfbWV0YWRhdGEYBSABKAsyLC5nb29nbGUuY2hyb21lb3MudWlkZXRlY3Rpb24udjEuVGVzdE1ldGFkYXRhQgPgQQFSDHRlc3RNZXRhZGF0YRI1ChRmb3JjZV9pbWFnZV9yZXNpemluZxgGIAEoCEID4EEBUhJmb3JjZUltYWdlUmVzaXppbmcSPQoYcmV0dXJuX3RyYW5zZm9ybWVkX2ltYWdlGAcgASgIQgPgQQFSFnJldHVyblRyYW5zZm9ybWVkSW1hZ2VCDwoNX3Jlc2l6ZV9pbWFnZQ==');
 @$core.Deprecated('Use detectionRequestDescriptor instead')
 const DetectionRequest$json = const {
   '1': 'DetectionRequest',
@@ -76,6 +121,20 @@ const DetectionRequest$json = const {
 /// Descriptor for `DetectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List detectionRequestDescriptor = $convert.base64Decode(
     'ChBEZXRlY3Rpb25SZXF1ZXN0EmwKFndvcmRfZGV0ZWN0aW9uX3JlcXVlc3QYASABKAsyNC5nb29nbGUuY2hyb21lb3MudWlkZXRlY3Rpb24udjEuV29yZERldGVjdGlvblJlcXVlc3RIAFIUd29yZERldGVjdGlvblJlcXVlc3QSfAocdGV4dF9ibG9ja19kZXRlY3Rpb25fcmVxdWVzdBgCIAEoCzI5Lmdvb2dsZS5jaHJvbWVvcy51aWRldGVjdGlvbi52MS5UZXh0QmxvY2tEZXRlY3Rpb25SZXF1ZXN0SABSGXRleHRCbG9ja0RldGVjdGlvblJlcXVlc3QSfwodY3VzdG9tX2ljb25fZGV0ZWN0aW9uX3JlcXVlc3QYAyABKAsyOi5nb29nbGUuY2hyb21lb3MudWlkZXRlY3Rpb24udjEuQ3VzdG9tSWNvbkRldGVjdGlvblJlcXVlc3RIAFIaY3VzdG9tSWNvbkRldGVjdGlvblJlcXVlc3RCGAoWZGV0ZWN0aW9uX3JlcXVlc3RfdHlwZQ==');
+@$core.Deprecated('Use testMetadataDescriptor instead')
+const TestMetadata$json = const {
+  '1': 'TestMetadata',
+  '2': const [
+    const {'1': 'test_id', '3': 1, '4': 1, '5': 9, '10': 'testId'},
+    const {'1': 'board', '3': 2, '4': 1, '5': 9, '10': 'board'},
+    const {'1': 'model', '3': 3, '4': 1, '5': 9, '10': 'model'},
+    const {'1': 'cros_build', '3': 4, '4': 1, '5': 9, '10': 'crosBuild'},
+  ],
+};
+
+/// Descriptor for `TestMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List testMetadataDescriptor = $convert.base64Decode(
+    'CgxUZXN0TWV0YWRhdGESFwoHdGVzdF9pZBgBIAEoCVIGdGVzdElkEhQKBWJvYXJkGAIgASgJUgVib2FyZBIUCgVtb2RlbBgDIAEoCVIFbW9kZWwSHQoKY3Jvc19idWlsZBgEIAEoCVIJY3Jvc0J1aWxk');
 @$core.Deprecated('Use wordDetectionRequestDescriptor instead')
 const WordDetectionRequest$json = const {
   '1': 'WordDetectionRequest',
@@ -129,6 +188,13 @@ const TextBlockDetectionRequest$json = const {
       '10': 'maxEditDistance',
       '17': true
     },
+    const {
+      '1': 'specified_words_only',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'specifiedWordsOnly'
+    },
   ],
   '8': const [
     const {'1': '_max_edit_distance'},
@@ -138,7 +204,7 @@ const TextBlockDetectionRequest$json = const {
 /// Descriptor for `TextBlockDetectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List textBlockDetectionRequestDescriptor =
     $convert.base64Decode(
-        'ChlUZXh0QmxvY2tEZXRlY3Rpb25SZXF1ZXN0EhkKBXdvcmRzGAEgAygJQgPgQQJSBXdvcmRzEh0KCnJlZ2V4X21vZGUYAiABKAhSCXJlZ2V4TW9kZRIwChRkaXNhYmxlX2FwcHJveF9tYXRjaBgDIAEoCFISZGlzYWJsZUFwcHJveE1hdGNoEi8KEW1heF9lZGl0X2Rpc3RhbmNlGAQgASgFSABSD21heEVkaXREaXN0YW5jZYgBAUIUChJfbWF4X2VkaXRfZGlzdGFuY2U=');
+        'ChlUZXh0QmxvY2tEZXRlY3Rpb25SZXF1ZXN0EhkKBXdvcmRzGAEgAygJQgPgQQJSBXdvcmRzEh0KCnJlZ2V4X21vZGUYAiABKAhSCXJlZ2V4TW9kZRIwChRkaXNhYmxlX2FwcHJveF9tYXRjaBgDIAEoCFISZGlzYWJsZUFwcHJveE1hdGNoEi8KEW1heF9lZGl0X2Rpc3RhbmNlGAQgASgFSABSD21heEVkaXREaXN0YW5jZYgBARIwChRzcGVjaWZpZWRfd29yZHNfb25seRgFIAEoCFISc3BlY2lmaWVkV29yZHNPbmx5QhQKEl9tYXhfZWRpdF9kaXN0YW5jZQ==');
 @$core.Deprecated('Use customIconDetectionRequestDescriptor instead')
 const CustomIconDetectionRequest$json = const {
   '1': 'CustomIconDetectionRequest',
@@ -178,12 +244,26 @@ const UiDetectionResponse$json = const {
       '6': '.google.chromeos.uidetection.v1.BoundingBox',
       '10': 'boundingBoxes'
     },
+    const {
+      '1': 'transformed_image_png',
+      '3': 2,
+      '4': 1,
+      '5': 12,
+      '10': 'transformedImagePng'
+    },
+    const {
+      '1': 'resizing_scale_factor',
+      '3': 3,
+      '4': 1,
+      '5': 2,
+      '10': 'resizingScaleFactor'
+    },
   ],
 };
 
 /// Descriptor for `UiDetectionResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List uiDetectionResponseDescriptor = $convert.base64Decode(
-    'ChNVaURldGVjdGlvblJlc3BvbnNlElIKDmJvdW5kaW5nX2JveGVzGAEgAygLMisuZ29vZ2xlLmNocm9tZW9zLnVpZGV0ZWN0aW9uLnYxLkJvdW5kaW5nQm94Ug1ib3VuZGluZ0JveGVz');
+    'ChNVaURldGVjdGlvblJlc3BvbnNlElIKDmJvdW5kaW5nX2JveGVzGAEgAygLMisuZ29vZ2xlLmNocm9tZW9zLnVpZGV0ZWN0aW9uLnYxLkJvdW5kaW5nQm94Ug1ib3VuZGluZ0JveGVzEjIKFXRyYW5zZm9ybWVkX2ltYWdlX3BuZxgCIAEoDFITdHJhbnNmb3JtZWRJbWFnZVBuZxIyChVyZXNpemluZ19zY2FsZV9mYWN0b3IYAyABKAJSE3Jlc2l6aW5nU2NhbGVGYWN0b3I=');
 @$core.Deprecated('Use boundingBoxDescriptor instead')
 const BoundingBox$json = const {
   '1': 'BoundingBox',

@@ -1643,7 +1643,7 @@ class Bucket extends $pb.GeneratedMessage {
     $core.String? locationType,
     Bucket_IamConfiguration? iamConfiguration,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$core.String>? zoneAffinity,
+    $core.Iterable<$core.String>? zoneAffinity,
     $core.bool? satisfiesPzs,
     Bucket_Autoclass? autoclass,
   }) {

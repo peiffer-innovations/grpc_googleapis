@@ -192,7 +192,17 @@ const VehicleStop_TaskInfo$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': const {},
       '10': 'taskDuration'
+    },
+    const {
+      '1': 'target_time_window',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.maps.fleetengine.delivery.v1.TimeWindow',
+      '8': const {},
+      '10': 'targetTimeWindow'
     },
   ],
 };
@@ -210,4 +220,4 @@ const VehicleStop_State$json = const {
 
 /// Descriptor for `VehicleStop`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List vehicleStopDescriptor = $convert.base64Decode(
-    'CgtWZWhpY2xlU3RvcBJaChBwbGFubmVkX2xvY2F0aW9uGAEgASgLMioubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5Mb2NhdGlvbkluZm9CA+BBAlIPcGxhbm5lZExvY2F0aW9uEkgKBXRhc2tzGAIgAygLMjIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5WZWhpY2xlU3RvcC5UYXNrSW5mb1IFdGFza3MSRQoFc3RhdGUYAyABKA4yLy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlZlaGljbGVTdG9wLlN0YXRlUgVzdGF0ZRpjCghUYXNrSW5mbxIXCgd0YXNrX2lkGAEgASgJUgZ0YXNrSWQSPgoNdGFza19kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIMdGFza0R1cmF0aW9uIkEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESCwoHRU5ST1VURRACEgsKB0FSUklWRUQQAw==');
+    'CgtWZWhpY2xlU3RvcBJaChBwbGFubmVkX2xvY2F0aW9uGAEgASgLMioubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5Mb2NhdGlvbkluZm9CA+BBAlIPcGxhbm5lZExvY2F0aW9uEkgKBXRhc2tzGAIgAygLMjIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5WZWhpY2xlU3RvcC5UYXNrSW5mb1IFdGFza3MSRQoFc3RhdGUYAyABKA4yLy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLlZlaGljbGVTdG9wLlN0YXRlUgVzdGF0ZRrFAQoIVGFza0luZm8SFwoHdGFza19pZBgBIAEoCVIGdGFza0lkEkMKDXRhc2tfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBA1IMdGFza0R1cmF0aW9uElsKEnRhcmdldF90aW1lX3dpbmRvdxgDIAEoCzIoLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGltZVdpbmRvd0ID4EEDUhB0YXJnZXRUaW1lV2luZG93IkEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESCwoHRU5ST1VURRACEgsKB0FSUklWRUQQAw==');

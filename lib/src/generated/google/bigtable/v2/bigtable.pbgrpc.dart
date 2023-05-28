@@ -56,6 +56,20 @@ class BigtableClient extends $grpc.Client {
       ($0.ReadModifyWriteRowRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ReadModifyWriteRowResponse.fromBuffer(value));
+  static final _$generateInitialChangeStreamPartitions = $grpc.ClientMethod<
+          $0.GenerateInitialChangeStreamPartitionsRequest,
+          $0.GenerateInitialChangeStreamPartitionsResponse>(
+      '/google.bigtable.v2.Bigtable/GenerateInitialChangeStreamPartitions',
+      ($0.GenerateInitialChangeStreamPartitionsRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.GenerateInitialChangeStreamPartitionsResponse.fromBuffer(value));
+  static final _$readChangeStream = $grpc.ClientMethod<
+          $0.ReadChangeStreamRequest, $0.ReadChangeStreamResponse>(
+      '/google.bigtable.v2.Bigtable/ReadChangeStream',
+      ($0.ReadChangeStreamRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ReadChangeStreamResponse.fromBuffer(value));
 
   BigtableClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -107,6 +121,23 @@ class BigtableClient extends $grpc.Client {
       $0.ReadModifyWriteRowRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$readModifyWriteRow, request, options: options);
+  }
+
+  $grpc.ResponseStream<$0.GenerateInitialChangeStreamPartitionsResponse>
+      generateInitialChangeStreamPartitions(
+          $0.GenerateInitialChangeStreamPartitionsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$generateInitialChangeStreamPartitions,
+        $async.Stream.fromIterable([request]),
+        options: options);
+  }
+
+  $grpc.ResponseStream<$0.ReadChangeStreamResponse> readChangeStream(
+      $0.ReadChangeStreamRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$readChangeStream, $async.Stream.fromIterable([request]),
+        options: options);
   }
 }
 
@@ -171,6 +202,26 @@ abstract class BigtableServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ReadModifyWriteRowRequest.fromBuffer(value),
         ($0.ReadModifyWriteRowResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GenerateInitialChangeStreamPartitionsRequest,
+            $0.GenerateInitialChangeStreamPartitionsResponse>(
+        'GenerateInitialChangeStreamPartitions',
+        generateInitialChangeStreamPartitions_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.GenerateInitialChangeStreamPartitionsRequest.fromBuffer(value),
+        ($0.GenerateInitialChangeStreamPartitionsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ReadChangeStreamRequest,
+            $0.ReadChangeStreamResponse>(
+        'ReadChangeStream',
+        readChangeStream_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.ReadChangeStreamRequest.fromBuffer(value),
+        ($0.ReadChangeStreamResponse value) => value.writeToBuffer()));
   }
 
   $async.Stream<$0.ReadRowsResponse> readRows_Pre($grpc.ServiceCall call,
@@ -211,6 +262,20 @@ abstract class BigtableServiceBase extends $grpc.Service {
     return readModifyWriteRow(call, await request);
   }
 
+  $async.Stream<$0.GenerateInitialChangeStreamPartitionsResponse>
+      generateInitialChangeStreamPartitions_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.GenerateInitialChangeStreamPartitionsRequest>
+              request) async* {
+    yield* generateInitialChangeStreamPartitions(call, await request);
+  }
+
+  $async.Stream<$0.ReadChangeStreamResponse> readChangeStream_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ReadChangeStreamRequest> request) async* {
+    yield* readChangeStream(call, await request);
+  }
+
   $async.Stream<$0.ReadRowsResponse> readRows(
       $grpc.ServiceCall call, $0.ReadRowsRequest request);
   $async.Stream<$0.SampleRowKeysResponse> sampleRowKeys(
@@ -225,4 +290,9 @@ abstract class BigtableServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.PingAndWarmRequest request);
   $async.Future<$0.ReadModifyWriteRowResponse> readModifyWriteRow(
       $grpc.ServiceCall call, $0.ReadModifyWriteRowRequest request);
+  $async.Stream<$0.GenerateInitialChangeStreamPartitionsResponse>
+      generateInitialChangeStreamPartitions($grpc.ServiceCall call,
+          $0.GenerateInitialChangeStreamPartitionsRequest request);
+  $async.Stream<$0.ReadChangeStreamResponse> readChangeStream(
+      $grpc.ServiceCall call, $0.ReadChangeStreamRequest request);
 }

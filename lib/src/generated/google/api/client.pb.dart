@@ -46,7 +46,7 @@ class CommonLanguageSettings extends $pb.GeneratedMessage {
   CommonLanguageSettings._() : super();
   factory CommonLanguageSettings({
     @$core.Deprecated('This field is deprecated.')
-        $core.String? referenceDocsUri,
+    $core.String? referenceDocsUri,
     $core.Iterable<ClientLibraryDestination>? destinations,
   }) {
     final _result = create();
@@ -479,6 +479,11 @@ class Publishing extends $pb.GeneratedMessage {
             : 'librarySettings',
         $pb.PbFieldType.PM,
         subBuilder: ClientLibrarySettings.create)
+    ..aOS(
+        110,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'protoReferenceDocumentationUri')
     ..hasRequiredFields = false;
 
   Publishing._() : super();
@@ -492,6 +497,7 @@ class Publishing extends $pb.GeneratedMessage {
     $core.String? docTagPrefix,
     ClientLibraryOrganization? organization,
     $core.Iterable<ClientLibrarySettings>? librarySettings,
+    $core.String? protoReferenceDocumentationUri,
   }) {
     final _result = create();
     if (methodSettings != null) {
@@ -520,6 +526,9 @@ class Publishing extends $pb.GeneratedMessage {
     }
     if (librarySettings != null) {
       _result.librarySettings.addAll(librarySettings);
+    }
+    if (protoReferenceDocumentationUri != null) {
+      _result.protoReferenceDocumentationUri = protoReferenceDocumentationUri;
     }
     return _result;
   }
@@ -629,6 +638,18 @@ class Publishing extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(109)
   $core.List<ClientLibrarySettings> get librarySettings => $_getList(8);
+
+  @$pb.TagNumber(110)
+  $core.String get protoReferenceDocumentationUri => $_getSZ(9);
+  @$pb.TagNumber(110)
+  set protoReferenceDocumentationUri($core.String v) {
+    $_setString(9, v);
+  }
+
+  @$pb.TagNumber(110)
+  $core.bool hasProtoReferenceDocumentationUri() => $_has(9);
+  @$pb.TagNumber(110)
+  void clearProtoReferenceDocumentationUri() => clearField(110);
 }
 
 class JavaSettings extends $pb.GeneratedMessage {
@@ -1032,15 +1053,68 @@ class DotnetSettings extends $pb.GeneratedMessage {
             ? ''
             : 'common',
         subBuilder: CommonLanguageSettings.create)
+    ..m<$core.String, $core.String>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'renamedServices',
+        entryClassName: 'DotnetSettings.RenamedServicesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.api'))
+    ..m<$core.String, $core.String>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'renamedResources',
+        entryClassName: 'DotnetSettings.RenamedResourcesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.api'))
+    ..pPS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ignoredResources')
+    ..pPS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'forcedNamespaceAliases')
+    ..pPS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'handwrittenSignatures')
     ..hasRequiredFields = false;
 
   DotnetSettings._() : super();
   factory DotnetSettings({
     CommonLanguageSettings? common,
+    $core.Map<$core.String, $core.String>? renamedServices,
+    $core.Map<$core.String, $core.String>? renamedResources,
+    $core.Iterable<$core.String>? ignoredResources,
+    $core.Iterable<$core.String>? forcedNamespaceAliases,
+    $core.Iterable<$core.String>? handwrittenSignatures,
   }) {
     final _result = create();
     if (common != null) {
       _result.common = common;
+    }
+    if (renamedServices != null) {
+      _result.renamedServices.addAll(renamedServices);
+    }
+    if (renamedResources != null) {
+      _result.renamedResources.addAll(renamedResources);
+    }
+    if (ignoredResources != null) {
+      _result.ignoredResources.addAll(ignoredResources);
+    }
+    if (forcedNamespaceAliases != null) {
+      _result.forcedNamespaceAliases.addAll(forcedNamespaceAliases);
+    }
+    if (handwrittenSignatures != null) {
+      _result.handwrittenSignatures.addAll(handwrittenSignatures);
     }
     return _result;
   }
@@ -1084,6 +1158,21 @@ class DotnetSettings extends $pb.GeneratedMessage {
   void clearCommon() => clearField(1);
   @$pb.TagNumber(1)
   CommonLanguageSettings ensureCommon() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.Map<$core.String, $core.String> get renamedServices => $_getMap(1);
+
+  @$pb.TagNumber(3)
+  $core.Map<$core.String, $core.String> get renamedResources => $_getMap(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.String> get ignoredResources => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.List<$core.String> get forcedNamespaceAliases => $_getList(4);
+
+  @$pb.TagNumber(6)
+  $core.List<$core.String> get handwrittenSignatures => $_getList(5);
 }
 
 class RubySettings extends $pb.GeneratedMessage {

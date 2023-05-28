@@ -11,13 +11,14 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'location.pb.dart' as $0;
 
-enum Waypoint_LocationType { location, placeId, notSet }
+enum Waypoint_LocationType { location, placeId, address, notSet }
 
 class Waypoint extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, Waypoint_LocationType>
       _Waypoint_LocationTypeByTag = {
     1: Waypoint_LocationType.location,
     2: Waypoint_LocationType.placeId,
+    7: Waypoint_LocationType.address,
     0: Waypoint_LocationType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -29,7 +30,7 @@ class Waypoint extends $pb.GeneratedMessage {
               ? ''
               : 'google.maps.routing.v2'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 7])
     ..aOM<$0.Location>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -56,6 +57,11 @@ class Waypoint extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'sideOfRoad')
+    ..aOS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'address')
     ..hasRequiredFields = false;
 
   Waypoint._() : super();
@@ -65,6 +71,7 @@ class Waypoint extends $pb.GeneratedMessage {
     $core.bool? via,
     $core.bool? vehicleStopover,
     $core.bool? sideOfRoad,
+    $core.String? address,
   }) {
     final _result = create();
     if (location != null) {
@@ -81,6 +88,9 @@ class Waypoint extends $pb.GeneratedMessage {
     }
     if (sideOfRoad != null) {
       _result.sideOfRoad = sideOfRoad;
+    }
+    if (address != null) {
+      _result.address = address;
     }
     return _result;
   }
@@ -175,4 +185,16 @@ class Waypoint extends $pb.GeneratedMessage {
   $core.bool hasSideOfRoad() => $_has(4);
   @$pb.TagNumber(5)
   void clearSideOfRoad() => clearField(5);
+
+  @$pb.TagNumber(7)
+  $core.String get address => $_getSZ(5);
+  @$pb.TagNumber(7)
+  set address($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasAddress() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearAddress() => clearField(7);
 }

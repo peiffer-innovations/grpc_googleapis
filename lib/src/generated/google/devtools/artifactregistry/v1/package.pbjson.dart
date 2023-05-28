@@ -32,11 +32,12 @@ const Package$json = const {
       '10': 'updateTime'
     },
   ],
+  '7': const {},
 };
 
 /// Descriptor for `Package`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List packageDescriptor = $convert.base64Decode(
-    'CgdQYWNrYWdlEhIKBG5hbWUYASABKAlSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRI7CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSOwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1l');
+    'CgdQYWNrYWdlEhIKBG5hbWUYASABKAlSBG5hbWUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRI7CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSOwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lOoIB6kF/CidhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1BhY2thZ2USVHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9L3BhY2thZ2VzL3twYWNrYWdlfQ==');
 @$core.Deprecated('Use listPackagesRequestDescriptor instead')
 const ListPackagesRequest$json = const {
   '1': 'ListPackagesRequest',
@@ -56,7 +57,7 @@ const ListPackagesRequest$json = const {
 
 /// Descriptor for `ListPackagesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listPackagesRequestDescriptor = $convert.base64Decode(
-    'ChNMaXN0UGFja2FnZXNSZXF1ZXN0EhsKBnBhcmVudBgBIAEoCUID4EECUgZwYXJlbnQSGwoJcGFnZV9zaXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4=');
+    'ChNMaXN0UGFja2FnZXNSZXF1ZXN0EkcKBnBhcmVudBgBIAEoCUIv4EEC+kEpEidhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1BhY2thZ2VSBnBhcmVudBIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbg==');
 @$core.Deprecated('Use listPackagesResponseDescriptor instead')
 const ListPackagesResponse$json = const {
   '1': 'ListPackagesResponse',
@@ -92,7 +93,7 @@ const GetPackageRequest$json = const {
 
 /// Descriptor for `GetPackageRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getPackageRequestDescriptor = $convert.base64Decode(
-    'ChFHZXRQYWNrYWdlUmVxdWVzdBIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWU=');
+    'ChFHZXRQYWNrYWdlUmVxdWVzdBJDCgRuYW1lGAEgASgJQi/gQQL6QSkKJ2FydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUGFja2FnZVIEbmFtZQ==');
 @$core.Deprecated('Use deletePackageRequestDescriptor instead')
 const DeletePackageRequest$json = const {
   '1': 'DeletePackageRequest',
@@ -102,6 +103,5 @@ const DeletePackageRequest$json = const {
 };
 
 /// Descriptor for `DeletePackageRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deletePackageRequestDescriptor =
-    $convert.base64Decode(
-        'ChREZWxldGVQYWNrYWdlUmVxdWVzdBIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWU=');
+final $typed_data.Uint8List deletePackageRequestDescriptor = $convert.base64Decode(
+    'ChREZWxldGVQYWNrYWdlUmVxdWVzdBJDCgRuYW1lGAEgASgJQi/gQQL6QSkKJ2FydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUGFja2FnZVIEbmFtZQ==');

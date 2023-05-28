@@ -14,6 +14,9 @@ import 'analytics_admin.pb.dart' as $0;
 import 'resources.pb.dart' as $1;
 import '../../../protobuf/empty.pb.dart' as $2;
 import 'audience.pb.dart' as $3;
+import 'expanded_data_set.pb.dart' as $4;
+import 'channel_group.pb.dart' as $5;
+import 'event_create_and_edit.pb.dart' as $6;
 export 'analytics_admin.pb.dart';
 
 class AnalyticsAdminServiceClient extends $grpc.Client {
@@ -463,6 +466,32 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/ArchiveAudience',
       ($0.ArchiveAudienceRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$getSearchAds360Link = $grpc.ClientMethod<
+          $0.GetSearchAds360LinkRequest, $1.SearchAds360Link>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetSearchAds360Link',
+      ($0.GetSearchAds360LinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SearchAds360Link.fromBuffer(value));
+  static final _$listSearchAds360Links = $grpc.ClientMethod<
+          $0.ListSearchAds360LinksRequest, $0.ListSearchAds360LinksResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListSearchAds360Links',
+      ($0.ListSearchAds360LinksRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListSearchAds360LinksResponse.fromBuffer(value));
+  static final _$createSearchAds360Link = $grpc.ClientMethod<
+          $0.CreateSearchAds360LinkRequest, $1.SearchAds360Link>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateSearchAds360Link',
+      ($0.CreateSearchAds360LinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SearchAds360Link.fromBuffer(value));
+  static final _$deleteSearchAds360Link = $grpc.ClientMethod<
+          $0.DeleteSearchAds360LinkRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteSearchAds360Link',
+      ($0.DeleteSearchAds360LinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$updateSearchAds360Link = $grpc.ClientMethod<
+          $0.UpdateSearchAds360LinkRequest, $1.SearchAds360Link>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateSearchAds360Link',
+      ($0.UpdateSearchAds360LinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SearchAds360Link.fromBuffer(value));
   static final _$getAttributionSettings = $grpc.ClientMethod<
           $0.GetAttributionSettingsRequest, $1.AttributionSettings>(
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetAttributionSettings',
@@ -481,6 +510,222 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.RunAccessReportRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.RunAccessReportResponse.fromBuffer(value));
+  static final _$createAccessBinding = $grpc.ClientMethod<
+          $0.CreateAccessBindingRequest, $1.AccessBinding>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateAccessBinding',
+      ($0.CreateAccessBindingRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.AccessBinding.fromBuffer(value));
+  static final _$getAccessBinding = $grpc.ClientMethod<
+          $0.GetAccessBindingRequest, $1.AccessBinding>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetAccessBinding',
+      ($0.GetAccessBindingRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.AccessBinding.fromBuffer(value));
+  static final _$updateAccessBinding = $grpc.ClientMethod<
+          $0.UpdateAccessBindingRequest, $1.AccessBinding>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateAccessBinding',
+      ($0.UpdateAccessBindingRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.AccessBinding.fromBuffer(value));
+  static final _$deleteAccessBinding = $grpc.ClientMethod<
+          $0.DeleteAccessBindingRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteAccessBinding',
+      ($0.DeleteAccessBindingRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$listAccessBindings = $grpc.ClientMethod<
+          $0.ListAccessBindingsRequest, $0.ListAccessBindingsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListAccessBindings',
+      ($0.ListAccessBindingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListAccessBindingsResponse.fromBuffer(value));
+  static final _$batchCreateAccessBindings = $grpc.ClientMethod<
+          $0.BatchCreateAccessBindingsRequest,
+          $0.BatchCreateAccessBindingsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchCreateAccessBindings',
+      ($0.BatchCreateAccessBindingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BatchCreateAccessBindingsResponse.fromBuffer(value));
+  static final _$batchGetAccessBindings = $grpc.ClientMethod<
+          $0.BatchGetAccessBindingsRequest, $0.BatchGetAccessBindingsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchGetAccessBindings',
+      ($0.BatchGetAccessBindingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BatchGetAccessBindingsResponse.fromBuffer(value));
+  static final _$batchUpdateAccessBindings = $grpc.ClientMethod<
+          $0.BatchUpdateAccessBindingsRequest,
+          $0.BatchUpdateAccessBindingsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchUpdateAccessBindings',
+      ($0.BatchUpdateAccessBindingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BatchUpdateAccessBindingsResponse.fromBuffer(value));
+  static final _$batchDeleteAccessBindings = $grpc.ClientMethod<
+          $0.BatchDeleteAccessBindingsRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchDeleteAccessBindings',
+      ($0.BatchDeleteAccessBindingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$getExpandedDataSet = $grpc.ClientMethod<
+          $0.GetExpandedDataSetRequest, $4.ExpandedDataSet>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetExpandedDataSet',
+      ($0.GetExpandedDataSetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.ExpandedDataSet.fromBuffer(value));
+  static final _$listExpandedDataSets = $grpc.ClientMethod<
+          $0.ListExpandedDataSetsRequest, $0.ListExpandedDataSetsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListExpandedDataSets',
+      ($0.ListExpandedDataSetsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListExpandedDataSetsResponse.fromBuffer(value));
+  static final _$createExpandedDataSet = $grpc.ClientMethod<
+          $0.CreateExpandedDataSetRequest, $4.ExpandedDataSet>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateExpandedDataSet',
+      ($0.CreateExpandedDataSetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.ExpandedDataSet.fromBuffer(value));
+  static final _$updateExpandedDataSet = $grpc.ClientMethod<
+          $0.UpdateExpandedDataSetRequest, $4.ExpandedDataSet>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateExpandedDataSet',
+      ($0.UpdateExpandedDataSetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.ExpandedDataSet.fromBuffer(value));
+  static final _$deleteExpandedDataSet = $grpc.ClientMethod<
+          $0.DeleteExpandedDataSetRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteExpandedDataSet',
+      ($0.DeleteExpandedDataSetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$getChannelGroup = $grpc.ClientMethod<$0.GetChannelGroupRequest,
+          $5.ChannelGroup>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetChannelGroup',
+      ($0.GetChannelGroupRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $5.ChannelGroup.fromBuffer(value));
+  static final _$listChannelGroups = $grpc.ClientMethod<
+          $0.ListChannelGroupsRequest, $0.ListChannelGroupsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListChannelGroups',
+      ($0.ListChannelGroupsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListChannelGroupsResponse.fromBuffer(value));
+  static final _$createChannelGroup = $grpc.ClientMethod<
+          $0.CreateChannelGroupRequest, $5.ChannelGroup>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateChannelGroup',
+      ($0.CreateChannelGroupRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $5.ChannelGroup.fromBuffer(value));
+  static final _$updateChannelGroup = $grpc.ClientMethod<
+          $0.UpdateChannelGroupRequest, $5.ChannelGroup>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateChannelGroup',
+      ($0.UpdateChannelGroupRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $5.ChannelGroup.fromBuffer(value));
+  static final _$deleteChannelGroup = $grpc.ClientMethod<
+          $0.DeleteChannelGroupRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteChannelGroup',
+      ($0.DeleteChannelGroupRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$setAutomatedGa4ConfigurationOptOut = $grpc.ClientMethod<
+          $0.SetAutomatedGa4ConfigurationOptOutRequest,
+          $0.SetAutomatedGa4ConfigurationOptOutResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/SetAutomatedGa4ConfigurationOptOut',
+      ($0.SetAutomatedGa4ConfigurationOptOutRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.SetAutomatedGa4ConfigurationOptOutResponse.fromBuffer(value));
+  static final _$fetchAutomatedGa4ConfigurationOptOut = $grpc.ClientMethod<
+          $0.FetchAutomatedGa4ConfigurationOptOutRequest,
+          $0.FetchAutomatedGa4ConfigurationOptOutResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/FetchAutomatedGa4ConfigurationOptOut',
+      ($0.FetchAutomatedGa4ConfigurationOptOutRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.FetchAutomatedGa4ConfigurationOptOutResponse.fromBuffer(value));
+  static final _$getBigQueryLink = $grpc.ClientMethod<$0.GetBigQueryLinkRequest,
+          $1.BigQueryLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetBigQueryLink',
+      ($0.GetBigQueryLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.BigQueryLink.fromBuffer(value));
+  static final _$listBigQueryLinks = $grpc.ClientMethod<
+          $0.ListBigQueryLinksRequest, $0.ListBigQueryLinksResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListBigQueryLinks',
+      ($0.ListBigQueryLinksRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListBigQueryLinksResponse.fromBuffer(value));
+  static final _$getEnhancedMeasurementSettings = $grpc.ClientMethod<
+          $0.GetEnhancedMeasurementSettingsRequest,
+          $1.EnhancedMeasurementSettings>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetEnhancedMeasurementSettings',
+      ($0.GetEnhancedMeasurementSettingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.EnhancedMeasurementSettings.fromBuffer(value));
+  static final _$updateEnhancedMeasurementSettings = $grpc.ClientMethod<
+          $0.UpdateEnhancedMeasurementSettingsRequest,
+          $1.EnhancedMeasurementSettings>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateEnhancedMeasurementSettings',
+      ($0.UpdateEnhancedMeasurementSettingsRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.EnhancedMeasurementSettings.fromBuffer(value));
+  static final _$createConnectedSiteTag = $grpc.ClientMethod<
+          $0.CreateConnectedSiteTagRequest, $0.CreateConnectedSiteTagResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateConnectedSiteTag',
+      ($0.CreateConnectedSiteTagRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.CreateConnectedSiteTagResponse.fromBuffer(value));
+  static final _$deleteConnectedSiteTag = $grpc.ClientMethod<
+          $0.DeleteConnectedSiteTagRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteConnectedSiteTag',
+      ($0.DeleteConnectedSiteTagRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$listConnectedSiteTags = $grpc.ClientMethod<
+          $0.ListConnectedSiteTagsRequest, $0.ListConnectedSiteTagsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListConnectedSiteTags',
+      ($0.ListConnectedSiteTagsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListConnectedSiteTagsResponse.fromBuffer(value));
+  static final _$fetchConnectedGa4Property = $grpc.ClientMethod<
+          $0.FetchConnectedGa4PropertyRequest,
+          $0.FetchConnectedGa4PropertyResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/FetchConnectedGa4Property',
+      ($0.FetchConnectedGa4PropertyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.FetchConnectedGa4PropertyResponse.fromBuffer(value));
+  static final _$getAdSenseLink = $grpc.ClientMethod<$0.GetAdSenseLinkRequest,
+          $1.AdSenseLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetAdSenseLink',
+      ($0.GetAdSenseLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.AdSenseLink.fromBuffer(value));
+  static final _$createAdSenseLink = $grpc.ClientMethod<
+          $0.CreateAdSenseLinkRequest, $1.AdSenseLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateAdSenseLink',
+      ($0.CreateAdSenseLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.AdSenseLink.fromBuffer(value));
+  static final _$deleteAdSenseLink = $grpc.ClientMethod<
+          $0.DeleteAdSenseLinkRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteAdSenseLink',
+      ($0.DeleteAdSenseLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$listAdSenseLinks = $grpc.ClientMethod<
+          $0.ListAdSenseLinksRequest, $0.ListAdSenseLinksResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListAdSenseLinks',
+      ($0.ListAdSenseLinksRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListAdSenseLinksResponse.fromBuffer(value));
+  static final _$getEventCreateRule = $grpc.ClientMethod<
+          $0.GetEventCreateRuleRequest, $6.EventCreateRule>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetEventCreateRule',
+      ($0.GetEventCreateRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.EventCreateRule.fromBuffer(value));
+  static final _$listEventCreateRules = $grpc.ClientMethod<
+          $0.ListEventCreateRulesRequest, $0.ListEventCreateRulesResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListEventCreateRules',
+      ($0.ListEventCreateRulesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListEventCreateRulesResponse.fromBuffer(value));
+  static final _$createEventCreateRule = $grpc.ClientMethod<
+          $0.CreateEventCreateRuleRequest, $6.EventCreateRule>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateEventCreateRule',
+      ($0.CreateEventCreateRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.EventCreateRule.fromBuffer(value));
+  static final _$updateEventCreateRule = $grpc.ClientMethod<
+          $0.UpdateEventCreateRuleRequest, $6.EventCreateRule>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateEventCreateRule',
+      ($0.UpdateEventCreateRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.EventCreateRule.fromBuffer(value));
+  static final _$deleteEventCreateRule = $grpc.ClientMethod<
+          $0.DeleteEventCreateRuleRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteEventCreateRule',
+      ($0.DeleteEventCreateRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
 
   AnalyticsAdminServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -982,6 +1227,39 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
     return $createUnaryCall(_$archiveAudience, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.SearchAds360Link> getSearchAds360Link(
+      $0.GetSearchAds360LinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSearchAds360Link, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListSearchAds360LinksResponse> listSearchAds360Links(
+      $0.ListSearchAds360LinksRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listSearchAds360Links, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SearchAds360Link> createSearchAds360Link(
+      $0.CreateSearchAds360LinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSearchAds360Link, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteSearchAds360Link(
+      $0.DeleteSearchAds360LinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteSearchAds360Link, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SearchAds360Link> updateSearchAds360Link(
+      $0.UpdateSearchAds360LinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSearchAds360Link, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$1.AttributionSettings> getAttributionSettings(
       $0.GetAttributionSettingsRequest request,
       {$grpc.CallOptions? options}) {
@@ -1000,6 +1278,249 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.RunAccessReportRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$runAccessReport, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AccessBinding> createAccessBinding(
+      $0.CreateAccessBindingRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAccessBinding, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AccessBinding> getAccessBinding(
+      $0.GetAccessBindingRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccessBinding, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AccessBinding> updateAccessBinding(
+      $0.UpdateAccessBindingRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateAccessBinding, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteAccessBinding(
+      $0.DeleteAccessBindingRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAccessBinding, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListAccessBindingsResponse> listAccessBindings(
+      $0.ListAccessBindingsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAccessBindings, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BatchCreateAccessBindingsResponse>
+      batchCreateAccessBindings($0.BatchCreateAccessBindingsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchCreateAccessBindings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BatchGetAccessBindingsResponse>
+      batchGetAccessBindings($0.BatchGetAccessBindingsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchGetAccessBindings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BatchUpdateAccessBindingsResponse>
+      batchUpdateAccessBindings($0.BatchUpdateAccessBindingsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchUpdateAccessBindings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> batchDeleteAccessBindings(
+      $0.BatchDeleteAccessBindingsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchDeleteAccessBindings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ExpandedDataSet> getExpandedDataSet(
+      $0.GetExpandedDataSetRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getExpandedDataSet, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListExpandedDataSetsResponse> listExpandedDataSets(
+      $0.ListExpandedDataSetsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listExpandedDataSets, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ExpandedDataSet> createExpandedDataSet(
+      $0.CreateExpandedDataSetRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createExpandedDataSet, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ExpandedDataSet> updateExpandedDataSet(
+      $0.UpdateExpandedDataSetRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateExpandedDataSet, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteExpandedDataSet(
+      $0.DeleteExpandedDataSetRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteExpandedDataSet, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ChannelGroup> getChannelGroup(
+      $0.GetChannelGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getChannelGroup, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListChannelGroupsResponse> listChannelGroups(
+      $0.ListChannelGroupsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listChannelGroups, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ChannelGroup> createChannelGroup(
+      $0.CreateChannelGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createChannelGroup, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ChannelGroup> updateChannelGroup(
+      $0.UpdateChannelGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateChannelGroup, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteChannelGroup(
+      $0.DeleteChannelGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteChannelGroup, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.SetAutomatedGa4ConfigurationOptOutResponse>
+      setAutomatedGa4ConfigurationOptOut(
+          $0.SetAutomatedGa4ConfigurationOptOutRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$setAutomatedGa4ConfigurationOptOut, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.FetchAutomatedGa4ConfigurationOptOutResponse>
+      fetchAutomatedGa4ConfigurationOptOut(
+          $0.FetchAutomatedGa4ConfigurationOptOutRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$fetchAutomatedGa4ConfigurationOptOut, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.BigQueryLink> getBigQueryLink(
+      $0.GetBigQueryLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBigQueryLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListBigQueryLinksResponse> listBigQueryLinks(
+      $0.ListBigQueryLinksRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listBigQueryLinks, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.EnhancedMeasurementSettings>
+      getEnhancedMeasurementSettings(
+          $0.GetEnhancedMeasurementSettingsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getEnhancedMeasurementSettings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.EnhancedMeasurementSettings>
+      updateEnhancedMeasurementSettings(
+          $0.UpdateEnhancedMeasurementSettingsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateEnhancedMeasurementSettings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateConnectedSiteTagResponse>
+      createConnectedSiteTag($0.CreateConnectedSiteTagRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createConnectedSiteTag, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteConnectedSiteTag(
+      $0.DeleteConnectedSiteTagRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteConnectedSiteTag, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListConnectedSiteTagsResponse> listConnectedSiteTags(
+      $0.ListConnectedSiteTagsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listConnectedSiteTags, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.FetchConnectedGa4PropertyResponse>
+      fetchConnectedGa4Property($0.FetchConnectedGa4PropertyRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$fetchConnectedGa4Property, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AdSenseLink> getAdSenseLink(
+      $0.GetAdSenseLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAdSenseLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.AdSenseLink> createAdSenseLink(
+      $0.CreateAdSenseLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAdSenseLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteAdSenseLink(
+      $0.DeleteAdSenseLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAdSenseLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListAdSenseLinksResponse> listAdSenseLinks(
+      $0.ListAdSenseLinksRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAdSenseLinks, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.EventCreateRule> getEventCreateRule(
+      $0.GetEventCreateRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getEventCreateRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListEventCreateRulesResponse> listEventCreateRules(
+      $0.ListEventCreateRulesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listEventCreateRules, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.EventCreateRule> createEventCreateRule(
+      $0.CreateEventCreateRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createEventCreateRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.EventCreateRule> updateEventCreateRule(
+      $0.UpdateEventCreateRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateEventCreateRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteEventCreateRule(
+      $0.DeleteEventCreateRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEventCreateRule, request, options: options);
   }
 }
 
@@ -1686,6 +2207,50 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ArchiveAudienceRequest.fromBuffer(value),
         ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetSearchAds360LinkRequest, $1.SearchAds360Link>(
+            'GetSearchAds360Link',
+            getSearchAds360Link_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetSearchAds360LinkRequest.fromBuffer(value),
+            ($1.SearchAds360Link value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListSearchAds360LinksRequest,
+            $0.ListSearchAds360LinksResponse>(
+        'ListSearchAds360Links',
+        listSearchAds360Links_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListSearchAds360LinksRequest.fromBuffer(value),
+        ($0.ListSearchAds360LinksResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateSearchAds360LinkRequest,
+            $1.SearchAds360Link>(
+        'CreateSearchAds360Link',
+        createSearchAds360Link_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateSearchAds360LinkRequest.fromBuffer(value),
+        ($1.SearchAds360Link value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteSearchAds360LinkRequest, $2.Empty>(
+        'DeleteSearchAds360Link',
+        deleteSearchAds360Link_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteSearchAds360LinkRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateSearchAds360LinkRequest,
+            $1.SearchAds360Link>(
+        'UpdateSearchAds360Link',
+        updateSearchAds360Link_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateSearchAds360LinkRequest.fromBuffer(value),
+        ($1.SearchAds360Link value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetAttributionSettingsRequest,
             $1.AttributionSettings>(
         'GetAttributionSettings',
@@ -1713,6 +2278,341 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.RunAccessReportRequest.fromBuffer(value),
         ($0.RunAccessReportResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateAccessBindingRequest, $1.AccessBinding>(
+            'CreateAccessBinding',
+            createAccessBinding_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateAccessBindingRequest.fromBuffer(value),
+            ($1.AccessBinding value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetAccessBindingRequest, $1.AccessBinding>(
+            'GetAccessBinding',
+            getAccessBinding_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetAccessBindingRequest.fromBuffer(value),
+            ($1.AccessBinding value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.UpdateAccessBindingRequest, $1.AccessBinding>(
+            'UpdateAccessBinding',
+            updateAccessBinding_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.UpdateAccessBindingRequest.fromBuffer(value),
+            ($1.AccessBinding value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteAccessBindingRequest, $2.Empty>(
+        'DeleteAccessBinding',
+        deleteAccessBinding_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteAccessBindingRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListAccessBindingsRequest,
+            $0.ListAccessBindingsResponse>(
+        'ListAccessBindings',
+        listAccessBindings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListAccessBindingsRequest.fromBuffer(value),
+        ($0.ListAccessBindingsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchCreateAccessBindingsRequest,
+            $0.BatchCreateAccessBindingsResponse>(
+        'BatchCreateAccessBindings',
+        batchCreateAccessBindings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BatchCreateAccessBindingsRequest.fromBuffer(value),
+        ($0.BatchCreateAccessBindingsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchGetAccessBindingsRequest,
+            $0.BatchGetAccessBindingsResponse>(
+        'BatchGetAccessBindings',
+        batchGetAccessBindings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BatchGetAccessBindingsRequest.fromBuffer(value),
+        ($0.BatchGetAccessBindingsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchUpdateAccessBindingsRequest,
+            $0.BatchUpdateAccessBindingsResponse>(
+        'BatchUpdateAccessBindings',
+        batchUpdateAccessBindings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BatchUpdateAccessBindingsRequest.fromBuffer(value),
+        ($0.BatchUpdateAccessBindingsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.BatchDeleteAccessBindingsRequest, $2.Empty>(
+            'BatchDeleteAccessBindings',
+            batchDeleteAccessBindings_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.BatchDeleteAccessBindingsRequest.fromBuffer(value),
+            ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetExpandedDataSetRequest, $4.ExpandedDataSet>(
+            'GetExpandedDataSet',
+            getExpandedDataSet_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetExpandedDataSetRequest.fromBuffer(value),
+            ($4.ExpandedDataSet value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListExpandedDataSetsRequest,
+            $0.ListExpandedDataSetsResponse>(
+        'ListExpandedDataSets',
+        listExpandedDataSets_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListExpandedDataSetsRequest.fromBuffer(value),
+        ($0.ListExpandedDataSetsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateExpandedDataSetRequest,
+            $4.ExpandedDataSet>(
+        'CreateExpandedDataSet',
+        createExpandedDataSet_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateExpandedDataSetRequest.fromBuffer(value),
+        ($4.ExpandedDataSet value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateExpandedDataSetRequest,
+            $4.ExpandedDataSet>(
+        'UpdateExpandedDataSet',
+        updateExpandedDataSet_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateExpandedDataSetRequest.fromBuffer(value),
+        ($4.ExpandedDataSet value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteExpandedDataSetRequest, $2.Empty>(
+        'DeleteExpandedDataSet',
+        deleteExpandedDataSet_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteExpandedDataSetRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetChannelGroupRequest, $5.ChannelGroup>(
+        'GetChannelGroup',
+        getChannelGroup_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetChannelGroupRequest.fromBuffer(value),
+        ($5.ChannelGroup value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListChannelGroupsRequest,
+            $0.ListChannelGroupsResponse>(
+        'ListChannelGroups',
+        listChannelGroups_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListChannelGroupsRequest.fromBuffer(value),
+        ($0.ListChannelGroupsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateChannelGroupRequest, $5.ChannelGroup>(
+            'CreateChannelGroup',
+            createChannelGroup_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateChannelGroupRequest.fromBuffer(value),
+            ($5.ChannelGroup value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.UpdateChannelGroupRequest, $5.ChannelGroup>(
+            'UpdateChannelGroup',
+            updateChannelGroup_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.UpdateChannelGroupRequest.fromBuffer(value),
+            ($5.ChannelGroup value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteChannelGroupRequest, $2.Empty>(
+        'DeleteChannelGroup',
+        deleteChannelGroup_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteChannelGroupRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SetAutomatedGa4ConfigurationOptOutRequest,
+            $0.SetAutomatedGa4ConfigurationOptOutResponse>(
+        'SetAutomatedGa4ConfigurationOptOut',
+        setAutomatedGa4ConfigurationOptOut_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.SetAutomatedGa4ConfigurationOptOutRequest.fromBuffer(value),
+        ($0.SetAutomatedGa4ConfigurationOptOutResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.FetchAutomatedGa4ConfigurationOptOutRequest,
+            $0.FetchAutomatedGa4ConfigurationOptOutResponse>(
+        'FetchAutomatedGa4ConfigurationOptOut',
+        fetchAutomatedGa4ConfigurationOptOut_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.FetchAutomatedGa4ConfigurationOptOutRequest.fromBuffer(value),
+        ($0.FetchAutomatedGa4ConfigurationOptOutResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBigQueryLinkRequest, $1.BigQueryLink>(
+        'GetBigQueryLink',
+        getBigQueryLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBigQueryLinkRequest.fromBuffer(value),
+        ($1.BigQueryLink value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListBigQueryLinksRequest,
+            $0.ListBigQueryLinksResponse>(
+        'ListBigQueryLinks',
+        listBigQueryLinks_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListBigQueryLinksRequest.fromBuffer(value),
+        ($0.ListBigQueryLinksResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetEnhancedMeasurementSettingsRequest,
+            $1.EnhancedMeasurementSettings>(
+        'GetEnhancedMeasurementSettings',
+        getEnhancedMeasurementSettings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetEnhancedMeasurementSettingsRequest.fromBuffer(value),
+        ($1.EnhancedMeasurementSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateEnhancedMeasurementSettingsRequest,
+            $1.EnhancedMeasurementSettings>(
+        'UpdateEnhancedMeasurementSettings',
+        updateEnhancedMeasurementSettings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateEnhancedMeasurementSettingsRequest.fromBuffer(value),
+        ($1.EnhancedMeasurementSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateConnectedSiteTagRequest,
+            $0.CreateConnectedSiteTagResponse>(
+        'CreateConnectedSiteTag',
+        createConnectedSiteTag_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateConnectedSiteTagRequest.fromBuffer(value),
+        ($0.CreateConnectedSiteTagResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteConnectedSiteTagRequest, $2.Empty>(
+        'DeleteConnectedSiteTag',
+        deleteConnectedSiteTag_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteConnectedSiteTagRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListConnectedSiteTagsRequest,
+            $0.ListConnectedSiteTagsResponse>(
+        'ListConnectedSiteTags',
+        listConnectedSiteTags_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListConnectedSiteTagsRequest.fromBuffer(value),
+        ($0.ListConnectedSiteTagsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.FetchConnectedGa4PropertyRequest,
+            $0.FetchConnectedGa4PropertyResponse>(
+        'FetchConnectedGa4Property',
+        fetchConnectedGa4Property_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.FetchConnectedGa4PropertyRequest.fromBuffer(value),
+        ($0.FetchConnectedGa4PropertyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetAdSenseLinkRequest, $1.AdSenseLink>(
+        'GetAdSenseLink',
+        getAdSenseLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetAdSenseLinkRequest.fromBuffer(value),
+        ($1.AdSenseLink value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateAdSenseLinkRequest, $1.AdSenseLink>(
+        'CreateAdSenseLink',
+        createAdSenseLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateAdSenseLinkRequest.fromBuffer(value),
+        ($1.AdSenseLink value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteAdSenseLinkRequest, $2.Empty>(
+        'DeleteAdSenseLink',
+        deleteAdSenseLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteAdSenseLinkRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListAdSenseLinksRequest,
+            $0.ListAdSenseLinksResponse>(
+        'ListAdSenseLinks',
+        listAdSenseLinks_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListAdSenseLinksRequest.fromBuffer(value),
+        ($0.ListAdSenseLinksResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetEventCreateRuleRequest, $6.EventCreateRule>(
+            'GetEventCreateRule',
+            getEventCreateRule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetEventCreateRuleRequest.fromBuffer(value),
+            ($6.EventCreateRule value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListEventCreateRulesRequest,
+            $0.ListEventCreateRulesResponse>(
+        'ListEventCreateRules',
+        listEventCreateRules_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListEventCreateRulesRequest.fromBuffer(value),
+        ($0.ListEventCreateRulesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateEventCreateRuleRequest,
+            $6.EventCreateRule>(
+        'CreateEventCreateRule',
+        createEventCreateRule_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateEventCreateRuleRequest.fromBuffer(value),
+        ($6.EventCreateRule value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateEventCreateRuleRequest,
+            $6.EventCreateRule>(
+        'UpdateEventCreateRule',
+        updateEventCreateRule_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateEventCreateRuleRequest.fromBuffer(value),
+        ($6.EventCreateRule value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteEventCreateRuleRequest, $2.Empty>(
+        'DeleteEventCreateRule',
+        deleteEventCreateRule_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteEventCreateRuleRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Account> getAccount_Pre($grpc.ServiceCall call,
@@ -2169,6 +3069,35 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return archiveAudience(call, await request);
   }
 
+  $async.Future<$1.SearchAds360Link> getSearchAds360Link_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetSearchAds360LinkRequest> request) async {
+    return getSearchAds360Link(call, await request);
+  }
+
+  $async.Future<$0.ListSearchAds360LinksResponse> listSearchAds360Links_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListSearchAds360LinksRequest> request) async {
+    return listSearchAds360Links(call, await request);
+  }
+
+  $async.Future<$1.SearchAds360Link> createSearchAds360Link_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateSearchAds360LinkRequest> request) async {
+    return createSearchAds360Link(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteSearchAds360Link_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteSearchAds360LinkRequest> request) async {
+    return deleteSearchAds360Link(call, await request);
+  }
+
+  $async.Future<$1.SearchAds360Link> updateSearchAds360Link_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateSearchAds360LinkRequest> request) async {
+    return updateSearchAds360Link(call, await request);
+  }
+
   $async.Future<$1.AttributionSettings> getAttributionSettings_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetAttributionSettingsRequest> request) async {
@@ -2185,6 +3114,228 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call,
       $async.Future<$0.RunAccessReportRequest> request) async {
     return runAccessReport(call, await request);
+  }
+
+  $async.Future<$1.AccessBinding> createAccessBinding_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateAccessBindingRequest> request) async {
+    return createAccessBinding(call, await request);
+  }
+
+  $async.Future<$1.AccessBinding> getAccessBinding_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetAccessBindingRequest> request) async {
+    return getAccessBinding(call, await request);
+  }
+
+  $async.Future<$1.AccessBinding> updateAccessBinding_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateAccessBindingRequest> request) async {
+    return updateAccessBinding(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteAccessBinding_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteAccessBindingRequest> request) async {
+    return deleteAccessBinding(call, await request);
+  }
+
+  $async.Future<$0.ListAccessBindingsResponse> listAccessBindings_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListAccessBindingsRequest> request) async {
+    return listAccessBindings(call, await request);
+  }
+
+  $async.Future<$0.BatchCreateAccessBindingsResponse>
+      batchCreateAccessBindings_Pre($grpc.ServiceCall call,
+          $async.Future<$0.BatchCreateAccessBindingsRequest> request) async {
+    return batchCreateAccessBindings(call, await request);
+  }
+
+  $async.Future<$0.BatchGetAccessBindingsResponse> batchGetAccessBindings_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.BatchGetAccessBindingsRequest> request) async {
+    return batchGetAccessBindings(call, await request);
+  }
+
+  $async.Future<$0.BatchUpdateAccessBindingsResponse>
+      batchUpdateAccessBindings_Pre($grpc.ServiceCall call,
+          $async.Future<$0.BatchUpdateAccessBindingsRequest> request) async {
+    return batchUpdateAccessBindings(call, await request);
+  }
+
+  $async.Future<$2.Empty> batchDeleteAccessBindings_Pre($grpc.ServiceCall call,
+      $async.Future<$0.BatchDeleteAccessBindingsRequest> request) async {
+    return batchDeleteAccessBindings(call, await request);
+  }
+
+  $async.Future<$4.ExpandedDataSet> getExpandedDataSet_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetExpandedDataSetRequest> request) async {
+    return getExpandedDataSet(call, await request);
+  }
+
+  $async.Future<$0.ListExpandedDataSetsResponse> listExpandedDataSets_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListExpandedDataSetsRequest> request) async {
+    return listExpandedDataSets(call, await request);
+  }
+
+  $async.Future<$4.ExpandedDataSet> createExpandedDataSet_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateExpandedDataSetRequest> request) async {
+    return createExpandedDataSet(call, await request);
+  }
+
+  $async.Future<$4.ExpandedDataSet> updateExpandedDataSet_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateExpandedDataSetRequest> request) async {
+    return updateExpandedDataSet(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteExpandedDataSet_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteExpandedDataSetRequest> request) async {
+    return deleteExpandedDataSet(call, await request);
+  }
+
+  $async.Future<$5.ChannelGroup> getChannelGroup_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetChannelGroupRequest> request) async {
+    return getChannelGroup(call, await request);
+  }
+
+  $async.Future<$0.ListChannelGroupsResponse> listChannelGroups_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListChannelGroupsRequest> request) async {
+    return listChannelGroups(call, await request);
+  }
+
+  $async.Future<$5.ChannelGroup> createChannelGroup_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateChannelGroupRequest> request) async {
+    return createChannelGroup(call, await request);
+  }
+
+  $async.Future<$5.ChannelGroup> updateChannelGroup_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateChannelGroupRequest> request) async {
+    return updateChannelGroup(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteChannelGroup_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteChannelGroupRequest> request) async {
+    return deleteChannelGroup(call, await request);
+  }
+
+  $async.Future<$0.SetAutomatedGa4ConfigurationOptOutResponse>
+      setAutomatedGa4ConfigurationOptOut_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.SetAutomatedGa4ConfigurationOptOutRequest>
+              request) async {
+    return setAutomatedGa4ConfigurationOptOut(call, await request);
+  }
+
+  $async.Future<$0.FetchAutomatedGa4ConfigurationOptOutResponse>
+      fetchAutomatedGa4ConfigurationOptOut_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.FetchAutomatedGa4ConfigurationOptOutRequest>
+              request) async {
+    return fetchAutomatedGa4ConfigurationOptOut(call, await request);
+  }
+
+  $async.Future<$1.BigQueryLink> getBigQueryLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetBigQueryLinkRequest> request) async {
+    return getBigQueryLink(call, await request);
+  }
+
+  $async.Future<$0.ListBigQueryLinksResponse> listBigQueryLinks_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListBigQueryLinksRequest> request) async {
+    return listBigQueryLinks(call, await request);
+  }
+
+  $async.Future<$1.EnhancedMeasurementSettings>
+      getEnhancedMeasurementSettings_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.GetEnhancedMeasurementSettingsRequest>
+              request) async {
+    return getEnhancedMeasurementSettings(call, await request);
+  }
+
+  $async.Future<$1.EnhancedMeasurementSettings>
+      updateEnhancedMeasurementSettings_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.UpdateEnhancedMeasurementSettingsRequest>
+              request) async {
+    return updateEnhancedMeasurementSettings(call, await request);
+  }
+
+  $async.Future<$0.CreateConnectedSiteTagResponse> createConnectedSiteTag_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateConnectedSiteTagRequest> request) async {
+    return createConnectedSiteTag(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteConnectedSiteTag_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteConnectedSiteTagRequest> request) async {
+    return deleteConnectedSiteTag(call, await request);
+  }
+
+  $async.Future<$0.ListConnectedSiteTagsResponse> listConnectedSiteTags_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListConnectedSiteTagsRequest> request) async {
+    return listConnectedSiteTags(call, await request);
+  }
+
+  $async.Future<$0.FetchConnectedGa4PropertyResponse>
+      fetchConnectedGa4Property_Pre($grpc.ServiceCall call,
+          $async.Future<$0.FetchConnectedGa4PropertyRequest> request) async {
+    return fetchConnectedGa4Property(call, await request);
+  }
+
+  $async.Future<$1.AdSenseLink> getAdSenseLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetAdSenseLinkRequest> request) async {
+    return getAdSenseLink(call, await request);
+  }
+
+  $async.Future<$1.AdSenseLink> createAdSenseLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateAdSenseLinkRequest> request) async {
+    return createAdSenseLink(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteAdSenseLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteAdSenseLinkRequest> request) async {
+    return deleteAdSenseLink(call, await request);
+  }
+
+  $async.Future<$0.ListAdSenseLinksResponse> listAdSenseLinks_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListAdSenseLinksRequest> request) async {
+    return listAdSenseLinks(call, await request);
+  }
+
+  $async.Future<$6.EventCreateRule> getEventCreateRule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetEventCreateRuleRequest> request) async {
+    return getEventCreateRule(call, await request);
+  }
+
+  $async.Future<$0.ListEventCreateRulesResponse> listEventCreateRules_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListEventCreateRulesRequest> request) async {
+    return listEventCreateRules(call, await request);
+  }
+
+  $async.Future<$6.EventCreateRule> createEventCreateRule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateEventCreateRuleRequest> request) async {
+    return createEventCreateRule(call, await request);
+  }
+
+  $async.Future<$6.EventCreateRule> updateEventCreateRule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateEventCreateRuleRequest> request) async {
+    return updateEventCreateRule(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteEventCreateRule_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteEventCreateRuleRequest> request) async {
+    return deleteEventCreateRule(call, await request);
   }
 
   $async.Future<$1.Account> getAccount(
@@ -2355,10 +3506,99 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.UpdateAudienceRequest request);
   $async.Future<$2.Empty> archiveAudience(
       $grpc.ServiceCall call, $0.ArchiveAudienceRequest request);
+  $async.Future<$1.SearchAds360Link> getSearchAds360Link(
+      $grpc.ServiceCall call, $0.GetSearchAds360LinkRequest request);
+  $async.Future<$0.ListSearchAds360LinksResponse> listSearchAds360Links(
+      $grpc.ServiceCall call, $0.ListSearchAds360LinksRequest request);
+  $async.Future<$1.SearchAds360Link> createSearchAds360Link(
+      $grpc.ServiceCall call, $0.CreateSearchAds360LinkRequest request);
+  $async.Future<$2.Empty> deleteSearchAds360Link(
+      $grpc.ServiceCall call, $0.DeleteSearchAds360LinkRequest request);
+  $async.Future<$1.SearchAds360Link> updateSearchAds360Link(
+      $grpc.ServiceCall call, $0.UpdateSearchAds360LinkRequest request);
   $async.Future<$1.AttributionSettings> getAttributionSettings(
       $grpc.ServiceCall call, $0.GetAttributionSettingsRequest request);
   $async.Future<$1.AttributionSettings> updateAttributionSettings(
       $grpc.ServiceCall call, $0.UpdateAttributionSettingsRequest request);
   $async.Future<$0.RunAccessReportResponse> runAccessReport(
       $grpc.ServiceCall call, $0.RunAccessReportRequest request);
+  $async.Future<$1.AccessBinding> createAccessBinding(
+      $grpc.ServiceCall call, $0.CreateAccessBindingRequest request);
+  $async.Future<$1.AccessBinding> getAccessBinding(
+      $grpc.ServiceCall call, $0.GetAccessBindingRequest request);
+  $async.Future<$1.AccessBinding> updateAccessBinding(
+      $grpc.ServiceCall call, $0.UpdateAccessBindingRequest request);
+  $async.Future<$2.Empty> deleteAccessBinding(
+      $grpc.ServiceCall call, $0.DeleteAccessBindingRequest request);
+  $async.Future<$0.ListAccessBindingsResponse> listAccessBindings(
+      $grpc.ServiceCall call, $0.ListAccessBindingsRequest request);
+  $async.Future<$0.BatchCreateAccessBindingsResponse> batchCreateAccessBindings(
+      $grpc.ServiceCall call, $0.BatchCreateAccessBindingsRequest request);
+  $async.Future<$0.BatchGetAccessBindingsResponse> batchGetAccessBindings(
+      $grpc.ServiceCall call, $0.BatchGetAccessBindingsRequest request);
+  $async.Future<$0.BatchUpdateAccessBindingsResponse> batchUpdateAccessBindings(
+      $grpc.ServiceCall call, $0.BatchUpdateAccessBindingsRequest request);
+  $async.Future<$2.Empty> batchDeleteAccessBindings(
+      $grpc.ServiceCall call, $0.BatchDeleteAccessBindingsRequest request);
+  $async.Future<$4.ExpandedDataSet> getExpandedDataSet(
+      $grpc.ServiceCall call, $0.GetExpandedDataSetRequest request);
+  $async.Future<$0.ListExpandedDataSetsResponse> listExpandedDataSets(
+      $grpc.ServiceCall call, $0.ListExpandedDataSetsRequest request);
+  $async.Future<$4.ExpandedDataSet> createExpandedDataSet(
+      $grpc.ServiceCall call, $0.CreateExpandedDataSetRequest request);
+  $async.Future<$4.ExpandedDataSet> updateExpandedDataSet(
+      $grpc.ServiceCall call, $0.UpdateExpandedDataSetRequest request);
+  $async.Future<$2.Empty> deleteExpandedDataSet(
+      $grpc.ServiceCall call, $0.DeleteExpandedDataSetRequest request);
+  $async.Future<$5.ChannelGroup> getChannelGroup(
+      $grpc.ServiceCall call, $0.GetChannelGroupRequest request);
+  $async.Future<$0.ListChannelGroupsResponse> listChannelGroups(
+      $grpc.ServiceCall call, $0.ListChannelGroupsRequest request);
+  $async.Future<$5.ChannelGroup> createChannelGroup(
+      $grpc.ServiceCall call, $0.CreateChannelGroupRequest request);
+  $async.Future<$5.ChannelGroup> updateChannelGroup(
+      $grpc.ServiceCall call, $0.UpdateChannelGroupRequest request);
+  $async.Future<$2.Empty> deleteChannelGroup(
+      $grpc.ServiceCall call, $0.DeleteChannelGroupRequest request);
+  $async.Future<$0.SetAutomatedGa4ConfigurationOptOutResponse>
+      setAutomatedGa4ConfigurationOptOut($grpc.ServiceCall call,
+          $0.SetAutomatedGa4ConfigurationOptOutRequest request);
+  $async.Future<$0.FetchAutomatedGa4ConfigurationOptOutResponse>
+      fetchAutomatedGa4ConfigurationOptOut($grpc.ServiceCall call,
+          $0.FetchAutomatedGa4ConfigurationOptOutRequest request);
+  $async.Future<$1.BigQueryLink> getBigQueryLink(
+      $grpc.ServiceCall call, $0.GetBigQueryLinkRequest request);
+  $async.Future<$0.ListBigQueryLinksResponse> listBigQueryLinks(
+      $grpc.ServiceCall call, $0.ListBigQueryLinksRequest request);
+  $async.Future<$1.EnhancedMeasurementSettings> getEnhancedMeasurementSettings(
+      $grpc.ServiceCall call, $0.GetEnhancedMeasurementSettingsRequest request);
+  $async.Future<$1.EnhancedMeasurementSettings>
+      updateEnhancedMeasurementSettings($grpc.ServiceCall call,
+          $0.UpdateEnhancedMeasurementSettingsRequest request);
+  $async.Future<$0.CreateConnectedSiteTagResponse> createConnectedSiteTag(
+      $grpc.ServiceCall call, $0.CreateConnectedSiteTagRequest request);
+  $async.Future<$2.Empty> deleteConnectedSiteTag(
+      $grpc.ServiceCall call, $0.DeleteConnectedSiteTagRequest request);
+  $async.Future<$0.ListConnectedSiteTagsResponse> listConnectedSiteTags(
+      $grpc.ServiceCall call, $0.ListConnectedSiteTagsRequest request);
+  $async.Future<$0.FetchConnectedGa4PropertyResponse> fetchConnectedGa4Property(
+      $grpc.ServiceCall call, $0.FetchConnectedGa4PropertyRequest request);
+  $async.Future<$1.AdSenseLink> getAdSenseLink(
+      $grpc.ServiceCall call, $0.GetAdSenseLinkRequest request);
+  $async.Future<$1.AdSenseLink> createAdSenseLink(
+      $grpc.ServiceCall call, $0.CreateAdSenseLinkRequest request);
+  $async.Future<$2.Empty> deleteAdSenseLink(
+      $grpc.ServiceCall call, $0.DeleteAdSenseLinkRequest request);
+  $async.Future<$0.ListAdSenseLinksResponse> listAdSenseLinks(
+      $grpc.ServiceCall call, $0.ListAdSenseLinksRequest request);
+  $async.Future<$6.EventCreateRule> getEventCreateRule(
+      $grpc.ServiceCall call, $0.GetEventCreateRuleRequest request);
+  $async.Future<$0.ListEventCreateRulesResponse> listEventCreateRules(
+      $grpc.ServiceCall call, $0.ListEventCreateRulesRequest request);
+  $async.Future<$6.EventCreateRule> createEventCreateRule(
+      $grpc.ServiceCall call, $0.CreateEventCreateRuleRequest request);
+  $async.Future<$6.EventCreateRule> updateEventCreateRule(
+      $grpc.ServiceCall call, $0.UpdateEventCreateRuleRequest request);
+  $async.Future<$2.Empty> deleteEventCreateRule(
+      $grpc.ServiceCall call, $0.DeleteEventCreateRuleRequest request);
 }

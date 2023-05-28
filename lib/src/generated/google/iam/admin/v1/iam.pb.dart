@@ -2081,7 +2081,7 @@ class SignBlobRequest extends $pb.GeneratedMessage {
   factory SignBlobRequest({
     @$core.Deprecated('This field is deprecated.') $core.String? name,
     @$core.Deprecated('This field is deprecated.')
-        $core.List<$core.int>? bytesToSign,
+    $core.List<$core.int>? bytesToSign,
   }) {
     final _result = create();
     if (name != null) {
@@ -2181,7 +2181,7 @@ class SignBlobResponse extends $pb.GeneratedMessage {
   factory SignBlobResponse({
     @$core.Deprecated('This field is deprecated.') $core.String? keyId,
     @$core.Deprecated('This field is deprecated.')
-        $core.List<$core.int>? signature,
+    $core.List<$core.int>? signature,
   }) {
     final _result = create();
     if (keyId != null) {
@@ -3636,7 +3636,7 @@ class Permission extends $pb.GeneratedMessage {
     $core.String? title,
     $core.String? description,
     @$core.Deprecated('This field is deprecated.')
-        $core.bool? onlyInPredefinedRoles,
+    $core.bool? onlyInPredefinedRoles,
     Permission_PermissionLaunchStage? stage,
     Permission_CustomRolesSupportLevel? customRolesSupportLevel,
     $core.bool? apiDisabled,

@@ -18,7 +18,7 @@ const SpeedReadingInterval$json = const {
       '3': 1,
       '4': 1,
       '5': 5,
-      '9': 0,
+      '9': 1,
       '10': 'startPolylinePointIndex',
       '17': true
     },
@@ -27,7 +27,7 @@ const SpeedReadingInterval$json = const {
       '3': 2,
       '4': 1,
       '5': 5,
-      '9': 1,
+      '9': 2,
       '10': 'endPolylinePointIndex',
       '17': true
     },
@@ -37,11 +37,13 @@ const SpeedReadingInterval$json = const {
       '4': 1,
       '5': 14,
       '6': '.google.maps.routing.v2.SpeedReadingInterval.Speed',
+      '9': 0,
       '10': 'speed'
     },
   ],
   '4': const [SpeedReadingInterval_Speed$json],
   '8': const [
+    const {'1': 'speed_type'},
     const {'1': '_start_polyline_point_index'},
     const {'1': '_end_polyline_point_index'},
   ],
@@ -60,4 +62,4 @@ const SpeedReadingInterval_Speed$json = const {
 
 /// Descriptor for `SpeedReadingInterval`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List speedReadingIntervalDescriptor = $convert.base64Decode(
-    'ChRTcGVlZFJlYWRpbmdJbnRlcnZhbBJAChpzdGFydF9wb2x5bGluZV9wb2ludF9pbmRleBgBIAEoBUgAUhdzdGFydFBvbHlsaW5lUG9pbnRJbmRleIgBARI8ChhlbmRfcG9seWxpbmVfcG9pbnRfaW5kZXgYAiABKAVIAVIVZW5kUG9seWxpbmVQb2ludEluZGV4iAEBEkgKBXNwZWVkGAMgASgOMjIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5TcGVlZFJlYWRpbmdJbnRlcnZhbC5TcGVlZFIFc3BlZWQiRQoFU3BlZWQSFQoRU1BFRURfVU5TUEVDSUZJRUQQABIKCgZOT1JNQUwQARIICgRTTE9XEAISDwoLVFJBRkZJQ19KQU0QA0IdChtfc3RhcnRfcG9seWxpbmVfcG9pbnRfaW5kZXhCGwoZX2VuZF9wb2x5bGluZV9wb2ludF9pbmRleA==');
+    'ChRTcGVlZFJlYWRpbmdJbnRlcnZhbBJAChpzdGFydF9wb2x5bGluZV9wb2ludF9pbmRleBgBIAEoBUgBUhdzdGFydFBvbHlsaW5lUG9pbnRJbmRleIgBARI8ChhlbmRfcG9seWxpbmVfcG9pbnRfaW5kZXgYAiABKAVIAlIVZW5kUG9seWxpbmVQb2ludEluZGV4iAEBEkoKBXNwZWVkGAMgASgOMjIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5TcGVlZFJlYWRpbmdJbnRlcnZhbC5TcGVlZEgAUgVzcGVlZCJFCgVTcGVlZBIVChFTUEVFRF9VTlNQRUNJRklFRBAAEgoKBk5PUk1BTBABEggKBFNMT1cQAhIPCgtUUkFGRklDX0pBTRADQgwKCnNwZWVkX3R5cGVCHQobX3N0YXJ0X3BvbHlsaW5lX3BvaW50X2luZGV4QhsKGV9lbmRfcG9seWxpbmVfcG9pbnRfaW5kZXg=');

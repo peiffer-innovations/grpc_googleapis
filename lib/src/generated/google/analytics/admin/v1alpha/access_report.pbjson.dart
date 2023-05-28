@@ -514,12 +514,20 @@ const AccessQuota$json = const {
       '6': '.google.analytics.admin.v1alpha.AccessQuotaStatus',
       '10': 'serverErrorsPerProjectPerHour'
     },
+    const {
+      '1': 'tokens_per_project_per_hour',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.AccessQuotaStatus',
+      '10': 'tokensPerProjectPerHour'
+    },
   ],
 };
 
 /// Descriptor for `AccessQuota`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accessQuotaDescriptor = $convert.base64Decode(
-    'CgtBY2Nlc3NRdW90YRJXCg50b2tlbnNfcGVyX2RheRgBIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1c1IMdG9rZW5zUGVyRGF5ElkKD3Rva2Vuc19wZXJfaG91chgCIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1c1INdG9rZW5zUGVySG91chJiChNjb25jdXJyZW50X3JlcXVlc3RzGAMgASgLMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc1F1b3RhU3RhdHVzUhJjb25jdXJyZW50UmVxdWVzdHMSfAoic2VydmVyX2Vycm9yc19wZXJfcHJvamVjdF9wZXJfaG91chgEIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1c1Idc2VydmVyRXJyb3JzUGVyUHJvamVjdFBlckhvdXI=');
+    'CgtBY2Nlc3NRdW90YRJXCg50b2tlbnNfcGVyX2RheRgBIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1c1IMdG9rZW5zUGVyRGF5ElkKD3Rva2Vuc19wZXJfaG91chgCIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1c1INdG9rZW5zUGVySG91chJiChNjb25jdXJyZW50X3JlcXVlc3RzGAMgASgLMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc1F1b3RhU3RhdHVzUhJjb25jdXJyZW50UmVxdWVzdHMSfAoic2VydmVyX2Vycm9yc19wZXJfcHJvamVjdF9wZXJfaG91chgEIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1c1Idc2VydmVyRXJyb3JzUGVyUHJvamVjdFBlckhvdXISbwobdG9rZW5zX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAUgASgLMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc1F1b3RhU3RhdHVzUhd0b2tlbnNQZXJQcm9qZWN0UGVySG91cg==');
 @$core.Deprecated('Use accessQuotaStatusDescriptor instead')
 const AccessQuotaStatus$json = const {
   '1': 'AccessQuotaStatus',

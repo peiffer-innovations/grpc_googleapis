@@ -14,13 +14,14 @@ import '../../../protobuf/timestamp.pb.dart' as $2;
 import 'route_modifiers.pb.dart' as $3;
 import 'route.pb.dart' as $4;
 import 'fallback_info.pb.dart' as $5;
-import '../../../rpc/status.pb.dart' as $6;
-import '../../../protobuf/duration.pb.dart' as $7;
+import 'geocoding_results.pb.dart' as $6;
+import '../../../rpc/status.pb.dart' as $7;
+import '../../../protobuf/duration.pb.dart' as $8;
 
-import 'route_travel_mode.pbenum.dart' as $8;
-import 'routing_preference.pbenum.dart' as $9;
-import 'polyline.pbenum.dart' as $10;
-import 'units.pbenum.dart' as $11;
+import 'route_travel_mode.pbenum.dart' as $9;
+import 'routing_preference.pbenum.dart' as $10;
+import 'polyline.pbenum.dart' as $11;
+import 'units.pbenum.dart' as $12;
 import 'routes_service.pbenum.dart';
 
 export 'routes_service.pbenum.dart';
@@ -54,33 +55,33 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
             : 'intermediates',
         $pb.PbFieldType.PM,
         subBuilder: $1.Waypoint.create)
-    ..e<$8.RouteTravelMode>(
+    ..e<$9.RouteTravelMode>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'travelMode',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $8.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: $8.RouteTravelMode.valueOf,
-        enumValues: $8.RouteTravelMode.values)
-    ..e<$9.RoutingPreference>(
+        defaultOrMaker: $9.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
+        valueOf: $9.RouteTravelMode.valueOf,
+        enumValues: $9.RouteTravelMode.values)
+    ..e<$10.RoutingPreference>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'routingPreference',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $9.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
-        valueOf: $9.RoutingPreference.valueOf,
-        enumValues: $9.RoutingPreference.values)
-    ..e<$10.PolylineQuality>(
+        defaultOrMaker: $10.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
+        valueOf: $10.RoutingPreference.valueOf,
+        enumValues: $10.RoutingPreference.values)
+    ..e<$11.PolylineQuality>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'polylineQuality',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $10.PolylineQuality.POLYLINE_QUALITY_UNSPECIFIED,
-        valueOf: $10.PolylineQuality.valueOf,
-        enumValues: $10.PolylineQuality.values)
+        defaultOrMaker: $11.PolylineQuality.POLYLINE_QUALITY_UNSPECIFIED,
+        valueOf: $11.PolylineQuality.valueOf,
+        enumValues: $11.PolylineQuality.values)
     ..aOM<$2.Timestamp>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -103,24 +104,24 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'languageCode')
-    ..e<$11.Units>(
+    ..e<$12.Units>(
         11,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'units',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $11.Units.UNITS_UNSPECIFIED,
-        valueOf: $11.Units.valueOf,
-        enumValues: $11.Units.values)
-    ..e<$10.PolylineEncoding>(
+        defaultOrMaker: $12.Units.UNITS_UNSPECIFIED,
+        valueOf: $12.Units.valueOf,
+        enumValues: $12.Units.values)
+    ..e<$11.PolylineEncoding>(
         12,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'polylineEncoding',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $10.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
-        valueOf: $10.PolylineEncoding.valueOf,
-        enumValues: $10.PolylineEncoding.values)
+        defaultOrMaker: $11.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
+        valueOf: $11.PolylineEncoding.valueOf,
+        enumValues: $11.PolylineEncoding.values)
     ..pc<ComputeRoutesRequest_ReferenceRoute>(
         14,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -141,6 +142,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         enumValues: ComputeRoutesRequest_ExtraComputation.values,
         defaultEnumValue:
             ComputeRoutesRequest_ExtraComputation.EXTRA_COMPUTATION_UNSPECIFIED)
+    ..aOS(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'regionCode')
     ..hasRequiredFields = false;
 
   ComputeRoutesRequest._() : super();
@@ -148,18 +154,19 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     $1.Waypoint? origin,
     $1.Waypoint? destination,
     $core.Iterable<$1.Waypoint>? intermediates,
-    $8.RouteTravelMode? travelMode,
-    $9.RoutingPreference? routingPreference,
-    $10.PolylineQuality? polylineQuality,
+    $9.RouteTravelMode? travelMode,
+    $10.RoutingPreference? routingPreference,
+    $11.PolylineQuality? polylineQuality,
     $2.Timestamp? departureTime,
     $core.bool? computeAlternativeRoutes,
     $3.RouteModifiers? routeModifiers,
     $core.String? languageCode,
-    $11.Units? units,
-    $10.PolylineEncoding? polylineEncoding,
+    $12.Units? units,
+    $11.PolylineEncoding? polylineEncoding,
     $core.Iterable<ComputeRoutesRequest_ReferenceRoute>?
         requestedReferenceRoutes,
     $core.Iterable<ComputeRoutesRequest_ExtraComputation>? extraComputations,
+    $core.String? regionCode,
   }) {
     final _result = create();
     if (origin != null) {
@@ -203,6 +210,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     }
     if (extraComputations != null) {
       _result.extraComputations.addAll(extraComputations);
+    }
+    if (regionCode != null) {
+      _result.regionCode = regionCode;
     }
     return _result;
   }
@@ -266,9 +276,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   $core.List<$1.Waypoint> get intermediates => $_getList(2);
 
   @$pb.TagNumber(4)
-  $8.RouteTravelMode get travelMode => $_getN(3);
+  $9.RouteTravelMode get travelMode => $_getN(3);
   @$pb.TagNumber(4)
-  set travelMode($8.RouteTravelMode v) {
+  set travelMode($9.RouteTravelMode v) {
     setField(4, v);
   }
 
@@ -278,9 +288,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   void clearTravelMode() => clearField(4);
 
   @$pb.TagNumber(5)
-  $9.RoutingPreference get routingPreference => $_getN(4);
+  $10.RoutingPreference get routingPreference => $_getN(4);
   @$pb.TagNumber(5)
-  set routingPreference($9.RoutingPreference v) {
+  set routingPreference($10.RoutingPreference v) {
     setField(5, v);
   }
 
@@ -290,9 +300,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   void clearRoutingPreference() => clearField(5);
 
   @$pb.TagNumber(6)
-  $10.PolylineQuality get polylineQuality => $_getN(5);
+  $11.PolylineQuality get polylineQuality => $_getN(5);
   @$pb.TagNumber(6)
-  set polylineQuality($10.PolylineQuality v) {
+  set polylineQuality($11.PolylineQuality v) {
     setField(6, v);
   }
 
@@ -354,9 +364,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   void clearLanguageCode() => clearField(10);
 
   @$pb.TagNumber(11)
-  $11.Units get units => $_getN(10);
+  $12.Units get units => $_getN(10);
   @$pb.TagNumber(11)
-  set units($11.Units v) {
+  set units($12.Units v) {
     setField(11, v);
   }
 
@@ -366,9 +376,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   void clearUnits() => clearField(11);
 
   @$pb.TagNumber(12)
-  $10.PolylineEncoding get polylineEncoding => $_getN(11);
+  $11.PolylineEncoding get polylineEncoding => $_getN(11);
   @$pb.TagNumber(12)
-  set polylineEncoding($10.PolylineEncoding v) {
+  set polylineEncoding($11.PolylineEncoding v) {
     setField(12, v);
   }
 
@@ -384,6 +394,18 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $core.List<ComputeRoutesRequest_ExtraComputation> get extraComputations =>
       $_getList(13);
+
+  @$pb.TagNumber(16)
+  $core.String get regionCode => $_getSZ(14);
+  @$pb.TagNumber(16)
+  set regionCode($core.String v) {
+    $_setString(14, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasRegionCode() => $_has(14);
+  @$pb.TagNumber(16)
+  void clearRegionCode() => clearField(16);
 }
 
 class ComputeRoutesResponse extends $pb.GeneratedMessage {
@@ -409,12 +431,19 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
             ? ''
             : 'fallbackInfo',
         subBuilder: $5.FallbackInfo.create)
+    ..aOM<$6.GeocodingResults>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'geocodingResults',
+        subBuilder: $6.GeocodingResults.create)
     ..hasRequiredFields = false;
 
   ComputeRoutesResponse._() : super();
   factory ComputeRoutesResponse({
     $core.Iterable<$4.Route>? routes,
     $5.FallbackInfo? fallbackInfo,
+    $6.GeocodingResults? geocodingResults,
   }) {
     final _result = create();
     if (routes != null) {
@@ -422,6 +451,9 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
     }
     if (fallbackInfo != null) {
       _result.fallbackInfo = fallbackInfo;
+    }
+    if (geocodingResults != null) {
+      _result.geocodingResults = geocodingResults;
     }
     return _result;
   }
@@ -470,6 +502,20 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
   void clearFallbackInfo() => clearField(2);
   @$pb.TagNumber(2)
   $5.FallbackInfo ensureFallbackInfo() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $6.GeocodingResults get geocodingResults => $_getN(2);
+  @$pb.TagNumber(3)
+  set geocodingResults($6.GeocodingResults v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasGeocodingResults() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearGeocodingResults() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.GeocodingResults ensureGeocodingResults() => $_ensure(2);
 }
 
 class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
@@ -496,30 +542,35 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
             : 'destinations',
         $pb.PbFieldType.PM,
         subBuilder: RouteMatrixDestination.create)
-    ..e<$8.RouteTravelMode>(
+    ..e<$9.RouteTravelMode>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'travelMode',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $8.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: $8.RouteTravelMode.valueOf,
-        enumValues: $8.RouteTravelMode.values)
-    ..e<$9.RoutingPreference>(
+        defaultOrMaker: $9.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
+        valueOf: $9.RouteTravelMode.valueOf,
+        enumValues: $9.RouteTravelMode.values)
+    ..e<$10.RoutingPreference>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'routingPreference',
         $pb.PbFieldType.OE,
-        defaultOrMaker: $9.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
-        valueOf: $9.RoutingPreference.valueOf,
-        enumValues: $9.RoutingPreference.values)
+        defaultOrMaker: $10.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
+        valueOf: $10.RoutingPreference.valueOf,
+        enumValues: $10.RoutingPreference.values)
     ..aOM<$2.Timestamp>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'departureTime',
         subBuilder: $2.Timestamp.create)
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'languageCode')
     ..pc<ComputeRouteMatrixRequest_ExtraComputation>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -530,17 +581,24 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
         enumValues: ComputeRouteMatrixRequest_ExtraComputation.values,
         defaultEnumValue: ComputeRouteMatrixRequest_ExtraComputation
             .EXTRA_COMPUTATION_UNSPECIFIED)
+    ..aOS(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'regionCode')
     ..hasRequiredFields = false;
 
   ComputeRouteMatrixRequest._() : super();
   factory ComputeRouteMatrixRequest({
     $core.Iterable<RouteMatrixOrigin>? origins,
     $core.Iterable<RouteMatrixDestination>? destinations,
-    $8.RouteTravelMode? travelMode,
-    $9.RoutingPreference? routingPreference,
+    $9.RouteTravelMode? travelMode,
+    $10.RoutingPreference? routingPreference,
     $2.Timestamp? departureTime,
+    $core.String? languageCode,
     $core.Iterable<ComputeRouteMatrixRequest_ExtraComputation>?
         extraComputations,
+    $core.String? regionCode,
   }) {
     final _result = create();
     if (origins != null) {
@@ -558,8 +616,14 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
     if (departureTime != null) {
       _result.departureTime = departureTime;
     }
+    if (languageCode != null) {
+      _result.languageCode = languageCode;
+    }
     if (extraComputations != null) {
       _result.extraComputations.addAll(extraComputations);
+    }
+    if (regionCode != null) {
+      _result.regionCode = regionCode;
     }
     return _result;
   }
@@ -599,9 +663,9 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   $core.List<RouteMatrixDestination> get destinations => $_getList(1);
 
   @$pb.TagNumber(3)
-  $8.RouteTravelMode get travelMode => $_getN(2);
+  $9.RouteTravelMode get travelMode => $_getN(2);
   @$pb.TagNumber(3)
-  set travelMode($8.RouteTravelMode v) {
+  set travelMode($9.RouteTravelMode v) {
     setField(3, v);
   }
 
@@ -611,9 +675,9 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   void clearTravelMode() => clearField(3);
 
   @$pb.TagNumber(4)
-  $9.RoutingPreference get routingPreference => $_getN(3);
+  $10.RoutingPreference get routingPreference => $_getN(3);
   @$pb.TagNumber(4)
-  set routingPreference($9.RoutingPreference v) {
+  set routingPreference($10.RoutingPreference v) {
     setField(4, v);
   }
 
@@ -636,9 +700,33 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp ensureDepartureTime() => $_ensure(4);
 
+  @$pb.TagNumber(6)
+  $core.String get languageCode => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set languageCode($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasLanguageCode() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLanguageCode() => clearField(6);
+
   @$pb.TagNumber(8)
   $core.List<ComputeRouteMatrixRequest_ExtraComputation>
-      get extraComputations => $_getList(5);
+      get extraComputations => $_getList(6);
+
+  @$pb.TagNumber(9)
+  $core.String get regionCode => $_getSZ(7);
+  @$pb.TagNumber(9)
+  set regionCode($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasRegionCode() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearRegionCode() => clearField(9);
 }
 
 class RouteMatrixOrigin extends $pb.GeneratedMessage {
@@ -829,30 +917,30 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
             ? ''
             : 'destinationIndex',
         $pb.PbFieldType.O3)
-    ..aOM<$6.Status>(
+    ..aOM<$7.Status>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
-        subBuilder: $6.Status.create)
+        subBuilder: $7.Status.create)
     ..a<$core.int>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'distanceMeters',
         $pb.PbFieldType.O3)
-    ..aOM<$7.Duration>(
+    ..aOM<$8.Duration>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'duration',
-        subBuilder: $7.Duration.create)
-    ..aOM<$7.Duration>(
+        subBuilder: $8.Duration.create)
+    ..aOM<$8.Duration>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'staticDuration',
-        subBuilder: $7.Duration.create)
+        subBuilder: $8.Duration.create)
     ..aOM<$4.RouteTravelAdvisory>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -881,10 +969,10 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   factory RouteMatrixElement({
     $core.int? originIndex,
     $core.int? destinationIndex,
-    $6.Status? status,
+    $7.Status? status,
     $core.int? distanceMeters,
-    $7.Duration? duration,
-    $7.Duration? staticDuration,
+    $8.Duration? duration,
+    $8.Duration? staticDuration,
     $4.RouteTravelAdvisory? travelAdvisory,
     $5.FallbackInfo? fallbackInfo,
     RouteMatrixElementCondition? condition,
@@ -971,9 +1059,9 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   void clearDestinationIndex() => clearField(2);
 
   @$pb.TagNumber(3)
-  $6.Status get status => $_getN(2);
+  $7.Status get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status($6.Status v) {
+  set status($7.Status v) {
     setField(3, v);
   }
 
@@ -982,7 +1070,7 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Status ensureStatus() => $_ensure(2);
+  $7.Status ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.int get distanceMeters => $_getIZ(3);
@@ -997,9 +1085,9 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   void clearDistanceMeters() => clearField(4);
 
   @$pb.TagNumber(5)
-  $7.Duration get duration => $_getN(4);
+  $8.Duration get duration => $_getN(4);
   @$pb.TagNumber(5)
-  set duration($7.Duration v) {
+  set duration($8.Duration v) {
     setField(5, v);
   }
 
@@ -1008,12 +1096,12 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDuration() => clearField(5);
   @$pb.TagNumber(5)
-  $7.Duration ensureDuration() => $_ensure(4);
+  $8.Duration ensureDuration() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $7.Duration get staticDuration => $_getN(5);
+  $8.Duration get staticDuration => $_getN(5);
   @$pb.TagNumber(6)
-  set staticDuration($7.Duration v) {
+  set staticDuration($8.Duration v) {
     setField(6, v);
   }
 
@@ -1022,7 +1110,7 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearStaticDuration() => clearField(6);
   @$pb.TagNumber(6)
-  $7.Duration ensureStaticDuration() => $_ensure(5);
+  $8.Duration ensureStaticDuration() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $4.RouteTravelAdvisory get travelAdvisory => $_getN(6);

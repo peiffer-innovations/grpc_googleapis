@@ -29,7 +29,7 @@ class TableDisplayOptions extends $pb.GeneratedMessage {
   TableDisplayOptions._() : super();
   factory TableDisplayOptions({
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$core.String>? shownColumns,
+    $core.Iterable<$core.String>? shownColumns,
   }) {
     final _result = create();
     if (shownColumns != null) {

@@ -11,6 +11,10 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
 import '../../../protobuf/wrappers.pb.dart' as $1;
+import 'expanded_data_set.pb.dart' as $2;
+import 'channel_group.pb.dart' as $3;
+import 'audience.pb.dart' as $4;
+import 'event_create_and_edit.pb.dart' as $5;
 
 import 'resources.pbenum.dart';
 
@@ -2423,8 +2427,16 @@ enum ChangeHistoryChange_ChangeHistoryResource_Resource {
   customDimension,
   customMetric,
   dataRetentionSettings,
+  searchAds360Link,
   dataStream,
   attributionSettings,
+  expandedDataSet,
+  channelGroup,
+  bigqueryLink,
+  enhancedMeasurementSettings,
+  adsenseLink,
+  audience,
+  eventCreateRule,
   notSet
 }
 
@@ -2448,8 +2460,17 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     14: ChangeHistoryChange_ChangeHistoryResource_Resource.customMetric,
     15: ChangeHistoryChange_ChangeHistoryResource_Resource
         .dataRetentionSettings,
+    16: ChangeHistoryChange_ChangeHistoryResource_Resource.searchAds360Link,
     18: ChangeHistoryChange_ChangeHistoryResource_Resource.dataStream,
     20: ChangeHistoryChange_ChangeHistoryResource_Resource.attributionSettings,
+    21: ChangeHistoryChange_ChangeHistoryResource_Resource.expandedDataSet,
+    22: ChangeHistoryChange_ChangeHistoryResource_Resource.channelGroup,
+    23: ChangeHistoryChange_ChangeHistoryResource_Resource.bigqueryLink,
+    24: ChangeHistoryChange_ChangeHistoryResource_Resource
+        .enhancedMeasurementSettings,
+    27: ChangeHistoryChange_ChangeHistoryResource_Resource.adsenseLink,
+    28: ChangeHistoryChange_ChangeHistoryResource_Resource.audience,
+    29: ChangeHistoryChange_ChangeHistoryResource_Resource.eventCreateRule,
     0: ChangeHistoryChange_ChangeHistoryResource_Resource.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -2461,7 +2482,30 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
               ? ''
               : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 20])
+    ..oo(0, [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      27,
+      28,
+      29
+    ])
     ..aOM<Account>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2536,6 +2580,13 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
             ? ''
             : 'dataRetentionSettings',
         subBuilder: DataRetentionSettings.create)
+    ..aOM<SearchAds360Link>(
+        16,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'searchAds360Link',
+        protoName: 'search_ads_360_link',
+        subBuilder: SearchAds360Link.create)
     ..aOM<DataStream>(
         18,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -2548,6 +2599,48 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
             ? ''
             : 'attributionSettings',
         subBuilder: AttributionSettings.create)
+    ..aOM<$2.ExpandedDataSet>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'expandedDataSet',
+        subBuilder: $2.ExpandedDataSet.create)
+    ..aOM<$3.ChannelGroup>(
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'channelGroup',
+        subBuilder: $3.ChannelGroup.create)
+    ..aOM<BigQueryLink>(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bigqueryLink',
+        subBuilder: BigQueryLink.create)
+    ..aOM<EnhancedMeasurementSettings>(
+        24,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enhancedMeasurementSettings',
+        subBuilder: EnhancedMeasurementSettings.create)
+    ..aOM<AdSenseLink>(
+        27,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'adsenseLink',
+        subBuilder: AdSenseLink.create)
+    ..aOM<$4.Audience>(
+        28,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'audience',
+        subBuilder: $4.Audience.create)
+    ..aOM<$5.EventCreateRule>(
+        29,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'eventCreateRule',
+        subBuilder: $5.EventCreateRule.create)
     ..hasRequiredFields = false;
 
   ChangeHistoryChange_ChangeHistoryResource._() : super();
@@ -2565,8 +2658,16 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     CustomDimension? customDimension,
     CustomMetric? customMetric,
     DataRetentionSettings? dataRetentionSettings,
+    SearchAds360Link? searchAds360Link,
     DataStream? dataStream,
     AttributionSettings? attributionSettings,
+    $2.ExpandedDataSet? expandedDataSet,
+    $3.ChannelGroup? channelGroup,
+    BigQueryLink? bigqueryLink,
+    EnhancedMeasurementSettings? enhancedMeasurementSettings,
+    AdSenseLink? adsenseLink,
+    $4.Audience? audience,
+    $5.EventCreateRule? eventCreateRule,
   }) {
     final _result = create();
     if (account != null) {
@@ -2606,11 +2707,35 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     if (dataRetentionSettings != null) {
       _result.dataRetentionSettings = dataRetentionSettings;
     }
+    if (searchAds360Link != null) {
+      _result.searchAds360Link = searchAds360Link;
+    }
     if (dataStream != null) {
       _result.dataStream = dataStream;
     }
     if (attributionSettings != null) {
       _result.attributionSettings = attributionSettings;
+    }
+    if (expandedDataSet != null) {
+      _result.expandedDataSet = expandedDataSet;
+    }
+    if (channelGroup != null) {
+      _result.channelGroup = channelGroup;
+    }
+    if (bigqueryLink != null) {
+      _result.bigqueryLink = bigqueryLink;
+    }
+    if (enhancedMeasurementSettings != null) {
+      _result.enhancedMeasurementSettings = enhancedMeasurementSettings;
+    }
+    if (adsenseLink != null) {
+      _result.adsenseLink = adsenseLink;
+    }
+    if (audience != null) {
+      _result.audience = audience;
+    }
+    if (eventCreateRule != null) {
+      _result.eventCreateRule = eventCreateRule;
     }
     return _result;
   }
@@ -2825,33 +2950,146 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   DataRetentionSettings ensureDataRetentionSettings() => $_ensure(11);
 
+  @$pb.TagNumber(16)
+  SearchAds360Link get searchAds360Link => $_getN(12);
+  @$pb.TagNumber(16)
+  set searchAds360Link(SearchAds360Link v) {
+    setField(16, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasSearchAds360Link() => $_has(12);
+  @$pb.TagNumber(16)
+  void clearSearchAds360Link() => clearField(16);
+  @$pb.TagNumber(16)
+  SearchAds360Link ensureSearchAds360Link() => $_ensure(12);
+
   @$pb.TagNumber(18)
-  DataStream get dataStream => $_getN(12);
+  DataStream get dataStream => $_getN(13);
   @$pb.TagNumber(18)
   set dataStream(DataStream v) {
     setField(18, v);
   }
 
   @$pb.TagNumber(18)
-  $core.bool hasDataStream() => $_has(12);
+  $core.bool hasDataStream() => $_has(13);
   @$pb.TagNumber(18)
   void clearDataStream() => clearField(18);
   @$pb.TagNumber(18)
-  DataStream ensureDataStream() => $_ensure(12);
+  DataStream ensureDataStream() => $_ensure(13);
 
   @$pb.TagNumber(20)
-  AttributionSettings get attributionSettings => $_getN(13);
+  AttributionSettings get attributionSettings => $_getN(14);
   @$pb.TagNumber(20)
   set attributionSettings(AttributionSettings v) {
     setField(20, v);
   }
 
   @$pb.TagNumber(20)
-  $core.bool hasAttributionSettings() => $_has(13);
+  $core.bool hasAttributionSettings() => $_has(14);
   @$pb.TagNumber(20)
   void clearAttributionSettings() => clearField(20);
   @$pb.TagNumber(20)
-  AttributionSettings ensureAttributionSettings() => $_ensure(13);
+  AttributionSettings ensureAttributionSettings() => $_ensure(14);
+
+  @$pb.TagNumber(21)
+  $2.ExpandedDataSet get expandedDataSet => $_getN(15);
+  @$pb.TagNumber(21)
+  set expandedDataSet($2.ExpandedDataSet v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasExpandedDataSet() => $_has(15);
+  @$pb.TagNumber(21)
+  void clearExpandedDataSet() => clearField(21);
+  @$pb.TagNumber(21)
+  $2.ExpandedDataSet ensureExpandedDataSet() => $_ensure(15);
+
+  @$pb.TagNumber(22)
+  $3.ChannelGroup get channelGroup => $_getN(16);
+  @$pb.TagNumber(22)
+  set channelGroup($3.ChannelGroup v) {
+    setField(22, v);
+  }
+
+  @$pb.TagNumber(22)
+  $core.bool hasChannelGroup() => $_has(16);
+  @$pb.TagNumber(22)
+  void clearChannelGroup() => clearField(22);
+  @$pb.TagNumber(22)
+  $3.ChannelGroup ensureChannelGroup() => $_ensure(16);
+
+  @$pb.TagNumber(23)
+  BigQueryLink get bigqueryLink => $_getN(17);
+  @$pb.TagNumber(23)
+  set bigqueryLink(BigQueryLink v) {
+    setField(23, v);
+  }
+
+  @$pb.TagNumber(23)
+  $core.bool hasBigqueryLink() => $_has(17);
+  @$pb.TagNumber(23)
+  void clearBigqueryLink() => clearField(23);
+  @$pb.TagNumber(23)
+  BigQueryLink ensureBigqueryLink() => $_ensure(17);
+
+  @$pb.TagNumber(24)
+  EnhancedMeasurementSettings get enhancedMeasurementSettings => $_getN(18);
+  @$pb.TagNumber(24)
+  set enhancedMeasurementSettings(EnhancedMeasurementSettings v) {
+    setField(24, v);
+  }
+
+  @$pb.TagNumber(24)
+  $core.bool hasEnhancedMeasurementSettings() => $_has(18);
+  @$pb.TagNumber(24)
+  void clearEnhancedMeasurementSettings() => clearField(24);
+  @$pb.TagNumber(24)
+  EnhancedMeasurementSettings ensureEnhancedMeasurementSettings() =>
+      $_ensure(18);
+
+  @$pb.TagNumber(27)
+  AdSenseLink get adsenseLink => $_getN(19);
+  @$pb.TagNumber(27)
+  set adsenseLink(AdSenseLink v) {
+    setField(27, v);
+  }
+
+  @$pb.TagNumber(27)
+  $core.bool hasAdsenseLink() => $_has(19);
+  @$pb.TagNumber(27)
+  void clearAdsenseLink() => clearField(27);
+  @$pb.TagNumber(27)
+  AdSenseLink ensureAdsenseLink() => $_ensure(19);
+
+  @$pb.TagNumber(28)
+  $4.Audience get audience => $_getN(20);
+  @$pb.TagNumber(28)
+  set audience($4.Audience v) {
+    setField(28, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasAudience() => $_has(20);
+  @$pb.TagNumber(28)
+  void clearAudience() => clearField(28);
+  @$pb.TagNumber(28)
+  $4.Audience ensureAudience() => $_ensure(20);
+
+  @$pb.TagNumber(29)
+  $5.EventCreateRule get eventCreateRule => $_getN(21);
+  @$pb.TagNumber(29)
+  set eventCreateRule($5.EventCreateRule v) {
+    setField(29, v);
+  }
+
+  @$pb.TagNumber(29)
+  $core.bool hasEventCreateRule() => $_has(21);
+  @$pb.TagNumber(29)
+  void clearEventCreateRule() => clearField(29);
+  @$pb.TagNumber(29)
+  $5.EventCreateRule ensureEventCreateRule() => $_ensure(21);
 }
 
 class ChangeHistoryChange extends $pb.GeneratedMessage {
@@ -3413,6 +3651,211 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
   void clearCostDataSharingEnabled() => clearField(8);
   @$pb.TagNumber(8)
   $1.BoolValue ensureCostDataSharingEnabled() => $_ensure(7);
+}
+
+class SearchAds360Link extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SearchAds360Link',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'advertiserId')
+    ..aOM<$1.BoolValue>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'campaignDataSharingEnabled',
+        subBuilder: $1.BoolValue.create)
+    ..aOM<$1.BoolValue>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'costDataSharingEnabled',
+        subBuilder: $1.BoolValue.create)
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'advertiserDisplayName')
+    ..aOM<$1.BoolValue>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'adsPersonalizationEnabled',
+        subBuilder: $1.BoolValue.create)
+    ..aOM<$1.BoolValue>(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'siteStatsSharingEnabled',
+        subBuilder: $1.BoolValue.create)
+    ..hasRequiredFields = false;
+
+  SearchAds360Link._() : super();
+  factory SearchAds360Link({
+    $core.String? name,
+    $core.String? advertiserId,
+    $1.BoolValue? campaignDataSharingEnabled,
+    $1.BoolValue? costDataSharingEnabled,
+    $core.String? advertiserDisplayName,
+    $1.BoolValue? adsPersonalizationEnabled,
+    $1.BoolValue? siteStatsSharingEnabled,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (advertiserId != null) {
+      _result.advertiserId = advertiserId;
+    }
+    if (campaignDataSharingEnabled != null) {
+      _result.campaignDataSharingEnabled = campaignDataSharingEnabled;
+    }
+    if (costDataSharingEnabled != null) {
+      _result.costDataSharingEnabled = costDataSharingEnabled;
+    }
+    if (advertiserDisplayName != null) {
+      _result.advertiserDisplayName = advertiserDisplayName;
+    }
+    if (adsPersonalizationEnabled != null) {
+      _result.adsPersonalizationEnabled = adsPersonalizationEnabled;
+    }
+    if (siteStatsSharingEnabled != null) {
+      _result.siteStatsSharingEnabled = siteStatsSharingEnabled;
+    }
+    return _result;
+  }
+  factory SearchAds360Link.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchAds360Link.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SearchAds360Link clone() => SearchAds360Link()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SearchAds360Link copyWith(void Function(SearchAds360Link) updates) =>
+      super.copyWith((message) => updates(message as SearchAds360Link))
+          as SearchAds360Link; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SearchAds360Link create() => SearchAds360Link._();
+  SearchAds360Link createEmptyInstance() => create();
+  static $pb.PbList<SearchAds360Link> createRepeated() =>
+      $pb.PbList<SearchAds360Link>();
+  @$core.pragma('dart2js:noInline')
+  static SearchAds360Link getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchAds360Link>(create);
+  static SearchAds360Link? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get advertiserId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set advertiserId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAdvertiserId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAdvertiserId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.BoolValue get campaignDataSharingEnabled => $_getN(2);
+  @$pb.TagNumber(3)
+  set campaignDataSharingEnabled($1.BoolValue v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCampaignDataSharingEnabled() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCampaignDataSharingEnabled() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.BoolValue ensureCampaignDataSharingEnabled() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $1.BoolValue get costDataSharingEnabled => $_getN(3);
+  @$pb.TagNumber(4)
+  set costDataSharingEnabled($1.BoolValue v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCostDataSharingEnabled() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCostDataSharingEnabled() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.BoolValue ensureCostDataSharingEnabled() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get advertiserDisplayName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set advertiserDisplayName($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasAdvertiserDisplayName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAdvertiserDisplayName() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $1.BoolValue get adsPersonalizationEnabled => $_getN(5);
+  @$pb.TagNumber(6)
+  set adsPersonalizationEnabled($1.BoolValue v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasAdsPersonalizationEnabled() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAdsPersonalizationEnabled() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.BoolValue ensureAdsPersonalizationEnabled() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $1.BoolValue get siteStatsSharingEnabled => $_getN(6);
+  @$pb.TagNumber(7)
+  set siteStatsSharingEnabled($1.BoolValue v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasSiteStatsSharingEnabled() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSiteStatsSharingEnabled() => clearField(7);
+  @$pb.TagNumber(7)
+  $1.BoolValue ensureSiteStatsSharingEnabled() => $_ensure(6);
 }
 
 class LinkProposalStatusDetails extends $pb.GeneratedMessage {
@@ -4457,4 +4900,792 @@ class AttributionSettings extends $pb.GeneratedMessage {
   $core.bool hasReportingAttributionModel() => $_has(3);
   @$pb.TagNumber(4)
   void clearReportingAttributionModel() => clearField(4);
+}
+
+enum AccessBinding_AccessTarget { user, notSet }
+
+class AccessBinding extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AccessBinding_AccessTarget>
+      _AccessBinding_AccessTargetByTag = {
+    2: AccessBinding_AccessTarget.user,
+    0: AccessBinding_AccessTarget.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AccessBinding',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..oo(0, [2])
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'user')
+    ..pPS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'roles')
+    ..hasRequiredFields = false;
+
+  AccessBinding._() : super();
+  factory AccessBinding({
+    $core.String? name,
+    $core.String? user,
+    $core.Iterable<$core.String>? roles,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (user != null) {
+      _result.user = user;
+    }
+    if (roles != null) {
+      _result.roles.addAll(roles);
+    }
+    return _result;
+  }
+  factory AccessBinding.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccessBinding.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AccessBinding clone() => AccessBinding()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AccessBinding copyWith(void Function(AccessBinding) updates) =>
+      super.copyWith((message) => updates(message as AccessBinding))
+          as AccessBinding; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AccessBinding create() => AccessBinding._();
+  AccessBinding createEmptyInstance() => create();
+  static $pb.PbList<AccessBinding> createRepeated() =>
+      $pb.PbList<AccessBinding>();
+  @$core.pragma('dart2js:noInline')
+  static AccessBinding getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AccessBinding>(create);
+  static AccessBinding? _defaultInstance;
+
+  AccessBinding_AccessTarget whichAccessTarget() =>
+      _AccessBinding_AccessTargetByTag[$_whichOneof(0)]!;
+  void clearAccessTarget() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get user => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set user($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUser() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUser() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get roles => $_getList(2);
+}
+
+class BigQueryLink extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BigQueryLink',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'project')
+    ..aOM<$0.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOB(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dailyExportEnabled')
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'streamingExportEnabled')
+    ..aOB(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'includeAdvertisingId')
+    ..pPS(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'exportStreams')
+    ..pPS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'excludedEvents')
+    ..aOB(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'intradayExportEnabled')
+    ..hasRequiredFields = false;
+
+  BigQueryLink._() : super();
+  factory BigQueryLink({
+    $core.String? name,
+    $core.String? project,
+    $0.Timestamp? createTime,
+    $core.bool? dailyExportEnabled,
+    $core.bool? streamingExportEnabled,
+    $core.bool? includeAdvertisingId,
+    $core.Iterable<$core.String>? exportStreams,
+    $core.Iterable<$core.String>? excludedEvents,
+    $core.bool? intradayExportEnabled,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (project != null) {
+      _result.project = project;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (dailyExportEnabled != null) {
+      _result.dailyExportEnabled = dailyExportEnabled;
+    }
+    if (streamingExportEnabled != null) {
+      _result.streamingExportEnabled = streamingExportEnabled;
+    }
+    if (includeAdvertisingId != null) {
+      _result.includeAdvertisingId = includeAdvertisingId;
+    }
+    if (exportStreams != null) {
+      _result.exportStreams.addAll(exportStreams);
+    }
+    if (excludedEvents != null) {
+      _result.excludedEvents.addAll(excludedEvents);
+    }
+    if (intradayExportEnabled != null) {
+      _result.intradayExportEnabled = intradayExportEnabled;
+    }
+    return _result;
+  }
+  factory BigQueryLink.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BigQueryLink.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BigQueryLink clone() => BigQueryLink()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BigQueryLink copyWith(void Function(BigQueryLink) updates) =>
+      super.copyWith((message) => updates(message as BigQueryLink))
+          as BigQueryLink; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BigQueryLink create() => BigQueryLink._();
+  BigQueryLink createEmptyInstance() => create();
+  static $pb.PbList<BigQueryLink> createRepeated() =>
+      $pb.PbList<BigQueryLink>();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryLink getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryLink>(create);
+  static BigQueryLink? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get project => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set project($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProject() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProject() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set createTime($0.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCreateTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCreateTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Timestamp ensureCreateTime() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.bool get dailyExportEnabled => $_getBF(3);
+  @$pb.TagNumber(4)
+  set dailyExportEnabled($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDailyExportEnabled() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDailyExportEnabled() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get streamingExportEnabled => $_getBF(4);
+  @$pb.TagNumber(5)
+  set streamingExportEnabled($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasStreamingExportEnabled() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearStreamingExportEnabled() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get includeAdvertisingId => $_getBF(5);
+  @$pb.TagNumber(6)
+  set includeAdvertisingId($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasIncludeAdvertisingId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearIncludeAdvertisingId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.List<$core.String> get exportStreams => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $core.List<$core.String> get excludedEvents => $_getList(7);
+
+  @$pb.TagNumber(9)
+  $core.bool get intradayExportEnabled => $_getBF(8);
+  @$pb.TagNumber(9)
+  set intradayExportEnabled($core.bool v) {
+    $_setBool(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasIntradayExportEnabled() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearIntradayExportEnabled() => clearField(9);
+}
+
+class EnhancedMeasurementSettings extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'EnhancedMeasurementSettings',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOB(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'streamEnabled')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'scrollsEnabled')
+    ..aOB(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'outboundClicksEnabled')
+    ..aOB(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'siteSearchEnabled')
+    ..aOB(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'videoEngagementEnabled')
+    ..aOB(
+        7,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fileDownloadsEnabled')
+    ..aOB(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageChangesEnabled')
+    ..aOB(
+        9,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'formInteractionsEnabled')
+    ..aOS(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'searchQueryParameter')
+    ..aOS(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uriQueryParameter')
+    ..hasRequiredFields = false;
+
+  EnhancedMeasurementSettings._() : super();
+  factory EnhancedMeasurementSettings({
+    $core.String? name,
+    $core.bool? streamEnabled,
+    $core.bool? scrollsEnabled,
+    $core.bool? outboundClicksEnabled,
+    $core.bool? siteSearchEnabled,
+    $core.bool? videoEngagementEnabled,
+    $core.bool? fileDownloadsEnabled,
+    $core.bool? pageChangesEnabled,
+    $core.bool? formInteractionsEnabled,
+    $core.String? searchQueryParameter,
+    $core.String? uriQueryParameter,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (streamEnabled != null) {
+      _result.streamEnabled = streamEnabled;
+    }
+    if (scrollsEnabled != null) {
+      _result.scrollsEnabled = scrollsEnabled;
+    }
+    if (outboundClicksEnabled != null) {
+      _result.outboundClicksEnabled = outboundClicksEnabled;
+    }
+    if (siteSearchEnabled != null) {
+      _result.siteSearchEnabled = siteSearchEnabled;
+    }
+    if (videoEngagementEnabled != null) {
+      _result.videoEngagementEnabled = videoEngagementEnabled;
+    }
+    if (fileDownloadsEnabled != null) {
+      _result.fileDownloadsEnabled = fileDownloadsEnabled;
+    }
+    if (pageChangesEnabled != null) {
+      _result.pageChangesEnabled = pageChangesEnabled;
+    }
+    if (formInteractionsEnabled != null) {
+      _result.formInteractionsEnabled = formInteractionsEnabled;
+    }
+    if (searchQueryParameter != null) {
+      _result.searchQueryParameter = searchQueryParameter;
+    }
+    if (uriQueryParameter != null) {
+      _result.uriQueryParameter = uriQueryParameter;
+    }
+    return _result;
+  }
+  factory EnhancedMeasurementSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnhancedMeasurementSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EnhancedMeasurementSettings clone() =>
+      EnhancedMeasurementSettings()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EnhancedMeasurementSettings copyWith(
+          void Function(EnhancedMeasurementSettings) updates) =>
+      super.copyWith(
+              (message) => updates(message as EnhancedMeasurementSettings))
+          as EnhancedMeasurementSettings; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EnhancedMeasurementSettings create() =>
+      EnhancedMeasurementSettings._();
+  EnhancedMeasurementSettings createEmptyInstance() => create();
+  static $pb.PbList<EnhancedMeasurementSettings> createRepeated() =>
+      $pb.PbList<EnhancedMeasurementSettings>();
+  @$core.pragma('dart2js:noInline')
+  static EnhancedMeasurementSettings getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnhancedMeasurementSettings>(create);
+  static EnhancedMeasurementSettings? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get streamEnabled => $_getBF(1);
+  @$pb.TagNumber(2)
+  set streamEnabled($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStreamEnabled() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStreamEnabled() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get scrollsEnabled => $_getBF(2);
+  @$pb.TagNumber(3)
+  set scrollsEnabled($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasScrollsEnabled() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearScrollsEnabled() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get outboundClicksEnabled => $_getBF(3);
+  @$pb.TagNumber(4)
+  set outboundClicksEnabled($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasOutboundClicksEnabled() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearOutboundClicksEnabled() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get siteSearchEnabled => $_getBF(4);
+  @$pb.TagNumber(5)
+  set siteSearchEnabled($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasSiteSearchEnabled() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSiteSearchEnabled() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get videoEngagementEnabled => $_getBF(5);
+  @$pb.TagNumber(6)
+  set videoEngagementEnabled($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasVideoEngagementEnabled() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearVideoEngagementEnabled() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get fileDownloadsEnabled => $_getBF(6);
+  @$pb.TagNumber(7)
+  set fileDownloadsEnabled($core.bool v) {
+    $_setBool(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasFileDownloadsEnabled() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearFileDownloadsEnabled() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get pageChangesEnabled => $_getBF(7);
+  @$pb.TagNumber(8)
+  set pageChangesEnabled($core.bool v) {
+    $_setBool(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasPageChangesEnabled() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearPageChangesEnabled() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.bool get formInteractionsEnabled => $_getBF(8);
+  @$pb.TagNumber(9)
+  set formInteractionsEnabled($core.bool v) {
+    $_setBool(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasFormInteractionsEnabled() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearFormInteractionsEnabled() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get searchQueryParameter => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set searchQueryParameter($core.String v) {
+    $_setString(9, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasSearchQueryParameter() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearSearchQueryParameter() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get uriQueryParameter => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set uriQueryParameter($core.String v) {
+    $_setString(10, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasUriQueryParameter() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearUriQueryParameter() => clearField(11);
+}
+
+class ConnectedSiteTag extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ConnectedSiteTag',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'displayName')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tagId')
+    ..hasRequiredFields = false;
+
+  ConnectedSiteTag._() : super();
+  factory ConnectedSiteTag({
+    $core.String? displayName,
+    $core.String? tagId,
+  }) {
+    final _result = create();
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    if (tagId != null) {
+      _result.tagId = tagId;
+    }
+    return _result;
+  }
+  factory ConnectedSiteTag.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConnectedSiteTag.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ConnectedSiteTag clone() => ConnectedSiteTag()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ConnectedSiteTag copyWith(void Function(ConnectedSiteTag) updates) =>
+      super.copyWith((message) => updates(message as ConnectedSiteTag))
+          as ConnectedSiteTag; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ConnectedSiteTag create() => ConnectedSiteTag._();
+  ConnectedSiteTag createEmptyInstance() => create();
+  static $pb.PbList<ConnectedSiteTag> createRepeated() =>
+      $pb.PbList<ConnectedSiteTag>();
+  @$core.pragma('dart2js:noInline')
+  static ConnectedSiteTag getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConnectedSiteTag>(create);
+  static ConnectedSiteTag? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get displayName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set displayName($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDisplayName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDisplayName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get tagId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set tagId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTagId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTagId() => clearField(2);
+}
+
+class AdSenseLink extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AdSenseLink',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'adClientCode')
+    ..hasRequiredFields = false;
+
+  AdSenseLink._() : super();
+  factory AdSenseLink({
+    $core.String? name,
+    $core.String? adClientCode,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (adClientCode != null) {
+      _result.adClientCode = adClientCode;
+    }
+    return _result;
+  }
+  factory AdSenseLink.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdSenseLink.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AdSenseLink clone() => AdSenseLink()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AdSenseLink copyWith(void Function(AdSenseLink) updates) =>
+      super.copyWith((message) => updates(message as AdSenseLink))
+          as AdSenseLink; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AdSenseLink create() => AdSenseLink._();
+  AdSenseLink createEmptyInstance() => create();
+  static $pb.PbList<AdSenseLink> createRepeated() => $pb.PbList<AdSenseLink>();
+  @$core.pragma('dart2js:noInline')
+  static AdSenseLink getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdSenseLink>(create);
+  static AdSenseLink? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get adClientCode => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set adClientCode($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAdClientCode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAdClientCode() => clearField(2);
 }

@@ -21,6 +21,7 @@ const ListUptimeCheckConfigsRequest$json = const {
       '8': const {},
       '10': 'parent'
     },
+    const {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
     const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -29,7 +30,7 @@ const ListUptimeCheckConfigsRequest$json = const {
 /// Descriptor for `ListUptimeCheckConfigsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listUptimeCheckConfigsRequestDescriptor =
     $convert.base64Decode(
-        'Ch1MaXN0VXB0aW1lQ2hlY2tDb25maWdzUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9VcHRpbWVDaGVja0NvbmZpZ1IGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgDIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgEIAEoCVIJcGFnZVRva2Vu');
+        'Ch1MaXN0VXB0aW1lQ2hlY2tDb25maWdzUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9VcHRpbWVDaGVja0NvbmZpZ1IGcGFyZW50EhYKBmZpbHRlchgCIAEoCVIGZmlsdGVyEhsKCXBhZ2Vfc2l6ZRgDIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgEIAEoCVIJcGFnZVRva2Vu');
 @$core.Deprecated('Use listUptimeCheckConfigsResponseDescriptor instead')
 const ListUptimeCheckConfigsResponse$json = const {
   '1': 'ListUptimeCheckConfigsResponse',

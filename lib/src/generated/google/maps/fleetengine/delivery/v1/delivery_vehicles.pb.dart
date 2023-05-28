@@ -485,12 +485,19 @@ class VehicleStop_TaskInfo extends $pb.GeneratedMessage {
             ? ''
             : 'taskDuration',
         subBuilder: $3.Duration.create)
+    ..aOM<$0.TimeWindow>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'targetTimeWindow',
+        subBuilder: $0.TimeWindow.create)
     ..hasRequiredFields = false;
 
   VehicleStop_TaskInfo._() : super();
   factory VehicleStop_TaskInfo({
     $core.String? taskId,
     $3.Duration? taskDuration,
+    $0.TimeWindow? targetTimeWindow,
   }) {
     final _result = create();
     if (taskId != null) {
@@ -498,6 +505,9 @@ class VehicleStop_TaskInfo extends $pb.GeneratedMessage {
     }
     if (taskDuration != null) {
       _result.taskDuration = taskDuration;
+    }
+    if (targetTimeWindow != null) {
+      _result.targetTimeWindow = targetTimeWindow;
     }
     return _result;
   }
@@ -554,6 +564,20 @@ class VehicleStop_TaskInfo extends $pb.GeneratedMessage {
   void clearTaskDuration() => clearField(2);
   @$pb.TagNumber(2)
   $3.Duration ensureTaskDuration() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $0.TimeWindow get targetTimeWindow => $_getN(2);
+  @$pb.TagNumber(3)
+  set targetTimeWindow($0.TimeWindow v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTargetTimeWindow() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTargetTimeWindow() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.TimeWindow ensureTargetTimeWindow() => $_ensure(2);
 }
 
 class VehicleStop extends $pb.GeneratedMessage {

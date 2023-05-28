@@ -183,6 +183,15 @@ class Index extends $pb.GeneratedMessage {
         defaultOrMaker: Index_State.STATE_UNSPECIFIED,
         valueOf: Index_State.valueOf,
         enumValues: Index_State.values)
+    ..e<Index_ApiScope>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'apiScope',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Index_ApiScope.ANY_API,
+        valueOf: Index_ApiScope.valueOf,
+        enumValues: Index_ApiScope.values)
     ..hasRequiredFields = false;
 
   Index._() : super();
@@ -191,6 +200,7 @@ class Index extends $pb.GeneratedMessage {
     Index_QueryScope? queryScope,
     $core.Iterable<Index_IndexField>? fields,
     Index_State? state,
+    Index_ApiScope? apiScope,
   }) {
     final _result = create();
     if (name != null) {
@@ -204,6 +214,9 @@ class Index extends $pb.GeneratedMessage {
     }
     if (state != null) {
       _result.state = state;
+    }
+    if (apiScope != null) {
+      _result.apiScope = apiScope;
     }
     return _result;
   }
@@ -271,4 +284,16 @@ class Index extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(3);
   @$pb.TagNumber(4)
   void clearState() => clearField(4);
+
+  @$pb.TagNumber(5)
+  Index_ApiScope get apiScope => $_getN(4);
+  @$pb.TagNumber(5)
+  set apiScope(Index_ApiScope v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasApiScope() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearApiScope() => clearField(5);
 }

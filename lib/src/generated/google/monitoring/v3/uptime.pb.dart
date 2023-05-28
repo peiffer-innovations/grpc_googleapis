@@ -289,6 +289,78 @@ class UptimeCheckConfig_ResourceGroup extends $pb.GeneratedMessage {
   void clearResourceType() => clearField(2);
 }
 
+class UptimeCheckConfig_PingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UptimeCheckConfig.PingConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pingsCount',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  UptimeCheckConfig_PingConfig._() : super();
+  factory UptimeCheckConfig_PingConfig({
+    $core.int? pingsCount,
+  }) {
+    final _result = create();
+    if (pingsCount != null) {
+      _result.pingsCount = pingsCount;
+    }
+    return _result;
+  }
+  factory UptimeCheckConfig_PingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UptimeCheckConfig_PingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UptimeCheckConfig_PingConfig clone() =>
+      UptimeCheckConfig_PingConfig()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UptimeCheckConfig_PingConfig copyWith(
+          void Function(UptimeCheckConfig_PingConfig) updates) =>
+      super.copyWith(
+              (message) => updates(message as UptimeCheckConfig_PingConfig))
+          as UptimeCheckConfig_PingConfig; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UptimeCheckConfig_PingConfig create() =>
+      UptimeCheckConfig_PingConfig._();
+  UptimeCheckConfig_PingConfig createEmptyInstance() => create();
+  static $pb.PbList<UptimeCheckConfig_PingConfig> createRepeated() =>
+      $pb.PbList<UptimeCheckConfig_PingConfig>();
+  @$core.pragma('dart2js:noInline')
+  static UptimeCheckConfig_PingConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig_PingConfig>(create);
+  static UptimeCheckConfig_PingConfig? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get pingsCount => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set pingsCount($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasPingsCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPingsCount() => clearField(1);
+}
+
 class UptimeCheckConfig_HttpCheck_BasicAuthentication
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -388,6 +460,135 @@ class UptimeCheckConfig_HttpCheck_BasicAuthentication
   void clearPassword() => clearField(2);
 }
 
+enum UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode {
+  statusValue,
+  statusClass,
+  notSet
+}
+
+class UptimeCheckConfig_HttpCheck_ResponseStatusCode
+    extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int,
+          UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode>
+      _UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCodeByTag = {
+    1: UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode.statusValue,
+    2: UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode.statusClass,
+    0: UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UptimeCheckConfig.HttpCheck.ResponseStatusCode',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'statusValue',
+        $pb.PbFieldType.O3)
+    ..e<UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'statusClass',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass
+                .STATUS_CLASS_UNSPECIFIED,
+        valueOf:
+            UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass.valueOf,
+        enumValues:
+            UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass.values)
+    ..hasRequiredFields = false;
+
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode._() : super();
+  factory UptimeCheckConfig_HttpCheck_ResponseStatusCode({
+    $core.int? statusValue,
+    UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass? statusClass,
+  }) {
+    final _result = create();
+    if (statusValue != null) {
+      _result.statusValue = statusValue;
+    }
+    if (statusClass != null) {
+      _result.statusClass = statusClass;
+    }
+    return _result;
+  }
+  factory UptimeCheckConfig_HttpCheck_ResponseStatusCode.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UptimeCheckConfig_HttpCheck_ResponseStatusCode.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode clone() =>
+      UptimeCheckConfig_HttpCheck_ResponseStatusCode()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode copyWith(
+          void Function(UptimeCheckConfig_HttpCheck_ResponseStatusCode)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as UptimeCheckConfig_HttpCheck_ResponseStatusCode))
+          as UptimeCheckConfig_HttpCheck_ResponseStatusCode; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UptimeCheckConfig_HttpCheck_ResponseStatusCode create() =>
+      UptimeCheckConfig_HttpCheck_ResponseStatusCode._();
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode createEmptyInstance() =>
+      create();
+  static $pb.PbList<UptimeCheckConfig_HttpCheck_ResponseStatusCode>
+      createRepeated() =>
+          $pb.PbList<UptimeCheckConfig_HttpCheck_ResponseStatusCode>();
+  @$core.pragma('dart2js:noInline')
+  static UptimeCheckConfig_HttpCheck_ResponseStatusCode getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          UptimeCheckConfig_HttpCheck_ResponseStatusCode>(create);
+  static UptimeCheckConfig_HttpCheck_ResponseStatusCode? _defaultInstance;
+
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode whichStatusCode() =>
+      _UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCodeByTag[
+          $_whichOneof(0)]!;
+  void clearStatusCode() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.int get statusValue => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set statusValue($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStatusValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatusValue() => clearField(1);
+
+  @$pb.TagNumber(2)
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass get statusClass =>
+      $_getN(1);
+  @$pb.TagNumber(2)
+  set statusClass(
+      UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStatusClass() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatusClass() => clearField(2);
+}
+
 class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -465,6 +666,24 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
             ? ''
             : 'body',
         $pb.PbFieldType.OY)
+    ..pc<UptimeCheckConfig_HttpCheck_ResponseStatusCode>(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acceptedResponseStatusCodes',
+        $pb.PbFieldType.PM,
+        subBuilder: UptimeCheckConfig_HttpCheck_ResponseStatusCode.create)
+    ..aOM<UptimeCheckConfig_PingConfig>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pingConfig',
+        subBuilder: UptimeCheckConfig_PingConfig.create)
+    ..aOS(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'customContentType')
     ..hasRequiredFields = false;
 
   UptimeCheckConfig_HttpCheck._() : super();
@@ -479,6 +698,10 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
     UptimeCheckConfig_HttpCheck_RequestMethod? requestMethod,
     UptimeCheckConfig_HttpCheck_ContentType? contentType,
     $core.List<$core.int>? body,
+    $core.Iterable<UptimeCheckConfig_HttpCheck_ResponseStatusCode>?
+        acceptedResponseStatusCodes,
+    UptimeCheckConfig_PingConfig? pingConfig,
+    $core.String? customContentType,
   }) {
     final _result = create();
     if (useSsl != null) {
@@ -510,6 +733,15 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
     }
     if (body != null) {
       _result.body = body;
+    }
+    if (acceptedResponseStatusCodes != null) {
+      _result.acceptedResponseStatusCodes.addAll(acceptedResponseStatusCodes);
+    }
+    if (pingConfig != null) {
+      _result.pingConfig = pingConfig;
+    }
+    if (customContentType != null) {
+      _result.customContentType = customContentType;
     }
     return _result;
   }
@@ -657,6 +889,36 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   $core.bool hasBody() => $_has(9);
   @$pb.TagNumber(10)
   void clearBody() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.List<UptimeCheckConfig_HttpCheck_ResponseStatusCode>
+      get acceptedResponseStatusCodes => $_getList(10);
+
+  @$pb.TagNumber(12)
+  UptimeCheckConfig_PingConfig get pingConfig => $_getN(11);
+  @$pb.TagNumber(12)
+  set pingConfig(UptimeCheckConfig_PingConfig v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasPingConfig() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearPingConfig() => clearField(12);
+  @$pb.TagNumber(12)
+  UptimeCheckConfig_PingConfig ensurePingConfig() => $_ensure(11);
+
+  @$pb.TagNumber(13)
+  $core.String get customContentType => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set customContentType($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasCustomContentType() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearCustomContentType() => clearField(13);
 }
 
 class UptimeCheckConfig_TcpCheck extends $pb.GeneratedMessage {
@@ -675,15 +937,25 @@ class UptimeCheckConfig_TcpCheck extends $pb.GeneratedMessage {
             ? ''
             : 'port',
         $pb.PbFieldType.O3)
+    ..aOM<UptimeCheckConfig_PingConfig>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pingConfig',
+        subBuilder: UptimeCheckConfig_PingConfig.create)
     ..hasRequiredFields = false;
 
   UptimeCheckConfig_TcpCheck._() : super();
   factory UptimeCheckConfig_TcpCheck({
     $core.int? port,
+    UptimeCheckConfig_PingConfig? pingConfig,
   }) {
     final _result = create();
     if (port != null) {
       _result.port = port;
+    }
+    if (pingConfig != null) {
+      _result.pingConfig = pingConfig;
     }
     return _result;
   }
@@ -728,9 +1000,148 @@ class UptimeCheckConfig_TcpCheck extends $pb.GeneratedMessage {
   $core.bool hasPort() => $_has(0);
   @$pb.TagNumber(1)
   void clearPort() => clearField(1);
+
+  @$pb.TagNumber(2)
+  UptimeCheckConfig_PingConfig get pingConfig => $_getN(1);
+  @$pb.TagNumber(2)
+  set pingConfig(UptimeCheckConfig_PingConfig v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPingConfig() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPingConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  UptimeCheckConfig_PingConfig ensurePingConfig() => $_ensure(1);
+}
+
+class UptimeCheckConfig_ContentMatcher_JsonPathMatcher
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UptimeCheckConfig.ContentMatcher.JsonPathMatcher',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'jsonPath')
+    ..e<UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'jsonMatcher',
+        $pb.PbFieldType.OE,
+        defaultOrMaker:
+            UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
+                .JSON_PATH_MATCHER_OPTION_UNSPECIFIED,
+        valueOf:
+            UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
+                .valueOf,
+        enumValues:
+            UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
+                .values)
+    ..hasRequiredFields = false;
+
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher._() : super();
+  factory UptimeCheckConfig_ContentMatcher_JsonPathMatcher({
+    $core.String? jsonPath,
+    UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption?
+        jsonMatcher,
+  }) {
+    final _result = create();
+    if (jsonPath != null) {
+      _result.jsonPath = jsonPath;
+    }
+    if (jsonMatcher != null) {
+      _result.jsonMatcher = jsonMatcher;
+    }
+    return _result;
+  }
+  factory UptimeCheckConfig_ContentMatcher_JsonPathMatcher.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UptimeCheckConfig_ContentMatcher_JsonPathMatcher.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher clone() =>
+      UptimeCheckConfig_ContentMatcher_JsonPathMatcher()
+        ..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher copyWith(
+          void Function(UptimeCheckConfig_ContentMatcher_JsonPathMatcher)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as UptimeCheckConfig_ContentMatcher_JsonPathMatcher))
+          as UptimeCheckConfig_ContentMatcher_JsonPathMatcher; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UptimeCheckConfig_ContentMatcher_JsonPathMatcher create() =>
+      UptimeCheckConfig_ContentMatcher_JsonPathMatcher._();
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher createEmptyInstance() =>
+      create();
+  static $pb.PbList<UptimeCheckConfig_ContentMatcher_JsonPathMatcher>
+      createRepeated() =>
+          $pb.PbList<UptimeCheckConfig_ContentMatcher_JsonPathMatcher>();
+  @$core.pragma('dart2js:noInline')
+  static UptimeCheckConfig_ContentMatcher_JsonPathMatcher getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          UptimeCheckConfig_ContentMatcher_JsonPathMatcher>(create);
+  static UptimeCheckConfig_ContentMatcher_JsonPathMatcher? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get jsonPath => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set jsonPath($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasJsonPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearJsonPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
+      get jsonMatcher => $_getN(1);
+  @$pb.TagNumber(2)
+  set jsonMatcher(
+      UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
+          v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasJsonMatcher() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearJsonMatcher() => clearField(2);
+}
+
+enum UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo {
+  jsonPathMatcher,
+  notSet
 }
 
 class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int,
+          UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo>
+      _UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfoByTag = {
+    3: UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo.jsonPathMatcher,
+    0: UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -740,6 +1151,7 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
               ? ''
               : 'google.monitoring.v3'),
       createEmptyInstance: create)
+    ..oo(0, [3])
     ..aOS(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -756,12 +1168,19 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
         valueOf: UptimeCheckConfig_ContentMatcher_ContentMatcherOption.valueOf,
         enumValues:
             UptimeCheckConfig_ContentMatcher_ContentMatcherOption.values)
+    ..aOM<UptimeCheckConfig_ContentMatcher_JsonPathMatcher>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'jsonPathMatcher',
+        subBuilder: UptimeCheckConfig_ContentMatcher_JsonPathMatcher.create)
     ..hasRequiredFields = false;
 
   UptimeCheckConfig_ContentMatcher._() : super();
   factory UptimeCheckConfig_ContentMatcher({
     $core.String? content,
     UptimeCheckConfig_ContentMatcher_ContentMatcherOption? matcher,
+    UptimeCheckConfig_ContentMatcher_JsonPathMatcher? jsonPathMatcher,
   }) {
     final _result = create();
     if (content != null) {
@@ -769,6 +1188,9 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
     }
     if (matcher != null) {
       _result.matcher = matcher;
+    }
+    if (jsonPathMatcher != null) {
+      _result.jsonPathMatcher = jsonPathMatcher;
     }
     return _result;
   }
@@ -804,6 +1226,12 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
           create);
   static UptimeCheckConfig_ContentMatcher? _defaultInstance;
 
+  UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo
+      whichAdditionalMatcherInfo() =>
+          _UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfoByTag[
+              $_whichOneof(0)]!;
+  void clearAdditionalMatcherInfo() => clearField($_whichOneof(0));
+
   @$pb.TagNumber(1)
   $core.String get content => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -828,6 +1256,22 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
   $core.bool hasMatcher() => $_has(1);
   @$pb.TagNumber(2)
   void clearMatcher() => clearField(2);
+
+  @$pb.TagNumber(3)
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher get jsonPathMatcher =>
+      $_getN(2);
+  @$pb.TagNumber(3)
+  set jsonPathMatcher(UptimeCheckConfig_ContentMatcher_JsonPathMatcher v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasJsonPathMatcher() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearJsonPathMatcher() => clearField(3);
+  @$pb.TagNumber(3)
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher ensureJsonPathMatcher() =>
+      $_ensure(2);
 }
 
 enum UptimeCheckConfig_Resource { monitoredResource, resourceGroup, notSet }
@@ -932,6 +1376,24 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'isInternal')
+    ..e<UptimeCheckConfig_CheckerType>(
+        17,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'checkerType',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: UptimeCheckConfig_CheckerType.CHECKER_TYPE_UNSPECIFIED,
+        valueOf: UptimeCheckConfig_CheckerType.valueOf,
+        enumValues: UptimeCheckConfig_CheckerType.values)
+    ..m<$core.String, $core.String>(
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'userLabels',
+        entryClassName: 'UptimeCheckConfig.UserLabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.monitoring.v3'))
     ..hasRequiredFields = false;
 
   UptimeCheckConfig._() : super();
@@ -947,8 +1409,10 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
     $core.Iterable<UptimeCheckConfig_ContentMatcher>? contentMatchers,
     $core.Iterable<UptimeCheckRegion>? selectedRegions,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<InternalChecker>? internalCheckers,
+    $core.Iterable<InternalChecker>? internalCheckers,
     @$core.Deprecated('This field is deprecated.') $core.bool? isInternal,
+    UptimeCheckConfig_CheckerType? checkerType,
+    $core.Map<$core.String, $core.String>? userLabels,
   }) {
     final _result = create();
     if (name != null) {
@@ -988,6 +1452,12 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
     if (isInternal != null) {
       // ignore: deprecated_member_use_from_same_package
       _result.isInternal = isInternal;
+    }
+    if (checkerType != null) {
+      _result.checkerType = checkerType;
+    }
+    if (userLabels != null) {
+      _result.userLabels.addAll(userLabels);
     }
     return _result;
   }
@@ -1160,6 +1630,21 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(15)
   void clearIsInternal() => clearField(15);
+
+  @$pb.TagNumber(17)
+  UptimeCheckConfig_CheckerType get checkerType => $_getN(12);
+  @$pb.TagNumber(17)
+  set checkerType(UptimeCheckConfig_CheckerType v) {
+    setField(17, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasCheckerType() => $_has(12);
+  @$pb.TagNumber(17)
+  void clearCheckerType() => clearField(17);
+
+  @$pb.TagNumber(20)
+  $core.Map<$core.String, $core.String> get userLabels => $_getMap(13);
 }
 
 class UptimeCheckIp extends $pb.GeneratedMessage {

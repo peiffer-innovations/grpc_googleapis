@@ -56,11 +56,18 @@ class StructuredQuery_CompositeFilter_Operator extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'AND');
+  static const StructuredQuery_CompositeFilter_Operator OR =
+      StructuredQuery_CompositeFilter_Operator._(
+          2,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'OR');
 
   static const $core.List<StructuredQuery_CompositeFilter_Operator> values =
       <StructuredQuery_CompositeFilter_Operator>[
     OPERATOR_UNSPECIFIED,
     AND,
+    OR,
   ];
 
   static final $core.Map<$core.int, StructuredQuery_CompositeFilter_Operator>

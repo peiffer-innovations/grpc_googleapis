@@ -23,6 +23,7 @@ import '../../../protobuf/empty.pb.dart' as $3;
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
 import 'settings.pb.dart' as $12;
+import 'vpcsc_config.pb.dart' as $13;
 export 'service.pb.dart';
 
 class ArtifactRegistryClient extends $grpc.Client {
@@ -37,6 +38,39 @@ class ArtifactRegistryClient extends $grpc.Client {
       '/google.devtools.artifactregistry.v1.ArtifactRegistry/GetDockerImage',
       ($4.GetDockerImageRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $4.DockerImage.fromBuffer(value));
+  static final _$listMavenArtifacts = $grpc.ClientMethod<
+          $4.ListMavenArtifactsRequest, $4.ListMavenArtifactsResponse>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/ListMavenArtifacts',
+      ($4.ListMavenArtifactsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListMavenArtifactsResponse.fromBuffer(value));
+  static final _$getMavenArtifact = $grpc.ClientMethod<
+          $4.GetMavenArtifactRequest, $4.MavenArtifact>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/GetMavenArtifact',
+      ($4.GetMavenArtifactRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.MavenArtifact.fromBuffer(value));
+  static final _$listNpmPackages = $grpc.ClientMethod<$4.ListNpmPackagesRequest,
+          $4.ListNpmPackagesResponse>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/ListNpmPackages',
+      ($4.ListNpmPackagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListNpmPackagesResponse.fromBuffer(value));
+  static final _$getNpmPackage =
+      $grpc.ClientMethod<$4.GetNpmPackageRequest, $4.NpmPackage>(
+          '/google.devtools.artifactregistry.v1.ArtifactRegistry/GetNpmPackage',
+          ($4.GetNpmPackageRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $4.NpmPackage.fromBuffer(value));
+  static final _$listPythonPackages = $grpc.ClientMethod<
+          $4.ListPythonPackagesRequest, $4.ListPythonPackagesResponse>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/ListPythonPackages',
+      ($4.ListPythonPackagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListPythonPackagesResponse.fromBuffer(value));
+  static final _$getPythonPackage = $grpc.ClientMethod<
+          $4.GetPythonPackageRequest, $4.PythonPackage>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/GetPythonPackage',
+      ($4.GetPythonPackageRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.PythonPackage.fromBuffer(value));
   static final _$importAptArtifacts = $grpc.ClientMethod<
           $5.ImportAptArtifactsRequest, $2.Operation>(
       '/google.devtools.artifactregistry.v1.ArtifactRegistry/ImportAptArtifacts',
@@ -163,6 +197,16 @@ class ArtifactRegistryClient extends $grpc.Client {
       '/google.devtools.artifactregistry.v1.ArtifactRegistry/UpdateProjectSettings',
       ($12.UpdateProjectSettingsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $12.ProjectSettings.fromBuffer(value));
+  static final _$getVPCSCConfig = $grpc.ClientMethod<$13.GetVPCSCConfigRequest,
+          $13.VPCSCConfig>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/GetVPCSCConfig',
+      ($13.GetVPCSCConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.VPCSCConfig.fromBuffer(value));
+  static final _$updateVPCSCConfig = $grpc.ClientMethod<
+          $13.UpdateVPCSCConfigRequest, $13.VPCSCConfig>(
+      '/google.devtools.artifactregistry.v1.ArtifactRegistry/UpdateVPCSCConfig',
+      ($13.UpdateVPCSCConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.VPCSCConfig.fromBuffer(value));
 
   ArtifactRegistryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -179,6 +223,42 @@ class ArtifactRegistryClient extends $grpc.Client {
       $4.GetDockerImageRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getDockerImage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListMavenArtifactsResponse> listMavenArtifacts(
+      $4.ListMavenArtifactsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listMavenArtifacts, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.MavenArtifact> getMavenArtifact(
+      $4.GetMavenArtifactRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getMavenArtifact, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListNpmPackagesResponse> listNpmPackages(
+      $4.ListNpmPackagesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listNpmPackages, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.NpmPackage> getNpmPackage(
+      $4.GetNpmPackageRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getNpmPackage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListPythonPackagesResponse> listPythonPackages(
+      $4.ListPythonPackagesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listPythonPackages, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.PythonPackage> getPythonPackage(
+      $4.GetPythonPackageRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPythonPackage, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> importAptArtifacts(
@@ -321,6 +401,18 @@ class ArtifactRegistryClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateProjectSettings, request, options: options);
   }
+
+  $grpc.ResponseFuture<$13.VPCSCConfig> getVPCSCConfig(
+      $13.GetVPCSCConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getVPCSCConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$13.VPCSCConfig> updateVPCSCConfig(
+      $13.UpdateVPCSCConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateVPCSCConfig, request, options: options);
+  }
 }
 
 abstract class ArtifactRegistryServiceBase extends $grpc.Service {
@@ -345,6 +437,59 @@ abstract class ArtifactRegistryServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.GetDockerImageRequest.fromBuffer(value),
         ($4.DockerImage value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListMavenArtifactsRequest,
+            $4.ListMavenArtifactsResponse>(
+        'ListMavenArtifacts',
+        listMavenArtifacts_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListMavenArtifactsRequest.fromBuffer(value),
+        ($4.ListMavenArtifactsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.GetMavenArtifactRequest, $4.MavenArtifact>(
+            'GetMavenArtifact',
+            getMavenArtifact_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.GetMavenArtifactRequest.fromBuffer(value),
+            ($4.MavenArtifact value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListNpmPackagesRequest,
+            $4.ListNpmPackagesResponse>(
+        'ListNpmPackages',
+        listNpmPackages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListNpmPackagesRequest.fromBuffer(value),
+        ($4.ListNpmPackagesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetNpmPackageRequest, $4.NpmPackage>(
+        'GetNpmPackage',
+        getNpmPackage_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.GetNpmPackageRequest.fromBuffer(value),
+        ($4.NpmPackage value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListPythonPackagesRequest,
+            $4.ListPythonPackagesResponse>(
+        'ListPythonPackages',
+        listPythonPackages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListPythonPackagesRequest.fromBuffer(value),
+        ($4.ListPythonPackagesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.GetPythonPackageRequest, $4.PythonPackage>(
+            'GetPythonPackage',
+            getPythonPackage_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.GetPythonPackageRequest.fromBuffer(value),
+            ($4.PythonPackage value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$5.ImportAptArtifactsRequest, $2.Operation>(
         'ImportAptArtifacts',
         importAptArtifacts_Pre,
@@ -542,6 +687,23 @@ abstract class ArtifactRegistryServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $12.UpdateProjectSettingsRequest.fromBuffer(value),
         ($12.ProjectSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.GetVPCSCConfigRequest, $13.VPCSCConfig>(
+        'GetVPCSCConfig',
+        getVPCSCConfig_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $13.GetVPCSCConfigRequest.fromBuffer(value),
+        ($13.VPCSCConfig value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$13.UpdateVPCSCConfigRequest, $13.VPCSCConfig>(
+            'UpdateVPCSCConfig',
+            updateVPCSCConfig_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $13.UpdateVPCSCConfigRequest.fromBuffer(value),
+            ($13.VPCSCConfig value) => value.writeToBuffer()));
   }
 
   $async.Future<$4.ListDockerImagesResponse> listDockerImages_Pre(
@@ -553,6 +715,39 @@ abstract class ArtifactRegistryServiceBase extends $grpc.Service {
   $async.Future<$4.DockerImage> getDockerImage_Pre($grpc.ServiceCall call,
       $async.Future<$4.GetDockerImageRequest> request) async {
     return getDockerImage(call, await request);
+  }
+
+  $async.Future<$4.ListMavenArtifactsResponse> listMavenArtifacts_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListMavenArtifactsRequest> request) async {
+    return listMavenArtifacts(call, await request);
+  }
+
+  $async.Future<$4.MavenArtifact> getMavenArtifact_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetMavenArtifactRequest> request) async {
+    return getMavenArtifact(call, await request);
+  }
+
+  $async.Future<$4.ListNpmPackagesResponse> listNpmPackages_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListNpmPackagesRequest> request) async {
+    return listNpmPackages(call, await request);
+  }
+
+  $async.Future<$4.NpmPackage> getNpmPackage_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetNpmPackageRequest> request) async {
+    return getNpmPackage(call, await request);
+  }
+
+  $async.Future<$4.ListPythonPackagesResponse> listPythonPackages_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListPythonPackagesRequest> request) async {
+    return listPythonPackages(call, await request);
+  }
+
+  $async.Future<$4.PythonPackage> getPythonPackage_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetPythonPackageRequest> request) async {
+    return getPythonPackage(call, await request);
   }
 
   $async.Future<$2.Operation> importAptArtifacts_Pre($grpc.ServiceCall call,
@@ -686,10 +881,32 @@ abstract class ArtifactRegistryServiceBase extends $grpc.Service {
     return updateProjectSettings(call, await request);
   }
 
+  $async.Future<$13.VPCSCConfig> getVPCSCConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$13.GetVPCSCConfigRequest> request) async {
+    return getVPCSCConfig(call, await request);
+  }
+
+  $async.Future<$13.VPCSCConfig> updateVPCSCConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$13.UpdateVPCSCConfigRequest> request) async {
+    return updateVPCSCConfig(call, await request);
+  }
+
   $async.Future<$4.ListDockerImagesResponse> listDockerImages(
       $grpc.ServiceCall call, $4.ListDockerImagesRequest request);
   $async.Future<$4.DockerImage> getDockerImage(
       $grpc.ServiceCall call, $4.GetDockerImageRequest request);
+  $async.Future<$4.ListMavenArtifactsResponse> listMavenArtifacts(
+      $grpc.ServiceCall call, $4.ListMavenArtifactsRequest request);
+  $async.Future<$4.MavenArtifact> getMavenArtifact(
+      $grpc.ServiceCall call, $4.GetMavenArtifactRequest request);
+  $async.Future<$4.ListNpmPackagesResponse> listNpmPackages(
+      $grpc.ServiceCall call, $4.ListNpmPackagesRequest request);
+  $async.Future<$4.NpmPackage> getNpmPackage(
+      $grpc.ServiceCall call, $4.GetNpmPackageRequest request);
+  $async.Future<$4.ListPythonPackagesResponse> listPythonPackages(
+      $grpc.ServiceCall call, $4.ListPythonPackagesRequest request);
+  $async.Future<$4.PythonPackage> getPythonPackage(
+      $grpc.ServiceCall call, $4.GetPythonPackageRequest request);
   $async.Future<$2.Operation> importAptArtifacts(
       $grpc.ServiceCall call, $5.ImportAptArtifactsRequest request);
   $async.Future<$2.Operation> importYumArtifacts(
@@ -740,4 +957,8 @@ abstract class ArtifactRegistryServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $12.GetProjectSettingsRequest request);
   $async.Future<$12.ProjectSettings> updateProjectSettings(
       $grpc.ServiceCall call, $12.UpdateProjectSettingsRequest request);
+  $async.Future<$13.VPCSCConfig> getVPCSCConfig(
+      $grpc.ServiceCall call, $13.GetVPCSCConfigRequest request);
+  $async.Future<$13.VPCSCConfig> updateVPCSCConfig(
+      $grpc.ServiceCall call, $13.UpdateVPCSCConfigRequest request);
 }

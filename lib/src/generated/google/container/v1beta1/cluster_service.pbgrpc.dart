@@ -102,18 +102,18 @@ class ClusterManagerClient extends $grpc.Client {
           '/google.container.v1beta1.ClusterManager/GetServerConfig',
           ($0.GetServerConfigRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.ServerConfig.fromBuffer(value));
-  static final _$listNodePools =
-      $grpc.ClientMethod<$0.ListNodePoolsRequest, $0.ListNodePoolsResponse>(
-          '/google.container.v1beta1.ClusterManager/ListNodePools',
-          ($0.ListNodePoolsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.ListNodePoolsResponse.fromBuffer(value));
   static final _$getJSONWebKeys =
       $grpc.ClientMethod<$0.GetJSONWebKeysRequest, $0.GetJSONWebKeysResponse>(
           '/google.container.v1beta1.ClusterManager/GetJSONWebKeys',
           ($0.GetJSONWebKeysRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.GetJSONWebKeysResponse.fromBuffer(value));
+  static final _$listNodePools =
+      $grpc.ClientMethod<$0.ListNodePoolsRequest, $0.ListNodePoolsResponse>(
+          '/google.container.v1beta1.ClusterManager/ListNodePools',
+          ($0.ListNodePoolsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ListNodePoolsResponse.fromBuffer(value));
   static final _$getNodePool =
       $grpc.ClientMethod<$0.GetNodePoolRequest, $0.NodePool>(
           '/google.container.v1beta1.ClusterManager/GetNodePool',
@@ -299,16 +299,16 @@ class ClusterManagerClient extends $grpc.Client {
     return $createUnaryCall(_$getServerConfig, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.ListNodePoolsResponse> listNodePools(
-      $0.ListNodePoolsRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listNodePools, request, options: options);
-  }
-
   $grpc.ResponseFuture<$0.GetJSONWebKeysResponse> getJSONWebKeys(
       $0.GetJSONWebKeysRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getJSONWebKeys, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListNodePoolsResponse> listNodePools(
+      $0.ListNodePoolsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listNodePools, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.NodePool> getNodePool($0.GetNodePoolRequest request,
@@ -545,15 +545,6 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetServerConfigRequest.fromBuffer(value),
         ($0.ServerConfig value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.ListNodePoolsRequest, $0.ListNodePoolsResponse>(
-            'ListNodePools',
-            listNodePools_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.ListNodePoolsRequest.fromBuffer(value),
-            ($0.ListNodePoolsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetJSONWebKeysRequest,
             $0.GetJSONWebKeysResponse>(
         'GetJSONWebKeys',
@@ -563,6 +554,15 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetJSONWebKeysRequest.fromBuffer(value),
         ($0.GetJSONWebKeysResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListNodePoolsRequest, $0.ListNodePoolsResponse>(
+            'ListNodePools',
+            listNodePools_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListNodePoolsRequest.fromBuffer(value),
+            ($0.ListNodePoolsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetNodePoolRequest, $0.NodePool>(
         'GetNodePool',
         getNodePool_Pre,
@@ -776,16 +776,16 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
     return getServerConfig(call, await request);
   }
 
-  $async.Future<$0.ListNodePoolsResponse> listNodePools_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.ListNodePoolsRequest> request) async {
-    return listNodePools(call, await request);
-  }
-
   $async.Future<$0.GetJSONWebKeysResponse> getJSONWebKeys_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetJSONWebKeysRequest> request) async {
     return getJSONWebKeys(call, await request);
+  }
+
+  $async.Future<$0.ListNodePoolsResponse> listNodePools_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListNodePoolsRequest> request) async {
+    return listNodePools(call, await request);
   }
 
   $async.Future<$0.NodePool> getNodePool_Pre($grpc.ServiceCall call,
@@ -900,10 +900,10 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.CancelOperationRequest request);
   $async.Future<$0.ServerConfig> getServerConfig(
       $grpc.ServiceCall call, $0.GetServerConfigRequest request);
-  $async.Future<$0.ListNodePoolsResponse> listNodePools(
-      $grpc.ServiceCall call, $0.ListNodePoolsRequest request);
   $async.Future<$0.GetJSONWebKeysResponse> getJSONWebKeys(
       $grpc.ServiceCall call, $0.GetJSONWebKeysRequest request);
+  $async.Future<$0.ListNodePoolsResponse> listNodePools(
+      $grpc.ServiceCall call, $0.ListNodePoolsRequest request);
   $async.Future<$0.NodePool> getNodePool(
       $grpc.ServiceCall call, $0.GetNodePoolRequest request);
   $async.Future<$0.Operation> createNodePool(

@@ -91,11 +91,14 @@ class CompositeFilter_Operator extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'AND');
+  static const CompositeFilter_Operator OR = CompositeFilter_Operator._(2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OR');
 
   static const $core.List<CompositeFilter_Operator> values =
       <CompositeFilter_Operator>[
     OPERATOR_UNSPECIFIED,
     AND,
+    OR,
   ];
 
   static final $core.Map<$core.int, CompositeFilter_Operator> _byValue =

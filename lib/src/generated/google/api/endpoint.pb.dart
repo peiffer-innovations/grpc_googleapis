@@ -45,7 +45,7 @@ class Endpoint extends $pb.GeneratedMessage {
   factory Endpoint({
     $core.String? name,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$core.String>? aliases,
+    $core.Iterable<$core.String>? aliases,
     $core.bool? allowCors,
     $core.String? target,
   }) {

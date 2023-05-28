@@ -688,6 +688,11 @@ class Operation_Type extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'SET_MAINTENANCE_POLICY');
+  static const Operation_Type RESIZE_CLUSTER = Operation_Type._(
+      18,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RESIZE_CLUSTER');
 
   static const $core.List<Operation_Type> values = <Operation_Type>[
     TYPE_UNSPECIFIED,
@@ -707,6 +712,7 @@ class Operation_Type extends $pb.ProtobufEnum {
     SET_NODE_POOL_SIZE,
     SET_NETWORK_POLICY,
     SET_MAINTENANCE_POLICY,
+    RESIZE_CLUSTER,
   ];
 
   static final $core.Map<$core.int, Operation_Type> _byValue =

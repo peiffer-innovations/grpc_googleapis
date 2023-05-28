@@ -125,6 +125,14 @@ const ComputeRoutesRequest$json = const {
       '10': 'languageCode'
     },
     const {
+      '1': 'region_code',
+      '3': 16,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'regionCode'
+    },
+    const {
       '1': 'units',
       '3': 11,
       '4': 1,
@@ -180,7 +188,7 @@ const ComputeRoutesRequest_ExtraComputation$json = const {
 
 /// Descriptor for `ComputeRoutesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List computeRoutesRequestDescriptor = $convert.base64Decode(
-    'ChRDb21wdXRlUm91dGVzUmVxdWVzdBI9CgZvcmlnaW4YASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQJSBm9yaWdpbhJHCgtkZXN0aW5hdGlvbhgCIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAlILZGVzdGluYXRpb24SSwoNaW50ZXJtZWRpYXRlcxgDIAMoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAVINaW50ZXJtZWRpYXRlcxJNCgt0cmF2ZWxfbW9kZRgEIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAUgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJXChBwb2x5bGluZV9xdWFsaXR5GAYgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZVF1YWxpdHlCA+BBAVIPcG9seWxpbmVRdWFsaXR5EloKEXBvbHlsaW5lX2VuY29kaW5nGAwgASgOMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZUVuY29kaW5nQgPgQQFSEHBvbHlsaW5lRW5jb2RpbmcSRgoOZGVwYXJ0dXJlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFSDWRlcGFydHVyZVRpbWUSQQoaY29tcHV0ZV9hbHRlcm5hdGl2ZV9yb3V0ZXMYCCABKAhCA+BBAVIYY29tcHV0ZUFsdGVybmF0aXZlUm91dGVzElQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBAVIOcm91dGVNb2RpZmllcnMSKAoNbGFuZ3VhZ2VfY29kZRgKIAEoCUID4EEBUgxsYW5ndWFnZUNvZGUSOAoFdW5pdHMYCyABKA4yHS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlVuaXRzQgPgQQFSBXVuaXRzEn4KGnJlcXVlc3RlZF9yZWZlcmVuY2Vfcm91dGVzGA4gAygOMjsuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVzUmVxdWVzdC5SZWZlcmVuY2VSb3V0ZUID4EEBUhhyZXF1ZXN0ZWRSZWZlcmVuY2VSb3V0ZXMScQoSZXh0cmFfY29tcHV0YXRpb25zGA8gAygOMj0uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVzUmVxdWVzdC5FeHRyYUNvbXB1dGF0aW9uQgPgQQFSEWV4dHJhQ29tcHV0YXRpb25zIkUKDlJlZmVyZW5jZVJvdXRlEh8KG1JFRkVSRU5DRV9ST1VURV9VTlNQRUNJRklFRBAAEhIKDkZVRUxfRUZGSUNJRU5UEAEibwoQRXh0cmFDb21wdXRhdGlvbhIhCh1FWFRSQV9DT01QVVRBVElPTl9VTlNQRUNJRklFRBAAEgkKBVRPTExTEAESFAoQRlVFTF9DT05TVU1QVElPThACEhcKE1RSQUZGSUNfT05fUE9MWUxJTkUQAw==');
+    'ChRDb21wdXRlUm91dGVzUmVxdWVzdBI9CgZvcmlnaW4YASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQJSBm9yaWdpbhJHCgtkZXN0aW5hdGlvbhgCIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAlILZGVzdGluYXRpb24SSwoNaW50ZXJtZWRpYXRlcxgDIAMoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAVINaW50ZXJtZWRpYXRlcxJNCgt0cmF2ZWxfbW9kZRgEIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAUgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJXChBwb2x5bGluZV9xdWFsaXR5GAYgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZVF1YWxpdHlCA+BBAVIPcG9seWxpbmVRdWFsaXR5EloKEXBvbHlsaW5lX2VuY29kaW5nGAwgASgOMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZUVuY29kaW5nQgPgQQFSEHBvbHlsaW5lRW5jb2RpbmcSRgoOZGVwYXJ0dXJlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFSDWRlcGFydHVyZVRpbWUSQQoaY29tcHV0ZV9hbHRlcm5hdGl2ZV9yb3V0ZXMYCCABKAhCA+BBAVIYY29tcHV0ZUFsdGVybmF0aXZlUm91dGVzElQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBAVIOcm91dGVNb2RpZmllcnMSKAoNbGFuZ3VhZ2VfY29kZRgKIAEoCUID4EEBUgxsYW5ndWFnZUNvZGUSJAoLcmVnaW9uX2NvZGUYECABKAlCA+BBAVIKcmVnaW9uQ29kZRI4CgV1bml0cxgLIAEoDjIdLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVW5pdHNCA+BBAVIFdW5pdHMSfgoacmVxdWVzdGVkX3JlZmVyZW5jZV9yb3V0ZXMYDiADKA4yOy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0LlJlZmVyZW5jZVJvdXRlQgPgQQFSGHJlcXVlc3RlZFJlZmVyZW5jZVJvdXRlcxJxChJleHRyYV9jb21wdXRhdGlvbnMYDyADKA4yPS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0LkV4dHJhQ29tcHV0YXRpb25CA+BBAVIRZXh0cmFDb21wdXRhdGlvbnMiRQoOUmVmZXJlbmNlUm91dGUSHwobUkVGRVJFTkNFX1JPVVRFX1VOU1BFQ0lGSUVEEAASEgoORlVFTF9FRkZJQ0lFTlQQASJvChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVYVFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQARIUChBGVUVMX0NPTlNVTVBUSU9OEAISFwoTVFJBRkZJQ19PTl9QT0xZTElORRAD');
 @$core.Deprecated('Use computeRoutesResponseDescriptor instead')
 const ComputeRoutesResponse$json = const {
   '1': 'ComputeRoutesResponse',
@@ -201,12 +209,20 @@ const ComputeRoutesResponse$json = const {
       '6': '.google.maps.routing.v2.FallbackInfo',
       '10': 'fallbackInfo'
     },
+    const {
+      '1': 'geocoding_results',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.maps.routing.v2.GeocodingResults',
+      '10': 'geocodingResults'
+    },
   ],
 };
 
 /// Descriptor for `ComputeRoutesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List computeRoutesResponseDescriptor = $convert.base64Decode(
-    'ChVDb21wdXRlUm91dGVzUmVzcG9uc2USNQoGcm91dGVzGAEgAygLMh0uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZVIGcm91dGVzEkkKDWZhbGxiYWNrX2luZm8YAiABKAsyJC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkZhbGxiYWNrSW5mb1IMZmFsbGJhY2tJbmZv');
+    'ChVDb21wdXRlUm91dGVzUmVzcG9uc2USNQoGcm91dGVzGAEgAygLMh0uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZVIGcm91dGVzEkkKDWZhbGxiYWNrX2luZm8YAiABKAsyJC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkZhbGxiYWNrSW5mb1IMZmFsbGJhY2tJbmZvElUKEWdlb2NvZGluZ19yZXN1bHRzGAMgASgLMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5HZW9jb2RpbmdSZXN1bHRzUhBnZW9jb2RpbmdSZXN1bHRz');
 @$core.Deprecated('Use computeRouteMatrixRequestDescriptor instead')
 const ComputeRouteMatrixRequest$json = const {
   '1': 'ComputeRouteMatrixRequest',
@@ -257,6 +273,22 @@ const ComputeRouteMatrixRequest$json = const {
       '10': 'departureTime'
     },
     const {
+      '1': 'language_code',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'languageCode'
+    },
+    const {
+      '1': 'region_code',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'regionCode'
+    },
+    const {
       '1': 'extra_computations',
       '3': 8,
       '4': 3,
@@ -281,7 +313,7 @@ const ComputeRouteMatrixRequest_ExtraComputation$json = const {
 /// Descriptor for `ComputeRouteMatrixRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List computeRouteMatrixRequestDescriptor =
     $convert.base64Decode(
-        'ChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0EkgKB29yaWdpbnMYASADKAsyKS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4T3JpZ2luQgPgQQJSB29yaWdpbnMSVwoMZGVzdGluYXRpb25zGAIgAygLMi4uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeERlc3RpbmF0aW9uQgPgQQJSDGRlc3RpbmF0aW9ucxJNCgt0cmF2ZWxfbW9kZRgDIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAQgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJGCg5kZXBhcnR1cmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAVINZGVwYXJ0dXJlVGltZRJ2ChJleHRyYV9jb21wdXRhdGlvbnMYCCADKA4yQi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QuRXh0cmFDb21wdXRhdGlvbkID4EEBUhFleHRyYUNvbXB1dGF0aW9ucyJAChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVYVFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQAQ==');
+        'ChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0EkgKB29yaWdpbnMYASADKAsyKS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4T3JpZ2luQgPgQQJSB29yaWdpbnMSVwoMZGVzdGluYXRpb25zGAIgAygLMi4uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeERlc3RpbmF0aW9uQgPgQQJSDGRlc3RpbmF0aW9ucxJNCgt0cmF2ZWxfbW9kZRgDIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQFSCnRyYXZlbE1vZGUSXQoScm91dGluZ19wcmVmZXJlbmNlGAQgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBUhFyb3V0aW5nUHJlZmVyZW5jZRJGCg5kZXBhcnR1cmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAVINZGVwYXJ0dXJlVGltZRIoCg1sYW5ndWFnZV9jb2RlGAYgASgJQgPgQQFSDGxhbmd1YWdlQ29kZRIkCgtyZWdpb25fY29kZRgJIAEoCUID4EEBUgpyZWdpb25Db2RlEnYKEmV4dHJhX2NvbXB1dGF0aW9ucxgIIAMoDjJCLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0ZVJvdXRlTWF0cml4UmVxdWVzdC5FeHRyYUNvbXB1dGF0aW9uQgPgQQFSEWV4dHJhQ29tcHV0YXRpb25zIkAKEEV4dHJhQ29tcHV0YXRpb24SIQodRVhUUkFfQ09NUFVUQVRJT05fVU5TUEVDSUZJRUQQABIJCgVUT0xMUxAB');
 @$core.Deprecated('Use routeMatrixOriginDescriptor instead')
 const RouteMatrixOrigin$json = const {
   '1': 'RouteMatrixOrigin',

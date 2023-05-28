@@ -10,10 +10,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'header.pb.dart' as $3;
+import 'header.pb.dart' as $4;
 import 'delivery_vehicles.pb.dart' as $1;
-import '../../../../geo/type/viewport.pb.dart' as $4;
-import '../../../../protobuf/field_mask.pb.dart' as $5;
+import '../../../../geo/type/viewport.pb.dart' as $5;
+import '../../../../protobuf/field_mask.pb.dart' as $6;
 import 'tasks.pb.dart' as $2;
 
 class CreateDeliveryVehicleRequest extends $pb.GeneratedMessage {
@@ -26,12 +26,12 @@ class CreateDeliveryVehicleRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -52,7 +52,7 @@ class CreateDeliveryVehicleRequest extends $pb.GeneratedMessage {
 
   CreateDeliveryVehicleRequest._() : super();
   factory CreateDeliveryVehicleRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? parent,
     $core.String? deliveryVehicleId,
     $1.DeliveryVehicle? deliveryVehicle,
@@ -104,9 +104,9 @@ class CreateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   static CreateDeliveryVehicleRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -115,7 +115,7 @@ class CreateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(1);
@@ -166,12 +166,12 @@ class GetDeliveryVehicleRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -181,7 +181,7 @@ class GetDeliveryVehicleRequest extends $pb.GeneratedMessage {
 
   GetDeliveryVehicleRequest._() : super();
   factory GetDeliveryVehicleRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? name,
   }) {
     final _result = create();
@@ -223,9 +223,9 @@ class GetDeliveryVehicleRequest extends $pb.GeneratedMessage {
   static GetDeliveryVehicleRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -234,7 +234,7 @@ class GetDeliveryVehicleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(1);
@@ -259,12 +259,12 @@ class ListDeliveryVehiclesRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -286,22 +286,22 @@ class ListDeliveryVehiclesRequest extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'filter')
-    ..aOM<$4.Viewport>(
+    ..aOM<$5.Viewport>(
         7,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'viewport',
-        subBuilder: $4.Viewport.create)
+        subBuilder: $5.Viewport.create)
     ..hasRequiredFields = false;
 
   ListDeliveryVehiclesRequest._() : super();
   factory ListDeliveryVehiclesRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     $core.String? filter,
-    $4.Viewport? viewport,
+    $5.Viewport? viewport,
   }) {
     final _result = create();
     if (header != null) {
@@ -356,9 +356,9 @@ class ListDeliveryVehiclesRequest extends $pb.GeneratedMessage {
   static ListDeliveryVehiclesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -367,7 +367,7 @@ class ListDeliveryVehiclesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(1);
@@ -418,9 +418,9 @@ class ListDeliveryVehiclesRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(6);
 
   @$pb.TagNumber(7)
-  $4.Viewport get viewport => $_getN(5);
+  $5.Viewport get viewport => $_getN(5);
   @$pb.TagNumber(7)
-  set viewport($4.Viewport v) {
+  set viewport($5.Viewport v) {
     setField(7, v);
   }
 
@@ -429,7 +429,7 @@ class ListDeliveryVehiclesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearViewport() => clearField(7);
   @$pb.TagNumber(7)
-  $4.Viewport ensureViewport() => $_ensure(5);
+  $5.Viewport ensureViewport() => $_ensure(5);
 }
 
 class ListDeliveryVehiclesResponse extends $pb.GeneratedMessage {
@@ -548,31 +548,31 @@ class UpdateDeliveryVehicleRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOM<$1.DeliveryVehicle>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'deliveryVehicle',
         subBuilder: $1.DeliveryVehicle.create)
-    ..aOM<$5.FieldMask>(
+    ..aOM<$6.FieldMask>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDeliveryVehicleRequest._() : super();
   factory UpdateDeliveryVehicleRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $1.DeliveryVehicle? deliveryVehicle,
-    $5.FieldMask? updateMask,
+    $6.FieldMask? updateMask,
   }) {
     final _result = create();
     if (header != null) {
@@ -618,9 +618,9 @@ class UpdateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   static UpdateDeliveryVehicleRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -629,7 +629,7 @@ class UpdateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $1.DeliveryVehicle get deliveryVehicle => $_getN(1);
@@ -646,9 +646,9 @@ class UpdateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   $1.DeliveryVehicle ensureDeliveryVehicle() => $_ensure(1);
 
   @$pb.TagNumber(4)
-  $5.FieldMask get updateMask => $_getN(2);
+  $6.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(4)
-  set updateMask($5.FieldMask v) {
+  set updateMask($6.FieldMask v) {
     setField(4, v);
   }
 
@@ -657,7 +657,7 @@ class UpdateDeliveryVehicleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
   @$pb.TagNumber(4)
-  $5.FieldMask ensureUpdateMask() => $_ensure(2);
+  $6.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class BatchCreateTasksRequest extends $pb.GeneratedMessage {
@@ -670,12 +670,12 @@ class BatchCreateTasksRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -692,7 +692,7 @@ class BatchCreateTasksRequest extends $pb.GeneratedMessage {
 
   BatchCreateTasksRequest._() : super();
   factory BatchCreateTasksRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? parent,
     $core.Iterable<CreateTaskRequest>? requests,
   }) {
@@ -738,9 +738,9 @@ class BatchCreateTasksRequest extends $pb.GeneratedMessage {
   static BatchCreateTasksRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -749,7 +749,7 @@ class BatchCreateTasksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(1);
@@ -839,12 +839,12 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -865,7 +865,7 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
 
   CreateTaskRequest._() : super();
   factory CreateTaskRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? parent,
     $2.Task? task,
     $core.String? taskId,
@@ -913,9 +913,9 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   static CreateTaskRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -924,7 +924,7 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(1);
@@ -975,12 +975,12 @@ class GetTaskRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -990,7 +990,7 @@ class GetTaskRequest extends $pb.GeneratedMessage {
 
   GetTaskRequest._() : super();
   factory GetTaskRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? name,
   }) {
     final _result = create();
@@ -1030,9 +1030,9 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   static GetTaskRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -1041,7 +1041,7 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(1);
@@ -1066,12 +1066,12 @@ class SearchTasksRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1097,7 +1097,7 @@ class SearchTasksRequest extends $pb.GeneratedMessage {
 
   SearchTasksRequest._() : super();
   factory SearchTasksRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? parent,
     $core.String? trackingId,
     $core.int? pageSize,
@@ -1149,9 +1149,9 @@ class SearchTasksRequest extends $pb.GeneratedMessage {
   static SearchTasksRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -1160,7 +1160,7 @@ class SearchTasksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(1);
@@ -1302,31 +1302,31 @@ class UpdateTaskRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOM<$2.Task>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'task',
         subBuilder: $2.Task.create)
-    ..aOM<$5.FieldMask>(
+    ..aOM<$6.FieldMask>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'updateMask',
-        subBuilder: $5.FieldMask.create)
+        subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTaskRequest._() : super();
   factory UpdateTaskRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $2.Task? task,
-    $5.FieldMask? updateMask,
+    $6.FieldMask? updateMask,
   }) {
     final _result = create();
     if (header != null) {
@@ -1368,9 +1368,9 @@ class UpdateTaskRequest extends $pb.GeneratedMessage {
   static UpdateTaskRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -1379,7 +1379,7 @@ class UpdateTaskRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $2.Task get task => $_getN(1);
@@ -1396,9 +1396,9 @@ class UpdateTaskRequest extends $pb.GeneratedMessage {
   $2.Task ensureTask() => $_ensure(1);
 
   @$pb.TagNumber(4)
-  $5.FieldMask get updateMask => $_getN(2);
+  $6.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(4)
-  set updateMask($5.FieldMask v) {
+  set updateMask($6.FieldMask v) {
     setField(4, v);
   }
 
@@ -1407,7 +1407,7 @@ class UpdateTaskRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
   @$pb.TagNumber(4)
-  $5.FieldMask ensureUpdateMask() => $_ensure(2);
+  $6.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class ListTasksRequest extends $pb.GeneratedMessage {
@@ -1420,12 +1420,12 @@ class ListTasksRequest extends $pb.GeneratedMessage {
               ? ''
               : 'maps.fleetengine.delivery.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.DeliveryRequestHeader>(
+    ..aOM<$4.DeliveryRequestHeader>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'header',
-        subBuilder: $3.DeliveryRequestHeader.create)
+        subBuilder: $4.DeliveryRequestHeader.create)
     ..aOS(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1451,7 +1451,7 @@ class ListTasksRequest extends $pb.GeneratedMessage {
 
   ListTasksRequest._() : super();
   factory ListTasksRequest({
-    $3.DeliveryRequestHeader? header,
+    $4.DeliveryRequestHeader? header,
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
@@ -1503,9 +1503,9 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   static ListTasksRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader get header => $_getN(0);
+  $4.DeliveryRequestHeader get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($3.DeliveryRequestHeader v) {
+  set header($4.DeliveryRequestHeader v) {
     setField(1, v);
   }
 
@@ -1514,7 +1514,7 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $3.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(1);
@@ -1665,4 +1665,98 @@ class ListTasksResponse extends $pb.GeneratedMessage {
   $core.bool hasTotalSize() => $_has(2);
   @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
+}
+
+class GetTaskTrackingInfoRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetTaskTrackingInfoRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'maps.fleetengine.delivery.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.DeliveryRequestHeader>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'header',
+        subBuilder: $4.DeliveryRequestHeader.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
+
+  GetTaskTrackingInfoRequest._() : super();
+  factory GetTaskTrackingInfoRequest({
+    $4.DeliveryRequestHeader? header,
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (header != null) {
+      _result.header = header;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetTaskTrackingInfoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTaskTrackingInfoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetTaskTrackingInfoRequest clone() =>
+      GetTaskTrackingInfoRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetTaskTrackingInfoRequest copyWith(
+          void Function(GetTaskTrackingInfoRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetTaskTrackingInfoRequest))
+          as GetTaskTrackingInfoRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetTaskTrackingInfoRequest create() => GetTaskTrackingInfoRequest._();
+  GetTaskTrackingInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTaskTrackingInfoRequest> createRepeated() =>
+      $pb.PbList<GetTaskTrackingInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetTaskTrackingInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTaskTrackingInfoRequest>(create);
+  static GetTaskTrackingInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $4.DeliveryRequestHeader get header => $_getN(0);
+  @$pb.TagNumber(1)
+  set header($4.DeliveryRequestHeader v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasHeader() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearHeader() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.DeliveryRequestHeader ensureHeader() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set name($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearName() => clearField(3);
 }

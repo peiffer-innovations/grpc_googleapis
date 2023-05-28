@@ -199,11 +199,17 @@ class Hash_HashType extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'MD5');
+  static const Hash_HashType SHA512 = Hash_HashType._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SHA512');
 
   static const $core.List<Hash_HashType> values = <Hash_HashType>[
     NONE,
     SHA256,
     MD5,
+    SHA512,
   ];
 
   static final $core.Map<$core.int, Hash_HashType> _byValue =
@@ -580,6 +586,36 @@ class BuildOptions_LoggingMode extends $pb.ProtobufEnum {
   static BuildOptions_LoggingMode? valueOf($core.int value) => _byValue[value];
 
   const BuildOptions_LoggingMode._($core.int v, $core.String n) : super(v, n);
+}
+
+class BuildOptions_DefaultLogsBucketBehavior extends $pb.ProtobufEnum {
+  static const BuildOptions_DefaultLogsBucketBehavior
+      DEFAULT_LOGS_BUCKET_BEHAVIOR_UNSPECIFIED =
+      BuildOptions_DefaultLogsBucketBehavior._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DEFAULT_LOGS_BUCKET_BEHAVIOR_UNSPECIFIED');
+  static const BuildOptions_DefaultLogsBucketBehavior
+      REGIONAL_USER_OWNED_BUCKET = BuildOptions_DefaultLogsBucketBehavior._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'REGIONAL_USER_OWNED_BUCKET');
+
+  static const $core.List<BuildOptions_DefaultLogsBucketBehavior> values =
+      <BuildOptions_DefaultLogsBucketBehavior>[
+    DEFAULT_LOGS_BUCKET_BEHAVIOR_UNSPECIFIED,
+    REGIONAL_USER_OWNED_BUCKET,
+  ];
+
+  static final $core.Map<$core.int, BuildOptions_DefaultLogsBucketBehavior>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static BuildOptions_DefaultLogsBucketBehavior? valueOf($core.int value) =>
+      _byValue[value];
+
+  const BuildOptions_DefaultLogsBucketBehavior._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class WorkerPool_State extends $pb.ProtobufEnum {

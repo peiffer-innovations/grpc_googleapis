@@ -88,12 +88,6 @@ class AudienceDimensionOrMetricFilter_StringFilter_MatchType
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'FULL_REGEXP');
-  static const AudienceDimensionOrMetricFilter_StringFilter_MatchType
-      PARTIAL_REGEXP = AudienceDimensionOrMetricFilter_StringFilter_MatchType._(
-          6,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PARTIAL_REGEXP');
 
   static const $core
           .List<AudienceDimensionOrMetricFilter_StringFilter_MatchType>
@@ -104,7 +98,6 @@ class AudienceDimensionOrMetricFilter_StringFilter_MatchType
     ENDS_WITH,
     CONTAINS,
     FULL_REGEXP,
-    PARTIAL_REGEXP,
   ];
 
   static final $core.Map<$core.int,
@@ -141,25 +134,11 @@ class AudienceDimensionOrMetricFilter_NumericFilter_Operation
               ? ''
               : 'LESS_THAN');
   static const AudienceDimensionOrMetricFilter_NumericFilter_Operation
-      LESS_THAN_OR_EQUAL =
-      AudienceDimensionOrMetricFilter_NumericFilter_Operation._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LESS_THAN_OR_EQUAL');
-  static const AudienceDimensionOrMetricFilter_NumericFilter_Operation
       GREATER_THAN = AudienceDimensionOrMetricFilter_NumericFilter_Operation._(
           4,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'GREATER_THAN');
-  static const AudienceDimensionOrMetricFilter_NumericFilter_Operation
-      GREATER_THAN_OR_EQUAL =
-      AudienceDimensionOrMetricFilter_NumericFilter_Operation._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'GREATER_THAN_OR_EQUAL');
 
   static const $core
           .List<AudienceDimensionOrMetricFilter_NumericFilter_Operation>
@@ -167,9 +146,7 @@ class AudienceDimensionOrMetricFilter_NumericFilter_Operation
     OPERATION_UNSPECIFIED,
     EQUAL,
     LESS_THAN,
-    LESS_THAN_OR_EQUAL,
     GREATER_THAN,
-    GREATER_THAN_OR_EQUAL,
   ];
 
   static final $core.Map<$core.int,

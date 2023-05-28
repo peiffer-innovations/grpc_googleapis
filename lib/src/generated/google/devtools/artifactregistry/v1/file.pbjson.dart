@@ -59,6 +59,7 @@ const File$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'createTime'
     },
     const {
@@ -67,21 +68,38 @@ const File$json = const {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': const {},
       '10': 'updateTime'
     },
     const {'1': 'owner', '3': 7, '4': 1, '5': 9, '10': 'owner'},
+    const {
+      '1': 'fetch_time',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': const {},
+      '10': 'fetchTime'
+    },
   ],
   '7': const {},
 };
 
 /// Descriptor for `File`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List fileDescriptor = $convert.base64Decode(
-    'CgRGaWxlEhIKBG5hbWUYASABKAlSBG5hbWUSHQoKc2l6ZV9ieXRlcxgDIAEoA1IJc2l6ZUJ5dGVzEkEKBmhhc2hlcxgEIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLkhhc2hSBmhhc2hlcxI7CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSOwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1cGRhdGVUaW1lEhQKBW93bmVyGAcgASgJUgVvd25lcjp56kF2CiRhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0ZpbGUSTnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9L2ZpbGVzL3tmaWxlfQ==');
+    'CgRGaWxlEhIKBG5hbWUYASABKAlSBG5hbWUSHQoKc2l6ZV9ieXRlcxgDIAEoA1IJc2l6ZUJ5dGVzEkEKBmhhc2hlcxgEIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLkhhc2hSBmhhc2hlcxJACgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGltZRIUCgVvd25lchgHIAEoCVIFb3duZXISPgoKZmV0Y2hfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IJZmV0Y2hUaW1lOnnqQXYKJGFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vRmlsZRJOcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0vZmlsZXMve2ZpbGV9');
 @$core.Deprecated('Use listFilesRequestDescriptor instead')
 const ListFilesRequest$json = const {
   '1': 'ListFilesRequest',
   '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    const {
+      '1': 'parent',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': const {},
+      '10': 'parent'
+    },
     const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
@@ -91,7 +109,7 @@ const ListFilesRequest$json = const {
 
 /// Descriptor for `ListFilesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listFilesRequestDescriptor = $convert.base64Decode(
-    'ChBMaXN0RmlsZXNSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhYKBmZpbHRlchgEIAEoCVIGZmlsdGVyEhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2VuEhkKCG9yZGVyX2J5GAUgASgJUgdvcmRlckJ5');
+    'ChBMaXN0RmlsZXNSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUIs4EEC+kEmEiRhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0ZpbGVSBnBhcmVudBIWCgZmaWx0ZXIYBCABKAlSBmZpbHRlchIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YAyABKAlSCXBhZ2VUb2tlbhIZCghvcmRlcl9ieRgFIAEoCVIHb3JkZXJCeQ==');
 @$core.Deprecated('Use listFilesResponseDescriptor instead')
 const ListFilesResponse$json = const {
   '1': 'ListFilesResponse',
@@ -121,10 +139,10 @@ final $typed_data.Uint8List listFilesResponseDescriptor = $convert.base64Decode(
 const GetFileRequest$json = const {
   '1': 'GetFileRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'name'},
   ],
 };
 
 /// Descriptor for `GetFileRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getFileRequestDescriptor =
-    $convert.base64Decode('Cg5HZXRGaWxlUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1l');
+final $typed_data.Uint8List getFileRequestDescriptor = $convert.base64Decode(
+    'Cg5HZXRGaWxlUmVxdWVzdBJACgRuYW1lGAEgASgJQizgQQL6QSYKJGFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vRmlsZVIEbmFtZQ==');

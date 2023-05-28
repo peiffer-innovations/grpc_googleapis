@@ -281,8 +281,8 @@ const DeleteSchemaRevisionRequest$json = const {
       '3': 2,
       '4': 1,
       '5': 9,
-      '8': const {},
-      '10': 'revisionId'
+      '8': const {'3': true},
+      '10': 'revisionId',
     },
   ],
 };
@@ -290,7 +290,7 @@ const DeleteSchemaRevisionRequest$json = const {
 /// Descriptor for `DeleteSchemaRevisionRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteSchemaRevisionRequestDescriptor =
     $convert.base64Decode(
-        'ChtEZWxldGVTY2hlbWFSZXZpc2lvblJlcXVlc3QSOAoEbmFtZRgBIAEoCUIk4EEC+kEeChxwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU2NoZW1hUgRuYW1lEiQKC3JldmlzaW9uX2lkGAIgASgJQgPgQQJSCnJldmlzaW9uSWQ=');
+        'ChtEZWxldGVTY2hlbWFSZXZpc2lvblJlcXVlc3QSOAoEbmFtZRgBIAEoCUIk4EEC+kEeChxwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU2NoZW1hUgRuYW1lEiYKC3JldmlzaW9uX2lkGAIgASgJQgUYAeBBAVIKcmV2aXNpb25JZA==');
 @$core.Deprecated('Use deleteSchemaRequestDescriptor instead')
 const DeleteSchemaRequest$json = const {
   '1': 'DeleteSchemaRequest',

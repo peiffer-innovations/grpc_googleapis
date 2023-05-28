@@ -422,6 +422,13 @@ class SettingsChange_RestrictionChange_Feature extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'DRIVE_FILE_STREAM');
+  static const SettingsChange_RestrictionChange_Feature
+      FILE_ORGANIZER_CAN_SHARE_FOLDERS =
+      SettingsChange_RestrictionChange_Feature._(
+          5,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'FILE_ORGANIZER_CAN_SHARE_FOLDERS');
 
   static const $core.List<SettingsChange_RestrictionChange_Feature> values =
       <SettingsChange_RestrictionChange_Feature>[
@@ -430,6 +437,7 @@ class SettingsChange_RestrictionChange_Feature extends $pb.ProtobufEnum {
     DIRECT_SHARING,
     ITEM_DUPLICATION,
     DRIVE_FILE_STREAM,
+    FILE_ORGANIZER_CAN_SHARE_FOLDERS,
   ];
 
   static final $core.Map<$core.int, SettingsChange_RestrictionChange_Feature>

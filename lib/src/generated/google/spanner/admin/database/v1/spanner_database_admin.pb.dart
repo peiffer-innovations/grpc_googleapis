@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'backup.pb.dart' as $5;
 import '../../../../protobuf/timestamp.pb.dart' as $6;
 import 'common.pb.dart' as $7;
+import '../../../../protobuf/field_mask.pb.dart' as $8;
 import '../../../../longrunning/operations.pb.dart' as $2;
 
 import 'spanner_database_admin.pbenum.dart';
@@ -199,6 +200,16 @@ class Database extends $pb.GeneratedMessage {
         defaultOrMaker: $7.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED,
         valueOf: $7.DatabaseDialect.valueOf,
         enumValues: $7.DatabaseDialect.values)
+    ..aOB(
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'enableDropProtection')
+    ..aOB(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'reconciling')
     ..hasRequiredFields = false;
 
   Database._() : super();
@@ -213,6 +224,8 @@ class Database extends $pb.GeneratedMessage {
     $core.Iterable<$7.EncryptionInfo>? encryptionInfo,
     $core.String? defaultLeader,
     $7.DatabaseDialect? databaseDialect,
+    $core.bool? enableDropProtection,
+    $core.bool? reconciling,
   }) {
     final _result = create();
     if (name != null) {
@@ -244,6 +257,12 @@ class Database extends $pb.GeneratedMessage {
     }
     if (databaseDialect != null) {
       _result.databaseDialect = databaseDialect;
+    }
+    if (enableDropProtection != null) {
+      _result.enableDropProtection = enableDropProtection;
+    }
+    if (reconciling != null) {
+      _result.reconciling = reconciling;
     }
     return _result;
   }
@@ -391,6 +410,30 @@ class Database extends $pb.GeneratedMessage {
   $core.bool hasDatabaseDialect() => $_has(9);
   @$pb.TagNumber(10)
   void clearDatabaseDialect() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.bool get enableDropProtection => $_getBF(10);
+  @$pb.TagNumber(11)
+  set enableDropProtection($core.bool v) {
+    $_setBool(10, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasEnableDropProtection() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearEnableDropProtection() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.bool get reconciling => $_getBF(11);
+  @$pb.TagNumber(12)
+  set reconciling($core.bool v) {
+    $_setBool(11, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasReconciling() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearReconciling() => clearField(12);
 }
 
 class ListDatabasesRequest extends $pb.GeneratedMessage {
@@ -872,6 +915,222 @@ class GetDatabaseRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
+}
+
+class UpdateDatabaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateDatabaseRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.spanner.admin.database.v1'),
+      createEmptyInstance: create)
+    ..aOM<Database>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'database',
+        subBuilder: Database.create)
+    ..aOM<$8.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $8.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  UpdateDatabaseRequest._() : super();
+  factory UpdateDatabaseRequest({
+    Database? database,
+    $8.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (database != null) {
+      _result.database = database;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateDatabaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatabaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseRequest clone() =>
+      UpdateDatabaseRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseRequest copyWith(
+          void Function(UpdateDatabaseRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateDatabaseRequest))
+          as UpdateDatabaseRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseRequest create() => UpdateDatabaseRequest._();
+  UpdateDatabaseRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateDatabaseRequest> createRepeated() =>
+      $pb.PbList<UpdateDatabaseRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDatabaseRequest>(create);
+  static UpdateDatabaseRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Database get database => $_getN(0);
+  @$pb.TagNumber(1)
+  set database(Database v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDatabase() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDatabase() => clearField(1);
+  @$pb.TagNumber(1)
+  Database ensureDatabase() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $8.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($8.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+class UpdateDatabaseMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateDatabaseMetadata',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.spanner.admin.database.v1'),
+      createEmptyInstance: create)
+    ..aOM<UpdateDatabaseRequest>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'request',
+        subBuilder: UpdateDatabaseRequest.create)
+    ..aOM<$7.OperationProgress>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'progress',
+        subBuilder: $7.OperationProgress.create)
+    ..aOM<$6.Timestamp>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cancelTime',
+        subBuilder: $6.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  UpdateDatabaseMetadata._() : super();
+  factory UpdateDatabaseMetadata({
+    UpdateDatabaseRequest? request,
+    $7.OperationProgress? progress,
+    $6.Timestamp? cancelTime,
+  }) {
+    final _result = create();
+    if (request != null) {
+      _result.request = request;
+    }
+    if (progress != null) {
+      _result.progress = progress;
+    }
+    if (cancelTime != null) {
+      _result.cancelTime = cancelTime;
+    }
+    return _result;
+  }
+  factory UpdateDatabaseMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatabaseMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseMetadata clone() =>
+      UpdateDatabaseMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateDatabaseMetadata copyWith(
+          void Function(UpdateDatabaseMetadata) updates) =>
+      super.copyWith((message) => updates(message as UpdateDatabaseMetadata))
+          as UpdateDatabaseMetadata; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseMetadata create() => UpdateDatabaseMetadata._();
+  UpdateDatabaseMetadata createEmptyInstance() => create();
+  static $pb.PbList<UpdateDatabaseMetadata> createRepeated() =>
+      $pb.PbList<UpdateDatabaseMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDatabaseMetadata>(create);
+  static UpdateDatabaseMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  UpdateDatabaseRequest get request => $_getN(0);
+  @$pb.TagNumber(1)
+  set request(UpdateDatabaseRequest v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRequest() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  UpdateDatabaseRequest ensureRequest() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $7.OperationProgress get progress => $_getN(1);
+  @$pb.TagNumber(2)
+  set progress($7.OperationProgress v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasProgress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProgress() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.OperationProgress ensureProgress() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $6.Timestamp get cancelTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set cancelTime($6.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasCancelTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCancelTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.Timestamp ensureCancelTime() => $_ensure(2);
 }
 
 class UpdateDatabaseDdlRequest extends $pb.GeneratedMessage {

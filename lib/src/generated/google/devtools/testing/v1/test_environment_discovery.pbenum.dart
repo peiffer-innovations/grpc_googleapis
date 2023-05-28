@@ -82,6 +82,48 @@ class DeviceFormFactor extends $pb.ProtobufEnum {
   const DeviceFormFactor._($core.int v, $core.String n) : super(v, n);
 }
 
+class DeviceCapacity extends $pb.ProtobufEnum {
+  static const DeviceCapacity DEVICE_CAPACITY_UNSPECIFIED = DeviceCapacity._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DEVICE_CAPACITY_UNSPECIFIED');
+  static const DeviceCapacity DEVICE_CAPACITY_HIGH = DeviceCapacity._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DEVICE_CAPACITY_HIGH');
+  static const DeviceCapacity DEVICE_CAPACITY_MEDIUM = DeviceCapacity._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DEVICE_CAPACITY_MEDIUM');
+  static const DeviceCapacity DEVICE_CAPACITY_LOW = DeviceCapacity._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DEVICE_CAPACITY_LOW');
+  static const DeviceCapacity DEVICE_CAPACITY_NONE = DeviceCapacity._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DEVICE_CAPACITY_NONE');
+
+  static const $core.List<DeviceCapacity> values = <DeviceCapacity>[
+    DEVICE_CAPACITY_UNSPECIFIED,
+    DEVICE_CAPACITY_HIGH,
+    DEVICE_CAPACITY_MEDIUM,
+    DEVICE_CAPACITY_LOW,
+    DEVICE_CAPACITY_NONE,
+  ];
+
+  static final $core.Map<$core.int, DeviceCapacity> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DeviceCapacity? valueOf($core.int value) => _byValue[value];
+
+  const DeviceCapacity._($core.int v, $core.String n) : super(v, n);
+}
+
 class GetTestEnvironmentCatalogRequest_EnvironmentType
     extends $pb.ProtobufEnum {
   static const GetTestEnvironmentCatalogRequest_EnvironmentType

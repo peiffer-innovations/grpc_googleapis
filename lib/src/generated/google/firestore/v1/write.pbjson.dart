@@ -270,9 +270,17 @@ const ExistenceFilter$json = const {
   '2': const [
     const {'1': 'target_id', '3': 1, '4': 1, '5': 5, '10': 'targetId'},
     const {'1': 'count', '3': 2, '4': 1, '5': 5, '10': 'count'},
+    const {
+      '1': 'unchanged_names',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.v1.BloomFilter',
+      '10': 'unchangedNames'
+    },
   ],
 };
 
 /// Descriptor for `ExistenceFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List existenceFilterDescriptor = $convert.base64Decode(
-    'Cg9FeGlzdGVuY2VGaWx0ZXISGwoJdGFyZ2V0X2lkGAEgASgFUgh0YXJnZXRJZBIUCgVjb3VudBgCIAEoBVIFY291bnQ=');
+    'Cg9FeGlzdGVuY2VGaWx0ZXISGwoJdGFyZ2V0X2lkGAEgASgFUgh0YXJnZXRJZBIUCgVjb3VudBgCIAEoBVIFY291bnQSSQoPdW5jaGFuZ2VkX25hbWVzGAMgASgLMiAuZ29vZ2xlLmZpcmVzdG9yZS52MS5CbG9vbUZpbHRlclIOdW5jaGFuZ2VkTmFtZXM=');

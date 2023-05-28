@@ -13,7 +13,14 @@ import 'speed_reading_interval.pbenum.dart';
 
 export 'speed_reading_interval.pbenum.dart';
 
+enum SpeedReadingInterval_SpeedType { speed, notSet }
+
 class SpeedReadingInterval extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, SpeedReadingInterval_SpeedType>
+      _SpeedReadingInterval_SpeedTypeByTag = {
+    3: SpeedReadingInterval_SpeedType.speed,
+    0: SpeedReadingInterval_SpeedType.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
@@ -23,6 +30,7 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
               ? ''
               : 'google.maps.routing.v2'),
       createEmptyInstance: create)
+    ..oo(0, [3])
     ..a<$core.int>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -91,6 +99,10 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
   static SpeedReadingInterval getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SpeedReadingInterval>(create);
   static SpeedReadingInterval? _defaultInstance;
+
+  SpeedReadingInterval_SpeedType whichSpeedType() =>
+      _SpeedReadingInterval_SpeedTypeByTag[$_whichOneof(0)]!;
+  void clearSpeedType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.int get startPolylinePointIndex => $_getIZ(0);

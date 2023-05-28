@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'document.pb.dart' as $0;
 import 'common.pb.dart' as $1;
 import '../../protobuf/timestamp.pb.dart' as $2;
+import 'bloom_filter.pb.dart' as $3;
 
 import 'write.pbenum.dart';
 
@@ -942,12 +943,19 @@ class ExistenceFilter extends $pb.GeneratedMessage {
             ? ''
             : 'count',
         $pb.PbFieldType.O3)
+    ..aOM<$3.BloomFilter>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'unchangedNames',
+        subBuilder: $3.BloomFilter.create)
     ..hasRequiredFields = false;
 
   ExistenceFilter._() : super();
   factory ExistenceFilter({
     $core.int? targetId,
     $core.int? count,
+    $3.BloomFilter? unchangedNames,
   }) {
     final _result = create();
     if (targetId != null) {
@@ -955,6 +963,9 @@ class ExistenceFilter extends $pb.GeneratedMessage {
     }
     if (count != null) {
       _result.count = count;
+    }
+    if (unchangedNames != null) {
+      _result.unchangedNames = unchangedNames;
     }
     return _result;
   }
@@ -1008,4 +1019,18 @@ class ExistenceFilter extends $pb.GeneratedMessage {
   $core.bool hasCount() => $_has(1);
   @$pb.TagNumber(2)
   void clearCount() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $3.BloomFilter get unchangedNames => $_getN(2);
+  @$pb.TagNumber(3)
+  set unchangedNames($3.BloomFilter v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasUnchangedNames() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUnchangedNames() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.BloomFilter ensureUnchangedNames() => $_ensure(2);
 }

@@ -1805,6 +1805,12 @@ class AccessQuota extends $pb.GeneratedMessage {
             ? ''
             : 'serverErrorsPerProjectPerHour',
         subBuilder: AccessQuotaStatus.create)
+    ..aOM<AccessQuotaStatus>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'tokensPerProjectPerHour',
+        subBuilder: AccessQuotaStatus.create)
     ..hasRequiredFields = false;
 
   AccessQuota._() : super();
@@ -1813,6 +1819,7 @@ class AccessQuota extends $pb.GeneratedMessage {
     AccessQuotaStatus? tokensPerHour,
     AccessQuotaStatus? concurrentRequests,
     AccessQuotaStatus? serverErrorsPerProjectPerHour,
+    AccessQuotaStatus? tokensPerProjectPerHour,
   }) {
     final _result = create();
     if (tokensPerDay != null) {
@@ -1826,6 +1833,9 @@ class AccessQuota extends $pb.GeneratedMessage {
     }
     if (serverErrorsPerProjectPerHour != null) {
       _result.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
+    }
+    if (tokensPerProjectPerHour != null) {
+      _result.tokensPerProjectPerHour = tokensPerProjectPerHour;
     }
     return _result;
   }
@@ -1910,6 +1920,20 @@ class AccessQuota extends $pb.GeneratedMessage {
   void clearServerErrorsPerProjectPerHour() => clearField(4);
   @$pb.TagNumber(4)
   AccessQuotaStatus ensureServerErrorsPerProjectPerHour() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  AccessQuotaStatus get tokensPerProjectPerHour => $_getN(4);
+  @$pb.TagNumber(5)
+  set tokensPerProjectPerHour(AccessQuotaStatus v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTokensPerProjectPerHour() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTokensPerProjectPerHour() => clearField(5);
+  @$pb.TagNumber(5)
+  AccessQuotaStatus ensureTokensPerProjectPerHour() => $_ensure(4);
 }
 
 class AccessQuotaStatus extends $pb.GeneratedMessage {

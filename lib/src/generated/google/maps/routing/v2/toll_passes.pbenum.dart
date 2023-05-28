@@ -293,6 +293,11 @@ class TollPass extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'US_MI_AMBASSADOR_BRIDGE_PREMIER_COMMUTER_CARD');
+  static const TollPass US_MI_BCPASS = TollPass._(
+      94,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'US_MI_BCPASS');
   static const TollPass US_MI_GROSSE_ILE_TOLL_BRIDGE_PASS_TAG = TollPass._(
       37,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
@@ -531,6 +536,7 @@ class TollPass extends $pb.ProtobufEnum {
     US_MD_EZPASSMD,
     US_ME_EZPASSME,
     US_MI_AMBASSADOR_BRIDGE_PREMIER_COMMUTER_CARD,
+    US_MI_BCPASS,
     US_MI_GROSSE_ILE_TOLL_BRIDGE_PASS_TAG,
     US_MI_IQ_PROX_CARD,
     US_MI_MACKINAC_BRIDGE_MAC_PASS,

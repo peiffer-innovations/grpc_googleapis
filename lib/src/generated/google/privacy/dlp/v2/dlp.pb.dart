@@ -23084,7 +23084,7 @@ class InfoTypeSummary extends $pb.GeneratedMessage {
   factory InfoTypeSummary({
     $2.InfoType? infoType,
     @$core.Deprecated('This field is deprecated.')
-        $core.int? estimatedPrevalence,
+    $core.int? estimatedPrevalence,
   }) {
     final _result = create();
     if (infoType != null) {

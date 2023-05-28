@@ -51,6 +51,24 @@ const RestoreInfo$json = const {
 /// Descriptor for `RestoreInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List restoreInfoDescriptor = $convert.base64Decode(
     'CgtSZXN0b3JlSW5mbxJMCgtzb3VyY2VfdHlwZRgBIAEoDjIrLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5SZXN0b3JlU291cmNlVHlwZVIKc291cmNlVHlwZRJHCgtiYWNrdXBfaW5mbxgCIAEoCzIkLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5CYWNrdXBJbmZvSABSCmJhY2t1cEluZm9CDQoLc291cmNlX2luZm8=');
+@$core.Deprecated('Use changeStreamConfigDescriptor instead')
+const ChangeStreamConfig$json = const {
+  '1': 'ChangeStreamConfig',
+  '2': const [
+    const {
+      '1': 'retention_period',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'retentionPeriod'
+    },
+  ],
+};
+
+/// Descriptor for `ChangeStreamConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeStreamConfigDescriptor = $convert.base64Decode(
+    'ChJDaGFuZ2VTdHJlYW1Db25maWcSRAoQcmV0ZW50aW9uX3BlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIPcmV0ZW50aW9uUGVyaW9k');
 @$core.Deprecated('Use tableDescriptor instead')
 const Table$json = const {
   '1': 'Table',
@@ -90,6 +108,14 @@ const Table$json = const {
       '6': '.google.bigtable.admin.v2.RestoreInfo',
       '8': const {},
       '10': 'restoreInfo'
+    },
+    const {
+      '1': 'change_stream_config',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.ChangeStreamConfig',
+      '10': 'changeStreamConfig'
     },
     const {
       '1': 'deletion_protection',
@@ -205,7 +231,7 @@ const Table_View$json = const {
 
 /// Descriptor for `Table`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tableDescriptor = $convert.base64Decode(
-    'CgVUYWJsZRISCgRuYW1lGAEgASgJUgRuYW1lEl4KDmNsdXN0ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeUID4EEDUg1jbHVzdGVyU3RhdGVzElwKD2NvbHVtbl9mYW1pbGllcxgDIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5Db2x1bW5GYW1pbGllc0VudHJ5Ug5jb2x1bW5GYW1pbGllcxJbCgtncmFudWxhcml0eRgEIAEoDjI0Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5UaW1lc3RhbXBHcmFudWxhcml0eUID4EEFUgtncmFudWxhcml0eRJNCgxyZXN0b3JlX2luZm8YBiABKAsyJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuUmVzdG9yZUluZm9CA+BBA1ILcmVzdG9yZUluZm8SLwoTZGVsZXRpb25fcHJvdGVjdGlvbhgJIAEoCFISZGVsZXRpb25Qcm90ZWN0aW9uGugCCgxDbHVzdGVyU3RhdGUSbwoRcmVwbGljYXRpb25fc3RhdGUYASABKA4yPS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuQ2x1c3RlclN0YXRlLlJlcGxpY2F0aW9uU3RhdGVCA+BBA1IQcmVwbGljYXRpb25TdGF0ZRJWCg9lbmNyeXB0aW9uX2luZm8YAiADKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRW5jcnlwdGlvbkluZm9CA+BBA1IOZW5jcnlwdGlvbkluZm8ijgEKEFJlcGxpY2F0aW9uU3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASEAoMSU5JVElBTElaSU5HEAESFwoTUExBTk5FRF9NQUlOVEVOQU5DRRACEhkKFVVOUExBTk5FRF9NQUlOVEVOQU5DRRADEgkKBVJFQURZEAQSFAoQUkVBRFlfT1BUSU1JWklORxAFGm4KEkNsdXN0ZXJTdGF0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRJCCgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGVSBXZhbHVlOgI4ARppChNDb2x1bW5GYW1pbGllc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EjwKBXZhbHVlGAIgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNvbHVtbkZhbWlseVIFdmFsdWU6AjgBIkkKFFRpbWVzdGFtcEdyYW51bGFyaXR5EiUKIVRJTUVTVEFNUF9HUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEgoKBk1JTExJUxABInEKBFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEg0KCU5BTUVfT05MWRABEg8KC1NDSEVNQV9WSUVXEAISFAoQUkVQTElDQVRJT05fVklFVxADEhMKD0VOQ1JZUFRJT05fVklFVxAFEggKBEZVTEwQBDpf6kFcCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEjZwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vdGFibGVzL3t0YWJsZX0=');
+    'CgVUYWJsZRISCgRuYW1lGAEgASgJUgRuYW1lEl4KDmNsdXN0ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeUID4EEDUg1jbHVzdGVyU3RhdGVzElwKD2NvbHVtbl9mYW1pbGllcxgDIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5Db2x1bW5GYW1pbGllc0VudHJ5Ug5jb2x1bW5GYW1pbGllcxJbCgtncmFudWxhcml0eRgEIAEoDjI0Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5UaW1lc3RhbXBHcmFudWxhcml0eUID4EEFUgtncmFudWxhcml0eRJNCgxyZXN0b3JlX2luZm8YBiABKAsyJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuUmVzdG9yZUluZm9CA+BBA1ILcmVzdG9yZUluZm8SXgoUY2hhbmdlX3N0cmVhbV9jb25maWcYCCABKAsyLC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2hhbmdlU3RyZWFtQ29uZmlnUhJjaGFuZ2VTdHJlYW1Db25maWcSLwoTZGVsZXRpb25fcHJvdGVjdGlvbhgJIAEoCFISZGVsZXRpb25Qcm90ZWN0aW9uGugCCgxDbHVzdGVyU3RhdGUSbwoRcmVwbGljYXRpb25fc3RhdGUYASABKA4yPS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuQ2x1c3RlclN0YXRlLlJlcGxpY2F0aW9uU3RhdGVCA+BBA1IQcmVwbGljYXRpb25TdGF0ZRJWCg9lbmNyeXB0aW9uX2luZm8YAiADKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRW5jcnlwdGlvbkluZm9CA+BBA1IOZW5jcnlwdGlvbkluZm8ijgEKEFJlcGxpY2F0aW9uU3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASEAoMSU5JVElBTElaSU5HEAESFwoTUExBTk5FRF9NQUlOVEVOQU5DRRACEhkKFVVOUExBTk5FRF9NQUlOVEVOQU5DRRADEgkKBVJFQURZEAQSFAoQUkVBRFlfT1BUSU1JWklORxAFGm4KEkNsdXN0ZXJTdGF0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRJCCgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGVSBXZhbHVlOgI4ARppChNDb2x1bW5GYW1pbGllc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EjwKBXZhbHVlGAIgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNvbHVtbkZhbWlseVIFdmFsdWU6AjgBIkkKFFRpbWVzdGFtcEdyYW51bGFyaXR5EiUKIVRJTUVTVEFNUF9HUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEgoKBk1JTExJUxABInEKBFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEg0KCU5BTUVfT05MWRABEg8KC1NDSEVNQV9WSUVXEAISFAoQUkVQTElDQVRJT05fVklFVxADEhMKD0VOQ1JZUFRJT05fVklFVxAFEggKBEZVTEwQBDpf6kFcCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEjZwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vdGFibGVzL3t0YWJsZX0=');
 @$core.Deprecated('Use columnFamilyDescriptor instead')
 const ColumnFamily$json = const {
   '1': 'ColumnFamily',

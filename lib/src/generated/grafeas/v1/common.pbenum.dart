@@ -65,6 +65,16 @@ class NoteKind extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'DSSE_ATTESTATION');
+  static const NoteKind VULNERABILITY_ASSESSMENT = NoteKind._(
+      11,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'VULNERABILITY_ASSESSMENT');
+  static const NoteKind SBOM_REFERENCE = NoteKind._(
+      12,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SBOM_REFERENCE');
 
   static const $core.List<NoteKind> values = <NoteKind>[
     NOTE_KIND_UNSPECIFIED,
@@ -78,6 +88,8 @@ class NoteKind extends $pb.ProtobufEnum {
     UPGRADE,
     COMPLIANCE,
     DSSE_ATTESTATION,
+    VULNERABILITY_ASSESSMENT,
+    SBOM_REFERENCE,
   ];
 
   static final $core.Map<$core.int, NoteKind> _byValue =

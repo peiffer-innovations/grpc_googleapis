@@ -539,3 +539,63 @@ class ReportResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReportResponse>(create);
   static ReportResponse? _defaultInstance;
 }
+
+class ResourceInfoList extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ResourceInfoList',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicecontrol.v2'),
+      createEmptyInstance: create)
+    ..pc<ResourceInfo>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resources',
+        $pb.PbFieldType.PM,
+        subBuilder: ResourceInfo.create)
+    ..hasRequiredFields = false;
+
+  ResourceInfoList._() : super();
+  factory ResourceInfoList({
+    $core.Iterable<ResourceInfo>? resources,
+  }) {
+    final _result = create();
+    if (resources != null) {
+      _result.resources.addAll(resources);
+    }
+    return _result;
+  }
+  factory ResourceInfoList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceInfoList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ResourceInfoList clone() => ResourceInfoList()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ResourceInfoList copyWith(void Function(ResourceInfoList) updates) =>
+      super.copyWith((message) => updates(message as ResourceInfoList))
+          as ResourceInfoList; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ResourceInfoList create() => ResourceInfoList._();
+  ResourceInfoList createEmptyInstance() => create();
+  static $pb.PbList<ResourceInfoList> createRepeated() =>
+      $pb.PbList<ResourceInfoList>();
+  @$core.pragma('dart2js:noInline')
+  static ResourceInfoList getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ResourceInfoList>(create);
+  static ResourceInfoList? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ResourceInfo> get resources => $_getList(0);
+}

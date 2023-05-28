@@ -9,6 +9,120 @@ import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use runAccessReportRequestDescriptor instead')
+const RunAccessReportRequest$json = const {
+  '1': 'RunAccessReportRequest',
+  '2': const [
+    const {'1': 'entity', '3': 1, '4': 1, '5': 9, '10': 'entity'},
+    const {
+      '1': 'dimensions',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessDimension',
+      '10': 'dimensions'
+    },
+    const {
+      '1': 'metrics',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessMetric',
+      '10': 'metrics'
+    },
+    const {
+      '1': 'date_ranges',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessDateRange',
+      '10': 'dateRanges'
+    },
+    const {
+      '1': 'dimension_filter',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessFilterExpression',
+      '10': 'dimensionFilter'
+    },
+    const {
+      '1': 'metric_filter',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessFilterExpression',
+      '10': 'metricFilter'
+    },
+    const {'1': 'offset', '3': 7, '4': 1, '5': 3, '10': 'offset'},
+    const {'1': 'limit', '3': 8, '4': 1, '5': 3, '10': 'limit'},
+    const {'1': 'time_zone', '3': 9, '4': 1, '5': 9, '10': 'timeZone'},
+    const {
+      '1': 'order_bys',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessOrderBy',
+      '10': 'orderBys'
+    },
+    const {
+      '1': 'return_entity_quota',
+      '3': 11,
+      '4': 1,
+      '5': 8,
+      '10': 'returnEntityQuota'
+    },
+  ],
+};
+
+/// Descriptor for `RunAccessReportRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List runAccessReportRequestDescriptor =
+    $convert.base64Decode(
+        'ChZSdW5BY2Nlc3NSZXBvcnRSZXF1ZXN0EhYKBmVudGl0eRgBIAEoCVIGZW50aXR5Ek4KCmRpbWVuc2lvbnMYAiADKAsyLi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5BY2Nlc3NEaW1lbnNpb25SCmRpbWVuc2lvbnMSRQoHbWV0cmljcxgDIAMoCzIrLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkFjY2Vzc01ldHJpY1IHbWV0cmljcxJPCgtkYXRlX3JhbmdlcxgEIAMoCzIuLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkFjY2Vzc0RhdGVSYW5nZVIKZGF0ZVJhbmdlcxJgChBkaW1lbnNpb25fZmlsdGVyGAUgASgLMjUuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuQWNjZXNzRmlsdGVyRXhwcmVzc2lvblIPZGltZW5zaW9uRmlsdGVyEloKDW1ldHJpY19maWx0ZXIYBiABKAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5BY2Nlc3NGaWx0ZXJFeHByZXNzaW9uUgxtZXRyaWNGaWx0ZXISFgoGb2Zmc2V0GAcgASgDUgZvZmZzZXQSFAoFbGltaXQYCCABKANSBWxpbWl0EhsKCXRpbWVfem9uZRgJIAEoCVIIdGltZVpvbmUSSQoJb3JkZXJfYnlzGAogAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuQWNjZXNzT3JkZXJCeVIIb3JkZXJCeXMSLgoTcmV0dXJuX2VudGl0eV9xdW90YRgLIAEoCFIRcmV0dXJuRW50aXR5UXVvdGE=');
+@$core.Deprecated('Use runAccessReportResponseDescriptor instead')
+const RunAccessReportResponse$json = const {
+  '1': 'RunAccessReportResponse',
+  '2': const [
+    const {
+      '1': 'dimension_headers',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessDimensionHeader',
+      '10': 'dimensionHeaders'
+    },
+    const {
+      '1': 'metric_headers',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessMetricHeader',
+      '10': 'metricHeaders'
+    },
+    const {
+      '1': 'rows',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessRow',
+      '10': 'rows'
+    },
+    const {'1': 'row_count', '3': 4, '4': 1, '5': 5, '10': 'rowCount'},
+    const {
+      '1': 'quota',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1beta.AccessQuota',
+      '10': 'quota'
+    },
+  ],
+};
+
+/// Descriptor for `RunAccessReportResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List runAccessReportResponseDescriptor =
+    $convert.base64Decode(
+        'ChdSdW5BY2Nlc3NSZXBvcnRSZXNwb25zZRJhChFkaW1lbnNpb25faGVhZGVycxgBIAMoCzI0Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkFjY2Vzc0RpbWVuc2lvbkhlYWRlclIQZGltZW5zaW9uSGVhZGVycxJYCg5tZXRyaWNfaGVhZGVycxgCIAMoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkFjY2Vzc01ldHJpY0hlYWRlclINbWV0cmljSGVhZGVycxI8CgRyb3dzGAMgAygLMiguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuQWNjZXNzUm93UgRyb3dzEhsKCXJvd19jb3VudBgEIAEoBVIIcm93Q291bnQSQAoFcXVvdGEYBSABKAsyKi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5BY2Nlc3NRdW90YVIFcXVvdGE=');
 @$core.Deprecated('Use getAccountRequestDescriptor instead')
 const GetAccountRequest$json = const {
   '1': 'GetAccountRequest',

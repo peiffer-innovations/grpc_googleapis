@@ -25,11 +25,17 @@ class Index_QueryScope extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'COLLECTION_GROUP');
+  static const Index_QueryScope COLLECTION_RECURSIVE = Index_QueryScope._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'COLLECTION_RECURSIVE');
 
   static const $core.List<Index_QueryScope> values = <Index_QueryScope>[
     QUERY_SCOPE_UNSPECIFIED,
     COLLECTION,
     COLLECTION_GROUP,
+    COLLECTION_RECURSIVE,
   ];
 
   static final $core.Map<$core.int, Index_QueryScope> _byValue =
@@ -37,6 +43,30 @@ class Index_QueryScope extends $pb.ProtobufEnum {
   static Index_QueryScope? valueOf($core.int value) => _byValue[value];
 
   const Index_QueryScope._($core.int v, $core.String n) : super(v, n);
+}
+
+class Index_ApiScope extends $pb.ProtobufEnum {
+  static const Index_ApiScope ANY_API = Index_ApiScope._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'ANY_API');
+  static const Index_ApiScope DATASTORE_MODE_API = Index_ApiScope._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'DATASTORE_MODE_API');
+
+  static const $core.List<Index_ApiScope> values = <Index_ApiScope>[
+    ANY_API,
+    DATASTORE_MODE_API,
+  ];
+
+  static final $core.Map<$core.int, Index_ApiScope> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Index_ApiScope? valueOf($core.int value) => _byValue[value];
+
+  const Index_ApiScope._($core.int v, $core.String n) : super(v, n);
 }
 
 class Index_State extends $pb.ProtobufEnum {

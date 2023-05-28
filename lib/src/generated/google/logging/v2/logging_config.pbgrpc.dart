@@ -11,8 +11,8 @@ import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
 import 'logging_config.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $1;
 import '../../longrunning/operations.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $1;
 export 'logging_config.pb.dart';
 
 class ConfigServiceV2Client extends $grpc.Client {
@@ -27,6 +27,16 @@ class ConfigServiceV2Client extends $grpc.Client {
           '/google.logging.v2.ConfigServiceV2/GetBucket',
           ($2.GetBucketRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.LogBucket.fromBuffer(value));
+  static final _$createBucketAsync =
+      $grpc.ClientMethod<$2.CreateBucketRequest, $0.Operation>(
+          '/google.logging.v2.ConfigServiceV2/CreateBucketAsync',
+          ($2.CreateBucketRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$updateBucketAsync =
+      $grpc.ClientMethod<$2.UpdateBucketRequest, $0.Operation>(
+          '/google.logging.v2.ConfigServiceV2/UpdateBucketAsync',
+          ($2.UpdateBucketRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$createBucket =
       $grpc.ClientMethod<$2.CreateBucketRequest, $2.LogBucket>(
           '/google.logging.v2.ConfigServiceV2/CreateBucket',
@@ -97,6 +107,26 @@ class ConfigServiceV2Client extends $grpc.Client {
           '/google.logging.v2.ConfigServiceV2/DeleteSink',
           ($2.DeleteSinkRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$createLink =
+      $grpc.ClientMethod<$2.CreateLinkRequest, $0.Operation>(
+          '/google.logging.v2.ConfigServiceV2/CreateLink',
+          ($2.CreateLinkRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$deleteLink =
+      $grpc.ClientMethod<$2.DeleteLinkRequest, $0.Operation>(
+          '/google.logging.v2.ConfigServiceV2/DeleteLink',
+          ($2.DeleteLinkRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$listLinks =
+      $grpc.ClientMethod<$2.ListLinksRequest, $2.ListLinksResponse>(
+          '/google.logging.v2.ConfigServiceV2/ListLinks',
+          ($2.ListLinksRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.ListLinksResponse.fromBuffer(value));
+  static final _$getLink = $grpc.ClientMethod<$2.GetLinkRequest, $2.Link>(
+      '/google.logging.v2.ConfigServiceV2/GetLink',
+      ($2.GetLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Link.fromBuffer(value));
   static final _$listExclusions =
       $grpc.ClientMethod<$2.ListExclusionsRequest, $2.ListExclusionsResponse>(
           '/google.logging.v2.ConfigServiceV2/ListExclusions',
@@ -163,6 +193,18 @@ class ConfigServiceV2Client extends $grpc.Client {
   $grpc.ResponseFuture<$2.LogBucket> getBucket($2.GetBucketRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getBucket, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> createBucketAsync(
+      $2.CreateBucketRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createBucketAsync, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> updateBucketAsync(
+      $2.UpdateBucketRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateBucketAsync, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.LogBucket> createBucket(
@@ -238,6 +280,27 @@ class ConfigServiceV2Client extends $grpc.Client {
   $grpc.ResponseFuture<$1.Empty> deleteSink($2.DeleteSinkRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteSink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> createLink($2.CreateLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Operation> deleteLink($2.DeleteLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.ListLinksResponse> listLinks(
+      $2.ListLinksRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listLinks, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Link> getLink($2.GetLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getLink, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.ListExclusionsResponse> listExclusions(
@@ -320,6 +383,22 @@ abstract class ConfigServiceV2ServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.GetBucketRequest.fromBuffer(value),
         ($2.LogBucket value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateBucketRequest, $0.Operation>(
+        'CreateBucketAsync',
+        createBucketAsync_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.CreateBucketRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateBucketRequest, $0.Operation>(
+        'UpdateBucketAsync',
+        updateBucketAsync_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.UpdateBucketRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.CreateBucketRequest, $2.LogBucket>(
         'CreateBucket',
         createBucket_Pre,
@@ -422,6 +501,34 @@ abstract class ConfigServiceV2ServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.DeleteSinkRequest.fromBuffer(value),
         ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateLinkRequest, $0.Operation>(
+        'CreateLink',
+        createLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.CreateLinkRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteLinkRequest, $0.Operation>(
+        'DeleteLink',
+        deleteLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.DeleteLinkRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListLinksRequest, $2.ListLinksResponse>(
+        'ListLinks',
+        listLinks_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.ListLinksRequest.fromBuffer(value),
+        ($2.ListLinksResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetLinkRequest, $2.Link>(
+        'GetLink',
+        getLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.GetLinkRequest.fromBuffer(value),
+        ($2.Link value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.ListExclusionsRequest,
             $2.ListExclusionsResponse>(
         'ListExclusions',
@@ -516,6 +623,16 @@ abstract class ConfigServiceV2ServiceBase extends $grpc.Service {
     return getBucket(call, await request);
   }
 
+  $async.Future<$0.Operation> createBucketAsync_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateBucketRequest> request) async {
+    return createBucketAsync(call, await request);
+  }
+
+  $async.Future<$0.Operation> updateBucketAsync_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateBucketRequest> request) async {
+    return updateBucketAsync(call, await request);
+  }
+
   $async.Future<$2.LogBucket> createBucket_Pre($grpc.ServiceCall call,
       $async.Future<$2.CreateBucketRequest> request) async {
     return createBucket(call, await request);
@@ -586,6 +703,26 @@ abstract class ConfigServiceV2ServiceBase extends $grpc.Service {
     return deleteSink(call, await request);
   }
 
+  $async.Future<$0.Operation> createLink_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateLinkRequest> request) async {
+    return createLink(call, await request);
+  }
+
+  $async.Future<$0.Operation> deleteLink_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteLinkRequest> request) async {
+    return deleteLink(call, await request);
+  }
+
+  $async.Future<$2.ListLinksResponse> listLinks_Pre($grpc.ServiceCall call,
+      $async.Future<$2.ListLinksRequest> request) async {
+    return listLinks(call, await request);
+  }
+
+  $async.Future<$2.Link> getLink_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.GetLinkRequest> request) async {
+    return getLink(call, await request);
+  }
+
   $async.Future<$2.ListExclusionsResponse> listExclusions_Pre(
       $grpc.ServiceCall call,
       $async.Future<$2.ListExclusionsRequest> request) async {
@@ -641,6 +778,10 @@ abstract class ConfigServiceV2ServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ListBucketsRequest request);
   $async.Future<$2.LogBucket> getBucket(
       $grpc.ServiceCall call, $2.GetBucketRequest request);
+  $async.Future<$0.Operation> createBucketAsync(
+      $grpc.ServiceCall call, $2.CreateBucketRequest request);
+  $async.Future<$0.Operation> updateBucketAsync(
+      $grpc.ServiceCall call, $2.UpdateBucketRequest request);
   $async.Future<$2.LogBucket> createBucket(
       $grpc.ServiceCall call, $2.CreateBucketRequest request);
   $async.Future<$2.LogBucket> updateBucket(
@@ -669,6 +810,14 @@ abstract class ConfigServiceV2ServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.UpdateSinkRequest request);
   $async.Future<$1.Empty> deleteSink(
       $grpc.ServiceCall call, $2.DeleteSinkRequest request);
+  $async.Future<$0.Operation> createLink(
+      $grpc.ServiceCall call, $2.CreateLinkRequest request);
+  $async.Future<$0.Operation> deleteLink(
+      $grpc.ServiceCall call, $2.DeleteLinkRequest request);
+  $async.Future<$2.ListLinksResponse> listLinks(
+      $grpc.ServiceCall call, $2.ListLinksRequest request);
+  $async.Future<$2.Link> getLink(
+      $grpc.ServiceCall call, $2.GetLinkRequest request);
   $async.Future<$2.ListExclusionsResponse> listExclusions(
       $grpc.ServiceCall call, $2.ListExclusionsRequest request);
   $async.Future<$2.LogExclusion> getExclusion(

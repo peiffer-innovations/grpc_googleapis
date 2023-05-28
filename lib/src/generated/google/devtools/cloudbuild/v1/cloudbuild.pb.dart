@@ -372,6 +372,114 @@ class StorageSource extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(3);
 }
 
+class GitSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GitSource',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'url')
+    ..aOS(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'dir')
+    ..aOS(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'revision')
+    ..hasRequiredFields = false;
+
+  GitSource._() : super();
+  factory GitSource({
+    $core.String? url,
+    $core.String? dir,
+    $core.String? revision,
+  }) {
+    final _result = create();
+    if (url != null) {
+      _result.url = url;
+    }
+    if (dir != null) {
+      _result.dir = dir;
+    }
+    if (revision != null) {
+      _result.revision = revision;
+    }
+    return _result;
+  }
+  factory GitSource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GitSource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GitSource clone() => GitSource()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GitSource copyWith(void Function(GitSource) updates) =>
+      super.copyWith((message) => updates(message as GitSource))
+          as GitSource; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GitSource create() => GitSource._();
+  GitSource createEmptyInstance() => create();
+  static $pb.PbList<GitSource> createRepeated() => $pb.PbList<GitSource>();
+  @$core.pragma('dart2js:noInline')
+  static GitSource getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GitSource>(create);
+  static GitSource? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set url($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUrl() => clearField(1);
+
+  @$pb.TagNumber(5)
+  $core.String get dir => $_getSZ(1);
+  @$pb.TagNumber(5)
+  set dir($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDir() => $_has(1);
+  @$pb.TagNumber(5)
+  void clearDir() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get revision => $_getSZ(2);
+  @$pb.TagNumber(6)
+  set revision($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasRevision() => $_has(2);
+  @$pb.TagNumber(6)
+  void clearRevision() => clearField(6);
+}
+
 enum RepoSource_Revision { branchName, tagName, commitSha, notSet }
 
 class RepoSource extends $pb.GeneratedMessage {
@@ -705,12 +813,19 @@ class StorageSourceManifest extends $pb.GeneratedMessage {
   void clearGeneration() => clearField(3);
 }
 
-enum Source_Source { storageSource, repoSource, storageSourceManifest, notSet }
+enum Source_Source {
+  storageSource,
+  repoSource,
+  gitSource,
+  storageSourceManifest,
+  notSet
+}
 
 class Source extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, Source_Source> _Source_SourceByTag = {
     2: Source_Source.storageSource,
     3: Source_Source.repoSource,
+    5: Source_Source.gitSource,
     8: Source_Source.storageSourceManifest,
     0: Source_Source.notSet
   };
@@ -723,7 +838,7 @@ class Source extends $pb.GeneratedMessage {
               ? ''
               : 'google.devtools.cloudbuild.v1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 8])
+    ..oo(0, [2, 3, 5, 8])
     ..aOM<StorageSource>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -736,6 +851,12 @@ class Source extends $pb.GeneratedMessage {
             ? ''
             : 'repoSource',
         subBuilder: RepoSource.create)
+    ..aOM<GitSource>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'gitSource',
+        subBuilder: GitSource.create)
     ..aOM<StorageSourceManifest>(
         8,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -748,6 +869,7 @@ class Source extends $pb.GeneratedMessage {
   factory Source({
     StorageSource? storageSource,
     RepoSource? repoSource,
+    GitSource? gitSource,
     StorageSourceManifest? storageSourceManifest,
   }) {
     final _result = create();
@@ -756,6 +878,9 @@ class Source extends $pb.GeneratedMessage {
     }
     if (repoSource != null) {
       _result.repoSource = repoSource;
+    }
+    if (gitSource != null) {
+      _result.gitSource = gitSource;
     }
     if (storageSourceManifest != null) {
       _result.storageSourceManifest = storageSourceManifest;
@@ -819,19 +944,33 @@ class Source extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   RepoSource ensureRepoSource() => $_ensure(1);
 
+  @$pb.TagNumber(5)
+  GitSource get gitSource => $_getN(2);
+  @$pb.TagNumber(5)
+  set gitSource(GitSource v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasGitSource() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearGitSource() => clearField(5);
+  @$pb.TagNumber(5)
+  GitSource ensureGitSource() => $_ensure(2);
+
   @$pb.TagNumber(8)
-  StorageSourceManifest get storageSourceManifest => $_getN(2);
+  StorageSourceManifest get storageSourceManifest => $_getN(3);
   @$pb.TagNumber(8)
   set storageSourceManifest(StorageSourceManifest v) {
     setField(8, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasStorageSourceManifest() => $_has(2);
+  $core.bool hasStorageSourceManifest() => $_has(3);
   @$pb.TagNumber(8)
   void clearStorageSourceManifest() => clearField(8);
   @$pb.TagNumber(8)
-  StorageSourceManifest ensureStorageSourceManifest() => $_ensure(2);
+  StorageSourceManifest ensureStorageSourceManifest() => $_ensure(3);
 }
 
 class BuiltImage extends $pb.GeneratedMessage {
@@ -1137,6 +1276,121 @@ class UploadedMavenArtifact extends $pb.GeneratedMessage {
   static UploadedMavenArtifact getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UploadedMavenArtifact>(create);
   static UploadedMavenArtifact? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uri => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uri($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasUri() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUri() => clearField(1);
+
+  @$pb.TagNumber(2)
+  FileHashes get fileHashes => $_getN(1);
+  @$pb.TagNumber(2)
+  set fileHashes(FileHashes v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFileHashes() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFileHashes() => clearField(2);
+  @$pb.TagNumber(2)
+  FileHashes ensureFileHashes() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  TimeSpan get pushTiming => $_getN(2);
+  @$pb.TagNumber(3)
+  set pushTiming(TimeSpan v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPushTiming() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPushTiming() => clearField(3);
+  @$pb.TagNumber(3)
+  TimeSpan ensurePushTiming() => $_ensure(2);
+}
+
+class UploadedNpmPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UploadedNpmPackage',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uri')
+    ..aOM<FileHashes>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fileHashes',
+        subBuilder: FileHashes.create)
+    ..aOM<TimeSpan>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pushTiming',
+        subBuilder: TimeSpan.create)
+    ..hasRequiredFields = false;
+
+  UploadedNpmPackage._() : super();
+  factory UploadedNpmPackage({
+    $core.String? uri,
+    FileHashes? fileHashes,
+    TimeSpan? pushTiming,
+  }) {
+    final _result = create();
+    if (uri != null) {
+      _result.uri = uri;
+    }
+    if (fileHashes != null) {
+      _result.fileHashes = fileHashes;
+    }
+    if (pushTiming != null) {
+      _result.pushTiming = pushTiming;
+    }
+    return _result;
+  }
+  factory UploadedNpmPackage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UploadedNpmPackage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UploadedNpmPackage clone() => UploadedNpmPackage()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UploadedNpmPackage copyWith(void Function(UploadedNpmPackage) updates) =>
+      super.copyWith((message) => updates(message as UploadedNpmPackage))
+          as UploadedNpmPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UploadedNpmPackage create() => UploadedNpmPackage._();
+  UploadedNpmPackage createEmptyInstance() => create();
+  static $pb.PbList<UploadedNpmPackage> createRepeated() =>
+      $pb.PbList<UploadedNpmPackage>();
+  @$core.pragma('dart2js:noInline')
+  static UploadedNpmPackage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadedNpmPackage>(create);
+  static UploadedNpmPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get uri => $_getSZ(0);
@@ -1689,6 +1943,13 @@ class Results extends $pb.GeneratedMessage {
             : 'mavenArtifacts',
         $pb.PbFieldType.PM,
         subBuilder: UploadedMavenArtifact.create)
+    ..pc<UploadedNpmPackage>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'npmPackages',
+        $pb.PbFieldType.PM,
+        subBuilder: UploadedNpmPackage.create)
     ..hasRequiredFields = false;
 
   Results._() : super();
@@ -1701,6 +1962,7 @@ class Results extends $pb.GeneratedMessage {
     TimeSpan? artifactTiming,
     $core.Iterable<UploadedPythonPackage>? pythonPackages,
     $core.Iterable<UploadedMavenArtifact>? mavenArtifacts,
+    $core.Iterable<UploadedNpmPackage>? npmPackages,
   }) {
     final _result = create();
     if (images != null) {
@@ -1726,6 +1988,9 @@ class Results extends $pb.GeneratedMessage {
     }
     if (mavenArtifacts != null) {
       _result.mavenArtifacts.addAll(mavenArtifacts);
+    }
+    if (npmPackages != null) {
+      _result.npmPackages.addAll(npmPackages);
     }
     return _result;
   }
@@ -1807,6 +2072,9 @@ class Results extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(9)
   $core.List<UploadedMavenArtifact> get mavenArtifacts => $_getList(7);
+
+  @$pb.TagNumber(12)
+  $core.List<UploadedNpmPackage> get npmPackages => $_getList(8);
 }
 
 class ArtifactResult extends $pb.GeneratedMessage {
@@ -3062,6 +3330,95 @@ class Artifacts_PythonPackage extends $pb.GeneratedMessage {
   $core.List<$core.String> get paths => $_getList(1);
 }
 
+class Artifacts_NpmPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Artifacts.NpmPackage',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.devtools.cloudbuild.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'repository')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'packagePath')
+    ..hasRequiredFields = false;
+
+  Artifacts_NpmPackage._() : super();
+  factory Artifacts_NpmPackage({
+    $core.String? repository,
+    $core.String? packagePath,
+  }) {
+    final _result = create();
+    if (repository != null) {
+      _result.repository = repository;
+    }
+    if (packagePath != null) {
+      _result.packagePath = packagePath;
+    }
+    return _result;
+  }
+  factory Artifacts_NpmPackage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Artifacts_NpmPackage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Artifacts_NpmPackage clone() =>
+      Artifacts_NpmPackage()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Artifacts_NpmPackage copyWith(void Function(Artifacts_NpmPackage) updates) =>
+      super.copyWith((message) => updates(message as Artifacts_NpmPackage))
+          as Artifacts_NpmPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Artifacts_NpmPackage create() => Artifacts_NpmPackage._();
+  Artifacts_NpmPackage createEmptyInstance() => create();
+  static $pb.PbList<Artifacts_NpmPackage> createRepeated() =>
+      $pb.PbList<Artifacts_NpmPackage>();
+  @$core.pragma('dart2js:noInline')
+  static Artifacts_NpmPackage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Artifacts_NpmPackage>(create);
+  static Artifacts_NpmPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get repository => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set repository($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasRepository() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRepository() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get packagePath => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set packagePath($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPackagePath() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPackagePath() => clearField(2);
+}
+
 class Artifacts extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -3097,6 +3454,13 @@ class Artifacts extends $pb.GeneratedMessage {
             : 'pythonPackages',
         $pb.PbFieldType.PM,
         subBuilder: Artifacts_PythonPackage.create)
+    ..pc<Artifacts_NpmPackage>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'npmPackages',
+        $pb.PbFieldType.PM,
+        subBuilder: Artifacts_NpmPackage.create)
     ..hasRequiredFields = false;
 
   Artifacts._() : super();
@@ -3105,6 +3469,7 @@ class Artifacts extends $pb.GeneratedMessage {
     Artifacts_ArtifactObjects? objects,
     $core.Iterable<Artifacts_MavenArtifact>? mavenArtifacts,
     $core.Iterable<Artifacts_PythonPackage>? pythonPackages,
+    $core.Iterable<Artifacts_NpmPackage>? npmPackages,
   }) {
     final _result = create();
     if (images != null) {
@@ -3118,6 +3483,9 @@ class Artifacts extends $pb.GeneratedMessage {
     }
     if (pythonPackages != null) {
       _result.pythonPackages.addAll(pythonPackages);
+    }
+    if (npmPackages != null) {
+      _result.npmPackages.addAll(npmPackages);
     }
     return _result;
   }
@@ -3169,6 +3537,9 @@ class Artifacts extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(5)
   $core.List<Artifacts_PythonPackage> get pythonPackages => $_getList(3);
+
+  @$pb.TagNumber(6)
+  $core.List<Artifacts_NpmPackage> get npmPackages => $_getList(4);
 }
 
 class TimeSpan extends $pb.GeneratedMessage {
@@ -5442,7 +5813,7 @@ class GitHubEventsConfig extends $pb.GeneratedMessage {
   GitHubEventsConfig._() : super();
   factory GitHubEventsConfig({
     @$core.Deprecated('This field is deprecated.')
-        $fixnum.Int64? installationId,
+    $fixnum.Int64? installationId,
     PullRequestFilter? pullRequest,
     PushFilter? push,
     $core.String? owner,
@@ -6887,6 +7258,16 @@ class BuildOptions extends $pb.GeneratedMessage {
             ? ''
             : 'pool',
         subBuilder: BuildOptions_PoolOption.create)
+    ..e<BuildOptions_DefaultLogsBucketBehavior>(
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'defaultLogsBucketBehavior',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: BuildOptions_DefaultLogsBucketBehavior
+            .DEFAULT_LOGS_BUCKET_BEHAVIOR_UNSPECIFIED,
+        valueOf: BuildOptions_DefaultLogsBucketBehavior.valueOf,
+        enumValues: BuildOptions_DefaultLogsBucketBehavior.values)
     ..hasRequiredFields = false;
 
   BuildOptions._() : super();
@@ -6904,6 +7285,7 @@ class BuildOptions extends $pb.GeneratedMessage {
     $core.Iterable<Volume>? volumes,
     $core.bool? dynamicSubstitutions,
     BuildOptions_PoolOption? pool,
+    BuildOptions_DefaultLogsBucketBehavior? defaultLogsBucketBehavior,
   }) {
     final _result = create();
     if (sourceProvenanceHash != null) {
@@ -6945,6 +7327,9 @@ class BuildOptions extends $pb.GeneratedMessage {
     }
     if (pool != null) {
       _result.pool = pool;
+    }
+    if (defaultLogsBucketBehavior != null) {
+      _result.defaultLogsBucketBehavior = defaultLogsBucketBehavior;
     }
     return _result;
   }
@@ -7100,6 +7485,19 @@ class BuildOptions extends $pb.GeneratedMessage {
   void clearPool() => clearField(19);
   @$pb.TagNumber(19)
   BuildOptions_PoolOption ensurePool() => $_ensure(12);
+
+  @$pb.TagNumber(21)
+  BuildOptions_DefaultLogsBucketBehavior get defaultLogsBucketBehavior =>
+      $_getN(13);
+  @$pb.TagNumber(21)
+  set defaultLogsBucketBehavior(BuildOptions_DefaultLogsBucketBehavior v) {
+    setField(21, v);
+  }
+
+  @$pb.TagNumber(21)
+  $core.bool hasDefaultLogsBucketBehavior() => $_has(13);
+  @$pb.TagNumber(21)
+  void clearDefaultLogsBucketBehavior() => clearField(21);
 }
 
 class ReceiveTriggerWebhookRequest extends $pb.GeneratedMessage {
@@ -7698,12 +8096,18 @@ class PrivatePoolV1Config_NetworkConfig extends $pb.GeneratedMessage {
             .EGRESS_OPTION_UNSPECIFIED,
         valueOf: PrivatePoolV1Config_NetworkConfig_EgressOption.valueOf,
         enumValues: PrivatePoolV1Config_NetworkConfig_EgressOption.values)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'peeredNetworkIpRange')
     ..hasRequiredFields = false;
 
   PrivatePoolV1Config_NetworkConfig._() : super();
   factory PrivatePoolV1Config_NetworkConfig({
     $core.String? peeredNetwork,
     PrivatePoolV1Config_NetworkConfig_EgressOption? egressOption,
+    $core.String? peeredNetworkIpRange,
   }) {
     final _result = create();
     if (peeredNetwork != null) {
@@ -7711,6 +8115,9 @@ class PrivatePoolV1Config_NetworkConfig extends $pb.GeneratedMessage {
     }
     if (egressOption != null) {
       _result.egressOption = egressOption;
+    }
+    if (peeredNetworkIpRange != null) {
+      _result.peeredNetworkIpRange = peeredNetworkIpRange;
     }
     return _result;
   }
@@ -7769,6 +8176,18 @@ class PrivatePoolV1Config_NetworkConfig extends $pb.GeneratedMessage {
   $core.bool hasEgressOption() => $_has(1);
   @$pb.TagNumber(2)
   void clearEgressOption() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get peeredNetworkIpRange => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set peeredNetworkIpRange($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPeeredNetworkIpRange() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPeeredNetworkIpRange() => clearField(3);
 }
 
 class PrivatePoolV1Config extends $pb.GeneratedMessage {

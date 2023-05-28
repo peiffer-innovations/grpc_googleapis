@@ -301,7 +301,7 @@ class Actions_Engagement extends $pb.GeneratedMessage {
     Actions_Engagement_PushNotification? pushNotification,
     Actions_Engagement_DailyUpdate? dailyUpdate,
     @$core.Deprecated('This field is deprecated.')
-        Actions_Engagement_ActionLink? actionLink,
+    Actions_Engagement_ActionLink? actionLink,
     Actions_Engagement_AssistantLink? assistantLink,
   }) {
     final _result = create();

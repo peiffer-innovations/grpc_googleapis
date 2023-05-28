@@ -253,7 +253,7 @@ class Vehicle extends $pb.GeneratedMessage {
     Vehicle_VehicleType? vehicleType,
     LicensePlate? licensePlate,
     @$core.Deprecated('This field is deprecated.')
-        $core.Iterable<$0.TerminalLocation>? route,
+    $core.Iterable<$0.TerminalLocation>? route,
     $1.Timestamp? currentRouteSegmentVersion,
     $1.Timestamp? waypointsVersion,
     $2.Int32Value? remainingDistanceMeters,

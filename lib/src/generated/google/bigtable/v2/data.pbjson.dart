@@ -648,3 +648,60 @@ const ReadModifyWriteRule$json = const {
 /// Descriptor for `ReadModifyWriteRule`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List readModifyWriteRuleDescriptor = $convert.base64Decode(
     'ChNSZWFkTW9kaWZ5V3JpdGVSdWxlEh8KC2ZhbWlseV9uYW1lGAEgASgJUgpmYW1pbHlOYW1lEikKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAxSD2NvbHVtblF1YWxpZmllchIjCgxhcHBlbmRfdmFsdWUYAyABKAxIAFILYXBwZW5kVmFsdWUSKwoQaW5jcmVtZW50X2Ftb3VudBgEIAEoA0gAUg9pbmNyZW1lbnRBbW91bnRCBgoEcnVsZQ==');
+@$core.Deprecated('Use streamPartitionDescriptor instead')
+const StreamPartition$json = const {
+  '1': 'StreamPartition',
+  '2': const [
+    const {
+      '1': 'row_range',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.RowRange',
+      '10': 'rowRange'
+    },
+  ],
+};
+
+/// Descriptor for `StreamPartition`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List streamPartitionDescriptor = $convert.base64Decode(
+    'Cg9TdHJlYW1QYXJ0aXRpb24SOQoJcm93X3JhbmdlGAEgASgLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd1JhbmdlUghyb3dSYW5nZQ==');
+@$core.Deprecated('Use streamContinuationTokensDescriptor instead')
+const StreamContinuationTokens$json = const {
+  '1': 'StreamContinuationTokens',
+  '2': const [
+    const {
+      '1': 'tokens',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.bigtable.v2.StreamContinuationToken',
+      '10': 'tokens'
+    },
+  ],
+};
+
+/// Descriptor for `StreamContinuationTokens`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List streamContinuationTokensDescriptor =
+    $convert.base64Decode(
+        'ChhTdHJlYW1Db250aW51YXRpb25Ub2tlbnMSQwoGdG9rZW5zGAEgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuUgZ0b2tlbnM=');
+@$core.Deprecated('Use streamContinuationTokenDescriptor instead')
+const StreamContinuationToken$json = const {
+  '1': 'StreamContinuationToken',
+  '2': const [
+    const {
+      '1': 'partition',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.StreamPartition',
+      '10': 'partition'
+    },
+    const {'1': 'token', '3': 2, '4': 1, '5': 9, '10': 'token'},
+  ],
+};
+
+/// Descriptor for `StreamContinuationToken`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List streamContinuationTokenDescriptor =
+    $convert.base64Decode(
+        'ChdTdHJlYW1Db250aW51YXRpb25Ub2tlbhJBCglwYXJ0aXRpb24YASABKAsyIy5nb29nbGUuYmlndGFibGUudjIuU3RyZWFtUGFydGl0aW9uUglwYXJ0aXRpb24SFAoFdG9rZW4YAiABKAlSBXRva2Vu');

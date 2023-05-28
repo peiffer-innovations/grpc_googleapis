@@ -264,6 +264,11 @@ class Build extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'rwFirmwareVersion')
+    ..pPS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels')
     ..hasRequiredFields = false;
 
   Build._() : super();
@@ -275,6 +280,7 @@ class Build extends $pb.GeneratedMessage {
     Build_BuildType? type,
     $core.String? branch,
     $core.String? rwFirmwareVersion,
+    $core.Iterable<$core.String>? labels,
   }) {
     final _result = create();
     if (name != null) {
@@ -297,6 +303,9 @@ class Build extends $pb.GeneratedMessage {
     }
     if (rwFirmwareVersion != null) {
       _result.rwFirmwareVersion = rwFirmwareVersion;
+    }
+    if (labels != null) {
+      _result.labels.addAll(labels);
     }
     return _result;
   }
@@ -409,6 +418,9 @@ class Build extends $pb.GeneratedMessage {
   $core.bool hasRwFirmwareVersion() => $_has(6);
   @$pb.TagNumber(7)
   void clearRwFirmwareVersion() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.List<$core.String> get labels => $_getList(7);
 }
 
 class BuildArtifact extends $pb.GeneratedMessage {
