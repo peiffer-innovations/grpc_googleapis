@@ -1,6 +1,6 @@
 name: grpc_googleapis
 description: Generator to create all the gRPC Dart files for googleapis.
-version: 1.2.1
+version: 1.2.2
 homepage: https://github.com/peiffer-innovations/grpc_googleapis
 
 environment:
@@ -12,7 +12,7 @@ environment:
 #   protobuf: ^2.0.1
 
 dev_dependencies:
-  test: ^1.20.1
+  test: ^1.24.9
 
 ignore_updates:
   - 'archive'
@@ -37,5 +37,6 @@ ignore_updates:
   - 'term_glyph'
   - 'test_api'
   - 'typed_data'
+  - 'uuid'
   - 'vector_math'
   - 'webdriver'
