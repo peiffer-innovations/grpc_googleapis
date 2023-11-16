@@ -47,11 +47,12 @@ jobs:
 
           rm -rf googleapis/google/ads
           rm -rf googleapis/google/cloud
+          rm -rf googleapis/google/shopping
           rm -rf googleapis/grafeas/v1alpha1
           rm -rf googleapis/grafeas/v1beta1
 
           rm -rf grafeas/proto/v1alpha1
-          rm -rf grafeas/proto//v1beta1
+          rm -rf grafeas/proto/v1beta1
 
       - name: Generate Dart Files
         run: |
@@ -64,7 +65,7 @@ jobs:
           cd generated
           git clone https://github.com/peiffer-innovations/grpc_googleapis .
           cd ..
-          dart tools/generate.dart $BUILD_NUMBER
+          dart tool/generate.dart $BUILD_NUMBER
           cd generated
           dart pub get
           dart format lib
