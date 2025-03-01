@@ -1,50 +1,41 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/addressvalidation/v1/address_validation_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The possible final outcomes of the sequence of address validation requests
+/// needed to validate an address.
 class ProvideValidationFeedbackRequest_ValidationConclusion
     extends $pb.ProtobufEnum {
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       VALIDATION_CONCLUSION_UNSPECIFIED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'VALIDATION_CONCLUSION_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'VALIDATION_CONCLUSION_UNSPECIFIED');
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       VALIDATED_VERSION_USED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'VALIDATED_VERSION_USED');
+          1, _omitEnumNames ? '' : 'VALIDATED_VERSION_USED');
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       USER_VERSION_USED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_VERSION_USED');
+          2, _omitEnumNames ? '' : 'USER_VERSION_USED');
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       UNVALIDATED_VERSION_USED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNVALIDATED_VERSION_USED');
+          3, _omitEnumNames ? '' : 'UNVALIDATED_VERSION_USED');
   static const ProvideValidationFeedbackRequest_ValidationConclusion UNUSED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNUSED');
+          4, _omitEnumNames ? '' : 'UNUSED');
 
   static const $core.List<ProvideValidationFeedbackRequest_ValidationConclusion>
       values = <ProvideValidationFeedbackRequest_ValidationConclusion>[
@@ -56,7 +47,7 @@ class ProvideValidationFeedbackRequest_ValidationConclusion
   ];
 
   static final $core
-          .Map<$core.int, ProvideValidationFeedbackRequest_ValidationConclusion>
+      .Map<$core.int, ProvideValidationFeedbackRequest_ValidationConclusion>
       _byValue = $pb.ProtobufEnum.initByValue(values);
   static ProvideValidationFeedbackRequest_ValidationConclusion? valueOf(
           $core.int value) =>
@@ -67,43 +58,29 @@ class ProvideValidationFeedbackRequest_ValidationConclusion
       : super(v, n);
 }
 
+/// The various granularities that an address or a geocode can have.
+/// When used to indicate granularity for an *address*, these values indicate
+/// with how fine a granularity the address identifies a mailing destination.
+/// For example, an address such as "123 Main Street, Redwood City, CA, 94061"
+/// identifies a `PREMISE` while something like "Redwood City, CA, 94061"
+/// identifies a `LOCALITY`. However, if we are unable to find a geocode for
+/// "123 Main Street" in Redwood City, the geocode returned might be of
+/// `LOCALITY` granularity even though the address is more granular.
 class Verdict_Granularity extends $pb.ProtobufEnum {
   static const Verdict_Granularity GRANULARITY_UNSPECIFIED =
-      Verdict_Granularity._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'GRANULARITY_UNSPECIFIED');
-  static const Verdict_Granularity SUB_PREMISE = Verdict_Granularity._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SUB_PREMISE');
-  static const Verdict_Granularity PREMISE = Verdict_Granularity._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PREMISE');
-  static const Verdict_Granularity PREMISE_PROXIMITY = Verdict_Granularity._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PREMISE_PROXIMITY');
-  static const Verdict_Granularity BLOCK = Verdict_Granularity._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'BLOCK');
-  static const Verdict_Granularity ROUTE = Verdict_Granularity._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ROUTE');
-  static const Verdict_Granularity OTHER = Verdict_Granularity._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OTHER');
+      Verdict_Granularity._(0, _omitEnumNames ? '' : 'GRANULARITY_UNSPECIFIED');
+  static const Verdict_Granularity SUB_PREMISE =
+      Verdict_Granularity._(1, _omitEnumNames ? '' : 'SUB_PREMISE');
+  static const Verdict_Granularity PREMISE =
+      Verdict_Granularity._(2, _omitEnumNames ? '' : 'PREMISE');
+  static const Verdict_Granularity PREMISE_PROXIMITY =
+      Verdict_Granularity._(3, _omitEnumNames ? '' : 'PREMISE_PROXIMITY');
+  static const Verdict_Granularity BLOCK =
+      Verdict_Granularity._(4, _omitEnumNames ? '' : 'BLOCK');
+  static const Verdict_Granularity ROUTE =
+      Verdict_Granularity._(5, _omitEnumNames ? '' : 'ROUTE');
+  static const Verdict_Granularity OTHER =
+      Verdict_Granularity._(6, _omitEnumNames ? '' : 'OTHER');
 
   static const $core.List<Verdict_Granularity> values = <Verdict_Granularity>[
     GRANULARITY_UNSPECIFIED,
@@ -121,3 +98,5 @@ class Verdict_Granularity extends $pb.ProtobufEnum {
 
   const Verdict_Granularity._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

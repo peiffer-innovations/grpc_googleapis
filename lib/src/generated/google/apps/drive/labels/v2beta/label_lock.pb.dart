@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2beta/label_lock.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,44 +15,37 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../../protobuf/timestamp.pb.dart' as $0;
 import 'common.pb.dart' as $1;
-
 import 'label_lock.pbenum.dart';
 
 export 'label_lock.pbenum.dart';
 
+/// A description of a user's capabilities on a LabelLock.
 class LabelLock_Capabilities extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LabelLock.Capabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canViewPolicy')
-    ..hasRequiredFields = false;
-
-  LabelLock_Capabilities._() : super();
   factory LabelLock_Capabilities({
     $core.bool? canViewPolicy,
   }) {
-    final _result = create();
+    final $result = create();
     if (canViewPolicy != null) {
-      _result.canViewPolicy = canViewPolicy;
+      $result.canViewPolicy = canViewPolicy;
     }
-    return _result;
+    return $result;
   }
+  LabelLock_Capabilities._() : super();
   factory LabelLock_Capabilities.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LabelLock_Capabilities.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LabelLock.Capabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canViewPolicy')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -60,8 +57,10 @@ class LabelLock_Capabilities extends $pb.GeneratedMessage {
   LabelLock_Capabilities copyWith(
           void Function(LabelLock_Capabilities) updates) =>
       super.copyWith((message) => updates(message as LabelLock_Capabilities))
-          as LabelLock_Capabilities; // ignore: deprecated_member_use
+          as LabelLock_Capabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LabelLock_Capabilities create() => LabelLock_Capabilities._();
   LabelLock_Capabilities createEmptyInstance() => create();
@@ -72,6 +71,7 @@ class LabelLock_Capabilities extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LabelLock_Capabilities>(create);
   static LabelLock_Capabilities? _defaultInstance;
 
+  /// True if the user is authorized to view the policy.
   @$pb.TagNumber(1)
   $core.bool get canViewPolicy => $_getBF(0);
   @$pb.TagNumber(1)
@@ -85,67 +85,8 @@ class LabelLock_Capabilities extends $pb.GeneratedMessage {
   void clearCanViewPolicy() => clearField(1);
 }
 
+/// A Lock that can be applied to a Label, Field, or Choice.
 class LabelLock extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LabelLock',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fieldId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'choiceId')
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$1.UserInfo>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'creator',
-        subBuilder: $1.UserInfo.create)
-    ..aOM<$0.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deleteTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<LabelLock_Capabilities>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'capabilities',
-        subBuilder: LabelLock_Capabilities.create)
-    ..e<LabelLock_State>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: LabelLock_State.STATE_UNSPECIFIED,
-        valueOf: LabelLock_State.valueOf,
-        enumValues: LabelLock_State.values)
-    ..hasRequiredFields = false;
-
-  LabelLock._() : super();
   factory LabelLock({
     $core.String? name,
     $core.String? fieldId,
@@ -156,39 +97,63 @@ class LabelLock extends $pb.GeneratedMessage {
     LabelLock_Capabilities? capabilities,
     LabelLock_State? state,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (fieldId != null) {
-      _result.fieldId = fieldId;
+      $result.fieldId = fieldId;
     }
     if (choiceId != null) {
-      _result.choiceId = choiceId;
+      $result.choiceId = choiceId;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (creator != null) {
-      _result.creator = creator;
+      $result.creator = creator;
     }
     if (deleteTime != null) {
-      _result.deleteTime = deleteTime;
+      $result.deleteTime = deleteTime;
     }
     if (capabilities != null) {
-      _result.capabilities = capabilities;
+      $result.capabilities = capabilities;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
-    return _result;
+    return $result;
   }
+  LabelLock._() : super();
   factory LabelLock.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LabelLock.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LabelLock',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'fieldId')
+    ..aOS(3, _omitFieldNames ? '' : 'choiceId')
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$1.UserInfo>(5, _omitFieldNames ? '' : 'creator',
+        subBuilder: $1.UserInfo.create)
+    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'deleteTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<LabelLock_Capabilities>(8, _omitFieldNames ? '' : 'capabilities',
+        subBuilder: LabelLock_Capabilities.create)
+    ..e<LabelLock_State>(9, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: LabelLock_State.STATE_UNSPECIFIED,
+        valueOf: LabelLock_State.valueOf,
+        enumValues: LabelLock_State.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -197,9 +162,10 @@ class LabelLock extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   LabelLock copyWith(void Function(LabelLock) updates) =>
-      super.copyWith((message) => updates(message as LabelLock))
-          as LabelLock; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as LabelLock)) as LabelLock;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LabelLock create() => LabelLock._();
   LabelLock createEmptyInstance() => create();
@@ -209,6 +175,7 @@ class LabelLock extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LabelLock>(create);
   static LabelLock? _defaultInstance;
 
+  /// Output only. Resource name of this LabelLock.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -221,6 +188,8 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The ID of the Field that should be locked.  Empty if the whole
+  /// Label should be locked.
   @$pb.TagNumber(2)
   $core.String get fieldId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -233,6 +202,8 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFieldId() => clearField(2);
 
+  /// The ID of the Selection Field Choice that should be locked.  If present,
+  /// `field_id` must also be present.
   @$pb.TagNumber(3)
   $core.String get choiceId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -245,6 +216,7 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearChoiceId() => clearField(3);
 
+  /// Output only. The time this LabelLock was created.
   @$pb.TagNumber(4)
   $0.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(4)
@@ -259,6 +231,9 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Timestamp ensureCreateTime() => $_ensure(3);
 
+  /// Output only. The user whose credentials were used to create the LabelLock.
+  /// This will not be present if no user was responsible for creating the
+  /// LabelLock.
   @$pb.TagNumber(5)
   $1.UserInfo get creator => $_getN(4);
   @$pb.TagNumber(5)
@@ -273,6 +248,9 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.UserInfo ensureCreator() => $_ensure(4);
 
+  /// Output only. A timestamp indicating when this LabelLock was scheduled for
+  /// deletion. This will be present only if this LabelLock is in the DELETING
+  /// state.
   @$pb.TagNumber(6)
   $0.Timestamp get deleteTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -287,6 +265,7 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Timestamp ensureDeleteTime() => $_ensure(5);
 
+  /// Output only. The user's capabilities on this LabelLock.
   @$pb.TagNumber(8)
   LabelLock_Capabilities get capabilities => $_getN(6);
   @$pb.TagNumber(8)
@@ -301,6 +280,7 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   LabelLock_Capabilities ensureCapabilities() => $_ensure(6);
 
+  /// Output only. This LabelLock's state.
   @$pb.TagNumber(9)
   LabelLock_State get state => $_getN(7);
   @$pb.TagNumber(9)
@@ -313,3 +293,7 @@ class LabelLock extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearState() => clearField(9);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

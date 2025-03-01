@@ -1,105 +1,61 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/analytics/admin/v1alpha/event_create_and_edit.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Comparison type for matching condition
 class MatchingCondition_ComparisonType extends $pb.ProtobufEnum {
   static const MatchingCondition_ComparisonType COMPARISON_TYPE_UNSPECIFIED =
       MatchingCondition_ComparisonType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'COMPARISON_TYPE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'COMPARISON_TYPE_UNSPECIFIED');
   static const MatchingCondition_ComparisonType EQUALS =
-      MatchingCondition_ComparisonType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'EQUALS');
+      MatchingCondition_ComparisonType._(1, _omitEnumNames ? '' : 'EQUALS');
   static const MatchingCondition_ComparisonType EQUALS_CASE_INSENSITIVE =
       MatchingCondition_ComparisonType._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'EQUALS_CASE_INSENSITIVE');
+          2, _omitEnumNames ? '' : 'EQUALS_CASE_INSENSITIVE');
   static const MatchingCondition_ComparisonType CONTAINS =
-      MatchingCondition_ComparisonType._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CONTAINS');
+      MatchingCondition_ComparisonType._(3, _omitEnumNames ? '' : 'CONTAINS');
   static const MatchingCondition_ComparisonType CONTAINS_CASE_INSENSITIVE =
       MatchingCondition_ComparisonType._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CONTAINS_CASE_INSENSITIVE');
+          4, _omitEnumNames ? '' : 'CONTAINS_CASE_INSENSITIVE');
   static const MatchingCondition_ComparisonType STARTS_WITH =
       MatchingCondition_ComparisonType._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STARTS_WITH');
+          5, _omitEnumNames ? '' : 'STARTS_WITH');
   static const MatchingCondition_ComparisonType STARTS_WITH_CASE_INSENSITIVE =
       MatchingCondition_ComparisonType._(
-          6,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STARTS_WITH_CASE_INSENSITIVE');
+          6, _omitEnumNames ? '' : 'STARTS_WITH_CASE_INSENSITIVE');
   static const MatchingCondition_ComparisonType ENDS_WITH =
-      MatchingCondition_ComparisonType._(
-          7,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ENDS_WITH');
+      MatchingCondition_ComparisonType._(7, _omitEnumNames ? '' : 'ENDS_WITH');
   static const MatchingCondition_ComparisonType ENDS_WITH_CASE_INSENSITIVE =
       MatchingCondition_ComparisonType._(
-          8,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ENDS_WITH_CASE_INSENSITIVE');
+          8, _omitEnumNames ? '' : 'ENDS_WITH_CASE_INSENSITIVE');
   static const MatchingCondition_ComparisonType GREATER_THAN =
       MatchingCondition_ComparisonType._(
-          9,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'GREATER_THAN');
+          9, _omitEnumNames ? '' : 'GREATER_THAN');
   static const MatchingCondition_ComparisonType GREATER_THAN_OR_EQUAL =
       MatchingCondition_ComparisonType._(
-          10,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'GREATER_THAN_OR_EQUAL');
+          10, _omitEnumNames ? '' : 'GREATER_THAN_OR_EQUAL');
   static const MatchingCondition_ComparisonType LESS_THAN =
-      MatchingCondition_ComparisonType._(
-          11,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LESS_THAN');
+      MatchingCondition_ComparisonType._(11, _omitEnumNames ? '' : 'LESS_THAN');
   static const MatchingCondition_ComparisonType LESS_THAN_OR_EQUAL =
       MatchingCondition_ComparisonType._(
-          12,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LESS_THAN_OR_EQUAL');
+          12, _omitEnumNames ? '' : 'LESS_THAN_OR_EQUAL');
   static const MatchingCondition_ComparisonType REGULAR_EXPRESSION =
       MatchingCondition_ComparisonType._(
-          13,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REGULAR_EXPRESSION');
+          13, _omitEnumNames ? '' : 'REGULAR_EXPRESSION');
   static const MatchingCondition_ComparisonType
       REGULAR_EXPRESSION_CASE_INSENSITIVE = MatchingCondition_ComparisonType._(
-          14,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REGULAR_EXPRESSION_CASE_INSENSITIVE');
+          14, _omitEnumNames ? '' : 'REGULAR_EXPRESSION_CASE_INSENSITIVE');
 
   static const $core.List<MatchingCondition_ComparisonType> values =
       <MatchingCondition_ComparisonType>[
@@ -128,3 +84,5 @@ class MatchingCondition_ComparisonType extends $pb.ProtobufEnum {
   const MatchingCondition_ComparisonType._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

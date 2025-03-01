@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/error_stats_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,87 +17,12 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../../protobuf/duration.pb.dart' as $1;
 import '../../../protobuf/timestamp.pb.dart' as $2;
 import 'common.pb.dart' as $3;
-
 import 'error_stats_service.pbenum.dart';
 
 export 'error_stats_service.pbenum.dart';
 
+/// Specifies a set of `ErrorGroupStats` to return.
 class ListGroupStatsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListGroupStatsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectName')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'groupId')
-    ..aOM<ServiceContextFilter>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceFilter',
-        subBuilder: ServiceContextFilter.create)
-    ..aOM<QueryTimeRange>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeRange',
-        subBuilder: QueryTimeRange.create)
-    ..aOM<$1.Duration>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timedCountDuration',
-        subBuilder: $1.Duration.create)
-    ..e<TimedCountAlignment>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alignment',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TimedCountAlignment.ERROR_COUNT_ALIGNMENT_UNSPECIFIED,
-        valueOf: TimedCountAlignment.valueOf,
-        enumValues: TimedCountAlignment.values)
-    ..aOM<$2.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alignmentTime',
-        subBuilder: $2.Timestamp.create)
-    ..e<ErrorGroupOrder>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'order',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ErrorGroupOrder.GROUP_ORDER_UNSPECIFIED,
-        valueOf: ErrorGroupOrder.valueOf,
-        enumValues: ErrorGroupOrder.values)
-    ..a<$core.int>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListGroupStatsRequest._() : super();
   factory ListGroupStatsRequest({
     $core.String? projectName,
     $core.Iterable<$core.String>? groupId,
@@ -106,45 +35,76 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectName != null) {
-      _result.projectName = projectName;
+      $result.projectName = projectName;
     }
     if (groupId != null) {
-      _result.groupId.addAll(groupId);
+      $result.groupId.addAll(groupId);
     }
     if (serviceFilter != null) {
-      _result.serviceFilter = serviceFilter;
+      $result.serviceFilter = serviceFilter;
     }
     if (timeRange != null) {
-      _result.timeRange = timeRange;
+      $result.timeRange = timeRange;
     }
     if (timedCountDuration != null) {
-      _result.timedCountDuration = timedCountDuration;
+      $result.timedCountDuration = timedCountDuration;
     }
     if (alignment != null) {
-      _result.alignment = alignment;
+      $result.alignment = alignment;
     }
     if (alignmentTime != null) {
-      _result.alignmentTime = alignmentTime;
+      $result.alignmentTime = alignmentTime;
     }
     if (order != null) {
-      _result.order = order;
+      $result.order = order;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListGroupStatsRequest._() : super();
   factory ListGroupStatsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListGroupStatsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListGroupStatsRequest',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectName')
+    ..pPS(2, _omitFieldNames ? '' : 'groupId')
+    ..aOM<ServiceContextFilter>(3, _omitFieldNames ? '' : 'serviceFilter',
+        subBuilder: ServiceContextFilter.create)
+    ..aOM<QueryTimeRange>(5, _omitFieldNames ? '' : 'timeRange',
+        subBuilder: QueryTimeRange.create)
+    ..aOM<$1.Duration>(6, _omitFieldNames ? '' : 'timedCountDuration',
+        subBuilder: $1.Duration.create)
+    ..e<TimedCountAlignment>(
+        7, _omitFieldNames ? '' : 'alignment', $pb.PbFieldType.OE,
+        defaultOrMaker: TimedCountAlignment.ERROR_COUNT_ALIGNMENT_UNSPECIFIED,
+        valueOf: TimedCountAlignment.valueOf,
+        enumValues: TimedCountAlignment.values)
+    ..aOM<$2.Timestamp>(8, _omitFieldNames ? '' : 'alignmentTime',
+        subBuilder: $2.Timestamp.create)
+    ..e<ErrorGroupOrder>(9, _omitFieldNames ? '' : 'order', $pb.PbFieldType.OE,
+        defaultOrMaker: ErrorGroupOrder.GROUP_ORDER_UNSPECIFIED,
+        valueOf: ErrorGroupOrder.valueOf,
+        enumValues: ErrorGroupOrder.values)
+    ..a<$core.int>(11, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(12, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -156,8 +116,10 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   ListGroupStatsRequest copyWith(
           void Function(ListGroupStatsRequest) updates) =>
       super.copyWith((message) => updates(message as ListGroupStatsRequest))
-          as ListGroupStatsRequest; // ignore: deprecated_member_use
+          as ListGroupStatsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListGroupStatsRequest create() => ListGroupStatsRequest._();
   ListGroupStatsRequest createEmptyInstance() => create();
@@ -168,6 +130,22 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListGroupStatsRequest>(create);
   static ListGroupStatsRequest? _defaultInstance;
 
+  ///  Required. The resource name of the Google Cloud Platform project. Written
+  ///  as `projects/{projectID}` or `projects/{projectNumber}`, where
+  ///  `{projectID}` and `{projectNumber}` can be found in the
+  ///  [Google Cloud console](https://support.google.com/cloud/answer/6158840).
+  ///  It may also include a location, such as
+  ///  `projects/{projectID}/locations/{location}` where `{location}` is a cloud
+  ///  region.
+  ///
+  ///  Examples: `projects/my-project-123`, `projects/5551234`,
+  ///  `projects/my-project-123/locations/us-central1`,
+  ///  `projects/5551234/locations/us-central1`.
+  ///
+  ///  For a list of supported locations, see [Supported
+  ///  Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+  ///  the default when unspecified. Use `-` as a wildcard to request group stats
+  ///  from all regions.
   @$pb.TagNumber(1)
   $core.String get projectName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -180,9 +158,20 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectName() => clearField(1);
 
+  /// Optional. List all [ErrorGroupStats]
+  /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] with these
+  /// IDs. The `group_id` is a unique identifier for a particular error group.
+  /// The identifier is derived from key parts of the error-log content and is
+  /// treated as Service Data. For information about how Service Data
+  /// is handled, see [Google Cloud Privacy Notice]
+  /// (https://cloud.google.com/terms/cloud-privacy-notice).
   @$pb.TagNumber(2)
   $core.List<$core.String> get groupId => $_getList(1);
 
+  /// Optional. List only [ErrorGroupStats]
+  /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] which belong
+  /// to a service context that matches the filter. Data for all service contexts
+  /// is returned if this field is not specified.
   @$pb.TagNumber(3)
   ServiceContextFilter get serviceFilter => $_getN(2);
   @$pb.TagNumber(3)
@@ -197,6 +186,21 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ServiceContextFilter ensureServiceFilter() => $_ensure(2);
 
+  /// Optional. List data for the given time range.
+  /// If not set, a default time range is used. The field
+  /// [time_range_begin]
+  /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse.time_range_begin]
+  /// in the response will specify the beginning of this time range. Only
+  /// [ErrorGroupStats]
+  /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] with a
+  /// non-zero count in the given time range are returned, unless the request
+  /// contains an explicit [group_id]
+  /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest.group_id]
+  /// list. If a [group_id]
+  /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest.group_id]
+  /// list is given, also [ErrorGroupStats]
+  /// [google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats] with zero
+  /// occurrences are returned.
   @$pb.TagNumber(5)
   QueryTimeRange get timeRange => $_getN(3);
   @$pb.TagNumber(5)
@@ -211,6 +215,9 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   QueryTimeRange ensureTimeRange() => $_ensure(3);
 
+  /// Optional. The preferred duration for a single returned [TimedCount]
+  /// [google.devtools.clouderrorreporting.v1beta1.TimedCount]. If not set, no
+  /// timed counts are returned.
   @$pb.TagNumber(6)
   $1.Duration get timedCountDuration => $_getN(4);
   @$pb.TagNumber(6)
@@ -225,6 +232,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.Duration ensureTimedCountDuration() => $_ensure(4);
 
+  /// Optional. The alignment of the timed counts to be returned.
+  /// Default is `ALIGNMENT_EQUAL_AT_END`.
   @$pb.TagNumber(7)
   TimedCountAlignment get alignment => $_getN(5);
   @$pb.TagNumber(7)
@@ -237,6 +246,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearAlignment() => clearField(7);
 
+  /// Optional. Time where the timed counts shall be aligned if rounded
+  /// alignment is chosen. Default is 00:00 UTC.
   @$pb.TagNumber(8)
   $2.Timestamp get alignmentTime => $_getN(6);
   @$pb.TagNumber(8)
@@ -251,6 +262,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $2.Timestamp ensureAlignmentTime() => $_ensure(6);
 
+  /// Optional. The sort order in which the results are returned.
+  /// Default is `COUNT_DESC`.
   @$pb.TagNumber(9)
   ErrorGroupOrder get order => $_getN(7);
   @$pb.TagNumber(9)
@@ -263,6 +276,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearOrder() => clearField(9);
 
+  /// Optional. The maximum number of results to return per response.
+  /// Default is 20.
   @$pb.TagNumber(11)
   $core.int get pageSize => $_getIZ(8);
   @$pb.TagNumber(11)
@@ -275,6 +290,10 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearPageSize() => clearField(11);
 
+  /// Optional. A [next_page_token]
+  /// [google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse.next_page_token]
+  /// provided by a previous response. To view additional results, pass this
+  /// token along with the identical query parameters as the first request.
   @$pb.TagNumber(12)
   $core.String get pageToken => $_getSZ(9);
   @$pb.TagNumber(12)
@@ -288,60 +307,47 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(12);
 }
 
+/// Contains a set of requested error group stats.
 class ListGroupStatsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListGroupStatsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<ErrorGroupStats>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorGroupStats',
-        $pb.PbFieldType.PM,
-        subBuilder: ErrorGroupStats.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..aOM<$2.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeRangeBegin',
-        subBuilder: $2.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  ListGroupStatsResponse._() : super();
   factory ListGroupStatsResponse({
     $core.Iterable<ErrorGroupStats>? errorGroupStats,
     $core.String? nextPageToken,
     $2.Timestamp? timeRangeBegin,
   }) {
-    final _result = create();
+    final $result = create();
     if (errorGroupStats != null) {
-      _result.errorGroupStats.addAll(errorGroupStats);
+      $result.errorGroupStats.addAll(errorGroupStats);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
     if (timeRangeBegin != null) {
-      _result.timeRangeBegin = timeRangeBegin;
+      $result.timeRangeBegin = timeRangeBegin;
     }
-    return _result;
+    return $result;
   }
+  ListGroupStatsResponse._() : super();
   factory ListGroupStatsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListGroupStatsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListGroupStatsResponse',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<ErrorGroupStats>(
+        1, _omitFieldNames ? '' : 'errorGroupStats', $pb.PbFieldType.PM,
+        subBuilder: ErrorGroupStats.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'timeRangeBegin',
+        subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -353,8 +359,10 @@ class ListGroupStatsResponse extends $pb.GeneratedMessage {
   ListGroupStatsResponse copyWith(
           void Function(ListGroupStatsResponse) updates) =>
       super.copyWith((message) => updates(message as ListGroupStatsResponse))
-          as ListGroupStatsResponse; // ignore: deprecated_member_use
+          as ListGroupStatsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListGroupStatsResponse create() => ListGroupStatsResponse._();
   ListGroupStatsResponse createEmptyInstance() => create();
@@ -365,9 +373,13 @@ class ListGroupStatsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListGroupStatsResponse>(create);
   static ListGroupStatsResponse? _defaultInstance;
 
+  /// The error group stats which match the given request.
   @$pb.TagNumber(1)
   $core.List<ErrorGroupStats> get errorGroupStats => $_getList(0);
 
+  /// If non-empty, more results are available.
+  /// Pass this token, along with the same query parameters as the first
+  /// request, to view the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -380,6 +392,10 @@ class ListGroupStatsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  /// The timestamp specifies the start time to which the request was restricted.
+  /// The start time is set based on the requested time range. It may be adjusted
+  /// to a later time if a project has exceeded the storage quota and older data
+  /// has been deleted.
   @$pb.TagNumber(4)
   $2.Timestamp get timeRangeBegin => $_getN(2);
   @$pb.TagNumber(4)
@@ -395,73 +411,9 @@ class ListGroupStatsResponse extends $pb.GeneratedMessage {
   $2.Timestamp ensureTimeRangeBegin() => $_ensure(2);
 }
 
+/// Data extracted for a specific group based on certain filter criteria,
+/// such as a given time period and/or service filter.
 class ErrorGroupStats extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorGroupStats',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOM<$3.ErrorGroup>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'group',
-        subBuilder: $3.ErrorGroup.create)
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'count')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'affectedUsersCount')
-    ..pc<TimedCount>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timedCounts',
-        $pb.PbFieldType.PM,
-        subBuilder: TimedCount.create)
-    ..aOM<$2.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firstSeenTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastSeenTime',
-        subBuilder: $2.Timestamp.create)
-    ..pc<$3.ServiceContext>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'affectedServices',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.ServiceContext.create)
-    ..a<$core.int>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'numAffectedServices',
-        $pb.PbFieldType.O3)
-    ..aOM<$3.ErrorEvent>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'representative',
-        subBuilder: $3.ErrorEvent.create)
-    ..hasRequiredFields = false;
-
-  ErrorGroupStats._() : super();
   factory ErrorGroupStats({
     $3.ErrorGroup? group,
     $fixnum.Int64? count,
@@ -473,42 +425,70 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
     $core.int? numAffectedServices,
     $3.ErrorEvent? representative,
   }) {
-    final _result = create();
+    final $result = create();
     if (group != null) {
-      _result.group = group;
+      $result.group = group;
     }
     if (count != null) {
-      _result.count = count;
+      $result.count = count;
     }
     if (affectedUsersCount != null) {
-      _result.affectedUsersCount = affectedUsersCount;
+      $result.affectedUsersCount = affectedUsersCount;
     }
     if (timedCounts != null) {
-      _result.timedCounts.addAll(timedCounts);
+      $result.timedCounts.addAll(timedCounts);
     }
     if (firstSeenTime != null) {
-      _result.firstSeenTime = firstSeenTime;
+      $result.firstSeenTime = firstSeenTime;
     }
     if (lastSeenTime != null) {
-      _result.lastSeenTime = lastSeenTime;
+      $result.lastSeenTime = lastSeenTime;
     }
     if (affectedServices != null) {
-      _result.affectedServices.addAll(affectedServices);
+      $result.affectedServices.addAll(affectedServices);
     }
     if (numAffectedServices != null) {
-      _result.numAffectedServices = numAffectedServices;
+      $result.numAffectedServices = numAffectedServices;
     }
     if (representative != null) {
-      _result.representative = representative;
+      $result.representative = representative;
     }
-    return _result;
+    return $result;
   }
+  ErrorGroupStats._() : super();
   factory ErrorGroupStats.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ErrorGroupStats.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ErrorGroupStats',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$3.ErrorGroup>(1, _omitFieldNames ? '' : 'group',
+        subBuilder: $3.ErrorGroup.create)
+    ..aInt64(2, _omitFieldNames ? '' : 'count')
+    ..aInt64(3, _omitFieldNames ? '' : 'affectedUsersCount')
+    ..pc<TimedCount>(
+        4, _omitFieldNames ? '' : 'timedCounts', $pb.PbFieldType.PM,
+        subBuilder: TimedCount.create)
+    ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'firstSeenTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(6, _omitFieldNames ? '' : 'lastSeenTime',
+        subBuilder: $2.Timestamp.create)
+    ..pc<$3.ServiceContext>(
+        7, _omitFieldNames ? '' : 'affectedServices', $pb.PbFieldType.PM,
+        subBuilder: $3.ServiceContext.create)
+    ..a<$core.int>(
+        8, _omitFieldNames ? '' : 'numAffectedServices', $pb.PbFieldType.O3)
+    ..aOM<$3.ErrorEvent>(9, _omitFieldNames ? '' : 'representative',
+        subBuilder: $3.ErrorEvent.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -518,8 +498,10 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ErrorGroupStats copyWith(void Function(ErrorGroupStats) updates) =>
       super.copyWith((message) => updates(message as ErrorGroupStats))
-          as ErrorGroupStats; // ignore: deprecated_member_use
+          as ErrorGroupStats;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ErrorGroupStats create() => ErrorGroupStats._();
   ErrorGroupStats createEmptyInstance() => create();
@@ -530,6 +512,7 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ErrorGroupStats>(create);
   static ErrorGroupStats? _defaultInstance;
 
+  /// Group data that is independent of the filter criteria.
   @$pb.TagNumber(1)
   $3.ErrorGroup get group => $_getN(0);
   @$pb.TagNumber(1)
@@ -544,6 +527,8 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.ErrorGroup ensureGroup() => $_ensure(0);
 
+  /// Approximate total number of events in the given group that match
+  /// the filter criteria.
   @$pb.TagNumber(2)
   $fixnum.Int64 get count => $_getI64(1);
   @$pb.TagNumber(2)
@@ -556,6 +541,19 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCount() => clearField(2);
 
+  /// Approximate number of affected users in the given group that
+  /// match the filter criteria.
+  /// Users are distinguished by data in the [ErrorContext]
+  /// [google.devtools.clouderrorreporting.v1beta1.ErrorContext] of the
+  /// individual error events, such as their login name or their remote
+  /// IP address in case of HTTP requests.
+  /// The number of affected users can be zero even if the number of
+  /// errors is non-zero if no data was provided from which the
+  /// affected user could be deduced.
+  /// Users are counted based on data in the request
+  /// context that was provided in the error report. If more users are
+  /// implicitly affected, such as due to a crash of the whole service,
+  /// this is not reflected here.
   @$pb.TagNumber(3)
   $fixnum.Int64 get affectedUsersCount => $_getI64(2);
   @$pb.TagNumber(3)
@@ -568,9 +566,18 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearAffectedUsersCount() => clearField(3);
 
+  ///  Approximate number of occurrences over time.
+  ///  Timed counts returned by ListGroups are guaranteed to be:
+  ///
+  ///  - Inside the requested time interval
+  ///  - Non-overlapping, and
+  ///  - Ordered by ascending time.
   @$pb.TagNumber(4)
   $core.List<TimedCount> get timedCounts => $_getList(3);
 
+  /// Approximate first occurrence that was ever seen for this group
+  /// and which matches the given filter criteria, ignoring the
+  /// time_range that was specified in the request.
   @$pb.TagNumber(5)
   $2.Timestamp get firstSeenTime => $_getN(4);
   @$pb.TagNumber(5)
@@ -585,6 +592,9 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp ensureFirstSeenTime() => $_ensure(4);
 
+  /// Approximate last occurrence that was ever seen for this group and
+  /// which matches the given filter criteria, ignoring the time_range
+  /// that was specified in the request.
   @$pb.TagNumber(6)
   $2.Timestamp get lastSeenTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -599,9 +609,14 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Timestamp ensureLastSeenTime() => $_ensure(5);
 
+  /// Service contexts with a non-zero error count for the given filter
+  /// criteria. This list can be truncated if multiple services are affected.
+  /// Refer to `num_affected_services` for the total count.
   @$pb.TagNumber(7)
   $core.List<$3.ServiceContext> get affectedServices => $_getList(6);
 
+  /// The total number of services with a non-zero error count for the given
+  /// filter criteria.
   @$pb.TagNumber(8)
   $core.int get numAffectedServices => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -614,6 +629,11 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearNumAffectedServices() => clearField(8);
 
+  /// An arbitrary event that is chosen as representative for the whole group.
+  /// The representative event is intended to be used as a quick preview for
+  /// the whole group. Events in the group are usually sufficiently similar
+  /// to each other such that showing an arbitrary representative provides
+  /// insight into the characteristics of the group as a whole.
   @$pb.TagNumber(9)
   $3.ErrorEvent get representative => $_getN(8);
   @$pb.TagNumber(9)
@@ -629,59 +649,48 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   $3.ErrorEvent ensureRepresentative() => $_ensure(8);
 }
 
+/// The number of errors in a given time period.
+/// All numbers are approximate since the error events are sampled
+/// before counting them.
 class TimedCount extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TimedCount',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'count')
-    ..aOM<$2.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $2.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  TimedCount._() : super();
   factory TimedCount({
     $fixnum.Int64? count,
     $2.Timestamp? startTime,
     $2.Timestamp? endTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (count != null) {
-      _result.count = count;
+      $result.count = count;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
-    return _result;
+    return $result;
   }
+  TimedCount._() : super();
   factory TimedCount.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TimedCount.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimedCount',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'count')
+    ..aOM<$2.Timestamp>(2, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -690,9 +699,10 @@ class TimedCount extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TimedCount copyWith(void Function(TimedCount) updates) =>
-      super.copyWith((message) => updates(message as TimedCount))
-          as TimedCount; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TimedCount)) as TimedCount;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TimedCount create() => TimedCount._();
   TimedCount createEmptyInstance() => create();
@@ -702,6 +712,7 @@ class TimedCount extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TimedCount>(create);
   static TimedCount? _defaultInstance;
 
+  /// Approximate number of occurrences in the given time period.
   @$pb.TagNumber(1)
   $fixnum.Int64 get count => $_getI64(0);
   @$pb.TagNumber(1)
@@ -714,6 +725,7 @@ class TimedCount extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCount() => clearField(1);
 
+  /// Start of the time period to which `count` refers (included).
   @$pb.TagNumber(2)
   $2.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -728,6 +740,7 @@ class TimedCount extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.Timestamp ensureStartTime() => $_ensure(1);
 
+  /// End of the time period to which `count` refers (excluded).
   @$pb.TagNumber(3)
   $2.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -743,52 +756,8 @@ class TimedCount extends $pb.GeneratedMessage {
   $2.Timestamp ensureEndTime() => $_ensure(2);
 }
 
+/// Specifies a set of error events to return.
 class ListEventsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListEventsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'groupId')
-    ..aOM<ServiceContextFilter>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceFilter',
-        subBuilder: ServiceContextFilter.create)
-    ..aOM<QueryTimeRange>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeRange',
-        subBuilder: QueryTimeRange.create)
-    ..a<$core.int>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListEventsRequest._() : super();
   factory ListEventsRequest({
     $core.String? projectName,
     $core.String? groupId,
@@ -797,33 +766,51 @@ class ListEventsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectName != null) {
-      _result.projectName = projectName;
+      $result.projectName = projectName;
     }
     if (groupId != null) {
-      _result.groupId = groupId;
+      $result.groupId = groupId;
     }
     if (serviceFilter != null) {
-      _result.serviceFilter = serviceFilter;
+      $result.serviceFilter = serviceFilter;
     }
     if (timeRange != null) {
-      _result.timeRange = timeRange;
+      $result.timeRange = timeRange;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListEventsRequest._() : super();
   factory ListEventsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListEventsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListEventsRequest',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectName')
+    ..aOS(2, _omitFieldNames ? '' : 'groupId')
+    ..aOM<ServiceContextFilter>(3, _omitFieldNames ? '' : 'serviceFilter',
+        subBuilder: ServiceContextFilter.create)
+    ..aOM<QueryTimeRange>(4, _omitFieldNames ? '' : 'timeRange',
+        subBuilder: QueryTimeRange.create)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(7, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -833,8 +820,10 @@ class ListEventsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListEventsRequest copyWith(void Function(ListEventsRequest) updates) =>
       super.copyWith((message) => updates(message as ListEventsRequest))
-          as ListEventsRequest; // ignore: deprecated_member_use
+          as ListEventsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListEventsRequest create() => ListEventsRequest._();
   ListEventsRequest createEmptyInstance() => create();
@@ -845,6 +834,18 @@ class ListEventsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListEventsRequest>(create);
   static ListEventsRequest? _defaultInstance;
 
+  ///  Required. The resource name of the Google Cloud Platform project. Written
+  ///  as `projects/{projectID}` or `projects/{projectID}/locations/{location}`,
+  ///  where `{projectID}` is the [Google Cloud Platform project
+  ///  ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+  ///  a Cloud region.
+  ///
+  ///  Examples: `projects/my-project-123`,
+  ///  `projects/my-project-123/locations/global`.
+  ///
+  ///  For a list of supported locations, see [Supported
+  ///  Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+  ///  the default when unspecified.
   @$pb.TagNumber(1)
   $core.String get projectName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -857,6 +858,12 @@ class ListEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectName() => clearField(1);
 
+  /// Required. The group for which events shall be returned.
+  /// The `group_id` is a unique identifier for a particular error group. The
+  /// identifier is derived from key parts of the error-log content and is
+  /// treated as Service Data. For information about how Service Data
+  /// is handled, see [Google Cloud Privacy
+  /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
   @$pb.TagNumber(2)
   $core.String get groupId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -869,6 +876,9 @@ class ListEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGroupId() => clearField(2);
 
+  /// Optional. List only ErrorGroups which belong to a service context that
+  /// matches the filter.
+  /// Data for all service contexts is returned if this field is not specified.
   @$pb.TagNumber(3)
   ServiceContextFilter get serviceFilter => $_getN(2);
   @$pb.TagNumber(3)
@@ -883,6 +893,9 @@ class ListEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ServiceContextFilter ensureServiceFilter() => $_ensure(2);
 
+  /// Optional. List only data for the given time range.
+  /// If not set a default time range is used. The field time_range_begin
+  /// in the response will specify the beginning of this time range.
   @$pb.TagNumber(4)
   QueryTimeRange get timeRange => $_getN(3);
   @$pb.TagNumber(4)
@@ -897,6 +910,7 @@ class ListEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   QueryTimeRange ensureTimeRange() => $_ensure(3);
 
+  /// Optional. The maximum number of results to return per response.
   @$pb.TagNumber(6)
   $core.int get pageSize => $_getIZ(4);
   @$pb.TagNumber(6)
@@ -909,6 +923,7 @@ class ListEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPageSize() => clearField(6);
 
+  /// Optional. A `next_page_token` provided by a previous response.
   @$pb.TagNumber(7)
   $core.String get pageToken => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -922,60 +937,47 @@ class ListEventsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(7);
 }
 
+/// Contains a set of requested error events.
 class ListEventsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListEventsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<$3.ErrorEvent>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorEvents',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.ErrorEvent.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..aOM<$2.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeRangeBegin',
-        subBuilder: $2.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  ListEventsResponse._() : super();
   factory ListEventsResponse({
     $core.Iterable<$3.ErrorEvent>? errorEvents,
     $core.String? nextPageToken,
     $2.Timestamp? timeRangeBegin,
   }) {
-    final _result = create();
+    final $result = create();
     if (errorEvents != null) {
-      _result.errorEvents.addAll(errorEvents);
+      $result.errorEvents.addAll(errorEvents);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
     if (timeRangeBegin != null) {
-      _result.timeRangeBegin = timeRangeBegin;
+      $result.timeRangeBegin = timeRangeBegin;
     }
-    return _result;
+    return $result;
   }
+  ListEventsResponse._() : super();
   factory ListEventsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListEventsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListEventsResponse',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$3.ErrorEvent>(
+        1, _omitFieldNames ? '' : 'errorEvents', $pb.PbFieldType.PM,
+        subBuilder: $3.ErrorEvent.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'timeRangeBegin',
+        subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -985,8 +987,10 @@ class ListEventsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListEventsResponse copyWith(void Function(ListEventsResponse) updates) =>
       super.copyWith((message) => updates(message as ListEventsResponse))
-          as ListEventsResponse; // ignore: deprecated_member_use
+          as ListEventsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListEventsResponse create() => ListEventsResponse._();
   ListEventsResponse createEmptyInstance() => create();
@@ -997,9 +1001,13 @@ class ListEventsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListEventsResponse>(create);
   static ListEventsResponse? _defaultInstance;
 
+  /// The error events which match the given request.
   @$pb.TagNumber(1)
   $core.List<$3.ErrorEvent> get errorEvents => $_getList(0);
 
+  /// If non-empty, more results are available.
+  /// Pass this token, along with the same query parameters as the first
+  /// request, to view the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1012,6 +1020,7 @@ class ListEventsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  /// The timestamp specifies the start time to which the request was restricted.
   @$pb.TagNumber(4)
   $2.Timestamp get timeRangeBegin => $_getN(2);
   @$pb.TagNumber(4)
@@ -1027,43 +1036,45 @@ class ListEventsResponse extends $pb.GeneratedMessage {
   $2.Timestamp ensureTimeRangeBegin() => $_ensure(2);
 }
 
+///  A time range for which error group data shall be displayed.
+///  Query time ranges end at 'now'.
+///  When longer time ranges are selected, the resolution of the data decreases.
+///  The description of each time range below indicates the suggested minimum
+///  timed count duration for that range.
+///
+///  Requests might be rejected or the resulting timed count durations might be
+///  adjusted for lower durations.
 class QueryTimeRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryTimeRange',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..e<QueryTimeRange_Period>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'period',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: QueryTimeRange_Period.PERIOD_UNSPECIFIED,
-        valueOf: QueryTimeRange_Period.valueOf,
-        enumValues: QueryTimeRange_Period.values)
-    ..hasRequiredFields = false;
-
-  QueryTimeRange._() : super();
   factory QueryTimeRange({
     QueryTimeRange_Period? period,
   }) {
-    final _result = create();
+    final $result = create();
     if (period != null) {
-      _result.period = period;
+      $result.period = period;
     }
-    return _result;
+    return $result;
   }
+  QueryTimeRange._() : super();
   factory QueryTimeRange.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryTimeRange.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryTimeRange',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..e<QueryTimeRange_Period>(
+        1, _omitFieldNames ? '' : 'period', $pb.PbFieldType.OE,
+        defaultOrMaker: QueryTimeRange_Period.PERIOD_UNSPECIFIED,
+        valueOf: QueryTimeRange_Period.valueOf,
+        enumValues: QueryTimeRange_Period.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1073,8 +1084,10 @@ class QueryTimeRange extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   QueryTimeRange copyWith(void Function(QueryTimeRange) updates) =>
       super.copyWith((message) => updates(message as QueryTimeRange))
-          as QueryTimeRange; // ignore: deprecated_member_use
+          as QueryTimeRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryTimeRange create() => QueryTimeRange._();
   QueryTimeRange createEmptyInstance() => create();
@@ -1085,6 +1098,7 @@ class QueryTimeRange extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<QueryTimeRange>(create);
   static QueryTimeRange? _defaultInstance;
 
+  /// Restricts the query to the specified time range.
   @$pb.TagNumber(1)
   QueryTimeRange_Period get period => $_getN(0);
   @$pb.TagNumber(1)
@@ -1098,57 +1112,47 @@ class QueryTimeRange extends $pb.GeneratedMessage {
   void clearPeriod() => clearField(1);
 }
 
+/// Specifies criteria for filtering a subset of service contexts.
+/// The fields in the filter correspond to the fields in `ServiceContext`.
+/// Only exact, case-sensitive matches are supported.
+/// If a field is unset or empty, it matches arbitrary values.
 class ServiceContextFilter extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceContextFilter',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceType')
-    ..hasRequiredFields = false;
-
-  ServiceContextFilter._() : super();
   factory ServiceContextFilter({
     $core.String? service,
     $core.String? version,
     $core.String? resourceType,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (resourceType != null) {
-      _result.resourceType = resourceType;
+      $result.resourceType = resourceType;
     }
-    return _result;
+    return $result;
   }
+  ServiceContextFilter._() : super();
   factory ServiceContextFilter.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServiceContextFilter.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServiceContextFilter',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(2, _omitFieldNames ? '' : 'service')
+    ..aOS(3, _omitFieldNames ? '' : 'version')
+    ..aOS(4, _omitFieldNames ? '' : 'resourceType')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1159,8 +1163,10 @@ class ServiceContextFilter extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServiceContextFilter copyWith(void Function(ServiceContextFilter) updates) =>
       super.copyWith((message) => updates(message as ServiceContextFilter))
-          as ServiceContextFilter; // ignore: deprecated_member_use
+          as ServiceContextFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServiceContextFilter create() => ServiceContextFilter._();
   ServiceContextFilter createEmptyInstance() => create();
@@ -1171,6 +1177,8 @@ class ServiceContextFilter extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServiceContextFilter>(create);
   static ServiceContextFilter? _defaultInstance;
 
+  /// Optional. The exact value to match against
+  /// [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
   @$pb.TagNumber(2)
   $core.String get service => $_getSZ(0);
   @$pb.TagNumber(2)
@@ -1183,6 +1191,8 @@ class ServiceContextFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearService() => clearField(2);
 
+  /// Optional. The exact value to match against
+  /// [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
   @$pb.TagNumber(3)
   $core.String get version => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -1195,6 +1205,8 @@ class ServiceContextFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearVersion() => clearField(3);
 
+  /// Optional. The exact value to match against
+  /// [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
   @$pb.TagNumber(4)
   $core.String get resourceType => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -1208,39 +1220,34 @@ class ServiceContextFilter extends $pb.GeneratedMessage {
   void clearResourceType() => clearField(4);
 }
 
+/// Deletes all events in the project.
 class DeleteEventsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteEventsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectName')
-    ..hasRequiredFields = false;
-
-  DeleteEventsRequest._() : super();
   factory DeleteEventsRequest({
     $core.String? projectName,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectName != null) {
-      _result.projectName = projectName;
+      $result.projectName = projectName;
     }
-    return _result;
+    return $result;
   }
+  DeleteEventsRequest._() : super();
   factory DeleteEventsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteEventsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteEventsRequest',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1250,8 +1257,10 @@ class DeleteEventsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteEventsRequest copyWith(void Function(DeleteEventsRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteEventsRequest))
-          as DeleteEventsRequest; // ignore: deprecated_member_use
+          as DeleteEventsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteEventsRequest create() => DeleteEventsRequest._();
   DeleteEventsRequest createEmptyInstance() => create();
@@ -1262,6 +1271,18 @@ class DeleteEventsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteEventsRequest>(create);
   static DeleteEventsRequest? _defaultInstance;
 
+  ///  Required. The resource name of the Google Cloud Platform project. Written
+  ///  as `projects/{projectID}` or `projects/{projectID}/locations/{location}`,
+  ///  where `{projectID}` is the [Google Cloud Platform project
+  ///  ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+  ///  a Cloud region.
+  ///
+  ///  Examples: `projects/my-project-123`,
+  ///  `projects/my-project-123/locations/global`.
+  ///
+  ///  For a list of supported locations, see [Supported
+  ///  Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+  ///  the default when unspecified.
   @$pb.TagNumber(1)
   $core.String get projectName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1275,26 +1296,25 @@ class DeleteEventsRequest extends $pb.GeneratedMessage {
   void clearProjectName() => clearField(1);
 }
 
+/// Response message for deleting error events.
 class DeleteEventsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteEventsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  DeleteEventsResponse._() : super();
   factory DeleteEventsResponse() => create();
+  DeleteEventsResponse._() : super();
   factory DeleteEventsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteEventsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteEventsResponse',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1305,8 +1325,10 @@ class DeleteEventsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteEventsResponse copyWith(void Function(DeleteEventsResponse) updates) =>
       super.copyWith((message) => updates(message as DeleteEventsResponse))
-          as DeleteEventsResponse; // ignore: deprecated_member_use
+          as DeleteEventsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteEventsResponse create() => DeleteEventsResponse._();
   DeleteEventsResponse createEmptyInstance() => create();
@@ -1317,3 +1339,7 @@ class DeleteEventsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteEventsResponse>(create);
   static DeleteEventsResponse? _defaultInstance;
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

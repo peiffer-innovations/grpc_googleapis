@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/conversation/prompt/content/image.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,68 +15,48 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 export 'image.pbenum.dart';
 
+/// An image displayed in the card.
 class Image extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Image',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.conversation'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alt')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'height',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'width',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Image._() : super();
   factory Image({
     $core.String? url,
     $core.String? alt,
     $core.int? height,
     $core.int? width,
   }) {
-    final _result = create();
+    final $result = create();
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
     if (alt != null) {
-      _result.alt = alt;
+      $result.alt = alt;
     }
     if (height != null) {
-      _result.height = height;
+      $result.height = height;
     }
     if (width != null) {
-      _result.width = width;
+      $result.width = width;
     }
-    return _result;
+    return $result;
   }
+  Image._() : super();
   factory Image.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Image.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Image',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2.conversation'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..aOS(2, _omitFieldNames ? '' : 'alt')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'height', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'width', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -81,9 +65,10 @@ class Image extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Image copyWith(void Function(Image) updates) =>
-      super.copyWith((message) => updates(message as Image))
-          as Image; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Image)) as Image;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Image create() => Image._();
   Image createEmptyInstance() => create();
@@ -93,6 +78,8 @@ class Image extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Image>(create);
   static Image? _defaultInstance;
 
+  /// The source url of the image. Images can be JPG, PNG and GIF (animated and
+  /// non-animated). For example,`https://www.agentx.com/logo.png`. Required.
   @$pb.TagNumber(1)
   $core.String get url => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -105,6 +92,9 @@ class Image extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
+  /// A text description of the image to be used for accessibility, e.g. screen
+  /// readers.
+  /// Required.
   @$pb.TagNumber(2)
   $core.String get alt => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -117,6 +107,8 @@ class Image extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlt() => clearField(2);
 
+  /// The height of the image in pixels.
+  /// Optional.
   @$pb.TagNumber(3)
   $core.int get height => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -129,6 +121,8 @@ class Image extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
 
+  /// The width of the image in pixels.
+  /// Optional.
   @$pb.TagNumber(4)
   $core.int get width => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -141,3 +135,7 @@ class Image extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearWidth() => clearField(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

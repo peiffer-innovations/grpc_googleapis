@@ -1,24 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/dashboard/v1/table_display_options.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use tableDisplayOptionsDescriptor instead')
-const TableDisplayOptions$json = const {
+const TableDisplayOptions$json = {
   '1': 'TableDisplayOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'shown_columns',
       '3': 1,
       '4': 3,
       '5': 9,
-      '8': const {'3': true},
+      '8': {'3': true},
       '10': 'shownColumns',
     },
   ],
@@ -26,4 +30,5 @@ const TableDisplayOptions$json = const {
 
 /// Descriptor for `TableDisplayOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tableDisplayOptionsDescriptor = $convert.base64Decode(
-    'ChNUYWJsZURpc3BsYXlPcHRpb25zEioKDXNob3duX2NvbHVtbnMYASADKAlCBRgB4EEBUgxzaG93bkNvbHVtbnM=');
+    'ChNUYWJsZURpc3BsYXlPcHRpb25zEioKDXNob3duX2NvbHVtbnMYASADKAlCBRgB4EEBUgxzaG'
+    '93bkNvbHVtbnM=');

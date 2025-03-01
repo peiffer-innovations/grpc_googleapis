@@ -1,20 +1,24 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/download_metadata.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use downloadMetadataDescriptor instead')
-const DownloadMetadata$json = const {
+const DownloadMetadata$json = {
   '1': 'DownloadMetadata',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'upload_status',
       '3': 2,
       '4': 1,
@@ -22,10 +26,41 @@ const DownloadMetadata$json = const {
       '6': '.google.devtools.resultstore.v2.UploadStatus',
       '10': 'uploadStatus'
     },
+    {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'finalize_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'finalizeTime'
+    },
+    {
+      '1': 'immutable_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'immutableTime'
+    },
   ],
-  '7': const {},
+  '7': {},
 };
 
 /// Descriptor for `DownloadMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List downloadMetadataDescriptor = $convert.base64Decode(
-    'ChBEb3dubG9hZE1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSUQoNdXBsb2FkX3N0YXR1cxgCIAEoDjIsLmdvb2dsZS5kZXZ0b29scy5yZXN1bHRzdG9yZS52Mi5VcGxvYWRTdGF0dXNSDHVwbG9hZFN0YXR1czpb6kFYCityZXN1bHRzdG9yZS5nb29nbGVhcGlzLmNvbS9Eb3dubG9hZE1ldGFkYXRhEilpbnZvY2F0aW9ucy97aW52b2NhdGlvbn0vZG93bmxvYWRNZXRhZGF0YQ==');
+    'ChBEb3dubG9hZE1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSUQoNdXBsb2FkX3N0YXR1cx'
+    'gCIAEoDjIsLmdvb2dsZS5kZXZ0b29scy5yZXN1bHRzdG9yZS52Mi5VcGxvYWRTdGF0dXNSDHVw'
+    'bG9hZFN0YXR1cxI7CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
+    'RhbXBSCmNyZWF0ZVRpbWUSPwoNZmluYWxpemVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1'
+    'Zi5UaW1lc3RhbXBSDGZpbmFsaXplVGltZRJBCg5pbW11dGFibGVfdGltZRgFIAEoCzIaLmdvb2'
+    'dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDWltbXV0YWJsZVRpbWU6W+pBWAorcmVzdWx0c3RvcmUu'
+    'Z29vZ2xlYXBpcy5jb20vRG93bmxvYWRNZXRhZGF0YRIpaW52b2NhdGlvbnMve2ludm9jYXRpb2'
+    '59L2Rvd25sb2FkTWV0YWRhdGE=');

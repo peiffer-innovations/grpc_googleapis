@@ -1,47 +1,45 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/conversation/prompt/suggestion.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Input suggestion to be presented to the user.
 class Suggestion extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Suggestion',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.conversation'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..hasRequiredFields = false;
-
-  Suggestion._() : super();
   factory Suggestion({
     $core.String? title,
   }) {
-    final _result = create();
+    final $result = create();
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
-    return _result;
+    return $result;
   }
+  Suggestion._() : super();
   factory Suggestion.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Suggestion.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Suggestion',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2.conversation'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'title')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -50,9 +48,10 @@ class Suggestion extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Suggestion copyWith(void Function(Suggestion) updates) =>
-      super.copyWith((message) => updates(message as Suggestion))
-          as Suggestion; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Suggestion)) as Suggestion;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Suggestion create() => Suggestion._();
   Suggestion createEmptyInstance() => create();
@@ -62,6 +61,10 @@ class Suggestion extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Suggestion>(create);
   static Suggestion? _defaultInstance;
 
+  /// Required. The text shown in the suggestion chip. When tapped, this text will be
+  /// posted back to the conversation verbatim as if the user had typed it.
+  /// Each title must be unique among the set of suggestion chips.
+  /// Max 25 chars
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -74,3 +77,7 @@ class Suggestion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

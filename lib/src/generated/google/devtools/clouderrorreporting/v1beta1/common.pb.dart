@@ -1,86 +1,72 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
-
 import 'common.pbenum.dart';
 
 export 'common.pbenum.dart';
 
+/// Description of a group of similar error events.
 class ErrorGroup extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorGroup',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'groupId')
-    ..pc<TrackingIssue>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'trackingIssues',
-        $pb.PbFieldType.PM,
-        subBuilder: TrackingIssue.create)
-    ..e<ResolutionStatus>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resolutionStatus',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ResolutionStatus.RESOLUTION_STATUS_UNSPECIFIED,
-        valueOf: ResolutionStatus.valueOf,
-        enumValues: ResolutionStatus.values)
-    ..hasRequiredFields = false;
-
-  ErrorGroup._() : super();
   factory ErrorGroup({
     $core.String? name,
     $core.String? groupId,
     $core.Iterable<TrackingIssue>? trackingIssues,
     ResolutionStatus? resolutionStatus,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (groupId != null) {
-      _result.groupId = groupId;
+      $result.groupId = groupId;
     }
     if (trackingIssues != null) {
-      _result.trackingIssues.addAll(trackingIssues);
+      $result.trackingIssues.addAll(trackingIssues);
     }
     if (resolutionStatus != null) {
-      _result.resolutionStatus = resolutionStatus;
+      $result.resolutionStatus = resolutionStatus;
     }
-    return _result;
+    return $result;
   }
+  ErrorGroup._() : super();
   factory ErrorGroup.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ErrorGroup.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ErrorGroup',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'groupId')
+    ..pc<TrackingIssue>(
+        3, _omitFieldNames ? '' : 'trackingIssues', $pb.PbFieldType.PM,
+        subBuilder: TrackingIssue.create)
+    ..e<ResolutionStatus>(
+        5, _omitFieldNames ? '' : 'resolutionStatus', $pb.PbFieldType.OE,
+        defaultOrMaker: ResolutionStatus.RESOLUTION_STATUS_UNSPECIFIED,
+        valueOf: ResolutionStatus.valueOf,
+        enumValues: ResolutionStatus.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -89,9 +75,10 @@ class ErrorGroup extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ErrorGroup copyWith(void Function(ErrorGroup) updates) =>
-      super.copyWith((message) => updates(message as ErrorGroup))
-          as ErrorGroup; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ErrorGroup)) as ErrorGroup;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ErrorGroup create() => ErrorGroup._();
   ErrorGroup createEmptyInstance() => create();
@@ -101,6 +88,22 @@ class ErrorGroup extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ErrorGroup>(create);
   static ErrorGroup? _defaultInstance;
 
+  ///  The group resource name.
+  ///  Written as `projects/{projectID}/groups/{group_id}` or
+  ///  `projects/{projectID}/locations/{location}/groups/{group_id}`
+  ///
+  ///  Examples: `projects/my-project-123/groups/my-group`,
+  ///  `projects/my-project-123/locations/us-central1/groups/my-group`
+  ///
+  ///  In the group resource name, the `group_id` is a unique identifier for a
+  ///  particular error group. The identifier is derived from key parts of the
+  ///  error-log content and is treated as Service Data. For information about
+  ///  how Service Data is handled, see [Google Cloud Privacy
+  ///  Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+  ///
+  ///  For a list of supported locations, see [Supported
+  ///  Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+  ///  the default when unspecified.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -113,6 +116,14 @@ class ErrorGroup extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  An opaque identifier of the group. This field is assigned by the Error
+  ///  Reporting system and always populated.
+  ///
+  ///  In the group resource name, the `group_id` is a unique identifier for a
+  ///  particular error group. The identifier is derived from key parts of the
+  ///  error-log content and is treated as Service Data. For information about
+  ///  how Service Data is handled, see [Google Cloud Privacy
+  ///  Notice](https://cloud.google.com/terms/cloud-privacy-notice).
   @$pb.TagNumber(2)
   $core.String get groupId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -125,9 +136,13 @@ class ErrorGroup extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGroupId() => clearField(2);
 
+  /// Associated tracking issues.
   @$pb.TagNumber(3)
   $core.List<TrackingIssue> get trackingIssues => $_getList(2);
 
+  ///  Error group's resolution status.
+  ///
+  ///  An unspecified resolution status will be interpreted as OPEN
   @$pb.TagNumber(5)
   ResolutionStatus get resolutionStatus => $_getN(3);
   @$pb.TagNumber(5)
@@ -141,39 +156,34 @@ class ErrorGroup extends $pb.GeneratedMessage {
   void clearResolutionStatus() => clearField(5);
 }
 
+/// Information related to tracking the progress on resolving the error.
 class TrackingIssue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TrackingIssue',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..hasRequiredFields = false;
-
-  TrackingIssue._() : super();
   factory TrackingIssue({
     $core.String? url,
   }) {
-    final _result = create();
+    final $result = create();
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
-    return _result;
+    return $result;
   }
+  TrackingIssue._() : super();
   factory TrackingIssue.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TrackingIssue.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TrackingIssue',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -183,8 +193,10 @@ class TrackingIssue extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TrackingIssue copyWith(void Function(TrackingIssue) updates) =>
       super.copyWith((message) => updates(message as TrackingIssue))
-          as TrackingIssue; // ignore: deprecated_member_use
+          as TrackingIssue;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TrackingIssue create() => TrackingIssue._();
   TrackingIssue createEmptyInstance() => create();
@@ -195,6 +207,8 @@ class TrackingIssue extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TrackingIssue>(create);
   static TrackingIssue? _defaultInstance;
 
+  /// A URL pointing to a related entry in an issue tracking system.
+  /// Example: `https://github.com/user/project/issues/4`
   @$pb.TagNumber(1)
   $core.String get url => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -208,69 +222,52 @@ class TrackingIssue extends $pb.GeneratedMessage {
   void clearUrl() => clearField(1);
 }
 
+/// An error event which is returned by the Error Reporting system.
 class ErrorEvent extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorEvent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'eventTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<ServiceContext>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceContext',
-        subBuilder: ServiceContext.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'message')
-    ..aOM<ErrorContext>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'context',
-        subBuilder: ErrorContext.create)
-    ..hasRequiredFields = false;
-
-  ErrorEvent._() : super();
   factory ErrorEvent({
     $0.Timestamp? eventTime,
     ServiceContext? serviceContext,
     $core.String? message,
     ErrorContext? context,
   }) {
-    final _result = create();
+    final $result = create();
     if (eventTime != null) {
-      _result.eventTime = eventTime;
+      $result.eventTime = eventTime;
     }
     if (serviceContext != null) {
-      _result.serviceContext = serviceContext;
+      $result.serviceContext = serviceContext;
     }
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
     if (context != null) {
-      _result.context = context;
+      $result.context = context;
     }
-    return _result;
+    return $result;
   }
+  ErrorEvent._() : super();
   factory ErrorEvent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ErrorEvent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ErrorEvent',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'eventTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<ServiceContext>(2, _omitFieldNames ? '' : 'serviceContext',
+        subBuilder: ServiceContext.create)
+    ..aOS(3, _omitFieldNames ? '' : 'message')
+    ..aOM<ErrorContext>(5, _omitFieldNames ? '' : 'context',
+        subBuilder: ErrorContext.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -279,9 +276,10 @@ class ErrorEvent extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ErrorEvent copyWith(void Function(ErrorEvent) updates) =>
-      super.copyWith((message) => updates(message as ErrorEvent))
-          as ErrorEvent; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ErrorEvent)) as ErrorEvent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ErrorEvent create() => ErrorEvent._();
   ErrorEvent createEmptyInstance() => create();
@@ -291,6 +289,9 @@ class ErrorEvent extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ErrorEvent>(create);
   static ErrorEvent? _defaultInstance;
 
+  /// Time when the event occurred as provided in the error report.
+  /// If the report did not contain a timestamp, the time the error was received
+  /// by the Error Reporting system is used.
   @$pb.TagNumber(1)
   $0.Timestamp get eventTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -305,6 +306,7 @@ class ErrorEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureEventTime() => $_ensure(0);
 
+  /// The `ServiceContext` for which this error was reported.
   @$pb.TagNumber(2)
   ServiceContext get serviceContext => $_getN(1);
   @$pb.TagNumber(2)
@@ -319,6 +321,7 @@ class ErrorEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ServiceContext ensureServiceContext() => $_ensure(1);
 
+  /// The stack trace that was reported or logged by the service.
   @$pb.TagNumber(3)
   $core.String get message => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -331,6 +334,7 @@ class ErrorEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMessage() => clearField(3);
 
+  /// Data about the context in which the error occurred.
   @$pb.TagNumber(5)
   ErrorContext get context => $_getN(3);
   @$pb.TagNumber(5)
@@ -346,57 +350,45 @@ class ErrorEvent extends $pb.GeneratedMessage {
   ErrorContext ensureContext() => $_ensure(3);
 }
 
+/// Describes a running service that sends errors.
+/// Its version changes over time and multiple versions can run in parallel.
 class ServiceContext extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceContext',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceType')
-    ..hasRequiredFields = false;
-
-  ServiceContext._() : super();
   factory ServiceContext({
     $core.String? service,
     $core.String? version,
     $core.String? resourceType,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (resourceType != null) {
-      _result.resourceType = resourceType;
+      $result.resourceType = resourceType;
     }
-    return _result;
+    return $result;
   }
+  ServiceContext._() : super();
   factory ServiceContext.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServiceContext.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServiceContext',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(2, _omitFieldNames ? '' : 'service')
+    ..aOS(3, _omitFieldNames ? '' : 'version')
+    ..aOS(4, _omitFieldNames ? '' : 'resourceType')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -406,8 +398,10 @@ class ServiceContext extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServiceContext copyWith(void Function(ServiceContext) updates) =>
       super.copyWith((message) => updates(message as ServiceContext))
-          as ServiceContext; // ignore: deprecated_member_use
+          as ServiceContext;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServiceContext create() => ServiceContext._();
   ServiceContext createEmptyInstance() => create();
@@ -418,6 +412,13 @@ class ServiceContext extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServiceContext>(create);
   static ServiceContext? _defaultInstance;
 
+  ///  An identifier of the service, such as the name of the
+  ///  executable, job, or Google App Engine service name. This field is expected
+  ///  to have a low number of values that are relatively stable over time, as
+  ///  opposed to `version`, which can be changed whenever new code is deployed.
+  ///
+  ///  Contains the service name for error reports extracted from Google
+  ///  App Engine logs or `default` if the App Engine default service is used.
   @$pb.TagNumber(2)
   $core.String get service => $_getSZ(0);
   @$pb.TagNumber(2)
@@ -430,6 +431,10 @@ class ServiceContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearService() => clearField(2);
 
+  /// Represents the source code version that the developer provided,
+  /// which could represent a version label or a Git SHA-1 hash, for example.
+  /// For App Engine standard environment, the version is set to the version of
+  /// the app.
   @$pb.TagNumber(3)
   $core.String get version => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -442,6 +447,11 @@ class ServiceContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearVersion() => clearField(3);
 
+  ///  Type of the MonitoredResource. List of possible values:
+  ///  https://cloud.google.com/monitoring/api/resources
+  ///
+  ///  Value is set automatically for incoming errors and must not be set when
+  ///  reporting errors.
   @$pb.TagNumber(4)
   $core.String get resourceType => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -455,59 +465,49 @@ class ServiceContext extends $pb.GeneratedMessage {
   void clearResourceType() => clearField(4);
 }
 
+/// A description of the context in which an error occurred.
+/// This data should be provided by the application when reporting an error,
+/// unless the
+/// error report has been generated automatically from Google App Engine logs.
 class ErrorContext extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorContext',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOM<HttpRequestContext>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'httpRequest',
-        subBuilder: HttpRequestContext.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'user')
-    ..aOM<SourceLocation>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reportLocation',
-        subBuilder: SourceLocation.create)
-    ..hasRequiredFields = false;
-
-  ErrorContext._() : super();
   factory ErrorContext({
     HttpRequestContext? httpRequest,
     $core.String? user,
     SourceLocation? reportLocation,
   }) {
-    final _result = create();
+    final $result = create();
     if (httpRequest != null) {
-      _result.httpRequest = httpRequest;
+      $result.httpRequest = httpRequest;
     }
     if (user != null) {
-      _result.user = user;
+      $result.user = user;
     }
     if (reportLocation != null) {
-      _result.reportLocation = reportLocation;
+      $result.reportLocation = reportLocation;
     }
-    return _result;
+    return $result;
   }
+  ErrorContext._() : super();
   factory ErrorContext.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ErrorContext.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ErrorContext',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<HttpRequestContext>(1, _omitFieldNames ? '' : 'httpRequest',
+        subBuilder: HttpRequestContext.create)
+    ..aOS(2, _omitFieldNames ? '' : 'user')
+    ..aOM<SourceLocation>(3, _omitFieldNames ? '' : 'reportLocation',
+        subBuilder: SourceLocation.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -517,8 +517,10 @@ class ErrorContext extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ErrorContext copyWith(void Function(ErrorContext) updates) =>
       super.copyWith((message) => updates(message as ErrorContext))
-          as ErrorContext; // ignore: deprecated_member_use
+          as ErrorContext;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ErrorContext create() => ErrorContext._();
   ErrorContext createEmptyInstance() => create();
@@ -529,6 +531,8 @@ class ErrorContext extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ErrorContext>(create);
   static ErrorContext? _defaultInstance;
 
+  /// The HTTP request which was processed when the error was
+  /// triggered.
   @$pb.TagNumber(1)
   HttpRequestContext get httpRequest => $_getN(0);
   @$pb.TagNumber(1)
@@ -543,6 +547,14 @@ class ErrorContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   HttpRequestContext ensureHttpRequest() => $_ensure(0);
 
+  /// The user who caused or was affected by the crash.
+  /// This can be a user ID, an email address, or an arbitrary token that
+  /// uniquely identifies the user.
+  /// When sending an error report, leave this field empty if the user was not
+  /// logged in. In this case the
+  /// Error Reporting system will use other data, such as remote IP address, to
+  /// distinguish affected users. See `affected_users_count` in
+  /// `ErrorGroupStats`.
   @$pb.TagNumber(2)
   $core.String get user => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -555,6 +567,11 @@ class ErrorContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUser() => clearField(2);
 
+  /// The location in the source code where the decision was made to
+  /// report the error, usually the place where it was logged.
+  /// For a logged exception this would be the source line where the
+  /// exception is logged, usually close to the place where it was
+  /// caught.
   @$pb.TagNumber(3)
   SourceLocation get reportLocation => $_getN(2);
   @$pb.TagNumber(3)
@@ -570,50 +587,11 @@ class ErrorContext extends $pb.GeneratedMessage {
   SourceLocation ensureReportLocation() => $_ensure(2);
 }
 
+/// HTTP request data that is related to a reported error.
+/// This data should be provided by the application when reporting an error,
+/// unless the
+/// error report has been generated automatically from Google App Engine logs.
 class HttpRequestContext extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HttpRequestContext',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'method')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userAgent')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referrer')
-    ..a<$core.int>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'responseStatusCode',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remoteIp')
-    ..hasRequiredFields = false;
-
-  HttpRequestContext._() : super();
   factory HttpRequestContext({
     $core.String? method,
     $core.String? url,
@@ -622,33 +600,50 @@ class HttpRequestContext extends $pb.GeneratedMessage {
     $core.int? responseStatusCode,
     $core.String? remoteIp,
   }) {
-    final _result = create();
+    final $result = create();
     if (method != null) {
-      _result.method = method;
+      $result.method = method;
     }
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
     if (userAgent != null) {
-      _result.userAgent = userAgent;
+      $result.userAgent = userAgent;
     }
     if (referrer != null) {
-      _result.referrer = referrer;
+      $result.referrer = referrer;
     }
     if (responseStatusCode != null) {
-      _result.responseStatusCode = responseStatusCode;
+      $result.responseStatusCode = responseStatusCode;
     }
     if (remoteIp != null) {
-      _result.remoteIp = remoteIp;
+      $result.remoteIp = remoteIp;
     }
-    return _result;
+    return $result;
   }
+  HttpRequestContext._() : super();
   factory HttpRequestContext.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HttpRequestContext.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HttpRequestContext',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'method')
+    ..aOS(2, _omitFieldNames ? '' : 'url')
+    ..aOS(3, _omitFieldNames ? '' : 'userAgent')
+    ..aOS(4, _omitFieldNames ? '' : 'referrer')
+    ..a<$core.int>(
+        5, _omitFieldNames ? '' : 'responseStatusCode', $pb.PbFieldType.O3)
+    ..aOS(6, _omitFieldNames ? '' : 'remoteIp')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -658,8 +653,10 @@ class HttpRequestContext extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   HttpRequestContext copyWith(void Function(HttpRequestContext) updates) =>
       super.copyWith((message) => updates(message as HttpRequestContext))
-          as HttpRequestContext; // ignore: deprecated_member_use
+          as HttpRequestContext;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HttpRequestContext create() => HttpRequestContext._();
   HttpRequestContext createEmptyInstance() => create();
@@ -670,6 +667,7 @@ class HttpRequestContext extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HttpRequestContext>(create);
   static HttpRequestContext? _defaultInstance;
 
+  /// The type of HTTP request, such as `GET`, `POST`, etc.
   @$pb.TagNumber(1)
   $core.String get method => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -682,6 +680,7 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMethod() => clearField(1);
 
+  /// The URL of the request.
   @$pb.TagNumber(2)
   $core.String get url => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -694,6 +693,7 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUrl() => clearField(2);
 
+  /// The user agent information that is provided with the request.
   @$pb.TagNumber(3)
   $core.String get userAgent => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -706,6 +706,7 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUserAgent() => clearField(3);
 
+  /// The referrer information that is provided with the request.
   @$pb.TagNumber(4)
   $core.String get referrer => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -718,6 +719,7 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReferrer() => clearField(4);
 
+  /// The HTTP response status code for the request.
   @$pb.TagNumber(5)
   $core.int get responseStatusCode => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -730,6 +732,10 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearResponseStatusCode() => clearField(5);
 
+  /// The IP address from which the request originated.
+  /// This can be IPv4, IPv6, or a token which is derived from the
+  /// IP address, depending on the data that has been provided
+  /// in the error report.
   @$pb.TagNumber(6)
   $core.String get remoteIp => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -743,58 +749,47 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   void clearRemoteIp() => clearField(6);
 }
 
+/// Indicates a location in the source code of the service for which errors are
+/// reported. `functionName` must be provided by the application when reporting
+/// an error, unless the error report contains a `message` with a supported
+/// exception stack trace. All fields are optional for the later case.
 class SourceLocation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SourceLocation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouderrorreporting.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filePath')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lineNumber',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'functionName')
-    ..hasRequiredFields = false;
-
-  SourceLocation._() : super();
   factory SourceLocation({
     $core.String? filePath,
     $core.int? lineNumber,
     $core.String? functionName,
   }) {
-    final _result = create();
+    final $result = create();
     if (filePath != null) {
-      _result.filePath = filePath;
+      $result.filePath = filePath;
     }
     if (lineNumber != null) {
-      _result.lineNumber = lineNumber;
+      $result.lineNumber = lineNumber;
     }
     if (functionName != null) {
-      _result.functionName = functionName;
+      $result.functionName = functionName;
     }
-    return _result;
+    return $result;
   }
+  SourceLocation._() : super();
   factory SourceLocation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SourceLocation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SourceLocation',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'filePath')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'lineNumber', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'functionName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -804,8 +799,10 @@ class SourceLocation extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SourceLocation copyWith(void Function(SourceLocation) updates) =>
       super.copyWith((message) => updates(message as SourceLocation))
-          as SourceLocation; // ignore: deprecated_member_use
+          as SourceLocation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SourceLocation create() => SourceLocation._();
   SourceLocation createEmptyInstance() => create();
@@ -816,6 +813,8 @@ class SourceLocation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SourceLocation>(create);
   static SourceLocation? _defaultInstance;
 
+  /// The source code filename, which can include a truncated relative
+  /// path, or a full path from a production machine.
   @$pb.TagNumber(1)
   $core.String get filePath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -828,6 +827,7 @@ class SourceLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFilePath() => clearField(1);
 
+  /// 1-based. 0 indicates that the line number is unknown.
   @$pb.TagNumber(2)
   $core.int get lineNumber => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -840,6 +840,9 @@ class SourceLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLineNumber() => clearField(2);
 
+  /// Human-readable name of a function or method.
+  /// The value can include optional context like the class or package name.
+  /// For example, `my.package.MyClass.method` in case of Java.
   @$pb.TagNumber(4)
   $core.String get functionName => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -852,3 +855,7 @@ class SourceLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFunctionName() => clearField(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

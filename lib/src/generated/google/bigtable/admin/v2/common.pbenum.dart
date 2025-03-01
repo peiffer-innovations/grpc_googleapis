@@ -1,30 +1,24 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Storage media types for persisting Bigtable data.
 class StorageType extends $pb.ProtobufEnum {
-  static const StorageType STORAGE_TYPE_UNSPECIFIED = StorageType._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STORAGE_TYPE_UNSPECIFIED');
-  static const StorageType SSD = StorageType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SSD');
-  static const StorageType HDD = StorageType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'HDD');
+  static const StorageType STORAGE_TYPE_UNSPECIFIED =
+      StorageType._(0, _omitEnumNames ? '' : 'STORAGE_TYPE_UNSPECIFIED');
+  static const StorageType SSD = StorageType._(1, _omitEnumNames ? '' : 'SSD');
+  static const StorageType HDD = StorageType._(2, _omitEnumNames ? '' : 'HDD');
 
   static const $core.List<StorageType> values = <StorageType>[
     STORAGE_TYPE_UNSPECIFIED,
@@ -38,3 +32,5 @@ class StorageType extends $pb.ProtobufEnum {
 
   const StorageType._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

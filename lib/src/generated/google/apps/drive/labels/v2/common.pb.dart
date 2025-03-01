@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,53 +15,43 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../../type/color.pb.dart' as $0;
-
 import 'common.pbenum.dart';
 
 export 'common.pbenum.dart';
 
+/// The policy that governs how to treat a disabled label, field, or selection
+/// choice in different contexts.
 class Lifecycle_DisabledPolicy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Lifecycle.DisabledPolicy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hideInSearch')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'showInApply')
-    ..hasRequiredFields = false;
-
-  Lifecycle_DisabledPolicy._() : super();
   factory Lifecycle_DisabledPolicy({
     $core.bool? hideInSearch,
     $core.bool? showInApply,
   }) {
-    final _result = create();
+    final $result = create();
     if (hideInSearch != null) {
-      _result.hideInSearch = hideInSearch;
+      $result.hideInSearch = hideInSearch;
     }
     if (showInApply != null) {
-      _result.showInApply = showInApply;
+      $result.showInApply = showInApply;
     }
-    return _result;
+    return $result;
   }
+  Lifecycle_DisabledPolicy._() : super();
   factory Lifecycle_DisabledPolicy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Lifecycle_DisabledPolicy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Lifecycle.DisabledPolicy',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'hideInSearch')
+    ..aOB(2, _omitFieldNames ? '' : 'showInApply')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -69,8 +63,10 @@ class Lifecycle_DisabledPolicy extends $pb.GeneratedMessage {
   Lifecycle_DisabledPolicy copyWith(
           void Function(Lifecycle_DisabledPolicy) updates) =>
       super.copyWith((message) => updates(message as Lifecycle_DisabledPolicy))
-          as Lifecycle_DisabledPolicy; // ignore: deprecated_member_use
+          as Lifecycle_DisabledPolicy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Lifecycle_DisabledPolicy create() => Lifecycle_DisabledPolicy._();
   Lifecycle_DisabledPolicy createEmptyInstance() => create();
@@ -81,6 +77,12 @@ class Lifecycle_DisabledPolicy extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Lifecycle_DisabledPolicy>(create);
   static Lifecycle_DisabledPolicy? _defaultInstance;
 
+  ///  Whether to hide this disabled object in the search menu for Drive items.
+  ///
+  ///  * When `false`, the object is generally shown in the UI as disabled but
+  ///  it appears in the search results when searching for Drive items.
+  ///  * When `true`, the object is generally hidden in the UI when
+  ///    searching for Drive items.
   @$pb.TagNumber(1)
   $core.bool get hideInSearch => $_getBF(0);
   @$pb.TagNumber(1)
@@ -93,6 +95,11 @@ class Lifecycle_DisabledPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHideInSearch() => clearField(1);
 
+  ///  Whether to show this disabled object in the apply menu on Drive items.
+  ///
+  ///  * When `true`, the object is generally shown in the UI as disabled
+  ///    and is unselectable.
+  ///  * When `false`, the object is generally hidden in the UI.
   @$pb.TagNumber(2)
   $core.bool get showInApply => $_getBF(1);
   @$pb.TagNumber(2)
@@ -106,62 +113,64 @@ class Lifecycle_DisabledPolicy extends $pb.GeneratedMessage {
   void clearShowInApply() => clearField(2);
 }
 
+///  The lifecycle state of an object, such as label, field, or choice. The
+///  lifecycle enforces the following transitions:
+///
+///  * `UNPUBLISHED_DRAFT` (starting state)
+///  * `UNPUBLISHED_DRAFT` -> `PUBLISHED`
+///  * `UNPUBLISHED_DRAFT` -> (Deleted)
+///  * `PUBLISHED` -> `DISABLED`
+///  * `DISABLED` -> `PUBLISHED`
+///  * `DISABLED` -> (Deleted)
+///
+///  The published and disabled states have some distinct characteristics:
+///
+///  * Published—Some kinds of changes might be made to an object in this state,
+///    in which case `has_unpublished_changes` will be true. Also, some kinds of
+///    changes are not permitted. Generally, any change that would invalidate or
+///    cause new restrictions on existing metadata related to the label are
+///    rejected.
+///  * Disabled—When disabled, the configured `DisabledPolicy` takes effect.
 class Lifecycle extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Lifecycle',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2'),
-      createEmptyInstance: create)
-    ..e<Lifecycle_State>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Lifecycle_State.STATE_UNSPECIFIED,
-        valueOf: Lifecycle_State.valueOf,
-        enumValues: Lifecycle_State.values)
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hasUnpublishedChanges')
-    ..aOM<Lifecycle_DisabledPolicy>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabledPolicy',
-        subBuilder: Lifecycle_DisabledPolicy.create)
-    ..hasRequiredFields = false;
-
-  Lifecycle._() : super();
   factory Lifecycle({
     Lifecycle_State? state,
     $core.bool? hasUnpublishedChanges,
     Lifecycle_DisabledPolicy? disabledPolicy,
   }) {
-    final _result = create();
+    final $result = create();
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (hasUnpublishedChanges != null) {
-      _result.hasUnpublishedChanges = hasUnpublishedChanges;
+      $result.hasUnpublishedChanges = hasUnpublishedChanges;
     }
     if (disabledPolicy != null) {
-      _result.disabledPolicy = disabledPolicy;
+      $result.disabledPolicy = disabledPolicy;
     }
-    return _result;
+    return $result;
   }
+  Lifecycle._() : super();
   factory Lifecycle.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Lifecycle.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Lifecycle',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
+      createEmptyInstance: create)
+    ..e<Lifecycle_State>(1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: Lifecycle_State.STATE_UNSPECIFIED,
+        valueOf: Lifecycle_State.valueOf,
+        enumValues: Lifecycle_State.values)
+    ..aOB(2, _omitFieldNames ? '' : 'hasUnpublishedChanges')
+    ..aOM<Lifecycle_DisabledPolicy>(3, _omitFieldNames ? '' : 'disabledPolicy',
+        subBuilder: Lifecycle_DisabledPolicy.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -170,9 +179,10 @@ class Lifecycle extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Lifecycle copyWith(void Function(Lifecycle) updates) =>
-      super.copyWith((message) => updates(message as Lifecycle))
-          as Lifecycle; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Lifecycle)) as Lifecycle;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Lifecycle create() => Lifecycle._();
   Lifecycle createEmptyInstance() => create();
@@ -182,6 +192,7 @@ class Lifecycle extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Lifecycle>(create);
   static Lifecycle? _defaultInstance;
 
+  /// Output only. The state of the object associated with this lifecycle.
   @$pb.TagNumber(1)
   Lifecycle_State get state => $_getN(0);
   @$pb.TagNumber(1)
@@ -194,6 +205,8 @@ class Lifecycle extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearState() => clearField(1);
 
+  /// Output only. Whether the object associated with this lifecycle has
+  /// unpublished changes.
   @$pb.TagNumber(2)
   $core.bool get hasUnpublishedChanges => $_getBF(1);
   @$pb.TagNumber(2)
@@ -206,6 +219,8 @@ class Lifecycle extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHasUnpublishedChanges() => clearField(2);
 
+  /// The policy that governs how to show a disabled label, field, or selection
+  /// choice.
   @$pb.TagNumber(3)
   Lifecycle_DisabledPolicy get disabledPolicy => $_getN(2);
   @$pb.TagNumber(3)
@@ -221,39 +236,33 @@ class Lifecycle extends $pb.GeneratedMessage {
   Lifecycle_DisabledPolicy ensureDisabledPolicy() => $_ensure(2);
 }
 
+/// Information about a user.
 class UserInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UserInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'person')
-    ..hasRequiredFields = false;
-
-  UserInfo._() : super();
   factory UserInfo({
     $core.String? person,
   }) {
-    final _result = create();
+    final $result = create();
     if (person != null) {
-      _result.person = person;
+      $result.person = person;
     }
-    return _result;
+    return $result;
   }
+  UserInfo._() : super();
   factory UserInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UserInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'person')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -262,9 +271,10 @@ class UserInfo extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   UserInfo copyWith(void Function(UserInfo) updates) =>
-      super.copyWith((message) => updates(message as UserInfo))
-          as UserInfo; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as UserInfo)) as UserInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UserInfo create() => UserInfo._();
   UserInfo createEmptyInstance() => create();
@@ -274,6 +284,9 @@ class UserInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserInfo>(create);
   static UserInfo? _defaultInstance;
 
+  /// The identifier for this user that can be used with the People API to get
+  /// more information.
+  /// For example, people/12345678.
   @$pb.TagNumber(1)
   $core.String get person => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -287,49 +300,39 @@ class UserInfo extends $pb.GeneratedMessage {
   void clearPerson() => clearField(1);
 }
 
+/// Badge status of the label.
 class BadgeConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BadgeConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Color>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'color',
-        subBuilder: $0.Color.create)
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'priorityOverride')
-    ..hasRequiredFields = false;
-
-  BadgeConfig._() : super();
   factory BadgeConfig({
     $0.Color? color,
     $fixnum.Int64? priorityOverride,
   }) {
-    final _result = create();
+    final $result = create();
     if (color != null) {
-      _result.color = color;
+      $result.color = color;
     }
     if (priorityOverride != null) {
-      _result.priorityOverride = priorityOverride;
+      $result.priorityOverride = priorityOverride;
     }
-    return _result;
+    return $result;
   }
+  BadgeConfig._() : super();
   factory BadgeConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BadgeConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BadgeConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Color>(1, _omitFieldNames ? '' : 'color',
+        subBuilder: $0.Color.create)
+    ..aInt64(2, _omitFieldNames ? '' : 'priorityOverride')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -339,8 +342,10 @@ class BadgeConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BadgeConfig copyWith(void Function(BadgeConfig) updates) =>
       super.copyWith((message) => updates(message as BadgeConfig))
-          as BadgeConfig; // ignore: deprecated_member_use
+          as BadgeConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BadgeConfig create() => BadgeConfig._();
   BadgeConfig createEmptyInstance() => create();
@@ -350,6 +355,9 @@ class BadgeConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BadgeConfig>(create);
   static BadgeConfig? _defaultInstance;
 
+  /// The color of the badge. When not specified, no badge is rendered.
+  /// The background, foreground, and solo (light and dark mode) colors set here
+  /// are changed in the Drive UI into the closest recommended supported color.
   @$pb.TagNumber(1)
   $0.Color get color => $_getN(0);
   @$pb.TagNumber(1)
@@ -364,6 +372,8 @@ class BadgeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Color ensureColor() => $_ensure(0);
 
+  /// Override the default global priority of this badge.
+  /// When set to 0, the default priority heuristic is used.
   @$pb.TagNumber(2)
   $fixnum.Int64 get priorityOverride => $_getI64(1);
   @$pb.TagNumber(2)
@@ -377,60 +387,47 @@ class BadgeConfig extends $pb.GeneratedMessage {
   void clearPriorityOverride() => clearField(2);
 }
 
+/// The color derived from BadgeConfig and changed to the closest recommended
+/// supported color.
 class BadgeColors extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BadgeColors',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Color>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'backgroundColor',
-        subBuilder: $0.Color.create)
-    ..aOM<$0.Color>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'foregroundColor',
-        subBuilder: $0.Color.create)
-    ..aOM<$0.Color>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'soloColor',
-        subBuilder: $0.Color.create)
-    ..hasRequiredFields = false;
-
-  BadgeColors._() : super();
   factory BadgeColors({
     $0.Color? backgroundColor,
     $0.Color? foregroundColor,
     $0.Color? soloColor,
   }) {
-    final _result = create();
+    final $result = create();
     if (backgroundColor != null) {
-      _result.backgroundColor = backgroundColor;
+      $result.backgroundColor = backgroundColor;
     }
     if (foregroundColor != null) {
-      _result.foregroundColor = foregroundColor;
+      $result.foregroundColor = foregroundColor;
     }
     if (soloColor != null) {
-      _result.soloColor = soloColor;
+      $result.soloColor = soloColor;
     }
-    return _result;
+    return $result;
   }
+  BadgeColors._() : super();
   factory BadgeColors.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BadgeColors.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BadgeColors',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Color>(1, _omitFieldNames ? '' : 'backgroundColor',
+        subBuilder: $0.Color.create)
+    ..aOM<$0.Color>(2, _omitFieldNames ? '' : 'foregroundColor',
+        subBuilder: $0.Color.create)
+    ..aOM<$0.Color>(3, _omitFieldNames ? '' : 'soloColor',
+        subBuilder: $0.Color.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -440,8 +437,10 @@ class BadgeColors extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BadgeColors copyWith(void Function(BadgeColors) updates) =>
       super.copyWith((message) => updates(message as BadgeColors))
-          as BadgeColors; // ignore: deprecated_member_use
+          as BadgeColors;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BadgeColors create() => BadgeColors._();
   BadgeColors createEmptyInstance() => create();
@@ -451,6 +450,7 @@ class BadgeColors extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BadgeColors>(create);
   static BadgeColors? _defaultInstance;
 
+  /// Output only. Badge background that pairs with the foreground.
   @$pb.TagNumber(1)
   $0.Color get backgroundColor => $_getN(0);
   @$pb.TagNumber(1)
@@ -465,6 +465,7 @@ class BadgeColors extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Color ensureBackgroundColor() => $_ensure(0);
 
+  /// Output only. Badge foreground that pairs with the background.
   @$pb.TagNumber(2)
   $0.Color get foregroundColor => $_getN(1);
   @$pb.TagNumber(2)
@@ -479,6 +480,7 @@ class BadgeColors extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Color ensureForegroundColor() => $_ensure(1);
 
+  /// Output only. Color that can be used for text without a background.
   @$pb.TagNumber(3)
   $0.Color get soloColor => $_getN(2);
   @$pb.TagNumber(3)
@@ -494,39 +496,34 @@ class BadgeColors extends $pb.GeneratedMessage {
   $0.Color ensureSoloColor() => $_ensure(2);
 }
 
+/// Contains information about whether a label component should be considered
+/// locked.
 class LockStatus extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LockStatus',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locked')
-    ..hasRequiredFields = false;
-
-  LockStatus._() : super();
   factory LockStatus({
     $core.bool? locked,
   }) {
-    final _result = create();
+    final $result = create();
     if (locked != null) {
-      _result.locked = locked;
+      $result.locked = locked;
     }
-    return _result;
+    return $result;
   }
+  LockStatus._() : super();
   factory LockStatus.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LockStatus.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LockStatus',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'locked')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -535,9 +532,10 @@ class LockStatus extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   LockStatus copyWith(void Function(LockStatus) updates) =>
-      super.copyWith((message) => updates(message as LockStatus))
-          as LockStatus; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as LockStatus)) as LockStatus;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LockStatus create() => LockStatus._();
   LockStatus createEmptyInstance() => create();
@@ -547,6 +545,10 @@ class LockStatus extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LockStatus>(create);
   static LockStatus? _defaultInstance;
 
+  /// Output only. Indicates whether this label component is the (direct) target
+  /// of a LabelLock.  A label component can be implicitly locked even if it's
+  /// not the direct target of a LabelLock, in which case this field is set to
+  /// false.
   @$pb.TagNumber(1)
   $core.bool get locked => $_getBF(0);
   @$pb.TagNumber(1)
@@ -559,3 +561,7 @@ class LockStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLocked() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

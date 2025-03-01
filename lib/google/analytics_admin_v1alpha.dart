@@ -20,3 +20,6 @@ export '../src/generated/google/analytics/admin/v1alpha/expanded_data_set.pbjson
 export '../src/generated/google/analytics/admin/v1alpha/resources.pb.dart';
 export '../src/generated/google/analytics/admin/v1alpha/resources.pbenum.dart';
 export '../src/generated/google/analytics/admin/v1alpha/resources.pbjson.dart';
+export '../src/generated/google/analytics/admin/v1alpha/subproperty_event_filter.pb.dart';
+export '../src/generated/google/analytics/admin/v1alpha/subproperty_event_filter.pbenum.dart';
+export '../src/generated/google/analytics/admin/v1alpha/subproperty_event_filter.pbjson.dart';

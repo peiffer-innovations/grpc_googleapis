@@ -1,65 +1,58 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2beta/label.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart' as $0;
 import '../../../../protobuf/timestamp.pb.dart' as $1;
+import 'common.pb.dart' as $0;
 import 'field.pb.dart' as $2;
-
 import 'label.pbenum.dart';
 
 export 'label.pbenum.dart';
 
+/// Basic properties of the label.
 class Label_Properties extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Label.Properties',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..hasRequiredFields = false;
-
-  Label_Properties._() : super();
   factory Label_Properties({
     $core.String? title,
     $core.String? description,
   }) {
-    final _result = create();
+    final $result = create();
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
-    return _result;
+    return $result;
   }
+  Label_Properties._() : super();
   factory Label_Properties.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Label_Properties.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Label.Properties',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'title')
+    ..aOS(2, _omitFieldNames ? '' : 'description')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -69,8 +62,10 @@ class Label_Properties extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Label_Properties copyWith(void Function(Label_Properties) updates) =>
       super.copyWith((message) => updates(message as Label_Properties))
-          as Label_Properties; // ignore: deprecated_member_use
+          as Label_Properties;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Label_Properties create() => Label_Properties._();
   Label_Properties createEmptyInstance() => create();
@@ -81,6 +76,7 @@ class Label_Properties extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Label_Properties>(create);
   static Label_Properties? _defaultInstance;
 
+  /// Required. Title of the label.
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -93,6 +89,7 @@ class Label_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => clearField(1);
 
+  /// The description of the label.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -106,66 +103,48 @@ class Label_Properties extends $pb.GeneratedMessage {
   void clearDescription() => clearField(2);
 }
 
+/// UI display hints for rendering the label.
 class Label_DisplayHints extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Label.DisplayHints',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hiddenInSearch')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shownInApply')
-    ..aInt64(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'priority')
-    ..hasRequiredFields = false;
-
-  Label_DisplayHints._() : super();
   factory Label_DisplayHints({
     $core.bool? disabled,
     $core.bool? hiddenInSearch,
     $core.bool? shownInApply,
     $fixnum.Int64? priority,
   }) {
-    final _result = create();
+    final $result = create();
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
     if (hiddenInSearch != null) {
-      _result.hiddenInSearch = hiddenInSearch;
+      $result.hiddenInSearch = hiddenInSearch;
     }
     if (shownInApply != null) {
-      _result.shownInApply = shownInApply;
+      $result.shownInApply = shownInApply;
     }
     if (priority != null) {
-      _result.priority = priority;
+      $result.priority = priority;
     }
-    return _result;
+    return $result;
   }
+  Label_DisplayHints._() : super();
   factory Label_DisplayHints.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Label_DisplayHints.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Label.DisplayHints',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disabled')
+    ..aOB(2, _omitFieldNames ? '' : 'hiddenInSearch')
+    ..aOB(3, _omitFieldNames ? '' : 'shownInApply')
+    ..aInt64(4, _omitFieldNames ? '' : 'priority')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -175,8 +154,10 @@ class Label_DisplayHints extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Label_DisplayHints copyWith(void Function(Label_DisplayHints) updates) =>
       super.copyWith((message) => updates(message as Label_DisplayHints))
-          as Label_DisplayHints; // ignore: deprecated_member_use
+          as Label_DisplayHints;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Label_DisplayHints create() => Label_DisplayHints._();
   Label_DisplayHints createEmptyInstance() => create();
@@ -187,6 +168,7 @@ class Label_DisplayHints extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Label_DisplayHints>(create);
   static Label_DisplayHints? _defaultInstance;
 
+  /// Whether the label should be shown in the UI as disabled.
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -199,6 +181,8 @@ class Label_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisabled() => clearField(1);
 
+  /// This label should be hidden in the search menu when searching for Drive
+  /// items.
   @$pb.TagNumber(2)
   $core.bool get hiddenInSearch => $_getBF(1);
   @$pb.TagNumber(2)
@@ -211,6 +195,8 @@ class Label_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHiddenInSearch() => clearField(2);
 
+  /// This label should be shown in the apply menu when applying values to a
+  /// Drive item.
   @$pb.TagNumber(3)
   $core.bool get shownInApply => $_getBF(2);
   @$pb.TagNumber(3)
@@ -223,6 +209,7 @@ class Label_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearShownInApply() => clearField(3);
 
+  /// Order to display label in a list.
   @$pb.TagNumber(4)
   $fixnum.Int64 get priority => $_getI64(3);
   @$pb.TagNumber(4)
@@ -236,57 +223,43 @@ class Label_DisplayHints extends $pb.GeneratedMessage {
   void clearPriority() => clearField(4);
 }
 
+/// The capabilities a user has on this label's applied metadata.
 class Label_AppliedCapabilities extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Label.AppliedCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canRead')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canApply')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canRemove')
-    ..hasRequiredFields = false;
-
-  Label_AppliedCapabilities._() : super();
   factory Label_AppliedCapabilities({
     $core.bool? canRead,
     $core.bool? canApply,
     $core.bool? canRemove,
   }) {
-    final _result = create();
+    final $result = create();
     if (canRead != null) {
-      _result.canRead = canRead;
+      $result.canRead = canRead;
     }
     if (canApply != null) {
-      _result.canApply = canApply;
+      $result.canApply = canApply;
     }
     if (canRemove != null) {
-      _result.canRemove = canRemove;
+      $result.canRemove = canRemove;
     }
-    return _result;
+    return $result;
   }
+  Label_AppliedCapabilities._() : super();
   factory Label_AppliedCapabilities.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Label_AppliedCapabilities.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Label.AppliedCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canRead')
+    ..aOB(2, _omitFieldNames ? '' : 'canApply')
+    ..aOB(3, _omitFieldNames ? '' : 'canRemove')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -298,8 +271,10 @@ class Label_AppliedCapabilities extends $pb.GeneratedMessage {
   Label_AppliedCapabilities copyWith(
           void Function(Label_AppliedCapabilities) updates) =>
       super.copyWith((message) => updates(message as Label_AppliedCapabilities))
-          as Label_AppliedCapabilities; // ignore: deprecated_member_use
+          as Label_AppliedCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Label_AppliedCapabilities create() => Label_AppliedCapabilities._();
   Label_AppliedCapabilities createEmptyInstance() => create();
@@ -310,6 +285,7 @@ class Label_AppliedCapabilities extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Label_AppliedCapabilities>(create);
   static Label_AppliedCapabilities? _defaultInstance;
 
+  /// Whether the user can read applied metadata related to this label.
   @$pb.TagNumber(1)
   $core.bool get canRead => $_getBF(0);
   @$pb.TagNumber(1)
@@ -322,6 +298,7 @@ class Label_AppliedCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCanRead() => clearField(1);
 
+  /// Whether the user can apply this label to items.
   @$pb.TagNumber(2)
   $core.bool get canApply => $_getBF(1);
   @$pb.TagNumber(2)
@@ -334,6 +311,7 @@ class Label_AppliedCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCanApply() => clearField(2);
 
+  /// Whether the user can remove this label from items.
   @$pb.TagNumber(3)
   $core.bool get canRemove => $_getBF(2);
   @$pb.TagNumber(3)
@@ -347,66 +325,48 @@ class Label_AppliedCapabilities extends $pb.GeneratedMessage {
   void clearCanRemove() => clearField(3);
 }
 
+/// The capabilities related to this label when editing the label.
 class Label_SchemaCapabilities extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Label.SchemaCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canUpdate')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canDelete')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canDisable')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canEnable')
-    ..hasRequiredFields = false;
-
-  Label_SchemaCapabilities._() : super();
   factory Label_SchemaCapabilities({
     $core.bool? canUpdate,
     $core.bool? canDelete,
     $core.bool? canDisable,
     $core.bool? canEnable,
   }) {
-    final _result = create();
+    final $result = create();
     if (canUpdate != null) {
-      _result.canUpdate = canUpdate;
+      $result.canUpdate = canUpdate;
     }
     if (canDelete != null) {
-      _result.canDelete = canDelete;
+      $result.canDelete = canDelete;
     }
     if (canDisable != null) {
-      _result.canDisable = canDisable;
+      $result.canDisable = canDisable;
     }
     if (canEnable != null) {
-      _result.canEnable = canEnable;
+      $result.canEnable = canEnable;
     }
-    return _result;
+    return $result;
   }
+  Label_SchemaCapabilities._() : super();
   factory Label_SchemaCapabilities.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Label_SchemaCapabilities.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Label.SchemaCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canUpdate')
+    ..aOB(2, _omitFieldNames ? '' : 'canDelete')
+    ..aOB(3, _omitFieldNames ? '' : 'canDisable')
+    ..aOB(4, _omitFieldNames ? '' : 'canEnable')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -418,8 +378,10 @@ class Label_SchemaCapabilities extends $pb.GeneratedMessage {
   Label_SchemaCapabilities copyWith(
           void Function(Label_SchemaCapabilities) updates) =>
       super.copyWith((message) => updates(message as Label_SchemaCapabilities))
-          as Label_SchemaCapabilities; // ignore: deprecated_member_use
+          as Label_SchemaCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Label_SchemaCapabilities create() => Label_SchemaCapabilities._();
   Label_SchemaCapabilities createEmptyInstance() => create();
@@ -430,6 +392,7 @@ class Label_SchemaCapabilities extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Label_SchemaCapabilities>(create);
   static Label_SchemaCapabilities? _defaultInstance;
 
+  /// Whether the user can change this label.
   @$pb.TagNumber(1)
   $core.bool get canUpdate => $_getBF(0);
   @$pb.TagNumber(1)
@@ -442,6 +405,8 @@ class Label_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCanUpdate() => clearField(1);
 
+  /// Whether the user can delete this label.
+  /// The user must have permission and the label must be disabled.
   @$pb.TagNumber(2)
   $core.bool get canDelete => $_getBF(1);
   @$pb.TagNumber(2)
@@ -454,6 +419,9 @@ class Label_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCanDelete() => clearField(2);
 
+  /// Whether the user can disable this label.
+  /// The user must have permission and this label must not already be
+  /// disabled.
   @$pb.TagNumber(3)
   $core.bool get canDisable => $_getBF(2);
   @$pb.TagNumber(3)
@@ -466,6 +434,8 @@ class Label_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCanDisable() => clearField(3);
 
+  /// Whether the user can enable this label.
+  /// The user must have permission and this label must be disabled.
   @$pb.TagNumber(4)
   $core.bool get canEnable => $_getBF(3);
   @$pb.TagNumber(4)
@@ -479,43 +449,37 @@ class Label_SchemaCapabilities extends $pb.GeneratedMessage {
   void clearCanEnable() => clearField(4);
 }
 
+/// Behavior of this label when it's applied to Drive items.
 class Label_AppliedLabelPolicy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Label.AppliedLabelPolicy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..e<Label_AppliedLabelPolicy_CopyMode>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'copyMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Label_AppliedLabelPolicy_CopyMode.COPY_MODE_UNSPECIFIED,
-        valueOf: Label_AppliedLabelPolicy_CopyMode.valueOf,
-        enumValues: Label_AppliedLabelPolicy_CopyMode.values)
-    ..hasRequiredFields = false;
-
-  Label_AppliedLabelPolicy._() : super();
   factory Label_AppliedLabelPolicy({
     Label_AppliedLabelPolicy_CopyMode? copyMode,
   }) {
-    final _result = create();
+    final $result = create();
     if (copyMode != null) {
-      _result.copyMode = copyMode;
+      $result.copyMode = copyMode;
     }
-    return _result;
+    return $result;
   }
+  Label_AppliedLabelPolicy._() : super();
   factory Label_AppliedLabelPolicy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Label_AppliedLabelPolicy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Label.AppliedLabelPolicy',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..e<Label_AppliedLabelPolicy_CopyMode>(
+        1, _omitFieldNames ? '' : 'copyMode', $pb.PbFieldType.OE,
+        defaultOrMaker: Label_AppliedLabelPolicy_CopyMode.COPY_MODE_UNSPECIFIED,
+        valueOf: Label_AppliedLabelPolicy_CopyMode.valueOf,
+        enumValues: Label_AppliedLabelPolicy_CopyMode.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -527,8 +491,10 @@ class Label_AppliedLabelPolicy extends $pb.GeneratedMessage {
   Label_AppliedLabelPolicy copyWith(
           void Function(Label_AppliedLabelPolicy) updates) =>
       super.copyWith((message) => updates(message as Label_AppliedLabelPolicy))
-          as Label_AppliedLabelPolicy; // ignore: deprecated_member_use
+          as Label_AppliedLabelPolicy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Label_AppliedLabelPolicy create() => Label_AppliedLabelPolicy._();
   Label_AppliedLabelPolicy createEmptyInstance() => create();
@@ -539,6 +505,8 @@ class Label_AppliedLabelPolicy extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Label_AppliedLabelPolicy>(create);
   static Label_AppliedLabelPolicy? _defaultInstance;
 
+  /// Indicates how the applied label and field values should be copied when
+  /// a Drive item is copied.
   @$pb.TagNumber(1)
   Label_AppliedLabelPolicy_CopyMode get copyMode => $_getN(0);
   @$pb.TagNumber(1)
@@ -552,145 +520,11 @@ class Label_AppliedLabelPolicy extends $pb.GeneratedMessage {
   void clearCopyMode() => clearField(1);
 }
 
+/// A label defines a taxonomy that can be applied to Drive items in order to
+/// organize and search across items. Labels can be simple strings, or can
+/// contain fields that describe additional metadata that can be further used to
+/// organize and search Drive items.
 class Label extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Label',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'revisionId')
-    ..e<Label_LabelType>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labelType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Label_LabelType.LABEL_TYPE_UNSPECIFIED,
-        valueOf: Label_LabelType.valueOf,
-        enumValues: Label_LabelType.values)
-    ..aOM<$0.UserInfo>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'creator',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'revisionCreator',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'revisionCreateTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publisher',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publishTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabler',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disableTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<Label_Properties>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'properties',
-        subBuilder: Label_Properties.create)
-    ..aOM<$0.Lifecycle>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lifecycle',
-        subBuilder: $0.Lifecycle.create)
-    ..aOM<Label_DisplayHints>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayHints',
-        subBuilder: Label_DisplayHints.create)
-    ..aOM<Label_AppliedCapabilities>(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appliedCapabilities',
-        subBuilder: Label_AppliedCapabilities.create)
-    ..aOM<Label_SchemaCapabilities>(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'schemaCapabilities',
-        subBuilder: Label_SchemaCapabilities.create)
-    ..aOM<Label_AppliedLabelPolicy>(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appliedLabelPolicy',
-        subBuilder: Label_AppliedLabelPolicy.create)
-    ..pc<$2.Field>(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fields',
-        $pb.PbFieldType.PM,
-        subBuilder: $2.Field.create)
-    ..aOS(
-        21,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'learnMoreUri')
-    ..aOM<$0.LockStatus>(
-        22,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lockStatus',
-        subBuilder: $0.LockStatus.create)
-    ..hasRequiredFields = false;
-
-  Label._() : super();
   factory Label({
     $core.String? name,
     $core.String? id,
@@ -704,6 +538,7 @@ class Label extends $pb.GeneratedMessage {
     $1.Timestamp? publishTime,
     $0.UserInfo? disabler,
     $1.Timestamp? disableTime,
+    $core.String? customer,
     Label_Properties? properties,
     $0.Lifecycle? lifecycle,
     Label_DisplayHints? displayHints,
@@ -714,78 +549,135 @@ class Label extends $pb.GeneratedMessage {
     $core.String? learnMoreUri,
     $0.LockStatus? lockStatus,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (revisionId != null) {
-      _result.revisionId = revisionId;
+      $result.revisionId = revisionId;
     }
     if (labelType != null) {
-      _result.labelType = labelType;
+      $result.labelType = labelType;
     }
     if (creator != null) {
-      _result.creator = creator;
+      $result.creator = creator;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (revisionCreator != null) {
-      _result.revisionCreator = revisionCreator;
+      $result.revisionCreator = revisionCreator;
     }
     if (revisionCreateTime != null) {
-      _result.revisionCreateTime = revisionCreateTime;
+      $result.revisionCreateTime = revisionCreateTime;
     }
     if (publisher != null) {
-      _result.publisher = publisher;
+      $result.publisher = publisher;
     }
     if (publishTime != null) {
-      _result.publishTime = publishTime;
+      $result.publishTime = publishTime;
     }
     if (disabler != null) {
-      _result.disabler = disabler;
+      $result.disabler = disabler;
     }
     if (disableTime != null) {
-      _result.disableTime = disableTime;
+      $result.disableTime = disableTime;
+    }
+    if (customer != null) {
+      $result.customer = customer;
     }
     if (properties != null) {
-      _result.properties = properties;
+      $result.properties = properties;
     }
     if (lifecycle != null) {
-      _result.lifecycle = lifecycle;
+      $result.lifecycle = lifecycle;
     }
     if (displayHints != null) {
-      _result.displayHints = displayHints;
+      $result.displayHints = displayHints;
     }
     if (appliedCapabilities != null) {
-      _result.appliedCapabilities = appliedCapabilities;
+      $result.appliedCapabilities = appliedCapabilities;
     }
     if (schemaCapabilities != null) {
-      _result.schemaCapabilities = schemaCapabilities;
+      $result.schemaCapabilities = schemaCapabilities;
     }
     if (appliedLabelPolicy != null) {
-      _result.appliedLabelPolicy = appliedLabelPolicy;
+      $result.appliedLabelPolicy = appliedLabelPolicy;
     }
     if (fields != null) {
-      _result.fields.addAll(fields);
+      $result.fields.addAll(fields);
     }
     if (learnMoreUri != null) {
-      _result.learnMoreUri = learnMoreUri;
+      $result.learnMoreUri = learnMoreUri;
     }
     if (lockStatus != null) {
-      _result.lockStatus = lockStatus;
+      $result.lockStatus = lockStatus;
     }
-    return _result;
+    return $result;
   }
+  Label._() : super();
   factory Label.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Label.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Label',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'revisionId')
+    ..e<Label_LabelType>(
+        4, _omitFieldNames ? '' : 'labelType', $pb.PbFieldType.OE,
+        defaultOrMaker: Label_LabelType.LABEL_TYPE_UNSPECIFIED,
+        valueOf: Label_LabelType.valueOf,
+        enumValues: Label_LabelType.values)
+    ..aOM<$0.UserInfo>(5, _omitFieldNames ? '' : 'creator',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(7, _omitFieldNames ? '' : 'revisionCreator',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'revisionCreateTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(9, _omitFieldNames ? '' : 'publisher',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'publishTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(11, _omitFieldNames ? '' : 'disabler',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'disableTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(13, _omitFieldNames ? '' : 'customer')
+    ..aOM<Label_Properties>(14, _omitFieldNames ? '' : 'properties',
+        subBuilder: Label_Properties.create)
+    ..aOM<$0.Lifecycle>(15, _omitFieldNames ? '' : 'lifecycle',
+        subBuilder: $0.Lifecycle.create)
+    ..aOM<Label_DisplayHints>(16, _omitFieldNames ? '' : 'displayHints',
+        subBuilder: Label_DisplayHints.create)
+    ..aOM<Label_AppliedCapabilities>(
+        17, _omitFieldNames ? '' : 'appliedCapabilities',
+        subBuilder: Label_AppliedCapabilities.create)
+    ..aOM<Label_SchemaCapabilities>(
+        18, _omitFieldNames ? '' : 'schemaCapabilities',
+        subBuilder: Label_SchemaCapabilities.create)
+    ..aOM<Label_AppliedLabelPolicy>(
+        19, _omitFieldNames ? '' : 'appliedLabelPolicy',
+        subBuilder: Label_AppliedLabelPolicy.create)
+    ..pc<$2.Field>(20, _omitFieldNames ? '' : 'fields', $pb.PbFieldType.PM,
+        subBuilder: $2.Field.create)
+    ..aOS(21, _omitFieldNames ? '' : 'learnMoreUri')
+    ..aOM<$0.LockStatus>(22, _omitFieldNames ? '' : 'lockStatus',
+        subBuilder: $0.LockStatus.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -794,9 +686,10 @@ class Label extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Label copyWith(void Function(Label) updates) =>
-      super.copyWith((message) => updates(message as Label))
-          as Label; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Label)) as Label;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Label create() => Label._();
   Label createEmptyInstance() => create();
@@ -806,6 +699,9 @@ class Label extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Label>(create);
   static Label? _defaultInstance;
 
+  /// Output only. Resource name of the label. Will be in the form of either:
+  /// `labels/{id}` or `labels/{id}@{revision_id}` depending on the request.
+  /// See `id` and `revision_id` below.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -818,6 +714,9 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Output only. Globally unique identifier of this label. ID makes up part of
+  /// the label `name`, but unlike `name`, ID is consistent between revisions.
+  /// Matches the regex: `([a-zA-Z0-9])+`
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -830,6 +729,10 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// Output only. Revision ID of the label. Revision ID might be part of the
+  /// label `name` depending on the request issued. A new revision is created
+  /// whenever revisioned properties of a label are changed. Matches the regex:
+  /// `([a-zA-Z0-9])+`
   @$pb.TagNumber(3)
   $core.String get revisionId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -842,6 +745,7 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearRevisionId() => clearField(3);
 
+  /// Required. The type of label.
   @$pb.TagNumber(4)
   Label_LabelType get labelType => $_getN(3);
   @$pb.TagNumber(4)
@@ -854,6 +758,7 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearLabelType() => clearField(4);
 
+  /// Output only. The user who created this label.
   @$pb.TagNumber(5)
   $0.UserInfo get creator => $_getN(4);
   @$pb.TagNumber(5)
@@ -868,6 +773,7 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.UserInfo ensureCreator() => $_ensure(4);
 
+  /// Output only. The time this label was created.
   @$pb.TagNumber(6)
   $1.Timestamp get createTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -882,6 +788,7 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.Timestamp ensureCreateTime() => $_ensure(5);
 
+  /// Output only. The user who created this label revision.
   @$pb.TagNumber(7)
   $0.UserInfo get revisionCreator => $_getN(6);
   @$pb.TagNumber(7)
@@ -896,6 +803,7 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.UserInfo ensureRevisionCreator() => $_ensure(6);
 
+  /// Output only. The time this label revision was created.
   @$pb.TagNumber(8)
   $1.Timestamp get revisionCreateTime => $_getN(7);
   @$pb.TagNumber(8)
@@ -910,6 +818,8 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $1.Timestamp ensureRevisionCreateTime() => $_ensure(7);
 
+  /// Output only. The user who published this label.  This value has no meaning
+  /// when the label is not published.
   @$pb.TagNumber(9)
   $0.UserInfo get publisher => $_getN(8);
   @$pb.TagNumber(9)
@@ -924,6 +834,8 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $0.UserInfo ensurePublisher() => $_ensure(8);
 
+  /// Output only. The time this label was published. This value has no meaning
+  /// when the label is not published.
   @$pb.TagNumber(10)
   $1.Timestamp get publishTime => $_getN(9);
   @$pb.TagNumber(10)
@@ -938,6 +850,8 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $1.Timestamp ensurePublishTime() => $_ensure(9);
 
+  /// Output only. The user who disabled this label. This value has no meaning
+  /// when the label is not disabled.
   @$pb.TagNumber(11)
   $0.UserInfo get disabler => $_getN(10);
   @$pb.TagNumber(11)
@@ -952,6 +866,8 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $0.UserInfo ensureDisabler() => $_ensure(10);
 
+  /// Output only. The time this label was disabled. This value has no meaning
+  /// when the label is not disabled.
   @$pb.TagNumber(12)
   $1.Timestamp get disableTime => $_getN(11);
   @$pb.TagNumber(12)
@@ -966,116 +882,145 @@ class Label extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $1.Timestamp ensureDisableTime() => $_ensure(11);
 
+  /// Output only. The customer this label belongs to.
+  /// For example: "customers/123abc789."
+  @$pb.TagNumber(13)
+  $core.String get customer => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set customer($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasCustomer() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearCustomer() => clearField(13);
+
+  /// Required. The basic properties of the label.
   @$pb.TagNumber(14)
-  Label_Properties get properties => $_getN(12);
+  Label_Properties get properties => $_getN(13);
   @$pb.TagNumber(14)
   set properties(Label_Properties v) {
     setField(14, v);
   }
 
   @$pb.TagNumber(14)
-  $core.bool hasProperties() => $_has(12);
+  $core.bool hasProperties() => $_has(13);
   @$pb.TagNumber(14)
   void clearProperties() => clearField(14);
   @$pb.TagNumber(14)
-  Label_Properties ensureProperties() => $_ensure(12);
+  Label_Properties ensureProperties() => $_ensure(13);
 
+  /// Output only. The lifecycle state of the label including whether it's
+  /// published, deprecated, and has draft changes.
   @$pb.TagNumber(15)
-  $0.Lifecycle get lifecycle => $_getN(13);
+  $0.Lifecycle get lifecycle => $_getN(14);
   @$pb.TagNumber(15)
   set lifecycle($0.Lifecycle v) {
     setField(15, v);
   }
 
   @$pb.TagNumber(15)
-  $core.bool hasLifecycle() => $_has(13);
+  $core.bool hasLifecycle() => $_has(14);
   @$pb.TagNumber(15)
   void clearLifecycle() => clearField(15);
   @$pb.TagNumber(15)
-  $0.Lifecycle ensureLifecycle() => $_ensure(13);
+  $0.Lifecycle ensureLifecycle() => $_ensure(14);
 
+  /// Output only. UI display hints for rendering the label.
   @$pb.TagNumber(16)
-  Label_DisplayHints get displayHints => $_getN(14);
+  Label_DisplayHints get displayHints => $_getN(15);
   @$pb.TagNumber(16)
   set displayHints(Label_DisplayHints v) {
     setField(16, v);
   }
 
   @$pb.TagNumber(16)
-  $core.bool hasDisplayHints() => $_has(14);
+  $core.bool hasDisplayHints() => $_has(15);
   @$pb.TagNumber(16)
   void clearDisplayHints() => clearField(16);
   @$pb.TagNumber(16)
-  Label_DisplayHints ensureDisplayHints() => $_ensure(14);
+  Label_DisplayHints ensureDisplayHints() => $_ensure(15);
 
+  /// Output only. The capabilities related to this label on applied metadata.
   @$pb.TagNumber(17)
-  Label_AppliedCapabilities get appliedCapabilities => $_getN(15);
+  Label_AppliedCapabilities get appliedCapabilities => $_getN(16);
   @$pb.TagNumber(17)
   set appliedCapabilities(Label_AppliedCapabilities v) {
     setField(17, v);
   }
 
   @$pb.TagNumber(17)
-  $core.bool hasAppliedCapabilities() => $_has(15);
+  $core.bool hasAppliedCapabilities() => $_has(16);
   @$pb.TagNumber(17)
   void clearAppliedCapabilities() => clearField(17);
   @$pb.TagNumber(17)
-  Label_AppliedCapabilities ensureAppliedCapabilities() => $_ensure(15);
+  Label_AppliedCapabilities ensureAppliedCapabilities() => $_ensure(16);
 
+  /// Output only. The capabilities the user has on this label.
   @$pb.TagNumber(18)
-  Label_SchemaCapabilities get schemaCapabilities => $_getN(16);
+  Label_SchemaCapabilities get schemaCapabilities => $_getN(17);
   @$pb.TagNumber(18)
   set schemaCapabilities(Label_SchemaCapabilities v) {
     setField(18, v);
   }
 
   @$pb.TagNumber(18)
-  $core.bool hasSchemaCapabilities() => $_has(16);
+  $core.bool hasSchemaCapabilities() => $_has(17);
   @$pb.TagNumber(18)
   void clearSchemaCapabilities() => clearField(18);
   @$pb.TagNumber(18)
-  Label_SchemaCapabilities ensureSchemaCapabilities() => $_ensure(16);
+  Label_SchemaCapabilities ensureSchemaCapabilities() => $_ensure(17);
 
+  /// Output only. Behavior of this label when it's applied to Drive items.
   @$pb.TagNumber(19)
-  Label_AppliedLabelPolicy get appliedLabelPolicy => $_getN(17);
+  Label_AppliedLabelPolicy get appliedLabelPolicy => $_getN(18);
   @$pb.TagNumber(19)
   set appliedLabelPolicy(Label_AppliedLabelPolicy v) {
     setField(19, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasAppliedLabelPolicy() => $_has(17);
+  $core.bool hasAppliedLabelPolicy() => $_has(18);
   @$pb.TagNumber(19)
   void clearAppliedLabelPolicy() => clearField(19);
   @$pb.TagNumber(19)
-  Label_AppliedLabelPolicy ensureAppliedLabelPolicy() => $_ensure(17);
+  Label_AppliedLabelPolicy ensureAppliedLabelPolicy() => $_ensure(18);
 
+  /// List of fields in descending priority order.
   @$pb.TagNumber(20)
-  $core.List<$2.Field> get fields => $_getList(18);
+  $core.List<$2.Field> get fields => $_getList(19);
 
+  /// Custom URL to present to users to allow them to learn more about this label
+  /// and how it should be used.
   @$pb.TagNumber(21)
-  $core.String get learnMoreUri => $_getSZ(19);
+  $core.String get learnMoreUri => $_getSZ(20);
   @$pb.TagNumber(21)
   set learnMoreUri($core.String v) {
-    $_setString(19, v);
+    $_setString(20, v);
   }
 
   @$pb.TagNumber(21)
-  $core.bool hasLearnMoreUri() => $_has(19);
+  $core.bool hasLearnMoreUri() => $_has(20);
   @$pb.TagNumber(21)
   void clearLearnMoreUri() => clearField(21);
 
+  /// Output only. The LockStatus of this label.
   @$pb.TagNumber(22)
-  $0.LockStatus get lockStatus => $_getN(20);
+  $0.LockStatus get lockStatus => $_getN(21);
   @$pb.TagNumber(22)
   set lockStatus($0.LockStatus v) {
     setField(22, v);
   }
 
   @$pb.TagNumber(22)
-  $core.bool hasLockStatus() => $_has(20);
+  $core.bool hasLockStatus() => $_has(21);
   @$pb.TagNumber(22)
   void clearLockStatus() => clearField(22);
   @$pb.TagNumber(22)
-  $0.LockStatus ensureLockStatus() => $_ensure(20);
+  $0.LockStatus ensureLockStatus() => $_ensure(21);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

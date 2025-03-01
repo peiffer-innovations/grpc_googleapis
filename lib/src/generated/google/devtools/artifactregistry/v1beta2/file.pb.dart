@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/artifactregistry/v1beta2/file.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,58 +15,46 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
-
 import 'file.pbenum.dart';
 
 export 'file.pbenum.dart';
 
+/// A hash of file content.
 class Hash extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Hash',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..e<Hash_HashType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Hash_HashType.HASH_TYPE_UNSPECIFIED,
-        valueOf: Hash_HashType.valueOf,
-        enumValues: Hash_HashType.values)
-    ..a<$core.List<$core.int>>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value',
-        $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  Hash._() : super();
   factory Hash({
     Hash_HashType? type,
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Hash._() : super();
   factory Hash.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Hash.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Hash',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..e<Hash_HashType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: Hash_HashType.HASH_TYPE_UNSPECIFIED,
+        valueOf: Hash_HashType.valueOf,
+        enumValues: Hash_HashType.values)
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -71,9 +63,10 @@ class Hash extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Hash copyWith(void Function(Hash) updates) =>
-      super.copyWith((message) => updates(message as Hash))
-          as Hash; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Hash)) as Hash;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Hash create() => Hash._();
   Hash createEmptyInstance() => create();
@@ -83,6 +76,7 @@ class Hash extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Hash>(create);
   static Hash? _defaultInstance;
 
+  /// The algorithm used to compute the hash value.
   @$pb.TagNumber(1)
   Hash_HashType get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -95,6 +89,7 @@ class Hash extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// The hash value.
   @$pb.TagNumber(2)
   $core.List<$core.int> get value => $_getN(1);
   @$pb.TagNumber(2)
@@ -108,53 +103,8 @@ class Hash extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+/// Files store content that is potentially associated with Packages or Versions.
 class File extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'File',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sizeBytes')
-    ..pc<Hash>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hashes',
-        $pb.PbFieldType.PM,
-        subBuilder: Hash.create)
-    ..aOM<$0.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'owner')
-    ..hasRequiredFields = false;
-
-  File._() : super();
   factory File({
     $core.String? name,
     $fixnum.Int64? sizeBytes,
@@ -163,33 +113,51 @@ class File extends $pb.GeneratedMessage {
     $0.Timestamp? updateTime,
     $core.String? owner,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (sizeBytes != null) {
-      _result.sizeBytes = sizeBytes;
+      $result.sizeBytes = sizeBytes;
     }
     if (hashes != null) {
-      _result.hashes.addAll(hashes);
+      $result.hashes.addAll(hashes);
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (owner != null) {
-      _result.owner = owner;
+      $result.owner = owner;
     }
-    return _result;
+    return $result;
   }
+  File._() : super();
   factory File.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory File.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'File',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aInt64(3, _omitFieldNames ? '' : 'sizeBytes')
+    ..pc<Hash>(4, _omitFieldNames ? '' : 'hashes', $pb.PbFieldType.PM,
+        subBuilder: Hash.create)
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(7, _omitFieldNames ? '' : 'owner')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -198,9 +166,10 @@ class File extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   File copyWith(void Function(File) updates) =>
-      super.copyWith((message) => updates(message as File))
-          as File; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as File)) as File;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static File create() => File._();
   File createEmptyInstance() => create();
@@ -210,6 +179,9 @@ class File extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<File>(create);
   static File? _defaultInstance;
 
+  /// The name of the file, for example:
+  /// "projects/p1/locations/us-central1/repositories/repo1/files/a%2Fb%2Fc.txt".
+  /// If the file ID part contains slashes, they are escaped.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -222,6 +194,7 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The size of the File in bytes.
   @$pb.TagNumber(3)
   $fixnum.Int64 get sizeBytes => $_getI64(1);
   @$pb.TagNumber(3)
@@ -234,9 +207,11 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearSizeBytes() => clearField(3);
 
+  /// The hashes of the file content.
   @$pb.TagNumber(4)
   $core.List<Hash> get hashes => $_getList(2);
 
+  /// The time when the File was created.
   @$pb.TagNumber(5)
   $0.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(5)
@@ -251,6 +226,7 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.Timestamp ensureCreateTime() => $_ensure(3);
 
+  /// The time when the File was last updated.
   @$pb.TagNumber(6)
   $0.Timestamp get updateTime => $_getN(4);
   @$pb.TagNumber(6)
@@ -265,6 +241,7 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Timestamp ensureUpdateTime() => $_ensure(4);
 
+  /// The name of the Package or Version that owns this file, if any.
   @$pb.TagNumber(7)
   $core.String get owner => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -278,67 +255,48 @@ class File extends $pb.GeneratedMessage {
   void clearOwner() => clearField(7);
 }
 
+/// The request to list files.
 class ListFilesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListFilesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..hasRequiredFields = false;
-
-  ListFilesRequest._() : super();
   factory ListFilesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  ListFilesRequest._() : super();
   factory ListFilesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListFilesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListFilesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -348,8 +306,10 @@ class ListFilesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListFilesRequest copyWith(void Function(ListFilesRequest) updates) =>
       super.copyWith((message) => updates(message as ListFilesRequest))
-          as ListFilesRequest; // ignore: deprecated_member_use
+          as ListFilesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListFilesRequest create() => ListFilesRequest._();
   ListFilesRequest createEmptyInstance() => create();
@@ -360,6 +320,8 @@ class ListFilesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListFilesRequest>(create);
   static ListFilesRequest? _defaultInstance;
 
+  /// The name of the repository whose files will be listed. For example:
+  /// "projects/p1/locations/us-central1/repositories/repo1
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -372,6 +334,7 @@ class ListFilesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of files to return.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -384,6 +347,7 @@ class ListFilesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// The next_page_token value returned from a previous list request, if any.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -396,6 +360,18 @@ class ListFilesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  ///  An expression for filtering the results of the request. Filter rules are
+  ///  case insensitive. The fields eligible for filtering are:
+  ///
+  ///    * `name`
+  ///    * `owner`
+  ///
+  ///   An example of using a filter:
+  ///
+  ///    * `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b/*"` --> Files with an
+  ///    ID starting with "a/b/".
+  ///    * `owner="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/1.0"` -->
+  ///    Files owned by the version `1.0` in package `pkg1`.
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -409,50 +385,39 @@ class ListFilesRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(4);
 }
 
+/// The response from listing files.
 class ListFilesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListFilesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..pc<File>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'files',
-        $pb.PbFieldType.PM,
-        subBuilder: File.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListFilesResponse._() : super();
   factory ListFilesResponse({
     $core.Iterable<File>? files,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (files != null) {
-      _result.files.addAll(files);
+      $result.files.addAll(files);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListFilesResponse._() : super();
   factory ListFilesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListFilesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListFilesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<File>(1, _omitFieldNames ? '' : 'files', $pb.PbFieldType.PM,
+        subBuilder: File.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -462,8 +427,10 @@ class ListFilesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListFilesResponse copyWith(void Function(ListFilesResponse) updates) =>
       super.copyWith((message) => updates(message as ListFilesResponse))
-          as ListFilesResponse; // ignore: deprecated_member_use
+          as ListFilesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListFilesResponse create() => ListFilesResponse._();
   ListFilesResponse createEmptyInstance() => create();
@@ -474,9 +441,12 @@ class ListFilesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListFilesResponse>(create);
   static ListFilesResponse? _defaultInstance;
 
+  /// The files returned.
   @$pb.TagNumber(1)
   $core.List<File> get files => $_getList(0);
 
+  /// The token to retrieve the next page of files, or empty if there are no
+  /// more files to return.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -490,39 +460,33 @@ class ListFilesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The request to retrieve a file.
 class GetFileRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetFileRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetFileRequest._() : super();
   factory GetFileRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetFileRequest._() : super();
   factory GetFileRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetFileRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetFileRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -532,8 +496,10 @@ class GetFileRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetFileRequest copyWith(void Function(GetFileRequest) updates) =>
       super.copyWith((message) => updates(message as GetFileRequest))
-          as GetFileRequest; // ignore: deprecated_member_use
+          as GetFileRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetFileRequest create() => GetFileRequest._();
   GetFileRequest createEmptyInstance() => create();
@@ -544,6 +510,7 @@ class GetFileRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetFileRequest>(create);
   static GetFileRequest? _defaultInstance;
 
+  /// The name of the file to retrieve.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -556,3 +523,7 @@ class GetFileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

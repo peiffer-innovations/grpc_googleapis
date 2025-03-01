@@ -1,23 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/bigtable_table_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'bigtable_table_admin.pb.dart' as $4;
-import 'table.pb.dart' as $5;
-import '../../../longrunning/operations.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $3;
+import 'bigtable_table_admin.pb.dart' as $4;
+import 'table.pb.dart' as $5;
+
 export 'bigtable_table_admin.pb.dart';
 
+@$pb.GrpcServiceName('google.bigtable.admin.v2.BigtableTableAdmin')
 class BigtableTableAdminClient extends $grpc.Client {
   static final _$createTable =
       $grpc.ClientMethod<$4.CreateTableRequest, $5.Table>(
@@ -54,6 +61,32 @@ class BigtableTableAdminClient extends $grpc.Client {
           '/google.bigtable.admin.v2.BigtableTableAdmin/UndeleteTable',
           ($4.UndeleteTableRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$createAuthorizedView =
+      $grpc.ClientMethod<$4.CreateAuthorizedViewRequest, $2.Operation>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/CreateAuthorizedView',
+          ($4.CreateAuthorizedViewRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$listAuthorizedViews = $grpc.ClientMethod<
+          $4.ListAuthorizedViewsRequest, $4.ListAuthorizedViewsResponse>(
+      '/google.bigtable.admin.v2.BigtableTableAdmin/ListAuthorizedViews',
+      ($4.ListAuthorizedViewsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListAuthorizedViewsResponse.fromBuffer(value));
+  static final _$getAuthorizedView =
+      $grpc.ClientMethod<$4.GetAuthorizedViewRequest, $5.AuthorizedView>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/GetAuthorizedView',
+          ($4.GetAuthorizedViewRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $5.AuthorizedView.fromBuffer(value));
+  static final _$updateAuthorizedView =
+      $grpc.ClientMethod<$4.UpdateAuthorizedViewRequest, $2.Operation>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/UpdateAuthorizedView',
+          ($4.UpdateAuthorizedViewRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$deleteAuthorizedView =
+      $grpc.ClientMethod<$4.DeleteAuthorizedViewRequest, $3.Empty>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/DeleteAuthorizedView',
+          ($4.DeleteAuthorizedViewRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
   static final _$modifyColumnFamilies =
       $grpc.ClientMethod<$4.ModifyColumnFamiliesRequest, $5.Table>(
           '/google.bigtable.admin.v2.BigtableTableAdmin/ModifyColumnFamilies',
@@ -128,6 +161,11 @@ class BigtableTableAdminClient extends $grpc.Client {
           '/google.bigtable.admin.v2.BigtableTableAdmin/RestoreTable',
           ($4.RestoreTableRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$copyBackup =
+      $grpc.ClientMethod<$4.CopyBackupRequest, $2.Operation>(
+          '/google.bigtable.admin.v2.BigtableTableAdmin/CopyBackup',
+          ($4.CopyBackupRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$getIamPolicy =
       $grpc.ClientMethod<$0.GetIamPolicyRequest, $1.Policy>(
           '/google.bigtable.admin.v2.BigtableTableAdmin/GetIamPolicy',
@@ -187,6 +225,36 @@ class BigtableTableAdminClient extends $grpc.Client {
       $4.UndeleteTableRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$undeleteTable, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> createAuthorizedView(
+      $4.CreateAuthorizedViewRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAuthorizedView, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListAuthorizedViewsResponse> listAuthorizedViews(
+      $4.ListAuthorizedViewsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAuthorizedViews, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.AuthorizedView> getAuthorizedView(
+      $4.GetAuthorizedViewRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAuthorizedView, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> updateAuthorizedView(
+      $4.UpdateAuthorizedViewRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateAuthorizedView, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteAuthorizedView(
+      $4.DeleteAuthorizedViewRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAuthorizedView, request, options: options);
   }
 
   $grpc.ResponseFuture<$5.Table> modifyColumnFamilies(
@@ -269,6 +337,11 @@ class BigtableTableAdminClient extends $grpc.Client {
     return $createUnaryCall(_$restoreTable, request, options: options);
   }
 
+  $grpc.ResponseFuture<$2.Operation> copyBackup($4.CopyBackupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$copyBackup, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.Policy> getIamPolicy($0.GetIamPolicyRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getIamPolicy, request, options: options);
@@ -286,6 +359,7 @@ class BigtableTableAdminClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.bigtable.admin.v2.BigtableTableAdmin')
 abstract class BigtableTableAdminServiceBase extends $grpc.Service {
   $core.String get $name => 'google.bigtable.admin.v2.BigtableTableAdmin';
 
@@ -345,6 +419,50 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.UndeleteTableRequest.fromBuffer(value),
         ($2.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.CreateAuthorizedViewRequest, $2.Operation>(
+            'CreateAuthorizedView',
+            createAuthorizedView_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.CreateAuthorizedViewRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListAuthorizedViewsRequest,
+            $4.ListAuthorizedViewsResponse>(
+        'ListAuthorizedViews',
+        listAuthorizedViews_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListAuthorizedViewsRequest.fromBuffer(value),
+        ($4.ListAuthorizedViewsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.GetAuthorizedViewRequest, $5.AuthorizedView>(
+            'GetAuthorizedView',
+            getAuthorizedView_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.GetAuthorizedViewRequest.fromBuffer(value),
+            ($5.AuthorizedView value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.UpdateAuthorizedViewRequest, $2.Operation>(
+            'UpdateAuthorizedView',
+            updateAuthorizedView_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.UpdateAuthorizedViewRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.DeleteAuthorizedViewRequest, $3.Empty>(
+        'DeleteAuthorizedView',
+        deleteAuthorizedView_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.DeleteAuthorizedViewRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.ModifyColumnFamiliesRequest, $5.Table>(
         'ModifyColumnFamilies',
         modifyColumnFamilies_Pre,
@@ -460,6 +578,13 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.RestoreTableRequest.fromBuffer(value),
         ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.CopyBackupRequest, $2.Operation>(
+        'CopyBackup',
+        copyBackup_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $4.CopyBackupRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetIamPolicyRequest, $1.Policy>(
         'GetIamPolicy',
         getIamPolicy_Pre,
@@ -521,6 +646,32 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
   $async.Future<$2.Operation> undeleteTable_Pre($grpc.ServiceCall call,
       $async.Future<$4.UndeleteTableRequest> request) async {
     return undeleteTable(call, await request);
+  }
+
+  $async.Future<$2.Operation> createAuthorizedView_Pre($grpc.ServiceCall call,
+      $async.Future<$4.CreateAuthorizedViewRequest> request) async {
+    return createAuthorizedView(call, await request);
+  }
+
+  $async.Future<$4.ListAuthorizedViewsResponse> listAuthorizedViews_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListAuthorizedViewsRequest> request) async {
+    return listAuthorizedViews(call, await request);
+  }
+
+  $async.Future<$5.AuthorizedView> getAuthorizedView_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetAuthorizedViewRequest> request) async {
+    return getAuthorizedView(call, await request);
+  }
+
+  $async.Future<$2.Operation> updateAuthorizedView_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateAuthorizedViewRequest> request) async {
+    return updateAuthorizedView(call, await request);
+  }
+
+  $async.Future<$3.Empty> deleteAuthorizedView_Pre($grpc.ServiceCall call,
+      $async.Future<$4.DeleteAuthorizedViewRequest> request) async {
+    return deleteAuthorizedView(call, await request);
   }
 
   $async.Future<$5.Table> modifyColumnFamilies_Pre($grpc.ServiceCall call,
@@ -596,6 +747,11 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
     return restoreTable(call, await request);
   }
 
+  $async.Future<$2.Operation> copyBackup_Pre($grpc.ServiceCall call,
+      $async.Future<$4.CopyBackupRequest> request) async {
+    return copyBackup(call, await request);
+  }
+
   $async.Future<$1.Policy> getIamPolicy_Pre($grpc.ServiceCall call,
       $async.Future<$0.GetIamPolicyRequest> request) async {
     return getIamPolicy(call, await request);
@@ -626,6 +782,16 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.DeleteTableRequest request);
   $async.Future<$2.Operation> undeleteTable(
       $grpc.ServiceCall call, $4.UndeleteTableRequest request);
+  $async.Future<$2.Operation> createAuthorizedView(
+      $grpc.ServiceCall call, $4.CreateAuthorizedViewRequest request);
+  $async.Future<$4.ListAuthorizedViewsResponse> listAuthorizedViews(
+      $grpc.ServiceCall call, $4.ListAuthorizedViewsRequest request);
+  $async.Future<$5.AuthorizedView> getAuthorizedView(
+      $grpc.ServiceCall call, $4.GetAuthorizedViewRequest request);
+  $async.Future<$2.Operation> updateAuthorizedView(
+      $grpc.ServiceCall call, $4.UpdateAuthorizedViewRequest request);
+  $async.Future<$3.Empty> deleteAuthorizedView(
+      $grpc.ServiceCall call, $4.DeleteAuthorizedViewRequest request);
   $async.Future<$5.Table> modifyColumnFamilies(
       $grpc.ServiceCall call, $4.ModifyColumnFamiliesRequest request);
   $async.Future<$3.Empty> dropRowRange(
@@ -654,6 +820,8 @@ abstract class BigtableTableAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $4.ListBackupsRequest request);
   $async.Future<$2.Operation> restoreTable(
       $grpc.ServiceCall call, $4.RestoreTableRequest request);
+  $async.Future<$2.Operation> copyBackup(
+      $grpc.ServiceCall call, $4.CopyBackupRequest request);
   $async.Future<$1.Policy> getIamPolicy(
       $grpc.ServiceCall call, $0.GetIamPolicyRequest request);
   $async.Future<$1.Policy> setIamPolicy(

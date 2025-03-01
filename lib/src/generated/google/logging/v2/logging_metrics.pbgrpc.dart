@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging_metrics.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'logging_metrics.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../protobuf/empty.pb.dart' as $1;
+import 'logging_metrics.pb.dart' as $0;
+
 export 'logging_metrics.pb.dart';
 
+@$pb.GrpcServiceName('google.logging.v2.MetricsServiceV2')
 class MetricsServiceV2Client extends $grpc.Client {
   static final _$listLogMetrics =
       $grpc.ClientMethod<$0.ListLogMetricsRequest, $0.ListLogMetricsResponse>(
@@ -78,6 +85,7 @@ class MetricsServiceV2Client extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.logging.v2.MetricsServiceV2')
 abstract class MetricsServiceV2ServiceBase extends $grpc.Service {
   $core.String get $name => 'google.logging.v2.MetricsServiceV2';
 

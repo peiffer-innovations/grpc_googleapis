@@ -1,20 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1/containeranalysis.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
 import 'containeranalysis.pb.dart' as $2;
+
 export 'containeranalysis.pb.dart';
 
+@$pb.GrpcServiceName('google.devtools.containeranalysis.v1.ContainerAnalysis')
 class ContainerAnalysisClient extends $grpc.Client {
   static final _$setIamPolicy = $grpc.ClientMethod<$0.SetIamPolicyRequest,
           $1.Policy>(
@@ -71,6 +78,7 @@ class ContainerAnalysisClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.devtools.containeranalysis.v1.ContainerAnalysis')
 abstract class ContainerAnalysisServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.devtools.containeranalysis.v1.ContainerAnalysis';

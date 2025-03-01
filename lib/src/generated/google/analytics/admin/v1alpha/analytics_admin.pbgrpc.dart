@@ -1,24 +1,32 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/analytics/admin/v1alpha/analytics_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'analytics_admin.pb.dart' as $0;
-import 'resources.pb.dart' as $1;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../protobuf/empty.pb.dart' as $2;
+import 'analytics_admin.pb.dart' as $0;
 import 'audience.pb.dart' as $3;
-import 'expanded_data_set.pb.dart' as $4;
 import 'channel_group.pb.dart' as $5;
 import 'event_create_and_edit.pb.dart' as $6;
+import 'expanded_data_set.pb.dart' as $4;
+import 'resources.pb.dart' as $1;
+import 'subproperty_event_filter.pb.dart' as $7;
+
 export 'analytics_admin.pb.dart';
 
+@$pb.GrpcServiceName('google.analytics.admin.v1alpha.AnalyticsAdminService')
 class AnalyticsAdminServiceClient extends $grpc.Client {
   static final _$getAccount =
       $grpc.ClientMethod<$0.GetAccountRequest, $1.Account>(
@@ -79,61 +87,6 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateProperty',
       ($0.UpdatePropertyRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Property.fromBuffer(value));
-  static final _$getUserLink =
-      $grpc.ClientMethod<$0.GetUserLinkRequest, $1.UserLink>(
-          '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetUserLink',
-          ($0.GetUserLinkRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.UserLink.fromBuffer(value));
-  static final _$batchGetUserLinks = $grpc.ClientMethod<
-          $0.BatchGetUserLinksRequest, $0.BatchGetUserLinksResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchGetUserLinks',
-      ($0.BatchGetUserLinksRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.BatchGetUserLinksResponse.fromBuffer(value));
-  static final _$listUserLinks =
-      $grpc.ClientMethod<$0.ListUserLinksRequest, $0.ListUserLinksResponse>(
-          '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListUserLinks',
-          ($0.ListUserLinksRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.ListUserLinksResponse.fromBuffer(value));
-  static final _$auditUserLinks = $grpc.ClientMethod<$0.AuditUserLinksRequest,
-          $0.AuditUserLinksResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/AuditUserLinks',
-      ($0.AuditUserLinksRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.AuditUserLinksResponse.fromBuffer(value));
-  static final _$createUserLink = $grpc.ClientMethod<$0.CreateUserLinkRequest,
-          $1.UserLink>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateUserLink',
-      ($0.CreateUserLinkRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UserLink.fromBuffer(value));
-  static final _$batchCreateUserLinks = $grpc.ClientMethod<
-          $0.BatchCreateUserLinksRequest, $0.BatchCreateUserLinksResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchCreateUserLinks',
-      ($0.BatchCreateUserLinksRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.BatchCreateUserLinksResponse.fromBuffer(value));
-  static final _$updateUserLink = $grpc.ClientMethod<$0.UpdateUserLinkRequest,
-          $1.UserLink>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateUserLink',
-      ($0.UpdateUserLinkRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UserLink.fromBuffer(value));
-  static final _$batchUpdateUserLinks = $grpc.ClientMethod<
-          $0.BatchUpdateUserLinksRequest, $0.BatchUpdateUserLinksResponse>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchUpdateUserLinks',
-      ($0.BatchUpdateUserLinksRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.BatchUpdateUserLinksResponse.fromBuffer(value));
-  static final _$deleteUserLink = $grpc.ClientMethod<$0.DeleteUserLinkRequest,
-          $2.Empty>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteUserLink',
-      ($0.DeleteUserLinkRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
-  static final _$batchDeleteUserLinks = $grpc.ClientMethod<
-          $0.BatchDeleteUserLinksRequest, $2.Empty>(
-      '/google.analytics.admin.v1alpha.AnalyticsAdminService/BatchDeleteUserLinks',
-      ($0.BatchDeleteUserLinksRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
   static final _$createFirebaseLink = $grpc.ClientMethod<
           $0.CreateFirebaseLinkRequest, $1.FirebaseLink>(
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateFirebaseLink',
@@ -224,6 +177,44 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.AcknowledgeUserDataCollectionRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.AcknowledgeUserDataCollectionResponse.fromBuffer(value));
+  static final _$getSKAdNetworkConversionValueSchema = $grpc.ClientMethod<
+          $0.GetSKAdNetworkConversionValueSchemaRequest,
+          $1.SKAdNetworkConversionValueSchema>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetSKAdNetworkConversionValueSchema',
+      ($0.GetSKAdNetworkConversionValueSchemaRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.SKAdNetworkConversionValueSchema.fromBuffer(value));
+  static final _$createSKAdNetworkConversionValueSchema = $grpc.ClientMethod<
+          $0.CreateSKAdNetworkConversionValueSchemaRequest,
+          $1.SKAdNetworkConversionValueSchema>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateSKAdNetworkConversionValueSchema',
+      ($0.CreateSKAdNetworkConversionValueSchemaRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.SKAdNetworkConversionValueSchema.fromBuffer(value));
+  static final _$deleteSKAdNetworkConversionValueSchema = $grpc.ClientMethod<
+          $0.DeleteSKAdNetworkConversionValueSchemaRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteSKAdNetworkConversionValueSchema',
+      ($0.DeleteSKAdNetworkConversionValueSchemaRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$updateSKAdNetworkConversionValueSchema = $grpc.ClientMethod<
+          $0.UpdateSKAdNetworkConversionValueSchemaRequest,
+          $1.SKAdNetworkConversionValueSchema>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateSKAdNetworkConversionValueSchema',
+      ($0.UpdateSKAdNetworkConversionValueSchemaRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.SKAdNetworkConversionValueSchema.fromBuffer(value));
+  static final _$listSKAdNetworkConversionValueSchemas = $grpc.ClientMethod<
+          $0.ListSKAdNetworkConversionValueSchemasRequest,
+          $0.ListSKAdNetworkConversionValueSchemasResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListSKAdNetworkConversionValueSchemas',
+      ($0.ListSKAdNetworkConversionValueSchemasRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListSKAdNetworkConversionValueSchemasResponse.fromBuffer(value));
   static final _$searchChangeHistoryEvents = $grpc.ClientMethod<
           $0.SearchChangeHistoryEventsRequest,
           $0.SearchChangeHistoryEventsResponse>(
@@ -248,6 +239,11 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateConversionEvent',
       ($0.CreateConversionEventRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ConversionEvent.fromBuffer(value));
+  static final _$updateConversionEvent = $grpc.ClientMethod<
+          $0.UpdateConversionEventRequest, $1.ConversionEvent>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateConversionEvent',
+      ($0.UpdateConversionEventRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ConversionEvent.fromBuffer(value));
   static final _$getConversionEvent = $grpc.ClientMethod<
           $0.GetConversionEventRequest, $1.ConversionEvent>(
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetConversionEvent',
@@ -264,6 +260,32 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.ListConversionEventsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListConversionEventsResponse.fromBuffer(value));
+  static final _$createKeyEvent = $grpc.ClientMethod<$0.CreateKeyEventRequest,
+          $1.KeyEvent>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateKeyEvent',
+      ($0.CreateKeyEventRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.KeyEvent.fromBuffer(value));
+  static final _$updateKeyEvent = $grpc.ClientMethod<$0.UpdateKeyEventRequest,
+          $1.KeyEvent>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateKeyEvent',
+      ($0.UpdateKeyEventRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.KeyEvent.fromBuffer(value));
+  static final _$getKeyEvent =
+      $grpc.ClientMethod<$0.GetKeyEventRequest, $1.KeyEvent>(
+          '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetKeyEvent',
+          ($0.GetKeyEventRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.KeyEvent.fromBuffer(value));
+  static final _$deleteKeyEvent = $grpc.ClientMethod<$0.DeleteKeyEventRequest,
+          $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteKeyEvent',
+      ($0.DeleteKeyEventRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$listKeyEvents =
+      $grpc.ClientMethod<$0.ListKeyEventsRequest, $0.ListKeyEventsResponse>(
+          '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListKeyEvents',
+          ($0.ListKeyEventsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ListKeyEventsResponse.fromBuffer(value));
   static final _$getDisplayVideo360AdvertiserLink = $grpc.ClientMethod<
           $0.GetDisplayVideo360AdvertiserLinkRequest,
           $1.DisplayVideo360AdvertiserLink>(
@@ -629,6 +651,11 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
           value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.FetchAutomatedGa4ConfigurationOptOutResponse.fromBuffer(value));
+  static final _$createBigQueryLink = $grpc.ClientMethod<
+          $0.CreateBigQueryLinkRequest, $1.BigQueryLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateBigQueryLink',
+      ($0.CreateBigQueryLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.BigQueryLink.fromBuffer(value));
   static final _$getBigQueryLink = $grpc.ClientMethod<$0.GetBigQueryLinkRequest,
           $1.BigQueryLink>(
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetBigQueryLink',
@@ -640,6 +667,16 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.ListBigQueryLinksRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListBigQueryLinksResponse.fromBuffer(value));
+  static final _$deleteBigQueryLink = $grpc.ClientMethod<
+          $0.DeleteBigQueryLinkRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteBigQueryLink',
+      ($0.DeleteBigQueryLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$updateBigQueryLink = $grpc.ClientMethod<
+          $0.UpdateBigQueryLinkRequest, $1.BigQueryLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateBigQueryLink',
+      ($0.UpdateBigQueryLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.BigQueryLink.fromBuffer(value));
   static final _$getEnhancedMeasurementSettings = $grpc.ClientMethod<
           $0.GetEnhancedMeasurementSettingsRequest,
           $1.EnhancedMeasurementSettings>(
@@ -726,6 +763,142 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteEventCreateRule',
       ($0.DeleteEventCreateRuleRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$getEventEditRule = $grpc.ClientMethod<
+          $0.GetEventEditRuleRequest, $6.EventEditRule>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetEventEditRule',
+      ($0.GetEventEditRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.EventEditRule.fromBuffer(value));
+  static final _$listEventEditRules = $grpc.ClientMethod<
+          $0.ListEventEditRulesRequest, $0.ListEventEditRulesResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListEventEditRules',
+      ($0.ListEventEditRulesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListEventEditRulesResponse.fromBuffer(value));
+  static final _$createEventEditRule = $grpc.ClientMethod<
+          $0.CreateEventEditRuleRequest, $6.EventEditRule>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateEventEditRule',
+      ($0.CreateEventEditRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.EventEditRule.fromBuffer(value));
+  static final _$updateEventEditRule = $grpc.ClientMethod<
+          $0.UpdateEventEditRuleRequest, $6.EventEditRule>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateEventEditRule',
+      ($0.UpdateEventEditRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.EventEditRule.fromBuffer(value));
+  static final _$deleteEventEditRule = $grpc.ClientMethod<
+          $0.DeleteEventEditRuleRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteEventEditRule',
+      ($0.DeleteEventEditRuleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$reorderEventEditRules = $grpc.ClientMethod<
+          $0.ReorderEventEditRulesRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ReorderEventEditRules',
+      ($0.ReorderEventEditRulesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$updateDataRedactionSettings = $grpc.ClientMethod<
+          $0.UpdateDataRedactionSettingsRequest, $1.DataRedactionSettings>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateDataRedactionSettings',
+      ($0.UpdateDataRedactionSettingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.DataRedactionSettings.fromBuffer(value));
+  static final _$getDataRedactionSettings = $grpc.ClientMethod<
+          $0.GetDataRedactionSettingsRequest, $1.DataRedactionSettings>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetDataRedactionSettings',
+      ($0.GetDataRedactionSettingsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.DataRedactionSettings.fromBuffer(value));
+  static final _$getCalculatedMetric = $grpc.ClientMethod<
+          $0.GetCalculatedMetricRequest, $1.CalculatedMetric>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetCalculatedMetric',
+      ($0.GetCalculatedMetricRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.CalculatedMetric.fromBuffer(value));
+  static final _$createCalculatedMetric = $grpc.ClientMethod<
+          $0.CreateCalculatedMetricRequest, $1.CalculatedMetric>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateCalculatedMetric',
+      ($0.CreateCalculatedMetricRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.CalculatedMetric.fromBuffer(value));
+  static final _$listCalculatedMetrics = $grpc.ClientMethod<
+          $0.ListCalculatedMetricsRequest, $0.ListCalculatedMetricsResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListCalculatedMetrics',
+      ($0.ListCalculatedMetricsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListCalculatedMetricsResponse.fromBuffer(value));
+  static final _$updateCalculatedMetric = $grpc.ClientMethod<
+          $0.UpdateCalculatedMetricRequest, $1.CalculatedMetric>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateCalculatedMetric',
+      ($0.UpdateCalculatedMetricRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.CalculatedMetric.fromBuffer(value));
+  static final _$deleteCalculatedMetric = $grpc.ClientMethod<
+          $0.DeleteCalculatedMetricRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteCalculatedMetric',
+      ($0.DeleteCalculatedMetricRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$createRollupProperty = $grpc.ClientMethod<
+          $0.CreateRollupPropertyRequest, $0.CreateRollupPropertyResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateRollupProperty',
+      ($0.CreateRollupPropertyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.CreateRollupPropertyResponse.fromBuffer(value));
+  static final _$getRollupPropertySourceLink = $grpc.ClientMethod<
+          $0.GetRollupPropertySourceLinkRequest, $1.RollupPropertySourceLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetRollupPropertySourceLink',
+      ($0.GetRollupPropertySourceLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.RollupPropertySourceLink.fromBuffer(value));
+  static final _$listRollupPropertySourceLinks = $grpc.ClientMethod<
+          $0.ListRollupPropertySourceLinksRequest,
+          $0.ListRollupPropertySourceLinksResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListRollupPropertySourceLinks',
+      ($0.ListRollupPropertySourceLinksRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListRollupPropertySourceLinksResponse.fromBuffer(value));
+  static final _$createRollupPropertySourceLink = $grpc.ClientMethod<
+          $0.CreateRollupPropertySourceLinkRequest,
+          $1.RollupPropertySourceLink>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateRollupPropertySourceLink',
+      ($0.CreateRollupPropertySourceLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.RollupPropertySourceLink.fromBuffer(value));
+  static final _$deleteRollupPropertySourceLink = $grpc.ClientMethod<
+          $0.DeleteRollupPropertySourceLinkRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteRollupPropertySourceLink',
+      ($0.DeleteRollupPropertySourceLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$provisionSubproperty = $grpc.ClientMethod<
+          $0.ProvisionSubpropertyRequest, $0.ProvisionSubpropertyResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ProvisionSubproperty',
+      ($0.ProvisionSubpropertyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ProvisionSubpropertyResponse.fromBuffer(value));
+  static final _$createSubpropertyEventFilter = $grpc.ClientMethod<
+          $0.CreateSubpropertyEventFilterRequest, $7.SubpropertyEventFilter>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/CreateSubpropertyEventFilter',
+      ($0.CreateSubpropertyEventFilterRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $7.SubpropertyEventFilter.fromBuffer(value));
+  static final _$getSubpropertyEventFilter = $grpc.ClientMethod<
+          $0.GetSubpropertyEventFilterRequest, $7.SubpropertyEventFilter>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/GetSubpropertyEventFilter',
+      ($0.GetSubpropertyEventFilterRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $7.SubpropertyEventFilter.fromBuffer(value));
+  static final _$listSubpropertyEventFilters = $grpc.ClientMethod<
+          $0.ListSubpropertyEventFiltersRequest,
+          $0.ListSubpropertyEventFiltersResponse>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/ListSubpropertyEventFilters',
+      ($0.ListSubpropertyEventFiltersRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListSubpropertyEventFiltersResponse.fromBuffer(value));
+  static final _$updateSubpropertyEventFilter = $grpc.ClientMethod<
+          $0.UpdateSubpropertyEventFilterRequest, $7.SubpropertyEventFilter>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateSubpropertyEventFilter',
+      ($0.UpdateSubpropertyEventFilterRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $7.SubpropertyEventFilter.fromBuffer(value));
+  static final _$deleteSubpropertyEventFilter = $grpc.ClientMethod<
+          $0.DeleteSubpropertyEventFilterRequest, $2.Empty>(
+      '/google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteSubpropertyEventFilter',
+      ($0.DeleteSubpropertyEventFilterRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
 
   AnalyticsAdminServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -794,65 +967,6 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.UpdatePropertyRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateProperty, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.UserLink> getUserLink($0.GetUserLinkRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getUserLink, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.BatchGetUserLinksResponse> batchGetUserLinks(
-      $0.BatchGetUserLinksRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$batchGetUserLinks, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.ListUserLinksResponse> listUserLinks(
-      $0.ListUserLinksRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listUserLinks, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.AuditUserLinksResponse> auditUserLinks(
-      $0.AuditUserLinksRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$auditUserLinks, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.UserLink> createUserLink(
-      $0.CreateUserLinkRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createUserLink, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.BatchCreateUserLinksResponse> batchCreateUserLinks(
-      $0.BatchCreateUserLinksRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$batchCreateUserLinks, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.UserLink> updateUserLink(
-      $0.UpdateUserLinkRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateUserLink, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.BatchUpdateUserLinksResponse> batchUpdateUserLinks(
-      $0.BatchUpdateUserLinksRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$batchUpdateUserLinks, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.Empty> deleteUserLink(
-      $0.DeleteUserLinkRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteUserLink, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.Empty> batchDeleteUserLinks(
-      $0.BatchDeleteUserLinksRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$batchDeleteUserLinks, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.FirebaseLink> createFirebaseLink(
@@ -957,6 +1071,45 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$1.SKAdNetworkConversionValueSchema>
+      getSKAdNetworkConversionValueSchema(
+          $0.GetSKAdNetworkConversionValueSchemaRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSKAdNetworkConversionValueSchema, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SKAdNetworkConversionValueSchema>
+      createSKAdNetworkConversionValueSchema(
+          $0.CreateSKAdNetworkConversionValueSchemaRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSKAdNetworkConversionValueSchema, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteSKAdNetworkConversionValueSchema(
+      $0.DeleteSKAdNetworkConversionValueSchemaRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteSKAdNetworkConversionValueSchema, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SKAdNetworkConversionValueSchema>
+      updateSKAdNetworkConversionValueSchema(
+          $0.UpdateSKAdNetworkConversionValueSchemaRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSKAdNetworkConversionValueSchema, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListSKAdNetworkConversionValueSchemasResponse>
+      listSKAdNetworkConversionValueSchemas(
+          $0.ListSKAdNetworkConversionValueSchemasRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listSKAdNetworkConversionValueSchemas, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$0.SearchChangeHistoryEventsResponse>
       searchChangeHistoryEvents($0.SearchChangeHistoryEventsRequest request,
           {$grpc.CallOptions? options}) {
@@ -984,6 +1137,12 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
     return $createUnaryCall(_$createConversionEvent, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.ConversionEvent> updateConversionEvent(
+      $0.UpdateConversionEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateConversionEvent, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.ConversionEvent> getConversionEvent(
       $0.GetConversionEventRequest request,
       {$grpc.CallOptions? options}) {
@@ -1000,6 +1159,35 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.ListConversionEventsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listConversionEvents, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.KeyEvent> createKeyEvent(
+      $0.CreateKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.KeyEvent> updateKeyEvent(
+      $0.UpdateKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.KeyEvent> getKeyEvent($0.GetKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteKeyEvent(
+      $0.DeleteKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListKeyEventsResponse> listKeyEvents(
+      $0.ListKeyEventsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listKeyEvents, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.DisplayVideo360AdvertiserLink>
@@ -1414,6 +1602,12 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$1.BigQueryLink> createBigQueryLink(
+      $0.CreateBigQueryLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createBigQueryLink, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.BigQueryLink> getBigQueryLink(
       $0.GetBigQueryLinkRequest request,
       {$grpc.CallOptions? options}) {
@@ -1424,6 +1618,18 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.ListBigQueryLinksRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listBigQueryLinks, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteBigQueryLink(
+      $0.DeleteBigQueryLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteBigQueryLink, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.BigQueryLink> updateBigQueryLink(
+      $0.UpdateBigQueryLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateBigQueryLink, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.EnhancedMeasurementSettings>
@@ -1522,8 +1728,169 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteEventCreateRule, request, options: options);
   }
+
+  $grpc.ResponseFuture<$6.EventEditRule> getEventEditRule(
+      $0.GetEventEditRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getEventEditRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListEventEditRulesResponse> listEventEditRules(
+      $0.ListEventEditRulesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listEventEditRules, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.EventEditRule> createEventEditRule(
+      $0.CreateEventEditRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createEventEditRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.EventEditRule> updateEventEditRule(
+      $0.UpdateEventEditRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateEventEditRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteEventEditRule(
+      $0.DeleteEventEditRuleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEventEditRule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> reorderEventEditRules(
+      $0.ReorderEventEditRulesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$reorderEventEditRules, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DataRedactionSettings> updateDataRedactionSettings(
+      $0.UpdateDataRedactionSettingsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateDataRedactionSettings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DataRedactionSettings> getDataRedactionSettings(
+      $0.GetDataRedactionSettingsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDataRedactionSettings, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.CalculatedMetric> getCalculatedMetric(
+      $0.GetCalculatedMetricRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getCalculatedMetric, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.CalculatedMetric> createCalculatedMetric(
+      $0.CreateCalculatedMetricRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createCalculatedMetric, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListCalculatedMetricsResponse> listCalculatedMetrics(
+      $0.ListCalculatedMetricsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listCalculatedMetrics, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.CalculatedMetric> updateCalculatedMetric(
+      $0.UpdateCalculatedMetricRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateCalculatedMetric, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteCalculatedMetric(
+      $0.DeleteCalculatedMetricRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteCalculatedMetric, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateRollupPropertyResponse> createRollupProperty(
+      $0.CreateRollupPropertyRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createRollupProperty, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.RollupPropertySourceLink> getRollupPropertySourceLink(
+      $0.GetRollupPropertySourceLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getRollupPropertySourceLink, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListRollupPropertySourceLinksResponse>
+      listRollupPropertySourceLinks(
+          $0.ListRollupPropertySourceLinksRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listRollupPropertySourceLinks, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.RollupPropertySourceLink>
+      createRollupPropertySourceLink(
+          $0.CreateRollupPropertySourceLinkRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createRollupPropertySourceLink, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteRollupPropertySourceLink(
+      $0.DeleteRollupPropertySourceLinkRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteRollupPropertySourceLink, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ProvisionSubpropertyResponse> provisionSubproperty(
+      $0.ProvisionSubpropertyRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$provisionSubproperty, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$7.SubpropertyEventFilter> createSubpropertyEventFilter(
+      $0.CreateSubpropertyEventFilterRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSubpropertyEventFilter, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$7.SubpropertyEventFilter> getSubpropertyEventFilter(
+      $0.GetSubpropertyEventFilterRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSubpropertyEventFilter, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListSubpropertyEventFiltersResponse>
+      listSubpropertyEventFilters($0.ListSubpropertyEventFiltersRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listSubpropertyEventFilters, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$7.SubpropertyEventFilter> updateSubpropertyEventFilter(
+      $0.UpdateSubpropertyEventFilterRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSubpropertyEventFilter, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteSubpropertyEventFilter(
+      $0.DeleteSubpropertyEventFilterRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteSubpropertyEventFilter, request,
+        options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.analytics.admin.v1alpha.AnalyticsAdminService')
 abstract class AnalyticsAdminServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.analytics.admin.v1alpha.AnalyticsAdminService';
@@ -1620,91 +1987,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdatePropertyRequest.fromBuffer(value),
         ($1.Property value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetUserLinkRequest, $1.UserLink>(
-        'GetUserLink',
-        getUserLink_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.GetUserLinkRequest.fromBuffer(value),
-        ($1.UserLink value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.BatchGetUserLinksRequest,
-            $0.BatchGetUserLinksResponse>(
-        'BatchGetUserLinks',
-        batchGetUserLinks_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.BatchGetUserLinksRequest.fromBuffer(value),
-        ($0.BatchGetUserLinksResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.ListUserLinksRequest, $0.ListUserLinksResponse>(
-            'ListUserLinks',
-            listUserLinks_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.ListUserLinksRequest.fromBuffer(value),
-            ($0.ListUserLinksResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.AuditUserLinksRequest,
-            $0.AuditUserLinksResponse>(
-        'AuditUserLinks',
-        auditUserLinks_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.AuditUserLinksRequest.fromBuffer(value),
-        ($0.AuditUserLinksResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.CreateUserLinkRequest, $1.UserLink>(
-        'CreateUserLink',
-        createUserLink_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.CreateUserLinkRequest.fromBuffer(value),
-        ($1.UserLink value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.BatchCreateUserLinksRequest,
-            $0.BatchCreateUserLinksResponse>(
-        'BatchCreateUserLinks',
-        batchCreateUserLinks_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.BatchCreateUserLinksRequest.fromBuffer(value),
-        ($0.BatchCreateUserLinksResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.UpdateUserLinkRequest, $1.UserLink>(
-        'UpdateUserLink',
-        updateUserLink_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.UpdateUserLinkRequest.fromBuffer(value),
-        ($1.UserLink value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.BatchUpdateUserLinksRequest,
-            $0.BatchUpdateUserLinksResponse>(
-        'BatchUpdateUserLinks',
-        batchUpdateUserLinks_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.BatchUpdateUserLinksRequest.fromBuffer(value),
-        ($0.BatchUpdateUserLinksResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.DeleteUserLinkRequest, $2.Empty>(
-        'DeleteUserLink',
-        deleteUserLink_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.DeleteUserLinkRequest.fromBuffer(value),
-        ($2.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.BatchDeleteUserLinksRequest, $2.Empty>(
-        'BatchDeleteUserLinks',
-        batchDeleteUserLinks_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.BatchDeleteUserLinksRequest.fromBuffer(value),
-        ($2.Empty value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.CreateFirebaseLinkRequest, $1.FirebaseLink>(
             'CreateFirebaseLink',
@@ -1840,6 +2122,56 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
             $0.AcknowledgeUserDataCollectionRequest.fromBuffer(value),
         ($0.AcknowledgeUserDataCollectionResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetSKAdNetworkConversionValueSchemaRequest,
+            $1.SKAdNetworkConversionValueSchema>(
+        'GetSKAdNetworkConversionValueSchema',
+        getSKAdNetworkConversionValueSchema_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSKAdNetworkConversionValueSchemaRequest.fromBuffer(value),
+        ($1.SKAdNetworkConversionValueSchema value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.CreateSKAdNetworkConversionValueSchemaRequest,
+            $1.SKAdNetworkConversionValueSchema>(
+        'CreateSKAdNetworkConversionValueSchema',
+        createSKAdNetworkConversionValueSchema_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateSKAdNetworkConversionValueSchemaRequest.fromBuffer(value),
+        ($1.SKAdNetworkConversionValueSchema value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.DeleteSKAdNetworkConversionValueSchemaRequest, $2.Empty>(
+        'DeleteSKAdNetworkConversionValueSchema',
+        deleteSKAdNetworkConversionValueSchema_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteSKAdNetworkConversionValueSchemaRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.UpdateSKAdNetworkConversionValueSchemaRequest,
+            $1.SKAdNetworkConversionValueSchema>(
+        'UpdateSKAdNetworkConversionValueSchema',
+        updateSKAdNetworkConversionValueSchema_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateSKAdNetworkConversionValueSchemaRequest.fromBuffer(value),
+        ($1.SKAdNetworkConversionValueSchema value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.ListSKAdNetworkConversionValueSchemasRequest,
+            $0.ListSKAdNetworkConversionValueSchemasResponse>(
+        'ListSKAdNetworkConversionValueSchemas',
+        listSKAdNetworkConversionValueSchemas_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListSKAdNetworkConversionValueSchemasRequest.fromBuffer(value),
+        ($0.ListSKAdNetworkConversionValueSchemasResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.SearchChangeHistoryEventsRequest,
             $0.SearchChangeHistoryEventsResponse>(
         'SearchChangeHistoryEvents',
@@ -1876,6 +2208,15 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CreateConversionEventRequest.fromBuffer(value),
         ($1.ConversionEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateConversionEventRequest,
+            $1.ConversionEvent>(
+        'UpdateConversionEvent',
+        updateConversionEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateConversionEventRequest.fromBuffer(value),
+        ($1.ConversionEvent value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.GetConversionEventRequest, $1.ConversionEvent>(
             'GetConversionEvent',
@@ -1902,6 +2243,47 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListConversionEventsRequest.fromBuffer(value),
         ($0.ListConversionEventsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateKeyEventRequest, $1.KeyEvent>(
+        'CreateKeyEvent',
+        createKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateKeyEventRequest.fromBuffer(value),
+        ($1.KeyEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateKeyEventRequest, $1.KeyEvent>(
+        'UpdateKeyEvent',
+        updateKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateKeyEventRequest.fromBuffer(value),
+        ($1.KeyEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetKeyEventRequest, $1.KeyEvent>(
+        'GetKeyEvent',
+        getKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetKeyEventRequest.fromBuffer(value),
+        ($1.KeyEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteKeyEventRequest, $2.Empty>(
+        'DeleteKeyEvent',
+        deleteKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteKeyEventRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListKeyEventsRequest, $0.ListKeyEventsResponse>(
+            'ListKeyEvents',
+            listKeyEvents_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListKeyEventsRequest.fromBuffer(value),
+            ($0.ListKeyEventsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetDisplayVideo360AdvertiserLinkRequest,
             $1.DisplayVideo360AdvertiserLink>(
         'GetDisplayVideo360AdvertiserLink',
@@ -2466,6 +2848,15 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
             $0.FetchAutomatedGa4ConfigurationOptOutRequest.fromBuffer(value),
         ($0.FetchAutomatedGa4ConfigurationOptOutResponse value) =>
             value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateBigQueryLinkRequest, $1.BigQueryLink>(
+            'CreateBigQueryLink',
+            createBigQueryLink_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateBigQueryLinkRequest.fromBuffer(value),
+            ($1.BigQueryLink value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetBigQueryLinkRequest, $1.BigQueryLink>(
         'GetBigQueryLink',
         getBigQueryLink_Pre,
@@ -2483,6 +2874,23 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListBigQueryLinksRequest.fromBuffer(value),
         ($0.ListBigQueryLinksResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteBigQueryLinkRequest, $2.Empty>(
+        'DeleteBigQueryLink',
+        deleteBigQueryLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteBigQueryLinkRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.UpdateBigQueryLinkRequest, $1.BigQueryLink>(
+            'UpdateBigQueryLink',
+            updateBigQueryLink_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.UpdateBigQueryLinkRequest.fromBuffer(value),
+            ($1.BigQueryLink value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetEnhancedMeasurementSettingsRequest,
             $1.EnhancedMeasurementSettings>(
         'GetEnhancedMeasurementSettings',
@@ -2613,6 +3021,221 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.DeleteEventCreateRuleRequest.fromBuffer(value),
         ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetEventEditRuleRequest, $6.EventEditRule>(
+            'GetEventEditRule',
+            getEventEditRule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetEventEditRuleRequest.fromBuffer(value),
+            ($6.EventEditRule value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListEventEditRulesRequest,
+            $0.ListEventEditRulesResponse>(
+        'ListEventEditRules',
+        listEventEditRules_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListEventEditRulesRequest.fromBuffer(value),
+        ($0.ListEventEditRulesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateEventEditRuleRequest, $6.EventEditRule>(
+            'CreateEventEditRule',
+            createEventEditRule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateEventEditRuleRequest.fromBuffer(value),
+            ($6.EventEditRule value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.UpdateEventEditRuleRequest, $6.EventEditRule>(
+            'UpdateEventEditRule',
+            updateEventEditRule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.UpdateEventEditRuleRequest.fromBuffer(value),
+            ($6.EventEditRule value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteEventEditRuleRequest, $2.Empty>(
+        'DeleteEventEditRule',
+        deleteEventEditRule_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteEventEditRuleRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ReorderEventEditRulesRequest, $2.Empty>(
+        'ReorderEventEditRules',
+        reorderEventEditRules_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ReorderEventEditRulesRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateDataRedactionSettingsRequest,
+            $1.DataRedactionSettings>(
+        'UpdateDataRedactionSettings',
+        updateDataRedactionSettings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateDataRedactionSettingsRequest.fromBuffer(value),
+        ($1.DataRedactionSettings value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetDataRedactionSettingsRequest,
+            $1.DataRedactionSettings>(
+        'GetDataRedactionSettings',
+        getDataRedactionSettings_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetDataRedactionSettingsRequest.fromBuffer(value),
+        ($1.DataRedactionSettings value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetCalculatedMetricRequest, $1.CalculatedMetric>(
+            'GetCalculatedMetric',
+            getCalculatedMetric_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetCalculatedMetricRequest.fromBuffer(value),
+            ($1.CalculatedMetric value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateCalculatedMetricRequest,
+            $1.CalculatedMetric>(
+        'CreateCalculatedMetric',
+        createCalculatedMetric_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateCalculatedMetricRequest.fromBuffer(value),
+        ($1.CalculatedMetric value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListCalculatedMetricsRequest,
+            $0.ListCalculatedMetricsResponse>(
+        'ListCalculatedMetrics',
+        listCalculatedMetrics_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListCalculatedMetricsRequest.fromBuffer(value),
+        ($0.ListCalculatedMetricsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateCalculatedMetricRequest,
+            $1.CalculatedMetric>(
+        'UpdateCalculatedMetric',
+        updateCalculatedMetric_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateCalculatedMetricRequest.fromBuffer(value),
+        ($1.CalculatedMetric value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteCalculatedMetricRequest, $2.Empty>(
+        'DeleteCalculatedMetric',
+        deleteCalculatedMetric_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteCalculatedMetricRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateRollupPropertyRequest,
+            $0.CreateRollupPropertyResponse>(
+        'CreateRollupProperty',
+        createRollupProperty_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateRollupPropertyRequest.fromBuffer(value),
+        ($0.CreateRollupPropertyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetRollupPropertySourceLinkRequest,
+            $1.RollupPropertySourceLink>(
+        'GetRollupPropertySourceLink',
+        getRollupPropertySourceLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetRollupPropertySourceLinkRequest.fromBuffer(value),
+        ($1.RollupPropertySourceLink value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRollupPropertySourceLinksRequest,
+            $0.ListRollupPropertySourceLinksResponse>(
+        'ListRollupPropertySourceLinks',
+        listRollupPropertySourceLinks_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListRollupPropertySourceLinksRequest.fromBuffer(value),
+        ($0.ListRollupPropertySourceLinksResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateRollupPropertySourceLinkRequest,
+            $1.RollupPropertySourceLink>(
+        'CreateRollupPropertySourceLink',
+        createRollupPropertySourceLink_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateRollupPropertySourceLinkRequest.fromBuffer(value),
+        ($1.RollupPropertySourceLink value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.DeleteRollupPropertySourceLinkRequest, $2.Empty>(
+            'DeleteRollupPropertySourceLink',
+            deleteRollupPropertySourceLink_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.DeleteRollupPropertySourceLinkRequest.fromBuffer(value),
+            ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ProvisionSubpropertyRequest,
+            $0.ProvisionSubpropertyResponse>(
+        'ProvisionSubproperty',
+        provisionSubproperty_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ProvisionSubpropertyRequest.fromBuffer(value),
+        ($0.ProvisionSubpropertyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateSubpropertyEventFilterRequest,
+            $7.SubpropertyEventFilter>(
+        'CreateSubpropertyEventFilter',
+        createSubpropertyEventFilter_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateSubpropertyEventFilterRequest.fromBuffer(value),
+        ($7.SubpropertyEventFilter value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSubpropertyEventFilterRequest,
+            $7.SubpropertyEventFilter>(
+        'GetSubpropertyEventFilter',
+        getSubpropertyEventFilter_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSubpropertyEventFilterRequest.fromBuffer(value),
+        ($7.SubpropertyEventFilter value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListSubpropertyEventFiltersRequest,
+            $0.ListSubpropertyEventFiltersResponse>(
+        'ListSubpropertyEventFilters',
+        listSubpropertyEventFilters_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListSubpropertyEventFiltersRequest.fromBuffer(value),
+        ($0.ListSubpropertyEventFiltersResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateSubpropertyEventFilterRequest,
+            $7.SubpropertyEventFilter>(
+        'UpdateSubpropertyEventFilter',
+        updateSubpropertyEventFilter_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateSubpropertyEventFilterRequest.fromBuffer(value),
+        ($7.SubpropertyEventFilter value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.DeleteSubpropertyEventFilterRequest, $2.Empty>(
+            'DeleteSubpropertyEventFilter',
+            deleteSubpropertyEventFilter_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.DeleteSubpropertyEventFilterRequest.fromBuffer(value),
+            ($2.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Account> getAccount_Pre($grpc.ServiceCall call,
@@ -2672,61 +3295,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
   $async.Future<$1.Property> updateProperty_Pre($grpc.ServiceCall call,
       $async.Future<$0.UpdatePropertyRequest> request) async {
     return updateProperty(call, await request);
-  }
-
-  $async.Future<$1.UserLink> getUserLink_Pre($grpc.ServiceCall call,
-      $async.Future<$0.GetUserLinkRequest> request) async {
-    return getUserLink(call, await request);
-  }
-
-  $async.Future<$0.BatchGetUserLinksResponse> batchGetUserLinks_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.BatchGetUserLinksRequest> request) async {
-    return batchGetUserLinks(call, await request);
-  }
-
-  $async.Future<$0.ListUserLinksResponse> listUserLinks_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.ListUserLinksRequest> request) async {
-    return listUserLinks(call, await request);
-  }
-
-  $async.Future<$0.AuditUserLinksResponse> auditUserLinks_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.AuditUserLinksRequest> request) async {
-    return auditUserLinks(call, await request);
-  }
-
-  $async.Future<$1.UserLink> createUserLink_Pre($grpc.ServiceCall call,
-      $async.Future<$0.CreateUserLinkRequest> request) async {
-    return createUserLink(call, await request);
-  }
-
-  $async.Future<$0.BatchCreateUserLinksResponse> batchCreateUserLinks_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.BatchCreateUserLinksRequest> request) async {
-    return batchCreateUserLinks(call, await request);
-  }
-
-  $async.Future<$1.UserLink> updateUserLink_Pre($grpc.ServiceCall call,
-      $async.Future<$0.UpdateUserLinkRequest> request) async {
-    return updateUserLink(call, await request);
-  }
-
-  $async.Future<$0.BatchUpdateUserLinksResponse> batchUpdateUserLinks_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.BatchUpdateUserLinksRequest> request) async {
-    return batchUpdateUserLinks(call, await request);
-  }
-
-  $async.Future<$2.Empty> deleteUserLink_Pre($grpc.ServiceCall call,
-      $async.Future<$0.DeleteUserLinkRequest> request) async {
-    return deleteUserLink(call, await request);
-  }
-
-  $async.Future<$2.Empty> batchDeleteUserLinks_Pre($grpc.ServiceCall call,
-      $async.Future<$0.BatchDeleteUserLinksRequest> request) async {
-    return batchDeleteUserLinks(call, await request);
   }
 
   $async.Future<$1.FirebaseLink> createFirebaseLink_Pre($grpc.ServiceCall call,
@@ -2823,6 +3391,45 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return acknowledgeUserDataCollection(call, await request);
   }
 
+  $async.Future<$1.SKAdNetworkConversionValueSchema>
+      getSKAdNetworkConversionValueSchema_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.GetSKAdNetworkConversionValueSchemaRequest>
+              request) async {
+    return getSKAdNetworkConversionValueSchema(call, await request);
+  }
+
+  $async.Future<$1.SKAdNetworkConversionValueSchema>
+      createSKAdNetworkConversionValueSchema_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.CreateSKAdNetworkConversionValueSchemaRequest>
+              request) async {
+    return createSKAdNetworkConversionValueSchema(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteSKAdNetworkConversionValueSchema_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.DeleteSKAdNetworkConversionValueSchemaRequest>
+          request) async {
+    return deleteSKAdNetworkConversionValueSchema(call, await request);
+  }
+
+  $async.Future<$1.SKAdNetworkConversionValueSchema>
+      updateSKAdNetworkConversionValueSchema_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.UpdateSKAdNetworkConversionValueSchemaRequest>
+              request) async {
+    return updateSKAdNetworkConversionValueSchema(call, await request);
+  }
+
+  $async.Future<$0.ListSKAdNetworkConversionValueSchemasResponse>
+      listSKAdNetworkConversionValueSchemas_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.ListSKAdNetworkConversionValueSchemasRequest>
+              request) async {
+    return listSKAdNetworkConversionValueSchemas(call, await request);
+  }
+
   $async.Future<$0.SearchChangeHistoryEventsResponse>
       searchChangeHistoryEvents_Pre($grpc.ServiceCall call,
           $async.Future<$0.SearchChangeHistoryEventsRequest> request) async {
@@ -2847,6 +3454,12 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return createConversionEvent(call, await request);
   }
 
+  $async.Future<$1.ConversionEvent> updateConversionEvent_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateConversionEventRequest> request) async {
+    return updateConversionEvent(call, await request);
+  }
+
   $async.Future<$1.ConversionEvent> getConversionEvent_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetConversionEventRequest> request) async {
@@ -2862,6 +3475,32 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call,
       $async.Future<$0.ListConversionEventsRequest> request) async {
     return listConversionEvents(call, await request);
+  }
+
+  $async.Future<$1.KeyEvent> createKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateKeyEventRequest> request) async {
+    return createKeyEvent(call, await request);
+  }
+
+  $async.Future<$1.KeyEvent> updateKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateKeyEventRequest> request) async {
+    return updateKeyEvent(call, await request);
+  }
+
+  $async.Future<$1.KeyEvent> getKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetKeyEventRequest> request) async {
+    return getKeyEvent(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteKeyEventRequest> request) async {
+    return deleteKeyEvent(call, await request);
+  }
+
+  $async.Future<$0.ListKeyEventsResponse> listKeyEvents_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListKeyEventsRequest> request) async {
+    return listKeyEvents(call, await request);
   }
 
   $async.Future<$1.DisplayVideo360AdvertiserLink>
@@ -3238,6 +3877,11 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return fetchAutomatedGa4ConfigurationOptOut(call, await request);
   }
 
+  $async.Future<$1.BigQueryLink> createBigQueryLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateBigQueryLinkRequest> request) async {
+    return createBigQueryLink(call, await request);
+  }
+
   $async.Future<$1.BigQueryLink> getBigQueryLink_Pre($grpc.ServiceCall call,
       $async.Future<$0.GetBigQueryLinkRequest> request) async {
     return getBigQueryLink(call, await request);
@@ -3247,6 +3891,16 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call,
       $async.Future<$0.ListBigQueryLinksRequest> request) async {
     return listBigQueryLinks(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteBigQueryLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteBigQueryLinkRequest> request) async {
+    return deleteBigQueryLink(call, await request);
+  }
+
+  $async.Future<$1.BigQueryLink> updateBigQueryLink_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateBigQueryLinkRequest> request) async {
+    return updateBigQueryLink(call, await request);
   }
 
   $async.Future<$1.EnhancedMeasurementSettings>
@@ -3338,6 +3992,148 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return deleteEventCreateRule(call, await request);
   }
 
+  $async.Future<$6.EventEditRule> getEventEditRule_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetEventEditRuleRequest> request) async {
+    return getEventEditRule(call, await request);
+  }
+
+  $async.Future<$0.ListEventEditRulesResponse> listEventEditRules_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListEventEditRulesRequest> request) async {
+    return listEventEditRules(call, await request);
+  }
+
+  $async.Future<$6.EventEditRule> createEventEditRule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateEventEditRuleRequest> request) async {
+    return createEventEditRule(call, await request);
+  }
+
+  $async.Future<$6.EventEditRule> updateEventEditRule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateEventEditRuleRequest> request) async {
+    return updateEventEditRule(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteEventEditRule_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteEventEditRuleRequest> request) async {
+    return deleteEventEditRule(call, await request);
+  }
+
+  $async.Future<$2.Empty> reorderEventEditRules_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ReorderEventEditRulesRequest> request) async {
+    return reorderEventEditRules(call, await request);
+  }
+
+  $async.Future<$1.DataRedactionSettings> updateDataRedactionSettings_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateDataRedactionSettingsRequest> request) async {
+    return updateDataRedactionSettings(call, await request);
+  }
+
+  $async.Future<$1.DataRedactionSettings> getDataRedactionSettings_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetDataRedactionSettingsRequest> request) async {
+    return getDataRedactionSettings(call, await request);
+  }
+
+  $async.Future<$1.CalculatedMetric> getCalculatedMetric_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetCalculatedMetricRequest> request) async {
+    return getCalculatedMetric(call, await request);
+  }
+
+  $async.Future<$1.CalculatedMetric> createCalculatedMetric_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateCalculatedMetricRequest> request) async {
+    return createCalculatedMetric(call, await request);
+  }
+
+  $async.Future<$0.ListCalculatedMetricsResponse> listCalculatedMetrics_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListCalculatedMetricsRequest> request) async {
+    return listCalculatedMetrics(call, await request);
+  }
+
+  $async.Future<$1.CalculatedMetric> updateCalculatedMetric_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateCalculatedMetricRequest> request) async {
+    return updateCalculatedMetric(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteCalculatedMetric_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteCalculatedMetricRequest> request) async {
+    return deleteCalculatedMetric(call, await request);
+  }
+
+  $async.Future<$0.CreateRollupPropertyResponse> createRollupProperty_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateRollupPropertyRequest> request) async {
+    return createRollupProperty(call, await request);
+  }
+
+  $async.Future<$1.RollupPropertySourceLink> getRollupPropertySourceLink_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetRollupPropertySourceLinkRequest> request) async {
+    return getRollupPropertySourceLink(call, await request);
+  }
+
+  $async.Future<$0.ListRollupPropertySourceLinksResponse>
+      listRollupPropertySourceLinks_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$0.ListRollupPropertySourceLinksRequest>
+              request) async {
+    return listRollupPropertySourceLinks(call, await request);
+  }
+
+  $async.Future<$1.RollupPropertySourceLink> createRollupPropertySourceLink_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateRollupPropertySourceLinkRequest> request) async {
+    return createRollupPropertySourceLink(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteRollupPropertySourceLink_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.DeleteRollupPropertySourceLinkRequest> request) async {
+    return deleteRollupPropertySourceLink(call, await request);
+  }
+
+  $async.Future<$0.ProvisionSubpropertyResponse> provisionSubproperty_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ProvisionSubpropertyRequest> request) async {
+    return provisionSubproperty(call, await request);
+  }
+
+  $async.Future<$7.SubpropertyEventFilter> createSubpropertyEventFilter_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateSubpropertyEventFilterRequest> request) async {
+    return createSubpropertyEventFilter(call, await request);
+  }
+
+  $async.Future<$7.SubpropertyEventFilter> getSubpropertyEventFilter_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetSubpropertyEventFilterRequest> request) async {
+    return getSubpropertyEventFilter(call, await request);
+  }
+
+  $async.Future<$0.ListSubpropertyEventFiltersResponse>
+      listSubpropertyEventFilters_Pre($grpc.ServiceCall call,
+          $async.Future<$0.ListSubpropertyEventFiltersRequest> request) async {
+    return listSubpropertyEventFilters(call, await request);
+  }
+
+  $async.Future<$7.SubpropertyEventFilter> updateSubpropertyEventFilter_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateSubpropertyEventFilterRequest> request) async {
+    return updateSubpropertyEventFilter(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteSubpropertyEventFilter_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.DeleteSubpropertyEventFilterRequest> request) async {
+    return deleteSubpropertyEventFilter(call, await request);
+  }
+
   $async.Future<$1.Account> getAccount(
       $grpc.ServiceCall call, $0.GetAccountRequest request);
   $async.Future<$0.ListAccountsResponse> listAccounts(
@@ -3360,26 +4156,6 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.DeletePropertyRequest request);
   $async.Future<$1.Property> updateProperty(
       $grpc.ServiceCall call, $0.UpdatePropertyRequest request);
-  $async.Future<$1.UserLink> getUserLink(
-      $grpc.ServiceCall call, $0.GetUserLinkRequest request);
-  $async.Future<$0.BatchGetUserLinksResponse> batchGetUserLinks(
-      $grpc.ServiceCall call, $0.BatchGetUserLinksRequest request);
-  $async.Future<$0.ListUserLinksResponse> listUserLinks(
-      $grpc.ServiceCall call, $0.ListUserLinksRequest request);
-  $async.Future<$0.AuditUserLinksResponse> auditUserLinks(
-      $grpc.ServiceCall call, $0.AuditUserLinksRequest request);
-  $async.Future<$1.UserLink> createUserLink(
-      $grpc.ServiceCall call, $0.CreateUserLinkRequest request);
-  $async.Future<$0.BatchCreateUserLinksResponse> batchCreateUserLinks(
-      $grpc.ServiceCall call, $0.BatchCreateUserLinksRequest request);
-  $async.Future<$1.UserLink> updateUserLink(
-      $grpc.ServiceCall call, $0.UpdateUserLinkRequest request);
-  $async.Future<$0.BatchUpdateUserLinksResponse> batchUpdateUserLinks(
-      $grpc.ServiceCall call, $0.BatchUpdateUserLinksRequest request);
-  $async.Future<$2.Empty> deleteUserLink(
-      $grpc.ServiceCall call, $0.DeleteUserLinkRequest request);
-  $async.Future<$2.Empty> batchDeleteUserLinks(
-      $grpc.ServiceCall call, $0.BatchDeleteUserLinksRequest request);
   $async.Future<$1.FirebaseLink> createFirebaseLink(
       $grpc.ServiceCall call, $0.CreateFirebaseLinkRequest request);
   $async.Future<$2.Empty> deleteFirebaseLink(
@@ -3415,6 +4191,21 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
   $async.Future<$0.AcknowledgeUserDataCollectionResponse>
       acknowledgeUserDataCollection($grpc.ServiceCall call,
           $0.AcknowledgeUserDataCollectionRequest request);
+  $async.Future<$1.SKAdNetworkConversionValueSchema>
+      getSKAdNetworkConversionValueSchema($grpc.ServiceCall call,
+          $0.GetSKAdNetworkConversionValueSchemaRequest request);
+  $async.Future<$1.SKAdNetworkConversionValueSchema>
+      createSKAdNetworkConversionValueSchema($grpc.ServiceCall call,
+          $0.CreateSKAdNetworkConversionValueSchemaRequest request);
+  $async.Future<$2.Empty> deleteSKAdNetworkConversionValueSchema(
+      $grpc.ServiceCall call,
+      $0.DeleteSKAdNetworkConversionValueSchemaRequest request);
+  $async.Future<$1.SKAdNetworkConversionValueSchema>
+      updateSKAdNetworkConversionValueSchema($grpc.ServiceCall call,
+          $0.UpdateSKAdNetworkConversionValueSchemaRequest request);
+  $async.Future<$0.ListSKAdNetworkConversionValueSchemasResponse>
+      listSKAdNetworkConversionValueSchemas($grpc.ServiceCall call,
+          $0.ListSKAdNetworkConversionValueSchemasRequest request);
   $async.Future<$0.SearchChangeHistoryEventsResponse> searchChangeHistoryEvents(
       $grpc.ServiceCall call, $0.SearchChangeHistoryEventsRequest request);
   $async.Future<$1.GoogleSignalsSettings> getGoogleSignalsSettings(
@@ -3423,12 +4214,24 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.UpdateGoogleSignalsSettingsRequest request);
   $async.Future<$1.ConversionEvent> createConversionEvent(
       $grpc.ServiceCall call, $0.CreateConversionEventRequest request);
+  $async.Future<$1.ConversionEvent> updateConversionEvent(
+      $grpc.ServiceCall call, $0.UpdateConversionEventRequest request);
   $async.Future<$1.ConversionEvent> getConversionEvent(
       $grpc.ServiceCall call, $0.GetConversionEventRequest request);
   $async.Future<$2.Empty> deleteConversionEvent(
       $grpc.ServiceCall call, $0.DeleteConversionEventRequest request);
   $async.Future<$0.ListConversionEventsResponse> listConversionEvents(
       $grpc.ServiceCall call, $0.ListConversionEventsRequest request);
+  $async.Future<$1.KeyEvent> createKeyEvent(
+      $grpc.ServiceCall call, $0.CreateKeyEventRequest request);
+  $async.Future<$1.KeyEvent> updateKeyEvent(
+      $grpc.ServiceCall call, $0.UpdateKeyEventRequest request);
+  $async.Future<$1.KeyEvent> getKeyEvent(
+      $grpc.ServiceCall call, $0.GetKeyEventRequest request);
+  $async.Future<$2.Empty> deleteKeyEvent(
+      $grpc.ServiceCall call, $0.DeleteKeyEventRequest request);
+  $async.Future<$0.ListKeyEventsResponse> listKeyEvents(
+      $grpc.ServiceCall call, $0.ListKeyEventsRequest request);
   $async.Future<$1.DisplayVideo360AdvertiserLink>
       getDisplayVideo360AdvertiserLink($grpc.ServiceCall call,
           $0.GetDisplayVideo360AdvertiserLinkRequest request);
@@ -3566,10 +4369,16 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
   $async.Future<$0.FetchAutomatedGa4ConfigurationOptOutResponse>
       fetchAutomatedGa4ConfigurationOptOut($grpc.ServiceCall call,
           $0.FetchAutomatedGa4ConfigurationOptOutRequest request);
+  $async.Future<$1.BigQueryLink> createBigQueryLink(
+      $grpc.ServiceCall call, $0.CreateBigQueryLinkRequest request);
   $async.Future<$1.BigQueryLink> getBigQueryLink(
       $grpc.ServiceCall call, $0.GetBigQueryLinkRequest request);
   $async.Future<$0.ListBigQueryLinksResponse> listBigQueryLinks(
       $grpc.ServiceCall call, $0.ListBigQueryLinksRequest request);
+  $async.Future<$2.Empty> deleteBigQueryLink(
+      $grpc.ServiceCall call, $0.DeleteBigQueryLinkRequest request);
+  $async.Future<$1.BigQueryLink> updateBigQueryLink(
+      $grpc.ServiceCall call, $0.UpdateBigQueryLinkRequest request);
   $async.Future<$1.EnhancedMeasurementSettings> getEnhancedMeasurementSettings(
       $grpc.ServiceCall call, $0.GetEnhancedMeasurementSettingsRequest request);
   $async.Future<$1.EnhancedMeasurementSettings>
@@ -3601,4 +4410,54 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.UpdateEventCreateRuleRequest request);
   $async.Future<$2.Empty> deleteEventCreateRule(
       $grpc.ServiceCall call, $0.DeleteEventCreateRuleRequest request);
+  $async.Future<$6.EventEditRule> getEventEditRule(
+      $grpc.ServiceCall call, $0.GetEventEditRuleRequest request);
+  $async.Future<$0.ListEventEditRulesResponse> listEventEditRules(
+      $grpc.ServiceCall call, $0.ListEventEditRulesRequest request);
+  $async.Future<$6.EventEditRule> createEventEditRule(
+      $grpc.ServiceCall call, $0.CreateEventEditRuleRequest request);
+  $async.Future<$6.EventEditRule> updateEventEditRule(
+      $grpc.ServiceCall call, $0.UpdateEventEditRuleRequest request);
+  $async.Future<$2.Empty> deleteEventEditRule(
+      $grpc.ServiceCall call, $0.DeleteEventEditRuleRequest request);
+  $async.Future<$2.Empty> reorderEventEditRules(
+      $grpc.ServiceCall call, $0.ReorderEventEditRulesRequest request);
+  $async.Future<$1.DataRedactionSettings> updateDataRedactionSettings(
+      $grpc.ServiceCall call, $0.UpdateDataRedactionSettingsRequest request);
+  $async.Future<$1.DataRedactionSettings> getDataRedactionSettings(
+      $grpc.ServiceCall call, $0.GetDataRedactionSettingsRequest request);
+  $async.Future<$1.CalculatedMetric> getCalculatedMetric(
+      $grpc.ServiceCall call, $0.GetCalculatedMetricRequest request);
+  $async.Future<$1.CalculatedMetric> createCalculatedMetric(
+      $grpc.ServiceCall call, $0.CreateCalculatedMetricRequest request);
+  $async.Future<$0.ListCalculatedMetricsResponse> listCalculatedMetrics(
+      $grpc.ServiceCall call, $0.ListCalculatedMetricsRequest request);
+  $async.Future<$1.CalculatedMetric> updateCalculatedMetric(
+      $grpc.ServiceCall call, $0.UpdateCalculatedMetricRequest request);
+  $async.Future<$2.Empty> deleteCalculatedMetric(
+      $grpc.ServiceCall call, $0.DeleteCalculatedMetricRequest request);
+  $async.Future<$0.CreateRollupPropertyResponse> createRollupProperty(
+      $grpc.ServiceCall call, $0.CreateRollupPropertyRequest request);
+  $async.Future<$1.RollupPropertySourceLink> getRollupPropertySourceLink(
+      $grpc.ServiceCall call, $0.GetRollupPropertySourceLinkRequest request);
+  $async.Future<$0.ListRollupPropertySourceLinksResponse>
+      listRollupPropertySourceLinks($grpc.ServiceCall call,
+          $0.ListRollupPropertySourceLinksRequest request);
+  $async.Future<$1.RollupPropertySourceLink> createRollupPropertySourceLink(
+      $grpc.ServiceCall call, $0.CreateRollupPropertySourceLinkRequest request);
+  $async.Future<$2.Empty> deleteRollupPropertySourceLink(
+      $grpc.ServiceCall call, $0.DeleteRollupPropertySourceLinkRequest request);
+  $async.Future<$0.ProvisionSubpropertyResponse> provisionSubproperty(
+      $grpc.ServiceCall call, $0.ProvisionSubpropertyRequest request);
+  $async.Future<$7.SubpropertyEventFilter> createSubpropertyEventFilter(
+      $grpc.ServiceCall call, $0.CreateSubpropertyEventFilterRequest request);
+  $async.Future<$7.SubpropertyEventFilter> getSubpropertyEventFilter(
+      $grpc.ServiceCall call, $0.GetSubpropertyEventFilterRequest request);
+  $async.Future<$0.ListSubpropertyEventFiltersResponse>
+      listSubpropertyEventFilters($grpc.ServiceCall call,
+          $0.ListSubpropertyEventFiltersRequest request);
+  $async.Future<$7.SubpropertyEventFilter> updateSubpropertyEventFilter(
+      $grpc.ServiceCall call, $0.UpdateSubpropertyEventFilterRequest request);
+  $async.Future<$2.Empty> deleteSubpropertyEventFilter(
+      $grpc.ServiceCall call, $0.DeleteSubpropertyEventFilterRequest request);
 }

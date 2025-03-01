@@ -1,30 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/conversation/prompt/content/media.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Media type of this response.
 class Media_MediaType extends $pb.ProtobufEnum {
-  static const Media_MediaType MEDIA_TYPE_UNSPECIFIED = Media_MediaType._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MEDIA_TYPE_UNSPECIFIED');
-  static const Media_MediaType AUDIO = Media_MediaType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'AUDIO');
-  static const Media_MediaType MEDIA_STATUS_ACK = Media_MediaType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MEDIA_STATUS_ACK');
+  static const Media_MediaType MEDIA_TYPE_UNSPECIFIED =
+      Media_MediaType._(0, _omitEnumNames ? '' : 'MEDIA_TYPE_UNSPECIFIED');
+  static const Media_MediaType AUDIO =
+      Media_MediaType._(1, _omitEnumNames ? '' : 'AUDIO');
+  static const Media_MediaType MEDIA_STATUS_ACK =
+      Media_MediaType._(2, _omitEnumNames ? '' : 'MEDIA_STATUS_ACK');
 
   static const $core.List<Media_MediaType> values = <Media_MediaType>[
     MEDIA_TYPE_UNSPECIFIED,
@@ -39,25 +35,15 @@ class Media_MediaType extends $pb.ProtobufEnum {
   const Media_MediaType._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Optional media control types the media response can support
 class Media_OptionalMediaControls extends $pb.ProtobufEnum {
   static const Media_OptionalMediaControls OPTIONAL_MEDIA_CONTROLS_UNSPECIFIED =
       Media_OptionalMediaControls._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OPTIONAL_MEDIA_CONTROLS_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'OPTIONAL_MEDIA_CONTROLS_UNSPECIFIED');
   static const Media_OptionalMediaControls PAUSED =
-      Media_OptionalMediaControls._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PAUSED');
+      Media_OptionalMediaControls._(1, _omitEnumNames ? '' : 'PAUSED');
   static const Media_OptionalMediaControls STOPPED =
-      Media_OptionalMediaControls._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STOPPED');
+      Media_OptionalMediaControls._(2, _omitEnumNames ? '' : 'STOPPED');
 
   static const $core.List<Media_OptionalMediaControls> values =
       <Media_OptionalMediaControls>[
@@ -74,3 +60,5 @@ class Media_OptionalMediaControls extends $pb.ProtobufEnum {
   const Media_OptionalMediaControls._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

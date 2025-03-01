@@ -1,26 +1,33 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/resultstore_upload.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'resultstore_upload.pb.dart' as $0;
-import 'invocation.pb.dart' as $1;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../protobuf/empty.pb.dart' as $2;
-import 'target.pb.dart' as $3;
-import 'configured_target.pb.dart' as $4;
 import 'action.pb.dart' as $5;
 import 'configuration.pb.dart' as $6;
+import 'configured_target.pb.dart' as $4;
 import 'file_set.pb.dart' as $7;
+import 'invocation.pb.dart' as $1;
+import 'resultstore_upload.pb.dart' as $0;
+import 'target.pb.dart' as $3;
 import 'upload_metadata.pb.dart' as $8;
+
 export 'resultstore_upload.pb.dart';
 
+@$pb.GrpcServiceName('google.devtools.resultstore.v2.ResultStoreUpload')
 class ResultStoreUploadClient extends $grpc.Client {
   static final _$createInvocation =
       $grpc.ClientMethod<$0.CreateInvocationRequest, $1.Invocation>(
@@ -296,6 +303,7 @@ class ResultStoreUploadClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.devtools.resultstore.v2.ResultStoreUpload')
 abstract class ResultStoreUploadServiceBase extends $grpc.Service {
   $core.String get $name => 'google.devtools.resultstore.v2.ResultStoreUpload';
 

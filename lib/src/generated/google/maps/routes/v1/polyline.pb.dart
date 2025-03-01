@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routes/v1/polyline.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -15,7 +19,29 @@ export 'polyline.pbenum.dart';
 
 enum Polyline_PolylineType { encodedPolyline, geoJsonLinestring, notSet }
 
+/// Encapsulates an encoded polyline.
 class Polyline extends $pb.GeneratedMessage {
+  factory Polyline({
+    $core.String? encodedPolyline,
+    $0.Struct? geoJsonLinestring,
+  }) {
+    final $result = create();
+    if (encodedPolyline != null) {
+      $result.encodedPolyline = encodedPolyline;
+    }
+    if (geoJsonLinestring != null) {
+      $result.geoJsonLinestring = geoJsonLinestring;
+    }
+    return $result;
+  }
+  Polyline._() : super();
+  factory Polyline.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Polyline.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Polyline_PolylineType>
       _Polyline_PolylineTypeByTag = {
     1: Polyline_PolylineType.encodedPolyline,
@@ -23,48 +49,16 @@ class Polyline extends $pb.GeneratedMessage {
     0: Polyline_PolylineType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Polyline',
+      _omitMessageNames ? '' : 'Polyline',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'encodedPolyline')
-    ..aOM<$0.Struct>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'geoJsonLinestring',
+    ..aOS(1, _omitFieldNames ? '' : 'encodedPolyline')
+    ..aOM<$0.Struct>(2, _omitFieldNames ? '' : 'geoJsonLinestring',
         subBuilder: $0.Struct.create)
     ..hasRequiredFields = false;
 
-  Polyline._() : super();
-  factory Polyline({
-    $core.String? encodedPolyline,
-    $0.Struct? geoJsonLinestring,
-  }) {
-    final _result = create();
-    if (encodedPolyline != null) {
-      _result.encodedPolyline = encodedPolyline;
-    }
-    if (geoJsonLinestring != null) {
-      _result.geoJsonLinestring = geoJsonLinestring;
-    }
-    return _result;
-  }
-  factory Polyline.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Polyline.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -73,9 +67,10 @@ class Polyline extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Polyline copyWith(void Function(Polyline) updates) =>
-      super.copyWith((message) => updates(message as Polyline))
-          as Polyline; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Polyline)) as Polyline;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Polyline create() => Polyline._();
   Polyline createEmptyInstance() => create();
@@ -89,6 +84,8 @@ class Polyline extends $pb.GeneratedMessage {
       _Polyline_PolylineTypeByTag[$_whichOneof(0)]!;
   void clearPolylineType() => clearField($_whichOneof(0));
 
+  /// The string encoding of the polyline using the [polyline encoding
+  /// algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).
   @$pb.TagNumber(1)
   $core.String get encodedPolyline => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -101,6 +98,8 @@ class Polyline extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEncodedPolyline() => clearField(1);
 
+  /// Specifies a polyline using the [GeoJSON LineString
+  /// format](https://tools.ietf.org/html/rfc7946#section-3.1.4).
   @$pb.TagNumber(2)
   $0.Struct get geoJsonLinestring => $_getN(1);
   @$pb.TagNumber(2)
@@ -115,3 +114,7 @@ class Polyline extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Struct ensureGeoJsonLinestring() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

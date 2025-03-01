@@ -1,18 +1,25 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firebase/fcm/connection/v1alpha1/connection_api.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'connection_api.pb.dart' as $0;
+
 export 'connection_api.pb.dart';
 
+@$pb.GrpcServiceName('google.firebase.fcm.connection.v1alpha1.ConnectionApi')
 class ConnectionApiClient extends $grpc.Client {
   static final _$connect =
       $grpc.ClientMethod<$0.UpstreamRequest, $0.DownstreamResponse>(
@@ -33,6 +40,7 @@ class ConnectionApiClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.firebase.fcm.connection.v1alpha1.ConnectionApi')
 abstract class ConnectionApiServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.firebase.fcm.connection.v1alpha1.ConnectionApi';

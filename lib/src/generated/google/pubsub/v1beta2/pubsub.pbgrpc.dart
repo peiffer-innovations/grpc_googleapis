@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/pubsub/v1beta2/pubsub.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'pubsub.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../protobuf/empty.pb.dart' as $1;
+import 'pubsub.pb.dart' as $0;
+
 export 'pubsub.pb.dart';
 
+@$pb.GrpcServiceName('google.pubsub.v1beta2.Subscriber')
 class SubscriberClient extends $grpc.Client {
   static final _$createSubscription =
       $grpc.ClientMethod<$0.Subscription, $0.Subscription>(
@@ -108,6 +115,7 @@ class SubscriberClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.pubsub.v1beta2.Subscriber')
 abstract class SubscriberServiceBase extends $grpc.Service {
   $core.String get $name => 'google.pubsub.v1beta2.Subscriber';
 
@@ -236,6 +244,7 @@ abstract class SubscriberServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.ModifyPushConfigRequest request);
 }
 
+@$pb.GrpcServiceName('google.pubsub.v1beta2.Publisher')
 class PublisherClient extends $grpc.Client {
   static final _$createTopic = $grpc.ClientMethod<$0.Topic, $0.Topic>(
       '/google.pubsub.v1beta2.Publisher/CreateTopic',
@@ -308,6 +317,7 @@ class PublisherClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.pubsub.v1beta2.Publisher')
 abstract class PublisherServiceBase extends $grpc.Service {
   $core.String get $name => 'google.pubsub.v1beta2.Publisher';
 

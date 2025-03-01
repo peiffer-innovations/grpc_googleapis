@@ -1,20 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/containeranalysis.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
 import 'containeranalysis.pb.dart' as $2;
+
 export 'containeranalysis.pb.dart';
 
+@$pb.GrpcServiceName(
+    'google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1')
 class ContainerAnalysisV1Beta1Client extends $grpc.Client {
   static final _$setIamPolicy = $grpc.ClientMethod<$0.SetIamPolicyRequest,
           $1.Policy>(
@@ -38,6 +46,11 @@ class ContainerAnalysisV1Beta1Client extends $grpc.Client {
       ($2.GeneratePackagesSummaryRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $2.PackagesSummaryResponse.fromBuffer(value));
+  static final _$exportSBOM = $grpc.ClientMethod<$2.ExportSBOMRequest,
+          $2.ExportSBOMResponse>(
+      '/google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1/ExportSBOM',
+      ($2.ExportSBOMRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.ExportSBOMResponse.fromBuffer(value));
 
   ContainerAnalysisV1Beta1Client($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -66,8 +79,16 @@ class ContainerAnalysisV1Beta1Client extends $grpc.Client {
     return $createUnaryCall(_$generatePackagesSummary, request,
         options: options);
   }
+
+  $grpc.ResponseFuture<$2.ExportSBOMResponse> exportSBOM(
+      $2.ExportSBOMRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$exportSBOM, request, options: options);
+  }
 }
 
+@$pb.GrpcServiceName(
+    'google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1')
 abstract class ContainerAnalysisV1Beta1ServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1';
@@ -107,6 +128,13 @@ abstract class ContainerAnalysisV1Beta1ServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.GeneratePackagesSummaryRequest.fromBuffer(value),
         ($2.PackagesSummaryResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ExportSBOMRequest, $2.ExportSBOMResponse>(
+        'ExportSBOM',
+        exportSBOM_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.ExportSBOMRequest.fromBuffer(value),
+        ($2.ExportSBOMResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Policy> setIamPolicy_Pre($grpc.ServiceCall call,
@@ -131,6 +159,11 @@ abstract class ContainerAnalysisV1Beta1ServiceBase extends $grpc.Service {
     return generatePackagesSummary(call, await request);
   }
 
+  $async.Future<$2.ExportSBOMResponse> exportSBOM_Pre($grpc.ServiceCall call,
+      $async.Future<$2.ExportSBOMRequest> request) async {
+    return exportSBOM(call, await request);
+  }
+
   $async.Future<$1.Policy> setIamPolicy(
       $grpc.ServiceCall call, $0.SetIamPolicyRequest request);
   $async.Future<$1.Policy> getIamPolicy(
@@ -139,4 +172,6 @@ abstract class ContainerAnalysisV1Beta1ServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
   $async.Future<$2.PackagesSummaryResponse> generatePackagesSummary(
       $grpc.ServiceCall call, $2.GeneratePackagesSummaryRequest request);
+  $async.Future<$2.ExportSBOMResponse> exportSBOM(
+      $grpc.ServiceCall call, $2.ExportSBOMRequest request);
 }

@@ -1,19 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/error_group_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'error_group_service.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'common.pb.dart' as $1;
+import 'error_group_service.pb.dart' as $0;
+
 export 'error_group_service.pb.dart';
 
+@$pb.GrpcServiceName(
+    'google.devtools.clouderrorreporting.v1beta1.ErrorGroupService')
 class ErrorGroupServiceClient extends $grpc.Client {
   static final _$getGroup = $grpc.ClientMethod<$0.GetGroupRequest,
           $1.ErrorGroup>(
@@ -42,6 +50,8 @@ class ErrorGroupServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName(
+    'google.devtools.clouderrorreporting.v1beta1.ErrorGroupService')
 abstract class ErrorGroupServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.devtools.clouderrorreporting.v1beta1.ErrorGroupService';

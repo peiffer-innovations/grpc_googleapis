@@ -1,33 +1,32 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routes/v1/compute_custom_routes_response.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// RouteObjective used for the response.
 class ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective
     extends $pb.ProtobufEnum {
   static const ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective
       FALLBACK_ROUTE_OBJECTIVE_UNSPECIFIED =
       ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'FALLBACK_ROUTE_OBJECTIVE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'FALLBACK_ROUTE_OBJECTIVE_UNSPECIFIED');
   static const ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective
       FALLBACK_RATECARD_WITHOUT_TOLL_PRICE_DATA =
       ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'FALLBACK_RATECARD_WITHOUT_TOLL_PRICE_DATA');
+          1, _omitEnumNames ? '' : 'FALLBACK_RATECARD_WITHOUT_TOLL_PRICE_DATA');
 
   static const $core
-          .List<ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective>
+      .List<ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective>
       values =
       <ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective>[
     FALLBACK_ROUTE_OBJECTIVE_UNSPECIFIED,
@@ -44,3 +43,5 @@ class ComputeCustomRoutesResponse_FallbackInfo_FallbackRouteObjective
       $core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

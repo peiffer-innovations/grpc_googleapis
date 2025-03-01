@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/container/v1/cluster_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'cluster_service.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../protobuf/empty.pb.dart' as $1;
+import 'cluster_service.pb.dart' as $0;
+
 export 'cluster_service.pb.dart';
 
+@$pb.GrpcServiceName('google.container.v1.ClusterManager')
 class ClusterManagerClient extends $grpc.Client {
   static final _$listClusters =
       $grpc.ClientMethod<$0.ListClustersRequest, $0.ListClustersResponse>(
@@ -185,6 +192,13 @@ class ClusterManagerClient extends $grpc.Client {
       ($0.ListUsableSubnetworksRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListUsableSubnetworksResponse.fromBuffer(value));
+  static final _$checkAutopilotCompatibility = $grpc.ClientMethod<
+          $0.CheckAutopilotCompatibilityRequest,
+          $0.CheckAutopilotCompatibilityResponse>(
+      '/google.container.v1.ClusterManager/CheckAutopilotCompatibility',
+      ($0.CheckAutopilotCompatibilityRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.CheckAutopilotCompatibilityResponse.fromBuffer(value));
 
   ClusterManagerClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -388,8 +402,16 @@ class ClusterManagerClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listUsableSubnetworks, request, options: options);
   }
+
+  $grpc.ResponseFuture<$0.CheckAutopilotCompatibilityResponse>
+      checkAutopilotCompatibility($0.CheckAutopilotCompatibilityRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$checkAutopilotCompatibility, request,
+        options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.container.v1.ClusterManager')
 abstract class ClusterManagerServiceBase extends $grpc.Service {
   $core.String get $name => 'google.container.v1.ClusterManager';
 
@@ -666,6 +688,16 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListUsableSubnetworksRequest.fromBuffer(value),
         ($0.ListUsableSubnetworksResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CheckAutopilotCompatibilityRequest,
+            $0.CheckAutopilotCompatibilityResponse>(
+        'CheckAutopilotCompatibility',
+        checkAutopilotCompatibility_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CheckAutopilotCompatibilityRequest.fromBuffer(value),
+        ($0.CheckAutopilotCompatibilityResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.ListClustersResponse> listClusters_Pre(
@@ -839,6 +871,12 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
     return listUsableSubnetworks(call, await request);
   }
 
+  $async.Future<$0.CheckAutopilotCompatibilityResponse>
+      checkAutopilotCompatibility_Pre($grpc.ServiceCall call,
+          $async.Future<$0.CheckAutopilotCompatibilityRequest> request) async {
+    return checkAutopilotCompatibility(call, await request);
+  }
+
   $async.Future<$0.ListClustersResponse> listClusters(
       $grpc.ServiceCall call, $0.ListClustersRequest request);
   $async.Future<$0.Cluster> getCluster(
@@ -905,4 +943,7 @@ abstract class ClusterManagerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SetMaintenancePolicyRequest request);
   $async.Future<$0.ListUsableSubnetworksResponse> listUsableSubnetworks(
       $grpc.ServiceCall call, $0.ListUsableSubnetworksRequest request);
+  $async.Future<$0.CheckAutopilotCompatibilityResponse>
+      checkAutopilotCompatibility($grpc.ServiceCall call,
+          $0.CheckAutopilotCompatibilityRequest request);
 }

@@ -1,82 +1,66 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1/field.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'index.pb.dart' as $0;
-
 import 'field.pbenum.dart';
+import 'index.pb.dart' as $0;
 
 export 'field.pbenum.dart';
 
+/// The index configuration for this field.
 class Field_IndexConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.IndexConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<$0.Index>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'indexes',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Index.create)
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'usesAncestorConfig')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ancestorField')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reverting')
-    ..hasRequiredFields = false;
-
-  Field_IndexConfig._() : super();
   factory Field_IndexConfig({
     $core.Iterable<$0.Index>? indexes,
     $core.bool? usesAncestorConfig,
     $core.String? ancestorField,
     $core.bool? reverting,
   }) {
-    final _result = create();
+    final $result = create();
     if (indexes != null) {
-      _result.indexes.addAll(indexes);
+      $result.indexes.addAll(indexes);
     }
     if (usesAncestorConfig != null) {
-      _result.usesAncestorConfig = usesAncestorConfig;
+      $result.usesAncestorConfig = usesAncestorConfig;
     }
     if (ancestorField != null) {
-      _result.ancestorField = ancestorField;
+      $result.ancestorField = ancestorField;
     }
     if (reverting != null) {
-      _result.reverting = reverting;
+      $result.reverting = reverting;
     }
-    return _result;
+    return $result;
   }
+  Field_IndexConfig._() : super();
   factory Field_IndexConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_IndexConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.IndexConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<$0.Index>(1, _omitFieldNames ? '' : 'indexes', $pb.PbFieldType.PM,
+        subBuilder: $0.Index.create)
+    ..aOB(2, _omitFieldNames ? '' : 'usesAncestorConfig')
+    ..aOS(3, _omitFieldNames ? '' : 'ancestorField')
+    ..aOB(4, _omitFieldNames ? '' : 'reverting')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -86,8 +70,10 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_IndexConfig copyWith(void Function(Field_IndexConfig) updates) =>
       super.copyWith((message) => updates(message as Field_IndexConfig))
-          as Field_IndexConfig; // ignore: deprecated_member_use
+          as Field_IndexConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_IndexConfig create() => Field_IndexConfig._();
   Field_IndexConfig createEmptyInstance() => create();
@@ -98,9 +84,13 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_IndexConfig>(create);
   static Field_IndexConfig? _defaultInstance;
 
+  /// The indexes supported for this field.
   @$pb.TagNumber(1)
   $core.List<$0.Index> get indexes => $_getList(0);
 
+  /// Output only. When true, the `Field`'s index configuration is set from the
+  /// configuration specified by the `ancestor_field`.
+  /// When false, the `Field`'s index configuration is defined explicitly.
   @$pb.TagNumber(2)
   $core.bool get usesAncestorConfig => $_getBF(1);
   @$pb.TagNumber(2)
@@ -113,6 +103,10 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUsesAncestorConfig() => clearField(2);
 
+  /// Output only. Specifies the resource name of the `Field` from which this
+  /// field's index configuration is set (when `uses_ancestor_config` is true),
+  /// or from which it *would* be set if this field had no index configuration
+  /// (when `uses_ancestor_config` is false).
   @$pb.TagNumber(3)
   $core.String get ancestorField => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -125,6 +119,11 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearAncestorField() => clearField(3);
 
+  /// Output only
+  /// When true, the `Field`'s index configuration is in the process of being
+  /// reverted. Once complete, the index config will transition to the same
+  /// state as the field specified by `ancestor_field`, at which point
+  /// `uses_ancestor_config` will be `true` and `reverting` will be `false`.
   @$pb.TagNumber(4)
   $core.bool get reverting => $_getBF(3);
   @$pb.TagNumber(4)
@@ -138,43 +137,44 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   void clearReverting() => clearField(4);
 }
 
+///  The TTL (time-to-live) configuration for documents that have this `Field`
+///  set.
+///
+///  Storing a timestamp value into a TTL-enabled field will be treated as
+///  the document's absolute expiration time. Timestamp values in the past
+///  indicate that the document is eligible for immediate expiration. Using any
+///  other data type or leaving the field absent will disable expiration for the
+///  individual document.
 class Field_TtlConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.TtlConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1'),
-      createEmptyInstance: create)
-    ..e<Field_TtlConfig_State>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Field_TtlConfig_State.STATE_UNSPECIFIED,
-        valueOf: Field_TtlConfig_State.valueOf,
-        enumValues: Field_TtlConfig_State.values)
-    ..hasRequiredFields = false;
-
-  Field_TtlConfig._() : super();
   factory Field_TtlConfig({
     Field_TtlConfig_State? state,
   }) {
-    final _result = create();
+    final $result = create();
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
-    return _result;
+    return $result;
   }
+  Field_TtlConfig._() : super();
   factory Field_TtlConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_TtlConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.TtlConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..e<Field_TtlConfig_State>(
+        1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: Field_TtlConfig_State.STATE_UNSPECIFIED,
+        valueOf: Field_TtlConfig_State.valueOf,
+        enumValues: Field_TtlConfig_State.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -184,8 +184,10 @@ class Field_TtlConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_TtlConfig copyWith(void Function(Field_TtlConfig) updates) =>
       super.copyWith((message) => updates(message as Field_TtlConfig))
-          as Field_TtlConfig; // ignore: deprecated_member_use
+          as Field_TtlConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_TtlConfig create() => Field_TtlConfig._();
   Field_TtlConfig createEmptyInstance() => create();
@@ -196,6 +198,7 @@ class Field_TtlConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_TtlConfig>(create);
   static Field_TtlConfig? _defaultInstance;
 
+  /// Output only. The state of the TTL configuration.
   @$pb.TagNumber(1)
   Field_TtlConfig_State get state => $_getN(0);
   @$pb.TagNumber(1)
@@ -209,59 +212,48 @@ class Field_TtlConfig extends $pb.GeneratedMessage {
   void clearState() => clearField(1);
 }
 
+///  Represents a single field in the database.
+///
+///  Fields are grouped by their "Collection Group", which represent all
+///  collections in the database with the same ID.
 class Field extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<Field_IndexConfig>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'indexConfig',
-        subBuilder: Field_IndexConfig.create)
-    ..aOM<Field_TtlConfig>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ttlConfig',
-        subBuilder: Field_TtlConfig.create)
-    ..hasRequiredFields = false;
-
-  Field._() : super();
   factory Field({
     $core.String? name,
     Field_IndexConfig? indexConfig,
     Field_TtlConfig? ttlConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (indexConfig != null) {
-      _result.indexConfig = indexConfig;
+      $result.indexConfig = indexConfig;
     }
     if (ttlConfig != null) {
-      _result.ttlConfig = ttlConfig;
+      $result.ttlConfig = ttlConfig;
     }
-    return _result;
+    return $result;
   }
+  Field._() : super();
   factory Field.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<Field_IndexConfig>(2, _omitFieldNames ? '' : 'indexConfig',
+        subBuilder: Field_IndexConfig.create)
+    ..aOM<Field_TtlConfig>(3, _omitFieldNames ? '' : 'ttlConfig',
+        subBuilder: Field_TtlConfig.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -270,9 +262,10 @@ class Field extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Field copyWith(void Function(Field) updates) =>
-      super.copyWith((message) => updates(message as Field))
-          as Field; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Field)) as Field;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field create() => Field._();
   Field createEmptyInstance() => create();
@@ -282,6 +275,30 @@ class Field extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Field>(create);
   static Field? _defaultInstance;
 
+  ///  Required. A field name of the form:
+  ///  `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}`
+  ///
+  ///  A field path can be a simple field name, e.g. `address` or a path to fields
+  ///  within `map_value` , e.g. `address.city`,
+  ///  or a special field path. The only valid special field is `*`, which
+  ///  represents any field.
+  ///
+  ///  Field paths can be quoted using `` ` `` (backtick). The only character that
+  ///  must be escaped within a quoted field path is the backtick character
+  ///  itself, escaped using a backslash. Special characters in field paths that
+  ///  must be quoted include: `*`, `.`,
+  ///  `` ` `` (backtick), `[`, `]`, as well as any ascii symbolic characters.
+  ///
+  ///  Examples:
+  ///  `` `address.city` `` represents a field named `address.city`, not the map
+  ///  key `city` in the field `address`. `` `*` `` represents a field named `*`,
+  ///  not any field.
+  ///
+  ///  A special `Field` contains the default indexing settings for all fields.
+  ///  This field's resource name is:
+  ///  `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`
+  ///  Indexes defined on this `Field` will be applied to all fields which do not
+  ///  have their own `Field` index configuration.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -294,6 +311,10 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The index configuration for this field. If unset, field indexing will
+  /// revert to the configuration defined by the `ancestor_field`. To
+  /// explicitly remove all indexes for this field, specify an index config
+  /// with an empty list of indexes.
   @$pb.TagNumber(2)
   Field_IndexConfig get indexConfig => $_getN(1);
   @$pb.TagNumber(2)
@@ -308,6 +329,9 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Field_IndexConfig ensureIndexConfig() => $_ensure(1);
 
+  /// The TTL configuration for this `Field`.
+  /// Setting or unsetting this will enable or disable the TTL for
+  /// documents that have this `Field`.
   @$pb.TagNumber(3)
   Field_TtlConfig get ttlConfig => $_getN(2);
   @$pb.TagNumber(3)
@@ -322,3 +346,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Field_TtlConfig ensureTtlConfig() => $_ensure(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

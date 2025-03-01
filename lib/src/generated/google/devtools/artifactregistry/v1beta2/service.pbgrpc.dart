@@ -1,29 +1,37 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/artifactregistry/v1beta2/service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'apt_artifact.pb.dart' as $4;
-import '../../../longrunning/operations.pb.dart' as $2;
-import 'yum_artifact.pb.dart' as $5;
-import 'repository.pb.dart' as $6;
-import 'package.pb.dart' as $7;
-import 'version.pb.dart' as $8;
-import 'file.pb.dart' as $9;
-import 'tag.pb.dart' as $10;
-import '../../../protobuf/empty.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $3;
+import 'apt_artifact.pb.dart' as $4;
+import 'file.pb.dart' as $9;
+import 'package.pb.dart' as $7;
+import 'repository.pb.dart' as $6;
 import 'settings.pb.dart' as $11;
+import 'tag.pb.dart' as $10;
+import 'version.pb.dart' as $8;
+import 'yum_artifact.pb.dart' as $5;
+
 export 'service.pb.dart';
 
+@$pb.GrpcServiceName(
+    'google.devtools.artifactregistry.v1beta2.ArtifactRegistry')
 class ArtifactRegistryClient extends $grpc.Client {
   static final _$importAptArtifacts = $grpc.ClientMethod<
           $4.ImportAptArtifactsRequest, $2.Operation>(
@@ -298,6 +306,8 @@ class ArtifactRegistryClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName(
+    'google.devtools.artifactregistry.v1beta2.ArtifactRegistry')
 abstract class ArtifactRegistryServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.devtools.artifactregistry.v1beta2.ArtifactRegistry';

@@ -1,80 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/conversation/prompt/prompt.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'simple.pb.dart' as $0;
-import 'content/content.pb.dart' as $1;
-import 'suggestion.pb.dart' as $2;
-import 'content/link.pb.dart' as $3;
 import 'content/canvas.pb.dart' as $4;
+import 'content/content.pb.dart' as $1;
+import 'content/link.pb.dart' as $3;
+import 'simple.pb.dart' as $0;
+import 'suggestion.pb.dart' as $2;
 
+/// Represent a response to a user.
 class Prompt extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Prompt',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.conversation'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'append')
-    ..aOM<$0.Simple>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firstSimple',
-        subBuilder: $0.Simple.create)
-    ..aOM<$1.Content>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'content',
-        subBuilder: $1.Content.create)
-    ..aOM<$0.Simple>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastSimple',
-        subBuilder: $0.Simple.create)
-    ..pc<$2.Suggestion>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'suggestions',
-        $pb.PbFieldType.PM,
-        subBuilder: $2.Suggestion.create)
-    ..aOM<$3.Link>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'link',
-        subBuilder: $3.Link.create)
-    ..aOB(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'override')
-    ..aOM<$4.Canvas>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canvas',
-        subBuilder: $4.Canvas.create)
-    ..hasRequiredFields = false;
-
-  Prompt._() : super();
   factory Prompt({
     @$core.Deprecated('This field is deprecated.') $core.bool? append,
     $0.Simple? firstSimple,
@@ -85,40 +31,63 @@ class Prompt extends $pb.GeneratedMessage {
     $core.bool? override,
     $4.Canvas? canvas,
   }) {
-    final _result = create();
+    final $result = create();
     if (append != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.append = append;
+      $result.append = append;
     }
     if (firstSimple != null) {
-      _result.firstSimple = firstSimple;
+      $result.firstSimple = firstSimple;
     }
     if (content != null) {
-      _result.content = content;
+      $result.content = content;
     }
     if (lastSimple != null) {
-      _result.lastSimple = lastSimple;
+      $result.lastSimple = lastSimple;
     }
     if (suggestions != null) {
-      _result.suggestions.addAll(suggestions);
+      $result.suggestions.addAll(suggestions);
     }
     if (link != null) {
-      _result.link = link;
+      $result.link = link;
     }
     if (override != null) {
-      _result.override = override;
+      $result.override = override;
     }
     if (canvas != null) {
-      _result.canvas = canvas;
+      $result.canvas = canvas;
     }
-    return _result;
+    return $result;
   }
+  Prompt._() : super();
   factory Prompt.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Prompt.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Prompt',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2.conversation'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'append')
+    ..aOM<$0.Simple>(2, _omitFieldNames ? '' : 'firstSimple',
+        subBuilder: $0.Simple.create)
+    ..aOM<$1.Content>(3, _omitFieldNames ? '' : 'content',
+        subBuilder: $1.Content.create)
+    ..aOM<$0.Simple>(4, _omitFieldNames ? '' : 'lastSimple',
+        subBuilder: $0.Simple.create)
+    ..pc<$2.Suggestion>(
+        5, _omitFieldNames ? '' : 'suggestions', $pb.PbFieldType.PM,
+        subBuilder: $2.Suggestion.create)
+    ..aOM<$3.Link>(6, _omitFieldNames ? '' : 'link', subBuilder: $3.Link.create)
+    ..aOB(8, _omitFieldNames ? '' : 'override')
+    ..aOM<$4.Canvas>(9, _omitFieldNames ? '' : 'canvas',
+        subBuilder: $4.Canvas.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -127,9 +96,10 @@ class Prompt extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Prompt copyWith(void Function(Prompt) updates) =>
-      super.copyWith((message) => updates(message as Prompt))
-          as Prompt; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Prompt)) as Prompt;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Prompt create() => Prompt._();
   Prompt createEmptyInstance() => create();
@@ -139,6 +109,17 @@ class Prompt extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Prompt>(create);
   static Prompt? _defaultInstance;
 
+  /// Optional. Mode for how this messages should be merged with previously
+  /// defined messages.
+  /// "false" will clear all previously defined messages (first and last
+  /// simple, content, suggestions link and canvas) and add messages defined in
+  /// this prompt.
+  /// "true" will add messages defined in this prompt to messages defined in
+  /// previous responses. Setting this field to "true" will also enable appending
+  /// to some fields inside Simple prompts, the Suggestion prompt and the Canvas
+  /// prompt (part of the Content prompt). The Content and Link messages will
+  /// always be overwritten if defined in the prompt.
+  /// Default value is "false".
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.bool get append => $_getBF(0);
@@ -155,6 +136,7 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAppend() => clearField(1);
 
+  /// Optional. The first voice and text-only response.
   @$pb.TagNumber(2)
   $0.Simple get firstSimple => $_getN(1);
   @$pb.TagNumber(2)
@@ -169,6 +151,7 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Simple ensureFirstSimple() => $_ensure(1);
 
+  /// Optional. A content like a card, list or media to display to the user.
   @$pb.TagNumber(3)
   $1.Content get content => $_getN(2);
   @$pb.TagNumber(3)
@@ -183,6 +166,7 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Content ensureContent() => $_ensure(2);
 
+  /// Optional. The last voice and text-only response.
   @$pb.TagNumber(4)
   $0.Simple get lastSimple => $_getN(3);
   @$pb.TagNumber(4)
@@ -197,9 +181,17 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Simple ensureLastSimple() => $_ensure(3);
 
+  /// Optional. Suggestions to be displayed to the user which will always appear
+  /// at the end of the response.
+  /// If the "override" field in the containing prompt is "false", the titles
+  /// defined in this field will be added to titles defined in any previously
+  /// defined suggestions prompts and duplicate values will be removed.
   @$pb.TagNumber(5)
   $core.List<$2.Suggestion> get suggestions => $_getList(4);
 
+  /// Optional. An additional suggestion chip that can link out to the associated app
+  /// or site.
+  /// The chip will be rendered with the title "Open <name>". Max 20 chars.
   @$pb.TagNumber(6)
   $3.Link get link => $_getN(5);
   @$pb.TagNumber(6)
@@ -214,6 +206,17 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $3.Link ensureLink() => $_ensure(5);
 
+  /// Optional. Mode for how this messages should be merged with previously
+  /// defined messages.
+  /// "true" clears all previously defined messages (first and last
+  /// simple, content, suggestions link and canvas) and adds messages defined in
+  /// this prompt.
+  /// "false" adds messages defined in this prompt to messages defined in
+  /// previous responses. Leaving this field to "false" also enables
+  /// appending to some fields inside Simple prompts, the Suggestions prompt,
+  /// and the Canvas prompt (part of the Content prompt). The Content and Link
+  /// messages are always overwritten if defined in the prompt. Default
+  /// value is "false".
   @$pb.TagNumber(8)
   $core.bool get override => $_getBF(6);
   @$pb.TagNumber(8)
@@ -226,6 +229,7 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearOverride() => clearField(8);
 
+  /// Optional. Represents a Interactive Canvas response to be sent to the user.
   @$pb.TagNumber(9)
   $4.Canvas get canvas => $_getN(7);
   @$pb.TagNumber(9)
@@ -240,3 +244,7 @@ class Prompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $4.Canvas ensureCanvas() => $_ensure(7);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

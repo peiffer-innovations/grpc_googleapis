@@ -1,60 +1,42 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/build/v1/build_events.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
 import '../../../protobuf/any.pb.dart' as $1;
-import 'build_status.pb.dart' as $2;
-
+import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'build_events.pbenum.dart';
+import 'build_status.pb.dart' as $2;
 
 export 'build_events.pbenum.dart';
 
+/// Notification that the build system has attempted to run the build tool.
 class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent.InvocationAttemptStarted',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'attemptNumber')
-    ..aOM<$1.Any>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details',
-        subBuilder: $1.Any.create)
-    ..hasRequiredFields = false;
-
-  BuildEvent_InvocationAttemptStarted._() : super();
   factory BuildEvent_InvocationAttemptStarted({
     $fixnum.Int64? attemptNumber,
     $1.Any? details,
   }) {
-    final _result = create();
+    final $result = create();
     if (attemptNumber != null) {
-      _result.attemptNumber = attemptNumber;
+      $result.attemptNumber = attemptNumber;
     }
     if (details != null) {
-      _result.details = details;
+      $result.details = details;
     }
-    return _result;
+    return $result;
   }
+  BuildEvent_InvocationAttemptStarted._() : super();
   factory BuildEvent_InvocationAttemptStarted.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -62,6 +44,17 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
   factory BuildEvent_InvocationAttemptStarted.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildEvent.InvocationAttemptStarted',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'attemptNumber')
+    ..aOM<$1.Any>(2, _omitFieldNames ? '' : 'details',
+        subBuilder: $1.Any.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -74,8 +67,10 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
           void Function(BuildEvent_InvocationAttemptStarted) updates) =>
       super.copyWith((message) =>
               updates(message as BuildEvent_InvocationAttemptStarted))
-          as BuildEvent_InvocationAttemptStarted; // ignore: deprecated_member_use
+          as BuildEvent_InvocationAttemptStarted;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent_InvocationAttemptStarted create() =>
       BuildEvent_InvocationAttemptStarted._();
@@ -88,6 +83,9 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
           BuildEvent_InvocationAttemptStarted>(create);
   static BuildEvent_InvocationAttemptStarted? _defaultInstance;
 
+  /// The number of the invocation attempt, starting at 1 and increasing by 1
+  /// for each new attempt. Can be used to determine if there is a later
+  /// invocation attempt replacing the current one a client is processing.
   @$pb.TagNumber(1)
   $fixnum.Int64 get attemptNumber => $_getI64(0);
   @$pb.TagNumber(1)
@@ -100,6 +98,7 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAttemptNumber() => clearField(1);
 
+  /// Arbitrary details about the invocation attempt.
   @$pb.TagNumber(2)
   $1.Any get details => $_getN(1);
   @$pb.TagNumber(2)
@@ -115,44 +114,22 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
   $1.Any ensureDetails() => $_ensure(1);
 }
 
+/// Notification that an invocation attempt has finished.
 class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent.InvocationAttemptFinished',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.BuildStatus>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'invocationStatus',
-        subBuilder: $2.BuildStatus.create)
-    ..aOM<$1.Any>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details',
-        subBuilder: $1.Any.create)
-    ..hasRequiredFields = false;
-
-  BuildEvent_InvocationAttemptFinished._() : super();
   factory BuildEvent_InvocationAttemptFinished({
     $2.BuildStatus? invocationStatus,
     $1.Any? details,
   }) {
-    final _result = create();
+    final $result = create();
     if (invocationStatus != null) {
-      _result.invocationStatus = invocationStatus;
+      $result.invocationStatus = invocationStatus;
     }
     if (details != null) {
-      _result.details = details;
+      $result.details = details;
     }
-    return _result;
+    return $result;
   }
+  BuildEvent_InvocationAttemptFinished._() : super();
   factory BuildEvent_InvocationAttemptFinished.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -160,6 +137,18 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
   factory BuildEvent_InvocationAttemptFinished.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildEvent.InvocationAttemptFinished',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.BuildStatus>(3, _omitFieldNames ? '' : 'invocationStatus',
+        subBuilder: $2.BuildStatus.create)
+    ..aOM<$1.Any>(4, _omitFieldNames ? '' : 'details',
+        subBuilder: $1.Any.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -172,8 +161,10 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
           void Function(BuildEvent_InvocationAttemptFinished) updates) =>
       super.copyWith((message) =>
               updates(message as BuildEvent_InvocationAttemptFinished))
-          as BuildEvent_InvocationAttemptFinished; // ignore: deprecated_member_use
+          as BuildEvent_InvocationAttemptFinished;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent_InvocationAttemptFinished create() =>
       BuildEvent_InvocationAttemptFinished._();
@@ -186,6 +177,7 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
           BuildEvent_InvocationAttemptFinished>(create);
   static BuildEvent_InvocationAttemptFinished? _defaultInstance;
 
+  /// Final status of the invocation.
   @$pb.TagNumber(3)
   $2.BuildStatus get invocationStatus => $_getN(0);
   @$pb.TagNumber(3)
@@ -200,6 +192,7 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.BuildStatus ensureInvocationStatus() => $_ensure(0);
 
+  /// Arbitrary details about the invocation attempt.
   @$pb.TagNumber(4)
   $1.Any get details => $_getN(1);
   @$pb.TagNumber(4)
@@ -215,40 +208,34 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
   $1.Any ensureDetails() => $_ensure(1);
 }
 
+/// Notification that the build request is enqueued.
 class BuildEvent_BuildEnqueued extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent.BuildEnqueued',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
-      createEmptyInstance: create)
-    ..aOM<$1.Any>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details',
-        subBuilder: $1.Any.create)
-    ..hasRequiredFields = false;
-
-  BuildEvent_BuildEnqueued._() : super();
   factory BuildEvent_BuildEnqueued({
     $1.Any? details,
   }) {
-    final _result = create();
+    final $result = create();
     if (details != null) {
-      _result.details = details;
+      $result.details = details;
     }
-    return _result;
+    return $result;
   }
+  BuildEvent_BuildEnqueued._() : super();
   factory BuildEvent_BuildEnqueued.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BuildEvent_BuildEnqueued.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildEvent.BuildEnqueued',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
+      createEmptyInstance: create)
+    ..aOM<$1.Any>(1, _omitFieldNames ? '' : 'details',
+        subBuilder: $1.Any.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -260,8 +247,10 @@ class BuildEvent_BuildEnqueued extends $pb.GeneratedMessage {
   BuildEvent_BuildEnqueued copyWith(
           void Function(BuildEvent_BuildEnqueued) updates) =>
       super.copyWith((message) => updates(message as BuildEvent_BuildEnqueued))
-          as BuildEvent_BuildEnqueued; // ignore: deprecated_member_use
+          as BuildEvent_BuildEnqueued;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent_BuildEnqueued create() => BuildEvent_BuildEnqueued._();
   BuildEvent_BuildEnqueued createEmptyInstance() => create();
@@ -272,6 +261,7 @@ class BuildEvent_BuildEnqueued extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BuildEvent_BuildEnqueued>(create);
   static BuildEvent_BuildEnqueued? _defaultInstance;
 
+  /// Additional details about the Build.
   @$pb.TagNumber(1)
   $1.Any get details => $_getN(0);
   @$pb.TagNumber(1)
@@ -287,50 +277,42 @@ class BuildEvent_BuildEnqueued extends $pb.GeneratedMessage {
   $1.Any ensureDetails() => $_ensure(0);
 }
 
+/// Notification that the build request has finished, and no further
+/// invocations will occur.  Note that this applies to the entire Build.
+/// Individual invocations trigger InvocationFinished when they finish.
 class BuildEvent_BuildFinished extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent.BuildFinished',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.BuildStatus>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        subBuilder: $2.BuildStatus.create)
-    ..aOM<$1.Any>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details',
-        subBuilder: $1.Any.create)
-    ..hasRequiredFields = false;
-
-  BuildEvent_BuildFinished._() : super();
   factory BuildEvent_BuildFinished({
     $2.BuildStatus? status,
     $1.Any? details,
   }) {
-    final _result = create();
+    final $result = create();
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (details != null) {
-      _result.details = details;
+      $result.details = details;
     }
-    return _result;
+    return $result;
   }
+  BuildEvent_BuildFinished._() : super();
   factory BuildEvent_BuildFinished.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BuildEvent_BuildFinished.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildEvent.BuildFinished',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.BuildStatus>(1, _omitFieldNames ? '' : 'status',
+        subBuilder: $2.BuildStatus.create)
+    ..aOM<$1.Any>(2, _omitFieldNames ? '' : 'details',
+        subBuilder: $1.Any.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -342,8 +324,10 @@ class BuildEvent_BuildFinished extends $pb.GeneratedMessage {
   BuildEvent_BuildFinished copyWith(
           void Function(BuildEvent_BuildFinished) updates) =>
       super.copyWith((message) => updates(message as BuildEvent_BuildFinished))
-          as BuildEvent_BuildFinished; // ignore: deprecated_member_use
+          as BuildEvent_BuildFinished;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent_BuildFinished create() => BuildEvent_BuildFinished._();
   BuildEvent_BuildFinished createEmptyInstance() => create();
@@ -354,6 +338,7 @@ class BuildEvent_BuildFinished extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BuildEvent_BuildFinished>(create);
   static BuildEvent_BuildFinished? _defaultInstance;
 
+  /// Final status of the build.
   @$pb.TagNumber(1)
   $2.BuildStatus get status => $_getN(0);
   @$pb.TagNumber(1)
@@ -368,6 +353,7 @@ class BuildEvent_BuildFinished extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.BuildStatus ensureStatus() => $_ensure(0);
 
+  /// Additional details about the Build.
   @$pb.TagNumber(2)
   $1.Any get details => $_getN(1);
   @$pb.TagNumber(2)
@@ -385,7 +371,33 @@ class BuildEvent_BuildFinished extends $pb.GeneratedMessage {
 
 enum BuildEvent_ConsoleOutput_Output { textOutput, binaryOutput, notSet }
 
+/// Textual output written to standard output or standard error.
 class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
+  factory BuildEvent_ConsoleOutput({
+    ConsoleOutputStream? type,
+    $core.String? textOutput,
+    $core.List<$core.int>? binaryOutput,
+  }) {
+    final $result = create();
+    if (type != null) {
+      $result.type = type;
+    }
+    if (textOutput != null) {
+      $result.textOutput = textOutput;
+    }
+    if (binaryOutput != null) {
+      $result.binaryOutput = binaryOutput;
+    }
+    return $result;
+  }
+  BuildEvent_ConsoleOutput._() : super();
+  factory BuildEvent_ConsoleOutput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_ConsoleOutput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, BuildEvent_ConsoleOutput_Output>
       _BuildEvent_ConsoleOutput_OutputByTag = {
     2: BuildEvent_ConsoleOutput_Output.textOutput,
@@ -393,61 +405,21 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
     0: BuildEvent_ConsoleOutput_Output.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent.ConsoleOutput',
+      _omitMessageNames ? '' : 'BuildEvent.ConsoleOutput',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
       createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..e<ConsoleOutputStream>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
+        1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
         defaultOrMaker: ConsoleOutputStream.UNKNOWN,
         valueOf: ConsoleOutputStream.valueOf,
         enumValues: ConsoleOutputStream.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'textOutput')
+    ..aOS(2, _omitFieldNames ? '' : 'textOutput')
     ..a<$core.List<$core.int>>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'binaryOutput',
-        $pb.PbFieldType.OY)
+        3, _omitFieldNames ? '' : 'binaryOutput', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  BuildEvent_ConsoleOutput._() : super();
-  factory BuildEvent_ConsoleOutput({
-    ConsoleOutputStream? type,
-    $core.String? textOutput,
-    $core.List<$core.int>? binaryOutput,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (textOutput != null) {
-      _result.textOutput = textOutput;
-    }
-    if (binaryOutput != null) {
-      _result.binaryOutput = binaryOutput;
-    }
-    return _result;
-  }
-  factory BuildEvent_ConsoleOutput.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BuildEvent_ConsoleOutput.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -459,8 +431,10 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
   BuildEvent_ConsoleOutput copyWith(
           void Function(BuildEvent_ConsoleOutput) updates) =>
       super.copyWith((message) => updates(message as BuildEvent_ConsoleOutput))
-          as BuildEvent_ConsoleOutput; // ignore: deprecated_member_use
+          as BuildEvent_ConsoleOutput;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent_ConsoleOutput create() => BuildEvent_ConsoleOutput._();
   BuildEvent_ConsoleOutput createEmptyInstance() => create();
@@ -475,6 +449,7 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
       _BuildEvent_ConsoleOutput_OutputByTag[$_whichOneof(0)]!;
   void clearOutput() => clearField($_whichOneof(0));
 
+  /// The output stream type.
   @$pb.TagNumber(1)
   ConsoleOutputStream get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -487,6 +462,7 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// Regular UTF-8 output; normal text.
   @$pb.TagNumber(2)
   $core.String get textOutput => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -499,6 +475,7 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTextOutput() => clearField(2);
 
+  /// Used if the output is not UTF-8 text (for example, a binary proto).
   @$pb.TagNumber(3)
   $core.List<$core.int> get binaryOutput => $_getN(2);
   @$pb.TagNumber(3)
@@ -512,38 +489,19 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
   void clearBinaryOutput() => clearField(3);
 }
 
+/// Notification of the end of a build event stream published by a build
+/// component other than CONTROLLER (See StreamId.BuildComponents).
 class BuildEvent_BuildComponentStreamFinished extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent.BuildComponentStreamFinished',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
-      createEmptyInstance: create)
-    ..e<BuildEvent_BuildComponentStreamFinished_FinishType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: BuildEvent_BuildComponentStreamFinished_FinishType
-            .FINISH_TYPE_UNSPECIFIED,
-        valueOf: BuildEvent_BuildComponentStreamFinished_FinishType.valueOf,
-        enumValues: BuildEvent_BuildComponentStreamFinished_FinishType.values)
-    ..hasRequiredFields = false;
-
-  BuildEvent_BuildComponentStreamFinished._() : super();
   factory BuildEvent_BuildComponentStreamFinished({
     BuildEvent_BuildComponentStreamFinished_FinishType? type,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
-    return _result;
+    return $result;
   }
+  BuildEvent_BuildComponentStreamFinished._() : super();
   factory BuildEvent_BuildComponentStreamFinished.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -551,6 +509,20 @@ class BuildEvent_BuildComponentStreamFinished extends $pb.GeneratedMessage {
   factory BuildEvent_BuildComponentStreamFinished.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildEvent.BuildComponentStreamFinished',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
+      createEmptyInstance: create)
+    ..e<BuildEvent_BuildComponentStreamFinished_FinishType>(
+        1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: BuildEvent_BuildComponentStreamFinished_FinishType
+            .FINISH_TYPE_UNSPECIFIED,
+        valueOf: BuildEvent_BuildComponentStreamFinished_FinishType.valueOf,
+        enumValues: BuildEvent_BuildComponentStreamFinished_FinishType.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -563,8 +535,10 @@ class BuildEvent_BuildComponentStreamFinished extends $pb.GeneratedMessage {
           void Function(BuildEvent_BuildComponentStreamFinished) updates) =>
       super.copyWith((message) =>
               updates(message as BuildEvent_BuildComponentStreamFinished))
-          as BuildEvent_BuildComponentStreamFinished; // ignore: deprecated_member_use
+          as BuildEvent_BuildComponentStreamFinished;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent_BuildComponentStreamFinished create() =>
       BuildEvent_BuildComponentStreamFinished._();
@@ -577,6 +551,7 @@ class BuildEvent_BuildComponentStreamFinished extends $pb.GeneratedMessage {
           BuildEvent_BuildComponentStreamFinished>(create);
   static BuildEvent_BuildComponentStreamFinished? _defaultInstance;
 
+  /// How the event stream finished.
   @$pb.TagNumber(1)
   BuildEvent_BuildComponentStreamFinished_FinishType get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -603,7 +578,62 @@ enum BuildEvent_Event {
   notSet
 }
 
+/// An event representing some state change that occurred in the build. This
+/// message does not include field for uniquely identifying an event.
 class BuildEvent extends $pb.GeneratedMessage {
+  factory BuildEvent({
+    $0.Timestamp? eventTime,
+    BuildEvent_InvocationAttemptStarted? invocationAttemptStarted,
+    BuildEvent_InvocationAttemptFinished? invocationAttemptFinished,
+    BuildEvent_BuildEnqueued? buildEnqueued,
+    BuildEvent_BuildFinished? buildFinished,
+    BuildEvent_ConsoleOutput? consoleOutput,
+    BuildEvent_BuildComponentStreamFinished? componentStreamFinished,
+    $1.Any? bazelEvent,
+    $1.Any? buildExecutionEvent,
+    $1.Any? sourceFetchEvent,
+  }) {
+    final $result = create();
+    if (eventTime != null) {
+      $result.eventTime = eventTime;
+    }
+    if (invocationAttemptStarted != null) {
+      $result.invocationAttemptStarted = invocationAttemptStarted;
+    }
+    if (invocationAttemptFinished != null) {
+      $result.invocationAttemptFinished = invocationAttemptFinished;
+    }
+    if (buildEnqueued != null) {
+      $result.buildEnqueued = buildEnqueued;
+    }
+    if (buildFinished != null) {
+      $result.buildFinished = buildFinished;
+    }
+    if (consoleOutput != null) {
+      $result.consoleOutput = consoleOutput;
+    }
+    if (componentStreamFinished != null) {
+      $result.componentStreamFinished = componentStreamFinished;
+    }
+    if (bazelEvent != null) {
+      $result.bazelEvent = bazelEvent;
+    }
+    if (buildExecutionEvent != null) {
+      $result.buildExecutionEvent = buildExecutionEvent;
+    }
+    if (sourceFetchEvent != null) {
+      $result.sourceFetchEvent = sourceFetchEvent;
+    }
+    return $result;
+  }
+  BuildEvent._() : super();
+  factory BuildEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, BuildEvent_Event> _BuildEvent_EventByTag = {
     51: BuildEvent_Event.invocationAttemptStarted,
     52: BuildEvent_Event.invocationAttemptFinished,
@@ -617,129 +647,36 @@ class BuildEvent extends $pb.GeneratedMessage {
     0: BuildEvent_Event.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildEvent',
+      _omitMessageNames ? '' : 'BuildEvent',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
       createEmptyInstance: create)
     ..oo(0, [51, 52, 53, 55, 56, 59, 60, 61, 62])
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'eventTime',
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'eventTime',
         subBuilder: $0.Timestamp.create)
     ..aOM<BuildEvent_InvocationAttemptStarted>(
-        51,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'invocationAttemptStarted',
+        51, _omitFieldNames ? '' : 'invocationAttemptStarted',
         subBuilder: BuildEvent_InvocationAttemptStarted.create)
     ..aOM<BuildEvent_InvocationAttemptFinished>(
-        52,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'invocationAttemptFinished',
+        52, _omitFieldNames ? '' : 'invocationAttemptFinished',
         subBuilder: BuildEvent_InvocationAttemptFinished.create)
-    ..aOM<BuildEvent_BuildEnqueued>(
-        53,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildEnqueued',
+    ..aOM<BuildEvent_BuildEnqueued>(53, _omitFieldNames ? '' : 'buildEnqueued',
         subBuilder: BuildEvent_BuildEnqueued.create)
-    ..aOM<BuildEvent_BuildFinished>(
-        55,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildFinished',
+    ..aOM<BuildEvent_BuildFinished>(55, _omitFieldNames ? '' : 'buildFinished',
         subBuilder: BuildEvent_BuildFinished.create)
-    ..aOM<BuildEvent_ConsoleOutput>(
-        56,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'consoleOutput',
+    ..aOM<BuildEvent_ConsoleOutput>(56, _omitFieldNames ? '' : 'consoleOutput',
         subBuilder: BuildEvent_ConsoleOutput.create)
     ..aOM<BuildEvent_BuildComponentStreamFinished>(
-        59,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'componentStreamFinished',
+        59, _omitFieldNames ? '' : 'componentStreamFinished',
         subBuilder: BuildEvent_BuildComponentStreamFinished.create)
-    ..aOM<$1.Any>(
-        60,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bazelEvent',
+    ..aOM<$1.Any>(60, _omitFieldNames ? '' : 'bazelEvent',
         subBuilder: $1.Any.create)
-    ..aOM<$1.Any>(
-        61,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildExecutionEvent',
+    ..aOM<$1.Any>(61, _omitFieldNames ? '' : 'buildExecutionEvent',
         subBuilder: $1.Any.create)
-    ..aOM<$1.Any>(
-        62,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceFetchEvent',
+    ..aOM<$1.Any>(62, _omitFieldNames ? '' : 'sourceFetchEvent',
         subBuilder: $1.Any.create)
     ..hasRequiredFields = false;
 
-  BuildEvent._() : super();
-  factory BuildEvent({
-    $0.Timestamp? eventTime,
-    BuildEvent_InvocationAttemptStarted? invocationAttemptStarted,
-    BuildEvent_InvocationAttemptFinished? invocationAttemptFinished,
-    BuildEvent_BuildEnqueued? buildEnqueued,
-    BuildEvent_BuildFinished? buildFinished,
-    BuildEvent_ConsoleOutput? consoleOutput,
-    BuildEvent_BuildComponentStreamFinished? componentStreamFinished,
-    $1.Any? bazelEvent,
-    $1.Any? buildExecutionEvent,
-    $1.Any? sourceFetchEvent,
-  }) {
-    final _result = create();
-    if (eventTime != null) {
-      _result.eventTime = eventTime;
-    }
-    if (invocationAttemptStarted != null) {
-      _result.invocationAttemptStarted = invocationAttemptStarted;
-    }
-    if (invocationAttemptFinished != null) {
-      _result.invocationAttemptFinished = invocationAttemptFinished;
-    }
-    if (buildEnqueued != null) {
-      _result.buildEnqueued = buildEnqueued;
-    }
-    if (buildFinished != null) {
-      _result.buildFinished = buildFinished;
-    }
-    if (consoleOutput != null) {
-      _result.consoleOutput = consoleOutput;
-    }
-    if (componentStreamFinished != null) {
-      _result.componentStreamFinished = componentStreamFinished;
-    }
-    if (bazelEvent != null) {
-      _result.bazelEvent = bazelEvent;
-    }
-    if (buildExecutionEvent != null) {
-      _result.buildExecutionEvent = buildExecutionEvent;
-    }
-    if (sourceFetchEvent != null) {
-      _result.sourceFetchEvent = sourceFetchEvent;
-    }
-    return _result;
-  }
-  factory BuildEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BuildEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -748,9 +685,10 @@ class BuildEvent extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   BuildEvent copyWith(void Function(BuildEvent) updates) =>
-      super.copyWith((message) => updates(message as BuildEvent))
-          as BuildEvent; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as BuildEvent)) as BuildEvent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildEvent create() => BuildEvent._();
   BuildEvent createEmptyInstance() => create();
@@ -763,6 +701,8 @@ class BuildEvent extends $pb.GeneratedMessage {
   BuildEvent_Event whichEvent() => _BuildEvent_EventByTag[$_whichOneof(0)]!;
   void clearEvent() => clearField($_whichOneof(0));
 
+  /// This should be precisely the time when this event happened, and not when
+  /// the event proto was created or sent.
   @$pb.TagNumber(1)
   $0.Timestamp get eventTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -777,6 +717,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureEventTime() => $_ensure(0);
 
+  /// An invocation attempt has started.
   @$pb.TagNumber(51)
   BuildEvent_InvocationAttemptStarted get invocationAttemptStarted => $_getN(1);
   @$pb.TagNumber(51)
@@ -792,6 +733,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   BuildEvent_InvocationAttemptStarted ensureInvocationAttemptStarted() =>
       $_ensure(1);
 
+  /// An invocation attempt has finished.
   @$pb.TagNumber(52)
   BuildEvent_InvocationAttemptFinished get invocationAttemptFinished =>
       $_getN(2);
@@ -808,6 +750,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   BuildEvent_InvocationAttemptFinished ensureInvocationAttemptFinished() =>
       $_ensure(2);
 
+  /// The build is enqueued.
   @$pb.TagNumber(53)
   BuildEvent_BuildEnqueued get buildEnqueued => $_getN(3);
   @$pb.TagNumber(53)
@@ -822,6 +765,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(53)
   BuildEvent_BuildEnqueued ensureBuildEnqueued() => $_ensure(3);
 
+  /// The build has finished. Set when the build is terminated.
   @$pb.TagNumber(55)
   BuildEvent_BuildFinished get buildFinished => $_getN(4);
   @$pb.TagNumber(55)
@@ -836,6 +780,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(55)
   BuildEvent_BuildFinished ensureBuildFinished() => $_ensure(4);
 
+  /// An event containing printed text.
   @$pb.TagNumber(56)
   BuildEvent_ConsoleOutput get consoleOutput => $_getN(5);
   @$pb.TagNumber(56)
@@ -850,6 +795,9 @@ class BuildEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(56)
   BuildEvent_ConsoleOutput ensureConsoleOutput() => $_ensure(5);
 
+  /// Indicates the end of a build event stream (with the same StreamId) from
+  /// a build component executing the requested build task.
+  /// *** This field does not indicate the WatchBuild RPC is finished. ***
   @$pb.TagNumber(59)
   BuildEvent_BuildComponentStreamFinished get componentStreamFinished =>
       $_getN(6);
@@ -866,6 +814,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   BuildEvent_BuildComponentStreamFinished ensureComponentStreamFinished() =>
       $_ensure(6);
 
+  /// Structured build event generated by Bazel about its execution progress.
   @$pb.TagNumber(60)
   $1.Any get bazelEvent => $_getN(7);
   @$pb.TagNumber(60)
@@ -880,6 +829,8 @@ class BuildEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(60)
   $1.Any ensureBazelEvent() => $_ensure(7);
 
+  /// An event that contains supplemental tool-specific information about
+  /// build execution.
   @$pb.TagNumber(61)
   $1.Any get buildExecutionEvent => $_getN(8);
   @$pb.TagNumber(61)
@@ -894,6 +845,8 @@ class BuildEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(61)
   $1.Any ensureBuildExecutionEvent() => $_ensure(8);
 
+  /// An event that contains supplemental tool-specific information about
+  /// source fetching.
   @$pb.TagNumber(62)
   $1.Any get sourceFetchEvent => $_getN(9);
   @$pb.TagNumber(62)
@@ -909,61 +862,47 @@ class BuildEvent extends $pb.GeneratedMessage {
   $1.Any ensureSourceFetchEvent() => $_ensure(9);
 }
 
+/// Unique identifier for a build event stream.
 class StreamId extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StreamId',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.build.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildId')
-    ..e<StreamId_BuildComponent>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'component',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: StreamId_BuildComponent.UNKNOWN_COMPONENT,
-        valueOf: StreamId_BuildComponent.valueOf,
-        enumValues: StreamId_BuildComponent.values)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'invocationId')
-    ..hasRequiredFields = false;
-
-  StreamId._() : super();
   factory StreamId({
     $core.String? buildId,
     StreamId_BuildComponent? component,
     $core.String? invocationId,
   }) {
-    final _result = create();
+    final $result = create();
     if (buildId != null) {
-      _result.buildId = buildId;
+      $result.buildId = buildId;
     }
     if (component != null) {
-      _result.component = component;
+      $result.component = component;
     }
     if (invocationId != null) {
-      _result.invocationId = invocationId;
+      $result.invocationId = invocationId;
     }
-    return _result;
+    return $result;
   }
+  StreamId._() : super();
   factory StreamId.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StreamId.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StreamId',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.build.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'buildId')
+    ..e<StreamId_BuildComponent>(
+        3, _omitFieldNames ? '' : 'component', $pb.PbFieldType.OE,
+        defaultOrMaker: StreamId_BuildComponent.UNKNOWN_COMPONENT,
+        valueOf: StreamId_BuildComponent.valueOf,
+        enumValues: StreamId_BuildComponent.values)
+    ..aOS(6, _omitFieldNames ? '' : 'invocationId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -972,9 +911,10 @@ class StreamId extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   StreamId copyWith(void Function(StreamId) updates) =>
-      super.copyWith((message) => updates(message as StreamId))
-          as StreamId; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as StreamId)) as StreamId;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StreamId create() => StreamId._();
   StreamId createEmptyInstance() => create();
@@ -984,6 +924,7 @@ class StreamId extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StreamId>(create);
   static StreamId? _defaultInstance;
 
+  /// The id of a Build message.
   @$pb.TagNumber(1)
   $core.String get buildId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -996,6 +937,7 @@ class StreamId extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBuildId() => clearField(1);
 
+  /// The component that emitted this event.
   @$pb.TagNumber(3)
   StreamId_BuildComponent get component => $_getN(1);
   @$pb.TagNumber(3)
@@ -1008,6 +950,8 @@ class StreamId extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearComponent() => clearField(3);
 
+  /// The unique invocation ID within this build.
+  /// It should be the same as {invocation} (below) during the migration.
   @$pb.TagNumber(6)
   $core.String get invocationId => $_getSZ(2);
   @$pb.TagNumber(6)
@@ -1020,3 +964,7 @@ class StreamId extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearInvocationId() => clearField(6);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

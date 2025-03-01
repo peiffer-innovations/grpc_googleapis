@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1beta2/operation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,62 +16,13 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'index.pb.dart' as $1;
-
 import 'operation.pbenum.dart';
 
 export 'operation.pbenum.dart';
 
+/// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+/// [FirestoreAdmin.CreateIndex][google.firestore.admin.v1beta2.FirestoreAdmin.CreateIndex].
 class IndexOperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IndexOperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'index')
-    ..e<OperationState>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
-        enumValues: OperationState.values)
-    ..aOM<Progress>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressDocuments',
-        subBuilder: Progress.create)
-    ..aOM<Progress>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressBytes',
-        subBuilder: Progress.create)
-    ..hasRequiredFields = false;
-
-  IndexOperationMetadata._() : super();
   factory IndexOperationMetadata({
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
@@ -76,33 +31,55 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
     Progress? progressDocuments,
     Progress? progressBytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (index != null) {
-      _result.index = index;
+      $result.index = index;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (progressDocuments != null) {
-      _result.progressDocuments = progressDocuments;
+      $result.progressDocuments = progressDocuments;
     }
     if (progressBytes != null) {
-      _result.progressBytes = progressBytes;
+      $result.progressBytes = progressBytes;
     }
-    return _result;
+    return $result;
   }
+  IndexOperationMetadata._() : super();
   factory IndexOperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IndexOperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IndexOperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'index')
+    ..e<OperationState>(4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOM<Progress>(5, _omitFieldNames ? '' : 'progressDocuments',
+        subBuilder: Progress.create)
+    ..aOM<Progress>(6, _omitFieldNames ? '' : 'progressBytes',
+        subBuilder: Progress.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -114,8 +91,10 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   IndexOperationMetadata copyWith(
           void Function(IndexOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as IndexOperationMetadata))
-          as IndexOperationMetadata; // ignore: deprecated_member_use
+          as IndexOperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IndexOperationMetadata create() => IndexOperationMetadata._();
   IndexOperationMetadata createEmptyInstance() => create();
@@ -126,6 +105,7 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IndexOperationMetadata>(create);
   static IndexOperationMetadata? _defaultInstance;
 
+  /// The time this operation started.
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -140,6 +120,8 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
+  /// The time this operation completed. Will be unset if operation still in
+  /// progress.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -154,6 +136,8 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// The index resource that this operation is acting on. For example:
+  /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
   @$pb.TagNumber(3)
   $core.String get index => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -166,6 +150,7 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIndex() => clearField(3);
 
+  /// The state of the operation.
   @$pb.TagNumber(4)
   OperationState get state => $_getN(3);
   @$pb.TagNumber(4)
@@ -178,6 +163,7 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearState() => clearField(4);
 
+  /// The progress, in documents, of this operation.
   @$pb.TagNumber(5)
   Progress get progressDocuments => $_getN(4);
   @$pb.TagNumber(5)
@@ -192,6 +178,7 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Progress ensureProgressDocuments() => $_ensure(4);
 
+  /// The progress, in bytes, of this operation.
   @$pb.TagNumber(6)
   Progress get progressBytes => $_getN(5);
   @$pb.TagNumber(6)
@@ -207,48 +194,22 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   Progress ensureProgressBytes() => $_ensure(5);
 }
 
+/// Information about an index configuration change.
 class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FieldOperationMetadata.IndexConfigDelta',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..e<FieldOperationMetadata_IndexConfigDelta_ChangeType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'changeType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: FieldOperationMetadata_IndexConfigDelta_ChangeType
-            .CHANGE_TYPE_UNSPECIFIED,
-        valueOf: FieldOperationMetadata_IndexConfigDelta_ChangeType.valueOf,
-        enumValues: FieldOperationMetadata_IndexConfigDelta_ChangeType.values)
-    ..aOM<$1.Index>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'index',
-        subBuilder: $1.Index.create)
-    ..hasRequiredFields = false;
-
-  FieldOperationMetadata_IndexConfigDelta._() : super();
   factory FieldOperationMetadata_IndexConfigDelta({
     FieldOperationMetadata_IndexConfigDelta_ChangeType? changeType,
     $1.Index? index,
   }) {
-    final _result = create();
+    final $result = create();
     if (changeType != null) {
-      _result.changeType = changeType;
+      $result.changeType = changeType;
     }
     if (index != null) {
-      _result.index = index;
+      $result.index = index;
     }
-    return _result;
+    return $result;
   }
+  FieldOperationMetadata_IndexConfigDelta._() : super();
   factory FieldOperationMetadata_IndexConfigDelta.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -256,6 +217,22 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
   factory FieldOperationMetadata_IndexConfigDelta.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FieldOperationMetadata.IndexConfigDelta',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..e<FieldOperationMetadata_IndexConfigDelta_ChangeType>(
+        1, _omitFieldNames ? '' : 'changeType', $pb.PbFieldType.OE,
+        defaultOrMaker: FieldOperationMetadata_IndexConfigDelta_ChangeType
+            .CHANGE_TYPE_UNSPECIFIED,
+        valueOf: FieldOperationMetadata_IndexConfigDelta_ChangeType.valueOf,
+        enumValues: FieldOperationMetadata_IndexConfigDelta_ChangeType.values)
+    ..aOM<$1.Index>(2, _omitFieldNames ? '' : 'index',
+        subBuilder: $1.Index.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -268,8 +245,10 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
           void Function(FieldOperationMetadata_IndexConfigDelta) updates) =>
       super.copyWith((message) =>
               updates(message as FieldOperationMetadata_IndexConfigDelta))
-          as FieldOperationMetadata_IndexConfigDelta; // ignore: deprecated_member_use
+          as FieldOperationMetadata_IndexConfigDelta;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata_IndexConfigDelta create() =>
       FieldOperationMetadata_IndexConfigDelta._();
@@ -282,6 +261,7 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
           FieldOperationMetadata_IndexConfigDelta>(create);
   static FieldOperationMetadata_IndexConfigDelta? _defaultInstance;
 
+  /// Specifies how the index is changing.
   @$pb.TagNumber(1)
   FieldOperationMetadata_IndexConfigDelta_ChangeType get changeType =>
       $_getN(0);
@@ -295,6 +275,7 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearChangeType() => clearField(1);
 
+  /// The index being changed.
   @$pb.TagNumber(2)
   $1.Index get index => $_getN(1);
   @$pb.TagNumber(2)
@@ -310,64 +291,9 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
   $1.Index ensureIndex() => $_ensure(1);
 }
 
+/// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+/// [FirestoreAdmin.UpdateField][google.firestore.admin.v1beta2.FirestoreAdmin.UpdateField].
 class FieldOperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FieldOperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'field')
-    ..pc<FieldOperationMetadata_IndexConfigDelta>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'indexConfigDeltas',
-        $pb.PbFieldType.PM,
-        subBuilder: FieldOperationMetadata_IndexConfigDelta.create)
-    ..e<OperationState>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
-        enumValues: OperationState.values)
-    ..aOM<Progress>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'documentProgress',
-        subBuilder: Progress.create)
-    ..aOM<Progress>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bytesProgress',
-        subBuilder: Progress.create)
-    ..hasRequiredFields = false;
-
-  FieldOperationMetadata._() : super();
   factory FieldOperationMetadata({
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
@@ -377,36 +303,61 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
     Progress? documentProgress,
     Progress? bytesProgress,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (field_3 != null) {
-      _result.field_3 = field_3;
+      $result.field_3 = field_3;
     }
     if (indexConfigDeltas != null) {
-      _result.indexConfigDeltas.addAll(indexConfigDeltas);
+      $result.indexConfigDeltas.addAll(indexConfigDeltas);
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (documentProgress != null) {
-      _result.documentProgress = documentProgress;
+      $result.documentProgress = documentProgress;
     }
     if (bytesProgress != null) {
-      _result.bytesProgress = bytesProgress;
+      $result.bytesProgress = bytesProgress;
     }
-    return _result;
+    return $result;
   }
+  FieldOperationMetadata._() : super();
   factory FieldOperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FieldOperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FieldOperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'field')
+    ..pc<FieldOperationMetadata_IndexConfigDelta>(
+        4, _omitFieldNames ? '' : 'indexConfigDeltas', $pb.PbFieldType.PM,
+        subBuilder: FieldOperationMetadata_IndexConfigDelta.create)
+    ..e<OperationState>(5, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOM<Progress>(6, _omitFieldNames ? '' : 'documentProgress',
+        subBuilder: Progress.create)
+    ..aOM<Progress>(7, _omitFieldNames ? '' : 'bytesProgress',
+        subBuilder: Progress.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -418,8 +369,10 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   FieldOperationMetadata copyWith(
           void Function(FieldOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as FieldOperationMetadata))
-          as FieldOperationMetadata; // ignore: deprecated_member_use
+          as FieldOperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata create() => FieldOperationMetadata._();
   FieldOperationMetadata createEmptyInstance() => create();
@@ -430,6 +383,7 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FieldOperationMetadata>(create);
   static FieldOperationMetadata? _defaultInstance;
 
+  /// The time this operation started.
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -444,6 +398,8 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
+  /// The time this operation completed. Will be unset if operation still in
+  /// progress.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -458,6 +414,8 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// The field resource that this operation is acting on. For example:
+  /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}`
   @$pb.TagNumber(3)
   $core.String get field_3 => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -470,10 +428,13 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearField_3() => clearField(3);
 
+  /// A list of [IndexConfigDelta][google.firestore.admin.v1beta2.FieldOperationMetadata.IndexConfigDelta], which describe the intent of this
+  /// operation.
   @$pb.TagNumber(4)
   $core.List<FieldOperationMetadata_IndexConfigDelta> get indexConfigDeltas =>
       $_getList(3);
 
+  /// The state of the operation.
   @$pb.TagNumber(5)
   OperationState get state => $_getN(4);
   @$pb.TagNumber(5)
@@ -486,6 +447,7 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearState() => clearField(5);
 
+  /// The progress, in documents, of this operation.
   @$pb.TagNumber(6)
   Progress get documentProgress => $_getN(5);
   @$pb.TagNumber(6)
@@ -500,6 +462,7 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Progress ensureDocumentProgress() => $_ensure(5);
 
+  /// The progress, in bytes, of this operation.
   @$pb.TagNumber(7)
   Progress get bytesProgress => $_getN(6);
   @$pb.TagNumber(7)
@@ -515,62 +478,9 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   Progress ensureBytesProgress() => $_ensure(6);
 }
 
+/// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+/// [FirestoreAdmin.ExportDocuments][google.firestore.admin.v1beta2.FirestoreAdmin.ExportDocuments].
 class ExportDocumentsMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExportDocumentsMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..e<OperationState>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
-        enumValues: OperationState.values)
-    ..aOM<Progress>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressDocuments',
-        subBuilder: Progress.create)
-    ..aOM<Progress>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressBytes',
-        subBuilder: Progress.create)
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'collectionIds')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'outputUriPrefix')
-    ..hasRequiredFields = false;
-
-  ExportDocumentsMetadata._() : super();
   factory ExportDocumentsMetadata({
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
@@ -580,36 +490,60 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? collectionIds,
     $core.String? outputUriPrefix,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (operationState != null) {
-      _result.operationState = operationState;
+      $result.operationState = operationState;
     }
     if (progressDocuments != null) {
-      _result.progressDocuments = progressDocuments;
+      $result.progressDocuments = progressDocuments;
     }
     if (progressBytes != null) {
-      _result.progressBytes = progressBytes;
+      $result.progressBytes = progressBytes;
     }
     if (collectionIds != null) {
-      _result.collectionIds.addAll(collectionIds);
+      $result.collectionIds.addAll(collectionIds);
     }
     if (outputUriPrefix != null) {
-      _result.outputUriPrefix = outputUriPrefix;
+      $result.outputUriPrefix = outputUriPrefix;
     }
-    return _result;
+    return $result;
   }
+  ExportDocumentsMetadata._() : super();
   factory ExportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExportDocumentsMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExportDocumentsMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..e<OperationState>(
+        3, _omitFieldNames ? '' : 'operationState', $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOM<Progress>(4, _omitFieldNames ? '' : 'progressDocuments',
+        subBuilder: Progress.create)
+    ..aOM<Progress>(5, _omitFieldNames ? '' : 'progressBytes',
+        subBuilder: Progress.create)
+    ..pPS(6, _omitFieldNames ? '' : 'collectionIds')
+    ..aOS(7, _omitFieldNames ? '' : 'outputUriPrefix')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -621,8 +555,10 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   ExportDocumentsMetadata copyWith(
           void Function(ExportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsMetadata))
-          as ExportDocumentsMetadata; // ignore: deprecated_member_use
+          as ExportDocumentsMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsMetadata create() => ExportDocumentsMetadata._();
   ExportDocumentsMetadata createEmptyInstance() => create();
@@ -633,6 +569,7 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExportDocumentsMetadata>(create);
   static ExportDocumentsMetadata? _defaultInstance;
 
+  /// The time this operation started.
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -647,6 +584,8 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
+  /// The time this operation completed. Will be unset if operation still in
+  /// progress.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -661,6 +600,7 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// The state of the export operation.
   @$pb.TagNumber(3)
   OperationState get operationState => $_getN(2);
   @$pb.TagNumber(3)
@@ -673,6 +613,7 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOperationState() => clearField(3);
 
+  /// The progress, in documents, of this operation.
   @$pb.TagNumber(4)
   Progress get progressDocuments => $_getN(3);
   @$pb.TagNumber(4)
@@ -687,6 +628,7 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Progress ensureProgressDocuments() => $_ensure(3);
 
+  /// The progress, in bytes, of this operation.
   @$pb.TagNumber(5)
   Progress get progressBytes => $_getN(4);
   @$pb.TagNumber(5)
@@ -701,9 +643,11 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Progress ensureProgressBytes() => $_ensure(4);
 
+  /// Which collection ids are being exported.
   @$pb.TagNumber(6)
   $core.List<$core.String> get collectionIds => $_getList(5);
 
+  /// Where the entities are being exported to.
   @$pb.TagNumber(7)
   $core.String get outputUriPrefix => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -717,62 +661,9 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   void clearOutputUriPrefix() => clearField(7);
 }
 
+/// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+/// [FirestoreAdmin.ImportDocuments][google.firestore.admin.v1beta2.FirestoreAdmin.ImportDocuments].
 class ImportDocumentsMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ImportDocumentsMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..e<OperationState>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
-        enumValues: OperationState.values)
-    ..aOM<Progress>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressDocuments',
-        subBuilder: Progress.create)
-    ..aOM<Progress>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressBytes',
-        subBuilder: Progress.create)
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'collectionIds')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'inputUriPrefix')
-    ..hasRequiredFields = false;
-
-  ImportDocumentsMetadata._() : super();
   factory ImportDocumentsMetadata({
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
@@ -782,36 +673,60 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? collectionIds,
     $core.String? inputUriPrefix,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (operationState != null) {
-      _result.operationState = operationState;
+      $result.operationState = operationState;
     }
     if (progressDocuments != null) {
-      _result.progressDocuments = progressDocuments;
+      $result.progressDocuments = progressDocuments;
     }
     if (progressBytes != null) {
-      _result.progressBytes = progressBytes;
+      $result.progressBytes = progressBytes;
     }
     if (collectionIds != null) {
-      _result.collectionIds.addAll(collectionIds);
+      $result.collectionIds.addAll(collectionIds);
     }
     if (inputUriPrefix != null) {
-      _result.inputUriPrefix = inputUriPrefix;
+      $result.inputUriPrefix = inputUriPrefix;
     }
-    return _result;
+    return $result;
   }
+  ImportDocumentsMetadata._() : super();
   factory ImportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ImportDocumentsMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ImportDocumentsMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..e<OperationState>(
+        3, _omitFieldNames ? '' : 'operationState', $pb.PbFieldType.OE,
+        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
+        valueOf: OperationState.valueOf,
+        enumValues: OperationState.values)
+    ..aOM<Progress>(4, _omitFieldNames ? '' : 'progressDocuments',
+        subBuilder: Progress.create)
+    ..aOM<Progress>(5, _omitFieldNames ? '' : 'progressBytes',
+        subBuilder: Progress.create)
+    ..pPS(6, _omitFieldNames ? '' : 'collectionIds')
+    ..aOS(7, _omitFieldNames ? '' : 'inputUriPrefix')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -823,8 +738,10 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   ImportDocumentsMetadata copyWith(
           void Function(ImportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ImportDocumentsMetadata))
-          as ImportDocumentsMetadata; // ignore: deprecated_member_use
+          as ImportDocumentsMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ImportDocumentsMetadata create() => ImportDocumentsMetadata._();
   ImportDocumentsMetadata createEmptyInstance() => create();
@@ -835,6 +752,7 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ImportDocumentsMetadata>(create);
   static ImportDocumentsMetadata? _defaultInstance;
 
+  /// The time this operation started.
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -849,6 +767,8 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
+  /// The time this operation completed. Will be unset if operation still in
+  /// progress.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -863,6 +783,7 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// The state of the import operation.
   @$pb.TagNumber(3)
   OperationState get operationState => $_getN(2);
   @$pb.TagNumber(3)
@@ -875,6 +796,7 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOperationState() => clearField(3);
 
+  /// The progress, in documents, of this operation.
   @$pb.TagNumber(4)
   Progress get progressDocuments => $_getN(3);
   @$pb.TagNumber(4)
@@ -889,6 +811,7 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Progress ensureProgressDocuments() => $_ensure(3);
 
+  /// The progress, in bytes, of this operation.
   @$pb.TagNumber(5)
   Progress get progressBytes => $_getN(4);
   @$pb.TagNumber(5)
@@ -903,9 +826,11 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Progress ensureProgressBytes() => $_ensure(4);
 
+  /// Which collection ids are being imported.
   @$pb.TagNumber(6)
   $core.List<$core.String> get collectionIds => $_getList(5);
 
+  /// The location of the documents being imported.
   @$pb.TagNumber(7)
   $core.String get inputUriPrefix => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -919,39 +844,33 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   void clearInputUriPrefix() => clearField(7);
 }
 
+/// Returned in the [google.longrunning.Operation][google.longrunning.Operation] response field.
 class ExportDocumentsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExportDocumentsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'outputUriPrefix')
-    ..hasRequiredFields = false;
-
-  ExportDocumentsResponse._() : super();
   factory ExportDocumentsResponse({
     $core.String? outputUriPrefix,
   }) {
-    final _result = create();
+    final $result = create();
     if (outputUriPrefix != null) {
-      _result.outputUriPrefix = outputUriPrefix;
+      $result.outputUriPrefix = outputUriPrefix;
     }
-    return _result;
+    return $result;
   }
+  ExportDocumentsResponse._() : super();
   factory ExportDocumentsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExportDocumentsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExportDocumentsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'outputUriPrefix')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -963,8 +882,10 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
   ExportDocumentsResponse copyWith(
           void Function(ExportDocumentsResponse) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsResponse))
-          as ExportDocumentsResponse; // ignore: deprecated_member_use
+          as ExportDocumentsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsResponse create() => ExportDocumentsResponse._();
   ExportDocumentsResponse createEmptyInstance() => create();
@@ -975,6 +896,9 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExportDocumentsResponse>(create);
   static ExportDocumentsResponse? _defaultInstance;
 
+  /// Location of the output files. This can be used to begin an import
+  /// into Cloud Firestore (this project or another project) after the operation
+  /// completes successfully.
   @$pb.TagNumber(1)
   $core.String get outputUriPrefix => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -988,48 +912,40 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
   void clearOutputUriPrefix() => clearField(1);
 }
 
+/// Describes the progress of the operation.
+/// Unit of work is generic and must be interpreted based on where [Progress][google.firestore.admin.v1beta2.Progress]
+/// is used.
 class Progress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Progress',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta2'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'estimatedWork')
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'completedWork')
-    ..hasRequiredFields = false;
-
-  Progress._() : super();
   factory Progress({
     $fixnum.Int64? estimatedWork,
     $fixnum.Int64? completedWork,
   }) {
-    final _result = create();
+    final $result = create();
     if (estimatedWork != null) {
-      _result.estimatedWork = estimatedWork;
+      $result.estimatedWork = estimatedWork;
     }
     if (completedWork != null) {
-      _result.completedWork = completedWork;
+      $result.completedWork = completedWork;
     }
-    return _result;
+    return $result;
   }
+  Progress._() : super();
   factory Progress.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Progress.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Progress',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'estimatedWork')
+    ..aInt64(2, _omitFieldNames ? '' : 'completedWork')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1038,9 +954,10 @@ class Progress extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Progress copyWith(void Function(Progress) updates) =>
-      super.copyWith((message) => updates(message as Progress))
-          as Progress; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Progress)) as Progress;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Progress create() => Progress._();
   Progress createEmptyInstance() => create();
@@ -1050,6 +967,7 @@ class Progress extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Progress>(create);
   static Progress? _defaultInstance;
 
+  /// The amount of work estimated.
   @$pb.TagNumber(1)
   $fixnum.Int64 get estimatedWork => $_getI64(0);
   @$pb.TagNumber(1)
@@ -1062,6 +980,7 @@ class Progress extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEstimatedWork() => clearField(1);
 
+  /// The amount of work completed.
   @$pb.TagNumber(2)
   $fixnum.Int64 get completedWork => $_getI64(1);
   @$pb.TagNumber(2)
@@ -1074,3 +993,7 @@ class Progress extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCompletedWork() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

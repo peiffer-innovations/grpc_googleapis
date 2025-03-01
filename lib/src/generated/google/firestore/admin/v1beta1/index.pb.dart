@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1beta1/index.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,52 +17,41 @@ import 'index.pbenum.dart';
 
 export 'index.pbenum.dart';
 
+/// A field of an index.
 class IndexField extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IndexField',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fieldPath')
-    ..e<IndexField_Mode>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'mode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: IndexField_Mode.MODE_UNSPECIFIED,
-        valueOf: IndexField_Mode.valueOf,
-        enumValues: IndexField_Mode.values)
-    ..hasRequiredFields = false;
-
-  IndexField._() : super();
   factory IndexField({
     $core.String? fieldPath,
     IndexField_Mode? mode,
   }) {
-    final _result = create();
+    final $result = create();
     if (fieldPath != null) {
-      _result.fieldPath = fieldPath;
+      $result.fieldPath = fieldPath;
     }
     if (mode != null) {
-      _result.mode = mode;
+      $result.mode = mode;
     }
-    return _result;
+    return $result;
   }
+  IndexField._() : super();
   factory IndexField.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IndexField.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IndexField',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'fieldPath')
+    ..e<IndexField_Mode>(2, _omitFieldNames ? '' : 'mode', $pb.PbFieldType.OE,
+        defaultOrMaker: IndexField_Mode.MODE_UNSPECIFIED,
+        valueOf: IndexField_Mode.valueOf,
+        enumValues: IndexField_Mode.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -67,9 +60,10 @@ class IndexField extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   IndexField copyWith(void Function(IndexField) updates) =>
-      super.copyWith((message) => updates(message as IndexField))
-          as IndexField; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as IndexField)) as IndexField;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IndexField create() => IndexField._();
   IndexField createEmptyInstance() => create();
@@ -79,6 +73,10 @@ class IndexField extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IndexField>(create);
   static IndexField? _defaultInstance;
 
+  /// The path of the field. Must match the field path specification described
+  /// by [google.firestore.v1beta1.Document.fields][fields].
+  /// Special field path `__name__` may be used by itself or at the end of a
+  /// path. `__type__` may be used only at the end of path.
   @$pb.TagNumber(1)
   $core.String get fieldPath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -91,6 +89,7 @@ class IndexField extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFieldPath() => clearField(1);
 
+  /// The field's mode.
   @$pb.TagNumber(2)
   IndexField_Mode get mode => $_getN(1);
   @$pb.TagNumber(2)
@@ -104,72 +103,52 @@ class IndexField extends $pb.GeneratedMessage {
   void clearMode() => clearField(2);
 }
 
+/// An index definition.
 class Index extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Index',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firestore.admin.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'collectionId')
-    ..pc<IndexField>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fields',
-        $pb.PbFieldType.PM,
-        subBuilder: IndexField.create)
-    ..e<Index_State>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Index_State.STATE_UNSPECIFIED,
-        valueOf: Index_State.valueOf,
-        enumValues: Index_State.values)
-    ..hasRequiredFields = false;
-
-  Index._() : super();
   factory Index({
     $core.String? name,
     $core.String? collectionId,
     $core.Iterable<IndexField>? fields,
     Index_State? state,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (collectionId != null) {
-      _result.collectionId = collectionId;
+      $result.collectionId = collectionId;
     }
     if (fields != null) {
-      _result.fields.addAll(fields);
+      $result.fields.addAll(fields);
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
-    return _result;
+    return $result;
   }
+  Index._() : super();
   factory Index.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Index.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Index',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'collectionId')
+    ..pc<IndexField>(3, _omitFieldNames ? '' : 'fields', $pb.PbFieldType.PM,
+        subBuilder: IndexField.create)
+    ..e<Index_State>(6, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: Index_State.STATE_UNSPECIFIED,
+        valueOf: Index_State.valueOf,
+        enumValues: Index_State.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -178,9 +157,10 @@ class Index extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Index copyWith(void Function(Index) updates) =>
-      super.copyWith((message) => updates(message as Index))
-          as Index; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Index)) as Index;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Index create() => Index._();
   Index createEmptyInstance() => create();
@@ -190,6 +170,8 @@ class Index extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Index>(create);
   static Index? _defaultInstance;
 
+  /// The resource name of the index.
+  /// Output only.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -202,6 +184,7 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The collection ID to which this index applies. Required.
   @$pb.TagNumber(2)
   $core.String get collectionId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -214,9 +197,12 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCollectionId() => clearField(2);
 
+  /// The fields to index.
   @$pb.TagNumber(3)
   $core.List<IndexField> get fields => $_getList(2);
 
+  /// The state of the index.
+  /// Output only.
   @$pb.TagNumber(6)
   Index_State get state => $_getN(3);
   @$pb.TagNumber(6)
@@ -229,3 +215,7 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearState() => clearField(6);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,92 +1,76 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/serviceusage/v1/resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/api.pb.dart' as $0;
-import '../../documentation.pb.dart' as $1;
-import '../../quota.pb.dart' as $2;
 import '../../auth.pb.dart' as $3;
-import '../../usage.pb.dart' as $4;
+import '../../documentation.pb.dart' as $1;
 import '../../endpoint.pb.dart' as $5;
 import '../../monitored_resource.pb.dart' as $6;
 import '../../monitoring.pb.dart' as $7;
-
+import '../../quota.pb.dart' as $2;
+import '../../usage.pb.dart' as $4;
 import 'resources.pbenum.dart';
 
 export 'resources.pbenum.dart';
 
+/// A service that is available for use by the consumer.
 class Service extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Service',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<ServiceConfig>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'config',
-        subBuilder: ServiceConfig.create)
-    ..e<State>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: State.STATE_UNSPECIFIED,
-        valueOf: State.valueOf,
-        enumValues: State.values)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  Service._() : super();
   factory Service({
     $core.String? name,
     ServiceConfig? config,
     State? state,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (config != null) {
-      _result.config = config;
+      $result.config = config;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  Service._() : super();
   factory Service.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Service.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Service',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<ServiceConfig>(2, _omitFieldNames ? '' : 'config',
+        subBuilder: ServiceConfig.create)
+    ..e<State>(4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: State.STATE_UNSPECIFIED,
+        valueOf: State.valueOf,
+        enumValues: State.values)
+    ..aOS(5, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -95,9 +79,10 @@ class Service extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Service copyWith(void Function(Service) updates) =>
-      super.copyWith((message) => updates(message as Service))
-          as Service; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Service)) as Service;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Service create() => Service._();
   Service createEmptyInstance() => create();
@@ -107,6 +92,10 @@ class Service extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
   static Service? _defaultInstance;
 
+  ///  The resource name of the consumer and service.
+  ///
+  ///  A valid name would be:
+  ///  - projects/123/services/serviceusage.googleapis.com
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -119,6 +108,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The service configuration of the available service.
+  /// Some fields may be filtered out of the configuration in responses to
+  /// the `ListServices` method. These fields are present only in responses to
+  /// the `GetService` method.
   @$pb.TagNumber(2)
   ServiceConfig get config => $_getN(1);
   @$pb.TagNumber(2)
@@ -133,6 +126,7 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ServiceConfig ensureConfig() => $_ensure(1);
 
+  /// Whether or not the service has been enabled for use by the consumer.
   @$pb.TagNumber(4)
   State get state => $_getN(2);
   @$pb.TagNumber(4)
@@ -145,6 +139,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearState() => clearField(4);
 
+  ///  The resource name of the consumer.
+  ///
+  ///  A valid name would be:
+  ///  - projects/123
   @$pb.TagNumber(5)
   $core.String get parent => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -158,80 +156,8 @@ class Service extends $pb.GeneratedMessage {
   void clearParent() => clearField(5);
 }
 
+/// The configuration of the service.
 class ServiceConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..pc<$0.Api>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'apis',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Api.create)
-    ..aOM<$1.Documentation>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'documentation',
-        subBuilder: $1.Documentation.create)
-    ..aOM<$2.Quota>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'quota',
-        subBuilder: $2.Quota.create)
-    ..aOM<$3.Authentication>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'authentication',
-        subBuilder: $3.Authentication.create)
-    ..aOM<$4.Usage>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'usage',
-        subBuilder: $4.Usage.create)
-    ..pc<$5.Endpoint>(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endpoints',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.Endpoint.create)
-    ..pc<$6.MonitoredResourceDescriptor>(
-        25,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoredResources',
-        $pb.PbFieldType.PM,
-        subBuilder: $6.MonitoredResourceDescriptor.create)
-    ..aOM<$7.Monitoring>(
-        28,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoring',
-        subBuilder: $7.Monitoring.create)
-    ..hasRequiredFields = false;
-
-  ServiceConfig._() : super();
   factory ServiceConfig({
     $core.String? name,
     $core.String? title,
@@ -244,45 +170,74 @@ class ServiceConfig extends $pb.GeneratedMessage {
     $core.Iterable<$6.MonitoredResourceDescriptor>? monitoredResources,
     $7.Monitoring? monitoring,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (apis != null) {
-      _result.apis.addAll(apis);
+      $result.apis.addAll(apis);
     }
     if (documentation != null) {
-      _result.documentation = documentation;
+      $result.documentation = documentation;
     }
     if (quota != null) {
-      _result.quota = quota;
+      $result.quota = quota;
     }
     if (authentication != null) {
-      _result.authentication = authentication;
+      $result.authentication = authentication;
     }
     if (usage != null) {
-      _result.usage = usage;
+      $result.usage = usage;
     }
     if (endpoints != null) {
-      _result.endpoints.addAll(endpoints);
+      $result.endpoints.addAll(endpoints);
     }
     if (monitoredResources != null) {
-      _result.monitoredResources.addAll(monitoredResources);
+      $result.monitoredResources.addAll(monitoredResources);
     }
     if (monitoring != null) {
-      _result.monitoring = monitoring;
+      $result.monitoring = monitoring;
     }
-    return _result;
+    return $result;
   }
+  ServiceConfig._() : super();
   factory ServiceConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServiceConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServiceConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..pc<$0.Api>(3, _omitFieldNames ? '' : 'apis', $pb.PbFieldType.PM,
+        subBuilder: $0.Api.create)
+    ..aOM<$1.Documentation>(6, _omitFieldNames ? '' : 'documentation',
+        subBuilder: $1.Documentation.create)
+    ..aOM<$2.Quota>(10, _omitFieldNames ? '' : 'quota',
+        subBuilder: $2.Quota.create)
+    ..aOM<$3.Authentication>(11, _omitFieldNames ? '' : 'authentication',
+        subBuilder: $3.Authentication.create)
+    ..aOM<$4.Usage>(15, _omitFieldNames ? '' : 'usage',
+        subBuilder: $4.Usage.create)
+    ..pc<$5.Endpoint>(
+        18, _omitFieldNames ? '' : 'endpoints', $pb.PbFieldType.PM,
+        subBuilder: $5.Endpoint.create)
+    ..pc<$6.MonitoredResourceDescriptor>(
+        25, _omitFieldNames ? '' : 'monitoredResources', $pb.PbFieldType.PM,
+        subBuilder: $6.MonitoredResourceDescriptor.create)
+    ..aOM<$7.Monitoring>(28, _omitFieldNames ? '' : 'monitoring',
+        subBuilder: $7.Monitoring.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -292,8 +247,10 @@ class ServiceConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServiceConfig copyWith(void Function(ServiceConfig) updates) =>
       super.copyWith((message) => updates(message as ServiceConfig))
-          as ServiceConfig; // ignore: deprecated_member_use
+          as ServiceConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServiceConfig create() => ServiceConfig._();
   ServiceConfig createEmptyInstance() => create();
@@ -304,6 +261,10 @@ class ServiceConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServiceConfig>(create);
   static ServiceConfig? _defaultInstance;
 
+  ///  The DNS address at which this service is available.
+  ///
+  ///  An example DNS address would be:
+  ///  `calendar.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -316,6 +277,7 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The product title for this service.
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -328,9 +290,13 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => clearField(2);
 
+  /// A list of API interfaces exported by this service. Contains only the names,
+  /// versions, and method names of the interfaces.
   @$pb.TagNumber(3)
   $core.List<$0.Api> get apis => $_getList(2);
 
+  /// Additional API documentation. Contains only the summary and the
+  /// documentation URL.
   @$pb.TagNumber(6)
   $1.Documentation get documentation => $_getN(3);
   @$pb.TagNumber(6)
@@ -345,6 +311,7 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.Documentation ensureDocumentation() => $_ensure(3);
 
+  /// Quota configuration.
   @$pb.TagNumber(10)
   $2.Quota get quota => $_getN(4);
   @$pb.TagNumber(10)
@@ -359,6 +326,7 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $2.Quota ensureQuota() => $_ensure(4);
 
+  /// Auth configuration. Contains only the OAuth rules.
   @$pb.TagNumber(11)
   $3.Authentication get authentication => $_getN(5);
   @$pb.TagNumber(11)
@@ -373,6 +341,7 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $3.Authentication ensureAuthentication() => $_ensure(5);
 
+  /// Configuration controlling usage of this service.
   @$pb.TagNumber(15)
   $4.Usage get usage => $_getN(6);
   @$pb.TagNumber(15)
@@ -387,13 +356,20 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $4.Usage ensureUsage() => $_ensure(6);
 
+  /// Configuration for network endpoints. Contains only the names and aliases
+  /// of the endpoints.
   @$pb.TagNumber(18)
   $core.List<$5.Endpoint> get endpoints => $_getList(7);
 
+  /// Defines the monitored resources used by this service. This is required
+  /// by the [Service.monitoring][google.api.Service.monitoring] and
+  /// [Service.logging][google.api.Service.logging] configurations.
   @$pb.TagNumber(25)
   $core.List<$6.MonitoredResourceDescriptor> get monitoredResources =>
       $_getList(8);
 
+  /// Monitoring configuration.
+  /// This should not include the 'producer_destinations' field.
   @$pb.TagNumber(28)
   $7.Monitoring get monitoring => $_getN(9);
   @$pb.TagNumber(28)
@@ -409,39 +385,33 @@ class ServiceConfig extends $pb.GeneratedMessage {
   $7.Monitoring ensureMonitoring() => $_ensure(9);
 }
 
+/// The operation metadata returned for the batchend services operation.
 class OperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceNames')
-    ..hasRequiredFields = false;
-
-  OperationMetadata._() : super();
   factory OperationMetadata({
     $core.Iterable<$core.String>? resourceNames,
   }) {
-    final _result = create();
+    final $result = create();
     if (resourceNames != null) {
-      _result.resourceNames.addAll(resourceNames);
+      $result.resourceNames.addAll(resourceNames);
     }
-    return _result;
+    return $result;
   }
+  OperationMetadata._() : super();
   factory OperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..pPS(2, _omitFieldNames ? '' : 'resourceNames')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -451,8 +421,10 @@ class OperationMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata))
-          as OperationMetadata; // ignore: deprecated_member_use
+          as OperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
@@ -463,6 +435,12 @@ class OperationMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata? _defaultInstance;
 
+  /// The full name of the resources that this operation is directly
+  /// associated with.
   @$pb.TagNumber(2)
   $core.List<$core.String> get resourceNames => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

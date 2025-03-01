@@ -1,23 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/notification.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use notificationChannelDescriptorDescriptor instead')
-const NotificationChannelDescriptor$json = const {
+const NotificationChannelDescriptor$json = {
   '1': 'NotificationChannelDescriptor',
-  '2': const [
-    const {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'type', '3': 1, '4': 1, '5': 9, '10': 'type'},
-    const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
-    const {
+  '2': [
+    {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'type', '3': 1, '4': 1, '5': 9, '10': 'type'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    {
       '1': 'labels',
       '3': 4,
       '4': 3,
@@ -25,16 +29,16 @@ const NotificationChannelDescriptor$json = const {
       '6': '.google.api.LabelDescriptor',
       '10': 'labels'
     },
-    const {
+    {
       '1': 'supported_tiers',
       '3': 5,
       '4': 3,
       '5': 14,
       '6': '.google.monitoring.v3.ServiceTier',
-      '8': const {'3': true},
+      '8': {'3': true},
       '10': 'supportedTiers',
     },
-    const {
+    {
       '1': 'launch_stage',
       '3': 7,
       '4': 1,
@@ -43,22 +47,33 @@ const NotificationChannelDescriptor$json = const {
       '10': 'launchStage'
     },
   ],
-  '7': const {},
+  '7': {},
 };
 
 /// Descriptor for `NotificationChannelDescriptor`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List notificationChannelDescriptorDescriptor =
-    $convert.base64Decode(
-        'Ch1Ob3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvchISCgRuYW1lGAYgASgJUgRuYW1lEhIKBHR5cGUYASABKAlSBHR5cGUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRIgCgtkZXNjcmlwdGlvbhgDIAEoCVILZGVzY3JpcHRpb24SMwoGbGFiZWxzGAQgAygLMhsuZ29vZ2xlLmFwaS5MYWJlbERlc2NyaXB0b3JSBmxhYmVscxJOCg9zdXBwb3J0ZWRfdGllcnMYBSADKA4yIS5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlVGllckICGAFSDnN1cHBvcnRlZFRpZXJzEjoKDGxhdW5jaF9zdGFnZRgHIAEoDjIXLmdvb2dsZS5hcGkuTGF1bmNoU3RhZ2VSC2xhdW5jaFN0YWdlOqAC6kGcAgo3bW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvchJGcHJvamVjdHMve3Byb2plY3R9L25vdGlmaWNhdGlvbkNoYW5uZWxEZXNjcmlwdG9ycy97Y2hhbm5lbF9kZXNjcmlwdG9yfRJQb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9ub3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvcnMve2NoYW5uZWxfZGVzY3JpcHRvcn0SRGZvbGRlcnMve2ZvbGRlcn0vbm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3JzL3tjaGFubmVsX2Rlc2NyaXB0b3J9EgEq');
+final $typed_data.Uint8List notificationChannelDescriptorDescriptor = $convert.base64Decode(
+    'Ch1Ob3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvchISCgRuYW1lGAYgASgJUgRuYW1lEhIKBH'
+    'R5cGUYASABKAlSBHR5cGUSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRIgCgtk'
+    'ZXNjcmlwdGlvbhgDIAEoCVILZGVzY3JpcHRpb24SMwoGbGFiZWxzGAQgAygLMhsuZ29vZ2xlLm'
+    'FwaS5MYWJlbERlc2NyaXB0b3JSBmxhYmVscxJOCg9zdXBwb3J0ZWRfdGllcnMYBSADKA4yIS5n'
+    'b29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlVGllckICGAFSDnN1cHBvcnRlZFRpZXJzEjoKDG'
+    'xhdW5jaF9zdGFnZRgHIAEoDjIXLmdvb2dsZS5hcGkuTGF1bmNoU3RhZ2VSC2xhdW5jaFN0YWdl'
+    'OqAC6kGcAgo3bW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25DaGFubmVsRG'
+    'VzY3JpcHRvchJGcHJvamVjdHMve3Byb2plY3R9L25vdGlmaWNhdGlvbkNoYW5uZWxEZXNjcmlw'
+    'dG9ycy97Y2hhbm5lbF9kZXNjcmlwdG9yfRJQb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS'
+    '9ub3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvcnMve2NoYW5uZWxfZGVzY3JpcHRvcn0SRGZv'
+    'bGRlcnMve2ZvbGRlcn0vbm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3JzL3tjaGFubmVsX2'
+    'Rlc2NyaXB0b3J9EgEq');
+
 @$core.Deprecated('Use notificationChannelDescriptor instead')
-const NotificationChannel$json = const {
+const NotificationChannel$json = {
   '1': 'NotificationChannel',
-  '2': const [
-    const {'1': 'type', '3': 1, '4': 1, '5': 9, '10': 'type'},
-    const {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
-    const {
+  '2': [
+    {'1': 'type', '3': 1, '4': 1, '5': 9, '10': 'type'},
+    {'1': 'name', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
+    {
       '1': 'labels',
       '3': 5,
       '4': 3,
@@ -66,7 +81,7 @@ const NotificationChannel$json = const {
       '6': '.google.monitoring.v3.NotificationChannel.LabelsEntry',
       '10': 'labels'
     },
-    const {
+    {
       '1': 'user_labels',
       '3': 8,
       '4': 3,
@@ -74,7 +89,7 @@ const NotificationChannel$json = const {
       '6': '.google.monitoring.v3.NotificationChannel.UserLabelsEntry',
       '10': 'userLabels'
     },
-    const {
+    {
       '1': 'verification_status',
       '3': 9,
       '4': 1,
@@ -82,7 +97,7 @@ const NotificationChannel$json = const {
       '6': '.google.monitoring.v3.NotificationChannel.VerificationStatus',
       '10': 'verificationStatus'
     },
-    const {
+    {
       '1': 'enabled',
       '3': 11,
       '4': 1,
@@ -90,7 +105,7 @@ const NotificationChannel$json = const {
       '6': '.google.protobuf.BoolValue',
       '10': 'enabled'
     },
-    const {
+    {
       '1': 'creation_record',
       '3': 12,
       '4': 1,
@@ -98,7 +113,7 @@ const NotificationChannel$json = const {
       '6': '.google.monitoring.v3.MutationRecord',
       '10': 'creationRecord'
     },
-    const {
+    {
       '1': 'mutation_records',
       '3': 13,
       '4': 3,
@@ -107,44 +122,63 @@ const NotificationChannel$json = const {
       '10': 'mutationRecords'
     },
   ],
-  '3': const [
+  '3': [
     NotificationChannel_LabelsEntry$json,
     NotificationChannel_UserLabelsEntry$json
   ],
-  '4': const [NotificationChannel_VerificationStatus$json],
-  '7': const {},
+  '4': [NotificationChannel_VerificationStatus$json],
+  '7': {},
 };
 
 @$core.Deprecated('Use notificationChannelDescriptor instead')
-const NotificationChannel_LabelsEntry$json = const {
+const NotificationChannel_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
 @$core.Deprecated('Use notificationChannelDescriptor instead')
-const NotificationChannel_UserLabelsEntry$json = const {
+const NotificationChannel_UserLabelsEntry$json = {
   '1': 'UserLabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
 @$core.Deprecated('Use notificationChannelDescriptor instead')
-const NotificationChannel_VerificationStatus$json = const {
+const NotificationChannel_VerificationStatus$json = {
   '1': 'VerificationStatus',
-  '2': const [
-    const {'1': 'VERIFICATION_STATUS_UNSPECIFIED', '2': 0},
-    const {'1': 'UNVERIFIED', '2': 1},
-    const {'1': 'VERIFIED', '2': 2},
+  '2': [
+    {'1': 'VERIFICATION_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'UNVERIFIED', '2': 1},
+    {'1': 'VERIFIED', '2': 2},
   ],
 };
 
 /// Descriptor for `NotificationChannel`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List notificationChannelDescriptor = $convert.base64Decode(
-    'ChNOb3RpZmljYXRpb25DaGFubmVsEhIKBHR5cGUYASABKAlSBHR5cGUSEgoEbmFtZRgGIAEoCVIEbmFtZRIhCgxkaXNwbGF5X25hbWUYAyABKAlSC2Rpc3BsYXlOYW1lEiAKC2Rlc2NyaXB0aW9uGAQgASgJUgtkZXNjcmlwdGlvbhJNCgZsYWJlbHMYBSADKAsyNS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsLkxhYmVsc0VudHJ5UgZsYWJlbHMSWgoLdXNlcl9sYWJlbHMYCCADKAsyOS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsLlVzZXJMYWJlbHNFbnRyeVIKdXNlckxhYmVscxJtChN2ZXJpZmljYXRpb25fc3RhdHVzGAkgASgOMjwuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5lbC5WZXJpZmljYXRpb25TdGF0dXNSEnZlcmlmaWNhdGlvblN0YXR1cxI0CgdlbmFibGVkGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZVIHZW5hYmxlZBJNCg9jcmVhdGlvbl9yZWNvcmQYDCABKAsyJC5nb29nbGUubW9uaXRvcmluZy52My5NdXRhdGlvblJlY29yZFIOY3JlYXRpb25SZWNvcmQSTwoQbXV0YXRpb25fcmVjb3JkcxgNIAMoCzIkLmdvb2dsZS5tb25pdG9yaW5nLnYzLk11dGF0aW9uUmVjb3JkUg9tdXRhdGlvblJlY29yZHMaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ARo9Cg9Vc2VyTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4ASJXChJWZXJpZmljYXRpb25TdGF0dXMSIwofVkVSSUZJQ0FUSU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEg4KClVOVkVSSUZJRUQQARIMCghWRVJJRklFRBACOv4B6kH6AQotbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25DaGFubmVsEj5wcm9qZWN0cy97cHJvamVjdH0vbm90aWZpY2F0aW9uQ2hhbm5lbHMve25vdGlmaWNhdGlvbl9jaGFubmVsfRJIb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9ub3RpZmljYXRpb25DaGFubmVscy97bm90aWZpY2F0aW9uX2NoYW5uZWx9Ejxmb2xkZXJzL3tmb2xkZXJ9L25vdGlmaWNhdGlvbkNoYW5uZWxzL3tub3RpZmljYXRpb25fY2hhbm5lbH0SASo=');
+    'ChNOb3RpZmljYXRpb25DaGFubmVsEhIKBHR5cGUYASABKAlSBHR5cGUSFwoEbmFtZRgGIAEoCU'
+    'ID4EEIUgRuYW1lEiEKDGRpc3BsYXlfbmFtZRgDIAEoCVILZGlzcGxheU5hbWUSIAoLZGVzY3Jp'
+    'cHRpb24YBCABKAlSC2Rlc2NyaXB0aW9uEk0KBmxhYmVscxgFIAMoCzI1Lmdvb2dsZS5tb25pdG'
+    '9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5uZWwuTGFiZWxzRW50cnlSBmxhYmVscxJaCgt1c2Vy'
+    'X2xhYmVscxgIIAMoCzI5Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5uZW'
+    'wuVXNlckxhYmVsc0VudHJ5Ugp1c2VyTGFiZWxzEm0KE3ZlcmlmaWNhdGlvbl9zdGF0dXMYCSAB'
+    'KA4yPC5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsLlZlcmlmaWNhdG'
+    'lvblN0YXR1c1ISdmVyaWZpY2F0aW9uU3RhdHVzEjQKB2VuYWJsZWQYCyABKAsyGi5nb29nbGUu'
+    'cHJvdG9idWYuQm9vbFZhbHVlUgdlbmFibGVkEk0KD2NyZWF0aW9uX3JlY29yZBgMIAEoCzIkLm'
+    'dvb2dsZS5tb25pdG9yaW5nLnYzLk11dGF0aW9uUmVjb3JkUg5jcmVhdGlvblJlY29yZBJPChBt'
+    'dXRhdGlvbl9yZWNvcmRzGA0gAygLMiQuZ29vZ2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25SZW'
+    'NvcmRSD211dGF0aW9uUmVjb3Jkcxo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIU'
+    'CgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGj0KD1VzZXJMYWJlbHNFbnRyeRIQCgNrZXkYASABKA'
+    'lSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIlcKElZlcmlmaWNhdGlvblN0YXR1cxIj'
+    'Ch9WRVJJRklDQVRJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASDgoKVU5WRVJJRklFRBABEgwKCF'
+    'ZFUklGSUVEEAI6/gHqQfoBCi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05vdGlmaWNhdGlv'
+    'bkNoYW5uZWwSPnByb2plY3RzL3twcm9qZWN0fS9ub3RpZmljYXRpb25DaGFubmVscy97bm90aW'
+    'ZpY2F0aW9uX2NoYW5uZWx9Ekhvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L25vdGlmaWNh'
+    'dGlvbkNoYW5uZWxzL3tub3RpZmljYXRpb25fY2hhbm5lbH0SPGZvbGRlcnMve2ZvbGRlcn0vbm'
+    '90aWZpY2F0aW9uQ2hhbm5lbHMve25vdGlmaWNhdGlvbl9jaGFubmVsfRIBKg==');

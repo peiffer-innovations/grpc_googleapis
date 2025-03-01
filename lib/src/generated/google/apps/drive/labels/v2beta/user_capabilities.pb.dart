@@ -1,52 +1,20 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2beta/user_capabilities.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The capabilities of a user.
 class UserCapabilities extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UserCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canAccessLabelManager')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canAdministrateLabels')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canCreateSharedLabels')
-    ..aOB(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canCreateAdminLabels')
-    ..hasRequiredFields = false;
-
-  UserCapabilities._() : super();
   factory UserCapabilities({
     $core.String? name,
     $core.bool? canAccessLabelManager,
@@ -54,30 +22,44 @@ class UserCapabilities extends $pb.GeneratedMessage {
     $core.bool? canCreateSharedLabels,
     $core.bool? canCreateAdminLabels,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (canAccessLabelManager != null) {
-      _result.canAccessLabelManager = canAccessLabelManager;
+      $result.canAccessLabelManager = canAccessLabelManager;
     }
     if (canAdministrateLabels != null) {
-      _result.canAdministrateLabels = canAdministrateLabels;
+      $result.canAdministrateLabels = canAdministrateLabels;
     }
     if (canCreateSharedLabels != null) {
-      _result.canCreateSharedLabels = canCreateSharedLabels;
+      $result.canCreateSharedLabels = canCreateSharedLabels;
     }
     if (canCreateAdminLabels != null) {
-      _result.canCreateAdminLabels = canCreateAdminLabels;
+      $result.canCreateAdminLabels = canCreateAdminLabels;
     }
-    return _result;
+    return $result;
   }
+  UserCapabilities._() : super();
   factory UserCapabilities.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UserCapabilities.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOB(2, _omitFieldNames ? '' : 'canAccessLabelManager')
+    ..aOB(3, _omitFieldNames ? '' : 'canAdministrateLabels')
+    ..aOB(4, _omitFieldNames ? '' : 'canCreateSharedLabels')
+    ..aOB(5, _omitFieldNames ? '' : 'canCreateAdminLabels')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -87,8 +69,10 @@ class UserCapabilities extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UserCapabilities copyWith(void Function(UserCapabilities) updates) =>
       super.copyWith((message) => updates(message as UserCapabilities))
-          as UserCapabilities; // ignore: deprecated_member_use
+          as UserCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UserCapabilities create() => UserCapabilities._();
   UserCapabilities createEmptyInstance() => create();
@@ -99,6 +83,7 @@ class UserCapabilities extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UserCapabilities>(create);
   static UserCapabilities? _defaultInstance;
 
+  /// Output only. Resource name for the user capabilities.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -111,6 +96,7 @@ class UserCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Output only. Whether the user is allowed access to the label manager.
   @$pb.TagNumber(2)
   $core.bool get canAccessLabelManager => $_getBF(1);
   @$pb.TagNumber(2)
@@ -123,6 +109,8 @@ class UserCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCanAccessLabelManager() => clearField(2);
 
+  /// Output only. Whether the user is an administrator for the shared labels
+  /// feature.
   @$pb.TagNumber(3)
   $core.bool get canAdministrateLabels => $_getBF(2);
   @$pb.TagNumber(3)
@@ -135,6 +123,7 @@ class UserCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCanAdministrateLabels() => clearField(3);
 
+  /// Output only. Whether the user is allowed to create new shared labels.
   @$pb.TagNumber(4)
   $core.bool get canCreateSharedLabels => $_getBF(3);
   @$pb.TagNumber(4)
@@ -147,6 +136,7 @@ class UserCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCanCreateSharedLabels() => clearField(4);
 
+  /// Output only. Whether the user is allowed to create new admin labels.
   @$pb.TagNumber(5)
   $core.bool get canCreateAdminLabels => $_getBF(4);
   @$pb.TagNumber(5)
@@ -159,3 +149,7 @@ class UserCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCanCreateAdminLabels() => clearField(5);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

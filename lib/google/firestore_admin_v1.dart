@@ -1,3 +1,6 @@
+export '../src/generated/google/firestore/admin/v1/backup.pb.dart';
+export '../src/generated/google/firestore/admin/v1/backup.pbenum.dart';
+export '../src/generated/google/firestore/admin/v1/backup.pbjson.dart';
 export '../src/generated/google/firestore/admin/v1/database.pb.dart';
 export '../src/generated/google/firestore/admin/v1/database.pbenum.dart';
 export '../src/generated/google/firestore/admin/v1/database.pbjson.dart';
@@ -17,3 +20,6 @@ export '../src/generated/google/firestore/admin/v1/location.pbjson.dart';
 export '../src/generated/google/firestore/admin/v1/operation.pb.dart';
 export '../src/generated/google/firestore/admin/v1/operation.pbenum.dart';
 export '../src/generated/google/firestore/admin/v1/operation.pbjson.dart';
+export '../src/generated/google/firestore/admin/v1/schedule.pb.dart';
+export '../src/generated/google/firestore/admin/v1/schedule.pbenum.dart';
+export '../src/generated/google/firestore/admin/v1/schedule.pbjson.dart';

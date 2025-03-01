@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routes/v1/fallback_info.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,56 +17,47 @@ import 'fallback_info.pbenum.dart';
 
 export 'fallback_info.pbenum.dart';
 
+/// Information related to how and why a fallback result was used. If this field
+/// is set, then it means the server used a different routing mode from your
+/// preferred mode as fallback.
 class FallbackInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FallbackInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..e<FallbackRoutingMode>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'routingMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: FallbackRoutingMode.FALLBACK_ROUTING_MODE_UNSPECIFIED,
-        valueOf: FallbackRoutingMode.valueOf,
-        enumValues: FallbackRoutingMode.values)
-    ..e<FallbackReason>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reason',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: FallbackReason.FALLBACK_REASON_UNSPECIFIED,
-        valueOf: FallbackReason.valueOf,
-        enumValues: FallbackReason.values)
-    ..hasRequiredFields = false;
-
-  FallbackInfo._() : super();
   factory FallbackInfo({
     FallbackRoutingMode? routingMode,
     FallbackReason? reason,
   }) {
-    final _result = create();
+    final $result = create();
     if (routingMode != null) {
-      _result.routingMode = routingMode;
+      $result.routingMode = routingMode;
     }
     if (reason != null) {
-      _result.reason = reason;
+      $result.reason = reason;
     }
-    return _result;
+    return $result;
   }
+  FallbackInfo._() : super();
   factory FallbackInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FallbackInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FallbackInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..e<FallbackRoutingMode>(
+        1, _omitFieldNames ? '' : 'routingMode', $pb.PbFieldType.OE,
+        defaultOrMaker: FallbackRoutingMode.FALLBACK_ROUTING_MODE_UNSPECIFIED,
+        valueOf: FallbackRoutingMode.valueOf,
+        enumValues: FallbackRoutingMode.values)
+    ..e<FallbackReason>(2, _omitFieldNames ? '' : 'reason', $pb.PbFieldType.OE,
+        defaultOrMaker: FallbackReason.FALLBACK_REASON_UNSPECIFIED,
+        valueOf: FallbackReason.valueOf,
+        enumValues: FallbackReason.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -72,8 +67,10 @@ class FallbackInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   FallbackInfo copyWith(void Function(FallbackInfo) updates) =>
       super.copyWith((message) => updates(message as FallbackInfo))
-          as FallbackInfo; // ignore: deprecated_member_use
+          as FallbackInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FallbackInfo create() => FallbackInfo._();
   FallbackInfo createEmptyInstance() => create();
@@ -84,6 +81,9 @@ class FallbackInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FallbackInfo>(create);
   static FallbackInfo? _defaultInstance;
 
+  /// Routing mode used for the response. If fallback was triggered, the mode
+  /// may be different from routing preference set in the original client
+  /// request.
   @$pb.TagNumber(1)
   FallbackRoutingMode get routingMode => $_getN(0);
   @$pb.TagNumber(1)
@@ -96,6 +96,9 @@ class FallbackInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRoutingMode() => clearField(1);
 
+  /// The reason why fallback response was used instead of the original response.
+  /// This field is only populated when the fallback mode is triggered and the
+  /// fallback response is returned.
   @$pb.TagNumber(2)
   FallbackReason get reason => $_getN(1);
   @$pb.TagNumber(2)
@@ -108,3 +111,7 @@ class FallbackInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReason() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

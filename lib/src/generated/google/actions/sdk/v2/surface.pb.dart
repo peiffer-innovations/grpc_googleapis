@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/surface.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,41 +17,36 @@ import 'surface.pbenum.dart';
 
 export 'surface.pbenum.dart';
 
+/// Contains a set of requirements that the client surface must support to invoke
+/// Actions in your project.
 class SurfaceRequirements extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SurfaceRequirements',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..pc<CapabilityRequirement>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minimumRequirements',
-        $pb.PbFieldType.PM,
-        subBuilder: CapabilityRequirement.create)
-    ..hasRequiredFields = false;
-
-  SurfaceRequirements._() : super();
   factory SurfaceRequirements({
     $core.Iterable<CapabilityRequirement>? minimumRequirements,
   }) {
-    final _result = create();
+    final $result = create();
     if (minimumRequirements != null) {
-      _result.minimumRequirements.addAll(minimumRequirements);
+      $result.minimumRequirements.addAll(minimumRequirements);
     }
-    return _result;
+    return $result;
   }
+  SurfaceRequirements._() : super();
   factory SurfaceRequirements.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SurfaceRequirements.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SurfaceRequirements',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..pc<CapabilityRequirement>(
+        1, _omitFieldNames ? '' : 'minimumRequirements', $pb.PbFieldType.PM,
+        subBuilder: CapabilityRequirement.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -57,8 +56,10 @@ class SurfaceRequirements extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SurfaceRequirements copyWith(void Function(SurfaceRequirements) updates) =>
       super.copyWith((message) => updates(message as SurfaceRequirements))
-          as SurfaceRequirements; // ignore: deprecated_member_use
+          as SurfaceRequirements;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SurfaceRequirements create() => SurfaceRequirements._();
   SurfaceRequirements createEmptyInstance() => create();
@@ -69,48 +70,45 @@ class SurfaceRequirements extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SurfaceRequirements>(create);
   static SurfaceRequirements? _defaultInstance;
 
+  /// The minimum set of capabilities needed to invoke the Actions in your
+  /// project. If the surface is missing any of these, the Action will not be
+  /// triggered.
   @$pb.TagNumber(1)
   $core.List<CapabilityRequirement> get minimumRequirements => $_getList(0);
 }
 
+/// Represents a requirement about the availability of a given capability.
 class CapabilityRequirement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CapabilityRequirement',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..e<CapabilityRequirement_SurfaceCapability>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'capability',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: CapabilityRequirement_SurfaceCapability
-            .SURFACE_CAPABILITY_UNSPECIFIED,
-        valueOf: CapabilityRequirement_SurfaceCapability.valueOf,
-        enumValues: CapabilityRequirement_SurfaceCapability.values)
-    ..hasRequiredFields = false;
-
-  CapabilityRequirement._() : super();
   factory CapabilityRequirement({
     CapabilityRequirement_SurfaceCapability? capability,
   }) {
-    final _result = create();
+    final $result = create();
     if (capability != null) {
-      _result.capability = capability;
+      $result.capability = capability;
     }
-    return _result;
+    return $result;
   }
+  CapabilityRequirement._() : super();
   factory CapabilityRequirement.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CapabilityRequirement.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CapabilityRequirement',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..e<CapabilityRequirement_SurfaceCapability>(
+        1, _omitFieldNames ? '' : 'capability', $pb.PbFieldType.OE,
+        defaultOrMaker: CapabilityRequirement_SurfaceCapability
+            .SURFACE_CAPABILITY_UNSPECIFIED,
+        valueOf: CapabilityRequirement_SurfaceCapability.valueOf,
+        enumValues: CapabilityRequirement_SurfaceCapability.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -122,8 +120,10 @@ class CapabilityRequirement extends $pb.GeneratedMessage {
   CapabilityRequirement copyWith(
           void Function(CapabilityRequirement) updates) =>
       super.copyWith((message) => updates(message as CapabilityRequirement))
-          as CapabilityRequirement; // ignore: deprecated_member_use
+          as CapabilityRequirement;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CapabilityRequirement create() => CapabilityRequirement._();
   CapabilityRequirement createEmptyInstance() => create();
@@ -134,6 +134,7 @@ class CapabilityRequirement extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CapabilityRequirement>(create);
   static CapabilityRequirement? _defaultInstance;
 
+  /// The type of capability.
   @$pb.TagNumber(1)
   CapabilityRequirement_SurfaceCapability get capability => $_getN(0);
   @$pb.TagNumber(1)
@@ -146,3 +147,7 @@ class CapabilityRequirement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCapability() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

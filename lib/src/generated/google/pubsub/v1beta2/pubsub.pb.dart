@@ -1,47 +1,45 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/pubsub/v1beta2/pubsub.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// A topic resource.
 class Topic extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Topic',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  Topic._() : super();
   factory Topic({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  Topic._() : super();
   factory Topic.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Topic.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Topic',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -50,9 +48,10 @@ class Topic extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Topic copyWith(void Function(Topic) updates) =>
-      super.copyWith((message) => updates(message as Topic))
-          as Topic; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Topic)) as Topic;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Topic create() => Topic._();
   Topic createEmptyInstance() => create();
@@ -62,6 +61,7 @@ class Topic extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Topic>(create);
   static Topic? _defaultInstance;
 
+  /// Name of the topic.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -75,62 +75,48 @@ class Topic extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A message data and its attributes.
 class PubsubMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PubsubMessage',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'data',
-        $pb.PbFieldType.OY)
-    ..m<$core.String, $core.String>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'attributes',
-        entryClassName: 'PubsubMessage.AttributesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.pubsub.v1beta2'))
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'messageId')
-    ..hasRequiredFields = false;
-
-  PubsubMessage._() : super();
   factory PubsubMessage({
     $core.List<$core.int>? data,
     $core.Map<$core.String, $core.String>? attributes,
     $core.String? messageId,
   }) {
-    final _result = create();
+    final $result = create();
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
     if (attributes != null) {
-      _result.attributes.addAll(attributes);
+      $result.attributes.addAll(attributes);
     }
     if (messageId != null) {
-      _result.messageId = messageId;
+      $result.messageId = messageId;
     }
-    return _result;
+    return $result;
   }
+  PubsubMessage._() : super();
   factory PubsubMessage.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PubsubMessage.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PubsubMessage',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'attributes',
+        entryClassName: 'PubsubMessage.AttributesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -140,8 +126,10 @@ class PubsubMessage extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PubsubMessage copyWith(void Function(PubsubMessage) updates) =>
       super.copyWith((message) => updates(message as PubsubMessage))
-          as PubsubMessage; // ignore: deprecated_member_use
+          as PubsubMessage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PubsubMessage create() => PubsubMessage._();
   PubsubMessage createEmptyInstance() => create();
@@ -152,6 +140,8 @@ class PubsubMessage extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PubsubMessage>(create);
   static PubsubMessage? _defaultInstance;
 
+  /// The message payload. For JSON requests, the value of this field must be
+  /// base64-encoded.
   @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
   @$pb.TagNumber(1)
@@ -164,9 +154,14 @@ class PubsubMessage extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearData() => clearField(1);
 
+  /// Optional attributes for this message.
   @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get attributes => $_getMap(1);
 
+  /// ID of this message assigned by the server at publication time. Guaranteed
+  /// to be unique within the topic. This value may be read by a subscriber
+  /// that receives a PubsubMessage via a Pull call or a push delivery. It must
+  /// not be populated by a publisher in a Publish call.
   @$pb.TagNumber(3)
   $core.String get messageId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -180,39 +175,33 @@ class PubsubMessage extends $pb.GeneratedMessage {
   void clearMessageId() => clearField(3);
 }
 
+/// Request for the GetTopic method.
 class GetTopicRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetTopicRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..hasRequiredFields = false;
-
-  GetTopicRequest._() : super();
   factory GetTopicRequest({
     $core.String? topic,
   }) {
-    final _result = create();
+    final $result = create();
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
-    return _result;
+    return $result;
   }
+  GetTopicRequest._() : super();
   factory GetTopicRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetTopicRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetTopicRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -222,8 +211,10 @@ class GetTopicRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetTopicRequest copyWith(void Function(GetTopicRequest) updates) =>
       super.copyWith((message) => updates(message as GetTopicRequest))
-          as GetTopicRequest; // ignore: deprecated_member_use
+          as GetTopicRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetTopicRequest create() => GetTopicRequest._();
   GetTopicRequest createEmptyInstance() => create();
@@ -234,6 +225,7 @@ class GetTopicRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetTopicRequest>(create);
   static GetTopicRequest? _defaultInstance;
 
+  /// The name of the topic to get.
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -247,50 +239,40 @@ class GetTopicRequest extends $pb.GeneratedMessage {
   void clearTopic() => clearField(1);
 }
 
+/// Request for the Publish method.
 class PublishRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PublishRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..pc<PubsubMessage>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'messages',
-        $pb.PbFieldType.PM,
-        subBuilder: PubsubMessage.create)
-    ..hasRequiredFields = false;
-
-  PublishRequest._() : super();
   factory PublishRequest({
     $core.String? topic,
     $core.Iterable<PubsubMessage>? messages,
   }) {
-    final _result = create();
+    final $result = create();
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
     if (messages != null) {
-      _result.messages.addAll(messages);
+      $result.messages.addAll(messages);
     }
-    return _result;
+    return $result;
   }
+  PublishRequest._() : super();
   factory PublishRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PublishRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PublishRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..pc<PubsubMessage>(
+        2, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM,
+        subBuilder: PubsubMessage.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -300,8 +282,10 @@ class PublishRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PublishRequest copyWith(void Function(PublishRequest) updates) =>
       super.copyWith((message) => updates(message as PublishRequest))
-          as PublishRequest; // ignore: deprecated_member_use
+          as PublishRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PublishRequest create() => PublishRequest._();
   PublishRequest createEmptyInstance() => create();
@@ -312,6 +296,7 @@ class PublishRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PublishRequest>(create);
   static PublishRequest? _defaultInstance;
 
+  /// The messages in the request will be published on this topic.
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -324,43 +309,38 @@ class PublishRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
+  /// The messages to publish.
   @$pb.TagNumber(2)
   $core.List<PubsubMessage> get messages => $_getList(1);
 }
 
+/// Response for the Publish method.
 class PublishResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PublishResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'messageIds')
-    ..hasRequiredFields = false;
-
-  PublishResponse._() : super();
   factory PublishResponse({
     $core.Iterable<$core.String>? messageIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (messageIds != null) {
-      _result.messageIds.addAll(messageIds);
+      $result.messageIds.addAll(messageIds);
     }
-    return _result;
+    return $result;
   }
+  PublishResponse._() : super();
   factory PublishResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PublishResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PublishResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'messageIds')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -370,8 +350,10 @@ class PublishResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PublishResponse copyWith(void Function(PublishResponse) updates) =>
       super.copyWith((message) => updates(message as PublishResponse))
-          as PublishResponse; // ignore: deprecated_member_use
+          as PublishResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PublishResponse create() => PublishResponse._();
   PublishResponse createEmptyInstance() => create();
@@ -382,62 +364,50 @@ class PublishResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PublishResponse>(create);
   static PublishResponse? _defaultInstance;
 
+  /// The server-assigned ID of each published message, in the same order as
+  /// the messages in the request. IDs are guaranteed to be unique within
+  /// the topic.
   @$pb.TagNumber(1)
   $core.List<$core.String> get messageIds => $_getList(0);
 }
 
+/// Request for the ListTopics method.
 class ListTopicsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListTopicsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'project')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListTopicsRequest._() : super();
   factory ListTopicsRequest({
     $core.String? project,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (project != null) {
-      _result.project = project;
+      $result.project = project;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListTopicsRequest._() : super();
   factory ListTopicsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListTopicsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTopicsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'project')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -447,8 +417,10 @@ class ListTopicsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListTopicsRequest copyWith(void Function(ListTopicsRequest) updates) =>
       super.copyWith((message) => updates(message as ListTopicsRequest))
-          as ListTopicsRequest; // ignore: deprecated_member_use
+          as ListTopicsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListTopicsRequest create() => ListTopicsRequest._();
   ListTopicsRequest createEmptyInstance() => create();
@@ -459,6 +431,7 @@ class ListTopicsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListTopicsRequest>(create);
   static ListTopicsRequest? _defaultInstance;
 
+  /// The name of the cloud project that topics belong to.
   @$pb.TagNumber(1)
   $core.String get project => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -471,6 +444,7 @@ class ListTopicsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProject() => clearField(1);
 
+  /// Maximum number of topics to return.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -483,6 +457,9 @@ class ListTopicsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// The value returned by the last ListTopicsResponse; indicates that this is
+  /// a continuation of a prior ListTopics call, and that the system should
+  /// return the next page of data.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -496,50 +473,39 @@ class ListTopicsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response for the ListTopics method.
 class ListTopicsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListTopicsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..pc<Topic>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topics',
-        $pb.PbFieldType.PM,
-        subBuilder: Topic.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListTopicsResponse._() : super();
   factory ListTopicsResponse({
     $core.Iterable<Topic>? topics,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (topics != null) {
-      _result.topics.addAll(topics);
+      $result.topics.addAll(topics);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListTopicsResponse._() : super();
   factory ListTopicsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListTopicsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTopicsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<Topic>(1, _omitFieldNames ? '' : 'topics', $pb.PbFieldType.PM,
+        subBuilder: Topic.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -549,8 +515,10 @@ class ListTopicsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListTopicsResponse copyWith(void Function(ListTopicsResponse) updates) =>
       super.copyWith((message) => updates(message as ListTopicsResponse))
-          as ListTopicsResponse; // ignore: deprecated_member_use
+          as ListTopicsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListTopicsResponse create() => ListTopicsResponse._();
   ListTopicsResponse createEmptyInstance() => create();
@@ -561,9 +529,12 @@ class ListTopicsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListTopicsResponse>(create);
   static ListTopicsResponse? _defaultInstance;
 
+  /// The resulting topics.
   @$pb.TagNumber(1)
   $core.List<Topic> get topics => $_getList(0);
 
+  /// If not empty, indicates that there may be more topics that match the
+  /// request; this value should be passed in a new ListTopicsRequest.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -577,58 +548,43 @@ class ListTopicsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request for the ListTopicSubscriptions method.
 class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListTopicSubscriptionsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListTopicSubscriptionsRequest._() : super();
   factory ListTopicSubscriptionsRequest({
     $core.String? topic,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListTopicSubscriptionsRequest._() : super();
   factory ListTopicSubscriptionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListTopicSubscriptionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTopicSubscriptionsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -641,8 +597,10 @@ class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
           void Function(ListTopicSubscriptionsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListTopicSubscriptionsRequest))
-          as ListTopicSubscriptionsRequest; // ignore: deprecated_member_use
+          as ListTopicSubscriptionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListTopicSubscriptionsRequest create() =>
       ListTopicSubscriptionsRequest._();
@@ -654,6 +612,7 @@ class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListTopicSubscriptionsRequest>(create);
   static ListTopicSubscriptionsRequest? _defaultInstance;
 
+  /// The name of the topic that subscriptions are attached to.
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -666,6 +625,7 @@ class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
+  /// Maximum number of subscription names to return.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -678,6 +638,9 @@ class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// The value returned by the last ListTopicSubscriptionsResponse; indicates
+  /// that this is a continuation of a prior ListTopicSubscriptions call, and
+  /// that the system should return the next page of data.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -691,48 +654,38 @@ class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response for the ListTopicSubscriptions method.
 class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListTopicSubscriptionsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscriptions')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListTopicSubscriptionsResponse._() : super();
   factory ListTopicSubscriptionsResponse({
     $core.Iterable<$core.String>? subscriptions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscriptions != null) {
-      _result.subscriptions.addAll(subscriptions);
+      $result.subscriptions.addAll(subscriptions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListTopicSubscriptionsResponse._() : super();
   factory ListTopicSubscriptionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListTopicSubscriptionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTopicSubscriptionsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'subscriptions')
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -745,8 +698,10 @@ class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
           void Function(ListTopicSubscriptionsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListTopicSubscriptionsResponse))
-          as ListTopicSubscriptionsResponse; // ignore: deprecated_member_use
+          as ListTopicSubscriptionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListTopicSubscriptionsResponse create() =>
       ListTopicSubscriptionsResponse._();
@@ -758,9 +713,13 @@ class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListTopicSubscriptionsResponse>(create);
   static ListTopicSubscriptionsResponse? _defaultInstance;
 
+  /// The names of the subscriptions that match the request.
   @$pb.TagNumber(1)
   $core.List<$core.String> get subscriptions => $_getList(0);
 
+  /// If not empty, indicates that there may be more subscriptions that match
+  /// the request; this value should be passed in a new
+  /// ListTopicSubscriptionsRequest to get more subscriptions.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -774,39 +733,33 @@ class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request for the DeleteTopic method.
 class DeleteTopicRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteTopicRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..hasRequiredFields = false;
-
-  DeleteTopicRequest._() : super();
   factory DeleteTopicRequest({
     $core.String? topic,
   }) {
-    final _result = create();
+    final $result = create();
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
-    return _result;
+    return $result;
   }
+  DeleteTopicRequest._() : super();
   factory DeleteTopicRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteTopicRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteTopicRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -816,8 +769,10 @@ class DeleteTopicRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteTopicRequest copyWith(void Function(DeleteTopicRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteTopicRequest))
-          as DeleteTopicRequest; // ignore: deprecated_member_use
+          as DeleteTopicRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteTopicRequest create() => DeleteTopicRequest._();
   DeleteTopicRequest createEmptyInstance() => create();
@@ -828,6 +783,7 @@ class DeleteTopicRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteTopicRequest>(create);
   static DeleteTopicRequest? _defaultInstance;
 
+  /// Name of the topic to delete.
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -841,68 +797,50 @@ class DeleteTopicRequest extends $pb.GeneratedMessage {
   void clearTopic() => clearField(1);
 }
 
+/// A subscription resource.
 class Subscription extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Subscription',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..aOM<PushConfig>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pushConfig',
-        subBuilder: PushConfig.create)
-    ..a<$core.int>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ackDeadlineSeconds',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Subscription._() : super();
   factory Subscription({
     $core.String? name,
     $core.String? topic,
     PushConfig? pushConfig,
     $core.int? ackDeadlineSeconds,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
     if (pushConfig != null) {
-      _result.pushConfig = pushConfig;
+      $result.pushConfig = pushConfig;
     }
     if (ackDeadlineSeconds != null) {
-      _result.ackDeadlineSeconds = ackDeadlineSeconds;
+      $result.ackDeadlineSeconds = ackDeadlineSeconds;
     }
-    return _result;
+    return $result;
   }
+  Subscription._() : super();
   factory Subscription.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Subscription.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Subscription',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'topic')
+    ..aOM<PushConfig>(4, _omitFieldNames ? '' : 'pushConfig',
+        subBuilder: PushConfig.create)
+    ..a<$core.int>(
+        5, _omitFieldNames ? '' : 'ackDeadlineSeconds', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -912,8 +850,10 @@ class Subscription extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Subscription copyWith(void Function(Subscription) updates) =>
       super.copyWith((message) => updates(message as Subscription))
-          as Subscription; // ignore: deprecated_member_use
+          as Subscription;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Subscription create() => Subscription._();
   Subscription createEmptyInstance() => create();
@@ -924,6 +864,7 @@ class Subscription extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Subscription>(create);
   static Subscription? _defaultInstance;
 
+  /// Name of the subscription.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -936,6 +877,9 @@ class Subscription extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The name of the topic from which this subscription is receiving messages.
+  /// This will be present if and only if the subscription has not been detached
+  /// from its topic.
   @$pb.TagNumber(2)
   $core.String get topic => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -948,6 +892,9 @@ class Subscription extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTopic() => clearField(2);
 
+  /// If push delivery is used with this subscription, this field is
+  /// used to configure it. An empty pushConfig signifies that the subscriber
+  /// will pull and ack messages using API methods.
   @$pb.TagNumber(4)
   PushConfig get pushConfig => $_getN(2);
   @$pb.TagNumber(4)
@@ -962,6 +909,21 @@ class Subscription extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   PushConfig ensurePushConfig() => $_ensure(2);
 
+  ///  This value is the maximum time after a subscriber receives a message
+  ///  before the subscriber should acknowledge the message. After message
+  ///  delivery but before the ack deadline expires and before the message is
+  ///  acknowledged, it is an outstanding message and will not be delivered
+  ///  again during that time (on a best-effort basis).
+  ///
+  ///  For pull delivery this value
+  ///  is used as the initial value for the ack deadline. It may be overridden
+  ///  for a specific message by calling ModifyAckDeadline.
+  ///
+  ///  For push delivery, this value is also used to set the request timeout for
+  ///  the call to the push endpoint.
+  ///
+  ///  If the subscriber never acknowledges the message, the Pub/Sub
+  ///  system will eventually redeliver the message.
   @$pb.TagNumber(5)
   $core.int get ackDeadlineSeconds => $_getIZ(3);
   @$pb.TagNumber(5)
@@ -975,52 +937,42 @@ class Subscription extends $pb.GeneratedMessage {
   void clearAckDeadlineSeconds() => clearField(5);
 }
 
+/// Configuration for a push delivery endpoint.
 class PushConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PushConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pushEndpoint')
-    ..m<$core.String, $core.String>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'attributes',
-        entryClassName: 'PushConfig.AttributesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.pubsub.v1beta2'))
-    ..hasRequiredFields = false;
-
-  PushConfig._() : super();
   factory PushConfig({
     $core.String? pushEndpoint,
     $core.Map<$core.String, $core.String>? attributes,
   }) {
-    final _result = create();
+    final $result = create();
     if (pushEndpoint != null) {
-      _result.pushEndpoint = pushEndpoint;
+      $result.pushEndpoint = pushEndpoint;
     }
     if (attributes != null) {
-      _result.attributes.addAll(attributes);
+      $result.attributes.addAll(attributes);
     }
-    return _result;
+    return $result;
   }
+  PushConfig._() : super();
   factory PushConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PushConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PushConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'pushEndpoint')
+    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'attributes',
+        entryClassName: 'PushConfig.AttributesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1029,9 +981,10 @@ class PushConfig extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   PushConfig copyWith(void Function(PushConfig) updates) =>
-      super.copyWith((message) => updates(message as PushConfig))
-          as PushConfig; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as PushConfig)) as PushConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PushConfig create() => PushConfig._();
   PushConfig createEmptyInstance() => create();
@@ -1041,6 +994,8 @@ class PushConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PushConfig>(create);
   static PushConfig? _defaultInstance;
 
+  /// A URL locating the endpoint to which messages should be pushed.
+  /// For example, a Webhook endpoint might use "https://example.com/push".
   @$pb.TagNumber(1)
   $core.String get pushEndpoint => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1053,53 +1008,65 @@ class PushConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPushEndpoint() => clearField(1);
 
+  ///  Endpoint configuration attributes.
+  ///
+  ///  Every endpoint has a set of API supported attributes that can be used to
+  ///  control different aspects of the message delivery.
+  ///
+  ///  The currently supported attribute is `x-goog-version`, which you can
+  ///  use to change the format of the push message. This attribute
+  ///  indicates the version of the data expected by the endpoint. This
+  ///  controls the shape of the envelope (i.e. its fields and metadata).
+  ///  The endpoint version is based on the version of the Pub/Sub
+  ///  API.
+  ///
+  ///  If not present during the CreateSubscription call, it will default to
+  ///  the version of the API used to make such call. If not present during a
+  ///  ModifyPushConfig call, its value will not be changed. GetSubscription
+  ///  calls will always return a valid version, even if the subscription was
+  ///  created without this attribute.
+  ///
+  ///  The possible values for this attribute are:
+  ///
+  ///  * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API.
+  ///  * `v1beta2`: uses the push format defined in the v1beta2 Pub/Sub API.
   @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get attributes => $_getMap(1);
 }
 
+/// A message and its corresponding acknowledgment ID.
 class ReceivedMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReceivedMessage',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ackId')
-    ..aOM<PubsubMessage>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'message',
-        subBuilder: PubsubMessage.create)
-    ..hasRequiredFields = false;
-
-  ReceivedMessage._() : super();
   factory ReceivedMessage({
     $core.String? ackId,
     PubsubMessage? message,
   }) {
-    final _result = create();
+    final $result = create();
     if (ackId != null) {
-      _result.ackId = ackId;
+      $result.ackId = ackId;
     }
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
-    return _result;
+    return $result;
   }
+  ReceivedMessage._() : super();
   factory ReceivedMessage.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReceivedMessage.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReceivedMessage',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'ackId')
+    ..aOM<PubsubMessage>(2, _omitFieldNames ? '' : 'message',
+        subBuilder: PubsubMessage.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1109,8 +1076,10 @@ class ReceivedMessage extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReceivedMessage copyWith(void Function(ReceivedMessage) updates) =>
       super.copyWith((message) => updates(message as ReceivedMessage))
-          as ReceivedMessage; // ignore: deprecated_member_use
+          as ReceivedMessage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReceivedMessage create() => ReceivedMessage._();
   ReceivedMessage createEmptyInstance() => create();
@@ -1121,6 +1090,7 @@ class ReceivedMessage extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReceivedMessage>(create);
   static ReceivedMessage? _defaultInstance;
 
+  /// This ID can be used to acknowledge the received message.
   @$pb.TagNumber(1)
   $core.String get ackId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1133,6 +1103,7 @@ class ReceivedMessage extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAckId() => clearField(1);
 
+  /// The message.
   @$pb.TagNumber(2)
   PubsubMessage get message => $_getN(1);
   @$pb.TagNumber(2)
@@ -1148,39 +1119,33 @@ class ReceivedMessage extends $pb.GeneratedMessage {
   PubsubMessage ensureMessage() => $_ensure(1);
 }
 
+/// Request for the GetSubscription method.
 class GetSubscriptionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetSubscriptionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..hasRequiredFields = false;
-
-  GetSubscriptionRequest._() : super();
   factory GetSubscriptionRequest({
     $core.String? subscription,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
-    return _result;
+    return $result;
   }
+  GetSubscriptionRequest._() : super();
   factory GetSubscriptionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetSubscriptionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSubscriptionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subscription')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1192,8 +1157,10 @@ class GetSubscriptionRequest extends $pb.GeneratedMessage {
   GetSubscriptionRequest copyWith(
           void Function(GetSubscriptionRequest) updates) =>
       super.copyWith((message) => updates(message as GetSubscriptionRequest))
-          as GetSubscriptionRequest; // ignore: deprecated_member_use
+          as GetSubscriptionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetSubscriptionRequest create() => GetSubscriptionRequest._();
   GetSubscriptionRequest createEmptyInstance() => create();
@@ -1204,6 +1171,7 @@ class GetSubscriptionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetSubscriptionRequest>(create);
   static GetSubscriptionRequest? _defaultInstance;
 
+  /// The name of the subscription to get.
   @$pb.TagNumber(1)
   $core.String get subscription => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1217,58 +1185,43 @@ class GetSubscriptionRequest extends $pb.GeneratedMessage {
   void clearSubscription() => clearField(1);
 }
 
+/// Request for the ListSubscriptions method.
 class ListSubscriptionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListSubscriptionsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'project')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListSubscriptionsRequest._() : super();
   factory ListSubscriptionsRequest({
     $core.String? project,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (project != null) {
-      _result.project = project;
+      $result.project = project;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListSubscriptionsRequest._() : super();
   factory ListSubscriptionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListSubscriptionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSubscriptionsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'project')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1280,8 +1233,10 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   ListSubscriptionsRequest copyWith(
           void Function(ListSubscriptionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListSubscriptionsRequest))
-          as ListSubscriptionsRequest; // ignore: deprecated_member_use
+          as ListSubscriptionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListSubscriptionsRequest create() => ListSubscriptionsRequest._();
   ListSubscriptionsRequest createEmptyInstance() => create();
@@ -1292,6 +1247,7 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListSubscriptionsRequest>(create);
   static ListSubscriptionsRequest? _defaultInstance;
 
+  /// The name of the cloud project that subscriptions belong to.
   @$pb.TagNumber(1)
   $core.String get project => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1304,6 +1260,7 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProject() => clearField(1);
 
+  /// Maximum number of subscriptions to return.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1316,6 +1273,9 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// The value returned by the last ListSubscriptionsResponse; indicates that
+  /// this is a continuation of a prior ListSubscriptions call, and that the
+  /// system should return the next page of data.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1329,50 +1289,40 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response for the ListSubscriptions method.
 class ListSubscriptionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListSubscriptionsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..pc<Subscription>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscriptions',
-        $pb.PbFieldType.PM,
-        subBuilder: Subscription.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListSubscriptionsResponse._() : super();
   factory ListSubscriptionsResponse({
     $core.Iterable<Subscription>? subscriptions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscriptions != null) {
-      _result.subscriptions.addAll(subscriptions);
+      $result.subscriptions.addAll(subscriptions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListSubscriptionsResponse._() : super();
   factory ListSubscriptionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListSubscriptionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSubscriptionsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<Subscription>(
+        1, _omitFieldNames ? '' : 'subscriptions', $pb.PbFieldType.PM,
+        subBuilder: Subscription.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1384,8 +1334,10 @@ class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   ListSubscriptionsResponse copyWith(
           void Function(ListSubscriptionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListSubscriptionsResponse))
-          as ListSubscriptionsResponse; // ignore: deprecated_member_use
+          as ListSubscriptionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListSubscriptionsResponse create() => ListSubscriptionsResponse._();
   ListSubscriptionsResponse createEmptyInstance() => create();
@@ -1396,9 +1348,13 @@ class ListSubscriptionsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListSubscriptionsResponse>(create);
   static ListSubscriptionsResponse? _defaultInstance;
 
+  /// The subscriptions that match the request.
   @$pb.TagNumber(1)
   $core.List<Subscription> get subscriptions => $_getList(0);
 
+  /// If not empty, indicates that there may be more subscriptions that match
+  /// the request; this value should be passed in a new ListSubscriptionsRequest
+  /// to get more subscriptions.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1412,39 +1368,33 @@ class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request for the DeleteSubscription method.
 class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteSubscriptionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..hasRequiredFields = false;
-
-  DeleteSubscriptionRequest._() : super();
   factory DeleteSubscriptionRequest({
     $core.String? subscription,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
-    return _result;
+    return $result;
   }
+  DeleteSubscriptionRequest._() : super();
   factory DeleteSubscriptionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteSubscriptionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteSubscriptionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subscription')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1456,8 +1406,10 @@ class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
   DeleteSubscriptionRequest copyWith(
           void Function(DeleteSubscriptionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteSubscriptionRequest))
-          as DeleteSubscriptionRequest; // ignore: deprecated_member_use
+          as DeleteSubscriptionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteSubscriptionRequest create() => DeleteSubscriptionRequest._();
   DeleteSubscriptionRequest createEmptyInstance() => create();
@@ -1468,6 +1420,7 @@ class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteSubscriptionRequest>(create);
   static DeleteSubscriptionRequest? _defaultInstance;
 
+  /// The subscription to delete.
   @$pb.TagNumber(1)
   $core.String get subscription => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1481,49 +1434,39 @@ class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
   void clearSubscription() => clearField(1);
 }
 
+/// Request for the ModifyPushConfig method.
 class ModifyPushConfigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ModifyPushConfigRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..aOM<PushConfig>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pushConfig',
-        subBuilder: PushConfig.create)
-    ..hasRequiredFields = false;
-
-  ModifyPushConfigRequest._() : super();
   factory ModifyPushConfigRequest({
     $core.String? subscription,
     PushConfig? pushConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
     if (pushConfig != null) {
-      _result.pushConfig = pushConfig;
+      $result.pushConfig = pushConfig;
     }
-    return _result;
+    return $result;
   }
+  ModifyPushConfigRequest._() : super();
   factory ModifyPushConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ModifyPushConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ModifyPushConfigRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subscription')
+    ..aOM<PushConfig>(2, _omitFieldNames ? '' : 'pushConfig',
+        subBuilder: PushConfig.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1535,8 +1478,10 @@ class ModifyPushConfigRequest extends $pb.GeneratedMessage {
   ModifyPushConfigRequest copyWith(
           void Function(ModifyPushConfigRequest) updates) =>
       super.copyWith((message) => updates(message as ModifyPushConfigRequest))
-          as ModifyPushConfigRequest; // ignore: deprecated_member_use
+          as ModifyPushConfigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ModifyPushConfigRequest create() => ModifyPushConfigRequest._();
   ModifyPushConfigRequest createEmptyInstance() => create();
@@ -1547,6 +1492,7 @@ class ModifyPushConfigRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModifyPushConfigRequest>(create);
   static ModifyPushConfigRequest? _defaultInstance;
 
+  /// The name of the subscription.
   @$pb.TagNumber(1)
   $core.String get subscription => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1559,6 +1505,12 @@ class ModifyPushConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  ///  The push configuration for future deliveries.
+  ///
+  ///  An empty pushConfig indicates that the Pub/Sub system should
+  ///  stop pushing messages from the given subscription and allow
+  ///  messages to be pulled and acknowledged - effectively pausing
+  ///  the subscription if Pull is not called.
   @$pb.TagNumber(2)
   PushConfig get pushConfig => $_getN(1);
   @$pb.TagNumber(2)
@@ -1574,58 +1526,43 @@ class ModifyPushConfigRequest extends $pb.GeneratedMessage {
   PushConfig ensurePushConfig() => $_ensure(1);
 }
 
+/// Request for the Pull method.
 class PullRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PullRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'returnImmediately')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxMessages',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  PullRequest._() : super();
   factory PullRequest({
     $core.String? subscription,
     $core.bool? returnImmediately,
     $core.int? maxMessages,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
     if (returnImmediately != null) {
-      _result.returnImmediately = returnImmediately;
+      $result.returnImmediately = returnImmediately;
     }
     if (maxMessages != null) {
-      _result.maxMessages = maxMessages;
+      $result.maxMessages = maxMessages;
     }
-    return _result;
+    return $result;
   }
+  PullRequest._() : super();
   factory PullRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PullRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PullRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subscription')
+    ..aOB(2, _omitFieldNames ? '' : 'returnImmediately')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'maxMessages', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1635,8 +1572,10 @@ class PullRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PullRequest copyWith(void Function(PullRequest) updates) =>
       super.copyWith((message) => updates(message as PullRequest))
-          as PullRequest; // ignore: deprecated_member_use
+          as PullRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PullRequest create() => PullRequest._();
   PullRequest createEmptyInstance() => create();
@@ -1646,6 +1585,7 @@ class PullRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PullRequest>(create);
   static PullRequest? _defaultInstance;
 
+  /// The subscription from which messages should be pulled.
   @$pb.TagNumber(1)
   $core.String get subscription => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1658,6 +1598,11 @@ class PullRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  /// If this is specified as true the system will respond immediately even if
+  /// it is not able to return a message in the Pull response. Otherwise the
+  /// system is allowed to wait until at least one message is available rather
+  /// than returning no messages. The client may cancel the request if it does
+  /// not wish to wait any longer for the response.
   @$pb.TagNumber(2)
   $core.bool get returnImmediately => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1670,6 +1615,8 @@ class PullRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReturnImmediately() => clearField(2);
 
+  /// The maximum number of messages returned for this request. The Pub/Sub
+  /// system may return fewer than the number specified.
   @$pb.TagNumber(3)
   $core.int get maxMessages => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1683,41 +1630,35 @@ class PullRequest extends $pb.GeneratedMessage {
   void clearMaxMessages() => clearField(3);
 }
 
+/// Response for the Pull method.
 class PullResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PullResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..pc<ReceivedMessage>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'receivedMessages',
-        $pb.PbFieldType.PM,
-        subBuilder: ReceivedMessage.create)
-    ..hasRequiredFields = false;
-
-  PullResponse._() : super();
   factory PullResponse({
     $core.Iterable<ReceivedMessage>? receivedMessages,
   }) {
-    final _result = create();
+    final $result = create();
     if (receivedMessages != null) {
-      _result.receivedMessages.addAll(receivedMessages);
+      $result.receivedMessages.addAll(receivedMessages);
     }
-    return _result;
+    return $result;
   }
+  PullResponse._() : super();
   factory PullResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PullResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PullResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<ReceivedMessage>(
+        1, _omitFieldNames ? '' : 'receivedMessages', $pb.PbFieldType.PM,
+        subBuilder: ReceivedMessage.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1727,8 +1668,10 @@ class PullResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PullResponse copyWith(void Function(PullResponse) updates) =>
       super.copyWith((message) => updates(message as PullResponse))
-          as PullResponse; // ignore: deprecated_member_use
+          as PullResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PullResponse create() => PullResponse._();
   PullResponse createEmptyInstance() => create();
@@ -1739,62 +1682,52 @@ class PullResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PullResponse>(create);
   static PullResponse? _defaultInstance;
 
+  /// Received Pub/Sub messages. The Pub/Sub system will return zero messages if
+  /// there are no more available in the backlog. The Pub/Sub system may return
+  /// fewer than the maxMessages requested even if there are more messages
+  /// available in the backlog.
   @$pb.TagNumber(1)
   $core.List<ReceivedMessage> get receivedMessages => $_getList(0);
 }
 
+/// Request for the ModifyAckDeadline method.
 class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ModifyAckDeadlineRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ackId')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ackDeadlineSeconds',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  ModifyAckDeadlineRequest._() : super();
   factory ModifyAckDeadlineRequest({
     $core.String? subscription,
     $core.String? ackId,
     $core.int? ackDeadlineSeconds,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
     if (ackId != null) {
-      _result.ackId = ackId;
+      $result.ackId = ackId;
     }
     if (ackDeadlineSeconds != null) {
-      _result.ackDeadlineSeconds = ackDeadlineSeconds;
+      $result.ackDeadlineSeconds = ackDeadlineSeconds;
     }
-    return _result;
+    return $result;
   }
+  ModifyAckDeadlineRequest._() : super();
   factory ModifyAckDeadlineRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ModifyAckDeadlineRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ModifyAckDeadlineRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subscription')
+    ..aOS(2, _omitFieldNames ? '' : 'ackId')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'ackDeadlineSeconds', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1806,8 +1739,10 @@ class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
   ModifyAckDeadlineRequest copyWith(
           void Function(ModifyAckDeadlineRequest) updates) =>
       super.copyWith((message) => updates(message as ModifyAckDeadlineRequest))
-          as ModifyAckDeadlineRequest; // ignore: deprecated_member_use
+          as ModifyAckDeadlineRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ModifyAckDeadlineRequest create() => ModifyAckDeadlineRequest._();
   ModifyAckDeadlineRequest createEmptyInstance() => create();
@@ -1818,6 +1753,7 @@ class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModifyAckDeadlineRequest>(create);
   static ModifyAckDeadlineRequest? _defaultInstance;
 
+  /// The name of the subscription.
   @$pb.TagNumber(1)
   $core.String get subscription => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1830,6 +1766,7 @@ class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  /// The acknowledgment ID.
   @$pb.TagNumber(2)
   $core.String get ackId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1842,6 +1779,11 @@ class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAckId() => clearField(2);
 
+  /// The new ack deadline with respect to the time this request was sent to the
+  /// Pub/Sub system. Must be >= 0. For example, if the value is 10, the new ack
+  /// deadline will expire 10 seconds after the ModifyAckDeadline call was made.
+  /// Specifying zero may immediately make the message available for another pull
+  /// request.
   @$pb.TagNumber(3)
   $core.int get ackDeadlineSeconds => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1855,48 +1797,38 @@ class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
   void clearAckDeadlineSeconds() => clearField(3);
 }
 
+/// Request for the Acknowledge method.
 class AcknowledgeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AcknowledgeRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.pubsub.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ackIds')
-    ..hasRequiredFields = false;
-
-  AcknowledgeRequest._() : super();
   factory AcknowledgeRequest({
     $core.String? subscription,
     $core.Iterable<$core.String>? ackIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
     if (ackIds != null) {
-      _result.ackIds.addAll(ackIds);
+      $result.ackIds.addAll(ackIds);
     }
-    return _result;
+    return $result;
   }
+  AcknowledgeRequest._() : super();
   factory AcknowledgeRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AcknowledgeRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AcknowledgeRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.pubsub.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subscription')
+    ..pPS(2, _omitFieldNames ? '' : 'ackIds')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1906,8 +1838,10 @@ class AcknowledgeRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AcknowledgeRequest copyWith(void Function(AcknowledgeRequest) updates) =>
       super.copyWith((message) => updates(message as AcknowledgeRequest))
-          as AcknowledgeRequest; // ignore: deprecated_member_use
+          as AcknowledgeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AcknowledgeRequest create() => AcknowledgeRequest._();
   AcknowledgeRequest createEmptyInstance() => create();
@@ -1918,6 +1852,7 @@ class AcknowledgeRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AcknowledgeRequest>(create);
   static AcknowledgeRequest? _defaultInstance;
 
+  /// The subscription whose message is being acknowledged.
   @$pb.TagNumber(1)
   $core.String get subscription => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1930,6 +1865,12 @@ class AcknowledgeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  /// The acknowledgment ID for the messages being acknowledged that was returned
+  /// by the Pub/Sub system in the Pull response. Must not be empty.
   @$pb.TagNumber(2)
   $core.List<$core.String> get ackIds => $_getList(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,64 +1,58 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/actions_sdk.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'files.pb.dart' as $2;
-import 'validation_results.pb.dart' as $3;
 import '../../../protobuf/wrappers.pb.dart' as $4;
 import 'account_linking_secret.pb.dart' as $5;
+import 'files.pb.dart' as $2;
 import 'release_channel.pb.dart' as $6;
+import 'validation_results.pb.dart' as $3;
 import 'version.pb.dart' as $1;
 
+/// Streaming RPC request for WriteDraft.
 class WriteDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WriteDraftRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$2.Files>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'files',
-        subBuilder: $2.Files.create)
-    ..hasRequiredFields = false;
-
-  WriteDraftRequest._() : super();
   factory WriteDraftRequest({
     $core.String? parent,
     $2.Files? files,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (files != null) {
-      _result.files = files;
+      $result.files = files;
     }
-    return _result;
+    return $result;
   }
+  WriteDraftRequest._() : super();
   factory WriteDraftRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory WriteDraftRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WriteDraftRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$2.Files>(4, _omitFieldNames ? '' : 'files',
+        subBuilder: $2.Files.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -68,8 +62,10 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   WriteDraftRequest copyWith(void Function(WriteDraftRequest) updates) =>
       super.copyWith((message) => updates(message as WriteDraftRequest))
-          as WriteDraftRequest; // ignore: deprecated_member_use
+          as WriteDraftRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WriteDraftRequest create() => WriteDraftRequest._();
   WriteDraftRequest createEmptyInstance() => create();
@@ -80,6 +76,8 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<WriteDraftRequest>(create);
   static WriteDraftRequest? _defaultInstance;
 
+  /// Required. The parent resource name in the format `projects/{project}`. The
+  /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -92,6 +90,13 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. List of files sent to the server at a time. This is a list of config files
+  /// or data files.
+  /// 1. The first request must be a ConfigFiles.
+  /// 2. The first request must have a ConfigFile with 'settings'.
+  /// 3. The first request must have a ConfigFile with 'manifest'.
+  /// 4. The webhook ConfigFile corresponding to inline cloud function must be
+  ///    streamed before the DataFile corresponding to its source code.
   @$pb.TagNumber(4)
   $2.Files get files => $_getN(1);
   @$pb.TagNumber(4)
@@ -107,49 +112,39 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
   $2.Files ensureFiles() => $_ensure(1);
 }
 
+/// Definition of draft resource.
 class Draft extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Draft',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$3.ValidationResults>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validationResults',
-        subBuilder: $3.ValidationResults.create)
-    ..hasRequiredFields = false;
-
-  Draft._() : super();
   factory Draft({
     $core.String? name,
     $3.ValidationResults? validationResults,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (validationResults != null) {
-      _result.validationResults = validationResults;
+      $result.validationResults = validationResults;
     }
-    return _result;
+    return $result;
   }
+  Draft._() : super();
   factory Draft.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Draft.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Draft',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$3.ValidationResults>(2, _omitFieldNames ? '' : 'validationResults',
+        subBuilder: $3.ValidationResults.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -158,9 +153,10 @@ class Draft extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Draft copyWith(void Function(Draft) updates) =>
-      super.copyWith((message) => updates(message as Draft))
-          as Draft; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Draft)) as Draft;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Draft create() => Draft._();
   Draft createEmptyInstance() => create();
@@ -170,6 +166,8 @@ class Draft extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Draft>(create);
   static Draft? _defaultInstance;
 
+  /// The unique identifier of the draft in the following format.
+  /// `projects/{project}/draft`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -182,6 +180,9 @@ class Draft extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Validation results associated with the project draft content. Note that
+  /// WriteDraft updates the draft despite the warnings as warnings are not draft
+  /// blocking.
   @$pb.TagNumber(2)
   $3.ValidationResults get validationResults => $_getN(1);
   @$pb.TagNumber(2)
@@ -197,20 +198,10 @@ class Draft extends $pb.GeneratedMessage {
   $3.ValidationResults ensureValidationResults() => $_ensure(1);
 }
 
+/// Indicates the preview content will be coming from the Draft.
 class WritePreviewRequest_ContentFromDraft extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WritePreviewRequest.ContentFromDraft',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  WritePreviewRequest_ContentFromDraft._() : super();
   factory WritePreviewRequest_ContentFromDraft() => create();
+  WritePreviewRequest_ContentFromDraft._() : super();
   factory WritePreviewRequest_ContentFromDraft.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -218,6 +209,14 @@ class WritePreviewRequest_ContentFromDraft extends $pb.GeneratedMessage {
   factory WritePreviewRequest_ContentFromDraft.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WritePreviewRequest.ContentFromDraft',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -230,8 +229,10 @@ class WritePreviewRequest_ContentFromDraft extends $pb.GeneratedMessage {
           void Function(WritePreviewRequest_ContentFromDraft) updates) =>
       super.copyWith((message) =>
               updates(message as WritePreviewRequest_ContentFromDraft))
-          as WritePreviewRequest_ContentFromDraft; // ignore: deprecated_member_use
+          as WritePreviewRequest_ContentFromDraft;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_ContentFromDraft create() =>
       WritePreviewRequest_ContentFromDraft._();
@@ -245,34 +246,19 @@ class WritePreviewRequest_ContentFromDraft extends $pb.GeneratedMessage {
   static WritePreviewRequest_ContentFromDraft? _defaultInstance;
 }
 
+/// Indicates the preview content will be coming from an exiting version.
 class WritePreviewRequest_ContentFromSubmittedVersion
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WritePreviewRequest.ContentFromSubmittedVersion',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..hasRequiredFields = false;
-
-  WritePreviewRequest_ContentFromSubmittedVersion._() : super();
   factory WritePreviewRequest_ContentFromSubmittedVersion({
     $core.String? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  WritePreviewRequest_ContentFromSubmittedVersion._() : super();
   factory WritePreviewRequest_ContentFromSubmittedVersion.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -281,6 +267,17 @@ class WritePreviewRequest_ContentFromSubmittedVersion
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'WritePreviewRequest.ContentFromSubmittedVersion',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'version')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -294,8 +291,10 @@ class WritePreviewRequest_ContentFromSubmittedVersion
               updates) =>
       super.copyWith((message) => updates(
               message as WritePreviewRequest_ContentFromSubmittedVersion))
-          as WritePreviewRequest_ContentFromSubmittedVersion; // ignore: deprecated_member_use
+          as WritePreviewRequest_ContentFromSubmittedVersion;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_ContentFromSubmittedVersion create() =>
       WritePreviewRequest_ContentFromSubmittedVersion._();
@@ -310,6 +309,8 @@ class WritePreviewRequest_ContentFromSubmittedVersion
           WritePreviewRequest_ContentFromSubmittedVersion>(create);
   static WritePreviewRequest_ContentFromSubmittedVersion? _defaultInstance;
 
+  /// Required. Submitted version of the project to be used to create a preview.
+  /// Format: `projects/{project}/versions/{version}`
   @$pb.TagNumber(1)
   $core.String get version => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -323,34 +324,18 @@ class WritePreviewRequest_ContentFromSubmittedVersion
   void clearVersion() => clearField(1);
 }
 
+/// Settings for updating the preview.
 class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WritePreviewRequest.PreviewSettings',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOM<$4.BoolValue>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sandbox',
-        subBuilder: $4.BoolValue.create)
-    ..hasRequiredFields = false;
-
-  WritePreviewRequest_PreviewSettings._() : super();
   factory WritePreviewRequest_PreviewSettings({
     $4.BoolValue? sandbox,
   }) {
-    final _result = create();
+    final $result = create();
     if (sandbox != null) {
-      _result.sandbox = sandbox;
+      $result.sandbox = sandbox;
     }
-    return _result;
+    return $result;
   }
+  WritePreviewRequest_PreviewSettings._() : super();
   factory WritePreviewRequest_PreviewSettings.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -358,6 +343,16 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
   factory WritePreviewRequest_PreviewSettings.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WritePreviewRequest.PreviewSettings',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOM<$4.BoolValue>(1, _omitFieldNames ? '' : 'sandbox',
+        subBuilder: $4.BoolValue.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -370,8 +365,10 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
           void Function(WritePreviewRequest_PreviewSettings) updates) =>
       super.copyWith((message) =>
               updates(message as WritePreviewRequest_PreviewSettings))
-          as WritePreviewRequest_PreviewSettings; // ignore: deprecated_member_use
+          as WritePreviewRequest_PreviewSettings;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_PreviewSettings create() =>
       WritePreviewRequest_PreviewSettings._();
@@ -384,6 +381,9 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
           WritePreviewRequest_PreviewSettings>(create);
   static WritePreviewRequest_PreviewSettings? _defaultInstance;
 
+  /// Indicates whether or not to run certain operations, such as transactions,
+  /// in sandbox mode. By default, preview requests run these operations in
+  /// sandbox mode. In other words, the default value for `sandbox` is `true`.
   @$pb.TagNumber(1)
   $4.BoolValue get sandbox => $_getN(0);
   @$pb.TagNumber(1)
@@ -401,7 +401,41 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
 
 enum WritePreviewRequest_Source { files, draft, submittedVersion, notSet }
 
+/// Streaming RPC request for WritePreview.
 class WritePreviewRequest extends $pb.GeneratedMessage {
+  factory WritePreviewRequest({
+    $core.String? parent,
+    WritePreviewRequest_PreviewSettings? previewSettings,
+    $2.Files? files,
+    WritePreviewRequest_ContentFromDraft? draft,
+    WritePreviewRequest_ContentFromSubmittedVersion? submittedVersion,
+  }) {
+    final $result = create();
+    if (parent != null) {
+      $result.parent = parent;
+    }
+    if (previewSettings != null) {
+      $result.previewSettings = previewSettings;
+    }
+    if (files != null) {
+      $result.files = files;
+    }
+    if (draft != null) {
+      $result.draft = draft;
+    }
+    if (submittedVersion != null) {
+      $result.submittedVersion = submittedVersion;
+    }
+    return $result;
+  }
+  WritePreviewRequest._() : super();
+  factory WritePreviewRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WritePreviewRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, WritePreviewRequest_Source>
       _WritePreviewRequest_SourceByTag = {
     5: WritePreviewRequest_Source.files,
@@ -410,78 +444,25 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
     0: WritePreviewRequest_Source.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WritePreviewRequest',
+      _omitMessageNames ? '' : 'WritePreviewRequest',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
     ..oo(0, [5, 6, 7])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOM<WritePreviewRequest_PreviewSettings>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'previewSettings',
+        4, _omitFieldNames ? '' : 'previewSettings',
         subBuilder: WritePreviewRequest_PreviewSettings.create)
-    ..aOM<$2.Files>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'files',
+    ..aOM<$2.Files>(5, _omitFieldNames ? '' : 'files',
         subBuilder: $2.Files.create)
     ..aOM<WritePreviewRequest_ContentFromDraft>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'draft',
+        6, _omitFieldNames ? '' : 'draft',
         subBuilder: WritePreviewRequest_ContentFromDraft.create)
     ..aOM<WritePreviewRequest_ContentFromSubmittedVersion>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'submittedVersion',
+        7, _omitFieldNames ? '' : 'submittedVersion',
         subBuilder: WritePreviewRequest_ContentFromSubmittedVersion.create)
     ..hasRequiredFields = false;
 
-  WritePreviewRequest._() : super();
-  factory WritePreviewRequest({
-    $core.String? parent,
-    WritePreviewRequest_PreviewSettings? previewSettings,
-    $2.Files? files,
-    WritePreviewRequest_ContentFromDraft? draft,
-    WritePreviewRequest_ContentFromSubmittedVersion? submittedVersion,
-  }) {
-    final _result = create();
-    if (parent != null) {
-      _result.parent = parent;
-    }
-    if (previewSettings != null) {
-      _result.previewSettings = previewSettings;
-    }
-    if (files != null) {
-      _result.files = files;
-    }
-    if (draft != null) {
-      _result.draft = draft;
-    }
-    if (submittedVersion != null) {
-      _result.submittedVersion = submittedVersion;
-    }
-    return _result;
-  }
-  factory WritePreviewRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WritePreviewRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -491,8 +472,10 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   WritePreviewRequest copyWith(void Function(WritePreviewRequest) updates) =>
       super.copyWith((message) => updates(message as WritePreviewRequest))
-          as WritePreviewRequest; // ignore: deprecated_member_use
+          as WritePreviewRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest create() => WritePreviewRequest._();
   WritePreviewRequest createEmptyInstance() => create();
@@ -507,6 +490,8 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
       _WritePreviewRequest_SourceByTag[$_whichOneof(0)]!;
   void clearSource() => clearField($_whichOneof(0));
 
+  /// Required. The parent resource name in the format `projects/{project}`. The
+  /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -519,6 +504,7 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The settings for updating the user's preview.
   @$pb.TagNumber(4)
   WritePreviewRequest_PreviewSettings get previewSettings => $_getN(1);
   @$pb.TagNumber(4)
@@ -533,6 +519,13 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   WritePreviewRequest_PreviewSettings ensurePreviewSettings() => $_ensure(1);
 
+  /// List of files sent to the server at a time. This is a list of config
+  /// files or data files.
+  /// 1. The first request must be a ConfigFiles.
+  /// 2. The first request must have a ConfigFile with 'settings'.
+  /// 3. The first request must have a ConfigFile with 'manifest'.
+  /// 4. The webhook ConfigFile corresponding to inline cloud function must be
+  ///    streamed before the DataFile corresponding to its source code.
   @$pb.TagNumber(5)
   $2.Files get files => $_getN(2);
   @$pb.TagNumber(5)
@@ -547,6 +540,7 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Files ensureFiles() => $_ensure(2);
 
+  /// Content sourced from the project draft.
   @$pb.TagNumber(6)
   WritePreviewRequest_ContentFromDraft get draft => $_getN(3);
   @$pb.TagNumber(6)
@@ -561,6 +555,7 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   WritePreviewRequest_ContentFromDraft ensureDraft() => $_ensure(3);
 
+  /// Content sourced from the an exiting version.
   @$pb.TagNumber(7)
   WritePreviewRequest_ContentFromSubmittedVersion get submittedVersion =>
       $_getN(4);
@@ -578,58 +573,44 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
       $_ensure(4);
 }
 
+/// Definition of preview resource.
 class Preview extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Preview',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$3.ValidationResults>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validationResults',
-        subBuilder: $3.ValidationResults.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'simulatorUrl')
-    ..hasRequiredFields = false;
-
-  Preview._() : super();
   factory Preview({
     $core.String? name,
     $3.ValidationResults? validationResults,
     $core.String? simulatorUrl,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (validationResults != null) {
-      _result.validationResults = validationResults;
+      $result.validationResults = validationResults;
     }
     if (simulatorUrl != null) {
-      _result.simulatorUrl = simulatorUrl;
+      $result.simulatorUrl = simulatorUrl;
     }
-    return _result;
+    return $result;
   }
+  Preview._() : super();
   factory Preview.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Preview.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Preview',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$3.ValidationResults>(2, _omitFieldNames ? '' : 'validationResults',
+        subBuilder: $3.ValidationResults.create)
+    ..aOS(3, _omitFieldNames ? '' : 'simulatorUrl')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -638,9 +619,10 @@ class Preview extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Preview copyWith(void Function(Preview) updates) =>
-      super.copyWith((message) => updates(message as Preview))
-          as Preview; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Preview)) as Preview;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Preview create() => Preview._();
   Preview createEmptyInstance() => create();
@@ -650,6 +632,8 @@ class Preview extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Preview>(create);
   static Preview? _defaultInstance;
 
+  /// The unique identifier of the preview.
+  /// Format: `projects/{project}/preview`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -662,6 +646,7 @@ class Preview extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Validation results associated with the user project preview content.
   @$pb.TagNumber(2)
   $3.ValidationResults get validationResults => $_getN(1);
   @$pb.TagNumber(2)
@@ -676,6 +661,7 @@ class Preview extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.ValidationResults ensureValidationResults() => $_ensure(1);
 
+  /// The simulator URL to test the user preview.
   @$pb.TagNumber(3)
   $core.String get simulatorUrl => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -689,58 +675,44 @@ class Preview extends $pb.GeneratedMessage {
   void clearSimulatorUrl() => clearField(3);
 }
 
+/// Streaming RPC request for CreateVersion.
 class CreateVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateVersionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'releaseChannel')
-    ..aOM<$2.Files>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'files',
-        subBuilder: $2.Files.create)
-    ..hasRequiredFields = false;
-
-  CreateVersionRequest._() : super();
   factory CreateVersionRequest({
     $core.String? parent,
     $core.String? releaseChannel,
     $2.Files? files,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (releaseChannel != null) {
-      _result.releaseChannel = releaseChannel;
+      $result.releaseChannel = releaseChannel;
     }
     if (files != null) {
-      _result.files = files;
+      $result.files = files;
     }
-    return _result;
+    return $result;
   }
+  CreateVersionRequest._() : super();
   factory CreateVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(4, _omitFieldNames ? '' : 'releaseChannel')
+    ..aOM<$2.Files>(5, _omitFieldNames ? '' : 'files',
+        subBuilder: $2.Files.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -751,8 +723,10 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateVersionRequest copyWith(void Function(CreateVersionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVersionRequest))
-          as CreateVersionRequest; // ignore: deprecated_member_use
+          as CreateVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateVersionRequest create() => CreateVersionRequest._();
   CreateVersionRequest createEmptyInstance() => create();
@@ -763,6 +737,8 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateVersionRequest>(create);
   static CreateVersionRequest? _defaultInstance;
 
+  /// Required. The parent resource name in the format `projects/{project}`. The
+  /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -775,6 +751,10 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Optional. The release channel to deploy the version, if specified. The supported
+  /// built in release channels are actions.channels.Production,
+  /// actions.channels.ClosedBeta, actions.channels.Alpha.
+  /// .
   @$pb.TagNumber(4)
   $core.String get releaseChannel => $_getSZ(1);
   @$pb.TagNumber(4)
@@ -787,6 +767,13 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReleaseChannel() => clearField(4);
 
+  /// Required. List of files sent to the server at a time. This is a list of config files
+  /// or data files.
+  /// 1. The first request must be a ConfigFiles.
+  /// 2. The first request must have a ConfigFile with 'settings'.
+  /// 3. The first request must have a ConfigFile with 'manifest'.
+  /// 4. The webhook ConfigFile corresponding to inline cloud function must be
+  ///    streamed before the DataFile corresponding to its source code.
   @$pb.TagNumber(5)
   $2.Files get files => $_getN(2);
   @$pb.TagNumber(5)
@@ -802,49 +789,39 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   $2.Files ensureFiles() => $_ensure(2);
 }
 
+/// RPC request for ReadDraft.
 class ReadDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReadDraftRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientSecretEncryptionKeyVersion')
-    ..hasRequiredFields = false;
-
-  ReadDraftRequest._() : super();
   factory ReadDraftRequest({
     $core.String? name,
     $core.String? clientSecretEncryptionKeyVersion,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (clientSecretEncryptionKeyVersion != null) {
-      _result.clientSecretEncryptionKeyVersion =
+      $result.clientSecretEncryptionKeyVersion =
           clientSecretEncryptionKeyVersion;
     }
-    return _result;
+    return $result;
   }
+  ReadDraftRequest._() : super();
   factory ReadDraftRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReadDraftRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReadDraftRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'clientSecretEncryptionKeyVersion')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -854,8 +831,10 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReadDraftRequest copyWith(void Function(ReadDraftRequest) updates) =>
       super.copyWith((message) => updates(message as ReadDraftRequest))
-          as ReadDraftRequest; // ignore: deprecated_member_use
+          as ReadDraftRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReadDraftRequest create() => ReadDraftRequest._();
   ReadDraftRequest createEmptyInstance() => create();
@@ -866,6 +845,8 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReadDraftRequest>(create);
   static ReadDraftRequest? _defaultInstance;
 
+  /// Required. The name of the resource in the format `projects/{project}/draft`. The
+  /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -878,6 +859,10 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Optional. The version of the crypto key used to encrypt the account linking OAuth
+  /// client secret. If not specified, the primary key version is used for
+  /// encryption. Only relevant for projects with account linking with client
+  /// secret.
   @$pb.TagNumber(2)
   $core.String get clientSecretEncryptionKeyVersion => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -891,40 +876,34 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
   void clearClientSecretEncryptionKeyVersion() => clearField(2);
 }
 
+/// Streaming RPC response for ReadDraft.
 class ReadDraftResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReadDraftResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOM<$2.Files>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'files',
-        subBuilder: $2.Files.create)
-    ..hasRequiredFields = false;
-
-  ReadDraftResponse._() : super();
   factory ReadDraftResponse({
     $2.Files? files,
   }) {
-    final _result = create();
+    final $result = create();
     if (files != null) {
-      _result.files = files;
+      $result.files = files;
     }
-    return _result;
+    return $result;
   }
+  ReadDraftResponse._() : super();
   factory ReadDraftResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReadDraftResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReadDraftResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.Files>(3, _omitFieldNames ? '' : 'files',
+        subBuilder: $2.Files.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -934,8 +913,10 @@ class ReadDraftResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReadDraftResponse copyWith(void Function(ReadDraftResponse) updates) =>
       super.copyWith((message) => updates(message as ReadDraftResponse))
-          as ReadDraftResponse; // ignore: deprecated_member_use
+          as ReadDraftResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReadDraftResponse create() => ReadDraftResponse._();
   ReadDraftResponse createEmptyInstance() => create();
@@ -946,6 +927,7 @@ class ReadDraftResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReadDraftResponse>(create);
   static ReadDraftResponse? _defaultInstance;
 
+  /// List of files sent from the server at a time.
   @$pb.TagNumber(3)
   $2.Files get files => $_getN(0);
   @$pb.TagNumber(3)
@@ -961,49 +943,39 @@ class ReadDraftResponse extends $pb.GeneratedMessage {
   $2.Files ensureFiles() => $_ensure(0);
 }
 
+/// RPC request for ReadVersion.
 class ReadVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReadVersionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientSecretEncryptionKeyVersion')
-    ..hasRequiredFields = false;
-
-  ReadVersionRequest._() : super();
   factory ReadVersionRequest({
     $core.String? name,
     $core.String? clientSecretEncryptionKeyVersion,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (clientSecretEncryptionKeyVersion != null) {
-      _result.clientSecretEncryptionKeyVersion =
+      $result.clientSecretEncryptionKeyVersion =
           clientSecretEncryptionKeyVersion;
     }
-    return _result;
+    return $result;
   }
+  ReadVersionRequest._() : super();
   factory ReadVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReadVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReadVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'clientSecretEncryptionKeyVersion')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1013,8 +985,10 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReadVersionRequest copyWith(void Function(ReadVersionRequest) updates) =>
       super.copyWith((message) => updates(message as ReadVersionRequest))
-          as ReadVersionRequest; // ignore: deprecated_member_use
+          as ReadVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReadVersionRequest create() => ReadVersionRequest._();
   ReadVersionRequest createEmptyInstance() => create();
@@ -1025,6 +999,10 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReadVersionRequest>(create);
   static ReadVersionRequest? _defaultInstance;
 
+  /// Required. The name of the version resource in the format
+  /// `projects/{project}/versions/{version}`. `{project}` is the
+  /// cloud project ID associated with the project, `{version}` is the
+  /// identifier of the version being read.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1037,6 +1015,10 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Optional. The version of the crypto key used to encrypt the account linking OAuth
+  /// client secret. If not specified, the primary key version is used for
+  /// encryption. Only relevant for projects with account linking with client
+  /// secret.
   @$pb.TagNumber(2)
   $core.String get clientSecretEncryptionKeyVersion => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1050,40 +1032,34 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
   void clearClientSecretEncryptionKeyVersion() => clearField(2);
 }
 
+/// Streaming RPC response for ReadVersion.
 class ReadVersionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReadVersionResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOM<$2.Files>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'files',
-        subBuilder: $2.Files.create)
-    ..hasRequiredFields = false;
-
-  ReadVersionResponse._() : super();
   factory ReadVersionResponse({
     $2.Files? files,
   }) {
-    final _result = create();
+    final $result = create();
     if (files != null) {
-      _result.files = files;
+      $result.files = files;
     }
-    return _result;
+    return $result;
   }
+  ReadVersionResponse._() : super();
   factory ReadVersionResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReadVersionResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReadVersionResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.Files>(1, _omitFieldNames ? '' : 'files',
+        subBuilder: $2.Files.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1093,8 +1069,10 @@ class ReadVersionResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReadVersionResponse copyWith(void Function(ReadVersionResponse) updates) =>
       super.copyWith((message) => updates(message as ReadVersionResponse))
-          as ReadVersionResponse; // ignore: deprecated_member_use
+          as ReadVersionResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReadVersionResponse create() => ReadVersionResponse._();
   ReadVersionResponse createEmptyInstance() => create();
@@ -1105,6 +1083,7 @@ class ReadVersionResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReadVersionResponse>(create);
   static ReadVersionResponse? _defaultInstance;
 
+  /// List of files sent from the server at a time.
   @$pb.TagNumber(1)
   $2.Files get files => $_getN(0);
   @$pb.TagNumber(1)
@@ -1120,39 +1099,33 @@ class ReadVersionResponse extends $pb.GeneratedMessage {
   $2.Files ensureFiles() => $_ensure(0);
 }
 
+/// RPC request for EncryptSecret.
 class EncryptSecretRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EncryptSecretRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientSecret')
-    ..hasRequiredFields = false;
-
-  EncryptSecretRequest._() : super();
   factory EncryptSecretRequest({
     $core.String? clientSecret,
   }) {
-    final _result = create();
+    final $result = create();
     if (clientSecret != null) {
-      _result.clientSecret = clientSecret;
+      $result.clientSecret = clientSecret;
     }
-    return _result;
+    return $result;
   }
+  EncryptSecretRequest._() : super();
   factory EncryptSecretRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EncryptSecretRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EncryptSecretRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'clientSecret')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1163,8 +1136,10 @@ class EncryptSecretRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   EncryptSecretRequest copyWith(void Function(EncryptSecretRequest) updates) =>
       super.copyWith((message) => updates(message as EncryptSecretRequest))
-          as EncryptSecretRequest; // ignore: deprecated_member_use
+          as EncryptSecretRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EncryptSecretRequest create() => EncryptSecretRequest._();
   EncryptSecretRequest createEmptyInstance() => create();
@@ -1175,6 +1150,7 @@ class EncryptSecretRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EncryptSecretRequest>(create);
   static EncryptSecretRequest? _defaultInstance;
 
+  /// Required. The account linking client secret plaintext.
   @$pb.TagNumber(1)
   $core.String get clientSecret => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1188,40 +1164,35 @@ class EncryptSecretRequest extends $pb.GeneratedMessage {
   void clearClientSecret() => clearField(1);
 }
 
+/// RPC response for EncryptSecret.
 class EncryptSecretResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EncryptSecretResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOM<$5.AccountLinkingSecret>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accountLinkingSecret',
-        subBuilder: $5.AccountLinkingSecret.create)
-    ..hasRequiredFields = false;
-
-  EncryptSecretResponse._() : super();
   factory EncryptSecretResponse({
     $5.AccountLinkingSecret? accountLinkingSecret,
   }) {
-    final _result = create();
+    final $result = create();
     if (accountLinkingSecret != null) {
-      _result.accountLinkingSecret = accountLinkingSecret;
+      $result.accountLinkingSecret = accountLinkingSecret;
     }
-    return _result;
+    return $result;
   }
+  EncryptSecretResponse._() : super();
   factory EncryptSecretResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EncryptSecretResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EncryptSecretResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.AccountLinkingSecret>(
+        1, _omitFieldNames ? '' : 'accountLinkingSecret',
+        subBuilder: $5.AccountLinkingSecret.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1233,8 +1204,10 @@ class EncryptSecretResponse extends $pb.GeneratedMessage {
   EncryptSecretResponse copyWith(
           void Function(EncryptSecretResponse) updates) =>
       super.copyWith((message) => updates(message as EncryptSecretResponse))
-          as EncryptSecretResponse; // ignore: deprecated_member_use
+          as EncryptSecretResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EncryptSecretResponse create() => EncryptSecretResponse._();
   EncryptSecretResponse createEmptyInstance() => create();
@@ -1245,6 +1218,8 @@ class EncryptSecretResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EncryptSecretResponse>(create);
   static EncryptSecretResponse? _defaultInstance;
 
+  /// Contains the encrypted account linking client secret and the key version
+  /// used to encrypt the secret.
   @$pb.TagNumber(1)
   $5.AccountLinkingSecret get accountLinkingSecret => $_getN(0);
   @$pb.TagNumber(1)
@@ -1260,40 +1235,34 @@ class EncryptSecretResponse extends $pb.GeneratedMessage {
   $5.AccountLinkingSecret ensureAccountLinkingSecret() => $_ensure(0);
 }
 
+/// RPC request for DecryptSecret.
 class DecryptSecretRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DecryptSecretRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'encryptedClientSecret',
-        $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  DecryptSecretRequest._() : super();
   factory DecryptSecretRequest({
     $core.List<$core.int>? encryptedClientSecret,
   }) {
-    final _result = create();
+    final $result = create();
     if (encryptedClientSecret != null) {
-      _result.encryptedClientSecret = encryptedClientSecret;
+      $result.encryptedClientSecret = encryptedClientSecret;
     }
-    return _result;
+    return $result;
   }
+  DecryptSecretRequest._() : super();
   factory DecryptSecretRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DecryptSecretRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DecryptSecretRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'encryptedClientSecret', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1304,8 +1273,10 @@ class DecryptSecretRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DecryptSecretRequest copyWith(void Function(DecryptSecretRequest) updates) =>
       super.copyWith((message) => updates(message as DecryptSecretRequest))
-          as DecryptSecretRequest; // ignore: deprecated_member_use
+          as DecryptSecretRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DecryptSecretRequest create() => DecryptSecretRequest._();
   DecryptSecretRequest createEmptyInstance() => create();
@@ -1316,6 +1287,7 @@ class DecryptSecretRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DecryptSecretRequest>(create);
   static DecryptSecretRequest? _defaultInstance;
 
+  /// Required. The account linking client secret ciphertext.
   @$pb.TagNumber(1)
   $core.List<$core.int> get encryptedClientSecret => $_getN(0);
   @$pb.TagNumber(1)
@@ -1329,39 +1301,33 @@ class DecryptSecretRequest extends $pb.GeneratedMessage {
   void clearEncryptedClientSecret() => clearField(1);
 }
 
+/// RPC response for DecryptSecret.
 class DecryptSecretResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DecryptSecretResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientSecret')
-    ..hasRequiredFields = false;
-
-  DecryptSecretResponse._() : super();
   factory DecryptSecretResponse({
     $core.String? clientSecret,
   }) {
-    final _result = create();
+    final $result = create();
     if (clientSecret != null) {
-      _result.clientSecret = clientSecret;
+      $result.clientSecret = clientSecret;
     }
-    return _result;
+    return $result;
   }
+  DecryptSecretResponse._() : super();
   factory DecryptSecretResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DecryptSecretResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DecryptSecretResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'clientSecret')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1373,8 +1339,10 @@ class DecryptSecretResponse extends $pb.GeneratedMessage {
   DecryptSecretResponse copyWith(
           void Function(DecryptSecretResponse) updates) =>
       super.copyWith((message) => updates(message as DecryptSecretResponse))
-          as DecryptSecretResponse; // ignore: deprecated_member_use
+          as DecryptSecretResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DecryptSecretResponse create() => DecryptSecretResponse._();
   DecryptSecretResponse createEmptyInstance() => create();
@@ -1385,6 +1353,7 @@ class DecryptSecretResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DecryptSecretResponse>(create);
   static DecryptSecretResponse? _defaultInstance;
 
+  /// The account linking client secret plaintext.
   @$pb.TagNumber(1)
   $core.String get clientSecret => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1398,49 +1367,38 @@ class DecryptSecretResponse extends $pb.GeneratedMessage {
   void clearClientSecret() => clearField(1);
 }
 
+/// RPC request for ListSampleProjects.
 class ListSampleProjectsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListSampleProjectsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListSampleProjectsRequest._() : super();
   factory ListSampleProjectsRequest({
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListSampleProjectsRequest._() : super();
   factory ListSampleProjectsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListSampleProjectsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSampleProjectsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1452,8 +1410,10 @@ class ListSampleProjectsRequest extends $pb.GeneratedMessage {
   ListSampleProjectsRequest copyWith(
           void Function(ListSampleProjectsRequest) updates) =>
       super.copyWith((message) => updates(message as ListSampleProjectsRequest))
-          as ListSampleProjectsRequest; // ignore: deprecated_member_use
+          as ListSampleProjectsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListSampleProjectsRequest create() => ListSampleProjectsRequest._();
   ListSampleProjectsRequest createEmptyInstance() => create();
@@ -1464,6 +1424,10 @@ class ListSampleProjectsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListSampleProjectsRequest>(create);
   static ListSampleProjectsRequest? _defaultInstance;
 
+  /// Optional. The maximum number of sample projects to return. The service may return
+  /// fewer than this value.
+  /// If unspecified, at most 1000 sample projects will be returned. Values above
+  /// 1000 will be coerced to 1000.
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1476,6 +1440,8 @@ class ListSampleProjectsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
+  /// Optional. A page token, received from a previous 'ListSampleProjects' call.
+  /// Provide this to retrieve the subsequent page.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1489,50 +1455,40 @@ class ListSampleProjectsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(2);
 }
 
+/// RPC response for ListSampleProjects.
 class ListSampleProjectsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListSampleProjectsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..pc<SampleProject>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sampleProjects',
-        $pb.PbFieldType.PM,
-        subBuilder: SampleProject.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListSampleProjectsResponse._() : super();
   factory ListSampleProjectsResponse({
     $core.Iterable<SampleProject>? sampleProjects,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (sampleProjects != null) {
-      _result.sampleProjects.addAll(sampleProjects);
+      $result.sampleProjects.addAll(sampleProjects);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListSampleProjectsResponse._() : super();
   factory ListSampleProjectsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListSampleProjectsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSampleProjectsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..pc<SampleProject>(
+        1, _omitFieldNames ? '' : 'sampleProjects', $pb.PbFieldType.PM,
+        subBuilder: SampleProject.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1545,8 +1501,10 @@ class ListSampleProjectsResponse extends $pb.GeneratedMessage {
           void Function(ListSampleProjectsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListSampleProjectsResponse))
-          as ListSampleProjectsResponse; // ignore: deprecated_member_use
+          as ListSampleProjectsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListSampleProjectsResponse create() => ListSampleProjectsResponse._();
   ListSampleProjectsResponse createEmptyInstance() => create();
@@ -1557,9 +1515,12 @@ class ListSampleProjectsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListSampleProjectsResponse>(create);
   static ListSampleProjectsResponse? _defaultInstance;
 
+  /// The list of sample projects supported.
   @$pb.TagNumber(1)
   $core.List<SampleProject> get sampleProjects => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1573,57 +1534,43 @@ class ListSampleProjectsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Definition of sample project resource.
 class SampleProject extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SampleProject',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hostedUrl')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..hasRequiredFields = false;
-
-  SampleProject._() : super();
   factory SampleProject({
     $core.String? name,
     $core.String? hostedUrl,
     $core.String? description,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (hostedUrl != null) {
-      _result.hostedUrl = hostedUrl;
+      $result.hostedUrl = hostedUrl;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
-    return _result;
+    return $result;
   }
+  SampleProject._() : super();
   factory SampleProject.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SampleProject.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SampleProject',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'hostedUrl')
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1633,8 +1580,10 @@ class SampleProject extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SampleProject copyWith(void Function(SampleProject) updates) =>
       super.copyWith((message) => updates(message as SampleProject))
-          as SampleProject; // ignore: deprecated_member_use
+          as SampleProject;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SampleProject create() => SampleProject._();
   SampleProject createEmptyInstance() => create();
@@ -1645,6 +1594,8 @@ class SampleProject extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SampleProject>(create);
   static SampleProject? _defaultInstance;
 
+  /// The name of the sample project.
+  /// Format: `sampleProjects/{sample_project}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1657,6 +1608,7 @@ class SampleProject extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The URL to the zip file where the sample is hosted.
   @$pb.TagNumber(2)
   $core.String get hostedUrl => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1669,6 +1621,7 @@ class SampleProject extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHostedUrl() => clearField(2);
 
+  /// The description of the sample project.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1682,58 +1635,43 @@ class SampleProject extends $pb.GeneratedMessage {
   void clearDescription() => clearField(3);
 }
 
+/// RPC request for listing release channels
 class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListReleaseChannelsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListReleaseChannelsRequest._() : super();
   factory ListReleaseChannelsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListReleaseChannelsRequest._() : super();
   factory ListReleaseChannelsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListReleaseChannelsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListReleaseChannelsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1746,8 +1684,10 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
           void Function(ListReleaseChannelsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListReleaseChannelsRequest))
-          as ListReleaseChannelsRequest; // ignore: deprecated_member_use
+          as ListReleaseChannelsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListReleaseChannelsRequest create() => ListReleaseChannelsRequest._();
   ListReleaseChannelsRequest createEmptyInstance() => create();
@@ -1758,6 +1698,8 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListReleaseChannelsRequest>(create);
   static ListReleaseChannelsRequest? _defaultInstance;
 
+  /// Required. The name of the resource in the format `projects/{project}`. The
+  /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1770,6 +1712,9 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of release channels to return. The service may return
+  /// fewer than this value. If unspecified, at most 50 release channels will be
+  /// returned.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1782,6 +1727,10 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// A page token, received from a previous `ListReleaseChannels` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListReleaseChannels`
+  /// must match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1795,50 +1744,40 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// RPC response for listing release channels
 class ListReleaseChannelsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListReleaseChannelsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..pc<$6.ReleaseChannel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'releaseChannels',
-        $pb.PbFieldType.PM,
-        subBuilder: $6.ReleaseChannel.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListReleaseChannelsResponse._() : super();
   factory ListReleaseChannelsResponse({
     $core.Iterable<$6.ReleaseChannel>? releaseChannels,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (releaseChannels != null) {
-      _result.releaseChannels.addAll(releaseChannels);
+      $result.releaseChannels.addAll(releaseChannels);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListReleaseChannelsResponse._() : super();
   factory ListReleaseChannelsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListReleaseChannelsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListReleaseChannelsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..pc<$6.ReleaseChannel>(
+        1, _omitFieldNames ? '' : 'releaseChannels', $pb.PbFieldType.PM,
+        subBuilder: $6.ReleaseChannel.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1851,8 +1790,10 @@ class ListReleaseChannelsResponse extends $pb.GeneratedMessage {
           void Function(ListReleaseChannelsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListReleaseChannelsResponse))
-          as ListReleaseChannelsResponse; // ignore: deprecated_member_use
+          as ListReleaseChannelsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListReleaseChannelsResponse create() =>
       ListReleaseChannelsResponse._();
@@ -1864,9 +1805,12 @@ class ListReleaseChannelsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListReleaseChannelsResponse>(create);
   static ListReleaseChannelsResponse? _defaultInstance;
 
+  /// List of the release channels for the given project id.
   @$pb.TagNumber(1)
   $core.List<$6.ReleaseChannel> get releaseChannels => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1880,58 +1824,43 @@ class ListReleaseChannelsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// RPC request for listing versions
 class ListVersionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListVersionsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListVersionsRequest._() : super();
   factory ListVersionsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListVersionsRequest._() : super();
   factory ListVersionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListVersionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListVersionsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1941,8 +1870,10 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListVersionsRequest copyWith(void Function(ListVersionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListVersionsRequest))
-          as ListVersionsRequest; // ignore: deprecated_member_use
+          as ListVersionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListVersionsRequest create() => ListVersionsRequest._();
   ListVersionsRequest createEmptyInstance() => create();
@@ -1953,6 +1884,8 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListVersionsRequest>(create);
   static ListVersionsRequest? _defaultInstance;
 
+  /// Required. The name of the resource in the format `projects/{project}`. The
+  /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1965,6 +1898,9 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of versions to return. The service may return
+  /// fewer than this value. If unspecified, at most 50 versions will be
+  /// returned.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1977,6 +1913,10 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// A page token, received from a previous `ListVersions` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListVersions`
+  /// must match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1990,50 +1930,39 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// RPC response for listing versions
 class ListVersionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListVersionsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..pc<$1.Version>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versions',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Version.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListVersionsResponse._() : super();
   factory ListVersionsResponse({
     $core.Iterable<$1.Version>? versions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (versions != null) {
-      _result.versions.addAll(versions);
+      $result.versions.addAll(versions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListVersionsResponse._() : super();
   factory ListVersionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListVersionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListVersionsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..pc<$1.Version>(1, _omitFieldNames ? '' : 'versions', $pb.PbFieldType.PM,
+        subBuilder: $1.Version.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2044,8 +1973,10 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListVersionsResponse copyWith(void Function(ListVersionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListVersionsResponse))
-          as ListVersionsResponse; // ignore: deprecated_member_use
+          as ListVersionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListVersionsResponse create() => ListVersionsResponse._();
   ListVersionsResponse createEmptyInstance() => create();
@@ -2056,9 +1987,12 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListVersionsResponse>(create);
   static ListVersionsResponse? _defaultInstance;
 
+  /// List of the versions for the given project id.
   @$pb.TagNumber(1)
   $core.List<$1.Version> get versions => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2071,3 +2005,7 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

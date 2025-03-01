@@ -1,30 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2beta/label_lock.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// A description of a LabelLock's state.
 class LabelLock_State extends $pb.ProtobufEnum {
-  static const LabelLock_State STATE_UNSPECIFIED = LabelLock_State._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STATE_UNSPECIFIED');
-  static const LabelLock_State ACTIVE = LabelLock_State._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ACTIVE');
-  static const LabelLock_State DELETING = LabelLock_State._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DELETING');
+  static const LabelLock_State STATE_UNSPECIFIED =
+      LabelLock_State._(0, _omitEnumNames ? '' : 'STATE_UNSPECIFIED');
+  static const LabelLock_State ACTIVE =
+      LabelLock_State._(1, _omitEnumNames ? '' : 'ACTIVE');
+  static const LabelLock_State DELETING =
+      LabelLock_State._(2, _omitEnumNames ? '' : 'DELETING');
 
   static const $core.List<LabelLock_State> values = <LabelLock_State>[
     STATE_UNSPECIFIED,
@@ -38,3 +34,5 @@ class LabelLock_State extends $pb.ProtobufEnum {
 
   const LabelLock_State._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

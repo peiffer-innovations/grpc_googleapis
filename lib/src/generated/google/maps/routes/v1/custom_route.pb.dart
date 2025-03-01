@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routes/v1/custom_route.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,49 +15,42 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'route.pb.dart' as $0;
 
+/// Encapsulates a custom route computed based on the route objective specified
+/// by the customer. `CustomRoute` contains a route and a route token, which can
+/// be passed to NavSDK to reconstruct the custom route for turn by turn
+/// navigation.
 class CustomRoute extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CustomRoute',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.Route>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'route',
-        subBuilder: $0.Route.create)
-    ..aOS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'token')
-    ..hasRequiredFields = false;
-
-  CustomRoute._() : super();
   factory CustomRoute({
     $0.Route? route,
     $core.String? token,
   }) {
-    final _result = create();
+    final $result = create();
     if (route != null) {
-      _result.route = route;
+      $result.route = route;
     }
     if (token != null) {
-      _result.token = token;
+      $result.token = token;
     }
-    return _result;
+    return $result;
   }
+  CustomRoute._() : super();
   factory CustomRoute.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CustomRoute.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CustomRoute',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Route>(11, _omitFieldNames ? '' : 'route',
+        subBuilder: $0.Route.create)
+    ..aOS(12, _omitFieldNames ? '' : 'token')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -63,8 +60,10 @@ class CustomRoute extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CustomRoute copyWith(void Function(CustomRoute) updates) =>
       super.copyWith((message) => updates(message as CustomRoute))
-          as CustomRoute; // ignore: deprecated_member_use
+          as CustomRoute;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CustomRoute create() => CustomRoute._();
   CustomRoute createEmptyInstance() => create();
@@ -74,6 +73,7 @@ class CustomRoute extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CustomRoute>(create);
   static CustomRoute? _defaultInstance;
 
+  /// The route considered 'best' for the input route objective.
   @$pb.TagNumber(11)
   $0.Route get route => $_getN(0);
   @$pb.TagNumber(11)
@@ -88,6 +88,11 @@ class CustomRoute extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $0.Route ensureRoute() => $_ensure(0);
 
+  /// Web-safe base64 encoded route token that can be passed to NavSDK, which
+  /// allows NavSDK to reconstruct the route during navigation, and in the event
+  /// of rerouting honor the original intention when `RoutesPreferred`
+  /// `ComputeCustomRoutes` is called. Customers should treat this token as an
+  /// opaque blob.
   @$pb.TagNumber(12)
   $core.String get token => $_getSZ(1);
   @$pb.TagNumber(12)
@@ -100,3 +105,7 @@ class CustomRoute extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearToken() => clearField(12);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

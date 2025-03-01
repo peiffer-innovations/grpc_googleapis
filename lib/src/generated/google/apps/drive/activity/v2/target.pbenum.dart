@@ -1,35 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/activity/v2/target.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// This item is deprecated; please see `DriveFolder.Type` instead.
 class DriveItem_Folder_Type extends $pb.ProtobufEnum {
-  static const DriveItem_Folder_Type TYPE_UNSPECIFIED = DriveItem_Folder_Type._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TYPE_UNSPECIFIED');
-  static const DriveItem_Folder_Type MY_DRIVE_ROOT = DriveItem_Folder_Type._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MY_DRIVE_ROOT');
-  static const DriveItem_Folder_Type TEAM_DRIVE_ROOT = DriveItem_Folder_Type._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TEAM_DRIVE_ROOT');
-  static const DriveItem_Folder_Type STANDARD_FOLDER = DriveItem_Folder_Type._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STANDARD_FOLDER');
+  static const DriveItem_Folder_Type TYPE_UNSPECIFIED =
+      DriveItem_Folder_Type._(0, _omitEnumNames ? '' : 'TYPE_UNSPECIFIED');
+  static const DriveItem_Folder_Type MY_DRIVE_ROOT =
+      DriveItem_Folder_Type._(1, _omitEnumNames ? '' : 'MY_DRIVE_ROOT');
+  static const DriveItem_Folder_Type TEAM_DRIVE_ROOT =
+      DriveItem_Folder_Type._(2, _omitEnumNames ? '' : 'TEAM_DRIVE_ROOT');
+  static const DriveItem_Folder_Type STANDARD_FOLDER =
+      DriveItem_Folder_Type._(3, _omitEnumNames ? '' : 'STANDARD_FOLDER');
 
   static const $core.List<DriveItem_Folder_Type> values =
       <DriveItem_Folder_Type>[
@@ -46,31 +39,17 @@ class DriveItem_Folder_Type extends $pb.ProtobufEnum {
   const DriveItem_Folder_Type._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The type of a Drive folder.
 class DriveItem_DriveFolder_Type extends $pb.ProtobufEnum {
   static const DriveItem_DriveFolder_Type TYPE_UNSPECIFIED =
-      DriveItem_DriveFolder_Type._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TYPE_UNSPECIFIED');
+      DriveItem_DriveFolder_Type._(0, _omitEnumNames ? '' : 'TYPE_UNSPECIFIED');
   static const DriveItem_DriveFolder_Type MY_DRIVE_ROOT =
-      DriveItem_DriveFolder_Type._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'MY_DRIVE_ROOT');
+      DriveItem_DriveFolder_Type._(1, _omitEnumNames ? '' : 'MY_DRIVE_ROOT');
   static const DriveItem_DriveFolder_Type SHARED_DRIVE_ROOT =
       DriveItem_DriveFolder_Type._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SHARED_DRIVE_ROOT');
+          2, _omitEnumNames ? '' : 'SHARED_DRIVE_ROOT');
   static const DriveItem_DriveFolder_Type STANDARD_FOLDER =
-      DriveItem_DriveFolder_Type._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STANDARD_FOLDER');
+      DriveItem_DriveFolder_Type._(3, _omitEnumNames ? '' : 'STANDARD_FOLDER');
 
   static const $core.List<DriveItem_DriveFolder_Type> values =
       <DriveItem_DriveFolder_Type>[
@@ -87,3 +66,5 @@ class DriveItem_DriveFolder_Type extends $pb.ProtobufEnum {
 
   const DriveItem_DriveFolder_Type._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

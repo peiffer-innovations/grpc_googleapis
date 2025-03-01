@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firebase/fcm/connection/v1alpha1/connection_api.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,46 +17,39 @@ import '../../../../protobuf/timestamp.pb.dart' as $1;
 
 enum UpstreamRequest_RequestType { ack, notSet }
 
+/// Request sent to FCM from the connected client.
 class UpstreamRequest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, UpstreamRequest_RequestType>
-      _UpstreamRequest_RequestTypeByTag = {
-    1: UpstreamRequest_RequestType.ack,
-    0: UpstreamRequest_RequestType.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpstreamRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firebase.fcm.connection.v1alpha1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOM<Ack>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ack',
-        subBuilder: Ack.create)
-    ..hasRequiredFields = false;
-
-  UpstreamRequest._() : super();
   factory UpstreamRequest({
     Ack? ack,
   }) {
-    final _result = create();
+    final $result = create();
     if (ack != null) {
-      _result.ack = ack;
+      $result.ack = ack;
     }
-    return _result;
+    return $result;
   }
+  UpstreamRequest._() : super();
   factory UpstreamRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpstreamRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, UpstreamRequest_RequestType>
+      _UpstreamRequest_RequestTypeByTag = {
+    1: UpstreamRequest_RequestType.ack,
+    0: UpstreamRequest_RequestType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpstreamRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firebase.fcm.connection.v1alpha1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Ack>(1, _omitFieldNames ? '' : 'ack', subBuilder: Ack.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -62,8 +59,10 @@ class UpstreamRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpstreamRequest copyWith(void Function(UpstreamRequest) updates) =>
       super.copyWith((message) => updates(message as UpstreamRequest))
-          as UpstreamRequest; // ignore: deprecated_member_use
+          as UpstreamRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpstreamRequest create() => UpstreamRequest._();
   UpstreamRequest createEmptyInstance() => create();
@@ -78,6 +77,7 @@ class UpstreamRequest extends $pb.GeneratedMessage {
       _UpstreamRequest_RequestTypeByTag[$_whichOneof(0)]!;
   void clearRequestType() => clearField($_whichOneof(0));
 
+  /// Message acknowledgement.
   @$pb.TagNumber(1)
   Ack get ack => $_getN(0);
   @$pb.TagNumber(1)
@@ -95,46 +95,40 @@ class UpstreamRequest extends $pb.GeneratedMessage {
 
 enum DownstreamResponse_ResponseType { message, notSet }
 
+/// Response sent to the connected client from FCM.
 class DownstreamResponse extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, DownstreamResponse_ResponseType>
-      _DownstreamResponse_ResponseTypeByTag = {
-    1: DownstreamResponse_ResponseType.message,
-    0: DownstreamResponse_ResponseType.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DownstreamResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firebase.fcm.connection.v1alpha1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOM<Message>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'message',
-        subBuilder: Message.create)
-    ..hasRequiredFields = false;
-
-  DownstreamResponse._() : super();
   factory DownstreamResponse({
     Message? message,
   }) {
-    final _result = create();
+    final $result = create();
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
-    return _result;
+    return $result;
   }
+  DownstreamResponse._() : super();
   factory DownstreamResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DownstreamResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, DownstreamResponse_ResponseType>
+      _DownstreamResponse_ResponseTypeByTag = {
+    1: DownstreamResponse_ResponseType.message,
+    0: DownstreamResponse_ResponseType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DownstreamResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firebase.fcm.connection.v1alpha1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Message>(1, _omitFieldNames ? '' : 'message',
+        subBuilder: Message.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -144,8 +138,10 @@ class DownstreamResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DownstreamResponse copyWith(void Function(DownstreamResponse) updates) =>
       super.copyWith((message) => updates(message as DownstreamResponse))
-          as DownstreamResponse; // ignore: deprecated_member_use
+          as DownstreamResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DownstreamResponse create() => DownstreamResponse._();
   DownstreamResponse createEmptyInstance() => create();
@@ -160,6 +156,9 @@ class DownstreamResponse extends $pb.GeneratedMessage {
       _DownstreamResponse_ResponseTypeByTag[$_whichOneof(0)]!;
   void clearResponseType() => clearField($_whichOneof(0));
 
+  /// Message sent to FCM via the [Send
+  /// API](https://firebase.google.com/docs/cloud-messaging/send-message)
+  /// targeting this client.
   @$pb.TagNumber(1)
   Message get message => $_getN(0);
   @$pb.TagNumber(1)
@@ -175,39 +174,36 @@ class DownstreamResponse extends $pb.GeneratedMessage {
   Message ensureMessage() => $_ensure(0);
 }
 
+///  Acknowledgement to indicate a client successfully received an FCM message.
+///
+///  If a message is not acked, FCM will continously resend the message until
+///  it expires. Duplicate delivery in this case is working as intended.
 class Ack extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Ack',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firebase.fcm.connection.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'messageId')
-    ..hasRequiredFields = false;
-
-  Ack._() : super();
   factory Ack({
     $core.String? messageId,
   }) {
-    final _result = create();
+    final $result = create();
     if (messageId != null) {
-      _result.messageId = messageId;
+      $result.messageId = messageId;
     }
-    return _result;
+    return $result;
   }
+  Ack._() : super();
   factory Ack.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Ack.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Ack',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firebase.fcm.connection.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'messageId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -216,9 +212,10 @@ class Ack extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Ack copyWith(void Function(Ack) updates) =>
-      super.copyWith((message) => updates(message as Ack))
-          as Ack; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Ack)) as Ack;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Ack create() => Ack._();
   Ack createEmptyInstance() => create();
@@ -228,6 +225,7 @@ class Ack extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Ack>(create);
   static Ack? _defaultInstance;
 
+  /// Id of message being acknowledged
   @$pb.TagNumber(1)
   $core.String get messageId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -241,38 +239,49 @@ class Ack extends $pb.GeneratedMessage {
   void clearMessageId() => clearField(1);
 }
 
+/// Message created through the [Send
+/// API](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#resource-message).
 class Message extends $pb.GeneratedMessage {
+  factory Message({
+    $core.String? messageId,
+    $1.Timestamp? createTime,
+    $1.Timestamp? expireTime,
+    $core.Map<$core.String, $core.String>? data,
+  }) {
+    final $result = create();
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
+    if (expireTime != null) {
+      $result.expireTime = expireTime;
+    }
+    if (data != null) {
+      $result.data.addAll(data);
+    }
+    return $result;
+  }
+  Message._() : super();
+  factory Message.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Message.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Message',
+      _omitMessageNames ? '' : 'Message',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.firebase.fcm.connection.v1alpha1'),
+          _omitMessageNames ? '' : 'google.firebase.fcm.connection.v1alpha1'),
       createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'messageId')
-    ..aOM<$1.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
+    ..aOS(1, _omitFieldNames ? '' : 'messageId')
+    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'createTime',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'expireTime',
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'expireTime',
         subBuilder: $1.Timestamp.create)
-    ..m<$core.String, $core.String>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'data',
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'data',
         entryClassName: 'Message.DataEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OS,
@@ -280,34 +289,6 @@ class Message extends $pb.GeneratedMessage {
             const $pb.PackageName('google.firebase.fcm.connection.v1alpha1'))
     ..hasRequiredFields = false;
 
-  Message._() : super();
-  factory Message({
-    $core.String? messageId,
-    $1.Timestamp? createTime,
-    $1.Timestamp? expireTime,
-    $core.Map<$core.String, $core.String>? data,
-  }) {
-    final _result = create();
-    if (messageId != null) {
-      _result.messageId = messageId;
-    }
-    if (createTime != null) {
-      _result.createTime = createTime;
-    }
-    if (expireTime != null) {
-      _result.expireTime = expireTime;
-    }
-    if (data != null) {
-      _result.data.addAll(data);
-    }
-    return _result;
-  }
-  factory Message.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Message.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -316,9 +297,10 @@ class Message extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Message copyWith(void Function(Message) updates) =>
-      super.copyWith((message) => updates(message as Message))
-          as Message; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Message)) as Message;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Message create() => Message._();
   Message createEmptyInstance() => create();
@@ -328,6 +310,7 @@ class Message extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message>(create);
   static Message? _defaultInstance;
 
+  /// The identifier of the message. Used to ack the message.
   @$pb.TagNumber(1)
   $core.String get messageId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -340,6 +323,7 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMessageId() => clearField(1);
 
+  /// Time the message was received in FCM.
   @$pb.TagNumber(2)
   $1.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -354,6 +338,7 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Timestamp ensureCreateTime() => $_ensure(1);
 
+  /// Expiry time of the message. Currently it is always 4 weeks.
   @$pb.TagNumber(3)
   $1.Timestamp get expireTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -368,6 +353,12 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Timestamp ensureExpireTime() => $_ensure(2);
 
+  /// The arbitrary payload set in the [Send
+  /// API](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#resource-message).
   @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get data => $_getMap(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,74 +1,45 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/version.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Enum indicating the states that a Version can take. This enum is not yet
+/// frozen and values maybe added later.
 class Version_VersionState_State extends $pb.ProtobufEnum {
   static const Version_VersionState_State STATE_UNSPECIFIED =
       Version_VersionState_State._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STATE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'STATE_UNSPECIFIED');
   static const Version_VersionState_State CREATION_IN_PROGRESS =
       Version_VersionState_State._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CREATION_IN_PROGRESS');
+          1, _omitEnumNames ? '' : 'CREATION_IN_PROGRESS');
   static const Version_VersionState_State CREATION_FAILED =
-      Version_VersionState_State._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CREATION_FAILED');
+      Version_VersionState_State._(2, _omitEnumNames ? '' : 'CREATION_FAILED');
   static const Version_VersionState_State CREATED =
-      Version_VersionState_State._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CREATED');
+      Version_VersionState_State._(3, _omitEnumNames ? '' : 'CREATED');
   static const Version_VersionState_State REVIEW_IN_PROGRESS =
       Version_VersionState_State._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REVIEW_IN_PROGRESS');
+          4, _omitEnumNames ? '' : 'REVIEW_IN_PROGRESS');
   static const Version_VersionState_State APPROVED =
-      Version_VersionState_State._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'APPROVED');
+      Version_VersionState_State._(5, _omitEnumNames ? '' : 'APPROVED');
   static const Version_VersionState_State CONDITIONALLY_APPROVED =
       Version_VersionState_State._(
-          6,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CONDITIONALLY_APPROVED');
-  static const Version_VersionState_State DENIED = Version_VersionState_State._(
-      7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DENIED');
+          6, _omitEnumNames ? '' : 'CONDITIONALLY_APPROVED');
+  static const Version_VersionState_State DENIED =
+      Version_VersionState_State._(7, _omitEnumNames ? '' : 'DENIED');
   static const Version_VersionState_State UNDER_TAKEDOWN =
-      Version_VersionState_State._(
-          8,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNDER_TAKEDOWN');
+      Version_VersionState_State._(8, _omitEnumNames ? '' : 'UNDER_TAKEDOWN');
   static const Version_VersionState_State DELETED =
-      Version_VersionState_State._(
-          9,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'DELETED');
+      Version_VersionState_State._(9, _omitEnumNames ? '' : 'DELETED');
 
   static const $core.List<Version_VersionState_State> values =
       <Version_VersionState_State>[
@@ -91,3 +62,5 @@ class Version_VersionState_State extends $pb.ProtobufEnum {
 
   const Version_VersionState_State._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

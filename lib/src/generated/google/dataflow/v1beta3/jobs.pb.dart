@@ -1,194 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/dataflow/v1beta3/jobs.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'environment.pb.dart' as $2;
-import '../../protobuf/timestamp.pb.dart' as $3;
 import '../../protobuf/duration.pb.dart' as $4;
 import '../../protobuf/struct.pb.dart' as $5;
-
+import '../../protobuf/timestamp.pb.dart' as $3;
+import 'environment.pb.dart' as $2;
 import 'environment.pbenum.dart' as $2;
 import 'jobs.pbenum.dart';
 
 export 'jobs.pbenum.dart';
 
+/// Defines a job to be run by the Cloud Dataflow service.
 class Job extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Job',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<$2.JobType>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $2.JobType.JOB_TYPE_UNKNOWN,
-        valueOf: $2.JobType.valueOf,
-        enumValues: $2.JobType.values)
-    ..aOM<$2.Environment>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environment',
-        subBuilder: $2.Environment.create)
-    ..pc<Step>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'steps',
-        $pb.PbFieldType.PM,
-        subBuilder: Step.create)
-    ..e<JobState>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: JobState.JOB_STATE_UNKNOWN,
-        valueOf: JobState.valueOf,
-        enumValues: JobState.values)
-    ..aOM<$3.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentStateTime',
-        subBuilder: $3.Timestamp.create)
-    ..e<JobState>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestedState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: JobState.JOB_STATE_UNKNOWN,
-        valueOf: JobState.valueOf,
-        enumValues: JobState.values)
-    ..aOM<JobExecutionInfo>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionInfo',
-        subBuilder: JobExecutionInfo.create)
-    ..aOM<$3.Timestamp>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $3.Timestamp.create)
-    ..aOS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'replaceJobId')
-    ..m<$core.String, $core.String>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'transformNameMapping',
-        entryClassName: 'Job.TransformNameMappingEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.dataflow.v1beta3'))
-    ..aOS(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientRequestId')
-    ..aOS(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'replacedByJobId')
-    ..pPS(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tempFiles')
-    ..m<$core.String, $core.String>(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labels',
-        entryClassName: 'Job.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.dataflow.v1beta3'))
-    ..aOS(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..aOM<PipelineDescription>(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pipelineDescription',
-        subBuilder: PipelineDescription.create)
-    ..pc<ExecutionStageState>(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'stageStates',
-        $pb.PbFieldType.PM,
-        subBuilder: ExecutionStageState.create)
-    ..aOM<JobMetadata>(
-        21,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'jobMetadata',
-        subBuilder: JobMetadata.create)
-    ..aOM<$3.Timestamp>(
-        22,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $3.Timestamp.create)
-    ..aOS(
-        23,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createdFromSnapshotId')
-    ..aOS(
-        24,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'stepsLocation')
-    ..aOB(
-        25,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'satisfiesPzs')
-    ..hasRequiredFields = false;
-
-  Job._() : super();
   factory Job({
     $core.String? id,
     $core.String? projectId,
@@ -216,90 +52,153 @@ class Job extends $pb.GeneratedMessage {
     $core.String? stepsLocation,
     $core.bool? satisfiesPzs,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (environment != null) {
-      _result.environment = environment;
+      $result.environment = environment;
     }
     if (steps != null) {
-      _result.steps.addAll(steps);
+      $result.steps.addAll(steps);
     }
     if (currentState != null) {
-      _result.currentState = currentState;
+      $result.currentState = currentState;
     }
     if (currentStateTime != null) {
-      _result.currentStateTime = currentStateTime;
+      $result.currentStateTime = currentStateTime;
     }
     if (requestedState != null) {
-      _result.requestedState = requestedState;
+      $result.requestedState = requestedState;
     }
     if (executionInfo != null) {
-      _result.executionInfo = executionInfo;
+      $result.executionInfo = executionInfo;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (replaceJobId != null) {
-      _result.replaceJobId = replaceJobId;
+      $result.replaceJobId = replaceJobId;
     }
     if (transformNameMapping != null) {
-      _result.transformNameMapping.addAll(transformNameMapping);
+      $result.transformNameMapping.addAll(transformNameMapping);
     }
     if (clientRequestId != null) {
-      _result.clientRequestId = clientRequestId;
+      $result.clientRequestId = clientRequestId;
     }
     if (replacedByJobId != null) {
-      _result.replacedByJobId = replacedByJobId;
+      $result.replacedByJobId = replacedByJobId;
     }
     if (tempFiles != null) {
-      _result.tempFiles.addAll(tempFiles);
+      $result.tempFiles.addAll(tempFiles);
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (pipelineDescription != null) {
-      _result.pipelineDescription = pipelineDescription;
+      $result.pipelineDescription = pipelineDescription;
     }
     if (stageStates != null) {
-      _result.stageStates.addAll(stageStates);
+      $result.stageStates.addAll(stageStates);
     }
     if (jobMetadata != null) {
-      _result.jobMetadata = jobMetadata;
+      $result.jobMetadata = jobMetadata;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (createdFromSnapshotId != null) {
-      _result.createdFromSnapshotId = createdFromSnapshotId;
+      $result.createdFromSnapshotId = createdFromSnapshotId;
     }
     if (stepsLocation != null) {
-      _result.stepsLocation = stepsLocation;
+      $result.stepsLocation = stepsLocation;
     }
     if (satisfiesPzs != null) {
-      _result.satisfiesPzs = satisfiesPzs;
+      $result.satisfiesPzs = satisfiesPzs;
     }
-    return _result;
+    return $result;
   }
+  Job._() : super();
   factory Job.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Job.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Job',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'projectId')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
+    ..e<$2.JobType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.JobType.JOB_TYPE_UNKNOWN,
+        valueOf: $2.JobType.valueOf,
+        enumValues: $2.JobType.values)
+    ..aOM<$2.Environment>(5, _omitFieldNames ? '' : 'environment',
+        subBuilder: $2.Environment.create)
+    ..pc<Step>(6, _omitFieldNames ? '' : 'steps', $pb.PbFieldType.PM,
+        subBuilder: Step.create)
+    ..e<JobState>(7, _omitFieldNames ? '' : 'currentState', $pb.PbFieldType.OE,
+        defaultOrMaker: JobState.JOB_STATE_UNKNOWN,
+        valueOf: JobState.valueOf,
+        enumValues: JobState.values)
+    ..aOM<$3.Timestamp>(8, _omitFieldNames ? '' : 'currentStateTime',
+        subBuilder: $3.Timestamp.create)
+    ..e<JobState>(
+        9, _omitFieldNames ? '' : 'requestedState', $pb.PbFieldType.OE,
+        defaultOrMaker: JobState.JOB_STATE_UNKNOWN,
+        valueOf: JobState.valueOf,
+        enumValues: JobState.values)
+    ..aOM<JobExecutionInfo>(10, _omitFieldNames ? '' : 'executionInfo',
+        subBuilder: JobExecutionInfo.create)
+    ..aOM<$3.Timestamp>(11, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOS(12, _omitFieldNames ? '' : 'replaceJobId')
+    ..m<$core.String, $core.String>(
+        13, _omitFieldNames ? '' : 'transformNameMapping',
+        entryClassName: 'Job.TransformNameMappingEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.dataflow.v1beta3'))
+    ..aOS(14, _omitFieldNames ? '' : 'clientRequestId')
+    ..aOS(15, _omitFieldNames ? '' : 'replacedByJobId')
+    ..pPS(16, _omitFieldNames ? '' : 'tempFiles')
+    ..m<$core.String, $core.String>(17, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'Job.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.dataflow.v1beta3'))
+    ..aOS(18, _omitFieldNames ? '' : 'location')
+    ..aOM<PipelineDescription>(19, _omitFieldNames ? '' : 'pipelineDescription',
+        subBuilder: PipelineDescription.create)
+    ..pc<ExecutionStageState>(
+        20, _omitFieldNames ? '' : 'stageStates', $pb.PbFieldType.PM,
+        subBuilder: ExecutionStageState.create)
+    ..aOM<JobMetadata>(21, _omitFieldNames ? '' : 'jobMetadata',
+        subBuilder: JobMetadata.create)
+    ..aOM<$3.Timestamp>(22, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOS(23, _omitFieldNames ? '' : 'createdFromSnapshotId')
+    ..aOS(24, _omitFieldNames ? '' : 'stepsLocation')
+    ..aOB(25, _omitFieldNames ? '' : 'satisfiesPzs')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -308,9 +207,10 @@ class Job extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Job copyWith(void Function(Job) updates) =>
-      super.copyWith((message) => updates(message as Job))
-          as Job; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Job)) as Job;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Job create() => Job._();
   Job createEmptyInstance() => create();
@@ -320,6 +220,10 @@ class Job extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Job>(create);
   static Job? _defaultInstance;
 
+  ///  The unique ID of this job.
+  ///
+  ///  This field is set by the Cloud Dataflow service when the Job is
+  ///  created, and is immutable for the life of the job.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -332,6 +236,7 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// The ID of the Cloud Platform project that the job belongs to.
   @$pb.TagNumber(2)
   $core.String get projectId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -344,6 +249,15 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 
+  ///  The user-specified Cloud Dataflow job name.
+  ///
+  ///  Only one Job with a given name may exist in a project at any
+  ///  given time. If a caller attempts to create a Job with the same
+  ///  name as an already-existing Job, the attempt returns the
+  ///  existing Job.
+  ///
+  ///  The name must match the regular expression
+  ///  `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -356,6 +270,7 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearName() => clearField(3);
 
+  /// The type of Cloud Dataflow job.
   @$pb.TagNumber(4)
   $2.JobType get type => $_getN(3);
   @$pb.TagNumber(4)
@@ -368,6 +283,7 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearType() => clearField(4);
 
+  /// The environment for the job.
   @$pb.TagNumber(5)
   $2.Environment get environment => $_getN(4);
   @$pb.TagNumber(5)
@@ -382,9 +298,24 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Environment ensureEnvironment() => $_ensure(4);
 
+  ///  Exactly one of step or steps_location should be specified.
+  ///
+  ///  The top-level steps that constitute the entire job. Only retrieved with
+  ///  JOB_VIEW_ALL.
   @$pb.TagNumber(6)
   $core.List<Step> get steps => $_getList(5);
 
+  ///  The current state of the job.
+  ///
+  ///  Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise
+  ///  specified.
+  ///
+  ///  A job in the `JOB_STATE_RUNNING` state may asynchronously enter a
+  ///  terminal state. After a job has reached a terminal state, no
+  ///  further state updates may be made.
+  ///
+  ///  This field may be mutated by the Cloud Dataflow service;
+  ///  callers cannot mutate it.
   @$pb.TagNumber(7)
   JobState get currentState => $_getN(6);
   @$pb.TagNumber(7)
@@ -397,6 +328,7 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearCurrentState() => clearField(7);
 
+  /// The timestamp associated with the current state.
   @$pb.TagNumber(8)
   $3.Timestamp get currentStateTime => $_getN(7);
   @$pb.TagNumber(8)
@@ -411,6 +343,13 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $3.Timestamp ensureCurrentStateTime() => $_ensure(7);
 
+  ///  The job's requested state.
+  ///
+  ///  `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and
+  ///  `JOB_STATE_RUNNING` states, by setting requested_state.  `UpdateJob` may
+  ///  also be used to directly set a job's requested state to
+  ///  `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the
+  ///  job if it has not already reached a terminal state.
   @$pb.TagNumber(9)
   JobState get requestedState => $_getN(8);
   @$pb.TagNumber(9)
@@ -423,6 +362,7 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearRequestedState() => clearField(9);
 
+  /// Deprecated.
   @$pb.TagNumber(10)
   JobExecutionInfo get executionInfo => $_getN(9);
   @$pb.TagNumber(10)
@@ -437,6 +377,8 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   JobExecutionInfo ensureExecutionInfo() => $_ensure(9);
 
+  /// The timestamp when the job was initially created. Immutable and set by the
+  /// Cloud Dataflow service.
   @$pb.TagNumber(11)
   $3.Timestamp get createTime => $_getN(10);
   @$pb.TagNumber(11)
@@ -451,6 +393,12 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $3.Timestamp ensureCreateTime() => $_ensure(10);
 
+  ///  If this job is an update of an existing job, this field is the job ID
+  ///  of the job it replaced.
+  ///
+  ///  When sending a `CreateJobRequest`, you can update a job by specifying it
+  ///  here. The job named here is stopped, and its intermediate state is
+  ///  transferred to this job.
   @$pb.TagNumber(12)
   $core.String get replaceJobId => $_getSZ(11);
   @$pb.TagNumber(12)
@@ -463,10 +411,19 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearReplaceJobId() => clearField(12);
 
+  /// The map of transform name prefixes of the job to be replaced to the
+  /// corresponding name prefixes of the new job.
   @$pb.TagNumber(13)
   $core.Map<$core.String, $core.String> get transformNameMapping =>
       $_getMap(12);
 
+  /// The client's unique identifier of the job, re-used across retried attempts.
+  /// If this field is set, the service will ensure its uniqueness.
+  /// The request to create a job will fail if the service has knowledge of a
+  /// previously submitted job with the same client's ID and job name.
+  /// The caller may use this field to ensure idempotence of job
+  /// creation across retried attempts to create a job.
+  /// By default, the field is empty and, in that case, the service ignores it.
   @$pb.TagNumber(14)
   $core.String get clientRequestId => $_getSZ(13);
   @$pb.TagNumber(14)
@@ -479,6 +436,8 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearClientRequestId() => clearField(14);
 
+  /// If another job is an update of this job (and thus, this job is in
+  /// `JOB_STATE_UPDATED`), this field contains the ID of that job.
   @$pb.TagNumber(15)
   $core.String get replacedByJobId => $_getSZ(14);
   @$pb.TagNumber(15)
@@ -491,12 +450,36 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   void clearReplacedByJobId() => clearField(15);
 
+  ///  A set of files the system should be aware of that are used
+  ///  for temporary storage. These temporary files will be
+  ///  removed on job completion.
+  ///  No duplicates are allowed.
+  ///  No file patterns are supported.
+  ///
+  ///  The supported files are:
+  ///
+  ///  Google Cloud Storage:
+  ///
+  ///     storage.googleapis.com/{bucket}/{object}
+  ///     bucket.storage.googleapis.com/{object}
   @$pb.TagNumber(16)
   $core.List<$core.String> get tempFiles => $_getList(15);
 
+  ///  User-defined labels for this job.
+  ///
+  ///  The labels map can contain no more than 64 entries.  Entries of the labels
+  ///  map are UTF8 strings that comply with the following restrictions:
+  ///
+  ///  * Keys must conform to regexp:  [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+  ///  * Values must conform to regexp:  [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+  ///  * Both keys and values are additionally constrained to be <= 128 bytes in
+  ///  size.
   @$pb.TagNumber(17)
   $core.Map<$core.String, $core.String> get labels => $_getMap(16);
 
+  /// The [regional endpoint]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// contains this job.
   @$pb.TagNumber(18)
   $core.String get location => $_getSZ(17);
   @$pb.TagNumber(18)
@@ -509,6 +492,10 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   void clearLocation() => clearField(18);
 
+  /// Preliminary field: The format of this data may change at any time.
+  /// A description of the user pipeline and stages through which it is executed.
+  /// Created by Cloud Dataflow service.  Only retrieved with
+  /// JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
   @$pb.TagNumber(19)
   PipelineDescription get pipelineDescription => $_getN(18);
   @$pb.TagNumber(19)
@@ -523,9 +510,14 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   PipelineDescription ensurePipelineDescription() => $_ensure(18);
 
+  /// This field may be mutated by the Cloud Dataflow service;
+  /// callers cannot mutate it.
   @$pb.TagNumber(20)
   $core.List<ExecutionStageState> get stageStates => $_getList(19);
 
+  /// This field is populated by the Dataflow service to support filtering jobs
+  /// by the metadata values provided here. Populated for ListJobs and all GetJob
+  /// views SUMMARY and higher.
   @$pb.TagNumber(21)
   JobMetadata get jobMetadata => $_getN(20);
   @$pb.TagNumber(21)
@@ -540,6 +532,12 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   JobMetadata ensureJobMetadata() => $_ensure(20);
 
+  /// The timestamp when the job was started (transitioned to JOB_STATE_PENDING).
+  /// Flexible resource scheduling jobs are started with some delay after job
+  /// creation, so start_time is unset before start and is updated when the
+  /// job is started by the Cloud Dataflow service. For other jobs, start_time
+  /// always equals to create_time and is immutable and set by the Cloud Dataflow
+  /// service.
   @$pb.TagNumber(22)
   $3.Timestamp get startTime => $_getN(21);
   @$pb.TagNumber(22)
@@ -554,6 +552,8 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   $3.Timestamp ensureStartTime() => $_ensure(21);
 
+  /// If this is specified, the job's initial state is populated from the given
+  /// snapshot.
   @$pb.TagNumber(23)
   $core.String get createdFromSnapshotId => $_getSZ(22);
   @$pb.TagNumber(23)
@@ -566,6 +566,7 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   void clearCreatedFromSnapshotId() => clearField(23);
 
+  /// The Cloud Storage location where the steps are stored.
   @$pb.TagNumber(24)
   $core.String get stepsLocation => $_getSZ(23);
   @$pb.TagNumber(24)
@@ -578,6 +579,8 @@ class Job extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   void clearStepsLocation() => clearField(24);
 
+  /// Reserved for future use. This field is set only in responses from the
+  /// server; it is ignored if it is set in any requests.
   @$pb.TagNumber(25)
   $core.bool get satisfiesPzs => $_getBF(24);
   @$pb.TagNumber(25)
@@ -591,48 +594,38 @@ class Job extends $pb.GeneratedMessage {
   void clearSatisfiesPzs() => clearField(25);
 }
 
+/// Metadata for a Datastore connector used by the job.
 class DatastoreIODetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DatastoreIODetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'namespace')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..hasRequiredFields = false;
-
-  DatastoreIODetails._() : super();
   factory DatastoreIODetails({
     $core.String? namespace,
     $core.String? projectId,
   }) {
-    final _result = create();
+    final $result = create();
     if (namespace != null) {
-      _result.namespace = namespace;
+      $result.namespace = namespace;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
-    return _result;
+    return $result;
   }
+  DatastoreIODetails._() : super();
   factory DatastoreIODetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DatastoreIODetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DatastoreIODetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'namespace')
+    ..aOS(2, _omitFieldNames ? '' : 'projectId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -642,8 +635,10 @@ class DatastoreIODetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DatastoreIODetails copyWith(void Function(DatastoreIODetails) updates) =>
       super.copyWith((message) => updates(message as DatastoreIODetails))
-          as DatastoreIODetails; // ignore: deprecated_member_use
+          as DatastoreIODetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DatastoreIODetails create() => DatastoreIODetails._();
   DatastoreIODetails createEmptyInstance() => create();
@@ -654,6 +649,7 @@ class DatastoreIODetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DatastoreIODetails>(create);
   static DatastoreIODetails? _defaultInstance;
 
+  /// Namespace used in the connection.
   @$pb.TagNumber(1)
   $core.String get namespace => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -666,6 +662,7 @@ class DatastoreIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNamespace() => clearField(1);
 
+  /// ProjectId accessed in the connection.
   @$pb.TagNumber(2)
   $core.String get projectId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -679,48 +676,38 @@ class DatastoreIODetails extends $pb.GeneratedMessage {
   void clearProjectId() => clearField(2);
 }
 
+/// Metadata for a Pub/Sub connector used by the job.
 class PubSubIODetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PubSubIODetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscription')
-    ..hasRequiredFields = false;
-
-  PubSubIODetails._() : super();
   factory PubSubIODetails({
     $core.String? topic,
     $core.String? subscription,
   }) {
-    final _result = create();
+    final $result = create();
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
     if (subscription != null) {
-      _result.subscription = subscription;
+      $result.subscription = subscription;
     }
-    return _result;
+    return $result;
   }
+  PubSubIODetails._() : super();
   factory PubSubIODetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PubSubIODetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PubSubIODetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..aOS(2, _omitFieldNames ? '' : 'subscription')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -730,8 +717,10 @@ class PubSubIODetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PubSubIODetails copyWith(void Function(PubSubIODetails) updates) =>
       super.copyWith((message) => updates(message as PubSubIODetails))
-          as PubSubIODetails; // ignore: deprecated_member_use
+          as PubSubIODetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PubSubIODetails create() => PubSubIODetails._();
   PubSubIODetails createEmptyInstance() => create();
@@ -742,6 +731,7 @@ class PubSubIODetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PubSubIODetails>(create);
   static PubSubIODetails? _defaultInstance;
 
+  /// Topic accessed in the connection.
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -754,6 +744,7 @@ class PubSubIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
+  /// Subscription used in the connection.
   @$pb.TagNumber(2)
   $core.String get subscription => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -767,39 +758,33 @@ class PubSubIODetails extends $pb.GeneratedMessage {
   void clearSubscription() => clearField(2);
 }
 
+/// Metadata for a File connector used by the job.
 class FileIODetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FileIODetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filePattern')
-    ..hasRequiredFields = false;
-
-  FileIODetails._() : super();
   factory FileIODetails({
     $core.String? filePattern,
   }) {
-    final _result = create();
+    final $result = create();
     if (filePattern != null) {
-      _result.filePattern = filePattern;
+      $result.filePattern = filePattern;
     }
-    return _result;
+    return $result;
   }
+  FileIODetails._() : super();
   factory FileIODetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FileIODetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FileIODetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'filePattern')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -809,8 +794,10 @@ class FileIODetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   FileIODetails copyWith(void Function(FileIODetails) updates) =>
       super.copyWith((message) => updates(message as FileIODetails))
-          as FileIODetails; // ignore: deprecated_member_use
+          as FileIODetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FileIODetails create() => FileIODetails._();
   FileIODetails createEmptyInstance() => create();
@@ -821,6 +808,7 @@ class FileIODetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FileIODetails>(create);
   static FileIODetails? _defaultInstance;
 
+  /// File Pattern used to access files by the connector.
   @$pb.TagNumber(1)
   $core.String get filePattern => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -834,57 +822,43 @@ class FileIODetails extends $pb.GeneratedMessage {
   void clearFilePattern() => clearField(1);
 }
 
+/// Metadata for a Cloud Bigtable connector used by the job.
 class BigTableIODetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BigTableIODetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instanceId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tableId')
-    ..hasRequiredFields = false;
-
-  BigTableIODetails._() : super();
   factory BigTableIODetails({
     $core.String? projectId,
     $core.String? instanceId,
     $core.String? tableId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (instanceId != null) {
-      _result.instanceId = instanceId;
+      $result.instanceId = instanceId;
     }
     if (tableId != null) {
-      _result.tableId = tableId;
+      $result.tableId = tableId;
     }
-    return _result;
+    return $result;
   }
+  BigTableIODetails._() : super();
   factory BigTableIODetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BigTableIODetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BigTableIODetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'instanceId')
+    ..aOS(3, _omitFieldNames ? '' : 'tableId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -894,8 +868,10 @@ class BigTableIODetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BigTableIODetails copyWith(void Function(BigTableIODetails) updates) =>
       super.copyWith((message) => updates(message as BigTableIODetails))
-          as BigTableIODetails; // ignore: deprecated_member_use
+          as BigTableIODetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BigTableIODetails create() => BigTableIODetails._();
   BigTableIODetails createEmptyInstance() => create();
@@ -906,6 +882,7 @@ class BigTableIODetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BigTableIODetails>(create);
   static BigTableIODetails? _defaultInstance;
 
+  /// ProjectId accessed in the connection.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -918,6 +895,7 @@ class BigTableIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// InstanceId accessed in the connection.
   @$pb.TagNumber(2)
   $core.String get instanceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -930,6 +908,7 @@ class BigTableIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInstanceId() => clearField(2);
 
+  /// TableId accessed in the connection.
   @$pb.TagNumber(3)
   $core.String get tableId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -943,66 +922,48 @@ class BigTableIODetails extends $pb.GeneratedMessage {
   void clearTableId() => clearField(3);
 }
 
+/// Metadata for a BigQuery connector used by the job.
 class BigQueryIODetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BigQueryIODetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'table')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataset')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'query')
-    ..hasRequiredFields = false;
-
-  BigQueryIODetails._() : super();
   factory BigQueryIODetails({
     $core.String? table,
     $core.String? dataset,
     $core.String? projectId,
     $core.String? query,
   }) {
-    final _result = create();
+    final $result = create();
     if (table != null) {
-      _result.table = table;
+      $result.table = table;
     }
     if (dataset != null) {
-      _result.dataset = dataset;
+      $result.dataset = dataset;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (query != null) {
-      _result.query = query;
+      $result.query = query;
     }
-    return _result;
+    return $result;
   }
+  BigQueryIODetails._() : super();
   factory BigQueryIODetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BigQueryIODetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BigQueryIODetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'table')
+    ..aOS(2, _omitFieldNames ? '' : 'dataset')
+    ..aOS(3, _omitFieldNames ? '' : 'projectId')
+    ..aOS(4, _omitFieldNames ? '' : 'query')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1012,8 +973,10 @@ class BigQueryIODetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BigQueryIODetails copyWith(void Function(BigQueryIODetails) updates) =>
       super.copyWith((message) => updates(message as BigQueryIODetails))
-          as BigQueryIODetails; // ignore: deprecated_member_use
+          as BigQueryIODetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BigQueryIODetails create() => BigQueryIODetails._();
   BigQueryIODetails createEmptyInstance() => create();
@@ -1024,6 +987,7 @@ class BigQueryIODetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BigQueryIODetails>(create);
   static BigQueryIODetails? _defaultInstance;
 
+  /// Table accessed in the connection.
   @$pb.TagNumber(1)
   $core.String get table => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1036,6 +1000,7 @@ class BigQueryIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTable() => clearField(1);
 
+  /// Dataset accessed in the connection.
   @$pb.TagNumber(2)
   $core.String get dataset => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1048,6 +1013,7 @@ class BigQueryIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDataset() => clearField(2);
 
+  /// Project accessed in the connection.
   @$pb.TagNumber(3)
   $core.String get projectId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1060,6 +1026,7 @@ class BigQueryIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearProjectId() => clearField(3);
 
+  /// Query used to access data in the connection.
   @$pb.TagNumber(4)
   $core.String get query => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1073,57 +1040,43 @@ class BigQueryIODetails extends $pb.GeneratedMessage {
   void clearQuery() => clearField(4);
 }
 
+/// Metadata for a Spanner connector used by the job.
 class SpannerIODetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SpannerIODetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instanceId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'databaseId')
-    ..hasRequiredFields = false;
-
-  SpannerIODetails._() : super();
   factory SpannerIODetails({
     $core.String? projectId,
     $core.String? instanceId,
     $core.String? databaseId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (instanceId != null) {
-      _result.instanceId = instanceId;
+      $result.instanceId = instanceId;
     }
     if (databaseId != null) {
-      _result.databaseId = databaseId;
+      $result.databaseId = databaseId;
     }
-    return _result;
+    return $result;
   }
+  SpannerIODetails._() : super();
   factory SpannerIODetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SpannerIODetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SpannerIODetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'instanceId')
+    ..aOS(3, _omitFieldNames ? '' : 'databaseId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1133,8 +1086,10 @@ class SpannerIODetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SpannerIODetails copyWith(void Function(SpannerIODetails) updates) =>
       super.copyWith((message) => updates(message as SpannerIODetails))
-          as SpannerIODetails; // ignore: deprecated_member_use
+          as SpannerIODetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SpannerIODetails create() => SpannerIODetails._();
   SpannerIODetails createEmptyInstance() => create();
@@ -1145,6 +1100,7 @@ class SpannerIODetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SpannerIODetails>(create);
   static SpannerIODetails? _defaultInstance;
 
+  /// ProjectId accessed in the connection.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1157,6 +1113,7 @@ class SpannerIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// InstanceId accessed in the connection.
   @$pb.TagNumber(2)
   $core.String get instanceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1169,6 +1126,7 @@ class SpannerIODetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInstanceId() => clearField(2);
 
+  /// DatabaseId accessed in the connection.
   @$pb.TagNumber(3)
   $core.String get databaseId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1182,61 +1140,47 @@ class SpannerIODetails extends $pb.GeneratedMessage {
   void clearDatabaseId() => clearField(3);
 }
 
+/// The version of the SDK used to run the job.
 class SdkVersion extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SdkVersion',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versionDisplayName')
-    ..e<SdkVersion_SdkSupportStatus>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sdkSupportStatus',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: SdkVersion_SdkSupportStatus.UNKNOWN,
-        valueOf: SdkVersion_SdkSupportStatus.valueOf,
-        enumValues: SdkVersion_SdkSupportStatus.values)
-    ..hasRequiredFields = false;
-
-  SdkVersion._() : super();
   factory SdkVersion({
     $core.String? version,
     $core.String? versionDisplayName,
     SdkVersion_SdkSupportStatus? sdkSupportStatus,
   }) {
-    final _result = create();
+    final $result = create();
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (versionDisplayName != null) {
-      _result.versionDisplayName = versionDisplayName;
+      $result.versionDisplayName = versionDisplayName;
     }
     if (sdkSupportStatus != null) {
-      _result.sdkSupportStatus = sdkSupportStatus;
+      $result.sdkSupportStatus = sdkSupportStatus;
     }
-    return _result;
+    return $result;
   }
+  SdkVersion._() : super();
   factory SdkVersion.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SdkVersion.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SdkVersion',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'version')
+    ..aOS(2, _omitFieldNames ? '' : 'versionDisplayName')
+    ..e<SdkVersion_SdkSupportStatus>(
+        3, _omitFieldNames ? '' : 'sdkSupportStatus', $pb.PbFieldType.OE,
+        defaultOrMaker: SdkVersion_SdkSupportStatus.UNKNOWN,
+        valueOf: SdkVersion_SdkSupportStatus.valueOf,
+        enumValues: SdkVersion_SdkSupportStatus.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1245,9 +1189,10 @@ class SdkVersion extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SdkVersion copyWith(void Function(SdkVersion) updates) =>
-      super.copyWith((message) => updates(message as SdkVersion))
-          as SdkVersion; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SdkVersion)) as SdkVersion;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SdkVersion create() => SdkVersion._();
   SdkVersion createEmptyInstance() => create();
@@ -1257,6 +1202,7 @@ class SdkVersion extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SdkVersion>(create);
   static SdkVersion? _defaultInstance;
 
+  /// The version of the SDK used to run the job.
   @$pb.TagNumber(1)
   $core.String get version => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1269,6 +1215,7 @@ class SdkVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVersion() => clearField(1);
 
+  /// A readable string describing the version of the SDK.
   @$pb.TagNumber(2)
   $core.String get versionDisplayName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1281,6 +1228,7 @@ class SdkVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVersionDisplayName() => clearField(2);
 
+  /// The support status for this SDK version.
   @$pb.TagNumber(3)
   SdkVersion_SdkSupportStatus get sdkSupportStatus => $_getN(2);
   @$pb.TagNumber(3)
@@ -1294,67 +1242,9 @@ class SdkVersion extends $pb.GeneratedMessage {
   void clearSdkSupportStatus() => clearField(3);
 }
 
+/// Metadata available primarily for filtering jobs. Will be included in the
+/// ListJob response and Job SUMMARY view.
 class JobMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'JobMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOM<SdkVersion>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sdkVersion',
-        subBuilder: SdkVersion.create)
-    ..pc<SpannerIODetails>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'spannerDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: SpannerIODetails.create)
-    ..pc<BigQueryIODetails>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bigqueryDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: BigQueryIODetails.create)
-    ..pc<BigTableIODetails>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bigTableDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: BigTableIODetails.create)
-    ..pc<PubSubIODetails>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pubsubDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: PubSubIODetails.create)
-    ..pc<FileIODetails>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fileDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: FileIODetails.create)
-    ..pc<DatastoreIODetails>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'datastoreDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: DatastoreIODetails.create)
-    ..hasRequiredFields = false;
-
-  JobMetadata._() : super();
   factory JobMetadata({
     SdkVersion? sdkVersion,
     $core.Iterable<SpannerIODetails>? spannerDetails,
@@ -1364,36 +1254,65 @@ class JobMetadata extends $pb.GeneratedMessage {
     $core.Iterable<FileIODetails>? fileDetails,
     $core.Iterable<DatastoreIODetails>? datastoreDetails,
   }) {
-    final _result = create();
+    final $result = create();
     if (sdkVersion != null) {
-      _result.sdkVersion = sdkVersion;
+      $result.sdkVersion = sdkVersion;
     }
     if (spannerDetails != null) {
-      _result.spannerDetails.addAll(spannerDetails);
+      $result.spannerDetails.addAll(spannerDetails);
     }
     if (bigqueryDetails != null) {
-      _result.bigqueryDetails.addAll(bigqueryDetails);
+      $result.bigqueryDetails.addAll(bigqueryDetails);
     }
     if (bigTableDetails != null) {
-      _result.bigTableDetails.addAll(bigTableDetails);
+      $result.bigTableDetails.addAll(bigTableDetails);
     }
     if (pubsubDetails != null) {
-      _result.pubsubDetails.addAll(pubsubDetails);
+      $result.pubsubDetails.addAll(pubsubDetails);
     }
     if (fileDetails != null) {
-      _result.fileDetails.addAll(fileDetails);
+      $result.fileDetails.addAll(fileDetails);
     }
     if (datastoreDetails != null) {
-      _result.datastoreDetails.addAll(datastoreDetails);
+      $result.datastoreDetails.addAll(datastoreDetails);
     }
-    return _result;
+    return $result;
   }
+  JobMetadata._() : super();
   factory JobMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory JobMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'JobMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOM<SdkVersion>(1, _omitFieldNames ? '' : 'sdkVersion',
+        subBuilder: SdkVersion.create)
+    ..pc<SpannerIODetails>(
+        2, _omitFieldNames ? '' : 'spannerDetails', $pb.PbFieldType.PM,
+        subBuilder: SpannerIODetails.create)
+    ..pc<BigQueryIODetails>(
+        3, _omitFieldNames ? '' : 'bigqueryDetails', $pb.PbFieldType.PM,
+        subBuilder: BigQueryIODetails.create)
+    ..pc<BigTableIODetails>(
+        4, _omitFieldNames ? '' : 'bigTableDetails', $pb.PbFieldType.PM,
+        subBuilder: BigTableIODetails.create)
+    ..pc<PubSubIODetails>(
+        5, _omitFieldNames ? '' : 'pubsubDetails', $pb.PbFieldType.PM,
+        subBuilder: PubSubIODetails.create)
+    ..pc<FileIODetails>(
+        6, _omitFieldNames ? '' : 'fileDetails', $pb.PbFieldType.PM,
+        subBuilder: FileIODetails.create)
+    ..pc<DatastoreIODetails>(
+        7, _omitFieldNames ? '' : 'datastoreDetails', $pb.PbFieldType.PM,
+        subBuilder: DatastoreIODetails.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1403,8 +1322,10 @@ class JobMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   JobMetadata copyWith(void Function(JobMetadata) updates) =>
       super.copyWith((message) => updates(message as JobMetadata))
-          as JobMetadata; // ignore: deprecated_member_use
+          as JobMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static JobMetadata create() => JobMetadata._();
   JobMetadata createEmptyInstance() => create();
@@ -1414,6 +1335,7 @@ class JobMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<JobMetadata>(create);
   static JobMetadata? _defaultInstance;
 
+  /// The SDK version used to run the job.
   @$pb.TagNumber(1)
   SdkVersion get sdkVersion => $_getN(0);
   @$pb.TagNumber(1)
@@ -1428,81 +1350,73 @@ class JobMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SdkVersion ensureSdkVersion() => $_ensure(0);
 
+  /// Identification of a Spanner source used in the Dataflow job.
   @$pb.TagNumber(2)
   $core.List<SpannerIODetails> get spannerDetails => $_getList(1);
 
+  /// Identification of a BigQuery source used in the Dataflow job.
   @$pb.TagNumber(3)
   $core.List<BigQueryIODetails> get bigqueryDetails => $_getList(2);
 
+  /// Identification of a Cloud Bigtable source used in the Dataflow job.
   @$pb.TagNumber(4)
   $core.List<BigTableIODetails> get bigTableDetails => $_getList(3);
 
+  /// Identification of a Pub/Sub source used in the Dataflow job.
   @$pb.TagNumber(5)
   $core.List<PubSubIODetails> get pubsubDetails => $_getList(4);
 
+  /// Identification of a File source used in the Dataflow job.
   @$pb.TagNumber(6)
   $core.List<FileIODetails> get fileDetails => $_getList(5);
 
+  /// Identification of a Datastore source used in the Dataflow job.
   @$pb.TagNumber(7)
   $core.List<DatastoreIODetails> get datastoreDetails => $_getList(6);
 }
 
+/// A message describing the state of a particular execution stage.
 class ExecutionStageState extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionStageState',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionStageName')
-    ..e<JobState>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionStageState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: JobState.JOB_STATE_UNKNOWN,
-        valueOf: JobState.valueOf,
-        enumValues: JobState.values)
-    ..aOM<$3.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentStateTime',
-        subBuilder: $3.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  ExecutionStageState._() : super();
   factory ExecutionStageState({
     $core.String? executionStageName,
     JobState? executionStageState,
     $3.Timestamp? currentStateTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (executionStageName != null) {
-      _result.executionStageName = executionStageName;
+      $result.executionStageName = executionStageName;
     }
     if (executionStageState != null) {
-      _result.executionStageState = executionStageState;
+      $result.executionStageState = executionStageState;
     }
     if (currentStateTime != null) {
-      _result.currentStateTime = currentStateTime;
+      $result.currentStateTime = currentStateTime;
     }
-    return _result;
+    return $result;
   }
+  ExecutionStageState._() : super();
   factory ExecutionStageState.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExecutionStageState.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionStageState',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'executionStageName')
+    ..e<JobState>(
+        2, _omitFieldNames ? '' : 'executionStageState', $pb.PbFieldType.OE,
+        defaultOrMaker: JobState.JOB_STATE_UNKNOWN,
+        valueOf: JobState.valueOf,
+        enumValues: JobState.values)
+    ..aOM<$3.Timestamp>(3, _omitFieldNames ? '' : 'currentStateTime',
+        subBuilder: $3.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1512,8 +1426,10 @@ class ExecutionStageState extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ExecutionStageState copyWith(void Function(ExecutionStageState) updates) =>
       super.copyWith((message) => updates(message as ExecutionStageState))
-          as ExecutionStageState; // ignore: deprecated_member_use
+          as ExecutionStageState;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionStageState create() => ExecutionStageState._();
   ExecutionStageState createEmptyInstance() => create();
@@ -1524,6 +1440,7 @@ class ExecutionStageState extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExecutionStageState>(create);
   static ExecutionStageState? _defaultInstance;
 
+  /// The name of the execution stage.
   @$pb.TagNumber(1)
   $core.String get executionStageName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1536,6 +1453,7 @@ class ExecutionStageState extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearExecutionStageName() => clearField(1);
 
+  /// Executions stage states allow the same set of values as JobState.
   @$pb.TagNumber(2)
   JobState get executionStageState => $_getN(1);
   @$pb.TagNumber(2)
@@ -1548,6 +1466,7 @@ class ExecutionStageState extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearExecutionStageState() => clearField(2);
 
+  /// The time at which the stage transitioned to this state.
   @$pb.TagNumber(3)
   $3.Timestamp get currentStateTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -1563,63 +1482,51 @@ class ExecutionStageState extends $pb.GeneratedMessage {
   $3.Timestamp ensureCurrentStateTime() => $_ensure(2);
 }
 
+/// A descriptive representation of submitted pipeline as well as the executed
+/// form.  This data is provided by the Dataflow service for ease of visualizing
+/// the pipeline and interpreting Dataflow provided metrics.
 class PipelineDescription extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PipelineDescription',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..pc<TransformSummary>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalPipelineTransform',
-        $pb.PbFieldType.PM,
-        subBuilder: TransformSummary.create)
-    ..pc<ExecutionStageSummary>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionPipelineStage',
-        $pb.PbFieldType.PM,
-        subBuilder: ExecutionStageSummary.create)
-    ..pc<DisplayData>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayData',
-        $pb.PbFieldType.PM,
-        subBuilder: DisplayData.create)
-    ..hasRequiredFields = false;
-
-  PipelineDescription._() : super();
   factory PipelineDescription({
     $core.Iterable<TransformSummary>? originalPipelineTransform,
     $core.Iterable<ExecutionStageSummary>? executionPipelineStage,
     $core.Iterable<DisplayData>? displayData,
   }) {
-    final _result = create();
+    final $result = create();
     if (originalPipelineTransform != null) {
-      _result.originalPipelineTransform.addAll(originalPipelineTransform);
+      $result.originalPipelineTransform.addAll(originalPipelineTransform);
     }
     if (executionPipelineStage != null) {
-      _result.executionPipelineStage.addAll(executionPipelineStage);
+      $result.executionPipelineStage.addAll(executionPipelineStage);
     }
     if (displayData != null) {
-      _result.displayData.addAll(displayData);
+      $result.displayData.addAll(displayData);
     }
-    return _result;
+    return $result;
   }
+  PipelineDescription._() : super();
   factory PipelineDescription.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PipelineDescription.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PipelineDescription',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<TransformSummary>(1,
+        _omitFieldNames ? '' : 'originalPipelineTransform', $pb.PbFieldType.PM,
+        subBuilder: TransformSummary.create)
+    ..pc<ExecutionStageSummary>(
+        2, _omitFieldNames ? '' : 'executionPipelineStage', $pb.PbFieldType.PM,
+        subBuilder: ExecutionStageSummary.create)
+    ..pc<DisplayData>(
+        3, _omitFieldNames ? '' : 'displayData', $pb.PbFieldType.PM,
+        subBuilder: DisplayData.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1629,8 +1536,10 @@ class PipelineDescription extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PipelineDescription copyWith(void Function(PipelineDescription) updates) =>
       super.copyWith((message) => updates(message as PipelineDescription))
-          as PipelineDescription; // ignore: deprecated_member_use
+          as PipelineDescription;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PipelineDescription create() => PipelineDescription._();
   PipelineDescription createEmptyInstance() => create();
@@ -1641,65 +1550,21 @@ class PipelineDescription extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PipelineDescription>(create);
   static PipelineDescription? _defaultInstance;
 
+  /// Description of each transform in the pipeline and collections between them.
   @$pb.TagNumber(1)
   $core.List<TransformSummary> get originalPipelineTransform => $_getList(0);
 
+  /// Description of each stage of execution of the pipeline.
   @$pb.TagNumber(2)
   $core.List<ExecutionStageSummary> get executionPipelineStage => $_getList(1);
 
+  /// Pipeline level display data.
   @$pb.TagNumber(3)
   $core.List<DisplayData> get displayData => $_getList(2);
 }
 
+/// Description of the type, names/ids, and input/outputs for a transform.
 class TransformSummary extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TransformSummary',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..e<KindType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: KindType.UNKNOWN_KIND,
-        valueOf: KindType.valueOf,
-        enumValues: KindType.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..pc<DisplayData>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayData',
-        $pb.PbFieldType.PM,
-        subBuilder: DisplayData.create)
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'outputCollectionName')
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'inputCollectionName')
-    ..hasRequiredFields = false;
-
-  TransformSummary._() : super();
   factory TransformSummary({
     KindType? kind,
     $core.String? id,
@@ -1708,33 +1573,53 @@ class TransformSummary extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? outputCollectionName,
     $core.Iterable<$core.String>? inputCollectionName,
   }) {
-    final _result = create();
+    final $result = create();
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (displayData != null) {
-      _result.displayData.addAll(displayData);
+      $result.displayData.addAll(displayData);
     }
     if (outputCollectionName != null) {
-      _result.outputCollectionName.addAll(outputCollectionName);
+      $result.outputCollectionName.addAll(outputCollectionName);
     }
     if (inputCollectionName != null) {
-      _result.inputCollectionName.addAll(inputCollectionName);
+      $result.inputCollectionName.addAll(inputCollectionName);
     }
-    return _result;
+    return $result;
   }
+  TransformSummary._() : super();
   factory TransformSummary.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TransformSummary.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TransformSummary',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..e<KindType>(1, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: KindType.UNKNOWN_KIND,
+        valueOf: KindType.valueOf,
+        enumValues: KindType.values)
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
+    ..pc<DisplayData>(
+        4, _omitFieldNames ? '' : 'displayData', $pb.PbFieldType.PM,
+        subBuilder: DisplayData.create)
+    ..pPS(5, _omitFieldNames ? '' : 'outputCollectionName')
+    ..pPS(6, _omitFieldNames ? '' : 'inputCollectionName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1744,8 +1629,10 @@ class TransformSummary extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TransformSummary copyWith(void Function(TransformSummary) updates) =>
       super.copyWith((message) => updates(message as TransformSummary))
-          as TransformSummary; // ignore: deprecated_member_use
+          as TransformSummary;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransformSummary create() => TransformSummary._();
   TransformSummary createEmptyInstance() => create();
@@ -1756,6 +1643,7 @@ class TransformSummary extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TransformSummary>(create);
   static TransformSummary? _defaultInstance;
 
+  /// Type of transform.
   @$pb.TagNumber(1)
   KindType get kind => $_getN(0);
   @$pb.TagNumber(1)
@@ -1768,6 +1656,7 @@ class TransformSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKind() => clearField(1);
 
+  /// SDK generated id of this transform instance.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1780,6 +1669,7 @@ class TransformSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// User provided name for this transform instance.
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1792,76 +1682,61 @@ class TransformSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearName() => clearField(3);
 
+  /// Transform-specific display data.
   @$pb.TagNumber(4)
   $core.List<DisplayData> get displayData => $_getList(3);
 
+  /// User  names for all collection outputs to this transform.
   @$pb.TagNumber(5)
   $core.List<$core.String> get outputCollectionName => $_getList(4);
 
+  /// User names for all collection inputs to this transform.
   @$pb.TagNumber(6)
   $core.List<$core.String> get inputCollectionName => $_getList(5);
 }
 
+/// Description of an input or output of an execution stage.
 class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionStageSummary.StageSource',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalTransformOrCollection')
-    ..aInt64(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sizeBytes')
-    ..hasRequiredFields = false;
-
-  ExecutionStageSummary_StageSource._() : super();
   factory ExecutionStageSummary_StageSource({
     $core.String? userName,
     $core.String? name,
     $core.String? originalTransformOrCollection,
     $fixnum.Int64? sizeBytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (userName != null) {
-      _result.userName = userName;
+      $result.userName = userName;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (originalTransformOrCollection != null) {
-      _result.originalTransformOrCollection = originalTransformOrCollection;
+      $result.originalTransformOrCollection = originalTransformOrCollection;
     }
     if (sizeBytes != null) {
-      _result.sizeBytes = sizeBytes;
+      $result.sizeBytes = sizeBytes;
     }
-    return _result;
+    return $result;
   }
+  ExecutionStageSummary_StageSource._() : super();
   factory ExecutionStageSummary_StageSource.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExecutionStageSummary_StageSource.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionStageSummary.StageSource',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userName')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'originalTransformOrCollection')
+    ..aInt64(4, _omitFieldNames ? '' : 'sizeBytes')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1874,8 +1749,10 @@ class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
           void Function(ExecutionStageSummary_StageSource) updates) =>
       super.copyWith((message) =>
               updates(message as ExecutionStageSummary_StageSource))
-          as ExecutionStageSummary_StageSource; // ignore: deprecated_member_use
+          as ExecutionStageSummary_StageSource;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionStageSummary_StageSource create() =>
       ExecutionStageSummary_StageSource._();
@@ -1888,6 +1765,7 @@ class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
           create);
   static ExecutionStageSummary_StageSource? _defaultInstance;
 
+  /// Human-readable name for this source; may be user or system generated.
   @$pb.TagNumber(1)
   $core.String get userName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1900,6 +1778,7 @@ class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUserName() => clearField(1);
 
+  /// Dataflow service generated name for this source.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1912,6 +1791,8 @@ class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// User name for the original user transform or collection with which this
+  /// source is most closely associated.
   @$pb.TagNumber(3)
   $core.String get originalTransformOrCollection => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1924,6 +1805,7 @@ class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOriginalTransformOrCollection() => clearField(3);
 
+  /// Size of the source, if measurable.
   @$pb.TagNumber(4)
   $fixnum.Int64 get sizeBytes => $_getI64(3);
   @$pb.TagNumber(4)
@@ -1937,51 +1819,26 @@ class ExecutionStageSummary_StageSource extends $pb.GeneratedMessage {
   void clearSizeBytes() => clearField(4);
 }
 
+/// Description of a transform executed as part of an execution stage.
 class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionStageSummary.ComponentTransform',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalTransform')
-    ..hasRequiredFields = false;
-
-  ExecutionStageSummary_ComponentTransform._() : super();
   factory ExecutionStageSummary_ComponentTransform({
     $core.String? userName,
     $core.String? name,
     $core.String? originalTransform,
   }) {
-    final _result = create();
+    final $result = create();
     if (userName != null) {
-      _result.userName = userName;
+      $result.userName = userName;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (originalTransform != null) {
-      _result.originalTransform = originalTransform;
+      $result.originalTransform = originalTransform;
     }
-    return _result;
+    return $result;
   }
+  ExecutionStageSummary_ComponentTransform._() : super();
   factory ExecutionStageSummary_ComponentTransform.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1989,6 +1846,17 @@ class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
   factory ExecutionStageSummary_ComponentTransform.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionStageSummary.ComponentTransform',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userName')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'originalTransform')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2001,8 +1869,10 @@ class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
           void Function(ExecutionStageSummary_ComponentTransform) updates) =>
       super.copyWith((message) =>
               updates(message as ExecutionStageSummary_ComponentTransform))
-          as ExecutionStageSummary_ComponentTransform; // ignore: deprecated_member_use
+          as ExecutionStageSummary_ComponentTransform;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionStageSummary_ComponentTransform create() =>
       ExecutionStageSummary_ComponentTransform._();
@@ -2016,6 +1886,7 @@ class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
           ExecutionStageSummary_ComponentTransform>(create);
   static ExecutionStageSummary_ComponentTransform? _defaultInstance;
 
+  /// Human-readable name for this transform; may be user or system generated.
   @$pb.TagNumber(1)
   $core.String get userName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2028,6 +1899,7 @@ class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUserName() => clearField(1);
 
+  /// Dataflow service generated name for this source.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2040,6 +1912,8 @@ class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// User name for the original user transform with which this transform is
+  /// most closely associated.
   @$pb.TagNumber(3)
   $core.String get originalTransform => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2053,51 +1927,27 @@ class ExecutionStageSummary_ComponentTransform extends $pb.GeneratedMessage {
   void clearOriginalTransform() => clearField(3);
 }
 
+/// Description of an interstitial value between transforms in an execution
+/// stage.
 class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionStageSummary.ComponentSource',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalTransformOrCollection')
-    ..hasRequiredFields = false;
-
-  ExecutionStageSummary_ComponentSource._() : super();
   factory ExecutionStageSummary_ComponentSource({
     $core.String? userName,
     $core.String? name,
     $core.String? originalTransformOrCollection,
   }) {
-    final _result = create();
+    final $result = create();
     if (userName != null) {
-      _result.userName = userName;
+      $result.userName = userName;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (originalTransformOrCollection != null) {
-      _result.originalTransformOrCollection = originalTransformOrCollection;
+      $result.originalTransformOrCollection = originalTransformOrCollection;
     }
-    return _result;
+    return $result;
   }
+  ExecutionStageSummary_ComponentSource._() : super();
   factory ExecutionStageSummary_ComponentSource.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2105,6 +1955,17 @@ class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
   factory ExecutionStageSummary_ComponentSource.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionStageSummary.ComponentSource',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userName')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'originalTransformOrCollection')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2117,8 +1978,10 @@ class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
           void Function(ExecutionStageSummary_ComponentSource) updates) =>
       super.copyWith((message) =>
               updates(message as ExecutionStageSummary_ComponentSource))
-          as ExecutionStageSummary_ComponentSource; // ignore: deprecated_member_use
+          as ExecutionStageSummary_ComponentSource;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionStageSummary_ComponentSource create() =>
       ExecutionStageSummary_ComponentSource._();
@@ -2131,6 +1994,7 @@ class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
           ExecutionStageSummary_ComponentSource>(create);
   static ExecutionStageSummary_ComponentSource? _defaultInstance;
 
+  /// Human-readable name for this transform; may be user or system generated.
   @$pb.TagNumber(1)
   $core.String get userName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2143,6 +2007,7 @@ class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUserName() => clearField(1);
 
+  /// Dataflow service generated name for this source.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2155,6 +2020,8 @@ class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// User name for the original user transform or collection with which this
+  /// source is most closely associated.
   @$pb.TagNumber(3)
   $core.String get originalTransformOrCollection => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2168,71 +2035,10 @@ class ExecutionStageSummary_ComponentSource extends $pb.GeneratedMessage {
   void clearOriginalTransformOrCollection() => clearField(3);
 }
 
+/// Description of the composing transforms, names/ids, and input/outputs of a
+/// stage of execution.  Some composing transforms and sources may have been
+/// generated by the Dataflow service during execution planning.
 class ExecutionStageSummary extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionStageSummary',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..e<KindType>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: KindType.UNKNOWN_KIND,
-        valueOf: KindType.valueOf,
-        enumValues: KindType.values)
-    ..pc<ExecutionStageSummary_StageSource>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'inputSource',
-        $pb.PbFieldType.PM,
-        subBuilder: ExecutionStageSummary_StageSource.create)
-    ..pc<ExecutionStageSummary_StageSource>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'outputSource',
-        $pb.PbFieldType.PM,
-        subBuilder: ExecutionStageSummary_StageSource.create)
-    ..pc<ExecutionStageSummary_ComponentTransform>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'componentTransform',
-        $pb.PbFieldType.PM,
-        subBuilder: ExecutionStageSummary_ComponentTransform.create)
-    ..pc<ExecutionStageSummary_ComponentSource>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'componentSource',
-        $pb.PbFieldType.PM,
-        subBuilder: ExecutionStageSummary_ComponentSource.create)
-    ..pPS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'prerequisiteStage')
-    ..hasRequiredFields = false;
-
-  ExecutionStageSummary._() : super();
   factory ExecutionStageSummary({
     $core.String? name,
     $core.String? id,
@@ -2244,39 +2050,67 @@ class ExecutionStageSummary extends $pb.GeneratedMessage {
     $core.Iterable<ExecutionStageSummary_ComponentSource>? componentSource,
     $core.Iterable<$core.String>? prerequisiteStage,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (inputSource != null) {
-      _result.inputSource.addAll(inputSource);
+      $result.inputSource.addAll(inputSource);
     }
     if (outputSource != null) {
-      _result.outputSource.addAll(outputSource);
+      $result.outputSource.addAll(outputSource);
     }
     if (componentTransform != null) {
-      _result.componentTransform.addAll(componentTransform);
+      $result.componentTransform.addAll(componentTransform);
     }
     if (componentSource != null) {
-      _result.componentSource.addAll(componentSource);
+      $result.componentSource.addAll(componentSource);
     }
     if (prerequisiteStage != null) {
-      _result.prerequisiteStage.addAll(prerequisiteStage);
+      $result.prerequisiteStage.addAll(prerequisiteStage);
     }
-    return _result;
+    return $result;
   }
+  ExecutionStageSummary._() : super();
   factory ExecutionStageSummary.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExecutionStageSummary.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionStageSummary',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..e<KindType>(3, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: KindType.UNKNOWN_KIND,
+        valueOf: KindType.valueOf,
+        enumValues: KindType.values)
+    ..pc<ExecutionStageSummary_StageSource>(
+        4, _omitFieldNames ? '' : 'inputSource', $pb.PbFieldType.PM,
+        subBuilder: ExecutionStageSummary_StageSource.create)
+    ..pc<ExecutionStageSummary_StageSource>(
+        5, _omitFieldNames ? '' : 'outputSource', $pb.PbFieldType.PM,
+        subBuilder: ExecutionStageSummary_StageSource.create)
+    ..pc<ExecutionStageSummary_ComponentTransform>(
+        6, _omitFieldNames ? '' : 'componentTransform', $pb.PbFieldType.PM,
+        subBuilder: ExecutionStageSummary_ComponentTransform.create)
+    ..pc<ExecutionStageSummary_ComponentSource>(
+        7, _omitFieldNames ? '' : 'componentSource', $pb.PbFieldType.PM,
+        subBuilder: ExecutionStageSummary_ComponentSource.create)
+    ..pPS(8, _omitFieldNames ? '' : 'prerequisiteStage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2288,8 +2122,10 @@ class ExecutionStageSummary extends $pb.GeneratedMessage {
   ExecutionStageSummary copyWith(
           void Function(ExecutionStageSummary) updates) =>
       super.copyWith((message) => updates(message as ExecutionStageSummary))
-          as ExecutionStageSummary; // ignore: deprecated_member_use
+          as ExecutionStageSummary;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionStageSummary create() => ExecutionStageSummary._();
   ExecutionStageSummary createEmptyInstance() => create();
@@ -2300,6 +2136,7 @@ class ExecutionStageSummary extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExecutionStageSummary>(create);
   static ExecutionStageSummary? _defaultInstance;
 
+  /// Dataflow service generated name for this stage.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2312,6 +2149,7 @@ class ExecutionStageSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Dataflow service generated id for this stage.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2324,6 +2162,7 @@ class ExecutionStageSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// Type of transform this stage is executing.
   @$pb.TagNumber(3)
   KindType get kind => $_getN(2);
   @$pb.TagNumber(3)
@@ -2336,21 +2175,26 @@ class ExecutionStageSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearKind() => clearField(3);
 
+  /// Input sources for this stage.
   @$pb.TagNumber(4)
   $core.List<ExecutionStageSummary_StageSource> get inputSource => $_getList(3);
 
+  /// Output sources for this stage.
   @$pb.TagNumber(5)
   $core.List<ExecutionStageSummary_StageSource> get outputSource =>
       $_getList(4);
 
+  /// Transforms that comprise this execution stage.
   @$pb.TagNumber(6)
   $core.List<ExecutionStageSummary_ComponentTransform> get componentTransform =>
       $_getList(5);
 
+  /// Collections produced and consumed by component transforms of this stage.
   @$pb.TagNumber(7)
   $core.List<ExecutionStageSummary_ComponentSource> get componentSource =>
       $_getList(6);
 
+  /// Other stages that must complete before this stage can run.
   @$pb.TagNumber(8)
   $core.List<$core.String> get prerequisiteStage => $_getList(7);
 }
@@ -2366,94 +2210,8 @@ enum DisplayData_Value {
   notSet
 }
 
+/// Data provided with a pipeline or transform to provide descriptive info.
 class DisplayData extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, DisplayData_Value> _DisplayData_ValueByTag =
-      {
-    4: DisplayData_Value.strValue,
-    5: DisplayData_Value.int64Value,
-    6: DisplayData_Value.floatValue,
-    7: DisplayData_Value.javaClassValue,
-    8: DisplayData_Value.timestampValue,
-    9: DisplayData_Value.durationValue,
-    10: DisplayData_Value.boolValue,
-    0: DisplayData_Value.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DisplayData',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..oo(0, [4, 5, 6, 7, 8, 9, 10])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'namespace')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'strValue')
-    ..aInt64(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'int64Value')
-    ..a<$core.double>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'floatValue',
-        $pb.PbFieldType.OF)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'javaClassValue')
-    ..aOM<$3.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timestampValue',
-        subBuilder: $3.Timestamp.create)
-    ..aOM<$4.Duration>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'durationValue',
-        subBuilder: $4.Duration.create)
-    ..aOB(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'boolValue')
-    ..aOS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shortStrValue')
-    ..aOS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..aOS(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'label')
-    ..hasRequiredFields = false;
-
-  DisplayData._() : super();
   factory DisplayData({
     $core.String? key,
     $core.String? namespace,
@@ -2468,51 +2226,87 @@ class DisplayData extends $pb.GeneratedMessage {
     $core.String? url,
     $core.String? label,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (namespace != null) {
-      _result.namespace = namespace;
+      $result.namespace = namespace;
     }
     if (strValue != null) {
-      _result.strValue = strValue;
+      $result.strValue = strValue;
     }
     if (int64Value != null) {
-      _result.int64Value = int64Value;
+      $result.int64Value = int64Value;
     }
     if (floatValue != null) {
-      _result.floatValue = floatValue;
+      $result.floatValue = floatValue;
     }
     if (javaClassValue != null) {
-      _result.javaClassValue = javaClassValue;
+      $result.javaClassValue = javaClassValue;
     }
     if (timestampValue != null) {
-      _result.timestampValue = timestampValue;
+      $result.timestampValue = timestampValue;
     }
     if (durationValue != null) {
-      _result.durationValue = durationValue;
+      $result.durationValue = durationValue;
     }
     if (boolValue != null) {
-      _result.boolValue = boolValue;
+      $result.boolValue = boolValue;
     }
     if (shortStrValue != null) {
-      _result.shortStrValue = shortStrValue;
+      $result.shortStrValue = shortStrValue;
     }
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
     if (label != null) {
-      _result.label = label;
+      $result.label = label;
     }
-    return _result;
+    return $result;
   }
+  DisplayData._() : super();
   factory DisplayData.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DisplayData.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, DisplayData_Value> _DisplayData_ValueByTag =
+      {
+    4: DisplayData_Value.strValue,
+    5: DisplayData_Value.int64Value,
+    6: DisplayData_Value.floatValue,
+    7: DisplayData_Value.javaClassValue,
+    8: DisplayData_Value.timestampValue,
+    9: DisplayData_Value.durationValue,
+    10: DisplayData_Value.boolValue,
+    0: DisplayData_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DisplayData',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5, 6, 7, 8, 9, 10])
+    ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..aOS(2, _omitFieldNames ? '' : 'namespace')
+    ..aOS(4, _omitFieldNames ? '' : 'strValue')
+    ..aInt64(5, _omitFieldNames ? '' : 'int64Value')
+    ..a<$core.double>(
+        6, _omitFieldNames ? '' : 'floatValue', $pb.PbFieldType.OF)
+    ..aOS(7, _omitFieldNames ? '' : 'javaClassValue')
+    ..aOM<$3.Timestamp>(8, _omitFieldNames ? '' : 'timestampValue',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$4.Duration>(9, _omitFieldNames ? '' : 'durationValue',
+        subBuilder: $4.Duration.create)
+    ..aOB(10, _omitFieldNames ? '' : 'boolValue')
+    ..aOS(11, _omitFieldNames ? '' : 'shortStrValue')
+    ..aOS(12, _omitFieldNames ? '' : 'url')
+    ..aOS(13, _omitFieldNames ? '' : 'label')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2522,8 +2316,10 @@ class DisplayData extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DisplayData copyWith(void Function(DisplayData) updates) =>
       super.copyWith((message) => updates(message as DisplayData))
-          as DisplayData; // ignore: deprecated_member_use
+          as DisplayData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DisplayData create() => DisplayData._();
   DisplayData createEmptyInstance() => create();
@@ -2536,6 +2332,9 @@ class DisplayData extends $pb.GeneratedMessage {
   DisplayData_Value whichValue() => _DisplayData_ValueByTag[$_whichOneof(0)]!;
   void clearValue() => clearField($_whichOneof(0));
 
+  /// The key identifying the display data.
+  /// This is intended to be used as a label for the display data
+  /// when viewed in a dax monitoring system.
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2548,6 +2347,10 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// The namespace for the key. This is usually a class name or programming
+  /// language namespace (i.e. python module) which defines the display data.
+  /// This allows a dax monitoring system to specially handle the data
+  /// and perform custom rendering.
   @$pb.TagNumber(2)
   $core.String get namespace => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2560,6 +2363,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNamespace() => clearField(2);
 
+  /// Contains value if the data is of string type.
   @$pb.TagNumber(4)
   $core.String get strValue => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -2572,6 +2376,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearStrValue() => clearField(4);
 
+  /// Contains value if the data is of int64 type.
   @$pb.TagNumber(5)
   $fixnum.Int64 get int64Value => $_getI64(3);
   @$pb.TagNumber(5)
@@ -2584,6 +2389,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearInt64Value() => clearField(5);
 
+  /// Contains value if the data is of float type.
   @$pb.TagNumber(6)
   $core.double get floatValue => $_getN(4);
   @$pb.TagNumber(6)
@@ -2596,6 +2402,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearFloatValue() => clearField(6);
 
+  /// Contains value if the data is of java class type.
   @$pb.TagNumber(7)
   $core.String get javaClassValue => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -2608,6 +2415,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearJavaClassValue() => clearField(7);
 
+  /// Contains value if the data is of timestamp type.
   @$pb.TagNumber(8)
   $3.Timestamp get timestampValue => $_getN(6);
   @$pb.TagNumber(8)
@@ -2622,6 +2430,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $3.Timestamp ensureTimestampValue() => $_ensure(6);
 
+  /// Contains value if the data is of duration type.
   @$pb.TagNumber(9)
   $4.Duration get durationValue => $_getN(7);
   @$pb.TagNumber(9)
@@ -2636,6 +2445,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $4.Duration ensureDurationValue() => $_ensure(7);
 
+  /// Contains value if the data is of a boolean type.
   @$pb.TagNumber(10)
   $core.bool get boolValue => $_getBF(8);
   @$pb.TagNumber(10)
@@ -2648,6 +2458,12 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearBoolValue() => clearField(10);
 
+  /// A possible additional shorter value to display.
+  /// For example a java_class_name_value of com.mypackage.MyDoFn
+  /// will be stored with MyDoFn as the short_str_value and
+  /// com.mypackage.MyDoFn as the java_class_name value.
+  /// short_str_value can be displayed and java_class_name_value
+  /// will be displayed as a tooltip.
   @$pb.TagNumber(11)
   $core.String get shortStrValue => $_getSZ(9);
   @$pb.TagNumber(11)
@@ -2660,6 +2476,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearShortStrValue() => clearField(11);
 
+  /// An optional full URL.
   @$pb.TagNumber(12)
   $core.String get url => $_getSZ(10);
   @$pb.TagNumber(12)
@@ -2672,6 +2489,7 @@ class DisplayData extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearUrl() => clearField(12);
 
+  /// An optional label to display in a dax UI for the element.
   @$pb.TagNumber(13)
   $core.String get label => $_getSZ(11);
   @$pb.TagNumber(13)
@@ -2685,58 +2503,68 @@ class DisplayData extends $pb.GeneratedMessage {
   void clearLabel() => clearField(13);
 }
 
+///  Defines a particular step within a Cloud Dataflow job.
+///
+///  A job consists of multiple steps, each of which performs some
+///  specific operation as part of the overall job.  Data is typically
+///  passed from one step to another as part of the job.
+///
+///  Here's an example of a sequence of steps which together implement a
+///  Map-Reduce job:
+///
+///    * Read a collection of data from some source, parsing the
+///      collection's elements.
+///
+///    * Validate the elements.
+///
+///    * Apply a user-defined function to map each element to some value
+///      and extract an element-specific key value.
+///
+///    * Group elements with the same key into a single element with
+///      that key, transforming a multiply-keyed collection into a
+///      uniquely-keyed collection.
+///
+///    * Write the elements out to some data sink.
+///
+///  Note that the Cloud Dataflow service may be used to run many different
+///  types of jobs, not just Map-Reduce.
 class Step extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Step',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$5.Struct>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'properties',
-        subBuilder: $5.Struct.create)
-    ..hasRequiredFields = false;
-
-  Step._() : super();
   factory Step({
     $core.String? kind,
     $core.String? name,
     $5.Struct? properties,
   }) {
-    final _result = create();
+    final $result = create();
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (properties != null) {
-      _result.properties = properties;
+      $result.properties = properties;
     }
-    return _result;
+    return $result;
   }
+  Step._() : super();
   factory Step.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Step.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Step',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'kind')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOM<$5.Struct>(3, _omitFieldNames ? '' : 'properties',
+        subBuilder: $5.Struct.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2745,9 +2573,10 @@ class Step extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Step copyWith(void Function(Step) updates) =>
-      super.copyWith((message) => updates(message as Step))
-          as Step; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Step)) as Step;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Step create() => Step._();
   Step createEmptyInstance() => create();
@@ -2757,6 +2586,7 @@ class Step extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Step>(create);
   static Step? _defaultInstance;
 
+  /// The kind of step in the Cloud Dataflow job.
   @$pb.TagNumber(1)
   $core.String get kind => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2769,6 +2599,8 @@ class Step extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKind() => clearField(1);
 
+  /// The name that identifies the step. This must be unique for each
+  /// step with respect to all other steps in the Cloud Dataflow job.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2781,6 +2613,9 @@ class Step extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// Named properties associated with the step. Each kind of
+  /// predefined step has its own required set of properties.
+  /// Must be provided on Create.  Only retrieved with JOB_VIEW_ALL.
   @$pb.TagNumber(3)
   $5.Struct get properties => $_getN(2);
   @$pb.TagNumber(3)
@@ -2796,44 +2631,40 @@ class Step extends $pb.GeneratedMessage {
   $5.Struct ensureProperties() => $_ensure(2);
 }
 
+/// Additional information about how a Cloud Dataflow job will be executed that
+/// isn't contained in the submitted job.
 class JobExecutionInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'JobExecutionInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..m<$core.String, JobExecutionStageInfo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'stages',
-        entryClassName: 'JobExecutionInfo.StagesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: JobExecutionStageInfo.create,
-        packageName: const $pb.PackageName('google.dataflow.v1beta3'))
-    ..hasRequiredFields = false;
-
-  JobExecutionInfo._() : super();
   factory JobExecutionInfo({
     $core.Map<$core.String, JobExecutionStageInfo>? stages,
   }) {
-    final _result = create();
+    final $result = create();
     if (stages != null) {
-      _result.stages.addAll(stages);
+      $result.stages.addAll(stages);
     }
-    return _result;
+    return $result;
   }
+  JobExecutionInfo._() : super();
   factory JobExecutionInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory JobExecutionInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'JobExecutionInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..m<$core.String, JobExecutionStageInfo>(1, _omitFieldNames ? '' : 'stages',
+        entryClassName: 'JobExecutionInfo.StagesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: JobExecutionStageInfo.create,
+        valueDefaultOrMaker: JobExecutionStageInfo.getDefault,
+        packageName: const $pb.PackageName('google.dataflow.v1beta3'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2843,8 +2674,10 @@ class JobExecutionInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   JobExecutionInfo copyWith(void Function(JobExecutionInfo) updates) =>
       super.copyWith((message) => updates(message as JobExecutionInfo))
-          as JobExecutionInfo; // ignore: deprecated_member_use
+          as JobExecutionInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static JobExecutionInfo create() => JobExecutionInfo._();
   JobExecutionInfo createEmptyInstance() => create();
@@ -2855,43 +2688,39 @@ class JobExecutionInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<JobExecutionInfo>(create);
   static JobExecutionInfo? _defaultInstance;
 
+  /// A mapping from each stage to the information about that stage.
   @$pb.TagNumber(1)
   $core.Map<$core.String, JobExecutionStageInfo> get stages => $_getMap(0);
 }
 
+/// Contains information about how a particular
+/// [google.dataflow.v1beta3.Step][google.dataflow.v1beta3.Step] will be executed.
 class JobExecutionStageInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'JobExecutionStageInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'stepName')
-    ..hasRequiredFields = false;
-
-  JobExecutionStageInfo._() : super();
   factory JobExecutionStageInfo({
     $core.Iterable<$core.String>? stepName,
   }) {
-    final _result = create();
+    final $result = create();
     if (stepName != null) {
-      _result.stepName.addAll(stepName);
+      $result.stepName.addAll(stepName);
     }
-    return _result;
+    return $result;
   }
+  JobExecutionStageInfo._() : super();
   factory JobExecutionStageInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory JobExecutionStageInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'JobExecutionStageInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'stepName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2903,8 +2732,10 @@ class JobExecutionStageInfo extends $pb.GeneratedMessage {
   JobExecutionStageInfo copyWith(
           void Function(JobExecutionStageInfo) updates) =>
       super.copyWith((message) => updates(message as JobExecutionStageInfo))
-          as JobExecutionStageInfo; // ignore: deprecated_member_use
+          as JobExecutionStageInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static JobExecutionStageInfo create() => JobExecutionStageInfo._();
   JobExecutionStageInfo createEmptyInstance() => create();
@@ -2915,53 +2746,15 @@ class JobExecutionStageInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<JobExecutionStageInfo>(create);
   static JobExecutionStageInfo? _defaultInstance;
 
+  /// The steps associated with the execution stage.
+  /// Note that stages may have several steps, and that a given step
+  /// might be run by more than one stage.
   @$pb.TagNumber(1)
   $core.List<$core.String> get stepName => $_getList(0);
 }
 
+/// Request to create a Cloud Dataflow job.
 class CreateJobRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateJobRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOM<Job>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'job',
-        subBuilder: Job.create)
-    ..e<JobView>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: JobView.JOB_VIEW_UNKNOWN,
-        valueOf: JobView.valueOf,
-        enumValues: JobView.values)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'replaceJobId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..hasRequiredFields = false;
-
-  CreateJobRequest._() : super();
   factory CreateJobRequest({
     $core.String? projectId,
     Job? job,
@@ -2969,30 +2762,47 @@ class CreateJobRequest extends $pb.GeneratedMessage {
     $core.String? replaceJobId,
     $core.String? location,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (job != null) {
-      _result.job = job;
+      $result.job = job;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (replaceJobId != null) {
-      _result.replaceJobId = replaceJobId;
+      $result.replaceJobId = replaceJobId;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
-    return _result;
+    return $result;
   }
+  CreateJobRequest._() : super();
   factory CreateJobRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateJobRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateJobRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOM<Job>(2, _omitFieldNames ? '' : 'job', subBuilder: Job.create)
+    ..e<JobView>(3, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: JobView.JOB_VIEW_UNKNOWN,
+        valueOf: JobView.valueOf,
+        enumValues: JobView.values)
+    ..aOS(4, _omitFieldNames ? '' : 'replaceJobId')
+    ..aOS(5, _omitFieldNames ? '' : 'location')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3002,8 +2812,10 @@ class CreateJobRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateJobRequest copyWith(void Function(CreateJobRequest) updates) =>
       super.copyWith((message) => updates(message as CreateJobRequest))
-          as CreateJobRequest; // ignore: deprecated_member_use
+          as CreateJobRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateJobRequest create() => CreateJobRequest._();
   CreateJobRequest createEmptyInstance() => create();
@@ -3014,6 +2826,7 @@ class CreateJobRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateJobRequest>(create);
   static CreateJobRequest? _defaultInstance;
 
+  /// The ID of the Cloud Platform project that the job belongs to.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3026,6 +2839,7 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The job to create.
   @$pb.TagNumber(2)
   Job get job => $_getN(1);
   @$pb.TagNumber(2)
@@ -3040,6 +2854,7 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Job ensureJob() => $_ensure(1);
 
+  /// The level of information requested in response.
   @$pb.TagNumber(3)
   JobView get view => $_getN(2);
   @$pb.TagNumber(3)
@@ -3052,6 +2867,7 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearView() => clearField(3);
 
+  /// Deprecated. This field is now in the Job message.
   @$pb.TagNumber(4)
   $core.String get replaceJobId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3064,6 +2880,9 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReplaceJobId() => clearField(4);
 
+  /// The [regional endpoint]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// contains this job.
   @$pb.TagNumber(5)
   $core.String get location => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -3077,70 +2896,51 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   void clearLocation() => clearField(5);
 }
 
+/// Request to get the state of a Cloud Dataflow job.
 class GetJobRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetJobRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'jobId')
-    ..e<JobView>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: JobView.JOB_VIEW_UNKNOWN,
-        valueOf: JobView.valueOf,
-        enumValues: JobView.values)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..hasRequiredFields = false;
-
-  GetJobRequest._() : super();
   factory GetJobRequest({
     $core.String? projectId,
     $core.String? jobId,
     JobView? view,
     $core.String? location,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (jobId != null) {
-      _result.jobId = jobId;
+      $result.jobId = jobId;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
-    return _result;
+    return $result;
   }
+  GetJobRequest._() : super();
   factory GetJobRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetJobRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetJobRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'jobId')
+    ..e<JobView>(3, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: JobView.JOB_VIEW_UNKNOWN,
+        valueOf: JobView.valueOf,
+        enumValues: JobView.values)
+    ..aOS(4, _omitFieldNames ? '' : 'location')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3150,8 +2950,10 @@ class GetJobRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetJobRequest copyWith(void Function(GetJobRequest) updates) =>
       super.copyWith((message) => updates(message as GetJobRequest))
-          as GetJobRequest; // ignore: deprecated_member_use
+          as GetJobRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetJobRequest create() => GetJobRequest._();
   GetJobRequest createEmptyInstance() => create();
@@ -3162,6 +2964,7 @@ class GetJobRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetJobRequest>(create);
   static GetJobRequest? _defaultInstance;
 
+  /// The ID of the Cloud Platform project that the job belongs to.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3174,6 +2977,7 @@ class GetJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The job ID.
   @$pb.TagNumber(2)
   $core.String get jobId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3186,6 +2990,7 @@ class GetJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearJobId() => clearField(2);
 
+  /// The level of information requested in response.
   @$pb.TagNumber(3)
   JobView get view => $_getN(2);
   @$pb.TagNumber(3)
@@ -3198,6 +3003,9 @@ class GetJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearView() => clearField(3);
 
+  /// The [regional endpoint]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// contains this job.
   @$pb.TagNumber(4)
   $core.String get location => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3211,67 +3019,48 @@ class GetJobRequest extends $pb.GeneratedMessage {
   void clearLocation() => clearField(4);
 }
 
+/// Request to update a Cloud Dataflow job.
 class UpdateJobRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateJobRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'jobId')
-    ..aOM<Job>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'job',
-        subBuilder: Job.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..hasRequiredFields = false;
-
-  UpdateJobRequest._() : super();
   factory UpdateJobRequest({
     $core.String? projectId,
     $core.String? jobId,
     Job? job,
     $core.String? location,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (jobId != null) {
-      _result.jobId = jobId;
+      $result.jobId = jobId;
     }
     if (job != null) {
-      _result.job = job;
+      $result.job = job;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
-    return _result;
+    return $result;
   }
+  UpdateJobRequest._() : super();
   factory UpdateJobRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateJobRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateJobRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'jobId')
+    ..aOM<Job>(3, _omitFieldNames ? '' : 'job', subBuilder: Job.create)
+    ..aOS(4, _omitFieldNames ? '' : 'location')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3281,8 +3070,10 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateJobRequest copyWith(void Function(UpdateJobRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateJobRequest))
-          as UpdateJobRequest; // ignore: deprecated_member_use
+          as UpdateJobRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateJobRequest create() => UpdateJobRequest._();
   UpdateJobRequest createEmptyInstance() => create();
@@ -3293,6 +3084,7 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateJobRequest>(create);
   static UpdateJobRequest? _defaultInstance;
 
+  /// The ID of the Cloud Platform project that the job belongs to.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3305,6 +3097,7 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The job ID.
   @$pb.TagNumber(2)
   $core.String get jobId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3317,6 +3110,8 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearJobId() => clearField(2);
 
+  /// The updated job.
+  /// Only the job state is updatable; other fields will be ignored.
   @$pb.TagNumber(3)
   Job get job => $_getN(2);
   @$pb.TagNumber(3)
@@ -3331,6 +3126,9 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Job ensureJob() => $_ensure(2);
 
+  /// The [regional endpoint]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// contains this job.
   @$pb.TagNumber(4)
   $core.String get location => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3344,58 +3142,8 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   void clearLocation() => clearField(4);
 }
 
+/// Request to list Cloud Dataflow jobs.
 class ListJobsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListJobsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..e<JobView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: JobView.JOB_VIEW_UNKNOWN,
-        valueOf: JobView.valueOf,
-        enumValues: JobView.values)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..e<ListJobsRequest_Filter>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ListJobsRequest_Filter.UNKNOWN,
-        valueOf: ListJobsRequest_Filter.valueOf,
-        enumValues: ListJobsRequest_Filter.values)
-    ..aOS(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..hasRequiredFields = false;
-
-  ListJobsRequest._() : super();
   factory ListJobsRequest({
     $core.String? projectId,
     @$core.Deprecated('This field is deprecated.') JobView? view,
@@ -3404,34 +3152,56 @@ class ListJobsRequest extends $pb.GeneratedMessage {
     ListJobsRequest_Filter? filter,
     $core.String? location,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (view != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.view = view;
+      $result.view = view;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
-    return _result;
+    return $result;
   }
+  ListJobsRequest._() : super();
   factory ListJobsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListJobsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListJobsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..e<JobView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: JobView.JOB_VIEW_UNKNOWN,
+        valueOf: JobView.valueOf,
+        enumValues: JobView.values)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..e<ListJobsRequest_Filter>(
+        5, _omitFieldNames ? '' : 'filter', $pb.PbFieldType.OE,
+        defaultOrMaker: ListJobsRequest_Filter.UNKNOWN,
+        valueOf: ListJobsRequest_Filter.valueOf,
+        enumValues: ListJobsRequest_Filter.values)
+    ..aOS(17, _omitFieldNames ? '' : 'location')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3441,8 +3211,10 @@ class ListJobsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListJobsRequest copyWith(void Function(ListJobsRequest) updates) =>
       super.copyWith((message) => updates(message as ListJobsRequest))
-          as ListJobsRequest; // ignore: deprecated_member_use
+          as ListJobsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListJobsRequest create() => ListJobsRequest._();
   ListJobsRequest createEmptyInstance() => create();
@@ -3453,6 +3225,7 @@ class ListJobsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListJobsRequest>(create);
   static ListJobsRequest? _defaultInstance;
 
+  /// The project which owns the jobs.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3465,6 +3238,8 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Deprecated. ListJobs always returns summaries now.
+  /// Use GetJob for other JobViews.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   JobView get view => $_getN(1);
@@ -3481,6 +3256,9 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  /// If there are many jobs, limit response to at most this many.
+  /// The actual number of jobs returned will be the lesser of max_responses
+  /// and an unspecified server-defined limit.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -3493,6 +3271,8 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Set this to the 'next_page_token' field of a previous response
+  /// to request additional results in a long list.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3505,6 +3285,7 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
+  /// The kind of filter to use.
   @$pb.TagNumber(5)
   ListJobsRequest_Filter get filter => $_getN(4);
   @$pb.TagNumber(5)
@@ -3517,6 +3298,9 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 
+  /// The [regional endpoint]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// contains this job.
   @$pb.TagNumber(17)
   $core.String get location => $_getSZ(5);
   @$pb.TagNumber(17)
@@ -3530,39 +3314,35 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   void clearLocation() => clearField(17);
 }
 
+/// Indicates which [regional endpoint]
+/// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) failed
+/// to respond to a request for data.
 class FailedLocation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FailedLocation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  FailedLocation._() : super();
   factory FailedLocation({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  FailedLocation._() : super();
   factory FailedLocation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FailedLocation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FailedLocation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3572,8 +3352,10 @@ class FailedLocation extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   FailedLocation copyWith(void Function(FailedLocation) updates) =>
       super.copyWith((message) => updates(message as FailedLocation))
-          as FailedLocation; // ignore: deprecated_member_use
+          as FailedLocation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FailedLocation create() => FailedLocation._();
   FailedLocation createEmptyInstance() => create();
@@ -3584,6 +3366,9 @@ class FailedLocation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FailedLocation>(create);
   static FailedLocation? _defaultInstance;
 
+  /// The name of the [regional endpoint]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// failed to respond.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3597,61 +3382,50 @@ class FailedLocation extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Response to a request to list Cloud Dataflow jobs in a project. This might
+/// be a partial response, depending on the page size in the ListJobsRequest.
+/// However, if the project does not have any jobs, an instance of
+/// ListJobsResponse is not returned and the requests's response
+/// body is empty {}.
 class ListJobsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListJobsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..pc<Job>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'jobs',
-        $pb.PbFieldType.PM,
-        subBuilder: Job.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..pc<FailedLocation>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedLocation',
-        $pb.PbFieldType.PM,
-        subBuilder: FailedLocation.create)
-    ..hasRequiredFields = false;
-
-  ListJobsResponse._() : super();
   factory ListJobsResponse({
     $core.Iterable<Job>? jobs,
     $core.String? nextPageToken,
     $core.Iterable<FailedLocation>? failedLocation,
   }) {
-    final _result = create();
+    final $result = create();
     if (jobs != null) {
-      _result.jobs.addAll(jobs);
+      $result.jobs.addAll(jobs);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
     if (failedLocation != null) {
-      _result.failedLocation.addAll(failedLocation);
+      $result.failedLocation.addAll(failedLocation);
     }
-    return _result;
+    return $result;
   }
+  ListJobsResponse._() : super();
   factory ListJobsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListJobsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListJobsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<Job>(1, _omitFieldNames ? '' : 'jobs', $pb.PbFieldType.PM,
+        subBuilder: Job.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..pc<FailedLocation>(
+        3, _omitFieldNames ? '' : 'failedLocation', $pb.PbFieldType.PM,
+        subBuilder: FailedLocation.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3661,8 +3435,10 @@ class ListJobsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListJobsResponse copyWith(void Function(ListJobsResponse) updates) =>
       super.copyWith((message) => updates(message as ListJobsResponse))
-          as ListJobsResponse; // ignore: deprecated_member_use
+          as ListJobsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListJobsResponse create() => ListJobsResponse._();
   ListJobsResponse createEmptyInstance() => create();
@@ -3673,9 +3449,11 @@ class ListJobsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListJobsResponse>(create);
   static ListJobsResponse? _defaultInstance;
 
+  /// A subset of the requested job information.
   @$pb.TagNumber(1)
   $core.List<Job> get jobs => $_getList(0);
 
+  /// Set if there may be more results than fit in this response.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3688,54 +3466,15 @@ class ListJobsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  /// Zero or more messages describing the [regional endpoints]
+  /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+  /// failed to respond.
   @$pb.TagNumber(3)
   $core.List<FailedLocation> get failedLocation => $_getList(2);
 }
 
+/// Request to create a snapshot of a job.
 class SnapshotJobRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SnapshotJobRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'jobId')
-    ..aOM<$4.Duration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ttl',
-        subBuilder: $4.Duration.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..aOB(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'snapshotSources')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..hasRequiredFields = false;
-
-  SnapshotJobRequest._() : super();
   factory SnapshotJobRequest({
     $core.String? projectId,
     $core.String? jobId,
@@ -3744,33 +3483,49 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
     $core.bool? snapshotSources,
     $core.String? description,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (jobId != null) {
-      _result.jobId = jobId;
+      $result.jobId = jobId;
     }
     if (ttl != null) {
-      _result.ttl = ttl;
+      $result.ttl = ttl;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (snapshotSources != null) {
-      _result.snapshotSources = snapshotSources;
+      $result.snapshotSources = snapshotSources;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
-    return _result;
+    return $result;
   }
+  SnapshotJobRequest._() : super();
   factory SnapshotJobRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SnapshotJobRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SnapshotJobRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'jobId')
+    ..aOM<$4.Duration>(3, _omitFieldNames ? '' : 'ttl',
+        subBuilder: $4.Duration.create)
+    ..aOS(4, _omitFieldNames ? '' : 'location')
+    ..aOB(5, _omitFieldNames ? '' : 'snapshotSources')
+    ..aOS(6, _omitFieldNames ? '' : 'description')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3780,8 +3535,10 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SnapshotJobRequest copyWith(void Function(SnapshotJobRequest) updates) =>
       super.copyWith((message) => updates(message as SnapshotJobRequest))
-          as SnapshotJobRequest; // ignore: deprecated_member_use
+          as SnapshotJobRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SnapshotJobRequest create() => SnapshotJobRequest._();
   SnapshotJobRequest createEmptyInstance() => create();
@@ -3792,6 +3549,7 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SnapshotJobRequest>(create);
   static SnapshotJobRequest? _defaultInstance;
 
+  /// The project which owns the job to be snapshotted.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3804,6 +3562,7 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The job to be snapshotted.
   @$pb.TagNumber(2)
   $core.String get jobId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3816,6 +3575,7 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearJobId() => clearField(2);
 
+  /// TTL for the snapshot.
   @$pb.TagNumber(3)
   $4.Duration get ttl => $_getN(2);
   @$pb.TagNumber(3)
@@ -3830,6 +3590,7 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.Duration ensureTtl() => $_ensure(2);
 
+  /// The location that contains this job.
   @$pb.TagNumber(4)
   $core.String get location => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3842,6 +3603,7 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearLocation() => clearField(4);
 
+  /// If true, perform snapshots for sources which support this.
   @$pb.TagNumber(5)
   $core.bool get snapshotSources => $_getBF(4);
   @$pb.TagNumber(5)
@@ -3854,6 +3616,7 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSnapshotSources() => clearField(5);
 
+  /// User specified description of the snapshot. Maybe empty.
   @$pb.TagNumber(6)
   $core.String get description => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -3867,39 +3630,33 @@ class SnapshotJobRequest extends $pb.GeneratedMessage {
   void clearDescription() => clearField(6);
 }
 
+/// Request to check is active jobs exists for a project
 class CheckActiveJobsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CheckActiveJobsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..hasRequiredFields = false;
-
-  CheckActiveJobsRequest._() : super();
   factory CheckActiveJobsRequest({
     $core.String? projectId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
-    return _result;
+    return $result;
   }
+  CheckActiveJobsRequest._() : super();
   factory CheckActiveJobsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CheckActiveJobsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CheckActiveJobsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3911,8 +3668,10 @@ class CheckActiveJobsRequest extends $pb.GeneratedMessage {
   CheckActiveJobsRequest copyWith(
           void Function(CheckActiveJobsRequest) updates) =>
       super.copyWith((message) => updates(message as CheckActiveJobsRequest))
-          as CheckActiveJobsRequest; // ignore: deprecated_member_use
+          as CheckActiveJobsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckActiveJobsRequest create() => CheckActiveJobsRequest._();
   CheckActiveJobsRequest createEmptyInstance() => create();
@@ -3923,6 +3682,7 @@ class CheckActiveJobsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CheckActiveJobsRequest>(create);
   static CheckActiveJobsRequest? _defaultInstance;
 
+  /// The project which owns the jobs.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3936,39 +3696,33 @@ class CheckActiveJobsRequest extends $pb.GeneratedMessage {
   void clearProjectId() => clearField(1);
 }
 
+/// Response for CheckActiveJobsRequest.
 class CheckActiveJobsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CheckActiveJobsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.dataflow.v1beta3'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'activeJobsExist')
-    ..hasRequiredFields = false;
-
-  CheckActiveJobsResponse._() : super();
   factory CheckActiveJobsResponse({
     $core.bool? activeJobsExist,
   }) {
-    final _result = create();
+    final $result = create();
     if (activeJobsExist != null) {
-      _result.activeJobsExist = activeJobsExist;
+      $result.activeJobsExist = activeJobsExist;
     }
-    return _result;
+    return $result;
   }
+  CheckActiveJobsResponse._() : super();
   factory CheckActiveJobsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CheckActiveJobsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CheckActiveJobsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'activeJobsExist')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3980,8 +3734,10 @@ class CheckActiveJobsResponse extends $pb.GeneratedMessage {
   CheckActiveJobsResponse copyWith(
           void Function(CheckActiveJobsResponse) updates) =>
       super.copyWith((message) => updates(message as CheckActiveJobsResponse))
-          as CheckActiveJobsResponse; // ignore: deprecated_member_use
+          as CheckActiveJobsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckActiveJobsResponse create() => CheckActiveJobsResponse._();
   CheckActiveJobsResponse createEmptyInstance() => create();
@@ -3992,6 +3748,7 @@ class CheckActiveJobsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CheckActiveJobsResponse>(create);
   static CheckActiveJobsResponse? _defaultInstance;
 
+  /// If True, active jobs exists for project. False otherwise.
   @$pb.TagNumber(1)
   $core.bool get activeJobsExist => $_getBF(0);
   @$pb.TagNumber(1)
@@ -4004,3 +3761,7 @@ class CheckActiveJobsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearActiveJobsExist() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

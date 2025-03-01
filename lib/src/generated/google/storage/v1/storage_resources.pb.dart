@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/storage/v1/storage_resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,44 +16,37 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../protobuf/timestamp.pb.dart' as $0;
 import '../../protobuf/wrappers.pb.dart' as $1;
-
 import 'storage_resources.pbenum.dart';
 
 export 'storage_resources.pbenum.dart';
 
+/// Billing properties of a bucket.
 class Bucket_Billing extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Billing',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requesterPays')
-    ..hasRequiredFields = false;
-
-  Bucket_Billing._() : super();
   factory Bucket_Billing({
     $core.bool? requesterPays,
   }) {
-    final _result = create();
+    final $result = create();
     if (requesterPays != null) {
-      _result.requesterPays = requesterPays;
+      $result.requesterPays = requesterPays;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Billing._() : super();
   factory Bucket_Billing.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Billing.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Billing',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'requesterPays')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -59,8 +56,10 @@ class Bucket_Billing extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Billing copyWith(void Function(Bucket_Billing) updates) =>
       super.copyWith((message) => updates(message as Bucket_Billing))
-          as Bucket_Billing; // ignore: deprecated_member_use
+          as Bucket_Billing;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Billing create() => Bucket_Billing._();
   Bucket_Billing createEmptyInstance() => create();
@@ -71,6 +70,7 @@ class Bucket_Billing extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Billing>(create);
   static Bucket_Billing? _defaultInstance;
 
+  /// When set to true, Requester Pays is enabled for this bucket.
   @$pb.TagNumber(1)
   $core.bool get requesterPays => $_getBF(0);
   @$pb.TagNumber(1)
@@ -84,67 +84,52 @@ class Bucket_Billing extends $pb.GeneratedMessage {
   void clearRequesterPays() => clearField(1);
 }
 
+/// Cross-Origin Response sharing (CORS) properties for a bucket.
+/// For more on GCS and CORS, see
+/// https://cloud.google.com/storage/docs/cross-origin.
+/// For more on CORS in general, see https://tools.ietf.org/html/rfc6454.
 class Bucket_Cors extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Cors',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'origin')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'method')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'responseHeader')
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxAgeSeconds',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Bucket_Cors._() : super();
   factory Bucket_Cors({
     $core.Iterable<$core.String>? origin,
     $core.Iterable<$core.String>? method,
     $core.Iterable<$core.String>? responseHeader,
     $core.int? maxAgeSeconds,
   }) {
-    final _result = create();
+    final $result = create();
     if (origin != null) {
-      _result.origin.addAll(origin);
+      $result.origin.addAll(origin);
     }
     if (method != null) {
-      _result.method.addAll(method);
+      $result.method.addAll(method);
     }
     if (responseHeader != null) {
-      _result.responseHeader.addAll(responseHeader);
+      $result.responseHeader.addAll(responseHeader);
     }
     if (maxAgeSeconds != null) {
-      _result.maxAgeSeconds = maxAgeSeconds;
+      $result.maxAgeSeconds = maxAgeSeconds;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Cors._() : super();
   factory Bucket_Cors.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Cors.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Cors',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'origin')
+    ..pPS(2, _omitFieldNames ? '' : 'method')
+    ..pPS(3, _omitFieldNames ? '' : 'responseHeader')
+    ..a<$core.int>(
+        4, _omitFieldNames ? '' : 'maxAgeSeconds', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -154,8 +139,10 @@ class Bucket_Cors extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Cors copyWith(void Function(Bucket_Cors) updates) =>
       super.copyWith((message) => updates(message as Bucket_Cors))
-          as Bucket_Cors; // ignore: deprecated_member_use
+          as Bucket_Cors;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Cors create() => Bucket_Cors._();
   Bucket_Cors createEmptyInstance() => create();
@@ -165,15 +152,27 @@ class Bucket_Cors extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Cors>(create);
   static Bucket_Cors? _defaultInstance;
 
+  /// The list of Origins eligible to receive CORS response headers. See
+  /// [https://tools.ietf.org/html/rfc6454][RFC 6454] for more on origins.
+  /// Note: "*" is permitted in the list of origins, and means "any Origin".
   @$pb.TagNumber(1)
   $core.List<$core.String> get origin => $_getList(0);
 
+  /// The list of HTTP methods on which to include CORS response headers,
+  /// (`GET`, `OPTIONS`, `POST`, etc) Note: "*" is permitted in the list of
+  /// methods, and means "any method".
   @$pb.TagNumber(2)
   $core.List<$core.String> get method => $_getList(1);
 
+  /// The list of HTTP headers other than the
+  /// [https://www.w3.org/TR/cors/#simple-response-header][simple response
+  /// headers] to give permission for the user-agent to share across domains.
   @$pb.TagNumber(3)
   $core.List<$core.String> get responseHeader => $_getList(2);
 
+  /// The value, in seconds, to return in the
+  /// [https://www.w3.org/TR/cors/#access-control-max-age-response-header][Access-Control-Max-Age
+  /// header] used in preflight responses.
   @$pb.TagNumber(4)
   $core.int get maxAgeSeconds => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -187,39 +186,33 @@ class Bucket_Cors extends $pb.GeneratedMessage {
   void clearMaxAgeSeconds() => clearField(4);
 }
 
+/// Encryption properties of a bucket.
 class Bucket_Encryption extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Encryption',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'defaultKmsKeyName')
-    ..hasRequiredFields = false;
-
-  Bucket_Encryption._() : super();
   factory Bucket_Encryption({
     $core.String? defaultKmsKeyName,
   }) {
-    final _result = create();
+    final $result = create();
     if (defaultKmsKeyName != null) {
-      _result.defaultKmsKeyName = defaultKmsKeyName;
+      $result.defaultKmsKeyName = defaultKmsKeyName;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Encryption._() : super();
   factory Bucket_Encryption.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Encryption.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Encryption',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'defaultKmsKeyName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -229,8 +222,10 @@ class Bucket_Encryption extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Encryption copyWith(void Function(Bucket_Encryption) updates) =>
       super.copyWith((message) => updates(message as Bucket_Encryption))
-          as Bucket_Encryption; // ignore: deprecated_member_use
+          as Bucket_Encryption;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Encryption create() => Bucket_Encryption._();
   Bucket_Encryption createEmptyInstance() => create();
@@ -241,6 +236,8 @@ class Bucket_Encryption extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Encryption>(create);
   static Bucket_Encryption? _defaultInstance;
 
+  /// A Cloud KMS key that will be used to encrypt objects inserted into this
+  /// bucket, if no encryption method is specified.
   @$pb.TagNumber(1)
   $core.String get defaultKmsKeyName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -256,42 +253,20 @@ class Bucket_Encryption extends $pb.GeneratedMessage {
 
 class Bucket_IamConfiguration_UniformBucketLevelAccess
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.IamConfiguration.UniformBucketLevelAccess',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lockedTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  Bucket_IamConfiguration_UniformBucketLevelAccess._() : super();
   factory Bucket_IamConfiguration_UniformBucketLevelAccess({
     $core.bool? enabled,
     $0.Timestamp? lockedTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
     if (lockedTime != null) {
-      _result.lockedTime = lockedTime;
+      $result.lockedTime = lockedTime;
     }
-    return _result;
+    return $result;
   }
+  Bucket_IamConfiguration_UniformBucketLevelAccess._() : super();
   factory Bucket_IamConfiguration_UniformBucketLevelAccess.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -300,6 +275,19 @@ class Bucket_IamConfiguration_UniformBucketLevelAccess
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'Bucket.IamConfiguration.UniformBucketLevelAccess',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'enabled')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'lockedTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -314,8 +302,10 @@ class Bucket_IamConfiguration_UniformBucketLevelAccess
               updates) =>
       super.copyWith((message) => updates(
               message as Bucket_IamConfiguration_UniformBucketLevelAccess))
-          as Bucket_IamConfiguration_UniformBucketLevelAccess; // ignore: deprecated_member_use
+          as Bucket_IamConfiguration_UniformBucketLevelAccess;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_IamConfiguration_UniformBucketLevelAccess create() =>
       Bucket_IamConfiguration_UniformBucketLevelAccess._();
@@ -330,6 +320,7 @@ class Bucket_IamConfiguration_UniformBucketLevelAccess
           Bucket_IamConfiguration_UniformBucketLevelAccess>(create);
   static Bucket_IamConfiguration_UniformBucketLevelAccess? _defaultInstance;
 
+  /// If set, access checks only use bucket-level IAM policies or above.
   @$pb.TagNumber(1)
   $core.bool get enabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -342,6 +333,10 @@ class Bucket_IamConfiguration_UniformBucketLevelAccess
   @$pb.TagNumber(1)
   void clearEnabled() => clearField(1);
 
+  /// The deadline time for changing
+  /// <code>iamConfiguration.uniformBucketLevelAccess.enabled</code> from
+  /// true to false in [https://tools.ietf.org/html/rfc3339][RFC 3339]. After
+  /// the deadline is passed the field is immutable.
   @$pb.TagNumber(2)
   $0.Timestamp get lockedTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -357,54 +352,45 @@ class Bucket_IamConfiguration_UniformBucketLevelAccess
   $0.Timestamp ensureLockedTime() => $_ensure(1);
 }
 
+/// Bucket restriction options currently enforced on the bucket.
 class Bucket_IamConfiguration extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.IamConfiguration',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOM<Bucket_IamConfiguration_UniformBucketLevelAccess>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uniformBucketLevelAccess',
-        subBuilder: Bucket_IamConfiguration_UniformBucketLevelAccess.create)
-    ..e<Bucket_IamConfiguration_PublicAccessPrevention>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publicAccessPrevention',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Bucket_IamConfiguration_PublicAccessPrevention
-            .PUBLIC_ACCESS_PREVENTION_UNSPECIFIED,
-        valueOf: Bucket_IamConfiguration_PublicAccessPrevention.valueOf,
-        enumValues: Bucket_IamConfiguration_PublicAccessPrevention.values)
-    ..hasRequiredFields = false;
-
-  Bucket_IamConfiguration._() : super();
   factory Bucket_IamConfiguration({
     Bucket_IamConfiguration_UniformBucketLevelAccess? uniformBucketLevelAccess,
     Bucket_IamConfiguration_PublicAccessPrevention? publicAccessPrevention,
   }) {
-    final _result = create();
+    final $result = create();
     if (uniformBucketLevelAccess != null) {
-      _result.uniformBucketLevelAccess = uniformBucketLevelAccess;
+      $result.uniformBucketLevelAccess = uniformBucketLevelAccess;
     }
     if (publicAccessPrevention != null) {
-      _result.publicAccessPrevention = publicAccessPrevention;
+      $result.publicAccessPrevention = publicAccessPrevention;
     }
-    return _result;
+    return $result;
   }
+  Bucket_IamConfiguration._() : super();
   factory Bucket_IamConfiguration.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_IamConfiguration.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.IamConfiguration',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOM<Bucket_IamConfiguration_UniformBucketLevelAccess>(
+        1, _omitFieldNames ? '' : 'uniformBucketLevelAccess',
+        subBuilder: Bucket_IamConfiguration_UniformBucketLevelAccess.create)
+    ..e<Bucket_IamConfiguration_PublicAccessPrevention>(
+        2, _omitFieldNames ? '' : 'publicAccessPrevention', $pb.PbFieldType.OE,
+        defaultOrMaker: Bucket_IamConfiguration_PublicAccessPrevention
+            .PUBLIC_ACCESS_PREVENTION_UNSPECIFIED,
+        valueOf: Bucket_IamConfiguration_PublicAccessPrevention.valueOf,
+        enumValues: Bucket_IamConfiguration_PublicAccessPrevention.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -416,8 +402,10 @@ class Bucket_IamConfiguration extends $pb.GeneratedMessage {
   Bucket_IamConfiguration copyWith(
           void Function(Bucket_IamConfiguration) updates) =>
       super.copyWith((message) => updates(message as Bucket_IamConfiguration))
-          as Bucket_IamConfiguration; // ignore: deprecated_member_use
+          as Bucket_IamConfiguration;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_IamConfiguration create() => Bucket_IamConfiguration._();
   Bucket_IamConfiguration createEmptyInstance() => create();
@@ -445,6 +433,7 @@ class Bucket_IamConfiguration extends $pb.GeneratedMessage {
   Bucket_IamConfiguration_UniformBucketLevelAccess
       ensureUniformBucketLevelAccess() => $_ensure(0);
 
+  /// Whether IAM will enforce public access prevention.
   @$pb.TagNumber(2)
   Bucket_IamConfiguration_PublicAccessPrevention get publicAccessPrevention =>
       $_getN(1);
@@ -459,48 +448,38 @@ class Bucket_IamConfiguration extends $pb.GeneratedMessage {
   void clearPublicAccessPrevention() => clearField(2);
 }
 
+/// An action to take on an object.
 class Bucket_Lifecycle_Rule_Action extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Lifecycle.Rule.Action',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'storageClass')
-    ..hasRequiredFields = false;
-
-  Bucket_Lifecycle_Rule_Action._() : super();
   factory Bucket_Lifecycle_Rule_Action({
     $core.String? type,
     $core.String? storageClass,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (storageClass != null) {
-      _result.storageClass = storageClass;
+      $result.storageClass = storageClass;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Lifecycle_Rule_Action._() : super();
   factory Bucket_Lifecycle_Rule_Action.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Lifecycle_Rule_Action.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Lifecycle.Rule.Action',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'type')
+    ..aOS(2, _omitFieldNames ? '' : 'storageClass')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -513,8 +492,10 @@ class Bucket_Lifecycle_Rule_Action extends $pb.GeneratedMessage {
           void Function(Bucket_Lifecycle_Rule_Action) updates) =>
       super.copyWith(
               (message) => updates(message as Bucket_Lifecycle_Rule_Action))
-          as Bucket_Lifecycle_Rule_Action; // ignore: deprecated_member_use
+          as Bucket_Lifecycle_Rule_Action;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Lifecycle_Rule_Action create() =>
       Bucket_Lifecycle_Rule_Action._();
@@ -526,6 +507,8 @@ class Bucket_Lifecycle_Rule_Action extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Lifecycle_Rule_Action>(create);
   static Bucket_Lifecycle_Rule_Action? _defaultInstance;
 
+  /// Type of the action. Currently, only `Delete`, `SetStorageClass`, and
+  /// `AbortIncompleteMultipartUpload` are supported.
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -538,6 +521,8 @@ class Bucket_Lifecycle_Rule_Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// Target storage class. Required iff the type of the action is
+  /// SetStorageClass.
   @$pb.TagNumber(2)
   $core.String get storageClass => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -551,87 +536,8 @@ class Bucket_Lifecycle_Rule_Action extends $pb.GeneratedMessage {
   void clearStorageClass() => clearField(2);
 }
 
+/// A condition of an object which triggers some action.
 class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Lifecycle.Rule.Condition',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'age',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createdBefore',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$1.BoolValue>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'isLive',
-        subBuilder: $1.BoolValue.create)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'numNewerVersions',
-        $pb.PbFieldType.O3)
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matchesStorageClass')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matchesPattern')
-    ..a<$core.int>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'daysSinceCustomTime',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customTimeBefore',
-        subBuilder: $0.Timestamp.create)
-    ..a<$core.int>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'daysSinceNoncurrentTime',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Timestamp>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'noncurrentTimeBefore',
-        subBuilder: $0.Timestamp.create)
-    ..pPS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matchesPrefix')
-    ..pPS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matchesSuffix')
-    ..hasRequiredFields = false;
-
-  Bucket_Lifecycle_Rule_Condition._() : super();
   factory Bucket_Lifecycle_Rule_Condition({
     $core.int? age,
     $0.Timestamp? createdBefore,
@@ -646,51 +552,79 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? matchesPrefix,
     $core.Iterable<$core.String>? matchesSuffix,
   }) {
-    final _result = create();
+    final $result = create();
     if (age != null) {
-      _result.age = age;
+      $result.age = age;
     }
     if (createdBefore != null) {
-      _result.createdBefore = createdBefore;
+      $result.createdBefore = createdBefore;
     }
     if (isLive != null) {
-      _result.isLive = isLive;
+      $result.isLive = isLive;
     }
     if (numNewerVersions != null) {
-      _result.numNewerVersions = numNewerVersions;
+      $result.numNewerVersions = numNewerVersions;
     }
     if (matchesStorageClass != null) {
-      _result.matchesStorageClass.addAll(matchesStorageClass);
+      $result.matchesStorageClass.addAll(matchesStorageClass);
     }
     if (matchesPattern != null) {
-      _result.matchesPattern = matchesPattern;
+      $result.matchesPattern = matchesPattern;
     }
     if (daysSinceCustomTime != null) {
-      _result.daysSinceCustomTime = daysSinceCustomTime;
+      $result.daysSinceCustomTime = daysSinceCustomTime;
     }
     if (customTimeBefore != null) {
-      _result.customTimeBefore = customTimeBefore;
+      $result.customTimeBefore = customTimeBefore;
     }
     if (daysSinceNoncurrentTime != null) {
-      _result.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
+      $result.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
     }
     if (noncurrentTimeBefore != null) {
-      _result.noncurrentTimeBefore = noncurrentTimeBefore;
+      $result.noncurrentTimeBefore = noncurrentTimeBefore;
     }
     if (matchesPrefix != null) {
-      _result.matchesPrefix.addAll(matchesPrefix);
+      $result.matchesPrefix.addAll(matchesPrefix);
     }
     if (matchesSuffix != null) {
-      _result.matchesSuffix.addAll(matchesSuffix);
+      $result.matchesSuffix.addAll(matchesSuffix);
     }
-    return _result;
+    return $result;
   }
+  Bucket_Lifecycle_Rule_Condition._() : super();
   factory Bucket_Lifecycle_Rule_Condition.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Lifecycle_Rule_Condition.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Lifecycle.Rule.Condition',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'age', $pb.PbFieldType.O3)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'createdBefore',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$1.BoolValue>(3, _omitFieldNames ? '' : 'isLive',
+        subBuilder: $1.BoolValue.create)
+    ..a<$core.int>(
+        4, _omitFieldNames ? '' : 'numNewerVersions', $pb.PbFieldType.O3)
+    ..pPS(5, _omitFieldNames ? '' : 'matchesStorageClass')
+    ..aOS(6, _omitFieldNames ? '' : 'matchesPattern')
+    ..a<$core.int>(
+        7, _omitFieldNames ? '' : 'daysSinceCustomTime', $pb.PbFieldType.O3)
+    ..aOM<$0.Timestamp>(8, _omitFieldNames ? '' : 'customTimeBefore',
+        subBuilder: $0.Timestamp.create)
+    ..a<$core.int>(
+        9, _omitFieldNames ? '' : 'daysSinceNoncurrentTime', $pb.PbFieldType.O3)
+    ..aOM<$0.Timestamp>(10, _omitFieldNames ? '' : 'noncurrentTimeBefore',
+        subBuilder: $0.Timestamp.create)
+    ..pPS(11, _omitFieldNames ? '' : 'matchesPrefix')
+    ..pPS(12, _omitFieldNames ? '' : 'matchesSuffix')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -703,8 +637,10 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
           void Function(Bucket_Lifecycle_Rule_Condition) updates) =>
       super.copyWith(
               (message) => updates(message as Bucket_Lifecycle_Rule_Condition))
-          as Bucket_Lifecycle_Rule_Condition; // ignore: deprecated_member_use
+          as Bucket_Lifecycle_Rule_Condition;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Lifecycle_Rule_Condition create() =>
       Bucket_Lifecycle_Rule_Condition._();
@@ -717,6 +653,8 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
           create);
   static Bucket_Lifecycle_Rule_Condition? _defaultInstance;
 
+  /// Age of an object (in days). This condition is satisfied when an
+  /// object reaches the specified age.
   @$pb.TagNumber(1)
   $core.int get age => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -729,6 +667,10 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAge() => clearField(1);
 
+  /// A date in [RFC 3339][1] format with only the date part (for
+  /// instance, "2013-01-15"). This condition is satisfied when an
+  /// object is created before midnight of the specified date in UTC.
+  /// [1]: https://tools.ietf.org/html/rfc3339
   @$pb.TagNumber(2)
   $0.Timestamp get createdBefore => $_getN(1);
   @$pb.TagNumber(2)
@@ -743,6 +685,9 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureCreatedBefore() => $_ensure(1);
 
+  /// Relevant only for versioned objects. If the value is
+  /// `true`, this condition matches live objects; if the value
+  /// is `false`, it matches archived objects.
   @$pb.TagNumber(3)
   $1.BoolValue get isLive => $_getN(2);
   @$pb.TagNumber(3)
@@ -757,6 +702,9 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.BoolValue ensureIsLive() => $_ensure(2);
 
+  /// Relevant only for versioned objects. If the value is N, this
+  /// condition is satisfied when there are at least N versions (including
+  /// the live version) newer than this version of the object.
   @$pb.TagNumber(4)
   $core.int get numNewerVersions => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -769,9 +717,19 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNumNewerVersions() => clearField(4);
 
+  /// Objects having any of the storage classes specified by this condition
+  /// will be matched. Values include `MULTI_REGIONAL`, `REGIONAL`,
+  /// `NEARLINE`, `COLDLINE`, `STANDARD`, and
+  /// `DURABLE_REDUCED_AVAILABILITY`.
   @$pb.TagNumber(5)
   $core.List<$core.String> get matchesStorageClass => $_getList(4);
 
+  /// A regular expression that satisfies the RE2 syntax. This condition is
+  /// satisfied when the name of the object matches the RE2 pattern.  Note:
+  /// This feature is currently in the "Early Access" launch stage and is
+  /// only available to an allowlisted set of users; that means that this
+  /// feature may be changed in backward-incompatible ways and that it is
+  /// not guaranteed to be released.
   @$pb.TagNumber(6)
   $core.String get matchesPattern => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -784,6 +742,8 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearMatchesPattern() => clearField(6);
 
+  /// Number of days that has elapsed since the custom timestamp set on an
+  /// object.
   @$pb.TagNumber(7)
   $core.int get daysSinceCustomTime => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -796,6 +756,8 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearDaysSinceCustomTime() => clearField(7);
 
+  /// An object matches this condition if the custom timestamp set on the
+  /// object is before this timestamp.
   @$pb.TagNumber(8)
   $0.Timestamp get customTimeBefore => $_getN(7);
   @$pb.TagNumber(8)
@@ -810,6 +772,11 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $0.Timestamp ensureCustomTimeBefore() => $_ensure(7);
 
+  /// This condition is relevant only for versioned objects. An object
+  /// version satisfies this condition only if these many days have been
+  /// passed since it became noncurrent. The value of the field must be a
+  /// nonnegative integer. If it's zero, the object version will become
+  /// eligible for Lifecycle action as soon as it becomes noncurrent.
   @$pb.TagNumber(9)
   $core.int get daysSinceNoncurrentTime => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -822,6 +789,9 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearDaysSinceNoncurrentTime() => clearField(9);
 
+  /// This condition is relevant only for versioned objects. An object
+  /// version satisfies this condition only if it became noncurrent before
+  /// the specified timestamp.
   @$pb.TagNumber(10)
   $0.Timestamp get noncurrentTimeBefore => $_getN(9);
   @$pb.TagNumber(10)
@@ -836,57 +806,53 @@ class Bucket_Lifecycle_Rule_Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $0.Timestamp ensureNoncurrentTimeBefore() => $_ensure(9);
 
+  /// List of object name prefixes. If any prefix exactly matches the
+  /// beginning of the object name, the condition evaluates to true.
   @$pb.TagNumber(11)
   $core.List<$core.String> get matchesPrefix => $_getList(10);
 
+  /// List of object name suffixes. If any suffix exactly matches the
+  /// end of the object name, the condition evaluates to true.
   @$pb.TagNumber(12)
   $core.List<$core.String> get matchesSuffix => $_getList(11);
 }
 
+/// A lifecycle Rule, combining an action to take on an object and a
+/// condition which will trigger that action.
 class Bucket_Lifecycle_Rule extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Lifecycle.Rule',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOM<Bucket_Lifecycle_Rule_Action>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'action',
-        subBuilder: Bucket_Lifecycle_Rule_Action.create)
-    ..aOM<Bucket_Lifecycle_Rule_Condition>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'condition',
-        subBuilder: Bucket_Lifecycle_Rule_Condition.create)
-    ..hasRequiredFields = false;
-
-  Bucket_Lifecycle_Rule._() : super();
   factory Bucket_Lifecycle_Rule({
     Bucket_Lifecycle_Rule_Action? action,
     Bucket_Lifecycle_Rule_Condition? condition,
   }) {
-    final _result = create();
+    final $result = create();
     if (action != null) {
-      _result.action = action;
+      $result.action = action;
     }
     if (condition != null) {
-      _result.condition = condition;
+      $result.condition = condition;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Lifecycle_Rule._() : super();
   factory Bucket_Lifecycle_Rule.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Lifecycle_Rule.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Lifecycle.Rule',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOM<Bucket_Lifecycle_Rule_Action>(1, _omitFieldNames ? '' : 'action',
+        subBuilder: Bucket_Lifecycle_Rule_Action.create)
+    ..aOM<Bucket_Lifecycle_Rule_Condition>(
+        2, _omitFieldNames ? '' : 'condition',
+        subBuilder: Bucket_Lifecycle_Rule_Condition.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -898,8 +864,10 @@ class Bucket_Lifecycle_Rule extends $pb.GeneratedMessage {
   Bucket_Lifecycle_Rule copyWith(
           void Function(Bucket_Lifecycle_Rule) updates) =>
       super.copyWith((message) => updates(message as Bucket_Lifecycle_Rule))
-          as Bucket_Lifecycle_Rule; // ignore: deprecated_member_use
+          as Bucket_Lifecycle_Rule;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Lifecycle_Rule create() => Bucket_Lifecycle_Rule._();
   Bucket_Lifecycle_Rule createEmptyInstance() => create();
@@ -910,6 +878,7 @@ class Bucket_Lifecycle_Rule extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Lifecycle_Rule>(create);
   static Bucket_Lifecycle_Rule? _defaultInstance;
 
+  /// The action to take.
   @$pb.TagNumber(1)
   Bucket_Lifecycle_Rule_Action get action => $_getN(0);
   @$pb.TagNumber(1)
@@ -924,6 +893,7 @@ class Bucket_Lifecycle_Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Bucket_Lifecycle_Rule_Action ensureAction() => $_ensure(0);
 
+  /// The condition(s) under which the action will be taken.
   @$pb.TagNumber(2)
   Bucket_Lifecycle_Rule_Condition get condition => $_getN(1);
   @$pb.TagNumber(2)
@@ -939,41 +909,36 @@ class Bucket_Lifecycle_Rule extends $pb.GeneratedMessage {
   Bucket_Lifecycle_Rule_Condition ensureCondition() => $_ensure(1);
 }
 
+/// Lifecycle properties of a bucket.
+/// For more information, see https://cloud.google.com/storage/docs/lifecycle.
 class Bucket_Lifecycle extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Lifecycle',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<Bucket_Lifecycle_Rule>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rule',
-        $pb.PbFieldType.PM,
-        subBuilder: Bucket_Lifecycle_Rule.create)
-    ..hasRequiredFields = false;
-
-  Bucket_Lifecycle._() : super();
   factory Bucket_Lifecycle({
     $core.Iterable<Bucket_Lifecycle_Rule>? rule,
   }) {
-    final _result = create();
+    final $result = create();
     if (rule != null) {
-      _result.rule.addAll(rule);
+      $result.rule.addAll(rule);
     }
-    return _result;
+    return $result;
   }
+  Bucket_Lifecycle._() : super();
   factory Bucket_Lifecycle.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Lifecycle.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Lifecycle',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<Bucket_Lifecycle_Rule>(
+        1, _omitFieldNames ? '' : 'rule', $pb.PbFieldType.PM,
+        subBuilder: Bucket_Lifecycle_Rule.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -983,8 +948,10 @@ class Bucket_Lifecycle extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Lifecycle copyWith(void Function(Bucket_Lifecycle) updates) =>
       super.copyWith((message) => updates(message as Bucket_Lifecycle))
-          as Bucket_Lifecycle; // ignore: deprecated_member_use
+          as Bucket_Lifecycle;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Lifecycle create() => Bucket_Lifecycle._();
   Bucket_Lifecycle createEmptyInstance() => create();
@@ -995,52 +962,44 @@ class Bucket_Lifecycle extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Lifecycle>(create);
   static Bucket_Lifecycle? _defaultInstance;
 
+  /// A lifecycle management rule, which is made of an action to take and the
+  /// condition(s) under which the action will be taken.
   @$pb.TagNumber(1)
   $core.List<Bucket_Lifecycle_Rule> get rule => $_getList(0);
 }
 
+/// Logging-related properties of a bucket.
 class Bucket_Logging extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Logging',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'logBucket')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'logObjectPrefix')
-    ..hasRequiredFields = false;
-
-  Bucket_Logging._() : super();
   factory Bucket_Logging({
     $core.String? logBucket,
     $core.String? logObjectPrefix,
   }) {
-    final _result = create();
+    final $result = create();
     if (logBucket != null) {
-      _result.logBucket = logBucket;
+      $result.logBucket = logBucket;
     }
     if (logObjectPrefix != null) {
-      _result.logObjectPrefix = logObjectPrefix;
+      $result.logObjectPrefix = logObjectPrefix;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Logging._() : super();
   factory Bucket_Logging.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Logging.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Logging',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'logBucket')
+    ..aOS(2, _omitFieldNames ? '' : 'logObjectPrefix')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1050,8 +1009,10 @@ class Bucket_Logging extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Logging copyWith(void Function(Bucket_Logging) updates) =>
       super.copyWith((message) => updates(message as Bucket_Logging))
-          as Bucket_Logging; // ignore: deprecated_member_use
+          as Bucket_Logging;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Logging create() => Bucket_Logging._();
   Bucket_Logging createEmptyInstance() => create();
@@ -1062,6 +1023,7 @@ class Bucket_Logging extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Logging>(create);
   static Bucket_Logging? _defaultInstance;
 
+  /// The destination bucket where the current bucket's logs should be placed.
   @$pb.TagNumber(1)
   $core.String get logBucket => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1074,6 +1036,7 @@ class Bucket_Logging extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLogBucket() => clearField(1);
 
+  /// A prefix for log object names.
   @$pb.TagNumber(2)
   $core.String get logObjectPrefix => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1087,58 +1050,44 @@ class Bucket_Logging extends $pb.GeneratedMessage {
   void clearLogObjectPrefix() => clearField(2);
 }
 
+/// Retention policy properties of a bucket.
 class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.RetentionPolicy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'effectiveTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'isLocked')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'retentionPeriod')
-    ..hasRequiredFields = false;
-
-  Bucket_RetentionPolicy._() : super();
   factory Bucket_RetentionPolicy({
     $0.Timestamp? effectiveTime,
     $core.bool? isLocked,
     $fixnum.Int64? retentionPeriod,
   }) {
-    final _result = create();
+    final $result = create();
     if (effectiveTime != null) {
-      _result.effectiveTime = effectiveTime;
+      $result.effectiveTime = effectiveTime;
     }
     if (isLocked != null) {
-      _result.isLocked = isLocked;
+      $result.isLocked = isLocked;
     }
     if (retentionPeriod != null) {
-      _result.retentionPeriod = retentionPeriod;
+      $result.retentionPeriod = retentionPeriod;
     }
-    return _result;
+    return $result;
   }
+  Bucket_RetentionPolicy._() : super();
   factory Bucket_RetentionPolicy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_RetentionPolicy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.RetentionPolicy',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'effectiveTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOB(2, _omitFieldNames ? '' : 'isLocked')
+    ..aInt64(3, _omitFieldNames ? '' : 'retentionPeriod')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1150,8 +1099,10 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   Bucket_RetentionPolicy copyWith(
           void Function(Bucket_RetentionPolicy) updates) =>
       super.copyWith((message) => updates(message as Bucket_RetentionPolicy))
-          as Bucket_RetentionPolicy; // ignore: deprecated_member_use
+          as Bucket_RetentionPolicy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_RetentionPolicy create() => Bucket_RetentionPolicy._();
   Bucket_RetentionPolicy createEmptyInstance() => create();
@@ -1162,6 +1113,9 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_RetentionPolicy>(create);
   static Bucket_RetentionPolicy? _defaultInstance;
 
+  /// Server-determined value that indicates the time from which policy was
+  /// enforced and effective. This value is in
+  /// [https://tools.ietf.org/html/rfc3339][RFC 3339] format.
   @$pb.TagNumber(1)
   $0.Timestamp get effectiveTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -1176,6 +1130,7 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureEffectiveTime() => $_ensure(0);
 
+  /// Once locked, an object retention policy cannot be modified.
   @$pb.TagNumber(2)
   $core.bool get isLocked => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1188,6 +1143,10 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIsLocked() => clearField(2);
 
+  /// The duration in seconds that objects need to be retained. Retention
+  /// duration must be greater than zero and less than 100 years. Note that
+  /// enforcement of retention periods less than a day is not guaranteed. Such
+  /// periods should only be used for testing purposes.
   @$pb.TagNumber(3)
   $fixnum.Int64 get retentionPeriod => $_getI64(2);
   @$pb.TagNumber(3)
@@ -1201,39 +1160,35 @@ class Bucket_RetentionPolicy extends $pb.GeneratedMessage {
   void clearRetentionPeriod() => clearField(3);
 }
 
+/// Properties of a bucket related to versioning.
+/// For more on GCS versioning, see
+/// https://cloud.google.com/storage/docs/object-versioning.
 class Bucket_Versioning extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Versioning',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..hasRequiredFields = false;
-
-  Bucket_Versioning._() : super();
   factory Bucket_Versioning({
     $core.bool? enabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Versioning._() : super();
   factory Bucket_Versioning.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Versioning.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Versioning',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'enabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1243,8 +1198,10 @@ class Bucket_Versioning extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Versioning copyWith(void Function(Bucket_Versioning) updates) =>
       super.copyWith((message) => updates(message as Bucket_Versioning))
-          as Bucket_Versioning; // ignore: deprecated_member_use
+          as Bucket_Versioning;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Versioning create() => Bucket_Versioning._();
   Bucket_Versioning createEmptyInstance() => create();
@@ -1255,6 +1212,7 @@ class Bucket_Versioning extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Versioning>(create);
   static Bucket_Versioning? _defaultInstance;
 
+  /// While set to true, versioning is fully enabled for this bucket.
   @$pb.TagNumber(1)
   $core.bool get enabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1268,48 +1226,40 @@ class Bucket_Versioning extends $pb.GeneratedMessage {
   void clearEnabled() => clearField(1);
 }
 
+/// Properties of a bucket related to accessing the contents as a static
+/// website. For more on hosting a static website via GCS, see
+/// https://cloud.google.com/storage/docs/hosting-static-website.
 class Bucket_Website extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Website',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'mainPageSuffix')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'notFoundPage')
-    ..hasRequiredFields = false;
-
-  Bucket_Website._() : super();
   factory Bucket_Website({
     $core.String? mainPageSuffix,
     $core.String? notFoundPage,
   }) {
-    final _result = create();
+    final $result = create();
     if (mainPageSuffix != null) {
-      _result.mainPageSuffix = mainPageSuffix;
+      $result.mainPageSuffix = mainPageSuffix;
     }
     if (notFoundPage != null) {
-      _result.notFoundPage = notFoundPage;
+      $result.notFoundPage = notFoundPage;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Website._() : super();
   factory Bucket_Website.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Website.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Website',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'mainPageSuffix')
+    ..aOS(2, _omitFieldNames ? '' : 'notFoundPage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1319,8 +1269,10 @@ class Bucket_Website extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Website copyWith(void Function(Bucket_Website) updates) =>
       super.copyWith((message) => updates(message as Bucket_Website))
-          as Bucket_Website; // ignore: deprecated_member_use
+          as Bucket_Website;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Website create() => Bucket_Website._();
   Bucket_Website createEmptyInstance() => create();
@@ -1331,6 +1283,10 @@ class Bucket_Website extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Website>(create);
   static Bucket_Website? _defaultInstance;
 
+  /// If the requested object path is missing, the service will ensure the path
+  /// has a trailing '/', append this suffix, and attempt to retrieve the
+  /// resulting object. This allows the creation of `index.html`
+  /// objects to represent directory pages.
   @$pb.TagNumber(1)
   $core.String get mainPageSuffix => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1343,6 +1299,11 @@ class Bucket_Website extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMainPageSuffix() => clearField(1);
 
+  /// If the requested object path is missing, and any
+  /// `mainPageSuffix` object is missing, if applicable, the service
+  /// will return the named object from this bucket as the content for a
+  /// [https://tools.ietf.org/html/rfc7231#section-6.5.4][404 Not Found]
+  /// result.
   @$pb.TagNumber(2)
   $core.String get notFoundPage => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1356,49 +1317,39 @@ class Bucket_Website extends $pb.GeneratedMessage {
   void clearNotFoundPage() => clearField(2);
 }
 
+/// Configuration for a bucket's Autoclass feature.
 class Bucket_Autoclass extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket.Autoclass',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'toggleTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  Bucket_Autoclass._() : super();
   factory Bucket_Autoclass({
     $core.bool? enabled,
     $0.Timestamp? toggleTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
     if (toggleTime != null) {
-      _result.toggleTime = toggleTime;
+      $result.toggleTime = toggleTime;
     }
-    return _result;
+    return $result;
   }
+  Bucket_Autoclass._() : super();
   factory Bucket_Autoclass.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket_Autoclass.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket.Autoclass',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'enabled')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'toggleTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1408,8 +1359,10 @@ class Bucket_Autoclass extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Bucket_Autoclass copyWith(void Function(Bucket_Autoclass) updates) =>
       super.copyWith((message) => updates(message as Bucket_Autoclass))
-          as Bucket_Autoclass; // ignore: deprecated_member_use
+          as Bucket_Autoclass;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket_Autoclass create() => Bucket_Autoclass._();
   Bucket_Autoclass createEmptyInstance() => create();
@@ -1420,6 +1373,7 @@ class Bucket_Autoclass extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Bucket_Autoclass>(create);
   static Bucket_Autoclass? _defaultInstance;
 
+  /// Enables Autoclass.
   @$pb.TagNumber(1)
   $core.bool get enabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1432,6 +1386,7 @@ class Bucket_Autoclass extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEnabled() => clearField(1);
 
+  /// Latest instant at which the `enabled` bit was flipped.
   @$pb.TagNumber(2)
   $0.Timestamp get toggleTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -1447,176 +1402,8 @@ class Bucket_Autoclass extends $pb.GeneratedMessage {
   $0.Timestamp ensureToggleTime() => $_ensure(1);
 }
 
+/// A bucket.
 class Bucket extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Bucket',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<BucketAccessControl>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'acl',
-        $pb.PbFieldType.PM,
-        subBuilder: BucketAccessControl.create)
-    ..pc<ObjectAccessControl>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'defaultObjectAcl',
-        $pb.PbFieldType.PM,
-        subBuilder: ObjectAccessControl.create)
-    ..aOM<Bucket_Lifecycle>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lifecycle',
-        subBuilder: Bucket_Lifecycle.create)
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeCreated',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aInt64(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectNumber')
-    ..aInt64(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metageneration')
-    ..pc<Bucket_Cors>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cors',
-        $pb.PbFieldType.PM,
-        subBuilder: Bucket_Cors.create)
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..aOS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'storageClass')
-    ..aOS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..aOM<$0.Timestamp>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updated',
-        subBuilder: $0.Timestamp.create)
-    ..aOB(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'defaultEventBasedHold')
-    ..m<$core.String, $core.String>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labels',
-        entryClassName: 'Bucket.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.storage.v1'))
-    ..aOM<Bucket_Website>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'website',
-        subBuilder: Bucket_Website.create)
-    ..aOM<Bucket_Versioning>(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versioning',
-        subBuilder: Bucket_Versioning.create)
-    ..aOM<Bucket_Logging>(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'logging',
-        subBuilder: Bucket_Logging.create)
-    ..aOM<Owner>(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'owner',
-        subBuilder: Owner.create)
-    ..aOM<Bucket_Encryption>(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'encryption',
-        subBuilder: Bucket_Encryption.create)
-    ..aOM<Bucket_Billing>(
-        21,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'billing',
-        subBuilder: Bucket_Billing.create)
-    ..aOM<Bucket_RetentionPolicy>(
-        22,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'retentionPolicy',
-        subBuilder: Bucket_RetentionPolicy.create)
-    ..aOS(
-        23,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locationType')
-    ..aOM<Bucket_IamConfiguration>(
-        24,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iamConfiguration',
-        subBuilder: Bucket_IamConfiguration.create)
-    ..pPS(
-        25,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zoneAffinity')
-    ..aOB(
-        26,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'satisfiesPzs')
-    ..aOM<Bucket_Autoclass>(
-        28,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'autoclass',
-        subBuilder: Bucket_Autoclass.create)
-    ..hasRequiredFields = false;
-
-  Bucket._() : super();
   factory Bucket({
     $core.Iterable<BucketAccessControl>? acl,
     $core.Iterable<ObjectAccessControl>? defaultObjectAcl,
@@ -1647,97 +1434,154 @@ class Bucket extends $pb.GeneratedMessage {
     $core.bool? satisfiesPzs,
     Bucket_Autoclass? autoclass,
   }) {
-    final _result = create();
+    final $result = create();
     if (acl != null) {
-      _result.acl.addAll(acl);
+      $result.acl.addAll(acl);
     }
     if (defaultObjectAcl != null) {
-      _result.defaultObjectAcl.addAll(defaultObjectAcl);
+      $result.defaultObjectAcl.addAll(defaultObjectAcl);
     }
     if (lifecycle != null) {
-      _result.lifecycle = lifecycle;
+      $result.lifecycle = lifecycle;
     }
     if (timeCreated != null) {
-      _result.timeCreated = timeCreated;
+      $result.timeCreated = timeCreated;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (projectNumber != null) {
-      _result.projectNumber = projectNumber;
+      $result.projectNumber = projectNumber;
     }
     if (metageneration != null) {
-      _result.metageneration = metageneration;
+      $result.metageneration = metageneration;
     }
     if (cors != null) {
-      _result.cors.addAll(cors);
+      $result.cors.addAll(cors);
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (storageClass != null) {
-      _result.storageClass = storageClass;
+      $result.storageClass = storageClass;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (updated != null) {
-      _result.updated = updated;
+      $result.updated = updated;
     }
     if (defaultEventBasedHold != null) {
-      _result.defaultEventBasedHold = defaultEventBasedHold;
+      $result.defaultEventBasedHold = defaultEventBasedHold;
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
     if (website != null) {
-      _result.website = website;
+      $result.website = website;
     }
     if (versioning != null) {
-      _result.versioning = versioning;
+      $result.versioning = versioning;
     }
     if (logging != null) {
-      _result.logging = logging;
+      $result.logging = logging;
     }
     if (owner != null) {
-      _result.owner = owner;
+      $result.owner = owner;
     }
     if (encryption != null) {
-      _result.encryption = encryption;
+      $result.encryption = encryption;
     }
     if (billing != null) {
-      _result.billing = billing;
+      $result.billing = billing;
     }
     if (retentionPolicy != null) {
-      _result.retentionPolicy = retentionPolicy;
+      $result.retentionPolicy = retentionPolicy;
     }
     if (locationType != null) {
-      _result.locationType = locationType;
+      $result.locationType = locationType;
     }
     if (iamConfiguration != null) {
-      _result.iamConfiguration = iamConfiguration;
+      $result.iamConfiguration = iamConfiguration;
     }
     if (zoneAffinity != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.zoneAffinity.addAll(zoneAffinity);
+      $result.zoneAffinity.addAll(zoneAffinity);
     }
     if (satisfiesPzs != null) {
-      _result.satisfiesPzs = satisfiesPzs;
+      $result.satisfiesPzs = satisfiesPzs;
     }
     if (autoclass != null) {
-      _result.autoclass = autoclass;
+      $result.autoclass = autoclass;
     }
-    return _result;
+    return $result;
   }
+  Bucket._() : super();
   factory Bucket.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Bucket.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Bucket',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<BucketAccessControl>(
+        1, _omitFieldNames ? '' : 'acl', $pb.PbFieldType.PM,
+        subBuilder: BucketAccessControl.create)
+    ..pc<ObjectAccessControl>(
+        2, _omitFieldNames ? '' : 'defaultObjectAcl', $pb.PbFieldType.PM,
+        subBuilder: ObjectAccessControl.create)
+    ..aOM<Bucket_Lifecycle>(3, _omitFieldNames ? '' : 'lifecycle',
+        subBuilder: Bucket_Lifecycle.create)
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'timeCreated',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(5, _omitFieldNames ? '' : 'id')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..aInt64(7, _omitFieldNames ? '' : 'projectNumber')
+    ..aInt64(8, _omitFieldNames ? '' : 'metageneration')
+    ..pc<Bucket_Cors>(9, _omitFieldNames ? '' : 'cors', $pb.PbFieldType.PM,
+        subBuilder: Bucket_Cors.create)
+    ..aOS(10, _omitFieldNames ? '' : 'location')
+    ..aOS(11, _omitFieldNames ? '' : 'storageClass')
+    ..aOS(12, _omitFieldNames ? '' : 'etag')
+    ..aOM<$0.Timestamp>(13, _omitFieldNames ? '' : 'updated',
+        subBuilder: $0.Timestamp.create)
+    ..aOB(14, _omitFieldNames ? '' : 'defaultEventBasedHold')
+    ..m<$core.String, $core.String>(15, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'Bucket.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.storage.v1'))
+    ..aOM<Bucket_Website>(16, _omitFieldNames ? '' : 'website',
+        subBuilder: Bucket_Website.create)
+    ..aOM<Bucket_Versioning>(17, _omitFieldNames ? '' : 'versioning',
+        subBuilder: Bucket_Versioning.create)
+    ..aOM<Bucket_Logging>(18, _omitFieldNames ? '' : 'logging',
+        subBuilder: Bucket_Logging.create)
+    ..aOM<Owner>(19, _omitFieldNames ? '' : 'owner', subBuilder: Owner.create)
+    ..aOM<Bucket_Encryption>(20, _omitFieldNames ? '' : 'encryption',
+        subBuilder: Bucket_Encryption.create)
+    ..aOM<Bucket_Billing>(21, _omitFieldNames ? '' : 'billing',
+        subBuilder: Bucket_Billing.create)
+    ..aOM<Bucket_RetentionPolicy>(22, _omitFieldNames ? '' : 'retentionPolicy',
+        subBuilder: Bucket_RetentionPolicy.create)
+    ..aOS(23, _omitFieldNames ? '' : 'locationType')
+    ..aOM<Bucket_IamConfiguration>(
+        24, _omitFieldNames ? '' : 'iamConfiguration',
+        subBuilder: Bucket_IamConfiguration.create)
+    ..pPS(25, _omitFieldNames ? '' : 'zoneAffinity')
+    ..aOB(26, _omitFieldNames ? '' : 'satisfiesPzs')
+    ..aOM<Bucket_Autoclass>(28, _omitFieldNames ? '' : 'autoclass',
+        subBuilder: Bucket_Autoclass.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1746,9 +1590,10 @@ class Bucket extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Bucket copyWith(void Function(Bucket) updates) =>
-      super.copyWith((message) => updates(message as Bucket))
-          as Bucket; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Bucket)) as Bucket;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Bucket create() => Bucket._();
   Bucket createEmptyInstance() => create();
@@ -1758,12 +1603,17 @@ class Bucket extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Bucket>(create);
   static Bucket? _defaultInstance;
 
+  /// Access controls on the bucket.
   @$pb.TagNumber(1)
   $core.List<BucketAccessControl> get acl => $_getList(0);
 
+  /// Default access controls to apply to new objects when no ACL is provided.
   @$pb.TagNumber(2)
   $core.List<ObjectAccessControl> get defaultObjectAcl => $_getList(1);
 
+  /// The bucket's lifecycle configuration. See
+  /// [https://developers.google.com/storage/docs/lifecycle]Lifecycle Management]
+  /// for more information.
   @$pb.TagNumber(3)
   Bucket_Lifecycle get lifecycle => $_getN(2);
   @$pb.TagNumber(3)
@@ -1778,6 +1628,10 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Bucket_Lifecycle ensureLifecycle() => $_ensure(2);
 
+  /// The creation time of the bucket in
+  /// [https://tools.ietf.org/html/rfc3339][RFC 3339] format.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(4)
   $0.Timestamp get timeCreated => $_getN(3);
   @$pb.TagNumber(4)
@@ -1792,6 +1646,10 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Timestamp ensureTimeCreated() => $_ensure(3);
 
+  /// The ID of the bucket. For buckets, the `id` and `name` properties are the
+  /// same.
+  /// Attempting to update this field after the bucket is created will result in
+  /// a [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(5)
   $core.String get id => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1804,6 +1662,9 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearId() => clearField(5);
 
+  /// The name of the bucket.
+  /// Attempting to update this field after the bucket is created will result in
+  /// an error.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1816,6 +1677,9 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearName() => clearField(6);
 
+  /// The project number of the project the bucket belongs to.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(7)
   $fixnum.Int64 get projectNumber => $_getI64(6);
   @$pb.TagNumber(7)
@@ -1828,6 +1692,9 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearProjectNumber() => clearField(7);
 
+  /// The metadata generation of this bucket.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(8)
   $fixnum.Int64 get metageneration => $_getI64(7);
   @$pb.TagNumber(8)
@@ -1840,9 +1707,16 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearMetageneration() => clearField(8);
 
+  /// The bucket's [https://www.w3.org/TR/cors/][Cross-Origin Resource Sharing]
+  /// (CORS) configuration.
   @$pb.TagNumber(9)
   $core.List<Bucket_Cors> get cors => $_getList(8);
 
+  /// The location of the bucket. Object data for objects in the bucket resides
+  /// in physical storage within this region.  Defaults to `US`. See the
+  /// [https://developers.google.com/storage/docs/concepts-techniques#specifyinglocations"][developer's
+  /// guide] for the authoritative list. Attempting to update this field after
+  /// the bucket is created will result in an error.
   @$pb.TagNumber(10)
   $core.String get location => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -1855,6 +1729,12 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearLocation() => clearField(10);
 
+  /// The bucket's default storage class, used whenever no storageClass is
+  /// specified for a newly-created object. This defines how objects in the
+  /// bucket are stored and determines the SLA and the cost of storage.
+  /// If this value is not specified when the bucket is created, it will default
+  /// to `STANDARD`. For more information, see
+  /// https://developers.google.com/storage/docs/storage-classes.
   @$pb.TagNumber(11)
   $core.String get storageClass => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -1867,6 +1747,10 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearStorageClass() => clearField(11);
 
+  /// HTTP 1.1 [https://tools.ietf.org/html/rfc7232#section-2.3"]Entity tag]
+  /// for the bucket.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(12)
   $core.String get etag => $_getSZ(11);
   @$pb.TagNumber(12)
@@ -1879,6 +1763,9 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearEtag() => clearField(12);
 
+  /// The modification time of the bucket.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(13)
   $0.Timestamp get updated => $_getN(12);
   @$pb.TagNumber(13)
@@ -1893,6 +1780,19 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $0.Timestamp ensureUpdated() => $_ensure(12);
 
+  /// The default value for event-based hold on newly created objects in this
+  /// bucket.  Event-based hold is a way to retain objects indefinitely until an
+  /// event occurs, signified by the
+  /// hold's release. After being released, such objects will be subject to
+  /// bucket-level retention (if any).  One sample use case of this flag is for
+  /// banks to hold loan documents for at least 3 years after loan is paid in
+  /// full. Here, bucket-level retention is 3 years and the event is loan being
+  /// paid in full. In this example, these objects will be held intact for any
+  /// number of years until the event has occurred (event-based hold on the
+  /// object is released) and then 3 more years after that. That means retention
+  /// duration of the objects begins from the moment event-based hold
+  /// transitioned from true to false.  Objects under event-based hold cannot be
+  /// deleted, overwritten or archived until the hold is removed.
   @$pb.TagNumber(14)
   $core.bool get defaultEventBasedHold => $_getBF(13);
   @$pb.TagNumber(14)
@@ -1905,9 +1805,14 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearDefaultEventBasedHold() => clearField(14);
 
+  /// User-provided labels, in key/value pairs.
   @$pb.TagNumber(15)
   $core.Map<$core.String, $core.String> get labels => $_getMap(14);
 
+  /// The bucket's website configuration, controlling how the service behaves
+  /// when accessing bucket contents as a web site. See the
+  /// [https://cloud.google.com/storage/docs/static-website][Static Website
+  /// Examples] for more information.
   @$pb.TagNumber(16)
   Bucket_Website get website => $_getN(15);
   @$pb.TagNumber(16)
@@ -1922,6 +1827,7 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   Bucket_Website ensureWebsite() => $_ensure(15);
 
+  /// The bucket's versioning configuration.
   @$pb.TagNumber(17)
   Bucket_Versioning get versioning => $_getN(16);
   @$pb.TagNumber(17)
@@ -1936,6 +1842,8 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   Bucket_Versioning ensureVersioning() => $_ensure(16);
 
+  /// The bucket's logging configuration, which defines the destination bucket
+  /// and optional name prefix for the current bucket's logs.
   @$pb.TagNumber(18)
   Bucket_Logging get logging => $_getN(17);
   @$pb.TagNumber(18)
@@ -1950,6 +1858,7 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   Bucket_Logging ensureLogging() => $_ensure(17);
 
+  /// The owner of the bucket. This is always the project team's owner group.
   @$pb.TagNumber(19)
   Owner get owner => $_getN(18);
   @$pb.TagNumber(19)
@@ -1964,6 +1873,7 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   Owner ensureOwner() => $_ensure(18);
 
+  /// Encryption configuration for a bucket.
   @$pb.TagNumber(20)
   Bucket_Encryption get encryption => $_getN(19);
   @$pb.TagNumber(20)
@@ -1978,6 +1888,7 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   Bucket_Encryption ensureEncryption() => $_ensure(19);
 
+  /// The bucket's billing configuration.
   @$pb.TagNumber(21)
   Bucket_Billing get billing => $_getN(20);
   @$pb.TagNumber(21)
@@ -1992,6 +1903,15 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   Bucket_Billing ensureBilling() => $_ensure(20);
 
+  /// The bucket's retention policy. The retention policy enforces a minimum
+  /// retention time for all objects contained in the bucket, based on their
+  /// creation time. Any attempt to overwrite or delete objects younger than the
+  /// retention period will result in a PERMISSION_DENIED error.  An unlocked
+  /// retention policy can be modified or removed from the bucket via a
+  /// storage.buckets.update operation. A locked retention policy cannot be
+  /// removed or shortened in duration for the lifetime of the bucket.
+  /// Attempting to remove or decrease period of a locked retention policy will
+  /// result in a PERMISSION_DENIED error.
   @$pb.TagNumber(22)
   Bucket_RetentionPolicy get retentionPolicy => $_getN(21);
   @$pb.TagNumber(22)
@@ -2006,6 +1926,7 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   Bucket_RetentionPolicy ensureRetentionPolicy() => $_ensure(21);
 
+  /// The location type of the bucket (region, dual-region, multi-region, etc).
   @$pb.TagNumber(23)
   $core.String get locationType => $_getSZ(22);
   @$pb.TagNumber(23)
@@ -2018,6 +1939,7 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   void clearLocationType() => clearField(23);
 
+  /// The bucket's IAM configuration.
   @$pb.TagNumber(24)
   Bucket_IamConfiguration get iamConfiguration => $_getN(23);
   @$pb.TagNumber(24)
@@ -2032,10 +1954,16 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   Bucket_IamConfiguration ensureIamConfiguration() => $_ensure(23);
 
+  /// The zone or zones from which the bucket is intended to use zonal quota.
+  /// Requests for data from outside the specified affinities are still allowed
+  /// but won't be able to use zonal quota. The values are case-insensitive.
+  /// Attempting to update this field after bucket is created will result in an
+  /// error.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(25)
   $core.List<$core.String> get zoneAffinity => $_getList(24);
 
+  /// Reserved for future use.
   @$pb.TagNumber(26)
   $core.bool get satisfiesPzs => $_getBF(25);
   @$pb.TagNumber(26)
@@ -2048,6 +1976,8 @@ class Bucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(26)
   void clearSatisfiesPzs() => clearField(26);
 
+  /// The bucket's autoclass configuration. If there is no configuration, the
+  /// Autoclass feature will be disabled and have no effect on the bucket.
   @$pb.TagNumber(28)
   Bucket_Autoclass get autoclass => $_getN(26);
   @$pb.TagNumber(28)
@@ -2063,65 +1993,8 @@ class Bucket extends $pb.GeneratedMessage {
   Bucket_Autoclass ensureAutoclass() => $_ensure(26);
 }
 
+/// An access-control entry.
 class BucketAccessControl extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BucketAccessControl',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'role')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entity')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entityId')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'email')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'domain')
-    ..aOM<ProjectTeam>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectTeam',
-        subBuilder: ProjectTeam.create)
-    ..hasRequiredFields = false;
-
-  BucketAccessControl._() : super();
   factory BucketAccessControl({
     $core.String? role,
     $core.String? etag,
@@ -2133,42 +2006,61 @@ class BucketAccessControl extends $pb.GeneratedMessage {
     $core.String? domain,
     ProjectTeam? projectTeam,
   }) {
-    final _result = create();
+    final $result = create();
     if (role != null) {
-      _result.role = role;
+      $result.role = role;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (entity != null) {
-      _result.entity = entity;
+      $result.entity = entity;
     }
     if (entityId != null) {
-      _result.entityId = entityId;
+      $result.entityId = entityId;
     }
     if (email != null) {
-      _result.email = email;
+      $result.email = email;
     }
     if (domain != null) {
-      _result.domain = domain;
+      $result.domain = domain;
     }
     if (projectTeam != null) {
-      _result.projectTeam = projectTeam;
+      $result.projectTeam = projectTeam;
     }
-    return _result;
+    return $result;
   }
+  BucketAccessControl._() : super();
   factory BucketAccessControl.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BucketAccessControl.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BucketAccessControl',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'role')
+    ..aOS(2, _omitFieldNames ? '' : 'etag')
+    ..aOS(3, _omitFieldNames ? '' : 'id')
+    ..aOS(4, _omitFieldNames ? '' : 'bucket')
+    ..aOS(6, _omitFieldNames ? '' : 'entity')
+    ..aOS(7, _omitFieldNames ? '' : 'entityId')
+    ..aOS(8, _omitFieldNames ? '' : 'email')
+    ..aOS(9, _omitFieldNames ? '' : 'domain')
+    ..aOM<ProjectTeam>(10, _omitFieldNames ? '' : 'projectTeam',
+        subBuilder: ProjectTeam.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2178,8 +2070,10 @@ class BucketAccessControl extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BucketAccessControl copyWith(void Function(BucketAccessControl) updates) =>
       super.copyWith((message) => updates(message as BucketAccessControl))
-          as BucketAccessControl; // ignore: deprecated_member_use
+          as BucketAccessControl;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BucketAccessControl create() => BucketAccessControl._();
   BucketAccessControl createEmptyInstance() => create();
@@ -2190,6 +2084,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BucketAccessControl>(create);
   static BucketAccessControl? _defaultInstance;
 
+  /// The access permission for the entity.
   @$pb.TagNumber(1)
   $core.String get role => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2202,6 +2097,8 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRole() => clearField(1);
 
+  /// HTTP 1.1 ["https://tools.ietf.org/html/rfc7232#section-2.3][Entity tag]
+  /// for the access-control entry.
   @$pb.TagNumber(2)
   $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2214,6 +2111,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEtag() => clearField(2);
 
+  /// The ID of the access-control entry.
   @$pb.TagNumber(3)
   $core.String get id => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2226,6 +2124,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearId() => clearField(3);
 
+  /// The name of the bucket.
   @$pb.TagNumber(4)
   $core.String get bucket => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2238,6 +2137,21 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBucket() => clearField(4);
 
+  /// The entity holding the permission, in one of the following forms:
+  /// * `user-{userid}`
+  /// * `user-{email}`
+  /// * `group-{groupid}`
+  /// * `group-{email}`
+  /// * `domain-{domain}`
+  /// * `project-{team-projectid}`
+  /// * `allUsers`
+  /// * `allAuthenticatedUsers`
+  /// Examples:
+  /// * The user `liz@example.com` would be `user-liz@example.com`.
+  /// * The group `example@googlegroups.com` would be
+  /// `group-example@googlegroups.com`
+  /// * All members of the Google Apps for Business domain `example.com` would be
+  /// `domain-example.com`
   @$pb.TagNumber(6)
   $core.String get entity => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -2250,6 +2164,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearEntity() => clearField(6);
 
+  /// The ID for the entity, if any.
   @$pb.TagNumber(7)
   $core.String get entityId => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -2262,6 +2177,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearEntityId() => clearField(7);
 
+  /// The email address associated with the entity, if any.
   @$pb.TagNumber(8)
   $core.String get email => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -2274,6 +2190,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearEmail() => clearField(8);
 
+  /// The domain associated with the entity, if any.
   @$pb.TagNumber(9)
   $core.String get domain => $_getSZ(7);
   @$pb.TagNumber(9)
@@ -2286,6 +2203,7 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearDomain() => clearField(9);
 
+  /// The project team associated with the entity, if any.
   @$pb.TagNumber(10)
   ProjectTeam get projectTeam => $_getN(8);
   @$pb.TagNumber(10)
@@ -2301,41 +2219,35 @@ class BucketAccessControl extends $pb.GeneratedMessage {
   ProjectTeam ensureProjectTeam() => $_ensure(8);
 }
 
+/// The response to a call to BucketAccessControls.ListBucketAccessControls.
 class ListBucketAccessControlsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListBucketAccessControlsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<BucketAccessControl>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'items',
-        $pb.PbFieldType.PM,
-        subBuilder: BucketAccessControl.create)
-    ..hasRequiredFields = false;
-
-  ListBucketAccessControlsResponse._() : super();
   factory ListBucketAccessControlsResponse({
     $core.Iterable<BucketAccessControl>? items,
   }) {
-    final _result = create();
+    final $result = create();
     if (items != null) {
-      _result.items.addAll(items);
+      $result.items.addAll(items);
     }
-    return _result;
+    return $result;
   }
+  ListBucketAccessControlsResponse._() : super();
   factory ListBucketAccessControlsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListBucketAccessControlsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListBucketAccessControlsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<BucketAccessControl>(
+        1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+        subBuilder: BucketAccessControl.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2348,8 +2260,10 @@ class ListBucketAccessControlsResponse extends $pb.GeneratedMessage {
           void Function(ListBucketAccessControlsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListBucketAccessControlsResponse))
-          as ListBucketAccessControlsResponse; // ignore: deprecated_member_use
+          as ListBucketAccessControlsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListBucketAccessControlsResponse create() =>
       ListBucketAccessControlsResponse._();
@@ -2362,54 +2276,44 @@ class ListBucketAccessControlsResponse extends $pb.GeneratedMessage {
           create);
   static ListBucketAccessControlsResponse? _defaultInstance;
 
+  /// The list of items.
   @$pb.TagNumber(1)
   $core.List<BucketAccessControl> get items => $_getList(0);
 }
 
+/// The result of a call to Buckets.ListBuckets
 class ListBucketsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListBucketsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<Bucket>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'items',
-        $pb.PbFieldType.PM,
-        subBuilder: Bucket.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListBucketsResponse._() : super();
   factory ListBucketsResponse({
     $core.Iterable<Bucket>? items,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (items != null) {
-      _result.items.addAll(items);
+      $result.items.addAll(items);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListBucketsResponse._() : super();
   factory ListBucketsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListBucketsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListBucketsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<Bucket>(1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+        subBuilder: Bucket.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2419,8 +2323,10 @@ class ListBucketsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListBucketsResponse copyWith(void Function(ListBucketsResponse) updates) =>
       super.copyWith((message) => updates(message as ListBucketsResponse))
-          as ListBucketsResponse; // ignore: deprecated_member_use
+          as ListBucketsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListBucketsResponse create() => ListBucketsResponse._();
   ListBucketsResponse createEmptyInstance() => create();
@@ -2431,9 +2337,12 @@ class ListBucketsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListBucketsResponse>(create);
   static ListBucketsResponse? _defaultInstance;
 
+  /// The list of items.
   @$pb.TagNumber(1)
   $core.List<Bucket> get items => $_getList(0);
 
+  /// The continuation token, used to page through large result sets. Provide
+  /// this value in a subsequent request to return the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2447,69 +2356,8 @@ class ListBucketsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// An notification channel used to watch for resource changes.
 class Channel extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Channel',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceUri')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'token')
-    ..aOM<$0.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'expiration',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'address')
-    ..m<$core.String, $core.String>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'params',
-        entryClassName: 'Channel.ParamsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.storage.v1'))
-    ..aOB(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'payload')
-    ..hasRequiredFields = false;
-
-  Channel._() : super();
   factory Channel({
     $core.String? id,
     $core.String? resourceId,
@@ -2521,42 +2369,65 @@ class Channel extends $pb.GeneratedMessage {
     $core.Map<$core.String, $core.String>? params,
     $core.bool? payload,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (resourceId != null) {
-      _result.resourceId = resourceId;
+      $result.resourceId = resourceId;
     }
     if (resourceUri != null) {
-      _result.resourceUri = resourceUri;
+      $result.resourceUri = resourceUri;
     }
     if (token != null) {
-      _result.token = token;
+      $result.token = token;
     }
     if (expiration != null) {
-      _result.expiration = expiration;
+      $result.expiration = expiration;
     }
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
     if (params != null) {
-      _result.params.addAll(params);
+      $result.params.addAll(params);
     }
     if (payload != null) {
-      _result.payload = payload;
+      $result.payload = payload;
     }
-    return _result;
+    return $result;
   }
+  Channel._() : super();
   factory Channel.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Channel.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Channel',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'resourceId')
+    ..aOS(3, _omitFieldNames ? '' : 'resourceUri')
+    ..aOS(4, _omitFieldNames ? '' : 'token')
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'expiration',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(6, _omitFieldNames ? '' : 'type')
+    ..aOS(7, _omitFieldNames ? '' : 'address')
+    ..m<$core.String, $core.String>(8, _omitFieldNames ? '' : 'params',
+        entryClassName: 'Channel.ParamsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.storage.v1'))
+    ..aOB(9, _omitFieldNames ? '' : 'payload')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2565,9 +2436,10 @@ class Channel extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Channel copyWith(void Function(Channel) updates) =>
-      super.copyWith((message) => updates(message as Channel))
-          as Channel; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Channel)) as Channel;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Channel create() => Channel._();
   Channel createEmptyInstance() => create();
@@ -2577,6 +2449,7 @@ class Channel extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Channel>(create);
   static Channel? _defaultInstance;
 
+  /// A UUID or similar unique string that identifies this channel.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2589,6 +2462,8 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// An opaque ID that identifies the resource being watched on this channel.
+  /// Stable across different API versions.
   @$pb.TagNumber(2)
   $core.String get resourceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2601,6 +2476,7 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearResourceId() => clearField(2);
 
+  /// A version-specific identifier for the watched resource.
   @$pb.TagNumber(3)
   $core.String get resourceUri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2613,6 +2489,8 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearResourceUri() => clearField(3);
 
+  /// An arbitrary string delivered to the target address with each notification
+  /// delivered over this channel. Optional.
   @$pb.TagNumber(4)
   $core.String get token => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2625,6 +2503,7 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearToken() => clearField(4);
 
+  /// Date and time of notification channel expiration. Optional.
   @$pb.TagNumber(5)
   $0.Timestamp get expiration => $_getN(4);
   @$pb.TagNumber(5)
@@ -2639,6 +2518,7 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.Timestamp ensureExpiration() => $_ensure(4);
 
+  /// The type of delivery mechanism used for this channel.
   @$pb.TagNumber(6)
   $core.String get type => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -2651,6 +2531,7 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearType() => clearField(6);
 
+  /// The address where notifications are delivered for this channel.
   @$pb.TagNumber(7)
   $core.String get address => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -2663,9 +2544,11 @@ class Channel extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearAddress() => clearField(7);
 
+  /// Additional parameters controlling delivery channel behavior. Optional.
   @$pb.TagNumber(8)
   $core.Map<$core.String, $core.String> get params => $_getMap(7);
 
+  /// A Boolean value to indicate whether payload is wanted. Optional.
   @$pb.TagNumber(9)
   $core.bool get payload => $_getBF(8);
   @$pb.TagNumber(9)
@@ -2680,44 +2563,6 @@ class Channel extends $pb.GeneratedMessage {
 }
 
 class ListChannelsResponse_Items extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListChannelsResponse.Items',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'channelId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pushUrl')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subscriberEmail')
-    ..aOM<$0.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'creationTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  ListChannelsResponse_Items._() : super();
   factory ListChannelsResponse_Items({
     $core.String? channelId,
     $core.String? resourceId,
@@ -2725,30 +2570,45 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
     $core.String? subscriberEmail,
     $0.Timestamp? creationTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (channelId != null) {
-      _result.channelId = channelId;
+      $result.channelId = channelId;
     }
     if (resourceId != null) {
-      _result.resourceId = resourceId;
+      $result.resourceId = resourceId;
     }
     if (pushUrl != null) {
-      _result.pushUrl = pushUrl;
+      $result.pushUrl = pushUrl;
     }
     if (subscriberEmail != null) {
-      _result.subscriberEmail = subscriberEmail;
+      $result.subscriberEmail = subscriberEmail;
     }
     if (creationTime != null) {
-      _result.creationTime = creationTime;
+      $result.creationTime = creationTime;
     }
-    return _result;
+    return $result;
   }
+  ListChannelsResponse_Items._() : super();
   factory ListChannelsResponse_Items.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListChannelsResponse_Items.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListChannelsResponse.Items',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'resourceId')
+    ..aOS(3, _omitFieldNames ? '' : 'pushUrl')
+    ..aOS(4, _omitFieldNames ? '' : 'subscriberEmail')
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'creationTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2761,8 +2621,10 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
           void Function(ListChannelsResponse_Items) updates) =>
       super.copyWith(
               (message) => updates(message as ListChannelsResponse_Items))
-          as ListChannelsResponse_Items; // ignore: deprecated_member_use
+          as ListChannelsResponse_Items;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListChannelsResponse_Items create() => ListChannelsResponse_Items._();
   ListChannelsResponse_Items createEmptyInstance() => create();
@@ -2773,6 +2635,7 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListChannelsResponse_Items>(create);
   static ListChannelsResponse_Items? _defaultInstance;
 
+  /// User-specified name for a channel. Needed to unsubscribe.
   @$pb.TagNumber(1)
   $core.String get channelId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2785,6 +2648,8 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearChannelId() => clearField(1);
 
+  /// Opaque value generated by GCS representing a bucket. Needed to
+  /// unsubscribe.
   @$pb.TagNumber(2)
   $core.String get resourceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2797,6 +2662,7 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearResourceId() => clearField(2);
 
+  /// Url used to identify where notifications are sent to.
   @$pb.TagNumber(3)
   $core.String get pushUrl => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2809,6 +2675,7 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPushUrl() => clearField(3);
 
+  /// Email address of the subscriber.
   @$pb.TagNumber(4)
   $core.String get subscriberEmail => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2821,6 +2688,7 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearSubscriberEmail() => clearField(4);
 
+  /// Time when the channel was created.
   @$pb.TagNumber(5)
   $0.Timestamp get creationTime => $_getN(4);
   @$pb.TagNumber(5)
@@ -2836,41 +2704,35 @@ class ListChannelsResponse_Items extends $pb.GeneratedMessage {
   $0.Timestamp ensureCreationTime() => $_ensure(4);
 }
 
+/// The result of a call to Channels.ListChannels
 class ListChannelsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListChannelsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<ListChannelsResponse_Items>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'items',
-        $pb.PbFieldType.PM,
-        subBuilder: ListChannelsResponse_Items.create)
-    ..hasRequiredFields = false;
-
-  ListChannelsResponse._() : super();
   factory ListChannelsResponse({
     $core.Iterable<ListChannelsResponse_Items>? items,
   }) {
-    final _result = create();
+    final $result = create();
     if (items != null) {
-      _result.items.addAll(items);
+      $result.items.addAll(items);
     }
-    return _result;
+    return $result;
   }
+  ListChannelsResponse._() : super();
   factory ListChannelsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListChannelsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListChannelsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<ListChannelsResponse_Items>(
+        1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+        subBuilder: ListChannelsResponse_Items.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2881,8 +2743,10 @@ class ListChannelsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListChannelsResponse copyWith(void Function(ListChannelsResponse) updates) =>
       super.copyWith((message) => updates(message as ListChannelsResponse))
-          as ListChannelsResponse; // ignore: deprecated_member_use
+          as ListChannelsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListChannelsResponse create() => ListChannelsResponse._();
   ListChannelsResponse createEmptyInstance() => create();
@@ -2893,54 +2757,46 @@ class ListChannelsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListChannelsResponse>(create);
   static ListChannelsResponse? _defaultInstance;
 
+  /// The list of notification channels for a bucket.
   @$pb.TagNumber(1)
   $core.List<ListChannelsResponse_Items> get items => $_getList(0);
 }
 
+/// Message used to convey content being read or written, along with its
+/// checksum.
 class ChecksummedData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ChecksummedData',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'content',
-        $pb.PbFieldType.OY)
-    ..aOM<$1.UInt32Value>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'crc32c',
-        subBuilder: $1.UInt32Value.create)
-    ..hasRequiredFields = false;
-
-  ChecksummedData._() : super();
   factory ChecksummedData({
     $core.List<$core.int>? content,
     $1.UInt32Value? crc32c,
   }) {
-    final _result = create();
+    final $result = create();
     if (content != null) {
-      _result.content = content;
+      $result.content = content;
     }
     if (crc32c != null) {
-      _result.crc32c = crc32c;
+      $result.crc32c = crc32c;
     }
-    return _result;
+    return $result;
   }
+  ChecksummedData._() : super();
   factory ChecksummedData.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ChecksummedData.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ChecksummedData',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'content', $pb.PbFieldType.OY)
+    ..aOM<$1.UInt32Value>(2, _omitFieldNames ? '' : 'crc32c',
+        subBuilder: $1.UInt32Value.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2950,8 +2806,10 @@ class ChecksummedData extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ChecksummedData copyWith(void Function(ChecksummedData) updates) =>
       super.copyWith((message) => updates(message as ChecksummedData))
-          as ChecksummedData; // ignore: deprecated_member_use
+          as ChecksummedData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ChecksummedData create() => ChecksummedData._();
   ChecksummedData createEmptyInstance() => create();
@@ -2962,6 +2820,7 @@ class ChecksummedData extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ChecksummedData>(create);
   static ChecksummedData? _defaultInstance;
 
+  /// The data.
   @$pb.TagNumber(1)
   $core.List<$core.int> get content => $_getN(0);
   @$pb.TagNumber(1)
@@ -2974,6 +2833,7 @@ class ChecksummedData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearContent() => clearField(1);
 
+  /// CRC32C digest of the contents.
   @$pb.TagNumber(2)
   $1.UInt32Value get crc32c => $_getN(1);
   @$pb.TagNumber(2)
@@ -2989,49 +2849,39 @@ class ChecksummedData extends $pb.GeneratedMessage {
   $1.UInt32Value ensureCrc32c() => $_ensure(1);
 }
 
+/// Message used for storing full (not subrange) object checksums.
 class ObjectChecksums extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ObjectChecksums',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOM<$1.UInt32Value>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'crc32c',
-        subBuilder: $1.UInt32Value.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'md5Hash')
-    ..hasRequiredFields = false;
-
-  ObjectChecksums._() : super();
   factory ObjectChecksums({
     $1.UInt32Value? crc32c,
     $core.String? md5Hash,
   }) {
-    final _result = create();
+    final $result = create();
     if (crc32c != null) {
-      _result.crc32c = crc32c;
+      $result.crc32c = crc32c;
     }
     if (md5Hash != null) {
-      _result.md5Hash = md5Hash;
+      $result.md5Hash = md5Hash;
     }
-    return _result;
+    return $result;
   }
+  ObjectChecksums._() : super();
   factory ObjectChecksums.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ObjectChecksums.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ObjectChecksums',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOM<$1.UInt32Value>(1, _omitFieldNames ? '' : 'crc32c',
+        subBuilder: $1.UInt32Value.create)
+    ..aOS(2, _omitFieldNames ? '' : 'md5Hash')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3041,8 +2891,10 @@ class ObjectChecksums extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ObjectChecksums copyWith(void Function(ObjectChecksums) updates) =>
       super.copyWith((message) => updates(message as ObjectChecksums))
-          as ObjectChecksums; // ignore: deprecated_member_use
+          as ObjectChecksums;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ObjectChecksums create() => ObjectChecksums._();
   ObjectChecksums createEmptyInstance() => create();
@@ -3053,6 +2905,9 @@ class ObjectChecksums extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ObjectChecksums>(create);
   static ObjectChecksums? _defaultInstance;
 
+  /// CRC32C digest of the object data. Computed by the GCS service for
+  /// all written objects, and validated by the GCS service against
+  /// client-supplied values if present in an InsertObjectRequest.
   @$pb.TagNumber(1)
   $1.UInt32Value get crc32c => $_getN(0);
   @$pb.TagNumber(1)
@@ -3067,6 +2922,8 @@ class ObjectChecksums extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.UInt32Value ensureCrc32c() => $_ensure(0);
 
+  /// Hex-encoded MD5 hash of the object data (hexdigest). Whether/how this
+  /// checksum is provided and validated is service-dependent.
   @$pb.TagNumber(2)
   $core.String get md5Hash => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3080,26 +2937,24 @@ class ObjectChecksums extends $pb.GeneratedMessage {
   void clearMd5Hash() => clearField(2);
 }
 
+/// A collection of enums used in multiple places throughout the API.
 class CommonEnums extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CommonEnums',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  CommonEnums._() : super();
   factory CommonEnums() => create();
+  CommonEnums._() : super();
   factory CommonEnums.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CommonEnums.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CommonEnums',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3109,8 +2964,10 @@ class CommonEnums extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CommonEnums copyWith(void Function(CommonEnums) updates) =>
       super.copyWith((message) => updates(message as CommonEnums))
-          as CommonEnums; // ignore: deprecated_member_use
+          as CommonEnums;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CommonEnums create() => CommonEnums._();
   CommonEnums createEmptyInstance() => create();
@@ -3121,57 +2978,43 @@ class CommonEnums extends $pb.GeneratedMessage {
   static CommonEnums? _defaultInstance;
 }
 
+/// Specifies a requested range of bytes to download.
 class ContentRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ContentRange',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'start')
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'end')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'completeLength')
-    ..hasRequiredFields = false;
-
-  ContentRange._() : super();
   factory ContentRange({
     $fixnum.Int64? start,
     $fixnum.Int64? end,
     $fixnum.Int64? completeLength,
   }) {
-    final _result = create();
+    final $result = create();
     if (start != null) {
-      _result.start = start;
+      $result.start = start;
     }
     if (end != null) {
-      _result.end = end;
+      $result.end = end;
     }
     if (completeLength != null) {
-      _result.completeLength = completeLength;
+      $result.completeLength = completeLength;
     }
-    return _result;
+    return $result;
   }
+  ContentRange._() : super();
   factory ContentRange.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ContentRange.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ContentRange',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'start')
+    ..aInt64(2, _omitFieldNames ? '' : 'end')
+    ..aInt64(3, _omitFieldNames ? '' : 'completeLength')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3181,8 +3024,10 @@ class ContentRange extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ContentRange copyWith(void Function(ContentRange) updates) =>
       super.copyWith((message) => updates(message as ContentRange))
-          as ContentRange; // ignore: deprecated_member_use
+          as ContentRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ContentRange create() => ContentRange._();
   ContentRange createEmptyInstance() => create();
@@ -3193,6 +3038,7 @@ class ContentRange extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ContentRange>(create);
   static ContentRange? _defaultInstance;
 
+  /// The starting offset of the object data.
   @$pb.TagNumber(1)
   $fixnum.Int64 get start => $_getI64(0);
   @$pb.TagNumber(1)
@@ -3205,6 +3051,7 @@ class ContentRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStart() => clearField(1);
 
+  /// The ending offset of the object data.
   @$pb.TagNumber(2)
   $fixnum.Int64 get end => $_getI64(1);
   @$pb.TagNumber(2)
@@ -3217,6 +3064,7 @@ class ContentRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEnd() => clearField(2);
 
+  /// The complete length of the object data.
   @$pb.TagNumber(3)
   $fixnum.Int64 get completeLength => $_getI64(2);
   @$pb.TagNumber(3)
@@ -3230,61 +3078,8 @@ class ContentRange extends $pb.GeneratedMessage {
   void clearCompleteLength() => clearField(3);
 }
 
+/// Hmac Key Metadata, which includes all information other than the secret.
 class HmacKeyMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HmacKeyMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceAccountEmail')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state')
-    ..aOM<$0.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeCreated',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updated',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  HmacKeyMetadata._() : super();
   factory HmacKeyMetadata({
     $core.String? id,
     $core.String? accessId,
@@ -3295,39 +3090,58 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
     $0.Timestamp? updated,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (accessId != null) {
-      _result.accessId = accessId;
+      $result.accessId = accessId;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (serviceAccountEmail != null) {
-      _result.serviceAccountEmail = serviceAccountEmail;
+      $result.serviceAccountEmail = serviceAccountEmail;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (timeCreated != null) {
-      _result.timeCreated = timeCreated;
+      $result.timeCreated = timeCreated;
     }
     if (updated != null) {
-      _result.updated = updated;
+      $result.updated = updated;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  HmacKeyMetadata._() : super();
   factory HmacKeyMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HmacKeyMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HmacKeyMetadata',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'accessId')
+    ..aOS(3, _omitFieldNames ? '' : 'projectId')
+    ..aOS(4, _omitFieldNames ? '' : 'serviceAccountEmail')
+    ..aOS(5, _omitFieldNames ? '' : 'state')
+    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'timeCreated',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(7, _omitFieldNames ? '' : 'updated',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(8, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3337,8 +3151,10 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   HmacKeyMetadata copyWith(void Function(HmacKeyMetadata) updates) =>
       super.copyWith((message) => updates(message as HmacKeyMetadata))
-          as HmacKeyMetadata; // ignore: deprecated_member_use
+          as HmacKeyMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HmacKeyMetadata create() => HmacKeyMetadata._();
   HmacKeyMetadata createEmptyInstance() => create();
@@ -3349,6 +3165,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HmacKeyMetadata>(create);
   static HmacKeyMetadata? _defaultInstance;
 
+  /// Resource name ID of the key in the format <projectId>/<accessId>.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3361,6 +3178,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// Globally unique id for keys.
   @$pb.TagNumber(2)
   $core.String get accessId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3373,6 +3191,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAccessId() => clearField(2);
 
+  /// The project ID that the hmac key is contained in.
   @$pb.TagNumber(3)
   $core.String get projectId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3385,6 +3204,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearProjectId() => clearField(3);
 
+  /// Email of the service account the key authenticates as.
   @$pb.TagNumber(4)
   $core.String get serviceAccountEmail => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3397,6 +3217,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearServiceAccountEmail() => clearField(4);
 
+  /// State of the key. One of ACTIVE, INACTIVE, or DELETED.
   @$pb.TagNumber(5)
   $core.String get state => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -3409,6 +3230,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearState() => clearField(5);
 
+  /// The creation time of the HMAC key in RFC 3339 format.
   @$pb.TagNumber(6)
   $0.Timestamp get timeCreated => $_getN(5);
   @$pb.TagNumber(6)
@@ -3423,6 +3245,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Timestamp ensureTimeCreated() => $_ensure(5);
 
+  /// The last modification time of the HMAC key metadata in RFC 3339 format.
   @$pb.TagNumber(7)
   $0.Timestamp get updated => $_getN(6);
   @$pb.TagNumber(7)
@@ -3437,6 +3260,7 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.Timestamp ensureUpdated() => $_ensure(6);
 
+  /// Tag updated with each key update.
   @$pb.TagNumber(8)
   $core.String get etag => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -3450,58 +3274,8 @@ class HmacKeyMetadata extends $pb.GeneratedMessage {
   void clearEtag() => clearField(8);
 }
 
+/// A subscription to receive Google PubSub notifications.
 class Notification extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Notification',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topic')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'eventTypes')
-    ..m<$core.String, $core.String>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customAttributes',
-        entryClassName: 'Notification.CustomAttributesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.storage.v1'))
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'objectNamePrefix')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'payloadFormat')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..hasRequiredFields = false;
-
-  Notification._() : super();
   factory Notification({
     $core.String? topic,
     $core.Iterable<$core.String>? eventTypes,
@@ -3511,36 +3285,57 @@ class Notification extends $pb.GeneratedMessage {
     $core.String? payloadFormat,
     $core.String? id,
   }) {
-    final _result = create();
+    final $result = create();
     if (topic != null) {
-      _result.topic = topic;
+      $result.topic = topic;
     }
     if (eventTypes != null) {
-      _result.eventTypes.addAll(eventTypes);
+      $result.eventTypes.addAll(eventTypes);
     }
     if (customAttributes != null) {
-      _result.customAttributes.addAll(customAttributes);
+      $result.customAttributes.addAll(customAttributes);
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (objectNamePrefix != null) {
-      _result.objectNamePrefix = objectNamePrefix;
+      $result.objectNamePrefix = objectNamePrefix;
     }
     if (payloadFormat != null) {
-      _result.payloadFormat = payloadFormat;
+      $result.payloadFormat = payloadFormat;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
-    return _result;
+    return $result;
   }
+  Notification._() : super();
   factory Notification.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Notification.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Notification',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..pPS(2, _omitFieldNames ? '' : 'eventTypes')
+    ..m<$core.String, $core.String>(
+        3, _omitFieldNames ? '' : 'customAttributes',
+        entryClassName: 'Notification.CustomAttributesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.storage.v1'))
+    ..aOS(4, _omitFieldNames ? '' : 'etag')
+    ..aOS(5, _omitFieldNames ? '' : 'objectNamePrefix')
+    ..aOS(6, _omitFieldNames ? '' : 'payloadFormat')
+    ..aOS(7, _omitFieldNames ? '' : 'id')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3550,8 +3345,10 @@ class Notification extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Notification copyWith(void Function(Notification) updates) =>
       super.copyWith((message) => updates(message as Notification))
-          as Notification; // ignore: deprecated_member_use
+          as Notification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Notification create() => Notification._();
   Notification createEmptyInstance() => create();
@@ -3562,6 +3359,8 @@ class Notification extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Notification>(create);
   static Notification? _defaultInstance;
 
+  /// The Cloud PubSub topic to which this subscription publishes. Formatted as:
+  /// '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3574,12 +3373,18 @@ class Notification extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
+  /// If present, only send notifications about listed event types. If empty,
+  /// sent notifications for all event types.
   @$pb.TagNumber(2)
   $core.List<$core.String> get eventTypes => $_getList(1);
 
+  /// An optional list of additional attributes to attach to each Cloud PubSub
+  /// message published for this notification subscription.
   @$pb.TagNumber(3)
   $core.Map<$core.String, $core.String> get customAttributes => $_getMap(2);
 
+  /// HTTP 1.1 [https://tools.ietf.org/html/rfc7232#section-2.3][Entity tag]
+  /// for this subscription notification.
   @$pb.TagNumber(4)
   $core.String get etag => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3592,6 +3397,8 @@ class Notification extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearEtag() => clearField(4);
 
+  /// If present, only apply this notification configuration to object names that
+  /// begin with this prefix.
   @$pb.TagNumber(5)
   $core.String get objectNamePrefix => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -3604,6 +3411,7 @@ class Notification extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearObjectNamePrefix() => clearField(5);
 
+  /// The desired content of the Payload.
   @$pb.TagNumber(6)
   $core.String get payloadFormat => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -3616,6 +3424,7 @@ class Notification extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPayloadFormat() => clearField(6);
 
+  /// The ID of the notification.
   @$pb.TagNumber(7)
   $core.String get id => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -3629,41 +3438,34 @@ class Notification extends $pb.GeneratedMessage {
   void clearId() => clearField(7);
 }
 
+/// The result of a call to Notifications.ListNotifications
 class ListNotificationsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNotificationsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<Notification>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'items',
-        $pb.PbFieldType.PM,
-        subBuilder: Notification.create)
-    ..hasRequiredFields = false;
-
-  ListNotificationsResponse._() : super();
   factory ListNotificationsResponse({
     $core.Iterable<Notification>? items,
   }) {
-    final _result = create();
+    final $result = create();
     if (items != null) {
-      _result.items.addAll(items);
+      $result.items.addAll(items);
     }
-    return _result;
+    return $result;
   }
+  ListNotificationsResponse._() : super();
   factory ListNotificationsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNotificationsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNotificationsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<Notification>(1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+        subBuilder: Notification.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3675,8 +3477,10 @@ class ListNotificationsResponse extends $pb.GeneratedMessage {
   ListNotificationsResponse copyWith(
           void Function(ListNotificationsResponse) updates) =>
       super.copyWith((message) => updates(message as ListNotificationsResponse))
-          as ListNotificationsResponse; // ignore: deprecated_member_use
+          as ListNotificationsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNotificationsResponse create() => ListNotificationsResponse._();
   ListNotificationsResponse createEmptyInstance() => create();
@@ -3687,52 +3491,43 @@ class ListNotificationsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNotificationsResponse>(create);
   static ListNotificationsResponse? _defaultInstance;
 
+  /// The list of items.
   @$pb.TagNumber(1)
   $core.List<Notification> get items => $_getList(0);
 }
 
+/// Describes the customer-specified mechanism used to store the data at rest.
 class Object_CustomerEncryption extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Object.CustomerEncryption',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'encryptionAlgorithm')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keySha256')
-    ..hasRequiredFields = false;
-
-  Object_CustomerEncryption._() : super();
   factory Object_CustomerEncryption({
     $core.String? encryptionAlgorithm,
     $core.String? keySha256,
   }) {
-    final _result = create();
+    final $result = create();
     if (encryptionAlgorithm != null) {
-      _result.encryptionAlgorithm = encryptionAlgorithm;
+      $result.encryptionAlgorithm = encryptionAlgorithm;
     }
     if (keySha256 != null) {
-      _result.keySha256 = keySha256;
+      $result.keySha256 = keySha256;
     }
-    return _result;
+    return $result;
   }
+  Object_CustomerEncryption._() : super();
   factory Object_CustomerEncryption.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Object_CustomerEncryption.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Object.CustomerEncryption',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'encryptionAlgorithm')
+    ..aOS(2, _omitFieldNames ? '' : 'keySha256')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3744,8 +3539,10 @@ class Object_CustomerEncryption extends $pb.GeneratedMessage {
   Object_CustomerEncryption copyWith(
           void Function(Object_CustomerEncryption) updates) =>
       super.copyWith((message) => updates(message as Object_CustomerEncryption))
-          as Object_CustomerEncryption; // ignore: deprecated_member_use
+          as Object_CustomerEncryption;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Object_CustomerEncryption create() => Object_CustomerEncryption._();
   Object_CustomerEncryption createEmptyInstance() => create();
@@ -3756,6 +3553,7 @@ class Object_CustomerEncryption extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Object_CustomerEncryption>(create);
   static Object_CustomerEncryption? _defaultInstance;
 
+  /// The encryption algorithm.
   @$pb.TagNumber(1)
   $core.String get encryptionAlgorithm => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3768,6 +3566,7 @@ class Object_CustomerEncryption extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEncryptionAlgorithm() => clearField(1);
 
+  /// SHA256 hash value of the encryption key.
   @$pb.TagNumber(2)
   $core.String get keySha256 => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3781,181 +3580,8 @@ class Object_CustomerEncryption extends $pb.GeneratedMessage {
   void clearKeySha256() => clearField(2);
 }
 
+/// An object.
 class Object extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Object',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentEncoding')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentDisposition')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cacheControl')
-    ..pc<ObjectAccessControl>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'acl',
-        $pb.PbFieldType.PM,
-        subBuilder: ObjectAccessControl.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentLanguage')
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metageneration')
-    ..aOM<$0.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeDeleted',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentType')
-    ..aInt64(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'size')
-    ..aOM<$0.Timestamp>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeCreated',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$1.UInt32Value>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'crc32c',
-        subBuilder: $1.UInt32Value.create)
-    ..a<$core.int>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'componentCount',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'md5Hash')
-    ..aOS(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..aOM<$0.Timestamp>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updated',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'storageClass')
-    ..aOS(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kmsKeyName')
-    ..aOM<$0.Timestamp>(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeStorageClassUpdated',
-        subBuilder: $0.Timestamp.create)
-    ..aOB(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'temporaryHold')
-    ..aOM<$0.Timestamp>(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'retentionExpirationTime',
-        subBuilder: $0.Timestamp.create)
-    ..m<$core.String, $core.String>(
-        21,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        entryClassName: 'Object.MetadataEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.storage.v1'))
-    ..aOS(
-        23,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        24,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        25,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aInt64(
-        26,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'generation')
-    ..aOM<Owner>(
-        27,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'owner',
-        subBuilder: Owner.create)
-    ..aOM<Object_CustomerEncryption>(
-        28,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerEncryption',
-        subBuilder: Object_CustomerEncryption.create)
-    ..aOM<$1.BoolValue>(
-        29,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'eventBasedHold',
-        subBuilder: $1.BoolValue.create)
-    ..aOM<$0.Timestamp>(
-        30,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  Object._() : super();
   factory Object({
     $core.String? contentEncoding,
     $core.String? contentDisposition,
@@ -3987,102 +3613,157 @@ class Object extends $pb.GeneratedMessage {
     $1.BoolValue? eventBasedHold,
     $0.Timestamp? customTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (contentEncoding != null) {
-      _result.contentEncoding = contentEncoding;
+      $result.contentEncoding = contentEncoding;
     }
     if (contentDisposition != null) {
-      _result.contentDisposition = contentDisposition;
+      $result.contentDisposition = contentDisposition;
     }
     if (cacheControl != null) {
-      _result.cacheControl = cacheControl;
+      $result.cacheControl = cacheControl;
     }
     if (acl != null) {
-      _result.acl.addAll(acl);
+      $result.acl.addAll(acl);
     }
     if (contentLanguage != null) {
-      _result.contentLanguage = contentLanguage;
+      $result.contentLanguage = contentLanguage;
     }
     if (metageneration != null) {
-      _result.metageneration = metageneration;
+      $result.metageneration = metageneration;
     }
     if (timeDeleted != null) {
-      _result.timeDeleted = timeDeleted;
+      $result.timeDeleted = timeDeleted;
     }
     if (contentType != null) {
-      _result.contentType = contentType;
+      $result.contentType = contentType;
     }
     if (size != null) {
-      _result.size = size;
+      $result.size = size;
     }
     if (timeCreated != null) {
-      _result.timeCreated = timeCreated;
+      $result.timeCreated = timeCreated;
     }
     if (crc32c != null) {
-      _result.crc32c = crc32c;
+      $result.crc32c = crc32c;
     }
     if (componentCount != null) {
-      _result.componentCount = componentCount;
+      $result.componentCount = componentCount;
     }
     if (md5Hash != null) {
-      _result.md5Hash = md5Hash;
+      $result.md5Hash = md5Hash;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (updated != null) {
-      _result.updated = updated;
+      $result.updated = updated;
     }
     if (storageClass != null) {
-      _result.storageClass = storageClass;
+      $result.storageClass = storageClass;
     }
     if (kmsKeyName != null) {
-      _result.kmsKeyName = kmsKeyName;
+      $result.kmsKeyName = kmsKeyName;
     }
     if (timeStorageClassUpdated != null) {
-      _result.timeStorageClassUpdated = timeStorageClassUpdated;
+      $result.timeStorageClassUpdated = timeStorageClassUpdated;
     }
     if (temporaryHold != null) {
-      _result.temporaryHold = temporaryHold;
+      $result.temporaryHold = temporaryHold;
     }
     if (retentionExpirationTime != null) {
-      _result.retentionExpirationTime = retentionExpirationTime;
+      $result.retentionExpirationTime = retentionExpirationTime;
     }
     if (metadata != null) {
-      _result.metadata.addAll(metadata);
+      $result.metadata.addAll(metadata);
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (generation != null) {
-      _result.generation = generation;
+      $result.generation = generation;
     }
     if (owner != null) {
-      _result.owner = owner;
+      $result.owner = owner;
     }
     if (customerEncryption != null) {
-      _result.customerEncryption = customerEncryption;
+      $result.customerEncryption = customerEncryption;
     }
     if (eventBasedHold != null) {
-      _result.eventBasedHold = eventBasedHold;
+      $result.eventBasedHold = eventBasedHold;
     }
     if (customTime != null) {
-      _result.customTime = customTime;
+      $result.customTime = customTime;
     }
-    return _result;
+    return $result;
   }
+  Object._() : super();
   factory Object.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Object.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Object',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'contentEncoding')
+    ..aOS(2, _omitFieldNames ? '' : 'contentDisposition')
+    ..aOS(3, _omitFieldNames ? '' : 'cacheControl')
+    ..pc<ObjectAccessControl>(
+        4, _omitFieldNames ? '' : 'acl', $pb.PbFieldType.PM,
+        subBuilder: ObjectAccessControl.create)
+    ..aOS(5, _omitFieldNames ? '' : 'contentLanguage')
+    ..aInt64(6, _omitFieldNames ? '' : 'metageneration')
+    ..aOM<$0.Timestamp>(7, _omitFieldNames ? '' : 'timeDeleted',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(8, _omitFieldNames ? '' : 'contentType')
+    ..aInt64(9, _omitFieldNames ? '' : 'size')
+    ..aOM<$0.Timestamp>(10, _omitFieldNames ? '' : 'timeCreated',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$1.UInt32Value>(11, _omitFieldNames ? '' : 'crc32c',
+        subBuilder: $1.UInt32Value.create)
+    ..a<$core.int>(
+        12, _omitFieldNames ? '' : 'componentCount', $pb.PbFieldType.O3)
+    ..aOS(13, _omitFieldNames ? '' : 'md5Hash')
+    ..aOS(14, _omitFieldNames ? '' : 'etag')
+    ..aOM<$0.Timestamp>(15, _omitFieldNames ? '' : 'updated',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(16, _omitFieldNames ? '' : 'storageClass')
+    ..aOS(17, _omitFieldNames ? '' : 'kmsKeyName')
+    ..aOM<$0.Timestamp>(18, _omitFieldNames ? '' : 'timeStorageClassUpdated',
+        subBuilder: $0.Timestamp.create)
+    ..aOB(19, _omitFieldNames ? '' : 'temporaryHold')
+    ..aOM<$0.Timestamp>(20, _omitFieldNames ? '' : 'retentionExpirationTime',
+        subBuilder: $0.Timestamp.create)
+    ..m<$core.String, $core.String>(21, _omitFieldNames ? '' : 'metadata',
+        entryClassName: 'Object.MetadataEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.storage.v1'))
+    ..aOS(23, _omitFieldNames ? '' : 'name')
+    ..aOS(24, _omitFieldNames ? '' : 'id')
+    ..aOS(25, _omitFieldNames ? '' : 'bucket')
+    ..aInt64(26, _omitFieldNames ? '' : 'generation')
+    ..aOM<Owner>(27, _omitFieldNames ? '' : 'owner', subBuilder: Owner.create)
+    ..aOM<Object_CustomerEncryption>(
+        28, _omitFieldNames ? '' : 'customerEncryption',
+        subBuilder: Object_CustomerEncryption.create)
+    ..aOM<$1.BoolValue>(29, _omitFieldNames ? '' : 'eventBasedHold',
+        subBuilder: $1.BoolValue.create)
+    ..aOM<$0.Timestamp>(30, _omitFieldNames ? '' : 'customTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4091,9 +3772,10 @@ class Object extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Object copyWith(void Function(Object) updates) =>
-      super.copyWith((message) => updates(message as Object))
-          as Object; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Object)) as Object;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Object create() => Object._();
   Object createEmptyInstance() => create();
@@ -4103,6 +3785,8 @@ class Object extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Object>(create);
   static Object? _defaultInstance;
 
+  /// Content-Encoding of the object data, matching
+  /// [https://tools.ietf.org/html/rfc7231#section-3.1.2.2][RFC 7231 §3.1.2.2]
   @$pb.TagNumber(1)
   $core.String get contentEncoding => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4115,6 +3799,8 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearContentEncoding() => clearField(1);
 
+  /// Content-Disposition of the object data, matching
+  /// [https://tools.ietf.org/html/rfc6266][RFC 6266].
   @$pb.TagNumber(2)
   $core.String get contentDisposition => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4127,6 +3813,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearContentDisposition() => clearField(2);
 
+  /// Cache-Control directive for the object data, matching
+  /// [https://tools.ietf.org/html/rfc7234#section-5.2"][RFC 7234 §5.2].
+  /// If omitted, and the object is accessible to all anonymous users, the
+  /// default will be `public, max-age=3600`.
   @$pb.TagNumber(3)
   $core.String get cacheControl => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4139,9 +3829,12 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCacheControl() => clearField(3);
 
+  /// Access controls on the object.
   @$pb.TagNumber(4)
   $core.List<ObjectAccessControl> get acl => $_getList(3);
 
+  /// Content-Language of the object data, matching
+  /// [https://tools.ietf.org/html/rfc7231#section-3.1.3.2][RFC 7231 §3.1.3.2].
   @$pb.TagNumber(5)
   $core.String get contentLanguage => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -4154,6 +3847,12 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearContentLanguage() => clearField(5);
 
+  /// The version of the metadata for this object at this generation. Used for
+  /// preconditions and for detecting changes in metadata. A metageneration
+  /// number is only meaningful in the context of a particular generation of a
+  /// particular object.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(6)
   $fixnum.Int64 get metageneration => $_getI64(5);
   @$pb.TagNumber(6)
@@ -4166,6 +3865,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearMetageneration() => clearField(6);
 
+  /// The deletion time of the object. Will be returned if and only if this
+  /// version of the object has been deleted.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(7)
   $0.Timestamp get timeDeleted => $_getN(6);
   @$pb.TagNumber(7)
@@ -4180,6 +3883,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.Timestamp ensureTimeDeleted() => $_ensure(6);
 
+  /// Content-Type of the object data, matching
+  /// [https://tools.ietf.org/html/rfc7231#section-3.1.1.5][RFC 7231 §3.1.1.5].
+  /// If an object is stored without a Content-Type, it is served as
+  /// `application/octet-stream`.
   @$pb.TagNumber(8)
   $core.String get contentType => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -4192,6 +3899,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearContentType() => clearField(8);
 
+  /// Content-Length of the object data in bytes, matching
+  /// [https://tools.ietf.org/html/rfc7230#section-3.3.2][RFC 7230 §3.3.2].
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(9)
   $fixnum.Int64 get size => $_getI64(8);
   @$pb.TagNumber(9)
@@ -4204,6 +3915,9 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearSize() => clearField(9);
 
+  /// The creation time of the object.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(10)
   $0.Timestamp get timeCreated => $_getN(9);
   @$pb.TagNumber(10)
@@ -4218,6 +3932,13 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $0.Timestamp ensureTimeCreated() => $_ensure(9);
 
+  /// CRC32c checksum. For more information about using the CRC32c
+  /// checksum, see
+  /// [https://cloud.google.com/storage/docs/hashes-etags#json-api][Hashes and
+  /// ETags: Best Practices]. This is a server determined value and should not be
+  /// supplied by the user when sending an Object. The server will ignore any
+  /// value provided. Users should instead use the object_checksums field on the
+  /// InsertObjectRequest when uploading an object.
   @$pb.TagNumber(11)
   $1.UInt32Value get crc32c => $_getN(10);
   @$pb.TagNumber(11)
@@ -4232,6 +3953,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $1.UInt32Value ensureCrc32c() => $_ensure(10);
 
+  /// Number of underlying components that make up this object. Components are
+  /// accumulated by compose operations.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(12)
   $core.int get componentCount => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -4244,6 +3969,14 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearComponentCount() => clearField(12);
 
+  /// MD5 hash of the data; encoded using base64 as per
+  /// [https://tools.ietf.org/html/rfc4648#section-4][RFC 4648 §4]. For more
+  /// information about using the MD5 hash, see
+  /// [https://cloud.google.com/storage/docs/hashes-etags#json-api][Hashes and
+  /// ETags: Best Practices]. This is a server determined value and should not be
+  /// supplied by the user when sending an Object. The server will ignore any
+  /// value provided. Users should instead use the object_checksums field on the
+  /// InsertObjectRequest when uploading an object.
   @$pb.TagNumber(13)
   $core.String get md5Hash => $_getSZ(12);
   @$pb.TagNumber(13)
@@ -4256,6 +3989,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearMd5Hash() => clearField(13);
 
+  /// HTTP 1.1 Entity tag for the object. See
+  /// [https://tools.ietf.org/html/rfc7232#section-2.3][RFC 7232 §2.3].
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(14)
   $core.String get etag => $_getSZ(13);
   @$pb.TagNumber(14)
@@ -4268,6 +4005,9 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearEtag() => clearField(14);
 
+  /// The modification time of the object metadata.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(15)
   $0.Timestamp get updated => $_getN(14);
   @$pb.TagNumber(15)
@@ -4282,6 +4022,7 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $0.Timestamp ensureUpdated() => $_ensure(14);
 
+  /// Storage class of the object.
   @$pb.TagNumber(16)
   $core.String get storageClass => $_getSZ(15);
   @$pb.TagNumber(16)
@@ -4294,6 +4035,8 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   void clearStorageClass() => clearField(16);
 
+  /// Cloud KMS Key used to encrypt this object, if the object is encrypted by
+  /// such a key.
   @$pb.TagNumber(17)
   $core.String get kmsKeyName => $_getSZ(16);
   @$pb.TagNumber(17)
@@ -4306,6 +4049,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   void clearKmsKeyName() => clearField(17);
 
+  /// The time at which the object's storage class was last changed. When the
+  /// object is initially created, it will be set to time_created.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(18)
   $0.Timestamp get timeStorageClassUpdated => $_getN(17);
   @$pb.TagNumber(18)
@@ -4320,6 +4067,11 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $0.Timestamp ensureTimeStorageClassUpdated() => $_ensure(17);
 
+  /// Whether an object is under temporary hold. While this flag is set to true,
+  /// the object is protected against deletion and overwrites.  A common use case
+  /// of this flag is regulatory investigations where objects need to be retained
+  /// while the investigation is ongoing. Note that unlike event-based hold,
+  /// temporary hold does not impact retention expiration time of an object.
   @$pb.TagNumber(19)
   $core.bool get temporaryHold => $_getBF(18);
   @$pb.TagNumber(19)
@@ -4332,6 +4084,14 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   void clearTemporaryHold() => clearField(19);
 
+  /// A server-determined value that specifies the earliest time that the
+  /// object's retention period expires. This value is in
+  /// [https://tools.ietf.org/html/rfc3339][RFC 3339] format.
+  /// Note 1: This field is not provided for objects with an active event-based
+  /// hold, since retention expiration is unknown until the hold is removed.
+  /// Note 2: This value can be provided even when temporary hold is set (so that
+  /// the user can reason about policy without having to first unset the
+  /// temporary hold).
   @$pb.TagNumber(20)
   $0.Timestamp get retentionExpirationTime => $_getN(19);
   @$pb.TagNumber(20)
@@ -4346,9 +4106,13 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   $0.Timestamp ensureRetentionExpirationTime() => $_ensure(19);
 
+  /// User-provided metadata, in key/value pairs.
   @$pb.TagNumber(21)
   $core.Map<$core.String, $core.String> get metadata => $_getMap(20);
 
+  /// The name of the object.
+  /// Attempting to update this field after the object is created will result in
+  /// an error.
   @$pb.TagNumber(23)
   $core.String get name => $_getSZ(21);
   @$pb.TagNumber(23)
@@ -4361,6 +4125,10 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   void clearName() => clearField(23);
 
+  /// The ID of the object, including the bucket name, object name, and
+  /// generation number.
+  /// Attempting to update this field after the object is created will result in
+  /// an error.
   @$pb.TagNumber(24)
   $core.String get id => $_getSZ(22);
   @$pb.TagNumber(24)
@@ -4373,6 +4141,9 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   void clearId() => clearField(24);
 
+  /// The name of the bucket containing this object.
+  /// Attempting to update this field after the object is created will result in
+  /// an error.
   @$pb.TagNumber(25)
   $core.String get bucket => $_getSZ(23);
   @$pb.TagNumber(25)
@@ -4385,6 +4156,9 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(25)
   void clearBucket() => clearField(25);
 
+  /// The content generation of this object. Used for object versioning.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(26)
   $fixnum.Int64 get generation => $_getI64(24);
   @$pb.TagNumber(26)
@@ -4397,6 +4171,9 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(26)
   void clearGeneration() => clearField(26);
 
+  /// The owner of the object. This will always be the uploader of the object.
+  /// Attempting to set or update this field will result in a
+  /// [FieldViolation][google.rpc.BadRequest.FieldViolation].
   @$pb.TagNumber(27)
   Owner get owner => $_getN(25);
   @$pb.TagNumber(27)
@@ -4411,6 +4188,8 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   Owner ensureOwner() => $_ensure(25);
 
+  /// Metadata of customer-supplied encryption key, if the object is encrypted by
+  /// such a key.
   @$pb.TagNumber(28)
   Object_CustomerEncryption get customerEncryption => $_getN(26);
   @$pb.TagNumber(28)
@@ -4425,6 +4204,17 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(28)
   Object_CustomerEncryption ensureCustomerEncryption() => $_ensure(26);
 
+  /// Whether an object is under event-based hold. Event-based hold is a way to
+  /// retain objects until an event occurs, which is signified by the
+  /// hold's release (i.e. this value is set to false). After being released (set
+  /// to false), such objects will be subject to bucket-level retention (if any).
+  /// One sample use case of this flag is for banks to hold loan documents for at
+  /// least 3 years after loan is paid in full. Here, bucket-level retention is 3
+  /// years and the event is the loan being paid in full. In this example, these
+  /// objects will be held intact for any number of years until the event has
+  /// occurred (event-based hold on the object is released) and then 3 more years
+  /// after that. That means retention duration of the objects begins from the
+  /// moment event-based hold transitioned from true to false.
   @$pb.TagNumber(29)
   $1.BoolValue get eventBasedHold => $_getN(27);
   @$pb.TagNumber(29)
@@ -4439,6 +4229,7 @@ class Object extends $pb.GeneratedMessage {
   @$pb.TagNumber(29)
   $1.BoolValue ensureEventBasedHold() => $_ensure(27);
 
+  /// A user-specified timestamp set on an object.
   @$pb.TagNumber(30)
   $0.Timestamp get customTime => $_getN(28);
   @$pb.TagNumber(30)
@@ -4454,75 +4245,8 @@ class Object extends $pb.GeneratedMessage {
   $0.Timestamp ensureCustomTime() => $_ensure(28);
 }
 
+/// An access-control entry.
 class ObjectAccessControl extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ObjectAccessControl',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'role')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'object')
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'generation')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entity')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entityId')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'email')
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'domain')
-    ..aOM<ProjectTeam>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectTeam',
-        subBuilder: ProjectTeam.create)
-    ..hasRequiredFields = false;
-
-  ObjectAccessControl._() : super();
   factory ObjectAccessControl({
     $core.String? role,
     $core.String? etag,
@@ -4536,48 +4260,69 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
     $core.String? domain,
     ProjectTeam? projectTeam,
   }) {
-    final _result = create();
+    final $result = create();
     if (role != null) {
-      _result.role = role;
+      $result.role = role;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (object != null) {
-      _result.object = object;
+      $result.object = object;
     }
     if (generation != null) {
-      _result.generation = generation;
+      $result.generation = generation;
     }
     if (entity != null) {
-      _result.entity = entity;
+      $result.entity = entity;
     }
     if (entityId != null) {
-      _result.entityId = entityId;
+      $result.entityId = entityId;
     }
     if (email != null) {
-      _result.email = email;
+      $result.email = email;
     }
     if (domain != null) {
-      _result.domain = domain;
+      $result.domain = domain;
     }
     if (projectTeam != null) {
-      _result.projectTeam = projectTeam;
+      $result.projectTeam = projectTeam;
     }
-    return _result;
+    return $result;
   }
+  ObjectAccessControl._() : super();
   factory ObjectAccessControl.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ObjectAccessControl.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ObjectAccessControl',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'role')
+    ..aOS(2, _omitFieldNames ? '' : 'etag')
+    ..aOS(3, _omitFieldNames ? '' : 'id')
+    ..aOS(4, _omitFieldNames ? '' : 'bucket')
+    ..aOS(5, _omitFieldNames ? '' : 'object')
+    ..aInt64(6, _omitFieldNames ? '' : 'generation')
+    ..aOS(7, _omitFieldNames ? '' : 'entity')
+    ..aOS(8, _omitFieldNames ? '' : 'entityId')
+    ..aOS(9, _omitFieldNames ? '' : 'email')
+    ..aOS(10, _omitFieldNames ? '' : 'domain')
+    ..aOM<ProjectTeam>(11, _omitFieldNames ? '' : 'projectTeam',
+        subBuilder: ProjectTeam.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4587,8 +4332,10 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ObjectAccessControl copyWith(void Function(ObjectAccessControl) updates) =>
       super.copyWith((message) => updates(message as ObjectAccessControl))
-          as ObjectAccessControl; // ignore: deprecated_member_use
+          as ObjectAccessControl;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ObjectAccessControl create() => ObjectAccessControl._();
   ObjectAccessControl createEmptyInstance() => create();
@@ -4599,6 +4346,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ObjectAccessControl>(create);
   static ObjectAccessControl? _defaultInstance;
 
+  /// The access permission for the entity.
   @$pb.TagNumber(1)
   $core.String get role => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4611,6 +4359,8 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRole() => clearField(1);
 
+  /// HTTP 1.1 Entity tag for the access-control entry.
+  /// See [https://tools.ietf.org/html/rfc7232#section-2.3][RFC 7232 §2.3].
   @$pb.TagNumber(2)
   $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4623,6 +4373,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEtag() => clearField(2);
 
+  /// The ID of the access-control entry.
   @$pb.TagNumber(3)
   $core.String get id => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4635,6 +4386,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearId() => clearField(3);
 
+  /// The name of the bucket.
   @$pb.TagNumber(4)
   $core.String get bucket => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4647,6 +4399,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBucket() => clearField(4);
 
+  /// The name of the object, if applied to an object.
   @$pb.TagNumber(5)
   $core.String get object => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -4659,6 +4412,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearObject() => clearField(5);
 
+  /// The content generation of the object, if applied to an object.
   @$pb.TagNumber(6)
   $fixnum.Int64 get generation => $_getI64(5);
   @$pb.TagNumber(6)
@@ -4671,6 +4425,21 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearGeneration() => clearField(6);
 
+  /// The entity holding the permission, in one of the following forms:
+  /// * `user-{userid}`
+  /// * `user-{email}`
+  /// * `group-{groupid}`
+  /// * `group-{email}`
+  /// * `domain-{domain}`
+  /// * `project-{team-projectid}`
+  /// * `allUsers`
+  /// * `allAuthenticatedUsers`
+  /// Examples:
+  /// * The user `liz@example.com` would be `user-liz@example.com`.
+  /// * The group `example@googlegroups.com` would be
+  /// `group-example@googlegroups.com`.
+  /// * All members of the Google Apps for Business domain `example.com` would be
+  /// `domain-example.com`.
   @$pb.TagNumber(7)
   $core.String get entity => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -4683,6 +4452,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearEntity() => clearField(7);
 
+  /// The ID for the entity, if any.
   @$pb.TagNumber(8)
   $core.String get entityId => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -4695,6 +4465,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearEntityId() => clearField(8);
 
+  /// The email address associated with the entity, if any.
   @$pb.TagNumber(9)
   $core.String get email => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -4707,6 +4478,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearEmail() => clearField(9);
 
+  /// The domain associated with the entity, if any.
   @$pb.TagNumber(10)
   $core.String get domain => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -4719,6 +4491,7 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearDomain() => clearField(10);
 
+  /// The project team associated with the entity, if any.
   @$pb.TagNumber(11)
   ProjectTeam get projectTeam => $_getN(10);
   @$pb.TagNumber(11)
@@ -4734,41 +4507,35 @@ class ObjectAccessControl extends $pb.GeneratedMessage {
   ProjectTeam ensureProjectTeam() => $_ensure(10);
 }
 
+/// The result of a call to ObjectAccessControls.ListObjectAccessControls.
 class ListObjectAccessControlsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListObjectAccessControlsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pc<ObjectAccessControl>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'items',
-        $pb.PbFieldType.PM,
-        subBuilder: ObjectAccessControl.create)
-    ..hasRequiredFields = false;
-
-  ListObjectAccessControlsResponse._() : super();
   factory ListObjectAccessControlsResponse({
     $core.Iterable<ObjectAccessControl>? items,
   }) {
-    final _result = create();
+    final $result = create();
     if (items != null) {
-      _result.items.addAll(items);
+      $result.items.addAll(items);
     }
-    return _result;
+    return $result;
   }
+  ListObjectAccessControlsResponse._() : super();
   factory ListObjectAccessControlsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListObjectAccessControlsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListObjectAccessControlsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pc<ObjectAccessControl>(
+        1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+        subBuilder: ObjectAccessControl.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4781,8 +4548,10 @@ class ListObjectAccessControlsResponse extends $pb.GeneratedMessage {
           void Function(ListObjectAccessControlsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListObjectAccessControlsResponse))
-          as ListObjectAccessControlsResponse; // ignore: deprecated_member_use
+          as ListObjectAccessControlsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListObjectAccessControlsResponse create() =>
       ListObjectAccessControlsResponse._();
@@ -4795,63 +4564,49 @@ class ListObjectAccessControlsResponse extends $pb.GeneratedMessage {
           create);
   static ListObjectAccessControlsResponse? _defaultInstance;
 
+  /// The list of items.
   @$pb.TagNumber(1)
   $core.List<ObjectAccessControl> get items => $_getList(0);
 }
 
+/// The result of a call to Objects.ListObjects
 class ListObjectsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListObjectsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'prefixes')
-    ..pc<Object>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'items',
-        $pb.PbFieldType.PM,
-        subBuilder: Object.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListObjectsResponse._() : super();
   factory ListObjectsResponse({
     $core.Iterable<$core.String>? prefixes,
     $core.Iterable<Object>? items,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (prefixes != null) {
-      _result.prefixes.addAll(prefixes);
+      $result.prefixes.addAll(prefixes);
     }
     if (items != null) {
-      _result.items.addAll(items);
+      $result.items.addAll(items);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListObjectsResponse._() : super();
   factory ListObjectsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListObjectsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListObjectsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'prefixes')
+    ..pc<Object>(2, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+        subBuilder: Object.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4861,8 +4616,10 @@ class ListObjectsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListObjectsResponse copyWith(void Function(ListObjectsResponse) updates) =>
       super.copyWith((message) => updates(message as ListObjectsResponse))
-          as ListObjectsResponse; // ignore: deprecated_member_use
+          as ListObjectsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListObjectsResponse create() => ListObjectsResponse._();
   ListObjectsResponse createEmptyInstance() => create();
@@ -4873,12 +4630,17 @@ class ListObjectsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListObjectsResponse>(create);
   static ListObjectsResponse? _defaultInstance;
 
+  /// The list of prefixes of objects matching-but-not-listed up to and including
+  /// the requested delimiter.
   @$pb.TagNumber(1)
   $core.List<$core.String> get prefixes => $_getList(0);
 
+  /// The list of items.
   @$pb.TagNumber(2)
   $core.List<Object> get items => $_getList(1);
 
+  /// The continuation token, used to page through large result sets. Provide
+  /// this value in a subsequent request to return the next page of results.
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4892,48 +4654,38 @@ class ListObjectsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(3);
 }
 
+/// Represents the Viewers, Editors, or Owners of a given project.
 class ProjectTeam extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ProjectTeam',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectNumber')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'team')
-    ..hasRequiredFields = false;
-
-  ProjectTeam._() : super();
   factory ProjectTeam({
     $core.String? projectNumber,
     $core.String? team,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectNumber != null) {
-      _result.projectNumber = projectNumber;
+      $result.projectNumber = projectNumber;
     }
     if (team != null) {
-      _result.team = team;
+      $result.team = team;
     }
-    return _result;
+    return $result;
   }
+  ProjectTeam._() : super();
   factory ProjectTeam.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ProjectTeam.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ProjectTeam',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectNumber')
+    ..aOS(2, _omitFieldNames ? '' : 'team')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4943,8 +4695,10 @@ class ProjectTeam extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ProjectTeam copyWith(void Function(ProjectTeam) updates) =>
       super.copyWith((message) => updates(message as ProjectTeam))
-          as ProjectTeam; // ignore: deprecated_member_use
+          as ProjectTeam;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ProjectTeam create() => ProjectTeam._();
   ProjectTeam createEmptyInstance() => create();
@@ -4954,6 +4708,7 @@ class ProjectTeam extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ProjectTeam>(create);
   static ProjectTeam? _defaultInstance;
 
+  /// The project number.
   @$pb.TagNumber(1)
   $core.String get projectNumber => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4966,6 +4721,7 @@ class ProjectTeam extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectNumber() => clearField(1);
 
+  /// The team.
   @$pb.TagNumber(2)
   $core.String get team => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4979,39 +4735,33 @@ class ProjectTeam extends $pb.GeneratedMessage {
   void clearTeam() => clearField(2);
 }
 
+/// A subscription to receive Google PubSub notifications.
 class ServiceAccount extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceAccount',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'emailAddress')
-    ..hasRequiredFields = false;
-
-  ServiceAccount._() : super();
   factory ServiceAccount({
     $core.String? emailAddress,
   }) {
-    final _result = create();
+    final $result = create();
     if (emailAddress != null) {
-      _result.emailAddress = emailAddress;
+      $result.emailAddress = emailAddress;
     }
-    return _result;
+    return $result;
   }
+  ServiceAccount._() : super();
   factory ServiceAccount.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServiceAccount.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServiceAccount',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'emailAddress')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5021,8 +4771,10 @@ class ServiceAccount extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServiceAccount copyWith(void Function(ServiceAccount) updates) =>
       super.copyWith((message) => updates(message as ServiceAccount))
-          as ServiceAccount; // ignore: deprecated_member_use
+          as ServiceAccount;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServiceAccount create() => ServiceAccount._();
   ServiceAccount createEmptyInstance() => create();
@@ -5033,6 +4785,7 @@ class ServiceAccount extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServiceAccount>(create);
   static ServiceAccount? _defaultInstance;
 
+  /// The ID of the notification.
   @$pb.TagNumber(1)
   $core.String get emailAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5046,48 +4799,38 @@ class ServiceAccount extends $pb.GeneratedMessage {
   void clearEmailAddress() => clearField(1);
 }
 
+/// The owner of a specific resource.
 class Owner extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Owner',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entity')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entityId')
-    ..hasRequiredFields = false;
-
-  Owner._() : super();
   factory Owner({
     $core.String? entity,
     $core.String? entityId,
   }) {
-    final _result = create();
+    final $result = create();
     if (entity != null) {
-      _result.entity = entity;
+      $result.entity = entity;
     }
     if (entityId != null) {
-      _result.entityId = entityId;
+      $result.entityId = entityId;
     }
-    return _result;
+    return $result;
   }
+  Owner._() : super();
   factory Owner.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Owner.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Owner',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.storage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'entity')
+    ..aOS(2, _omitFieldNames ? '' : 'entityId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5096,9 +4839,10 @@ class Owner extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Owner copyWith(void Function(Owner) updates) =>
-      super.copyWith((message) => updates(message as Owner))
-          as Owner; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Owner)) as Owner;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Owner create() => Owner._();
   Owner createEmptyInstance() => create();
@@ -5108,6 +4852,7 @@ class Owner extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Owner>(create);
   static Owner? _defaultInstance;
 
+  /// The entity, in the form `user-`*userId*.
   @$pb.TagNumber(1)
   $core.String get entity => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5120,6 +4865,7 @@ class Owner extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEntity() => clearField(1);
 
+  /// The ID for the entity.
   @$pb.TagNumber(2)
   $core.String get entityId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5132,3 +4878,7 @@ class Owner extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEntityId() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,21 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/storage/v2/storage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'storage.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../iam/v1/policy.pb.dart' as $1;
+import '../../protobuf/empty.pb.dart' as $3;
+import 'storage.pb.dart' as $2;
+
 export 'storage.pb.dart';
 
+@$pb.GrpcServiceName('google.storage.v2.Storage')
 class StorageClient extends $grpc.Client {
   static final _$deleteBucket =
       $grpc.ClientMethod<$2.DeleteBucketRequest, $3.Empty>(
@@ -63,28 +70,6 @@ class StorageClient extends $grpc.Client {
           '/google.storage.v2.Storage/UpdateBucket',
           ($2.UpdateBucketRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Bucket.fromBuffer(value));
-  static final _$deleteNotificationConfig =
-      $grpc.ClientMethod<$2.DeleteNotificationConfigRequest, $3.Empty>(
-          '/google.storage.v2.Storage/DeleteNotificationConfig',
-          ($2.DeleteNotificationConfigRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
-  static final _$getNotificationConfig = $grpc.ClientMethod<
-          $2.GetNotificationConfigRequest, $2.NotificationConfig>(
-      '/google.storage.v2.Storage/GetNotificationConfig',
-      ($2.GetNotificationConfigRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.NotificationConfig.fromBuffer(value));
-  static final _$createNotificationConfig = $grpc.ClientMethod<
-          $2.CreateNotificationConfigRequest, $2.NotificationConfig>(
-      '/google.storage.v2.Storage/CreateNotificationConfig',
-      ($2.CreateNotificationConfigRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.NotificationConfig.fromBuffer(value));
-  static final _$listNotificationConfigs = $grpc.ClientMethod<
-          $2.ListNotificationConfigsRequest,
-          $2.ListNotificationConfigsResponse>(
-      '/google.storage.v2.Storage/ListNotificationConfigs',
-      ($2.ListNotificationConfigsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $2.ListNotificationConfigsResponse.fromBuffer(value));
   static final _$composeObject =
       $grpc.ClientMethod<$2.ComposeObjectRequest, $2.Object>(
           '/google.storage.v2.Storage/ComposeObject',
@@ -95,6 +80,11 @@ class StorageClient extends $grpc.Client {
           '/google.storage.v2.Storage/DeleteObject',
           ($2.DeleteObjectRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$restoreObject =
+      $grpc.ClientMethod<$2.RestoreObjectRequest, $2.Object>(
+          '/google.storage.v2.Storage/RestoreObject',
+          ($2.RestoreObjectRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Object.fromBuffer(value));
   static final _$cancelResumableWrite = $grpc.ClientMethod<
           $2.CancelResumableWriteRequest, $2.CancelResumableWriteResponse>(
       '/google.storage.v2.Storage/CancelResumableWrite',
@@ -111,6 +101,12 @@ class StorageClient extends $grpc.Client {
           ($2.ReadObjectRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $2.ReadObjectResponse.fromBuffer(value));
+  static final _$bidiReadObject =
+      $grpc.ClientMethod<$2.BidiReadObjectRequest, $2.BidiReadObjectResponse>(
+          '/google.storage.v2.Storage/BidiReadObject',
+          ($2.BidiReadObjectRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.BidiReadObjectResponse.fromBuffer(value));
   static final _$updateObject =
       $grpc.ClientMethod<$2.UpdateObjectRequest, $2.Object>(
           '/google.storage.v2.Storage/UpdateObject',
@@ -122,6 +118,12 @@ class StorageClient extends $grpc.Client {
           ($2.WriteObjectRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $2.WriteObjectResponse.fromBuffer(value));
+  static final _$bidiWriteObject =
+      $grpc.ClientMethod<$2.BidiWriteObjectRequest, $2.BidiWriteObjectResponse>(
+          '/google.storage.v2.Storage/BidiWriteObject',
+          ($2.BidiWriteObjectRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.BidiWriteObjectResponse.fromBuffer(value));
   static final _$listObjects =
       $grpc.ClientMethod<$2.ListObjectsRequest, $2.ListObjectsResponse>(
           '/google.storage.v2.Storage/ListObjects',
@@ -146,40 +148,11 @@ class StorageClient extends $grpc.Client {
       ($2.QueryWriteStatusRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $2.QueryWriteStatusResponse.fromBuffer(value));
-  static final _$getServiceAccount =
-      $grpc.ClientMethod<$2.GetServiceAccountRequest, $2.ServiceAccount>(
-          '/google.storage.v2.Storage/GetServiceAccount',
-          ($2.GetServiceAccountRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $2.ServiceAccount.fromBuffer(value));
-  static final _$createHmacKey =
-      $grpc.ClientMethod<$2.CreateHmacKeyRequest, $2.CreateHmacKeyResponse>(
-          '/google.storage.v2.Storage/CreateHmacKey',
-          ($2.CreateHmacKeyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $2.CreateHmacKeyResponse.fromBuffer(value));
-  static final _$deleteHmacKey =
-      $grpc.ClientMethod<$2.DeleteHmacKeyRequest, $3.Empty>(
-          '/google.storage.v2.Storage/DeleteHmacKey',
-          ($2.DeleteHmacKeyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
-  static final _$getHmacKey =
-      $grpc.ClientMethod<$2.GetHmacKeyRequest, $2.HmacKeyMetadata>(
-          '/google.storage.v2.Storage/GetHmacKey',
-          ($2.GetHmacKeyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $2.HmacKeyMetadata.fromBuffer(value));
-  static final _$listHmacKeys =
-      $grpc.ClientMethod<$2.ListHmacKeysRequest, $2.ListHmacKeysResponse>(
-          '/google.storage.v2.Storage/ListHmacKeys',
-          ($2.ListHmacKeysRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $2.ListHmacKeysResponse.fromBuffer(value));
-  static final _$updateHmacKey =
-      $grpc.ClientMethod<$2.UpdateHmacKeyRequest, $2.HmacKeyMetadata>(
-          '/google.storage.v2.Storage/UpdateHmacKey',
-          ($2.UpdateHmacKeyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $2.HmacKeyMetadata.fromBuffer(value));
+  static final _$moveObject =
+      $grpc.ClientMethod<$2.MoveObjectRequest, $2.Object>(
+          '/google.storage.v2.Storage/MoveObject',
+          ($2.MoveObjectRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Object.fromBuffer(value));
 
   StorageClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -235,33 +208,6 @@ class StorageClient extends $grpc.Client {
     return $createUnaryCall(_$updateBucket, request, options: options);
   }
 
-  $grpc.ResponseFuture<$3.Empty> deleteNotificationConfig(
-      $2.DeleteNotificationConfigRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteNotificationConfig, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$2.NotificationConfig> getNotificationConfig(
-      $2.GetNotificationConfigRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getNotificationConfig, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.NotificationConfig> createNotificationConfig(
-      $2.CreateNotificationConfigRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createNotificationConfig, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$2.ListNotificationConfigsResponse>
-      listNotificationConfigs($2.ListNotificationConfigsRequest request,
-          {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listNotificationConfigs, request,
-        options: options);
-  }
-
   $grpc.ResponseFuture<$2.Object> composeObject($2.ComposeObjectRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$composeObject, request, options: options);
@@ -270,6 +216,11 @@ class StorageClient extends $grpc.Client {
   $grpc.ResponseFuture<$3.Empty> deleteObject($2.DeleteObjectRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteObject, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Object> restoreObject($2.RestoreObjectRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$restoreObject, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.CancelResumableWriteResponse> cancelResumableWrite(
@@ -291,6 +242,12 @@ class StorageClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseStream<$2.BidiReadObjectResponse> bidiReadObject(
+      $async.Stream<$2.BidiReadObjectRequest> request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$bidiReadObject, request, options: options);
+  }
+
   $grpc.ResponseFuture<$2.Object> updateObject($2.UpdateObjectRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateObject, request, options: options);
@@ -301,6 +258,12 @@ class StorageClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$writeObject, request, options: options)
         .single;
+  }
+
+  $grpc.ResponseStream<$2.BidiWriteObjectResponse> bidiWriteObject(
+      $async.Stream<$2.BidiWriteObjectRequest> request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$bidiWriteObject, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.ListObjectsResponse> listObjects(
@@ -327,42 +290,13 @@ class StorageClient extends $grpc.Client {
     return $createUnaryCall(_$queryWriteStatus, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ServiceAccount> getServiceAccount(
-      $2.GetServiceAccountRequest request,
+  $grpc.ResponseFuture<$2.Object> moveObject($2.MoveObjectRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getServiceAccount, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.CreateHmacKeyResponse> createHmacKey(
-      $2.CreateHmacKeyRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createHmacKey, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$3.Empty> deleteHmacKey($2.DeleteHmacKeyRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deleteHmacKey, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.HmacKeyMetadata> getHmacKey(
-      $2.GetHmacKeyRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getHmacKey, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.ListHmacKeysResponse> listHmacKeys(
-      $2.ListHmacKeysRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listHmacKeys, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.HmacKeyMetadata> updateHmacKey(
-      $2.UpdateHmacKeyRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$updateHmacKey, request, options: options);
+    return $createUnaryCall(_$moveObject, request, options: options);
   }
 }
 
+@$pb.GrpcServiceName('google.storage.v2.Storage')
 abstract class StorageServiceBase extends $grpc.Service {
   $core.String get $name => 'google.storage.v2.Storage';
 
@@ -441,42 +375,6 @@ abstract class StorageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.UpdateBucketRequest.fromBuffer(value),
         ($2.Bucket value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$2.DeleteNotificationConfigRequest, $3.Empty>(
-            'DeleteNotificationConfig',
-            deleteNotificationConfig_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $2.DeleteNotificationConfigRequest.fromBuffer(value),
-            ($3.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetNotificationConfigRequest,
-            $2.NotificationConfig>(
-        'GetNotificationConfig',
-        getNotificationConfig_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.GetNotificationConfigRequest.fromBuffer(value),
-        ($2.NotificationConfig value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.CreateNotificationConfigRequest,
-            $2.NotificationConfig>(
-        'CreateNotificationConfig',
-        createNotificationConfig_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.CreateNotificationConfigRequest.fromBuffer(value),
-        ($2.NotificationConfig value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.ListNotificationConfigsRequest,
-            $2.ListNotificationConfigsResponse>(
-        'ListNotificationConfigs',
-        listNotificationConfigs_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.ListNotificationConfigsRequest.fromBuffer(value),
-        ($2.ListNotificationConfigsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.ComposeObjectRequest, $2.Object>(
         'ComposeObject',
         composeObject_Pre,
@@ -493,6 +391,14 @@ abstract class StorageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.DeleteObjectRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RestoreObjectRequest, $2.Object>(
+        'RestoreObject',
+        restoreObject_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RestoreObjectRequest.fromBuffer(value),
+        ($2.Object value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.CancelResumableWriteRequest,
             $2.CancelResumableWriteResponse>(
         'CancelResumableWrite',
@@ -516,6 +422,15 @@ abstract class StorageServiceBase extends $grpc.Service {
         true,
         ($core.List<$core.int> value) => $2.ReadObjectRequest.fromBuffer(value),
         ($2.ReadObjectResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.BidiReadObjectRequest,
+            $2.BidiReadObjectResponse>(
+        'BidiReadObject',
+        bidiReadObject,
+        true,
+        true,
+        ($core.List<$core.int> value) =>
+            $2.BidiReadObjectRequest.fromBuffer(value),
+        ($2.BidiReadObjectResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.UpdateObjectRequest, $2.Object>(
         'UpdateObject',
         updateObject_Pre,
@@ -533,6 +448,15 @@ abstract class StorageServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $2.WriteObjectRequest.fromBuffer(value),
             ($2.WriteObjectResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.BidiWriteObjectRequest,
+            $2.BidiWriteObjectResponse>(
+        'BidiWriteObject',
+        bidiWriteObject,
+        true,
+        true,
+        ($core.List<$core.int> value) =>
+            $2.BidiWriteObjectRequest.fromBuffer(value),
+        ($2.BidiWriteObjectResponse value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$2.ListObjectsRequest, $2.ListObjectsResponse>(
             'ListObjects',
@@ -568,56 +492,13 @@ abstract class StorageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.QueryWriteStatusRequest.fromBuffer(value),
         ($2.QueryWriteStatusResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$2.GetServiceAccountRequest, $2.ServiceAccount>(
-            'GetServiceAccount',
-            getServiceAccount_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $2.GetServiceAccountRequest.fromBuffer(value),
-            ($2.ServiceAccount value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$2.CreateHmacKeyRequest, $2.CreateHmacKeyResponse>(
-            'CreateHmacKey',
-            createHmacKey_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $2.CreateHmacKeyRequest.fromBuffer(value),
-            ($2.CreateHmacKeyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.DeleteHmacKeyRequest, $3.Empty>(
-        'DeleteHmacKey',
-        deleteHmacKey_Pre,
+    $addMethod($grpc.ServiceMethod<$2.MoveObjectRequest, $2.Object>(
+        'MoveObject',
+        moveObject_Pre,
         false,
         false,
-        ($core.List<$core.int> value) =>
-            $2.DeleteHmacKeyRequest.fromBuffer(value),
-        ($3.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetHmacKeyRequest, $2.HmacKeyMetadata>(
-        'GetHmacKey',
-        getHmacKey_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $2.GetHmacKeyRequest.fromBuffer(value),
-        ($2.HmacKeyMetadata value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$2.ListHmacKeysRequest, $2.ListHmacKeysResponse>(
-            'ListHmacKeys',
-            listHmacKeys_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $2.ListHmacKeysRequest.fromBuffer(value),
-            ($2.ListHmacKeysResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.UpdateHmacKeyRequest, $2.HmacKeyMetadata>(
-        'UpdateHmacKey',
-        updateHmacKey_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.UpdateHmacKeyRequest.fromBuffer(value),
-        ($2.HmacKeyMetadata value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $2.MoveObjectRequest.fromBuffer(value),
+        ($2.Object value) => value.writeToBuffer()));
   }
 
   $async.Future<$3.Empty> deleteBucket_Pre($grpc.ServiceCall call,
@@ -666,29 +547,6 @@ abstract class StorageServiceBase extends $grpc.Service {
     return updateBucket(call, await request);
   }
 
-  $async.Future<$3.Empty> deleteNotificationConfig_Pre($grpc.ServiceCall call,
-      $async.Future<$2.DeleteNotificationConfigRequest> request) async {
-    return deleteNotificationConfig(call, await request);
-  }
-
-  $async.Future<$2.NotificationConfig> getNotificationConfig_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$2.GetNotificationConfigRequest> request) async {
-    return getNotificationConfig(call, await request);
-  }
-
-  $async.Future<$2.NotificationConfig> createNotificationConfig_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$2.CreateNotificationConfigRequest> request) async {
-    return createNotificationConfig(call, await request);
-  }
-
-  $async.Future<$2.ListNotificationConfigsResponse> listNotificationConfigs_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$2.ListNotificationConfigsRequest> request) async {
-    return listNotificationConfigs(call, await request);
-  }
-
   $async.Future<$2.Object> composeObject_Pre($grpc.ServiceCall call,
       $async.Future<$2.ComposeObjectRequest> request) async {
     return composeObject(call, await request);
@@ -697,6 +555,11 @@ abstract class StorageServiceBase extends $grpc.Service {
   $async.Future<$3.Empty> deleteObject_Pre($grpc.ServiceCall call,
       $async.Future<$2.DeleteObjectRequest> request) async {
     return deleteObject(call, await request);
+  }
+
+  $async.Future<$2.Object> restoreObject_Pre($grpc.ServiceCall call,
+      $async.Future<$2.RestoreObjectRequest> request) async {
+    return restoreObject(call, await request);
   }
 
   $async.Future<$2.CancelResumableWriteResponse> cancelResumableWrite_Pre(
@@ -742,36 +605,9 @@ abstract class StorageServiceBase extends $grpc.Service {
     return queryWriteStatus(call, await request);
   }
 
-  $async.Future<$2.ServiceAccount> getServiceAccount_Pre($grpc.ServiceCall call,
-      $async.Future<$2.GetServiceAccountRequest> request) async {
-    return getServiceAccount(call, await request);
-  }
-
-  $async.Future<$2.CreateHmacKeyResponse> createHmacKey_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$2.CreateHmacKeyRequest> request) async {
-    return createHmacKey(call, await request);
-  }
-
-  $async.Future<$3.Empty> deleteHmacKey_Pre($grpc.ServiceCall call,
-      $async.Future<$2.DeleteHmacKeyRequest> request) async {
-    return deleteHmacKey(call, await request);
-  }
-
-  $async.Future<$2.HmacKeyMetadata> getHmacKey_Pre($grpc.ServiceCall call,
-      $async.Future<$2.GetHmacKeyRequest> request) async {
-    return getHmacKey(call, await request);
-  }
-
-  $async.Future<$2.ListHmacKeysResponse> listHmacKeys_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$2.ListHmacKeysRequest> request) async {
-    return listHmacKeys(call, await request);
-  }
-
-  $async.Future<$2.HmacKeyMetadata> updateHmacKey_Pre($grpc.ServiceCall call,
-      $async.Future<$2.UpdateHmacKeyRequest> request) async {
-    return updateHmacKey(call, await request);
+  $async.Future<$2.Object> moveObject_Pre($grpc.ServiceCall call,
+      $async.Future<$2.MoveObjectRequest> request) async {
+    return moveObject(call, await request);
   }
 
   $async.Future<$3.Empty> deleteBucket(
@@ -792,28 +628,26 @@ abstract class StorageServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
   $async.Future<$2.Bucket> updateBucket(
       $grpc.ServiceCall call, $2.UpdateBucketRequest request);
-  $async.Future<$3.Empty> deleteNotificationConfig(
-      $grpc.ServiceCall call, $2.DeleteNotificationConfigRequest request);
-  $async.Future<$2.NotificationConfig> getNotificationConfig(
-      $grpc.ServiceCall call, $2.GetNotificationConfigRequest request);
-  $async.Future<$2.NotificationConfig> createNotificationConfig(
-      $grpc.ServiceCall call, $2.CreateNotificationConfigRequest request);
-  $async.Future<$2.ListNotificationConfigsResponse> listNotificationConfigs(
-      $grpc.ServiceCall call, $2.ListNotificationConfigsRequest request);
   $async.Future<$2.Object> composeObject(
       $grpc.ServiceCall call, $2.ComposeObjectRequest request);
   $async.Future<$3.Empty> deleteObject(
       $grpc.ServiceCall call, $2.DeleteObjectRequest request);
+  $async.Future<$2.Object> restoreObject(
+      $grpc.ServiceCall call, $2.RestoreObjectRequest request);
   $async.Future<$2.CancelResumableWriteResponse> cancelResumableWrite(
       $grpc.ServiceCall call, $2.CancelResumableWriteRequest request);
   $async.Future<$2.Object> getObject(
       $grpc.ServiceCall call, $2.GetObjectRequest request);
   $async.Stream<$2.ReadObjectResponse> readObject(
       $grpc.ServiceCall call, $2.ReadObjectRequest request);
+  $async.Stream<$2.BidiReadObjectResponse> bidiReadObject(
+      $grpc.ServiceCall call, $async.Stream<$2.BidiReadObjectRequest> request);
   $async.Future<$2.Object> updateObject(
       $grpc.ServiceCall call, $2.UpdateObjectRequest request);
   $async.Future<$2.WriteObjectResponse> writeObject(
       $grpc.ServiceCall call, $async.Stream<$2.WriteObjectRequest> request);
+  $async.Stream<$2.BidiWriteObjectResponse> bidiWriteObject(
+      $grpc.ServiceCall call, $async.Stream<$2.BidiWriteObjectRequest> request);
   $async.Future<$2.ListObjectsResponse> listObjects(
       $grpc.ServiceCall call, $2.ListObjectsRequest request);
   $async.Future<$2.RewriteResponse> rewriteObject(
@@ -822,16 +656,6 @@ abstract class StorageServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.StartResumableWriteRequest request);
   $async.Future<$2.QueryWriteStatusResponse> queryWriteStatus(
       $grpc.ServiceCall call, $2.QueryWriteStatusRequest request);
-  $async.Future<$2.ServiceAccount> getServiceAccount(
-      $grpc.ServiceCall call, $2.GetServiceAccountRequest request);
-  $async.Future<$2.CreateHmacKeyResponse> createHmacKey(
-      $grpc.ServiceCall call, $2.CreateHmacKeyRequest request);
-  $async.Future<$3.Empty> deleteHmacKey(
-      $grpc.ServiceCall call, $2.DeleteHmacKeyRequest request);
-  $async.Future<$2.HmacKeyMetadata> getHmacKey(
-      $grpc.ServiceCall call, $2.GetHmacKeyRequest request);
-  $async.Future<$2.ListHmacKeysResponse> listHmacKeys(
-      $grpc.ServiceCall call, $2.ListHmacKeysRequest request);
-  $async.Future<$2.HmacKeyMetadata> updateHmacKey(
-      $grpc.ServiceCall call, $2.UpdateHmacKeyRequest request);
+  $async.Future<$2.Object> moveObject(
+      $grpc.ServiceCall call, $2.MoveObjectRequest request);
 }

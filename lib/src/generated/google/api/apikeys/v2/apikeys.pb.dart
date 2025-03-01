@@ -1,69 +1,58 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/apikeys/v2/apikeys.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $3;
 import '../../../protobuf/field_mask.pb.dart' as $4;
+import 'resources.pb.dart' as $3;
 
+/// Request message for `CreateKey` method.
 class CreateKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateKeyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$3.Key>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key',
-        subBuilder: $3.Key.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyId')
-    ..hasRequiredFields = false;
-
-  CreateKeyRequest._() : super();
   factory CreateKeyRequest({
     $core.String? parent,
     $3.Key? key,
     $core.String? keyId,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (keyId != null) {
-      _result.keyId = keyId;
+      $result.keyId = keyId;
     }
-    return _result;
+    return $result;
   }
+  CreateKeyRequest._() : super();
   factory CreateKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$3.Key>(2, _omitFieldNames ? '' : 'key', subBuilder: $3.Key.create)
+    ..aOS(3, _omitFieldNames ? '' : 'keyId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -73,8 +62,10 @@ class CreateKeyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateKeyRequest copyWith(void Function(CreateKeyRequest) updates) =>
       super.copyWith((message) => updates(message as CreateKeyRequest))
-          as CreateKeyRequest; // ignore: deprecated_member_use
+          as CreateKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateKeyRequest create() => CreateKeyRequest._();
   CreateKeyRequest createEmptyInstance() => create();
@@ -85,6 +76,7 @@ class CreateKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateKeyRequest>(create);
   static CreateKeyRequest? _defaultInstance;
 
+  /// Required. The project in which the API key is created.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -97,6 +89,9 @@ class CreateKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The API key fields to set at creation time.
+  /// You can configure only the `display_name`, `restrictions`, and
+  /// `annotations` fields.
   @$pb.TagNumber(2)
   $3.Key get key => $_getN(1);
   @$pb.TagNumber(2)
@@ -111,6 +106,15 @@ class CreateKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.Key ensureKey() => $_ensure(1);
 
+  ///  User specified key id (optional). If specified, it will become the final
+  ///  component of the key resource name.
+  ///
+  ///  The id must be unique within the project, must conform with RFC-1034,
+  ///  is restricted to lower-cased letters, and has a maximum length of 63
+  ///  characters. In another word, the id must match the regular
+  ///  expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
+  ///
+  ///  The id must NOT be a UUID-like string.
   @$pb.TagNumber(3)
   $core.String get keyId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -124,67 +128,48 @@ class CreateKeyRequest extends $pb.GeneratedMessage {
   void clearKeyId() => clearField(3);
 }
 
+/// Request message for `ListKeys` method.
 class ListKeysRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListKeysRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOB(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'showDeleted')
-    ..hasRequiredFields = false;
-
-  ListKeysRequest._() : super();
   factory ListKeysRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     $core.bool? showDeleted,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (showDeleted != null) {
-      _result.showDeleted = showDeleted;
+      $result.showDeleted = showDeleted;
     }
-    return _result;
+    return $result;
   }
+  ListKeysRequest._() : super();
   factory ListKeysRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListKeysRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListKeysRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOB(6, _omitFieldNames ? '' : 'showDeleted')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -194,8 +179,10 @@ class ListKeysRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListKeysRequest copyWith(void Function(ListKeysRequest) updates) =>
       super.copyWith((message) => updates(message as ListKeysRequest))
-          as ListKeysRequest; // ignore: deprecated_member_use
+          as ListKeysRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListKeysRequest create() => ListKeysRequest._();
   ListKeysRequest createEmptyInstance() => create();
@@ -206,6 +193,7 @@ class ListKeysRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListKeysRequest>(create);
   static ListKeysRequest? _defaultInstance;
 
+  /// Required. Lists all API keys associated with this project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -218,6 +206,7 @@ class ListKeysRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Optional. Specifies the maximum number of results to be returned at a time.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -230,6 +219,7 @@ class ListKeysRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional. Requests a specific page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -242,6 +232,8 @@ class ListKeysRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Optional. Indicate that keys deleted in the past 30 days should also be
+  /// returned.
   @$pb.TagNumber(6)
   $core.bool get showDeleted => $_getBF(3);
   @$pb.TagNumber(6)
@@ -255,50 +247,39 @@ class ListKeysRequest extends $pb.GeneratedMessage {
   void clearShowDeleted() => clearField(6);
 }
 
+/// Response message for `ListKeys` method.
 class ListKeysResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListKeysResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..pc<$3.Key>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keys',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.Key.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListKeysResponse._() : super();
   factory ListKeysResponse({
     $core.Iterable<$3.Key>? keys,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (keys != null) {
-      _result.keys.addAll(keys);
+      $result.keys.addAll(keys);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListKeysResponse._() : super();
   factory ListKeysResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListKeysResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListKeysResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..pc<$3.Key>(1, _omitFieldNames ? '' : 'keys', $pb.PbFieldType.PM,
+        subBuilder: $3.Key.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -308,8 +289,10 @@ class ListKeysResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListKeysResponse copyWith(void Function(ListKeysResponse) updates) =>
       super.copyWith((message) => updates(message as ListKeysResponse))
-          as ListKeysResponse; // ignore: deprecated_member_use
+          as ListKeysResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListKeysResponse create() => ListKeysResponse._();
   ListKeysResponse createEmptyInstance() => create();
@@ -320,9 +303,11 @@ class ListKeysResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListKeysResponse>(create);
   static ListKeysResponse? _defaultInstance;
 
+  /// A list of API keys.
   @$pb.TagNumber(1)
   $core.List<$3.Key> get keys => $_getList(0);
 
+  /// The pagination token for the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -336,39 +321,33 @@ class ListKeysResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `GetKey` method.
 class GetKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetKeyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetKeyRequest._() : super();
   factory GetKeyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetKeyRequest._() : super();
   factory GetKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -378,8 +357,10 @@ class GetKeyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetKeyRequest copyWith(void Function(GetKeyRequest) updates) =>
       super.copyWith((message) => updates(message as GetKeyRequest))
-          as GetKeyRequest; // ignore: deprecated_member_use
+          as GetKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetKeyRequest create() => GetKeyRequest._();
   GetKeyRequest createEmptyInstance() => create();
@@ -390,6 +371,7 @@ class GetKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetKeyRequest>(create);
   static GetKeyRequest? _defaultInstance;
 
+  /// Required. The resource name of the API key to get.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -403,39 +385,33 @@ class GetKeyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `GetKeyString` method.
 class GetKeyStringRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetKeyStringRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetKeyStringRequest._() : super();
   factory GetKeyStringRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetKeyStringRequest._() : super();
   factory GetKeyStringRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetKeyStringRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetKeyStringRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -445,8 +421,10 @@ class GetKeyStringRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetKeyStringRequest copyWith(void Function(GetKeyStringRequest) updates) =>
       super.copyWith((message) => updates(message as GetKeyStringRequest))
-          as GetKeyStringRequest; // ignore: deprecated_member_use
+          as GetKeyStringRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetKeyStringRequest create() => GetKeyStringRequest._();
   GetKeyStringRequest createEmptyInstance() => create();
@@ -457,6 +435,7 @@ class GetKeyStringRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetKeyStringRequest>(create);
   static GetKeyStringRequest? _defaultInstance;
 
+  /// Required. The resource name of the API key to be retrieved.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -470,39 +449,33 @@ class GetKeyStringRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Response message for `GetKeyString` method.
 class GetKeyStringResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetKeyStringResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyString')
-    ..hasRequiredFields = false;
-
-  GetKeyStringResponse._() : super();
   factory GetKeyStringResponse({
     $core.String? keyString,
   }) {
-    final _result = create();
+    final $result = create();
     if (keyString != null) {
-      _result.keyString = keyString;
+      $result.keyString = keyString;
     }
-    return _result;
+    return $result;
   }
+  GetKeyStringResponse._() : super();
   factory GetKeyStringResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetKeyStringResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetKeyStringResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'keyString')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -513,8 +486,10 @@ class GetKeyStringResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetKeyStringResponse copyWith(void Function(GetKeyStringResponse) updates) =>
       super.copyWith((message) => updates(message as GetKeyStringResponse))
-          as GetKeyStringResponse; // ignore: deprecated_member_use
+          as GetKeyStringResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetKeyStringResponse create() => GetKeyStringResponse._();
   GetKeyStringResponse createEmptyInstance() => create();
@@ -525,6 +500,7 @@ class GetKeyStringResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetKeyStringResponse>(create);
   static GetKeyStringResponse? _defaultInstance;
 
+  /// An encrypted and signed value of the key.
   @$pb.TagNumber(1)
   $core.String get keyString => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -538,50 +514,39 @@ class GetKeyStringResponse extends $pb.GeneratedMessage {
   void clearKeyString() => clearField(1);
 }
 
+/// Request message for `UpdateKey` method.
 class UpdateKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateKeyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOM<$3.Key>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key',
-        subBuilder: $3.Key.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateKeyRequest._() : super();
   factory UpdateKeyRequest({
     $3.Key? key,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateKeyRequest._() : super();
   factory UpdateKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOM<$3.Key>(1, _omitFieldNames ? '' : 'key', subBuilder: $3.Key.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -591,8 +556,10 @@ class UpdateKeyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateKeyRequest copyWith(void Function(UpdateKeyRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateKeyRequest))
-          as UpdateKeyRequest; // ignore: deprecated_member_use
+          as UpdateKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateKeyRequest create() => UpdateKeyRequest._();
   UpdateKeyRequest createEmptyInstance() => create();
@@ -603,6 +570,9 @@ class UpdateKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateKeyRequest>(create);
   static UpdateKeyRequest? _defaultInstance;
 
+  /// Required. Set the `name` field to the resource name of the API key to be
+  /// updated. You can update only the `display_name`, `restrictions`, and
+  /// `annotations` fields.
   @$pb.TagNumber(1)
   $3.Key get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -617,6 +587,13 @@ class UpdateKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.Key ensureKey() => $_ensure(0);
 
+  /// The field mask specifies which fields to be updated as part of this
+  /// request. All other fields are ignored.
+  /// Mutable fields are: `display_name`, `restrictions`, and `annotations`.
+  /// If an update mask is not provided, the service treats it as an implied mask
+  /// equivalent to all allowed fields that are set on the wire. If the field
+  /// mask has a special value "*", the service treats it equivalent to replace
+  /// all allowed mutable fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -632,48 +609,38 @@ class UpdateKeyRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for `DeleteKey` method.
 class DeleteKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteKeyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  DeleteKeyRequest._() : super();
   factory DeleteKeyRequest({
     $core.String? name,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  DeleteKeyRequest._() : super();
   factory DeleteKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -683,8 +650,10 @@ class DeleteKeyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteKeyRequest copyWith(void Function(DeleteKeyRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteKeyRequest))
-          as DeleteKeyRequest; // ignore: deprecated_member_use
+          as DeleteKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteKeyRequest create() => DeleteKeyRequest._();
   DeleteKeyRequest createEmptyInstance() => create();
@@ -695,6 +664,7 @@ class DeleteKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteKeyRequest>(create);
   static DeleteKeyRequest? _defaultInstance;
 
+  /// Required. The resource name of the API key to be deleted.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -707,6 +677,8 @@ class DeleteKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Optional. The etag known to the client for the expected state of the key.
+  /// This is to be used for optimistic concurrency.
   @$pb.TagNumber(2)
   $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -720,39 +692,33 @@ class DeleteKeyRequest extends $pb.GeneratedMessage {
   void clearEtag() => clearField(2);
 }
 
+/// Request message for `UndeleteKey` method.
 class UndeleteKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteKeyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  UndeleteKeyRequest._() : super();
   factory UndeleteKeyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  UndeleteKeyRequest._() : super();
   factory UndeleteKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -762,8 +728,10 @@ class UndeleteKeyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UndeleteKeyRequest copyWith(void Function(UndeleteKeyRequest) updates) =>
       super.copyWith((message) => updates(message as UndeleteKeyRequest))
-          as UndeleteKeyRequest; // ignore: deprecated_member_use
+          as UndeleteKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteKeyRequest create() => UndeleteKeyRequest._();
   UndeleteKeyRequest createEmptyInstance() => create();
@@ -774,6 +742,7 @@ class UndeleteKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteKeyRequest>(create);
   static UndeleteKeyRequest? _defaultInstance;
 
+  /// Required. The resource name of the API key to be undeleted.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -787,39 +756,33 @@ class UndeleteKeyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `LookupKey` method.
 class LookupKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LookupKeyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyString')
-    ..hasRequiredFields = false;
-
-  LookupKeyRequest._() : super();
   factory LookupKeyRequest({
     $core.String? keyString,
   }) {
-    final _result = create();
+    final $result = create();
     if (keyString != null) {
-      _result.keyString = keyString;
+      $result.keyString = keyString;
     }
-    return _result;
+    return $result;
   }
+  LookupKeyRequest._() : super();
   factory LookupKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LookupKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LookupKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'keyString')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -829,8 +792,10 @@ class LookupKeyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LookupKeyRequest copyWith(void Function(LookupKeyRequest) updates) =>
       super.copyWith((message) => updates(message as LookupKeyRequest))
-          as LookupKeyRequest; // ignore: deprecated_member_use
+          as LookupKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LookupKeyRequest create() => LookupKeyRequest._();
   LookupKeyRequest createEmptyInstance() => create();
@@ -841,6 +806,7 @@ class LookupKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LookupKeyRequest>(create);
   static LookupKeyRequest? _defaultInstance;
 
+  /// Required. Finds the project that owns the key string value.
   @$pb.TagNumber(1)
   $core.String get keyString => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -854,48 +820,38 @@ class LookupKeyRequest extends $pb.GeneratedMessage {
   void clearKeyString() => clearField(1);
 }
 
+/// Response message for `LookupKey` method.
 class LookupKeyResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LookupKeyResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.apikeys.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  LookupKeyResponse._() : super();
   factory LookupKeyResponse({
     $core.String? parent,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  LookupKeyResponse._() : super();
   factory LookupKeyResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LookupKeyResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LookupKeyResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.apikeys.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -905,8 +861,10 @@ class LookupKeyResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LookupKeyResponse copyWith(void Function(LookupKeyResponse) updates) =>
       super.copyWith((message) => updates(message as LookupKeyResponse))
-          as LookupKeyResponse; // ignore: deprecated_member_use
+          as LookupKeyResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LookupKeyResponse create() => LookupKeyResponse._();
   LookupKeyResponse createEmptyInstance() => create();
@@ -917,6 +875,7 @@ class LookupKeyResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LookupKeyResponse>(create);
   static LookupKeyResponse? _defaultInstance;
 
+  /// The project that owns the key with the value specified in the request.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -929,6 +888,8 @@ class LookupKeyResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The resource name of the API key. If the API key has been purged,
+  /// resource name is empty.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -941,3 +902,7 @@ class LookupKeyResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

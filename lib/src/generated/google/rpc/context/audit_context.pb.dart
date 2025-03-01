@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/rpc/context/audit_context.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,48 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../protobuf/struct.pb.dart' as $0;
 
+/// `AuditContext` provides information that is needed for audit logging.
 class AuditContext extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AuditContext',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.rpc.context'),
-      createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'auditLog',
-        $pb.PbFieldType.OY)
-    ..aOM<$0.Struct>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scrubbedRequest',
-        subBuilder: $0.Struct.create)
-    ..aOM<$0.Struct>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scrubbedResponse',
-        subBuilder: $0.Struct.create)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scrubbedResponseItemCount',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'targetResource')
-    ..hasRequiredFields = false;
-
-  AuditContext._() : super();
   factory AuditContext({
     $core.List<$core.int>? auditLog,
     $0.Struct? scrubbedRequest,
@@ -60,30 +24,48 @@ class AuditContext extends $pb.GeneratedMessage {
     $core.int? scrubbedResponseItemCount,
     $core.String? targetResource,
   }) {
-    final _result = create();
+    final $result = create();
     if (auditLog != null) {
-      _result.auditLog = auditLog;
+      $result.auditLog = auditLog;
     }
     if (scrubbedRequest != null) {
-      _result.scrubbedRequest = scrubbedRequest;
+      $result.scrubbedRequest = scrubbedRequest;
     }
     if (scrubbedResponse != null) {
-      _result.scrubbedResponse = scrubbedResponse;
+      $result.scrubbedResponse = scrubbedResponse;
     }
     if (scrubbedResponseItemCount != null) {
-      _result.scrubbedResponseItemCount = scrubbedResponseItemCount;
+      $result.scrubbedResponseItemCount = scrubbedResponseItemCount;
     }
     if (targetResource != null) {
-      _result.targetResource = targetResource;
+      $result.targetResource = targetResource;
     }
-    return _result;
+    return $result;
   }
+  AuditContext._() : super();
   factory AuditContext.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AuditContext.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AuditContext',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.rpc.context'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'auditLog', $pb.PbFieldType.OY)
+    ..aOM<$0.Struct>(2, _omitFieldNames ? '' : 'scrubbedRequest',
+        subBuilder: $0.Struct.create)
+    ..aOM<$0.Struct>(3, _omitFieldNames ? '' : 'scrubbedResponse',
+        subBuilder: $0.Struct.create)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'scrubbedResponseItemCount',
+        $pb.PbFieldType.O3)
+    ..aOS(5, _omitFieldNames ? '' : 'targetResource')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -93,8 +75,10 @@ class AuditContext extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AuditContext copyWith(void Function(AuditContext) updates) =>
       super.copyWith((message) => updates(message as AuditContext))
-          as AuditContext; // ignore: deprecated_member_use
+          as AuditContext;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AuditContext create() => AuditContext._();
   AuditContext createEmptyInstance() => create();
@@ -105,6 +89,7 @@ class AuditContext extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AuditContext>(create);
   static AuditContext? _defaultInstance;
 
+  /// Serialized audit log.
   @$pb.TagNumber(1)
   $core.List<$core.int> get auditLog => $_getN(0);
   @$pb.TagNumber(1)
@@ -117,6 +102,10 @@ class AuditContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAuditLog() => clearField(1);
 
+  /// An API request message that is scrubbed based on the method annotation.
+  /// This field should only be filled if audit_log field is present.
+  /// Service Control will use this to assemble a complete log for Cloud Audit
+  /// Logs and Google internal audit logs.
   @$pb.TagNumber(2)
   $0.Struct get scrubbedRequest => $_getN(1);
   @$pb.TagNumber(2)
@@ -131,6 +120,10 @@ class AuditContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Struct ensureScrubbedRequest() => $_ensure(1);
 
+  /// An API response message that is scrubbed based on the method annotation.
+  /// This field should only be filled if audit_log field is present.
+  /// Service Control will use this to assemble a complete log for Cloud Audit
+  /// Logs and Google internal audit logs.
   @$pb.TagNumber(3)
   $0.Struct get scrubbedResponse => $_getN(2);
   @$pb.TagNumber(3)
@@ -145,6 +138,7 @@ class AuditContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Struct ensureScrubbedResponse() => $_ensure(2);
 
+  /// Number of scrubbed response items.
   @$pb.TagNumber(4)
   $core.int get scrubbedResponseItemCount => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -157,6 +151,7 @@ class AuditContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearScrubbedResponseItemCount() => clearField(4);
 
+  /// Audit resource name which is scrubbed.
   @$pb.TagNumber(5)
   $core.String get targetResource => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -169,3 +164,7 @@ class AuditContext extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearTargetResource() => clearField(5);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

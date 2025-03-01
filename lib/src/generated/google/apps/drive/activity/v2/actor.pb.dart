@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/activity/v2/actor.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -22,7 +26,41 @@ enum Actor_Type {
   notSet
 }
 
+/// The actor of a Drive activity.
 class Actor extends $pb.GeneratedMessage {
+  factory Actor({
+    User? user,
+    AnonymousUser? anonymous,
+    Impersonation? impersonation,
+    SystemEvent? system,
+    Administrator? administrator,
+  }) {
+    final $result = create();
+    if (user != null) {
+      $result.user = user;
+    }
+    if (anonymous != null) {
+      $result.anonymous = anonymous;
+    }
+    if (impersonation != null) {
+      $result.impersonation = impersonation;
+    }
+    if (system != null) {
+      $result.system = system;
+    }
+    if (administrator != null) {
+      $result.administrator = administrator;
+    }
+    return $result;
+  }
+  Actor._() : super();
+  factory Actor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Actor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Actor_Type> _Actor_TypeByTag = {
     1: Actor_Type.user,
     2: Actor_Type.anonymous,
@@ -32,79 +70,22 @@ class Actor extends $pb.GeneratedMessage {
     0: Actor_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actor',
+      _omitMessageNames ? '' : 'Actor',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5])
-    ..aOM<User>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'user',
-        subBuilder: User.create)
-    ..aOM<AnonymousUser>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'anonymous',
+    ..aOM<User>(1, _omitFieldNames ? '' : 'user', subBuilder: User.create)
+    ..aOM<AnonymousUser>(2, _omitFieldNames ? '' : 'anonymous',
         subBuilder: AnonymousUser.create)
-    ..aOM<Impersonation>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'impersonation',
+    ..aOM<Impersonation>(3, _omitFieldNames ? '' : 'impersonation',
         subBuilder: Impersonation.create)
-    ..aOM<SystemEvent>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'system',
+    ..aOM<SystemEvent>(4, _omitFieldNames ? '' : 'system',
         subBuilder: SystemEvent.create)
-    ..aOM<Administrator>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'administrator',
+    ..aOM<Administrator>(5, _omitFieldNames ? '' : 'administrator',
         subBuilder: Administrator.create)
     ..hasRequiredFields = false;
 
-  Actor._() : super();
-  factory Actor({
-    User? user,
-    AnonymousUser? anonymous,
-    Impersonation? impersonation,
-    SystemEvent? system,
-    Administrator? administrator,
-  }) {
-    final _result = create();
-    if (user != null) {
-      _result.user = user;
-    }
-    if (anonymous != null) {
-      _result.anonymous = anonymous;
-    }
-    if (impersonation != null) {
-      _result.impersonation = impersonation;
-    }
-    if (system != null) {
-      _result.system = system;
-    }
-    if (administrator != null) {
-      _result.administrator = administrator;
-    }
-    return _result;
-  }
-  factory Actor.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Actor.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -113,9 +94,10 @@ class Actor extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Actor copyWith(void Function(Actor) updates) =>
-      super.copyWith((message) => updates(message as Actor))
-          as Actor; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Actor)) as Actor;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actor create() => Actor._();
   Actor createEmptyInstance() => create();
@@ -128,6 +110,7 @@ class Actor extends $pb.GeneratedMessage {
   Actor_Type whichType() => _Actor_TypeByTag[$_whichOneof(0)]!;
   void clearType() => clearField($_whichOneof(0));
 
+  /// An end user.
   @$pb.TagNumber(1)
   User get user => $_getN(0);
   @$pb.TagNumber(1)
@@ -142,6 +125,7 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   User ensureUser() => $_ensure(0);
 
+  /// An anonymous user.
   @$pb.TagNumber(2)
   AnonymousUser get anonymous => $_getN(1);
   @$pb.TagNumber(2)
@@ -156,6 +140,7 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AnonymousUser ensureAnonymous() => $_ensure(1);
 
+  /// An account acting on behalf of another.
   @$pb.TagNumber(3)
   Impersonation get impersonation => $_getN(2);
   @$pb.TagNumber(3)
@@ -170,6 +155,7 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Impersonation ensureImpersonation() => $_ensure(2);
 
+  /// A non-user actor (i.e. system triggered).
   @$pb.TagNumber(4)
   SystemEvent get system => $_getN(3);
   @$pb.TagNumber(4)
@@ -184,6 +170,7 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   SystemEvent ensureSystem() => $_ensure(3);
 
+  /// An administrator.
   @$pb.TagNumber(5)
   Administrator get administrator => $_getN(4);
   @$pb.TagNumber(5)
@@ -199,48 +186,38 @@ class Actor extends $pb.GeneratedMessage {
   Administrator ensureAdministrator() => $_ensure(4);
 }
 
+/// A known user.
 class User_KnownUser extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'User.KnownUser',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'personName')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'isCurrentUser')
-    ..hasRequiredFields = false;
-
-  User_KnownUser._() : super();
   factory User_KnownUser({
     $core.String? personName,
     $core.bool? isCurrentUser,
   }) {
-    final _result = create();
+    final $result = create();
     if (personName != null) {
-      _result.personName = personName;
+      $result.personName = personName;
     }
     if (isCurrentUser != null) {
-      _result.isCurrentUser = isCurrentUser;
+      $result.isCurrentUser = isCurrentUser;
     }
-    return _result;
+    return $result;
   }
+  User_KnownUser._() : super();
   factory User_KnownUser.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory User_KnownUser.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'User.KnownUser',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'personName')
+    ..aOB(2, _omitFieldNames ? '' : 'isCurrentUser')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -250,8 +227,10 @@ class User_KnownUser extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   User_KnownUser copyWith(void Function(User_KnownUser) updates) =>
       super.copyWith((message) => updates(message as User_KnownUser))
-          as User_KnownUser; // ignore: deprecated_member_use
+          as User_KnownUser;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static User_KnownUser create() => User_KnownUser._();
   User_KnownUser createEmptyInstance() => create();
@@ -262,6 +241,9 @@ class User_KnownUser extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<User_KnownUser>(create);
   static User_KnownUser? _defaultInstance;
 
+  /// The identifier for this user that can be used with the People API to get
+  /// more information. The format is `people/ACCOUNT_ID`. See
+  /// https://developers.google.com/people/.
   @$pb.TagNumber(1)
   $core.String get personName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -274,6 +256,7 @@ class User_KnownUser extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPersonName() => clearField(1);
 
+  /// True if this is the user making the request.
   @$pb.TagNumber(2)
   $core.bool get isCurrentUser => $_getBF(1);
   @$pb.TagNumber(2)
@@ -287,26 +270,24 @@ class User_KnownUser extends $pb.GeneratedMessage {
   void clearIsCurrentUser() => clearField(2);
 }
 
+/// A user whose account has since been deleted.
 class User_DeletedUser extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'User.DeletedUser',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  User_DeletedUser._() : super();
   factory User_DeletedUser() => create();
+  User_DeletedUser._() : super();
   factory User_DeletedUser.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory User_DeletedUser.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'User.DeletedUser',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -316,8 +297,10 @@ class User_DeletedUser extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   User_DeletedUser copyWith(void Function(User_DeletedUser) updates) =>
       super.copyWith((message) => updates(message as User_DeletedUser))
-          as User_DeletedUser; // ignore: deprecated_member_use
+          as User_DeletedUser;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static User_DeletedUser create() => User_DeletedUser._();
   User_DeletedUser createEmptyInstance() => create();
@@ -329,26 +312,24 @@ class User_DeletedUser extends $pb.GeneratedMessage {
   static User_DeletedUser? _defaultInstance;
 }
 
+/// A user about whom nothing is currently known.
 class User_UnknownUser extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'User.UnknownUser',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  User_UnknownUser._() : super();
   factory User_UnknownUser() => create();
+  User_UnknownUser._() : super();
   factory User_UnknownUser.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory User_UnknownUser.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'User.UnknownUser',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -358,8 +339,10 @@ class User_UnknownUser extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   User_UnknownUser copyWith(void Function(User_UnknownUser) updates) =>
       super.copyWith((message) => updates(message as User_UnknownUser))
-          as User_UnknownUser; // ignore: deprecated_member_use
+          as User_UnknownUser;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static User_UnknownUser create() => User_UnknownUser._();
   User_UnknownUser createEmptyInstance() => create();
@@ -373,7 +356,33 @@ class User_UnknownUser extends $pb.GeneratedMessage {
 
 enum User_Type { knownUser, deletedUser, unknownUser, notSet }
 
+/// Information about an end user.
 class User extends $pb.GeneratedMessage {
+  factory User({
+    User_KnownUser? knownUser,
+    User_DeletedUser? deletedUser,
+    User_UnknownUser? unknownUser,
+  }) {
+    final $result = create();
+    if (knownUser != null) {
+      $result.knownUser = knownUser;
+    }
+    if (deletedUser != null) {
+      $result.deletedUser = deletedUser;
+    }
+    if (unknownUser != null) {
+      $result.unknownUser = unknownUser;
+    }
+    return $result;
+  }
+  User._() : super();
+  factory User.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory User.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, User_Type> _User_TypeByTag = {
     2: User_Type.knownUser,
     3: User_Type.deletedUser,
@@ -381,59 +390,19 @@ class User extends $pb.GeneratedMessage {
     0: User_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'User',
+      _omitMessageNames ? '' : 'User',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
-    ..aOM<User_KnownUser>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'knownUser',
+    ..aOM<User_KnownUser>(2, _omitFieldNames ? '' : 'knownUser',
         subBuilder: User_KnownUser.create)
-    ..aOM<User_DeletedUser>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deletedUser',
+    ..aOM<User_DeletedUser>(3, _omitFieldNames ? '' : 'deletedUser',
         subBuilder: User_DeletedUser.create)
-    ..aOM<User_UnknownUser>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'unknownUser',
+    ..aOM<User_UnknownUser>(4, _omitFieldNames ? '' : 'unknownUser',
         subBuilder: User_UnknownUser.create)
     ..hasRequiredFields = false;
 
-  User._() : super();
-  factory User({
-    User_KnownUser? knownUser,
-    User_DeletedUser? deletedUser,
-    User_UnknownUser? unknownUser,
-  }) {
-    final _result = create();
-    if (knownUser != null) {
-      _result.knownUser = knownUser;
-    }
-    if (deletedUser != null) {
-      _result.deletedUser = deletedUser;
-    }
-    if (unknownUser != null) {
-      _result.unknownUser = unknownUser;
-    }
-    return _result;
-  }
-  factory User.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory User.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -442,9 +411,10 @@ class User extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   User copyWith(void Function(User) updates) =>
-      super.copyWith((message) => updates(message as User))
-          as User; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as User)) as User;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static User create() => User._();
   User createEmptyInstance() => create();
@@ -457,6 +427,7 @@ class User extends $pb.GeneratedMessage {
   User_Type whichType() => _User_TypeByTag[$_whichOneof(0)]!;
   void clearType() => clearField($_whichOneof(0));
 
+  /// A known user.
   @$pb.TagNumber(2)
   User_KnownUser get knownUser => $_getN(0);
   @$pb.TagNumber(2)
@@ -471,6 +442,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   User_KnownUser ensureKnownUser() => $_ensure(0);
 
+  /// A user whose account has since been deleted.
   @$pb.TagNumber(3)
   User_DeletedUser get deletedUser => $_getN(1);
   @$pb.TagNumber(3)
@@ -485,6 +457,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   User_DeletedUser ensureDeletedUser() => $_ensure(1);
 
+  /// A user about whom nothing is currently known.
   @$pb.TagNumber(4)
   User_UnknownUser get unknownUser => $_getN(2);
   @$pb.TagNumber(4)
@@ -500,26 +473,25 @@ class User extends $pb.GeneratedMessage {
   User_UnknownUser ensureUnknownUser() => $_ensure(2);
 }
 
+/// Empty message representing an anonymous user or indicating the authenticated
+/// user should be anonymized.
 class AnonymousUser extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AnonymousUser',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  AnonymousUser._() : super();
   factory AnonymousUser() => create();
+  AnonymousUser._() : super();
   factory AnonymousUser.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AnonymousUser.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AnonymousUser',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -529,8 +501,10 @@ class AnonymousUser extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AnonymousUser copyWith(void Function(AnonymousUser) updates) =>
       super.copyWith((message) => updates(message as AnonymousUser))
-          as AnonymousUser; // ignore: deprecated_member_use
+          as AnonymousUser;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AnonymousUser create() => AnonymousUser._();
   AnonymousUser createEmptyInstance() => create();
@@ -542,40 +516,35 @@ class AnonymousUser extends $pb.GeneratedMessage {
   static AnonymousUser? _defaultInstance;
 }
 
+/// Information about an impersonation, where an admin acts on behalf of an end
+/// user. Information about the acting admin is not currently available.
 class Impersonation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Impersonation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..aOM<User>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'impersonatedUser',
-        subBuilder: User.create)
-    ..hasRequiredFields = false;
-
-  Impersonation._() : super();
   factory Impersonation({
     User? impersonatedUser,
   }) {
-    final _result = create();
+    final $result = create();
     if (impersonatedUser != null) {
-      _result.impersonatedUser = impersonatedUser;
+      $result.impersonatedUser = impersonatedUser;
     }
-    return _result;
+    return $result;
   }
+  Impersonation._() : super();
   factory Impersonation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Impersonation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Impersonation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOM<User>(1, _omitFieldNames ? '' : 'impersonatedUser',
+        subBuilder: User.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -585,8 +554,10 @@ class Impersonation extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Impersonation copyWith(void Function(Impersonation) updates) =>
       super.copyWith((message) => updates(message as Impersonation))
-          as Impersonation; // ignore: deprecated_member_use
+          as Impersonation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Impersonation create() => Impersonation._();
   Impersonation createEmptyInstance() => create();
@@ -597,6 +568,7 @@ class Impersonation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Impersonation>(create);
   static Impersonation? _defaultInstance;
 
+  /// The impersonated user.
   @$pb.TagNumber(1)
   User get impersonatedUser => $_getN(0);
   @$pb.TagNumber(1)
@@ -612,43 +584,36 @@ class Impersonation extends $pb.GeneratedMessage {
   User ensureImpersonatedUser() => $_ensure(0);
 }
 
+/// Event triggered by system operations instead of end users.
 class SystemEvent extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SystemEvent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..e<SystemEvent_Type>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: SystemEvent_Type.TYPE_UNSPECIFIED,
-        valueOf: SystemEvent_Type.valueOf,
-        enumValues: SystemEvent_Type.values)
-    ..hasRequiredFields = false;
-
-  SystemEvent._() : super();
   factory SystemEvent({
     SystemEvent_Type? type,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
-    return _result;
+    return $result;
   }
+  SystemEvent._() : super();
   factory SystemEvent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SystemEvent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SystemEvent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..e<SystemEvent_Type>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: SystemEvent_Type.TYPE_UNSPECIFIED,
+        valueOf: SystemEvent_Type.valueOf,
+        enumValues: SystemEvent_Type.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -658,8 +623,10 @@ class SystemEvent extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SystemEvent copyWith(void Function(SystemEvent) updates) =>
       super.copyWith((message) => updates(message as SystemEvent))
-          as SystemEvent; // ignore: deprecated_member_use
+          as SystemEvent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SystemEvent create() => SystemEvent._();
   SystemEvent createEmptyInstance() => create();
@@ -669,6 +636,7 @@ class SystemEvent extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SystemEvent>(create);
   static SystemEvent? _defaultInstance;
 
+  /// The type of the system event that may triggered activity.
   @$pb.TagNumber(1)
   SystemEvent_Type get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -682,26 +650,24 @@ class SystemEvent extends $pb.GeneratedMessage {
   void clearType() => clearField(1);
 }
 
+/// Empty message representing an administrator.
 class Administrator extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Administrator',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  Administrator._() : super();
   factory Administrator() => create();
+  Administrator._() : super();
   factory Administrator.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Administrator.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Administrator',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -711,8 +677,10 @@ class Administrator extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Administrator copyWith(void Function(Administrator) updates) =>
       super.copyWith((message) => updates(message as Administrator))
-          as Administrator; // ignore: deprecated_member_use
+          as Administrator;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Administrator create() => Administrator._();
   Administrator createEmptyInstance() => create();
@@ -723,3 +691,7 @@ class Administrator extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Administrator>(create);
   static Administrator? _defaultInstance;
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

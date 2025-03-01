@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/script/type/slides/slides_addon_manifest.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,50 +15,42 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../extension_point.pb.dart' as $0;
 
+/// Slides add-on manifest.
 class SlidesAddOnManifest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlidesAddOnManifest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.script.type.slides'),
-      createEmptyInstance: create)
-    ..aOM<$0.HomepageExtensionPoint>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'homepageTrigger',
-        subBuilder: $0.HomepageExtensionPoint.create)
-    ..aOM<SlidesExtensionPoint>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'onFileScopeGrantedTrigger',
-        subBuilder: SlidesExtensionPoint.create)
-    ..hasRequiredFields = false;
-
-  SlidesAddOnManifest._() : super();
   factory SlidesAddOnManifest({
     $0.HomepageExtensionPoint? homepageTrigger,
     SlidesExtensionPoint? onFileScopeGrantedTrigger,
   }) {
-    final _result = create();
+    final $result = create();
     if (homepageTrigger != null) {
-      _result.homepageTrigger = homepageTrigger;
+      $result.homepageTrigger = homepageTrigger;
     }
     if (onFileScopeGrantedTrigger != null) {
-      _result.onFileScopeGrantedTrigger = onFileScopeGrantedTrigger;
+      $result.onFileScopeGrantedTrigger = onFileScopeGrantedTrigger;
     }
-    return _result;
+    return $result;
   }
+  SlidesAddOnManifest._() : super();
   factory SlidesAddOnManifest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlidesAddOnManifest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlidesAddOnManifest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.script.type.slides'),
+      createEmptyInstance: create)
+    ..aOM<$0.HomepageExtensionPoint>(
+        1, _omitFieldNames ? '' : 'homepageTrigger',
+        subBuilder: $0.HomepageExtensionPoint.create)
+    ..aOM<SlidesExtensionPoint>(
+        2, _omitFieldNames ? '' : 'onFileScopeGrantedTrigger',
+        subBuilder: SlidesExtensionPoint.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -64,8 +60,10 @@ class SlidesAddOnManifest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SlidesAddOnManifest copyWith(void Function(SlidesAddOnManifest) updates) =>
       super.copyWith((message) => updates(message as SlidesAddOnManifest))
-          as SlidesAddOnManifest; // ignore: deprecated_member_use
+          as SlidesAddOnManifest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlidesAddOnManifest create() => SlidesAddOnManifest._();
   SlidesAddOnManifest createEmptyInstance() => create();
@@ -76,6 +74,8 @@ class SlidesAddOnManifest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SlidesAddOnManifest>(create);
   static SlidesAddOnManifest? _defaultInstance;
 
+  /// If present, this overrides the configuration from
+  /// `addOns.common.homepageTrigger`.
   @$pb.TagNumber(1)
   $0.HomepageExtensionPoint get homepageTrigger => $_getN(0);
   @$pb.TagNumber(1)
@@ -90,6 +90,8 @@ class SlidesAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.HomepageExtensionPoint ensureHomepageTrigger() => $_ensure(0);
 
+  /// Endpoint to execute when file scope authorization is granted
+  /// for this document/user pair.
   @$pb.TagNumber(2)
   SlidesExtensionPoint get onFileScopeGrantedTrigger => $_getN(1);
   @$pb.TagNumber(2)
@@ -105,39 +107,33 @@ class SlidesAddOnManifest extends $pb.GeneratedMessage {
   SlidesExtensionPoint ensureOnFileScopeGrantedTrigger() => $_ensure(1);
 }
 
+/// Common format for declaring a Slides add-on's triggers.
 class SlidesExtensionPoint extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlidesExtensionPoint',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.script.type.slides'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'runFunction')
-    ..hasRequiredFields = false;
-
-  SlidesExtensionPoint._() : super();
   factory SlidesExtensionPoint({
     $core.String? runFunction,
   }) {
-    final _result = create();
+    final $result = create();
     if (runFunction != null) {
-      _result.runFunction = runFunction;
+      $result.runFunction = runFunction;
     }
-    return _result;
+    return $result;
   }
+  SlidesExtensionPoint._() : super();
   factory SlidesExtensionPoint.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlidesExtensionPoint.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlidesExtensionPoint',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.script.type.slides'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'runFunction')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -148,8 +144,10 @@ class SlidesExtensionPoint extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SlidesExtensionPoint copyWith(void Function(SlidesExtensionPoint) updates) =>
       super.copyWith((message) => updates(message as SlidesExtensionPoint))
-          as SlidesExtensionPoint; // ignore: deprecated_member_use
+          as SlidesExtensionPoint;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlidesExtensionPoint create() => SlidesExtensionPoint._();
   SlidesExtensionPoint createEmptyInstance() => create();
@@ -160,6 +158,7 @@ class SlidesExtensionPoint extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SlidesExtensionPoint>(create);
   static SlidesExtensionPoint? _defaultInstance;
 
+  /// Required. The endpoint to execute when this extension point is activated.
   @$pb.TagNumber(1)
   $core.String get runFunction => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -172,3 +171,7 @@ class SlidesExtensionPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRunFunction() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

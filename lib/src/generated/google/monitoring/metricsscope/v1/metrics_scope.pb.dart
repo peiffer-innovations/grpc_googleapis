@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/metricsscope/v1/metrics_scope.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,70 +15,55 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
 
+/// Represents a [Metrics
+/// Scope](https://cloud.google.com/monitoring/settings#concept-scope) in Cloud
+/// Monitoring, which specifies one or more Google projects and zero or more AWS
+/// accounts to monitor together.
 class MetricsScope extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MetricsScope',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..pc<MonitoredProject>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoredProjects',
-        $pb.PbFieldType.PM,
-        subBuilder: MonitoredProject.create)
-    ..hasRequiredFields = false;
-
-  MetricsScope._() : super();
   factory MetricsScope({
     $core.String? name,
     $0.Timestamp? createTime,
     $0.Timestamp? updateTime,
     $core.Iterable<MonitoredProject>? monitoredProjects,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (monitoredProjects != null) {
-      _result.monitoredProjects.addAll(monitoredProjects);
+      $result.monitoredProjects.addAll(monitoredProjects);
     }
-    return _result;
+    return $result;
   }
+  MetricsScope._() : super();
   factory MetricsScope.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MetricsScope.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MetricsScope',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $0.Timestamp.create)
+    ..pc<MonitoredProject>(
+        4, _omitFieldNames ? '' : 'monitoredProjects', $pb.PbFieldType.PM,
+        subBuilder: MonitoredProject.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -84,8 +73,10 @@ class MetricsScope extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MetricsScope copyWith(void Function(MetricsScope) updates) =>
       super.copyWith((message) => updates(message as MetricsScope))
-          as MetricsScope; // ignore: deprecated_member_use
+          as MetricsScope;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MetricsScope create() => MetricsScope._();
   MetricsScope createEmptyInstance() => create();
@@ -96,6 +87,12 @@ class MetricsScope extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MetricsScope>(create);
   static MetricsScope? _defaultInstance;
 
+  /// Immutable. The resource name of the Monitoring Metrics Scope.
+  /// On input, the resource name can be specified with the
+  /// scoping project ID or number. On output, the resource name is
+  /// specified with the scoping project number.
+  /// Example:
+  /// `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -108,6 +105,7 @@ class MetricsScope extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Output only. The time when this `Metrics Scope` was created.
   @$pb.TagNumber(2)
   $0.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -122,6 +120,7 @@ class MetricsScope extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureCreateTime() => $_ensure(1);
 
+  /// Output only. The time when this `Metrics Scope` record was last updated.
   @$pb.TagNumber(3)
   $0.Timestamp get updateTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -136,53 +135,46 @@ class MetricsScope extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp ensureUpdateTime() => $_ensure(2);
 
+  /// Output only. The list of projects monitored by this `Metrics Scope`.
   @$pb.TagNumber(4)
   $core.List<MonitoredProject> get monitoredProjects => $_getList(3);
 }
 
+/// A [project being
+/// monitored](https://cloud.google.com/monitoring/settings/multiple-projects#create-multi)
+/// by a `Metrics Scope`.
 class MonitoredProject extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MonitoredProject',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$0.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  MonitoredProject._() : super();
   factory MonitoredProject({
     $core.String? name,
     $0.Timestamp? createTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
-    return _result;
+    return $result;
   }
+  MonitoredProject._() : super();
   factory MonitoredProject.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MonitoredProject.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MonitoredProject',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -192,8 +184,10 @@ class MonitoredProject extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MonitoredProject copyWith(void Function(MonitoredProject) updates) =>
       super.copyWith((message) => updates(message as MonitoredProject))
-          as MonitoredProject; // ignore: deprecated_member_use
+          as MonitoredProject;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MonitoredProject create() => MonitoredProject._();
   MonitoredProject createEmptyInstance() => create();
@@ -204,6 +198,11 @@ class MonitoredProject extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MonitoredProject>(create);
   static MonitoredProject? _defaultInstance;
 
+  /// Immutable. The resource name of the `MonitoredProject`. On input, the resource name
+  /// includes the scoping project ID and monitored project ID. On output, it
+  /// contains the equivalent project numbers.
+  /// Example:
+  /// `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -216,6 +215,7 @@ class MonitoredProject extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Output only. The time when this `MonitoredProject` was created.
   @$pb.TagNumber(6)
   $0.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(6)
@@ -230,3 +230,7 @@ class MonitoredProject extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Timestamp ensureCreateTime() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

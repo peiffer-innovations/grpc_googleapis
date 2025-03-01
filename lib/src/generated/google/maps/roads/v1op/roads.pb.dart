@@ -1,85 +1,70 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/roads/v1op/roads.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../type/latlng.pb.dart' as $1;
 import '../../../protobuf/wrappers.pb.dart' as $2;
-
+import '../../../type/latlng.pb.dart' as $1;
 import 'roads.pbenum.dart';
 
 export 'roads.pbenum.dart';
 
+/// A request to the SnapToRoads method, requesting that a sequence of points be
+/// snapped to road segments.
 class SnapToRoadsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SnapToRoadsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.roads.v1op'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'interpolate')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'assetId')
-    ..e<TravelMode>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'travelMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: TravelMode.valueOf,
-        enumValues: TravelMode.values)
-    ..hasRequiredFields = false;
-
-  SnapToRoadsRequest._() : super();
   factory SnapToRoadsRequest({
     $core.String? path,
     $core.bool? interpolate,
     $core.String? assetId,
     TravelMode? travelMode,
   }) {
-    final _result = create();
+    final $result = create();
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
     if (interpolate != null) {
-      _result.interpolate = interpolate;
+      $result.interpolate = interpolate;
     }
     if (assetId != null) {
-      _result.assetId = assetId;
+      $result.assetId = assetId;
     }
     if (travelMode != null) {
-      _result.travelMode = travelMode;
+      $result.travelMode = travelMode;
     }
-    return _result;
+    return $result;
   }
+  SnapToRoadsRequest._() : super();
   factory SnapToRoadsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SnapToRoadsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SnapToRoadsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.roads.v1op'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOB(2, _omitFieldNames ? '' : 'interpolate')
+    ..aOS(3, _omitFieldNames ? '' : 'assetId')
+    ..e<TravelMode>(4, _omitFieldNames ? '' : 'travelMode', $pb.PbFieldType.OE,
+        defaultOrMaker: TravelMode.TRAVEL_MODE_UNSPECIFIED,
+        valueOf: TravelMode.valueOf,
+        enumValues: TravelMode.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -89,8 +74,10 @@ class SnapToRoadsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SnapToRoadsRequest copyWith(void Function(SnapToRoadsRequest) updates) =>
       super.copyWith((message) => updates(message as SnapToRoadsRequest))
-          as SnapToRoadsRequest; // ignore: deprecated_member_use
+          as SnapToRoadsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SnapToRoadsRequest create() => SnapToRoadsRequest._();
   SnapToRoadsRequest createEmptyInstance() => create();
@@ -101,6 +88,8 @@ class SnapToRoadsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SnapToRoadsRequest>(create);
   static SnapToRoadsRequest? _defaultInstance;
 
+  /// The path to be snapped as a series of lat, lng points. Specified as
+  /// a string of the format: lat,lng|lat,lng|...
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -113,6 +102,7 @@ class SnapToRoadsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  /// Whether to interpolate the points to return full road geometry.
   @$pb.TagNumber(2)
   $core.bool get interpolate => $_getBF(1);
   @$pb.TagNumber(2)
@@ -125,6 +115,8 @@ class SnapToRoadsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInterpolate() => clearField(2);
 
+  /// The asset ID of the asset to which this path relates. This is used for
+  /// abuse detection purposes for clients with asset-based SKUs.
   @$pb.TagNumber(3)
   $core.String get assetId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -137,6 +129,7 @@ class SnapToRoadsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearAssetId() => clearField(3);
 
+  /// The type of travel being tracked. This will constrain the paths we snap to.
   @$pb.TagNumber(4)
   TravelMode get travelMode => $_getN(3);
   @$pb.TagNumber(4)
@@ -150,59 +143,45 @@ class SnapToRoadsRequest extends $pb.GeneratedMessage {
   void clearTravelMode() => clearField(4);
 }
 
+/// A snapped point object, representing the result of snapping.
 class SnappedPoint extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SnappedPoint',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.roads.v1op'),
-      createEmptyInstance: create)
-    ..aOM<$1.LatLng>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location',
-        subBuilder: $1.LatLng.create)
-    ..aOM<$2.UInt32Value>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalIndex',
-        subBuilder: $2.UInt32Value.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'placeId')
-    ..hasRequiredFields = false;
-
-  SnappedPoint._() : super();
   factory SnappedPoint({
     $1.LatLng? location,
     $2.UInt32Value? originalIndex,
     $core.String? placeId,
   }) {
-    final _result = create();
+    final $result = create();
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (originalIndex != null) {
-      _result.originalIndex = originalIndex;
+      $result.originalIndex = originalIndex;
     }
     if (placeId != null) {
-      _result.placeId = placeId;
+      $result.placeId = placeId;
     }
-    return _result;
+    return $result;
   }
+  SnappedPoint._() : super();
   factory SnappedPoint.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SnappedPoint.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SnappedPoint',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.roads.v1op'),
+      createEmptyInstance: create)
+    ..aOM<$1.LatLng>(1, _omitFieldNames ? '' : 'location',
+        subBuilder: $1.LatLng.create)
+    ..aOM<$2.UInt32Value>(2, _omitFieldNames ? '' : 'originalIndex',
+        subBuilder: $2.UInt32Value.create)
+    ..aOS(3, _omitFieldNames ? '' : 'placeId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -212,8 +191,10 @@ class SnappedPoint extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SnappedPoint copyWith(void Function(SnappedPoint) updates) =>
       super.copyWith((message) => updates(message as SnappedPoint))
-          as SnappedPoint; // ignore: deprecated_member_use
+          as SnappedPoint;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SnappedPoint create() => SnappedPoint._();
   SnappedPoint createEmptyInstance() => create();
@@ -224,6 +205,7 @@ class SnappedPoint extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SnappedPoint>(create);
   static SnappedPoint? _defaultInstance;
 
+  /// The lat,lng of the snapped location.
   @$pb.TagNumber(1)
   $1.LatLng get location => $_getN(0);
   @$pb.TagNumber(1)
@@ -238,6 +220,9 @@ class SnappedPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.LatLng ensureLocation() => $_ensure(0);
 
+  /// The index into the original path of the equivalent pre-snapped point.
+  /// This allows for identification of points which have been interpolated if
+  /// this index is missing.
   @$pb.TagNumber(2)
   $2.UInt32Value get originalIndex => $_getN(1);
   @$pb.TagNumber(2)
@@ -252,6 +237,8 @@ class SnappedPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.UInt32Value ensureOriginalIndex() => $_ensure(1);
 
+  /// The place ID for this snapped location (road segment). These are the same
+  /// as are currently used by the Places API.
   @$pb.TagNumber(3)
   $core.String get placeId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -265,50 +252,41 @@ class SnappedPoint extends $pb.GeneratedMessage {
   void clearPlaceId() => clearField(3);
 }
 
+/// The response from the SnapToRoads method, returning a sequence of snapped
+/// points.
 class SnapToRoadsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SnapToRoadsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.roads.v1op'),
-      createEmptyInstance: create)
-    ..pc<SnappedPoint>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'snappedPoints',
-        $pb.PbFieldType.PM,
-        subBuilder: SnappedPoint.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'warningMessage')
-    ..hasRequiredFields = false;
-
-  SnapToRoadsResponse._() : super();
   factory SnapToRoadsResponse({
     $core.Iterable<SnappedPoint>? snappedPoints,
     $core.String? warningMessage,
   }) {
-    final _result = create();
+    final $result = create();
     if (snappedPoints != null) {
-      _result.snappedPoints.addAll(snappedPoints);
+      $result.snappedPoints.addAll(snappedPoints);
     }
     if (warningMessage != null) {
-      _result.warningMessage = warningMessage;
+      $result.warningMessage = warningMessage;
     }
-    return _result;
+    return $result;
   }
+  SnapToRoadsResponse._() : super();
   factory SnapToRoadsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SnapToRoadsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SnapToRoadsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.roads.v1op'),
+      createEmptyInstance: create)
+    ..pc<SnappedPoint>(
+        1, _omitFieldNames ? '' : 'snappedPoints', $pb.PbFieldType.PM,
+        subBuilder: SnappedPoint.create)
+    ..aOS(2, _omitFieldNames ? '' : 'warningMessage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -318,8 +296,10 @@ class SnapToRoadsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SnapToRoadsResponse copyWith(void Function(SnapToRoadsResponse) updates) =>
       super.copyWith((message) => updates(message as SnapToRoadsResponse))
-          as SnapToRoadsResponse; // ignore: deprecated_member_use
+          as SnapToRoadsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SnapToRoadsResponse create() => SnapToRoadsResponse._();
   SnapToRoadsResponse createEmptyInstance() => create();
@@ -330,9 +310,12 @@ class SnapToRoadsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SnapToRoadsResponse>(create);
   static SnapToRoadsResponse? _defaultInstance;
 
+  /// A list of snapped points.
   @$pb.TagNumber(1)
   $core.List<SnappedPoint> get snappedPoints => $_getList(0);
 
+  /// User-visible warning message, if any, which can be shown alongside a valid
+  /// result.
   @$pb.TagNumber(2)
   $core.String get warningMessage => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -346,52 +329,42 @@ class SnapToRoadsResponse extends $pb.GeneratedMessage {
   void clearWarningMessage() => clearField(2);
 }
 
+/// A request to the ListNearestRoads method, requesting that a sequence of
+/// points be snapped individually to the road segment that each is closest to.
 class ListNearestRoadsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNearestRoadsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.roads.v1op'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'points')
-    ..e<TravelMode>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'travelMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: TravelMode.valueOf,
-        enumValues: TravelMode.values)
-    ..hasRequiredFields = false;
-
-  ListNearestRoadsRequest._() : super();
   factory ListNearestRoadsRequest({
     $core.String? points,
     TravelMode? travelMode,
   }) {
-    final _result = create();
+    final $result = create();
     if (points != null) {
-      _result.points = points;
+      $result.points = points;
     }
     if (travelMode != null) {
-      _result.travelMode = travelMode;
+      $result.travelMode = travelMode;
     }
-    return _result;
+    return $result;
   }
+  ListNearestRoadsRequest._() : super();
   factory ListNearestRoadsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNearestRoadsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNearestRoadsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.roads.v1op'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'points')
+    ..e<TravelMode>(2, _omitFieldNames ? '' : 'travelMode', $pb.PbFieldType.OE,
+        defaultOrMaker: TravelMode.TRAVEL_MODE_UNSPECIFIED,
+        valueOf: TravelMode.valueOf,
+        enumValues: TravelMode.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -403,8 +376,10 @@ class ListNearestRoadsRequest extends $pb.GeneratedMessage {
   ListNearestRoadsRequest copyWith(
           void Function(ListNearestRoadsRequest) updates) =>
       super.copyWith((message) => updates(message as ListNearestRoadsRequest))
-          as ListNearestRoadsRequest; // ignore: deprecated_member_use
+          as ListNearestRoadsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNearestRoadsRequest create() => ListNearestRoadsRequest._();
   ListNearestRoadsRequest createEmptyInstance() => create();
@@ -415,6 +390,8 @@ class ListNearestRoadsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNearestRoadsRequest>(create);
   static ListNearestRoadsRequest? _defaultInstance;
 
+  /// The points to be snapped as a series of lat, lng points. Specified as
+  /// a string of the format: lat,lng|lat,lng|...
   @$pb.TagNumber(1)
   $core.String get points => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -427,6 +404,7 @@ class ListNearestRoadsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPoints() => clearField(1);
 
+  /// The type of travel being tracked. This will constrain the roads we snap to.
   @$pb.TagNumber(2)
   TravelMode get travelMode => $_getN(1);
   @$pb.TagNumber(2)
@@ -440,41 +418,36 @@ class ListNearestRoadsRequest extends $pb.GeneratedMessage {
   void clearTravelMode() => clearField(2);
 }
 
+/// The response from the ListNearestRoads method, returning a list of snapped
+/// points.
 class ListNearestRoadsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNearestRoadsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.roads.v1op'),
-      createEmptyInstance: create)
-    ..pc<SnappedPoint>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'snappedPoints',
-        $pb.PbFieldType.PM,
-        subBuilder: SnappedPoint.create)
-    ..hasRequiredFields = false;
-
-  ListNearestRoadsResponse._() : super();
   factory ListNearestRoadsResponse({
     $core.Iterable<SnappedPoint>? snappedPoints,
   }) {
-    final _result = create();
+    final $result = create();
     if (snappedPoints != null) {
-      _result.snappedPoints.addAll(snappedPoints);
+      $result.snappedPoints.addAll(snappedPoints);
     }
-    return _result;
+    return $result;
   }
+  ListNearestRoadsResponse._() : super();
   factory ListNearestRoadsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNearestRoadsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNearestRoadsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.roads.v1op'),
+      createEmptyInstance: create)
+    ..pc<SnappedPoint>(
+        1, _omitFieldNames ? '' : 'snappedPoints', $pb.PbFieldType.PM,
+        subBuilder: SnappedPoint.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -486,8 +459,10 @@ class ListNearestRoadsResponse extends $pb.GeneratedMessage {
   ListNearestRoadsResponse copyWith(
           void Function(ListNearestRoadsResponse) updates) =>
       super.copyWith((message) => updates(message as ListNearestRoadsResponse))
-          as ListNearestRoadsResponse; // ignore: deprecated_member_use
+          as ListNearestRoadsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNearestRoadsResponse create() => ListNearestRoadsResponse._();
   ListNearestRoadsResponse createEmptyInstance() => create();
@@ -498,6 +473,11 @@ class ListNearestRoadsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNearestRoadsResponse>(create);
   static ListNearestRoadsResponse? _defaultInstance;
 
+  /// A list of snapped points.
   @$pb.TagNumber(1)
   $core.List<SnappedPoint> get snappedPoints => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

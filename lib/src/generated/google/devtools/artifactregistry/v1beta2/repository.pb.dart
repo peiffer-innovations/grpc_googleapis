@@ -1,68 +1,63 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/artifactregistry/v1beta2/repository.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
 import '../../../protobuf/field_mask.pb.dart' as $1;
-
+import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'repository.pbenum.dart';
 
 export 'repository.pbenum.dart';
 
+/// MavenRepositoryConfig is maven related repository details.
+/// Provides additional configuration details for repositories of the maven
+/// format type.
 class Repository_MavenRepositoryConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Repository.MavenRepositoryConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'allowSnapshotOverwrites')
-    ..e<Repository_MavenRepositoryConfig_VersionPolicy>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versionPolicy',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Repository_MavenRepositoryConfig_VersionPolicy
-            .VERSION_POLICY_UNSPECIFIED,
-        valueOf: Repository_MavenRepositoryConfig_VersionPolicy.valueOf,
-        enumValues: Repository_MavenRepositoryConfig_VersionPolicy.values)
-    ..hasRequiredFields = false;
-
-  Repository_MavenRepositoryConfig._() : super();
   factory Repository_MavenRepositoryConfig({
     $core.bool? allowSnapshotOverwrites,
     Repository_MavenRepositoryConfig_VersionPolicy? versionPolicy,
   }) {
-    final _result = create();
+    final $result = create();
     if (allowSnapshotOverwrites != null) {
-      _result.allowSnapshotOverwrites = allowSnapshotOverwrites;
+      $result.allowSnapshotOverwrites = allowSnapshotOverwrites;
     }
     if (versionPolicy != null) {
-      _result.versionPolicy = versionPolicy;
+      $result.versionPolicy = versionPolicy;
     }
-    return _result;
+    return $result;
   }
+  Repository_MavenRepositoryConfig._() : super();
   factory Repository_MavenRepositoryConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Repository_MavenRepositoryConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Repository.MavenRepositoryConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'allowSnapshotOverwrites')
+    ..e<Repository_MavenRepositoryConfig_VersionPolicy>(
+        2, _omitFieldNames ? '' : 'versionPolicy', $pb.PbFieldType.OE,
+        defaultOrMaker: Repository_MavenRepositoryConfig_VersionPolicy
+            .VERSION_POLICY_UNSPECIFIED,
+        valueOf: Repository_MavenRepositoryConfig_VersionPolicy.valueOf,
+        enumValues: Repository_MavenRepositoryConfig_VersionPolicy.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -75,8 +70,10 @@ class Repository_MavenRepositoryConfig extends $pb.GeneratedMessage {
           void Function(Repository_MavenRepositoryConfig) updates) =>
       super.copyWith(
               (message) => updates(message as Repository_MavenRepositoryConfig))
-          as Repository_MavenRepositoryConfig; // ignore: deprecated_member_use
+          as Repository_MavenRepositoryConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Repository_MavenRepositoryConfig create() =>
       Repository_MavenRepositoryConfig._();
@@ -89,6 +86,8 @@ class Repository_MavenRepositoryConfig extends $pb.GeneratedMessage {
           create);
   static Repository_MavenRepositoryConfig? _defaultInstance;
 
+  /// The repository with this flag will allow publishing
+  /// the same snapshot versions.
   @$pb.TagNumber(1)
   $core.bool get allowSnapshotOverwrites => $_getBF(0);
   @$pb.TagNumber(1)
@@ -101,6 +100,7 @@ class Repository_MavenRepositoryConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAllowSnapshotOverwrites() => clearField(1);
 
+  /// Version policy defines the versions that the registry will accept.
   @$pb.TagNumber(2)
   Repository_MavenRepositoryConfig_VersionPolicy get versionPolicy => $_getN(1);
   @$pb.TagNumber(2)
@@ -116,77 +116,8 @@ class Repository_MavenRepositoryConfig extends $pb.GeneratedMessage {
 
 enum Repository_FormatConfig { mavenConfig, notSet }
 
+/// A Repository for storing artifacts with a specific format.
 class Repository extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Repository_FormatConfig>
-      _Repository_FormatConfigByTag = {
-    9: Repository_FormatConfig.mavenConfig,
-    0: Repository_FormatConfig.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Repository',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..oo(0, [9])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<Repository_Format>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'format',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Repository_Format.FORMAT_UNSPECIFIED,
-        valueOf: Repository_Format.valueOf,
-        enumValues: Repository_Format.values)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..m<$core.String, $core.String>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labels',
-        entryClassName: 'Repository.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName:
-            const $pb.PackageName('google.devtools.artifactregistry.v1beta2'))
-    ..aOM<$0.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kmsKeyName')
-    ..aOM<Repository_MavenRepositoryConfig>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'mavenConfig',
-        subBuilder: Repository_MavenRepositoryConfig.create)
-    ..hasRequiredFields = false;
-
-  Repository._() : super();
   factory Repository({
     $core.String? name,
     Repository_Format? format,
@@ -197,39 +128,75 @@ class Repository extends $pb.GeneratedMessage {
     $core.String? kmsKeyName,
     Repository_MavenRepositoryConfig? mavenConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (format != null) {
-      _result.format = format;
+      $result.format = format;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (kmsKeyName != null) {
-      _result.kmsKeyName = kmsKeyName;
+      $result.kmsKeyName = kmsKeyName;
     }
     if (mavenConfig != null) {
-      _result.mavenConfig = mavenConfig;
+      $result.mavenConfig = mavenConfig;
     }
-    return _result;
+    return $result;
   }
+  Repository._() : super();
   factory Repository.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Repository.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Repository_FormatConfig>
+      _Repository_FormatConfigByTag = {
+    9: Repository_FormatConfig.mavenConfig,
+    0: Repository_FormatConfig.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Repository',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..oo(0, [9])
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<Repository_Format>(
+        2, _omitFieldNames ? '' : 'format', $pb.PbFieldType.OE,
+        defaultOrMaker: Repository_Format.FORMAT_UNSPECIFIED,
+        valueOf: Repository_Format.valueOf,
+        enumValues: Repository_Format.values)
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'Repository.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName:
+            const $pb.PackageName('google.devtools.artifactregistry.v1beta2'))
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(8, _omitFieldNames ? '' : 'kmsKeyName')
+    ..aOM<Repository_MavenRepositoryConfig>(
+        9, _omitFieldNames ? '' : 'mavenConfig',
+        subBuilder: Repository_MavenRepositoryConfig.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -238,9 +205,10 @@ class Repository extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Repository copyWith(void Function(Repository) updates) =>
-      super.copyWith((message) => updates(message as Repository))
-          as Repository; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Repository)) as Repository;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Repository create() => Repository._();
   Repository createEmptyInstance() => create();
@@ -254,6 +222,8 @@ class Repository extends $pb.GeneratedMessage {
       _Repository_FormatConfigByTag[$_whichOneof(0)]!;
   void clearFormatConfig() => clearField($_whichOneof(0));
 
+  /// The name of the repository, for example:
+  /// "projects/p1/locations/us-central1/repositories/repo1".
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -266,6 +236,7 @@ class Repository extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The format of packages that are stored in the repository.
   @$pb.TagNumber(2)
   Repository_Format get format => $_getN(1);
   @$pb.TagNumber(2)
@@ -278,6 +249,7 @@ class Repository extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFormat() => clearField(2);
 
+  /// The user-provided description of the repository.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -290,9 +262,15 @@ class Repository extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  /// Labels with user-defined metadata.
+  /// This field may contain up to 64 entries. Label keys and values may be no
+  /// longer than 63 characters. Label keys must begin with a lowercase letter
+  /// and may only contain lowercase letters, numeric characters, underscores,
+  /// and dashes.
   @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 
+  /// The time when the repository was created.
   @$pb.TagNumber(5)
   $0.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
@@ -307,6 +285,7 @@ class Repository extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.Timestamp ensureCreateTime() => $_ensure(4);
 
+  /// The time when the repository was last updated.
   @$pb.TagNumber(6)
   $0.Timestamp get updateTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -321,6 +300,10 @@ class Repository extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Timestamp ensureUpdateTime() => $_ensure(5);
 
+  /// The Cloud KMS resource name of the customer managed encryption key that’s
+  /// used to encrypt the contents of the Repository. Has the form:
+  /// `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`.
+  /// This value may not be changed after the Repository has been created.
   @$pb.TagNumber(8)
   $core.String get kmsKeyName => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -333,6 +316,8 @@ class Repository extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearKmsKeyName() => clearField(8);
 
+  /// Maven repository config contains repository level configuration
+  /// for the repositories of maven type.
   @$pb.TagNumber(9)
   Repository_MavenRepositoryConfig get mavenConfig => $_getN(7);
   @$pb.TagNumber(9)
@@ -348,58 +333,43 @@ class Repository extends $pb.GeneratedMessage {
   Repository_MavenRepositoryConfig ensureMavenConfig() => $_ensure(7);
 }
 
+/// The request to list repositories.
 class ListRepositoriesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListRepositoriesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListRepositoriesRequest._() : super();
   factory ListRepositoriesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListRepositoriesRequest._() : super();
   factory ListRepositoriesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListRepositoriesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListRepositoriesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -411,8 +381,10 @@ class ListRepositoriesRequest extends $pb.GeneratedMessage {
   ListRepositoriesRequest copyWith(
           void Function(ListRepositoriesRequest) updates) =>
       super.copyWith((message) => updates(message as ListRepositoriesRequest))
-          as ListRepositoriesRequest; // ignore: deprecated_member_use
+          as ListRepositoriesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListRepositoriesRequest create() => ListRepositoriesRequest._();
   ListRepositoriesRequest createEmptyInstance() => create();
@@ -423,6 +395,7 @@ class ListRepositoriesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListRepositoriesRequest>(create);
   static ListRepositoriesRequest? _defaultInstance;
 
+  /// Required. The name of the parent resource whose repositories will be listed.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -435,6 +408,7 @@ class ListRepositoriesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of repositories to return. Maximum page size is 1,000.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -447,6 +421,7 @@ class ListRepositoriesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// The next_page_token value returned from a previous list request, if any.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -460,50 +435,40 @@ class ListRepositoriesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// The response from listing repositories.
 class ListRepositoriesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListRepositoriesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..pc<Repository>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'repositories',
-        $pb.PbFieldType.PM,
-        subBuilder: Repository.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListRepositoriesResponse._() : super();
   factory ListRepositoriesResponse({
     $core.Iterable<Repository>? repositories,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (repositories != null) {
-      _result.repositories.addAll(repositories);
+      $result.repositories.addAll(repositories);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListRepositoriesResponse._() : super();
   factory ListRepositoriesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListRepositoriesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListRepositoriesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<Repository>(
+        1, _omitFieldNames ? '' : 'repositories', $pb.PbFieldType.PM,
+        subBuilder: Repository.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -515,8 +480,10 @@ class ListRepositoriesResponse extends $pb.GeneratedMessage {
   ListRepositoriesResponse copyWith(
           void Function(ListRepositoriesResponse) updates) =>
       super.copyWith((message) => updates(message as ListRepositoriesResponse))
-          as ListRepositoriesResponse; // ignore: deprecated_member_use
+          as ListRepositoriesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListRepositoriesResponse create() => ListRepositoriesResponse._();
   ListRepositoriesResponse createEmptyInstance() => create();
@@ -527,9 +494,12 @@ class ListRepositoriesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListRepositoriesResponse>(create);
   static ListRepositoriesResponse? _defaultInstance;
 
+  /// The repositories returned.
   @$pb.TagNumber(1)
   $core.List<Repository> get repositories => $_getList(0);
 
+  /// The token to retrieve the next page of repositories, or empty if there are
+  /// no more repositories to return.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -543,39 +513,33 @@ class ListRepositoriesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The request to retrieve a repository.
 class GetRepositoryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetRepositoryRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetRepositoryRequest._() : super();
   factory GetRepositoryRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetRepositoryRequest._() : super();
   factory GetRepositoryRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetRepositoryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetRepositoryRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -586,8 +550,10 @@ class GetRepositoryRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetRepositoryRequest copyWith(void Function(GetRepositoryRequest) updates) =>
       super.copyWith((message) => updates(message as GetRepositoryRequest))
-          as GetRepositoryRequest; // ignore: deprecated_member_use
+          as GetRepositoryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetRepositoryRequest create() => GetRepositoryRequest._();
   GetRepositoryRequest createEmptyInstance() => create();
@@ -598,6 +564,7 @@ class GetRepositoryRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetRepositoryRequest>(create);
   static GetRepositoryRequest? _defaultInstance;
 
+  /// Required. The name of the repository to retrieve.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -611,58 +578,44 @@ class GetRepositoryRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The request to create a new repository.
 class CreateRepositoryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateRepositoryRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'repositoryId')
-    ..aOM<Repository>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'repository',
-        subBuilder: Repository.create)
-    ..hasRequiredFields = false;
-
-  CreateRepositoryRequest._() : super();
   factory CreateRepositoryRequest({
     $core.String? parent,
     $core.String? repositoryId,
     Repository? repository,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (repositoryId != null) {
-      _result.repositoryId = repositoryId;
+      $result.repositoryId = repositoryId;
     }
     if (repository != null) {
-      _result.repository = repository;
+      $result.repository = repository;
     }
-    return _result;
+    return $result;
   }
+  CreateRepositoryRequest._() : super();
   factory CreateRepositoryRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateRepositoryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateRepositoryRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'repositoryId')
+    ..aOM<Repository>(3, _omitFieldNames ? '' : 'repository',
+        subBuilder: Repository.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -674,8 +627,10 @@ class CreateRepositoryRequest extends $pb.GeneratedMessage {
   CreateRepositoryRequest copyWith(
           void Function(CreateRepositoryRequest) updates) =>
       super.copyWith((message) => updates(message as CreateRepositoryRequest))
-          as CreateRepositoryRequest; // ignore: deprecated_member_use
+          as CreateRepositoryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateRepositoryRequest create() => CreateRepositoryRequest._();
   CreateRepositoryRequest createEmptyInstance() => create();
@@ -686,6 +641,7 @@ class CreateRepositoryRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateRepositoryRequest>(create);
   static CreateRepositoryRequest? _defaultInstance;
 
+  /// Required. The name of the parent resource where the repository will be created.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -698,6 +654,7 @@ class CreateRepositoryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The repository id to use for this repository.
   @$pb.TagNumber(2)
   $core.String get repositoryId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -710,6 +667,7 @@ class CreateRepositoryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRepositoryId() => clearField(2);
 
+  /// The repository to be created.
   @$pb.TagNumber(3)
   Repository get repository => $_getN(2);
   @$pb.TagNumber(3)
@@ -725,50 +683,40 @@ class CreateRepositoryRequest extends $pb.GeneratedMessage {
   Repository ensureRepository() => $_ensure(2);
 }
 
+/// The request to update a repository.
 class UpdateRepositoryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateRepositoryRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOM<Repository>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'repository',
-        subBuilder: Repository.create)
-    ..aOM<$1.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $1.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateRepositoryRequest._() : super();
   factory UpdateRepositoryRequest({
     Repository? repository,
     $1.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (repository != null) {
-      _result.repository = repository;
+      $result.repository = repository;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateRepositoryRequest._() : super();
   factory UpdateRepositoryRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateRepositoryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateRepositoryRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOM<Repository>(1, _omitFieldNames ? '' : 'repository',
+        subBuilder: Repository.create)
+    ..aOM<$1.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $1.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -780,8 +728,10 @@ class UpdateRepositoryRequest extends $pb.GeneratedMessage {
   UpdateRepositoryRequest copyWith(
           void Function(UpdateRepositoryRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateRepositoryRequest))
-          as UpdateRepositoryRequest; // ignore: deprecated_member_use
+          as UpdateRepositoryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateRepositoryRequest create() => UpdateRepositoryRequest._();
   UpdateRepositoryRequest createEmptyInstance() => create();
@@ -792,6 +742,7 @@ class UpdateRepositoryRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateRepositoryRequest>(create);
   static UpdateRepositoryRequest? _defaultInstance;
 
+  /// The repository that replaces the resource on the server.
   @$pb.TagNumber(1)
   Repository get repository => $_getN(0);
   @$pb.TagNumber(1)
@@ -806,6 +757,9 @@ class UpdateRepositoryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Repository ensureRepository() => $_ensure(0);
 
+  /// The update mask applies to the resource. For the `FieldMask` definition,
+  /// see
+  /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
   @$pb.TagNumber(2)
   $1.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -821,39 +775,33 @@ class UpdateRepositoryRequest extends $pb.GeneratedMessage {
   $1.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// The request to delete a repository.
 class DeleteRepositoryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteRepositoryRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteRepositoryRequest._() : super();
   factory DeleteRepositoryRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteRepositoryRequest._() : super();
   factory DeleteRepositoryRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteRepositoryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteRepositoryRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -865,8 +813,10 @@ class DeleteRepositoryRequest extends $pb.GeneratedMessage {
   DeleteRepositoryRequest copyWith(
           void Function(DeleteRepositoryRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteRepositoryRequest))
-          as DeleteRepositoryRequest; // ignore: deprecated_member_use
+          as DeleteRepositoryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteRepositoryRequest create() => DeleteRepositoryRequest._();
   DeleteRepositoryRequest createEmptyInstance() => create();
@@ -877,6 +827,7 @@ class DeleteRepositoryRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteRepositoryRequest>(create);
   static DeleteRepositoryRequest? _defaultInstance;
 
+  /// Required. The name of the repository to delete.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -889,3 +840,7 @@ class DeleteRepositoryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

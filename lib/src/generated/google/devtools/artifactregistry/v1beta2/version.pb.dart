@@ -1,70 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/artifactregistry/v1beta2/version.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../protobuf/struct.pb.dart' as $2;
 import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'tag.pb.dart' as $1;
-import '../../../protobuf/struct.pb.dart' as $2;
-
 import 'version.pbenum.dart';
 
 export 'version.pbenum.dart';
 
+/// The body of a version resource. A version resource represents a
+/// collection of components, such as files and other data. This may correspond
+/// to a version in many package management schemes.
 class Version extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Version',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..aOM<$0.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $0.Timestamp.create)
-    ..pc<$1.Tag>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'relatedTags',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Tag.create)
-    ..aOM<$2.Struct>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        subBuilder: $2.Struct.create)
-    ..hasRequiredFields = false;
-
-  Version._() : super();
   factory Version({
     $core.String? name,
     $core.String? description,
@@ -73,33 +32,52 @@ class Version extends $pb.GeneratedMessage {
     $core.Iterable<$1.Tag>? relatedTags,
     $2.Struct? metadata,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (relatedTags != null) {
-      _result.relatedTags.addAll(relatedTags);
+      $result.relatedTags.addAll(relatedTags);
     }
     if (metadata != null) {
-      _result.metadata = metadata;
+      $result.metadata = metadata;
     }
-    return _result;
+    return $result;
   }
+  Version._() : super();
   factory Version.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Version.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Version',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $0.Timestamp.create)
+    ..pc<$1.Tag>(7, _omitFieldNames ? '' : 'relatedTags', $pb.PbFieldType.PM,
+        subBuilder: $1.Tag.create)
+    ..aOM<$2.Struct>(8, _omitFieldNames ? '' : 'metadata',
+        subBuilder: $2.Struct.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -108,9 +86,10 @@ class Version extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Version copyWith(void Function(Version) updates) =>
-      super.copyWith((message) => updates(message as Version))
-          as Version; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Version)) as Version;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Version create() => Version._();
   Version createEmptyInstance() => create();
@@ -120,6 +99,10 @@ class Version extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Version>(create);
   static Version? _defaultInstance;
 
+  /// The name of the version, for example:
+  /// "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/art1".
+  /// If the package or version ID parts contain slashes, the slashes are
+  /// escaped.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -132,6 +115,7 @@ class Version extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Optional. Description of the version, as specified in its metadata.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -144,6 +128,7 @@ class Version extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  /// The time when the version was created.
   @$pb.TagNumber(5)
   $0.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(5)
@@ -158,6 +143,7 @@ class Version extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.Timestamp ensureCreateTime() => $_ensure(2);
 
+  /// The time when the version was last updated.
   @$pb.TagNumber(6)
   $0.Timestamp get updateTime => $_getN(3);
   @$pb.TagNumber(6)
@@ -172,9 +158,15 @@ class Version extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Timestamp ensureUpdateTime() => $_ensure(3);
 
+  /// Output only. A list of related tags. Will contain up to 100 tags that
+  /// reference this version.
   @$pb.TagNumber(7)
   $core.List<$1.Tag> get relatedTags => $_getList(4);
 
+  /// Output only. Repository-specific Metadata stored against this version.
+  /// The fields returned are defined by the underlying repository-specific
+  /// resource. Currently, the only resource in use is
+  /// [DockerImage][google.devtools.artifactregistry.v1.DockerImage]
   @$pb.TagNumber(8)
   $2.Struct get metadata => $_getN(5);
   @$pb.TagNumber(8)
@@ -190,49 +182,8 @@ class Version extends $pb.GeneratedMessage {
   $2.Struct ensureMetadata() => $_ensure(5);
 }
 
+/// The request to list versions.
 class ListVersionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListVersionsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..e<VersionView>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: VersionView.VERSION_VIEW_UNSPECIFIED,
-        valueOf: VersionView.valueOf,
-        enumValues: VersionView.values)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orderBy')
-    ..hasRequiredFields = false;
-
-  ListVersionsRequest._() : super();
   factory ListVersionsRequest({
     $core.String? parent,
     $core.int? pageSize,
@@ -240,30 +191,47 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
     VersionView? view,
     $core.String? orderBy,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (orderBy != null) {
-      _result.orderBy = orderBy;
+      $result.orderBy = orderBy;
     }
-    return _result;
+    return $result;
   }
+  ListVersionsRequest._() : super();
   factory ListVersionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListVersionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListVersionsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..e<VersionView>(4, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: VersionView.VERSION_VIEW_UNSPECIFIED,
+        valueOf: VersionView.valueOf,
+        enumValues: VersionView.values)
+    ..aOS(5, _omitFieldNames ? '' : 'orderBy')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -273,8 +241,10 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListVersionsRequest copyWith(void Function(ListVersionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListVersionsRequest))
-          as ListVersionsRequest; // ignore: deprecated_member_use
+          as ListVersionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListVersionsRequest create() => ListVersionsRequest._();
   ListVersionsRequest createEmptyInstance() => create();
@@ -285,6 +255,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListVersionsRequest>(create);
   static ListVersionsRequest? _defaultInstance;
 
+  /// The name of the parent resource whose versions will be listed.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -297,6 +268,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of versions to return. Maximum page size is 1,000.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -309,6 +281,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// The next_page_token value returned from a previous list request, if any.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -321,6 +294,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// The view that should be returned in the response.
   @$pb.TagNumber(4)
   VersionView get view => $_getN(3);
   @$pb.TagNumber(4)
@@ -333,6 +307,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearView() => clearField(4);
 
+  /// Optional. The field to order the results by.
   @$pb.TagNumber(5)
   $core.String get orderBy => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -346,50 +321,39 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   void clearOrderBy() => clearField(5);
 }
 
+/// The response from listing versions.
 class ListVersionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListVersionsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..pc<Version>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versions',
-        $pb.PbFieldType.PM,
-        subBuilder: Version.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListVersionsResponse._() : super();
   factory ListVersionsResponse({
     $core.Iterable<Version>? versions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (versions != null) {
-      _result.versions.addAll(versions);
+      $result.versions.addAll(versions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListVersionsResponse._() : super();
   factory ListVersionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListVersionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListVersionsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<Version>(1, _omitFieldNames ? '' : 'versions', $pb.PbFieldType.PM,
+        subBuilder: Version.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -400,8 +364,10 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListVersionsResponse copyWith(void Function(ListVersionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListVersionsResponse))
-          as ListVersionsResponse; // ignore: deprecated_member_use
+          as ListVersionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListVersionsResponse create() => ListVersionsResponse._();
   ListVersionsResponse createEmptyInstance() => create();
@@ -412,9 +378,12 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListVersionsResponse>(create);
   static ListVersionsResponse? _defaultInstance;
 
+  /// The versions returned.
   @$pb.TagNumber(1)
   $core.List<Version> get versions => $_getList(0);
 
+  /// The token to retrieve the next page of versions, or empty if there are no
+  /// more versions to return.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -428,52 +397,41 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The request to retrieve a version.
 class GetVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetVersionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<VersionView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: VersionView.VERSION_VIEW_UNSPECIFIED,
-        valueOf: VersionView.valueOf,
-        enumValues: VersionView.values)
-    ..hasRequiredFields = false;
-
-  GetVersionRequest._() : super();
   factory GetVersionRequest({
     $core.String? name,
     VersionView? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  GetVersionRequest._() : super();
   factory GetVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<VersionView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: VersionView.VERSION_VIEW_UNSPECIFIED,
+        valueOf: VersionView.valueOf,
+        enumValues: VersionView.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -483,8 +441,10 @@ class GetVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetVersionRequest copyWith(void Function(GetVersionRequest) updates) =>
       super.copyWith((message) => updates(message as GetVersionRequest))
-          as GetVersionRequest; // ignore: deprecated_member_use
+          as GetVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetVersionRequest create() => GetVersionRequest._();
   GetVersionRequest createEmptyInstance() => create();
@@ -495,6 +455,7 @@ class GetVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetVersionRequest>(create);
   static GetVersionRequest? _defaultInstance;
 
+  /// The name of the version to retrieve.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -507,6 +468,7 @@ class GetVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The view that should be returned in the response.
   @$pb.TagNumber(2)
   VersionView get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -520,48 +482,38 @@ class GetVersionRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(2);
 }
 
+/// The request to delete a version.
 class DeleteVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteVersionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.artifactregistry.v1beta2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'force')
-    ..hasRequiredFields = false;
-
-  DeleteVersionRequest._() : super();
   factory DeleteVersionRequest({
     $core.String? name,
     $core.bool? force,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (force != null) {
-      _result.force = force;
+      $result.force = force;
     }
-    return _result;
+    return $result;
   }
+  DeleteVersionRequest._() : super();
   factory DeleteVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.artifactregistry.v1beta2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOB(2, _omitFieldNames ? '' : 'force')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -572,8 +524,10 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteVersionRequest copyWith(void Function(DeleteVersionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVersionRequest))
-          as DeleteVersionRequest; // ignore: deprecated_member_use
+          as DeleteVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteVersionRequest create() => DeleteVersionRequest._();
   DeleteVersionRequest createEmptyInstance() => create();
@@ -584,6 +538,7 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteVersionRequest>(create);
   static DeleteVersionRequest? _defaultInstance;
 
+  /// The name of the version to delete.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -596,6 +551,8 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// By default, a version that is tagged may not be deleted. If force=true, the
+  /// version and any tags pointing to the version are deleted.
   @$pb.TagNumber(2)
   $core.bool get force => $_getBF(1);
   @$pb.TagNumber(2)
@@ -608,3 +565,7 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearForce() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

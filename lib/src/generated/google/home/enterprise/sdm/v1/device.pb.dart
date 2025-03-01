@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/home/enterprise/sdm/v1/device.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,69 +15,52 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../../protobuf/struct.pb.dart' as $0;
 
+/// Device resource represents an instance of enterprise managed device in the
+/// property.
 class Device extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Device',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.home.enterprise.sdm.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type')
-    ..aOM<$0.Struct>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'traits',
-        subBuilder: $0.Struct.create)
-    ..pc<ParentRelation>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parentRelations',
-        $pb.PbFieldType.PM,
-        subBuilder: ParentRelation.create)
-    ..hasRequiredFields = false;
-
-  Device._() : super();
   factory Device({
     $core.String? name,
     $core.String? type,
     $0.Struct? traits,
     $core.Iterable<ParentRelation>? parentRelations,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (traits != null) {
-      _result.traits = traits;
+      $result.traits = traits;
     }
     if (parentRelations != null) {
-      _result.parentRelations.addAll(parentRelations);
+      $result.parentRelations.addAll(parentRelations);
     }
-    return _result;
+    return $result;
   }
+  Device._() : super();
   factory Device.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Device.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Device',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.home.enterprise.sdm.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'type')
+    ..aOM<$0.Struct>(4, _omitFieldNames ? '' : 'traits',
+        subBuilder: $0.Struct.create)
+    ..pc<ParentRelation>(
+        5, _omitFieldNames ? '' : 'parentRelations', $pb.PbFieldType.PM,
+        subBuilder: ParentRelation.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -82,9 +69,10 @@ class Device extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Device copyWith(void Function(Device) updates) =>
-      super.copyWith((message) => updates(message as Device))
-          as Device; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Device)) as Device;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Device create() => Device._();
   Device createEmptyInstance() => create();
@@ -94,6 +82,8 @@ class Device extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Device>(create);
   static Device? _defaultInstance;
 
+  /// Required. The resource name of the device. For example:
+  /// "enterprises/XYZ/devices/123".
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -106,6 +96,10 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Output only. Type of the device for general display purposes.
+  /// For example: "THERMOSTAT". The device type should not be used to deduce or
+  /// infer functionality of the actual device it is assigned to. Instead, use
+  /// the returned traits for the device.
   @$pb.TagNumber(2)
   $core.String get type => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -118,6 +112,7 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearType() => clearField(2);
 
+  /// Output only. Device traits.
   @$pb.TagNumber(4)
   $0.Struct get traits => $_getN(2);
   @$pb.TagNumber(4)
@@ -132,52 +127,44 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Struct ensureTraits() => $_ensure(2);
 
+  /// Assignee details of the device.
   @$pb.TagNumber(5)
   $core.List<ParentRelation> get parentRelations => $_getList(3);
 }
 
+/// Represents device relationships, for instance, structure/room to which the
+/// device is assigned to.
 class ParentRelation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ParentRelation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.home.enterprise.sdm.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..hasRequiredFields = false;
-
-  ParentRelation._() : super();
   factory ParentRelation({
     $core.String? parent,
     $core.String? displayName,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
-    return _result;
+    return $result;
   }
+  ParentRelation._() : super();
   factory ParentRelation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ParentRelation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentRelation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.home.enterprise.sdm.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'displayName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -187,8 +174,10 @@ class ParentRelation extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ParentRelation copyWith(void Function(ParentRelation) updates) =>
       super.copyWith((message) => updates(message as ParentRelation))
-          as ParentRelation; // ignore: deprecated_member_use
+          as ParentRelation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ParentRelation create() => ParentRelation._();
   ParentRelation createEmptyInstance() => create();
@@ -199,6 +188,9 @@ class ParentRelation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ParentRelation>(create);
   static ParentRelation? _defaultInstance;
 
+  /// Output only. The name of the relation -- e.g., structure/room where the
+  /// device is assigned to. For example: "enterprises/XYZ/structures/ABC" or
+  /// "enterprises/XYZ/structures/ABC/rooms/123"
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -211,6 +203,8 @@ class ParentRelation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Output only. The custom name of the relation -- e.g., structure/room where
+  /// the device is assigned to.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -223,3 +217,7 @@ class ParentRelation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/clouddebugger/v2/controller.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,40 +15,34 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'data.pb.dart' as $1;
 
+/// Request to register a debuggee.
 class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RegisterDebuggeeRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouddebugger.v2'),
-      createEmptyInstance: create)
-    ..aOM<$1.Debuggee>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'debuggee',
-        subBuilder: $1.Debuggee.create)
-    ..hasRequiredFields = false;
-
-  RegisterDebuggeeRequest._() : super();
   factory RegisterDebuggeeRequest({
     $1.Debuggee? debuggee,
   }) {
-    final _result = create();
+    final $result = create();
     if (debuggee != null) {
-      _result.debuggee = debuggee;
+      $result.debuggee = debuggee;
     }
-    return _result;
+    return $result;
   }
+  RegisterDebuggeeRequest._() : super();
   factory RegisterDebuggeeRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RegisterDebuggeeRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterDebuggeeRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Debuggee>(1, _omitFieldNames ? '' : 'debuggee',
+        subBuilder: $1.Debuggee.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -56,8 +54,10 @@ class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
   RegisterDebuggeeRequest copyWith(
           void Function(RegisterDebuggeeRequest) updates) =>
       super.copyWith((message) => updates(message as RegisterDebuggeeRequest))
-          as RegisterDebuggeeRequest; // ignore: deprecated_member_use
+          as RegisterDebuggeeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RegisterDebuggeeRequest create() => RegisterDebuggeeRequest._();
   RegisterDebuggeeRequest createEmptyInstance() => create();
@@ -68,6 +68,9 @@ class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RegisterDebuggeeRequest>(create);
   static RegisterDebuggeeRequest? _defaultInstance;
 
+  /// Required. Debuggee information to register.
+  /// The fields `project`, `uniquifier`, `description` and `agent_version`
+  /// of the debuggee must be set.
   @$pb.TagNumber(1)
   $1.Debuggee get debuggee => $_getN(0);
   @$pb.TagNumber(1)
@@ -83,40 +86,34 @@ class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
   $1.Debuggee ensureDebuggee() => $_ensure(0);
 }
 
+/// Response for registering a debuggee.
 class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RegisterDebuggeeResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouddebugger.v2'),
-      createEmptyInstance: create)
-    ..aOM<$1.Debuggee>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'debuggee',
-        subBuilder: $1.Debuggee.create)
-    ..hasRequiredFields = false;
-
-  RegisterDebuggeeResponse._() : super();
   factory RegisterDebuggeeResponse({
     $1.Debuggee? debuggee,
   }) {
-    final _result = create();
+    final $result = create();
     if (debuggee != null) {
-      _result.debuggee = debuggee;
+      $result.debuggee = debuggee;
     }
-    return _result;
+    return $result;
   }
+  RegisterDebuggeeResponse._() : super();
   factory RegisterDebuggeeResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RegisterDebuggeeResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterDebuggeeResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Debuggee>(1, _omitFieldNames ? '' : 'debuggee',
+        subBuilder: $1.Debuggee.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -128,8 +125,10 @@ class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
   RegisterDebuggeeResponse copyWith(
           void Function(RegisterDebuggeeResponse) updates) =>
       super.copyWith((message) => updates(message as RegisterDebuggeeResponse))
-          as RegisterDebuggeeResponse; // ignore: deprecated_member_use
+          as RegisterDebuggeeResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RegisterDebuggeeResponse create() => RegisterDebuggeeResponse._();
   RegisterDebuggeeResponse createEmptyInstance() => create();
@@ -140,6 +139,11 @@ class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RegisterDebuggeeResponse>(create);
   static RegisterDebuggeeResponse? _defaultInstance;
 
+  /// Debuggee resource.
+  /// The field `id` is guaranteed to be set (in addition to the echoed fields).
+  /// If the field `is_disabled` is set to `true`, the agent should disable
+  /// itself by removing all breakpoints and detaching from the application.
+  /// It should however continue to poll `RegisterDebuggee` until reenabled.
   @$pb.TagNumber(1)
   $1.Debuggee get debuggee => $_getN(0);
   @$pb.TagNumber(1)
@@ -155,57 +159,43 @@ class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
   $1.Debuggee ensureDebuggee() => $_ensure(0);
 }
 
+/// Request to list active breakpoints.
 class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListActiveBreakpointsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouddebugger.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'debuggeeId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'waitToken')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'successOnTimeout')
-    ..hasRequiredFields = false;
-
-  ListActiveBreakpointsRequest._() : super();
   factory ListActiveBreakpointsRequest({
     $core.String? debuggeeId,
     $core.String? waitToken,
     $core.bool? successOnTimeout,
   }) {
-    final _result = create();
+    final $result = create();
     if (debuggeeId != null) {
-      _result.debuggeeId = debuggeeId;
+      $result.debuggeeId = debuggeeId;
     }
     if (waitToken != null) {
-      _result.waitToken = waitToken;
+      $result.waitToken = waitToken;
     }
     if (successOnTimeout != null) {
-      _result.successOnTimeout = successOnTimeout;
+      $result.successOnTimeout = successOnTimeout;
     }
-    return _result;
+    return $result;
   }
+  ListActiveBreakpointsRequest._() : super();
   factory ListActiveBreakpointsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListActiveBreakpointsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListActiveBreakpointsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'debuggeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'waitToken')
+    ..aOB(3, _omitFieldNames ? '' : 'successOnTimeout')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -218,8 +208,10 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
           void Function(ListActiveBreakpointsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListActiveBreakpointsRequest))
-          as ListActiveBreakpointsRequest; // ignore: deprecated_member_use
+          as ListActiveBreakpointsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListActiveBreakpointsRequest create() =>
       ListActiveBreakpointsRequest._();
@@ -231,6 +223,7 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListActiveBreakpointsRequest>(create);
   static ListActiveBreakpointsRequest? _defaultInstance;
 
+  /// Required. Identifies the debuggee.
   @$pb.TagNumber(1)
   $core.String get debuggeeId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -243,6 +236,10 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDebuggeeId() => clearField(1);
 
+  /// A token that, if specified, blocks the method call until the list
+  /// of active breakpoints has changed, or a server-selected timeout has
+  /// expired. The value should be set from the `next_wait_token` field in
+  /// the last response. The initial value should be set to `"init"`.
   @$pb.TagNumber(2)
   $core.String get waitToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -255,6 +252,12 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearWaitToken() => clearField(2);
 
+  ///  If set to `true` (recommended), returns `google.rpc.Code.OK` status and
+  ///  sets the `wait_expired` response field to `true` when the server-selected
+  ///  timeout has expired.
+  ///
+  ///  If set to `false` (deprecated), returns `google.rpc.Code.ABORTED` status
+  ///  when the server-selected timeout has expired.
   @$pb.TagNumber(3)
   $core.bool get successOnTimeout => $_getBF(2);
   @$pb.TagNumber(3)
@@ -268,59 +271,45 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
   void clearSuccessOnTimeout() => clearField(3);
 }
 
+/// Response for listing active breakpoints.
 class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListActiveBreakpointsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouddebugger.v2'),
-      createEmptyInstance: create)
-    ..pc<$1.Breakpoint>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'breakpoints',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Breakpoint.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextWaitToken')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'waitExpired')
-    ..hasRequiredFields = false;
-
-  ListActiveBreakpointsResponse._() : super();
   factory ListActiveBreakpointsResponse({
     $core.Iterable<$1.Breakpoint>? breakpoints,
     $core.String? nextWaitToken,
     $core.bool? waitExpired,
   }) {
-    final _result = create();
+    final $result = create();
     if (breakpoints != null) {
-      _result.breakpoints.addAll(breakpoints);
+      $result.breakpoints.addAll(breakpoints);
     }
     if (nextWaitToken != null) {
-      _result.nextWaitToken = nextWaitToken;
+      $result.nextWaitToken = nextWaitToken;
     }
     if (waitExpired != null) {
-      _result.waitExpired = waitExpired;
+      $result.waitExpired = waitExpired;
     }
-    return _result;
+    return $result;
   }
+  ListActiveBreakpointsResponse._() : super();
   factory ListActiveBreakpointsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListActiveBreakpointsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListActiveBreakpointsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..pc<$1.Breakpoint>(
+        1, _omitFieldNames ? '' : 'breakpoints', $pb.PbFieldType.PM,
+        subBuilder: $1.Breakpoint.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextWaitToken')
+    ..aOB(3, _omitFieldNames ? '' : 'waitExpired')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -333,8 +322,10 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
           void Function(ListActiveBreakpointsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListActiveBreakpointsResponse))
-          as ListActiveBreakpointsResponse; // ignore: deprecated_member_use
+          as ListActiveBreakpointsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListActiveBreakpointsResponse create() =>
       ListActiveBreakpointsResponse._();
@@ -346,9 +337,13 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListActiveBreakpointsResponse>(create);
   static ListActiveBreakpointsResponse? _defaultInstance;
 
+  /// List of all active breakpoints.
+  /// The fields `id` and `location` are guaranteed to be set on each breakpoint.
   @$pb.TagNumber(1)
   $core.List<$1.Breakpoint> get breakpoints => $_getList(0);
 
+  /// A token that can be used in the next method call to block until
+  /// the list of breakpoints changes.
   @$pb.TagNumber(2)
   $core.String get nextWaitToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -361,6 +356,9 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextWaitToken() => clearField(2);
 
+  /// If set to `true`, indicates that there is no change to the
+  /// list of active breakpoints and the server-selected timeout has expired.
+  /// The `breakpoints` field would be empty and should be ignored.
   @$pb.TagNumber(3)
   $core.bool get waitExpired => $_getBF(2);
   @$pb.TagNumber(3)
@@ -374,49 +372,39 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
   void clearWaitExpired() => clearField(3);
 }
 
+/// Request to update an active breakpoint.
 class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateActiveBreakpointRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouddebugger.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'debuggeeId')
-    ..aOM<$1.Breakpoint>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'breakpoint',
-        subBuilder: $1.Breakpoint.create)
-    ..hasRequiredFields = false;
-
-  UpdateActiveBreakpointRequest._() : super();
   factory UpdateActiveBreakpointRequest({
     $core.String? debuggeeId,
     $1.Breakpoint? breakpoint,
   }) {
-    final _result = create();
+    final $result = create();
     if (debuggeeId != null) {
-      _result.debuggeeId = debuggeeId;
+      $result.debuggeeId = debuggeeId;
     }
     if (breakpoint != null) {
-      _result.breakpoint = breakpoint;
+      $result.breakpoint = breakpoint;
     }
-    return _result;
+    return $result;
   }
+  UpdateActiveBreakpointRequest._() : super();
   factory UpdateActiveBreakpointRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateActiveBreakpointRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateActiveBreakpointRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'debuggeeId')
+    ..aOM<$1.Breakpoint>(2, _omitFieldNames ? '' : 'breakpoint',
+        subBuilder: $1.Breakpoint.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -429,8 +417,10 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
           void Function(UpdateActiveBreakpointRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateActiveBreakpointRequest))
-          as UpdateActiveBreakpointRequest; // ignore: deprecated_member_use
+          as UpdateActiveBreakpointRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateActiveBreakpointRequest create() =>
       UpdateActiveBreakpointRequest._();
@@ -442,6 +432,7 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateActiveBreakpointRequest>(create);
   static UpdateActiveBreakpointRequest? _defaultInstance;
 
+  /// Required. Identifies the debuggee being debugged.
   @$pb.TagNumber(1)
   $core.String get debuggeeId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -454,6 +445,9 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDebuggeeId() => clearField(1);
 
+  /// Required. Updated breakpoint information.
+  /// The field `id` must be set.
+  /// The agent must echo all Breakpoint specification fields in the update.
   @$pb.TagNumber(2)
   $1.Breakpoint get breakpoint => $_getN(1);
   @$pb.TagNumber(2)
@@ -469,26 +463,25 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
   $1.Breakpoint ensureBreakpoint() => $_ensure(1);
 }
 
+/// Response for updating an active breakpoint.
+/// The message is defined to allow future extensions.
 class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateActiveBreakpointResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.clouddebugger.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  UpdateActiveBreakpointResponse._() : super();
   factory UpdateActiveBreakpointResponse() => create();
+  UpdateActiveBreakpointResponse._() : super();
   factory UpdateActiveBreakpointResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateActiveBreakpointResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateActiveBreakpointResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -501,8 +494,10 @@ class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
           void Function(UpdateActiveBreakpointResponse) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateActiveBreakpointResponse))
-          as UpdateActiveBreakpointResponse; // ignore: deprecated_member_use
+          as UpdateActiveBreakpointResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateActiveBreakpointResponse create() =>
       UpdateActiveBreakpointResponse._();
@@ -514,3 +509,7 @@ class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateActiveBreakpointResponse>(create);
   static UpdateActiveBreakpointResponse? _defaultInstance;
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

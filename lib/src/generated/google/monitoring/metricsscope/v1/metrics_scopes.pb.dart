@@ -1,54 +1,51 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/metricsscope/v1/metrics_scopes.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'metrics_scope.pb.dart' as $3;
 import '../../../protobuf/timestamp.pb.dart' as $4;
-
+import 'metrics_scope.pb.dart' as $3;
 import 'metrics_scopes.pbenum.dart';
 
 export 'metrics_scopes.pbenum.dart';
 
+/// Request for the `GetMetricsScope` method.
 class GetMetricsScopeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetMetricsScopeRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetMetricsScopeRequest._() : super();
   factory GetMetricsScopeRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetMetricsScopeRequest._() : super();
   factory GetMetricsScopeRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetMetricsScopeRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetMetricsScopeRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -60,8 +57,10 @@ class GetMetricsScopeRequest extends $pb.GeneratedMessage {
   GetMetricsScopeRequest copyWith(
           void Function(GetMetricsScopeRequest) updates) =>
       super.copyWith((message) => updates(message as GetMetricsScopeRequest))
-          as GetMetricsScopeRequest; // ignore: deprecated_member_use
+          as GetMetricsScopeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetMetricsScopeRequest create() => GetMetricsScopeRequest._();
   GetMetricsScopeRequest createEmptyInstance() => create();
@@ -72,6 +71,9 @@ class GetMetricsScopeRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetMetricsScopeRequest>(create);
   static GetMetricsScopeRequest? _defaultInstance;
 
+  /// Required. The resource name of the `Metrics Scope`.
+  /// Example:
+  /// `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -85,33 +87,18 @@ class GetMetricsScopeRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request for the `ListMetricsScopesByMonitoredProject` method.
 class ListMetricsScopesByMonitoredProjectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListMetricsScopesByMonitoredProjectRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoredResourceContainer')
-    ..hasRequiredFields = false;
-
-  ListMetricsScopesByMonitoredProjectRequest._() : super();
   factory ListMetricsScopesByMonitoredProjectRequest({
     $core.String? monitoredResourceContainer,
   }) {
-    final _result = create();
+    final $result = create();
     if (monitoredResourceContainer != null) {
-      _result.monitoredResourceContainer = monitoredResourceContainer;
+      $result.monitoredResourceContainer = monitoredResourceContainer;
     }
-    return _result;
+    return $result;
   }
+  ListMetricsScopesByMonitoredProjectRequest._() : super();
   factory ListMetricsScopesByMonitoredProjectRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -119,6 +106,15 @@ class ListMetricsScopesByMonitoredProjectRequest extends $pb.GeneratedMessage {
   factory ListMetricsScopesByMonitoredProjectRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListMetricsScopesByMonitoredProjectRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'monitoredResourceContainer')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -131,8 +127,10 @@ class ListMetricsScopesByMonitoredProjectRequest extends $pb.GeneratedMessage {
           void Function(ListMetricsScopesByMonitoredProjectRequest) updates) =>
       super.copyWith((message) =>
               updates(message as ListMetricsScopesByMonitoredProjectRequest))
-          as ListMetricsScopesByMonitoredProjectRequest; // ignore: deprecated_member_use
+          as ListMetricsScopesByMonitoredProjectRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListMetricsScopesByMonitoredProjectRequest create() =>
       ListMetricsScopesByMonitoredProjectRequest._();
@@ -146,6 +144,9 @@ class ListMetricsScopesByMonitoredProjectRequest extends $pb.GeneratedMessage {
           ListMetricsScopesByMonitoredProjectRequest>(create);
   static ListMetricsScopesByMonitoredProjectRequest? _defaultInstance;
 
+  /// Required. The resource name of the `Monitored Project` being requested.
+  /// Example:
+  /// `projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
   @$pb.TagNumber(1)
   $core.String get monitoredResourceContainer => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -159,35 +160,18 @@ class ListMetricsScopesByMonitoredProjectRequest extends $pb.GeneratedMessage {
   void clearMonitoredResourceContainer() => clearField(1);
 }
 
+/// Response for the `ListMetricsScopesByMonitoredProject` method.
 class ListMetricsScopesByMonitoredProjectResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListMetricsScopesByMonitoredProjectResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.MetricsScope>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metricsScopes',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.MetricsScope.create)
-    ..hasRequiredFields = false;
-
-  ListMetricsScopesByMonitoredProjectResponse._() : super();
   factory ListMetricsScopesByMonitoredProjectResponse({
     $core.Iterable<$3.MetricsScope>? metricsScopes,
   }) {
-    final _result = create();
+    final $result = create();
     if (metricsScopes != null) {
-      _result.metricsScopes.addAll(metricsScopes);
+      $result.metricsScopes.addAll(metricsScopes);
     }
-    return _result;
+    return $result;
   }
+  ListMetricsScopesByMonitoredProjectResponse._() : super();
   factory ListMetricsScopesByMonitoredProjectResponse.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -195,6 +179,17 @@ class ListMetricsScopesByMonitoredProjectResponse extends $pb.GeneratedMessage {
   factory ListMetricsScopesByMonitoredProjectResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListMetricsScopesByMonitoredProjectResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.MetricsScope>(
+        1, _omitFieldNames ? '' : 'metricsScopes', $pb.PbFieldType.PM,
+        subBuilder: $3.MetricsScope.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -207,8 +202,10 @@ class ListMetricsScopesByMonitoredProjectResponse extends $pb.GeneratedMessage {
           void Function(ListMetricsScopesByMonitoredProjectResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListMetricsScopesByMonitoredProjectResponse))
-          as ListMetricsScopesByMonitoredProjectResponse; // ignore: deprecated_member_use
+          as ListMetricsScopesByMonitoredProjectResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListMetricsScopesByMonitoredProjectResponse create() =>
       ListMetricsScopesByMonitoredProjectResponse._();
@@ -222,53 +219,45 @@ class ListMetricsScopesByMonitoredProjectResponse extends $pb.GeneratedMessage {
           ListMetricsScopesByMonitoredProjectResponse>(create);
   static ListMetricsScopesByMonitoredProjectResponse? _defaultInstance;
 
+  /// A set of all metrics scopes that the specified monitored project has been
+  /// added to.
   @$pb.TagNumber(1)
   $core.List<$3.MetricsScope> get metricsScopes => $_getList(0);
 }
 
+/// Request for the `CreateMonitoredProject` method.
 class CreateMonitoredProjectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateMonitoredProjectRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$3.MonitoredProject>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoredProject',
-        subBuilder: $3.MonitoredProject.create)
-    ..hasRequiredFields = false;
-
-  CreateMonitoredProjectRequest._() : super();
   factory CreateMonitoredProjectRequest({
     $core.String? parent,
     $3.MonitoredProject? monitoredProject,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (monitoredProject != null) {
-      _result.monitoredProject = monitoredProject;
+      $result.monitoredProject = monitoredProject;
     }
-    return _result;
+    return $result;
   }
+  CreateMonitoredProjectRequest._() : super();
   factory CreateMonitoredProjectRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateMonitoredProjectRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateMonitoredProjectRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$3.MonitoredProject>(2, _omitFieldNames ? '' : 'monitoredProject',
+        subBuilder: $3.MonitoredProject.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -281,8 +270,10 @@ class CreateMonitoredProjectRequest extends $pb.GeneratedMessage {
           void Function(CreateMonitoredProjectRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateMonitoredProjectRequest))
-          as CreateMonitoredProjectRequest; // ignore: deprecated_member_use
+          as CreateMonitoredProjectRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateMonitoredProjectRequest create() =>
       CreateMonitoredProjectRequest._();
@@ -294,6 +285,10 @@ class CreateMonitoredProjectRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateMonitoredProjectRequest>(create);
   static CreateMonitoredProjectRequest? _defaultInstance;
 
+  /// Required. The resource name of the existing `Metrics Scope` that will monitor this
+  /// project.
+  /// Example:
+  /// `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -306,6 +301,10 @@ class CreateMonitoredProjectRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The initial `MonitoredProject` configuration.
+  /// Specify only the `monitored_project.name` field. All other fields are
+  /// ignored. The `monitored_project.name` must be in the format:
+  /// `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
   @$pb.TagNumber(2)
   $3.MonitoredProject get monitoredProject => $_getN(1);
   @$pb.TagNumber(2)
@@ -321,39 +320,33 @@ class CreateMonitoredProjectRequest extends $pb.GeneratedMessage {
   $3.MonitoredProject ensureMonitoredProject() => $_ensure(1);
 }
 
+/// Request for the `DeleteMonitoredProject` method.
 class DeleteMonitoredProjectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteMonitoredProjectRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteMonitoredProjectRequest._() : super();
   factory DeleteMonitoredProjectRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteMonitoredProjectRequest._() : super();
   factory DeleteMonitoredProjectRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteMonitoredProjectRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteMonitoredProjectRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -366,8 +359,10 @@ class DeleteMonitoredProjectRequest extends $pb.GeneratedMessage {
           void Function(DeleteMonitoredProjectRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteMonitoredProjectRequest))
-          as DeleteMonitoredProjectRequest; // ignore: deprecated_member_use
+          as DeleteMonitoredProjectRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteMonitoredProjectRequest create() =>
       DeleteMonitoredProjectRequest._();
@@ -379,6 +374,13 @@ class DeleteMonitoredProjectRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteMonitoredProjectRequest>(create);
   static DeleteMonitoredProjectRequest? _defaultInstance;
 
+  ///  Required. The resource name of the `MonitoredProject`.
+  ///  Example:
+  ///  `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
+  ///
+  ///  Authorization requires the following [Google
+  ///  IAM](https://cloud.google.com/iam) permissions on both the `Metrics Scope`
+  ///  and on the `MonitoredProject`: `monitoring.metricsScopes.link`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -392,63 +394,50 @@ class DeleteMonitoredProjectRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Contains metadata for longrunning operation for the edit Metrics Scope
+/// endpoints.
 class OperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.metricsscope.v1'),
-      createEmptyInstance: create)
-    ..e<OperationMetadata_State>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OperationMetadata_State.STATE_UNSPECIFIED,
-        valueOf: OperationMetadata_State.valueOf,
-        enumValues: OperationMetadata_State.values)
-    ..aOM<$4.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $4.Timestamp.create)
-    ..aOM<$4.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $4.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  OperationMetadata._() : super();
   factory OperationMetadata({
     OperationMetadata_State? state,
     $4.Timestamp? createTime,
     $4.Timestamp? updateTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
-    return _result;
+    return $result;
   }
+  OperationMetadata._() : super();
   factory OperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.metricsscope.v1'),
+      createEmptyInstance: create)
+    ..e<OperationMetadata_State>(
+        1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: OperationMetadata_State.STATE_UNSPECIFIED,
+        valueOf: OperationMetadata_State.valueOf,
+        enumValues: OperationMetadata_State.values)
+    ..aOM<$4.Timestamp>(5, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(6, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $4.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -458,8 +447,10 @@ class OperationMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata))
-          as OperationMetadata; // ignore: deprecated_member_use
+          as OperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
@@ -470,6 +461,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata? _defaultInstance;
 
+  /// Current state of the batch operation.
   @$pb.TagNumber(1)
   OperationMetadata_State get state => $_getN(0);
   @$pb.TagNumber(1)
@@ -482,6 +474,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearState() => clearField(1);
 
+  /// The time when the batch request was received.
   @$pb.TagNumber(5)
   $4.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(5)
@@ -496,6 +489,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $4.Timestamp ensureCreateTime() => $_ensure(1);
 
+  /// The time when the operation result was last updated.
   @$pb.TagNumber(6)
   $4.Timestamp get updateTime => $_getN(2);
   @$pb.TagNumber(6)
@@ -510,3 +504,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $4.Timestamp ensureUpdateTime() => $_ensure(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

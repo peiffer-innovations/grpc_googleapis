@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/localized_settings.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,90 +15,10 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'theme_customization.pb.dart' as $0;
 
+/// Represents settings of an Actions project that are specific to a user locale.
+/// In this instance, user means the end user who invokes your Actions.
+/// **This message is localizable.**
 class LocalizedSettings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LocalizedSettings',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pronunciation')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shortDescription')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fullDescription')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'smallLogoImage')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'largeBannerImage')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'developerName')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'developerEmail')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'termsOfServiceUrl')
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'voice')
-    ..aOS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'privacyPolicyUrl')
-    ..pPS(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sampleInvocations')
-    ..aOM<$0.ThemeCustomization>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'themeCustomization',
-        subBuilder: $0.ThemeCustomization.create)
-    ..aOS(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'voiceLocale')
-    ..hasRequiredFields = false;
-
-  LocalizedSettings._() : super();
   factory LocalizedSettings({
     $core.String? displayName,
     $core.String? pronunciation,
@@ -111,57 +35,82 @@ class LocalizedSettings extends $pb.GeneratedMessage {
     $0.ThemeCustomization? themeCustomization,
     $core.String? voiceLocale,
   }) {
-    final _result = create();
+    final $result = create();
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (pronunciation != null) {
-      _result.pronunciation = pronunciation;
+      $result.pronunciation = pronunciation;
     }
     if (shortDescription != null) {
-      _result.shortDescription = shortDescription;
+      $result.shortDescription = shortDescription;
     }
     if (fullDescription != null) {
-      _result.fullDescription = fullDescription;
+      $result.fullDescription = fullDescription;
     }
     if (smallLogoImage != null) {
-      _result.smallLogoImage = smallLogoImage;
+      $result.smallLogoImage = smallLogoImage;
     }
     if (largeBannerImage != null) {
-      _result.largeBannerImage = largeBannerImage;
+      $result.largeBannerImage = largeBannerImage;
     }
     if (developerName != null) {
-      _result.developerName = developerName;
+      $result.developerName = developerName;
     }
     if (developerEmail != null) {
-      _result.developerEmail = developerEmail;
+      $result.developerEmail = developerEmail;
     }
     if (termsOfServiceUrl != null) {
-      _result.termsOfServiceUrl = termsOfServiceUrl;
+      $result.termsOfServiceUrl = termsOfServiceUrl;
     }
     if (voice != null) {
-      _result.voice = voice;
+      $result.voice = voice;
     }
     if (privacyPolicyUrl != null) {
-      _result.privacyPolicyUrl = privacyPolicyUrl;
+      $result.privacyPolicyUrl = privacyPolicyUrl;
     }
     if (sampleInvocations != null) {
-      _result.sampleInvocations.addAll(sampleInvocations);
+      $result.sampleInvocations.addAll(sampleInvocations);
     }
     if (themeCustomization != null) {
-      _result.themeCustomization = themeCustomization;
+      $result.themeCustomization = themeCustomization;
     }
     if (voiceLocale != null) {
-      _result.voiceLocale = voiceLocale;
+      $result.voiceLocale = voiceLocale;
     }
-    return _result;
+    return $result;
   }
+  LocalizedSettings._() : super();
   factory LocalizedSettings.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LocalizedSettings.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LocalizedSettings',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'displayName')
+    ..aOS(2, _omitFieldNames ? '' : 'pronunciation')
+    ..aOS(3, _omitFieldNames ? '' : 'shortDescription')
+    ..aOS(4, _omitFieldNames ? '' : 'fullDescription')
+    ..aOS(5, _omitFieldNames ? '' : 'smallLogoImage')
+    ..aOS(6, _omitFieldNames ? '' : 'largeBannerImage')
+    ..aOS(7, _omitFieldNames ? '' : 'developerName')
+    ..aOS(8, _omitFieldNames ? '' : 'developerEmail')
+    ..aOS(9, _omitFieldNames ? '' : 'termsOfServiceUrl')
+    ..aOS(10, _omitFieldNames ? '' : 'voice')
+    ..aOS(11, _omitFieldNames ? '' : 'privacyPolicyUrl')
+    ..pPS(12, _omitFieldNames ? '' : 'sampleInvocations')
+    ..aOM<$0.ThemeCustomization>(
+        13, _omitFieldNames ? '' : 'themeCustomization',
+        subBuilder: $0.ThemeCustomization.create)
+    ..aOS(14, _omitFieldNames ? '' : 'voiceLocale')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -171,8 +120,10 @@ class LocalizedSettings extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LocalizedSettings copyWith(void Function(LocalizedSettings) updates) =>
       super.copyWith((message) => updates(message as LocalizedSettings))
-          as LocalizedSettings; // ignore: deprecated_member_use
+          as LocalizedSettings;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LocalizedSettings create() => LocalizedSettings._();
   LocalizedSettings createEmptyInstance() => create();
@@ -183,6 +134,8 @@ class LocalizedSettings extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LocalizedSettings>(create);
   static LocalizedSettings? _defaultInstance;
 
+  /// Required. The default display name for this Actions project (if there is no
+  /// translation available)
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -195,6 +148,8 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisplayName() => clearField(1);
 
+  /// Required. The pronunciation of the display name to invoke it within a voice
+  /// (spoken) context.
   @$pb.TagNumber(2)
   $core.String get pronunciation => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -207,6 +162,8 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPronunciation() => clearField(2);
 
+  /// Required. The default short description for the Actions project (if there is no
+  /// translation available). 80 character limit.
   @$pb.TagNumber(3)
   $core.String get shortDescription => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -219,6 +176,8 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearShortDescription() => clearField(3);
 
+  /// Required. The default long description for the Actions project (if there is no
+  /// translation available). 4000 character limit.
   @$pb.TagNumber(4)
   $core.String get fullDescription => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -231,6 +190,12 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFullDescription() => clearField(4);
 
+  /// Required. Small square image, 192 x 192 px.
+  /// This should be specified as a reference to the corresponding image in the
+  /// `resources/images/` directory. For example, `$resources.images.foo` (without the
+  /// extension) for image in `resources/images/foo.jpg`
+  /// When working on a project pulled from Console, the Google-managed URL
+  /// pulled could be used. URLs from external sources are not allowed.
   @$pb.TagNumber(5)
   $core.String get smallLogoImage => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -243,6 +208,12 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSmallLogoImage() => clearField(5);
 
+  /// Optional. Large landscape image, 1920 x 1080 px.
+  /// This should be specified as a reference to the corresponding image in the
+  /// `resources/images/` directory. For example, `$resources.images.foo` (without the
+  /// extension) for image in `resources/images/foo.jpg`
+  /// When working on a project pulled from Console, the Google-managed URL
+  /// pulled could be used. URLs from external sources are not allowed.
   @$pb.TagNumber(6)
   $core.String get largeBannerImage => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -255,6 +226,7 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearLargeBannerImage() => clearField(6);
 
+  /// Required. The name of the developer to be displayed to users.
   @$pb.TagNumber(7)
   $core.String get developerName => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -267,6 +239,7 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearDeveloperName() => clearField(7);
 
+  /// Required. The contact email address for the developer.
   @$pb.TagNumber(8)
   $core.String get developerEmail => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -279,6 +252,7 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearDeveloperEmail() => clearField(8);
 
+  /// Optional. The terms of service URL.
   @$pb.TagNumber(9)
   $core.String get termsOfServiceUrl => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -291,6 +265,9 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearTermsOfServiceUrl() => clearField(9);
 
+  /// Required. The Google Assistant voice type that users hear when they interact with
+  /// your Actions. The supported values are "male_1", "male_2", "female_1", and
+  /// "female_2".
   @$pb.TagNumber(10)
   $core.String get voice => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -303,6 +280,7 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearVoice() => clearField(10);
 
+  /// Required. The privacy policy URL.
   @$pb.TagNumber(11)
   $core.String get privacyPolicyUrl => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -315,9 +293,13 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearPrivacyPolicyUrl() => clearField(11);
 
+  /// Optional. Sample invocation phrases displayed as part of your Actions project's
+  /// description in the Assistant directory. This will help users learn how to
+  /// use it.
   @$pb.TagNumber(12)
   $core.List<$core.String> get sampleInvocations => $_getList(11);
 
+  /// Optional. Theme customizations for visual components of your Actions.
   @$pb.TagNumber(13)
   $0.ThemeCustomization get themeCustomization => $_getN(12);
   @$pb.TagNumber(13)
@@ -332,6 +314,9 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $0.ThemeCustomization ensureThemeCustomization() => $_ensure(12);
 
+  /// Optional. The locale for the specified voice. If not specified, this resolves
+  /// to the user's Assistant locale. If specified, the voice locale must have
+  /// the same root language as the locale specified in LocalizedSettings.
   @$pb.TagNumber(14)
   $core.String get voiceLocale => $_getSZ(13);
   @$pb.TagNumber(14)
@@ -344,3 +329,7 @@ class LocalizedSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearVoiceLocale() => clearField(14);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,76 +1,65 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/analytics/admin/v1alpha/expanded_data_set.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
-
 import 'expanded_data_set.pbenum.dart';
 
 export 'expanded_data_set.pbenum.dart';
 
+/// A filter for a string-type dimension that matches a particular pattern.
 class ExpandedDataSetFilter_StringFilter extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExpandedDataSetFilter.StringFilter',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..e<ExpandedDataSetFilter_StringFilter_MatchType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matchType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            ExpandedDataSetFilter_StringFilter_MatchType.MATCH_TYPE_UNSPECIFIED,
-        valueOf: ExpandedDataSetFilter_StringFilter_MatchType.valueOf,
-        enumValues: ExpandedDataSetFilter_StringFilter_MatchType.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'caseSensitive')
-    ..hasRequiredFields = false;
-
-  ExpandedDataSetFilter_StringFilter._() : super();
   factory ExpandedDataSetFilter_StringFilter({
     ExpandedDataSetFilter_StringFilter_MatchType? matchType,
     $core.String? value,
     $core.bool? caseSensitive,
   }) {
-    final _result = create();
+    final $result = create();
     if (matchType != null) {
-      _result.matchType = matchType;
+      $result.matchType = matchType;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
     if (caseSensitive != null) {
-      _result.caseSensitive = caseSensitive;
+      $result.caseSensitive = caseSensitive;
     }
-    return _result;
+    return $result;
   }
+  ExpandedDataSetFilter_StringFilter._() : super();
   factory ExpandedDataSetFilter_StringFilter.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExpandedDataSetFilter_StringFilter.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExpandedDataSetFilter.StringFilter',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..e<ExpandedDataSetFilter_StringFilter_MatchType>(
+        1, _omitFieldNames ? '' : 'matchType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ExpandedDataSetFilter_StringFilter_MatchType.MATCH_TYPE_UNSPECIFIED,
+        valueOf: ExpandedDataSetFilter_StringFilter_MatchType.valueOf,
+        enumValues: ExpandedDataSetFilter_StringFilter_MatchType.values)
+    ..aOS(2, _omitFieldNames ? '' : 'value')
+    ..aOB(3, _omitFieldNames ? '' : 'caseSensitive')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -83,8 +72,10 @@ class ExpandedDataSetFilter_StringFilter extends $pb.GeneratedMessage {
           void Function(ExpandedDataSetFilter_StringFilter) updates) =>
       super.copyWith((message) =>
               updates(message as ExpandedDataSetFilter_StringFilter))
-          as ExpandedDataSetFilter_StringFilter; // ignore: deprecated_member_use
+          as ExpandedDataSetFilter_StringFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExpandedDataSetFilter_StringFilter create() =>
       ExpandedDataSetFilter_StringFilter._();
@@ -97,6 +88,7 @@ class ExpandedDataSetFilter_StringFilter extends $pb.GeneratedMessage {
           create);
   static ExpandedDataSetFilter_StringFilter? _defaultInstance;
 
+  /// Required. The match type for the string filter.
   @$pb.TagNumber(1)
   ExpandedDataSetFilter_StringFilter_MatchType get matchType => $_getN(0);
   @$pb.TagNumber(1)
@@ -109,6 +101,7 @@ class ExpandedDataSetFilter_StringFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMatchType() => clearField(1);
 
+  /// Required. The string value to be matched against.
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -121,6 +114,10 @@ class ExpandedDataSetFilter_StringFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  /// Optional. If true, the match is case-sensitive. If false, the match is
+  /// case-insensitive.
+  /// Must be true when match_type is EXACT.
+  /// Must be false when match_type is CONTAINS.
   @$pb.TagNumber(3)
   $core.bool get caseSensitive => $_getBF(2);
   @$pb.TagNumber(3)
@@ -134,48 +131,38 @@ class ExpandedDataSetFilter_StringFilter extends $pb.GeneratedMessage {
   void clearCaseSensitive() => clearField(3);
 }
 
+/// A filter for a string dimension that matches a particular list of options.
 class ExpandedDataSetFilter_InListFilter extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExpandedDataSetFilter.InListFilter',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'values')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'caseSensitive')
-    ..hasRequiredFields = false;
-
-  ExpandedDataSetFilter_InListFilter._() : super();
   factory ExpandedDataSetFilter_InListFilter({
     $core.Iterable<$core.String>? values,
     $core.bool? caseSensitive,
   }) {
-    final _result = create();
+    final $result = create();
     if (values != null) {
-      _result.values.addAll(values);
+      $result.values.addAll(values);
     }
     if (caseSensitive != null) {
-      _result.caseSensitive = caseSensitive;
+      $result.caseSensitive = caseSensitive;
     }
-    return _result;
+    return $result;
   }
+  ExpandedDataSetFilter_InListFilter._() : super();
   factory ExpandedDataSetFilter_InListFilter.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExpandedDataSetFilter_InListFilter.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExpandedDataSetFilter.InListFilter',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'values')
+    ..aOB(2, _omitFieldNames ? '' : 'caseSensitive')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -188,8 +175,10 @@ class ExpandedDataSetFilter_InListFilter extends $pb.GeneratedMessage {
           void Function(ExpandedDataSetFilter_InListFilter) updates) =>
       super.copyWith((message) =>
               updates(message as ExpandedDataSetFilter_InListFilter))
-          as ExpandedDataSetFilter_InListFilter; // ignore: deprecated_member_use
+          as ExpandedDataSetFilter_InListFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExpandedDataSetFilter_InListFilter create() =>
       ExpandedDataSetFilter_InListFilter._();
@@ -202,9 +191,14 @@ class ExpandedDataSetFilter_InListFilter extends $pb.GeneratedMessage {
           create);
   static ExpandedDataSetFilter_InListFilter? _defaultInstance;
 
+  /// Required. The list of possible string values to match against. Must be
+  /// non-empty.
   @$pb.TagNumber(1)
   $core.List<$core.String> get values => $_getList(0);
 
+  /// Optional. If true, the match is case-sensitive. If false, the match is
+  /// case-insensitive.
+  /// Must be true.
   @$pb.TagNumber(2)
   $core.bool get caseSensitive => $_getBF(1);
   @$pb.TagNumber(2)
@@ -220,7 +214,33 @@ class ExpandedDataSetFilter_InListFilter extends $pb.GeneratedMessage {
 
 enum ExpandedDataSetFilter_OneFilter { stringFilter, inListFilter, notSet }
 
+/// A specific filter for a single dimension
 class ExpandedDataSetFilter extends $pb.GeneratedMessage {
+  factory ExpandedDataSetFilter({
+    $core.String? fieldName,
+    ExpandedDataSetFilter_StringFilter? stringFilter,
+    ExpandedDataSetFilter_InListFilter? inListFilter,
+  }) {
+    final $result = create();
+    if (fieldName != null) {
+      $result.fieldName = fieldName;
+    }
+    if (stringFilter != null) {
+      $result.stringFilter = stringFilter;
+    }
+    if (inListFilter != null) {
+      $result.inListFilter = inListFilter;
+    }
+    return $result;
+  }
+  ExpandedDataSetFilter._() : super();
+  factory ExpandedDataSetFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExpandedDataSetFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ExpandedDataSetFilter_OneFilter>
       _ExpandedDataSetFilter_OneFilterByTag = {
     2: ExpandedDataSetFilter_OneFilter.stringFilter,
@@ -228,58 +248,20 @@ class ExpandedDataSetFilter extends $pb.GeneratedMessage {
     0: ExpandedDataSetFilter_OneFilter.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExpandedDataSetFilter',
+      _omitMessageNames ? '' : 'ExpandedDataSetFilter',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fieldName')
+    ..aOS(1, _omitFieldNames ? '' : 'fieldName')
     ..aOM<ExpandedDataSetFilter_StringFilter>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'stringFilter',
+        2, _omitFieldNames ? '' : 'stringFilter',
         subBuilder: ExpandedDataSetFilter_StringFilter.create)
     ..aOM<ExpandedDataSetFilter_InListFilter>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'inListFilter',
+        3, _omitFieldNames ? '' : 'inListFilter',
         subBuilder: ExpandedDataSetFilter_InListFilter.create)
     ..hasRequiredFields = false;
 
-  ExpandedDataSetFilter._() : super();
-  factory ExpandedDataSetFilter({
-    $core.String? fieldName,
-    ExpandedDataSetFilter_StringFilter? stringFilter,
-    ExpandedDataSetFilter_InListFilter? inListFilter,
-  }) {
-    final _result = create();
-    if (fieldName != null) {
-      _result.fieldName = fieldName;
-    }
-    if (stringFilter != null) {
-      _result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      _result.inListFilter = inListFilter;
-    }
-    return _result;
-  }
-  factory ExpandedDataSetFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExpandedDataSetFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -291,8 +273,10 @@ class ExpandedDataSetFilter extends $pb.GeneratedMessage {
   ExpandedDataSetFilter copyWith(
           void Function(ExpandedDataSetFilter) updates) =>
       super.copyWith((message) => updates(message as ExpandedDataSetFilter))
-          as ExpandedDataSetFilter; // ignore: deprecated_member_use
+          as ExpandedDataSetFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExpandedDataSetFilter create() => ExpandedDataSetFilter._();
   ExpandedDataSetFilter createEmptyInstance() => create();
@@ -307,6 +291,7 @@ class ExpandedDataSetFilter extends $pb.GeneratedMessage {
       _ExpandedDataSetFilter_OneFilterByTag[$_whichOneof(0)]!;
   void clearOneFilter() => clearField($_whichOneof(0));
 
+  /// Required. The dimension name to filter.
   @$pb.TagNumber(1)
   $core.String get fieldName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -319,6 +304,7 @@ class ExpandedDataSetFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFieldName() => clearField(1);
 
+  /// A filter for a string-type dimension that matches a particular pattern.
   @$pb.TagNumber(2)
   ExpandedDataSetFilter_StringFilter get stringFilter => $_getN(1);
   @$pb.TagNumber(2)
@@ -333,6 +319,8 @@ class ExpandedDataSetFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ExpandedDataSetFilter_StringFilter ensureStringFilter() => $_ensure(1);
 
+  /// A filter for a string dimension that matches a particular list of
+  /// options.
   @$pb.TagNumber(3)
   ExpandedDataSetFilter_InListFilter get inListFilter => $_getN(2);
   @$pb.TagNumber(3)
@@ -355,7 +343,33 @@ enum ExpandedDataSetFilterExpression_Expr {
   notSet
 }
 
+/// A logical expression of EnhancedDataSet dimension filters.
 class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
+  factory ExpandedDataSetFilterExpression({
+    ExpandedDataSetFilterExpressionList? andGroup,
+    ExpandedDataSetFilterExpression? notExpression,
+    ExpandedDataSetFilter? filter,
+  }) {
+    final $result = create();
+    if (andGroup != null) {
+      $result.andGroup = andGroup;
+    }
+    if (notExpression != null) {
+      $result.notExpression = notExpression;
+    }
+    if (filter != null) {
+      $result.filter = filter;
+    }
+    return $result;
+  }
+  ExpandedDataSetFilterExpression._() : super();
+  factory ExpandedDataSetFilterExpression.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExpandedDataSetFilterExpression.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ExpandedDataSetFilterExpression_Expr>
       _ExpandedDataSetFilterExpression_ExprByTag = {
     1: ExpandedDataSetFilterExpression_Expr.andGroup,
@@ -364,59 +378,21 @@ class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
     0: ExpandedDataSetFilterExpression_Expr.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExpandedDataSetFilterExpression',
+      _omitMessageNames ? '' : 'ExpandedDataSetFilterExpression',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
     ..aOM<ExpandedDataSetFilterExpressionList>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'andGroup',
+        1, _omitFieldNames ? '' : 'andGroup',
         subBuilder: ExpandedDataSetFilterExpressionList.create)
     ..aOM<ExpandedDataSetFilterExpression>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'notExpression',
+        2, _omitFieldNames ? '' : 'notExpression',
         subBuilder: ExpandedDataSetFilterExpression.create)
-    ..aOM<ExpandedDataSetFilter>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter',
+    ..aOM<ExpandedDataSetFilter>(3, _omitFieldNames ? '' : 'filter',
         subBuilder: ExpandedDataSetFilter.create)
     ..hasRequiredFields = false;
 
-  ExpandedDataSetFilterExpression._() : super();
-  factory ExpandedDataSetFilterExpression({
-    ExpandedDataSetFilterExpressionList? andGroup,
-    ExpandedDataSetFilterExpression? notExpression,
-    ExpandedDataSetFilter? filter,
-  }) {
-    final _result = create();
-    if (andGroup != null) {
-      _result.andGroup = andGroup;
-    }
-    if (notExpression != null) {
-      _result.notExpression = notExpression;
-    }
-    if (filter != null) {
-      _result.filter = filter;
-    }
-    return _result;
-  }
-  factory ExpandedDataSetFilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExpandedDataSetFilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -429,8 +405,10 @@ class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
           void Function(ExpandedDataSetFilterExpression) updates) =>
       super.copyWith(
               (message) => updates(message as ExpandedDataSetFilterExpression))
-          as ExpandedDataSetFilterExpression; // ignore: deprecated_member_use
+          as ExpandedDataSetFilterExpression;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExpandedDataSetFilterExpression create() =>
       ExpandedDataSetFilterExpression._();
@@ -447,6 +425,10 @@ class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
       _ExpandedDataSetFilterExpression_ExprByTag[$_whichOneof(0)]!;
   void clearExpr() => clearField($_whichOneof(0));
 
+  /// A list of expressions to be AND’ed together. It must contain a
+  /// ExpandedDataSetFilterExpression with either not_expression or
+  /// dimension_filter. This must be set for the top level
+  /// ExpandedDataSetFilterExpression.
   @$pb.TagNumber(1)
   ExpandedDataSetFilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
@@ -461,6 +443,9 @@ class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ExpandedDataSetFilterExpressionList ensureAndGroup() => $_ensure(0);
 
+  /// A filter expression to be NOT'ed (that is, inverted, complemented). It
+  /// must include a dimension_filter. This cannot be set on the
+  /// top level ExpandedDataSetFilterExpression.
   @$pb.TagNumber(2)
   ExpandedDataSetFilterExpression get notExpression => $_getN(1);
   @$pb.TagNumber(2)
@@ -475,6 +460,8 @@ class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ExpandedDataSetFilterExpression ensureNotExpression() => $_ensure(1);
 
+  /// A filter on a single dimension. This cannot be set on the top
+  /// level ExpandedDataSetFilterExpression.
   @$pb.TagNumber(3)
   ExpandedDataSetFilter get filter => $_getN(2);
   @$pb.TagNumber(3)
@@ -490,35 +477,18 @@ class ExpandedDataSetFilterExpression extends $pb.GeneratedMessage {
   ExpandedDataSetFilter ensureFilter() => $_ensure(2);
 }
 
+/// A list of ExpandedDataSet filter expressions.
 class ExpandedDataSetFilterExpressionList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExpandedDataSetFilterExpressionList',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..pc<ExpandedDataSetFilterExpression>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filterExpressions',
-        $pb.PbFieldType.PM,
-        subBuilder: ExpandedDataSetFilterExpression.create)
-    ..hasRequiredFields = false;
-
-  ExpandedDataSetFilterExpressionList._() : super();
   factory ExpandedDataSetFilterExpressionList({
     $core.Iterable<ExpandedDataSetFilterExpression>? filterExpressions,
   }) {
-    final _result = create();
+    final $result = create();
     if (filterExpressions != null) {
-      _result.filterExpressions.addAll(filterExpressions);
+      $result.filterExpressions.addAll(filterExpressions);
     }
-    return _result;
+    return $result;
   }
+  ExpandedDataSetFilterExpressionList._() : super();
   factory ExpandedDataSetFilterExpressionList.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -526,6 +496,17 @@ class ExpandedDataSetFilterExpressionList extends $pb.GeneratedMessage {
   factory ExpandedDataSetFilterExpressionList.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExpandedDataSetFilterExpressionList',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<ExpandedDataSetFilterExpression>(
+        1, _omitFieldNames ? '' : 'filterExpressions', $pb.PbFieldType.PM,
+        subBuilder: ExpandedDataSetFilterExpression.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -538,8 +519,10 @@ class ExpandedDataSetFilterExpressionList extends $pb.GeneratedMessage {
           void Function(ExpandedDataSetFilterExpressionList) updates) =>
       super.copyWith((message) =>
               updates(message as ExpandedDataSetFilterExpressionList))
-          as ExpandedDataSetFilterExpressionList; // ignore: deprecated_member_use
+          as ExpandedDataSetFilterExpressionList;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExpandedDataSetFilterExpressionList create() =>
       ExpandedDataSetFilterExpressionList._();
@@ -552,61 +535,14 @@ class ExpandedDataSetFilterExpressionList extends $pb.GeneratedMessage {
           ExpandedDataSetFilterExpressionList>(create);
   static ExpandedDataSetFilterExpressionList? _defaultInstance;
 
+  /// A list of ExpandedDataSet filter expressions.
   @$pb.TagNumber(1)
   $core.List<ExpandedDataSetFilterExpression> get filterExpressions =>
       $_getList(0);
 }
 
+/// A resource message representing an `ExpandedDataSet`.
 class ExpandedDataSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExpandedDataSet',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dimensionNames')
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metricNames')
-    ..aOM<ExpandedDataSetFilterExpression>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dimensionFilterExpression',
-        subBuilder: ExpandedDataSetFilterExpression.create)
-    ..aOM<$0.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataCollectionStartTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  ExpandedDataSet._() : super();
   factory ExpandedDataSet({
     $core.String? name,
     $core.String? displayName,
@@ -616,36 +552,55 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
     ExpandedDataSetFilterExpression? dimensionFilterExpression,
     $0.Timestamp? dataCollectionStartTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (dimensionNames != null) {
-      _result.dimensionNames.addAll(dimensionNames);
+      $result.dimensionNames.addAll(dimensionNames);
     }
     if (metricNames != null) {
-      _result.metricNames.addAll(metricNames);
+      $result.metricNames.addAll(metricNames);
     }
     if (dimensionFilterExpression != null) {
-      _result.dimensionFilterExpression = dimensionFilterExpression;
+      $result.dimensionFilterExpression = dimensionFilterExpression;
     }
     if (dataCollectionStartTime != null) {
-      _result.dataCollectionStartTime = dataCollectionStartTime;
+      $result.dataCollectionStartTime = dataCollectionStartTime;
     }
-    return _result;
+    return $result;
   }
+  ExpandedDataSet._() : super();
   factory ExpandedDataSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExpandedDataSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExpandedDataSet',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'displayName')
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..pPS(4, _omitFieldNames ? '' : 'dimensionNames')
+    ..pPS(5, _omitFieldNames ? '' : 'metricNames')
+    ..aOM<ExpandedDataSetFilterExpression>(
+        6, _omitFieldNames ? '' : 'dimensionFilterExpression',
+        subBuilder: ExpandedDataSetFilterExpression.create)
+    ..aOM<$0.Timestamp>(7, _omitFieldNames ? '' : 'dataCollectionStartTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -655,8 +610,10 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ExpandedDataSet copyWith(void Function(ExpandedDataSet) updates) =>
       super.copyWith((message) => updates(message as ExpandedDataSet))
-          as ExpandedDataSet; // ignore: deprecated_member_use
+          as ExpandedDataSet;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExpandedDataSet create() => ExpandedDataSet._();
   ExpandedDataSet createEmptyInstance() => create();
@@ -667,6 +624,8 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExpandedDataSet>(create);
   static ExpandedDataSet? _defaultInstance;
 
+  /// Output only. The resource name for this ExpandedDataSet resource.
+  /// Format: properties/{property_id}/expandedDataSets/{expanded_data_set}
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -679,6 +638,8 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Required. The display name of the ExpandedDataSet.
+  /// Max 200 chars.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -691,6 +652,8 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
+  /// Optional. The description of the ExpandedDataSet.
+  /// Max 50 chars.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -703,12 +666,23 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  /// Immutable. The list of dimensions included in the ExpandedDataSet.
+  /// See the [API
+  /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
+  /// for the list of dimension names.
   @$pb.TagNumber(4)
   $core.List<$core.String> get dimensionNames => $_getList(3);
 
+  /// Immutable. The list of metrics included in the ExpandedDataSet.
+  /// See the [API
+  /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
+  /// for the list of dimension names.
   @$pb.TagNumber(5)
   $core.List<$core.String> get metricNames => $_getList(4);
 
+  /// Immutable. A logical expression of ExpandedDataSet filters applied to
+  /// dimension included in the ExpandedDataSet. This filter is used to reduce
+  /// the number of rows and thus the chance of encountering `other` row.
   @$pb.TagNumber(6)
   ExpandedDataSetFilterExpression get dimensionFilterExpression => $_getN(5);
   @$pb.TagNumber(6)
@@ -724,6 +698,8 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
   ExpandedDataSetFilterExpression ensureDimensionFilterExpression() =>
       $_ensure(5);
 
+  /// Output only. Time when expanded data set began (or will begin) collecing
+  /// data.
   @$pb.TagNumber(7)
   $0.Timestamp get dataCollectionStartTime => $_getN(6);
   @$pb.TagNumber(7)
@@ -738,3 +714,7 @@ class ExpandedDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.Timestamp ensureDataCollectionStartTime() => $_ensure(6);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

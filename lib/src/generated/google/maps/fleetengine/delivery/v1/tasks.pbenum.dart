@@ -1,40 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/delivery/v1/tasks.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The type of Task.
 class Task_Type extends $pb.ProtobufEnum {
-  static const Task_Type TYPE_UNSPECIFIED = Task_Type._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TYPE_UNSPECIFIED');
-  static const Task_Type PICKUP = Task_Type._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PICKUP');
-  static const Task_Type DELIVERY = Task_Type._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DELIVERY');
-  static const Task_Type SCHEDULED_STOP = Task_Type._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCHEDULED_STOP');
-  static const Task_Type UNAVAILABLE = Task_Type._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNAVAILABLE');
+  static const Task_Type TYPE_UNSPECIFIED =
+      Task_Type._(0, _omitEnumNames ? '' : 'TYPE_UNSPECIFIED');
+  static const Task_Type PICKUP =
+      Task_Type._(1, _omitEnumNames ? '' : 'PICKUP');
+  static const Task_Type DELIVERY =
+      Task_Type._(2, _omitEnumNames ? '' : 'DELIVERY');
+  static const Task_Type SCHEDULED_STOP =
+      Task_Type._(3, _omitEnumNames ? '' : 'SCHEDULED_STOP');
+  static const Task_Type UNAVAILABLE =
+      Task_Type._(4, _omitEnumNames ? '' : 'UNAVAILABLE');
 
   static const $core.List<Task_Type> values = <Task_Type>[
     TYPE_UNSPECIFIED,
@@ -51,22 +41,13 @@ class Task_Type extends $pb.ProtobufEnum {
   const Task_Type._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The state of a Task. This indicates the Tasks's progress.
 class Task_State extends $pb.ProtobufEnum {
-  static const Task_State STATE_UNSPECIFIED = Task_State._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STATE_UNSPECIFIED');
-  static const Task_State OPEN = Task_State._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OPEN');
-  static const Task_State CLOSED = Task_State._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CLOSED');
+  static const Task_State STATE_UNSPECIFIED =
+      Task_State._(0, _omitEnumNames ? '' : 'STATE_UNSPECIFIED');
+  static const Task_State OPEN = Task_State._(1, _omitEnumNames ? '' : 'OPEN');
+  static const Task_State CLOSED =
+      Task_State._(2, _omitEnumNames ? '' : 'CLOSED');
 
   static const $core.List<Task_State> values = <Task_State>[
     STATE_UNSPECIFIED,
@@ -81,22 +62,15 @@ class Task_State extends $pb.ProtobufEnum {
   const Task_State._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The outcome of attempting to execute a Task. When `TaskState` is closed,
+/// `TaskOutcome` indicates whether it was completed successfully.
 class Task_TaskOutcome extends $pb.ProtobufEnum {
-  static const Task_TaskOutcome TASK_OUTCOME_UNSPECIFIED = Task_TaskOutcome._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TASK_OUTCOME_UNSPECIFIED');
-  static const Task_TaskOutcome SUCCEEDED = Task_TaskOutcome._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SUCCEEDED');
-  static const Task_TaskOutcome FAILED = Task_TaskOutcome._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILED');
+  static const Task_TaskOutcome TASK_OUTCOME_UNSPECIFIED =
+      Task_TaskOutcome._(0, _omitEnumNames ? '' : 'TASK_OUTCOME_UNSPECIFIED');
+  static const Task_TaskOutcome SUCCEEDED =
+      Task_TaskOutcome._(1, _omitEnumNames ? '' : 'SUCCEEDED');
+  static const Task_TaskOutcome FAILED =
+      Task_TaskOutcome._(2, _omitEnumNames ? '' : 'FAILED');
 
   static const $core.List<Task_TaskOutcome> values = <Task_TaskOutcome>[
     TASK_OUTCOME_UNSPECIFIED,
@@ -111,26 +85,17 @@ class Task_TaskOutcome extends $pb.ProtobufEnum {
   const Task_TaskOutcome._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The identity of the source that populated the `task_outcome_location`.
 class Task_TaskOutcomeLocationSource extends $pb.ProtobufEnum {
   static const Task_TaskOutcomeLocationSource
       TASK_OUTCOME_LOCATION_SOURCE_UNSPECIFIED =
       Task_TaskOutcomeLocationSource._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TASK_OUTCOME_LOCATION_SOURCE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'TASK_OUTCOME_LOCATION_SOURCE_UNSPECIFIED');
   static const Task_TaskOutcomeLocationSource PROVIDER =
-      Task_TaskOutcomeLocationSource._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PROVIDER');
+      Task_TaskOutcomeLocationSource._(2, _omitEnumNames ? '' : 'PROVIDER');
   static const Task_TaskOutcomeLocationSource LAST_VEHICLE_LOCATION =
       Task_TaskOutcomeLocationSource._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LAST_VEHICLE_LOCATION');
+          3, _omitEnumNames ? '' : 'LAST_VEHICLE_LOCATION');
 
   static const $core.List<Task_TaskOutcomeLocationSource> values =
       <Task_TaskOutcomeLocationSource>[
@@ -147,3 +112,5 @@ class Task_TaskOutcomeLocationSource extends $pb.ProtobufEnum {
   const Task_TaskOutcomeLocationSource._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

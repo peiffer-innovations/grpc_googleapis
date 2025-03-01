@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/sbom.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,48 +16,37 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'common.pb.dart' as $0;
 import 'intoto_statement.pb.dart' as $1;
 
+/// The note representing an SBOM reference.
 class SBOMReferenceNote extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SBOMReferenceNote',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'format')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..hasRequiredFields = false;
-
-  SBOMReferenceNote._() : super();
   factory SBOMReferenceNote({
     $core.String? format,
     $core.String? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (format != null) {
-      _result.format = format;
+      $result.format = format;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  SBOMReferenceNote._() : super();
   factory SBOMReferenceNote.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SBOMReferenceNote.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SBOMReferenceNote',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'format')
+    ..aOS(2, _omitFieldNames ? '' : 'version')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -63,8 +56,10 @@ class SBOMReferenceNote extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SBOMReferenceNote copyWith(void Function(SBOMReferenceNote) updates) =>
       super.copyWith((message) => updates(message as SBOMReferenceNote))
-          as SBOMReferenceNote; // ignore: deprecated_member_use
+          as SBOMReferenceNote;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SBOMReferenceNote create() => SBOMReferenceNote._();
   SBOMReferenceNote createEmptyInstance() => create();
@@ -75,6 +70,7 @@ class SBOMReferenceNote extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SBOMReferenceNote>(create);
   static SBOMReferenceNote? _defaultInstance;
 
+  /// The format that SBOM takes. E.g. may be spdx, cyclonedx, etc...
   @$pb.TagNumber(1)
   $core.String get format => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -87,6 +83,8 @@ class SBOMReferenceNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFormat() => clearField(1);
 
+  /// The version of the format that the SBOM takes. E.g. if the format
+  /// is spdx, the version may be 2.3.
   @$pb.TagNumber(2)
   $core.String get version => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -100,60 +98,48 @@ class SBOMReferenceNote extends $pb.GeneratedMessage {
   void clearVersion() => clearField(2);
 }
 
+/// The occurrence representing an SBOM reference as applied to a specific
+/// resource. The occurrence follows the DSSE specification. See
+/// https://github.com/secure-systems-lab/dsse/blob/master/envelope.md for more
+/// details.
 class SBOMReferenceOccurrence extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SBOMReferenceOccurrence',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOM<SbomReferenceIntotoPayload>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'payload',
-        subBuilder: SbomReferenceIntotoPayload.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'payloadType')
-    ..pc<$0.EnvelopeSignature>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'signatures',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.EnvelopeSignature.create)
-    ..hasRequiredFields = false;
-
-  SBOMReferenceOccurrence._() : super();
   factory SBOMReferenceOccurrence({
     SbomReferenceIntotoPayload? payload,
     $core.String? payloadType,
     $core.Iterable<$0.EnvelopeSignature>? signatures,
   }) {
-    final _result = create();
+    final $result = create();
     if (payload != null) {
-      _result.payload = payload;
+      $result.payload = payload;
     }
     if (payloadType != null) {
-      _result.payloadType = payloadType;
+      $result.payloadType = payloadType;
     }
     if (signatures != null) {
-      _result.signatures.addAll(signatures);
+      $result.signatures.addAll(signatures);
     }
-    return _result;
+    return $result;
   }
+  SBOMReferenceOccurrence._() : super();
   factory SBOMReferenceOccurrence.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SBOMReferenceOccurrence.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SBOMReferenceOccurrence',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOM<SbomReferenceIntotoPayload>(1, _omitFieldNames ? '' : 'payload',
+        subBuilder: SbomReferenceIntotoPayload.create)
+    ..aOS(2, _omitFieldNames ? '' : 'payloadType')
+    ..pc<$0.EnvelopeSignature>(
+        3, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM,
+        subBuilder: $0.EnvelopeSignature.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -165,8 +151,10 @@ class SBOMReferenceOccurrence extends $pb.GeneratedMessage {
   SBOMReferenceOccurrence copyWith(
           void Function(SBOMReferenceOccurrence) updates) =>
       super.copyWith((message) => updates(message as SBOMReferenceOccurrence))
-          as SBOMReferenceOccurrence; // ignore: deprecated_member_use
+          as SBOMReferenceOccurrence;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SBOMReferenceOccurrence create() => SBOMReferenceOccurrence._();
   SBOMReferenceOccurrence createEmptyInstance() => create();
@@ -177,6 +165,7 @@ class SBOMReferenceOccurrence extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SBOMReferenceOccurrence>(create);
   static SBOMReferenceOccurrence? _defaultInstance;
 
+  /// The actual payload that contains the SBOM reference data.
   @$pb.TagNumber(1)
   SbomReferenceIntotoPayload get payload => $_getN(0);
   @$pb.TagNumber(1)
@@ -191,6 +180,9 @@ class SBOMReferenceOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SbomReferenceIntotoPayload ensurePayload() => $_ensure(0);
 
+  /// The kind of payload that SbomReferenceIntotoPayload takes. Since it's in
+  /// the intoto format, this value is expected to be
+  /// 'application/vnd.in-toto+json'.
   @$pb.TagNumber(2)
   $core.String get payloadType => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -203,74 +195,57 @@ class SBOMReferenceOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPayloadType() => clearField(2);
 
+  /// The signatures over the payload.
   @$pb.TagNumber(3)
   $core.List<$0.EnvelopeSignature> get signatures => $_getList(2);
 }
 
+/// The actual payload that contains the SBOM Reference data.
+/// The payload follows the intoto statement specification. See
+/// https://github.com/in-toto/attestation/blob/main/spec/v1.0/statement.md
+/// for more details.
 class SbomReferenceIntotoPayload extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SbomReferenceIntotoPayload',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : '_type',
-        protoName: 'type')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'predicateType')
-    ..pc<$1.Subject>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subject',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Subject.create)
-    ..aOM<SbomReferenceIntotoPredicate>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'predicate',
-        subBuilder: SbomReferenceIntotoPredicate.create)
-    ..hasRequiredFields = false;
-
-  SbomReferenceIntotoPayload._() : super();
   factory SbomReferenceIntotoPayload({
     $core.String? type,
     $core.String? predicateType,
     $core.Iterable<$1.Subject>? subject,
     SbomReferenceIntotoPredicate? predicate,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (predicateType != null) {
-      _result.predicateType = predicateType;
+      $result.predicateType = predicateType;
     }
     if (subject != null) {
-      _result.subject.addAll(subject);
+      $result.subject.addAll(subject);
     }
     if (predicate != null) {
-      _result.predicate = predicate;
+      $result.predicate = predicate;
     }
-    return _result;
+    return $result;
   }
+  SbomReferenceIntotoPayload._() : super();
   factory SbomReferenceIntotoPayload.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SbomReferenceIntotoPayload.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SbomReferenceIntotoPayload',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : '_type', protoName: 'type')
+    ..aOS(2, _omitFieldNames ? '' : 'predicateType')
+    ..pc<$1.Subject>(3, _omitFieldNames ? '' : 'subject', $pb.PbFieldType.PM,
+        subBuilder: $1.Subject.create)
+    ..aOM<SbomReferenceIntotoPredicate>(4, _omitFieldNames ? '' : 'predicate',
+        subBuilder: SbomReferenceIntotoPredicate.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -283,8 +258,10 @@ class SbomReferenceIntotoPayload extends $pb.GeneratedMessage {
           void Function(SbomReferenceIntotoPayload) updates) =>
       super.copyWith(
               (message) => updates(message as SbomReferenceIntotoPayload))
-          as SbomReferenceIntotoPayload; // ignore: deprecated_member_use
+          as SbomReferenceIntotoPayload;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SbomReferenceIntotoPayload create() => SbomReferenceIntotoPayload._();
   SbomReferenceIntotoPayload createEmptyInstance() => create();
@@ -295,6 +272,7 @@ class SbomReferenceIntotoPayload extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SbomReferenceIntotoPayload>(create);
   static SbomReferenceIntotoPayload? _defaultInstance;
 
+  /// Identifier for the schema of the Statement.
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -307,6 +285,7 @@ class SbomReferenceIntotoPayload extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// URI identifying the type of the Predicate.
   @$pb.TagNumber(2)
   $core.String get predicateType => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -319,9 +298,13 @@ class SbomReferenceIntotoPayload extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPredicateType() => clearField(2);
 
+  /// Set of software artifacts that the attestation applies to. Each element
+  /// represents a single software artifact.
   @$pb.TagNumber(3)
   $core.List<$1.Subject> get subject => $_getList(2);
 
+  /// Additional parameters of the Predicate. Includes the actual data about the
+  /// SBOM.
   @$pb.TagNumber(4)
   SbomReferenceIntotoPredicate get predicate => $_getN(3);
   @$pb.TagNumber(4)
@@ -337,70 +320,51 @@ class SbomReferenceIntotoPayload extends $pb.GeneratedMessage {
   SbomReferenceIntotoPredicate ensurePredicate() => $_ensure(3);
 }
 
+/// A predicate which describes the SBOM being referenced.
 class SbomReferenceIntotoPredicate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SbomReferenceIntotoPredicate',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referrerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'mimeType')
-    ..m<$core.String, $core.String>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'digest',
-        entryClassName: 'SbomReferenceIntotoPredicate.DigestEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('grafeas.v1'))
-    ..hasRequiredFields = false;
-
-  SbomReferenceIntotoPredicate._() : super();
   factory SbomReferenceIntotoPredicate({
     $core.String? referrerId,
     $core.String? location,
     $core.String? mimeType,
     $core.Map<$core.String, $core.String>? digest,
   }) {
-    final _result = create();
+    final $result = create();
     if (referrerId != null) {
-      _result.referrerId = referrerId;
+      $result.referrerId = referrerId;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (mimeType != null) {
-      _result.mimeType = mimeType;
+      $result.mimeType = mimeType;
     }
     if (digest != null) {
-      _result.digest.addAll(digest);
+      $result.digest.addAll(digest);
     }
-    return _result;
+    return $result;
   }
+  SbomReferenceIntotoPredicate._() : super();
   factory SbomReferenceIntotoPredicate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SbomReferenceIntotoPredicate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SbomReferenceIntotoPredicate',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'referrerId')
+    ..aOS(2, _omitFieldNames ? '' : 'location')
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'digest',
+        entryClassName: 'SbomReferenceIntotoPredicate.DigestEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('grafeas.v1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -413,8 +377,10 @@ class SbomReferenceIntotoPredicate extends $pb.GeneratedMessage {
           void Function(SbomReferenceIntotoPredicate) updates) =>
       super.copyWith(
               (message) => updates(message as SbomReferenceIntotoPredicate))
-          as SbomReferenceIntotoPredicate; // ignore: deprecated_member_use
+          as SbomReferenceIntotoPredicate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SbomReferenceIntotoPredicate create() =>
       SbomReferenceIntotoPredicate._();
@@ -426,6 +392,7 @@ class SbomReferenceIntotoPredicate extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SbomReferenceIntotoPredicate>(create);
   static SbomReferenceIntotoPredicate? _defaultInstance;
 
+  /// The person or system referring this predicate to the consumer.
   @$pb.TagNumber(1)
   $core.String get referrerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -438,6 +405,7 @@ class SbomReferenceIntotoPredicate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearReferrerId() => clearField(1);
 
+  /// The location of the SBOM.
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -450,6 +418,7 @@ class SbomReferenceIntotoPredicate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLocation() => clearField(2);
 
+  /// The mime type of the SBOM.
   @$pb.TagNumber(3)
   $core.String get mimeType => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -462,6 +431,11 @@ class SbomReferenceIntotoPredicate extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMimeType() => clearField(3);
 
+  /// A map of algorithm to digest of the contents of the SBOM.
   @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get digest => $_getMap(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

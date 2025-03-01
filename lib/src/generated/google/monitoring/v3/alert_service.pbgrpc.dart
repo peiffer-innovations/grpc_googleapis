@@ -1,20 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/alert_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'alert_service.pb.dart' as $0;
-import 'alert.pb.dart' as $1;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../protobuf/empty.pb.dart' as $2;
+import 'alert.pb.dart' as $1;
+import 'alert_service.pb.dart' as $0;
+
 export 'alert_service.pb.dart';
 
+@$pb.GrpcServiceName('google.monitoring.v3.AlertPolicyService')
 class AlertPolicyServiceClient extends $grpc.Client {
   static final _$listAlertPolicies = $grpc.ClientMethod<
           $0.ListAlertPoliciesRequest, $0.ListAlertPoliciesResponse>(
@@ -79,6 +86,7 @@ class AlertPolicyServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.monitoring.v3.AlertPolicyService')
 abstract class AlertPolicyServiceBase extends $grpc.Service {
   $core.String get $name => 'google.monitoring.v3.AlertPolicyService';
 

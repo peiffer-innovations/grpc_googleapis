@@ -1,74 +1,63 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2beta/field.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart' as $0;
 import '../../../../protobuf/timestamp.pb.dart' as $1;
 import '../../../../type/date.pb.dart' as $2;
-
+import 'common.pb.dart' as $0;
 import 'field.pbenum.dart';
 
 export 'field.pbenum.dart';
 
+/// The basic properties of the field.
 class Field_Properties extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.Properties',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'required')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'insertBeforeField')
-    ..hasRequiredFields = false;
-
-  Field_Properties._() : super();
   factory Field_Properties({
     $core.String? displayName,
     $core.bool? required,
     $core.String? insertBeforeField,
   }) {
-    final _result = create();
+    final $result = create();
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (required != null) {
-      _result.required = required;
+      $result.required = required;
     }
     if (insertBeforeField != null) {
-      _result.insertBeforeField = insertBeforeField;
+      $result.insertBeforeField = insertBeforeField;
     }
-    return _result;
+    return $result;
   }
+  Field_Properties._() : super();
   factory Field_Properties.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_Properties.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.Properties',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'displayName')
+    ..aOB(2, _omitFieldNames ? '' : 'required')
+    ..aOS(3, _omitFieldNames ? '' : 'insertBeforeField')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -78,8 +67,10 @@ class Field_Properties extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_Properties copyWith(void Function(Field_Properties) updates) =>
       super.copyWith((message) => updates(message as Field_Properties))
-          as Field_Properties; // ignore: deprecated_member_use
+          as Field_Properties;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_Properties create() => Field_Properties._();
   Field_Properties createEmptyInstance() => create();
@@ -90,6 +81,7 @@ class Field_Properties extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_Properties>(create);
   static Field_Properties? _defaultInstance;
 
+  /// Required. The display text to show in the UI identifying this field.
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -102,6 +94,7 @@ class Field_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisplayName() => clearField(1);
 
+  /// Whether the field should be marked as required.
   @$pb.TagNumber(2)
   $core.bool get required => $_getBF(1);
   @$pb.TagNumber(2)
@@ -114,6 +107,8 @@ class Field_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRequired() => clearField(2);
 
+  /// Input only. Insert or move this field before the indicated field. If
+  /// empty, the field is placed at the end of the list.
   @$pb.TagNumber(3)
   $core.String get insertBeforeField => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -127,66 +122,48 @@ class Field_Properties extends $pb.GeneratedMessage {
   void clearInsertBeforeField() => clearField(3);
 }
 
+/// UI display hints for rendering a field.
 class Field_DisplayHints extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.DisplayHints',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'required')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hiddenInSearch')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shownInApply')
-    ..hasRequiredFields = false;
-
-  Field_DisplayHints._() : super();
   factory Field_DisplayHints({
     $core.bool? required,
     $core.bool? disabled,
     $core.bool? hiddenInSearch,
     $core.bool? shownInApply,
   }) {
-    final _result = create();
+    final $result = create();
     if (required != null) {
-      _result.required = required;
+      $result.required = required;
     }
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
     if (hiddenInSearch != null) {
-      _result.hiddenInSearch = hiddenInSearch;
+      $result.hiddenInSearch = hiddenInSearch;
     }
     if (shownInApply != null) {
-      _result.shownInApply = shownInApply;
+      $result.shownInApply = shownInApply;
     }
-    return _result;
+    return $result;
   }
+  Field_DisplayHints._() : super();
   factory Field_DisplayHints.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_DisplayHints.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.DisplayHints',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'required')
+    ..aOB(2, _omitFieldNames ? '' : 'disabled')
+    ..aOB(3, _omitFieldNames ? '' : 'hiddenInSearch')
+    ..aOB(4, _omitFieldNames ? '' : 'shownInApply')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -196,8 +173,10 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_DisplayHints copyWith(void Function(Field_DisplayHints) updates) =>
       super.copyWith((message) => updates(message as Field_DisplayHints))
-          as Field_DisplayHints; // ignore: deprecated_member_use
+          as Field_DisplayHints;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_DisplayHints create() => Field_DisplayHints._();
   Field_DisplayHints createEmptyInstance() => create();
@@ -208,6 +187,7 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_DisplayHints>(create);
   static Field_DisplayHints? _defaultInstance;
 
+  /// Whether the field should be shown as required in the UI.
   @$pb.TagNumber(1)
   $core.bool get required => $_getBF(0);
   @$pb.TagNumber(1)
@@ -220,6 +200,7 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRequired() => clearField(1);
 
+  /// Whether the field should be shown in the UI as disabled.
   @$pb.TagNumber(2)
   $core.bool get disabled => $_getBF(1);
   @$pb.TagNumber(2)
@@ -232,6 +213,8 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDisabled() => clearField(2);
 
+  /// This field should be hidden in the search menu when searching for Drive
+  /// items.
   @$pb.TagNumber(3)
   $core.bool get hiddenInSearch => $_getBF(2);
   @$pb.TagNumber(3)
@@ -244,6 +227,8 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHiddenInSearch() => clearField(3);
 
+  /// This field should be shown in the apply menu when applying values to a
+  /// Drive item.
   @$pb.TagNumber(4)
   $core.bool get shownInApply => $_getBF(3);
   @$pb.TagNumber(4)
@@ -257,66 +242,48 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
   void clearShownInApply() => clearField(4);
 }
 
+/// The capabilities related to this field when editing the field.
 class Field_SchemaCapabilities extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SchemaCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canUpdate')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canDelete')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canDisable')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canEnable')
-    ..hasRequiredFields = false;
-
-  Field_SchemaCapabilities._() : super();
   factory Field_SchemaCapabilities({
     $core.bool? canUpdate,
     $core.bool? canDelete,
     $core.bool? canDisable,
     $core.bool? canEnable,
   }) {
-    final _result = create();
+    final $result = create();
     if (canUpdate != null) {
-      _result.canUpdate = canUpdate;
+      $result.canUpdate = canUpdate;
     }
     if (canDelete != null) {
-      _result.canDelete = canDelete;
+      $result.canDelete = canDelete;
     }
     if (canDisable != null) {
-      _result.canDisable = canDisable;
+      $result.canDisable = canDisable;
     }
     if (canEnable != null) {
-      _result.canEnable = canEnable;
+      $result.canEnable = canEnable;
     }
-    return _result;
+    return $result;
   }
+  Field_SchemaCapabilities._() : super();
   factory Field_SchemaCapabilities.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_SchemaCapabilities.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.SchemaCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canUpdate')
+    ..aOB(2, _omitFieldNames ? '' : 'canDelete')
+    ..aOB(3, _omitFieldNames ? '' : 'canDisable')
+    ..aOB(4, _omitFieldNames ? '' : 'canEnable')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -328,8 +295,10 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   Field_SchemaCapabilities copyWith(
           void Function(Field_SchemaCapabilities) updates) =>
       super.copyWith((message) => updates(message as Field_SchemaCapabilities))
-          as Field_SchemaCapabilities; // ignore: deprecated_member_use
+          as Field_SchemaCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SchemaCapabilities create() => Field_SchemaCapabilities._();
   Field_SchemaCapabilities createEmptyInstance() => create();
@@ -340,6 +309,7 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_SchemaCapabilities>(create);
   static Field_SchemaCapabilities? _defaultInstance;
 
+  /// Whether the user can change this field.
   @$pb.TagNumber(1)
   $core.bool get canUpdate => $_getBF(0);
   @$pb.TagNumber(1)
@@ -352,6 +322,8 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCanUpdate() => clearField(1);
 
+  /// Whether the user can delete this field.
+  /// The user must have permission and the field must be deprecated.
   @$pb.TagNumber(2)
   $core.bool get canDelete => $_getBF(1);
   @$pb.TagNumber(2)
@@ -364,6 +336,9 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCanDelete() => clearField(2);
 
+  /// Whether the user can disable this field.
+  /// The user must have permission and this field must not already be
+  /// disabled.
   @$pb.TagNumber(3)
   $core.bool get canDisable => $_getBF(2);
   @$pb.TagNumber(3)
@@ -376,6 +351,8 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCanDisable() => clearField(3);
 
+  /// Whether the user can enable this field.
+  /// The user must have permission and this field must be disabled.
   @$pb.TagNumber(4)
   $core.bool get canEnable => $_getBF(3);
   @$pb.TagNumber(4)
@@ -389,57 +366,43 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   void clearCanEnable() => clearField(4);
 }
 
+/// The capabilities related to this field on applied metadata.
 class Field_AppliedCapabilities extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.AppliedCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canRead')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canSearch')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canWrite')
-    ..hasRequiredFields = false;
-
-  Field_AppliedCapabilities._() : super();
   factory Field_AppliedCapabilities({
     $core.bool? canRead,
     $core.bool? canSearch,
     $core.bool? canWrite,
   }) {
-    final _result = create();
+    final $result = create();
     if (canRead != null) {
-      _result.canRead = canRead;
+      $result.canRead = canRead;
     }
     if (canSearch != null) {
-      _result.canSearch = canSearch;
+      $result.canSearch = canSearch;
     }
     if (canWrite != null) {
-      _result.canWrite = canWrite;
+      $result.canWrite = canWrite;
     }
-    return _result;
+    return $result;
   }
+  Field_AppliedCapabilities._() : super();
   factory Field_AppliedCapabilities.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_AppliedCapabilities.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.AppliedCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canRead')
+    ..aOB(2, _omitFieldNames ? '' : 'canSearch')
+    ..aOB(3, _omitFieldNames ? '' : 'canWrite')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -451,8 +414,10 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
   Field_AppliedCapabilities copyWith(
           void Function(Field_AppliedCapabilities) updates) =>
       super.copyWith((message) => updates(message as Field_AppliedCapabilities))
-          as Field_AppliedCapabilities; // ignore: deprecated_member_use
+          as Field_AppliedCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_AppliedCapabilities create() => Field_AppliedCapabilities._();
   Field_AppliedCapabilities createEmptyInstance() => create();
@@ -463,6 +428,7 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_AppliedCapabilities>(create);
   static Field_AppliedCapabilities? _defaultInstance;
 
+  /// Whether the user can read related applied metadata on items.
   @$pb.TagNumber(1)
   $core.bool get canRead => $_getBF(0);
   @$pb.TagNumber(1)
@@ -475,6 +441,7 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCanRead() => clearField(1);
 
+  /// Whether the user can search for Drive items referencing this field.
   @$pb.TagNumber(2)
   $core.bool get canSearch => $_getBF(1);
   @$pb.TagNumber(2)
@@ -487,6 +454,7 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCanSearch() => clearField(2);
 
+  /// Whether the user can set this field on Drive items.
   @$pb.TagNumber(3)
   $core.bool get canWrite => $_getBF(2);
   @$pb.TagNumber(3)
@@ -500,40 +468,33 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
   void clearCanWrite() => clearField(3);
 }
 
+/// Options for a multi-valued variant of an associated field type.
 class Field_ListOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.ListOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxEntries',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Field_ListOptions._() : super();
   factory Field_ListOptions({
     $core.int? maxEntries,
   }) {
-    final _result = create();
+    final $result = create();
     if (maxEntries != null) {
-      _result.maxEntries = maxEntries;
+      $result.maxEntries = maxEntries;
     }
-    return _result;
+    return $result;
   }
+  Field_ListOptions._() : super();
   factory Field_ListOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_ListOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.ListOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'maxEntries', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -543,8 +504,10 @@ class Field_ListOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_ListOptions copyWith(void Function(Field_ListOptions) updates) =>
       super.copyWith((message) => updates(message as Field_ListOptions))
-          as Field_ListOptions; // ignore: deprecated_member_use
+          as Field_ListOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_ListOptions create() => Field_ListOptions._();
   Field_ListOptions createEmptyInstance() => create();
@@ -555,6 +518,7 @@ class Field_ListOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_ListOptions>(create);
   static Field_ListOptions? _defaultInstance;
 
+  /// Maximum number of entries permitted.
   @$pb.TagNumber(1)
   $core.int get maxEntries => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -568,50 +532,38 @@ class Field_ListOptions extends $pb.GeneratedMessage {
   void clearMaxEntries() => clearField(1);
 }
 
+/// Options for the Text field type.
 class Field_TextOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.TextOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minLength',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxLength',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Field_TextOptions._() : super();
   factory Field_TextOptions({
     $core.int? minLength,
     $core.int? maxLength,
   }) {
-    final _result = create();
+    final $result = create();
     if (minLength != null) {
-      _result.minLength = minLength;
+      $result.minLength = minLength;
     }
     if (maxLength != null) {
-      _result.maxLength = maxLength;
+      $result.maxLength = maxLength;
     }
-    return _result;
+    return $result;
   }
+  Field_TextOptions._() : super();
   factory Field_TextOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_TextOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.TextOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'minLength', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'maxLength', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -621,8 +573,10 @@ class Field_TextOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_TextOptions copyWith(void Function(Field_TextOptions) updates) =>
       super.copyWith((message) => updates(message as Field_TextOptions))
-          as Field_TextOptions; // ignore: deprecated_member_use
+          as Field_TextOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_TextOptions create() => Field_TextOptions._();
   Field_TextOptions createEmptyInstance() => create();
@@ -633,6 +587,7 @@ class Field_TextOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_TextOptions>(create);
   static Field_TextOptions? _defaultInstance;
 
+  /// Output only. The minimum valid length of values for the text field.
   @$pb.TagNumber(1)
   $core.int get minLength => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -645,6 +600,7 @@ class Field_TextOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMinLength() => clearField(1);
 
+  /// Output only. The maximum valid length of values for the text field.
   @$pb.TagNumber(2)
   $core.int get maxLength => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -658,140 +614,38 @@ class Field_TextOptions extends $pb.GeneratedMessage {
   void clearMaxLength() => clearField(2);
 }
 
-class Field_LongTextOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.LongTextOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minLength',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxLength',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Field_LongTextOptions._() : super();
-  factory Field_LongTextOptions({
-    $core.int? minLength,
-    $core.int? maxLength,
-  }) {
-    final _result = create();
-    if (minLength != null) {
-      _result.minLength = minLength;
-    }
-    if (maxLength != null) {
-      _result.maxLength = maxLength;
-    }
-    return _result;
-  }
-  factory Field_LongTextOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_LongTextOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_LongTextOptions clone() =>
-      Field_LongTextOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Field_LongTextOptions copyWith(
-          void Function(Field_LongTextOptions) updates) =>
-      super.copyWith((message) => updates(message as Field_LongTextOptions))
-          as Field_LongTextOptions; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Field_LongTextOptions create() => Field_LongTextOptions._();
-  Field_LongTextOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_LongTextOptions> createRepeated() =>
-      $pb.PbList<Field_LongTextOptions>();
-  @$core.pragma('dart2js:noInline')
-  static Field_LongTextOptions getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Field_LongTextOptions>(create);
-  static Field_LongTextOptions? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get minLength => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set minLength($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasMinLength() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearMinLength() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.int get maxLength => $_getIZ(1);
-  @$pb.TagNumber(2)
-  set maxLength($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasMaxLength() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMaxLength() => clearField(2);
-}
-
+/// Options for the Integer field type.
 class Field_IntegerOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.IntegerOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minValue')
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxValue')
-    ..hasRequiredFields = false;
-
-  Field_IntegerOptions._() : super();
   factory Field_IntegerOptions({
     $fixnum.Int64? minValue,
     $fixnum.Int64? maxValue,
   }) {
-    final _result = create();
+    final $result = create();
     if (minValue != null) {
-      _result.minValue = minValue;
+      $result.minValue = minValue;
     }
     if (maxValue != null) {
-      _result.maxValue = maxValue;
+      $result.maxValue = maxValue;
     }
-    return _result;
+    return $result;
   }
+  Field_IntegerOptions._() : super();
   factory Field_IntegerOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_IntegerOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.IntegerOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'minValue')
+    ..aInt64(2, _omitFieldNames ? '' : 'maxValue')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -802,8 +656,10 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_IntegerOptions copyWith(void Function(Field_IntegerOptions) updates) =>
       super.copyWith((message) => updates(message as Field_IntegerOptions))
-          as Field_IntegerOptions; // ignore: deprecated_member_use
+          as Field_IntegerOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_IntegerOptions create() => Field_IntegerOptions._();
   Field_IntegerOptions createEmptyInstance() => create();
@@ -814,6 +670,7 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_IntegerOptions>(create);
   static Field_IntegerOptions? _defaultInstance;
 
+  /// Output only. The minimum valid value for the integer field.
   @$pb.TagNumber(1)
   $fixnum.Int64 get minValue => $_getI64(0);
   @$pb.TagNumber(1)
@@ -826,6 +683,7 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMinValue() => clearField(1);
 
+  /// Output only. The maximum valid value for the integer field.
   @$pb.TagNumber(2)
   $fixnum.Int64 get maxValue => $_getI64(1);
   @$pb.TagNumber(2)
@@ -839,72 +697,54 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
   void clearMaxValue() => clearField(2);
 }
 
+/// Options for the date field type.
 class Field_DateOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.DateOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..e<Field_DateOptions_DateFormat>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dateFormatType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Field_DateOptions_DateFormat.DATE_FORMAT_UNSPECIFIED,
-        valueOf: Field_DateOptions_DateFormat.valueOf,
-        enumValues: Field_DateOptions_DateFormat.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dateFormat')
-    ..aOM<$2.Date>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minValue',
-        subBuilder: $2.Date.create)
-    ..aOM<$2.Date>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxValue',
-        subBuilder: $2.Date.create)
-    ..hasRequiredFields = false;
-
-  Field_DateOptions._() : super();
   factory Field_DateOptions({
     Field_DateOptions_DateFormat? dateFormatType,
     $core.String? dateFormat,
     $2.Date? minValue,
     $2.Date? maxValue,
   }) {
-    final _result = create();
+    final $result = create();
     if (dateFormatType != null) {
-      _result.dateFormatType = dateFormatType;
+      $result.dateFormatType = dateFormatType;
     }
     if (dateFormat != null) {
-      _result.dateFormat = dateFormat;
+      $result.dateFormat = dateFormat;
     }
     if (minValue != null) {
-      _result.minValue = minValue;
+      $result.minValue = minValue;
     }
     if (maxValue != null) {
-      _result.maxValue = maxValue;
+      $result.maxValue = maxValue;
     }
-    return _result;
+    return $result;
   }
+  Field_DateOptions._() : super();
   factory Field_DateOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_DateOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.DateOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..e<Field_DateOptions_DateFormat>(
+        1, _omitFieldNames ? '' : 'dateFormatType', $pb.PbFieldType.OE,
+        defaultOrMaker: Field_DateOptions_DateFormat.DATE_FORMAT_UNSPECIFIED,
+        valueOf: Field_DateOptions_DateFormat.valueOf,
+        enumValues: Field_DateOptions_DateFormat.values)
+    ..aOS(2, _omitFieldNames ? '' : 'dateFormat')
+    ..aOM<$2.Date>(3, _omitFieldNames ? '' : 'minValue',
+        subBuilder: $2.Date.create)
+    ..aOM<$2.Date>(4, _omitFieldNames ? '' : 'maxValue',
+        subBuilder: $2.Date.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -914,8 +754,10 @@ class Field_DateOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_DateOptions copyWith(void Function(Field_DateOptions) updates) =>
       super.copyWith((message) => updates(message as Field_DateOptions))
-          as Field_DateOptions; // ignore: deprecated_member_use
+          as Field_DateOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_DateOptions create() => Field_DateOptions._();
   Field_DateOptions createEmptyInstance() => create();
@@ -926,6 +768,8 @@ class Field_DateOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_DateOptions>(create);
   static Field_DateOptions? _defaultInstance;
 
+  /// Localized date formatting option. Field values are rendered in
+  /// this format according to their locale.
   @$pb.TagNumber(1)
   Field_DateOptions_DateFormat get dateFormatType => $_getN(0);
   @$pb.TagNumber(1)
@@ -938,6 +782,7 @@ class Field_DateOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDateFormatType() => clearField(1);
 
+  /// Output only. ICU date format.
   @$pb.TagNumber(2)
   $core.String get dateFormat => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -950,6 +795,7 @@ class Field_DateOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDateFormat() => clearField(2);
 
+  /// Output only. Minimum valid value (year, month, day).
   @$pb.TagNumber(3)
   $2.Date get minValue => $_getN(2);
   @$pb.TagNumber(3)
@@ -964,6 +810,7 @@ class Field_DateOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.Date ensureMinValue() => $_ensure(2);
 
+  /// Output only. Maximum valid value (year, month, day).
   @$pb.TagNumber(4)
   $2.Date get maxValue => $_getN(3);
   @$pb.TagNumber(4)
@@ -979,61 +826,30 @@ class Field_DateOptions extends $pb.GeneratedMessage {
   $2.Date ensureMaxValue() => $_ensure(3);
 }
 
+/// Basic properties of the choice.
 class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SelectionOptions.Choice.Properties',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..aOM<$0.BadgeConfig>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'badgeConfig',
-        subBuilder: $0.BadgeConfig.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'insertBeforeChoice')
-    ..hasRequiredFields = false;
-
-  Field_SelectionOptions_Choice_Properties._() : super();
   factory Field_SelectionOptions_Choice_Properties({
     $core.String? displayName,
     $core.String? description,
     $0.BadgeConfig? badgeConfig,
     $core.String? insertBeforeChoice,
   }) {
-    final _result = create();
+    final $result = create();
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (badgeConfig != null) {
-      _result.badgeConfig = badgeConfig;
+      $result.badgeConfig = badgeConfig;
     }
     if (insertBeforeChoice != null) {
-      _result.insertBeforeChoice = insertBeforeChoice;
+      $result.insertBeforeChoice = insertBeforeChoice;
     }
-    return _result;
+    return $result;
   }
+  Field_SelectionOptions_Choice_Properties._() : super();
   factory Field_SelectionOptions_Choice_Properties.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1041,6 +857,19 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   factory Field_SelectionOptions_Choice_Properties.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.SelectionOptions.Choice.Properties',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'displayName')
+    ..aOS(2, _omitFieldNames ? '' : 'description')
+    ..aOM<$0.BadgeConfig>(3, _omitFieldNames ? '' : 'badgeConfig',
+        subBuilder: $0.BadgeConfig.create)
+    ..aOS(4, _omitFieldNames ? '' : 'insertBeforeChoice')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1053,8 +882,10 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
           void Function(Field_SelectionOptions_Choice_Properties) updates) =>
       super.copyWith((message) =>
               updates(message as Field_SelectionOptions_Choice_Properties))
-          as Field_SelectionOptions_Choice_Properties; // ignore: deprecated_member_use
+          as Field_SelectionOptions_Choice_Properties;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_Properties create() =>
       Field_SelectionOptions_Choice_Properties._();
@@ -1068,6 +899,7 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
           Field_SelectionOptions_Choice_Properties>(create);
   static Field_SelectionOptions_Choice_Properties? _defaultInstance;
 
+  /// Required. The display text to show in the UI identifying this field.
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1080,6 +912,7 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisplayName() => clearField(1);
 
+  /// The description of this label.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1092,6 +925,8 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
+  /// The badge configuration for this choice. When set, the
+  /// label that owns this choice is considered a "badged label".
   @$pb.TagNumber(3)
   $0.BadgeConfig get badgeConfig => $_getN(2);
   @$pb.TagNumber(3)
@@ -1106,6 +941,8 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.BadgeConfig ensureBadgeConfig() => $_ensure(2);
 
+  /// Input only. Insert or move this choice before the indicated choice.
+  /// If empty, the choice is placed at the end of the list.
   @$pb.TagNumber(4)
   $core.String get insertBeforeChoice => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1119,51 +956,8 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   void clearInsertBeforeChoice() => clearField(4);
 }
 
+/// UI display hints for rendering an option.
 class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SelectionOptions.Choice.DisplayHints',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hiddenInSearch')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shownInApply')
-    ..aOM<$0.BadgeColors>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'badgeColors',
-        subBuilder: $0.BadgeColors.create)
-    ..aOM<$0.BadgeColors>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'darkBadgeColors',
-        subBuilder: $0.BadgeColors.create)
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'badgePriority')
-    ..hasRequiredFields = false;
-
-  Field_SelectionOptions_Choice_DisplayHints._() : super();
   factory Field_SelectionOptions_Choice_DisplayHints({
     $core.bool? disabled,
     $core.bool? hiddenInSearch,
@@ -1172,27 +966,28 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
     $0.BadgeColors? darkBadgeColors,
     $fixnum.Int64? badgePriority,
   }) {
-    final _result = create();
+    final $result = create();
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
     if (hiddenInSearch != null) {
-      _result.hiddenInSearch = hiddenInSearch;
+      $result.hiddenInSearch = hiddenInSearch;
     }
     if (shownInApply != null) {
-      _result.shownInApply = shownInApply;
+      $result.shownInApply = shownInApply;
     }
     if (badgeColors != null) {
-      _result.badgeColors = badgeColors;
+      $result.badgeColors = badgeColors;
     }
     if (darkBadgeColors != null) {
-      _result.darkBadgeColors = darkBadgeColors;
+      $result.darkBadgeColors = darkBadgeColors;
     }
     if (badgePriority != null) {
-      _result.badgePriority = badgePriority;
+      $result.badgePriority = badgePriority;
     }
-    return _result;
+    return $result;
   }
+  Field_SelectionOptions_Choice_DisplayHints._() : super();
   factory Field_SelectionOptions_Choice_DisplayHints.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1200,6 +995,22 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   factory Field_SelectionOptions_Choice_DisplayHints.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.SelectionOptions.Choice.DisplayHints',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disabled')
+    ..aOB(2, _omitFieldNames ? '' : 'hiddenInSearch')
+    ..aOB(3, _omitFieldNames ? '' : 'shownInApply')
+    ..aOM<$0.BadgeColors>(4, _omitFieldNames ? '' : 'badgeColors',
+        subBuilder: $0.BadgeColors.create)
+    ..aOM<$0.BadgeColors>(5, _omitFieldNames ? '' : 'darkBadgeColors',
+        subBuilder: $0.BadgeColors.create)
+    ..aInt64(6, _omitFieldNames ? '' : 'badgePriority')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1212,8 +1023,10 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
           void Function(Field_SelectionOptions_Choice_DisplayHints) updates) =>
       super.copyWith((message) =>
               updates(message as Field_SelectionOptions_Choice_DisplayHints))
-          as Field_SelectionOptions_Choice_DisplayHints; // ignore: deprecated_member_use
+          as Field_SelectionOptions_Choice_DisplayHints;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_DisplayHints create() =>
       Field_SelectionOptions_Choice_DisplayHints._();
@@ -1227,6 +1040,7 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
           Field_SelectionOptions_Choice_DisplayHints>(create);
   static Field_SelectionOptions_Choice_DisplayHints? _defaultInstance;
 
+  /// Whether the option should be shown in the UI as disabled.
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1239,6 +1053,8 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisabled() => clearField(1);
 
+  /// This option should be hidden in the search menu when searching for
+  /// Drive items.
   @$pb.TagNumber(2)
   $core.bool get hiddenInSearch => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1251,6 +1067,8 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHiddenInSearch() => clearField(2);
 
+  /// This option should be shown in the apply menu when applying values to
+  /// a Drive item.
   @$pb.TagNumber(3)
   $core.bool get shownInApply => $_getBF(2);
   @$pb.TagNumber(3)
@@ -1263,6 +1081,8 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearShownInApply() => clearField(3);
 
+  /// The colors to use for the badge. Changed to Google Material colors
+  /// based on the chosen `properties.badge_config.color`.
   @$pb.TagNumber(4)
   $0.BadgeColors get badgeColors => $_getN(3);
   @$pb.TagNumber(4)
@@ -1277,6 +1097,8 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.BadgeColors ensureBadgeColors() => $_ensure(3);
 
+  /// The dark-mode color to use for the badge. Changed to Google Material
+  /// colors based on the chosen `properties.badge_config.color`.
   @$pb.TagNumber(5)
   $0.BadgeColors get darkBadgeColors => $_getN(4);
   @$pb.TagNumber(5)
@@ -1291,6 +1113,12 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.BadgeColors ensureDarkBadgeColors() => $_ensure(4);
 
+  /// The priority of this badge. Used to compare and sort between multiple
+  /// badges. A lower number means the badge should be shown first.
+  /// When a badging configuration is not present, this will be 0.
+  /// Otherwise, this will be set to `BadgeConfig.priority_override` or the
+  /// default heuristic which prefers creation date of the label, and field
+  /// and option priority.
   @$pb.TagNumber(6)
   $fixnum.Int64 get badgePriority => $_getI64(5);
   @$pb.TagNumber(6)
@@ -1304,61 +1132,31 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   void clearBadgePriority() => clearField(6);
 }
 
+/// The capabilities related to this choice when editing the choice.
 class Field_SelectionOptions_Choice_SchemaCapabilities
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SelectionOptions.Choice.SchemaCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canUpdate')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canDelete')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canDisable')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canEnable')
-    ..hasRequiredFields = false;
-
-  Field_SelectionOptions_Choice_SchemaCapabilities._() : super();
   factory Field_SelectionOptions_Choice_SchemaCapabilities({
     $core.bool? canUpdate,
     $core.bool? canDelete,
     $core.bool? canDisable,
     $core.bool? canEnable,
   }) {
-    final _result = create();
+    final $result = create();
     if (canUpdate != null) {
-      _result.canUpdate = canUpdate;
+      $result.canUpdate = canUpdate;
     }
     if (canDelete != null) {
-      _result.canDelete = canDelete;
+      $result.canDelete = canDelete;
     }
     if (canDisable != null) {
-      _result.canDisable = canDisable;
+      $result.canDisable = canDisable;
     }
     if (canEnable != null) {
-      _result.canEnable = canEnable;
+      $result.canEnable = canEnable;
     }
-    return _result;
+    return $result;
   }
+  Field_SelectionOptions_Choice_SchemaCapabilities._() : super();
   factory Field_SelectionOptions_Choice_SchemaCapabilities.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1367,6 +1165,20 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'Field.SelectionOptions.Choice.SchemaCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canUpdate')
+    ..aOB(2, _omitFieldNames ? '' : 'canDelete')
+    ..aOB(3, _omitFieldNames ? '' : 'canDisable')
+    ..aOB(4, _omitFieldNames ? '' : 'canEnable')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1381,8 +1193,10 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
               updates) =>
       super.copyWith((message) => updates(
               message as Field_SelectionOptions_Choice_SchemaCapabilities))
-          as Field_SelectionOptions_Choice_SchemaCapabilities; // ignore: deprecated_member_use
+          as Field_SelectionOptions_Choice_SchemaCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_SchemaCapabilities create() =>
       Field_SelectionOptions_Choice_SchemaCapabilities._();
@@ -1397,6 +1211,7 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
           Field_SelectionOptions_Choice_SchemaCapabilities>(create);
   static Field_SelectionOptions_Choice_SchemaCapabilities? _defaultInstance;
 
+  /// Whether the user can update this choice.
   @$pb.TagNumber(1)
   $core.bool get canUpdate => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1409,6 +1224,7 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
   @$pb.TagNumber(1)
   void clearCanUpdate() => clearField(1);
 
+  /// Whether the user can delete this choice.
   @$pb.TagNumber(2)
   $core.bool get canDelete => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1421,6 +1237,7 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
   @$pb.TagNumber(2)
   void clearCanDelete() => clearField(2);
 
+  /// Whether the user can disable this choice.
   @$pb.TagNumber(3)
   $core.bool get canDisable => $_getBF(2);
   @$pb.TagNumber(3)
@@ -1433,6 +1250,7 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
   @$pb.TagNumber(3)
   void clearCanDisable() => clearField(3);
 
+  /// Whether the user can enable this choice.
   @$pb.TagNumber(4)
   $core.bool get canEnable => $_getBF(3);
   @$pb.TagNumber(4)
@@ -1446,52 +1264,27 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
   void clearCanEnable() => clearField(4);
 }
 
+/// The capabilities related to this choice on applied metadata.
 class Field_SelectionOptions_Choice_AppliedCapabilities
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SelectionOptions.Choice.AppliedCapabilities',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canRead')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canSearch')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canSelect')
-    ..hasRequiredFields = false;
-
-  Field_SelectionOptions_Choice_AppliedCapabilities._() : super();
   factory Field_SelectionOptions_Choice_AppliedCapabilities({
     $core.bool? canRead,
     $core.bool? canSearch,
     $core.bool? canSelect,
   }) {
-    final _result = create();
+    final $result = create();
     if (canRead != null) {
-      _result.canRead = canRead;
+      $result.canRead = canRead;
     }
     if (canSearch != null) {
-      _result.canSearch = canSearch;
+      $result.canSearch = canSearch;
     }
     if (canSelect != null) {
-      _result.canSelect = canSelect;
+      $result.canSelect = canSelect;
     }
-    return _result;
+    return $result;
   }
+  Field_SelectionOptions_Choice_AppliedCapabilities._() : super();
   factory Field_SelectionOptions_Choice_AppliedCapabilities.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1500,6 +1293,19 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'Field.SelectionOptions.Choice.AppliedCapabilities',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canRead')
+    ..aOB(2, _omitFieldNames ? '' : 'canSearch')
+    ..aOB(3, _omitFieldNames ? '' : 'canSelect')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1514,8 +1320,10 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
               updates) =>
       super.copyWith((message) => updates(
               message as Field_SelectionOptions_Choice_AppliedCapabilities))
-          as Field_SelectionOptions_Choice_AppliedCapabilities; // ignore: deprecated_member_use
+          as Field_SelectionOptions_Choice_AppliedCapabilities;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_AppliedCapabilities create() =>
       Field_SelectionOptions_Choice_AppliedCapabilities._();
@@ -1530,6 +1338,7 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
           Field_SelectionOptions_Choice_AppliedCapabilities>(create);
   static Field_SelectionOptions_Choice_AppliedCapabilities? _defaultInstance;
 
+  /// Whether the user can read related applied metadata on items.
   @$pb.TagNumber(1)
   $core.bool get canRead => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1542,6 +1351,7 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
   @$pb.TagNumber(1)
   void clearCanRead() => clearField(1);
 
+  /// Whether the user can use this choice in search queries.
   @$pb.TagNumber(2)
   $core.bool get canSearch => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1554,6 +1364,7 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
   @$pb.TagNumber(2)
   void clearCanSearch() => clearField(2);
 
+  /// Whether the user can select this choice on an item.
   @$pb.TagNumber(3)
   $core.bool get canSelect => $_getBF(2);
   @$pb.TagNumber(3)
@@ -1567,108 +1378,8 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
   void clearCanSelect() => clearField(3);
 }
 
+/// Selection field choice.
 class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SelectionOptions.Choice',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOM<Field_SelectionOptions_Choice_Properties>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'properties',
-        subBuilder: Field_SelectionOptions_Choice_Properties.create)
-    ..aOM<$0.Lifecycle>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lifecycle',
-        subBuilder: $0.Lifecycle.create)
-    ..aOM<Field_SelectionOptions_Choice_DisplayHints>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayHints',
-        subBuilder: Field_SelectionOptions_Choice_DisplayHints.create)
-    ..aOM<Field_SelectionOptions_Choice_SchemaCapabilities>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'schemaCapabilities',
-        subBuilder: Field_SelectionOptions_Choice_SchemaCapabilities.create)
-    ..aOM<Field_SelectionOptions_Choice_AppliedCapabilities>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appliedCapabilities',
-        subBuilder: Field_SelectionOptions_Choice_AppliedCapabilities.create)
-    ..aOM<$0.UserInfo>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'creator',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updater',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publisher',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publishTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabler',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disableTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.LockStatus>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lockStatus',
-        subBuilder: $0.LockStatus.create)
-    ..hasRequiredFields = false;
-
-  Field_SelectionOptions_Choice._() : super();
   factory Field_SelectionOptions_Choice({
     $core.String? id,
     Field_SelectionOptions_Choice_Properties? properties,
@@ -1686,60 +1397,102 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
     $1.Timestamp? disableTime,
     $0.LockStatus? lockStatus,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (properties != null) {
-      _result.properties = properties;
+      $result.properties = properties;
     }
     if (lifecycle != null) {
-      _result.lifecycle = lifecycle;
+      $result.lifecycle = lifecycle;
     }
     if (displayHints != null) {
-      _result.displayHints = displayHints;
+      $result.displayHints = displayHints;
     }
     if (schemaCapabilities != null) {
-      _result.schemaCapabilities = schemaCapabilities;
+      $result.schemaCapabilities = schemaCapabilities;
     }
     if (appliedCapabilities != null) {
-      _result.appliedCapabilities = appliedCapabilities;
+      $result.appliedCapabilities = appliedCapabilities;
     }
     if (creator != null) {
-      _result.creator = creator;
+      $result.creator = creator;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updater != null) {
-      _result.updater = updater;
+      $result.updater = updater;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (publisher != null) {
-      _result.publisher = publisher;
+      $result.publisher = publisher;
     }
     if (publishTime != null) {
-      _result.publishTime = publishTime;
+      $result.publishTime = publishTime;
     }
     if (disabler != null) {
-      _result.disabler = disabler;
+      $result.disabler = disabler;
     }
     if (disableTime != null) {
-      _result.disableTime = disableTime;
+      $result.disableTime = disableTime;
     }
     if (lockStatus != null) {
-      _result.lockStatus = lockStatus;
+      $result.lockStatus = lockStatus;
     }
-    return _result;
+    return $result;
   }
+  Field_SelectionOptions_Choice._() : super();
   factory Field_SelectionOptions_Choice.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_SelectionOptions_Choice.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.SelectionOptions.Choice',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOM<Field_SelectionOptions_Choice_Properties>(
+        2, _omitFieldNames ? '' : 'properties',
+        subBuilder: Field_SelectionOptions_Choice_Properties.create)
+    ..aOM<$0.Lifecycle>(3, _omitFieldNames ? '' : 'lifecycle',
+        subBuilder: $0.Lifecycle.create)
+    ..aOM<Field_SelectionOptions_Choice_DisplayHints>(
+        4, _omitFieldNames ? '' : 'displayHints',
+        subBuilder: Field_SelectionOptions_Choice_DisplayHints.create)
+    ..aOM<Field_SelectionOptions_Choice_SchemaCapabilities>(
+        5, _omitFieldNames ? '' : 'schemaCapabilities',
+        subBuilder: Field_SelectionOptions_Choice_SchemaCapabilities.create)
+    ..aOM<Field_SelectionOptions_Choice_AppliedCapabilities>(
+        6, _omitFieldNames ? '' : 'appliedCapabilities',
+        subBuilder: Field_SelectionOptions_Choice_AppliedCapabilities.create)
+    ..aOM<$0.UserInfo>(7, _omitFieldNames ? '' : 'creator',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(9, _omitFieldNames ? '' : 'updater',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(11, _omitFieldNames ? '' : 'publisher',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'publishTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(13, _omitFieldNames ? '' : 'disabler',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(14, _omitFieldNames ? '' : 'disableTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.LockStatus>(15, _omitFieldNames ? '' : 'lockStatus',
+        subBuilder: $0.LockStatus.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1752,8 +1505,10 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
           void Function(Field_SelectionOptions_Choice) updates) =>
       super.copyWith(
               (message) => updates(message as Field_SelectionOptions_Choice))
-          as Field_SelectionOptions_Choice; // ignore: deprecated_member_use
+          as Field_SelectionOptions_Choice;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice create() =>
       Field_SelectionOptions_Choice._();
@@ -1765,6 +1520,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_SelectionOptions_Choice>(create);
   static Field_SelectionOptions_Choice? _defaultInstance;
 
+  /// The unique value of the choice.
+  /// This ID is autogenerated. Matches the regex: `([a-zA-Z0-9_])+`.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1777,6 +1534,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// Basic properties of the choice.
   @$pb.TagNumber(2)
   Field_SelectionOptions_Choice_Properties get properties => $_getN(1);
   @$pb.TagNumber(2)
@@ -1791,6 +1549,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Field_SelectionOptions_Choice_Properties ensureProperties() => $_ensure(1);
 
+  /// Output only. Lifecycle of the choice.
   @$pb.TagNumber(3)
   $0.Lifecycle get lifecycle => $_getN(2);
   @$pb.TagNumber(3)
@@ -1805,6 +1564,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Lifecycle ensureLifecycle() => $_ensure(2);
 
+  /// Output only. UI display hints for rendering a choice.
   @$pb.TagNumber(4)
   Field_SelectionOptions_Choice_DisplayHints get displayHints => $_getN(3);
   @$pb.TagNumber(4)
@@ -1820,6 +1580,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   Field_SelectionOptions_Choice_DisplayHints ensureDisplayHints() =>
       $_ensure(3);
 
+  /// Output only. The capabilities related to this option when editing the
+  /// option.
   @$pb.TagNumber(5)
   Field_SelectionOptions_Choice_SchemaCapabilities get schemaCapabilities =>
       $_getN(4);
@@ -1836,6 +1598,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   Field_SelectionOptions_Choice_SchemaCapabilities ensureSchemaCapabilities() =>
       $_ensure(4);
 
+  /// Output only. The capabilities related to this choice on applied
+  /// metadata.
   @$pb.TagNumber(6)
   Field_SelectionOptions_Choice_AppliedCapabilities get appliedCapabilities =>
       $_getN(5);
@@ -1852,6 +1616,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   Field_SelectionOptions_Choice_AppliedCapabilities
       ensureAppliedCapabilities() => $_ensure(5);
 
+  /// Output only. The user who created this choice.
   @$pb.TagNumber(7)
   $0.UserInfo get creator => $_getN(6);
   @$pb.TagNumber(7)
@@ -1866,6 +1631,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.UserInfo ensureCreator() => $_ensure(6);
 
+  /// Output only. The time this choice was created.
   @$pb.TagNumber(8)
   $1.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
@@ -1880,6 +1646,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $1.Timestamp ensureCreateTime() => $_ensure(7);
 
+  /// Output only. The user who updated this choice last.
   @$pb.TagNumber(9)
   $0.UserInfo get updater => $_getN(8);
   @$pb.TagNumber(9)
@@ -1894,6 +1661,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $0.UserInfo ensureUpdater() => $_ensure(8);
 
+  /// Output only. The time this choice was updated last.
   @$pb.TagNumber(10)
   $1.Timestamp get updateTime => $_getN(9);
   @$pb.TagNumber(10)
@@ -1908,6 +1676,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $1.Timestamp ensureUpdateTime() => $_ensure(9);
 
+  /// Output only. The user who published this choice. This value has no
+  /// meaning when the choice is not published.
   @$pb.TagNumber(11)
   $0.UserInfo get publisher => $_getN(10);
   @$pb.TagNumber(11)
@@ -1922,6 +1692,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $0.UserInfo ensurePublisher() => $_ensure(10);
 
+  /// Output only. The time this choice was published. This value has no
+  /// meaning when the choice is not published.
   @$pb.TagNumber(12)
   $1.Timestamp get publishTime => $_getN(11);
   @$pb.TagNumber(12)
@@ -1936,6 +1708,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $1.Timestamp ensurePublishTime() => $_ensure(11);
 
+  /// Output only. The user who disabled this choice. This value has no
+  /// meaning when the option is not disabled.
   @$pb.TagNumber(13)
   $0.UserInfo get disabler => $_getN(12);
   @$pb.TagNumber(13)
@@ -1950,6 +1724,8 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $0.UserInfo ensureDisabler() => $_ensure(12);
 
+  /// Output only. The time this choice was disabled. This value has no
+  /// meaning when the choice is not disabled.
   @$pb.TagNumber(14)
   $1.Timestamp get disableTime => $_getN(13);
   @$pb.TagNumber(14)
@@ -1964,6 +1740,7 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $1.Timestamp ensureDisableTime() => $_ensure(13);
 
+  /// Output only. The LockStatus of this choice.
   @$pb.TagNumber(15)
   $0.LockStatus get lockStatus => $_getN(14);
   @$pb.TagNumber(15)
@@ -1979,51 +1756,41 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   $0.LockStatus ensureLockStatus() => $_ensure(14);
 }
 
+/// Options for the selection field type.
 class Field_SelectionOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.SelectionOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOM<Field_ListOptions>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'listOptions',
-        subBuilder: Field_ListOptions.create)
-    ..pc<Field_SelectionOptions_Choice>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'choices',
-        $pb.PbFieldType.PM,
-        subBuilder: Field_SelectionOptions_Choice.create)
-    ..hasRequiredFields = false;
-
-  Field_SelectionOptions._() : super();
   factory Field_SelectionOptions({
     Field_ListOptions? listOptions,
     $core.Iterable<Field_SelectionOptions_Choice>? choices,
   }) {
-    final _result = create();
+    final $result = create();
     if (listOptions != null) {
-      _result.listOptions = listOptions;
+      $result.listOptions = listOptions;
     }
     if (choices != null) {
-      _result.choices.addAll(choices);
+      $result.choices.addAll(choices);
     }
-    return _result;
+    return $result;
   }
+  Field_SelectionOptions._() : super();
   factory Field_SelectionOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_SelectionOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.SelectionOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOM<Field_ListOptions>(1, _omitFieldNames ? '' : 'listOptions',
+        subBuilder: Field_ListOptions.create)
+    ..pc<Field_SelectionOptions_Choice>(
+        2, _omitFieldNames ? '' : 'choices', $pb.PbFieldType.PM,
+        subBuilder: Field_SelectionOptions_Choice.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2035,8 +1802,10 @@ class Field_SelectionOptions extends $pb.GeneratedMessage {
   Field_SelectionOptions copyWith(
           void Function(Field_SelectionOptions) updates) =>
       super.copyWith((message) => updates(message as Field_SelectionOptions))
-          as Field_SelectionOptions; // ignore: deprecated_member_use
+          as Field_SelectionOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions create() => Field_SelectionOptions._();
   Field_SelectionOptions createEmptyInstance() => create();
@@ -2047,6 +1816,8 @@ class Field_SelectionOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_SelectionOptions>(create);
   static Field_SelectionOptions? _defaultInstance;
 
+  /// When specified, indicates this field supports a list of values.
+  /// Once the field is published, this cannot be changed.
   @$pb.TagNumber(1)
   Field_ListOptions get listOptions => $_getN(0);
   @$pb.TagNumber(1)
@@ -2061,44 +1832,40 @@ class Field_SelectionOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Field_ListOptions ensureListOptions() => $_ensure(0);
 
+  /// The options available for this selection field.
+  /// The list order is consistent, and modified with `insert_before_choice`.
   @$pb.TagNumber(2)
   $core.List<Field_SelectionOptions_Choice> get choices => $_getList(1);
 }
 
+/// Options for the user field type.
 class Field_UserOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field.UserOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..aOM<Field_ListOptions>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'listOptions',
-        subBuilder: Field_ListOptions.create)
-    ..hasRequiredFields = false;
-
-  Field_UserOptions._() : super();
   factory Field_UserOptions({
     Field_ListOptions? listOptions,
   }) {
-    final _result = create();
+    final $result = create();
     if (listOptions != null) {
-      _result.listOptions = listOptions;
+      $result.listOptions = listOptions;
     }
-    return _result;
+    return $result;
   }
+  Field_UserOptions._() : super();
   factory Field_UserOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field_UserOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field.UserOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..aOM<Field_ListOptions>(1, _omitFieldNames ? '' : 'listOptions',
+        subBuilder: Field_ListOptions.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2108,8 +1875,10 @@ class Field_UserOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Field_UserOptions copyWith(void Function(Field_UserOptions) updates) =>
       super.copyWith((message) => updates(message as Field_UserOptions))
-          as Field_UserOptions; // ignore: deprecated_member_use
+          as Field_UserOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field_UserOptions create() => Field_UserOptions._();
   Field_UserOptions createEmptyInstance() => create();
@@ -2120,6 +1889,8 @@ class Field_UserOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Field_UserOptions>(create);
   static Field_UserOptions? _defaultInstance;
 
+  /// When specified, indicates that this field supports a list of values.
+  /// Once the field is published, this cannot be changed.
   @$pb.TagNumber(1)
   Field_ListOptions get listOptions => $_getN(0);
   @$pb.TagNumber(1)
@@ -2144,146 +1915,10 @@ enum Field_Type {
   notSet
 }
 
+/// Defines a field that has a display name, data type, and other
+/// configuration options. This field defines the kind of metadata that may be
+/// set on a Drive item.
 class Field extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Field_Type> _Field_TypeByTag = {
-    16: Field_Type.textOptions,
-    18: Field_Type.integerOptions,
-    19: Field_Type.dateOptions,
-    20: Field_Type.selectionOptions,
-    21: Field_Type.userOptions,
-    0: Field_Type.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Field',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.labels.v2beta'),
-      createEmptyInstance: create)
-    ..oo(0, [16, 18, 19, 20, 21])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'queryKey')
-    ..aOM<Field_Properties>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'properties',
-        subBuilder: Field_Properties.create)
-    ..aOM<$0.Lifecycle>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lifecycle',
-        subBuilder: $0.Lifecycle.create)
-    ..aOM<Field_DisplayHints>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayHints',
-        subBuilder: Field_DisplayHints.create)
-    ..aOM<Field_SchemaCapabilities>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'schemaCapabilities',
-        subBuilder: Field_SchemaCapabilities.create)
-    ..aOM<Field_AppliedCapabilities>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appliedCapabilities',
-        subBuilder: Field_AppliedCapabilities.create)
-    ..aOM<$0.UserInfo>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'creator',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updater',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.UserInfo>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publisher',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$0.UserInfo>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabler',
-        subBuilder: $0.UserInfo.create)
-    ..aOM<$1.Timestamp>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disableTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$0.LockStatus>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lockStatus',
-        subBuilder: $0.LockStatus.create)
-    ..aOM<Field_TextOptions>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'textOptions',
-        subBuilder: Field_TextOptions.create)
-    ..aOM<Field_IntegerOptions>(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'integerOptions',
-        subBuilder: Field_IntegerOptions.create)
-    ..aOM<Field_DateOptions>(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dateOptions',
-        subBuilder: Field_DateOptions.create)
-    ..aOM<Field_SelectionOptions>(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'selectionOptions',
-        subBuilder: Field_SelectionOptions.create)
-    ..aOM<Field_UserOptions>(
-        21,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userOptions',
-        subBuilder: Field_UserOptions.create)
-    ..hasRequiredFields = false;
-
-  Field._() : super();
   factory Field({
     $core.String? id,
     $core.String? queryKey,
@@ -2306,75 +1941,133 @@ class Field extends $pb.GeneratedMessage {
     Field_SelectionOptions? selectionOptions,
     Field_UserOptions? userOptions,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (queryKey != null) {
-      _result.queryKey = queryKey;
+      $result.queryKey = queryKey;
     }
     if (properties != null) {
-      _result.properties = properties;
+      $result.properties = properties;
     }
     if (lifecycle != null) {
-      _result.lifecycle = lifecycle;
+      $result.lifecycle = lifecycle;
     }
     if (displayHints != null) {
-      _result.displayHints = displayHints;
+      $result.displayHints = displayHints;
     }
     if (schemaCapabilities != null) {
-      _result.schemaCapabilities = schemaCapabilities;
+      $result.schemaCapabilities = schemaCapabilities;
     }
     if (appliedCapabilities != null) {
-      _result.appliedCapabilities = appliedCapabilities;
+      $result.appliedCapabilities = appliedCapabilities;
     }
     if (creator != null) {
-      _result.creator = creator;
+      $result.creator = creator;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updater != null) {
-      _result.updater = updater;
+      $result.updater = updater;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (publisher != null) {
-      _result.publisher = publisher;
+      $result.publisher = publisher;
     }
     if (disabler != null) {
-      _result.disabler = disabler;
+      $result.disabler = disabler;
     }
     if (disableTime != null) {
-      _result.disableTime = disableTime;
+      $result.disableTime = disableTime;
     }
     if (lockStatus != null) {
-      _result.lockStatus = lockStatus;
+      $result.lockStatus = lockStatus;
     }
     if (textOptions != null) {
-      _result.textOptions = textOptions;
+      $result.textOptions = textOptions;
     }
     if (integerOptions != null) {
-      _result.integerOptions = integerOptions;
+      $result.integerOptions = integerOptions;
     }
     if (dateOptions != null) {
-      _result.dateOptions = dateOptions;
+      $result.dateOptions = dateOptions;
     }
     if (selectionOptions != null) {
-      _result.selectionOptions = selectionOptions;
+      $result.selectionOptions = selectionOptions;
     }
     if (userOptions != null) {
-      _result.userOptions = userOptions;
+      $result.userOptions = userOptions;
     }
-    return _result;
+    return $result;
   }
+  Field._() : super();
   factory Field.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Field.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Field_Type> _Field_TypeByTag = {
+    16: Field_Type.textOptions,
+    18: Field_Type.integerOptions,
+    19: Field_Type.dateOptions,
+    20: Field_Type.selectionOptions,
+    21: Field_Type.userOptions,
+    0: Field_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Field',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.labels.v2beta'),
+      createEmptyInstance: create)
+    ..oo(0, [16, 18, 19, 20, 21])
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'queryKey')
+    ..aOM<Field_Properties>(3, _omitFieldNames ? '' : 'properties',
+        subBuilder: Field_Properties.create)
+    ..aOM<$0.Lifecycle>(4, _omitFieldNames ? '' : 'lifecycle',
+        subBuilder: $0.Lifecycle.create)
+    ..aOM<Field_DisplayHints>(5, _omitFieldNames ? '' : 'displayHints',
+        subBuilder: Field_DisplayHints.create)
+    ..aOM<Field_SchemaCapabilities>(
+        6, _omitFieldNames ? '' : 'schemaCapabilities',
+        subBuilder: Field_SchemaCapabilities.create)
+    ..aOM<Field_AppliedCapabilities>(
+        7, _omitFieldNames ? '' : 'appliedCapabilities',
+        subBuilder: Field_AppliedCapabilities.create)
+    ..aOM<$0.UserInfo>(8, _omitFieldNames ? '' : 'creator',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(10, _omitFieldNames ? '' : 'updater',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.UserInfo>(12, _omitFieldNames ? '' : 'publisher',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$0.UserInfo>(13, _omitFieldNames ? '' : 'disabler',
+        subBuilder: $0.UserInfo.create)
+    ..aOM<$1.Timestamp>(14, _omitFieldNames ? '' : 'disableTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$0.LockStatus>(15, _omitFieldNames ? '' : 'lockStatus',
+        subBuilder: $0.LockStatus.create)
+    ..aOM<Field_TextOptions>(16, _omitFieldNames ? '' : 'textOptions',
+        subBuilder: Field_TextOptions.create)
+    ..aOM<Field_IntegerOptions>(18, _omitFieldNames ? '' : 'integerOptions',
+        subBuilder: Field_IntegerOptions.create)
+    ..aOM<Field_DateOptions>(19, _omitFieldNames ? '' : 'dateOptions',
+        subBuilder: Field_DateOptions.create)
+    ..aOM<Field_SelectionOptions>(20, _omitFieldNames ? '' : 'selectionOptions',
+        subBuilder: Field_SelectionOptions.create)
+    ..aOM<Field_UserOptions>(21, _omitFieldNames ? '' : 'userOptions',
+        subBuilder: Field_UserOptions.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2383,9 +2076,10 @@ class Field extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Field copyWith(void Function(Field) updates) =>
-      super.copyWith((message) => updates(message as Field))
-          as Field; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Field)) as Field;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Field create() => Field._();
   Field createEmptyInstance() => create();
@@ -2398,6 +2092,9 @@ class Field extends $pb.GeneratedMessage {
   Field_Type whichType() => _Field_TypeByTag[$_whichOneof(0)]!;
   void clearType() => clearField($_whichOneof(0));
 
+  ///  Output only. The key of a field, unique within a label or library.
+  ///
+  ///  This value is autogenerated. Matches the regex: `([a-zA-Z0-9])+`
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2410,6 +2107,9 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// Output only. The key to use when constructing Drive search queries to find
+  /// files based on values defined for this field on files.
+  /// For example, "`{query_key}` > 2001-01-01".
   @$pb.TagNumber(2)
   $core.String get queryKey => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2422,6 +2122,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearQueryKey() => clearField(2);
 
+  /// The basic properties of the field.
   @$pb.TagNumber(3)
   Field_Properties get properties => $_getN(2);
   @$pb.TagNumber(3)
@@ -2436,6 +2137,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Field_Properties ensureProperties() => $_ensure(2);
 
+  /// Output only. The lifecycle of this field.
   @$pb.TagNumber(4)
   $0.Lifecycle get lifecycle => $_getN(3);
   @$pb.TagNumber(4)
@@ -2450,6 +2152,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Lifecycle ensureLifecycle() => $_ensure(3);
 
+  /// Output only. UI display hints for rendering a field.
   @$pb.TagNumber(5)
   Field_DisplayHints get displayHints => $_getN(4);
   @$pb.TagNumber(5)
@@ -2464,6 +2167,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Field_DisplayHints ensureDisplayHints() => $_ensure(4);
 
+  /// Output only. The capabilities this user has when editing this field.
   @$pb.TagNumber(6)
   Field_SchemaCapabilities get schemaCapabilities => $_getN(5);
   @$pb.TagNumber(6)
@@ -2478,6 +2182,8 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Field_SchemaCapabilities ensureSchemaCapabilities() => $_ensure(5);
 
+  /// Output only. The capabilities this user has on this field and its value
+  /// when the label is applied on Drive items.
   @$pb.TagNumber(7)
   Field_AppliedCapabilities get appliedCapabilities => $_getN(6);
   @$pb.TagNumber(7)
@@ -2492,6 +2198,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Field_AppliedCapabilities ensureAppliedCapabilities() => $_ensure(6);
 
+  /// Output only. The user who created this field.
   @$pb.TagNumber(8)
   $0.UserInfo get creator => $_getN(7);
   @$pb.TagNumber(8)
@@ -2506,6 +2213,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $0.UserInfo ensureCreator() => $_ensure(7);
 
+  /// Output only. The time this field was created.
   @$pb.TagNumber(9)
   $1.Timestamp get createTime => $_getN(8);
   @$pb.TagNumber(9)
@@ -2520,6 +2228,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $1.Timestamp ensureCreateTime() => $_ensure(8);
 
+  /// Output only. The user who modified this field.
   @$pb.TagNumber(10)
   $0.UserInfo get updater => $_getN(9);
   @$pb.TagNumber(10)
@@ -2534,6 +2243,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $0.UserInfo ensureUpdater() => $_ensure(9);
 
+  /// Output only. The time this field was updated.
   @$pb.TagNumber(11)
   $1.Timestamp get updateTime => $_getN(10);
   @$pb.TagNumber(11)
@@ -2548,6 +2258,8 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $1.Timestamp ensureUpdateTime() => $_ensure(10);
 
+  /// Output only. The user who published this field. This value has no meaning
+  /// when the field is not published.
   @$pb.TagNumber(12)
   $0.UserInfo get publisher => $_getN(11);
   @$pb.TagNumber(12)
@@ -2562,6 +2274,8 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $0.UserInfo ensurePublisher() => $_ensure(11);
 
+  /// Output only. The user who disabled this field. This value has no meaning
+  /// when the field is not disabled.
   @$pb.TagNumber(13)
   $0.UserInfo get disabler => $_getN(12);
   @$pb.TagNumber(13)
@@ -2576,6 +2290,8 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $0.UserInfo ensureDisabler() => $_ensure(12);
 
+  /// Output only. The time this field was disabled. This value has no meaning
+  /// when the field is not disabled.
   @$pb.TagNumber(14)
   $1.Timestamp get disableTime => $_getN(13);
   @$pb.TagNumber(14)
@@ -2590,6 +2306,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $1.Timestamp ensureDisableTime() => $_ensure(13);
 
+  /// Output only. The LockStatus of this field.
   @$pb.TagNumber(15)
   $0.LockStatus get lockStatus => $_getN(14);
   @$pb.TagNumber(15)
@@ -2604,6 +2321,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $0.LockStatus ensureLockStatus() => $_ensure(14);
 
+  /// Text field options.
   @$pb.TagNumber(16)
   Field_TextOptions get textOptions => $_getN(15);
   @$pb.TagNumber(16)
@@ -2618,6 +2336,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   Field_TextOptions ensureTextOptions() => $_ensure(15);
 
+  /// Integer field options.
   @$pb.TagNumber(18)
   Field_IntegerOptions get integerOptions => $_getN(16);
   @$pb.TagNumber(18)
@@ -2632,6 +2351,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   Field_IntegerOptions ensureIntegerOptions() => $_ensure(16);
 
+  /// Date field options.
   @$pb.TagNumber(19)
   Field_DateOptions get dateOptions => $_getN(17);
   @$pb.TagNumber(19)
@@ -2646,6 +2366,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   Field_DateOptions ensureDateOptions() => $_ensure(17);
 
+  /// Selection field options.
   @$pb.TagNumber(20)
   Field_SelectionOptions get selectionOptions => $_getN(18);
   @$pb.TagNumber(20)
@@ -2660,6 +2381,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   Field_SelectionOptions ensureSelectionOptions() => $_ensure(18);
 
+  /// User field options.
   @$pb.TagNumber(21)
   Field_UserOptions get userOptions => $_getN(19);
   @$pb.TagNumber(21)
@@ -2674,3 +2396,7 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   Field_UserOptions ensureUserOptions() => $_ensure(19);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

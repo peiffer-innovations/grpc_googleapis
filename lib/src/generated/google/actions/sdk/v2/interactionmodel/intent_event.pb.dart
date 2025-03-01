@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/interactionmodel/intent_event.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,58 +15,44 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'event_handler.pb.dart' as $0;
 
+/// Registers Events which trigger as the result of an intent match.
 class IntentEvent extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IntentEvent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'transitionToScene')
-    ..aOM<$0.EventHandler>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'handler',
-        subBuilder: $0.EventHandler.create)
-    ..hasRequiredFields = false;
-
-  IntentEvent._() : super();
   factory IntentEvent({
     $core.String? intent,
     $core.String? transitionToScene,
     $0.EventHandler? handler,
   }) {
-    final _result = create();
+    final $result = create();
     if (intent != null) {
-      _result.intent = intent;
+      $result.intent = intent;
     }
     if (transitionToScene != null) {
-      _result.transitionToScene = transitionToScene;
+      $result.transitionToScene = transitionToScene;
     }
     if (handler != null) {
-      _result.handler = handler;
+      $result.handler = handler;
     }
-    return _result;
+    return $result;
   }
+  IntentEvent._() : super();
   factory IntentEvent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IntentEvent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IntentEvent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2.interactionmodel'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'intent')
+    ..aOS(2, _omitFieldNames ? '' : 'transitionToScene')
+    ..aOM<$0.EventHandler>(3, _omitFieldNames ? '' : 'handler',
+        subBuilder: $0.EventHandler.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -72,8 +62,10 @@ class IntentEvent extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IntentEvent copyWith(void Function(IntentEvent) updates) =>
       super.copyWith((message) => updates(message as IntentEvent))
-          as IntentEvent; // ignore: deprecated_member_use
+          as IntentEvent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IntentEvent create() => IntentEvent._();
   IntentEvent createEmptyInstance() => create();
@@ -83,6 +75,7 @@ class IntentEvent extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IntentEvent>(create);
   static IntentEvent? _defaultInstance;
 
+  /// Required. Intent triggering the event.
   @$pb.TagNumber(1)
   $core.String get intent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -95,6 +88,8 @@ class IntentEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIntent() => clearField(1);
 
+  /// Optional. Destination scene which the conversation should jump to. The state of the
+  /// current scene is destroyed on the transition.
   @$pb.TagNumber(2)
   $core.String get transitionToScene => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -107,6 +102,9 @@ class IntentEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTransitionToScene() => clearField(2);
 
+  /// Optional. Event handler which is triggered when the intent is matched. Should execute
+  /// before transitioning to the destination scene. Useful to generate prompts
+  /// in response to events.
   @$pb.TagNumber(3)
   $0.EventHandler get handler => $_getN(2);
   @$pb.TagNumber(3)
@@ -121,3 +119,7 @@ class IntentEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.EventHandler ensureHandler() => $_ensure(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

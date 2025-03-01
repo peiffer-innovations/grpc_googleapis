@@ -1,21 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicemanagement/v1/servicemanager.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'servicemanager.pb.dart' as $2;
-import 'resources.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../longrunning/operations.pb.dart' as $0;
 import '../../service.pb.dart' as $4;
+import 'resources.pb.dart' as $3;
+import 'servicemanager.pb.dart' as $2;
+
 export 'servicemanager.pb.dart';
 
+@$pb.GrpcServiceName('google.api.servicemanagement.v1.ServiceManager')
 class ServiceManagerClient extends $grpc.Client {
   static final _$listServices =
       $grpc.ClientMethod<$2.ListServicesRequest, $2.ListServicesResponse>(
@@ -171,6 +178,7 @@ class ServiceManagerClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.api.servicemanagement.v1.ServiceManager')
 abstract class ServiceManagerServiceBase extends $grpc.Service {
   $core.String get $name => 'google.api.servicemanagement.v1.ServiceManager';
 

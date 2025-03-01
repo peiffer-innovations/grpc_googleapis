@@ -14,3 +14,6 @@ export '../src/generated/google/bigtable/v2/request_stats.pbjson.dart';
 export '../src/generated/google/bigtable/v2/response_params.pb.dart';
 export '../src/generated/google/bigtable/v2/response_params.pbenum.dart';
 export '../src/generated/google/bigtable/v2/response_params.pbjson.dart';
+export '../src/generated/google/bigtable/v2/types.pb.dart';
+export '../src/generated/google/bigtable/v2/types.pbenum.dart';
+export '../src/generated/google/bigtable/v2/types.pbjson.dart';

@@ -1,23 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2beta/label_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'requests.pb.dart' as $0;
-import 'user_capabilities.pb.dart' as $1;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../../../../protobuf/empty.pb.dart' as $4;
 import 'label.pb.dart' as $2;
 import 'label_limits.pb.dart' as $3;
-import '../../../../protobuf/empty.pb.dart' as $4;
 import 'label_permission.pb.dart' as $5;
+import 'requests.pb.dart' as $0;
+import 'user_capabilities.pb.dart' as $1;
+
 export 'label_service.pb.dart';
 
+@$pb.GrpcServiceName('google.apps.drive.labels.v2beta.LabelService')
 class LabelServiceClient extends $grpc.Client {
   static final _$getUserCapabilities =
       $grpc.ClientMethod<$0.GetUserCapabilitiesRequest, $1.UserCapabilities>(
@@ -228,6 +235,7 @@ class LabelServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.apps.drive.labels.v2beta.LabelService')
 abstract class LabelServiceBase extends $grpc.Service {
   $core.String get $name => 'google.apps.drive.labels.v2beta.LabelService';
 

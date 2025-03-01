@@ -1,57 +1,54 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/streetview/publish/v1/rpcmessages.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $2;
-import '../../../rpc/status.pb.dart' as $3;
-import '../../../protobuf/field_mask.pb.dart' as $4;
 import '../../../longrunning/operations.pb.dart' as $0;
-
+import '../../../protobuf/field_mask.pb.dart' as $4;
+import '../../../rpc/status.pb.dart' as $3;
+import 'resources.pb.dart' as $2;
 import 'rpcmessages.pbenum.dart';
 
 export 'rpcmessages.pbenum.dart';
 
+/// Request to create a [Photo][google.streetview.publish.v1.Photo].
 class CreatePhotoRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreatePhotoRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.Photo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photo',
-        subBuilder: $2.Photo.create)
-    ..hasRequiredFields = false;
-
-  CreatePhotoRequest._() : super();
   factory CreatePhotoRequest({
     $2.Photo? photo,
   }) {
-    final _result = create();
+    final $result = create();
     if (photo != null) {
-      _result.photo = photo;
+      $result.photo = photo;
     }
-    return _result;
+    return $result;
   }
+  CreatePhotoRequest._() : super();
   factory CreatePhotoRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreatePhotoRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreatePhotoRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Photo>(1, _omitFieldNames ? '' : 'photo',
+        subBuilder: $2.Photo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -61,8 +58,10 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreatePhotoRequest copyWith(void Function(CreatePhotoRequest) updates) =>
       super.copyWith((message) => updates(message as CreatePhotoRequest))
-          as CreatePhotoRequest; // ignore: deprecated_member_use
+          as CreatePhotoRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreatePhotoRequest create() => CreatePhotoRequest._();
   CreatePhotoRequest createEmptyInstance() => create();
@@ -73,6 +72,7 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreatePhotoRequest>(create);
   static CreatePhotoRequest? _defaultInstance;
 
+  /// Required. Photo to create.
   @$pb.TagNumber(1)
   $2.Photo get photo => $_getN(0);
   @$pb.TagNumber(1)
@@ -88,61 +88,54 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
   $2.Photo ensurePhoto() => $_ensure(0);
 }
 
+///  Request to get a [Photo][google.streetview.publish.v1.Photo].
+///
+///  By default
+///
+///  * does not return the download URL for the photo bytes.
+///
+///  Parameters:
+///
+///  * `view` controls if the download URL for the photo bytes is returned.
 class GetPhotoRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetPhotoRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photoId')
-    ..e<PhotoView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: PhotoView.BASIC,
-        valueOf: PhotoView.valueOf,
-        enumValues: PhotoView.values)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'languageCode')
-    ..hasRequiredFields = false;
-
-  GetPhotoRequest._() : super();
   factory GetPhotoRequest({
     $core.String? photoId,
     PhotoView? view,
     $core.String? languageCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (photoId != null) {
-      _result.photoId = photoId;
+      $result.photoId = photoId;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (languageCode != null) {
-      _result.languageCode = languageCode;
+      $result.languageCode = languageCode;
     }
-    return _result;
+    return $result;
   }
+  GetPhotoRequest._() : super();
   factory GetPhotoRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetPhotoRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetPhotoRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'photoId')
+    ..e<PhotoView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: PhotoView.BASIC,
+        valueOf: PhotoView.valueOf,
+        enumValues: PhotoView.values)
+    ..aOS(3, _omitFieldNames ? '' : 'languageCode')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -152,8 +145,10 @@ class GetPhotoRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetPhotoRequest copyWith(void Function(GetPhotoRequest) updates) =>
       super.copyWith((message) => updates(message as GetPhotoRequest))
-          as GetPhotoRequest; // ignore: deprecated_member_use
+          as GetPhotoRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetPhotoRequest create() => GetPhotoRequest._();
   GetPhotoRequest createEmptyInstance() => create();
@@ -164,6 +159,7 @@ class GetPhotoRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetPhotoRequest>(create);
   static GetPhotoRequest? _defaultInstance;
 
+  /// Required. ID of the [Photo][google.streetview.publish.v1.Photo].
   @$pb.TagNumber(1)
   $core.String get photoId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -176,6 +172,8 @@ class GetPhotoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPhotoId() => clearField(1);
 
+  /// Required. Specifies if a download URL for the photo bytes should be
+  /// returned in the [Photo][google.streetview.publish.v1.Photo] response.
   @$pb.TagNumber(2)
   PhotoView get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -188,6 +186,11 @@ class GetPhotoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+  /// information, see
+  /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+  /// If language_code is unspecified, the user's language preference for Google
+  /// services is used.
   @$pb.TagNumber(3)
   $core.String get languageCode => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -201,61 +204,53 @@ class GetPhotoRequest extends $pb.GeneratedMessage {
   void clearLanguageCode() => clearField(3);
 }
 
+///  Request to get one or more [Photos][google.streetview.publish.v1.Photo].
+///  By default
+///
+///  * does not return the download URL for the photo bytes.
+///
+///  Parameters:
+///
+///  * `view` controls if the download URL for the photo bytes is returned.
 class BatchGetPhotosRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchGetPhotosRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photoIds')
-    ..e<PhotoView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: PhotoView.BASIC,
-        valueOf: PhotoView.valueOf,
-        enumValues: PhotoView.values)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'languageCode')
-    ..hasRequiredFields = false;
-
-  BatchGetPhotosRequest._() : super();
   factory BatchGetPhotosRequest({
     $core.Iterable<$core.String>? photoIds,
     PhotoView? view,
     $core.String? languageCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (photoIds != null) {
-      _result.photoIds.addAll(photoIds);
+      $result.photoIds.addAll(photoIds);
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (languageCode != null) {
-      _result.languageCode = languageCode;
+      $result.languageCode = languageCode;
     }
-    return _result;
+    return $result;
   }
+  BatchGetPhotosRequest._() : super();
   factory BatchGetPhotosRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchGetPhotosRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchGetPhotosRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'photoIds')
+    ..e<PhotoView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: PhotoView.BASIC,
+        valueOf: PhotoView.valueOf,
+        enumValues: PhotoView.values)
+    ..aOS(3, _omitFieldNames ? '' : 'languageCode')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -267,8 +262,10 @@ class BatchGetPhotosRequest extends $pb.GeneratedMessage {
   BatchGetPhotosRequest copyWith(
           void Function(BatchGetPhotosRequest) updates) =>
       super.copyWith((message) => updates(message as BatchGetPhotosRequest))
-          as BatchGetPhotosRequest; // ignore: deprecated_member_use
+          as BatchGetPhotosRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchGetPhotosRequest create() => BatchGetPhotosRequest._();
   BatchGetPhotosRequest createEmptyInstance() => create();
@@ -279,9 +276,14 @@ class BatchGetPhotosRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchGetPhotosRequest>(create);
   static BatchGetPhotosRequest? _defaultInstance;
 
+  /// Required. IDs of the [Photos][google.streetview.publish.v1.Photo]. For HTTP
+  /// GET requests, the URL query parameter should be
+  /// `photoIds=<id1>&photoIds=<id2>&...`.
   @$pb.TagNumber(1)
   $core.List<$core.String> get photoIds => $_getList(0);
 
+  /// Required. Specifies if a download URL for the photo bytes should be
+  /// returned in the Photo response.
   @$pb.TagNumber(2)
   PhotoView get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -294,6 +296,11 @@ class BatchGetPhotosRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+  /// information, see
+  /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+  /// If language_code is unspecified, the user's language preference for Google
+  /// services is used.
   @$pb.TagNumber(3)
   $core.String get languageCode => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -307,41 +314,34 @@ class BatchGetPhotosRequest extends $pb.GeneratedMessage {
   void clearLanguageCode() => clearField(3);
 }
 
+/// Response to batch get of [Photos][google.streetview.publish.v1.Photo].
 class BatchGetPhotosResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchGetPhotosResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pc<PhotoResponse>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'results',
-        $pb.PbFieldType.PM,
-        subBuilder: PhotoResponse.create)
-    ..hasRequiredFields = false;
-
-  BatchGetPhotosResponse._() : super();
   factory BatchGetPhotosResponse({
     $core.Iterable<PhotoResponse>? results,
   }) {
-    final _result = create();
+    final $result = create();
     if (results != null) {
-      _result.results.addAll(results);
+      $result.results.addAll(results);
     }
-    return _result;
+    return $result;
   }
+  BatchGetPhotosResponse._() : super();
   factory BatchGetPhotosResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchGetPhotosResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchGetPhotosResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<PhotoResponse>(1, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM,
+        subBuilder: PhotoResponse.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -353,8 +353,10 @@ class BatchGetPhotosResponse extends $pb.GeneratedMessage {
   BatchGetPhotosResponse copyWith(
           void Function(BatchGetPhotosResponse) updates) =>
       super.copyWith((message) => updates(message as BatchGetPhotosResponse))
-          as BatchGetPhotosResponse; // ignore: deprecated_member_use
+          as BatchGetPhotosResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchGetPhotosResponse create() => BatchGetPhotosResponse._();
   BatchGetPhotosResponse createEmptyInstance() => create();
@@ -365,54 +367,53 @@ class BatchGetPhotosResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchGetPhotosResponse>(create);
   static BatchGetPhotosResponse? _defaultInstance;
 
+  /// List of results for each individual
+  /// [Photo][google.streetview.publish.v1.Photo] requested, in the same order as
+  /// the requests in
+  /// [BatchGetPhotos][google.streetview.publish.v1.StreetViewPublishService.BatchGetPhotos].
   @$pb.TagNumber(1)
   $core.List<PhotoResponse> get results => $_getList(0);
 }
 
+/// Response payload for a single
+/// [Photo][google.streetview.publish.v1.Photo]
+/// in batch operations including
+/// [BatchGetPhotos][google.streetview.publish.v1.StreetViewPublishService.BatchGetPhotos]
+/// and
+/// [BatchUpdatePhotos][google.streetview.publish.v1.StreetViewPublishService.BatchUpdatePhotos].
 class PhotoResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PhotoResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOM<$3.Status>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        subBuilder: $3.Status.create)
-    ..aOM<$2.Photo>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photo',
-        subBuilder: $2.Photo.create)
-    ..hasRequiredFields = false;
-
-  PhotoResponse._() : super();
   factory PhotoResponse({
     $3.Status? status,
     $2.Photo? photo,
   }) {
-    final _result = create();
+    final $result = create();
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (photo != null) {
-      _result.photo = photo;
+      $result.photo = photo;
     }
-    return _result;
+    return $result;
   }
+  PhotoResponse._() : super();
   factory PhotoResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PhotoResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PhotoResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Status>(1, _omitFieldNames ? '' : 'status',
+        subBuilder: $3.Status.create)
+    ..aOM<$2.Photo>(2, _omitFieldNames ? '' : 'photo',
+        subBuilder: $2.Photo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -422,8 +423,10 @@ class PhotoResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PhotoResponse copyWith(void Function(PhotoResponse) updates) =>
       super.copyWith((message) => updates(message as PhotoResponse))
-          as PhotoResponse; // ignore: deprecated_member_use
+          as PhotoResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PhotoResponse create() => PhotoResponse._();
   PhotoResponse createEmptyInstance() => create();
@@ -434,6 +437,8 @@ class PhotoResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PhotoResponse>(create);
   static PhotoResponse? _defaultInstance;
 
+  /// The status for the operation to get or update a single photo in the batch
+  /// request.
   @$pb.TagNumber(1)
   $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
@@ -448,6 +453,8 @@ class PhotoResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.Status ensureStatus() => $_ensure(0);
 
+  /// The [Photo][google.streetview.publish.v1.Photo] resource, if the request
+  /// was successful.
   @$pb.TagNumber(2)
   $2.Photo get photo => $_getN(1);
   @$pb.TagNumber(2)
@@ -463,49 +470,22 @@ class PhotoResponse extends $pb.GeneratedMessage {
   $2.Photo ensurePhoto() => $_ensure(1);
 }
 
+///  Request to list all photos that belong to the user sending the request.
+///
+///  By default
+///
+///  * does not return the download URL for the photo bytes.
+///
+///  Parameters:
+///
+///  * `view` controls if the download URL for the photo bytes is returned.
+///  * `pageSize` determines the maximum number of photos to return.
+///  * `pageToken` is the next page token value returned from a previous
+///  [ListPhotos][google.streetview.publish.v1.StreetViewPublishService.ListPhotos]
+///      request, if any.
+///  * `filter` allows filtering by a given parameter. 'placeId' is the only
+///  parameter supported at the moment.
 class ListPhotosRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListPhotosRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..e<PhotoView>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: PhotoView.BASIC,
-        valueOf: PhotoView.valueOf,
-        enumValues: PhotoView.values)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'languageCode')
-    ..hasRequiredFields = false;
-
-  ListPhotosRequest._() : super();
   factory ListPhotosRequest({
     PhotoView? view,
     $core.int? pageSize,
@@ -513,30 +493,47 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
     $core.String? filter,
     $core.String? languageCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (languageCode != null) {
-      _result.languageCode = languageCode;
+      $result.languageCode = languageCode;
     }
-    return _result;
+    return $result;
   }
+  ListPhotosRequest._() : super();
   factory ListPhotosRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListPhotosRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListPhotosRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..e<PhotoView>(1, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: PhotoView.BASIC,
+        valueOf: PhotoView.valueOf,
+        enumValues: PhotoView.values)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..aOS(5, _omitFieldNames ? '' : 'languageCode')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -546,8 +543,10 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListPhotosRequest copyWith(void Function(ListPhotosRequest) updates) =>
       super.copyWith((message) => updates(message as ListPhotosRequest))
-          as ListPhotosRequest; // ignore: deprecated_member_use
+          as ListPhotosRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListPhotosRequest create() => ListPhotosRequest._();
   ListPhotosRequest createEmptyInstance() => create();
@@ -558,6 +557,8 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListPhotosRequest>(create);
   static ListPhotosRequest? _defaultInstance;
 
+  /// Required. Specifies if a download URL for the photos bytes should be
+  /// returned in the Photos response.
   @$pb.TagNumber(1)
   PhotoView get view => $_getN(0);
   @$pb.TagNumber(1)
@@ -570,6 +571,11 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearView() => clearField(1);
 
+  /// Optional. The maximum number of photos to return.
+  /// `pageSize` must be non-negative. If `pageSize` is zero or is not provided,
+  /// the default page size of 100 is used.
+  /// The number of photos returned in the response may be less than `pageSize`
+  /// if the number of photos that belong to the user is less than `pageSize`.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -582,6 +588,11 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional. The
+  /// [nextPageToken][google.streetview.publish.v1.ListPhotosResponse.next_page_token]
+  /// value returned from a previous
+  /// [ListPhotos][google.streetview.publish.v1.StreetViewPublishService.ListPhotos]
+  /// request, if any.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -594,6 +605,12 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  ///  Optional. The filter expression. For example:
+  ///  `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+  ///
+  ///  The filters supported are: `placeId`, `min_latitude`, `max_latitude`,
+  ///  `min_longitude`, `max_longitude`. See https://google.aip.dev/160 for more
+  ///  information.
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -606,6 +623,11 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 
+  /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+  /// information, see
+  /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+  /// If language_code is unspecified, the user's language preference for Google
+  /// services is used.
   @$pb.TagNumber(5)
   $core.String get languageCode => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -619,50 +641,39 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
   void clearLanguageCode() => clearField(5);
 }
 
+/// Response to list all photos that belong to a user.
 class ListPhotosResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListPhotosResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pc<$2.Photo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photos',
-        $pb.PbFieldType.PM,
-        subBuilder: $2.Photo.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListPhotosResponse._() : super();
   factory ListPhotosResponse({
     $core.Iterable<$2.Photo>? photos,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (photos != null) {
-      _result.photos.addAll(photos);
+      $result.photos.addAll(photos);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListPhotosResponse._() : super();
   factory ListPhotosResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListPhotosResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListPhotosResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<$2.Photo>(1, _omitFieldNames ? '' : 'photos', $pb.PbFieldType.PM,
+        subBuilder: $2.Photo.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -672,8 +683,10 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListPhotosResponse copyWith(void Function(ListPhotosResponse) updates) =>
       super.copyWith((message) => updates(message as ListPhotosResponse))
-          as ListPhotosResponse; // ignore: deprecated_member_use
+          as ListPhotosResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListPhotosResponse create() => ListPhotosResponse._();
   ListPhotosResponse createEmptyInstance() => create();
@@ -684,9 +697,14 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListPhotosResponse>(create);
   static ListPhotosResponse? _defaultInstance;
 
+  /// List of photos. The
+  /// [pageSize][google.streetview.publish.v1.ListPhotosRequest.page_size] field
+  /// in the request determines the number of items returned.
   @$pb.TagNumber(1)
   $core.List<$2.Photo> get photos => $_getList(0);
 
+  /// Token to retrieve the next page of results, or empty if there are no more
+  /// results in the list.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -700,50 +718,42 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request to update the metadata of a
+/// [Photo][google.streetview.publish.v1.Photo]. Updating the pixels of a photo
+/// is not supported.
 class UpdatePhotoRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdatePhotoRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.Photo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photo',
-        subBuilder: $2.Photo.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdatePhotoRequest._() : super();
   factory UpdatePhotoRequest({
     $2.Photo? photo,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (photo != null) {
-      _result.photo = photo;
+      $result.photo = photo;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdatePhotoRequest._() : super();
   factory UpdatePhotoRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdatePhotoRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdatePhotoRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Photo>(1, _omitFieldNames ? '' : 'photo',
+        subBuilder: $2.Photo.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -753,8 +763,10 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdatePhotoRequest copyWith(void Function(UpdatePhotoRequest) updates) =>
       super.copyWith((message) => updates(message as UpdatePhotoRequest))
-          as UpdatePhotoRequest; // ignore: deprecated_member_use
+          as UpdatePhotoRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdatePhotoRequest create() => UpdatePhotoRequest._();
   UpdatePhotoRequest createEmptyInstance() => create();
@@ -765,6 +777,8 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdatePhotoRequest>(create);
   static UpdatePhotoRequest? _defaultInstance;
 
+  /// Required. [Photo][google.streetview.publish.v1.Photo] object containing the
+  /// new metadata.
   @$pb.TagNumber(1)
   $2.Photo get photo => $_getN(0);
   @$pb.TagNumber(1)
@@ -779,6 +793,32 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.Photo ensurePhoto() => $_ensure(0);
 
+  ///  Required. Mask that identifies fields on the photo metadata to update.
+  ///  If not present, the old [Photo][google.streetview.publish.v1.Photo]
+  ///  metadata is entirely replaced with the
+  ///  new [Photo][google.streetview.publish.v1.Photo] metadata in this request.
+  ///  The update fails if invalid fields are specified. Multiple fields can be
+  ///  specified in a comma-delimited list.
+  ///
+  ///  The following fields are valid:
+  ///
+  ///  * `pose.heading`
+  ///  * `pose.lat_lng_pair`
+  ///  * `pose.pitch`
+  ///  * `pose.roll`
+  ///  * `pose.level`
+  ///  * `pose.altitude`
+  ///  * `connections`
+  ///  * `places`
+  ///
+  ///
+  ///  > Note: When
+  ///  [updateMask][google.streetview.publish.v1.UpdatePhotoRequest.update_mask]
+  ///  contains repeated fields, the entire set of repeated values get replaced
+  ///  with the new contents. For example, if
+  ///  [updateMask][google.streetview.publish.v1.UpdatePhotoRequest.update_mask]
+  ///  contains `connections` and `UpdatePhotoRequest.photo.connections` is empty,
+  ///  all connections are removed.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -794,41 +834,36 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request to update the metadata of photos.
+/// Updating the pixels of photos is not supported.
 class BatchUpdatePhotosRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchUpdatePhotosRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pc<UpdatePhotoRequest>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updatePhotoRequests',
-        $pb.PbFieldType.PM,
-        subBuilder: UpdatePhotoRequest.create)
-    ..hasRequiredFields = false;
-
-  BatchUpdatePhotosRequest._() : super();
   factory BatchUpdatePhotosRequest({
     $core.Iterable<UpdatePhotoRequest>? updatePhotoRequests,
   }) {
-    final _result = create();
+    final $result = create();
     if (updatePhotoRequests != null) {
-      _result.updatePhotoRequests.addAll(updatePhotoRequests);
+      $result.updatePhotoRequests.addAll(updatePhotoRequests);
     }
-    return _result;
+    return $result;
   }
+  BatchUpdatePhotosRequest._() : super();
   factory BatchUpdatePhotosRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchUpdatePhotosRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchUpdatePhotosRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<UpdatePhotoRequest>(
+        1, _omitFieldNames ? '' : 'updatePhotoRequests', $pb.PbFieldType.PM,
+        subBuilder: UpdatePhotoRequest.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -840,8 +875,10 @@ class BatchUpdatePhotosRequest extends $pb.GeneratedMessage {
   BatchUpdatePhotosRequest copyWith(
           void Function(BatchUpdatePhotosRequest) updates) =>
       super.copyWith((message) => updates(message as BatchUpdatePhotosRequest))
-          as BatchUpdatePhotosRequest; // ignore: deprecated_member_use
+          as BatchUpdatePhotosRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchUpdatePhotosRequest create() => BatchUpdatePhotosRequest._();
   BatchUpdatePhotosRequest createEmptyInstance() => create();
@@ -852,45 +889,41 @@ class BatchUpdatePhotosRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchUpdatePhotosRequest>(create);
   static BatchUpdatePhotosRequest? _defaultInstance;
 
+  /// Required. List of
+  /// [UpdatePhotoRequests][google.streetview.publish.v1.UpdatePhotoRequest].
   @$pb.TagNumber(1)
   $core.List<UpdatePhotoRequest> get updatePhotoRequests => $_getList(0);
 }
 
+/// Response to batch update of metadata of one or more
+/// [Photos][google.streetview.publish.v1.Photo].
 class BatchUpdatePhotosResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchUpdatePhotosResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pc<PhotoResponse>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'results',
-        $pb.PbFieldType.PM,
-        subBuilder: PhotoResponse.create)
-    ..hasRequiredFields = false;
-
-  BatchUpdatePhotosResponse._() : super();
   factory BatchUpdatePhotosResponse({
     $core.Iterable<PhotoResponse>? results,
   }) {
-    final _result = create();
+    final $result = create();
     if (results != null) {
-      _result.results.addAll(results);
+      $result.results.addAll(results);
     }
-    return _result;
+    return $result;
   }
+  BatchUpdatePhotosResponse._() : super();
   factory BatchUpdatePhotosResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchUpdatePhotosResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchUpdatePhotosResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<PhotoResponse>(1, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM,
+        subBuilder: PhotoResponse.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -902,8 +935,10 @@ class BatchUpdatePhotosResponse extends $pb.GeneratedMessage {
   BatchUpdatePhotosResponse copyWith(
           void Function(BatchUpdatePhotosResponse) updates) =>
       super.copyWith((message) => updates(message as BatchUpdatePhotosResponse))
-          as BatchUpdatePhotosResponse; // ignore: deprecated_member_use
+          as BatchUpdatePhotosResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchUpdatePhotosResponse create() => BatchUpdatePhotosResponse._();
   BatchUpdatePhotosResponse createEmptyInstance() => create();
@@ -914,43 +949,40 @@ class BatchUpdatePhotosResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchUpdatePhotosResponse>(create);
   static BatchUpdatePhotosResponse? _defaultInstance;
 
+  /// List of results for each individual
+  /// [Photo][google.streetview.publish.v1.Photo] updated, in the same order as
+  /// the request.
   @$pb.TagNumber(1)
   $core.List<PhotoResponse> get results => $_getList(0);
 }
 
+/// Request to delete a [Photo][google.streetview.publish.v1.Photo].
 class DeletePhotoRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeletePhotoRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photoId')
-    ..hasRequiredFields = false;
-
-  DeletePhotoRequest._() : super();
   factory DeletePhotoRequest({
     $core.String? photoId,
   }) {
-    final _result = create();
+    final $result = create();
     if (photoId != null) {
-      _result.photoId = photoId;
+      $result.photoId = photoId;
     }
-    return _result;
+    return $result;
   }
+  DeletePhotoRequest._() : super();
   factory DeletePhotoRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeletePhotoRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeletePhotoRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'photoId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -960,8 +992,10 @@ class DeletePhotoRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeletePhotoRequest copyWith(void Function(DeletePhotoRequest) updates) =>
       super.copyWith((message) => updates(message as DeletePhotoRequest))
-          as DeletePhotoRequest; // ignore: deprecated_member_use
+          as DeletePhotoRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeletePhotoRequest create() => DeletePhotoRequest._();
   DeletePhotoRequest createEmptyInstance() => create();
@@ -972,6 +1006,7 @@ class DeletePhotoRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeletePhotoRequest>(create);
   static DeletePhotoRequest? _defaultInstance;
 
+  /// Required. ID of the [Photo][google.streetview.publish.v1.Photo].
   @$pb.TagNumber(1)
   $core.String get photoId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -985,39 +1020,33 @@ class DeletePhotoRequest extends $pb.GeneratedMessage {
   void clearPhotoId() => clearField(1);
 }
 
+/// Request to delete multiple [Photos][google.streetview.publish.v1.Photo].
 class BatchDeletePhotosRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchDeletePhotosRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photoIds')
-    ..hasRequiredFields = false;
-
-  BatchDeletePhotosRequest._() : super();
   factory BatchDeletePhotosRequest({
     $core.Iterable<$core.String>? photoIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (photoIds != null) {
-      _result.photoIds.addAll(photoIds);
+      $result.photoIds.addAll(photoIds);
     }
-    return _result;
+    return $result;
   }
+  BatchDeletePhotosRequest._() : super();
   factory BatchDeletePhotosRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchDeletePhotosRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchDeletePhotosRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'photoIds')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1029,8 +1058,10 @@ class BatchDeletePhotosRequest extends $pb.GeneratedMessage {
   BatchDeletePhotosRequest copyWith(
           void Function(BatchDeletePhotosRequest) updates) =>
       super.copyWith((message) => updates(message as BatchDeletePhotosRequest))
-          as BatchDeletePhotosRequest; // ignore: deprecated_member_use
+          as BatchDeletePhotosRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchDeletePhotosRequest create() => BatchDeletePhotosRequest._();
   BatchDeletePhotosRequest createEmptyInstance() => create();
@@ -1041,58 +1072,52 @@ class BatchDeletePhotosRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchDeletePhotosRequest>(create);
   static BatchDeletePhotosRequest? _defaultInstance;
 
+  /// Required. IDs of the [Photos][google.streetview.publish.v1.Photo]. HTTP
+  /// GET requests require the following syntax for the URL query parameter:
+  /// `photoIds=<id1>&photoIds=<id2>&...`.
   @$pb.TagNumber(1)
   $core.List<$core.String> get photoIds => $_getList(0);
 }
 
+/// Request to create a
+/// [PhotoSequence][google.streetview.publish.v1.PhotoSequence] from a video.
 class CreatePhotoSequenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreatePhotoSequenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.PhotoSequence>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photoSequence',
-        subBuilder: $2.PhotoSequence.create)
-    ..e<CreatePhotoSequenceRequest_InputType>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'inputType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            CreatePhotoSequenceRequest_InputType.INPUT_TYPE_UNSPECIFIED,
-        valueOf: CreatePhotoSequenceRequest_InputType.valueOf,
-        enumValues: CreatePhotoSequenceRequest_InputType.values)
-    ..hasRequiredFields = false;
-
-  CreatePhotoSequenceRequest._() : super();
   factory CreatePhotoSequenceRequest({
     $2.PhotoSequence? photoSequence,
     CreatePhotoSequenceRequest_InputType? inputType,
   }) {
-    final _result = create();
+    final $result = create();
     if (photoSequence != null) {
-      _result.photoSequence = photoSequence;
+      $result.photoSequence = photoSequence;
     }
     if (inputType != null) {
-      _result.inputType = inputType;
+      $result.inputType = inputType;
     }
-    return _result;
+    return $result;
   }
+  CreatePhotoSequenceRequest._() : super();
   factory CreatePhotoSequenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreatePhotoSequenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreatePhotoSequenceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.PhotoSequence>(1, _omitFieldNames ? '' : 'photoSequence',
+        subBuilder: $2.PhotoSequence.create)
+    ..e<CreatePhotoSequenceRequest_InputType>(
+        2, _omitFieldNames ? '' : 'inputType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            CreatePhotoSequenceRequest_InputType.INPUT_TYPE_UNSPECIFIED,
+        valueOf: CreatePhotoSequenceRequest_InputType.valueOf,
+        enumValues: CreatePhotoSequenceRequest_InputType.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1105,8 +1130,10 @@ class CreatePhotoSequenceRequest extends $pb.GeneratedMessage {
           void Function(CreatePhotoSequenceRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreatePhotoSequenceRequest))
-          as CreatePhotoSequenceRequest; // ignore: deprecated_member_use
+          as CreatePhotoSequenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreatePhotoSequenceRequest create() => CreatePhotoSequenceRequest._();
   CreatePhotoSequenceRequest createEmptyInstance() => create();
@@ -1117,6 +1144,8 @@ class CreatePhotoSequenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreatePhotoSequenceRequest>(create);
   static CreatePhotoSequenceRequest? _defaultInstance;
 
+  /// Required. [PhotoSequence][google.streetview.publish.v1.PhotoSequence] to
+  /// create.
   @$pb.TagNumber(1)
   $2.PhotoSequence get photoSequence => $_getN(0);
   @$pb.TagNumber(1)
@@ -1131,6 +1160,8 @@ class CreatePhotoSequenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.PhotoSequence ensurePhotoSequence() => $_ensure(0);
 
+  /// Required. The input form of
+  /// [PhotoSequence][google.streetview.publish.v1.PhotoSequence].
   @$pb.TagNumber(2)
   CreatePhotoSequenceRequest_InputType get inputType => $_getN(1);
   @$pb.TagNumber(2)
@@ -1144,62 +1175,58 @@ class CreatePhotoSequenceRequest extends $pb.GeneratedMessage {
   void clearInputType() => clearField(2);
 }
 
+///  Request to get a [PhotoSequence][google.streetview.publish.v1.PhotoSequence].
+///
+///  By default
+///
+///  * does not return the download URL for the
+///  [PhotoSequence][google.streetview.publish.v1.PhotoSequence].
+///
+///  Parameters:
+///
+///  * `view` controls if the download URL for the
+///  [PhotoSequence][google.streetview.publish.v1.PhotoSequence] is
+///    returned.
 class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetPhotoSequenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sequenceId')
-    ..e<PhotoView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: PhotoView.BASIC,
-        valueOf: PhotoView.valueOf,
-        enumValues: PhotoView.values)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..hasRequiredFields = false;
-
-  GetPhotoSequenceRequest._() : super();
   factory GetPhotoSequenceRequest({
     $core.String? sequenceId,
     @$core.Deprecated('This field is deprecated.') PhotoView? view,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (sequenceId != null) {
-      _result.sequenceId = sequenceId;
+      $result.sequenceId = sequenceId;
     }
     if (view != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.view = view;
+      $result.view = view;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  GetPhotoSequenceRequest._() : super();
   factory GetPhotoSequenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetPhotoSequenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetPhotoSequenceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sequenceId')
+    ..e<PhotoView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: PhotoView.BASIC,
+        valueOf: PhotoView.valueOf,
+        enumValues: PhotoView.values)
+    ..aOS(3, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1211,8 +1238,10 @@ class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
   GetPhotoSequenceRequest copyWith(
           void Function(GetPhotoSequenceRequest) updates) =>
       super.copyWith((message) => updates(message as GetPhotoSequenceRequest))
-          as GetPhotoSequenceRequest; // ignore: deprecated_member_use
+          as GetPhotoSequenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetPhotoSequenceRequest create() => GetPhotoSequenceRequest._();
   GetPhotoSequenceRequest createEmptyInstance() => create();
@@ -1223,6 +1252,7 @@ class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetPhotoSequenceRequest>(create);
   static GetPhotoSequenceRequest? _defaultInstance;
 
+  /// Required. ID of the photo sequence.
   @$pb.TagNumber(1)
   $core.String get sequenceId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1235,6 +1265,10 @@ class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSequenceId() => clearField(1);
 
+  /// Specifies if a download URL for the photo sequence should be returned in
+  /// `download_url` of individual photos in the
+  /// [PhotoSequence][google.streetview.publish.v1.PhotoSequence] response.
+  /// > Note: Currently not implemented.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   PhotoView get view => $_getN(1);
@@ -1251,6 +1285,10 @@ class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  ///  Optional. The filter expression. For example: `published_status=PUBLISHED`.
+  ///
+  ///  The filters supported are: `published_status`.  See
+  ///  https://google.aip.dev/160 for more information.
   @$pb.TagNumber(3)
   $core.String get filter => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1264,39 +1302,34 @@ class GetPhotoSequenceRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(3);
 }
 
+/// Request to delete a
+/// [PhotoSequence][google.streetview.publish.v1.PhotoSequence].
 class DeletePhotoSequenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeletePhotoSequenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sequenceId')
-    ..hasRequiredFields = false;
-
-  DeletePhotoSequenceRequest._() : super();
   factory DeletePhotoSequenceRequest({
     $core.String? sequenceId,
   }) {
-    final _result = create();
+    final $result = create();
     if (sequenceId != null) {
-      _result.sequenceId = sequenceId;
+      $result.sequenceId = sequenceId;
     }
-    return _result;
+    return $result;
   }
+  DeletePhotoSequenceRequest._() : super();
   factory DeletePhotoSequenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeletePhotoSequenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeletePhotoSequenceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sequenceId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1309,8 +1342,10 @@ class DeletePhotoSequenceRequest extends $pb.GeneratedMessage {
           void Function(DeletePhotoSequenceRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeletePhotoSequenceRequest))
-          as DeletePhotoSequenceRequest; // ignore: deprecated_member_use
+          as DeletePhotoSequenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeletePhotoSequenceRequest create() => DeletePhotoSequenceRequest._();
   DeletePhotoSequenceRequest createEmptyInstance() => create();
@@ -1321,6 +1356,8 @@ class DeletePhotoSequenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeletePhotoSequenceRequest>(create);
   static DeletePhotoSequenceRequest? _defaultInstance;
 
+  /// Required. ID of the
+  /// [PhotoSequence][google.streetview.publish.v1.PhotoSequence].
   @$pb.TagNumber(1)
   $core.String get sequenceId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1334,41 +1371,35 @@ class DeletePhotoSequenceRequest extends $pb.GeneratedMessage {
   void clearSequenceId() => clearField(1);
 }
 
+/// Response to batch delete of one or more
+/// [Photos][google.streetview.publish.v1.Photo].
 class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchDeletePhotosResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.Status>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.Status.create)
-    ..hasRequiredFields = false;
-
-  BatchDeletePhotosResponse._() : super();
   factory BatchDeletePhotosResponse({
     $core.Iterable<$3.Status>? status,
   }) {
-    final _result = create();
+    final $result = create();
     if (status != null) {
-      _result.status.addAll(status);
+      $result.status.addAll(status);
     }
-    return _result;
+    return $result;
   }
+  BatchDeletePhotosResponse._() : super();
   factory BatchDeletePhotosResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchDeletePhotosResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchDeletePhotosResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.Status>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.PM,
+        subBuilder: $3.Status.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1380,8 +1411,10 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
   BatchDeletePhotosResponse copyWith(
           void Function(BatchDeletePhotosResponse) updates) =>
       super.copyWith((message) => updates(message as BatchDeletePhotosResponse))
-          as BatchDeletePhotosResponse; // ignore: deprecated_member_use
+          as BatchDeletePhotosResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchDeletePhotosResponse create() => BatchDeletePhotosResponse._();
   BatchDeletePhotosResponse createEmptyInstance() => create();
@@ -1392,62 +1425,57 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchDeletePhotosResponse>(create);
   static BatchDeletePhotosResponse? _defaultInstance;
 
+  /// The status for the operation to delete a single
+  /// [Photo][google.streetview.publish.v1.Photo] in the batch request.
   @$pb.TagNumber(1)
   $core.List<$3.Status> get status => $_getList(0);
 }
 
+///  Request to list all photo sequences that belong to the user sending the
+///  request.
+///
+///  Parameters:
+///
+///  * `pageSize` determines the maximum number of photo sequences to return.
+///  * `pageToken` is the next page token value returned from a previous
+///  [ListPhotoSequences][google.streetview.publish.v1.StreetViewPublishService.ListPhotoSequences]
+///    request, if any.
 class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListPhotoSequencesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..hasRequiredFields = false;
-
-  ListPhotoSequencesRequest._() : super();
   factory ListPhotoSequencesRequest({
     $core.int? pageSize,
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  ListPhotoSequencesRequest._() : super();
   factory ListPhotoSequencesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListPhotoSequencesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListPhotoSequencesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1459,8 +1487,10 @@ class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
   ListPhotoSequencesRequest copyWith(
           void Function(ListPhotoSequencesRequest) updates) =>
       super.copyWith((message) => updates(message as ListPhotoSequencesRequest))
-          as ListPhotoSequencesRequest; // ignore: deprecated_member_use
+          as ListPhotoSequencesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListPhotoSequencesRequest create() => ListPhotoSequencesRequest._();
   ListPhotoSequencesRequest createEmptyInstance() => create();
@@ -1471,6 +1501,12 @@ class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListPhotoSequencesRequest>(create);
   static ListPhotoSequencesRequest? _defaultInstance;
 
+  /// Optional. The maximum number of photo sequences to return.
+  /// `pageSize` must be non-negative. If `pageSize` is zero or is not
+  /// provided, the default page size of 100 is used.
+  /// The number of photo sequences returned in the response may be less than
+  /// `pageSize` if the number of matches is less than `pageSize`.
+  /// This is currently unimplemented but is in process.
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1483,6 +1519,11 @@ class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
+  /// Optional. The
+  /// [nextPageToken][google.streetview.publish.v1.ListPhotosResponse.next_page_token]
+  /// value returned from a previous
+  /// [ListPhotoSequences][google.streetview.publish.v1.StreetViewPublishService.ListPhotoSequences]
+  /// request, if any.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1495,6 +1536,15 @@ class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
+  ///  Optional. The filter expression. For example: `imagery_type=SPHERICAL`.
+  ///
+  ///  The filters supported are: `imagery_type`, `processing_state`,
+  ///  `min_latitude`, `max_latitude`, `min_longitude`, `max_longitude`,
+  ///  `filename_query`, `min_capture_time_seconds`, `max_capture_time_seconds.
+  ///  See https://google.aip.dev/160 for more information. Filename queries
+  ///  should sent as a Phrase in order to support multiple words and special
+  ///  characters by adding escaped quotes. Ex: filename_query="example of a
+  ///  phrase.mp4"
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -1508,50 +1558,40 @@ class ListPhotoSequencesRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(4);
 }
 
+/// Response to list all photo sequences that belong to a user.
 class ListPhotoSequencesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListPhotoSequencesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.streetview.publish.v1'),
-      createEmptyInstance: create)
-    ..pc<$0.Operation>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'photoSequences',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Operation.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListPhotoSequencesResponse._() : super();
   factory ListPhotoSequencesResponse({
     $core.Iterable<$0.Operation>? photoSequences,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (photoSequences != null) {
-      _result.photoSequences.addAll(photoSequences);
+      $result.photoSequences.addAll(photoSequences);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListPhotoSequencesResponse._() : super();
   factory ListPhotoSequencesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListPhotoSequencesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListPhotoSequencesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.streetview.publish.v1'),
+      createEmptyInstance: create)
+    ..pc<$0.Operation>(
+        1, _omitFieldNames ? '' : 'photoSequences', $pb.PbFieldType.PM,
+        subBuilder: $0.Operation.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1564,8 +1604,10 @@ class ListPhotoSequencesResponse extends $pb.GeneratedMessage {
           void Function(ListPhotoSequencesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListPhotoSequencesResponse))
-          as ListPhotoSequencesResponse; // ignore: deprecated_member_use
+          as ListPhotoSequencesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListPhotoSequencesResponse create() => ListPhotoSequencesResponse._();
   ListPhotoSequencesResponse createEmptyInstance() => create();
@@ -1576,9 +1618,29 @@ class ListPhotoSequencesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListPhotoSequencesResponse>(create);
   static ListPhotoSequencesResponse? _defaultInstance;
 
+  ///  List of photo sequences via [Operation][google.longrunning.Operation]
+  ///  interface.
+  ///
+  ///  The maximum number of items returned is based on the
+  ///  [pageSize][google.streetview.publish.v1.ListPhotoSequencesRequest.page_size]
+  ///  field in the request.
+  ///
+  ///  Each item in the list can have three possible states,
+  ///
+  ///  * `Operation.done` = false, if the processing of
+  ///    [PhotoSequence][google.streetview.publish.v1.PhotoSequence] is not
+  ///    finished yet.
+  ///  * `Operation.done` = true and `Operation.error` is populated, if there was
+  ///    an error in processing.
+  ///  * `Operation.done` = true and `Operation.response` contains a
+  ///    [PhotoSequence][google.streetview.publish.v1.PhotoSequence] message,
+  ///    In each sequence, only
+  ///    [Id][google.streetview.publish.v1.PhotoSequence.id] is populated.
   @$pb.TagNumber(1)
   $core.List<$0.Operation> get photoSequences => $_getList(0);
 
+  /// Token to retrieve the next page of results, or empty if there are no more
+  /// results in the list.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1591,3 +1653,7 @@ class ListPhotoSequencesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

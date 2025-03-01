@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/interactionmodel/prompt/content/static_image_prompt.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,68 +15,49 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 export 'static_image_prompt.pbenum.dart';
 
+/// An image displayed in the card.
 class StaticImagePrompt extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StaticImagePrompt',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel.prompt'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alt')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'height',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'width',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  StaticImagePrompt._() : super();
   factory StaticImagePrompt({
     $core.String? url,
     $core.String? alt,
     $core.int? height,
     $core.int? width,
   }) {
-    final _result = create();
+    final $result = create();
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
     if (alt != null) {
-      _result.alt = alt;
+      $result.alt = alt;
     }
     if (height != null) {
-      _result.height = height;
+      $result.height = height;
     }
     if (width != null) {
-      _result.width = width;
+      $result.width = width;
     }
-    return _result;
+    return $result;
   }
+  StaticImagePrompt._() : super();
   factory StaticImagePrompt.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StaticImagePrompt.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StaticImagePrompt',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.actions.sdk.v2.interactionmodel.prompt'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..aOS(2, _omitFieldNames ? '' : 'alt')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'height', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'width', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -82,8 +67,10 @@ class StaticImagePrompt extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   StaticImagePrompt copyWith(void Function(StaticImagePrompt) updates) =>
       super.copyWith((message) => updates(message as StaticImagePrompt))
-          as StaticImagePrompt; // ignore: deprecated_member_use
+          as StaticImagePrompt;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticImagePrompt create() => StaticImagePrompt._();
   StaticImagePrompt createEmptyInstance() => create();
@@ -94,6 +81,8 @@ class StaticImagePrompt extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StaticImagePrompt>(create);
   static StaticImagePrompt? _defaultInstance;
 
+  /// Required. The source url of the image. Images can be JPG, PNG and GIF (animated and
+  /// non-animated). For example,`https://www.agentx.com/logo.png`.
   @$pb.TagNumber(1)
   $core.String get url => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -106,6 +95,8 @@ class StaticImagePrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
+  /// Required. A text description of the image to be used for accessibility, e.g. screen
+  /// readers.
   @$pb.TagNumber(2)
   $core.String get alt => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -118,6 +109,7 @@ class StaticImagePrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlt() => clearField(2);
 
+  /// Optional. The height of the image in pixels.
   @$pb.TagNumber(3)
   $core.int get height => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -130,6 +122,7 @@ class StaticImagePrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
 
+  /// Optional. The width of the image in pixels.
   @$pb.TagNumber(4)
   $core.int get width => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -142,3 +135,7 @@ class StaticImagePrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearWidth() => clearField(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

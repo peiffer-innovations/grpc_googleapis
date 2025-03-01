@@ -1,60 +1,37 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/v1/trips.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The status of a trip indicating its progression.
 class TripStatus extends $pb.ProtobufEnum {
-  static const TripStatus UNKNOWN_TRIP_STATUS = TripStatus._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNKNOWN_TRIP_STATUS');
-  static const TripStatus NEW = TripStatus._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NEW');
-  static const TripStatus ENROUTE_TO_PICKUP = TripStatus._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ENROUTE_TO_PICKUP');
-  static const TripStatus ARRIVED_AT_PICKUP = TripStatus._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ARRIVED_AT_PICKUP');
+  static const TripStatus UNKNOWN_TRIP_STATUS =
+      TripStatus._(0, _omitEnumNames ? '' : 'UNKNOWN_TRIP_STATUS');
+  static const TripStatus NEW = TripStatus._(1, _omitEnumNames ? '' : 'NEW');
+  static const TripStatus ENROUTE_TO_PICKUP =
+      TripStatus._(2, _omitEnumNames ? '' : 'ENROUTE_TO_PICKUP');
+  static const TripStatus ARRIVED_AT_PICKUP =
+      TripStatus._(3, _omitEnumNames ? '' : 'ARRIVED_AT_PICKUP');
   static const TripStatus ARRIVED_AT_INTERMEDIATE_DESTINATION = TripStatus._(
-      7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ARRIVED_AT_INTERMEDIATE_DESTINATION');
+      7, _omitEnumNames ? '' : 'ARRIVED_AT_INTERMEDIATE_DESTINATION');
   static const TripStatus ENROUTE_TO_INTERMEDIATE_DESTINATION = TripStatus._(
-      8,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ENROUTE_TO_INTERMEDIATE_DESTINATION');
-  static const TripStatus ENROUTE_TO_DROPOFF = TripStatus._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ENROUTE_TO_DROPOFF');
-  static const TripStatus COMPLETE = TripStatus._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'COMPLETE');
-  static const TripStatus CANCELED = TripStatus._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CANCELED');
+      8, _omitEnumNames ? '' : 'ENROUTE_TO_INTERMEDIATE_DESTINATION');
+  static const TripStatus ENROUTE_TO_DROPOFF =
+      TripStatus._(4, _omitEnumNames ? '' : 'ENROUTE_TO_DROPOFF');
+  static const TripStatus COMPLETE =
+      TripStatus._(5, _omitEnumNames ? '' : 'COMPLETE');
+  static const TripStatus CANCELED =
+      TripStatus._(6, _omitEnumNames ? '' : 'CANCELED');
 
   static const $core.List<TripStatus> values = <TripStatus>[
     UNKNOWN_TRIP_STATUS,
@@ -75,38 +52,21 @@ class TripStatus extends $pb.ProtobufEnum {
   const TripStatus._($core.int v, $core.String n) : super(v, n);
 }
 
+/// A set of values that indicate upon which platform the request was issued.
 class BillingPlatformIdentifier extends $pb.ProtobufEnum {
   static const BillingPlatformIdentifier
       BILLING_PLATFORM_IDENTIFIER_UNSPECIFIED = BillingPlatformIdentifier._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'BILLING_PLATFORM_IDENTIFIER_UNSPECIFIED');
-  static const BillingPlatformIdentifier SERVER = BillingPlatformIdentifier._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SERVER');
-  static const BillingPlatformIdentifier WEB = BillingPlatformIdentifier._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'WEB');
-  static const BillingPlatformIdentifier ANDROID = BillingPlatformIdentifier._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ANDROID');
-  static const BillingPlatformIdentifier IOS = BillingPlatformIdentifier._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IOS');
-  static const BillingPlatformIdentifier OTHERS = BillingPlatformIdentifier._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OTHERS');
+          0, _omitEnumNames ? '' : 'BILLING_PLATFORM_IDENTIFIER_UNSPECIFIED');
+  static const BillingPlatformIdentifier SERVER =
+      BillingPlatformIdentifier._(1, _omitEnumNames ? '' : 'SERVER');
+  static const BillingPlatformIdentifier WEB =
+      BillingPlatformIdentifier._(2, _omitEnumNames ? '' : 'WEB');
+  static const BillingPlatformIdentifier ANDROID =
+      BillingPlatformIdentifier._(3, _omitEnumNames ? '' : 'ANDROID');
+  static const BillingPlatformIdentifier IOS =
+      BillingPlatformIdentifier._(4, _omitEnumNames ? '' : 'IOS');
+  static const BillingPlatformIdentifier OTHERS =
+      BillingPlatformIdentifier._(5, _omitEnumNames ? '' : 'OTHERS');
 
   static const $core.List<BillingPlatformIdentifier> values =
       <BillingPlatformIdentifier>[
@@ -125,22 +85,15 @@ class BillingPlatformIdentifier extends $pb.ProtobufEnum {
   const BillingPlatformIdentifier._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Selector for different sets of Trip fields in a `GetTrip` response.  See
+/// [AIP-157](https://google.aip.dev/157) for context. Additional views are
+/// likely to be added.
 class TripView extends $pb.ProtobufEnum {
-  static const TripView TRIP_VIEW_UNSPECIFIED = TripView._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TRIP_VIEW_UNSPECIFIED');
-  static const TripView SDK = TripView._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SDK');
-  static const TripView JOURNEY_SHARING_V1S = TripView._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOURNEY_SHARING_V1S');
+  static const TripView TRIP_VIEW_UNSPECIFIED =
+      TripView._(0, _omitEnumNames ? '' : 'TRIP_VIEW_UNSPECIFIED');
+  static const TripView SDK = TripView._(1, _omitEnumNames ? '' : 'SDK');
+  static const TripView JOURNEY_SHARING_V1S =
+      TripView._(2, _omitEnumNames ? '' : 'JOURNEY_SHARING_V1S');
 
   static const $core.List<TripView> values = <TripView>[
     TRIP_VIEW_UNSPECIFIED,
@@ -154,3 +107,5 @@ class TripView extends $pb.ProtobufEnum {
 
   const TripView._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

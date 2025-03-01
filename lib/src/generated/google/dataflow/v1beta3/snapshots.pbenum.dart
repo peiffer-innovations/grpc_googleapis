@@ -1,45 +1,32 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/dataflow/v1beta3/snapshots.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Snapshot state.
 class SnapshotState extends $pb.ProtobufEnum {
-  static const SnapshotState UNKNOWN_SNAPSHOT_STATE = SnapshotState._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNKNOWN_SNAPSHOT_STATE');
-  static const SnapshotState PENDING = SnapshotState._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PENDING');
-  static const SnapshotState RUNNING = SnapshotState._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'RUNNING');
-  static const SnapshotState READY = SnapshotState._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'READY');
-  static const SnapshotState FAILED = SnapshotState._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILED');
-  static const SnapshotState DELETED = SnapshotState._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DELETED');
+  static const SnapshotState UNKNOWN_SNAPSHOT_STATE =
+      SnapshotState._(0, _omitEnumNames ? '' : 'UNKNOWN_SNAPSHOT_STATE');
+  static const SnapshotState PENDING =
+      SnapshotState._(1, _omitEnumNames ? '' : 'PENDING');
+  static const SnapshotState RUNNING =
+      SnapshotState._(2, _omitEnumNames ? '' : 'RUNNING');
+  static const SnapshotState READY =
+      SnapshotState._(3, _omitEnumNames ? '' : 'READY');
+  static const SnapshotState FAILED =
+      SnapshotState._(4, _omitEnumNames ? '' : 'FAILED');
+  static const SnapshotState DELETED =
+      SnapshotState._(5, _omitEnumNames ? '' : 'DELETED');
 
   static const $core.List<SnapshotState> values = <SnapshotState>[
     UNKNOWN_SNAPSHOT_STATE,
@@ -56,3 +43,5 @@ class SnapshotState extends $pb.ProtobufEnum {
 
   const SnapshotState._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

@@ -1,65 +1,57 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/regionlookup/v1alpha/region_match.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+///  Region Match.
+///
+///  Next available tag: 5
 class RegionMatch extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RegionMatch',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.regionlookup.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matchedPlaceId')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'candidatePlaceIds')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'debugInfo')
-    ..hasRequiredFields = false;
-
-  RegionMatch._() : super();
   factory RegionMatch({
     $core.String? matchedPlaceId,
     $core.Iterable<$core.String>? candidatePlaceIds,
     $core.String? debugInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (matchedPlaceId != null) {
-      _result.matchedPlaceId = matchedPlaceId;
+      $result.matchedPlaceId = matchedPlaceId;
     }
     if (candidatePlaceIds != null) {
-      _result.candidatePlaceIds.addAll(candidatePlaceIds);
+      $result.candidatePlaceIds.addAll(candidatePlaceIds);
     }
     if (debugInfo != null) {
-      _result.debugInfo = debugInfo;
+      $result.debugInfo = debugInfo;
     }
-    return _result;
+    return $result;
   }
+  RegionMatch._() : super();
   factory RegionMatch.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RegionMatch.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegionMatch',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.regionlookup.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'matchedPlaceId')
+    ..pPS(2, _omitFieldNames ? '' : 'candidatePlaceIds')
+    ..aOS(3, _omitFieldNames ? '' : 'debugInfo')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -69,8 +61,10 @@ class RegionMatch extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RegionMatch copyWith(void Function(RegionMatch) updates) =>
       super.copyWith((message) => updates(message as RegionMatch))
-          as RegionMatch; // ignore: deprecated_member_use
+          as RegionMatch;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RegionMatch create() => RegionMatch._();
   RegionMatch createEmptyInstance() => create();
@@ -80,6 +74,8 @@ class RegionMatch extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RegionMatch>(create);
   static RegionMatch? _defaultInstance;
 
+  /// Place ID of the region that is matched. If region is found, this field is
+  /// not set.
   @$pb.TagNumber(1)
   $core.String get matchedPlaceId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -92,9 +88,11 @@ class RegionMatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMatchedPlaceId() => clearField(1);
 
+  /// Region candidate IDs. Up to three candidates may be returned.
   @$pb.TagNumber(2)
   $core.List<$core.String> get candidatePlaceIds => $_getList(1);
 
+  /// Matching debug information for when no match is found.
   @$pb.TagNumber(3)
   $core.String get debugInfo => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -107,3 +105,7 @@ class RegionMatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDebugInfo() => clearField(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

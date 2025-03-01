@@ -1,22 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'spanner_instance_admin.pb.dart' as $4;
-import '../../../../longrunning/operations.pb.dart' as $2;
-import '../../../../protobuf/empty.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../../iam/v1/policy.pb.dart' as $1;
+import '../../../../longrunning/operations.pb.dart' as $2;
+import '../../../../protobuf/empty.pb.dart' as $3;
+import 'spanner_instance_admin.pb.dart' as $4;
+
 export 'spanner_instance_admin.pb.dart';
 
+@$pb.GrpcServiceName('google.spanner.admin.instance.v1.InstanceAdmin')
 class InstanceAdminClient extends $grpc.Client {
   static final _$listInstanceConfigs = $grpc.ClientMethod<
           $4.ListInstanceConfigsRequest, $4.ListInstanceConfigsResponse>(
@@ -57,6 +64,12 @@ class InstanceAdminClient extends $grpc.Client {
           ($4.ListInstancesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $4.ListInstancesResponse.fromBuffer(value));
+  static final _$listInstancePartitions = $grpc.ClientMethod<
+          $4.ListInstancePartitionsRequest, $4.ListInstancePartitionsResponse>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/ListInstancePartitions',
+      ($4.ListInstancePartitionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListInstancePartitionsResponse.fromBuffer(value));
   static final _$getInstance =
       $grpc.ClientMethod<$4.GetInstanceRequest, $4.Instance>(
           '/google.spanner.admin.instance.v1.InstanceAdmin/GetInstance',
@@ -93,6 +106,39 @@ class InstanceAdminClient extends $grpc.Client {
       ($0.TestIamPermissionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.TestIamPermissionsResponse.fromBuffer(value));
+  static final _$getInstancePartition = $grpc.ClientMethod<
+          $4.GetInstancePartitionRequest, $4.InstancePartition>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/GetInstancePartition',
+      ($4.GetInstancePartitionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.InstancePartition.fromBuffer(value));
+  static final _$createInstancePartition = $grpc.ClientMethod<
+          $4.CreateInstancePartitionRequest, $2.Operation>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/CreateInstancePartition',
+      ($4.CreateInstancePartitionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$deleteInstancePartition = $grpc.ClientMethod<
+          $4.DeleteInstancePartitionRequest, $3.Empty>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/DeleteInstancePartition',
+      ($4.DeleteInstancePartitionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$updateInstancePartition = $grpc.ClientMethod<
+          $4.UpdateInstancePartitionRequest, $2.Operation>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/UpdateInstancePartition',
+      ($4.UpdateInstancePartitionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$listInstancePartitionOperations = $grpc.ClientMethod<
+          $4.ListInstancePartitionOperationsRequest,
+          $4.ListInstancePartitionOperationsResponse>(
+      '/google.spanner.admin.instance.v1.InstanceAdmin/ListInstancePartitionOperations',
+      ($4.ListInstancePartitionOperationsRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $4.ListInstancePartitionOperationsResponse.fromBuffer(value));
+  static final _$moveInstance =
+      $grpc.ClientMethod<$4.MoveInstanceRequest, $2.Operation>(
+          '/google.spanner.admin.instance.v1.InstanceAdmin/MoveInstance',
+          ($4.MoveInstanceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
 
   InstanceAdminClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -143,6 +189,13 @@ class InstanceAdminClient extends $grpc.Client {
     return $createUnaryCall(_$listInstances, request, options: options);
   }
 
+  $grpc.ResponseFuture<$4.ListInstancePartitionsResponse>
+      listInstancePartitions($4.ListInstancePartitionsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listInstancePartitions, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$4.Instance> getInstance($4.GetInstanceRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getInstance, request, options: options);
@@ -181,8 +234,50 @@ class InstanceAdminClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$testIamPermissions, request, options: options);
   }
+
+  $grpc.ResponseFuture<$4.InstancePartition> getInstancePartition(
+      $4.GetInstancePartitionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getInstancePartition, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> createInstancePartition(
+      $4.CreateInstancePartitionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createInstancePartition, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteInstancePartition(
+      $4.DeleteInstancePartitionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteInstancePartition, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> updateInstancePartition(
+      $4.UpdateInstancePartitionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateInstancePartition, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$4.ListInstancePartitionOperationsResponse>
+      listInstancePartitionOperations(
+          $4.ListInstancePartitionOperationsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listInstancePartitionOperations, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> moveInstance(
+      $4.MoveInstanceRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$moveInstance, request, options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.spanner.admin.instance.v1.InstanceAdmin')
 abstract class InstanceAdminServiceBase extends $grpc.Service {
   $core.String get $name => 'google.spanner.admin.instance.v1.InstanceAdmin';
 
@@ -250,6 +345,15 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $4.ListInstancesRequest.fromBuffer(value),
             ($4.ListInstancesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListInstancePartitionsRequest,
+            $4.ListInstancePartitionsResponse>(
+        'ListInstancePartitions',
+        listInstancePartitions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListInstancePartitionsRequest.fromBuffer(value),
+        ($4.ListInstancePartitionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.GetInstanceRequest, $4.Instance>(
         'GetInstance',
         getInstance_Pre,
@@ -307,6 +411,59 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.TestIamPermissionsRequest.fromBuffer(value),
         ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetInstancePartitionRequest,
+            $4.InstancePartition>(
+        'GetInstancePartition',
+        getInstancePartition_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.GetInstancePartitionRequest.fromBuffer(value),
+        ($4.InstancePartition value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.CreateInstancePartitionRequest, $2.Operation>(
+            'CreateInstancePartition',
+            createInstancePartition_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.CreateInstancePartitionRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.DeleteInstancePartitionRequest, $3.Empty>(
+        'DeleteInstancePartition',
+        deleteInstancePartition_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.DeleteInstancePartitionRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.UpdateInstancePartitionRequest, $2.Operation>(
+            'UpdateInstancePartition',
+            updateInstancePartition_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.UpdateInstancePartitionRequest.fromBuffer(value),
+            ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListInstancePartitionOperationsRequest,
+            $4.ListInstancePartitionOperationsResponse>(
+        'ListInstancePartitionOperations',
+        listInstancePartitionOperations_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListInstancePartitionOperationsRequest.fromBuffer(value),
+        ($4.ListInstancePartitionOperationsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.MoveInstanceRequest, $2.Operation>(
+        'MoveInstance',
+        moveInstance_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.MoveInstanceRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$4.ListInstanceConfigsResponse> listInstanceConfigs_Pre(
@@ -347,6 +504,12 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
     return listInstances(call, await request);
   }
 
+  $async.Future<$4.ListInstancePartitionsResponse> listInstancePartitions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListInstancePartitionsRequest> request) async {
+    return listInstancePartitions(call, await request);
+  }
+
   $async.Future<$4.Instance> getInstance_Pre($grpc.ServiceCall call,
       $async.Future<$4.GetInstanceRequest> request) async {
     return getInstance(call, await request);
@@ -383,6 +546,42 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
     return testIamPermissions(call, await request);
   }
 
+  $async.Future<$4.InstancePartition> getInstancePartition_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.GetInstancePartitionRequest> request) async {
+    return getInstancePartition(call, await request);
+  }
+
+  $async.Future<$2.Operation> createInstancePartition_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.CreateInstancePartitionRequest> request) async {
+    return createInstancePartition(call, await request);
+  }
+
+  $async.Future<$3.Empty> deleteInstancePartition_Pre($grpc.ServiceCall call,
+      $async.Future<$4.DeleteInstancePartitionRequest> request) async {
+    return deleteInstancePartition(call, await request);
+  }
+
+  $async.Future<$2.Operation> updateInstancePartition_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.UpdateInstancePartitionRequest> request) async {
+    return updateInstancePartition(call, await request);
+  }
+
+  $async.Future<$4.ListInstancePartitionOperationsResponse>
+      listInstancePartitionOperations_Pre(
+          $grpc.ServiceCall call,
+          $async.Future<$4.ListInstancePartitionOperationsRequest>
+              request) async {
+    return listInstancePartitionOperations(call, await request);
+  }
+
+  $async.Future<$2.Operation> moveInstance_Pre($grpc.ServiceCall call,
+      $async.Future<$4.MoveInstanceRequest> request) async {
+    return moveInstance(call, await request);
+  }
+
   $async.Future<$4.ListInstanceConfigsResponse> listInstanceConfigs(
       $grpc.ServiceCall call, $4.ListInstanceConfigsRequest request);
   $async.Future<$4.InstanceConfig> getInstanceConfig(
@@ -398,6 +597,8 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
           $4.ListInstanceConfigOperationsRequest request);
   $async.Future<$4.ListInstancesResponse> listInstances(
       $grpc.ServiceCall call, $4.ListInstancesRequest request);
+  $async.Future<$4.ListInstancePartitionsResponse> listInstancePartitions(
+      $grpc.ServiceCall call, $4.ListInstancePartitionsRequest request);
   $async.Future<$4.Instance> getInstance(
       $grpc.ServiceCall call, $4.GetInstanceRequest request);
   $async.Future<$2.Operation> createInstance(
@@ -412,4 +613,17 @@ abstract class InstanceAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetIamPolicyRequest request);
   $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
       $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
+  $async.Future<$4.InstancePartition> getInstancePartition(
+      $grpc.ServiceCall call, $4.GetInstancePartitionRequest request);
+  $async.Future<$2.Operation> createInstancePartition(
+      $grpc.ServiceCall call, $4.CreateInstancePartitionRequest request);
+  $async.Future<$3.Empty> deleteInstancePartition(
+      $grpc.ServiceCall call, $4.DeleteInstancePartitionRequest request);
+  $async.Future<$2.Operation> updateInstancePartition(
+      $grpc.ServiceCall call, $4.UpdateInstancePartitionRequest request);
+  $async.Future<$4.ListInstancePartitionOperationsResponse>
+      listInstancePartitionOperations($grpc.ServiceCall call,
+          $4.ListInstancePartitionOperationsRequest request);
+  $async.Future<$2.Operation> moveInstance(
+      $grpc.ServiceCall call, $4.MoveInstanceRequest request);
 }

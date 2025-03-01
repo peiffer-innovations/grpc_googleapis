@@ -1,50 +1,35 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/dashboard/v1/dashboard_filter.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The type for the dashboard filter
 class DashboardFilter_FilterType extends $pb.ProtobufEnum {
   static const DashboardFilter_FilterType FILTER_TYPE_UNSPECIFIED =
       DashboardFilter_FilterType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'FILTER_TYPE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'FILTER_TYPE_UNSPECIFIED');
   static const DashboardFilter_FilterType RESOURCE_LABEL =
-      DashboardFilter_FilterType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'RESOURCE_LABEL');
+      DashboardFilter_FilterType._(1, _omitEnumNames ? '' : 'RESOURCE_LABEL');
   static const DashboardFilter_FilterType METRIC_LABEL =
-      DashboardFilter_FilterType._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'METRIC_LABEL');
+      DashboardFilter_FilterType._(2, _omitEnumNames ? '' : 'METRIC_LABEL');
   static const DashboardFilter_FilterType USER_METADATA_LABEL =
       DashboardFilter_FilterType._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_METADATA_LABEL');
+          3, _omitEnumNames ? '' : 'USER_METADATA_LABEL');
   static const DashboardFilter_FilterType SYSTEM_METADATA_LABEL =
       DashboardFilter_FilterType._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SYSTEM_METADATA_LABEL');
-  static const DashboardFilter_FilterType GROUP = DashboardFilter_FilterType._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'GROUP');
+          4, _omitEnumNames ? '' : 'SYSTEM_METADATA_LABEL');
+  static const DashboardFilter_FilterType GROUP =
+      DashboardFilter_FilterType._(5, _omitEnumNames ? '' : 'GROUP');
 
   static const $core.List<DashboardFilter_FilterType> values =
       <DashboardFilter_FilterType>[
@@ -63,3 +48,5 @@ class DashboardFilter_FilterType extends $pb.ProtobufEnum {
 
   const DashboardFilter_FilterType._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

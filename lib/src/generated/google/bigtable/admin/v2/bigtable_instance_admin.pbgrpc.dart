@@ -1,23 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'bigtable_instance_admin.pb.dart' as $4;
-import '../../../longrunning/operations.pb.dart' as $2;
-import 'instance.pb.dart' as $5;
-import '../../../protobuf/empty.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $3;
+import 'bigtable_instance_admin.pb.dart' as $4;
+import 'instance.pb.dart' as $5;
+
 export 'bigtable_instance_admin.pb.dart';
 
+@$pb.GrpcServiceName('google.bigtable.admin.v2.BigtableInstanceAdmin')
 class BigtableInstanceAdminClient extends $grpc.Client {
   static final _$createInstance =
       $grpc.ClientMethod<$4.CreateInstanceRequest, $2.Operation>(
@@ -253,6 +260,7 @@ class BigtableInstanceAdminClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.bigtable.admin.v2.BigtableInstanceAdmin')
 abstract class BigtableInstanceAdminServiceBase extends $grpc.Service {
   $core.String get $name => 'google.bigtable.admin.v2.BigtableInstanceAdmin';
 

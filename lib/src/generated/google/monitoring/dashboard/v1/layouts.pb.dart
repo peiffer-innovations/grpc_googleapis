@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/dashboard/v1/layouts.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,50 +16,40 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'widget.pb.dart' as $0;
 
+/// A basic layout divides the available space into vertical columns of equal
+/// width and arranges a list of widgets using a row-first strategy.
 class GridLayout extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GridLayout',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'columns')
-    ..pc<$0.Widget>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'widgets',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Widget.create)
-    ..hasRequiredFields = false;
-
-  GridLayout._() : super();
   factory GridLayout({
     $fixnum.Int64? columns,
     $core.Iterable<$0.Widget>? widgets,
   }) {
-    final _result = create();
+    final $result = create();
     if (columns != null) {
-      _result.columns = columns;
+      $result.columns = columns;
     }
     if (widgets != null) {
-      _result.widgets.addAll(widgets);
+      $result.widgets.addAll(widgets);
     }
-    return _result;
+    return $result;
   }
+  GridLayout._() : super();
   factory GridLayout.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GridLayout.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GridLayout',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'columns')
+    ..pc<$0.Widget>(2, _omitFieldNames ? '' : 'widgets', $pb.PbFieldType.PM,
+        subBuilder: $0.Widget.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -64,9 +58,10 @@ class GridLayout extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   GridLayout copyWith(void Function(GridLayout) updates) =>
-      super.copyWith((message) => updates(message as GridLayout))
-          as GridLayout; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as GridLayout)) as GridLayout;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GridLayout create() => GridLayout._();
   GridLayout createEmptyInstance() => create();
@@ -76,6 +71,8 @@ class GridLayout extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GridLayout>(create);
   static GridLayout? _defaultInstance;
 
+  /// The number of columns into which the view's width is divided. If omitted
+  /// or set to zero, a system default will be used while rendering.
   @$pb.TagNumber(1)
   $fixnum.Int64 get columns => $_getI64(0);
   @$pb.TagNumber(1)
@@ -88,53 +85,14 @@ class GridLayout extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearColumns() => clearField(1);
 
+  /// The informational elements that are arranged into the columns row-first.
   @$pb.TagNumber(2)
   $core.List<$0.Widget> get widgets => $_getList(1);
 }
 
+/// A single tile in the mosaic. The placement and size of the tile are
+/// configurable.
 class MosaicLayout_Tile extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MosaicLayout.Tile',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'xPos',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'yPos',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'width',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'height',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Widget>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'widget',
-        subBuilder: $0.Widget.create)
-    ..hasRequiredFields = false;
-
-  MosaicLayout_Tile._() : super();
   factory MosaicLayout_Tile({
     $core.int? xPos,
     $core.int? yPos,
@@ -142,30 +100,45 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
     $core.int? height,
     $0.Widget? widget,
   }) {
-    final _result = create();
+    final $result = create();
     if (xPos != null) {
-      _result.xPos = xPos;
+      $result.xPos = xPos;
     }
     if (yPos != null) {
-      _result.yPos = yPos;
+      $result.yPos = yPos;
     }
     if (width != null) {
-      _result.width = width;
+      $result.width = width;
     }
     if (height != null) {
-      _result.height = height;
+      $result.height = height;
     }
     if (widget != null) {
-      _result.widget = widget;
+      $result.widget = widget;
     }
-    return _result;
+    return $result;
   }
+  MosaicLayout_Tile._() : super();
   factory MosaicLayout_Tile.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MosaicLayout_Tile.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MosaicLayout.Tile',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'xPos', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'yPos', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'width', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'height', $pb.PbFieldType.O3)
+    ..aOM<$0.Widget>(5, _omitFieldNames ? '' : 'widget',
+        subBuilder: $0.Widget.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -175,8 +148,10 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MosaicLayout_Tile copyWith(void Function(MosaicLayout_Tile) updates) =>
       super.copyWith((message) => updates(message as MosaicLayout_Tile))
-          as MosaicLayout_Tile; // ignore: deprecated_member_use
+          as MosaicLayout_Tile;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MosaicLayout_Tile create() => MosaicLayout_Tile._();
   MosaicLayout_Tile createEmptyInstance() => create();
@@ -187,6 +162,9 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MosaicLayout_Tile>(create);
   static MosaicLayout_Tile? _defaultInstance;
 
+  /// The zero-indexed position of the tile in grid blocks relative to the
+  /// left edge of the grid. Tiles must be contained within the specified
+  /// number of columns. `x_pos` cannot be negative.
   @$pb.TagNumber(1)
   $core.int get xPos => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -199,6 +177,8 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearXPos() => clearField(1);
 
+  /// The zero-indexed position of the tile in grid blocks relative to the
+  /// top edge of the grid. `y_pos` cannot be negative.
   @$pb.TagNumber(2)
   $core.int get yPos => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -211,6 +191,8 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearYPos() => clearField(2);
 
+  /// The width of the tile, measured in grid blocks. Tiles must have a
+  /// minimum width of 1.
   @$pb.TagNumber(3)
   $core.int get width => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -223,6 +205,8 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearWidth() => clearField(3);
 
+  /// The height of the tile, measured in grid blocks. Tiles must have a
+  /// minimum height of 1.
   @$pb.TagNumber(4)
   $core.int get height => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -235,6 +219,7 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearHeight() => clearField(4);
 
+  /// The informational widget contained in the tile. For example an `XyChart`.
   @$pb.TagNumber(5)
   $0.Widget get widget => $_getN(4);
   @$pb.TagNumber(5)
@@ -250,51 +235,42 @@ class MosaicLayout_Tile extends $pb.GeneratedMessage {
   $0.Widget ensureWidget() => $_ensure(4);
 }
 
+/// A mosaic layout divides the available space into a grid of blocks, and
+/// overlays the grid with tiles. Unlike `GridLayout`, tiles may span multiple
+/// grid blocks and can be placed at arbitrary locations in the grid.
 class MosaicLayout extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MosaicLayout',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'columns',
-        $pb.PbFieldType.O3)
-    ..pc<MosaicLayout_Tile>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tiles',
-        $pb.PbFieldType.PM,
-        subBuilder: MosaicLayout_Tile.create)
-    ..hasRequiredFields = false;
-
-  MosaicLayout._() : super();
   factory MosaicLayout({
     $core.int? columns,
     $core.Iterable<MosaicLayout_Tile>? tiles,
   }) {
-    final _result = create();
+    final $result = create();
     if (columns != null) {
-      _result.columns = columns;
+      $result.columns = columns;
     }
     if (tiles != null) {
-      _result.tiles.addAll(tiles);
+      $result.tiles.addAll(tiles);
     }
-    return _result;
+    return $result;
   }
+  MosaicLayout._() : super();
   factory MosaicLayout.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MosaicLayout.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MosaicLayout',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'columns', $pb.PbFieldType.O3)
+    ..pc<MosaicLayout_Tile>(
+        3, _omitFieldNames ? '' : 'tiles', $pb.PbFieldType.PM,
+        subBuilder: MosaicLayout_Tile.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -304,8 +280,10 @@ class MosaicLayout extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MosaicLayout copyWith(void Function(MosaicLayout) updates) =>
       super.copyWith((message) => updates(message as MosaicLayout))
-          as MosaicLayout; // ignore: deprecated_member_use
+          as MosaicLayout;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MosaicLayout create() => MosaicLayout._();
   MosaicLayout createEmptyInstance() => create();
@@ -316,6 +294,8 @@ class MosaicLayout extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MosaicLayout>(create);
   static MosaicLayout? _defaultInstance;
 
+  /// The number of columns in the mosaic grid. The number of columns must be
+  /// between 1 and 12, inclusive.
   @$pb.TagNumber(1)
   $core.int get columns => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -328,54 +308,44 @@ class MosaicLayout extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearColumns() => clearField(1);
 
+  /// The tiles to display.
   @$pb.TagNumber(3)
   $core.List<MosaicLayout_Tile> get tiles => $_getList(1);
 }
 
+/// Defines the layout properties and content for a row.
 class RowLayout_Row extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RowLayout.Row',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'weight')
-    ..pc<$0.Widget>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'widgets',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Widget.create)
-    ..hasRequiredFields = false;
-
-  RowLayout_Row._() : super();
   factory RowLayout_Row({
     $fixnum.Int64? weight,
     $core.Iterable<$0.Widget>? widgets,
   }) {
-    final _result = create();
+    final $result = create();
     if (weight != null) {
-      _result.weight = weight;
+      $result.weight = weight;
     }
     if (widgets != null) {
-      _result.widgets.addAll(widgets);
+      $result.widgets.addAll(widgets);
     }
-    return _result;
+    return $result;
   }
+  RowLayout_Row._() : super();
   factory RowLayout_Row.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RowLayout_Row.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RowLayout.Row',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'weight')
+    ..pc<$0.Widget>(2, _omitFieldNames ? '' : 'widgets', $pb.PbFieldType.PM,
+        subBuilder: $0.Widget.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -385,8 +355,10 @@ class RowLayout_Row extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RowLayout_Row copyWith(void Function(RowLayout_Row) updates) =>
       super.copyWith((message) => updates(message as RowLayout_Row))
-          as RowLayout_Row; // ignore: deprecated_member_use
+          as RowLayout_Row;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RowLayout_Row create() => RowLayout_Row._();
   RowLayout_Row createEmptyInstance() => create();
@@ -397,6 +369,10 @@ class RowLayout_Row extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RowLayout_Row>(create);
   static RowLayout_Row? _defaultInstance;
 
+  /// The relative weight of this row. The row weight is used to adjust the
+  /// height of rows on the screen (relative to peers). Greater the weight,
+  /// greater the height of the row on the screen. If omitted, a value
+  /// of 1 is used while rendering.
   @$pb.TagNumber(1)
   $fixnum.Int64 get weight => $_getI64(0);
   @$pb.TagNumber(1)
@@ -409,45 +385,40 @@ class RowLayout_Row extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearWeight() => clearField(1);
 
+  /// The display widgets arranged horizontally in this row.
   @$pb.TagNumber(2)
   $core.List<$0.Widget> get widgets => $_getList(1);
 }
 
+/// A simplified layout that divides the available space into rows
+/// and arranges a set of widgets horizontally in each row.
 class RowLayout extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RowLayout',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..pc<RowLayout_Row>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rows',
-        $pb.PbFieldType.PM,
-        subBuilder: RowLayout_Row.create)
-    ..hasRequiredFields = false;
-
-  RowLayout._() : super();
   factory RowLayout({
     $core.Iterable<RowLayout_Row>? rows,
   }) {
-    final _result = create();
+    final $result = create();
     if (rows != null) {
-      _result.rows.addAll(rows);
+      $result.rows.addAll(rows);
     }
-    return _result;
+    return $result;
   }
+  RowLayout._() : super();
   factory RowLayout.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RowLayout.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RowLayout',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..pc<RowLayout_Row>(1, _omitFieldNames ? '' : 'rows', $pb.PbFieldType.PM,
+        subBuilder: RowLayout_Row.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -456,9 +427,10 @@ class RowLayout extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RowLayout copyWith(void Function(RowLayout) updates) =>
-      super.copyWith((message) => updates(message as RowLayout))
-          as RowLayout; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RowLayout)) as RowLayout;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RowLayout create() => RowLayout._();
   RowLayout createEmptyInstance() => create();
@@ -468,54 +440,44 @@ class RowLayout extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RowLayout>(create);
   static RowLayout? _defaultInstance;
 
+  /// The rows of content to display.
   @$pb.TagNumber(1)
   $core.List<RowLayout_Row> get rows => $_getList(0);
 }
 
+/// Defines the layout properties and content for a column.
 class ColumnLayout_Column extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ColumnLayout.Column',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'weight')
-    ..pc<$0.Widget>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'widgets',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Widget.create)
-    ..hasRequiredFields = false;
-
-  ColumnLayout_Column._() : super();
   factory ColumnLayout_Column({
     $fixnum.Int64? weight,
     $core.Iterable<$0.Widget>? widgets,
   }) {
-    final _result = create();
+    final $result = create();
     if (weight != null) {
-      _result.weight = weight;
+      $result.weight = weight;
     }
     if (widgets != null) {
-      _result.widgets.addAll(widgets);
+      $result.widgets.addAll(widgets);
     }
-    return _result;
+    return $result;
   }
+  ColumnLayout_Column._() : super();
   factory ColumnLayout_Column.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ColumnLayout_Column.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ColumnLayout.Column',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'weight')
+    ..pc<$0.Widget>(2, _omitFieldNames ? '' : 'widgets', $pb.PbFieldType.PM,
+        subBuilder: $0.Widget.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -525,8 +487,10 @@ class ColumnLayout_Column extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ColumnLayout_Column copyWith(void Function(ColumnLayout_Column) updates) =>
       super.copyWith((message) => updates(message as ColumnLayout_Column))
-          as ColumnLayout_Column; // ignore: deprecated_member_use
+          as ColumnLayout_Column;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ColumnLayout_Column create() => ColumnLayout_Column._();
   ColumnLayout_Column createEmptyInstance() => create();
@@ -537,6 +501,10 @@ class ColumnLayout_Column extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ColumnLayout_Column>(create);
   static ColumnLayout_Column? _defaultInstance;
 
+  /// The relative weight of this column. The column weight is used to adjust
+  /// the width of columns on the screen (relative to peers).
+  /// Greater the weight, greater the width of the column on the screen.
+  /// If omitted, a value of 1 is used while rendering.
   @$pb.TagNumber(1)
   $fixnum.Int64 get weight => $_getI64(0);
   @$pb.TagNumber(1)
@@ -549,45 +517,41 @@ class ColumnLayout_Column extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearWeight() => clearField(1);
 
+  /// The display widgets arranged vertically in this column.
   @$pb.TagNumber(2)
   $core.List<$0.Widget> get widgets => $_getList(1);
 }
 
+/// A simplified layout that divides the available space into vertical columns
+/// and arranges a set of widgets vertically in each column.
 class ColumnLayout extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ColumnLayout',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..pc<ColumnLayout_Column>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'columns',
-        $pb.PbFieldType.PM,
-        subBuilder: ColumnLayout_Column.create)
-    ..hasRequiredFields = false;
-
-  ColumnLayout._() : super();
   factory ColumnLayout({
     $core.Iterable<ColumnLayout_Column>? columns,
   }) {
-    final _result = create();
+    final $result = create();
     if (columns != null) {
-      _result.columns.addAll(columns);
+      $result.columns.addAll(columns);
     }
-    return _result;
+    return $result;
   }
+  ColumnLayout._() : super();
   factory ColumnLayout.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ColumnLayout.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ColumnLayout',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..pc<ColumnLayout_Column>(
+        1, _omitFieldNames ? '' : 'columns', $pb.PbFieldType.PM,
+        subBuilder: ColumnLayout_Column.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -597,8 +561,10 @@ class ColumnLayout extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ColumnLayout copyWith(void Function(ColumnLayout) updates) =>
       super.copyWith((message) => updates(message as ColumnLayout))
-          as ColumnLayout; // ignore: deprecated_member_use
+          as ColumnLayout;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ColumnLayout create() => ColumnLayout._();
   ColumnLayout createEmptyInstance() => create();
@@ -609,6 +575,11 @@ class ColumnLayout extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ColumnLayout>(create);
   static ColumnLayout? _defaultInstance;
 
+  /// The columns of content to display.
   @$pb.TagNumber(1)
   $core.List<ColumnLayout_Column> get columns => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

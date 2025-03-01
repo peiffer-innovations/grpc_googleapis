@@ -1,57 +1,44 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/delivery/v1/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The sensor or methodology used to determine the location.
 class DeliveryVehicleLocationSensor extends $pb.ProtobufEnum {
   static const DeliveryVehicleLocationSensor UNKNOWN_SENSOR =
       DeliveryVehicleLocationSensor._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNKNOWN_SENSOR');
+          0, _omitEnumNames ? '' : 'UNKNOWN_SENSOR');
   static const DeliveryVehicleLocationSensor GPS =
-      DeliveryVehicleLocationSensor._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'GPS');
+      DeliveryVehicleLocationSensor._(1, _omitEnumNames ? '' : 'GPS');
   static const DeliveryVehicleLocationSensor NETWORK =
-      DeliveryVehicleLocationSensor._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NETWORK');
+      DeliveryVehicleLocationSensor._(2, _omitEnumNames ? '' : 'NETWORK');
   static const DeliveryVehicleLocationSensor PASSIVE =
-      DeliveryVehicleLocationSensor._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PASSIVE');
+      DeliveryVehicleLocationSensor._(3, _omitEnumNames ? '' : 'PASSIVE');
   static const DeliveryVehicleLocationSensor ROAD_SNAPPED_LOCATION_PROVIDER =
       DeliveryVehicleLocationSensor._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ROAD_SNAPPED_LOCATION_PROVIDER');
+          4, _omitEnumNames ? '' : 'ROAD_SNAPPED_LOCATION_PROVIDER');
+  static const DeliveryVehicleLocationSensor CUSTOMER_SUPPLIED_LOCATION =
+      DeliveryVehicleLocationSensor._(
+          5, _omitEnumNames ? '' : 'CUSTOMER_SUPPLIED_LOCATION');
+  static const DeliveryVehicleLocationSensor FLEET_ENGINE_LOCATION =
+      DeliveryVehicleLocationSensor._(
+          6, _omitEnumNames ? '' : 'FLEET_ENGINE_LOCATION');
   static const DeliveryVehicleLocationSensor FUSED_LOCATION_PROVIDER =
       DeliveryVehicleLocationSensor._(
-          100,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'FUSED_LOCATION_PROVIDER');
+          100, _omitEnumNames ? '' : 'FUSED_LOCATION_PROVIDER');
   static const DeliveryVehicleLocationSensor CORE_LOCATION =
       DeliveryVehicleLocationSensor._(
-          200,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CORE_LOCATION');
+          200, _omitEnumNames ? '' : 'CORE_LOCATION');
 
   static const $core.List<DeliveryVehicleLocationSensor> values =
       <DeliveryVehicleLocationSensor>[
@@ -60,6 +47,8 @@ class DeliveryVehicleLocationSensor extends $pb.ProtobufEnum {
     NETWORK,
     PASSIVE,
     ROAD_SNAPPED_LOCATION_PROVIDER,
+    CUSTOMER_SUPPLIED_LOCATION,
+    FLEET_ENGINE_LOCATION,
     FUSED_LOCATION_PROVIDER,
     CORE_LOCATION,
   ];
@@ -73,37 +62,21 @@ class DeliveryVehicleLocationSensor extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The vehicle's navigation status.
 class DeliveryVehicleNavigationStatus extends $pb.ProtobufEnum {
   static const DeliveryVehicleNavigationStatus UNKNOWN_NAVIGATION_STATUS =
       DeliveryVehicleNavigationStatus._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNKNOWN_NAVIGATION_STATUS');
+          0, _omitEnumNames ? '' : 'UNKNOWN_NAVIGATION_STATUS');
   static const DeliveryVehicleNavigationStatus NO_GUIDANCE =
-      DeliveryVehicleNavigationStatus._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NO_GUIDANCE');
+      DeliveryVehicleNavigationStatus._(1, _omitEnumNames ? '' : 'NO_GUIDANCE');
   static const DeliveryVehicleNavigationStatus ENROUTE_TO_DESTINATION =
       DeliveryVehicleNavigationStatus._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ENROUTE_TO_DESTINATION');
+          2, _omitEnumNames ? '' : 'ENROUTE_TO_DESTINATION');
   static const DeliveryVehicleNavigationStatus OFF_ROUTE =
-      DeliveryVehicleNavigationStatus._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OFF_ROUTE');
+      DeliveryVehicleNavigationStatus._(3, _omitEnumNames ? '' : 'OFF_ROUTE');
   static const DeliveryVehicleNavigationStatus ARRIVED_AT_DESTINATION =
       DeliveryVehicleNavigationStatus._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ARRIVED_AT_DESTINATION');
+          4, _omitEnumNames ? '' : 'ARRIVED_AT_DESTINATION');
 
   static const $core.List<DeliveryVehicleNavigationStatus> values =
       <DeliveryVehicleNavigationStatus>[
@@ -122,3 +95,5 @@ class DeliveryVehicleNavigationStatus extends $pb.ProtobufEnum {
   const DeliveryVehicleNavigationStatus._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

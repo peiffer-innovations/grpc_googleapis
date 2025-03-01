@@ -1,22 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/spanner.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'spanner.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../protobuf/empty.pb.dart' as $1;
-import 'result_set.pb.dart' as $2;
-import 'transaction.pb.dart' as $3;
 import 'commit_response.pb.dart' as $4;
+import 'result_set.pb.dart' as $2;
+import 'spanner.pb.dart' as $0;
+import 'transaction.pb.dart' as $3;
+
 export 'spanner.pb.dart';
 
+@$pb.GrpcServiceName('google.spanner.v1.Spanner')
 class SpannerClient extends $grpc.Client {
   static final _$createSession =
       $grpc.ClientMethod<$0.CreateSessionRequest, $0.Session>(
@@ -98,6 +105,12 @@ class SpannerClient extends $grpc.Client {
           ($0.PartitionReadRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.PartitionResponse.fromBuffer(value));
+  static final _$batchWrite =
+      $grpc.ClientMethod<$0.BatchWriteRequest, $0.BatchWriteResponse>(
+          '/google.spanner.v1.Spanner/BatchWrite',
+          ($0.BatchWriteRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.BatchWriteResponse.fromBuffer(value));
 
   SpannerClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -191,8 +204,17 @@ class SpannerClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$partitionRead, request, options: options);
   }
+
+  $grpc.ResponseStream<$0.BatchWriteResponse> batchWrite(
+      $0.BatchWriteRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$batchWrite, $async.Stream.fromIterable([request]),
+        options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.spanner.v1.Spanner')
 abstract class SpannerServiceBase extends $grpc.Service {
   $core.String get $name => 'google.spanner.v1.Spanner';
 
@@ -315,6 +337,13 @@ abstract class SpannerServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.PartitionReadRequest.fromBuffer(value),
             ($0.PartitionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchWriteRequest, $0.BatchWriteResponse>(
+        'BatchWrite',
+        batchWrite_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) => $0.BatchWriteRequest.fromBuffer(value),
+        ($0.BatchWriteResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Session> createSession_Pre($grpc.ServiceCall call,
@@ -396,6 +425,11 @@ abstract class SpannerServiceBase extends $grpc.Service {
     return partitionRead(call, await request);
   }
 
+  $async.Stream<$0.BatchWriteResponse> batchWrite_Pre($grpc.ServiceCall call,
+      $async.Future<$0.BatchWriteRequest> request) async* {
+    yield* batchWrite(call, await request);
+  }
+
   $async.Future<$0.Session> createSession(
       $grpc.ServiceCall call, $0.CreateSessionRequest request);
   $async.Future<$0.BatchCreateSessionsResponse> batchCreateSessions(
@@ -426,4 +460,6 @@ abstract class SpannerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.PartitionQueryRequest request);
   $async.Future<$0.PartitionResponse> partitionRead(
       $grpc.ServiceCall call, $0.PartitionReadRequest request);
+  $async.Stream<$0.BatchWriteResponse> batchWrite(
+      $grpc.ServiceCall call, $0.BatchWriteRequest request);
 }

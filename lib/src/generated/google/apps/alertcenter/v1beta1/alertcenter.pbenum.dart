@@ -1,36 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/alertcenter/v1beta1/alertcenter.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The type of alert feedback.
 class AlertFeedbackType extends $pb.ProtobufEnum {
   static const AlertFeedbackType ALERT_FEEDBACK_TYPE_UNSPECIFIED =
       AlertFeedbackType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ALERT_FEEDBACK_TYPE_UNSPECIFIED');
-  static const AlertFeedbackType NOT_USEFUL = AlertFeedbackType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NOT_USEFUL');
-  static const AlertFeedbackType SOMEWHAT_USEFUL = AlertFeedbackType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SOMEWHAT_USEFUL');
-  static const AlertFeedbackType VERY_USEFUL = AlertFeedbackType._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'VERY_USEFUL');
+          0, _omitEnumNames ? '' : 'ALERT_FEEDBACK_TYPE_UNSPECIFIED');
+  static const AlertFeedbackType NOT_USEFUL =
+      AlertFeedbackType._(1, _omitEnumNames ? '' : 'NOT_USEFUL');
+  static const AlertFeedbackType SOMEWHAT_USEFUL =
+      AlertFeedbackType._(2, _omitEnumNames ? '' : 'SOMEWHAT_USEFUL');
+  static const AlertFeedbackType VERY_USEFUL =
+      AlertFeedbackType._(3, _omitEnumNames ? '' : 'VERY_USEFUL');
 
   static const $core.List<AlertFeedbackType> values = <AlertFeedbackType>[
     ALERT_FEEDBACK_TYPE_UNSPECIFIED,
@@ -46,19 +39,13 @@ class AlertFeedbackType extends $pb.ProtobufEnum {
   const AlertFeedbackType._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The format of the payload.
 class Settings_Notification_PayloadFormat extends $pb.ProtobufEnum {
   static const Settings_Notification_PayloadFormat PAYLOAD_FORMAT_UNSPECIFIED =
       Settings_Notification_PayloadFormat._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PAYLOAD_FORMAT_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'PAYLOAD_FORMAT_UNSPECIFIED');
   static const Settings_Notification_PayloadFormat JSON =
-      Settings_Notification_PayloadFormat._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'JSON');
+      Settings_Notification_PayloadFormat._(1, _omitEnumNames ? '' : 'JSON');
 
   static const $core.List<Settings_Notification_PayloadFormat> values =
       <Settings_Notification_PayloadFormat>[
@@ -74,3 +61,5 @@ class Settings_Notification_PayloadFormat extends $pb.ProtobufEnum {
   const Settings_Notification_PayloadFormat._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

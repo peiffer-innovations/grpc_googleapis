@@ -1,32 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/build/build.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Public key formats.
 class BuildSignature_KeyType extends $pb.ProtobufEnum {
   static const BuildSignature_KeyType KEY_TYPE_UNSPECIFIED =
-      BuildSignature_KeyType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'KEY_TYPE_UNSPECIFIED');
+      BuildSignature_KeyType._(0, _omitEnumNames ? '' : 'KEY_TYPE_UNSPECIFIED');
   static const BuildSignature_KeyType PGP_ASCII_ARMORED =
-      BuildSignature_KeyType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PGP_ASCII_ARMORED');
-  static const BuildSignature_KeyType PKIX_PEM = BuildSignature_KeyType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PKIX_PEM');
+      BuildSignature_KeyType._(1, _omitEnumNames ? '' : 'PGP_ASCII_ARMORED');
+  static const BuildSignature_KeyType PKIX_PEM =
+      BuildSignature_KeyType._(2, _omitEnumNames ? '' : 'PKIX_PEM');
 
   static const $core.List<BuildSignature_KeyType> values =
       <BuildSignature_KeyType>[
@@ -41,3 +35,5 @@ class BuildSignature_KeyType extends $pb.ProtobufEnum {
 
   const BuildSignature_KeyType._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

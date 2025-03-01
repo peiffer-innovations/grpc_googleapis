@@ -1,118 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/delivery/v1/task_tracking_info.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart' as $0;
-import '../../../../type/latlng.pb.dart' as $1;
-import '../../../../protobuf/wrappers.pb.dart' as $2;
 import '../../../../protobuf/timestamp.pb.dart' as $3;
+import '../../../../protobuf/wrappers.pb.dart' as $2;
+import '../../../../type/latlng.pb.dart' as $1;
+import 'common.pb.dart' as $0;
 import 'delivery_vehicles.pb.dart' as $4;
-
 import 'tasks.pbenum.dart' as $5;
 
+/// The `TaskTrackingInfo` message. The message contains task tracking
+/// information which will be used for display. If a tracking ID is associated
+/// with multiple Tasks, Fleet Engine uses a heuristic to decide which Task's
+/// TaskTrackingInfo to select.
 class TaskTrackingInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TaskTrackingInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.delivery.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'trackingId')
-    ..aOM<$0.DeliveryVehicleLocation>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vehicleLocation',
-        subBuilder: $0.DeliveryVehicleLocation.create)
-    ..pc<$1.LatLng>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'routePolylinePoints',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.LatLng.create)
-    ..aOM<$2.Int32Value>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remainingStopCount',
-        subBuilder: $2.Int32Value.create)
-    ..aOM<$2.Int32Value>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remainingDrivingDistanceMeters',
-        subBuilder: $2.Int32Value.create)
-    ..aOM<$3.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'estimatedArrivalTime',
-        subBuilder: $3.Timestamp.create)
-    ..aOM<$3.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'estimatedTaskCompletionTime',
-        subBuilder: $3.Timestamp.create)
-    ..e<$5.Task_TaskOutcome>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'taskOutcome',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $5.Task_TaskOutcome.TASK_OUTCOME_UNSPECIFIED,
-        valueOf: $5.Task_TaskOutcome.valueOf,
-        enumValues: $5.Task_TaskOutcome.values)
-    ..aOM<$4.LocationInfo>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'plannedLocation',
-        subBuilder: $4.LocationInfo.create)
-    ..e<$5.Task_State>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $5.Task_State.STATE_UNSPECIFIED,
-        valueOf: $5.Task_State.valueOf,
-        enumValues: $5.Task_State.values)
-    ..aOM<$3.Timestamp>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'taskOutcomeTime',
-        subBuilder: $3.Timestamp.create)
-    ..aOM<$0.TimeWindow>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'targetTimeWindow',
-        subBuilder: $0.TimeWindow.create)
-    ..hasRequiredFields = false;
-
-  TaskTrackingInfo._() : super();
   factory TaskTrackingInfo({
     $core.String? name,
     $core.String? trackingId,
@@ -127,55 +39,103 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
     $5.Task_State? state,
     $3.Timestamp? taskOutcomeTime,
     $0.TimeWindow? targetTimeWindow,
+    $core.Iterable<$0.TaskAttribute>? attributes,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (trackingId != null) {
-      _result.trackingId = trackingId;
+      $result.trackingId = trackingId;
     }
     if (vehicleLocation != null) {
-      _result.vehicleLocation = vehicleLocation;
+      $result.vehicleLocation = vehicleLocation;
     }
     if (routePolylinePoints != null) {
-      _result.routePolylinePoints.addAll(routePolylinePoints);
+      $result.routePolylinePoints.addAll(routePolylinePoints);
     }
     if (remainingStopCount != null) {
-      _result.remainingStopCount = remainingStopCount;
+      $result.remainingStopCount = remainingStopCount;
     }
     if (remainingDrivingDistanceMeters != null) {
-      _result.remainingDrivingDistanceMeters = remainingDrivingDistanceMeters;
+      $result.remainingDrivingDistanceMeters = remainingDrivingDistanceMeters;
     }
     if (estimatedArrivalTime != null) {
-      _result.estimatedArrivalTime = estimatedArrivalTime;
+      $result.estimatedArrivalTime = estimatedArrivalTime;
     }
     if (estimatedTaskCompletionTime != null) {
-      _result.estimatedTaskCompletionTime = estimatedTaskCompletionTime;
+      $result.estimatedTaskCompletionTime = estimatedTaskCompletionTime;
     }
     if (taskOutcome != null) {
-      _result.taskOutcome = taskOutcome;
+      $result.taskOutcome = taskOutcome;
     }
     if (plannedLocation != null) {
-      _result.plannedLocation = plannedLocation;
+      $result.plannedLocation = plannedLocation;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (taskOutcomeTime != null) {
-      _result.taskOutcomeTime = taskOutcomeTime;
+      $result.taskOutcomeTime = taskOutcomeTime;
     }
     if (targetTimeWindow != null) {
-      _result.targetTimeWindow = targetTimeWindow;
+      $result.targetTimeWindow = targetTimeWindow;
     }
-    return _result;
+    if (attributes != null) {
+      $result.attributes.addAll(attributes);
+    }
+    return $result;
   }
+  TaskTrackingInfo._() : super();
   factory TaskTrackingInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TaskTrackingInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TaskTrackingInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'maps.fleetengine.delivery.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'trackingId')
+    ..aOM<$0.DeliveryVehicleLocation>(
+        3, _omitFieldNames ? '' : 'vehicleLocation',
+        subBuilder: $0.DeliveryVehicleLocation.create)
+    ..pc<$1.LatLng>(
+        4, _omitFieldNames ? '' : 'routePolylinePoints', $pb.PbFieldType.PM,
+        subBuilder: $1.LatLng.create)
+    ..aOM<$2.Int32Value>(5, _omitFieldNames ? '' : 'remainingStopCount',
+        subBuilder: $2.Int32Value.create)
+    ..aOM<$2.Int32Value>(
+        6, _omitFieldNames ? '' : 'remainingDrivingDistanceMeters',
+        subBuilder: $2.Int32Value.create)
+    ..aOM<$3.Timestamp>(7, _omitFieldNames ? '' : 'estimatedArrivalTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(8, _omitFieldNames ? '' : 'estimatedTaskCompletionTime',
+        subBuilder: $3.Timestamp.create)
+    ..e<$5.Task_TaskOutcome>(
+        9, _omitFieldNames ? '' : 'taskOutcome', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_TaskOutcome.TASK_OUTCOME_UNSPECIFIED,
+        valueOf: $5.Task_TaskOutcome.valueOf,
+        enumValues: $5.Task_TaskOutcome.values)
+    ..aOM<$4.LocationInfo>(10, _omitFieldNames ? '' : 'plannedLocation',
+        subBuilder: $4.LocationInfo.create)
+    ..e<$5.Task_State>(11, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_State.STATE_UNSPECIFIED,
+        valueOf: $5.Task_State.valueOf,
+        enumValues: $5.Task_State.values)
+    ..aOM<$3.Timestamp>(12, _omitFieldNames ? '' : 'taskOutcomeTime',
+        subBuilder: $3.Timestamp.create)
+    ..aOM<$0.TimeWindow>(13, _omitFieldNames ? '' : 'targetTimeWindow',
+        subBuilder: $0.TimeWindow.create)
+    ..pc<$0.TaskAttribute>(
+        14, _omitFieldNames ? '' : 'attributes', $pb.PbFieldType.PM,
+        subBuilder: $0.TaskAttribute.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -185,8 +145,10 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TaskTrackingInfo copyWith(void Function(TaskTrackingInfo) updates) =>
       super.copyWith((message) => updates(message as TaskTrackingInfo))
-          as TaskTrackingInfo; // ignore: deprecated_member_use
+          as TaskTrackingInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TaskTrackingInfo create() => TaskTrackingInfo._();
   TaskTrackingInfo createEmptyInstance() => create();
@@ -197,6 +159,8 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TaskTrackingInfo>(create);
   static TaskTrackingInfo? _defaultInstance;
 
+  /// Must be in the format `providers/{provider}/taskTrackingInfo/{tracking}`,
+  /// where `tracking` represents the tracking ID.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -209,6 +173,13 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Immutable. The tracking ID of a Task.
+  /// * Must be a valid Unicode string.
+  /// * Limited to a maximum length of 64 characters.
+  /// * Normalized according to [Unicode Normalization Form C]
+  /// (http://www.unicode.org/reports/tr15/).
+  /// * May not contain any of the following ASCII characters: '/', ':', '?',
+  /// ',', or '#'.
   @$pb.TagNumber(2)
   $core.String get trackingId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -221,6 +192,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTrackingId() => clearField(2);
 
+  /// The vehicle's last location.
   @$pb.TagNumber(3)
   $0.DeliveryVehicleLocation get vehicleLocation => $_getN(2);
   @$pb.TagNumber(3)
@@ -235,9 +207,14 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.DeliveryVehicleLocation ensureVehicleLocation() => $_ensure(2);
 
+  /// A list of points which when connected forms a polyline of the vehicle's
+  /// expected route to the location of this task.
   @$pb.TagNumber(4)
   $core.List<$1.LatLng> get routePolylinePoints => $_getList(3);
 
+  /// Indicates the number of stops the vehicle remaining until the task stop is
+  /// reached, including the task stop. For example, if the vehicle's next stop
+  /// is the task stop, the value will be 1.
   @$pb.TagNumber(5)
   $2.Int32Value get remainingStopCount => $_getN(4);
   @$pb.TagNumber(5)
@@ -252,6 +229,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Int32Value ensureRemainingStopCount() => $_ensure(4);
 
+  /// The total remaining distance in meters to the `VehicleStop` of interest.
   @$pb.TagNumber(6)
   $2.Int32Value get remainingDrivingDistanceMeters => $_getN(5);
   @$pb.TagNumber(6)
@@ -266,6 +244,8 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Int32Value ensureRemainingDrivingDistanceMeters() => $_ensure(5);
 
+  /// The timestamp that indicates the estimated arrival time to the stop
+  /// location.
   @$pb.TagNumber(7)
   $3.Timestamp get estimatedArrivalTime => $_getN(6);
   @$pb.TagNumber(7)
@@ -280,6 +260,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $3.Timestamp ensureEstimatedArrivalTime() => $_ensure(6);
 
+  /// The timestamp that indicates the estimated completion time of a Task.
   @$pb.TagNumber(8)
   $3.Timestamp get estimatedTaskCompletionTime => $_getN(7);
   @$pb.TagNumber(8)
@@ -294,6 +275,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $3.Timestamp ensureEstimatedTaskCompletionTime() => $_ensure(7);
 
+  /// The outcome of attempting to execute a Task.
   @$pb.TagNumber(9)
   $5.Task_TaskOutcome get taskOutcome => $_getN(8);
   @$pb.TagNumber(9)
@@ -306,6 +288,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearTaskOutcome() => clearField(9);
 
+  /// Immutable. The location where the Task will be completed.
   @$pb.TagNumber(10)
   $4.LocationInfo get plannedLocation => $_getN(9);
   @$pb.TagNumber(10)
@@ -320,6 +303,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $4.LocationInfo ensurePlannedLocation() => $_ensure(9);
 
+  /// The current execution state of the Task.
   @$pb.TagNumber(11)
   $5.Task_State get state => $_getN(10);
   @$pb.TagNumber(11)
@@ -332,6 +316,8 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearState() => clearField(11);
 
+  /// The timestamp that indicates when the Task's outcome was set by the
+  /// provider.
   @$pb.TagNumber(12)
   $3.Timestamp get taskOutcomeTime => $_getN(11);
   @$pb.TagNumber(12)
@@ -346,6 +332,7 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $3.Timestamp ensureTaskOutcomeTime() => $_ensure(11);
 
+  /// The time window during which the task should be completed.
   @$pb.TagNumber(13)
   $0.TimeWindow get targetTimeWindow => $_getN(12);
   @$pb.TagNumber(13)
@@ -359,4 +346,12 @@ class TaskTrackingInfo extends $pb.GeneratedMessage {
   void clearTargetTimeWindow() => clearField(13);
   @$pb.TagNumber(13)
   $0.TimeWindow ensureTargetTimeWindow() => $_ensure(12);
+
+  /// The custom attributes set on the task.
+  @$pb.TagNumber(14)
+  $core.List<$0.TaskAttribute> get attributes => $_getList(13);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

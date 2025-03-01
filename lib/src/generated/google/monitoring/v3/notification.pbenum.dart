@@ -1,34 +1,35 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/notification.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Indicates whether the channel has been verified or not. It is illegal
+/// to specify this field in a
+/// [`CreateNotificationChannel`][google.monitoring.v3.NotificationChannelService.CreateNotificationChannel]
+/// or an
+/// [`UpdateNotificationChannel`][google.monitoring.v3.NotificationChannelService.UpdateNotificationChannel]
+/// operation.
 class NotificationChannel_VerificationStatus extends $pb.ProtobufEnum {
   static const NotificationChannel_VerificationStatus
       VERIFICATION_STATUS_UNSPECIFIED =
       NotificationChannel_VerificationStatus._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'VERIFICATION_STATUS_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'VERIFICATION_STATUS_UNSPECIFIED');
   static const NotificationChannel_VerificationStatus UNVERIFIED =
       NotificationChannel_VerificationStatus._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNVERIFIED');
+          1, _omitEnumNames ? '' : 'UNVERIFIED');
   static const NotificationChannel_VerificationStatus VERIFIED =
       NotificationChannel_VerificationStatus._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'VERIFIED');
+          2, _omitEnumNames ? '' : 'VERIFIED');
 
   static const $core.List<NotificationChannel_VerificationStatus> values =
       <NotificationChannel_VerificationStatus>[
@@ -45,3 +46,5 @@ class NotificationChannel_VerificationStatus extends $pb.ProtobufEnum {
   const NotificationChannel_VerificationStatus._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

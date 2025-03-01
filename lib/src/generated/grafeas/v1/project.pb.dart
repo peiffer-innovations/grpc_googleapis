@@ -1,48 +1,46 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/project.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Request to create a new project.
 class CreateProjectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateProjectRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1.project'),
-      createEmptyInstance: create)
-    ..aOM<Project>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'project',
-        subBuilder: Project.create)
-    ..hasRequiredFields = false;
-
-  CreateProjectRequest._() : super();
   factory CreateProjectRequest({
     Project? project,
   }) {
-    final _result = create();
+    final $result = create();
     if (project != null) {
-      _result.project = project;
+      $result.project = project;
     }
-    return _result;
+    return $result;
   }
+  CreateProjectRequest._() : super();
   factory CreateProjectRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateProjectRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateProjectRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1.project'),
+      createEmptyInstance: create)
+    ..aOM<Project>(1, _omitFieldNames ? '' : 'project',
+        subBuilder: Project.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -53,8 +51,10 @@ class CreateProjectRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateProjectRequest copyWith(void Function(CreateProjectRequest) updates) =>
       super.copyWith((message) => updates(message as CreateProjectRequest))
-          as CreateProjectRequest; // ignore: deprecated_member_use
+          as CreateProjectRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateProjectRequest create() => CreateProjectRequest._();
   CreateProjectRequest createEmptyInstance() => create();
@@ -65,6 +65,7 @@ class CreateProjectRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateProjectRequest>(create);
   static CreateProjectRequest? _defaultInstance;
 
+  /// The project to create.
   @$pb.TagNumber(1)
   Project get project => $_getN(0);
   @$pb.TagNumber(1)
@@ -80,39 +81,33 @@ class CreateProjectRequest extends $pb.GeneratedMessage {
   Project ensureProject() => $_ensure(0);
 }
 
+/// Request to get a project.
 class GetProjectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetProjectRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1.project'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetProjectRequest._() : super();
   factory GetProjectRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetProjectRequest._() : super();
   factory GetProjectRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetProjectRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetProjectRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1.project'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -122,8 +117,10 @@ class GetProjectRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetProjectRequest copyWith(void Function(GetProjectRequest) updates) =>
       super.copyWith((message) => updates(message as GetProjectRequest))
-          as GetProjectRequest; // ignore: deprecated_member_use
+          as GetProjectRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetProjectRequest create() => GetProjectRequest._();
   GetProjectRequest createEmptyInstance() => create();
@@ -134,6 +131,7 @@ class GetProjectRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetProjectRequest>(create);
   static GetProjectRequest? _defaultInstance;
 
+  /// The name of the project in the form of `projects/{PROJECT_ID}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -147,58 +145,43 @@ class GetProjectRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request to list projects.
 class ListProjectsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListProjectsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1.project'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListProjectsRequest._() : super();
   factory ListProjectsRequest({
     $core.String? filter,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListProjectsRequest._() : super();
   factory ListProjectsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListProjectsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListProjectsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1.project'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -208,8 +191,10 @@ class ListProjectsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListProjectsRequest copyWith(void Function(ListProjectsRequest) updates) =>
       super.copyWith((message) => updates(message as ListProjectsRequest))
-          as ListProjectsRequest; // ignore: deprecated_member_use
+          as ListProjectsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListProjectsRequest create() => ListProjectsRequest._();
   ListProjectsRequest createEmptyInstance() => create();
@@ -220,6 +205,7 @@ class ListProjectsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListProjectsRequest>(create);
   static ListProjectsRequest? _defaultInstance;
 
+  /// The filter expression.
   @$pb.TagNumber(1)
   $core.String get filter => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -232,6 +218,7 @@ class ListProjectsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
 
+  /// Number of projects to return in the list.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -244,6 +231,7 @@ class ListProjectsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Token to provide to skip to a particular spot in the list.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -257,39 +245,33 @@ class ListProjectsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Request to delete a project.
 class DeleteProjectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteProjectRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1.project'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteProjectRequest._() : super();
   factory DeleteProjectRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteProjectRequest._() : super();
   factory DeleteProjectRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteProjectRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteProjectRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1.project'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -300,8 +282,10 @@ class DeleteProjectRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteProjectRequest copyWith(void Function(DeleteProjectRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteProjectRequest))
-          as DeleteProjectRequest; // ignore: deprecated_member_use
+          as DeleteProjectRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteProjectRequest create() => DeleteProjectRequest._();
   DeleteProjectRequest createEmptyInstance() => create();
@@ -312,6 +296,7 @@ class DeleteProjectRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteProjectRequest>(create);
   static DeleteProjectRequest? _defaultInstance;
 
+  /// The name of the project in the form of `projects/{PROJECT_ID}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -325,50 +310,39 @@ class DeleteProjectRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Response for listing projects.
 class ListProjectsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListProjectsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1.project'),
-      createEmptyInstance: create)
-    ..pc<Project>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projects',
-        $pb.PbFieldType.PM,
-        subBuilder: Project.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListProjectsResponse._() : super();
   factory ListProjectsResponse({
     $core.Iterable<Project>? projects,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (projects != null) {
-      _result.projects.addAll(projects);
+      $result.projects.addAll(projects);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListProjectsResponse._() : super();
   factory ListProjectsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListProjectsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListProjectsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1.project'),
+      createEmptyInstance: create)
+    ..pc<Project>(1, _omitFieldNames ? '' : 'projects', $pb.PbFieldType.PM,
+        subBuilder: Project.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -379,8 +353,10 @@ class ListProjectsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListProjectsResponse copyWith(void Function(ListProjectsResponse) updates) =>
       super.copyWith((message) => updates(message as ListProjectsResponse))
-          as ListProjectsResponse; // ignore: deprecated_member_use
+          as ListProjectsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListProjectsResponse create() => ListProjectsResponse._();
   ListProjectsResponse createEmptyInstance() => create();
@@ -391,9 +367,13 @@ class ListProjectsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListProjectsResponse>(create);
   static ListProjectsResponse? _defaultInstance;
 
+  /// The projects requested.
   @$pb.TagNumber(1)
   $core.List<Project> get projects => $_getList(0);
 
+  /// The next pagination token in the list response. It should be used as
+  /// `page_token` for the following request. An empty value means no more
+  /// results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -407,39 +387,33 @@ class ListProjectsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Describes a Grafeas project.
 class Project extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Project',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1.project'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  Project._() : super();
   factory Project({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  Project._() : super();
   factory Project.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Project.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Project',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1.project'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -448,9 +422,10 @@ class Project extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Project copyWith(void Function(Project) updates) =>
-      super.copyWith((message) => updates(message as Project))
-          as Project; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Project)) as Project;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Project create() => Project._();
   Project createEmptyInstance() => create();
@@ -460,6 +435,7 @@ class Project extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Project>(create);
   static Project? _defaultInstance;
 
+  /// The name of the project in the form of `projects/{PROJECT_ID}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -472,3 +448,7 @@ class Project extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

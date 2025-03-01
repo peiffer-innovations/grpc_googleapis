@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudbuild/v2/cloudbuild.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,56 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
 
+/// Represents the metadata of the long-running operation.
 class OperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudbuild.v2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'target')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'verb')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'statusMessage')
-    ..aOB(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestedCancellation')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'apiVersion')
-    ..hasRequiredFields = false;
-
-  OperationMetadata._() : super();
   factory OperationMetadata({
     $0.Timestamp? createTime,
     $0.Timestamp? endTime,
@@ -70,36 +26,54 @@ class OperationMetadata extends $pb.GeneratedMessage {
     $core.bool? requestedCancellation,
     $core.String? apiVersion,
   }) {
-    final _result = create();
+    final $result = create();
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (target != null) {
-      _result.target = target;
+      $result.target = target;
     }
     if (verb != null) {
-      _result.verb = verb;
+      $result.verb = verb;
     }
     if (statusMessage != null) {
-      _result.statusMessage = statusMessage;
+      $result.statusMessage = statusMessage;
     }
     if (requestedCancellation != null) {
-      _result.requestedCancellation = requestedCancellation;
+      $result.requestedCancellation = requestedCancellation;
     }
     if (apiVersion != null) {
-      _result.apiVersion = apiVersion;
+      $result.apiVersion = apiVersion;
     }
-    return _result;
+    return $result;
   }
+  OperationMetadata._() : super();
   factory OperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudbuild.v2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'target')
+    ..aOS(4, _omitFieldNames ? '' : 'verb')
+    ..aOS(5, _omitFieldNames ? '' : 'statusMessage')
+    ..aOB(6, _omitFieldNames ? '' : 'requestedCancellation')
+    ..aOS(7, _omitFieldNames ? '' : 'apiVersion')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -109,8 +83,10 @@ class OperationMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata))
-          as OperationMetadata; // ignore: deprecated_member_use
+          as OperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
@@ -121,6 +97,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata? _defaultInstance;
 
+  /// Output only. The time the operation was created.
   @$pb.TagNumber(1)
   $0.Timestamp get createTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -135,6 +112,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureCreateTime() => $_ensure(0);
 
+  /// Output only. The time the operation finished running.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -149,6 +127,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// Output only. Server-defined resource path for the target of the operation.
   @$pb.TagNumber(3)
   $core.String get target => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -161,6 +140,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearTarget() => clearField(3);
 
+  /// Output only. Name of the verb executed by the operation.
   @$pb.TagNumber(4)
   $core.String get verb => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -173,6 +153,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearVerb() => clearField(4);
 
+  /// Output only. Human-readable status of the operation, if any.
   @$pb.TagNumber(5)
   $core.String get statusMessage => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -185,6 +166,11 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStatusMessage() => clearField(5);
 
+  /// Output only. Identifies whether the user has requested cancellation
+  /// of the operation. Operations that have successfully been cancelled
+  /// have [Operation.error][] value with a
+  /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+  /// `Code.CANCELLED`.
   @$pb.TagNumber(6)
   $core.bool get requestedCancellation => $_getBF(5);
   @$pb.TagNumber(6)
@@ -197,6 +183,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearRequestedCancellation() => clearField(6);
 
+  /// Output only. API version used to start the operation.
   @$pb.TagNumber(7)
   $core.String get apiVersion => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -210,56 +197,8 @@ class OperationMetadata extends $pb.GeneratedMessage {
   void clearApiVersion() => clearField(7);
 }
 
+/// Represents the custom metadata of the RunWorkflow long-running operation.
 class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RunWorkflowCustomOperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudbuild.v2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'verb')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestedCancellation')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'apiVersion')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'target')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pipelineRunId')
-    ..hasRequiredFields = false;
-
-  RunWorkflowCustomOperationMetadata._() : super();
   factory RunWorkflowCustomOperationMetadata({
     $0.Timestamp? createTime,
     $0.Timestamp? endTime,
@@ -269,36 +208,54 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
     $core.String? target,
     $core.String? pipelineRunId,
   }) {
-    final _result = create();
+    final $result = create();
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (verb != null) {
-      _result.verb = verb;
+      $result.verb = verb;
     }
     if (requestedCancellation != null) {
-      _result.requestedCancellation = requestedCancellation;
+      $result.requestedCancellation = requestedCancellation;
     }
     if (apiVersion != null) {
-      _result.apiVersion = apiVersion;
+      $result.apiVersion = apiVersion;
     }
     if (target != null) {
-      _result.target = target;
+      $result.target = target;
     }
     if (pipelineRunId != null) {
-      _result.pipelineRunId = pipelineRunId;
+      $result.pipelineRunId = pipelineRunId;
     }
-    return _result;
+    return $result;
   }
+  RunWorkflowCustomOperationMetadata._() : super();
   factory RunWorkflowCustomOperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RunWorkflowCustomOperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RunWorkflowCustomOperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudbuild.v2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'verb')
+    ..aOB(4, _omitFieldNames ? '' : 'requestedCancellation')
+    ..aOS(5, _omitFieldNames ? '' : 'apiVersion')
+    ..aOS(6, _omitFieldNames ? '' : 'target')
+    ..aOS(7, _omitFieldNames ? '' : 'pipelineRunId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -311,8 +268,10 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
           void Function(RunWorkflowCustomOperationMetadata) updates) =>
       super.copyWith((message) =>
               updates(message as RunWorkflowCustomOperationMetadata))
-          as RunWorkflowCustomOperationMetadata; // ignore: deprecated_member_use
+          as RunWorkflowCustomOperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RunWorkflowCustomOperationMetadata create() =>
       RunWorkflowCustomOperationMetadata._();
@@ -325,6 +284,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
           create);
   static RunWorkflowCustomOperationMetadata? _defaultInstance;
 
+  /// Output only. The time the operation was created.
   @$pb.TagNumber(1)
   $0.Timestamp get createTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -339,6 +299,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureCreateTime() => $_ensure(0);
 
+  /// Output only. The time the operation finished running.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -353,6 +314,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// Output only. Name of the verb executed by the operation.
   @$pb.TagNumber(3)
   $core.String get verb => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -365,6 +327,11 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearVerb() => clearField(3);
 
+  /// Output only. Identifies whether the user has requested cancellation
+  /// of the operation. Operations that have successfully been cancelled
+  /// have [Operation.error][] value with a
+  /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+  /// `Code.CANCELLED`.
   @$pb.TagNumber(4)
   $core.bool get requestedCancellation => $_getBF(3);
   @$pb.TagNumber(4)
@@ -377,6 +344,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearRequestedCancellation() => clearField(4);
 
+  /// Output only. API version used to start the operation.
   @$pb.TagNumber(5)
   $core.String get apiVersion => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -389,6 +357,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearApiVersion() => clearField(5);
 
+  /// Output only. Server-defined resource path for the target of the operation.
   @$pb.TagNumber(6)
   $core.String get target => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -401,6 +370,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearTarget() => clearField(6);
 
+  /// Output only. ID of the pipeline run created by RunWorkflow.
   @$pb.TagNumber(7)
   $core.String get pipelineRunId => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -413,3 +383,7 @@ class RunWorkflowCustomOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearPipelineRunId() => clearField(7);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

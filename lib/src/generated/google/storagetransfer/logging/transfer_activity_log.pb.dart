@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/storagetransfer/logging/transfer_activity_log.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,50 +15,12 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../protobuf/timestamp.pb.dart' as $0;
-
 import 'transfer_activity_log.pbenum.dart';
 
 export 'transfer_activity_log.pbenum.dart';
 
+/// AWS S3 object metadata.
 class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AwsS3ObjectMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'objectKey')
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastModifiedTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'md5')
-    ..aInt64(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'size')
-    ..hasRequiredFields = false;
-
-  AwsS3ObjectMetadata._() : super();
   factory AwsS3ObjectMetadata({
     $core.String? bucket,
     $core.String? objectKey,
@@ -62,30 +28,45 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
     $core.String? md5,
     $fixnum.Int64? size,
   }) {
-    final _result = create();
+    final $result = create();
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (objectKey != null) {
-      _result.objectKey = objectKey;
+      $result.objectKey = objectKey;
     }
     if (lastModifiedTime != null) {
-      _result.lastModifiedTime = lastModifiedTime;
+      $result.lastModifiedTime = lastModifiedTime;
     }
     if (md5 != null) {
-      _result.md5 = md5;
+      $result.md5 = md5;
     }
     if (size != null) {
-      _result.size = size;
+      $result.size = size;
     }
-    return _result;
+    return $result;
   }
+  AwsS3ObjectMetadata._() : super();
   factory AwsS3ObjectMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AwsS3ObjectMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AwsS3ObjectMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'bucket')
+    ..aOS(2, _omitFieldNames ? '' : 'objectKey')
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'lastModifiedTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'md5')
+    ..aInt64(5, _omitFieldNames ? '' : 'size')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -95,8 +76,10 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AwsS3ObjectMetadata copyWith(void Function(AwsS3ObjectMetadata) updates) =>
       super.copyWith((message) => updates(message as AwsS3ObjectMetadata))
-          as AwsS3ObjectMetadata; // ignore: deprecated_member_use
+          as AwsS3ObjectMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AwsS3ObjectMetadata create() => AwsS3ObjectMetadata._();
   AwsS3ObjectMetadata createEmptyInstance() => create();
@@ -107,6 +90,7 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AwsS3ObjectMetadata>(create);
   static AwsS3ObjectMetadata? _defaultInstance;
 
+  /// Required. Name of the S3 bucket.
   @$pb.TagNumber(1)
   $core.String get bucket => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -119,6 +103,7 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBucket() => clearField(1);
 
+  /// Required. Name/key of the object.
   @$pb.TagNumber(2)
   $core.String get objectKey => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -131,6 +116,7 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearObjectKey() => clearField(2);
 
+  /// Last modified time of the object.
   @$pb.TagNumber(3)
   $0.Timestamp get lastModifiedTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -145,6 +131,7 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp ensureLastModifiedTime() => $_ensure(2);
 
+  /// The MD5 checksum of the object's content.
   @$pb.TagNumber(4)
   $core.String get md5 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -157,6 +144,7 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMd5() => clearField(4);
 
+  /// Required. Size of the object in bytes.
   @$pb.TagNumber(5)
   $fixnum.Int64 get size => $_getI64(4);
   @$pb.TagNumber(5)
@@ -170,48 +158,38 @@ class AwsS3ObjectMetadata extends $pb.GeneratedMessage {
   void clearSize() => clearField(5);
 }
 
+/// AWS S3 bucket metadata.
 class AwsS3BucketMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AwsS3BucketMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..hasRequiredFields = false;
-
-  AwsS3BucketMetadata._() : super();
   factory AwsS3BucketMetadata({
     $core.String? bucket,
     $core.String? path,
   }) {
-    final _result = create();
+    final $result = create();
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
-    return _result;
+    return $result;
   }
+  AwsS3BucketMetadata._() : super();
   factory AwsS3BucketMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AwsS3BucketMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AwsS3BucketMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'bucket')
+    ..aOS(2, _omitFieldNames ? '' : 'path')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -221,8 +199,10 @@ class AwsS3BucketMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AwsS3BucketMetadata copyWith(void Function(AwsS3BucketMetadata) updates) =>
       super.copyWith((message) => updates(message as AwsS3BucketMetadata))
-          as AwsS3BucketMetadata; // ignore: deprecated_member_use
+          as AwsS3BucketMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AwsS3BucketMetadata create() => AwsS3BucketMetadata._();
   AwsS3BucketMetadata createEmptyInstance() => create();
@@ -233,6 +213,7 @@ class AwsS3BucketMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AwsS3BucketMetadata>(create);
   static AwsS3BucketMetadata? _defaultInstance;
 
+  /// Required. Name of the S3 bucket.
   @$pb.TagNumber(1)
   $core.String get bucket => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -245,6 +226,7 @@ class AwsS3BucketMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBucket() => clearField(1);
 
+  /// The path of transfer objects as an object key prefix ending with "/".
   @$pb.TagNumber(2)
   $core.String get path => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -258,50 +240,8 @@ class AwsS3BucketMetadata extends $pb.GeneratedMessage {
   void clearPath() => clearField(2);
 }
 
+/// Google Cloud Storage object metadata.
 class GcsObjectMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GcsObjectMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'objectKey')
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastModifiedTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'md5')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'crc32c')
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'size')
-    ..hasRequiredFields = false;
-
-  GcsObjectMetadata._() : super();
   factory GcsObjectMetadata({
     $core.String? bucket,
     $core.String? objectKey,
@@ -310,33 +250,49 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
     $core.String? crc32c,
     $fixnum.Int64? size,
   }) {
-    final _result = create();
+    final $result = create();
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (objectKey != null) {
-      _result.objectKey = objectKey;
+      $result.objectKey = objectKey;
     }
     if (lastModifiedTime != null) {
-      _result.lastModifiedTime = lastModifiedTime;
+      $result.lastModifiedTime = lastModifiedTime;
     }
     if (md5 != null) {
-      _result.md5 = md5;
+      $result.md5 = md5;
     }
     if (crc32c != null) {
-      _result.crc32c = crc32c;
+      $result.crc32c = crc32c;
     }
     if (size != null) {
-      _result.size = size;
+      $result.size = size;
     }
-    return _result;
+    return $result;
   }
+  GcsObjectMetadata._() : super();
   factory GcsObjectMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GcsObjectMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GcsObjectMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'bucket')
+    ..aOS(2, _omitFieldNames ? '' : 'objectKey')
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'lastModifiedTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'md5')
+    ..aOS(5, _omitFieldNames ? '' : 'crc32c')
+    ..aInt64(6, _omitFieldNames ? '' : 'size')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -346,8 +302,10 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GcsObjectMetadata copyWith(void Function(GcsObjectMetadata) updates) =>
       super.copyWith((message) => updates(message as GcsObjectMetadata))
-          as GcsObjectMetadata; // ignore: deprecated_member_use
+          as GcsObjectMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GcsObjectMetadata create() => GcsObjectMetadata._();
   GcsObjectMetadata createEmptyInstance() => create();
@@ -358,6 +316,7 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GcsObjectMetadata>(create);
   static GcsObjectMetadata? _defaultInstance;
 
+  /// Required. Name of the Cloud Storage bucket.
   @$pb.TagNumber(1)
   $core.String get bucket => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -370,6 +329,7 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBucket() => clearField(1);
 
+  /// Required. Name/key of the object.
   @$pb.TagNumber(2)
   $core.String get objectKey => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -382,6 +342,7 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearObjectKey() => clearField(2);
 
+  /// Last modified time of the object.
   @$pb.TagNumber(3)
   $0.Timestamp get lastModifiedTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -396,6 +357,7 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp ensureLastModifiedTime() => $_ensure(2);
 
+  /// The MD5 checksum of the object's content.
   @$pb.TagNumber(4)
   $core.String get md5 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -408,6 +370,7 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMd5() => clearField(4);
 
+  /// The CRC32C checksum of the object's content.
   @$pb.TagNumber(5)
   $core.String get crc32c => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -420,6 +383,7 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCrc32c() => clearField(5);
 
+  /// Required. Size of the object in bytes.
   @$pb.TagNumber(6)
   $fixnum.Int64 get size => $_getI64(5);
   @$pb.TagNumber(6)
@@ -433,48 +397,38 @@ class GcsObjectMetadata extends $pb.GeneratedMessage {
   void clearSize() => clearField(6);
 }
 
+/// Google Cloud Storage bucket metadata.
 class GcsBucketMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GcsBucketMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bucket')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..hasRequiredFields = false;
-
-  GcsBucketMetadata._() : super();
   factory GcsBucketMetadata({
     $core.String? bucket,
     $core.String? path,
   }) {
-    final _result = create();
+    final $result = create();
     if (bucket != null) {
-      _result.bucket = bucket;
+      $result.bucket = bucket;
     }
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
-    return _result;
+    return $result;
   }
+  GcsBucketMetadata._() : super();
   factory GcsBucketMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GcsBucketMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GcsBucketMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'bucket')
+    ..aOS(2, _omitFieldNames ? '' : 'path')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -484,8 +438,10 @@ class GcsBucketMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GcsBucketMetadata copyWith(void Function(GcsBucketMetadata) updates) =>
       super.copyWith((message) => updates(message as GcsBucketMetadata))
-          as GcsBucketMetadata; // ignore: deprecated_member_use
+          as GcsBucketMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GcsBucketMetadata create() => GcsBucketMetadata._();
   GcsBucketMetadata createEmptyInstance() => create();
@@ -496,6 +452,7 @@ class GcsBucketMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GcsBucketMetadata>(create);
   static GcsBucketMetadata? _defaultInstance;
 
+  /// Required. Name of the Cloud Storage bucket.
   @$pb.TagNumber(1)
   $core.String get bucket => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -508,6 +465,7 @@ class GcsBucketMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBucket() => clearField(1);
 
+  /// The path of transfer objects as an object key prefix ending with "/".
   @$pb.TagNumber(2)
   $core.String get path => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -521,50 +479,8 @@ class GcsBucketMetadata extends $pb.GeneratedMessage {
   void clearPath() => clearField(2);
 }
 
+/// Azure Blob Storage blob metadata.
 class AzureBlobMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AzureBlobMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'account')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'container')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'blobName')
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastModifiedTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'md5')
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'size')
-    ..hasRequiredFields = false;
-
-  AzureBlobMetadata._() : super();
   factory AzureBlobMetadata({
     $core.String? account,
     $core.String? container,
@@ -573,33 +489,49 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
     $core.String? md5,
     $fixnum.Int64? size,
   }) {
-    final _result = create();
+    final $result = create();
     if (account != null) {
-      _result.account = account;
+      $result.account = account;
     }
     if (container != null) {
-      _result.container = container;
+      $result.container = container;
     }
     if (blobName != null) {
-      _result.blobName = blobName;
+      $result.blobName = blobName;
     }
     if (lastModifiedTime != null) {
-      _result.lastModifiedTime = lastModifiedTime;
+      $result.lastModifiedTime = lastModifiedTime;
     }
     if (md5 != null) {
-      _result.md5 = md5;
+      $result.md5 = md5;
     }
     if (size != null) {
-      _result.size = size;
+      $result.size = size;
     }
-    return _result;
+    return $result;
   }
+  AzureBlobMetadata._() : super();
   factory AzureBlobMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AzureBlobMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AzureBlobMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'account')
+    ..aOS(2, _omitFieldNames ? '' : 'container')
+    ..aOS(3, _omitFieldNames ? '' : 'blobName')
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'lastModifiedTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(5, _omitFieldNames ? '' : 'md5')
+    ..aInt64(6, _omitFieldNames ? '' : 'size')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -609,8 +541,10 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AzureBlobMetadata copyWith(void Function(AzureBlobMetadata) updates) =>
       super.copyWith((message) => updates(message as AzureBlobMetadata))
-          as AzureBlobMetadata; // ignore: deprecated_member_use
+          as AzureBlobMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AzureBlobMetadata create() => AzureBlobMetadata._();
   AzureBlobMetadata createEmptyInstance() => create();
@@ -621,6 +555,7 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AzureBlobMetadata>(create);
   static AzureBlobMetadata? _defaultInstance;
 
+  /// Required. Name of the Azure Blob storage account.
   @$pb.TagNumber(1)
   $core.String get account => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -633,6 +568,7 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
 
+  /// Required. Name of the container.
   @$pb.TagNumber(2)
   $core.String get container => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -645,6 +581,7 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearContainer() => clearField(2);
 
+  /// Required. Name of the blob.
   @$pb.TagNumber(3)
   $core.String get blobName => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -657,6 +594,7 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearBlobName() => clearField(3);
 
+  /// Last modified time of the blob.
   @$pb.TagNumber(4)
   $0.Timestamp get lastModifiedTime => $_getN(3);
   @$pb.TagNumber(4)
@@ -671,6 +609,7 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Timestamp ensureLastModifiedTime() => $_ensure(3);
 
+  /// The MD5 checksum of the object's content.
   @$pb.TagNumber(5)
   $core.String get md5 => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -683,6 +622,7 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearMd5() => clearField(5);
 
+  /// Required. Size of the blob in bytes.
   @$pb.TagNumber(6)
   $fixnum.Int64 get size => $_getI64(5);
   @$pb.TagNumber(6)
@@ -696,57 +636,43 @@ class AzureBlobMetadata extends $pb.GeneratedMessage {
   void clearSize() => clearField(6);
 }
 
+/// Azure Blob Storage container metadata.
 class AzureBlobContainerMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AzureBlobContainerMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'account')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'container')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..hasRequiredFields = false;
-
-  AzureBlobContainerMetadata._() : super();
   factory AzureBlobContainerMetadata({
     $core.String? account,
     $core.String? container,
     $core.String? path,
   }) {
-    final _result = create();
+    final $result = create();
     if (account != null) {
-      _result.account = account;
+      $result.account = account;
     }
     if (container != null) {
-      _result.container = container;
+      $result.container = container;
     }
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
-    return _result;
+    return $result;
   }
+  AzureBlobContainerMetadata._() : super();
   factory AzureBlobContainerMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AzureBlobContainerMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AzureBlobContainerMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'account')
+    ..aOS(2, _omitFieldNames ? '' : 'container')
+    ..aOS(3, _omitFieldNames ? '' : 'path')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -759,8 +685,10 @@ class AzureBlobContainerMetadata extends $pb.GeneratedMessage {
           void Function(AzureBlobContainerMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as AzureBlobContainerMetadata))
-          as AzureBlobContainerMetadata; // ignore: deprecated_member_use
+          as AzureBlobContainerMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AzureBlobContainerMetadata create() => AzureBlobContainerMetadata._();
   AzureBlobContainerMetadata createEmptyInstance() => create();
@@ -771,6 +699,7 @@ class AzureBlobContainerMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AzureBlobContainerMetadata>(create);
   static AzureBlobContainerMetadata? _defaultInstance;
 
+  /// Required. Name of the Azure Blob storage account.
   @$pb.TagNumber(1)
   $core.String get account => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -783,6 +712,7 @@ class AzureBlobContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
 
+  /// Required. Name of the container.
   @$pb.TagNumber(2)
   $core.String get container => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -795,6 +725,7 @@ class AzureBlobContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearContainer() => clearField(2);
 
+  /// The path of transfer blobs as a blob name prefix ending with "/".
   @$pb.TagNumber(3)
   $core.String get path => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -808,67 +739,49 @@ class AzureBlobContainerMetadata extends $pb.GeneratedMessage {
   void clearPath() => clearField(3);
 }
 
+/// POSIX file metadata.
 class PosixFileMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PosixFileMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastModifiedTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'crc32c')
-    ..aInt64(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'size')
-    ..hasRequiredFields = false;
-
-  PosixFileMetadata._() : super();
   factory PosixFileMetadata({
     $core.String? path,
     $0.Timestamp? lastModifiedTime,
     $core.String? crc32c,
     $fixnum.Int64? size,
   }) {
-    final _result = create();
+    final $result = create();
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
     if (lastModifiedTime != null) {
-      _result.lastModifiedTime = lastModifiedTime;
+      $result.lastModifiedTime = lastModifiedTime;
     }
     if (crc32c != null) {
-      _result.crc32c = crc32c;
+      $result.crc32c = crc32c;
     }
     if (size != null) {
-      _result.size = size;
+      $result.size = size;
     }
-    return _result;
+    return $result;
   }
+  PosixFileMetadata._() : super();
   factory PosixFileMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PosixFileMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PosixFileMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'lastModifiedTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'crc32c')
+    ..aInt64(4, _omitFieldNames ? '' : 'size')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -878,8 +791,10 @@ class PosixFileMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PosixFileMetadata copyWith(void Function(PosixFileMetadata) updates) =>
       super.copyWith((message) => updates(message as PosixFileMetadata))
-          as PosixFileMetadata; // ignore: deprecated_member_use
+          as PosixFileMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PosixFileMetadata create() => PosixFileMetadata._();
   PosixFileMetadata createEmptyInstance() => create();
@@ -890,6 +805,7 @@ class PosixFileMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PosixFileMetadata>(create);
   static PosixFileMetadata? _defaultInstance;
 
+  /// Required. Path of a file.
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -902,6 +818,7 @@ class PosixFileMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  /// Last modified time (mtime) of the file.
   @$pb.TagNumber(2)
   $0.Timestamp get lastModifiedTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -916,6 +833,7 @@ class PosixFileMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureLastModifiedTime() => $_ensure(1);
 
+  /// The CRC32C checksum of the object's content.
   @$pb.TagNumber(3)
   $core.String get crc32c => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -928,6 +846,7 @@ class PosixFileMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCrc32c() => clearField(3);
 
+  /// Required. Size of the file in bytes.
   @$pb.TagNumber(4)
   $fixnum.Int64 get size => $_getI64(3);
   @$pb.TagNumber(4)
@@ -941,57 +860,43 @@ class PosixFileMetadata extends $pb.GeneratedMessage {
   void clearSize() => clearField(4);
 }
 
+/// HTTP file metadata.
 class HttpFileMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HttpFileMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'md5')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'size')
-    ..hasRequiredFields = false;
-
-  HttpFileMetadata._() : super();
   factory HttpFileMetadata({
     $core.String? url,
     $core.String? md5,
     $fixnum.Int64? size,
   }) {
-    final _result = create();
+    final $result = create();
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
     if (md5 != null) {
-      _result.md5 = md5;
+      $result.md5 = md5;
     }
     if (size != null) {
-      _result.size = size;
+      $result.size = size;
     }
-    return _result;
+    return $result;
   }
+  HttpFileMetadata._() : super();
   factory HttpFileMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HttpFileMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HttpFileMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..aOS(2, _omitFieldNames ? '' : 'md5')
+    ..aInt64(3, _omitFieldNames ? '' : 'size')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1001,8 +906,10 @@ class HttpFileMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   HttpFileMetadata copyWith(void Function(HttpFileMetadata) updates) =>
       super.copyWith((message) => updates(message as HttpFileMetadata))
-          as HttpFileMetadata; // ignore: deprecated_member_use
+          as HttpFileMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HttpFileMetadata create() => HttpFileMetadata._();
   HttpFileMetadata createEmptyInstance() => create();
@@ -1013,6 +920,7 @@ class HttpFileMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HttpFileMetadata>(create);
   static HttpFileMetadata? _defaultInstance;
 
+  /// Required. Url of the HTTP file.
   @$pb.TagNumber(1)
   $core.String get url => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1025,6 +933,7 @@ class HttpFileMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
+  /// The MD5 checksum of the file's content.
   @$pb.TagNumber(2)
   $core.String get md5 => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1037,6 +946,7 @@ class HttpFileMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMd5() => clearField(2);
 
+  /// Size of the file in bytes.
   @$pb.TagNumber(3)
   $fixnum.Int64 get size => $_getI64(2);
   @$pb.TagNumber(3)
@@ -1050,39 +960,33 @@ class HttpFileMetadata extends $pb.GeneratedMessage {
   void clearSize() => clearField(3);
 }
 
+/// HTTP manifest file metadata.
 class HttpManifestMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HttpManifestMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'url')
-    ..hasRequiredFields = false;
-
-  HttpManifestMetadata._() : super();
   factory HttpManifestMetadata({
     $core.String? url,
   }) {
-    final _result = create();
+    final $result = create();
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
-    return _result;
+    return $result;
   }
+  HttpManifestMetadata._() : super();
   factory HttpManifestMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HttpManifestMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HttpManifestMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1093,8 +997,10 @@ class HttpManifestMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   HttpManifestMetadata copyWith(void Function(HttpManifestMetadata) updates) =>
       super.copyWith((message) => updates(message as HttpManifestMetadata))
-          as HttpManifestMetadata; // ignore: deprecated_member_use
+          as HttpManifestMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HttpManifestMetadata create() => HttpManifestMetadata._();
   HttpManifestMetadata createEmptyInstance() => create();
@@ -1105,6 +1011,8 @@ class HttpManifestMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HttpManifestMetadata>(create);
   static HttpManifestMetadata? _defaultInstance;
 
+  /// Required. Url of the HTTP manifest which contains the list of HTTP files to
+  /// transfer.
   @$pb.TagNumber(1)
   $core.String get url => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1127,7 +1035,45 @@ enum ObjectMetadata_Metadata {
   notSet
 }
 
+/// Metadata of a blob/file/object.
 class ObjectMetadata extends $pb.GeneratedMessage {
+  factory ObjectMetadata({
+    StorageSystemType? type,
+    AwsS3ObjectMetadata? awsS3Object,
+    AzureBlobMetadata? azureBlob,
+    GcsObjectMetadata? gcsObject,
+    PosixFileMetadata? posixFile,
+    HttpFileMetadata? httpFile,
+  }) {
+    final $result = create();
+    if (type != null) {
+      $result.type = type;
+    }
+    if (awsS3Object != null) {
+      $result.awsS3Object = awsS3Object;
+    }
+    if (azureBlob != null) {
+      $result.azureBlob = azureBlob;
+    }
+    if (gcsObject != null) {
+      $result.gcsObject = gcsObject;
+    }
+    if (posixFile != null) {
+      $result.posixFile = posixFile;
+    }
+    if (httpFile != null) {
+      $result.httpFile = httpFile;
+    }
+    return $result;
+  }
+  ObjectMetadata._() : super();
+  factory ObjectMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ObjectMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ObjectMetadata_Metadata>
       _ObjectMetadata_MetadataByTag = {
     3: ObjectMetadata_Metadata.awsS3Object,
@@ -1138,92 +1084,27 @@ class ObjectMetadata extends $pb.GeneratedMessage {
     0: ObjectMetadata_Metadata.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ObjectMetadata',
+      _omitMessageNames ? '' : 'ObjectMetadata',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
       createEmptyInstance: create)
     ..oo(0, [3, 4, 5, 6, 7])
-    ..e<StorageSystemType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
+    ..e<StorageSystemType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
         defaultOrMaker: StorageSystemType.STORAGE_SYSTEM_TYPE_UNSPECIFIED,
         valueOf: StorageSystemType.valueOf,
         enumValues: StorageSystemType.values)
-    ..aOM<AwsS3ObjectMetadata>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'awsS3Object',
+    ..aOM<AwsS3ObjectMetadata>(3, _omitFieldNames ? '' : 'awsS3Object',
         subBuilder: AwsS3ObjectMetadata.create)
-    ..aOM<AzureBlobMetadata>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'azureBlob',
+    ..aOM<AzureBlobMetadata>(4, _omitFieldNames ? '' : 'azureBlob',
         subBuilder: AzureBlobMetadata.create)
-    ..aOM<GcsObjectMetadata>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcsObject',
+    ..aOM<GcsObjectMetadata>(5, _omitFieldNames ? '' : 'gcsObject',
         subBuilder: GcsObjectMetadata.create)
-    ..aOM<PosixFileMetadata>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'posixFile',
+    ..aOM<PosixFileMetadata>(6, _omitFieldNames ? '' : 'posixFile',
         subBuilder: PosixFileMetadata.create)
-    ..aOM<HttpFileMetadata>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'httpFile',
+    ..aOM<HttpFileMetadata>(7, _omitFieldNames ? '' : 'httpFile',
         subBuilder: HttpFileMetadata.create)
     ..hasRequiredFields = false;
 
-  ObjectMetadata._() : super();
-  factory ObjectMetadata({
-    StorageSystemType? type,
-    AwsS3ObjectMetadata? awsS3Object,
-    AzureBlobMetadata? azureBlob,
-    GcsObjectMetadata? gcsObject,
-    PosixFileMetadata? posixFile,
-    HttpFileMetadata? httpFile,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (awsS3Object != null) {
-      _result.awsS3Object = awsS3Object;
-    }
-    if (azureBlob != null) {
-      _result.azureBlob = azureBlob;
-    }
-    if (gcsObject != null) {
-      _result.gcsObject = gcsObject;
-    }
-    if (posixFile != null) {
-      _result.posixFile = posixFile;
-    }
-    if (httpFile != null) {
-      _result.httpFile = httpFile;
-    }
-    return _result;
-  }
-  factory ObjectMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ObjectMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1233,8 +1114,10 @@ class ObjectMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ObjectMetadata copyWith(void Function(ObjectMetadata) updates) =>
       super.copyWith((message) => updates(message as ObjectMetadata))
-          as ObjectMetadata; // ignore: deprecated_member_use
+          as ObjectMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ObjectMetadata create() => ObjectMetadata._();
   ObjectMetadata createEmptyInstance() => create();
@@ -1249,6 +1132,7 @@ class ObjectMetadata extends $pb.GeneratedMessage {
       _ObjectMetadata_MetadataByTag[$_whichOneof(0)]!;
   void clearMetadata() => clearField($_whichOneof(0));
 
+  /// Required. Storage system type of the object.
   @$pb.TagNumber(1)
   StorageSystemType get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -1261,6 +1145,7 @@ class ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// Object metadata of AWS S3.
   @$pb.TagNumber(3)
   AwsS3ObjectMetadata get awsS3Object => $_getN(1);
   @$pb.TagNumber(3)
@@ -1275,6 +1160,7 @@ class ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AwsS3ObjectMetadata ensureAwsS3Object() => $_ensure(1);
 
+  /// Blob metadata of Azure Blob Storage.
   @$pb.TagNumber(4)
   AzureBlobMetadata get azureBlob => $_getN(2);
   @$pb.TagNumber(4)
@@ -1289,6 +1175,7 @@ class ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AzureBlobMetadata ensureAzureBlob() => $_ensure(2);
 
+  /// Object metadata of Google Cloud Storage.
   @$pb.TagNumber(5)
   GcsObjectMetadata get gcsObject => $_getN(3);
   @$pb.TagNumber(5)
@@ -1303,6 +1190,7 @@ class ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   GcsObjectMetadata ensureGcsObject() => $_ensure(3);
 
+  /// File/directory metadata of POSIX file system.
   @$pb.TagNumber(6)
   PosixFileMetadata get posixFile => $_getN(4);
   @$pb.TagNumber(6)
@@ -1317,6 +1205,7 @@ class ObjectMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   PosixFileMetadata ensurePosixFile() => $_ensure(4);
 
+  /// Metadata of a file on a HTTP server.
   @$pb.TagNumber(7)
   HttpFileMetadata get httpFile => $_getN(5);
   @$pb.TagNumber(7)
@@ -1341,7 +1230,45 @@ enum ContainerMetadata_Metadata {
   notSet
 }
 
+/// Metadata of a bucket/container/directory
 class ContainerMetadata extends $pb.GeneratedMessage {
+  factory ContainerMetadata({
+    StorageSystemType? type,
+    AwsS3BucketMetadata? awsS3Bucket,
+    AzureBlobContainerMetadata? azureBlobContainer,
+    GcsBucketMetadata? gcsBucket,
+    PosixFileMetadata? posixDirectory,
+    HttpManifestMetadata? httpManifest,
+  }) {
+    final $result = create();
+    if (type != null) {
+      $result.type = type;
+    }
+    if (awsS3Bucket != null) {
+      $result.awsS3Bucket = awsS3Bucket;
+    }
+    if (azureBlobContainer != null) {
+      $result.azureBlobContainer = azureBlobContainer;
+    }
+    if (gcsBucket != null) {
+      $result.gcsBucket = gcsBucket;
+    }
+    if (posixDirectory != null) {
+      $result.posixDirectory = posixDirectory;
+    }
+    if (httpManifest != null) {
+      $result.httpManifest = httpManifest;
+    }
+    return $result;
+  }
+  ContainerMetadata._() : super();
+  factory ContainerMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ContainerMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ContainerMetadata_Metadata>
       _ContainerMetadata_MetadataByTag = {
     3: ContainerMetadata_Metadata.awsS3Bucket,
@@ -1352,92 +1279,28 @@ class ContainerMetadata extends $pb.GeneratedMessage {
     0: ContainerMetadata_Metadata.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ContainerMetadata',
+      _omitMessageNames ? '' : 'ContainerMetadata',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
       createEmptyInstance: create)
     ..oo(0, [3, 4, 5, 6, 7])
-    ..e<StorageSystemType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
+    ..e<StorageSystemType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
         defaultOrMaker: StorageSystemType.STORAGE_SYSTEM_TYPE_UNSPECIFIED,
         valueOf: StorageSystemType.valueOf,
         enumValues: StorageSystemType.values)
-    ..aOM<AwsS3BucketMetadata>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'awsS3Bucket',
+    ..aOM<AwsS3BucketMetadata>(3, _omitFieldNames ? '' : 'awsS3Bucket',
         subBuilder: AwsS3BucketMetadata.create)
     ..aOM<AzureBlobContainerMetadata>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'azureBlobContainer',
+        4, _omitFieldNames ? '' : 'azureBlobContainer',
         subBuilder: AzureBlobContainerMetadata.create)
-    ..aOM<GcsBucketMetadata>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcsBucket',
+    ..aOM<GcsBucketMetadata>(5, _omitFieldNames ? '' : 'gcsBucket',
         subBuilder: GcsBucketMetadata.create)
-    ..aOM<PosixFileMetadata>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'posixDirectory',
+    ..aOM<PosixFileMetadata>(6, _omitFieldNames ? '' : 'posixDirectory',
         subBuilder: PosixFileMetadata.create)
-    ..aOM<HttpManifestMetadata>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'httpManifest',
+    ..aOM<HttpManifestMetadata>(7, _omitFieldNames ? '' : 'httpManifest',
         subBuilder: HttpManifestMetadata.create)
     ..hasRequiredFields = false;
 
-  ContainerMetadata._() : super();
-  factory ContainerMetadata({
-    StorageSystemType? type,
-    AwsS3BucketMetadata? awsS3Bucket,
-    AzureBlobContainerMetadata? azureBlobContainer,
-    GcsBucketMetadata? gcsBucket,
-    PosixFileMetadata? posixDirectory,
-    HttpManifestMetadata? httpManifest,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (awsS3Bucket != null) {
-      _result.awsS3Bucket = awsS3Bucket;
-    }
-    if (azureBlobContainer != null) {
-      _result.azureBlobContainer = azureBlobContainer;
-    }
-    if (gcsBucket != null) {
-      _result.gcsBucket = gcsBucket;
-    }
-    if (posixDirectory != null) {
-      _result.posixDirectory = posixDirectory;
-    }
-    if (httpManifest != null) {
-      _result.httpManifest = httpManifest;
-    }
-    return _result;
-  }
-  factory ContainerMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ContainerMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1447,8 +1310,10 @@ class ContainerMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ContainerMetadata copyWith(void Function(ContainerMetadata) updates) =>
       super.copyWith((message) => updates(message as ContainerMetadata))
-          as ContainerMetadata; // ignore: deprecated_member_use
+          as ContainerMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ContainerMetadata create() => ContainerMetadata._();
   ContainerMetadata createEmptyInstance() => create();
@@ -1463,6 +1328,7 @@ class ContainerMetadata extends $pb.GeneratedMessage {
       _ContainerMetadata_MetadataByTag[$_whichOneof(0)]!;
   void clearMetadata() => clearField($_whichOneof(0));
 
+  /// Required. Storage system type of the object.
   @$pb.TagNumber(1)
   StorageSystemType get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -1475,6 +1341,7 @@ class ContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// Bucket metadata of AWS S3.
   @$pb.TagNumber(3)
   AwsS3BucketMetadata get awsS3Bucket => $_getN(1);
   @$pb.TagNumber(3)
@@ -1489,6 +1356,7 @@ class ContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AwsS3BucketMetadata ensureAwsS3Bucket() => $_ensure(1);
 
+  /// Container metadata of Azure Blob Storage.
   @$pb.TagNumber(4)
   AzureBlobContainerMetadata get azureBlobContainer => $_getN(2);
   @$pb.TagNumber(4)
@@ -1503,6 +1371,7 @@ class ContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AzureBlobContainerMetadata ensureAzureBlobContainer() => $_ensure(2);
 
+  /// Bucket metadata of Google Cloud Storage.
   @$pb.TagNumber(5)
   GcsBucketMetadata get gcsBucket => $_getN(3);
   @$pb.TagNumber(5)
@@ -1517,6 +1386,7 @@ class ContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   GcsBucketMetadata ensureGcsBucket() => $_ensure(3);
 
+  /// Directory metadata of POSIX file system.
   @$pb.TagNumber(6)
   PosixFileMetadata get posixDirectory => $_getN(4);
   @$pb.TagNumber(6)
@@ -1531,6 +1401,7 @@ class ContainerMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   PosixFileMetadata ensurePosixDirectory() => $_ensure(4);
 
+  /// Metadata of a manifest file on a HTTP server.
   @$pb.TagNumber(7)
   HttpManifestMetadata get httpManifest => $_getN(5);
   @$pb.TagNumber(7)
@@ -1546,57 +1417,43 @@ class ContainerMetadata extends $pb.GeneratedMessage {
   HttpManifestMetadata ensureHttpManifest() => $_ensure(5);
 }
 
+/// Status of an action.
 class TransferActivityLog_Status extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TransferActivityLog.Status',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'statusCode')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorType')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorMessage')
-    ..hasRequiredFields = false;
-
-  TransferActivityLog_Status._() : super();
   factory TransferActivityLog_Status({
     $core.String? statusCode,
     $core.String? errorType,
     $core.String? errorMessage,
   }) {
-    final _result = create();
+    final $result = create();
     if (statusCode != null) {
-      _result.statusCode = statusCode;
+      $result.statusCode = statusCode;
     }
     if (errorType != null) {
-      _result.errorType = errorType;
+      $result.errorType = errorType;
     }
     if (errorMessage != null) {
-      _result.errorMessage = errorMessage;
+      $result.errorMessage = errorMessage;
     }
-    return _result;
+    return $result;
   }
+  TransferActivityLog_Status._() : super();
   factory TransferActivityLog_Status.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TransferActivityLog_Status.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TransferActivityLog.Status',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'statusCode')
+    ..aOS(2, _omitFieldNames ? '' : 'errorType')
+    ..aOS(3, _omitFieldNames ? '' : 'errorMessage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1609,8 +1466,10 @@ class TransferActivityLog_Status extends $pb.GeneratedMessage {
           void Function(TransferActivityLog_Status) updates) =>
       super.copyWith(
               (message) => updates(message as TransferActivityLog_Status))
-          as TransferActivityLog_Status; // ignore: deprecated_member_use
+          as TransferActivityLog_Status;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransferActivityLog_Status create() => TransferActivityLog_Status._();
   TransferActivityLog_Status createEmptyInstance() => create();
@@ -1621,6 +1480,8 @@ class TransferActivityLog_Status extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TransferActivityLog_Status>(create);
   static TransferActivityLog_Status? _defaultInstance;
 
+  /// Required. A string value of the Google RPC code as the status of the
+  /// action. The action succeeded if it's `OK`, and failed otherwise.
   @$pb.TagNumber(1)
   $core.String get statusCode => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1633,6 +1494,8 @@ class TransferActivityLog_Status extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStatusCode() => clearField(1);
 
+  /// A string that represents the type of error encountered. Populated only if
+  /// status_code is not `OK`.
   @$pb.TagNumber(2)
   $core.String get errorType => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1645,6 +1508,8 @@ class TransferActivityLog_Status extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearErrorType() => clearField(2);
 
+  /// A human-readable error message for the failure. Populated only if
+  /// status_code is not `OK`.
   @$pb.TagNumber(3)
   $core.String get errorMessage => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1658,69 +1523,8 @@ class TransferActivityLog_Status extends $pb.GeneratedMessage {
   void clearErrorMessage() => clearField(3);
 }
 
+/// Schema of log payload of transfer activity.
 class TransferActivityLog extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TransferActivityLog',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.storagetransfer.logging'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operation')
-    ..e<TransferActivityLog_Action>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'action',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TransferActivityLog_Action.ACTION_UNSPECIFIED,
-        valueOf: TransferActivityLog_Action.valueOf,
-        enumValues: TransferActivityLog_Action.values)
-    ..aOM<TransferActivityLog_Status>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        subBuilder: TransferActivityLog_Status.create)
-    ..aOM<ContainerMetadata>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceContainer',
-        subBuilder: ContainerMetadata.create)
-    ..aOM<ContainerMetadata>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'destinationContainer',
-        subBuilder: ContainerMetadata.create)
-    ..aOM<ObjectMetadata>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceObject',
-        subBuilder: ObjectMetadata.create)
-    ..aOM<ObjectMetadata>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'destinationObject',
-        subBuilder: ObjectMetadata.create)
-    ..aOM<$0.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'completeTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  TransferActivityLog._() : super();
   factory TransferActivityLog({
     $core.String? operation,
     TransferActivityLog_Action? action,
@@ -1731,39 +1535,66 @@ class TransferActivityLog extends $pb.GeneratedMessage {
     ObjectMetadata? destinationObject,
     $0.Timestamp? completeTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (operation != null) {
-      _result.operation = operation;
+      $result.operation = operation;
     }
     if (action != null) {
-      _result.action = action;
+      $result.action = action;
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (sourceContainer != null) {
-      _result.sourceContainer = sourceContainer;
+      $result.sourceContainer = sourceContainer;
     }
     if (destinationContainer != null) {
-      _result.destinationContainer = destinationContainer;
+      $result.destinationContainer = destinationContainer;
     }
     if (sourceObject != null) {
-      _result.sourceObject = sourceObject;
+      $result.sourceObject = sourceObject;
     }
     if (destinationObject != null) {
-      _result.destinationObject = destinationObject;
+      $result.destinationObject = destinationObject;
     }
     if (completeTime != null) {
-      _result.completeTime = completeTime;
+      $result.completeTime = completeTime;
     }
-    return _result;
+    return $result;
   }
+  TransferActivityLog._() : super();
   factory TransferActivityLog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TransferActivityLog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TransferActivityLog',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.storagetransfer.logging'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'operation')
+    ..e<TransferActivityLog_Action>(
+        2, _omitFieldNames ? '' : 'action', $pb.PbFieldType.OE,
+        defaultOrMaker: TransferActivityLog_Action.ACTION_UNSPECIFIED,
+        valueOf: TransferActivityLog_Action.valueOf,
+        enumValues: TransferActivityLog_Action.values)
+    ..aOM<TransferActivityLog_Status>(3, _omitFieldNames ? '' : 'status',
+        subBuilder: TransferActivityLog_Status.create)
+    ..aOM<ContainerMetadata>(4, _omitFieldNames ? '' : 'sourceContainer',
+        subBuilder: ContainerMetadata.create)
+    ..aOM<ContainerMetadata>(5, _omitFieldNames ? '' : 'destinationContainer',
+        subBuilder: ContainerMetadata.create)
+    ..aOM<ObjectMetadata>(6, _omitFieldNames ? '' : 'sourceObject',
+        subBuilder: ObjectMetadata.create)
+    ..aOM<ObjectMetadata>(7, _omitFieldNames ? '' : 'destinationObject',
+        subBuilder: ObjectMetadata.create)
+    ..aOM<$0.Timestamp>(8, _omitFieldNames ? '' : 'completeTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1773,8 +1604,10 @@ class TransferActivityLog extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TransferActivityLog copyWith(void Function(TransferActivityLog) updates) =>
       super.copyWith((message) => updates(message as TransferActivityLog))
-          as TransferActivityLog; // ignore: deprecated_member_use
+          as TransferActivityLog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransferActivityLog create() => TransferActivityLog._();
   TransferActivityLog createEmptyInstance() => create();
@@ -1785,6 +1618,7 @@ class TransferActivityLog extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TransferActivityLog>(create);
   static TransferActivityLog? _defaultInstance;
 
+  /// Required. Name of the transfer operation.
   @$pb.TagNumber(1)
   $core.String get operation => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1797,6 +1631,7 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOperation() => clearField(1);
 
+  /// Required. The action which the transfer operation made.
   @$pb.TagNumber(2)
   TransferActivityLog_Action get action => $_getN(1);
   @$pb.TagNumber(2)
@@ -1809,6 +1644,7 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAction() => clearField(2);
 
+  /// Required. Status of the action.
   @$pb.TagNumber(3)
   TransferActivityLog_Status get status => $_getN(2);
   @$pb.TagNumber(3)
@@ -1823,6 +1659,8 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   TransferActivityLog_Status ensureStatus() => $_ensure(2);
 
+  /// Metadata of source bucket/container/directory. Only set if the action is
+  /// FIND.
   @$pb.TagNumber(4)
   ContainerMetadata get sourceContainer => $_getN(3);
   @$pb.TagNumber(4)
@@ -1837,6 +1675,8 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   ContainerMetadata ensureSourceContainer() => $_ensure(3);
 
+  /// Metadata of destination bucket/container/directory. Only set if the action
+  /// is FIND.
   @$pb.TagNumber(5)
   ContainerMetadata get destinationContainer => $_getN(4);
   @$pb.TagNumber(5)
@@ -1851,6 +1691,8 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ContainerMetadata ensureDestinationContainer() => $_ensure(4);
 
+  /// Metadata of the source blob/file/object. Only set if the action is COPY or
+  /// DELETE when deletion is applied to source.
   @$pb.TagNumber(6)
   ObjectMetadata get sourceObject => $_getN(5);
   @$pb.TagNumber(6)
@@ -1865,6 +1707,8 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   ObjectMetadata ensureSourceObject() => $_ensure(5);
 
+  /// Metadata of the destination blob/file/object. Only set if the action is
+  /// or DELETE when deletion is applied to destination.
   @$pb.TagNumber(7)
   ObjectMetadata get destinationObject => $_getN(6);
   @$pb.TagNumber(7)
@@ -1879,6 +1723,7 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   ObjectMetadata ensureDestinationObject() => $_ensure(6);
 
+  /// Required. Completion time of the action.
   @$pb.TagNumber(8)
   $0.Timestamp get completeTime => $_getN(7);
   @$pb.TagNumber(8)
@@ -1893,3 +1738,7 @@ class TransferActivityLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $0.Timestamp ensureCompleteTime() => $_ensure(7);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudbuild/v2/repositories.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'repositories.pb.dart' as $2;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../longrunning/operations.pb.dart' as $0;
+import 'repositories.pb.dart' as $2;
+
 export 'repositories.pb.dart';
 
+@$pb.GrpcServiceName('google.devtools.cloudbuild.v2.RepositoryManager')
 class RepositoryManagerClient extends $grpc.Client {
   static final _$createConnection =
       $grpc.ClientMethod<$2.CreateConnectionRequest, $0.Operation>(
@@ -86,6 +93,12 @@ class RepositoryManagerClient extends $grpc.Client {
       ($2.FetchLinkableRepositoriesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $2.FetchLinkableRepositoriesResponse.fromBuffer(value));
+  static final _$fetchGitRefs =
+      $grpc.ClientMethod<$2.FetchGitRefsRequest, $2.FetchGitRefsResponse>(
+          '/google.devtools.cloudbuild.v2.RepositoryManager/FetchGitRefs',
+          ($2.FetchGitRefsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.FetchGitRefsResponse.fromBuffer(value));
 
   RepositoryManagerClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -171,8 +184,15 @@ class RepositoryManagerClient extends $grpc.Client {
     return $createUnaryCall(_$fetchLinkableRepositories, request,
         options: options);
   }
+
+  $grpc.ResponseFuture<$2.FetchGitRefsResponse> fetchGitRefs(
+      $2.FetchGitRefsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$fetchGitRefs, request, options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.devtools.cloudbuild.v2.RepositoryManager')
 abstract class RepositoryManagerServiceBase extends $grpc.Service {
   $core.String get $name => 'google.devtools.cloudbuild.v2.RepositoryManager';
 
@@ -287,6 +307,15 @@ abstract class RepositoryManagerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.FetchLinkableRepositoriesRequest.fromBuffer(value),
         ($2.FetchLinkableRepositoriesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.FetchGitRefsRequest, $2.FetchGitRefsResponse>(
+            'FetchGitRefs',
+            fetchGitRefs_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.FetchGitRefsRequest.fromBuffer(value),
+            ($2.FetchGitRefsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Operation> createConnection_Pre($grpc.ServiceCall call,
@@ -360,6 +389,12 @@ abstract class RepositoryManagerServiceBase extends $grpc.Service {
     return fetchLinkableRepositories(call, await request);
   }
 
+  $async.Future<$2.FetchGitRefsResponse> fetchGitRefs_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.FetchGitRefsRequest> request) async {
+    return fetchGitRefs(call, await request);
+  }
+
   $async.Future<$0.Operation> createConnection(
       $grpc.ServiceCall call, $2.CreateConnectionRequest request);
   $async.Future<$2.Connection> getConnection(
@@ -386,4 +421,6 @@ abstract class RepositoryManagerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.FetchReadTokenRequest request);
   $async.Future<$2.FetchLinkableRepositoriesResponse> fetchLinkableRepositories(
       $grpc.ServiceCall call, $2.FetchLinkableRepositoriesRequest request);
+  $async.Future<$2.FetchGitRefsResponse> fetchGitRefs(
+      $grpc.ServiceCall call, $2.FetchGitRefsRequest request);
 }

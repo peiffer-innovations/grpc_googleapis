@@ -1,28 +1,31 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/grafeas/grafeas.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../../protobuf/field_mask.pb.dart' as $12;
 import '../../../../protobuf/timestamp.pb.dart' as $2;
-import '../vulnerability/vulnerability.pb.dart' as $3;
+import '../attestation/attestation.pb.dart' as $9;
 import '../build/build.pb.dart' as $4;
-import '../image/image.pb.dart' as $5;
-import '../package/package.pb.dart' as $6;
+import '../common/common.pb.dart' as $11;
+import '../common/common.pbenum.dart' as $11;
 import '../deployment/deployment.pb.dart' as $7;
 import '../discovery/discovery.pb.dart' as $8;
-import '../attestation/attestation.pb.dart' as $9;
+import '../image/image.pb.dart' as $5;
+import '../package/package.pb.dart' as $6;
 import '../provenance/provenance.pb.dart' as $10;
-import '../common/common.pb.dart' as $11;
-import '../../../../protobuf/field_mask.pb.dart' as $12;
-
-import '../common/common.pbenum.dart' as $11;
+import '../vulnerability/vulnerability.pb.dart' as $3;
 import '../vulnerability/vulnerability.pbenum.dart' as $3;
 
 enum Occurrence_Details {
@@ -36,115 +39,8 @@ enum Occurrence_Details {
   notSet
 }
 
+/// An instance of an analysis type that has been found on a resource.
 class Occurrence extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Occurrence_Details>
-      _Occurrence_DetailsByTag = {
-    8: Occurrence_Details.vulnerability,
-    9: Occurrence_Details.build,
-    10: Occurrence_Details.derivedImage,
-    11: Occurrence_Details.installation,
-    12: Occurrence_Details.deployment,
-    13: Occurrence_Details.discovered,
-    14: Occurrence_Details.attestation,
-    0: Occurrence_Details.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Occurrence',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..oo(0, [8, 9, 10, 11, 12, 13, 14])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<Resource>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resource',
-        subBuilder: Resource.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'noteName')
-    ..e<$11.NoteKind>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $11.NoteKind.NOTE_KIND_UNSPECIFIED,
-        valueOf: $11.NoteKind.valueOf,
-        enumValues: $11.NoteKind.values)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remediation')
-    ..aOM<$2.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$3.Details>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vulnerability',
-        subBuilder: $3.Details.create)
-    ..aOM<$4.Details>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'build',
-        subBuilder: $4.Details.create)
-    ..aOM<$5.Details>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'derivedImage',
-        subBuilder: $5.Details.create)
-    ..aOM<$6.Details>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'installation',
-        subBuilder: $6.Details.create)
-    ..aOM<$7.Details>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deployment',
-        subBuilder: $7.Details.create)
-    ..aOM<$8.Details>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'discovered',
-        subBuilder: $8.Details.create)
-    ..aOM<$9.Details>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'attestation',
-        subBuilder: $9.Details.create)
-    ..hasRequiredFields = false;
-
-  Occurrence._() : super();
   factory Occurrence({
     $core.String? name,
     Resource? resource,
@@ -161,57 +57,105 @@ class Occurrence extends $pb.GeneratedMessage {
     $8.Details? discovered,
     $9.Details? attestation,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (resource != null) {
-      _result.resource = resource;
+      $result.resource = resource;
     }
     if (noteName != null) {
-      _result.noteName = noteName;
+      $result.noteName = noteName;
     }
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (remediation != null) {
-      _result.remediation = remediation;
+      $result.remediation = remediation;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (vulnerability != null) {
-      _result.vulnerability = vulnerability;
+      $result.vulnerability = vulnerability;
     }
     if (build != null) {
-      _result.build = build;
+      $result.build = build;
     }
     if (derivedImage != null) {
-      _result.derivedImage = derivedImage;
+      $result.derivedImage = derivedImage;
     }
     if (installation != null) {
-      _result.installation = installation;
+      $result.installation = installation;
     }
     if (deployment != null) {
-      _result.deployment = deployment;
+      $result.deployment = deployment;
     }
     if (discovered != null) {
-      _result.discovered = discovered;
+      $result.discovered = discovered;
     }
     if (attestation != null) {
-      _result.attestation = attestation;
+      $result.attestation = attestation;
     }
-    return _result;
+    return $result;
   }
+  Occurrence._() : super();
   factory Occurrence.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Occurrence.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Occurrence_Details>
+      _Occurrence_DetailsByTag = {
+    8: Occurrence_Details.vulnerability,
+    9: Occurrence_Details.build,
+    10: Occurrence_Details.derivedImage,
+    11: Occurrence_Details.installation,
+    12: Occurrence_Details.deployment,
+    13: Occurrence_Details.discovered,
+    14: Occurrence_Details.attestation,
+    0: Occurrence_Details.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Occurrence',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..oo(0, [8, 9, 10, 11, 12, 13, 14])
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<Resource>(2, _omitFieldNames ? '' : 'resource',
+        subBuilder: Resource.create)
+    ..aOS(3, _omitFieldNames ? '' : 'noteName')
+    ..e<$11.NoteKind>(4, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: $11.NoteKind.NOTE_KIND_UNSPECIFIED,
+        valueOf: $11.NoteKind.valueOf,
+        enumValues: $11.NoteKind.values)
+    ..aOS(5, _omitFieldNames ? '' : 'remediation')
+    ..aOM<$2.Timestamp>(6, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$3.Details>(8, _omitFieldNames ? '' : 'vulnerability',
+        subBuilder: $3.Details.create)
+    ..aOM<$4.Details>(9, _omitFieldNames ? '' : 'build',
+        subBuilder: $4.Details.create)
+    ..aOM<$5.Details>(10, _omitFieldNames ? '' : 'derivedImage',
+        subBuilder: $5.Details.create)
+    ..aOM<$6.Details>(11, _omitFieldNames ? '' : 'installation',
+        subBuilder: $6.Details.create)
+    ..aOM<$7.Details>(12, _omitFieldNames ? '' : 'deployment',
+        subBuilder: $7.Details.create)
+    ..aOM<$8.Details>(13, _omitFieldNames ? '' : 'discovered',
+        subBuilder: $8.Details.create)
+    ..aOM<$9.Details>(14, _omitFieldNames ? '' : 'attestation',
+        subBuilder: $9.Details.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -220,9 +164,10 @@ class Occurrence extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Occurrence copyWith(void Function(Occurrence) updates) =>
-      super.copyWith((message) => updates(message as Occurrence))
-          as Occurrence; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Occurrence)) as Occurrence;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Occurrence create() => Occurrence._();
   Occurrence createEmptyInstance() => create();
@@ -236,6 +181,8 @@ class Occurrence extends $pb.GeneratedMessage {
       _Occurrence_DetailsByTag[$_whichOneof(0)]!;
   void clearDetails() => clearField($_whichOneof(0));
 
+  /// Output only. The name of the occurrence in the form of
+  /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -248,6 +195,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Required. Immutable. The resource for which the occurrence applies.
   @$pb.TagNumber(2)
   Resource get resource => $_getN(1);
   @$pb.TagNumber(2)
@@ -262,6 +210,9 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Resource ensureResource() => $_ensure(1);
 
+  /// Required. Immutable. The analysis note associated with this occurrence, in
+  /// the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be
+  /// used as a filter in list requests.
   @$pb.TagNumber(3)
   $core.String get noteName => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -274,6 +225,8 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearNoteName() => clearField(3);
 
+  /// Output only. This explicitly denotes which of the occurrence details are
+  /// specified. This field can be used as a filter in list requests.
   @$pb.TagNumber(4)
   $11.NoteKind get kind => $_getN(3);
   @$pb.TagNumber(4)
@@ -286,6 +239,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearKind() => clearField(4);
 
+  /// A description of actions that can be taken to remedy the note.
   @$pb.TagNumber(5)
   $core.String get remediation => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -298,6 +252,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearRemediation() => clearField(5);
 
+  /// Output only. The time this occurrence was created.
   @$pb.TagNumber(6)
   $2.Timestamp get createTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -312,6 +267,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Timestamp ensureCreateTime() => $_ensure(5);
 
+  /// Output only. The time this occurrence was last updated.
   @$pb.TagNumber(7)
   $2.Timestamp get updateTime => $_getN(6);
   @$pb.TagNumber(7)
@@ -326,6 +282,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $2.Timestamp ensureUpdateTime() => $_ensure(6);
 
+  /// Describes a security vulnerability.
   @$pb.TagNumber(8)
   $3.Details get vulnerability => $_getN(7);
   @$pb.TagNumber(8)
@@ -340,6 +297,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $3.Details ensureVulnerability() => $_ensure(7);
 
+  /// Describes a verifiable build.
   @$pb.TagNumber(9)
   $4.Details get build => $_getN(8);
   @$pb.TagNumber(9)
@@ -354,6 +312,8 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $4.Details ensureBuild() => $_ensure(8);
 
+  /// Describes how this resource derives from the basis in the associated
+  /// note.
   @$pb.TagNumber(10)
   $5.Details get derivedImage => $_getN(9);
   @$pb.TagNumber(10)
@@ -368,6 +328,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $5.Details ensureDerivedImage() => $_ensure(9);
 
+  /// Describes the installation of a package on the linked resource.
   @$pb.TagNumber(11)
   $6.Details get installation => $_getN(10);
   @$pb.TagNumber(11)
@@ -382,6 +343,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $6.Details ensureInstallation() => $_ensure(10);
 
+  /// Describes the deployment of an artifact on a runtime.
   @$pb.TagNumber(12)
   $7.Details get deployment => $_getN(11);
   @$pb.TagNumber(12)
@@ -396,6 +358,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $7.Details ensureDeployment() => $_ensure(11);
 
+  /// Describes when a resource was discovered.
   @$pb.TagNumber(13)
   $8.Details get discovered => $_getN(12);
   @$pb.TagNumber(13)
@@ -410,6 +373,7 @@ class Occurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $8.Details ensureDiscovered() => $_ensure(12);
 
+  /// Describes an attestation of an artifact.
   @$pb.TagNumber(14)
   $9.Details get attestation => $_getN(13);
   @$pb.TagNumber(14)
@@ -425,58 +389,44 @@ class Occurrence extends $pb.GeneratedMessage {
   $9.Details ensureAttestation() => $_ensure(13);
 }
 
+/// An entity that can have metadata. For example, a Docker image.
 class Resource extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Resource',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uri')
-    ..aOM<$10.Hash>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentHash',
-        subBuilder: $10.Hash.create)
-    ..hasRequiredFields = false;
-
-  Resource._() : super();
   factory Resource({
     $core.String? name,
     $core.String? uri,
     $10.Hash? contentHash,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (uri != null) {
-      _result.uri = uri;
+      $result.uri = uri;
     }
     if (contentHash != null) {
-      _result.contentHash = contentHash;
+      $result.contentHash = contentHash;
     }
-    return _result;
+    return $result;
   }
+  Resource._() : super();
   factory Resource.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Resource.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Resource',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'uri')
+    ..aOM<$10.Hash>(3, _omitFieldNames ? '' : 'contentHash',
+        subBuilder: $10.Hash.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -485,9 +435,10 @@ class Resource extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Resource copyWith(void Function(Resource) updates) =>
-      super.copyWith((message) => updates(message as Resource))
-          as Resource; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Resource)) as Resource;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Resource create() => Resource._();
   Resource createEmptyInstance() => create();
@@ -497,6 +448,8 @@ class Resource extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Resource>(create);
   static Resource? _defaultInstance;
 
+  /// The name of the resource. For example, the name of a Docker image -
+  /// "Debian".
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -509,6 +462,8 @@ class Resource extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Required. The unique URI of the resource. For example,
+  /// `https://gcr.io/project/image@sha256:foo` for a Docker image.
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -521,6 +476,7 @@ class Resource extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => clearField(2);
 
+  /// The hash of the resource content. For example, the Docker digest.
   @$pb.TagNumber(3)
   $10.Hash get contentHash => $_getN(2);
   @$pb.TagNumber(3)
@@ -547,126 +503,8 @@ enum Note_Type {
   notSet
 }
 
+/// A type of analysis that can be done for a resource.
 class Note extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Note_Type> _Note_TypeByTag = {
-    10: Note_Type.vulnerability,
-    11: Note_Type.build,
-    12: Note_Type.baseImage,
-    13: Note_Type.package,
-    14: Note_Type.deployable,
-    15: Note_Type.discovery,
-    16: Note_Type.attestationAuthority,
-    0: Note_Type.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Note',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..oo(0, [10, 11, 12, 13, 14, 15, 16])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shortDescription')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'longDescription')
-    ..e<$11.NoteKind>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $11.NoteKind.NOTE_KIND_UNSPECIFIED,
-        valueOf: $11.NoteKind.valueOf,
-        enumValues: $11.NoteKind.values)
-    ..pc<$11.RelatedUrl>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'relatedUrl',
-        $pb.PbFieldType.PM,
-        subBuilder: $11.RelatedUrl.create)
-    ..aOM<$2.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'expirationTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $2.Timestamp.create)
-    ..pPS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'relatedNoteNames')
-    ..aOM<$3.Vulnerability>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vulnerability',
-        subBuilder: $3.Vulnerability.create)
-    ..aOM<$4.Build>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'build',
-        subBuilder: $4.Build.create)
-    ..aOM<$5.Basis>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'baseImage',
-        subBuilder: $5.Basis.create)
-    ..aOM<$6.Package>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'package',
-        subBuilder: $6.Package.create)
-    ..aOM<$7.Deployable>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deployable',
-        subBuilder: $7.Deployable.create)
-    ..aOM<$8.Discovery>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'discovery',
-        subBuilder: $8.Discovery.create)
-    ..aOM<$9.Authority>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'attestationAuthority',
-        subBuilder: $9.Authority.create)
-    ..hasRequiredFields = false;
-
-  Note._() : super();
   factory Note({
     $core.String? name,
     $core.String? shortDescription,
@@ -685,63 +523,114 @@ class Note extends $pb.GeneratedMessage {
     $8.Discovery? discovery,
     $9.Authority? attestationAuthority,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (shortDescription != null) {
-      _result.shortDescription = shortDescription;
+      $result.shortDescription = shortDescription;
     }
     if (longDescription != null) {
-      _result.longDescription = longDescription;
+      $result.longDescription = longDescription;
     }
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (relatedUrl != null) {
-      _result.relatedUrl.addAll(relatedUrl);
+      $result.relatedUrl.addAll(relatedUrl);
     }
     if (expirationTime != null) {
-      _result.expirationTime = expirationTime;
+      $result.expirationTime = expirationTime;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (relatedNoteNames != null) {
-      _result.relatedNoteNames.addAll(relatedNoteNames);
+      $result.relatedNoteNames.addAll(relatedNoteNames);
     }
     if (vulnerability != null) {
-      _result.vulnerability = vulnerability;
+      $result.vulnerability = vulnerability;
     }
     if (build != null) {
-      _result.build = build;
+      $result.build = build;
     }
     if (baseImage != null) {
-      _result.baseImage = baseImage;
+      $result.baseImage = baseImage;
     }
     if (package != null) {
-      _result.package = package;
+      $result.package = package;
     }
     if (deployable != null) {
-      _result.deployable = deployable;
+      $result.deployable = deployable;
     }
     if (discovery != null) {
-      _result.discovery = discovery;
+      $result.discovery = discovery;
     }
     if (attestationAuthority != null) {
-      _result.attestationAuthority = attestationAuthority;
+      $result.attestationAuthority = attestationAuthority;
     }
-    return _result;
+    return $result;
   }
+  Note._() : super();
   factory Note.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Note.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Note_Type> _Note_TypeByTag = {
+    10: Note_Type.vulnerability,
+    11: Note_Type.build,
+    12: Note_Type.baseImage,
+    13: Note_Type.package,
+    14: Note_Type.deployable,
+    15: Note_Type.discovery,
+    16: Note_Type.attestationAuthority,
+    0: Note_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Note',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..oo(0, [10, 11, 12, 13, 14, 15, 16])
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'shortDescription')
+    ..aOS(3, _omitFieldNames ? '' : 'longDescription')
+    ..e<$11.NoteKind>(4, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: $11.NoteKind.NOTE_KIND_UNSPECIFIED,
+        valueOf: $11.NoteKind.valueOf,
+        enumValues: $11.NoteKind.values)
+    ..pc<$11.RelatedUrl>(
+        5, _omitFieldNames ? '' : 'relatedUrl', $pb.PbFieldType.PM,
+        subBuilder: $11.RelatedUrl.create)
+    ..aOM<$2.Timestamp>(6, _omitFieldNames ? '' : 'expirationTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(8, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $2.Timestamp.create)
+    ..pPS(9, _omitFieldNames ? '' : 'relatedNoteNames')
+    ..aOM<$3.Vulnerability>(10, _omitFieldNames ? '' : 'vulnerability',
+        subBuilder: $3.Vulnerability.create)
+    ..aOM<$4.Build>(11, _omitFieldNames ? '' : 'build',
+        subBuilder: $4.Build.create)
+    ..aOM<$5.Basis>(12, _omitFieldNames ? '' : 'baseImage',
+        subBuilder: $5.Basis.create)
+    ..aOM<$6.Package>(13, _omitFieldNames ? '' : 'package',
+        subBuilder: $6.Package.create)
+    ..aOM<$7.Deployable>(14, _omitFieldNames ? '' : 'deployable',
+        subBuilder: $7.Deployable.create)
+    ..aOM<$8.Discovery>(15, _omitFieldNames ? '' : 'discovery',
+        subBuilder: $8.Discovery.create)
+    ..aOM<$9.Authority>(16, _omitFieldNames ? '' : 'attestationAuthority',
+        subBuilder: $9.Authority.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -750,9 +639,10 @@ class Note extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Note copyWith(void Function(Note) updates) =>
-      super.copyWith((message) => updates(message as Note))
-          as Note; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Note)) as Note;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Note create() => Note._();
   Note createEmptyInstance() => create();
@@ -765,6 +655,8 @@ class Note extends $pb.GeneratedMessage {
   Note_Type whichType() => _Note_TypeByTag[$_whichOneof(0)]!;
   void clearType() => clearField($_whichOneof(0));
 
+  /// Output only. The name of the note in the form of
+  /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -777,6 +669,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// A one sentence description of this note.
   @$pb.TagNumber(2)
   $core.String get shortDescription => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -789,6 +682,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearShortDescription() => clearField(2);
 
+  /// A detailed description of this note.
   @$pb.TagNumber(3)
   $core.String get longDescription => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -801,6 +695,8 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLongDescription() => clearField(3);
 
+  /// Output only. The type of analysis. This field can be used as a filter in
+  /// list requests.
   @$pb.TagNumber(4)
   $11.NoteKind get kind => $_getN(3);
   @$pb.TagNumber(4)
@@ -813,9 +709,11 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearKind() => clearField(4);
 
+  /// URLs associated with this note.
   @$pb.TagNumber(5)
   $core.List<$11.RelatedUrl> get relatedUrl => $_getList(4);
 
+  /// Time of expiration for this note. Empty if note does not expire.
   @$pb.TagNumber(6)
   $2.Timestamp get expirationTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -830,6 +728,8 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Timestamp ensureExpirationTime() => $_ensure(5);
 
+  /// Output only. The time this note was created. This field can be used as a
+  /// filter in list requests.
   @$pb.TagNumber(7)
   $2.Timestamp get createTime => $_getN(6);
   @$pb.TagNumber(7)
@@ -844,6 +744,8 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $2.Timestamp ensureCreateTime() => $_ensure(6);
 
+  /// Output only. The time this note was last updated. This field can be used as
+  /// a filter in list requests.
   @$pb.TagNumber(8)
   $2.Timestamp get updateTime => $_getN(7);
   @$pb.TagNumber(8)
@@ -858,9 +760,11 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $2.Timestamp ensureUpdateTime() => $_ensure(7);
 
+  /// Other notes related to this note.
   @$pb.TagNumber(9)
   $core.List<$core.String> get relatedNoteNames => $_getList(8);
 
+  /// A note describing a package vulnerability.
   @$pb.TagNumber(10)
   $3.Vulnerability get vulnerability => $_getN(9);
   @$pb.TagNumber(10)
@@ -875,6 +779,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $3.Vulnerability ensureVulnerability() => $_ensure(9);
 
+  /// A note describing build provenance for a verifiable build.
   @$pb.TagNumber(11)
   $4.Build get build => $_getN(10);
   @$pb.TagNumber(11)
@@ -889,6 +794,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $4.Build ensureBuild() => $_ensure(10);
 
+  /// A note describing a base image.
   @$pb.TagNumber(12)
   $5.Basis get baseImage => $_getN(11);
   @$pb.TagNumber(12)
@@ -903,6 +809,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $5.Basis ensureBaseImage() => $_ensure(11);
 
+  /// A note describing a package hosted by various package managers.
   @$pb.TagNumber(13)
   $6.Package get package => $_getN(12);
   @$pb.TagNumber(13)
@@ -917,6 +824,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $6.Package ensurePackage() => $_ensure(12);
 
+  /// A note describing something that can be deployed.
   @$pb.TagNumber(14)
   $7.Deployable get deployable => $_getN(13);
   @$pb.TagNumber(14)
@@ -931,6 +839,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $7.Deployable ensureDeployable() => $_ensure(13);
 
+  /// A note describing the initial analysis of a resource.
   @$pb.TagNumber(15)
   $8.Discovery get discovery => $_getN(14);
   @$pb.TagNumber(15)
@@ -945,6 +854,7 @@ class Note extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $8.Discovery ensureDiscovery() => $_ensure(14);
 
+  /// A note describing an attestation role.
   @$pb.TagNumber(16)
   $9.Authority get attestationAuthority => $_getN(15);
   @$pb.TagNumber(16)
@@ -960,39 +870,33 @@ class Note extends $pb.GeneratedMessage {
   $9.Authority ensureAttestationAuthority() => $_ensure(15);
 }
 
+/// Request to get an occurrence.
 class GetOccurrenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetOccurrenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetOccurrenceRequest._() : super();
   factory GetOccurrenceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetOccurrenceRequest._() : super();
   factory GetOccurrenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetOccurrenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetOccurrenceRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1003,8 +907,10 @@ class GetOccurrenceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetOccurrenceRequest copyWith(void Function(GetOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as GetOccurrenceRequest))
-          as GetOccurrenceRequest; // ignore: deprecated_member_use
+          as GetOccurrenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOccurrenceRequest create() => GetOccurrenceRequest._();
   GetOccurrenceRequest createEmptyInstance() => create();
@@ -1015,6 +921,8 @@ class GetOccurrenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetOccurrenceRequest>(create);
   static GetOccurrenceRequest? _defaultInstance;
 
+  /// The name of the occurrence in the form of
+  /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1028,67 +936,48 @@ class GetOccurrenceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request to list occurrences.
 class ListOccurrencesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListOccurrencesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListOccurrencesRequest._() : super();
   factory ListOccurrencesRequest({
     $core.String? parent,
     $core.String? filter,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListOccurrencesRequest._() : super();
   factory ListOccurrencesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListOccurrencesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListOccurrencesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1100,8 +989,10 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
   ListOccurrencesRequest copyWith(
           void Function(ListOccurrencesRequest) updates) =>
       super.copyWith((message) => updates(message as ListOccurrencesRequest))
-          as ListOccurrencesRequest; // ignore: deprecated_member_use
+          as ListOccurrencesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListOccurrencesRequest create() => ListOccurrencesRequest._();
   ListOccurrencesRequest createEmptyInstance() => create();
@@ -1112,6 +1003,8 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListOccurrencesRequest>(create);
   static ListOccurrencesRequest? _defaultInstance;
 
+  /// The name of the project to list occurrences for in the form of
+  /// `projects/[PROJECT_ID]`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1124,6 +1017,7 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The filter expression.
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1136,6 +1030,7 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
+  /// Number of occurrences to return in the list.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1148,6 +1043,7 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Token to provide to skip to a particular spot in the list.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1161,50 +1057,40 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(4);
 }
 
+/// Response for listing occurrences.
 class ListOccurrencesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListOccurrencesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Occurrence>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'occurrences',
-        $pb.PbFieldType.PM,
-        subBuilder: Occurrence.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListOccurrencesResponse._() : super();
   factory ListOccurrencesResponse({
     $core.Iterable<Occurrence>? occurrences,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (occurrences != null) {
-      _result.occurrences.addAll(occurrences);
+      $result.occurrences.addAll(occurrences);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListOccurrencesResponse._() : super();
   factory ListOccurrencesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListOccurrencesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListOccurrencesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Occurrence>(
+        1, _omitFieldNames ? '' : 'occurrences', $pb.PbFieldType.PM,
+        subBuilder: Occurrence.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1216,8 +1102,10 @@ class ListOccurrencesResponse extends $pb.GeneratedMessage {
   ListOccurrencesResponse copyWith(
           void Function(ListOccurrencesResponse) updates) =>
       super.copyWith((message) => updates(message as ListOccurrencesResponse))
-          as ListOccurrencesResponse; // ignore: deprecated_member_use
+          as ListOccurrencesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListOccurrencesResponse create() => ListOccurrencesResponse._();
   ListOccurrencesResponse createEmptyInstance() => create();
@@ -1228,9 +1116,13 @@ class ListOccurrencesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListOccurrencesResponse>(create);
   static ListOccurrencesResponse? _defaultInstance;
 
+  /// The occurrences requested.
   @$pb.TagNumber(1)
   $core.List<Occurrence> get occurrences => $_getList(0);
 
+  /// The next pagination token in the list response. It should be used as
+  /// `page_token` for the following request. An empty value means no more
+  /// results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1244,39 +1136,33 @@ class ListOccurrencesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request to delete a occurrence.
 class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteOccurrenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteOccurrenceRequest._() : super();
   factory DeleteOccurrenceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteOccurrenceRequest._() : super();
   factory DeleteOccurrenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteOccurrenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteOccurrenceRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1288,8 +1174,10 @@ class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
   DeleteOccurrenceRequest copyWith(
           void Function(DeleteOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteOccurrenceRequest))
-          as DeleteOccurrenceRequest; // ignore: deprecated_member_use
+          as DeleteOccurrenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteOccurrenceRequest create() => DeleteOccurrenceRequest._();
   DeleteOccurrenceRequest createEmptyInstance() => create();
@@ -1300,6 +1188,8 @@ class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteOccurrenceRequest>(create);
   static DeleteOccurrenceRequest? _defaultInstance;
 
+  /// The name of the occurrence in the form of
+  /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1313,49 +1203,39 @@ class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request to create a new occurrence.
 class CreateOccurrenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateOccurrenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<Occurrence>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'occurrence',
-        subBuilder: Occurrence.create)
-    ..hasRequiredFields = false;
-
-  CreateOccurrenceRequest._() : super();
   factory CreateOccurrenceRequest({
     $core.String? parent,
     Occurrence? occurrence,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (occurrence != null) {
-      _result.occurrence = occurrence;
+      $result.occurrence = occurrence;
     }
-    return _result;
+    return $result;
   }
+  CreateOccurrenceRequest._() : super();
   factory CreateOccurrenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateOccurrenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateOccurrenceRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<Occurrence>(2, _omitFieldNames ? '' : 'occurrence',
+        subBuilder: Occurrence.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1367,8 +1247,10 @@ class CreateOccurrenceRequest extends $pb.GeneratedMessage {
   CreateOccurrenceRequest copyWith(
           void Function(CreateOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as CreateOccurrenceRequest))
-          as CreateOccurrenceRequest; // ignore: deprecated_member_use
+          as CreateOccurrenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateOccurrenceRequest create() => CreateOccurrenceRequest._();
   CreateOccurrenceRequest createEmptyInstance() => create();
@@ -1379,6 +1261,8 @@ class CreateOccurrenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateOccurrenceRequest>(create);
   static CreateOccurrenceRequest? _defaultInstance;
 
+  /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+  /// the occurrence is to be created.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1391,6 +1275,7 @@ class CreateOccurrenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The occurrence to create.
   @$pb.TagNumber(2)
   Occurrence get occurrence => $_getN(1);
   @$pb.TagNumber(2)
@@ -1406,59 +1291,45 @@ class CreateOccurrenceRequest extends $pb.GeneratedMessage {
   Occurrence ensureOccurrence() => $_ensure(1);
 }
 
+/// Request to update an occurrence.
 class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateOccurrenceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<Occurrence>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'occurrence',
-        subBuilder: Occurrence.create)
-    ..aOM<$12.FieldMask>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $12.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateOccurrenceRequest._() : super();
   factory UpdateOccurrenceRequest({
     $core.String? name,
     Occurrence? occurrence,
     $12.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (occurrence != null) {
-      _result.occurrence = occurrence;
+      $result.occurrence = occurrence;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateOccurrenceRequest._() : super();
   factory UpdateOccurrenceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateOccurrenceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateOccurrenceRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<Occurrence>(2, _omitFieldNames ? '' : 'occurrence',
+        subBuilder: Occurrence.create)
+    ..aOM<$12.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $12.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1470,8 +1341,10 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   UpdateOccurrenceRequest copyWith(
           void Function(UpdateOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateOccurrenceRequest))
-          as UpdateOccurrenceRequest; // ignore: deprecated_member_use
+          as UpdateOccurrenceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateOccurrenceRequest create() => UpdateOccurrenceRequest._();
   UpdateOccurrenceRequest createEmptyInstance() => create();
@@ -1482,6 +1355,8 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateOccurrenceRequest>(create);
   static UpdateOccurrenceRequest? _defaultInstance;
 
+  /// The name of the occurrence in the form of
+  /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1494,6 +1369,7 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The updated occurrence.
   @$pb.TagNumber(2)
   Occurrence get occurrence => $_getN(1);
   @$pb.TagNumber(2)
@@ -1508,6 +1384,7 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Occurrence ensureOccurrence() => $_ensure(1);
 
+  /// The fields to update.
   @$pb.TagNumber(3)
   $12.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
@@ -1523,39 +1400,33 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   $12.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request to get a note.
 class GetNoteRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetNoteRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetNoteRequest._() : super();
   factory GetNoteRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetNoteRequest._() : super();
   factory GetNoteRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetNoteRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetNoteRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1565,8 +1436,10 @@ class GetNoteRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetNoteRequest copyWith(void Function(GetNoteRequest) updates) =>
       super.copyWith((message) => updates(message as GetNoteRequest))
-          as GetNoteRequest; // ignore: deprecated_member_use
+          as GetNoteRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetNoteRequest create() => GetNoteRequest._();
   GetNoteRequest createEmptyInstance() => create();
@@ -1577,6 +1450,8 @@ class GetNoteRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetNoteRequest>(create);
   static GetNoteRequest? _defaultInstance;
 
+  /// The name of the note in the form of
+  /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1590,39 +1465,33 @@ class GetNoteRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request to get the note to which the specified occurrence is attached.
 class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetOccurrenceNoteRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetOccurrenceNoteRequest._() : super();
   factory GetOccurrenceNoteRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetOccurrenceNoteRequest._() : super();
   factory GetOccurrenceNoteRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetOccurrenceNoteRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetOccurrenceNoteRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1634,8 +1503,10 @@ class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
   GetOccurrenceNoteRequest copyWith(
           void Function(GetOccurrenceNoteRequest) updates) =>
       super.copyWith((message) => updates(message as GetOccurrenceNoteRequest))
-          as GetOccurrenceNoteRequest; // ignore: deprecated_member_use
+          as GetOccurrenceNoteRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOccurrenceNoteRequest create() => GetOccurrenceNoteRequest._();
   GetOccurrenceNoteRequest createEmptyInstance() => create();
@@ -1646,6 +1517,8 @@ class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetOccurrenceNoteRequest>(create);
   static GetOccurrenceNoteRequest? _defaultInstance;
 
+  /// The name of the occurrence in the form of
+  /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1659,67 +1532,48 @@ class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request to list notes.
 class ListNotesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNotesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListNotesRequest._() : super();
   factory ListNotesRequest({
     $core.String? parent,
     $core.String? filter,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListNotesRequest._() : super();
   factory ListNotesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNotesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNotesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1729,8 +1583,10 @@ class ListNotesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListNotesRequest copyWith(void Function(ListNotesRequest) updates) =>
       super.copyWith((message) => updates(message as ListNotesRequest))
-          as ListNotesRequest; // ignore: deprecated_member_use
+          as ListNotesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNotesRequest create() => ListNotesRequest._();
   ListNotesRequest createEmptyInstance() => create();
@@ -1741,6 +1597,8 @@ class ListNotesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNotesRequest>(create);
   static ListNotesRequest? _defaultInstance;
 
+  /// The name of the project to list notes for in the form of
+  /// `projects/[PROJECT_ID]`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1753,6 +1611,7 @@ class ListNotesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The filter expression.
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1765,6 +1624,7 @@ class ListNotesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
+  /// Number of notes to return in the list.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1777,6 +1637,7 @@ class ListNotesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Token to provide to skip to a particular spot in the list.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1790,50 +1651,39 @@ class ListNotesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(4);
 }
 
+/// Response for listing notes.
 class ListNotesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNotesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Note>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'notes',
-        $pb.PbFieldType.PM,
-        subBuilder: Note.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListNotesResponse._() : super();
   factory ListNotesResponse({
     $core.Iterable<Note>? notes,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (notes != null) {
-      _result.notes.addAll(notes);
+      $result.notes.addAll(notes);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListNotesResponse._() : super();
   factory ListNotesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNotesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNotesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Note>(1, _omitFieldNames ? '' : 'notes', $pb.PbFieldType.PM,
+        subBuilder: Note.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1843,8 +1693,10 @@ class ListNotesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListNotesResponse copyWith(void Function(ListNotesResponse) updates) =>
       super.copyWith((message) => updates(message as ListNotesResponse))
-          as ListNotesResponse; // ignore: deprecated_member_use
+          as ListNotesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNotesResponse create() => ListNotesResponse._();
   ListNotesResponse createEmptyInstance() => create();
@@ -1855,9 +1707,13 @@ class ListNotesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNotesResponse>(create);
   static ListNotesResponse? _defaultInstance;
 
+  /// The notes requested.
   @$pb.TagNumber(1)
   $core.List<Note> get notes => $_getList(0);
 
+  /// The next pagination token in the list response. It should be used as
+  /// `page_token` for the following request. An empty value means no more
+  /// results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1871,39 +1727,33 @@ class ListNotesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request to delete a note.
 class DeleteNoteRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteNoteRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteNoteRequest._() : super();
   factory DeleteNoteRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteNoteRequest._() : super();
   factory DeleteNoteRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteNoteRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteNoteRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1913,8 +1763,10 @@ class DeleteNoteRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteNoteRequest copyWith(void Function(DeleteNoteRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteNoteRequest))
-          as DeleteNoteRequest; // ignore: deprecated_member_use
+          as DeleteNoteRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteNoteRequest create() => DeleteNoteRequest._();
   DeleteNoteRequest createEmptyInstance() => create();
@@ -1925,6 +1777,8 @@ class DeleteNoteRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteNoteRequest>(create);
   static DeleteNoteRequest? _defaultInstance;
 
+  /// The name of the note in the form of
+  /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1938,58 +1792,43 @@ class DeleteNoteRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request to create a new note.
 class CreateNoteRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateNoteRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'noteId')
-    ..aOM<Note>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'note',
-        subBuilder: Note.create)
-    ..hasRequiredFields = false;
-
-  CreateNoteRequest._() : super();
   factory CreateNoteRequest({
     $core.String? parent,
     $core.String? noteId,
     Note? note,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (noteId != null) {
-      _result.noteId = noteId;
+      $result.noteId = noteId;
     }
     if (note != null) {
-      _result.note = note;
+      $result.note = note;
     }
-    return _result;
+    return $result;
   }
+  CreateNoteRequest._() : super();
   factory CreateNoteRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateNoteRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateNoteRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'noteId')
+    ..aOM<Note>(3, _omitFieldNames ? '' : 'note', subBuilder: Note.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1999,8 +1838,10 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateNoteRequest copyWith(void Function(CreateNoteRequest) updates) =>
       super.copyWith((message) => updates(message as CreateNoteRequest))
-          as CreateNoteRequest; // ignore: deprecated_member_use
+          as CreateNoteRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateNoteRequest create() => CreateNoteRequest._();
   CreateNoteRequest createEmptyInstance() => create();
@@ -2011,6 +1852,8 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateNoteRequest>(create);
   static CreateNoteRequest? _defaultInstance;
 
+  /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+  /// the note is to be created.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2023,6 +1866,7 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The ID to use for this note.
   @$pb.TagNumber(2)
   $core.String get noteId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2035,6 +1879,7 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNoteId() => clearField(2);
 
+  /// The note to create.
   @$pb.TagNumber(3)
   Note get note => $_getN(2);
   @$pb.TagNumber(3)
@@ -2050,59 +1895,44 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
   Note ensureNote() => $_ensure(2);
 }
 
+/// Request to update a note.
 class UpdateNoteRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateNoteRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<Note>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'note',
-        subBuilder: Note.create)
-    ..aOM<$12.FieldMask>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $12.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateNoteRequest._() : super();
   factory UpdateNoteRequest({
     $core.String? name,
     Note? note,
     $12.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (note != null) {
-      _result.note = note;
+      $result.note = note;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateNoteRequest._() : super();
   factory UpdateNoteRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateNoteRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateNoteRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<Note>(2, _omitFieldNames ? '' : 'note', subBuilder: Note.create)
+    ..aOM<$12.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $12.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2112,8 +1942,10 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateNoteRequest copyWith(void Function(UpdateNoteRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateNoteRequest))
-          as UpdateNoteRequest; // ignore: deprecated_member_use
+          as UpdateNoteRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateNoteRequest create() => UpdateNoteRequest._();
   UpdateNoteRequest createEmptyInstance() => create();
@@ -2124,6 +1956,8 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateNoteRequest>(create);
   static UpdateNoteRequest? _defaultInstance;
 
+  /// The name of the note in the form of
+  /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2136,6 +1970,7 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The updated note.
   @$pb.TagNumber(2)
   Note get note => $_getN(1);
   @$pb.TagNumber(2)
@@ -2150,6 +1985,7 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Note ensureNote() => $_ensure(1);
 
+  /// The fields to update.
   @$pb.TagNumber(3)
   $12.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
@@ -2165,67 +2001,48 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   $12.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request to list occurrences for a note.
 class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNoteOccurrencesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListNoteOccurrencesRequest._() : super();
   factory ListNoteOccurrencesRequest({
     $core.String? name,
     $core.String? filter,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListNoteOccurrencesRequest._() : super();
   factory ListNoteOccurrencesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNoteOccurrencesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNoteOccurrencesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2238,8 +2055,10 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
           void Function(ListNoteOccurrencesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListNoteOccurrencesRequest))
-          as ListNoteOccurrencesRequest; // ignore: deprecated_member_use
+          as ListNoteOccurrencesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNoteOccurrencesRequest create() => ListNoteOccurrencesRequest._();
   ListNoteOccurrencesRequest createEmptyInstance() => create();
@@ -2250,6 +2069,8 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNoteOccurrencesRequest>(create);
   static ListNoteOccurrencesRequest? _defaultInstance;
 
+  /// The name of the note to list occurrences for in the form of
+  /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2262,6 +2083,7 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The filter expression.
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2274,6 +2096,7 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
+  /// Number of occurrences to return in the list.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -2286,6 +2109,7 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Token to provide to skip to a particular spot in the list.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2299,50 +2123,40 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(4);
 }
 
+/// Response for listing occurrences for a note.
 class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNoteOccurrencesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Occurrence>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'occurrences',
-        $pb.PbFieldType.PM,
-        subBuilder: Occurrence.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListNoteOccurrencesResponse._() : super();
   factory ListNoteOccurrencesResponse({
     $core.Iterable<Occurrence>? occurrences,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (occurrences != null) {
-      _result.occurrences.addAll(occurrences);
+      $result.occurrences.addAll(occurrences);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListNoteOccurrencesResponse._() : super();
   factory ListNoteOccurrencesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNoteOccurrencesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNoteOccurrencesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Occurrence>(
+        1, _omitFieldNames ? '' : 'occurrences', $pb.PbFieldType.PM,
+        subBuilder: Occurrence.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2355,8 +2169,10 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
           void Function(ListNoteOccurrencesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListNoteOccurrencesResponse))
-          as ListNoteOccurrencesResponse; // ignore: deprecated_member_use
+          as ListNoteOccurrencesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNoteOccurrencesResponse create() =>
       ListNoteOccurrencesResponse._();
@@ -2368,9 +2184,11 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNoteOccurrencesResponse>(create);
   static ListNoteOccurrencesResponse? _defaultInstance;
 
+  /// The occurrences attached to the specified note.
   @$pb.TagNumber(1)
   $core.List<Occurrence> get occurrences => $_getList(0);
 
+  /// Token to provide to skip to a particular spot in the list.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2384,53 +2202,44 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request to create notes in batch.
 class BatchCreateNotesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchCreateNotesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..m<$core.String, Note>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'notes',
-        entryClassName: 'BatchCreateNotesRequest.NotesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: Note.create,
-        packageName: const $pb.PackageName('grafeas.v1beta1'))
-    ..hasRequiredFields = false;
-
-  BatchCreateNotesRequest._() : super();
   factory BatchCreateNotesRequest({
     $core.String? parent,
     $core.Map<$core.String, Note>? notes,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (notes != null) {
-      _result.notes.addAll(notes);
+      $result.notes.addAll(notes);
     }
-    return _result;
+    return $result;
   }
+  BatchCreateNotesRequest._() : super();
   factory BatchCreateNotesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchCreateNotesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchCreateNotesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..m<$core.String, Note>(2, _omitFieldNames ? '' : 'notes',
+        entryClassName: 'BatchCreateNotesRequest.NotesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: Note.create,
+        valueDefaultOrMaker: Note.getDefault,
+        packageName: const $pb.PackageName('grafeas.v1beta1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2442,8 +2251,10 @@ class BatchCreateNotesRequest extends $pb.GeneratedMessage {
   BatchCreateNotesRequest copyWith(
           void Function(BatchCreateNotesRequest) updates) =>
       super.copyWith((message) => updates(message as BatchCreateNotesRequest))
-          as BatchCreateNotesRequest; // ignore: deprecated_member_use
+          as BatchCreateNotesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchCreateNotesRequest create() => BatchCreateNotesRequest._();
   BatchCreateNotesRequest createEmptyInstance() => create();
@@ -2454,6 +2265,8 @@ class BatchCreateNotesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchCreateNotesRequest>(create);
   static BatchCreateNotesRequest? _defaultInstance;
 
+  /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+  /// the notes are to be created.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2466,45 +2279,39 @@ class BatchCreateNotesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The notes to create.
   @$pb.TagNumber(2)
   $core.Map<$core.String, Note> get notes => $_getMap(1);
 }
 
+/// Response for creating notes in batch.
 class BatchCreateNotesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchCreateNotesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Note>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'notes',
-        $pb.PbFieldType.PM,
-        subBuilder: Note.create)
-    ..hasRequiredFields = false;
-
-  BatchCreateNotesResponse._() : super();
   factory BatchCreateNotesResponse({
     $core.Iterable<Note>? notes,
   }) {
-    final _result = create();
+    final $result = create();
     if (notes != null) {
-      _result.notes.addAll(notes);
+      $result.notes.addAll(notes);
     }
-    return _result;
+    return $result;
   }
+  BatchCreateNotesResponse._() : super();
   factory BatchCreateNotesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchCreateNotesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchCreateNotesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Note>(1, _omitFieldNames ? '' : 'notes', $pb.PbFieldType.PM,
+        subBuilder: Note.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2516,8 +2323,10 @@ class BatchCreateNotesResponse extends $pb.GeneratedMessage {
   BatchCreateNotesResponse copyWith(
           void Function(BatchCreateNotesResponse) updates) =>
       super.copyWith((message) => updates(message as BatchCreateNotesResponse))
-          as BatchCreateNotesResponse; // ignore: deprecated_member_use
+          as BatchCreateNotesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchCreateNotesResponse create() => BatchCreateNotesResponse._();
   BatchCreateNotesResponse createEmptyInstance() => create();
@@ -2528,54 +2337,45 @@ class BatchCreateNotesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchCreateNotesResponse>(create);
   static BatchCreateNotesResponse? _defaultInstance;
 
+  /// The notes that were created.
   @$pb.TagNumber(1)
   $core.List<Note> get notes => $_getList(0);
 }
 
+/// Request to create occurrences in batch.
 class BatchCreateOccurrencesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchCreateOccurrencesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..pc<Occurrence>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'occurrences',
-        $pb.PbFieldType.PM,
-        subBuilder: Occurrence.create)
-    ..hasRequiredFields = false;
-
-  BatchCreateOccurrencesRequest._() : super();
   factory BatchCreateOccurrencesRequest({
     $core.String? parent,
     $core.Iterable<Occurrence>? occurrences,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (occurrences != null) {
-      _result.occurrences.addAll(occurrences);
+      $result.occurrences.addAll(occurrences);
     }
-    return _result;
+    return $result;
   }
+  BatchCreateOccurrencesRequest._() : super();
   factory BatchCreateOccurrencesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchCreateOccurrencesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchCreateOccurrencesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..pc<Occurrence>(
+        2, _omitFieldNames ? '' : 'occurrences', $pb.PbFieldType.PM,
+        subBuilder: Occurrence.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2588,8 +2388,10 @@ class BatchCreateOccurrencesRequest extends $pb.GeneratedMessage {
           void Function(BatchCreateOccurrencesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as BatchCreateOccurrencesRequest))
-          as BatchCreateOccurrencesRequest; // ignore: deprecated_member_use
+          as BatchCreateOccurrencesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchCreateOccurrencesRequest create() =>
       BatchCreateOccurrencesRequest._();
@@ -2601,6 +2403,8 @@ class BatchCreateOccurrencesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchCreateOccurrencesRequest>(create);
   static BatchCreateOccurrencesRequest? _defaultInstance;
 
+  /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+  /// the occurrences are to be created.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2613,45 +2417,40 @@ class BatchCreateOccurrencesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The occurrences to create.
   @$pb.TagNumber(2)
   $core.List<Occurrence> get occurrences => $_getList(1);
 }
 
+/// Response for creating occurrences in batch.
 class BatchCreateOccurrencesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchCreateOccurrencesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Occurrence>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'occurrences',
-        $pb.PbFieldType.PM,
-        subBuilder: Occurrence.create)
-    ..hasRequiredFields = false;
-
-  BatchCreateOccurrencesResponse._() : super();
   factory BatchCreateOccurrencesResponse({
     $core.Iterable<Occurrence>? occurrences,
   }) {
-    final _result = create();
+    final $result = create();
     if (occurrences != null) {
-      _result.occurrences.addAll(occurrences);
+      $result.occurrences.addAll(occurrences);
     }
-    return _result;
+    return $result;
   }
+  BatchCreateOccurrencesResponse._() : super();
   factory BatchCreateOccurrencesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchCreateOccurrencesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchCreateOccurrencesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Occurrence>(
+        1, _omitFieldNames ? '' : 'occurrences', $pb.PbFieldType.PM,
+        subBuilder: Occurrence.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2664,8 +2463,10 @@ class BatchCreateOccurrencesResponse extends $pb.GeneratedMessage {
           void Function(BatchCreateOccurrencesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as BatchCreateOccurrencesResponse))
-          as BatchCreateOccurrencesResponse; // ignore: deprecated_member_use
+          as BatchCreateOccurrencesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchCreateOccurrencesResponse create() =>
       BatchCreateOccurrencesResponse._();
@@ -2677,46 +2478,27 @@ class BatchCreateOccurrencesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchCreateOccurrencesResponse>(create);
   static BatchCreateOccurrencesResponse? _defaultInstance;
 
+  /// The occurrences that were created.
   @$pb.TagNumber(1)
   $core.List<Occurrence> get occurrences => $_getList(0);
 }
 
+/// Request to get a vulnerability summary for some set of occurrences.
 class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetVulnerabilityOccurrencesSummaryRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..hasRequiredFields = false;
-
-  GetVulnerabilityOccurrencesSummaryRequest._() : super();
   factory GetVulnerabilityOccurrencesSummaryRequest({
     $core.String? parent,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  GetVulnerabilityOccurrencesSummaryRequest._() : super();
   factory GetVulnerabilityOccurrencesSummaryRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2724,6 +2506,16 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
   factory GetVulnerabilityOccurrencesSummaryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetVulnerabilityOccurrencesSummaryRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2736,8 +2528,10 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
           void Function(GetVulnerabilityOccurrencesSummaryRequest) updates) =>
       super.copyWith((message) =>
               updates(message as GetVulnerabilityOccurrencesSummaryRequest))
-          as GetVulnerabilityOccurrencesSummaryRequest; // ignore: deprecated_member_use
+          as GetVulnerabilityOccurrencesSummaryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetVulnerabilityOccurrencesSummaryRequest create() =>
       GetVulnerabilityOccurrencesSummaryRequest._();
@@ -2751,6 +2545,8 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
           GetVulnerabilityOccurrencesSummaryRequest>(create);
   static GetVulnerabilityOccurrencesSummaryRequest? _defaultInstance;
 
+  /// The name of the project to get a vulnerability summary for in the form of
+  /// `projects/[PROJECT_ID]`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2763,6 +2559,7 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The filter expression.
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2776,66 +2573,31 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(2);
 }
 
+/// Per resource and severity counts of fixable and total vulnerabilities.
 class VulnerabilityOccurrencesSummary_FixableTotalByDigest
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VulnerabilityOccurrencesSummary.FixableTotalByDigest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..aOM<Resource>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resource',
-        subBuilder: Resource.create)
-    ..e<$3.Severity>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'severity',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $3.Severity.SEVERITY_UNSPECIFIED,
-        valueOf: $3.Severity.valueOf,
-        enumValues: $3.Severity.values)
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fixableCount')
-    ..aInt64(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'totalCount')
-    ..hasRequiredFields = false;
-
-  VulnerabilityOccurrencesSummary_FixableTotalByDigest._() : super();
   factory VulnerabilityOccurrencesSummary_FixableTotalByDigest({
     Resource? resource,
     $3.Severity? severity,
     $fixnum.Int64? fixableCount,
     $fixnum.Int64? totalCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (resource != null) {
-      _result.resource = resource;
+      $result.resource = resource;
     }
     if (severity != null) {
-      _result.severity = severity;
+      $result.severity = severity;
     }
     if (fixableCount != null) {
-      _result.fixableCount = fixableCount;
+      $result.fixableCount = fixableCount;
     }
     if (totalCount != null) {
-      _result.totalCount = totalCount;
+      $result.totalCount = totalCount;
     }
-    return _result;
+    return $result;
   }
+  VulnerabilityOccurrencesSummary_FixableTotalByDigest._() : super();
   factory VulnerabilityOccurrencesSummary_FixableTotalByDigest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2844,6 +2606,24 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'VulnerabilityOccurrencesSummary.FixableTotalByDigest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<Resource>(1, _omitFieldNames ? '' : 'resource',
+        subBuilder: Resource.create)
+    ..e<$3.Severity>(2, _omitFieldNames ? '' : 'severity', $pb.PbFieldType.OE,
+        defaultOrMaker: $3.Severity.SEVERITY_UNSPECIFIED,
+        valueOf: $3.Severity.valueOf,
+        enumValues: $3.Severity.values)
+    ..aInt64(3, _omitFieldNames ? '' : 'fixableCount')
+    ..aInt64(4, _omitFieldNames ? '' : 'totalCount')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2858,8 +2638,10 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
               updates) =>
       super.copyWith((message) => updates(
               message as VulnerabilityOccurrencesSummary_FixableTotalByDigest))
-          as VulnerabilityOccurrencesSummary_FixableTotalByDigest; // ignore: deprecated_member_use
+          as VulnerabilityOccurrencesSummary_FixableTotalByDigest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityOccurrencesSummary_FixableTotalByDigest create() =>
       VulnerabilityOccurrencesSummary_FixableTotalByDigest._();
@@ -2874,6 +2656,7 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
           VulnerabilityOccurrencesSummary_FixableTotalByDigest>(create);
   static VulnerabilityOccurrencesSummary_FixableTotalByDigest? _defaultInstance;
 
+  /// The affected resource.
   @$pb.TagNumber(1)
   Resource get resource => $_getN(0);
   @$pb.TagNumber(1)
@@ -2888,6 +2671,8 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   @$pb.TagNumber(1)
   Resource ensureResource() => $_ensure(0);
 
+  /// The severity for this count. SEVERITY_UNSPECIFIED indicates total across
+  /// all severities.
   @$pb.TagNumber(2)
   $3.Severity get severity => $_getN(1);
   @$pb.TagNumber(2)
@@ -2900,6 +2685,7 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   @$pb.TagNumber(2)
   void clearSeverity() => clearField(2);
 
+  /// The number of fixable vulnerabilities associated with this resource.
   @$pb.TagNumber(3)
   $fixnum.Int64 get fixableCount => $_getI64(2);
   @$pb.TagNumber(3)
@@ -2912,6 +2698,7 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   @$pb.TagNumber(3)
   void clearFixableCount() => clearField(3);
 
+  /// The total number of vulnerabilities associated with this resource.
   @$pb.TagNumber(4)
   $fixnum.Int64 get totalCount => $_getI64(3);
   @$pb.TagNumber(4)
@@ -2925,42 +2712,37 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   void clearTotalCount() => clearField(4);
 }
 
+/// A summary of how many vulnerability occurrences there are per resource and
+/// severity type.
 class VulnerabilityOccurrencesSummary extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VulnerabilityOccurrencesSummary',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<VulnerabilityOccurrencesSummary_FixableTotalByDigest>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'counts',
-        $pb.PbFieldType.PM,
-        subBuilder: VulnerabilityOccurrencesSummary_FixableTotalByDigest.create)
-    ..hasRequiredFields = false;
-
-  VulnerabilityOccurrencesSummary._() : super();
   factory VulnerabilityOccurrencesSummary({
     $core.Iterable<VulnerabilityOccurrencesSummary_FixableTotalByDigest>?
         counts,
   }) {
-    final _result = create();
+    final $result = create();
     if (counts != null) {
-      _result.counts.addAll(counts);
+      $result.counts.addAll(counts);
     }
-    return _result;
+    return $result;
   }
+  VulnerabilityOccurrencesSummary._() : super();
   factory VulnerabilityOccurrencesSummary.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory VulnerabilityOccurrencesSummary.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VulnerabilityOccurrencesSummary',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<VulnerabilityOccurrencesSummary_FixableTotalByDigest>(
+        1, _omitFieldNames ? '' : 'counts', $pb.PbFieldType.PM,
+        subBuilder: VulnerabilityOccurrencesSummary_FixableTotalByDigest.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2973,8 +2755,10 @@ class VulnerabilityOccurrencesSummary extends $pb.GeneratedMessage {
           void Function(VulnerabilityOccurrencesSummary) updates) =>
       super.copyWith(
               (message) => updates(message as VulnerabilityOccurrencesSummary))
-          as VulnerabilityOccurrencesSummary; // ignore: deprecated_member_use
+          as VulnerabilityOccurrencesSummary;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityOccurrencesSummary create() =>
       VulnerabilityOccurrencesSummary._();
@@ -2987,7 +2771,12 @@ class VulnerabilityOccurrencesSummary extends $pb.GeneratedMessage {
           create);
   static VulnerabilityOccurrencesSummary? _defaultInstance;
 
+  /// A listing by resource of the number of fixable and total vulnerabilities.
   @$pb.TagNumber(1)
   $core.List<VulnerabilityOccurrencesSummary_FixableTotalByDigest> get counts =>
       $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

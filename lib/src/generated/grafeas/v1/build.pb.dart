@@ -1,51 +1,49 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/build.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'provenance.pb.dart' as $0;
 import 'intoto_provenance.pb.dart' as $1;
 import 'intoto_statement.pb.dart' as $2;
+import 'provenance.pb.dart' as $0;
 
+/// Note holding the version of the provider's builder and the signature of the
+/// provenance message in the build details occurrence.
 class BuildNote extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildNote',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'builderVersion')
-    ..hasRequiredFields = false;
-
-  BuildNote._() : super();
   factory BuildNote({
     $core.String? builderVersion,
   }) {
-    final _result = create();
+    final $result = create();
     if (builderVersion != null) {
-      _result.builderVersion = builderVersion;
+      $result.builderVersion = builderVersion;
     }
-    return _result;
+    return $result;
   }
+  BuildNote._() : super();
   factory BuildNote.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BuildNote.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildNote',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'builderVersion')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -54,9 +52,10 @@ class BuildNote extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   BuildNote copyWith(void Function(BuildNote) updates) =>
-      super.copyWith((message) => updates(message as BuildNote))
-          as BuildNote; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as BuildNote)) as BuildNote;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildNote create() => BuildNote._();
   BuildNote createEmptyInstance() => create();
@@ -66,6 +65,7 @@ class BuildNote extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BuildNote>(create);
   static BuildNote? _defaultInstance;
 
+  /// Required. Immutable. Version of the builder which produced this build.
   @$pb.TagNumber(1)
   $core.String get builderVersion => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -79,69 +79,57 @@ class BuildNote extends $pb.GeneratedMessage {
   void clearBuilderVersion() => clearField(1);
 }
 
+/// Details of a build occurrence.
 class BuildOccurrence extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BuildOccurrence',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.BuildProvenance>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'provenance',
-        subBuilder: $0.BuildProvenance.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'provenanceBytes')
-    ..aOM<$1.InTotoProvenance>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intotoProvenance',
-        subBuilder: $1.InTotoProvenance.create)
-    ..aOM<$2.InTotoStatement>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intotoStatement',
-        subBuilder: $2.InTotoStatement.create)
-    ..hasRequiredFields = false;
-
-  BuildOccurrence._() : super();
   factory BuildOccurrence({
     $0.BuildProvenance? provenance,
     $core.String? provenanceBytes,
     $1.InTotoProvenance? intotoProvenance,
     $2.InTotoStatement? intotoStatement,
+    $2.InTotoSlsaProvenanceV1? inTotoSlsaProvenanceV1,
   }) {
-    final _result = create();
+    final $result = create();
     if (provenance != null) {
-      _result.provenance = provenance;
+      $result.provenance = provenance;
     }
     if (provenanceBytes != null) {
-      _result.provenanceBytes = provenanceBytes;
+      $result.provenanceBytes = provenanceBytes;
     }
     if (intotoProvenance != null) {
-      _result.intotoProvenance = intotoProvenance;
+      $result.intotoProvenance = intotoProvenance;
     }
     if (intotoStatement != null) {
-      _result.intotoStatement = intotoStatement;
+      $result.intotoStatement = intotoStatement;
     }
-    return _result;
+    if (inTotoSlsaProvenanceV1 != null) {
+      $result.inTotoSlsaProvenanceV1 = inTotoSlsaProvenanceV1;
+    }
+    return $result;
   }
+  BuildOccurrence._() : super();
   factory BuildOccurrence.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BuildOccurrence.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BuildOccurrence',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.BuildProvenance>(1, _omitFieldNames ? '' : 'provenance',
+        subBuilder: $0.BuildProvenance.create)
+    ..aOS(2, _omitFieldNames ? '' : 'provenanceBytes')
+    ..aOM<$1.InTotoProvenance>(3, _omitFieldNames ? '' : 'intotoProvenance',
+        subBuilder: $1.InTotoProvenance.create)
+    ..aOM<$2.InTotoStatement>(4, _omitFieldNames ? '' : 'intotoStatement',
+        subBuilder: $2.InTotoStatement.create)
+    ..aOM<$2.InTotoSlsaProvenanceV1>(
+        5, _omitFieldNames ? '' : 'inTotoSlsaProvenanceV1',
+        subBuilder: $2.InTotoSlsaProvenanceV1.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -151,8 +139,10 @@ class BuildOccurrence extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BuildOccurrence copyWith(void Function(BuildOccurrence) updates) =>
       super.copyWith((message) => updates(message as BuildOccurrence))
-          as BuildOccurrence; // ignore: deprecated_member_use
+          as BuildOccurrence;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BuildOccurrence create() => BuildOccurrence._();
   BuildOccurrence createEmptyInstance() => create();
@@ -163,6 +153,7 @@ class BuildOccurrence extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BuildOccurrence>(create);
   static BuildOccurrence? _defaultInstance;
 
+  /// The actual provenance for the build.
   @$pb.TagNumber(1)
   $0.BuildProvenance get provenance => $_getN(0);
   @$pb.TagNumber(1)
@@ -177,6 +168,17 @@ class BuildOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.BuildProvenance ensureProvenance() => $_ensure(0);
 
+  ///  Serialized JSON representation of the provenance, used in generating the
+  ///  build signature in the corresponding build note. After verifying the
+  ///  signature, `provenance_bytes` can be unmarshalled and compared to the
+  ///  provenance to confirm that it is unchanged. A base64-encoded string
+  ///  representation of the provenance bytes is used for the signature in order
+  ///  to interoperate with openssl which expects this format for signature
+  ///  verification.
+  ///
+  ///  The serialized form is captured both to avoid ambiguity in how the
+  ///  provenance is marshalled to json as well to prevent incompatibilities with
+  ///  future changes.
   @$pb.TagNumber(2)
   $core.String get provenanceBytes => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -189,6 +191,8 @@ class BuildOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProvenanceBytes() => clearField(2);
 
+  /// Deprecated. See InTotoStatement for the replacement.
+  /// In-toto Provenance representation as defined in spec.
   @$pb.TagNumber(3)
   $1.InTotoProvenance get intotoProvenance => $_getN(2);
   @$pb.TagNumber(3)
@@ -203,6 +207,10 @@ class BuildOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.InTotoProvenance ensureIntotoProvenance() => $_ensure(2);
 
+  /// In-toto Statement representation as defined in spec.
+  /// The intoto_statement can contain any type of provenance. The serialized
+  /// payload of the statement can be stored and signed in the Occurrence's
+  /// envelope.
   @$pb.TagNumber(4)
   $2.InTotoStatement get intotoStatement => $_getN(3);
   @$pb.TagNumber(4)
@@ -216,4 +224,26 @@ class BuildOccurrence extends $pb.GeneratedMessage {
   void clearIntotoStatement() => clearField(4);
   @$pb.TagNumber(4)
   $2.InTotoStatement ensureIntotoStatement() => $_ensure(3);
+
+  /// In-Toto Slsa Provenance V1 represents a slsa provenance meeting the slsa
+  /// spec, wrapped in an in-toto statement. This allows for direct
+  /// jsonification of a to-spec in-toto slsa statement with a to-spec
+  /// slsa provenance.
+  @$pb.TagNumber(5)
+  $2.InTotoSlsaProvenanceV1 get inTotoSlsaProvenanceV1 => $_getN(4);
+  @$pb.TagNumber(5)
+  set inTotoSlsaProvenanceV1($2.InTotoSlsaProvenanceV1 v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasInTotoSlsaProvenanceV1() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearInTotoSlsaProvenanceV1() => clearField(5);
+  @$pb.TagNumber(5)
+  $2.InTotoSlsaProvenanceV1 ensureInTotoSlsaProvenanceV1() => $_ensure(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

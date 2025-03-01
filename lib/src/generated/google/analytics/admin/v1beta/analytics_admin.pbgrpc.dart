@@ -1,20 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/analytics/admin/v1beta/analytics_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../../../protobuf/empty.pb.dart' as $2;
 import 'analytics_admin.pb.dart' as $0;
 import 'resources.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+
 export 'analytics_admin.pb.dart';
 
+@$pb.GrpcServiceName('google.analytics.admin.v1beta.AnalyticsAdminService')
 class AnalyticsAdminServiceClient extends $grpc.Client {
   static final _$getAccount =
       $grpc.ClientMethod<$0.GetAccountRequest, $1.Account>(
@@ -172,6 +179,11 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       '/google.analytics.admin.v1beta.AnalyticsAdminService/CreateConversionEvent',
       ($0.CreateConversionEventRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ConversionEvent.fromBuffer(value));
+  static final _$updateConversionEvent = $grpc.ClientMethod<
+          $0.UpdateConversionEventRequest, $1.ConversionEvent>(
+      '/google.analytics.admin.v1beta.AnalyticsAdminService/UpdateConversionEvent',
+      ($0.UpdateConversionEventRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ConversionEvent.fromBuffer(value));
   static final _$getConversionEvent = $grpc.ClientMethod<
           $0.GetConversionEventRequest, $1.ConversionEvent>(
       '/google.analytics.admin.v1beta.AnalyticsAdminService/GetConversionEvent',
@@ -188,6 +200,32 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       ($0.ListConversionEventsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListConversionEventsResponse.fromBuffer(value));
+  static final _$createKeyEvent =
+      $grpc.ClientMethod<$0.CreateKeyEventRequest, $1.KeyEvent>(
+          '/google.analytics.admin.v1beta.AnalyticsAdminService/CreateKeyEvent',
+          ($0.CreateKeyEventRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.KeyEvent.fromBuffer(value));
+  static final _$updateKeyEvent =
+      $grpc.ClientMethod<$0.UpdateKeyEventRequest, $1.KeyEvent>(
+          '/google.analytics.admin.v1beta.AnalyticsAdminService/UpdateKeyEvent',
+          ($0.UpdateKeyEventRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.KeyEvent.fromBuffer(value));
+  static final _$getKeyEvent =
+      $grpc.ClientMethod<$0.GetKeyEventRequest, $1.KeyEvent>(
+          '/google.analytics.admin.v1beta.AnalyticsAdminService/GetKeyEvent',
+          ($0.GetKeyEventRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.KeyEvent.fromBuffer(value));
+  static final _$deleteKeyEvent =
+      $grpc.ClientMethod<$0.DeleteKeyEventRequest, $2.Empty>(
+          '/google.analytics.admin.v1beta.AnalyticsAdminService/DeleteKeyEvent',
+          ($0.DeleteKeyEventRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+  static final _$listKeyEvents =
+      $grpc.ClientMethod<$0.ListKeyEventsRequest, $0.ListKeyEventsResponse>(
+          '/google.analytics.admin.v1beta.AnalyticsAdminService/ListKeyEvents',
+          ($0.ListKeyEventsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ListKeyEventsResponse.fromBuffer(value));
   static final _$createCustomDimension = $grpc.ClientMethod<
           $0.CreateCustomDimensionRequest, $1.CustomDimension>(
       '/google.analytics.admin.v1beta.AnalyticsAdminService/CreateCustomDimension',
@@ -463,6 +501,12 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
     return $createUnaryCall(_$createConversionEvent, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.ConversionEvent> updateConversionEvent(
+      $0.UpdateConversionEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateConversionEvent, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.ConversionEvent> getConversionEvent(
       $0.GetConversionEventRequest request,
       {$grpc.CallOptions? options}) {
@@ -479,6 +523,35 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
       $0.ListConversionEventsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listConversionEvents, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.KeyEvent> createKeyEvent(
+      $0.CreateKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.KeyEvent> updateKeyEvent(
+      $0.UpdateKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.KeyEvent> getKeyEvent($0.GetKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> deleteKeyEvent(
+      $0.DeleteKeyEventRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteKeyEvent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListKeyEventsResponse> listKeyEvents(
+      $0.ListKeyEventsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listKeyEvents, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.CustomDimension> createCustomDimension(
@@ -593,6 +666,7 @@ class AnalyticsAdminServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.analytics.admin.v1beta.AnalyticsAdminService')
 abstract class AnalyticsAdminServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.analytics.admin.v1beta.AnalyticsAdminService';
@@ -833,6 +907,15 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CreateConversionEventRequest.fromBuffer(value),
         ($1.ConversionEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateConversionEventRequest,
+            $1.ConversionEvent>(
+        'UpdateConversionEvent',
+        updateConversionEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateConversionEventRequest.fromBuffer(value),
+        ($1.ConversionEvent value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.GetConversionEventRequest, $1.ConversionEvent>(
             'GetConversionEvent',
@@ -859,6 +942,47 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListConversionEventsRequest.fromBuffer(value),
         ($0.ListConversionEventsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateKeyEventRequest, $1.KeyEvent>(
+        'CreateKeyEvent',
+        createKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateKeyEventRequest.fromBuffer(value),
+        ($1.KeyEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateKeyEventRequest, $1.KeyEvent>(
+        'UpdateKeyEvent',
+        updateKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateKeyEventRequest.fromBuffer(value),
+        ($1.KeyEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetKeyEventRequest, $1.KeyEvent>(
+        'GetKeyEvent',
+        getKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetKeyEventRequest.fromBuffer(value),
+        ($1.KeyEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteKeyEventRequest, $2.Empty>(
+        'DeleteKeyEvent',
+        deleteKeyEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteKeyEventRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListKeyEventsRequest, $0.ListKeyEventsResponse>(
+            'ListKeyEvents',
+            listKeyEvents_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListKeyEventsRequest.fromBuffer(value),
+            ($0.ListKeyEventsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.CreateCustomDimensionRequest,
             $1.CustomDimension>(
         'CreateCustomDimension',
@@ -1176,6 +1300,12 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
     return createConversionEvent(call, await request);
   }
 
+  $async.Future<$1.ConversionEvent> updateConversionEvent_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateConversionEventRequest> request) async {
+    return updateConversionEvent(call, await request);
+  }
+
   $async.Future<$1.ConversionEvent> getConversionEvent_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetConversionEventRequest> request) async {
@@ -1191,6 +1321,32 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call,
       $async.Future<$0.ListConversionEventsRequest> request) async {
     return listConversionEvents(call, await request);
+  }
+
+  $async.Future<$1.KeyEvent> createKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateKeyEventRequest> request) async {
+    return createKeyEvent(call, await request);
+  }
+
+  $async.Future<$1.KeyEvent> updateKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateKeyEventRequest> request) async {
+    return updateKeyEvent(call, await request);
+  }
+
+  $async.Future<$1.KeyEvent> getKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetKeyEventRequest> request) async {
+    return getKeyEvent(call, await request);
+  }
+
+  $async.Future<$2.Empty> deleteKeyEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteKeyEventRequest> request) async {
+    return deleteKeyEvent(call, await request);
+  }
+
+  $async.Future<$0.ListKeyEventsResponse> listKeyEvents_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListKeyEventsRequest> request) async {
+    return listKeyEvents(call, await request);
   }
 
   $async.Future<$1.CustomDimension> createCustomDimension_Pre(
@@ -1351,12 +1507,24 @@ abstract class AnalyticsAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SearchChangeHistoryEventsRequest request);
   $async.Future<$1.ConversionEvent> createConversionEvent(
       $grpc.ServiceCall call, $0.CreateConversionEventRequest request);
+  $async.Future<$1.ConversionEvent> updateConversionEvent(
+      $grpc.ServiceCall call, $0.UpdateConversionEventRequest request);
   $async.Future<$1.ConversionEvent> getConversionEvent(
       $grpc.ServiceCall call, $0.GetConversionEventRequest request);
   $async.Future<$2.Empty> deleteConversionEvent(
       $grpc.ServiceCall call, $0.DeleteConversionEventRequest request);
   $async.Future<$0.ListConversionEventsResponse> listConversionEvents(
       $grpc.ServiceCall call, $0.ListConversionEventsRequest request);
+  $async.Future<$1.KeyEvent> createKeyEvent(
+      $grpc.ServiceCall call, $0.CreateKeyEventRequest request);
+  $async.Future<$1.KeyEvent> updateKeyEvent(
+      $grpc.ServiceCall call, $0.UpdateKeyEventRequest request);
+  $async.Future<$1.KeyEvent> getKeyEvent(
+      $grpc.ServiceCall call, $0.GetKeyEventRequest request);
+  $async.Future<$2.Empty> deleteKeyEvent(
+      $grpc.ServiceCall call, $0.DeleteKeyEventRequest request);
+  $async.Future<$0.ListKeyEventsResponse> listKeyEvents(
+      $grpc.ServiceCall call, $0.ListKeyEventsRequest request);
   $async.Future<$1.CustomDimension> createCustomDimension(
       $grpc.ServiceCall call, $0.CreateCustomDimensionRequest request);
   $async.Future<$1.CustomDimension> updateCustomDimension(

@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,60 +17,47 @@ import '../../../protobuf/timestamp.pb.dart' as $0;
 
 export 'common.pbenum.dart';
 
+/// Encapsulates progress related information for a Cloud Bigtable long
+/// running operation.
 class OperationProgress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationProgress',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressPercent',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  OperationProgress._() : super();
   factory OperationProgress({
     $core.int? progressPercent,
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (progressPercent != null) {
-      _result.progressPercent = progressPercent;
+      $result.progressPercent = progressPercent;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
-    return _result;
+    return $result;
   }
+  OperationProgress._() : super();
   factory OperationProgress.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationProgress.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationProgress',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'progressPercent', $pb.PbFieldType.O3)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -76,8 +67,10 @@ class OperationProgress extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationProgress copyWith(void Function(OperationProgress) updates) =>
       super.copyWith((message) => updates(message as OperationProgress))
-          as OperationProgress; // ignore: deprecated_member_use
+          as OperationProgress;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationProgress create() => OperationProgress._();
   OperationProgress createEmptyInstance() => create();
@@ -88,6 +81,8 @@ class OperationProgress extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OperationProgress>(create);
   static OperationProgress? _defaultInstance;
 
+  /// Percent completion of the operation.
+  /// Values are between 0 and 100 inclusive.
   @$pb.TagNumber(1)
   $core.int get progressPercent => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -100,6 +95,7 @@ class OperationProgress extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProgressPercent() => clearField(1);
 
+  /// Time the request was received.
   @$pb.TagNumber(2)
   $0.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -114,6 +110,8 @@ class OperationProgress extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureStartTime() => $_ensure(1);
 
+  /// If set, the time at which this operation failed or was completed
+  /// successfully.
   @$pb.TagNumber(3)
   $0.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -128,3 +126,7 @@ class OperationProgress extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp ensureEndTime() => $_ensure(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

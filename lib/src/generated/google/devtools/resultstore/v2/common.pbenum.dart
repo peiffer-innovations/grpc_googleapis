@@ -1,104 +1,45 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// These correspond to the prefix of the rule name. Eg cc_test has language CC.
 class Language extends $pb.ProtobufEnum {
-  static const Language LANGUAGE_UNSPECIFIED = Language._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LANGUAGE_UNSPECIFIED');
-  static const Language NONE = Language._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NONE');
-  static const Language ANDROID = Language._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ANDROID');
-  static const Language AS = Language._(3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'AS');
-  static const Language CC = Language._(4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CC');
-  static const Language CSS = Language._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CSS');
-  static const Language DART = Language._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DART');
-  static const Language GO = Language._(7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'GO');
-  static const Language GWT = Language._(
-      8,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'GWT');
-  static const Language HASKELL = Language._(
-      9,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'HASKELL');
-  static const Language JAVA = Language._(
-      10,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JAVA');
-  static const Language JS = Language._(11,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'JS');
-  static const Language LISP = Language._(
-      12,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LISP');
-  static const Language OBJC = Language._(
-      13,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OBJC');
-  static const Language PY = Language._(14,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'PY');
-  static const Language SH = Language._(15,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SH');
-  static const Language SWIFT = Language._(
-      16,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SWIFT');
-  static const Language TS = Language._(18,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TS');
-  static const Language WEB = Language._(
-      19,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'WEB');
-  static const Language SCALA = Language._(
-      20,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCALA');
-  static const Language PROTO = Language._(
-      21,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PROTO');
-  static const Language XML = Language._(
-      22,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'XML');
+  static const Language LANGUAGE_UNSPECIFIED =
+      Language._(0, _omitEnumNames ? '' : 'LANGUAGE_UNSPECIFIED');
+  static const Language NONE = Language._(1, _omitEnumNames ? '' : 'NONE');
+  static const Language ANDROID =
+      Language._(2, _omitEnumNames ? '' : 'ANDROID');
+  static const Language AS = Language._(3, _omitEnumNames ? '' : 'AS');
+  static const Language CC = Language._(4, _omitEnumNames ? '' : 'CC');
+  static const Language CSS = Language._(5, _omitEnumNames ? '' : 'CSS');
+  static const Language DART = Language._(6, _omitEnumNames ? '' : 'DART');
+  static const Language GO = Language._(7, _omitEnumNames ? '' : 'GO');
+  static const Language GWT = Language._(8, _omitEnumNames ? '' : 'GWT');
+  static const Language HASKELL =
+      Language._(9, _omitEnumNames ? '' : 'HASKELL');
+  static const Language JAVA = Language._(10, _omitEnumNames ? '' : 'JAVA');
+  static const Language JS = Language._(11, _omitEnumNames ? '' : 'JS');
+  static const Language LISP = Language._(12, _omitEnumNames ? '' : 'LISP');
+  static const Language OBJC = Language._(13, _omitEnumNames ? '' : 'OBJC');
+  static const Language PY = Language._(14, _omitEnumNames ? '' : 'PY');
+  static const Language SH = Language._(15, _omitEnumNames ? '' : 'SH');
+  static const Language SWIFT = Language._(16, _omitEnumNames ? '' : 'SWIFT');
+  static const Language TS = Language._(18, _omitEnumNames ? '' : 'TS');
+  static const Language WEB = Language._(19, _omitEnumNames ? '' : 'WEB');
+  static const Language SCALA = Language._(20, _omitEnumNames ? '' : 'SCALA');
+  static const Language PROTO = Language._(21, _omitEnumNames ? '' : 'PROTO');
+  static const Language XML = Language._(22, _omitEnumNames ? '' : 'XML');
 
   static const $core.List<Language> values = <Language>[
     LANGUAGE_UNSPECIFIED,
@@ -132,77 +73,28 @@ class Language extends $pb.ProtobufEnum {
   const Language._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Status of a resource.
 class Status extends $pb.ProtobufEnum {
-  static const Status STATUS_UNSPECIFIED = Status._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STATUS_UNSPECIFIED');
-  static const Status BUILDING = Status._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'BUILDING');
-  static const Status BUILT = Status._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'BUILT');
-  static const Status FAILED_TO_BUILD = Status._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILED_TO_BUILD');
-  static const Status TESTING = Status._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TESTING');
-  static const Status PASSED = Status._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PASSED');
-  static const Status FAILED = Status._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILED');
-  static const Status TIMED_OUT = Status._(
-      7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TIMED_OUT');
-  static const Status CANCELLED = Status._(
-      8,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CANCELLED');
-  static const Status TOOL_FAILED = Status._(
-      9,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TOOL_FAILED');
-  static const Status INCOMPLETE = Status._(
-      10,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'INCOMPLETE');
-  static const Status FLAKY = Status._(
-      11,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FLAKY');
-  static const Status UNKNOWN = Status._(
-      12,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNKNOWN');
-  static const Status SKIPPED = Status._(
-      13,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SKIPPED');
+  static const Status STATUS_UNSPECIFIED =
+      Status._(0, _omitEnumNames ? '' : 'STATUS_UNSPECIFIED');
+  static const Status BUILDING = Status._(1, _omitEnumNames ? '' : 'BUILDING');
+  static const Status BUILT = Status._(2, _omitEnumNames ? '' : 'BUILT');
+  static const Status FAILED_TO_BUILD =
+      Status._(3, _omitEnumNames ? '' : 'FAILED_TO_BUILD');
+  static const Status TESTING = Status._(4, _omitEnumNames ? '' : 'TESTING');
+  static const Status PASSED = Status._(5, _omitEnumNames ? '' : 'PASSED');
+  static const Status FAILED = Status._(6, _omitEnumNames ? '' : 'FAILED');
+  static const Status TIMED_OUT =
+      Status._(7, _omitEnumNames ? '' : 'TIMED_OUT');
+  static const Status CANCELLED =
+      Status._(8, _omitEnumNames ? '' : 'CANCELLED');
+  static const Status TOOL_FAILED =
+      Status._(9, _omitEnumNames ? '' : 'TOOL_FAILED');
+  static const Status INCOMPLETE =
+      Status._(10, _omitEnumNames ? '' : 'INCOMPLETE');
+  static const Status FLAKY = Status._(11, _omitEnumNames ? '' : 'FLAKY');
+  static const Status UNKNOWN = Status._(12, _omitEnumNames ? '' : 'UNKNOWN');
+  static const Status SKIPPED = Status._(13, _omitEnumNames ? '' : 'SKIPPED');
 
   static const $core.List<Status> values = <Status>[
     STATUS_UNSPECIFIED,
@@ -228,27 +120,17 @@ class Status extends $pb.ProtobufEnum {
   const Status._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Indicates the upload status of the invocation, whether it is
+/// post-processing, or immutable, etc.
 class UploadStatus extends $pb.ProtobufEnum {
-  static const UploadStatus UPLOAD_STATUS_UNSPECIFIED = UploadStatus._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UPLOAD_STATUS_UNSPECIFIED');
-  static const UploadStatus UPLOADING = UploadStatus._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UPLOADING');
-  static const UploadStatus POST_PROCESSING = UploadStatus._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'POST_PROCESSING');
-  static const UploadStatus IMMUTABLE = UploadStatus._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMMUTABLE');
+  static const UploadStatus UPLOAD_STATUS_UNSPECIFIED =
+      UploadStatus._(0, _omitEnumNames ? '' : 'UPLOAD_STATUS_UNSPECIFIED');
+  static const UploadStatus UPLOADING =
+      UploadStatus._(1, _omitEnumNames ? '' : 'UPLOADING');
+  static const UploadStatus POST_PROCESSING =
+      UploadStatus._(2, _omitEnumNames ? '' : 'POST_PROCESSING');
+  static const UploadStatus IMMUTABLE =
+      UploadStatus._(3, _omitEnumNames ? '' : 'IMMUTABLE');
 
   static const $core.List<UploadStatus> values = <UploadStatus>[
     UPLOAD_STATUS_UNSPECIFIED,
@@ -263,3 +145,5 @@ class UploadStatus extends $pb.ProtobufEnum {
 
   const UploadStatus._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

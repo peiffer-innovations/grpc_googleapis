@@ -1,38 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/account_linking.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The type of Account Linking to perform.
 class AccountLinking_LinkingType extends $pb.ProtobufEnum {
   static const AccountLinking_LinkingType LINKING_TYPE_UNSPECIFIED =
       AccountLinking_LinkingType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LINKING_TYPE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'LINKING_TYPE_UNSPECIFIED');
   static const AccountLinking_LinkingType GOOGLE_SIGN_IN =
-      AccountLinking_LinkingType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'GOOGLE_SIGN_IN');
+      AccountLinking_LinkingType._(1, _omitEnumNames ? '' : 'GOOGLE_SIGN_IN');
   static const AccountLinking_LinkingType OAUTH_AND_GOOGLE_SIGN_IN =
       AccountLinking_LinkingType._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OAUTH_AND_GOOGLE_SIGN_IN');
-  static const AccountLinking_LinkingType OAUTH = AccountLinking_LinkingType._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OAUTH');
+          2, _omitEnumNames ? '' : 'OAUTH_AND_GOOGLE_SIGN_IN');
+  static const AccountLinking_LinkingType OAUTH =
+      AccountLinking_LinkingType._(3, _omitEnumNames ? '' : 'OAUTH');
 
   static const $core.List<AccountLinking_LinkingType> values =
       <AccountLinking_LinkingType>[
@@ -50,25 +42,16 @@ class AccountLinking_LinkingType extends $pb.ProtobufEnum {
   const AccountLinking_LinkingType._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The OAuth2 grant type Google uses to guide the user to sign in to your
+/// App's web service.
 class AccountLinking_AuthGrantType extends $pb.ProtobufEnum {
   static const AccountLinking_AuthGrantType AUTH_GRANT_TYPE_UNSPECIFIED =
       AccountLinking_AuthGrantType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTH_GRANT_TYPE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'AUTH_GRANT_TYPE_UNSPECIFIED');
   static const AccountLinking_AuthGrantType AUTH_CODE =
-      AccountLinking_AuthGrantType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTH_CODE');
+      AccountLinking_AuthGrantType._(1, _omitEnumNames ? '' : 'AUTH_CODE');
   static const AccountLinking_AuthGrantType IMPLICIT =
-      AccountLinking_AuthGrantType._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'IMPLICIT');
+      AccountLinking_AuthGrantType._(2, _omitEnumNames ? '' : 'IMPLICIT');
 
   static const $core.List<AccountLinking_AuthGrantType> values =
       <AccountLinking_AuthGrantType>[
@@ -85,3 +68,5 @@ class AccountLinking_AuthGrantType extends $pb.ProtobufEnum {
   const AccountLinking_AuthGrantType._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

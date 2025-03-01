@@ -1,18 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/testing/v1/test_environment_discovery.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'test_environment_discovery.pb.dart' as $0;
+
 export 'test_environment_discovery.pb.dart';
 
+@$pb.GrpcServiceName(
+    'google.devtools.testing.v1.TestEnvironmentDiscoveryService')
 class TestEnvironmentDiscoveryServiceClient extends $grpc.Client {
   static final _$getTestEnvironmentCatalog = $grpc.ClientMethod<
           $0.GetTestEnvironmentCatalogRequest, $0.TestEnvironmentCatalog>(
@@ -34,6 +42,8 @@ class TestEnvironmentDiscoveryServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName(
+    'google.devtools.testing.v1.TestEnvironmentDiscoveryService')
 abstract class TestEnvironmentDiscoveryServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.devtools.testing.v1.TestEnvironmentDiscoveryService';

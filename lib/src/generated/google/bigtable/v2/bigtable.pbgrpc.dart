@@ -1,18 +1,25 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/bigtable/v2/bigtable.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'bigtable.pb.dart' as $0;
+
 export 'bigtable.pb.dart';
 
+@$pb.GrpcServiceName('google.bigtable.v2.Bigtable')
 class BigtableClient extends $grpc.Client {
   static final _$readRows =
       $grpc.ClientMethod<$0.ReadRowsRequest, $0.ReadRowsResponse>(
@@ -70,6 +77,12 @@ class BigtableClient extends $grpc.Client {
       ($0.ReadChangeStreamRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ReadChangeStreamResponse.fromBuffer(value));
+  static final _$executeQuery =
+      $grpc.ClientMethod<$0.ExecuteQueryRequest, $0.ExecuteQueryResponse>(
+          '/google.bigtable.v2.Bigtable/ExecuteQuery',
+          ($0.ExecuteQueryRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ExecuteQueryResponse.fromBuffer(value));
 
   BigtableClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -139,8 +152,17 @@ class BigtableClient extends $grpc.Client {
         _$readChangeStream, $async.Stream.fromIterable([request]),
         options: options);
   }
+
+  $grpc.ResponseStream<$0.ExecuteQueryResponse> executeQuery(
+      $0.ExecuteQueryRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$executeQuery, $async.Stream.fromIterable([request]),
+        options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.bigtable.v2.Bigtable')
 abstract class BigtableServiceBase extends $grpc.Service {
   $core.String get $name => 'google.bigtable.v2.Bigtable';
 
@@ -222,6 +244,15 @@ abstract class BigtableServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ReadChangeStreamRequest.fromBuffer(value),
         ($0.ReadChangeStreamResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ExecuteQueryRequest, $0.ExecuteQueryResponse>(
+            'ExecuteQuery',
+            executeQuery_Pre,
+            false,
+            true,
+            ($core.List<$core.int> value) =>
+                $0.ExecuteQueryRequest.fromBuffer(value),
+            ($0.ExecuteQueryResponse value) => value.writeToBuffer()));
   }
 
   $async.Stream<$0.ReadRowsResponse> readRows_Pre($grpc.ServiceCall call,
@@ -276,6 +307,12 @@ abstract class BigtableServiceBase extends $grpc.Service {
     yield* readChangeStream(call, await request);
   }
 
+  $async.Stream<$0.ExecuteQueryResponse> executeQuery_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ExecuteQueryRequest> request) async* {
+    yield* executeQuery(call, await request);
+  }
+
   $async.Stream<$0.ReadRowsResponse> readRows(
       $grpc.ServiceCall call, $0.ReadRowsRequest request);
   $async.Stream<$0.SampleRowKeysResponse> sampleRowKeys(
@@ -295,4 +332,6 @@ abstract class BigtableServiceBase extends $grpc.Service {
           $0.GenerateInitialChangeStreamPartitionsRequest request);
   $async.Stream<$0.ReadChangeStreamResponse> readChangeStream(
       $grpc.ServiceCall call, $0.ReadChangeStreamRequest request);
+  $async.Stream<$0.ExecuteQueryResponse> executeQuery(
+      $grpc.ServiceCall call, $0.ExecuteQueryRequest request);
 }

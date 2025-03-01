@@ -1,18 +1,25 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v2/service_controller.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'service_controller.pb.dart' as $0;
+
 export 'service_controller.pb.dart';
 
+@$pb.GrpcServiceName('google.api.servicecontrol.v2.ServiceController')
 class ServiceControllerClient extends $grpc.Client {
   static final _$check = $grpc.ClientMethod<$0.CheckRequest, $0.CheckResponse>(
       '/google.api.servicecontrol.v2.ServiceController/Check',
@@ -40,6 +47,7 @@ class ServiceControllerClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.api.servicecontrol.v2.ServiceController')
 abstract class ServiceControllerServiceBase extends $grpc.Service {
   $core.String get $name => 'google.api.servicecontrol.v2.ServiceController';
 

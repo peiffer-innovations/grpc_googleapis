@@ -11,3 +11,6 @@ export '../src/generated/google/datastore/v1/entity.pbjson.dart';
 export '../src/generated/google/datastore/v1/query.pb.dart';
 export '../src/generated/google/datastore/v1/query.pbenum.dart';
 export '../src/generated/google/datastore/v1/query.pbjson.dart';
+export '../src/generated/google/datastore/v1/query_profile.pb.dart';
+export '../src/generated/google/datastore/v1/query_profile.pbenum.dart';
+export '../src/generated/google/datastore/v1/query_profile.pbjson.dart';

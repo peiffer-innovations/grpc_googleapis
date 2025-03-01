@@ -1,78 +1,66 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/testing/v1/test_environment_discovery.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 import '../../../type/date.pb.dart' as $1;
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import '../../../protobuf/duration.pb.dart' as $3;
-
 import 'test_environment_discovery.pbenum.dart';
 
 export 'test_environment_discovery.pbenum.dart';
 
+/// A single device IP block
 class DeviceIpBlock extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeviceIpBlock',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'block')
-    ..e<DeviceForm>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'form',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DeviceForm.DEVICE_FORM_UNSPECIFIED,
-        valueOf: DeviceForm.valueOf,
-        enumValues: DeviceForm.values)
-    ..aOM<$1.Date>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'addedDate',
-        subBuilder: $1.Date.create)
-    ..hasRequiredFields = false;
-
-  DeviceIpBlock._() : super();
   factory DeviceIpBlock({
     $core.String? block,
     DeviceForm? form,
     $1.Date? addedDate,
   }) {
-    final _result = create();
+    final $result = create();
     if (block != null) {
-      _result.block = block;
+      $result.block = block;
     }
     if (form != null) {
-      _result.form = form;
+      $result.form = form;
     }
     if (addedDate != null) {
-      _result.addedDate = addedDate;
+      $result.addedDate = addedDate;
     }
-    return _result;
+    return $result;
   }
+  DeviceIpBlock._() : super();
   factory DeviceIpBlock.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeviceIpBlock.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeviceIpBlock',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'block')
+    ..e<DeviceForm>(2, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE,
+        defaultOrMaker: DeviceForm.DEVICE_FORM_UNSPECIFIED,
+        valueOf: DeviceForm.valueOf,
+        enumValues: DeviceForm.values)
+    ..aOM<$1.Date>(3, _omitFieldNames ? '' : 'addedDate',
+        subBuilder: $1.Date.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -82,8 +70,10 @@ class DeviceIpBlock extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeviceIpBlock copyWith(void Function(DeviceIpBlock) updates) =>
       super.copyWith((message) => updates(message as DeviceIpBlock))
-          as DeviceIpBlock; // ignore: deprecated_member_use
+          as DeviceIpBlock;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeviceIpBlock create() => DeviceIpBlock._();
   DeviceIpBlock createEmptyInstance() => create();
@@ -94,6 +84,7 @@ class DeviceIpBlock extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeviceIpBlock>(create);
   static DeviceIpBlock? _defaultInstance;
 
+  /// An IP address block in CIDR notation eg: 34.68.194.64/29
   @$pb.TagNumber(1)
   $core.String get block => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -106,6 +97,7 @@ class DeviceIpBlock extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBlock() => clearField(1);
 
+  /// Whether this block is used by physical or virtual devices
   @$pb.TagNumber(2)
   DeviceForm get form => $_getN(1);
   @$pb.TagNumber(2)
@@ -118,6 +110,7 @@ class DeviceIpBlock extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearForm() => clearField(2);
 
+  /// The date this block was added to Firebase Test Lab
   @$pb.TagNumber(3)
   $1.Date get addedDate => $_getN(2);
   @$pb.TagNumber(3)
@@ -133,53 +126,43 @@ class DeviceIpBlock extends $pb.GeneratedMessage {
   $1.Date ensureAddedDate() => $_ensure(2);
 }
 
+/// Request to list the currently supported values for an environment type.
 class GetTestEnvironmentCatalogRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetTestEnvironmentCatalogRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..e<GetTestEnvironmentCatalogRequest_EnvironmentType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environmentType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: GetTestEnvironmentCatalogRequest_EnvironmentType
-            .ENVIRONMENT_TYPE_UNSPECIFIED,
-        valueOf: GetTestEnvironmentCatalogRequest_EnvironmentType.valueOf,
-        enumValues: GetTestEnvironmentCatalogRequest_EnvironmentType.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..hasRequiredFields = false;
-
-  GetTestEnvironmentCatalogRequest._() : super();
   factory GetTestEnvironmentCatalogRequest({
     GetTestEnvironmentCatalogRequest_EnvironmentType? environmentType,
     $core.String? projectId,
   }) {
-    final _result = create();
+    final $result = create();
     if (environmentType != null) {
-      _result.environmentType = environmentType;
+      $result.environmentType = environmentType;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
-    return _result;
+    return $result;
   }
+  GetTestEnvironmentCatalogRequest._() : super();
   factory GetTestEnvironmentCatalogRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetTestEnvironmentCatalogRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetTestEnvironmentCatalogRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..e<GetTestEnvironmentCatalogRequest_EnvironmentType>(
+        1, _omitFieldNames ? '' : 'environmentType', $pb.PbFieldType.OE,
+        defaultOrMaker: GetTestEnvironmentCatalogRequest_EnvironmentType
+            .ENVIRONMENT_TYPE_UNSPECIFIED,
+        valueOf: GetTestEnvironmentCatalogRequest_EnvironmentType.valueOf,
+        enumValues: GetTestEnvironmentCatalogRequest_EnvironmentType.values)
+    ..aOS(2, _omitFieldNames ? '' : 'projectId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -192,8 +175,10 @@ class GetTestEnvironmentCatalogRequest extends $pb.GeneratedMessage {
           void Function(GetTestEnvironmentCatalogRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetTestEnvironmentCatalogRequest))
-          as GetTestEnvironmentCatalogRequest; // ignore: deprecated_member_use
+          as GetTestEnvironmentCatalogRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetTestEnvironmentCatalogRequest create() =>
       GetTestEnvironmentCatalogRequest._();
@@ -206,6 +191,7 @@ class GetTestEnvironmentCatalogRequest extends $pb.GeneratedMessage {
           create);
   static GetTestEnvironmentCatalogRequest? _defaultInstance;
 
+  /// Required. The type of environment that should be listed.
   @$pb.TagNumber(1)
   GetTestEnvironmentCatalogRequest_EnvironmentType get environmentType =>
       $_getN(0);
@@ -219,6 +205,7 @@ class GetTestEnvironmentCatalogRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEnvironmentType() => clearField(1);
 
+  /// For authorization, the cloud project requesting the TestEnvironmentCatalog.
   @$pb.TagNumber(2)
   $core.String get projectId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -241,7 +228,41 @@ enum TestEnvironmentCatalog_EnvironmentCatalog {
   notSet
 }
 
+/// A description of a test environment.
 class TestEnvironmentCatalog extends $pb.GeneratedMessage {
+  factory TestEnvironmentCatalog({
+    AndroidDeviceCatalog? androidDeviceCatalog,
+    IosDeviceCatalog? iosDeviceCatalog,
+    NetworkConfigurationCatalog? networkConfigurationCatalog,
+    ProvidedSoftwareCatalog? softwareCatalog,
+    DeviceIpBlockCatalog? deviceIpBlockCatalog,
+  }) {
+    final $result = create();
+    if (androidDeviceCatalog != null) {
+      $result.androidDeviceCatalog = androidDeviceCatalog;
+    }
+    if (iosDeviceCatalog != null) {
+      $result.iosDeviceCatalog = iosDeviceCatalog;
+    }
+    if (networkConfigurationCatalog != null) {
+      $result.networkConfigurationCatalog = networkConfigurationCatalog;
+    }
+    if (softwareCatalog != null) {
+      $result.softwareCatalog = softwareCatalog;
+    }
+    if (deviceIpBlockCatalog != null) {
+      $result.deviceIpBlockCatalog = deviceIpBlockCatalog;
+    }
+    return $result;
+  }
+  TestEnvironmentCatalog._() : super();
+  factory TestEnvironmentCatalog.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestEnvironmentCatalog.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, TestEnvironmentCatalog_EnvironmentCatalog>
       _TestEnvironmentCatalog_EnvironmentCatalogByTag = {
     1: TestEnvironmentCatalog_EnvironmentCatalog.androidDeviceCatalog,
@@ -252,79 +273,26 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
     0: TestEnvironmentCatalog_EnvironmentCatalog.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestEnvironmentCatalog',
+      _omitMessageNames ? '' : 'TestEnvironmentCatalog',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 3, 4, 5, 6])
     ..aOM<AndroidDeviceCatalog>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidDeviceCatalog',
+        1, _omitFieldNames ? '' : 'androidDeviceCatalog',
         subBuilder: AndroidDeviceCatalog.create)
-    ..aOM<IosDeviceCatalog>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosDeviceCatalog',
+    ..aOM<IosDeviceCatalog>(3, _omitFieldNames ? '' : 'iosDeviceCatalog',
         subBuilder: IosDeviceCatalog.create)
     ..aOM<NetworkConfigurationCatalog>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'networkConfigurationCatalog',
+        4, _omitFieldNames ? '' : 'networkConfigurationCatalog',
         subBuilder: NetworkConfigurationCatalog.create)
-    ..aOM<ProvidedSoftwareCatalog>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'softwareCatalog',
+    ..aOM<ProvidedSoftwareCatalog>(5, _omitFieldNames ? '' : 'softwareCatalog',
         subBuilder: ProvidedSoftwareCatalog.create)
     ..aOM<DeviceIpBlockCatalog>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deviceIpBlockCatalog',
+        6, _omitFieldNames ? '' : 'deviceIpBlockCatalog',
         subBuilder: DeviceIpBlockCatalog.create)
     ..hasRequiredFields = false;
 
-  TestEnvironmentCatalog._() : super();
-  factory TestEnvironmentCatalog({
-    AndroidDeviceCatalog? androidDeviceCatalog,
-    IosDeviceCatalog? iosDeviceCatalog,
-    NetworkConfigurationCatalog? networkConfigurationCatalog,
-    ProvidedSoftwareCatalog? softwareCatalog,
-    DeviceIpBlockCatalog? deviceIpBlockCatalog,
-  }) {
-    final _result = create();
-    if (androidDeviceCatalog != null) {
-      _result.androidDeviceCatalog = androidDeviceCatalog;
-    }
-    if (iosDeviceCatalog != null) {
-      _result.iosDeviceCatalog = iosDeviceCatalog;
-    }
-    if (networkConfigurationCatalog != null) {
-      _result.networkConfigurationCatalog = networkConfigurationCatalog;
-    }
-    if (softwareCatalog != null) {
-      _result.softwareCatalog = softwareCatalog;
-    }
-    if (deviceIpBlockCatalog != null) {
-      _result.deviceIpBlockCatalog = deviceIpBlockCatalog;
-    }
-    return _result;
-  }
-  factory TestEnvironmentCatalog.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TestEnvironmentCatalog.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -336,8 +304,10 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
   TestEnvironmentCatalog copyWith(
           void Function(TestEnvironmentCatalog) updates) =>
       super.copyWith((message) => updates(message as TestEnvironmentCatalog))
-          as TestEnvironmentCatalog; // ignore: deprecated_member_use
+          as TestEnvironmentCatalog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestEnvironmentCatalog create() => TestEnvironmentCatalog._();
   TestEnvironmentCatalog createEmptyInstance() => create();
@@ -352,6 +322,7 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
       _TestEnvironmentCatalog_EnvironmentCatalogByTag[$_whichOneof(0)]!;
   void clearEnvironmentCatalog() => clearField($_whichOneof(0));
 
+  /// Supported Android devices.
   @$pb.TagNumber(1)
   AndroidDeviceCatalog get androidDeviceCatalog => $_getN(0);
   @$pb.TagNumber(1)
@@ -366,6 +337,7 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AndroidDeviceCatalog ensureAndroidDeviceCatalog() => $_ensure(0);
 
+  /// Supported iOS devices.
   @$pb.TagNumber(3)
   IosDeviceCatalog get iosDeviceCatalog => $_getN(1);
   @$pb.TagNumber(3)
@@ -380,6 +352,7 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   IosDeviceCatalog ensureIosDeviceCatalog() => $_ensure(1);
 
+  /// Supported network configurations.
   @$pb.TagNumber(4)
   NetworkConfigurationCatalog get networkConfigurationCatalog => $_getN(2);
   @$pb.TagNumber(4)
@@ -395,6 +368,7 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
   NetworkConfigurationCatalog ensureNetworkConfigurationCatalog() =>
       $_ensure(2);
 
+  /// The software test environment provided by TestExecutionService.
   @$pb.TagNumber(5)
   ProvidedSoftwareCatalog get softwareCatalog => $_getN(3);
   @$pb.TagNumber(5)
@@ -409,6 +383,7 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ProvidedSoftwareCatalog ensureSoftwareCatalog() => $_ensure(3);
 
+  /// The IP blocks used by devices in the test environment.
   @$pb.TagNumber(6)
   DeviceIpBlockCatalog get deviceIpBlockCatalog => $_getN(4);
   @$pb.TagNumber(6)
@@ -424,41 +399,35 @@ class TestEnvironmentCatalog extends $pb.GeneratedMessage {
   DeviceIpBlockCatalog ensureDeviceIpBlockCatalog() => $_ensure(4);
 }
 
+/// List of IP blocks used by the Firebase Test Lab
 class DeviceIpBlockCatalog extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeviceIpBlockCatalog',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<DeviceIpBlock>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ipBlocks',
-        $pb.PbFieldType.PM,
-        subBuilder: DeviceIpBlock.create)
-    ..hasRequiredFields = false;
-
-  DeviceIpBlockCatalog._() : super();
   factory DeviceIpBlockCatalog({
     $core.Iterable<DeviceIpBlock>? ipBlocks,
   }) {
-    final _result = create();
+    final $result = create();
     if (ipBlocks != null) {
-      _result.ipBlocks.addAll(ipBlocks);
+      $result.ipBlocks.addAll(ipBlocks);
     }
-    return _result;
+    return $result;
   }
+  DeviceIpBlockCatalog._() : super();
   factory DeviceIpBlockCatalog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeviceIpBlockCatalog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeviceIpBlockCatalog',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<DeviceIpBlock>(
+        1, _omitFieldNames ? '' : 'ipBlocks', $pb.PbFieldType.PM,
+        subBuilder: DeviceIpBlock.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -469,8 +438,10 @@ class DeviceIpBlockCatalog extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeviceIpBlockCatalog copyWith(void Function(DeviceIpBlockCatalog) updates) =>
       super.copyWith((message) => updates(message as DeviceIpBlockCatalog))
-          as DeviceIpBlockCatalog; // ignore: deprecated_member_use
+          as DeviceIpBlockCatalog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeviceIpBlockCatalog create() => DeviceIpBlockCatalog._();
   DeviceIpBlockCatalog createEmptyInstance() => create();
@@ -481,66 +452,53 @@ class DeviceIpBlockCatalog extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeviceIpBlockCatalog>(create);
   static DeviceIpBlockCatalog? _defaultInstance;
 
+  /// The device IP blocks used by Firebase Test Lab
   @$pb.TagNumber(1)
   $core.List<DeviceIpBlock> get ipBlocks => $_getList(0);
 }
 
+/// The currently supported Android devices.
 class AndroidDeviceCatalog extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidDeviceCatalog',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<AndroidModel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'models',
-        $pb.PbFieldType.PM,
-        subBuilder: AndroidModel.create)
-    ..pc<AndroidVersion>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versions',
-        $pb.PbFieldType.PM,
-        subBuilder: AndroidVersion.create)
-    ..aOM<AndroidRuntimeConfiguration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'runtimeConfiguration',
-        subBuilder: AndroidRuntimeConfiguration.create)
-    ..hasRequiredFields = false;
-
-  AndroidDeviceCatalog._() : super();
   factory AndroidDeviceCatalog({
     $core.Iterable<AndroidModel>? models,
     $core.Iterable<AndroidVersion>? versions,
     AndroidRuntimeConfiguration? runtimeConfiguration,
   }) {
-    final _result = create();
+    final $result = create();
     if (models != null) {
-      _result.models.addAll(models);
+      $result.models.addAll(models);
     }
     if (versions != null) {
-      _result.versions.addAll(versions);
+      $result.versions.addAll(versions);
     }
     if (runtimeConfiguration != null) {
-      _result.runtimeConfiguration = runtimeConfiguration;
+      $result.runtimeConfiguration = runtimeConfiguration;
     }
-    return _result;
+    return $result;
   }
+  AndroidDeviceCatalog._() : super();
   factory AndroidDeviceCatalog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidDeviceCatalog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidDeviceCatalog',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<AndroidModel>(1, _omitFieldNames ? '' : 'models', $pb.PbFieldType.PM,
+        subBuilder: AndroidModel.create)
+    ..pc<AndroidVersion>(
+        2, _omitFieldNames ? '' : 'versions', $pb.PbFieldType.PM,
+        subBuilder: AndroidVersion.create)
+    ..aOM<AndroidRuntimeConfiguration>(
+        3, _omitFieldNames ? '' : 'runtimeConfiguration',
+        subBuilder: AndroidRuntimeConfiguration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -551,8 +509,10 @@ class AndroidDeviceCatalog extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidDeviceCatalog copyWith(void Function(AndroidDeviceCatalog) updates) =>
       super.copyWith((message) => updates(message as AndroidDeviceCatalog))
-          as AndroidDeviceCatalog; // ignore: deprecated_member_use
+          as AndroidDeviceCatalog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidDeviceCatalog create() => AndroidDeviceCatalog._();
   AndroidDeviceCatalog createEmptyInstance() => create();
@@ -563,12 +523,15 @@ class AndroidDeviceCatalog extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidDeviceCatalog>(create);
   static AndroidDeviceCatalog? _defaultInstance;
 
+  /// The set of supported Android device models.
   @$pb.TagNumber(1)
   $core.List<AndroidModel> get models => $_getList(0);
 
+  /// The set of supported Android OS versions.
   @$pb.TagNumber(2)
   $core.List<AndroidVersion> get versions => $_getList(1);
 
+  /// The set of supported runtime configurations.
   @$pb.TagNumber(3)
   AndroidRuntimeConfiguration get runtimeConfiguration => $_getN(2);
   @$pb.TagNumber(3)
@@ -584,52 +547,41 @@ class AndroidDeviceCatalog extends $pb.GeneratedMessage {
   AndroidRuntimeConfiguration ensureRuntimeConfiguration() => $_ensure(2);
 }
 
+/// Android configuration that can be selected at the time a test is run.
 class AndroidRuntimeConfiguration extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidRuntimeConfiguration',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<Locale>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locales',
-        $pb.PbFieldType.PM,
-        subBuilder: Locale.create)
-    ..pc<Orientation>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orientations',
-        $pb.PbFieldType.PM,
-        subBuilder: Orientation.create)
-    ..hasRequiredFields = false;
-
-  AndroidRuntimeConfiguration._() : super();
   factory AndroidRuntimeConfiguration({
     $core.Iterable<Locale>? locales,
     $core.Iterable<Orientation>? orientations,
   }) {
-    final _result = create();
+    final $result = create();
     if (locales != null) {
-      _result.locales.addAll(locales);
+      $result.locales.addAll(locales);
     }
     if (orientations != null) {
-      _result.orientations.addAll(orientations);
+      $result.orientations.addAll(orientations);
     }
-    return _result;
+    return $result;
   }
+  AndroidRuntimeConfiguration._() : super();
   factory AndroidRuntimeConfiguration.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidRuntimeConfiguration.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidRuntimeConfiguration',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<Locale>(1, _omitFieldNames ? '' : 'locales', $pb.PbFieldType.PM,
+        subBuilder: Locale.create)
+    ..pc<Orientation>(
+        2, _omitFieldNames ? '' : 'orientations', $pb.PbFieldType.PM,
+        subBuilder: Orientation.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -642,8 +594,10 @@ class AndroidRuntimeConfiguration extends $pb.GeneratedMessage {
           void Function(AndroidRuntimeConfiguration) updates) =>
       super.copyWith(
               (message) => updates(message as AndroidRuntimeConfiguration))
-          as AndroidRuntimeConfiguration; // ignore: deprecated_member_use
+          as AndroidRuntimeConfiguration;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidRuntimeConfiguration create() =>
       AndroidRuntimeConfiguration._();
@@ -655,119 +609,17 @@ class AndroidRuntimeConfiguration extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidRuntimeConfiguration>(create);
   static AndroidRuntimeConfiguration? _defaultInstance;
 
+  /// The set of available locales.
   @$pb.TagNumber(1)
   $core.List<Locale> get locales => $_getList(0);
 
+  /// The set of available orientations.
   @$pb.TagNumber(2)
   $core.List<Orientation> get orientations => $_getList(1);
 }
 
+/// A description of an Android device tests may be run on.
 class AndroidModel extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidModel',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'manufacturer')
-    ..e<DeviceForm>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'form',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DeviceForm.DEVICE_FORM_UNSPECIFIED,
-        valueOf: DeviceForm.valueOf,
-        enumValues: DeviceForm.values)
-    ..a<$core.int>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'screenX',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'screenY',
-        $pb.PbFieldType.O3)
-    ..pPS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'supportedVersionIds')
-    ..pPS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'brand')
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'codename')
-    ..pPS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'supportedAbis')
-    ..a<$core.int>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'screenDensity',
-        $pb.PbFieldType.O3)
-    ..e<DeviceFormFactor>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'formFactor',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DeviceFormFactor.DEVICE_FORM_FACTOR_UNSPECIFIED,
-        valueOf: DeviceFormFactor.valueOf,
-        enumValues: DeviceFormFactor.values)
-    ..aOB(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lowFpsVideoRecording')
-    ..aOS(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'thumbnailUrl')
-    ..pc<PerAndroidVersionInfo>(
-        21,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'perVersionInfo',
-        $pb.PbFieldType.PM,
-        subBuilder: PerAndroidVersionInfo.create)
-    ..hasRequiredFields = false;
-
-  AndroidModel._() : super();
   factory AndroidModel({
     $core.String? id,
     $core.String? name,
@@ -785,64 +637,105 @@ class AndroidModel extends $pb.GeneratedMessage {
     $core.bool? lowFpsVideoRecording,
     $core.String? thumbnailUrl,
     $core.Iterable<PerAndroidVersionInfo>? perVersionInfo,
+    LabInfo? labInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (manufacturer != null) {
-      _result.manufacturer = manufacturer;
+      $result.manufacturer = manufacturer;
     }
     if (form != null) {
-      _result.form = form;
+      $result.form = form;
     }
     if (screenX != null) {
-      _result.screenX = screenX;
+      $result.screenX = screenX;
     }
     if (screenY != null) {
-      _result.screenY = screenY;
+      $result.screenY = screenY;
     }
     if (supportedVersionIds != null) {
-      _result.supportedVersionIds.addAll(supportedVersionIds);
+      $result.supportedVersionIds.addAll(supportedVersionIds);
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
     if (brand != null) {
-      _result.brand = brand;
+      $result.brand = brand;
     }
     if (codename != null) {
-      _result.codename = codename;
+      $result.codename = codename;
     }
     if (supportedAbis != null) {
-      _result.supportedAbis.addAll(supportedAbis);
+      $result.supportedAbis.addAll(supportedAbis);
     }
     if (screenDensity != null) {
-      _result.screenDensity = screenDensity;
+      $result.screenDensity = screenDensity;
     }
     if (formFactor != null) {
-      _result.formFactor = formFactor;
+      $result.formFactor = formFactor;
     }
     if (lowFpsVideoRecording != null) {
-      _result.lowFpsVideoRecording = lowFpsVideoRecording;
+      $result.lowFpsVideoRecording = lowFpsVideoRecording;
     }
     if (thumbnailUrl != null) {
-      _result.thumbnailUrl = thumbnailUrl;
+      $result.thumbnailUrl = thumbnailUrl;
     }
     if (perVersionInfo != null) {
-      _result.perVersionInfo.addAll(perVersionInfo);
+      $result.perVersionInfo.addAll(perVersionInfo);
     }
-    return _result;
+    if (labInfo != null) {
+      $result.labInfo = labInfo;
+    }
+    return $result;
   }
+  AndroidModel._() : super();
   factory AndroidModel.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidModel.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidModel',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'manufacturer')
+    ..e<DeviceForm>(4, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE,
+        defaultOrMaker: DeviceForm.DEVICE_FORM_UNSPECIFIED,
+        valueOf: DeviceForm.valueOf,
+        enumValues: DeviceForm.values)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'screenX', $pb.PbFieldType.O3)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'screenY', $pb.PbFieldType.O3)
+    ..pPS(7, _omitFieldNames ? '' : 'supportedVersionIds')
+    ..pPS(8, _omitFieldNames ? '' : 'tags')
+    ..aOS(9, _omitFieldNames ? '' : 'brand')
+    ..aOS(10, _omitFieldNames ? '' : 'codename')
+    ..pPS(11, _omitFieldNames ? '' : 'supportedAbis')
+    ..a<$core.int>(
+        12, _omitFieldNames ? '' : 'screenDensity', $pb.PbFieldType.O3)
+    ..e<DeviceFormFactor>(
+        16, _omitFieldNames ? '' : 'formFactor', $pb.PbFieldType.OE,
+        defaultOrMaker: DeviceFormFactor.DEVICE_FORM_FACTOR_UNSPECIFIED,
+        valueOf: DeviceFormFactor.valueOf,
+        enumValues: DeviceFormFactor.values)
+    ..aOB(17, _omitFieldNames ? '' : 'lowFpsVideoRecording')
+    ..aOS(19, _omitFieldNames ? '' : 'thumbnailUrl')
+    ..pc<PerAndroidVersionInfo>(
+        21, _omitFieldNames ? '' : 'perVersionInfo', $pb.PbFieldType.PM,
+        subBuilder: PerAndroidVersionInfo.create)
+    ..aOM<LabInfo>(26, _omitFieldNames ? '' : 'labInfo',
+        subBuilder: LabInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -852,8 +745,10 @@ class AndroidModel extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidModel copyWith(void Function(AndroidModel) updates) =>
       super.copyWith((message) => updates(message as AndroidModel))
-          as AndroidModel; // ignore: deprecated_member_use
+          as AndroidModel;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidModel create() => AndroidModel._();
   AndroidModel createEmptyInstance() => create();
@@ -864,6 +759,8 @@ class AndroidModel extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidModel>(create);
   static AndroidModel? _defaultInstance;
 
+  /// The unique opaque id for this model.
+  /// Use this for invoking the TestExecutionService.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -876,6 +773,8 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// The human-readable marketing name for this device model.
+  /// Examples: "Nexus 5", "Galaxy S5".
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -888,6 +787,7 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// The manufacturer of this device.
   @$pb.TagNumber(3)
   $core.String get manufacturer => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -900,6 +800,7 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearManufacturer() => clearField(3);
 
+  /// Whether this device is virtual or physical.
   @$pb.TagNumber(4)
   DeviceForm get form => $_getN(3);
   @$pb.TagNumber(4)
@@ -912,6 +813,7 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearForm() => clearField(4);
 
+  /// Screen size in the horizontal (X) dimension measured in pixels.
   @$pb.TagNumber(5)
   $core.int get screenX => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -924,6 +826,7 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearScreenX() => clearField(5);
 
+  /// Screen size in the vertical (Y) dimension measured in pixels.
   @$pb.TagNumber(6)
   $core.int get screenY => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -936,12 +839,17 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearScreenY() => clearField(6);
 
+  /// The set of Android versions this device supports.
   @$pb.TagNumber(7)
   $core.List<$core.String> get supportedVersionIds => $_getList(6);
 
+  /// Tags for this dimension.
+  /// Examples: "default", "preview", "deprecated".
   @$pb.TagNumber(8)
   $core.List<$core.String> get tags => $_getList(7);
 
+  /// The company that this device is branded with.
+  /// Example: "Google", "Samsung".
   @$pb.TagNumber(9)
   $core.String get brand => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -954,6 +862,8 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearBrand() => clearField(9);
 
+  /// The name of the industrial design.
+  /// This corresponds to android.os.Build.DEVICE.
   @$pb.TagNumber(10)
   $core.String get codename => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -966,9 +876,19 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearCodename() => clearField(10);
 
+  ///  The list of supported ABIs for this device.
+  ///  This corresponds to either android.os.Build.SUPPORTED_ABIS (for API level
+  ///  21 and above) or android.os.Build.CPU_ABI/CPU_ABI2.
+  ///  The most preferred ABI is the first element in the list.
+  ///
+  ///  Elements are optionally prefixed by "version_id:" (where version_id is
+  ///  the id of an AndroidVersion), denoting an ABI that is supported only on
+  ///  a particular version.
   @$pb.TagNumber(11)
   $core.List<$core.String> get supportedAbis => $_getList(10);
 
+  /// Screen density in DPI.
+  /// This corresponds to ro.sf.lcd_density
   @$pb.TagNumber(12)
   $core.int get screenDensity => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -981,6 +901,7 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearScreenDensity() => clearField(12);
 
+  /// Whether this device is a phone, tablet, wearable, etc.
   @$pb.TagNumber(16)
   DeviceFormFactor get formFactor => $_getN(12);
   @$pb.TagNumber(16)
@@ -993,6 +914,8 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   void clearFormFactor() => clearField(16);
 
+  /// True if and only if tests with this model are recorded by stitching
+  /// together screenshots. See use_low_spec_video_recording in device config.
   @$pb.TagNumber(17)
   $core.bool get lowFpsVideoRecording => $_getBF(13);
   @$pb.TagNumber(17)
@@ -1005,6 +928,7 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   void clearLowFpsVideoRecording() => clearField(17);
 
+  /// URL of a thumbnail image (photo) of the device.
   @$pb.TagNumber(19)
   $core.String get thumbnailUrl => $_getSZ(14);
   @$pb.TagNumber(19)
@@ -1017,61 +941,28 @@ class AndroidModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   void clearThumbnailUrl() => clearField(19);
 
+  /// Version-specific information of an Android model.
   @$pb.TagNumber(21)
   $core.List<PerAndroidVersionInfo> get perVersionInfo => $_getList(15);
+
+  /// Output only. Lab info of this device.
+  @$pb.TagNumber(26)
+  LabInfo get labInfo => $_getN(16);
+  @$pb.TagNumber(26)
+  set labInfo(LabInfo v) {
+    setField(26, v);
+  }
+
+  @$pb.TagNumber(26)
+  $core.bool hasLabInfo() => $_has(16);
+  @$pb.TagNumber(26)
+  void clearLabInfo() => clearField(26);
+  @$pb.TagNumber(26)
+  LabInfo ensureLabInfo() => $_ensure(16);
 }
 
+/// A version of the Android OS.
 class AndroidVersion extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidVersion',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versionString')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'apiLevel',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'codeName')
-    ..aOM<$1.Date>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'releaseDate',
-        subBuilder: $1.Date.create)
-    ..aOM<Distribution>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'distribution',
-        subBuilder: Distribution.create)
-    ..pPS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..hasRequiredFields = false;
-
-  AndroidVersion._() : super();
   factory AndroidVersion({
     $core.String? id,
     $core.String? versionString,
@@ -1081,36 +972,54 @@ class AndroidVersion extends $pb.GeneratedMessage {
     Distribution? distribution,
     $core.Iterable<$core.String>? tags,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (versionString != null) {
-      _result.versionString = versionString;
+      $result.versionString = versionString;
     }
     if (apiLevel != null) {
-      _result.apiLevel = apiLevel;
+      $result.apiLevel = apiLevel;
     }
     if (codeName != null) {
-      _result.codeName = codeName;
+      $result.codeName = codeName;
     }
     if (releaseDate != null) {
-      _result.releaseDate = releaseDate;
+      $result.releaseDate = releaseDate;
     }
     if (distribution != null) {
-      _result.distribution = distribution;
+      $result.distribution = distribution;
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
-    return _result;
+    return $result;
   }
+  AndroidVersion._() : super();
   factory AndroidVersion.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidVersion.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidVersion',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'versionString')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'apiLevel', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'codeName')
+    ..aOM<$1.Date>(5, _omitFieldNames ? '' : 'releaseDate',
+        subBuilder: $1.Date.create)
+    ..aOM<Distribution>(6, _omitFieldNames ? '' : 'distribution',
+        subBuilder: Distribution.create)
+    ..pPS(7, _omitFieldNames ? '' : 'tags')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1120,8 +1029,10 @@ class AndroidVersion extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidVersion copyWith(void Function(AndroidVersion) updates) =>
       super.copyWith((message) => updates(message as AndroidVersion))
-          as AndroidVersion; // ignore: deprecated_member_use
+          as AndroidVersion;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidVersion create() => AndroidVersion._();
   AndroidVersion createEmptyInstance() => create();
@@ -1132,6 +1043,8 @@ class AndroidVersion extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidVersion>(create);
   static AndroidVersion? _defaultInstance;
 
+  /// An opaque id for this Android version.
+  /// Use this id to invoke the TestExecutionService.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1144,6 +1057,8 @@ class AndroidVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// A string representing this version of the Android OS.
+  /// Examples: "4.3", "4.4".
   @$pb.TagNumber(2)
   $core.String get versionString => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1156,6 +1071,8 @@ class AndroidVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVersionString() => clearField(2);
 
+  /// The API level for this Android version.
+  /// Examples: 18, 19.
   @$pb.TagNumber(3)
   $core.int get apiLevel => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1168,6 +1085,8 @@ class AndroidVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearApiLevel() => clearField(3);
 
+  /// The code name for this Android version.
+  /// Examples: "JellyBean", "KitKat".
   @$pb.TagNumber(4)
   $core.String get codeName => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1180,6 +1099,7 @@ class AndroidVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCodeName() => clearField(4);
 
+  /// The date this Android version became available in the market.
   @$pb.TagNumber(5)
   $1.Date get releaseDate => $_getN(4);
   @$pb.TagNumber(5)
@@ -1194,6 +1114,7 @@ class AndroidVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.Date ensureReleaseDate() => $_ensure(4);
 
+  /// Market share for this version.
   @$pb.TagNumber(6)
   Distribution get distribution => $_getN(5);
   @$pb.TagNumber(6)
@@ -1208,56 +1129,63 @@ class AndroidVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Distribution ensureDistribution() => $_ensure(5);
 
+  /// Tags for this dimension.
+  /// Examples: "default", "preview", "deprecated".
   @$pb.TagNumber(7)
   $core.List<$core.String> get tags => $_getList(6);
 }
 
+/// A version-specific information of an Android model.
 class PerAndroidVersionInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PerAndroidVersionInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versionId')
-    ..e<DeviceCapacity>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deviceCapacity',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DeviceCapacity.DEVICE_CAPACITY_UNSPECIFIED,
-        valueOf: DeviceCapacity.valueOf,
-        enumValues: DeviceCapacity.values)
-    ..hasRequiredFields = false;
-
-  PerAndroidVersionInfo._() : super();
   factory PerAndroidVersionInfo({
     $core.String? versionId,
     DeviceCapacity? deviceCapacity,
+    $2.Duration? interactiveDeviceAvailabilityEstimate,
+    DirectAccessVersionInfo? directAccessVersionInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (versionId != null) {
-      _result.versionId = versionId;
+      $result.versionId = versionId;
     }
     if (deviceCapacity != null) {
-      _result.deviceCapacity = deviceCapacity;
+      $result.deviceCapacity = deviceCapacity;
     }
-    return _result;
+    if (interactiveDeviceAvailabilityEstimate != null) {
+      $result.interactiveDeviceAvailabilityEstimate =
+          interactiveDeviceAvailabilityEstimate;
+    }
+    if (directAccessVersionInfo != null) {
+      $result.directAccessVersionInfo = directAccessVersionInfo;
+    }
+    return $result;
   }
+  PerAndroidVersionInfo._() : super();
   factory PerAndroidVersionInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PerAndroidVersionInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PerAndroidVersionInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'versionId')
+    ..e<DeviceCapacity>(
+        2, _omitFieldNames ? '' : 'deviceCapacity', $pb.PbFieldType.OE,
+        defaultOrMaker: DeviceCapacity.DEVICE_CAPACITY_UNSPECIFIED,
+        valueOf: DeviceCapacity.valueOf,
+        enumValues: DeviceCapacity.values)
+    ..aOM<$2.Duration>(
+        3, _omitFieldNames ? '' : 'interactiveDeviceAvailabilityEstimate',
+        subBuilder: $2.Duration.create)
+    ..aOM<DirectAccessVersionInfo>(
+        4, _omitFieldNames ? '' : 'directAccessVersionInfo',
+        subBuilder: DirectAccessVersionInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1269,8 +1197,10 @@ class PerAndroidVersionInfo extends $pb.GeneratedMessage {
   PerAndroidVersionInfo copyWith(
           void Function(PerAndroidVersionInfo) updates) =>
       super.copyWith((message) => updates(message as PerAndroidVersionInfo))
-          as PerAndroidVersionInfo; // ignore: deprecated_member_use
+          as PerAndroidVersionInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PerAndroidVersionInfo create() => PerAndroidVersionInfo._();
   PerAndroidVersionInfo createEmptyInstance() => create();
@@ -1281,6 +1211,7 @@ class PerAndroidVersionInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PerAndroidVersionInfo>(create);
   static PerAndroidVersionInfo? _defaultInstance;
 
+  /// An Android version.
   @$pb.TagNumber(1)
   $core.String get versionId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1293,6 +1224,7 @@ class PerAndroidVersionInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVersionId() => clearField(1);
 
+  /// The number of online devices for an Android version.
   @$pb.TagNumber(2)
   DeviceCapacity get deviceCapacity => $_getN(1);
   @$pb.TagNumber(2)
@@ -1304,52 +1236,168 @@ class PerAndroidVersionInfo extends $pb.GeneratedMessage {
   $core.bool hasDeviceCapacity() => $_has(1);
   @$pb.TagNumber(2)
   void clearDeviceCapacity() => clearField(2);
+
+  /// Output only. The estimated wait time for a single interactive device
+  /// session using Direct Access.
+  @$pb.TagNumber(3)
+  $2.Duration get interactiveDeviceAvailabilityEstimate => $_getN(2);
+  @$pb.TagNumber(3)
+  set interactiveDeviceAvailabilityEstimate($2.Duration v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasInteractiveDeviceAvailabilityEstimate() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearInteractiveDeviceAvailabilityEstimate() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Duration ensureInteractiveDeviceAvailabilityEstimate() => $_ensure(2);
+
+  /// Output only. Identifies supported clients for DirectAccess for this Android
+  /// version.
+  @$pb.TagNumber(4)
+  DirectAccessVersionInfo get directAccessVersionInfo => $_getN(3);
+  @$pb.TagNumber(4)
+  set directAccessVersionInfo(DirectAccessVersionInfo v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDirectAccessVersionInfo() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDirectAccessVersionInfo() => clearField(4);
+  @$pb.TagNumber(4)
+  DirectAccessVersionInfo ensureDirectAccessVersionInfo() => $_ensure(3);
 }
 
-class Distribution extends $pb.GeneratedMessage {
+///  Denotes whether Direct Access is supported, and by which client versions.
+///
+///  DirectAccessService is currently available as a preview to select developers.
+///  You can register today on behalf of you and your team at
+///  https://developer.android.com/studio/preview/android-device-streaming
+class DirectAccessVersionInfo extends $pb.GeneratedMessage {
+  factory DirectAccessVersionInfo({
+    $core.bool? directAccessSupported,
+    $core.String? minimumAndroidStudioVersion,
+  }) {
+    final $result = create();
+    if (directAccessSupported != null) {
+      $result.directAccessSupported = directAccessSupported;
+    }
+    if (minimumAndroidStudioVersion != null) {
+      $result.minimumAndroidStudioVersion = minimumAndroidStudioVersion;
+    }
+    return $result;
+  }
+  DirectAccessVersionInfo._() : super();
+  factory DirectAccessVersionInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DirectAccessVersionInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Distribution',
+      _omitMessageNames ? '' : 'DirectAccessVersionInfo',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
-    ..aOM<$2.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'measurementTime',
-        subBuilder: $2.Timestamp.create)
-    ..a<$core.double>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'marketShare',
-        $pb.PbFieldType.OD)
+    ..aOB(1, _omitFieldNames ? '' : 'directAccessSupported')
+    ..aOS(2, _omitFieldNames ? '' : 'minimumAndroidStudioVersion')
     ..hasRequiredFields = false;
 
-  Distribution._() : super();
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DirectAccessVersionInfo clone() =>
+      DirectAccessVersionInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DirectAccessVersionInfo copyWith(
+          void Function(DirectAccessVersionInfo) updates) =>
+      super.copyWith((message) => updates(message as DirectAccessVersionInfo))
+          as DirectAccessVersionInfo;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DirectAccessVersionInfo create() => DirectAccessVersionInfo._();
+  DirectAccessVersionInfo createEmptyInstance() => create();
+  static $pb.PbList<DirectAccessVersionInfo> createRepeated() =>
+      $pb.PbList<DirectAccessVersionInfo>();
+  @$core.pragma('dart2js:noInline')
+  static DirectAccessVersionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DirectAccessVersionInfo>(create);
+  static DirectAccessVersionInfo? _defaultInstance;
+
+  /// Whether direct access is supported at all. Clients are expected to
+  /// filter down the device list to only android models and versions which
+  /// support Direct Access when that is the user intent.
+  @$pb.TagNumber(1)
+  $core.bool get directAccessSupported => $_getBF(0);
+  @$pb.TagNumber(1)
+  set directAccessSupported($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDirectAccessSupported() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDirectAccessSupported() => clearField(1);
+
+  /// Output only. Indicates client-device compatibility, where a device is known
+  /// to work only with certain workarounds implemented in the Android Studio
+  /// client. Expected format "major.minor.micro.patch", e.g.
+  /// "5921.22.2211.8881706".
+  @$pb.TagNumber(2)
+  $core.String get minimumAndroidStudioVersion => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set minimumAndroidStudioVersion($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMinimumAndroidStudioVersion() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMinimumAndroidStudioVersion() => clearField(2);
+}
+
+/// Data about the relative number of devices running a
+/// given configuration of the Android platform.
+class Distribution extends $pb.GeneratedMessage {
   factory Distribution({
-    $2.Timestamp? measurementTime,
+    $3.Timestamp? measurementTime,
     $core.double? marketShare,
   }) {
-    final _result = create();
+    final $result = create();
     if (measurementTime != null) {
-      _result.measurementTime = measurementTime;
+      $result.measurementTime = measurementTime;
     }
     if (marketShare != null) {
-      _result.marketShare = marketShare;
+      $result.marketShare = marketShare;
     }
-    return _result;
+    return $result;
   }
+  Distribution._() : super();
   factory Distribution.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Distribution',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Timestamp>(1, _omitFieldNames ? '' : 'measurementTime',
+        subBuilder: $3.Timestamp.create)
+    ..a<$core.double>(
+        2, _omitFieldNames ? '' : 'marketShare', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1359,8 +1407,10 @@ class Distribution extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Distribution copyWith(void Function(Distribution) updates) =>
       super.copyWith((message) => updates(message as Distribution))
-          as Distribution; // ignore: deprecated_member_use
+          as Distribution;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Distribution create() => Distribution._();
   Distribution createEmptyInstance() => create();
@@ -1371,10 +1421,11 @@ class Distribution extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Distribution>(create);
   static Distribution? _defaultInstance;
 
+  /// Output only. The time this distribution was measured.
   @$pb.TagNumber(1)
-  $2.Timestamp get measurementTime => $_getN(0);
+  $3.Timestamp get measurementTime => $_getN(0);
   @$pb.TagNumber(1)
-  set measurementTime($2.Timestamp v) {
+  set measurementTime($3.Timestamp v) {
     setField(1, v);
   }
 
@@ -1383,8 +1434,10 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMeasurementTime() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Timestamp ensureMeasurementTime() => $_ensure(0);
+  $3.Timestamp ensureMeasurementTime() => $_ensure(0);
 
+  /// Output only. The estimated fraction (0-1) of the total market with this
+  /// configuration.
   @$pb.TagNumber(2)
   $core.double get marketShare => $_getN(1);
   @$pb.TagNumber(2)
@@ -1398,73 +1451,117 @@ class Distribution extends $pb.GeneratedMessage {
   void clearMarketShare() => clearField(2);
 }
 
-class IosDeviceCatalog extends $pb.GeneratedMessage {
+/// Lab specific information for a device.
+class LabInfo extends $pb.GeneratedMessage {
+  factory LabInfo({
+    $core.String? name,
+  }) {
+    final $result = create();
+    if (name != null) {
+      $result.name = name;
+    }
+    return $result;
+  }
+  LabInfo._() : super();
+  factory LabInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LabInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosDeviceCatalog',
+      _omitMessageNames ? '' : 'LabInfo',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
-    ..pc<IosModel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'models',
-        $pb.PbFieldType.PM,
-        subBuilder: IosModel.create)
-    ..pc<IosVersion>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versions',
-        $pb.PbFieldType.PM,
-        subBuilder: IosVersion.create)
-    ..aOM<IosRuntimeConfiguration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'runtimeConfiguration',
-        subBuilder: IosRuntimeConfiguration.create)
-    ..pc<XcodeVersion>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'xcodeVersions',
-        $pb.PbFieldType.PM,
-        subBuilder: XcodeVersion.create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  IosDeviceCatalog._() : super();
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  LabInfo clone() => LabInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  LabInfo copyWith(void Function(LabInfo) updates) =>
+      super.copyWith((message) => updates(message as LabInfo)) as LabInfo;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LabInfo create() => LabInfo._();
+  LabInfo createEmptyInstance() => create();
+  static $pb.PbList<LabInfo> createRepeated() => $pb.PbList<LabInfo>();
+  @$core.pragma('dart2js:noInline')
+  static LabInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LabInfo>(create);
+  static LabInfo? _defaultInstance;
+
+  /// Lab name where the device is hosted.
+  /// If empty, the device is hosted in a Google owned lab.
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+/// The currently supported iOS devices.
+class IosDeviceCatalog extends $pb.GeneratedMessage {
   factory IosDeviceCatalog({
     $core.Iterable<IosModel>? models,
     $core.Iterable<IosVersion>? versions,
     IosRuntimeConfiguration? runtimeConfiguration,
     $core.Iterable<XcodeVersion>? xcodeVersions,
   }) {
-    final _result = create();
+    final $result = create();
     if (models != null) {
-      _result.models.addAll(models);
+      $result.models.addAll(models);
     }
     if (versions != null) {
-      _result.versions.addAll(versions);
+      $result.versions.addAll(versions);
     }
     if (runtimeConfiguration != null) {
-      _result.runtimeConfiguration = runtimeConfiguration;
+      $result.runtimeConfiguration = runtimeConfiguration;
     }
     if (xcodeVersions != null) {
-      _result.xcodeVersions.addAll(xcodeVersions);
+      $result.xcodeVersions.addAll(xcodeVersions);
     }
-    return _result;
+    return $result;
   }
+  IosDeviceCatalog._() : super();
   factory IosDeviceCatalog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosDeviceCatalog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosDeviceCatalog',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<IosModel>(1, _omitFieldNames ? '' : 'models', $pb.PbFieldType.PM,
+        subBuilder: IosModel.create)
+    ..pc<IosVersion>(2, _omitFieldNames ? '' : 'versions', $pb.PbFieldType.PM,
+        subBuilder: IosVersion.create)
+    ..aOM<IosRuntimeConfiguration>(
+        3, _omitFieldNames ? '' : 'runtimeConfiguration',
+        subBuilder: IosRuntimeConfiguration.create)
+    ..pc<XcodeVersion>(
+        4, _omitFieldNames ? '' : 'xcodeVersions', $pb.PbFieldType.PM,
+        subBuilder: XcodeVersion.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1474,8 +1571,10 @@ class IosDeviceCatalog extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IosDeviceCatalog copyWith(void Function(IosDeviceCatalog) updates) =>
       super.copyWith((message) => updates(message as IosDeviceCatalog))
-          as IosDeviceCatalog; // ignore: deprecated_member_use
+          as IosDeviceCatalog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosDeviceCatalog create() => IosDeviceCatalog._();
   IosDeviceCatalog createEmptyInstance() => create();
@@ -1486,12 +1585,15 @@ class IosDeviceCatalog extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosDeviceCatalog>(create);
   static IosDeviceCatalog? _defaultInstance;
 
+  /// The set of supported iOS device models.
   @$pb.TagNumber(1)
   $core.List<IosModel> get models => $_getList(0);
 
+  /// The set of supported iOS software versions.
   @$pb.TagNumber(2)
   $core.List<IosVersion> get versions => $_getList(1);
 
+  /// The set of supported runtime configurations.
   @$pb.TagNumber(3)
   IosRuntimeConfiguration get runtimeConfiguration => $_getN(2);
   @$pb.TagNumber(3)
@@ -1506,56 +1608,46 @@ class IosDeviceCatalog extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   IosRuntimeConfiguration ensureRuntimeConfiguration() => $_ensure(2);
 
+  /// The set of supported Xcode versions.
   @$pb.TagNumber(4)
   $core.List<XcodeVersion> get xcodeVersions => $_getList(3);
 }
 
+/// iOS configuration that can be selected at the time a test is run.
 class IosRuntimeConfiguration extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosRuntimeConfiguration',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<Locale>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locales',
-        $pb.PbFieldType.PM,
-        subBuilder: Locale.create)
-    ..pc<Orientation>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orientations',
-        $pb.PbFieldType.PM,
-        subBuilder: Orientation.create)
-    ..hasRequiredFields = false;
-
-  IosRuntimeConfiguration._() : super();
   factory IosRuntimeConfiguration({
     $core.Iterable<Locale>? locales,
     $core.Iterable<Orientation>? orientations,
   }) {
-    final _result = create();
+    final $result = create();
     if (locales != null) {
-      _result.locales.addAll(locales);
+      $result.locales.addAll(locales);
     }
     if (orientations != null) {
-      _result.orientations.addAll(orientations);
+      $result.orientations.addAll(orientations);
     }
-    return _result;
+    return $result;
   }
+  IosRuntimeConfiguration._() : super();
   factory IosRuntimeConfiguration.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosRuntimeConfiguration.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosRuntimeConfiguration',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<Locale>(1, _omitFieldNames ? '' : 'locales', $pb.PbFieldType.PM,
+        subBuilder: Locale.create)
+    ..pc<Orientation>(
+        2, _omitFieldNames ? '' : 'orientations', $pb.PbFieldType.PM,
+        subBuilder: Orientation.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1567,8 +1659,10 @@ class IosRuntimeConfiguration extends $pb.GeneratedMessage {
   IosRuntimeConfiguration copyWith(
           void Function(IosRuntimeConfiguration) updates) =>
       super.copyWith((message) => updates(message as IosRuntimeConfiguration))
-          as IosRuntimeConfiguration; // ignore: deprecated_member_use
+          as IosRuntimeConfiguration;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosRuntimeConfiguration create() => IosRuntimeConfiguration._();
   IosRuntimeConfiguration createEmptyInstance() => create();
@@ -1579,85 +1673,17 @@ class IosRuntimeConfiguration extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosRuntimeConfiguration>(create);
   static IosRuntimeConfiguration? _defaultInstance;
 
+  /// The set of available locales.
   @$pb.TagNumber(1)
   $core.List<Locale> get locales => $_getList(0);
 
+  /// The set of available orientations.
   @$pb.TagNumber(2)
   $core.List<Orientation> get orientations => $_getList(1);
 }
 
+/// A description of an iOS device tests may be run on.
 class IosModel extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosModel',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'supportedVersionIds')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deviceCapabilities')
-    ..e<DeviceFormFactor>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'formFactor',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DeviceFormFactor.DEVICE_FORM_FACTOR_UNSPECIFIED,
-        valueOf: DeviceFormFactor.valueOf,
-        enumValues: DeviceFormFactor.values)
-    ..a<$core.int>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'screenX',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'screenY',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'screenDensity',
-        $pb.PbFieldType.O3)
-    ..pc<PerIosVersionInfo>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'perVersionInfo',
-        $pb.PbFieldType.PM,
-        subBuilder: PerIosVersionInfo.create)
-    ..hasRequiredFields = false;
-
-  IosModel._() : super();
   factory IosModel({
     $core.String? id,
     $core.String? name,
@@ -1670,45 +1696,71 @@ class IosModel extends $pb.GeneratedMessage {
     $core.int? screenDensity,
     $core.Iterable<PerIosVersionInfo>? perVersionInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (supportedVersionIds != null) {
-      _result.supportedVersionIds.addAll(supportedVersionIds);
+      $result.supportedVersionIds.addAll(supportedVersionIds);
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
     if (deviceCapabilities != null) {
-      _result.deviceCapabilities.addAll(deviceCapabilities);
+      $result.deviceCapabilities.addAll(deviceCapabilities);
     }
     if (formFactor != null) {
-      _result.formFactor = formFactor;
+      $result.formFactor = formFactor;
     }
     if (screenX != null) {
-      _result.screenX = screenX;
+      $result.screenX = screenX;
     }
     if (screenY != null) {
-      _result.screenY = screenY;
+      $result.screenY = screenY;
     }
     if (screenDensity != null) {
-      _result.screenDensity = screenDensity;
+      $result.screenDensity = screenDensity;
     }
     if (perVersionInfo != null) {
-      _result.perVersionInfo.addAll(perVersionInfo);
+      $result.perVersionInfo.addAll(perVersionInfo);
     }
-    return _result;
+    return $result;
   }
+  IosModel._() : super();
   factory IosModel.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosModel.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosModel',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..pPS(3, _omitFieldNames ? '' : 'supportedVersionIds')
+    ..pPS(4, _omitFieldNames ? '' : 'tags')
+    ..pPS(5, _omitFieldNames ? '' : 'deviceCapabilities')
+    ..e<DeviceFormFactor>(
+        6, _omitFieldNames ? '' : 'formFactor', $pb.PbFieldType.OE,
+        defaultOrMaker: DeviceFormFactor.DEVICE_FORM_FACTOR_UNSPECIFIED,
+        valueOf: DeviceFormFactor.valueOf,
+        enumValues: DeviceFormFactor.values)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'screenX', $pb.PbFieldType.O3)
+    ..a<$core.int>(8, _omitFieldNames ? '' : 'screenY', $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        9, _omitFieldNames ? '' : 'screenDensity', $pb.PbFieldType.O3)
+    ..pc<PerIosVersionInfo>(
+        14, _omitFieldNames ? '' : 'perVersionInfo', $pb.PbFieldType.PM,
+        subBuilder: PerIosVersionInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1717,9 +1769,10 @@ class IosModel extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   IosModel copyWith(void Function(IosModel) updates) =>
-      super.copyWith((message) => updates(message as IosModel))
-          as IosModel; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as IosModel)) as IosModel;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosModel create() => IosModel._();
   IosModel createEmptyInstance() => create();
@@ -1729,6 +1782,8 @@ class IosModel extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IosModel>(create);
   static IosModel? _defaultInstance;
 
+  /// The unique opaque id for this model.
+  /// Use this for invoking the TestExecutionService.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1741,6 +1796,8 @@ class IosModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// The human-readable name for this device model.
+  /// Examples: "iPhone 4s", "iPad Mini 2".
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1753,15 +1810,22 @@ class IosModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// The set of iOS major software versions this device supports.
   @$pb.TagNumber(3)
   $core.List<$core.String> get supportedVersionIds => $_getList(2);
 
+  /// Tags for this dimension.
+  /// Examples: "default", "preview", "deprecated".
   @$pb.TagNumber(4)
   $core.List<$core.String> get tags => $_getList(3);
 
+  /// Device capabilities.
+  /// Copied from
+  /// https://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCompatibilityMatrix.html
   @$pb.TagNumber(5)
   $core.List<$core.String> get deviceCapabilities => $_getList(4);
 
+  /// Whether this device is a phone, tablet, wearable, etc.
   @$pb.TagNumber(6)
   DeviceFormFactor get formFactor => $_getN(5);
   @$pb.TagNumber(6)
@@ -1774,6 +1838,7 @@ class IosModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearFormFactor() => clearField(6);
 
+  /// Screen size in the horizontal (X) dimension measured in pixels.
   @$pb.TagNumber(7)
   $core.int get screenX => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -1786,6 +1851,7 @@ class IosModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearScreenX() => clearField(7);
 
+  /// Screen size in the vertical (Y) dimension measured in pixels.
   @$pb.TagNumber(8)
   $core.int get screenY => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -1798,6 +1864,7 @@ class IosModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearScreenY() => clearField(8);
 
+  /// Screen density in DPI.
   @$pb.TagNumber(9)
   $core.int get screenDensity => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -1810,50 +1877,13 @@ class IosModel extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearScreenDensity() => clearField(9);
 
+  /// Version-specific information of an iOS model.
   @$pb.TagNumber(14)
   $core.List<PerIosVersionInfo> get perVersionInfo => $_getList(9);
 }
 
+/// An iOS version.
 class IosVersion extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosVersion',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'majorVersion',
-        $pb.PbFieldType.O3)
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minorVersion',
-        $pb.PbFieldType.O3)
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'supportedXcodeVersionIds')
-    ..hasRequiredFields = false;
-
-  IosVersion._() : super();
   factory IosVersion({
     $core.String? id,
     $core.int? majorVersion,
@@ -1861,30 +1891,44 @@ class IosVersion extends $pb.GeneratedMessage {
     $core.int? minorVersion,
     $core.Iterable<$core.String>? supportedXcodeVersionIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (majorVersion != null) {
-      _result.majorVersion = majorVersion;
+      $result.majorVersion = majorVersion;
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
     if (minorVersion != null) {
-      _result.minorVersion = minorVersion;
+      $result.minorVersion = minorVersion;
     }
     if (supportedXcodeVersionIds != null) {
-      _result.supportedXcodeVersionIds.addAll(supportedXcodeVersionIds);
+      $result.supportedXcodeVersionIds.addAll(supportedXcodeVersionIds);
     }
-    return _result;
+    return $result;
   }
+  IosVersion._() : super();
   factory IosVersion.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosVersion.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosVersion',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'majorVersion', $pb.PbFieldType.O3)
+    ..pPS(3, _omitFieldNames ? '' : 'tags')
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'minorVersion', $pb.PbFieldType.O3)
+    ..pPS(5, _omitFieldNames ? '' : 'supportedXcodeVersionIds')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1893,9 +1937,10 @@ class IosVersion extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   IosVersion copyWith(void Function(IosVersion) updates) =>
-      super.copyWith((message) => updates(message as IosVersion))
-          as IosVersion; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as IosVersion)) as IosVersion;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosVersion create() => IosVersion._();
   IosVersion createEmptyInstance() => create();
@@ -1905,6 +1950,8 @@ class IosVersion extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosVersion>(create);
   static IosVersion? _defaultInstance;
 
+  /// An opaque id for this iOS version.
+  /// Use this id to invoke the TestExecutionService.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1917,6 +1964,8 @@ class IosVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// An integer representing the major iOS version.
+  /// Examples: "8", "9".
   @$pb.TagNumber(2)
   $core.int get majorVersion => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1929,9 +1978,13 @@ class IosVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMajorVersion() => clearField(2);
 
+  /// Tags for this dimension.
+  /// Examples: "default", "preview", "deprecated".
   @$pb.TagNumber(3)
   $core.List<$core.String> get tags => $_getList(2);
 
+  /// An integer representing the minor iOS version.
+  /// Examples: "1", "2".
   @$pb.TagNumber(4)
   $core.int get minorVersion => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -1944,56 +1997,47 @@ class IosVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMinorVersion() => clearField(4);
 
+  /// The available Xcode versions for this version.
   @$pb.TagNumber(5)
   $core.List<$core.String> get supportedXcodeVersionIds => $_getList(4);
 }
 
+/// A version-specific information of an iOS model.
 class PerIosVersionInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PerIosVersionInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versionId')
-    ..e<DeviceCapacity>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deviceCapacity',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DeviceCapacity.DEVICE_CAPACITY_UNSPECIFIED,
-        valueOf: DeviceCapacity.valueOf,
-        enumValues: DeviceCapacity.values)
-    ..hasRequiredFields = false;
-
-  PerIosVersionInfo._() : super();
   factory PerIosVersionInfo({
     $core.String? versionId,
     DeviceCapacity? deviceCapacity,
   }) {
-    final _result = create();
+    final $result = create();
     if (versionId != null) {
-      _result.versionId = versionId;
+      $result.versionId = versionId;
     }
     if (deviceCapacity != null) {
-      _result.deviceCapacity = deviceCapacity;
+      $result.deviceCapacity = deviceCapacity;
     }
-    return _result;
+    return $result;
   }
+  PerIosVersionInfo._() : super();
   factory PerIosVersionInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PerIosVersionInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PerIosVersionInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'versionId')
+    ..e<DeviceCapacity>(
+        2, _omitFieldNames ? '' : 'deviceCapacity', $pb.PbFieldType.OE,
+        defaultOrMaker: DeviceCapacity.DEVICE_CAPACITY_UNSPECIFIED,
+        valueOf: DeviceCapacity.valueOf,
+        enumValues: DeviceCapacity.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2003,8 +2047,10 @@ class PerIosVersionInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PerIosVersionInfo copyWith(void Function(PerIosVersionInfo) updates) =>
       super.copyWith((message) => updates(message as PerIosVersionInfo))
-          as PerIosVersionInfo; // ignore: deprecated_member_use
+          as PerIosVersionInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PerIosVersionInfo create() => PerIosVersionInfo._();
   PerIosVersionInfo createEmptyInstance() => create();
@@ -2015,6 +2061,7 @@ class PerIosVersionInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PerIosVersionInfo>(create);
   static PerIosVersionInfo? _defaultInstance;
 
+  /// An iOS version.
   @$pb.TagNumber(1)
   $core.String get versionId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2027,6 +2074,7 @@ class PerIosVersionInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVersionId() => clearField(1);
 
+  /// The number of online devices for an iOS version.
   @$pb.TagNumber(2)
   DeviceCapacity get deviceCapacity => $_getN(1);
   @$pb.TagNumber(2)
@@ -2040,66 +2088,48 @@ class PerIosVersionInfo extends $pb.GeneratedMessage {
   void clearDeviceCapacity() => clearField(2);
 }
 
+/// A location/region designation for language.
 class Locale extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Locale',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'region')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..hasRequiredFields = false;
-
-  Locale._() : super();
   factory Locale({
     $core.String? id,
     $core.String? name,
     $core.String? region,
     $core.Iterable<$core.String>? tags,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (region != null) {
-      _result.region = region;
+      $result.region = region;
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
-    return _result;
+    return $result;
   }
+  Locale._() : super();
   factory Locale.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Locale.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Locale',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'region')
+    ..pPS(4, _omitFieldNames ? '' : 'tags')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2108,9 +2138,10 @@ class Locale extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Locale copyWith(void Function(Locale) updates) =>
-      super.copyWith((message) => updates(message as Locale))
-          as Locale; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Locale)) as Locale;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Locale create() => Locale._();
   Locale createEmptyInstance() => create();
@@ -2120,6 +2151,8 @@ class Locale extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Locale>(create);
   static Locale? _defaultInstance;
 
+  /// The id for this locale.
+  /// Example: "en_US".
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2132,6 +2165,8 @@ class Locale extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// A human-friendly name for this language/locale.
+  /// Example: "English".
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2144,6 +2179,8 @@ class Locale extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// A human-friendly string representing the region for this
+  /// locale. Example: "United States". Not present for every locale.
   @$pb.TagNumber(3)
   $core.String get region => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2156,61 +2193,49 @@ class Locale extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearRegion() => clearField(3);
 
+  /// Tags for this dimension.
+  /// Example: "default".
   @$pb.TagNumber(4)
   $core.List<$core.String> get tags => $_getList(3);
 }
 
+/// Screen orientation of the device.
 class Orientation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Orientation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..hasRequiredFields = false;
-
-  Orientation._() : super();
   factory Orientation({
     $core.String? id,
     $core.String? name,
     $core.Iterable<$core.String>? tags,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
-    return _result;
+    return $result;
   }
+  Orientation._() : super();
   factory Orientation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Orientation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Orientation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..pPS(3, _omitFieldNames ? '' : 'tags')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2220,8 +2245,10 @@ class Orientation extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Orientation copyWith(void Function(Orientation) updates) =>
       super.copyWith((message) => updates(message as Orientation))
-          as Orientation; // ignore: deprecated_member_use
+          as Orientation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Orientation create() => Orientation._();
   Orientation createEmptyInstance() => create();
@@ -2231,6 +2258,8 @@ class Orientation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Orientation>(create);
   static Orientation? _defaultInstance;
 
+  /// The id for this orientation.
+  /// Example: "portrait".
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2243,6 +2272,8 @@ class Orientation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// A human-friendly name for this orientation.
+  /// Example: "portrait".
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2255,52 +2286,44 @@ class Orientation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// Tags for this dimension.
+  /// Example: "default".
   @$pb.TagNumber(3)
   $core.List<$core.String> get tags => $_getList(2);
 }
 
+/// An Xcode version that an iOS version is compatible with.
 class XcodeVersion extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'XcodeVersion',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..hasRequiredFields = false;
-
-  XcodeVersion._() : super();
   factory XcodeVersion({
     $core.String? version,
     $core.Iterable<$core.String>? tags,
   }) {
-    final _result = create();
+    final $result = create();
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
-    return _result;
+    return $result;
   }
+  XcodeVersion._() : super();
   factory XcodeVersion.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory XcodeVersion.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'XcodeVersion',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'version')
+    ..pPS(2, _omitFieldNames ? '' : 'tags')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2310,8 +2333,10 @@ class XcodeVersion extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   XcodeVersion copyWith(void Function(XcodeVersion) updates) =>
       super.copyWith((message) => updates(message as XcodeVersion))
-          as XcodeVersion; // ignore: deprecated_member_use
+          as XcodeVersion;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static XcodeVersion create() => XcodeVersion._();
   XcodeVersion createEmptyInstance() => create();
@@ -2322,6 +2347,8 @@ class XcodeVersion extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<XcodeVersion>(create);
   static XcodeVersion? _defaultInstance;
 
+  /// The id for this version.
+  /// Example: "9.2".
   @$pb.TagNumber(1)
   $core.String get version => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2334,45 +2361,40 @@ class XcodeVersion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVersion() => clearField(1);
 
+  /// Tags for this Xcode version.
+  /// Example: "default".
   @$pb.TagNumber(2)
   $core.List<$core.String> get tags => $_getList(1);
 }
 
 class NetworkConfigurationCatalog extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NetworkConfigurationCatalog',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<NetworkConfiguration>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'configurations',
-        $pb.PbFieldType.PM,
-        subBuilder: NetworkConfiguration.create)
-    ..hasRequiredFields = false;
-
-  NetworkConfigurationCatalog._() : super();
   factory NetworkConfigurationCatalog({
     $core.Iterable<NetworkConfiguration>? configurations,
   }) {
-    final _result = create();
+    final $result = create();
     if (configurations != null) {
-      _result.configurations.addAll(configurations);
+      $result.configurations.addAll(configurations);
     }
-    return _result;
+    return $result;
   }
+  NetworkConfigurationCatalog._() : super();
   factory NetworkConfigurationCatalog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NetworkConfigurationCatalog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NetworkConfigurationCatalog',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<NetworkConfiguration>(
+        1, _omitFieldNames ? '' : 'configurations', $pb.PbFieldType.PM,
+        subBuilder: NetworkConfiguration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2385,8 +2407,10 @@ class NetworkConfigurationCatalog extends $pb.GeneratedMessage {
           void Function(NetworkConfigurationCatalog) updates) =>
       super.copyWith(
               (message) => updates(message as NetworkConfigurationCatalog))
-          as NetworkConfigurationCatalog; // ignore: deprecated_member_use
+          as NetworkConfigurationCatalog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NetworkConfigurationCatalog create() =>
       NetworkConfigurationCatalog._();
@@ -2403,58 +2427,43 @@ class NetworkConfigurationCatalog extends $pb.GeneratedMessage {
 }
 
 class NetworkConfiguration extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NetworkConfiguration',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOM<TrafficRule>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'upRule',
-        subBuilder: TrafficRule.create)
-    ..aOM<TrafficRule>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'downRule',
-        subBuilder: TrafficRule.create)
-    ..hasRequiredFields = false;
-
-  NetworkConfiguration._() : super();
   factory NetworkConfiguration({
     $core.String? id,
     TrafficRule? upRule,
     TrafficRule? downRule,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (upRule != null) {
-      _result.upRule = upRule;
+      $result.upRule = upRule;
     }
     if (downRule != null) {
-      _result.downRule = downRule;
+      $result.downRule = downRule;
     }
-    return _result;
+    return $result;
   }
+  NetworkConfiguration._() : super();
   factory NetworkConfiguration.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NetworkConfiguration.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NetworkConfiguration',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOM<TrafficRule>(2, _omitFieldNames ? '' : 'upRule',
+        subBuilder: TrafficRule.create)
+    ..aOM<TrafficRule>(3, _omitFieldNames ? '' : 'downRule',
+        subBuilder: TrafficRule.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2465,8 +2474,10 @@ class NetworkConfiguration extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   NetworkConfiguration copyWith(void Function(NetworkConfiguration) updates) =>
       super.copyWith((message) => updates(message as NetworkConfiguration))
-          as NetworkConfiguration; // ignore: deprecated_member_use
+          as NetworkConfiguration;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NetworkConfiguration create() => NetworkConfiguration._();
   NetworkConfiguration createEmptyInstance() => create();
@@ -2477,6 +2488,7 @@ class NetworkConfiguration extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NetworkConfiguration>(create);
   static NetworkConfiguration? _defaultInstance;
 
+  /// The unique opaque id for this network traffic configuration.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2489,6 +2501,7 @@ class NetworkConfiguration extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// The emulation rule applying to the upload traffic.
   @$pb.TagNumber(2)
   TrafficRule get upRule => $_getN(1);
   @$pb.TagNumber(2)
@@ -2503,6 +2516,7 @@ class NetworkConfiguration extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   TrafficRule ensureUpRule() => $_ensure(1);
 
+  /// The emulation rule applying to the download traffic.
   @$pb.TagNumber(3)
   TrafficRule get downRule => $_getN(2);
   @$pb.TagNumber(3)
@@ -2518,80 +2532,56 @@ class NetworkConfiguration extends $pb.GeneratedMessage {
   TrafficRule ensureDownRule() => $_ensure(2);
 }
 
+/// Network emulation parameters.
 class TrafficRule extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TrafficRule',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<$3.Duration>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'delay',
-        subBuilder: $3.Duration.create)
-    ..a<$core.double>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'packetLossRatio',
-        $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'packetDuplicationRatio',
-        $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bandwidth',
-        $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'burst',
-        $pb.PbFieldType.OF)
-    ..hasRequiredFields = false;
-
-  TrafficRule._() : super();
   factory TrafficRule({
-    $3.Duration? delay,
+    $2.Duration? delay,
     $core.double? packetLossRatio,
     $core.double? packetDuplicationRatio,
     $core.double? bandwidth,
     $core.double? burst,
   }) {
-    final _result = create();
+    final $result = create();
     if (delay != null) {
-      _result.delay = delay;
+      $result.delay = delay;
     }
     if (packetLossRatio != null) {
-      _result.packetLossRatio = packetLossRatio;
+      $result.packetLossRatio = packetLossRatio;
     }
     if (packetDuplicationRatio != null) {
-      _result.packetDuplicationRatio = packetDuplicationRatio;
+      $result.packetDuplicationRatio = packetDuplicationRatio;
     }
     if (bandwidth != null) {
-      _result.bandwidth = bandwidth;
+      $result.bandwidth = bandwidth;
     }
     if (burst != null) {
-      _result.burst = burst;
+      $result.burst = burst;
     }
-    return _result;
+    return $result;
   }
+  TrafficRule._() : super();
   factory TrafficRule.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TrafficRule.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TrafficRule',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Duration>(1, _omitFieldNames ? '' : 'delay',
+        subBuilder: $2.Duration.create)
+    ..a<$core.double>(
+        2, _omitFieldNames ? '' : 'packetLossRatio', $pb.PbFieldType.OF)
+    ..a<$core.double>(
+        3, _omitFieldNames ? '' : 'packetDuplicationRatio', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'bandwidth', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, _omitFieldNames ? '' : 'burst', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2601,8 +2591,10 @@ class TrafficRule extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TrafficRule copyWith(void Function(TrafficRule) updates) =>
       super.copyWith((message) => updates(message as TrafficRule))
-          as TrafficRule; // ignore: deprecated_member_use
+          as TrafficRule;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TrafficRule create() => TrafficRule._();
   TrafficRule createEmptyInstance() => create();
@@ -2612,10 +2604,11 @@ class TrafficRule extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TrafficRule>(create);
   static TrafficRule? _defaultInstance;
 
+  /// Packet delay, must be >= 0.
   @$pb.TagNumber(1)
-  $3.Duration get delay => $_getN(0);
+  $2.Duration get delay => $_getN(0);
   @$pb.TagNumber(1)
-  set delay($3.Duration v) {
+  set delay($2.Duration v) {
     setField(1, v);
   }
 
@@ -2624,8 +2617,9 @@ class TrafficRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDelay() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Duration ensureDelay() => $_ensure(0);
+  $2.Duration ensureDelay() => $_ensure(0);
 
+  /// Packet loss ratio (0.0 - 1.0).
   @$pb.TagNumber(2)
   $core.double get packetLossRatio => $_getN(1);
   @$pb.TagNumber(2)
@@ -2638,6 +2632,7 @@ class TrafficRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPacketLossRatio() => clearField(2);
 
+  /// Packet duplication ratio (0.0 - 1.0).
   @$pb.TagNumber(3)
   $core.double get packetDuplicationRatio => $_getN(2);
   @$pb.TagNumber(3)
@@ -2650,6 +2645,7 @@ class TrafficRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPacketDuplicationRatio() => clearField(3);
 
+  /// Bandwidth in kbits/second.
   @$pb.TagNumber(4)
   $core.double get bandwidth => $_getN(3);
   @$pb.TagNumber(4)
@@ -2662,6 +2658,7 @@ class TrafficRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBandwidth() => clearField(4);
 
+  /// Burst size in kbits.
   @$pb.TagNumber(5)
   $core.double get burst => $_getN(4);
   @$pb.TagNumber(5)
@@ -2675,50 +2672,40 @@ class TrafficRule extends $pb.GeneratedMessage {
   void clearBurst() => clearField(5);
 }
 
+/// The currently provided software environment on the devices under test.
 class ProvidedSoftwareCatalog extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ProvidedSoftwareCatalog',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orchestratorVersion')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidxOrchestratorVersion')
-    ..hasRequiredFields = false;
-
-  ProvidedSoftwareCatalog._() : super();
   factory ProvidedSoftwareCatalog({
     @$core.Deprecated('This field is deprecated.')
     $core.String? orchestratorVersion,
     $core.String? androidxOrchestratorVersion,
   }) {
-    final _result = create();
+    final $result = create();
     if (orchestratorVersion != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.orchestratorVersion = orchestratorVersion;
+      $result.orchestratorVersion = orchestratorVersion;
     }
     if (androidxOrchestratorVersion != null) {
-      _result.androidxOrchestratorVersion = androidxOrchestratorVersion;
+      $result.androidxOrchestratorVersion = androidxOrchestratorVersion;
     }
-    return _result;
+    return $result;
   }
+  ProvidedSoftwareCatalog._() : super();
   factory ProvidedSoftwareCatalog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ProvidedSoftwareCatalog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ProvidedSoftwareCatalog',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'orchestratorVersion')
+    ..aOS(2, _omitFieldNames ? '' : 'androidxOrchestratorVersion')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2730,8 +2717,10 @@ class ProvidedSoftwareCatalog extends $pb.GeneratedMessage {
   ProvidedSoftwareCatalog copyWith(
           void Function(ProvidedSoftwareCatalog) updates) =>
       super.copyWith((message) => updates(message as ProvidedSoftwareCatalog))
-          as ProvidedSoftwareCatalog; // ignore: deprecated_member_use
+          as ProvidedSoftwareCatalog;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ProvidedSoftwareCatalog create() => ProvidedSoftwareCatalog._();
   ProvidedSoftwareCatalog createEmptyInstance() => create();
@@ -2742,6 +2731,11 @@ class ProvidedSoftwareCatalog extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ProvidedSoftwareCatalog>(create);
   static ProvidedSoftwareCatalog? _defaultInstance;
 
+  ///  Deprecated: Use AndroidX Test Orchestrator going forward.
+  ///
+  ///  A string representing the current version of Android Test Orchestrator
+  ///  that is used in the environment. The package is available at
+  ///  https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get orchestratorVersion => $_getSZ(0);
@@ -2758,6 +2752,9 @@ class ProvidedSoftwareCatalog extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOrchestratorVersion() => clearField(1);
 
+  /// A string representing the current version of AndroidX Test Orchestrator
+  /// that is used in the environment. The package is available at
+  /// https://maven.google.com/web/index.html#androidx.test:orchestrator.
   @$pb.TagNumber(2)
   $core.String get androidxOrchestratorVersion => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2770,3 +2767,7 @@ class ProvidedSoftwareCatalog extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAndroidxOrchestratorVersion() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

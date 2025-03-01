@@ -1,33 +1,31 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/unity/clientinfo.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use clientInfoDescriptor instead')
-const ClientInfo$json = const {
+const ClientInfo$json = {
   '1': 'ClientInfo',
-  '2': const [
-    const {
-      '1': 'application_id',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '10': 'applicationId'
-    },
-    const {
+  '2': [
+    {'1': 'application_id', '3': 1, '4': 1, '5': 9, '10': 'applicationId'},
+    {
       '1': 'application_version',
       '3': 2,
       '4': 1,
       '5': 9,
       '10': 'applicationVersion'
     },
-    const {
+    {
       '1': 'platform',
       '3': 3,
       '4': 1,
@@ -35,17 +33,11 @@ const ClientInfo$json = const {
       '6': '.google.maps.unity.ClientInfo.Platform',
       '10': 'platform'
     },
-    const {
-      '1': 'operating_system',
-      '3': 4,
-      '4': 1,
-      '5': 9,
-      '10': 'operatingSystem'
-    },
-    const {'1': 'api_client', '3': 5, '4': 1, '5': 9, '10': 'apiClient'},
-    const {'1': 'device_model', '3': 6, '4': 1, '5': 9, '10': 'deviceModel'},
-    const {'1': 'language_code', '3': 7, '4': 1, '5': 9, '10': 'languageCode'},
-    const {
+    {'1': 'operating_system', '3': 4, '4': 1, '5': 9, '10': 'operatingSystem'},
+    {'1': 'api_client', '3': 5, '4': 1, '5': 9, '10': 'apiClient'},
+    {'1': 'device_model', '3': 6, '4': 1, '5': 9, '10': 'deviceModel'},
+    {'1': 'language_code', '3': 7, '4': 1, '5': 9, '10': 'languageCode'},
+    {
       '1': 'operating_system_build',
       '3': 8,
       '4': 1,
@@ -53,24 +45,32 @@ const ClientInfo$json = const {
       '10': 'operatingSystemBuild'
     },
   ],
-  '4': const [ClientInfo_Platform$json],
+  '4': [ClientInfo_Platform$json],
 };
 
 @$core.Deprecated('Use clientInfoDescriptor instead')
-const ClientInfo_Platform$json = const {
+const ClientInfo_Platform$json = {
   '1': 'Platform',
-  '2': const [
-    const {'1': 'PLATFORM_UNSPECIFIED', '2': 0},
-    const {'1': 'EDITOR', '2': 1},
-    const {'1': 'MAC_OS', '2': 2},
-    const {'1': 'WINDOWS', '2': 3},
-    const {'1': 'LINUX', '2': 4},
-    const {'1': 'ANDROID', '2': 5},
-    const {'1': 'IOS', '2': 6},
-    const {'1': 'WEB_GL', '2': 7},
+  '2': [
+    {'1': 'PLATFORM_UNSPECIFIED', '2': 0},
+    {'1': 'EDITOR', '2': 1},
+    {'1': 'MAC_OS', '2': 2},
+    {'1': 'WINDOWS', '2': 3},
+    {'1': 'LINUX', '2': 4},
+    {'1': 'ANDROID', '2': 5},
+    {'1': 'IOS', '2': 6},
+    {'1': 'WEB_GL', '2': 7},
   ],
 };
 
 /// Descriptor for `ClientInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List clientInfoDescriptor = $convert.base64Decode(
-    'CgpDbGllbnRJbmZvEiUKDmFwcGxpY2F0aW9uX2lkGAEgASgJUg1hcHBsaWNhdGlvbklkEi8KE2FwcGxpY2F0aW9uX3ZlcnNpb24YAiABKAlSEmFwcGxpY2F0aW9uVmVyc2lvbhJCCghwbGF0Zm9ybRgDIAEoDjImLmdvb2dsZS5tYXBzLnVuaXR5LkNsaWVudEluZm8uUGxhdGZvcm1SCHBsYXRmb3JtEikKEG9wZXJhdGluZ19zeXN0ZW0YBCABKAlSD29wZXJhdGluZ1N5c3RlbRIdCgphcGlfY2xpZW50GAUgASgJUglhcGlDbGllbnQSIQoMZGV2aWNlX21vZGVsGAYgASgJUgtkZXZpY2VNb2RlbBIjCg1sYW5ndWFnZV9jb2RlGAcgASgJUgxsYW5ndWFnZUNvZGUSNAoWb3BlcmF0aW5nX3N5c3RlbV9idWlsZBgIIAEoCVIUb3BlcmF0aW5nU3lzdGVtQnVpbGQidgoIUGxhdGZvcm0SGAoUUExBVEZPUk1fVU5TUEVDSUZJRUQQABIKCgZFRElUT1IQARIKCgZNQUNfT1MQAhILCgdXSU5ET1dTEAMSCQoFTElOVVgQBBILCgdBTkRST0lEEAUSBwoDSU9TEAYSCgoGV0VCX0dMEAc=');
+    'CgpDbGllbnRJbmZvEiUKDmFwcGxpY2F0aW9uX2lkGAEgASgJUg1hcHBsaWNhdGlvbklkEi8KE2'
+    'FwcGxpY2F0aW9uX3ZlcnNpb24YAiABKAlSEmFwcGxpY2F0aW9uVmVyc2lvbhJCCghwbGF0Zm9y'
+    'bRgDIAEoDjImLmdvb2dsZS5tYXBzLnVuaXR5LkNsaWVudEluZm8uUGxhdGZvcm1SCHBsYXRmb3'
+    'JtEikKEG9wZXJhdGluZ19zeXN0ZW0YBCABKAlSD29wZXJhdGluZ1N5c3RlbRIdCgphcGlfY2xp'
+    'ZW50GAUgASgJUglhcGlDbGllbnQSIQoMZGV2aWNlX21vZGVsGAYgASgJUgtkZXZpY2VNb2RlbB'
+    'IjCg1sYW5ndWFnZV9jb2RlGAcgASgJUgxsYW5ndWFnZUNvZGUSNAoWb3BlcmF0aW5nX3N5c3Rl'
+    'bV9idWlsZBgIIAEoCVIUb3BlcmF0aW5nU3lzdGVtQnVpbGQidgoIUGxhdGZvcm0SGAoUUExBVE'
+    'ZPUk1fVU5TUEVDSUZJRUQQABIKCgZFRElUT1IQARIKCgZNQUNfT1MQAhILCgdXSU5ET1dTEAMS'
+    'CQoFTElOVVgQBBILCgdBTkRST0lEEAUSBwoDSU9TEAYSCgoGV0VCX0dMEAc=');

@@ -15,3 +15,6 @@ export '../src/generated/google/bigtable/admin/v2/instance.pbjson.dart';
 export '../src/generated/google/bigtable/admin/v2/table.pb.dart';
 export '../src/generated/google/bigtable/admin/v2/table.pbenum.dart';
 export '../src/generated/google/bigtable/admin/v2/table.pbjson.dart';
+export '../src/generated/google/bigtable/admin/v2/types.pb.dart';
+export '../src/generated/google/bigtable/admin/v2/types.pbenum.dart';
+export '../src/generated/google/bigtable/admin/v2/types.pbjson.dart';

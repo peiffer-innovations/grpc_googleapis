@@ -1,97 +1,110 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/home/graph/v1/homegraph.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use requestSyncDevicesRequestDescriptor instead')
-const RequestSyncDevicesRequest$json = const {
+const RequestSyncDevicesRequest$json = {
   '1': 'RequestSyncDevicesRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'agent_user_id',
       '3': 1,
       '4': 1,
       '5': 9,
-      '8': const {},
+      '8': {},
       '10': 'agentUserId'
     },
-    const {'1': 'async', '3': 2, '4': 1, '5': 8, '8': const {}, '10': 'async'},
+    {'1': 'async', '3': 2, '4': 1, '5': 8, '8': {}, '10': 'async'},
   ],
 };
 
 /// Descriptor for `RequestSyncDevicesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List requestSyncDevicesRequestDescriptor =
     $convert.base64Decode(
-        'ChlSZXF1ZXN0U3luY0RldmljZXNSZXF1ZXN0EicKDWFnZW50X3VzZXJfaWQYASABKAlCA+BBAlILYWdlbnRVc2VySWQSGQoFYXN5bmMYAiABKAhCA+BBAVIFYXN5bmM=');
+        'ChlSZXF1ZXN0U3luY0RldmljZXNSZXF1ZXN0EicKDWFnZW50X3VzZXJfaWQYASABKAlCA+BBAl'
+        'ILYWdlbnRVc2VySWQSGQoFYXN5bmMYAiABKAhCA+BBAVIFYXN5bmM=');
+
 @$core.Deprecated('Use requestSyncDevicesResponseDescriptor instead')
-const RequestSyncDevicesResponse$json = const {
+const RequestSyncDevicesResponse$json = {
   '1': 'RequestSyncDevicesResponse',
 };
 
 /// Descriptor for `RequestSyncDevicesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List requestSyncDevicesResponseDescriptor =
     $convert.base64Decode('ChpSZXF1ZXN0U3luY0RldmljZXNSZXNwb25zZQ==');
+
 @$core.Deprecated('Use reportStateAndNotificationRequestDescriptor instead')
-const ReportStateAndNotificationRequest$json = const {
+const ReportStateAndNotificationRequest$json = {
   '1': 'ReportStateAndNotificationRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'event_id', '3': 4, '4': 1, '5': 9, '10': 'eventId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'event_id', '3': 4, '4': 1, '5': 9, '10': 'eventId'},
+    {
       '1': 'agent_user_id',
       '3': 2,
       '4': 1,
       '5': 9,
-      '8': const {},
+      '8': {},
       '10': 'agentUserId'
     },
-    const {
+    {
       '1': 'follow_up_token',
       '3': 5,
       '4': 1,
       '5': 9,
-      '8': const {'3': true},
+      '8': {'3': true},
       '10': 'followUpToken',
     },
-    const {
+    {
       '1': 'payload',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.home.graph.v1.StateAndNotificationPayload',
-      '8': const {},
+      '8': {},
       '10': 'payload'
     },
   ],
 };
 
 /// Descriptor for `ReportStateAndNotificationRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List reportStateAndNotificationRequestDescriptor =
-    $convert.base64Decode(
-        'CiFSZXBvcnRTdGF0ZUFuZE5vdGlmaWNhdGlvblJlcXVlc3QSHQoKcmVxdWVzdF9pZBgBIAEoCVIJcmVxdWVzdElkEhkKCGV2ZW50X2lkGAQgASgJUgdldmVudElkEicKDWFnZW50X3VzZXJfaWQYAiABKAlCA+BBAlILYWdlbnRVc2VySWQSKgoPZm9sbG93X3VwX3Rva2VuGAUgASgJQgIYAVINZm9sbG93VXBUb2tlbhJQCgdwYXlsb2FkGAMgASgLMjEuZ29vZ2xlLmhvbWUuZ3JhcGgudjEuU3RhdGVBbmROb3RpZmljYXRpb25QYXlsb2FkQgPgQQJSB3BheWxvYWQ=');
+final $typed_data.Uint8List reportStateAndNotificationRequestDescriptor = $convert.base64Decode(
+    'CiFSZXBvcnRTdGF0ZUFuZE5vdGlmaWNhdGlvblJlcXVlc3QSHQoKcmVxdWVzdF9pZBgBIAEoCV'
+    'IJcmVxdWVzdElkEhkKCGV2ZW50X2lkGAQgASgJUgdldmVudElkEicKDWFnZW50X3VzZXJfaWQY'
+    'AiABKAlCA+BBAlILYWdlbnRVc2VySWQSKgoPZm9sbG93X3VwX3Rva2VuGAUgASgJQgIYAVINZm'
+    '9sbG93VXBUb2tlbhJQCgdwYXlsb2FkGAMgASgLMjEuZ29vZ2xlLmhvbWUuZ3JhcGgudjEuU3Rh'
+    'dGVBbmROb3RpZmljYXRpb25QYXlsb2FkQgPgQQJSB3BheWxvYWQ=');
+
 @$core.Deprecated('Use reportStateAndNotificationResponseDescriptor instead')
-const ReportStateAndNotificationResponse$json = const {
+const ReportStateAndNotificationResponse$json = {
   '1': 'ReportStateAndNotificationResponse',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
   ],
 };
 
 /// Descriptor for `ReportStateAndNotificationResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List reportStateAndNotificationResponseDescriptor =
     $convert.base64Decode(
-        'CiJSZXBvcnRTdGF0ZUFuZE5vdGlmaWNhdGlvblJlc3BvbnNlEh0KCnJlcXVlc3RfaWQYASABKAlSCXJlcXVlc3RJZA==');
+        'CiJSZXBvcnRTdGF0ZUFuZE5vdGlmaWNhdGlvblJlc3BvbnNlEh0KCnJlcXVlc3RfaWQYASABKA'
+        'lSCXJlcXVlc3RJZA==');
+
 @$core.Deprecated('Use stateAndNotificationPayloadDescriptor instead')
-const StateAndNotificationPayload$json = const {
+const StateAndNotificationPayload$json = {
   '1': 'StateAndNotificationPayload',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'devices',
       '3': 1,
       '4': 1,
@@ -105,12 +118,14 @@ const StateAndNotificationPayload$json = const {
 /// Descriptor for `StateAndNotificationPayload`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List stateAndNotificationPayloadDescriptor =
     $convert.base64Decode(
-        'ChtTdGF0ZUFuZE5vdGlmaWNhdGlvblBheWxvYWQSUAoHZGV2aWNlcxgBIAEoCzI2Lmdvb2dsZS5ob21lLmdyYXBoLnYxLlJlcG9ydFN0YXRlQW5kTm90aWZpY2F0aW9uRGV2aWNlUgdkZXZpY2Vz');
+        'ChtTdGF0ZUFuZE5vdGlmaWNhdGlvblBheWxvYWQSUAoHZGV2aWNlcxgBIAEoCzI2Lmdvb2dsZS'
+        '5ob21lLmdyYXBoLnYxLlJlcG9ydFN0YXRlQW5kTm90aWZpY2F0aW9uRGV2aWNlUgdkZXZpY2Vz');
+
 @$core.Deprecated('Use reportStateAndNotificationDeviceDescriptor instead')
-const ReportStateAndNotificationDevice$json = const {
+const ReportStateAndNotificationDevice$json = {
   '1': 'ReportStateAndNotificationDevice',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'states',
       '3': 1,
       '4': 1,
@@ -118,7 +133,7 @@ const ReportStateAndNotificationDevice$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'states'
     },
-    const {
+    {
       '1': 'notifications',
       '3': 2,
       '4': 1,
@@ -132,47 +147,52 @@ const ReportStateAndNotificationDevice$json = const {
 /// Descriptor for `ReportStateAndNotificationDevice`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List reportStateAndNotificationDeviceDescriptor =
     $convert.base64Decode(
-        'CiBSZXBvcnRTdGF0ZUFuZE5vdGlmaWNhdGlvbkRldmljZRIvCgZzdGF0ZXMYASABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0UgZzdGF0ZXMSPQoNbm90aWZpY2F0aW9ucxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RSDW5vdGlmaWNhdGlvbnM=');
+        'CiBSZXBvcnRTdGF0ZUFuZE5vdGlmaWNhdGlvbkRldmljZRIvCgZzdGF0ZXMYASABKAsyFy5nb2'
+        '9nbGUucHJvdG9idWYuU3RydWN0UgZzdGF0ZXMSPQoNbm90aWZpY2F0aW9ucxgCIAEoCzIXLmdv'
+        'b2dsZS5wcm90b2J1Zi5TdHJ1Y3RSDW5vdGlmaWNhdGlvbnM=');
+
 @$core.Deprecated('Use deleteAgentUserRequestDescriptor instead')
-const DeleteAgentUserRequest$json = const {
+const DeleteAgentUserRequest$json = {
   '1': 'DeleteAgentUserRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {
       '1': 'agent_user_id',
       '3': 2,
       '4': 1,
       '5': 9,
-      '8': const {},
+      '8': {},
       '10': 'agentUserId'
     },
   ],
 };
 
 /// Descriptor for `DeleteAgentUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteAgentUserRequestDescriptor =
-    $convert.base64Decode(
-        'ChZEZWxldGVBZ2VudFVzZXJSZXF1ZXN0Eh0KCnJlcXVlc3RfaWQYASABKAlSCXJlcXVlc3RJZBJSCg1hZ2VudF91c2VyX2lkGAIgASgJQi7gQQL6QSgKJmhvbWVncmFwaC5nb29nbGVhcGlzLmNvbS9BZ2VudFVzZXJQYXRoUgthZ2VudFVzZXJJZA==');
+final $typed_data.Uint8List deleteAgentUserRequestDescriptor = $convert.base64Decode(
+    'ChZEZWxldGVBZ2VudFVzZXJSZXF1ZXN0Eh0KCnJlcXVlc3RfaWQYASABKAlSCXJlcXVlc3RJZB'
+    'JSCg1hZ2VudF91c2VyX2lkGAIgASgJQi7gQQL6QSgKJmhvbWVncmFwaC5nb29nbGVhcGlzLmNv'
+    'bS9BZ2VudFVzZXJQYXRoUgthZ2VudFVzZXJJZA==');
+
 @$core.Deprecated('Use queryRequestDescriptor instead')
-const QueryRequest$json = const {
+const QueryRequest$json = {
   '1': 'QueryRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {
       '1': 'agent_user_id',
       '3': 2,
       '4': 1,
       '5': 9,
-      '8': const {},
+      '8': {},
       '10': 'agentUserId'
     },
-    const {
+    {
       '1': 'inputs',
       '3': 3,
       '4': 3,
       '5': 11,
       '6': '.google.home.graph.v1.QueryRequestInput',
-      '8': const {},
+      '8': {},
       '10': 'inputs'
     },
   ],
@@ -180,12 +200,15 @@ const QueryRequest$json = const {
 
 /// Descriptor for `QueryRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryRequestDescriptor = $convert.base64Decode(
-    'CgxRdWVyeVJlcXVlc3QSHQoKcmVxdWVzdF9pZBgBIAEoCVIJcmVxdWVzdElkEicKDWFnZW50X3VzZXJfaWQYAiABKAlCA+BBAlILYWdlbnRVc2VySWQSRAoGaW5wdXRzGAMgAygLMicuZ29vZ2xlLmhvbWUuZ3JhcGgudjEuUXVlcnlSZXF1ZXN0SW5wdXRCA+BBAlIGaW5wdXRz');
+    'CgxRdWVyeVJlcXVlc3QSHQoKcmVxdWVzdF9pZBgBIAEoCVIJcmVxdWVzdElkEicKDWFnZW50X3'
+    'VzZXJfaWQYAiABKAlCA+BBAlILYWdlbnRVc2VySWQSRAoGaW5wdXRzGAMgAygLMicuZ29vZ2xl'
+    'LmhvbWUuZ3JhcGgudjEuUXVlcnlSZXF1ZXN0SW5wdXRCA+BBAlIGaW5wdXRz');
+
 @$core.Deprecated('Use queryRequestInputDescriptor instead')
-const QueryRequestInput$json = const {
+const QueryRequestInput$json = {
   '1': 'QueryRequestInput',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'payload',
       '3': 1,
       '4': 1,
@@ -198,12 +221,14 @@ const QueryRequestInput$json = const {
 
 /// Descriptor for `QueryRequestInput`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryRequestInputDescriptor = $convert.base64Decode(
-    'ChFRdWVyeVJlcXVlc3RJbnB1dBJDCgdwYXlsb2FkGAEgASgLMikuZ29vZ2xlLmhvbWUuZ3JhcGgudjEuUXVlcnlSZXF1ZXN0UGF5bG9hZFIHcGF5bG9hZA==');
+    'ChFRdWVyeVJlcXVlc3RJbnB1dBJDCgdwYXlsb2FkGAEgASgLMikuZ29vZ2xlLmhvbWUuZ3JhcG'
+    'gudjEuUXVlcnlSZXF1ZXN0UGF5bG9hZFIHcGF5bG9hZA==');
+
 @$core.Deprecated('Use queryRequestPayloadDescriptor instead')
-const QueryRequestPayload$json = const {
+const QueryRequestPayload$json = {
   '1': 'QueryRequestPayload',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'devices',
       '3': 1,
       '4': 3,
@@ -216,24 +241,27 @@ const QueryRequestPayload$json = const {
 
 /// Descriptor for `QueryRequestPayload`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryRequestPayloadDescriptor = $convert.base64Decode(
-    'ChNRdWVyeVJlcXVlc3RQYXlsb2FkEj0KB2RldmljZXMYASADKAsyIy5nb29nbGUuaG9tZS5ncmFwaC52MS5BZ2VudERldmljZUlkUgdkZXZpY2Vz');
+    'ChNRdWVyeVJlcXVlc3RQYXlsb2FkEj0KB2RldmljZXMYASADKAsyIy5nb29nbGUuaG9tZS5ncm'
+    'FwaC52MS5BZ2VudERldmljZUlkUgdkZXZpY2Vz');
+
 @$core.Deprecated('Use agentDeviceIdDescriptor instead')
-const AgentDeviceId$json = const {
+const AgentDeviceId$json = {
   '1': 'AgentDeviceId',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
   ],
 };
 
 /// Descriptor for `AgentDeviceId`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List agentDeviceIdDescriptor =
     $convert.base64Decode('Cg1BZ2VudERldmljZUlkEg4KAmlkGAEgASgJUgJpZA==');
+
 @$core.Deprecated('Use queryResponseDescriptor instead')
-const QueryResponse$json = const {
+const QueryResponse$json = {
   '1': 'QueryResponse',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {
       '1': 'payload',
       '3': 2,
       '4': 1,
@@ -246,12 +274,15 @@ const QueryResponse$json = const {
 
 /// Descriptor for `QueryResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryResponseDescriptor = $convert.base64Decode(
-    'Cg1RdWVyeVJlc3BvbnNlEh0KCnJlcXVlc3RfaWQYASABKAlSCXJlcXVlc3RJZBJECgdwYXlsb2FkGAIgASgLMiouZ29vZ2xlLmhvbWUuZ3JhcGgudjEuUXVlcnlSZXNwb25zZVBheWxvYWRSB3BheWxvYWQ=');
+    'Cg1RdWVyeVJlc3BvbnNlEh0KCnJlcXVlc3RfaWQYASABKAlSCXJlcXVlc3RJZBJECgdwYXlsb2'
+    'FkGAIgASgLMiouZ29vZ2xlLmhvbWUuZ3JhcGgudjEuUXVlcnlSZXNwb25zZVBheWxvYWRSB3Bh'
+    'eWxvYWQ=');
+
 @$core.Deprecated('Use queryResponsePayloadDescriptor instead')
-const QueryResponsePayload$json = const {
+const QueryResponsePayload$json = {
   '1': 'QueryResponsePayload',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'devices',
       '3': 1,
       '4': 3,
@@ -260,15 +291,15 @@ const QueryResponsePayload$json = const {
       '10': 'devices'
     },
   ],
-  '3': const [QueryResponsePayload_DevicesEntry$json],
+  '3': [QueryResponsePayload_DevicesEntry$json],
 };
 
 @$core.Deprecated('Use queryResponsePayloadDescriptor instead')
-const QueryResponsePayload_DevicesEntry$json = const {
+const QueryResponsePayload_DevicesEntry$json = {
   '1': 'DevicesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -277,23 +308,27 @@ const QueryResponsePayload_DevicesEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
 /// Descriptor for `QueryResponsePayload`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryResponsePayloadDescriptor = $convert.base64Decode(
-    'ChRRdWVyeVJlc3BvbnNlUGF5bG9hZBJRCgdkZXZpY2VzGAEgAygLMjcuZ29vZ2xlLmhvbWUuZ3JhcGgudjEuUXVlcnlSZXNwb25zZVBheWxvYWQuRGV2aWNlc0VudHJ5UgdkZXZpY2VzGlMKDERldmljZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRItCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RSBXZhbHVlOgI4AQ==');
+    'ChRRdWVyeVJlc3BvbnNlUGF5bG9hZBJRCgdkZXZpY2VzGAEgAygLMjcuZ29vZ2xlLmhvbWUuZ3'
+    'JhcGgudjEuUXVlcnlSZXNwb25zZVBheWxvYWQuRGV2aWNlc0VudHJ5UgdkZXZpY2VzGlMKDERl'
+    'dmljZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRItCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5wcm'
+    '90b2J1Zi5TdHJ1Y3RSBXZhbHVlOgI4AQ==');
+
 @$core.Deprecated('Use syncRequestDescriptor instead')
-const SyncRequest$json = const {
+const SyncRequest$json = {
   '1': 'SyncRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {
       '1': 'agent_user_id',
       '3': 2,
       '4': 1,
       '5': 9,
-      '8': const {},
+      '8': {},
       '10': 'agentUserId'
     },
   ],
@@ -301,13 +336,15 @@ const SyncRequest$json = const {
 
 /// Descriptor for `SyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List syncRequestDescriptor = $convert.base64Decode(
-    'CgtTeW5jUmVxdWVzdBIdCgpyZXF1ZXN0X2lkGAEgASgJUglyZXF1ZXN0SWQSJwoNYWdlbnRfdXNlcl9pZBgCIAEoCUID4EECUgthZ2VudFVzZXJJZA==');
+    'CgtTeW5jUmVxdWVzdBIdCgpyZXF1ZXN0X2lkGAEgASgJUglyZXF1ZXN0SWQSJwoNYWdlbnRfdX'
+    'Nlcl9pZBgCIAEoCUID4EECUgthZ2VudFVzZXJJZA==');
+
 @$core.Deprecated('Use syncResponseDescriptor instead')
-const SyncResponse$json = const {
+const SyncResponse$json = {
   '1': 'SyncResponse',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {
       '1': 'payload',
       '3': 2,
       '4': 1,
@@ -320,13 +357,16 @@ const SyncResponse$json = const {
 
 /// Descriptor for `SyncResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List syncResponseDescriptor = $convert.base64Decode(
-    'CgxTeW5jUmVzcG9uc2USHQoKcmVxdWVzdF9pZBgBIAEoCVIJcmVxdWVzdElkEkMKB3BheWxvYWQYAiABKAsyKS5nb29nbGUuaG9tZS5ncmFwaC52MS5TeW5jUmVzcG9uc2VQYXlsb2FkUgdwYXlsb2Fk');
+    'CgxTeW5jUmVzcG9uc2USHQoKcmVxdWVzdF9pZBgBIAEoCVIJcmVxdWVzdElkEkMKB3BheWxvYW'
+    'QYAiABKAsyKS5nb29nbGUuaG9tZS5ncmFwaC52MS5TeW5jUmVzcG9uc2VQYXlsb2FkUgdwYXls'
+    'b2Fk');
+
 @$core.Deprecated('Use syncResponsePayloadDescriptor instead')
-const SyncResponsePayload$json = const {
+const SyncResponsePayload$json = {
   '1': 'SyncResponsePayload',
-  '2': const [
-    const {'1': 'agent_user_id', '3': 1, '4': 1, '5': 9, '10': 'agentUserId'},
-    const {
+  '2': [
+    {'1': 'agent_user_id', '3': 1, '4': 1, '5': 9, '10': 'agentUserId'},
+    {
       '1': 'devices',
       '3': 2,
       '4': 3,
@@ -339,4 +379,6 @@ const SyncResponsePayload$json = const {
 
 /// Descriptor for `SyncResponsePayload`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List syncResponsePayloadDescriptor = $convert.base64Decode(
-    'ChNTeW5jUmVzcG9uc2VQYXlsb2FkEiIKDWFnZW50X3VzZXJfaWQYASABKAlSC2FnZW50VXNlcklkEjYKB2RldmljZXMYAiADKAsyHC5nb29nbGUuaG9tZS5ncmFwaC52MS5EZXZpY2VSB2RldmljZXM=');
+    'ChNTeW5jUmVzcG9uc2VQYXlsb2FkEiIKDWFnZW50X3VzZXJfaWQYASABKAlSC2FnZW50VXNlck'
+    'lkEjYKB2RldmljZXMYAiADKAsyHC5nb29nbGUuaG9tZS5ncmFwaC52MS5EZXZpY2VSB2Rldmlj'
+    'ZXM=');

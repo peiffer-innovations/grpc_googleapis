@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/activity/v2/query_drive_activity_request.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,58 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 enum QueryDriveActivityRequest_Key { itemName, ancestorName, notSet }
 
+/// The request message for querying Drive activity.
 class QueryDriveActivityRequest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, QueryDriveActivityRequest_Key>
-      _QueryDriveActivityRequest_KeyByTag = {
-    1: QueryDriveActivityRequest_Key.itemName,
-    2: QueryDriveActivityRequest_Key.ancestorName,
-    0: QueryDriveActivityRequest_Key.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryDriveActivityRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..oo(0, [1, 2])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'itemName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ancestorName')
-    ..aOM<ConsolidationStrategy>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'consolidationStrategy',
-        subBuilder: ConsolidationStrategy.create)
-    ..a<$core.int>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..hasRequiredFields = false;
-
-  QueryDriveActivityRequest._() : super();
   factory QueryDriveActivityRequest({
     $core.String? itemName,
     $core.String? ancestorName,
@@ -71,33 +25,57 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (itemName != null) {
-      _result.itemName = itemName;
+      $result.itemName = itemName;
     }
     if (ancestorName != null) {
-      _result.ancestorName = ancestorName;
+      $result.ancestorName = ancestorName;
     }
     if (consolidationStrategy != null) {
-      _result.consolidationStrategy = consolidationStrategy;
+      $result.consolidationStrategy = consolidationStrategy;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  QueryDriveActivityRequest._() : super();
   factory QueryDriveActivityRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryDriveActivityRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, QueryDriveActivityRequest_Key>
+      _QueryDriveActivityRequest_KeyByTag = {
+    1: QueryDriveActivityRequest_Key.itemName,
+    2: QueryDriveActivityRequest_Key.ancestorName,
+    0: QueryDriveActivityRequest_Key.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryDriveActivityRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOS(1, _omitFieldNames ? '' : 'itemName')
+    ..aOS(2, _omitFieldNames ? '' : 'ancestorName')
+    ..aOM<ConsolidationStrategy>(
+        5, _omitFieldNames ? '' : 'consolidationStrategy',
+        subBuilder: ConsolidationStrategy.create)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(7, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(8, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -109,8 +87,10 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   QueryDriveActivityRequest copyWith(
           void Function(QueryDriveActivityRequest) updates) =>
       super.copyWith((message) => updates(message as QueryDriveActivityRequest))
-          as QueryDriveActivityRequest; // ignore: deprecated_member_use
+          as QueryDriveActivityRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryDriveActivityRequest create() => QueryDriveActivityRequest._();
   QueryDriveActivityRequest createEmptyInstance() => create();
@@ -125,6 +105,8 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
       _QueryDriveActivityRequest_KeyByTag[$_whichOneof(0)]!;
   void clearKey() => clearField($_whichOneof(0));
 
+  /// Return activities for this Drive item. The format is
+  /// `items/ITEM_ID`.
   @$pb.TagNumber(1)
   $core.String get itemName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -137,6 +119,8 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearItemName() => clearField(1);
 
+  /// Return activities for this Drive folder, plus all children and
+  /// descendants. The format is `items/ITEM_ID`.
   @$pb.TagNumber(2)
   $core.String get ancestorName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -149,6 +133,8 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAncestorName() => clearField(2);
 
+  /// Details on how to consolidate related actions that make up the activity. If
+  /// not set, then related actions aren't consolidated.
   @$pb.TagNumber(5)
   ConsolidationStrategy get consolidationStrategy => $_getN(2);
   @$pb.TagNumber(5)
@@ -163,6 +149,10 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ConsolidationStrategy ensureConsolidationStrategy() => $_ensure(2);
 
+  /// The minimum number of activities desired in the response; the server
+  /// attempts to return at least this quantity. The server may also return fewer
+  /// activities if it has a partial response ready before the request times out.
+  /// If not set, a default value is used.
   @$pb.TagNumber(6)
   $core.int get pageSize => $_getIZ(3);
   @$pb.TagNumber(6)
@@ -175,6 +165,10 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPageSize() => clearField(6);
 
+  /// The token identifies which page of results to return. Set this to the
+  /// next_page_token value returned from a previous query to obtain the
+  /// following page of results. If not set, the first page of results is
+  /// returned.
   @$pb.TagNumber(7)
   $core.String get pageToken => $_getSZ(4);
   @$pb.TagNumber(7)
@@ -187,6 +181,27 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearPageToken() => clearField(7);
 
+  ///  The filtering for items returned from this query request. The format of the
+  ///  filter string is a sequence of expressions, joined by an optional "AND",
+  ///  where each expression is of the form "field operator value".
+  ///
+  ///  Supported fields:
+  ///
+  ///    - `time`: Uses numerical operators on date values either in
+  ///      terms of milliseconds since Jan 1, 1970 or in <a
+  ///      href="https://www.rfc-editor.org/rfc/rfc3339" target="_blank">RFC
+  ///      3339</a> format. Examples:
+  ///        - `time > 1452409200000 AND time <= 1492812924310`
+  ///        - `time >= "2016-01-10T01:02:03-05:00"`
+  ///
+  ///    - `detail.action_detail_case`: Uses the "has" operator (:) and
+  ///      either a singular value or a list of allowed action types enclosed in
+  ///      parentheses, separated by a space. To exclude a result from the
+  ///      response, prepend a hyphen (`-`) to the beginning of the filter string.
+  ///      Examples:
+  ///        - `detail.action_detail_case:RENAME`
+  ///        - `detail.action_detail_case:(CREATE RESTORE)`
+  ///        - `-detail.action_detail_case:MOVE`
   @$pb.TagNumber(8)
   $core.String get filter => $_getSZ(5);
   @$pb.TagNumber(8)
@@ -200,20 +215,10 @@ class QueryDriveActivityRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(8);
 }
 
+/// A strategy that does no consolidation of individual activities.
 class ConsolidationStrategy_NoConsolidation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ConsolidationStrategy.NoConsolidation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  ConsolidationStrategy_NoConsolidation._() : super();
   factory ConsolidationStrategy_NoConsolidation() => create();
+  ConsolidationStrategy_NoConsolidation._() : super();
   factory ConsolidationStrategy_NoConsolidation.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -221,6 +226,14 @@ class ConsolidationStrategy_NoConsolidation extends $pb.GeneratedMessage {
   factory ConsolidationStrategy_NoConsolidation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConsolidationStrategy.NoConsolidation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -233,8 +246,10 @@ class ConsolidationStrategy_NoConsolidation extends $pb.GeneratedMessage {
           void Function(ConsolidationStrategy_NoConsolidation) updates) =>
       super.copyWith((message) =>
               updates(message as ConsolidationStrategy_NoConsolidation))
-          as ConsolidationStrategy_NoConsolidation; // ignore: deprecated_member_use
+          as ConsolidationStrategy_NoConsolidation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ConsolidationStrategy_NoConsolidation create() =>
       ConsolidationStrategy_NoConsolidation._();
@@ -248,26 +263,28 @@ class ConsolidationStrategy_NoConsolidation extends $pb.GeneratedMessage {
   static ConsolidationStrategy_NoConsolidation? _defaultInstance;
 }
 
+/// A strategy that consolidates activities using the grouping rules from the
+/// legacy V1 Activity API. Similar actions occurring within a window of time
+/// can be grouped across multiple targets (such as moving a set of files at
+/// once) or multiple actors (such as several users editing the same item).
+/// Grouping rules for this strategy are specific to each type of action.
 class ConsolidationStrategy_Legacy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ConsolidationStrategy.Legacy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  ConsolidationStrategy_Legacy._() : super();
   factory ConsolidationStrategy_Legacy() => create();
+  ConsolidationStrategy_Legacy._() : super();
   factory ConsolidationStrategy_Legacy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ConsolidationStrategy_Legacy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConsolidationStrategy.Legacy',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -280,8 +297,10 @@ class ConsolidationStrategy_Legacy extends $pb.GeneratedMessage {
           void Function(ConsolidationStrategy_Legacy) updates) =>
       super.copyWith(
               (message) => updates(message as ConsolidationStrategy_Legacy))
-          as ConsolidationStrategy_Legacy; // ignore: deprecated_member_use
+          as ConsolidationStrategy_Legacy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ConsolidationStrategy_Legacy create() =>
       ConsolidationStrategy_Legacy._();
@@ -296,7 +315,33 @@ class ConsolidationStrategy_Legacy extends $pb.GeneratedMessage {
 
 enum ConsolidationStrategy_Strategy { none, legacy, notSet }
 
+/// How the individual activities are consolidated. If a set of activities is
+/// related they can be consolidated into one combined activity, such as one
+/// actor performing the same action on multiple targets, or multiple actors
+/// performing the same action on a single target. The strategy defines the rules
+/// for which activities are related.
 class ConsolidationStrategy extends $pb.GeneratedMessage {
+  factory ConsolidationStrategy({
+    ConsolidationStrategy_NoConsolidation? none,
+    ConsolidationStrategy_Legacy? legacy,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    if (legacy != null) {
+      $result.legacy = legacy;
+    }
+    return $result;
+  }
+  ConsolidationStrategy._() : super();
+  factory ConsolidationStrategy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConsolidationStrategy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ConsolidationStrategy_Strategy>
       _ConsolidationStrategy_StrategyByTag = {
     1: ConsolidationStrategy_Strategy.none,
@@ -304,49 +349,18 @@ class ConsolidationStrategy extends $pb.GeneratedMessage {
     0: ConsolidationStrategy_Strategy.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ConsolidationStrategy',
+      _omitMessageNames ? '' : 'ConsolidationStrategy',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOM<ConsolidationStrategy_NoConsolidation>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'none',
+        1, _omitFieldNames ? '' : 'none',
         subBuilder: ConsolidationStrategy_NoConsolidation.create)
-    ..aOM<ConsolidationStrategy_Legacy>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'legacy',
+    ..aOM<ConsolidationStrategy_Legacy>(2, _omitFieldNames ? '' : 'legacy',
         subBuilder: ConsolidationStrategy_Legacy.create)
     ..hasRequiredFields = false;
 
-  ConsolidationStrategy._() : super();
-  factory ConsolidationStrategy({
-    ConsolidationStrategy_NoConsolidation? none,
-    ConsolidationStrategy_Legacy? legacy,
-  }) {
-    final _result = create();
-    if (none != null) {
-      _result.none = none;
-    }
-    if (legacy != null) {
-      _result.legacy = legacy;
-    }
-    return _result;
-  }
-  factory ConsolidationStrategy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConsolidationStrategy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -358,8 +372,10 @@ class ConsolidationStrategy extends $pb.GeneratedMessage {
   ConsolidationStrategy copyWith(
           void Function(ConsolidationStrategy) updates) =>
       super.copyWith((message) => updates(message as ConsolidationStrategy))
-          as ConsolidationStrategy; // ignore: deprecated_member_use
+          as ConsolidationStrategy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ConsolidationStrategy create() => ConsolidationStrategy._();
   ConsolidationStrategy createEmptyInstance() => create();
@@ -374,6 +390,7 @@ class ConsolidationStrategy extends $pb.GeneratedMessage {
       _ConsolidationStrategy_StrategyByTag[$_whichOneof(0)]!;
   void clearStrategy() => clearField($_whichOneof(0));
 
+  /// The individual activities are not consolidated.
   @$pb.TagNumber(1)
   ConsolidationStrategy_NoConsolidation get none => $_getN(0);
   @$pb.TagNumber(1)
@@ -388,6 +405,7 @@ class ConsolidationStrategy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ConsolidationStrategy_NoConsolidation ensureNone() => $_ensure(0);
 
+  /// The individual activities are consolidated using the legacy strategy.
   @$pb.TagNumber(2)
   ConsolidationStrategy_Legacy get legacy => $_getN(1);
   @$pb.TagNumber(2)
@@ -402,3 +420,7 @@ class ConsolidationStrategy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ConsolidationStrategy_Legacy ensureLegacy() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

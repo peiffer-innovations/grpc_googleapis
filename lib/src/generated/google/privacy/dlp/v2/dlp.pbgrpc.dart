@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/privacy/dlp/v2/dlp.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'dlp.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../protobuf/empty.pb.dart' as $1;
+import 'dlp.pb.dart' as $0;
+
 export 'dlp.pb.dart';
 
+@$pb.GrpcServiceName('google.privacy.dlp.v2.DlpService')
 class DlpServiceClient extends $grpc.Client {
   static final _$inspectContent =
       $grpc.ClientMethod<$0.InspectContentRequest, $0.InspectContentResponse>(
@@ -138,6 +145,35 @@ class DlpServiceClient extends $grpc.Client {
           '/google.privacy.dlp.v2.DlpService/ActivateJobTrigger',
           ($0.ActivateJobTriggerRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.DlpJob.fromBuffer(value));
+  static final _$createDiscoveryConfig =
+      $grpc.ClientMethod<$0.CreateDiscoveryConfigRequest, $0.DiscoveryConfig>(
+          '/google.privacy.dlp.v2.DlpService/CreateDiscoveryConfig',
+          ($0.CreateDiscoveryConfigRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.DiscoveryConfig.fromBuffer(value));
+  static final _$updateDiscoveryConfig =
+      $grpc.ClientMethod<$0.UpdateDiscoveryConfigRequest, $0.DiscoveryConfig>(
+          '/google.privacy.dlp.v2.DlpService/UpdateDiscoveryConfig',
+          ($0.UpdateDiscoveryConfigRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.DiscoveryConfig.fromBuffer(value));
+  static final _$getDiscoveryConfig =
+      $grpc.ClientMethod<$0.GetDiscoveryConfigRequest, $0.DiscoveryConfig>(
+          '/google.privacy.dlp.v2.DlpService/GetDiscoveryConfig',
+          ($0.GetDiscoveryConfigRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.DiscoveryConfig.fromBuffer(value));
+  static final _$listDiscoveryConfigs = $grpc.ClientMethod<
+          $0.ListDiscoveryConfigsRequest, $0.ListDiscoveryConfigsResponse>(
+      '/google.privacy.dlp.v2.DlpService/ListDiscoveryConfigs',
+      ($0.ListDiscoveryConfigsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListDiscoveryConfigsResponse.fromBuffer(value));
+  static final _$deleteDiscoveryConfig =
+      $grpc.ClientMethod<$0.DeleteDiscoveryConfigRequest, $1.Empty>(
+          '/google.privacy.dlp.v2.DlpService/DeleteDiscoveryConfig',
+          ($0.DeleteDiscoveryConfigRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$createDlpJob =
       $grpc.ClientMethod<$0.CreateDlpJobRequest, $0.DlpJob>(
           '/google.privacy.dlp.v2.DlpService/CreateDlpJob',
@@ -189,6 +225,65 @@ class DlpServiceClient extends $grpc.Client {
           '/google.privacy.dlp.v2.DlpService/DeleteStoredInfoType',
           ($0.DeleteStoredInfoTypeRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$listProjectDataProfiles = $grpc.ClientMethod<
+          $0.ListProjectDataProfilesRequest,
+          $0.ListProjectDataProfilesResponse>(
+      '/google.privacy.dlp.v2.DlpService/ListProjectDataProfiles',
+      ($0.ListProjectDataProfilesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListProjectDataProfilesResponse.fromBuffer(value));
+  static final _$listTableDataProfiles = $grpc.ClientMethod<
+          $0.ListTableDataProfilesRequest, $0.ListTableDataProfilesResponse>(
+      '/google.privacy.dlp.v2.DlpService/ListTableDataProfiles',
+      ($0.ListTableDataProfilesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListTableDataProfilesResponse.fromBuffer(value));
+  static final _$listColumnDataProfiles = $grpc.ClientMethod<
+          $0.ListColumnDataProfilesRequest, $0.ListColumnDataProfilesResponse>(
+      '/google.privacy.dlp.v2.DlpService/ListColumnDataProfiles',
+      ($0.ListColumnDataProfilesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListColumnDataProfilesResponse.fromBuffer(value));
+  static final _$getProjectDataProfile = $grpc.ClientMethod<
+          $0.GetProjectDataProfileRequest, $0.ProjectDataProfile>(
+      '/google.privacy.dlp.v2.DlpService/GetProjectDataProfile',
+      ($0.GetProjectDataProfileRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ProjectDataProfile.fromBuffer(value));
+  static final _$listFileStoreDataProfiles = $grpc.ClientMethod<
+          $0.ListFileStoreDataProfilesRequest,
+          $0.ListFileStoreDataProfilesResponse>(
+      '/google.privacy.dlp.v2.DlpService/ListFileStoreDataProfiles',
+      ($0.ListFileStoreDataProfilesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListFileStoreDataProfilesResponse.fromBuffer(value));
+  static final _$getFileStoreDataProfile = $grpc.ClientMethod<
+          $0.GetFileStoreDataProfileRequest, $0.FileStoreDataProfile>(
+      '/google.privacy.dlp.v2.DlpService/GetFileStoreDataProfile',
+      ($0.GetFileStoreDataProfileRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.FileStoreDataProfile.fromBuffer(value));
+  static final _$deleteFileStoreDataProfile =
+      $grpc.ClientMethod<$0.DeleteFileStoreDataProfileRequest, $1.Empty>(
+          '/google.privacy.dlp.v2.DlpService/DeleteFileStoreDataProfile',
+          ($0.DeleteFileStoreDataProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$getTableDataProfile =
+      $grpc.ClientMethod<$0.GetTableDataProfileRequest, $0.TableDataProfile>(
+          '/google.privacy.dlp.v2.DlpService/GetTableDataProfile',
+          ($0.GetTableDataProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.TableDataProfile.fromBuffer(value));
+  static final _$getColumnDataProfile =
+      $grpc.ClientMethod<$0.GetColumnDataProfileRequest, $0.ColumnDataProfile>(
+          '/google.privacy.dlp.v2.DlpService/GetColumnDataProfile',
+          ($0.GetColumnDataProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ColumnDataProfile.fromBuffer(value));
+  static final _$deleteTableDataProfile =
+      $grpc.ClientMethod<$0.DeleteTableDataProfileRequest, $1.Empty>(
+          '/google.privacy.dlp.v2.DlpService/DeleteTableDataProfile',
+          ($0.DeleteTableDataProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$hybridInspectDlpJob = $grpc.ClientMethod<
           $0.HybridInspectDlpJobRequest, $0.HybridInspectResponse>(
       '/google.privacy.dlp.v2.DlpService/HybridInspectDlpJob',
@@ -200,6 +295,38 @@ class DlpServiceClient extends $grpc.Client {
           '/google.privacy.dlp.v2.DlpService/FinishDlpJob',
           ($0.FinishDlpJobRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$createConnection =
+      $grpc.ClientMethod<$0.CreateConnectionRequest, $0.Connection>(
+          '/google.privacy.dlp.v2.DlpService/CreateConnection',
+          ($0.CreateConnectionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Connection.fromBuffer(value));
+  static final _$getConnection =
+      $grpc.ClientMethod<$0.GetConnectionRequest, $0.Connection>(
+          '/google.privacy.dlp.v2.DlpService/GetConnection',
+          ($0.GetConnectionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Connection.fromBuffer(value));
+  static final _$listConnections =
+      $grpc.ClientMethod<$0.ListConnectionsRequest, $0.ListConnectionsResponse>(
+          '/google.privacy.dlp.v2.DlpService/ListConnections',
+          ($0.ListConnectionsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ListConnectionsResponse.fromBuffer(value));
+  static final _$searchConnections = $grpc.ClientMethod<
+          $0.SearchConnectionsRequest, $0.SearchConnectionsResponse>(
+      '/google.privacy.dlp.v2.DlpService/SearchConnections',
+      ($0.SearchConnectionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.SearchConnectionsResponse.fromBuffer(value));
+  static final _$deleteConnection =
+      $grpc.ClientMethod<$0.DeleteConnectionRequest, $1.Empty>(
+          '/google.privacy.dlp.v2.DlpService/DeleteConnection',
+          ($0.DeleteConnectionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$updateConnection =
+      $grpc.ClientMethod<$0.UpdateConnectionRequest, $0.Connection>(
+          '/google.privacy.dlp.v2.DlpService/UpdateConnection',
+          ($0.UpdateConnectionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Connection.fromBuffer(value));
 
   DlpServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -343,6 +470,36 @@ class DlpServiceClient extends $grpc.Client {
     return $createUnaryCall(_$activateJobTrigger, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.DiscoveryConfig> createDiscoveryConfig(
+      $0.CreateDiscoveryConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createDiscoveryConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.DiscoveryConfig> updateDiscoveryConfig(
+      $0.UpdateDiscoveryConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateDiscoveryConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.DiscoveryConfig> getDiscoveryConfig(
+      $0.GetDiscoveryConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDiscoveryConfig, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListDiscoveryConfigsResponse> listDiscoveryConfigs(
+      $0.ListDiscoveryConfigsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listDiscoveryConfigs, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteDiscoveryConfig(
+      $0.DeleteDiscoveryConfigRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteDiscoveryConfig, request, options: options);
+  }
+
   $grpc.ResponseFuture<$0.DlpJob> createDlpJob($0.CreateDlpJobRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createDlpJob, request, options: options);
@@ -399,6 +556,72 @@ class DlpServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteStoredInfoType, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListProjectDataProfilesResponse>
+      listProjectDataProfiles($0.ListProjectDataProfilesRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listProjectDataProfiles, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListTableDataProfilesResponse> listTableDataProfiles(
+      $0.ListTableDataProfilesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listTableDataProfiles, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListColumnDataProfilesResponse>
+      listColumnDataProfiles($0.ListColumnDataProfilesRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listColumnDataProfiles, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ProjectDataProfile> getProjectDataProfile(
+      $0.GetProjectDataProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getProjectDataProfile, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListFileStoreDataProfilesResponse>
+      listFileStoreDataProfiles($0.ListFileStoreDataProfilesRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listFileStoreDataProfiles, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.FileStoreDataProfile> getFileStoreDataProfile(
+      $0.GetFileStoreDataProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFileStoreDataProfile, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteFileStoreDataProfile(
+      $0.DeleteFileStoreDataProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteFileStoreDataProfile, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.TableDataProfile> getTableDataProfile(
+      $0.GetTableDataProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getTableDataProfile, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ColumnDataProfile> getColumnDataProfile(
+      $0.GetColumnDataProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getColumnDataProfile, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteTableDataProfile(
+      $0.DeleteTableDataProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteTableDataProfile, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$0.HybridInspectResponse> hybridInspectDlpJob(
       $0.HybridInspectDlpJobRequest request,
       {$grpc.CallOptions? options}) {
@@ -409,8 +632,45 @@ class DlpServiceClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$finishDlpJob, request, options: options);
   }
+
+  $grpc.ResponseFuture<$0.Connection> createConnection(
+      $0.CreateConnectionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createConnection, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Connection> getConnection(
+      $0.GetConnectionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getConnection, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.ListConnectionsResponse> listConnections(
+      $0.ListConnectionsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listConnections, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.SearchConnectionsResponse> searchConnections(
+      $0.SearchConnectionsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$searchConnections, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteConnection(
+      $0.DeleteConnectionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteConnection, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Connection> updateConnection(
+      $0.UpdateConnectionRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateConnection, request, options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.privacy.dlp.v2.DlpService')
 abstract class DlpServiceBase extends $grpc.Service {
   $core.String get $name => 'google.privacy.dlp.v2.DlpService';
 
@@ -607,6 +867,50 @@ abstract class DlpServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ActivateJobTriggerRequest.fromBuffer(value),
         ($0.DlpJob value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateDiscoveryConfigRequest,
+            $0.DiscoveryConfig>(
+        'CreateDiscoveryConfig',
+        createDiscoveryConfig_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateDiscoveryConfigRequest.fromBuffer(value),
+        ($0.DiscoveryConfig value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateDiscoveryConfigRequest,
+            $0.DiscoveryConfig>(
+        'UpdateDiscoveryConfig',
+        updateDiscoveryConfig_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateDiscoveryConfigRequest.fromBuffer(value),
+        ($0.DiscoveryConfig value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetDiscoveryConfigRequest, $0.DiscoveryConfig>(
+            'GetDiscoveryConfig',
+            getDiscoveryConfig_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetDiscoveryConfigRequest.fromBuffer(value),
+            ($0.DiscoveryConfig value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListDiscoveryConfigsRequest,
+            $0.ListDiscoveryConfigsResponse>(
+        'ListDiscoveryConfigs',
+        listDiscoveryConfigs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListDiscoveryConfigsRequest.fromBuffer(value),
+        ($0.ListDiscoveryConfigsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteDiscoveryConfigRequest, $1.Empty>(
+        'DeleteDiscoveryConfig',
+        deleteDiscoveryConfig_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteDiscoveryConfigRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.CreateDlpJobRequest, $0.DlpJob>(
         'CreateDlpJob',
         createDlpJob_Pre,
@@ -691,6 +995,95 @@ abstract class DlpServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.DeleteStoredInfoTypeRequest.fromBuffer(value),
         ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListProjectDataProfilesRequest,
+            $0.ListProjectDataProfilesResponse>(
+        'ListProjectDataProfiles',
+        listProjectDataProfiles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListProjectDataProfilesRequest.fromBuffer(value),
+        ($0.ListProjectDataProfilesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListTableDataProfilesRequest,
+            $0.ListTableDataProfilesResponse>(
+        'ListTableDataProfiles',
+        listTableDataProfiles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListTableDataProfilesRequest.fromBuffer(value),
+        ($0.ListTableDataProfilesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListColumnDataProfilesRequest,
+            $0.ListColumnDataProfilesResponse>(
+        'ListColumnDataProfiles',
+        listColumnDataProfiles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListColumnDataProfilesRequest.fromBuffer(value),
+        ($0.ListColumnDataProfilesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetProjectDataProfileRequest,
+            $0.ProjectDataProfile>(
+        'GetProjectDataProfile',
+        getProjectDataProfile_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetProjectDataProfileRequest.fromBuffer(value),
+        ($0.ProjectDataProfile value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListFileStoreDataProfilesRequest,
+            $0.ListFileStoreDataProfilesResponse>(
+        'ListFileStoreDataProfiles',
+        listFileStoreDataProfiles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListFileStoreDataProfilesRequest.fromBuffer(value),
+        ($0.ListFileStoreDataProfilesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetFileStoreDataProfileRequest,
+            $0.FileStoreDataProfile>(
+        'GetFileStoreDataProfile',
+        getFileStoreDataProfile_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetFileStoreDataProfileRequest.fromBuffer(value),
+        ($0.FileStoreDataProfile value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.DeleteFileStoreDataProfileRequest, $1.Empty>(
+            'DeleteFileStoreDataProfile',
+            deleteFileStoreDataProfile_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.DeleteFileStoreDataProfileRequest.fromBuffer(value),
+            ($1.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetTableDataProfileRequest, $0.TableDataProfile>(
+            'GetTableDataProfile',
+            getTableDataProfile_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetTableDataProfileRequest.fromBuffer(value),
+            ($0.TableDataProfile value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetColumnDataProfileRequest,
+            $0.ColumnDataProfile>(
+        'GetColumnDataProfile',
+        getColumnDataProfile_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetColumnDataProfileRequest.fromBuffer(value),
+        ($0.ColumnDataProfile value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteTableDataProfileRequest, $1.Empty>(
+        'DeleteTableDataProfile',
+        deleteTableDataProfile_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteTableDataProfileRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.HybridInspectDlpJobRequest,
             $0.HybridInspectResponse>(
         'HybridInspectDlpJob',
@@ -708,6 +1101,56 @@ abstract class DlpServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.FinishDlpJobRequest.fromBuffer(value),
         ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateConnectionRequest, $0.Connection>(
+        'CreateConnection',
+        createConnection_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateConnectionRequest.fromBuffer(value),
+        ($0.Connection value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetConnectionRequest, $0.Connection>(
+        'GetConnection',
+        getConnection_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetConnectionRequest.fromBuffer(value),
+        ($0.Connection value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListConnectionsRequest,
+            $0.ListConnectionsResponse>(
+        'ListConnections',
+        listConnections_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListConnectionsRequest.fromBuffer(value),
+        ($0.ListConnectionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SearchConnectionsRequest,
+            $0.SearchConnectionsResponse>(
+        'SearchConnections',
+        searchConnections_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.SearchConnectionsRequest.fromBuffer(value),
+        ($0.SearchConnectionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteConnectionRequest, $1.Empty>(
+        'DeleteConnection',
+        deleteConnection_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteConnectionRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateConnectionRequest, $0.Connection>(
+        'UpdateConnection',
+        updateConnection_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateConnectionRequest.fromBuffer(value),
+        ($0.Connection value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.InspectContentResponse> inspectContent_Pre(
@@ -834,6 +1277,35 @@ abstract class DlpServiceBase extends $grpc.Service {
     return activateJobTrigger(call, await request);
   }
 
+  $async.Future<$0.DiscoveryConfig> createDiscoveryConfig_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateDiscoveryConfigRequest> request) async {
+    return createDiscoveryConfig(call, await request);
+  }
+
+  $async.Future<$0.DiscoveryConfig> updateDiscoveryConfig_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateDiscoveryConfigRequest> request) async {
+    return updateDiscoveryConfig(call, await request);
+  }
+
+  $async.Future<$0.DiscoveryConfig> getDiscoveryConfig_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetDiscoveryConfigRequest> request) async {
+    return getDiscoveryConfig(call, await request);
+  }
+
+  $async.Future<$0.ListDiscoveryConfigsResponse> listDiscoveryConfigs_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListDiscoveryConfigsRequest> request) async {
+    return listDiscoveryConfigs(call, await request);
+  }
+
+  $async.Future<$1.Empty> deleteDiscoveryConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteDiscoveryConfigRequest> request) async {
+    return deleteDiscoveryConfig(call, await request);
+  }
+
   $async.Future<$0.DlpJob> createDlpJob_Pre($grpc.ServiceCall call,
       $async.Future<$0.CreateDlpJobRequest> request) async {
     return createDlpJob(call, await request);
@@ -887,6 +1359,64 @@ abstract class DlpServiceBase extends $grpc.Service {
     return deleteStoredInfoType(call, await request);
   }
 
+  $async.Future<$0.ListProjectDataProfilesResponse> listProjectDataProfiles_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListProjectDataProfilesRequest> request) async {
+    return listProjectDataProfiles(call, await request);
+  }
+
+  $async.Future<$0.ListTableDataProfilesResponse> listTableDataProfiles_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListTableDataProfilesRequest> request) async {
+    return listTableDataProfiles(call, await request);
+  }
+
+  $async.Future<$0.ListColumnDataProfilesResponse> listColumnDataProfiles_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListColumnDataProfilesRequest> request) async {
+    return listColumnDataProfiles(call, await request);
+  }
+
+  $async.Future<$0.ProjectDataProfile> getProjectDataProfile_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetProjectDataProfileRequest> request) async {
+    return getProjectDataProfile(call, await request);
+  }
+
+  $async.Future<$0.ListFileStoreDataProfilesResponse>
+      listFileStoreDataProfiles_Pre($grpc.ServiceCall call,
+          $async.Future<$0.ListFileStoreDataProfilesRequest> request) async {
+    return listFileStoreDataProfiles(call, await request);
+  }
+
+  $async.Future<$0.FileStoreDataProfile> getFileStoreDataProfile_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetFileStoreDataProfileRequest> request) async {
+    return getFileStoreDataProfile(call, await request);
+  }
+
+  $async.Future<$1.Empty> deleteFileStoreDataProfile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteFileStoreDataProfileRequest> request) async {
+    return deleteFileStoreDataProfile(call, await request);
+  }
+
+  $async.Future<$0.TableDataProfile> getTableDataProfile_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetTableDataProfileRequest> request) async {
+    return getTableDataProfile(call, await request);
+  }
+
+  $async.Future<$0.ColumnDataProfile> getColumnDataProfile_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetColumnDataProfileRequest> request) async {
+    return getColumnDataProfile(call, await request);
+  }
+
+  $async.Future<$1.Empty> deleteTableDataProfile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteTableDataProfileRequest> request) async {
+    return deleteTableDataProfile(call, await request);
+  }
+
   $async.Future<$0.HybridInspectResponse> hybridInspectDlpJob_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.HybridInspectDlpJobRequest> request) async {
@@ -896,6 +1426,38 @@ abstract class DlpServiceBase extends $grpc.Service {
   $async.Future<$1.Empty> finishDlpJob_Pre($grpc.ServiceCall call,
       $async.Future<$0.FinishDlpJobRequest> request) async {
     return finishDlpJob(call, await request);
+  }
+
+  $async.Future<$0.Connection> createConnection_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateConnectionRequest> request) async {
+    return createConnection(call, await request);
+  }
+
+  $async.Future<$0.Connection> getConnection_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetConnectionRequest> request) async {
+    return getConnection(call, await request);
+  }
+
+  $async.Future<$0.ListConnectionsResponse> listConnections_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListConnectionsRequest> request) async {
+    return listConnections(call, await request);
+  }
+
+  $async.Future<$0.SearchConnectionsResponse> searchConnections_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.SearchConnectionsRequest> request) async {
+    return searchConnections(call, await request);
+  }
+
+  $async.Future<$1.Empty> deleteConnection_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteConnectionRequest> request) async {
+    return deleteConnection(call, await request);
+  }
+
+  $async.Future<$0.Connection> updateConnection_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateConnectionRequest> request) async {
+    return updateConnection(call, await request);
   }
 
   $async.Future<$0.InspectContentResponse> inspectContent(
@@ -942,6 +1504,16 @@ abstract class DlpServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.DeleteJobTriggerRequest request);
   $async.Future<$0.DlpJob> activateJobTrigger(
       $grpc.ServiceCall call, $0.ActivateJobTriggerRequest request);
+  $async.Future<$0.DiscoveryConfig> createDiscoveryConfig(
+      $grpc.ServiceCall call, $0.CreateDiscoveryConfigRequest request);
+  $async.Future<$0.DiscoveryConfig> updateDiscoveryConfig(
+      $grpc.ServiceCall call, $0.UpdateDiscoveryConfigRequest request);
+  $async.Future<$0.DiscoveryConfig> getDiscoveryConfig(
+      $grpc.ServiceCall call, $0.GetDiscoveryConfigRequest request);
+  $async.Future<$0.ListDiscoveryConfigsResponse> listDiscoveryConfigs(
+      $grpc.ServiceCall call, $0.ListDiscoveryConfigsRequest request);
+  $async.Future<$1.Empty> deleteDiscoveryConfig(
+      $grpc.ServiceCall call, $0.DeleteDiscoveryConfigRequest request);
   $async.Future<$0.DlpJob> createDlpJob(
       $grpc.ServiceCall call, $0.CreateDlpJobRequest request);
   $async.Future<$0.ListDlpJobsResponse> listDlpJobs(
@@ -962,8 +1534,40 @@ abstract class DlpServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.ListStoredInfoTypesRequest request);
   $async.Future<$1.Empty> deleteStoredInfoType(
       $grpc.ServiceCall call, $0.DeleteStoredInfoTypeRequest request);
+  $async.Future<$0.ListProjectDataProfilesResponse> listProjectDataProfiles(
+      $grpc.ServiceCall call, $0.ListProjectDataProfilesRequest request);
+  $async.Future<$0.ListTableDataProfilesResponse> listTableDataProfiles(
+      $grpc.ServiceCall call, $0.ListTableDataProfilesRequest request);
+  $async.Future<$0.ListColumnDataProfilesResponse> listColumnDataProfiles(
+      $grpc.ServiceCall call, $0.ListColumnDataProfilesRequest request);
+  $async.Future<$0.ProjectDataProfile> getProjectDataProfile(
+      $grpc.ServiceCall call, $0.GetProjectDataProfileRequest request);
+  $async.Future<$0.ListFileStoreDataProfilesResponse> listFileStoreDataProfiles(
+      $grpc.ServiceCall call, $0.ListFileStoreDataProfilesRequest request);
+  $async.Future<$0.FileStoreDataProfile> getFileStoreDataProfile(
+      $grpc.ServiceCall call, $0.GetFileStoreDataProfileRequest request);
+  $async.Future<$1.Empty> deleteFileStoreDataProfile(
+      $grpc.ServiceCall call, $0.DeleteFileStoreDataProfileRequest request);
+  $async.Future<$0.TableDataProfile> getTableDataProfile(
+      $grpc.ServiceCall call, $0.GetTableDataProfileRequest request);
+  $async.Future<$0.ColumnDataProfile> getColumnDataProfile(
+      $grpc.ServiceCall call, $0.GetColumnDataProfileRequest request);
+  $async.Future<$1.Empty> deleteTableDataProfile(
+      $grpc.ServiceCall call, $0.DeleteTableDataProfileRequest request);
   $async.Future<$0.HybridInspectResponse> hybridInspectDlpJob(
       $grpc.ServiceCall call, $0.HybridInspectDlpJobRequest request);
   $async.Future<$1.Empty> finishDlpJob(
       $grpc.ServiceCall call, $0.FinishDlpJobRequest request);
+  $async.Future<$0.Connection> createConnection(
+      $grpc.ServiceCall call, $0.CreateConnectionRequest request);
+  $async.Future<$0.Connection> getConnection(
+      $grpc.ServiceCall call, $0.GetConnectionRequest request);
+  $async.Future<$0.ListConnectionsResponse> listConnections(
+      $grpc.ServiceCall call, $0.ListConnectionsRequest request);
+  $async.Future<$0.SearchConnectionsResponse> searchConnections(
+      $grpc.ServiceCall call, $0.SearchConnectionsRequest request);
+  $async.Future<$1.Empty> deleteConnection(
+      $grpc.ServiceCall call, $0.DeleteConnectionRequest request);
+  $async.Future<$0.Connection> updateConnection(
+      $grpc.ServiceCall call, $0.UpdateConnectionRequest request);
 }

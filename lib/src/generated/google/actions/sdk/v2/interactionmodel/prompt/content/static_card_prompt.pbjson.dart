@@ -1,54 +1,51 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/interactionmodel/prompt/content/static_card_prompt.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use staticCardPromptDescriptor instead')
-const StaticCardPrompt$json = const {
+const StaticCardPrompt$json = {
   '1': 'StaticCardPrompt',
-  '2': const [
-    const {'1': 'title', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'title'},
-    const {
-      '1': 'subtitle',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '8': const {},
-      '10': 'subtitle'
-    },
-    const {'1': 'text', '3': 3, '4': 1, '5': 9, '8': const {}, '10': 'text'},
-    const {
+  '2': [
+    {'1': 'title', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'title'},
+    {'1': 'subtitle', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'subtitle'},
+    {'1': 'text', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'text'},
+    {
       '1': 'image',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.actions.sdk.v2.interactionmodel.prompt.StaticImagePrompt',
-      '8': const {},
+      '8': {},
       '10': 'image'
     },
-    const {
+    {
       '1': 'image_fill',
       '3': 5,
       '4': 1,
       '5': 14,
       '6':
           '.google.actions.sdk.v2.interactionmodel.prompt.StaticImagePrompt.ImageFill',
-      '8': const {},
+      '8': {},
       '10': 'imageFill'
     },
-    const {
+    {
       '1': 'button',
       '3': 6,
       '4': 1,
       '5': 11,
       '6': '.google.actions.sdk.v2.interactionmodel.prompt.StaticLinkPrompt',
-      '8': const {},
+      '8': {},
       '10': 'button'
     },
   ],
@@ -56,4 +53,11 @@ const StaticCardPrompt$json = const {
 
 /// Descriptor for `StaticCardPrompt`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List staticCardPromptDescriptor = $convert.base64Decode(
-    'ChBTdGF0aWNDYXJkUHJvbXB0EhkKBXRpdGxlGAEgASgJQgPgQQFSBXRpdGxlEh8KCHN1YnRpdGxlGAIgASgJQgPgQQFSCHN1YnRpdGxlEhcKBHRleHQYAyABKAlCA+BBAlIEdGV4dBJbCgVpbWFnZRgEIAEoCzJALmdvb2dsZS5hY3Rpb25zLnNkay52Mi5pbnRlcmFjdGlvbm1vZGVsLnByb21wdC5TdGF0aWNJbWFnZVByb21wdEID4EEBUgVpbWFnZRJuCgppbWFnZV9maWxsGAUgASgOMkouZ29vZ2xlLmFjdGlvbnMuc2RrLnYyLmludGVyYWN0aW9ubW9kZWwucHJvbXB0LlN0YXRpY0ltYWdlUHJvbXB0LkltYWdlRmlsbEID4EEBUglpbWFnZUZpbGwSXAoGYnV0dG9uGAYgASgLMj8uZ29vZ2xlLmFjdGlvbnMuc2RrLnYyLmludGVyYWN0aW9ubW9kZWwucHJvbXB0LlN0YXRpY0xpbmtQcm9tcHRCA+BBAVIGYnV0dG9u');
+    'ChBTdGF0aWNDYXJkUHJvbXB0EhkKBXRpdGxlGAEgASgJQgPgQQFSBXRpdGxlEh8KCHN1YnRpdG'
+    'xlGAIgASgJQgPgQQFSCHN1YnRpdGxlEhcKBHRleHQYAyABKAlCA+BBAlIEdGV4dBJbCgVpbWFn'
+    'ZRgEIAEoCzJALmdvb2dsZS5hY3Rpb25zLnNkay52Mi5pbnRlcmFjdGlvbm1vZGVsLnByb21wdC'
+    '5TdGF0aWNJbWFnZVByb21wdEID4EEBUgVpbWFnZRJuCgppbWFnZV9maWxsGAUgASgOMkouZ29v'
+    'Z2xlLmFjdGlvbnMuc2RrLnYyLmludGVyYWN0aW9ubW9kZWwucHJvbXB0LlN0YXRpY0ltYWdlUH'
+    'JvbXB0LkltYWdlRmlsbEID4EEBUglpbWFnZUZpbGwSXAoGYnV0dG9uGAYgASgLMj8uZ29vZ2xl'
+    'LmFjdGlvbnMuc2RrLnYyLmludGVyYWN0aW9ubW9kZWwucHJvbXB0LlN0YXRpY0xpbmtQcm9tcH'
+    'RCA+BBAVIGYnV0dG9u');

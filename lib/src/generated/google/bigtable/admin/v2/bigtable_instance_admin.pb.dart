@@ -1,89 +1,75 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'instance.pb.dart' as $5;
 import '../../../protobuf/field_mask.pb.dart' as $6;
 import '../../../protobuf/timestamp.pb.dart' as $7;
-
 import 'bigtable_instance_admin.pbenum.dart';
+import 'instance.pb.dart' as $5;
 
 export 'bigtable_instance_admin.pbenum.dart';
 
+/// Request message for BigtableInstanceAdmin.CreateInstance.
 class CreateInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateInstanceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instanceId')
-    ..aOM<$5.Instance>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instance',
-        subBuilder: $5.Instance.create)
-    ..m<$core.String, $5.Cluster>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusters',
-        entryClassName: 'CreateInstanceRequest.ClustersEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $5.Cluster.create,
-        packageName: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..hasRequiredFields = false;
-
-  CreateInstanceRequest._() : super();
   factory CreateInstanceRequest({
     $core.String? parent,
     $core.String? instanceId,
     $5.Instance? instance,
     $core.Map<$core.String, $5.Cluster>? clusters,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (instanceId != null) {
-      _result.instanceId = instanceId;
+      $result.instanceId = instanceId;
     }
     if (instance != null) {
-      _result.instance = instance;
+      $result.instance = instance;
     }
     if (clusters != null) {
-      _result.clusters.addAll(clusters);
+      $result.clusters.addAll(clusters);
     }
-    return _result;
+    return $result;
   }
+  CreateInstanceRequest._() : super();
   factory CreateInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'instanceId')
+    ..aOM<$5.Instance>(3, _omitFieldNames ? '' : 'instance',
+        subBuilder: $5.Instance.create)
+    ..m<$core.String, $5.Cluster>(4, _omitFieldNames ? '' : 'clusters',
+        entryClassName: 'CreateInstanceRequest.ClustersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $5.Cluster.create,
+        valueDefaultOrMaker: $5.Cluster.getDefault,
+        packageName: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -95,8 +81,10 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
   CreateInstanceRequest copyWith(
           void Function(CreateInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as CreateInstanceRequest))
-          as CreateInstanceRequest; // ignore: deprecated_member_use
+          as CreateInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateInstanceRequest create() => CreateInstanceRequest._();
   CreateInstanceRequest createEmptyInstance() => create();
@@ -107,6 +95,8 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateInstanceRequest>(create);
   static CreateInstanceRequest? _defaultInstance;
 
+  /// Required. The unique name of the project in which to create the new
+  /// instance. Values are of the form `projects/{project}`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -119,6 +109,9 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The ID to be used when referring to the new instance within its
+  /// project, e.g., just `myinstance` rather than
+  /// `projects/myproject/instances/myinstance`.
   @$pb.TagNumber(2)
   $core.String get instanceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -131,6 +124,8 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInstanceId() => clearField(2);
 
+  /// Required. The instance to create.
+  /// Fields marked `OutputOnly` must be left blank.
   @$pb.TagNumber(3)
   $5.Instance get instance => $_getN(2);
   @$pb.TagNumber(3)
@@ -145,43 +140,42 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $5.Instance ensureInstance() => $_ensure(2);
 
+  /// Required. The clusters to be created within the instance, mapped by desired
+  /// cluster ID, e.g., just `mycluster` rather than
+  /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+  /// Fields marked `OutputOnly` must be left blank.
+  /// Currently, at most four clusters can be specified.
   @$pb.TagNumber(4)
   $core.Map<$core.String, $5.Cluster> get clusters => $_getMap(3);
 }
 
+/// Request message for BigtableInstanceAdmin.GetInstance.
 class GetInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetInstanceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetInstanceRequest._() : super();
   factory GetInstanceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetInstanceRequest._() : super();
   factory GetInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -191,8 +185,10 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetInstanceRequest copyWith(void Function(GetInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as GetInstanceRequest))
-          as GetInstanceRequest; // ignore: deprecated_member_use
+          as GetInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetInstanceRequest create() => GetInstanceRequest._();
   GetInstanceRequest createEmptyInstance() => create();
@@ -203,6 +199,8 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetInstanceRequest>(create);
   static GetInstanceRequest? _defaultInstance;
 
+  /// Required. The unique name of the requested instance. Values are of the form
+  /// `projects/{project}/instances/{instance}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -216,48 +214,38 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for BigtableInstanceAdmin.ListInstances.
 class ListInstancesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListInstancesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListInstancesRequest._() : super();
   factory ListInstancesRequest({
     $core.String? parent,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListInstancesRequest._() : super();
   factory ListInstancesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListInstancesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListInstancesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -268,8 +256,10 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListInstancesRequest copyWith(void Function(ListInstancesRequest) updates) =>
       super.copyWith((message) => updates(message as ListInstancesRequest))
-          as ListInstancesRequest; // ignore: deprecated_member_use
+          as ListInstancesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListInstancesRequest create() => ListInstancesRequest._();
   ListInstancesRequest createEmptyInstance() => create();
@@ -280,6 +270,8 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListInstancesRequest>(create);
   static ListInstancesRequest? _defaultInstance;
 
+  /// Required. The unique name of the project for which a list of instances is
+  /// requested. Values are of the form `projects/{project}`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -292,6 +284,7 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// DEPRECATED: This field is unused and ignored.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -305,59 +298,44 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(2);
 }
 
+/// Response message for BigtableInstanceAdmin.ListInstances.
 class ListInstancesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListInstancesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..pc<$5.Instance>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instances',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.Instance.create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedLocations')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListInstancesResponse._() : super();
   factory ListInstancesResponse({
     $core.Iterable<$5.Instance>? instances,
     $core.Iterable<$core.String>? failedLocations,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (instances != null) {
-      _result.instances.addAll(instances);
+      $result.instances.addAll(instances);
     }
     if (failedLocations != null) {
-      _result.failedLocations.addAll(failedLocations);
+      $result.failedLocations.addAll(failedLocations);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListInstancesResponse._() : super();
   factory ListInstancesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListInstancesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListInstancesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.Instance>(1, _omitFieldNames ? '' : 'instances', $pb.PbFieldType.PM,
+        subBuilder: $5.Instance.create)
+    ..pPS(2, _omitFieldNames ? '' : 'failedLocations')
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -369,8 +347,10 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   ListInstancesResponse copyWith(
           void Function(ListInstancesResponse) updates) =>
       super.copyWith((message) => updates(message as ListInstancesResponse))
-          as ListInstancesResponse; // ignore: deprecated_member_use
+          as ListInstancesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListInstancesResponse create() => ListInstancesResponse._();
   ListInstancesResponse createEmptyInstance() => create();
@@ -381,12 +361,20 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListInstancesResponse>(create);
   static ListInstancesResponse? _defaultInstance;
 
+  /// The list of requested instances.
   @$pb.TagNumber(1)
   $core.List<$5.Instance> get instances => $_getList(0);
 
+  /// Locations from which Instance information could not be retrieved,
+  /// due to an outage or some other transient condition.
+  /// Instances whose Clusters are all in one of the failed locations
+  /// may be missing from `instances`, and Instances with at least one
+  /// Cluster in a failed location may only have partial information returned.
+  /// Values are of the form `projects/<project>/locations/<zone_id>`
   @$pb.TagNumber(2)
   $core.List<$core.String> get failedLocations => $_getList(1);
 
+  /// DEPRECATED: This field is unused and ignored.
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -400,50 +388,40 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(3);
 }
 
+/// Request message for BigtableInstanceAdmin.PartialUpdateInstance.
 class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PartialUpdateInstanceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<$5.Instance>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instance',
-        subBuilder: $5.Instance.create)
-    ..aOM<$6.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $6.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  PartialUpdateInstanceRequest._() : super();
   factory PartialUpdateInstanceRequest({
     $5.Instance? instance,
     $6.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (instance != null) {
-      _result.instance = instance;
+      $result.instance = instance;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  PartialUpdateInstanceRequest._() : super();
   factory PartialUpdateInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PartialUpdateInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PartialUpdateInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Instance>(1, _omitFieldNames ? '' : 'instance',
+        subBuilder: $5.Instance.create)
+    ..aOM<$6.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $6.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -456,8 +434,10 @@ class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
           void Function(PartialUpdateInstanceRequest) updates) =>
       super.copyWith(
               (message) => updates(message as PartialUpdateInstanceRequest))
-          as PartialUpdateInstanceRequest; // ignore: deprecated_member_use
+          as PartialUpdateInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PartialUpdateInstanceRequest create() =>
       PartialUpdateInstanceRequest._();
@@ -469,6 +449,7 @@ class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PartialUpdateInstanceRequest>(create);
   static PartialUpdateInstanceRequest? _defaultInstance;
 
+  /// Required. The Instance which will (partially) replace the current value.
   @$pb.TagNumber(1)
   $5.Instance get instance => $_getN(0);
   @$pb.TagNumber(1)
@@ -483,6 +464,8 @@ class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.Instance ensureInstance() => $_ensure(0);
 
+  /// Required. The subset of Instance fields which should be replaced.
+  /// Must be explicitly set.
   @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -498,39 +481,33 @@ class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
   $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for BigtableInstanceAdmin.DeleteInstance.
 class DeleteInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteInstanceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteInstanceRequest._() : super();
   factory DeleteInstanceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteInstanceRequest._() : super();
   factory DeleteInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -542,8 +519,10 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   DeleteInstanceRequest copyWith(
           void Function(DeleteInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteInstanceRequest))
-          as DeleteInstanceRequest; // ignore: deprecated_member_use
+          as DeleteInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteInstanceRequest create() => DeleteInstanceRequest._();
   DeleteInstanceRequest createEmptyInstance() => create();
@@ -554,6 +533,8 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteInstanceRequest>(create);
   static DeleteInstanceRequest? _defaultInstance;
 
+  /// Required. The unique name of the instance to be deleted.
+  /// Values are of the form `projects/{project}/instances/{instance}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -567,58 +548,44 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for BigtableInstanceAdmin.CreateCluster.
 class CreateClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOM<$5.Cluster>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cluster',
-        subBuilder: $5.Cluster.create)
-    ..hasRequiredFields = false;
-
-  CreateClusterRequest._() : super();
   factory CreateClusterRequest({
     $core.String? parent,
     $core.String? clusterId,
     $5.Cluster? cluster,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (cluster != null) {
-      _result.cluster = cluster;
+      $result.cluster = cluster;
     }
-    return _result;
+    return $result;
   }
+  CreateClusterRequest._() : super();
   factory CreateClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'clusterId')
+    ..aOM<$5.Cluster>(3, _omitFieldNames ? '' : 'cluster',
+        subBuilder: $5.Cluster.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -629,8 +596,10 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateClusterRequest copyWith(void Function(CreateClusterRequest) updates) =>
       super.copyWith((message) => updates(message as CreateClusterRequest))
-          as CreateClusterRequest; // ignore: deprecated_member_use
+          as CreateClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateClusterRequest create() => CreateClusterRequest._();
   CreateClusterRequest createEmptyInstance() => create();
@@ -641,6 +610,8 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateClusterRequest>(create);
   static CreateClusterRequest? _defaultInstance;
 
+  /// Required. The unique name of the instance in which to create the new
+  /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -653,6 +624,9 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The ID to be used when referring to the new cluster within its
+  /// instance, e.g., just `mycluster` rather than
+  /// `projects/myproject/instances/myinstance/clusters/mycluster`.
   @$pb.TagNumber(2)
   $core.String get clusterId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -665,6 +639,8 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearClusterId() => clearField(2);
 
+  /// Required. The cluster to be created.
+  /// Fields marked `OutputOnly` must be left blank.
   @$pb.TagNumber(3)
   $5.Cluster get cluster => $_getN(2);
   @$pb.TagNumber(3)
@@ -680,39 +656,33 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   $5.Cluster ensureCluster() => $_ensure(2);
 }
 
+/// Request message for BigtableInstanceAdmin.GetCluster.
 class GetClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetClusterRequest._() : super();
   factory GetClusterRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetClusterRequest._() : super();
   factory GetClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -722,8 +692,10 @@ class GetClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetClusterRequest copyWith(void Function(GetClusterRequest) updates) =>
       super.copyWith((message) => updates(message as GetClusterRequest))
-          as GetClusterRequest; // ignore: deprecated_member_use
+          as GetClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetClusterRequest create() => GetClusterRequest._();
   GetClusterRequest createEmptyInstance() => create();
@@ -734,6 +706,8 @@ class GetClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetClusterRequest>(create);
   static GetClusterRequest? _defaultInstance;
 
+  /// Required. The unique name of the requested cluster. Values are of the form
+  /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -747,48 +721,38 @@ class GetClusterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for BigtableInstanceAdmin.ListClusters.
 class ListClustersRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListClustersRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListClustersRequest._() : super();
   factory ListClustersRequest({
     $core.String? parent,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListClustersRequest._() : super();
   factory ListClustersRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListClustersRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListClustersRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -798,8 +762,10 @@ class ListClustersRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListClustersRequest copyWith(void Function(ListClustersRequest) updates) =>
       super.copyWith((message) => updates(message as ListClustersRequest))
-          as ListClustersRequest; // ignore: deprecated_member_use
+          as ListClustersRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListClustersRequest create() => ListClustersRequest._();
   ListClustersRequest createEmptyInstance() => create();
@@ -810,6 +776,11 @@ class ListClustersRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListClustersRequest>(create);
   static ListClustersRequest? _defaultInstance;
 
+  /// Required. The unique name of the instance for which a list of clusters is
+  /// requested. Values are of the form
+  /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+  /// Clusters for all Instances in a project, e.g.,
+  /// `projects/myproject/instances/-`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -822,6 +793,7 @@ class ListClustersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// DEPRECATED: This field is unused and ignored.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -835,59 +807,44 @@ class ListClustersRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(2);
 }
 
+/// Response message for BigtableInstanceAdmin.ListClusters.
 class ListClustersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListClustersResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..pc<$5.Cluster>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusters',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.Cluster.create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedLocations')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListClustersResponse._() : super();
   factory ListClustersResponse({
     $core.Iterable<$5.Cluster>? clusters,
     $core.Iterable<$core.String>? failedLocations,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (clusters != null) {
-      _result.clusters.addAll(clusters);
+      $result.clusters.addAll(clusters);
     }
     if (failedLocations != null) {
-      _result.failedLocations.addAll(failedLocations);
+      $result.failedLocations.addAll(failedLocations);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListClustersResponse._() : super();
   factory ListClustersResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListClustersResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListClustersResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.Cluster>(1, _omitFieldNames ? '' : 'clusters', $pb.PbFieldType.PM,
+        subBuilder: $5.Cluster.create)
+    ..pPS(2, _omitFieldNames ? '' : 'failedLocations')
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -898,8 +855,10 @@ class ListClustersResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListClustersResponse copyWith(void Function(ListClustersResponse) updates) =>
       super.copyWith((message) => updates(message as ListClustersResponse))
-          as ListClustersResponse; // ignore: deprecated_member_use
+          as ListClustersResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListClustersResponse create() => ListClustersResponse._();
   ListClustersResponse createEmptyInstance() => create();
@@ -910,12 +869,19 @@ class ListClustersResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListClustersResponse>(create);
   static ListClustersResponse? _defaultInstance;
 
+  /// The list of requested clusters.
   @$pb.TagNumber(1)
   $core.List<$5.Cluster> get clusters => $_getList(0);
 
+  /// Locations from which Cluster information could not be retrieved,
+  /// due to an outage or some other transient condition.
+  /// Clusters from these locations may be missing from `clusters`,
+  /// or may only have partial information returned.
+  /// Values are of the form `projects/<project>/locations/<zone_id>`
   @$pb.TagNumber(2)
   $core.List<$core.String> get failedLocations => $_getList(1);
 
+  /// DEPRECATED: This field is unused and ignored.
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -929,39 +895,33 @@ class ListClustersResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(3);
 }
 
+/// Request message for BigtableInstanceAdmin.DeleteCluster.
 class DeleteClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteClusterRequest._() : super();
   factory DeleteClusterRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteClusterRequest._() : super();
   factory DeleteClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -972,8 +932,10 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteClusterRequest copyWith(void Function(DeleteClusterRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteClusterRequest))
-          as DeleteClusterRequest; // ignore: deprecated_member_use
+          as DeleteClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteClusterRequest create() => DeleteClusterRequest._();
   DeleteClusterRequest createEmptyInstance() => create();
@@ -984,6 +946,8 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteClusterRequest>(create);
   static DeleteClusterRequest? _defaultInstance;
 
+  /// Required. The unique name of the cluster to be deleted. Values are of the
+  /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -997,60 +961,46 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The metadata for the Operation returned by CreateInstance.
 class CreateInstanceMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateInstanceMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<CreateInstanceRequest>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalRequest',
-        subBuilder: CreateInstanceRequest.create)
-    ..aOM<$7.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'finishTime',
-        subBuilder: $7.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  CreateInstanceMetadata._() : super();
   factory CreateInstanceMetadata({
     CreateInstanceRequest? originalRequest,
     $7.Timestamp? requestTime,
     $7.Timestamp? finishTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (originalRequest != null) {
-      _result.originalRequest = originalRequest;
+      $result.originalRequest = originalRequest;
     }
     if (requestTime != null) {
-      _result.requestTime = requestTime;
+      $result.requestTime = requestTime;
     }
     if (finishTime != null) {
-      _result.finishTime = finishTime;
+      $result.finishTime = finishTime;
     }
-    return _result;
+    return $result;
   }
+  CreateInstanceMetadata._() : super();
   factory CreateInstanceMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateInstanceMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateInstanceMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<CreateInstanceRequest>(1, _omitFieldNames ? '' : 'originalRequest',
+        subBuilder: CreateInstanceRequest.create)
+    ..aOM<$7.Timestamp>(2, _omitFieldNames ? '' : 'requestTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, _omitFieldNames ? '' : 'finishTime',
+        subBuilder: $7.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1062,8 +1012,10 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   CreateInstanceMetadata copyWith(
           void Function(CreateInstanceMetadata) updates) =>
       super.copyWith((message) => updates(message as CreateInstanceMetadata))
-          as CreateInstanceMetadata; // ignore: deprecated_member_use
+          as CreateInstanceMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateInstanceMetadata create() => CreateInstanceMetadata._();
   CreateInstanceMetadata createEmptyInstance() => create();
@@ -1074,6 +1026,7 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateInstanceMetadata>(create);
   static CreateInstanceMetadata? _defaultInstance;
 
+  /// The request that prompted the initiation of this CreateInstance operation.
   @$pb.TagNumber(1)
   CreateInstanceRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
@@ -1088,6 +1041,7 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CreateInstanceRequest ensureOriginalRequest() => $_ensure(0);
 
+  /// The time at which the original request was received.
   @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -1102,6 +1056,7 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  /// The time at which the operation failed or was completed successfully.
   @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -1117,60 +1072,47 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
+/// The metadata for the Operation returned by UpdateInstance.
 class UpdateInstanceMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateInstanceMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<PartialUpdateInstanceRequest>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalRequest',
-        subBuilder: PartialUpdateInstanceRequest.create)
-    ..aOM<$7.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'finishTime',
-        subBuilder: $7.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  UpdateInstanceMetadata._() : super();
   factory UpdateInstanceMetadata({
     PartialUpdateInstanceRequest? originalRequest,
     $7.Timestamp? requestTime,
     $7.Timestamp? finishTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (originalRequest != null) {
-      _result.originalRequest = originalRequest;
+      $result.originalRequest = originalRequest;
     }
     if (requestTime != null) {
-      _result.requestTime = requestTime;
+      $result.requestTime = requestTime;
     }
     if (finishTime != null) {
-      _result.finishTime = finishTime;
+      $result.finishTime = finishTime;
     }
-    return _result;
+    return $result;
   }
+  UpdateInstanceMetadata._() : super();
   factory UpdateInstanceMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateInstanceMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateInstanceMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<PartialUpdateInstanceRequest>(
+        1, _omitFieldNames ? '' : 'originalRequest',
+        subBuilder: PartialUpdateInstanceRequest.create)
+    ..aOM<$7.Timestamp>(2, _omitFieldNames ? '' : 'requestTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, _omitFieldNames ? '' : 'finishTime',
+        subBuilder: $7.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1182,8 +1124,10 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   UpdateInstanceMetadata copyWith(
           void Function(UpdateInstanceMetadata) updates) =>
       super.copyWith((message) => updates(message as UpdateInstanceMetadata))
-          as UpdateInstanceMetadata; // ignore: deprecated_member_use
+          as UpdateInstanceMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateInstanceMetadata create() => UpdateInstanceMetadata._();
   UpdateInstanceMetadata createEmptyInstance() => create();
@@ -1194,6 +1138,7 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateInstanceMetadata>(create);
   static UpdateInstanceMetadata? _defaultInstance;
 
+  /// The request that prompted the initiation of this UpdateInstance operation.
   @$pb.TagNumber(1)
   PartialUpdateInstanceRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
@@ -1208,6 +1153,7 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PartialUpdateInstanceRequest ensureOriginalRequest() => $_ensure(0);
 
+  /// The time at which the original request was received.
   @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -1222,6 +1168,7 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  /// The time at which the operation failed or was completed successfully.
   @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -1237,56 +1184,26 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
+/// Progress info for copying a table's data to the new cluster.
 class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateClusterMetadata.TableProgress',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'estimatedSizeBytes')
-    ..aInt64(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'estimatedCopiedBytes')
-    ..e<CreateClusterMetadata_TableProgress_State>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            CreateClusterMetadata_TableProgress_State.STATE_UNSPECIFIED,
-        valueOf: CreateClusterMetadata_TableProgress_State.valueOf,
-        enumValues: CreateClusterMetadata_TableProgress_State.values)
-    ..hasRequiredFields = false;
-
-  CreateClusterMetadata_TableProgress._() : super();
   factory CreateClusterMetadata_TableProgress({
     $fixnum.Int64? estimatedSizeBytes,
     $fixnum.Int64? estimatedCopiedBytes,
     CreateClusterMetadata_TableProgress_State? state,
   }) {
-    final _result = create();
+    final $result = create();
     if (estimatedSizeBytes != null) {
-      _result.estimatedSizeBytes = estimatedSizeBytes;
+      $result.estimatedSizeBytes = estimatedSizeBytes;
     }
     if (estimatedCopiedBytes != null) {
-      _result.estimatedCopiedBytes = estimatedCopiedBytes;
+      $result.estimatedCopiedBytes = estimatedCopiedBytes;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
-    return _result;
+    return $result;
   }
+  CreateClusterMetadata_TableProgress._() : super();
   factory CreateClusterMetadata_TableProgress.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1294,6 +1211,22 @@ class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
   factory CreateClusterMetadata_TableProgress.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateClusterMetadata.TableProgress',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aInt64(2, _omitFieldNames ? '' : 'estimatedSizeBytes')
+    ..aInt64(3, _omitFieldNames ? '' : 'estimatedCopiedBytes')
+    ..e<CreateClusterMetadata_TableProgress_State>(
+        4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            CreateClusterMetadata_TableProgress_State.STATE_UNSPECIFIED,
+        valueOf: CreateClusterMetadata_TableProgress_State.valueOf,
+        enumValues: CreateClusterMetadata_TableProgress_State.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1306,8 +1239,10 @@ class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
           void Function(CreateClusterMetadata_TableProgress) updates) =>
       super.copyWith((message) =>
               updates(message as CreateClusterMetadata_TableProgress))
-          as CreateClusterMetadata_TableProgress; // ignore: deprecated_member_use
+          as CreateClusterMetadata_TableProgress;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateClusterMetadata_TableProgress create() =>
       CreateClusterMetadata_TableProgress._();
@@ -1320,6 +1255,7 @@ class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
           CreateClusterMetadata_TableProgress>(create);
   static CreateClusterMetadata_TableProgress? _defaultInstance;
 
+  /// Estimate of the size of the table to be copied.
   @$pb.TagNumber(2)
   $fixnum.Int64 get estimatedSizeBytes => $_getI64(0);
   @$pb.TagNumber(2)
@@ -1332,6 +1268,9 @@ class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEstimatedSizeBytes() => clearField(2);
 
+  /// Estimate of the number of bytes copied so far for this table.
+  /// This will eventually reach 'estimated_size_bytes' unless the table copy
+  /// is CANCELLED.
   @$pb.TagNumber(3)
   $fixnum.Int64 get estimatedCopiedBytes => $_getI64(1);
   @$pb.TagNumber(3)
@@ -1357,74 +1296,58 @@ class CreateClusterMetadata_TableProgress extends $pb.GeneratedMessage {
   void clearState() => clearField(4);
 }
 
+/// The metadata for the Operation returned by CreateCluster.
 class CreateClusterMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateClusterMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<CreateClusterRequest>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalRequest',
-        subBuilder: CreateClusterRequest.create)
-    ..aOM<$7.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'finishTime',
-        subBuilder: $7.Timestamp.create)
-    ..m<$core.String, CreateClusterMetadata_TableProgress>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tables',
-        entryClassName: 'CreateClusterMetadata.TablesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: CreateClusterMetadata_TableProgress.create,
-        packageName: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..hasRequiredFields = false;
-
-  CreateClusterMetadata._() : super();
   factory CreateClusterMetadata({
     CreateClusterRequest? originalRequest,
     $7.Timestamp? requestTime,
     $7.Timestamp? finishTime,
     $core.Map<$core.String, CreateClusterMetadata_TableProgress>? tables,
   }) {
-    final _result = create();
+    final $result = create();
     if (originalRequest != null) {
-      _result.originalRequest = originalRequest;
+      $result.originalRequest = originalRequest;
     }
     if (requestTime != null) {
-      _result.requestTime = requestTime;
+      $result.requestTime = requestTime;
     }
     if (finishTime != null) {
-      _result.finishTime = finishTime;
+      $result.finishTime = finishTime;
     }
     if (tables != null) {
-      _result.tables.addAll(tables);
+      $result.tables.addAll(tables);
     }
-    return _result;
+    return $result;
   }
+  CreateClusterMetadata._() : super();
   factory CreateClusterMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateClusterMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateClusterMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<CreateClusterRequest>(1, _omitFieldNames ? '' : 'originalRequest',
+        subBuilder: CreateClusterRequest.create)
+    ..aOM<$7.Timestamp>(2, _omitFieldNames ? '' : 'requestTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, _omitFieldNames ? '' : 'finishTime',
+        subBuilder: $7.Timestamp.create)
+    ..m<$core.String, CreateClusterMetadata_TableProgress>(
+        4, _omitFieldNames ? '' : 'tables',
+        entryClassName: 'CreateClusterMetadata.TablesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: CreateClusterMetadata_TableProgress.create,
+        valueDefaultOrMaker: CreateClusterMetadata_TableProgress.getDefault,
+        packageName: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1436,8 +1359,10 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   CreateClusterMetadata copyWith(
           void Function(CreateClusterMetadata) updates) =>
       super.copyWith((message) => updates(message as CreateClusterMetadata))
-          as CreateClusterMetadata; // ignore: deprecated_member_use
+          as CreateClusterMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateClusterMetadata create() => CreateClusterMetadata._();
   CreateClusterMetadata createEmptyInstance() => create();
@@ -1448,6 +1373,7 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateClusterMetadata>(create);
   static CreateClusterMetadata? _defaultInstance;
 
+  /// The request that prompted the initiation of this CreateCluster operation.
   @$pb.TagNumber(1)
   CreateClusterRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
@@ -1462,6 +1388,7 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CreateClusterRequest ensureOriginalRequest() => $_ensure(0);
 
+  /// The time at which the original request was received.
   @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -1476,6 +1403,7 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  /// The time at which the operation failed or was completed successfully.
   @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -1490,65 +1418,59 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $7.Timestamp ensureFinishTime() => $_ensure(2);
 
+  ///  Keys: the full `name` of each table that existed in the instance when
+  ///  CreateCluster was first called, i.e.
+  ///  `projects/<project>/instances/<instance>/tables/<table>`. Any table added
+  ///  to the instance by a later API call will be created in the new cluster by
+  ///  that API call, not this one.
+  ///
+  ///  Values: information on how much of a table's data has been copied to the
+  ///  newly-created cluster so far.
   @$pb.TagNumber(4)
   $core.Map<$core.String, CreateClusterMetadata_TableProgress> get tables =>
       $_getMap(3);
 }
 
+/// The metadata for the Operation returned by UpdateCluster.
 class UpdateClusterMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateClusterMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<$5.Cluster>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalRequest',
-        subBuilder: $5.Cluster.create)
-    ..aOM<$7.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'finishTime',
-        subBuilder: $7.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  UpdateClusterMetadata._() : super();
   factory UpdateClusterMetadata({
     $5.Cluster? originalRequest,
     $7.Timestamp? requestTime,
     $7.Timestamp? finishTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (originalRequest != null) {
-      _result.originalRequest = originalRequest;
+      $result.originalRequest = originalRequest;
     }
     if (requestTime != null) {
-      _result.requestTime = requestTime;
+      $result.requestTime = requestTime;
     }
     if (finishTime != null) {
-      _result.finishTime = finishTime;
+      $result.finishTime = finishTime;
     }
-    return _result;
+    return $result;
   }
+  UpdateClusterMetadata._() : super();
   factory UpdateClusterMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateClusterMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateClusterMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Cluster>(1, _omitFieldNames ? '' : 'originalRequest',
+        subBuilder: $5.Cluster.create)
+    ..aOM<$7.Timestamp>(2, _omitFieldNames ? '' : 'requestTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, _omitFieldNames ? '' : 'finishTime',
+        subBuilder: $7.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1560,8 +1482,10 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
   UpdateClusterMetadata copyWith(
           void Function(UpdateClusterMetadata) updates) =>
       super.copyWith((message) => updates(message as UpdateClusterMetadata))
-          as UpdateClusterMetadata; // ignore: deprecated_member_use
+          as UpdateClusterMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateClusterMetadata create() => UpdateClusterMetadata._();
   UpdateClusterMetadata createEmptyInstance() => create();
@@ -1572,6 +1496,7 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateClusterMetadata>(create);
   static UpdateClusterMetadata? _defaultInstance;
 
+  /// The request that prompted the initiation of this UpdateCluster operation.
   @$pb.TagNumber(1)
   $5.Cluster get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
@@ -1586,6 +1511,7 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.Cluster ensureOriginalRequest() => $_ensure(0);
 
+  /// The time at which the original request was received.
   @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -1600,6 +1526,7 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  /// The time at which the operation failed or was completed successfully.
   @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -1615,60 +1542,47 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
   $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
+/// The metadata for the Operation returned by PartialUpdateCluster.
 class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PartialUpdateClusterMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<$7.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'finishTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<PartialUpdateClusterRequest>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalRequest',
-        subBuilder: PartialUpdateClusterRequest.create)
-    ..hasRequiredFields = false;
-
-  PartialUpdateClusterMetadata._() : super();
   factory PartialUpdateClusterMetadata({
     $7.Timestamp? requestTime,
     $7.Timestamp? finishTime,
     PartialUpdateClusterRequest? originalRequest,
   }) {
-    final _result = create();
+    final $result = create();
     if (requestTime != null) {
-      _result.requestTime = requestTime;
+      $result.requestTime = requestTime;
     }
     if (finishTime != null) {
-      _result.finishTime = finishTime;
+      $result.finishTime = finishTime;
     }
     if (originalRequest != null) {
-      _result.originalRequest = originalRequest;
+      $result.originalRequest = originalRequest;
     }
-    return _result;
+    return $result;
   }
+  PartialUpdateClusterMetadata._() : super();
   factory PartialUpdateClusterMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PartialUpdateClusterMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PartialUpdateClusterMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$7.Timestamp>(1, _omitFieldNames ? '' : 'requestTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(2, _omitFieldNames ? '' : 'finishTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<PartialUpdateClusterRequest>(
+        3, _omitFieldNames ? '' : 'originalRequest',
+        subBuilder: PartialUpdateClusterRequest.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1681,8 +1595,10 @@ class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
           void Function(PartialUpdateClusterMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as PartialUpdateClusterMetadata))
-          as PartialUpdateClusterMetadata; // ignore: deprecated_member_use
+          as PartialUpdateClusterMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PartialUpdateClusterMetadata create() =>
       PartialUpdateClusterMetadata._();
@@ -1694,6 +1610,7 @@ class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PartialUpdateClusterMetadata>(create);
   static PartialUpdateClusterMetadata? _defaultInstance;
 
+  /// The time at which the original request was received.
   @$pb.TagNumber(1)
   $7.Timestamp get requestTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -1708,6 +1625,7 @@ class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $7.Timestamp ensureRequestTime() => $_ensure(0);
 
+  /// The time at which the operation failed or was completed successfully.
   @$pb.TagNumber(2)
   $7.Timestamp get finishTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -1722,6 +1640,7 @@ class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Timestamp ensureFinishTime() => $_ensure(1);
 
+  /// The original request for PartialUpdateCluster.
   @$pb.TagNumber(3)
   PartialUpdateClusterRequest get originalRequest => $_getN(2);
   @$pb.TagNumber(3)
@@ -1737,50 +1656,40 @@ class PartialUpdateClusterMetadata extends $pb.GeneratedMessage {
   PartialUpdateClusterRequest ensureOriginalRequest() => $_ensure(2);
 }
 
+/// Request message for BigtableInstanceAdmin.PartialUpdateCluster.
 class PartialUpdateClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PartialUpdateClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<$5.Cluster>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cluster',
-        subBuilder: $5.Cluster.create)
-    ..aOM<$6.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $6.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  PartialUpdateClusterRequest._() : super();
   factory PartialUpdateClusterRequest({
     $5.Cluster? cluster,
     $6.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (cluster != null) {
-      _result.cluster = cluster;
+      $result.cluster = cluster;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  PartialUpdateClusterRequest._() : super();
   factory PartialUpdateClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PartialUpdateClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PartialUpdateClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Cluster>(1, _omitFieldNames ? '' : 'cluster',
+        subBuilder: $5.Cluster.create)
+    ..aOM<$6.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $6.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1793,8 +1702,10 @@ class PartialUpdateClusterRequest extends $pb.GeneratedMessage {
           void Function(PartialUpdateClusterRequest) updates) =>
       super.copyWith(
               (message) => updates(message as PartialUpdateClusterRequest))
-          as PartialUpdateClusterRequest; // ignore: deprecated_member_use
+          as PartialUpdateClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PartialUpdateClusterRequest create() =>
       PartialUpdateClusterRequest._();
@@ -1806,6 +1717,8 @@ class PartialUpdateClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PartialUpdateClusterRequest>(create);
   static PartialUpdateClusterRequest? _defaultInstance;
 
+  /// Required. The Cluster which contains the partial updates to be applied,
+  /// subject to the update_mask.
   @$pb.TagNumber(1)
   $5.Cluster get cluster => $_getN(0);
   @$pb.TagNumber(1)
@@ -1820,6 +1733,7 @@ class PartialUpdateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.Cluster ensureCluster() => $_ensure(0);
 
+  /// Required. The subset of Cluster fields which should be replaced.
   @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -1835,67 +1749,49 @@ class PartialUpdateClusterRequest extends $pb.GeneratedMessage {
   $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for BigtableInstanceAdmin.CreateAppProfile.
 class CreateAppProfileRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateAppProfileRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appProfileId')
-    ..aOM<$5.AppProfile>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appProfile',
-        subBuilder: $5.AppProfile.create)
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ignoreWarnings')
-    ..hasRequiredFields = false;
-
-  CreateAppProfileRequest._() : super();
   factory CreateAppProfileRequest({
     $core.String? parent,
     $core.String? appProfileId,
     $5.AppProfile? appProfile,
     $core.bool? ignoreWarnings,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (appProfileId != null) {
-      _result.appProfileId = appProfileId;
+      $result.appProfileId = appProfileId;
     }
     if (appProfile != null) {
-      _result.appProfile = appProfile;
+      $result.appProfile = appProfile;
     }
     if (ignoreWarnings != null) {
-      _result.ignoreWarnings = ignoreWarnings;
+      $result.ignoreWarnings = ignoreWarnings;
     }
-    return _result;
+    return $result;
   }
+  CreateAppProfileRequest._() : super();
   factory CreateAppProfileRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateAppProfileRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateAppProfileRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'appProfileId')
+    ..aOM<$5.AppProfile>(3, _omitFieldNames ? '' : 'appProfile',
+        subBuilder: $5.AppProfile.create)
+    ..aOB(4, _omitFieldNames ? '' : 'ignoreWarnings')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1907,8 +1803,10 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
   CreateAppProfileRequest copyWith(
           void Function(CreateAppProfileRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAppProfileRequest))
-          as CreateAppProfileRequest; // ignore: deprecated_member_use
+          as CreateAppProfileRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateAppProfileRequest create() => CreateAppProfileRequest._();
   CreateAppProfileRequest createEmptyInstance() => create();
@@ -1919,6 +1817,8 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateAppProfileRequest>(create);
   static CreateAppProfileRequest? _defaultInstance;
 
+  /// Required. The unique name of the instance in which to create the new app
+  /// profile. Values are of the form `projects/{project}/instances/{instance}`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1931,6 +1831,9 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The ID to be used when referring to the new app profile within
+  /// its instance, e.g., just `myprofile` rather than
+  /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
   @$pb.TagNumber(2)
   $core.String get appProfileId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1943,6 +1846,8 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAppProfileId() => clearField(2);
 
+  /// Required. The app profile to be created.
+  /// Fields marked `OutputOnly` will be ignored.
   @$pb.TagNumber(3)
   $5.AppProfile get appProfile => $_getN(2);
   @$pb.TagNumber(3)
@@ -1957,6 +1862,7 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $5.AppProfile ensureAppProfile() => $_ensure(2);
 
+  /// If true, ignore safety checks when creating the app profile.
   @$pb.TagNumber(4)
   $core.bool get ignoreWarnings => $_getBF(3);
   @$pb.TagNumber(4)
@@ -1970,39 +1876,33 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
   void clearIgnoreWarnings() => clearField(4);
 }
 
+/// Request message for BigtableInstanceAdmin.GetAppProfile.
 class GetAppProfileRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAppProfileRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetAppProfileRequest._() : super();
   factory GetAppProfileRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetAppProfileRequest._() : super();
   factory GetAppProfileRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAppProfileRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAppProfileRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2013,8 +1913,10 @@ class GetAppProfileRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetAppProfileRequest copyWith(void Function(GetAppProfileRequest) updates) =>
       super.copyWith((message) => updates(message as GetAppProfileRequest))
-          as GetAppProfileRequest; // ignore: deprecated_member_use
+          as GetAppProfileRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAppProfileRequest create() => GetAppProfileRequest._();
   GetAppProfileRequest createEmptyInstance() => create();
@@ -2025,6 +1927,8 @@ class GetAppProfileRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAppProfileRequest>(create);
   static GetAppProfileRequest? _defaultInstance;
 
+  /// Required. The unique name of the requested app profile. Values are of the
+  /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2038,58 +1942,43 @@ class GetAppProfileRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for BigtableInstanceAdmin.ListAppProfiles.
 class ListAppProfilesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAppProfilesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  ListAppProfilesRequest._() : super();
   factory ListAppProfilesRequest({
     $core.String? parent,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
-    return _result;
+    return $result;
   }
+  ListAppProfilesRequest._() : super();
   factory ListAppProfilesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAppProfilesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAppProfilesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2101,8 +1990,10 @@ class ListAppProfilesRequest extends $pb.GeneratedMessage {
   ListAppProfilesRequest copyWith(
           void Function(ListAppProfilesRequest) updates) =>
       super.copyWith((message) => updates(message as ListAppProfilesRequest))
-          as ListAppProfilesRequest; // ignore: deprecated_member_use
+          as ListAppProfilesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAppProfilesRequest create() => ListAppProfilesRequest._();
   ListAppProfilesRequest createEmptyInstance() => create();
@@ -2113,6 +2004,11 @@ class ListAppProfilesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAppProfilesRequest>(create);
   static ListAppProfilesRequest? _defaultInstance;
 
+  /// Required. The unique name of the instance for which a list of app profiles
+  /// is requested. Values are of the form
+  /// `projects/{project}/instances/{instance}`.
+  /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
+  /// e.g., `projects/myproject/instances/-`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2125,6 +2021,7 @@ class ListAppProfilesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The value of `next_page_token` returned by a previous call.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2137,6 +2034,15 @@ class ListAppProfilesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
+  ///  Maximum number of results per page.
+  ///
+  ///  A page_size of zero lets the server choose the number of items to return.
+  ///  A page_size which is strictly positive will return at most that many items.
+  ///  A negative page_size will cause an error.
+  ///
+  ///  Following the first request, subsequent paginated calls are not required
+  ///  to pass a page_size. If a page_size is set in subsequent calls, it must
+  ///  match the page_size given in the first request.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -2150,59 +2056,45 @@ class ListAppProfilesRequest extends $pb.GeneratedMessage {
   void clearPageSize() => clearField(3);
 }
 
+/// Response message for BigtableInstanceAdmin.ListAppProfiles.
 class ListAppProfilesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAppProfilesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..pc<$5.AppProfile>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appProfiles',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.AppProfile.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedLocations')
-    ..hasRequiredFields = false;
-
-  ListAppProfilesResponse._() : super();
   factory ListAppProfilesResponse({
     $core.Iterable<$5.AppProfile>? appProfiles,
     $core.String? nextPageToken,
     $core.Iterable<$core.String>? failedLocations,
   }) {
-    final _result = create();
+    final $result = create();
     if (appProfiles != null) {
-      _result.appProfiles.addAll(appProfiles);
+      $result.appProfiles.addAll(appProfiles);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
     if (failedLocations != null) {
-      _result.failedLocations.addAll(failedLocations);
+      $result.failedLocations.addAll(failedLocations);
     }
-    return _result;
+    return $result;
   }
+  ListAppProfilesResponse._() : super();
   factory ListAppProfilesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAppProfilesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAppProfilesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.AppProfile>(
+        1, _omitFieldNames ? '' : 'appProfiles', $pb.PbFieldType.PM,
+        subBuilder: $5.AppProfile.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..pPS(3, _omitFieldNames ? '' : 'failedLocations')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2214,8 +2106,10 @@ class ListAppProfilesResponse extends $pb.GeneratedMessage {
   ListAppProfilesResponse copyWith(
           void Function(ListAppProfilesResponse) updates) =>
       super.copyWith((message) => updates(message as ListAppProfilesResponse))
-          as ListAppProfilesResponse; // ignore: deprecated_member_use
+          as ListAppProfilesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAppProfilesResponse create() => ListAppProfilesResponse._();
   ListAppProfilesResponse createEmptyInstance() => create();
@@ -2226,9 +2120,13 @@ class ListAppProfilesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAppProfilesResponse>(create);
   static ListAppProfilesResponse? _defaultInstance;
 
+  /// The list of requested app profiles.
   @$pb.TagNumber(1)
   $core.List<$5.AppProfile> get appProfiles => $_getList(0);
 
+  /// Set if not all app profiles could be returned in a single response.
+  /// Pass this value to `page_token` in another request to get the next
+  /// page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2241,63 +2139,53 @@ class ListAppProfilesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  /// Locations from which AppProfile information could not be retrieved,
+  /// due to an outage or some other transient condition.
+  /// AppProfiles from these locations may be missing from `app_profiles`.
+  /// Values are of the form `projects/<project>/locations/<zone_id>`
   @$pb.TagNumber(3)
   $core.List<$core.String> get failedLocations => $_getList(2);
 }
 
+/// Request message for BigtableInstanceAdmin.UpdateAppProfile.
 class UpdateAppProfileRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateAppProfileRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOM<$5.AppProfile>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appProfile',
-        subBuilder: $5.AppProfile.create)
-    ..aOM<$6.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $6.FieldMask.create)
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ignoreWarnings')
-    ..hasRequiredFields = false;
-
-  UpdateAppProfileRequest._() : super();
   factory UpdateAppProfileRequest({
     $5.AppProfile? appProfile,
     $6.FieldMask? updateMask,
     $core.bool? ignoreWarnings,
   }) {
-    final _result = create();
+    final $result = create();
     if (appProfile != null) {
-      _result.appProfile = appProfile;
+      $result.appProfile = appProfile;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
     if (ignoreWarnings != null) {
-      _result.ignoreWarnings = ignoreWarnings;
+      $result.ignoreWarnings = ignoreWarnings;
     }
-    return _result;
+    return $result;
   }
+  UpdateAppProfileRequest._() : super();
   factory UpdateAppProfileRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateAppProfileRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAppProfileRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.AppProfile>(1, _omitFieldNames ? '' : 'appProfile',
+        subBuilder: $5.AppProfile.create)
+    ..aOM<$6.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $6.FieldMask.create)
+    ..aOB(3, _omitFieldNames ? '' : 'ignoreWarnings')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2309,8 +2197,10 @@ class UpdateAppProfileRequest extends $pb.GeneratedMessage {
   UpdateAppProfileRequest copyWith(
           void Function(UpdateAppProfileRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAppProfileRequest))
-          as UpdateAppProfileRequest; // ignore: deprecated_member_use
+          as UpdateAppProfileRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateAppProfileRequest create() => UpdateAppProfileRequest._();
   UpdateAppProfileRequest createEmptyInstance() => create();
@@ -2321,6 +2211,7 @@ class UpdateAppProfileRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateAppProfileRequest>(create);
   static UpdateAppProfileRequest? _defaultInstance;
 
+  /// Required. The app profile which will (partially) replace the current value.
   @$pb.TagNumber(1)
   $5.AppProfile get appProfile => $_getN(0);
   @$pb.TagNumber(1)
@@ -2335,6 +2226,8 @@ class UpdateAppProfileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.AppProfile ensureAppProfile() => $_ensure(0);
 
+  /// Required. The subset of app profile fields which should be replaced.
+  /// If unset, all fields will be replaced.
   @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -2349,6 +2242,7 @@ class UpdateAppProfileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $6.FieldMask ensureUpdateMask() => $_ensure(1);
 
+  /// If true, ignore safety checks when updating the app profile.
   @$pb.TagNumber(3)
   $core.bool get ignoreWarnings => $_getBF(2);
   @$pb.TagNumber(3)
@@ -2362,48 +2256,38 @@ class UpdateAppProfileRequest extends $pb.GeneratedMessage {
   void clearIgnoreWarnings() => clearField(3);
 }
 
+/// Request message for BigtableInstanceAdmin.DeleteAppProfile.
 class DeleteAppProfileRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteAppProfileRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ignoreWarnings')
-    ..hasRequiredFields = false;
-
-  DeleteAppProfileRequest._() : super();
   factory DeleteAppProfileRequest({
     $core.String? name,
     $core.bool? ignoreWarnings,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (ignoreWarnings != null) {
-      _result.ignoreWarnings = ignoreWarnings;
+      $result.ignoreWarnings = ignoreWarnings;
     }
-    return _result;
+    return $result;
   }
+  DeleteAppProfileRequest._() : super();
   factory DeleteAppProfileRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteAppProfileRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAppProfileRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOB(2, _omitFieldNames ? '' : 'ignoreWarnings')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2415,8 +2299,10 @@ class DeleteAppProfileRequest extends $pb.GeneratedMessage {
   DeleteAppProfileRequest copyWith(
           void Function(DeleteAppProfileRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAppProfileRequest))
-          as DeleteAppProfileRequest; // ignore: deprecated_member_use
+          as DeleteAppProfileRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteAppProfileRequest create() => DeleteAppProfileRequest._();
   DeleteAppProfileRequest createEmptyInstance() => create();
@@ -2427,6 +2313,9 @@ class DeleteAppProfileRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteAppProfileRequest>(create);
   static DeleteAppProfileRequest? _defaultInstance;
 
+  /// Required. The unique name of the app profile to be deleted. Values are of
+  /// the form
+  /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2439,6 +2328,7 @@ class DeleteAppProfileRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Required. If true, ignore safety checks when deleting the app profile.
   @$pb.TagNumber(2)
   $core.bool get ignoreWarnings => $_getBF(1);
   @$pb.TagNumber(2)
@@ -2452,26 +2342,24 @@ class DeleteAppProfileRequest extends $pb.GeneratedMessage {
   void clearIgnoreWarnings() => clearField(2);
 }
 
+/// The metadata for the Operation returned by UpdateAppProfile.
 class UpdateAppProfileMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateAppProfileMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  UpdateAppProfileMetadata._() : super();
   factory UpdateAppProfileMetadata() => create();
+  UpdateAppProfileMetadata._() : super();
   factory UpdateAppProfileMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateAppProfileMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAppProfileMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2483,8 +2371,10 @@ class UpdateAppProfileMetadata extends $pb.GeneratedMessage {
   UpdateAppProfileMetadata copyWith(
           void Function(UpdateAppProfileMetadata) updates) =>
       super.copyWith((message) => updates(message as UpdateAppProfileMetadata))
-          as UpdateAppProfileMetadata; // ignore: deprecated_member_use
+          as UpdateAppProfileMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateAppProfileMetadata create() => UpdateAppProfileMetadata._();
   UpdateAppProfileMetadata createEmptyInstance() => create();
@@ -2496,47 +2386,8 @@ class UpdateAppProfileMetadata extends $pb.GeneratedMessage {
   static UpdateAppProfileMetadata? _defaultInstance;
 }
 
+/// Request message for BigtableInstanceAdmin.ListHotTablets.
 class ListHotTabletsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListHotTabletsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$7.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $7.Timestamp.create)
-    ..aOM<$7.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $7.Timestamp.create)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListHotTabletsRequest._() : super();
   factory ListHotTabletsRequest({
     $core.String? parent,
     $7.Timestamp? startTime,
@@ -2544,30 +2395,46 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListHotTabletsRequest._() : super();
   factory ListHotTabletsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListHotTabletsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListHotTabletsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$7.Timestamp>(2, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $7.Timestamp.create)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(5, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2579,8 +2446,10 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
   ListHotTabletsRequest copyWith(
           void Function(ListHotTabletsRequest) updates) =>
       super.copyWith((message) => updates(message as ListHotTabletsRequest))
-          as ListHotTabletsRequest; // ignore: deprecated_member_use
+          as ListHotTabletsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListHotTabletsRequest create() => ListHotTabletsRequest._();
   ListHotTabletsRequest createEmptyInstance() => create();
@@ -2591,6 +2460,9 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListHotTabletsRequest>(create);
   static ListHotTabletsRequest? _defaultInstance;
 
+  /// Required. The cluster name to list hot tablets.
+  /// Value is in the following form:
+  /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2603,6 +2475,12 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The start time to list hot tablets. The hot tablets in the response will
+  /// have start times between the requested start time and end time. Start time
+  /// defaults to Now if it is unset, and end time defaults to Now - 24 hours if
+  /// it is unset. The start time should be less than the end time, and the
+  /// maximum allowed time range between start time and end time is 48 hours.
+  /// Start time and end time should have values between Now and Now - 14 days.
   @$pb.TagNumber(2)
   $7.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -2617,6 +2495,7 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Timestamp ensureStartTime() => $_ensure(1);
 
+  /// The end time to list hot tablets.
   @$pb.TagNumber(3)
   $7.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -2631,6 +2510,15 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $7.Timestamp ensureEndTime() => $_ensure(2);
 
+  ///  Maximum number of results per page.
+  ///
+  ///  A page_size that is empty or zero lets the server choose the number of
+  ///  items to return. A page_size which is strictly positive will return at most
+  ///  that many items. A negative page_size will cause an error.
+  ///
+  ///  Following the first request, subsequent paginated calls do not need a
+  ///  page_size field. If a page_size is set in subsequent calls, it must match
+  ///  the page_size given in the first request.
   @$pb.TagNumber(4)
   $core.int get pageSize => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -2643,6 +2531,7 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
+  /// The value of `next_page_token` returned by a previous call.
   @$pb.TagNumber(5)
   $core.String get pageToken => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -2656,50 +2545,40 @@ class ListHotTabletsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(5);
 }
 
+/// Response message for BigtableInstanceAdmin.ListHotTablets.
 class ListHotTabletsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListHotTabletsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.bigtable.admin.v2'),
-      createEmptyInstance: create)
-    ..pc<$5.HotTablet>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hotTablets',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.HotTablet.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListHotTabletsResponse._() : super();
   factory ListHotTabletsResponse({
     $core.Iterable<$5.HotTablet>? hotTablets,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (hotTablets != null) {
-      _result.hotTablets.addAll(hotTablets);
+      $result.hotTablets.addAll(hotTablets);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListHotTabletsResponse._() : super();
   factory ListHotTabletsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListHotTabletsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListHotTabletsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.HotTablet>(
+        1, _omitFieldNames ? '' : 'hotTablets', $pb.PbFieldType.PM,
+        subBuilder: $5.HotTablet.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2711,8 +2590,10 @@ class ListHotTabletsResponse extends $pb.GeneratedMessage {
   ListHotTabletsResponse copyWith(
           void Function(ListHotTabletsResponse) updates) =>
       super.copyWith((message) => updates(message as ListHotTabletsResponse))
-          as ListHotTabletsResponse; // ignore: deprecated_member_use
+          as ListHotTabletsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListHotTabletsResponse create() => ListHotTabletsResponse._();
   ListHotTabletsResponse createEmptyInstance() => create();
@@ -2723,9 +2604,17 @@ class ListHotTabletsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListHotTabletsResponse>(create);
   static ListHotTabletsResponse? _defaultInstance;
 
+  /// List of hot tablets in the tables of the requested cluster that fall
+  /// within the requested time range. Hot tablets are ordered by node cpu usage
+  /// percent. If there are multiple hot tablets that correspond to the same
+  /// tablet within a 15-minute interval, only the hot tablet with the highest
+  /// node cpu usage will be included in the response.
   @$pb.TagNumber(1)
   $core.List<$5.HotTablet> get hotTablets => $_getList(0);
 
+  /// Set if not all hot tablets could be returned in a single response.
+  /// Pass this value to `page_token` in another request to get the next
+  /// page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2738,3 +2627,7 @@ class ListHotTabletsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

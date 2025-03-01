@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/dataflow/v1beta3/templates.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'templates.pb.dart' as $2;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'jobs.pb.dart' as $1;
+import 'templates.pb.dart' as $2;
+
 export 'templates.pb.dart';
 
+@$pb.GrpcServiceName('google.dataflow.v1beta3.TemplatesService')
 class TemplatesServiceClient extends $grpc.Client {
   static final _$createJobFromTemplate =
       $grpc.ClientMethod<$2.CreateJobFromTemplateRequest, $1.Job>(
@@ -57,6 +64,7 @@ class TemplatesServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.dataflow.v1beta3.TemplatesService')
 abstract class TemplatesServiceBase extends $grpc.Service {
   $core.String get $name => 'google.dataflow.v1beta3.TemplatesService';
 
@@ -113,6 +121,7 @@ abstract class TemplatesServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.GetTemplateRequest request);
 }
 
+@$pb.GrpcServiceName('google.dataflow.v1beta3.FlexTemplatesService')
 class FlexTemplatesServiceClient extends $grpc.Client {
   static final _$launchFlexTemplate = $grpc.ClientMethod<
           $2.LaunchFlexTemplateRequest, $2.LaunchFlexTemplateResponse>(
@@ -133,6 +142,7 @@ class FlexTemplatesServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.dataflow.v1beta3.FlexTemplatesService')
 abstract class FlexTemplatesServiceBase extends $grpc.Service {
   $core.String get $name => 'google.dataflow.v1beta3.FlexTemplatesService';
 

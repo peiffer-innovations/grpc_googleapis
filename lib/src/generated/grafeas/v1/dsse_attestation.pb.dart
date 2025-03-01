@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/dsse_attestation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,39 +16,38 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'common.pb.dart' as $0;
 import 'intoto_statement.pb.dart' as $1;
 
+/// This submessage provides human-readable hints about the purpose of the
+/// authority. Because the name of a note acts as its resource reference, it is
+/// important to disambiguate the canonical name of the Note (which might be a
+/// UUID for security purposes) from "readable" names more suitable for debug
+/// output. Note that these hints should not be used to look up authorities in
+/// security sensitive contexts, such as when looking up attestations to
+/// verify.
 class DSSEAttestationNote_DSSEHint extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DSSEAttestationNote.DSSEHint',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'humanReadableName')
-    ..hasRequiredFields = false;
-
-  DSSEAttestationNote_DSSEHint._() : super();
   factory DSSEAttestationNote_DSSEHint({
     $core.String? humanReadableName,
   }) {
-    final _result = create();
+    final $result = create();
     if (humanReadableName != null) {
-      _result.humanReadableName = humanReadableName;
+      $result.humanReadableName = humanReadableName;
     }
-    return _result;
+    return $result;
   }
+  DSSEAttestationNote_DSSEHint._() : super();
   factory DSSEAttestationNote_DSSEHint.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DSSEAttestationNote_DSSEHint.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DSSEAttestationNote.DSSEHint',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'humanReadableName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -57,8 +60,10 @@ class DSSEAttestationNote_DSSEHint extends $pb.GeneratedMessage {
           void Function(DSSEAttestationNote_DSSEHint) updates) =>
       super.copyWith(
               (message) => updates(message as DSSEAttestationNote_DSSEHint))
-          as DSSEAttestationNote_DSSEHint; // ignore: deprecated_member_use
+          as DSSEAttestationNote_DSSEHint;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DSSEAttestationNote_DSSEHint create() =>
       DSSEAttestationNote_DSSEHint._();
@@ -70,6 +75,7 @@ class DSSEAttestationNote_DSSEHint extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DSSEAttestationNote_DSSEHint>(create);
   static DSSEAttestationNote_DSSEHint? _defaultInstance;
 
+  /// Required. The human readable name of this attestation authority, for example "cloudbuild-prod".
   @$pb.TagNumber(1)
   $core.String get humanReadableName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -84,39 +90,31 @@ class DSSEAttestationNote_DSSEHint extends $pb.GeneratedMessage {
 }
 
 class DSSEAttestationNote extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DSSEAttestationNote',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOM<DSSEAttestationNote_DSSEHint>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hint',
-        subBuilder: DSSEAttestationNote_DSSEHint.create)
-    ..hasRequiredFields = false;
-
-  DSSEAttestationNote._() : super();
   factory DSSEAttestationNote({
     DSSEAttestationNote_DSSEHint? hint,
   }) {
-    final _result = create();
+    final $result = create();
     if (hint != null) {
-      _result.hint = hint;
+      $result.hint = hint;
     }
-    return _result;
+    return $result;
   }
+  DSSEAttestationNote._() : super();
   factory DSSEAttestationNote.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DSSEAttestationNote.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DSSEAttestationNote',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOM<DSSEAttestationNote_DSSEHint>(1, _omitFieldNames ? '' : 'hint',
+        subBuilder: DSSEAttestationNote_DSSEHint.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -126,8 +124,10 @@ class DSSEAttestationNote extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DSSEAttestationNote copyWith(void Function(DSSEAttestationNote) updates) =>
       super.copyWith((message) => updates(message as DSSEAttestationNote))
-          as DSSEAttestationNote; // ignore: deprecated_member_use
+          as DSSEAttestationNote;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DSSEAttestationNote create() => DSSEAttestationNote._();
   DSSEAttestationNote createEmptyInstance() => create();
@@ -138,6 +138,7 @@ class DSSEAttestationNote extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DSSEAttestationNote>(create);
   static DSSEAttestationNote? _defaultInstance;
 
+  /// DSSEHint hints at the purpose of the attestation authority.
   @$pb.TagNumber(1)
   DSSEAttestationNote_DSSEHint get hint => $_getN(0);
   @$pb.TagNumber(1)
@@ -155,56 +156,46 @@ class DSSEAttestationNote extends $pb.GeneratedMessage {
 
 enum DSSEAttestationOccurrence_DecodedPayload { statement, notSet }
 
+/// Deprecated. Prefer to use a regular Occurrence, and populate the
+/// Envelope at the top level of the Occurrence.
 class DSSEAttestationOccurrence extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, DSSEAttestationOccurrence_DecodedPayload>
-      _DSSEAttestationOccurrence_DecodedPayloadByTag = {
-    2: DSSEAttestationOccurrence_DecodedPayload.statement,
-    0: DSSEAttestationOccurrence_DecodedPayload.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DSSEAttestationOccurrence',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [2])
-    ..aOM<$0.Envelope>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'envelope',
-        subBuilder: $0.Envelope.create)
-    ..aOM<$1.InTotoStatement>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'statement',
-        subBuilder: $1.InTotoStatement.create)
-    ..hasRequiredFields = false;
-
-  DSSEAttestationOccurrence._() : super();
   factory DSSEAttestationOccurrence({
     $0.Envelope? envelope,
     $1.InTotoStatement? statement,
   }) {
-    final _result = create();
+    final $result = create();
     if (envelope != null) {
-      _result.envelope = envelope;
+      $result.envelope = envelope;
     }
     if (statement != null) {
-      _result.statement = statement;
+      $result.statement = statement;
     }
-    return _result;
+    return $result;
   }
+  DSSEAttestationOccurrence._() : super();
   factory DSSEAttestationOccurrence.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DSSEAttestationOccurrence.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, DSSEAttestationOccurrence_DecodedPayload>
+      _DSSEAttestationOccurrence_DecodedPayloadByTag = {
+    2: DSSEAttestationOccurrence_DecodedPayload.statement,
+    0: DSSEAttestationOccurrence_DecodedPayload.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DSSEAttestationOccurrence',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [2])
+    ..aOM<$0.Envelope>(1, _omitFieldNames ? '' : 'envelope',
+        subBuilder: $0.Envelope.create)
+    ..aOM<$1.InTotoStatement>(2, _omitFieldNames ? '' : 'statement',
+        subBuilder: $1.InTotoStatement.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -216,8 +207,10 @@ class DSSEAttestationOccurrence extends $pb.GeneratedMessage {
   DSSEAttestationOccurrence copyWith(
           void Function(DSSEAttestationOccurrence) updates) =>
       super.copyWith((message) => updates(message as DSSEAttestationOccurrence))
-          as DSSEAttestationOccurrence; // ignore: deprecated_member_use
+          as DSSEAttestationOccurrence;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DSSEAttestationOccurrence create() => DSSEAttestationOccurrence._();
   DSSEAttestationOccurrence createEmptyInstance() => create();
@@ -232,6 +225,7 @@ class DSSEAttestationOccurrence extends $pb.GeneratedMessage {
       _DSSEAttestationOccurrence_DecodedPayloadByTag[$_whichOneof(0)]!;
   void clearDecodedPayload() => clearField($_whichOneof(0));
 
+  /// If doing something security critical, make sure to verify the signatures in this metadata.
   @$pb.TagNumber(1)
   $0.Envelope get envelope => $_getN(0);
   @$pb.TagNumber(1)
@@ -260,3 +254,7 @@ class DSSEAttestationOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.InTotoStatement ensureStatement() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,37 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/identity/accesscontextmanager/type/device_resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The encryption state of the device.
 class DeviceEncryptionStatus extends $pb.ProtobufEnum {
   static const DeviceEncryptionStatus ENCRYPTION_UNSPECIFIED =
       DeviceEncryptionStatus._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ENCRYPTION_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'ENCRYPTION_UNSPECIFIED');
   static const DeviceEncryptionStatus ENCRYPTION_UNSUPPORTED =
       DeviceEncryptionStatus._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ENCRYPTION_UNSUPPORTED');
-  static const DeviceEncryptionStatus UNENCRYPTED = DeviceEncryptionStatus._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNENCRYPTED');
-  static const DeviceEncryptionStatus ENCRYPTED = DeviceEncryptionStatus._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ENCRYPTED');
+          1, _omitEnumNames ? '' : 'ENCRYPTION_UNSUPPORTED');
+  static const DeviceEncryptionStatus UNENCRYPTED =
+      DeviceEncryptionStatus._(2, _omitEnumNames ? '' : 'UNENCRYPTED');
+  static const DeviceEncryptionStatus ENCRYPTED =
+      DeviceEncryptionStatus._(3, _omitEnumNames ? '' : 'ENCRYPTED');
 
   static const $core.List<DeviceEncryptionStatus> values =
       <DeviceEncryptionStatus>[
@@ -48,42 +41,21 @@ class DeviceEncryptionStatus extends $pb.ProtobufEnum {
   const DeviceEncryptionStatus._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The operating system type of the device.
+/// Next id: 7
 class OsType extends $pb.ProtobufEnum {
-  static const OsType OS_UNSPECIFIED = OsType._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'OS_UNSPECIFIED');
-  static const OsType DESKTOP_MAC = OsType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DESKTOP_MAC');
-  static const OsType DESKTOP_WINDOWS = OsType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DESKTOP_WINDOWS');
-  static const OsType DESKTOP_LINUX = OsType._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DESKTOP_LINUX');
-  static const OsType DESKTOP_CHROME_OS = OsType._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DESKTOP_CHROME_OS');
-  static const OsType ANDROID = OsType._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ANDROID');
-  static const OsType IOS = OsType._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IOS');
+  static const OsType OS_UNSPECIFIED =
+      OsType._(0, _omitEnumNames ? '' : 'OS_UNSPECIFIED');
+  static const OsType DESKTOP_MAC =
+      OsType._(1, _omitEnumNames ? '' : 'DESKTOP_MAC');
+  static const OsType DESKTOP_WINDOWS =
+      OsType._(2, _omitEnumNames ? '' : 'DESKTOP_WINDOWS');
+  static const OsType DESKTOP_LINUX =
+      OsType._(3, _omitEnumNames ? '' : 'DESKTOP_LINUX');
+  static const OsType DESKTOP_CHROME_OS =
+      OsType._(6, _omitEnumNames ? '' : 'DESKTOP_CHROME_OS');
+  static const OsType ANDROID = OsType._(4, _omitEnumNames ? '' : 'ANDROID');
+  static const OsType IOS = OsType._(5, _omitEnumNames ? '' : 'IOS');
 
   static const $core.List<OsType> values = <OsType>[
     OS_UNSPECIFIED,
@@ -102,28 +74,17 @@ class OsType extends $pb.ProtobufEnum {
   const OsType._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The degree to which the device is managed by the Cloud organization.
 class DeviceManagementLevel extends $pb.ProtobufEnum {
   static const DeviceManagementLevel MANAGEMENT_UNSPECIFIED =
       DeviceManagementLevel._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'MANAGEMENT_UNSPECIFIED');
-  static const DeviceManagementLevel NONE = DeviceManagementLevel._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NONE');
-  static const DeviceManagementLevel BASIC = DeviceManagementLevel._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'BASIC');
-  static const DeviceManagementLevel COMPLETE = DeviceManagementLevel._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'COMPLETE');
+          0, _omitEnumNames ? '' : 'MANAGEMENT_UNSPECIFIED');
+  static const DeviceManagementLevel NONE =
+      DeviceManagementLevel._(1, _omitEnumNames ? '' : 'NONE');
+  static const DeviceManagementLevel BASIC =
+      DeviceManagementLevel._(2, _omitEnumNames ? '' : 'BASIC');
+  static const DeviceManagementLevel COMPLETE =
+      DeviceManagementLevel._(3, _omitEnumNames ? '' : 'COMPLETE');
 
   static const $core.List<DeviceManagementLevel> values =
       <DeviceManagementLevel>[
@@ -139,3 +100,5 @@ class DeviceManagementLevel extends $pb.ProtobufEnum {
 
   const DeviceManagementLevel._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

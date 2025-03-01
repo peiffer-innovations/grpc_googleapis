@@ -1,20 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/home/enterprise/sdm/v1/smart_device_management_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'smart_device_management_service.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'device.pb.dart' as $1;
 import 'site.pb.dart' as $2;
+import 'smart_device_management_service.pb.dart' as $0;
+
 export 'smart_device_management_service.pb.dart';
 
+@$pb.GrpcServiceName(
+    'google.home.enterprise.sdm.v1.SmartDeviceManagementService')
 class SmartDeviceManagementServiceClient extends $grpc.Client {
   static final _$getDevice = $grpc.ClientMethod<$0.GetDeviceRequest, $1.Device>(
       '/google.home.enterprise.sdm.v1.SmartDeviceManagementService/GetDevice',
@@ -99,6 +107,8 @@ class SmartDeviceManagementServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName(
+    'google.home.enterprise.sdm.v1.SmartDeviceManagementService')
 abstract class SmartDeviceManagementServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.home.enterprise.sdm.v1.SmartDeviceManagementService';

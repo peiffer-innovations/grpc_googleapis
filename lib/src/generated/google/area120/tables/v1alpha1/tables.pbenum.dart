@@ -1,25 +1,24 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/area120/tables/v1alpha1/tables.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Column identifier used for the values in the row.
 class View extends $pb.ProtobufEnum {
-  static const View VIEW_UNSPECIFIED = View._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'VIEW_UNSPECIFIED');
-  static const View COLUMN_ID_VIEW = View._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'COLUMN_ID_VIEW');
+  static const View VIEW_UNSPECIFIED =
+      View._(0, _omitEnumNames ? '' : 'VIEW_UNSPECIFIED');
+  static const View COLUMN_ID_VIEW =
+      View._(1, _omitEnumNames ? '' : 'COLUMN_ID_VIEW');
 
   static const $core.List<View> values = <View>[
     VIEW_UNSPECIFIED,
@@ -32,3 +31,5 @@ class View extends $pb.ProtobufEnum {
 
   const View._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

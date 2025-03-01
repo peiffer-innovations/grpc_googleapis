@@ -1,20 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/v1/trip_api.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../../../protobuf/empty.pb.dart' as $2;
 import 'trip_api.pb.dart' as $0;
 import 'trips.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+
 export 'trip_api.pb.dart';
 
+@$pb.GrpcServiceName('maps.fleetengine.v1.TripService')
 class TripServiceClient extends $grpc.Client {
   static final _$createTrip = $grpc.ClientMethod<$0.CreateTripRequest, $1.Trip>(
       '/maps.fleetengine.v1.TripService/CreateTrip',
@@ -24,6 +31,11 @@ class TripServiceClient extends $grpc.Client {
       '/maps.fleetengine.v1.TripService/GetTrip',
       ($0.GetTripRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Trip.fromBuffer(value));
+  static final _$deleteTrip =
+      $grpc.ClientMethod<$0.DeleteTripRequest, $2.Empty>(
+          '/maps.fleetengine.v1.TripService/DeleteTrip',
+          ($0.DeleteTripRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
   static final _$reportBillableTrip =
       $grpc.ClientMethod<$0.ReportBillableTripRequest, $2.Empty>(
           '/maps.fleetengine.v1.TripService/ReportBillableTrip',
@@ -55,6 +67,11 @@ class TripServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getTrip, request, options: options);
   }
 
+  $grpc.ResponseFuture<$2.Empty> deleteTrip($0.DeleteTripRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteTrip, request, options: options);
+  }
+
   $grpc.ResponseFuture<$2.Empty> reportBillableTrip(
       $0.ReportBillableTripRequest request,
       {$grpc.CallOptions? options}) {
@@ -73,6 +90,7 @@ class TripServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('maps.fleetengine.v1.TripService')
 abstract class TripServiceBase extends $grpc.Service {
   $core.String get $name => 'maps.fleetengine.v1.TripService';
 
@@ -91,6 +109,13 @@ abstract class TripServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetTripRequest.fromBuffer(value),
         ($1.Trip value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteTripRequest, $2.Empty>(
+        'DeleteTrip',
+        deleteTrip_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteTripRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ReportBillableTripRequest, $2.Empty>(
         'ReportBillableTrip',
         reportBillableTrip_Pre,
@@ -127,6 +152,11 @@ abstract class TripServiceBase extends $grpc.Service {
     return getTrip(call, await request);
   }
 
+  $async.Future<$2.Empty> deleteTrip_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteTripRequest> request) async {
+    return deleteTrip(call, await request);
+  }
+
   $async.Future<$2.Empty> reportBillableTrip_Pre($grpc.ServiceCall call,
       $async.Future<$0.ReportBillableTripRequest> request) async {
     return reportBillableTrip(call, await request);
@@ -146,6 +176,8 @@ abstract class TripServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.CreateTripRequest request);
   $async.Future<$1.Trip> getTrip(
       $grpc.ServiceCall call, $0.GetTripRequest request);
+  $async.Future<$2.Empty> deleteTrip(
+      $grpc.ServiceCall call, $0.DeleteTripRequest request);
   $async.Future<$2.Empty> reportBillableTrip(
       $grpc.ServiceCall call, $0.ReportBillableTripRequest request);
   $async.Future<$0.SearchTripsResponse> searchTrips(

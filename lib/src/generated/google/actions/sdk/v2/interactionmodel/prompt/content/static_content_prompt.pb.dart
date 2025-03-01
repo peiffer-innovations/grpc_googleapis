@@ -1,21 +1,25 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/interactionmodel/prompt/content/static_content_prompt.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'static_card_prompt.pb.dart' as $0;
-import 'static_image_prompt.pb.dart' as $1;
-import 'static_table_prompt.pb.dart' as $2;
-import 'static_media_prompt.pb.dart' as $3;
-import 'static_list_prompt.pb.dart' as $4;
-import 'static_collection_prompt.pb.dart' as $5;
 import 'static_collection_browse_prompt.pb.dart' as $6;
+import 'static_collection_prompt.pb.dart' as $5;
+import 'static_image_prompt.pb.dart' as $1;
+import 'static_list_prompt.pb.dart' as $4;
+import 'static_media_prompt.pb.dart' as $3;
+import 'static_table_prompt.pb.dart' as $2;
 
 enum StaticContentPrompt_Content {
   card,
@@ -28,7 +32,49 @@ enum StaticContentPrompt_Content {
   notSet
 }
 
+/// A placeholder for the Content part of a StaticPrompt.
 class StaticContentPrompt extends $pb.GeneratedMessage {
+  factory StaticContentPrompt({
+    $0.StaticCardPrompt? card,
+    $1.StaticImagePrompt? image,
+    $2.StaticTablePrompt? table,
+    $3.StaticMediaPrompt? media,
+    $4.StaticListPrompt? list,
+    $5.StaticCollectionPrompt? collection,
+    $6.StaticCollectionBrowsePrompt? collectionBrowse,
+  }) {
+    final $result = create();
+    if (card != null) {
+      $result.card = card;
+    }
+    if (image != null) {
+      $result.image = image;
+    }
+    if (table != null) {
+      $result.table = table;
+    }
+    if (media != null) {
+      $result.media = media;
+    }
+    if (list != null) {
+      $result.list = list;
+    }
+    if (collection != null) {
+      $result.collection = collection;
+    }
+    if (collectionBrowse != null) {
+      $result.collectionBrowse = collectionBrowse;
+    }
+    return $result;
+  }
+  StaticContentPrompt._() : super();
+  factory StaticContentPrompt.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StaticContentPrompt.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, StaticContentPrompt_Content>
       _StaticContentPrompt_ContentByTag = {
     1: StaticContentPrompt_Content.card,
@@ -41,99 +87,29 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
     0: StaticContentPrompt_Content.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+      _omitMessageNames ? '' : 'StaticContentPrompt',
+      package: const $pb.PackageName(_omitMessageNames
           ? ''
-          : 'StaticContentPrompt',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel.prompt'),
+          : 'google.actions.sdk.v2.interactionmodel.prompt'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7])
-    ..aOM<$0.StaticCardPrompt>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'card',
+    ..aOM<$0.StaticCardPrompt>(1, _omitFieldNames ? '' : 'card',
         subBuilder: $0.StaticCardPrompt.create)
-    ..aOM<$1.StaticImagePrompt>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'image',
+    ..aOM<$1.StaticImagePrompt>(2, _omitFieldNames ? '' : 'image',
         subBuilder: $1.StaticImagePrompt.create)
-    ..aOM<$2.StaticTablePrompt>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'table',
+    ..aOM<$2.StaticTablePrompt>(3, _omitFieldNames ? '' : 'table',
         subBuilder: $2.StaticTablePrompt.create)
-    ..aOM<$3.StaticMediaPrompt>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'media',
+    ..aOM<$3.StaticMediaPrompt>(4, _omitFieldNames ? '' : 'media',
         subBuilder: $3.StaticMediaPrompt.create)
-    ..aOM<$4.StaticListPrompt>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'list',
+    ..aOM<$4.StaticListPrompt>(5, _omitFieldNames ? '' : 'list',
         subBuilder: $4.StaticListPrompt.create)
-    ..aOM<$5.StaticCollectionPrompt>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'collection',
+    ..aOM<$5.StaticCollectionPrompt>(6, _omitFieldNames ? '' : 'collection',
         subBuilder: $5.StaticCollectionPrompt.create)
     ..aOM<$6.StaticCollectionBrowsePrompt>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'collectionBrowse',
+        7, _omitFieldNames ? '' : 'collectionBrowse',
         subBuilder: $6.StaticCollectionBrowsePrompt.create)
     ..hasRequiredFields = false;
 
-  StaticContentPrompt._() : super();
-  factory StaticContentPrompt({
-    $0.StaticCardPrompt? card,
-    $1.StaticImagePrompt? image,
-    $2.StaticTablePrompt? table,
-    $3.StaticMediaPrompt? media,
-    $4.StaticListPrompt? list,
-    $5.StaticCollectionPrompt? collection,
-    $6.StaticCollectionBrowsePrompt? collectionBrowse,
-  }) {
-    final _result = create();
-    if (card != null) {
-      _result.card = card;
-    }
-    if (image != null) {
-      _result.image = image;
-    }
-    if (table != null) {
-      _result.table = table;
-    }
-    if (media != null) {
-      _result.media = media;
-    }
-    if (list != null) {
-      _result.list = list;
-    }
-    if (collection != null) {
-      _result.collection = collection;
-    }
-    if (collectionBrowse != null) {
-      _result.collectionBrowse = collectionBrowse;
-    }
-    return _result;
-  }
-  factory StaticContentPrompt.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StaticContentPrompt.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -143,8 +119,10 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   StaticContentPrompt copyWith(void Function(StaticContentPrompt) updates) =>
       super.copyWith((message) => updates(message as StaticContentPrompt))
-          as StaticContentPrompt; // ignore: deprecated_member_use
+          as StaticContentPrompt;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticContentPrompt create() => StaticContentPrompt._();
   StaticContentPrompt createEmptyInstance() => create();
@@ -159,6 +137,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
       _StaticContentPrompt_ContentByTag[$_whichOneof(0)]!;
   void clearContent() => clearField($_whichOneof(0));
 
+  /// A basic card.
   @$pb.TagNumber(1)
   $0.StaticCardPrompt get card => $_getN(0);
   @$pb.TagNumber(1)
@@ -173,6 +152,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.StaticCardPrompt ensureCard() => $_ensure(0);
 
+  /// An image.
   @$pb.TagNumber(2)
   $1.StaticImagePrompt get image => $_getN(1);
   @$pb.TagNumber(2)
@@ -187,6 +167,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.StaticImagePrompt ensureImage() => $_ensure(1);
 
+  /// Table card.
   @$pb.TagNumber(3)
   $2.StaticTablePrompt get table => $_getN(2);
   @$pb.TagNumber(3)
@@ -201,6 +182,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.StaticTablePrompt ensureTable() => $_ensure(2);
 
+  /// Response indicating a set of media to be played.
   @$pb.TagNumber(4)
   $3.StaticMediaPrompt get media => $_getN(3);
   @$pb.TagNumber(4)
@@ -215,6 +197,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $3.StaticMediaPrompt ensureMedia() => $_ensure(3);
 
+  /// A card for presenting a list of options to select from.
   @$pb.TagNumber(5)
   $4.StaticListPrompt get list => $_getN(4);
   @$pb.TagNumber(5)
@@ -229,6 +212,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $4.StaticListPrompt ensureList() => $_ensure(4);
 
+  /// A card presenting a list of options to select from.
   @$pb.TagNumber(6)
   $5.StaticCollectionPrompt get collection => $_getN(5);
   @$pb.TagNumber(6)
@@ -243,6 +227,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $5.StaticCollectionPrompt ensureCollection() => $_ensure(5);
 
+  /// A card presenting a collection of web pages to open.
   @$pb.TagNumber(7)
   $6.StaticCollectionBrowsePrompt get collectionBrowse => $_getN(6);
   @$pb.TagNumber(7)
@@ -257,3 +242,7 @@ class StaticContentPrompt extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $6.StaticCollectionBrowsePrompt ensureCollectionBrowse() => $_ensure(6);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

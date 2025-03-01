@@ -8,3 +8,6 @@ export '../src/generated/google/iam/v1/options.pbjson.dart';
 export '../src/generated/google/iam/v1/policy.pb.dart';
 export '../src/generated/google/iam/v1/policy.pbenum.dart';
 export '../src/generated/google/iam/v1/policy.pbjson.dart';
+export '../src/generated/google/iam/v1/resource_policy_member.pb.dart';
+export '../src/generated/google/iam/v1/resource_policy_member.pbenum.dart';
+export '../src/generated/google/iam/v1/resource_policy_member.pbjson.dart';

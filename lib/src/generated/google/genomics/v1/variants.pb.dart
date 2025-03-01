@@ -1,79 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/variants.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $3;
 import '../../protobuf/field_mask.pb.dart' as $4;
-
+import '../../protobuf/struct.pb.dart' as $3;
 import 'variants.pbenum.dart';
 
 export 'variants.pbenum.dart';
 
+/// Metadata describes a single piece of variant call metadata.
+/// These data include a top level key and either a single value string (value)
+/// or a list of key-value pairs (info.)
+/// Value and info are mutually exclusive.
 class VariantSetMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VariantSetMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value')
-    ..m<$core.String, $3.ListValue>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'info',
-        entryClassName: 'VariantSetMetadata.InfoEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $3.ListValue.create,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..e<VariantSetMetadata_Type>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: VariantSetMetadata_Type.TYPE_UNSPECIFIED,
-        valueOf: VariantSetMetadata_Type.valueOf,
-        enumValues: VariantSetMetadata_Type.values)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'number')
-    ..hasRequiredFields = false;
-
-  VariantSetMetadata._() : super();
   factory VariantSetMetadata({
     $core.String? key,
     $core.String? value,
@@ -83,36 +34,62 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
     $core.String? description,
     $core.String? number,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
     if (info != null) {
-      _result.info.addAll(info);
+      $result.info.addAll(info);
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (number != null) {
-      _result.number = number;
+      $result.number = number;
     }
-    return _result;
+    return $result;
   }
+  VariantSetMetadata._() : super();
   factory VariantSetMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory VariantSetMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VariantSetMetadata',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..aOS(2, _omitFieldNames ? '' : 'value')
+    ..m<$core.String, $3.ListValue>(3, _omitFieldNames ? '' : 'info',
+        entryClassName: 'VariantSetMetadata.InfoEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $3.ListValue.create,
+        valueDefaultOrMaker: $3.ListValue.getDefault,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..aOS(4, _omitFieldNames ? '' : 'id')
+    ..e<VariantSetMetadata_Type>(
+        5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: VariantSetMetadata_Type.TYPE_UNSPECIFIED,
+        valueOf: VariantSetMetadata_Type.valueOf,
+        enumValues: VariantSetMetadata_Type.values)
+    ..aOS(7, _omitFieldNames ? '' : 'description')
+    ..aOS(8, _omitFieldNames ? '' : 'number')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -122,8 +99,10 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   VariantSetMetadata copyWith(void Function(VariantSetMetadata) updates) =>
       super.copyWith((message) => updates(message as VariantSetMetadata))
-          as VariantSetMetadata; // ignore: deprecated_member_use
+          as VariantSetMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VariantSetMetadata create() => VariantSetMetadata._();
   VariantSetMetadata createEmptyInstance() => create();
@@ -134,6 +113,7 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<VariantSetMetadata>(create);
   static VariantSetMetadata? _defaultInstance;
 
+  /// The top-level key.
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -146,6 +126,7 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// The value field for simple metadata
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -158,9 +139,14 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  /// Remaining structured metadata key-value pairs. This must be of the form
+  /// map<string, string[]> (string key mapping to a list of string values).
   @$pb.TagNumber(3)
   $core.Map<$core.String, $3.ListValue> get info => $_getMap(2);
 
+  /// User-provided ID field, not enforced by this API.
+  /// Two or more pieces of structured metadata with identical
+  /// id and key fields are considered equivalent.
   @$pb.TagNumber(4)
   $core.String get id => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -173,6 +159,8 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
 
+  /// The type of data. Possible types include: Integer, Float,
+  /// Flag, Character, and String.
   @$pb.TagNumber(5)
   VariantSetMetadata_Type get type => $_getN(4);
   @$pb.TagNumber(5)
@@ -185,6 +173,7 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearType() => clearField(5);
 
+  /// A textual description of this metadata.
   @$pb.TagNumber(7)
   $core.String get description => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -197,6 +186,8 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearDescription() => clearField(7);
 
+  /// The number of values that can be included in a field described by this
+  /// metadata.
   @$pb.TagNumber(8)
   $core.String get number => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -210,58 +201,12 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   void clearNumber() => clearField(8);
 }
 
+///  A variant set is a collection of call sets and variants. It contains summary
+///  statistics of those contents. A variant set belongs to a dataset.
+///
+///  For more genomics resource definitions, see [Fundamentals of Google
+///  Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
 class VariantSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VariantSet',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'datasetId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..pc<VariantSetMetadata>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        $pb.PbFieldType.PM,
-        subBuilder: VariantSetMetadata.create)
-    ..pc<ReferenceBound>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceBounds',
-        $pb.PbFieldType.PM,
-        subBuilder: ReferenceBound.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceSetId')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..hasRequiredFields = false;
-
-  VariantSet._() : super();
   factory VariantSet({
     $core.String? datasetId,
     $core.String? id,
@@ -271,36 +216,56 @@ class VariantSet extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? description,
   }) {
-    final _result = create();
+    final $result = create();
     if (datasetId != null) {
-      _result.datasetId = datasetId;
+      $result.datasetId = datasetId;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (metadata != null) {
-      _result.metadata.addAll(metadata);
+      $result.metadata.addAll(metadata);
     }
     if (referenceBounds != null) {
-      _result.referenceBounds.addAll(referenceBounds);
+      $result.referenceBounds.addAll(referenceBounds);
     }
     if (referenceSetId != null) {
-      _result.referenceSetId = referenceSetId;
+      $result.referenceSetId = referenceSetId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
-    return _result;
+    return $result;
   }
+  VariantSet._() : super();
   factory VariantSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory VariantSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VariantSet',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'datasetId')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..pc<VariantSetMetadata>(
+        4, _omitFieldNames ? '' : 'metadata', $pb.PbFieldType.PM,
+        subBuilder: VariantSetMetadata.create)
+    ..pc<ReferenceBound>(
+        5, _omitFieldNames ? '' : 'referenceBounds', $pb.PbFieldType.PM,
+        subBuilder: ReferenceBound.create)
+    ..aOS(6, _omitFieldNames ? '' : 'referenceSetId')
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..aOS(8, _omitFieldNames ? '' : 'description')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -309,9 +274,10 @@ class VariantSet extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   VariantSet copyWith(void Function(VariantSet) updates) =>
-      super.copyWith((message) => updates(message as VariantSet))
-          as VariantSet; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as VariantSet)) as VariantSet;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VariantSet create() => VariantSet._();
   VariantSet createEmptyInstance() => create();
@@ -321,6 +287,7 @@ class VariantSet extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<VariantSet>(create);
   static VariantSet? _defaultInstance;
 
+  /// The dataset to which this variant set belongs.
   @$pb.TagNumber(1)
   $core.String get datasetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -333,6 +300,7 @@ class VariantSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDatasetId() => clearField(1);
 
+  /// The server-generated variant set ID, unique across all variant sets.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -345,12 +313,25 @@ class VariantSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// The metadata associated with this variant set.
   @$pb.TagNumber(4)
   $core.List<VariantSetMetadata> get metadata => $_getList(2);
 
+  /// A list of all references used by the variants in a variant set
+  /// with associated coordinate upper bounds for each one.
   @$pb.TagNumber(5)
   $core.List<ReferenceBound> get referenceBounds => $_getList(3);
 
+  ///  The reference set to which the variant set is mapped. The reference set
+  ///  describes the alignment provenance of the variant set, while the
+  ///  `referenceBounds` describe the shape of the actual variant data. The
+  ///  reference set's reference names are a superset of those found in the
+  ///  `referenceBounds`.
+  ///
+  ///  For example, given a variant set that is mapped to the GRCh38 reference set
+  ///  and contains a single variant on reference 'X', `referenceBounds` would
+  ///  contain only an entry for 'X', while the associated reference set
+  ///  enumerates all possible references: '1', '2', 'X', 'Y', 'MT', etc.
   @$pb.TagNumber(6)
   $core.String get referenceSetId => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -363,6 +344,7 @@ class VariantSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearReferenceSetId() => clearField(6);
 
+  /// User-specified, mutable name.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -375,6 +357,7 @@ class VariantSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearName() => clearField(7);
 
+  /// A textual description of this variant set.
   @$pb.TagNumber(8)
   $core.String get description => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -388,92 +371,19 @@ class VariantSet extends $pb.GeneratedMessage {
   void clearDescription() => clearField(8);
 }
 
+///  A variant represents a change in DNA sequence relative to a reference
+///  sequence. For example, a variant could represent a SNP or an insertion.
+///  Variants belong to a variant set.
+///
+///  For more genomics resource definitions, see [Fundamentals of Google
+///  Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
+///
+///  Each of the calls on a variant represent a determination of genotype with
+///  respect to that variant. For example, a call might assign probability of 0.32
+///  to the occurrence of a SNP named rs1234 in a sample named NA12345. A call
+///  belongs to a call set, which contains related calls typically from one
+///  sample.
 class Variant extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Variant',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'names')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceBases')
-    ..pPS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alternateBases')
-    ..a<$core.double>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'quality',
-        $pb.PbFieldType.OD)
-    ..pPS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..m<$core.String, $3.ListValue>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'info',
-        entryClassName: 'Variant.InfoEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $3.ListValue.create,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..pc<VariantCall>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'calls',
-        $pb.PbFieldType.PM,
-        subBuilder: VariantCall.create)
-    ..aInt64(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'created')
-    ..aInt64(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'end')
-    ..aOS(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceName')
-    ..aOS(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..aInt64(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'start')
-    ..hasRequiredFields = false;
-
-  Variant._() : super();
   factory Variant({
     $core.String? id,
     $core.Iterable<$core.String>? names,
@@ -489,54 +399,83 @@ class Variant extends $pb.GeneratedMessage {
     $core.String? variantSetId,
     $fixnum.Int64? start,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (names != null) {
-      _result.names.addAll(names);
+      $result.names.addAll(names);
     }
     if (referenceBases != null) {
-      _result.referenceBases = referenceBases;
+      $result.referenceBases = referenceBases;
     }
     if (alternateBases != null) {
-      _result.alternateBases.addAll(alternateBases);
+      $result.alternateBases.addAll(alternateBases);
     }
     if (quality != null) {
-      _result.quality = quality;
+      $result.quality = quality;
     }
     if (filter != null) {
-      _result.filter.addAll(filter);
+      $result.filter.addAll(filter);
     }
     if (info != null) {
-      _result.info.addAll(info);
+      $result.info.addAll(info);
     }
     if (calls != null) {
-      _result.calls.addAll(calls);
+      $result.calls.addAll(calls);
     }
     if (created != null) {
-      _result.created = created;
+      $result.created = created;
     }
     if (end != null) {
-      _result.end = end;
+      $result.end = end;
     }
     if (referenceName != null) {
-      _result.referenceName = referenceName;
+      $result.referenceName = referenceName;
     }
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
     if (start != null) {
-      _result.start = start;
+      $result.start = start;
     }
-    return _result;
+    return $result;
   }
+  Variant._() : super();
   factory Variant.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Variant.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Variant',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..pPS(3, _omitFieldNames ? '' : 'names')
+    ..aOS(6, _omitFieldNames ? '' : 'referenceBases')
+    ..pPS(7, _omitFieldNames ? '' : 'alternateBases')
+    ..a<$core.double>(8, _omitFieldNames ? '' : 'quality', $pb.PbFieldType.OD)
+    ..pPS(9, _omitFieldNames ? '' : 'filter')
+    ..m<$core.String, $3.ListValue>(10, _omitFieldNames ? '' : 'info',
+        entryClassName: 'Variant.InfoEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $3.ListValue.create,
+        valueDefaultOrMaker: $3.ListValue.getDefault,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..pc<VariantCall>(11, _omitFieldNames ? '' : 'calls', $pb.PbFieldType.PM,
+        subBuilder: VariantCall.create)
+    ..aInt64(12, _omitFieldNames ? '' : 'created')
+    ..aInt64(13, _omitFieldNames ? '' : 'end')
+    ..aOS(14, _omitFieldNames ? '' : 'referenceName')
+    ..aOS(15, _omitFieldNames ? '' : 'variantSetId')
+    ..aInt64(16, _omitFieldNames ? '' : 'start')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -545,9 +484,10 @@ class Variant extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Variant copyWith(void Function(Variant) updates) =>
-      super.copyWith((message) => updates(message as Variant))
-          as Variant; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Variant)) as Variant;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Variant create() => Variant._();
   Variant createEmptyInstance() => create();
@@ -557,6 +497,7 @@ class Variant extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Variant>(create);
   static Variant? _defaultInstance;
 
+  /// The server-generated variant ID, unique across all variants.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(2)
@@ -569,9 +510,12 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// Names for the variant, for example a RefSNP ID.
   @$pb.TagNumber(3)
   $core.List<$core.String> get names => $_getList(1);
 
+  /// The reference bases for this variant. They start at the given
+  /// position.
   @$pb.TagNumber(6)
   $core.String get referenceBases => $_getSZ(2);
   @$pb.TagNumber(6)
@@ -584,9 +528,12 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearReferenceBases() => clearField(6);
 
+  /// The bases that appear instead of the reference bases.
   @$pb.TagNumber(7)
   $core.List<$core.String> get alternateBases => $_getList(3);
 
+  /// A measure of how likely this variant is to be real.
+  /// A higher value is better.
   @$pb.TagNumber(8)
   $core.double get quality => $_getN(4);
   @$pb.TagNumber(8)
@@ -599,15 +546,22 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearQuality() => clearField(8);
 
+  /// A list of filters (normally quality filters) this variant has failed.
+  /// `PASS` indicates this variant has passed all filters.
   @$pb.TagNumber(9)
   $core.List<$core.String> get filter => $_getList(5);
 
+  /// A map of additional variant information. This must be of the form
+  /// map<string, string[]> (string key mapping to a list of string values).
   @$pb.TagNumber(10)
   $core.Map<$core.String, $3.ListValue> get info => $_getMap(6);
 
+  /// The variant calls for this particular variant. Each one represents the
+  /// determination of genotype with respect to this variant.
   @$pb.TagNumber(11)
   $core.List<VariantCall> get calls => $_getList(7);
 
+  /// The date this variant was created, in milliseconds from the epoch.
   @$pb.TagNumber(12)
   $fixnum.Int64 get created => $_getI64(8);
   @$pb.TagNumber(12)
@@ -620,6 +574,10 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearCreated() => clearField(12);
 
+  /// The end position (0-based) of this variant. This corresponds to the first
+  /// base after the last base in the reference allele. So, the length of
+  /// the reference allele is (end - start). This is useful for variants
+  /// that don't explicitly give alternate bases, for example large deletions.
   @$pb.TagNumber(13)
   $fixnum.Int64 get end => $_getI64(9);
   @$pb.TagNumber(13)
@@ -632,6 +590,8 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearEnd() => clearField(13);
 
+  /// The reference on which this variant occurs.
+  /// (such as `chr20` or `X`)
   @$pb.TagNumber(14)
   $core.String get referenceName => $_getSZ(10);
   @$pb.TagNumber(14)
@@ -644,6 +604,7 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearReferenceName() => clearField(14);
 
+  /// The ID of the variant set this variant belongs to.
   @$pb.TagNumber(15)
   $core.String get variantSetId => $_getSZ(11);
   @$pb.TagNumber(15)
@@ -656,6 +617,8 @@ class Variant extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   void clearVariantSetId() => clearField(15);
 
+  /// The position at which this variant occurs (0-based).
+  /// This corresponds to the first base of the string of reference bases.
   @$pb.TagNumber(16)
   $fixnum.Int64 get start => $_getI64(12);
   @$pb.TagNumber(16)
@@ -669,56 +632,11 @@ class Variant extends $pb.GeneratedMessage {
   void clearStart() => clearField(16);
 }
 
+/// A call represents the determination of genotype with respect to a particular
+/// variant. It may include associated information such as quality and phasing.
+/// For example, a call might assign a probability of 0.32 to the occurrence of
+/// a SNP named rs1234 in a call set with the name NA12345.
 class VariantCall extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VariantCall',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..m<$core.String, $3.ListValue>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'info',
-        entryClassName: 'VariantCall.InfoEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $3.ListValue.create,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'phaseset')
-    ..p<$core.double>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'genotypeLikelihood',
-        $pb.PbFieldType.KD)
-    ..p<$core.int>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'genotype',
-        $pb.PbFieldType.K3)
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetId')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetName')
-    ..hasRequiredFields = false;
-
-  VariantCall._() : super();
   factory VariantCall({
     $core.Map<$core.String, $3.ListValue>? info,
     $core.String? phaseset,
@@ -727,33 +645,55 @@ class VariantCall extends $pb.GeneratedMessage {
     $core.String? callSetId,
     $core.String? callSetName,
   }) {
-    final _result = create();
+    final $result = create();
     if (info != null) {
-      _result.info.addAll(info);
+      $result.info.addAll(info);
     }
     if (phaseset != null) {
-      _result.phaseset = phaseset;
+      $result.phaseset = phaseset;
     }
     if (genotypeLikelihood != null) {
-      _result.genotypeLikelihood.addAll(genotypeLikelihood);
+      $result.genotypeLikelihood.addAll(genotypeLikelihood);
     }
     if (genotype != null) {
-      _result.genotype.addAll(genotype);
+      $result.genotype.addAll(genotype);
     }
     if (callSetId != null) {
-      _result.callSetId = callSetId;
+      $result.callSetId = callSetId;
     }
     if (callSetName != null) {
-      _result.callSetName = callSetName;
+      $result.callSetName = callSetName;
     }
-    return _result;
+    return $result;
   }
+  VariantCall._() : super();
   factory VariantCall.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory VariantCall.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VariantCall',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..m<$core.String, $3.ListValue>(2, _omitFieldNames ? '' : 'info',
+        entryClassName: 'VariantCall.InfoEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $3.ListValue.create,
+        valueDefaultOrMaker: $3.ListValue.getDefault,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..aOS(5, _omitFieldNames ? '' : 'phaseset')
+    ..p<$core.double>(
+        6, _omitFieldNames ? '' : 'genotypeLikelihood', $pb.PbFieldType.KD)
+    ..p<$core.int>(7, _omitFieldNames ? '' : 'genotype', $pb.PbFieldType.K3)
+    ..aOS(8, _omitFieldNames ? '' : 'callSetId')
+    ..aOS(9, _omitFieldNames ? '' : 'callSetName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -763,8 +703,10 @@ class VariantCall extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   VariantCall copyWith(void Function(VariantCall) updates) =>
       super.copyWith((message) => updates(message as VariantCall))
-          as VariantCall; // ignore: deprecated_member_use
+          as VariantCall;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VariantCall create() => VariantCall._();
   VariantCall createEmptyInstance() => create();
@@ -774,9 +716,16 @@ class VariantCall extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<VariantCall>(create);
   static VariantCall? _defaultInstance;
 
+  /// A map of additional variant call information. This must be of the form
+  /// map<string, string[]> (string key mapping to a list of string values).
   @$pb.TagNumber(2)
   $core.Map<$core.String, $3.ListValue> get info => $_getMap(0);
 
+  /// If this field is present, this variant call's genotype ordering implies
+  /// the phase of the bases and is consistent with any other variant calls in
+  /// the same reference sequence which have the same phaseset value.
+  /// When importing data from VCF, if the genotype data was phased but no
+  /// phase set was specified this field will be set to `*`.
   @$pb.TagNumber(5)
   $core.String get phaseset => $_getSZ(1);
   @$pb.TagNumber(5)
@@ -789,12 +738,31 @@ class VariantCall extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearPhaseset() => clearField(5);
 
+  /// The genotype likelihoods for this variant call. Each array entry
+  /// represents how likely a specific genotype is for this call. The value
+  /// ordering is defined by the GL tag in the VCF spec.
+  /// If Phred-scaled genotype likelihood scores (PL) are available and
+  /// log10(P) genotype likelihood scores (GL) are not, PL scores are converted
+  /// to GL scores.  If both are available, PL scores are stored in `info`.
   @$pb.TagNumber(6)
   $core.List<$core.double> get genotypeLikelihood => $_getList(2);
 
+  /// The genotype of this variant call. Each value represents either the value
+  /// of the `referenceBases` field or a 1-based index into
+  /// `alternateBases`. If a variant had a `referenceBases`
+  /// value of `T` and an `alternateBases`
+  /// value of `["A", "C"]`, and the `genotype` was
+  /// `[2, 1]`, that would mean the call
+  /// represented the heterozygous value `CA` for this variant.
+  /// If the `genotype` was instead `[0, 1]`, the
+  /// represented value would be `TA`. Ordering of the
+  /// genotype values is important if the `phaseset` is present.
+  /// If a genotype is not called (that is, a `.` is present in the
+  /// GT string) -1 is returned.
   @$pb.TagNumber(7)
   $core.List<$core.int> get genotype => $_getList(3);
 
+  /// The ID of the call set this variant call belongs to.
   @$pb.TagNumber(8)
   $core.String get callSetId => $_getSZ(4);
   @$pb.TagNumber(8)
@@ -807,6 +775,7 @@ class VariantCall extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearCallSetId() => clearField(8);
 
+  /// The name of the call set this variant call belongs to.
   @$pb.TagNumber(9)
   $core.String get callSetName => $_getSZ(5);
   @$pb.TagNumber(9)
@@ -820,54 +789,12 @@ class VariantCall extends $pb.GeneratedMessage {
   void clearCallSetName() => clearField(9);
 }
 
+///  A call set is a collection of variant calls, typically for one sample. It
+///  belongs to a variant set.
+///
+///  For more genomics resource definitions, see [Fundamentals of Google
+///  Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
 class CallSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CallSet',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..m<$core.String, $3.ListValue>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'info',
-        entryClassName: 'CallSet.InfoEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $3.ListValue.create,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..aInt64(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'created')
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetIds')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sampleId')
-    ..hasRequiredFields = false;
-
-  CallSet._() : super();
   factory CallSet({
     $core.String? id,
     $core.String? name,
@@ -876,33 +803,54 @@ class CallSet extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? variantSetIds,
     $core.String? sampleId,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (info != null) {
-      _result.info.addAll(info);
+      $result.info.addAll(info);
     }
     if (created != null) {
-      _result.created = created;
+      $result.created = created;
     }
     if (variantSetIds != null) {
-      _result.variantSetIds.addAll(variantSetIds);
+      $result.variantSetIds.addAll(variantSetIds);
     }
     if (sampleId != null) {
-      _result.sampleId = sampleId;
+      $result.sampleId = sampleId;
     }
-    return _result;
+    return $result;
   }
+  CallSet._() : super();
   factory CallSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CallSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CallSet',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..m<$core.String, $3.ListValue>(4, _omitFieldNames ? '' : 'info',
+        entryClassName: 'CallSet.InfoEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $3.ListValue.create,
+        valueDefaultOrMaker: $3.ListValue.getDefault,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..aInt64(5, _omitFieldNames ? '' : 'created')
+    ..pPS(6, _omitFieldNames ? '' : 'variantSetIds')
+    ..aOS(7, _omitFieldNames ? '' : 'sampleId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -911,9 +859,10 @@ class CallSet extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   CallSet copyWith(void Function(CallSet) updates) =>
-      super.copyWith((message) => updates(message as CallSet))
-          as CallSet; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as CallSet)) as CallSet;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CallSet create() => CallSet._();
   CallSet createEmptyInstance() => create();
@@ -923,6 +872,7 @@ class CallSet extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CallSet>(create);
   static CallSet? _defaultInstance;
 
+  /// The server-generated call set ID, unique across all call sets.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -935,6 +885,7 @@ class CallSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// The call set name.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -947,9 +898,12 @@ class CallSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// A map of additional call set information. This must be of the form
+  /// map<string, string[]> (string key mapping to a list of string values).
   @$pb.TagNumber(4)
   $core.Map<$core.String, $3.ListValue> get info => $_getMap(2);
 
+  /// The date this call set was created in milliseconds from the epoch.
   @$pb.TagNumber(5)
   $fixnum.Int64 get created => $_getI64(3);
   @$pb.TagNumber(5)
@@ -962,9 +916,15 @@ class CallSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCreated() => clearField(5);
 
+  /// The IDs of the variant sets this call set belongs to. This field must
+  /// have exactly length one, as a call set belongs to a single variant set.
+  /// This field is repeated for compatibility with the
+  /// [GA4GH 0.5.1
+  /// API](https://github.com/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/variants.avdl#L76).
   @$pb.TagNumber(6)
   $core.List<$core.String> get variantSetIds => $_getList(4);
 
+  /// The sample ID this call set corresponds to.
   @$pb.TagNumber(7)
   $core.String get sampleId => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -978,48 +938,39 @@ class CallSet extends $pb.GeneratedMessage {
   void clearSampleId() => clearField(7);
 }
 
+/// ReferenceBound records an upper bound for the starting coordinate of
+/// variants in a particular reference.
 class ReferenceBound extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReferenceBound',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceName')
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'upperBound')
-    ..hasRequiredFields = false;
-
-  ReferenceBound._() : super();
   factory ReferenceBound({
     $core.String? referenceName,
     $fixnum.Int64? upperBound,
   }) {
-    final _result = create();
+    final $result = create();
     if (referenceName != null) {
-      _result.referenceName = referenceName;
+      $result.referenceName = referenceName;
     }
     if (upperBound != null) {
-      _result.upperBound = upperBound;
+      $result.upperBound = upperBound;
     }
-    return _result;
+    return $result;
   }
+  ReferenceBound._() : super();
   factory ReferenceBound.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReferenceBound.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReferenceBound',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'referenceName')
+    ..aInt64(2, _omitFieldNames ? '' : 'upperBound')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1029,8 +980,10 @@ class ReferenceBound extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReferenceBound copyWith(void Function(ReferenceBound) updates) =>
       super.copyWith((message) => updates(message as ReferenceBound))
-          as ReferenceBound; // ignore: deprecated_member_use
+          as ReferenceBound;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReferenceBound create() => ReferenceBound._();
   ReferenceBound createEmptyInstance() => create();
@@ -1041,6 +994,7 @@ class ReferenceBound extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReferenceBound>(create);
   static ReferenceBound? _defaultInstance;
 
+  /// The name of the reference associated with this reference bound.
   @$pb.TagNumber(1)
   $core.String get referenceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1053,6 +1007,8 @@ class ReferenceBound extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearReferenceName() => clearField(1);
 
+  /// An upper bound (inclusive) on the starting coordinate of any
+  /// variant in the reference sequence.
   @$pb.TagNumber(2)
   $fixnum.Int64 get upperBound => $_getI64(1);
   @$pb.TagNumber(2)
@@ -1066,55 +1022,8 @@ class ReferenceBound extends $pb.GeneratedMessage {
   void clearUpperBound() => clearField(2);
 }
 
+/// The variant data import request.
 class ImportVariantsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ImportVariantsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceUris')
-    ..e<ImportVariantsRequest_Format>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'format',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ImportVariantsRequest_Format.FORMAT_UNSPECIFIED,
-        valueOf: ImportVariantsRequest_Format.valueOf,
-        enumValues: ImportVariantsRequest_Format.values)
-    ..aOB(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'normalizeReferenceNames')
-    ..m<$core.String, InfoMergeOperation>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'infoMergeConfig',
-        entryClassName: 'ImportVariantsRequest.InfoMergeConfigEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OE,
-        valueOf: InfoMergeOperation.valueOf,
-        enumValues: InfoMergeOperation.values,
-        defaultEnumValue: InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..hasRequiredFields = false;
-
-  ImportVariantsRequest._() : super();
   factory ImportVariantsRequest({
     $core.String? variantSetId,
     $core.Iterable<$core.String>? sourceUris,
@@ -1122,30 +1031,58 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
     $core.bool? normalizeReferenceNames,
     $core.Map<$core.String, InfoMergeOperation>? infoMergeConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
     if (sourceUris != null) {
-      _result.sourceUris.addAll(sourceUris);
+      $result.sourceUris.addAll(sourceUris);
     }
     if (format != null) {
-      _result.format = format;
+      $result.format = format;
     }
     if (normalizeReferenceNames != null) {
-      _result.normalizeReferenceNames = normalizeReferenceNames;
+      $result.normalizeReferenceNames = normalizeReferenceNames;
     }
     if (infoMergeConfig != null) {
-      _result.infoMergeConfig.addAll(infoMergeConfig);
+      $result.infoMergeConfig.addAll(infoMergeConfig);
     }
-    return _result;
+    return $result;
   }
+  ImportVariantsRequest._() : super();
   factory ImportVariantsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ImportVariantsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ImportVariantsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantSetId')
+    ..pPS(2, _omitFieldNames ? '' : 'sourceUris')
+    ..e<ImportVariantsRequest_Format>(
+        3, _omitFieldNames ? '' : 'format', $pb.PbFieldType.OE,
+        defaultOrMaker: ImportVariantsRequest_Format.FORMAT_UNSPECIFIED,
+        valueOf: ImportVariantsRequest_Format.valueOf,
+        enumValues: ImportVariantsRequest_Format.values)
+    ..aOB(5, _omitFieldNames ? '' : 'normalizeReferenceNames')
+    ..m<$core.String, InfoMergeOperation>(
+        6, _omitFieldNames ? '' : 'infoMergeConfig',
+        entryClassName: 'ImportVariantsRequest.InfoMergeConfigEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OE,
+        valueOf: InfoMergeOperation.valueOf,
+        enumValues: InfoMergeOperation.values,
+        valueDefaultOrMaker:
+            InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
+        defaultEnumValue: InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1157,8 +1094,10 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
   ImportVariantsRequest copyWith(
           void Function(ImportVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as ImportVariantsRequest))
-          as ImportVariantsRequest; // ignore: deprecated_member_use
+          as ImportVariantsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ImportVariantsRequest create() => ImportVariantsRequest._();
   ImportVariantsRequest createEmptyInstance() => create();
@@ -1169,6 +1108,7 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ImportVariantsRequest>(create);
   static ImportVariantsRequest? _defaultInstance;
 
+  /// Required. The variant set to which variant data should be imported.
   @$pb.TagNumber(1)
   $core.String get variantSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1181,9 +1121,15 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVariantSetId() => clearField(1);
 
+  /// A list of URIs referencing variant files in Google Cloud Storage. URIs can
+  /// include wildcards [as described
+  /// here](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames).
+  /// Note that recursive wildcards ('**') are not supported.
   @$pb.TagNumber(2)
   $core.List<$core.String> get sourceUris => $_getList(1);
 
+  /// The format of the variant data being imported. If unspecified, defaults to
+  /// to `VCF`.
   @$pb.TagNumber(3)
   ImportVariantsRequest_Format get format => $_getN(2);
   @$pb.TagNumber(3)
@@ -1196,6 +1142,14 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFormat() => clearField(3);
 
+  /// Convert reference names to the canonical representation.
+  /// hg19 haploytypes (those reference names containing "_hap")
+  /// are not modified in any way.
+  /// All other reference names are modified according to the following rules:
+  /// The reference name is capitalized.
+  /// The "chr" prefix is dropped for all autosomes and sex chromsomes.
+  /// For example "chr17" becomes "17" and "chrX" becomes "X".
+  /// All mitochondrial chromosomes ("chrM", "chrMT", etc) become "MT".
   @$pb.TagNumber(5)
   $core.bool get normalizeReferenceNames => $_getBF(3);
   @$pb.TagNumber(5)
@@ -1208,44 +1162,41 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearNormalizeReferenceNames() => clearField(5);
 
+  /// A mapping between info field keys and the InfoMergeOperations to
+  /// be performed on them. This is plumbed down to the MergeVariantRequests
+  /// generated by the resulting import job.
   @$pb.TagNumber(6)
   $core.Map<$core.String, InfoMergeOperation> get infoMergeConfig =>
       $_getMap(4);
 }
 
+/// The variant data import response.
 class ImportVariantsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ImportVariantsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetIds')
-    ..hasRequiredFields = false;
-
-  ImportVariantsResponse._() : super();
   factory ImportVariantsResponse({
     $core.Iterable<$core.String>? callSetIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (callSetIds != null) {
-      _result.callSetIds.addAll(callSetIds);
+      $result.callSetIds.addAll(callSetIds);
     }
-    return _result;
+    return $result;
   }
+  ImportVariantsResponse._() : super();
   factory ImportVariantsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ImportVariantsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ImportVariantsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'callSetIds')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1257,8 +1208,10 @@ class ImportVariantsResponse extends $pb.GeneratedMessage {
   ImportVariantsResponse copyWith(
           void Function(ImportVariantsResponse) updates) =>
       super.copyWith((message) => updates(message as ImportVariantsResponse))
-          as ImportVariantsResponse; // ignore: deprecated_member_use
+          as ImportVariantsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ImportVariantsResponse create() => ImportVariantsResponse._();
   ImportVariantsResponse createEmptyInstance() => create();
@@ -1269,44 +1222,39 @@ class ImportVariantsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ImportVariantsResponse>(create);
   static ImportVariantsResponse? _defaultInstance;
 
+  /// IDs of the call sets created during the import.
   @$pb.TagNumber(1)
   $core.List<$core.String> get callSetIds => $_getList(0);
 }
 
+/// The CreateVariantSet request
 class CreateVariantSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateVariantSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOM<VariantSet>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSet',
-        subBuilder: VariantSet.create)
-    ..hasRequiredFields = false;
-
-  CreateVariantSetRequest._() : super();
   factory CreateVariantSetRequest({
     VariantSet? variantSet,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSet != null) {
-      _result.variantSet = variantSet;
+      $result.variantSet = variantSet;
     }
-    return _result;
+    return $result;
   }
+  CreateVariantSetRequest._() : super();
   factory CreateVariantSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateVariantSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateVariantSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOM<VariantSet>(1, _omitFieldNames ? '' : 'variantSet',
+        subBuilder: VariantSet.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1318,8 +1266,10 @@ class CreateVariantSetRequest extends $pb.GeneratedMessage {
   CreateVariantSetRequest copyWith(
           void Function(CreateVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVariantSetRequest))
-          as CreateVariantSetRequest; // ignore: deprecated_member_use
+          as CreateVariantSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateVariantSetRequest create() => CreateVariantSetRequest._();
   CreateVariantSetRequest createEmptyInstance() => create();
@@ -1330,6 +1280,7 @@ class CreateVariantSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateVariantSetRequest>(create);
   static CreateVariantSetRequest? _defaultInstance;
 
+  /// Required. The variant set to be created. Must have a valid `datasetId`.
   @$pb.TagNumber(1)
   VariantSet get variantSet => $_getN(0);
   @$pb.TagNumber(1)
@@ -1345,53 +1296,8 @@ class CreateVariantSetRequest extends $pb.GeneratedMessage {
   VariantSet ensureVariantSet() => $_ensure(0);
 }
 
+/// The variant data export request.
 class ExportVariantSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExportVariantSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetIds')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..e<ExportVariantSetRequest_Format>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'format',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ExportVariantSetRequest_Format.FORMAT_UNSPECIFIED,
-        valueOf: ExportVariantSetRequest_Format.valueOf,
-        enumValues: ExportVariantSetRequest_Format.values)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bigqueryDataset')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bigqueryTable')
-    ..hasRequiredFields = false;
-
-  ExportVariantSetRequest._() : super();
   factory ExportVariantSetRequest({
     $core.String? variantSetId,
     $core.Iterable<$core.String>? callSetIds,
@@ -1400,33 +1306,52 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
     $core.String? bigqueryDataset,
     $core.String? bigqueryTable,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
     if (callSetIds != null) {
-      _result.callSetIds.addAll(callSetIds);
+      $result.callSetIds.addAll(callSetIds);
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (format != null) {
-      _result.format = format;
+      $result.format = format;
     }
     if (bigqueryDataset != null) {
-      _result.bigqueryDataset = bigqueryDataset;
+      $result.bigqueryDataset = bigqueryDataset;
     }
     if (bigqueryTable != null) {
-      _result.bigqueryTable = bigqueryTable;
+      $result.bigqueryTable = bigqueryTable;
     }
-    return _result;
+    return $result;
   }
+  ExportVariantSetRequest._() : super();
   factory ExportVariantSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExportVariantSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExportVariantSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantSetId')
+    ..pPS(2, _omitFieldNames ? '' : 'callSetIds')
+    ..aOS(3, _omitFieldNames ? '' : 'projectId')
+    ..e<ExportVariantSetRequest_Format>(
+        4, _omitFieldNames ? '' : 'format', $pb.PbFieldType.OE,
+        defaultOrMaker: ExportVariantSetRequest_Format.FORMAT_UNSPECIFIED,
+        valueOf: ExportVariantSetRequest_Format.valueOf,
+        enumValues: ExportVariantSetRequest_Format.values)
+    ..aOS(5, _omitFieldNames ? '' : 'bigqueryDataset')
+    ..aOS(6, _omitFieldNames ? '' : 'bigqueryTable')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1438,8 +1363,10 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
   ExportVariantSetRequest copyWith(
           void Function(ExportVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as ExportVariantSetRequest))
-          as ExportVariantSetRequest; // ignore: deprecated_member_use
+          as ExportVariantSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExportVariantSetRequest create() => ExportVariantSetRequest._();
   ExportVariantSetRequest createEmptyInstance() => create();
@@ -1450,6 +1377,8 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExportVariantSetRequest>(create);
   static ExportVariantSetRequest? _defaultInstance;
 
+  /// Required. The ID of the variant set that contains variant data which
+  /// should be exported. The caller must have READ access to this variant set.
   @$pb.TagNumber(1)
   $core.String get variantSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1462,9 +1391,14 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVariantSetId() => clearField(1);
 
+  /// If provided, only variant call information from the specified call sets
+  /// will be exported. By default all variant calls are exported.
   @$pb.TagNumber(2)
   $core.List<$core.String> get callSetIds => $_getList(1);
 
+  /// Required. The Google Cloud project ID that owns the destination
+  /// BigQuery dataset. The caller must have WRITE access to this project.  This
+  /// project will also own the resulting export job.
   @$pb.TagNumber(3)
   $core.String get projectId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1477,6 +1411,7 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearProjectId() => clearField(3);
 
+  /// The format for the exported data.
   @$pb.TagNumber(4)
   ExportVariantSetRequest_Format get format => $_getN(3);
   @$pb.TagNumber(4)
@@ -1489,6 +1424,8 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFormat() => clearField(4);
 
+  /// Required. The BigQuery dataset to export data to. This dataset must already
+  /// exist. Note that this is distinct from the Genomics concept of "dataset".
   @$pb.TagNumber(5)
   $core.String get bigqueryDataset => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1501,6 +1438,9 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearBigqueryDataset() => clearField(5);
 
+  /// Required. The BigQuery table to export data to.
+  /// If the table doesn't exist, it will be created. If it already exists, it
+  /// will be overwritten.
   @$pb.TagNumber(6)
   $core.String get bigqueryTable => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1514,39 +1454,33 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
   void clearBigqueryTable() => clearField(6);
 }
 
+/// The variant set request.
 class GetVariantSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetVariantSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..hasRequiredFields = false;
-
-  GetVariantSetRequest._() : super();
   factory GetVariantSetRequest({
     $core.String? variantSetId,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
-    return _result;
+    return $result;
   }
+  GetVariantSetRequest._() : super();
   factory GetVariantSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetVariantSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetVariantSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantSetId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1557,8 +1491,10 @@ class GetVariantSetRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetVariantSetRequest copyWith(void Function(GetVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetVariantSetRequest))
-          as GetVariantSetRequest; // ignore: deprecated_member_use
+          as GetVariantSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetVariantSetRequest create() => GetVariantSetRequest._();
   GetVariantSetRequest createEmptyInstance() => create();
@@ -1569,6 +1505,7 @@ class GetVariantSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetVariantSetRequest>(create);
   static GetVariantSetRequest? _defaultInstance;
 
+  /// Required. The ID of the variant set.
   @$pb.TagNumber(1)
   $core.String get variantSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1582,58 +1519,43 @@ class GetVariantSetRequest extends $pb.GeneratedMessage {
   void clearVariantSetId() => clearField(1);
 }
 
+/// The search variant sets request.
 class SearchVariantSetsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchVariantSetsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'datasetIds')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  SearchVariantSetsRequest._() : super();
   factory SearchVariantSetsRequest({
     $core.Iterable<$core.String>? datasetIds,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final _result = create();
+    final $result = create();
     if (datasetIds != null) {
-      _result.datasetIds.addAll(datasetIds);
+      $result.datasetIds.addAll(datasetIds);
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
-    return _result;
+    return $result;
   }
+  SearchVariantSetsRequest._() : super();
   factory SearchVariantSetsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchVariantSetsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchVariantSetsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'datasetIds')
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1645,8 +1567,10 @@ class SearchVariantSetsRequest extends $pb.GeneratedMessage {
   SearchVariantSetsRequest copyWith(
           void Function(SearchVariantSetsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchVariantSetsRequest))
-          as SearchVariantSetsRequest; // ignore: deprecated_member_use
+          as SearchVariantSetsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchVariantSetsRequest create() => SearchVariantSetsRequest._();
   SearchVariantSetsRequest createEmptyInstance() => create();
@@ -1657,9 +1581,14 @@ class SearchVariantSetsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SearchVariantSetsRequest>(create);
   static SearchVariantSetsRequest? _defaultInstance;
 
+  /// Exactly one dataset ID must be provided here. Only variant sets which
+  /// belong to this dataset will be returned.
   @$pb.TagNumber(1)
   $core.List<$core.String> get datasetIds => $_getList(0);
 
+  /// The continuation token, which is used to page through large result sets.
+  /// To get the next page of results, set this parameter to the value of
+  /// `nextPageToken` from the previous response.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1672,6 +1601,8 @@ class SearchVariantSetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
+  /// The maximum number of results to return in a single page. If unspecified,
+  /// defaults to 1024.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1685,50 +1616,40 @@ class SearchVariantSetsRequest extends $pb.GeneratedMessage {
   void clearPageSize() => clearField(3);
 }
 
+/// The search variant sets response.
 class SearchVariantSetsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchVariantSetsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pc<VariantSet>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSets',
-        $pb.PbFieldType.PM,
-        subBuilder: VariantSet.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  SearchVariantSetsResponse._() : super();
   factory SearchVariantSetsResponse({
     $core.Iterable<VariantSet>? variantSets,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSets != null) {
-      _result.variantSets.addAll(variantSets);
+      $result.variantSets.addAll(variantSets);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  SearchVariantSetsResponse._() : super();
   factory SearchVariantSetsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchVariantSetsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchVariantSetsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<VariantSet>(
+        1, _omitFieldNames ? '' : 'variantSets', $pb.PbFieldType.PM,
+        subBuilder: VariantSet.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1740,8 +1661,10 @@ class SearchVariantSetsResponse extends $pb.GeneratedMessage {
   SearchVariantSetsResponse copyWith(
           void Function(SearchVariantSetsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchVariantSetsResponse))
-          as SearchVariantSetsResponse; // ignore: deprecated_member_use
+          as SearchVariantSetsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchVariantSetsResponse create() => SearchVariantSetsResponse._();
   SearchVariantSetsResponse createEmptyInstance() => create();
@@ -1752,9 +1675,13 @@ class SearchVariantSetsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SearchVariantSetsResponse>(create);
   static SearchVariantSetsResponse? _defaultInstance;
 
+  /// The variant sets belonging to the requested dataset.
   @$pb.TagNumber(1)
   $core.List<VariantSet> get variantSets => $_getList(0);
 
+  /// The continuation token, which is used to page through large result sets.
+  /// Provide this value in a subsequent request to return the next page of
+  /// results. This field will be empty if there aren't any additional results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1768,39 +1695,33 @@ class SearchVariantSetsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The delete variant set request.
 class DeleteVariantSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteVariantSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..hasRequiredFields = false;
-
-  DeleteVariantSetRequest._() : super();
   factory DeleteVariantSetRequest({
     $core.String? variantSetId,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
-    return _result;
+    return $result;
   }
+  DeleteVariantSetRequest._() : super();
   factory DeleteVariantSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteVariantSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteVariantSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantSetId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1812,8 +1733,10 @@ class DeleteVariantSetRequest extends $pb.GeneratedMessage {
   DeleteVariantSetRequest copyWith(
           void Function(DeleteVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVariantSetRequest))
-          as DeleteVariantSetRequest; // ignore: deprecated_member_use
+          as DeleteVariantSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteVariantSetRequest create() => DeleteVariantSetRequest._();
   DeleteVariantSetRequest createEmptyInstance() => create();
@@ -1824,6 +1747,7 @@ class DeleteVariantSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteVariantSetRequest>(create);
   static DeleteVariantSetRequest? _defaultInstance;
 
+  /// The ID of the variant set to be deleted.
   @$pb.TagNumber(1)
   $core.String get variantSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1838,58 +1762,43 @@ class DeleteVariantSetRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateVariantSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateVariantSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..aOM<VariantSet>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSet',
-        subBuilder: VariantSet.create)
-    ..aOM<$4.FieldMask>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateVariantSetRequest._() : super();
   factory UpdateVariantSetRequest({
     $core.String? variantSetId,
     VariantSet? variantSet,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
     if (variantSet != null) {
-      _result.variantSet = variantSet;
+      $result.variantSet = variantSet;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateVariantSetRequest._() : super();
   factory UpdateVariantSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateVariantSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateVariantSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantSetId')
+    ..aOM<VariantSet>(2, _omitFieldNames ? '' : 'variantSet',
+        subBuilder: VariantSet.create)
+    ..aOM<$4.FieldMask>(5, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1901,8 +1810,10 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
   UpdateVariantSetRequest copyWith(
           void Function(UpdateVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateVariantSetRequest))
-          as UpdateVariantSetRequest; // ignore: deprecated_member_use
+          as UpdateVariantSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateVariantSetRequest create() => UpdateVariantSetRequest._();
   UpdateVariantSetRequest createEmptyInstance() => create();
@@ -1913,6 +1824,7 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateVariantSetRequest>(create);
   static UpdateVariantSetRequest? _defaultInstance;
 
+  /// The ID of the variant to be updated (must already exist).
   @$pb.TagNumber(1)
   $core.String get variantSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1925,6 +1837,8 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVariantSetId() => clearField(1);
 
+  /// The new variant data. Only the variant_set.metadata will be considered
+  /// for update.
   @$pb.TagNumber(2)
   VariantSet get variantSet => $_getN(1);
   @$pb.TagNumber(2)
@@ -1939,6 +1853,14 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   VariantSet ensureVariantSet() => $_ensure(1);
 
+  ///  An optional mask specifying which fields to update. Supported fields:
+  ///
+  ///  * [metadata][google.genomics.v1.VariantSet.metadata].
+  ///  * [name][google.genomics.v1.VariantSet.name].
+  ///  * [description][google.genomics.v1.VariantSet.description].
+  ///
+  ///  Leaving `updateMask` unset is equivalent to specifying all mutable
+  ///  fields.
   @$pb.TagNumber(5)
   $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(5)
@@ -1954,66 +1876,8 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// The variant search request.
 class SearchVariantsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchVariantsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetIds')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantName')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetIds')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceName')
-    ..aInt64(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'start')
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'end')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..a<$core.int>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxCalls',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  SearchVariantsRequest._() : super();
   factory SearchVariantsRequest({
     $core.Iterable<$core.String>? variantSetIds,
     $core.String? variantName,
@@ -2025,42 +1889,60 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.int? maxCalls,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetIds != null) {
-      _result.variantSetIds.addAll(variantSetIds);
+      $result.variantSetIds.addAll(variantSetIds);
     }
     if (variantName != null) {
-      _result.variantName = variantName;
+      $result.variantName = variantName;
     }
     if (callSetIds != null) {
-      _result.callSetIds.addAll(callSetIds);
+      $result.callSetIds.addAll(callSetIds);
     }
     if (referenceName != null) {
-      _result.referenceName = referenceName;
+      $result.referenceName = referenceName;
     }
     if (start != null) {
-      _result.start = start;
+      $result.start = start;
     }
     if (end != null) {
-      _result.end = end;
+      $result.end = end;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (maxCalls != null) {
-      _result.maxCalls = maxCalls;
+      $result.maxCalls = maxCalls;
     }
-    return _result;
+    return $result;
   }
+  SearchVariantsRequest._() : super();
   factory SearchVariantsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchVariantsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchVariantsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'variantSetIds')
+    ..aOS(2, _omitFieldNames ? '' : 'variantName')
+    ..pPS(3, _omitFieldNames ? '' : 'callSetIds')
+    ..aOS(4, _omitFieldNames ? '' : 'referenceName')
+    ..aInt64(5, _omitFieldNames ? '' : 'start')
+    ..aInt64(6, _omitFieldNames ? '' : 'end')
+    ..aOS(7, _omitFieldNames ? '' : 'pageToken')
+    ..a<$core.int>(8, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..a<$core.int>(9, _omitFieldNames ? '' : 'maxCalls', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2072,8 +1954,10 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   SearchVariantsRequest copyWith(
           void Function(SearchVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchVariantsRequest))
-          as SearchVariantsRequest; // ignore: deprecated_member_use
+          as SearchVariantsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchVariantsRequest create() => SearchVariantsRequest._();
   SearchVariantsRequest createEmptyInstance() => create();
@@ -2084,9 +1968,13 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SearchVariantsRequest>(create);
   static SearchVariantsRequest? _defaultInstance;
 
+  /// At most one variant set ID must be provided. Only variants from this
+  /// variant set will be returned. If omitted, a call set id must be included in
+  /// the request.
   @$pb.TagNumber(1)
   $core.List<$core.String> get variantSetIds => $_getList(0);
 
+  /// Only return variants which have exactly this name.
   @$pb.TagNumber(2)
   $core.String get variantName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2099,9 +1987,13 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVariantName() => clearField(2);
 
+  /// Only return variant calls which belong to call sets with these ids.
+  /// Leaving this blank returns all variant calls. If a variant has no
+  /// calls belonging to any of these call sets, it won't be returned at all.
   @$pb.TagNumber(3)
   $core.List<$core.String> get callSetIds => $_getList(2);
 
+  /// Required. Only return variants in this reference sequence.
   @$pb.TagNumber(4)
   $core.String get referenceName => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2114,6 +2006,8 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReferenceName() => clearField(4);
 
+  /// The beginning of the window (0-based, inclusive) for which
+  /// overlapping variants should be returned. If unspecified, defaults to 0.
   @$pb.TagNumber(5)
   $fixnum.Int64 get start => $_getI64(4);
   @$pb.TagNumber(5)
@@ -2126,6 +2020,8 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStart() => clearField(5);
 
+  /// The end of the window, 0-based exclusive. If unspecified or 0, defaults to
+  /// the length of the reference.
   @$pb.TagNumber(6)
   $fixnum.Int64 get end => $_getI64(5);
   @$pb.TagNumber(6)
@@ -2138,6 +2034,9 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearEnd() => clearField(6);
 
+  /// The continuation token, which is used to page through large result sets.
+  /// To get the next page of results, set this parameter to the value of
+  /// `nextPageToken` from the previous response.
   @$pb.TagNumber(7)
   $core.String get pageToken => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -2150,6 +2049,8 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearPageToken() => clearField(7);
 
+  /// The maximum number of variants to return in a single page. If unspecified,
+  /// defaults to 5000. The maximum value is 10000.
   @$pb.TagNumber(8)
   $core.int get pageSize => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -2162,6 +2063,10 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearPageSize() => clearField(8);
 
+  /// The maximum number of calls to return in a single page. Note that this
+  /// limit may be exceeded in the event that a matching variant contains more
+  /// calls than the requested maximum. If unspecified, defaults to 5000. The
+  /// maximum value is 10000.
   @$pb.TagNumber(9)
   $core.int get maxCalls => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -2175,50 +2080,39 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
   void clearMaxCalls() => clearField(9);
 }
 
+/// The variant search response.
 class SearchVariantsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchVariantsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pc<Variant>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variants',
-        $pb.PbFieldType.PM,
-        subBuilder: Variant.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  SearchVariantsResponse._() : super();
   factory SearchVariantsResponse({
     $core.Iterable<Variant>? variants,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (variants != null) {
-      _result.variants.addAll(variants);
+      $result.variants.addAll(variants);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  SearchVariantsResponse._() : super();
   factory SearchVariantsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchVariantsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchVariantsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<Variant>(1, _omitFieldNames ? '' : 'variants', $pb.PbFieldType.PM,
+        subBuilder: Variant.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2230,8 +2124,10 @@ class SearchVariantsResponse extends $pb.GeneratedMessage {
   SearchVariantsResponse copyWith(
           void Function(SearchVariantsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchVariantsResponse))
-          as SearchVariantsResponse; // ignore: deprecated_member_use
+          as SearchVariantsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchVariantsResponse create() => SearchVariantsResponse._();
   SearchVariantsResponse createEmptyInstance() => create();
@@ -2242,9 +2138,13 @@ class SearchVariantsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SearchVariantsResponse>(create);
   static SearchVariantsResponse? _defaultInstance;
 
+  /// The list of matching Variants.
   @$pb.TagNumber(1)
   $core.List<Variant> get variants => $_getList(0);
 
+  /// The continuation token, which is used to page through large result sets.
+  /// Provide this value in a subsequent request to return the next page of
+  /// results. This field will be empty if there aren't any additional results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2259,39 +2159,32 @@ class SearchVariantsResponse extends $pb.GeneratedMessage {
 }
 
 class CreateVariantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateVariantRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOM<Variant>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variant',
-        subBuilder: Variant.create)
-    ..hasRequiredFields = false;
-
-  CreateVariantRequest._() : super();
   factory CreateVariantRequest({
     Variant? variant,
   }) {
-    final _result = create();
+    final $result = create();
     if (variant != null) {
-      _result.variant = variant;
+      $result.variant = variant;
     }
-    return _result;
+    return $result;
   }
+  CreateVariantRequest._() : super();
   factory CreateVariantRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateVariantRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateVariantRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOM<Variant>(1, _omitFieldNames ? '' : 'variant',
+        subBuilder: Variant.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2302,8 +2195,10 @@ class CreateVariantRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateVariantRequest copyWith(void Function(CreateVariantRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVariantRequest))
-          as CreateVariantRequest; // ignore: deprecated_member_use
+          as CreateVariantRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateVariantRequest create() => CreateVariantRequest._();
   CreateVariantRequest createEmptyInstance() => create();
@@ -2314,6 +2209,7 @@ class CreateVariantRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateVariantRequest>(create);
   static CreateVariantRequest? _defaultInstance;
 
+  /// The variant to be created.
   @$pb.TagNumber(1)
   Variant get variant => $_getN(0);
   @$pb.TagNumber(1)
@@ -2330,58 +2226,43 @@ class CreateVariantRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateVariantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateVariantRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantId')
-    ..aOM<Variant>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variant',
-        subBuilder: Variant.create)
-    ..aOM<$4.FieldMask>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateVariantRequest._() : super();
   factory UpdateVariantRequest({
     $core.String? variantId,
     Variant? variant,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantId != null) {
-      _result.variantId = variantId;
+      $result.variantId = variantId;
     }
     if (variant != null) {
-      _result.variant = variant;
+      $result.variant = variant;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateVariantRequest._() : super();
   factory UpdateVariantRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateVariantRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateVariantRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantId')
+    ..aOM<Variant>(2, _omitFieldNames ? '' : 'variant',
+        subBuilder: Variant.create)
+    ..aOM<$4.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2392,8 +2273,10 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateVariantRequest copyWith(void Function(UpdateVariantRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateVariantRequest))
-          as UpdateVariantRequest; // ignore: deprecated_member_use
+          as UpdateVariantRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateVariantRequest create() => UpdateVariantRequest._();
   UpdateVariantRequest createEmptyInstance() => create();
@@ -2404,6 +2287,7 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateVariantRequest>(create);
   static UpdateVariantRequest? _defaultInstance;
 
+  /// The ID of the variant to be updated.
   @$pb.TagNumber(1)
   $core.String get variantId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2416,6 +2300,7 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVariantId() => clearField(1);
 
+  /// The new variant data.
   @$pb.TagNumber(2)
   Variant get variant => $_getN(1);
   @$pb.TagNumber(2)
@@ -2430,6 +2315,10 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Variant ensureVariant() => $_ensure(1);
 
+  /// An optional mask specifying which fields to update. At this time, mutable
+  /// fields are [names][google.genomics.v1.Variant.names] and
+  /// [info][google.genomics.v1.Variant.info]. Acceptable values are "names" and
+  /// "info". If unspecified, all mutable fields will be updated.
   @$pb.TagNumber(3)
   $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
@@ -2446,38 +2335,31 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteVariantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteVariantRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantId')
-    ..hasRequiredFields = false;
-
-  DeleteVariantRequest._() : super();
   factory DeleteVariantRequest({
     $core.String? variantId,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantId != null) {
-      _result.variantId = variantId;
+      $result.variantId = variantId;
     }
-    return _result;
+    return $result;
   }
+  DeleteVariantRequest._() : super();
   factory DeleteVariantRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteVariantRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteVariantRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2488,8 +2370,10 @@ class DeleteVariantRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteVariantRequest copyWith(void Function(DeleteVariantRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVariantRequest))
-          as DeleteVariantRequest; // ignore: deprecated_member_use
+          as DeleteVariantRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteVariantRequest create() => DeleteVariantRequest._();
   DeleteVariantRequest createEmptyInstance() => create();
@@ -2500,6 +2384,7 @@ class DeleteVariantRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteVariantRequest>(create);
   static DeleteVariantRequest? _defaultInstance;
 
+  /// The ID of the variant to be deleted.
   @$pb.TagNumber(1)
   $core.String get variantId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2514,38 +2399,31 @@ class DeleteVariantRequest extends $pb.GeneratedMessage {
 }
 
 class GetVariantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetVariantRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantId')
-    ..hasRequiredFields = false;
-
-  GetVariantRequest._() : super();
   factory GetVariantRequest({
     $core.String? variantId,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantId != null) {
-      _result.variantId = variantId;
+      $result.variantId = variantId;
     }
-    return _result;
+    return $result;
   }
+  GetVariantRequest._() : super();
   factory GetVariantRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetVariantRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetVariantRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2555,8 +2433,10 @@ class GetVariantRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetVariantRequest copyWith(void Function(GetVariantRequest) updates) =>
       super.copyWith((message) => updates(message as GetVariantRequest))
-          as GetVariantRequest; // ignore: deprecated_member_use
+          as GetVariantRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetVariantRequest create() => GetVariantRequest._();
   GetVariantRequest createEmptyInstance() => create();
@@ -2567,6 +2447,7 @@ class GetVariantRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetVariantRequest>(create);
   static GetVariantRequest? _defaultInstance;
 
+  /// The ID of the variant.
   @$pb.TagNumber(1)
   $core.String get variantId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2581,65 +2462,52 @@ class GetVariantRequest extends $pb.GeneratedMessage {
 }
 
 class MergeVariantsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MergeVariantsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..pc<Variant>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variants',
-        $pb.PbFieldType.PM,
-        subBuilder: Variant.create)
-    ..m<$core.String, InfoMergeOperation>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'infoMergeConfig',
-        entryClassName: 'MergeVariantsRequest.InfoMergeConfigEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OE,
-        valueOf: InfoMergeOperation.valueOf,
-        enumValues: InfoMergeOperation.values,
-        defaultEnumValue: InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..hasRequiredFields = false;
-
-  MergeVariantsRequest._() : super();
   factory MergeVariantsRequest({
     $core.String? variantSetId,
     $core.Iterable<Variant>? variants,
     $core.Map<$core.String, InfoMergeOperation>? infoMergeConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
     if (variants != null) {
-      _result.variants.addAll(variants);
+      $result.variants.addAll(variants);
     }
     if (infoMergeConfig != null) {
-      _result.infoMergeConfig.addAll(infoMergeConfig);
+      $result.infoMergeConfig.addAll(infoMergeConfig);
     }
-    return _result;
+    return $result;
   }
+  MergeVariantsRequest._() : super();
   factory MergeVariantsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MergeVariantsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MergeVariantsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'variantSetId')
+    ..pc<Variant>(2, _omitFieldNames ? '' : 'variants', $pb.PbFieldType.PM,
+        subBuilder: Variant.create)
+    ..m<$core.String, InfoMergeOperation>(
+        3, _omitFieldNames ? '' : 'infoMergeConfig',
+        entryClassName: 'MergeVariantsRequest.InfoMergeConfigEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OE,
+        valueOf: InfoMergeOperation.valueOf,
+        enumValues: InfoMergeOperation.values,
+        valueDefaultOrMaker:
+            InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
+        defaultEnumValue: InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2650,8 +2518,10 @@ class MergeVariantsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MergeVariantsRequest copyWith(void Function(MergeVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as MergeVariantsRequest))
-          as MergeVariantsRequest; // ignore: deprecated_member_use
+          as MergeVariantsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MergeVariantsRequest create() => MergeVariantsRequest._();
   MergeVariantsRequest createEmptyInstance() => create();
@@ -2662,6 +2532,7 @@ class MergeVariantsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MergeVariantsRequest>(create);
   static MergeVariantsRequest? _defaultInstance;
 
+  /// The destination variant set.
   @$pb.TagNumber(1)
   $core.String get variantSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2674,75 +2545,59 @@ class MergeVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearVariantSetId() => clearField(1);
 
+  /// The variants to be merged with existing variants.
   @$pb.TagNumber(2)
   $core.List<Variant> get variants => $_getList(1);
 
+  /// A mapping between info field keys and the InfoMergeOperations to
+  /// be performed on them.
   @$pb.TagNumber(3)
   $core.Map<$core.String, InfoMergeOperation> get infoMergeConfig =>
       $_getMap(2);
 }
 
+/// The call set search request.
 class SearchCallSetsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchCallSetsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetIds')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  SearchCallSetsRequest._() : super();
   factory SearchCallSetsRequest({
     $core.Iterable<$core.String>? variantSetIds,
     $core.String? name,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final _result = create();
+    final $result = create();
     if (variantSetIds != null) {
-      _result.variantSetIds.addAll(variantSetIds);
+      $result.variantSetIds.addAll(variantSetIds);
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
-    return _result;
+    return $result;
   }
+  SearchCallSetsRequest._() : super();
   factory SearchCallSetsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchCallSetsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchCallSetsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'variantSetIds')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2754,8 +2609,10 @@ class SearchCallSetsRequest extends $pb.GeneratedMessage {
   SearchCallSetsRequest copyWith(
           void Function(SearchCallSetsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchCallSetsRequest))
-          as SearchCallSetsRequest; // ignore: deprecated_member_use
+          as SearchCallSetsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchCallSetsRequest create() => SearchCallSetsRequest._();
   SearchCallSetsRequest createEmptyInstance() => create();
@@ -2766,9 +2623,13 @@ class SearchCallSetsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SearchCallSetsRequest>(create);
   static SearchCallSetsRequest? _defaultInstance;
 
+  /// Restrict the query to call sets within the given variant sets. At least one
+  /// ID must be provided.
   @$pb.TagNumber(1)
   $core.List<$core.String> get variantSetIds => $_getList(0);
 
+  /// Only return call sets for which a substring of the name matches this
+  /// string.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2781,6 +2642,9 @@ class SearchCallSetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
 
+  /// The continuation token, which is used to page through large result sets.
+  /// To get the next page of results, set this parameter to the value of
+  /// `nextPageToken` from the previous response.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2793,6 +2657,8 @@ class SearchCallSetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// The maximum number of results to return in a single page. If unspecified,
+  /// defaults to 1024.
   @$pb.TagNumber(4)
   $core.int get pageSize => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -2806,50 +2672,39 @@ class SearchCallSetsRequest extends $pb.GeneratedMessage {
   void clearPageSize() => clearField(4);
 }
 
+/// The call set search response.
 class SearchCallSetsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchCallSetsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pc<CallSet>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSets',
-        $pb.PbFieldType.PM,
-        subBuilder: CallSet.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  SearchCallSetsResponse._() : super();
   factory SearchCallSetsResponse({
     $core.Iterable<CallSet>? callSets,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (callSets != null) {
-      _result.callSets.addAll(callSets);
+      $result.callSets.addAll(callSets);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  SearchCallSetsResponse._() : super();
   factory SearchCallSetsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchCallSetsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchCallSetsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<CallSet>(1, _omitFieldNames ? '' : 'callSets', $pb.PbFieldType.PM,
+        subBuilder: CallSet.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2861,8 +2716,10 @@ class SearchCallSetsResponse extends $pb.GeneratedMessage {
   SearchCallSetsResponse copyWith(
           void Function(SearchCallSetsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchCallSetsResponse))
-          as SearchCallSetsResponse; // ignore: deprecated_member_use
+          as SearchCallSetsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchCallSetsResponse create() => SearchCallSetsResponse._();
   SearchCallSetsResponse createEmptyInstance() => create();
@@ -2873,9 +2730,13 @@ class SearchCallSetsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SearchCallSetsResponse>(create);
   static SearchCallSetsResponse? _defaultInstance;
 
+  /// The list of matching call sets.
   @$pb.TagNumber(1)
   $core.List<CallSet> get callSets => $_getList(0);
 
+  /// The continuation token, which is used to page through large result sets.
+  /// Provide this value in a subsequent request to return the next page of
+  /// results. This field will be empty if there aren't any additional results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2890,39 +2751,32 @@ class SearchCallSetsResponse extends $pb.GeneratedMessage {
 }
 
 class CreateCallSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateCallSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOM<CallSet>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSet',
-        subBuilder: CallSet.create)
-    ..hasRequiredFields = false;
-
-  CreateCallSetRequest._() : super();
   factory CreateCallSetRequest({
     CallSet? callSet,
   }) {
-    final _result = create();
+    final $result = create();
     if (callSet != null) {
-      _result.callSet = callSet;
+      $result.callSet = callSet;
     }
-    return _result;
+    return $result;
   }
+  CreateCallSetRequest._() : super();
   factory CreateCallSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateCallSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateCallSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOM<CallSet>(1, _omitFieldNames ? '' : 'callSet',
+        subBuilder: CallSet.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2933,8 +2787,10 @@ class CreateCallSetRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateCallSetRequest copyWith(void Function(CreateCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateCallSetRequest))
-          as CreateCallSetRequest; // ignore: deprecated_member_use
+          as CreateCallSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateCallSetRequest create() => CreateCallSetRequest._();
   CreateCallSetRequest createEmptyInstance() => create();
@@ -2945,6 +2801,7 @@ class CreateCallSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateCallSetRequest>(create);
   static CreateCallSetRequest? _defaultInstance;
 
+  /// The call set to be created.
   @$pb.TagNumber(1)
   CallSet get callSet => $_getN(0);
   @$pb.TagNumber(1)
@@ -2961,58 +2818,43 @@ class CreateCallSetRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateCallSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateCallSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetId')
-    ..aOM<CallSet>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSet',
-        subBuilder: CallSet.create)
-    ..aOM<$4.FieldMask>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateCallSetRequest._() : super();
   factory UpdateCallSetRequest({
     $core.String? callSetId,
     CallSet? callSet,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (callSetId != null) {
-      _result.callSetId = callSetId;
+      $result.callSetId = callSetId;
     }
     if (callSet != null) {
-      _result.callSet = callSet;
+      $result.callSet = callSet;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateCallSetRequest._() : super();
   factory UpdateCallSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateCallSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateCallSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'callSetId')
+    ..aOM<CallSet>(2, _omitFieldNames ? '' : 'callSet',
+        subBuilder: CallSet.create)
+    ..aOM<$4.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3023,8 +2865,10 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateCallSetRequest copyWith(void Function(UpdateCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateCallSetRequest))
-          as UpdateCallSetRequest; // ignore: deprecated_member_use
+          as UpdateCallSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateCallSetRequest create() => UpdateCallSetRequest._();
   UpdateCallSetRequest createEmptyInstance() => create();
@@ -3035,6 +2879,7 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateCallSetRequest>(create);
   static UpdateCallSetRequest? _defaultInstance;
 
+  /// The ID of the call set to be updated.
   @$pb.TagNumber(1)
   $core.String get callSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3047,6 +2892,7 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCallSetId() => clearField(1);
 
+  /// The new call set data.
   @$pb.TagNumber(2)
   CallSet get callSet => $_getN(1);
   @$pb.TagNumber(2)
@@ -3061,6 +2907,10 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   CallSet ensureCallSet() => $_ensure(1);
 
+  /// An optional mask specifying which fields to update. At this time, the only
+  /// mutable field is [name][google.genomics.v1.CallSet.name]. The only
+  /// acceptable value is "name". If unspecified, all mutable fields will be
+  /// updated.
   @$pb.TagNumber(3)
   $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
@@ -3077,38 +2927,31 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteCallSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteCallSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetId')
-    ..hasRequiredFields = false;
-
-  DeleteCallSetRequest._() : super();
   factory DeleteCallSetRequest({
     $core.String? callSetId,
   }) {
-    final _result = create();
+    final $result = create();
     if (callSetId != null) {
-      _result.callSetId = callSetId;
+      $result.callSetId = callSetId;
     }
-    return _result;
+    return $result;
   }
+  DeleteCallSetRequest._() : super();
   factory DeleteCallSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteCallSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteCallSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'callSetId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3119,8 +2962,10 @@ class DeleteCallSetRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteCallSetRequest copyWith(void Function(DeleteCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteCallSetRequest))
-          as DeleteCallSetRequest; // ignore: deprecated_member_use
+          as DeleteCallSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteCallSetRequest create() => DeleteCallSetRequest._();
   DeleteCallSetRequest createEmptyInstance() => create();
@@ -3131,6 +2976,7 @@ class DeleteCallSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteCallSetRequest>(create);
   static DeleteCallSetRequest? _defaultInstance;
 
+  /// The ID of the call set to be deleted.
   @$pb.TagNumber(1)
   $core.String get callSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3145,38 +2991,31 @@ class DeleteCallSetRequest extends $pb.GeneratedMessage {
 }
 
 class GetCallSetRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetCallSetRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetId')
-    ..hasRequiredFields = false;
-
-  GetCallSetRequest._() : super();
   factory GetCallSetRequest({
     $core.String? callSetId,
   }) {
-    final _result = create();
+    final $result = create();
     if (callSetId != null) {
-      _result.callSetId = callSetId;
+      $result.callSetId = callSetId;
     }
-    return _result;
+    return $result;
   }
+  GetCallSetRequest._() : super();
   factory GetCallSetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetCallSetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetCallSetRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'callSetId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3186,8 +3025,10 @@ class GetCallSetRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetCallSetRequest copyWith(void Function(GetCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetCallSetRequest))
-          as GetCallSetRequest; // ignore: deprecated_member_use
+          as GetCallSetRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCallSetRequest create() => GetCallSetRequest._();
   GetCallSetRequest createEmptyInstance() => create();
@@ -3198,6 +3039,7 @@ class GetCallSetRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetCallSetRequest>(create);
   static GetCallSetRequest? _defaultInstance;
 
+  /// The ID of the call set.
   @$pb.TagNumber(1)
   $core.String get callSetId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3211,49 +3053,8 @@ class GetCallSetRequest extends $pb.GeneratedMessage {
   void clearCallSetId() => clearField(1);
 }
 
+/// The stream variants request.
 class StreamVariantsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StreamVariantsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variantSetId')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'callSetIds')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceName')
-    ..aInt64(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'start')
-    ..aInt64(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'end')
-    ..hasRequiredFields = false;
-
-  StreamVariantsRequest._() : super();
   factory StreamVariantsRequest({
     $core.String? projectId,
     $core.String? variantSetId,
@@ -3262,33 +3063,48 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? start,
     $fixnum.Int64? end,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (variantSetId != null) {
-      _result.variantSetId = variantSetId;
+      $result.variantSetId = variantSetId;
     }
     if (callSetIds != null) {
-      _result.callSetIds.addAll(callSetIds);
+      $result.callSetIds.addAll(callSetIds);
     }
     if (referenceName != null) {
-      _result.referenceName = referenceName;
+      $result.referenceName = referenceName;
     }
     if (start != null) {
-      _result.start = start;
+      $result.start = start;
     }
     if (end != null) {
-      _result.end = end;
+      $result.end = end;
     }
-    return _result;
+    return $result;
   }
+  StreamVariantsRequest._() : super();
   factory StreamVariantsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StreamVariantsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StreamVariantsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'variantSetId')
+    ..pPS(3, _omitFieldNames ? '' : 'callSetIds')
+    ..aOS(4, _omitFieldNames ? '' : 'referenceName')
+    ..aInt64(5, _omitFieldNames ? '' : 'start')
+    ..aInt64(6, _omitFieldNames ? '' : 'end')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3300,8 +3116,10 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
   StreamVariantsRequest copyWith(
           void Function(StreamVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as StreamVariantsRequest))
-          as StreamVariantsRequest; // ignore: deprecated_member_use
+          as StreamVariantsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StreamVariantsRequest create() => StreamVariantsRequest._();
   StreamVariantsRequest createEmptyInstance() => create();
@@ -3312,6 +3130,9 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StreamVariantsRequest>(create);
   static StreamVariantsRequest? _defaultInstance;
 
+  /// The Google Cloud project ID which will be billed
+  /// for this access. The caller must have WRITE access to this project.
+  /// Required.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3324,6 +3145,7 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The variant set ID from which to stream variants.
   @$pb.TagNumber(2)
   $core.String get variantSetId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3336,9 +3158,12 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVariantSetId() => clearField(2);
 
+  /// Only return variant calls which belong to call sets with these IDs.
+  /// Leaving this blank returns all variant calls.
   @$pb.TagNumber(3)
   $core.List<$core.String> get callSetIds => $_getList(2);
 
+  /// Required. Only return variants in this reference sequence.
   @$pb.TagNumber(4)
   $core.String get referenceName => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3351,6 +3176,8 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReferenceName() => clearField(4);
 
+  /// The beginning of the window (0-based, inclusive) for which
+  /// overlapping variants should be returned.
   @$pb.TagNumber(5)
   $fixnum.Int64 get start => $_getI64(4);
   @$pb.TagNumber(5)
@@ -3363,6 +3190,8 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStart() => clearField(5);
 
+  /// The end of the window (0-based, exclusive) for which overlapping
+  /// variants should be returned.
   @$pb.TagNumber(6)
   $fixnum.Int64 get end => $_getI64(5);
   @$pb.TagNumber(6)
@@ -3377,40 +3206,32 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
 }
 
 class StreamVariantsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StreamVariantsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..pc<Variant>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'variants',
-        $pb.PbFieldType.PM,
-        subBuilder: Variant.create)
-    ..hasRequiredFields = false;
-
-  StreamVariantsResponse._() : super();
   factory StreamVariantsResponse({
     $core.Iterable<Variant>? variants,
   }) {
-    final _result = create();
+    final $result = create();
     if (variants != null) {
-      _result.variants.addAll(variants);
+      $result.variants.addAll(variants);
     }
-    return _result;
+    return $result;
   }
+  StreamVariantsResponse._() : super();
   factory StreamVariantsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StreamVariantsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StreamVariantsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<Variant>(1, _omitFieldNames ? '' : 'variants', $pb.PbFieldType.PM,
+        subBuilder: Variant.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3422,8 +3243,10 @@ class StreamVariantsResponse extends $pb.GeneratedMessage {
   StreamVariantsResponse copyWith(
           void Function(StreamVariantsResponse) updates) =>
       super.copyWith((message) => updates(message as StreamVariantsResponse))
-          as StreamVariantsResponse; // ignore: deprecated_member_use
+          as StreamVariantsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StreamVariantsResponse create() => StreamVariantsResponse._();
   StreamVariantsResponse createEmptyInstance() => create();
@@ -3437,3 +3260,7 @@ class StreamVariantsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<Variant> get variants => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,23 +1,31 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/spanner/admin/database/v1/spanner_database_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'spanner_database_admin.pb.dart' as $4;
-import '../../../../longrunning/operations.pb.dart' as $2;
-import '../../../../protobuf/empty.pb.dart' as $3;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../../iam/v1/policy.pb.dart' as $1;
+import '../../../../longrunning/operations.pb.dart' as $2;
+import '../../../../protobuf/empty.pb.dart' as $3;
 import 'backup.pb.dart' as $5;
+import 'backup_schedule.pb.dart' as $6;
+import 'spanner_database_admin.pb.dart' as $4;
+
 export 'spanner_database_admin.pb.dart';
 
+@$pb.GrpcServiceName('google.spanner.admin.database.v1.DatabaseAdmin')
 class DatabaseAdminClient extends $grpc.Client {
   static final _$listDatabases =
       $grpc.ClientMethod<$4.ListDatabasesRequest, $4.ListDatabasesResponse>(
@@ -125,6 +133,38 @@ class DatabaseAdminClient extends $grpc.Client {
       ($4.ListDatabaseRolesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $4.ListDatabaseRolesResponse.fromBuffer(value));
+  static final _$addSplitPoints =
+      $grpc.ClientMethod<$4.AddSplitPointsRequest, $4.AddSplitPointsResponse>(
+          '/google.spanner.admin.database.v1.DatabaseAdmin/AddSplitPoints',
+          ($4.AddSplitPointsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $4.AddSplitPointsResponse.fromBuffer(value));
+  static final _$createBackupSchedule = $grpc.ClientMethod<
+          $6.CreateBackupScheduleRequest, $6.BackupSchedule>(
+      '/google.spanner.admin.database.v1.DatabaseAdmin/CreateBackupSchedule',
+      ($6.CreateBackupScheduleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.BackupSchedule.fromBuffer(value));
+  static final _$getBackupSchedule =
+      $grpc.ClientMethod<$6.GetBackupScheduleRequest, $6.BackupSchedule>(
+          '/google.spanner.admin.database.v1.DatabaseAdmin/GetBackupSchedule',
+          ($6.GetBackupScheduleRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $6.BackupSchedule.fromBuffer(value));
+  static final _$updateBackupSchedule = $grpc.ClientMethod<
+          $6.UpdateBackupScheduleRequest, $6.BackupSchedule>(
+      '/google.spanner.admin.database.v1.DatabaseAdmin/UpdateBackupSchedule',
+      ($6.UpdateBackupScheduleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.BackupSchedule.fromBuffer(value));
+  static final _$deleteBackupSchedule = $grpc.ClientMethod<
+          $6.DeleteBackupScheduleRequest, $3.Empty>(
+      '/google.spanner.admin.database.v1.DatabaseAdmin/DeleteBackupSchedule',
+      ($6.DeleteBackupScheduleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$listBackupSchedules = $grpc.ClientMethod<
+          $6.ListBackupSchedulesRequest, $6.ListBackupSchedulesResponse>(
+      '/google.spanner.admin.database.v1.DatabaseAdmin/ListBackupSchedules',
+      ($6.ListBackupSchedulesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $6.ListBackupSchedulesResponse.fromBuffer(value));
 
   DatabaseAdminClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -243,8 +283,45 @@ class DatabaseAdminClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listDatabaseRoles, request, options: options);
   }
+
+  $grpc.ResponseFuture<$4.AddSplitPointsResponse> addSplitPoints(
+      $4.AddSplitPointsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$addSplitPoints, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.BackupSchedule> createBackupSchedule(
+      $6.CreateBackupScheduleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createBackupSchedule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.BackupSchedule> getBackupSchedule(
+      $6.GetBackupScheduleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBackupSchedule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.BackupSchedule> updateBackupSchedule(
+      $6.UpdateBackupScheduleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateBackupSchedule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteBackupSchedule(
+      $6.DeleteBackupScheduleRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteBackupSchedule, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.ListBackupSchedulesResponse> listBackupSchedules(
+      $6.ListBackupSchedulesRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listBackupSchedules, request, options: options);
+  }
 }
 
+@$pb.GrpcServiceName('google.spanner.admin.database.v1.DatabaseAdmin')
 abstract class DatabaseAdminServiceBase extends $grpc.Service {
   $core.String get $name => 'google.spanner.admin.database.v1.DatabaseAdmin';
 
@@ -414,6 +491,59 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.ListDatabaseRolesRequest.fromBuffer(value),
         ($4.ListDatabaseRolesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.AddSplitPointsRequest,
+            $4.AddSplitPointsResponse>(
+        'AddSplitPoints',
+        addSplitPoints_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.AddSplitPointsRequest.fromBuffer(value),
+        ($4.AddSplitPointsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$6.CreateBackupScheduleRequest, $6.BackupSchedule>(
+            'CreateBackupSchedule',
+            createBackupSchedule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $6.CreateBackupScheduleRequest.fromBuffer(value),
+            ($6.BackupSchedule value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$6.GetBackupScheduleRequest, $6.BackupSchedule>(
+            'GetBackupSchedule',
+            getBackupSchedule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $6.GetBackupScheduleRequest.fromBuffer(value),
+            ($6.BackupSchedule value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$6.UpdateBackupScheduleRequest, $6.BackupSchedule>(
+            'UpdateBackupSchedule',
+            updateBackupSchedule_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $6.UpdateBackupScheduleRequest.fromBuffer(value),
+            ($6.BackupSchedule value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.DeleteBackupScheduleRequest, $3.Empty>(
+        'DeleteBackupSchedule',
+        deleteBackupSchedule_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $6.DeleteBackupScheduleRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.ListBackupSchedulesRequest,
+            $6.ListBackupSchedulesResponse>(
+        'ListBackupSchedules',
+        listBackupSchedules_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $6.ListBackupSchedulesRequest.fromBuffer(value),
+        ($6.ListBackupSchedulesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$4.ListDatabasesResponse> listDatabases_Pre(
@@ -522,6 +652,40 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
     return listDatabaseRoles(call, await request);
   }
 
+  $async.Future<$4.AddSplitPointsResponse> addSplitPoints_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.AddSplitPointsRequest> request) async {
+    return addSplitPoints(call, await request);
+  }
+
+  $async.Future<$6.BackupSchedule> createBackupSchedule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$6.CreateBackupScheduleRequest> request) async {
+    return createBackupSchedule(call, await request);
+  }
+
+  $async.Future<$6.BackupSchedule> getBackupSchedule_Pre($grpc.ServiceCall call,
+      $async.Future<$6.GetBackupScheduleRequest> request) async {
+    return getBackupSchedule(call, await request);
+  }
+
+  $async.Future<$6.BackupSchedule> updateBackupSchedule_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$6.UpdateBackupScheduleRequest> request) async {
+    return updateBackupSchedule(call, await request);
+  }
+
+  $async.Future<$3.Empty> deleteBackupSchedule_Pre($grpc.ServiceCall call,
+      $async.Future<$6.DeleteBackupScheduleRequest> request) async {
+    return deleteBackupSchedule(call, await request);
+  }
+
+  $async.Future<$6.ListBackupSchedulesResponse> listBackupSchedules_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$6.ListBackupSchedulesRequest> request) async {
+    return listBackupSchedules(call, await request);
+  }
+
   $async.Future<$4.ListDatabasesResponse> listDatabases(
       $grpc.ServiceCall call, $4.ListDatabasesRequest request);
   $async.Future<$2.Operation> createDatabase(
@@ -562,4 +726,16 @@ abstract class DatabaseAdminServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $5.ListBackupOperationsRequest request);
   $async.Future<$4.ListDatabaseRolesResponse> listDatabaseRoles(
       $grpc.ServiceCall call, $4.ListDatabaseRolesRequest request);
+  $async.Future<$4.AddSplitPointsResponse> addSplitPoints(
+      $grpc.ServiceCall call, $4.AddSplitPointsRequest request);
+  $async.Future<$6.BackupSchedule> createBackupSchedule(
+      $grpc.ServiceCall call, $6.CreateBackupScheduleRequest request);
+  $async.Future<$6.BackupSchedule> getBackupSchedule(
+      $grpc.ServiceCall call, $6.GetBackupScheduleRequest request);
+  $async.Future<$6.BackupSchedule> updateBackupSchedule(
+      $grpc.ServiceCall call, $6.UpdateBackupScheduleRequest request);
+  $async.Future<$3.Empty> deleteBackupSchedule(
+      $grpc.ServiceCall call, $6.DeleteBackupScheduleRequest request);
+  $async.Future<$6.ListBackupSchedulesResponse> listBackupSchedules(
+      $grpc.ServiceCall call, $6.ListBackupSchedulesRequest request);
 }

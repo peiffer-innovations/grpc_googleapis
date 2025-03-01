@@ -1,65 +1,46 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/vex.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'common.pb.dart' as $0;
-
 import 'vex.pbenum.dart';
 
 export 'vex.pbenum.dart';
 
+/// Publisher contains information about the publisher of
+/// this Note.
+/// (-- api-linter: core::0123::resource-annotation=disabled
+///     aip.dev/not-precedent: Publisher is not a separate resource. --)
 class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VulnerabilityAssessmentNote.Publisher',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'issuingAuthority')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publisherNamespace')
-    ..hasRequiredFields = false;
-
-  VulnerabilityAssessmentNote_Publisher._() : super();
   factory VulnerabilityAssessmentNote_Publisher({
     $core.String? name,
     $core.String? issuingAuthority,
     $core.String? publisherNamespace,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (issuingAuthority != null) {
-      _result.issuingAuthority = issuingAuthority;
+      $result.issuingAuthority = issuingAuthority;
     }
     if (publisherNamespace != null) {
-      _result.publisherNamespace = publisherNamespace;
+      $result.publisherNamespace = publisherNamespace;
     }
-    return _result;
+    return $result;
   }
+  VulnerabilityAssessmentNote_Publisher._() : super();
   factory VulnerabilityAssessmentNote_Publisher.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -67,6 +48,16 @@ class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
   factory VulnerabilityAssessmentNote_Publisher.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VulnerabilityAssessmentNote.Publisher',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'issuingAuthority')
+    ..aOS(3, _omitFieldNames ? '' : 'publisherNamespace')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -79,8 +70,10 @@ class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
           void Function(VulnerabilityAssessmentNote_Publisher) updates) =>
       super.copyWith((message) =>
               updates(message as VulnerabilityAssessmentNote_Publisher))
-          as VulnerabilityAssessmentNote_Publisher; // ignore: deprecated_member_use
+          as VulnerabilityAssessmentNote_Publisher;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityAssessmentNote_Publisher create() =>
       VulnerabilityAssessmentNote_Publisher._();
@@ -93,6 +86,8 @@ class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
           VulnerabilityAssessmentNote_Publisher>(create);
   static VulnerabilityAssessmentNote_Publisher? _defaultInstance;
 
+  /// Name of the publisher.
+  /// Examples: 'Google', 'Google Cloud Platform'.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -105,6 +100,9 @@ class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Provides information about the authority of the issuing party to
+  /// release the document, in particular, the party's constituency and
+  /// responsibilities or other obligations.
   @$pb.TagNumber(2)
   $core.String get issuingAuthority => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -117,6 +115,10 @@ class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIssuingAuthority() => clearField(2);
 
+  /// The context or namespace.
+  /// Contains a URL which is under control of the issuing party and can
+  /// be used as a globally unique identifier for that issuing party.
+  /// Example: https://csaf.io
   @$pb.TagNumber(3)
   $core.String get publisherNamespace => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -132,58 +134,29 @@ class VulnerabilityAssessmentNote_Publisher extends $pb.GeneratedMessage {
 
 enum VulnerabilityAssessmentNote_Product_Identifier { genericUri, notSet }
 
+/// Product contains information about a product and how to uniquely identify
+/// it.
+/// (-- api-linter: core::0123::resource-annotation=disabled
+///     aip.dev/not-precedent: Product is not a separate resource. --)
 class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
-  static const $core
-          .Map<$core.int, VulnerabilityAssessmentNote_Product_Identifier>
-      _VulnerabilityAssessmentNote_Product_IdentifierByTag = {
-    3: VulnerabilityAssessmentNote_Product_Identifier.genericUri,
-    0: VulnerabilityAssessmentNote_Product_Identifier.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VulnerabilityAssessmentNote.Product',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [3])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'genericUri')
-    ..hasRequiredFields = false;
-
-  VulnerabilityAssessmentNote_Product._() : super();
   factory VulnerabilityAssessmentNote_Product({
     $core.String? name,
     $core.String? id,
     $core.String? genericUri,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (genericUri != null) {
-      _result.genericUri = genericUri;
+      $result.genericUri = genericUri;
     }
-    return _result;
+    return $result;
   }
+  VulnerabilityAssessmentNote_Product._() : super();
   factory VulnerabilityAssessmentNote_Product.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -191,6 +164,23 @@ class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
   factory VulnerabilityAssessmentNote_Product.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core
+      .Map<$core.int, VulnerabilityAssessmentNote_Product_Identifier>
+      _VulnerabilityAssessmentNote_Product_IdentifierByTag = {
+    3: VulnerabilityAssessmentNote_Product_Identifier.genericUri,
+    0: VulnerabilityAssessmentNote_Product_Identifier.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VulnerabilityAssessmentNote.Product',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [3])
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'genericUri')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -203,8 +193,10 @@ class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
           void Function(VulnerabilityAssessmentNote_Product) updates) =>
       super.copyWith((message) =>
               updates(message as VulnerabilityAssessmentNote_Product))
-          as VulnerabilityAssessmentNote_Product; // ignore: deprecated_member_use
+          as VulnerabilityAssessmentNote_Product;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityAssessmentNote_Product create() =>
       VulnerabilityAssessmentNote_Product._();
@@ -221,6 +213,7 @@ class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
       _VulnerabilityAssessmentNote_Product_IdentifierByTag[$_whichOneof(0)]!;
   void clearIdentifier() => clearField($_whichOneof(0));
 
+  /// Name of the product.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -233,6 +226,9 @@ class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Token that identifies a product so that it can be referred to from other
+  /// parts in the document. There is no predefined format as long as it
+  /// uniquely identifies a group in the context of the current document.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -245,6 +241,8 @@ class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// Contains a URI which is vendor-specific.
+  /// Example: The artifact repository URL of an image.
   @$pb.TagNumber(3)
   $core.String get genericUri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -258,23 +256,42 @@ class VulnerabilityAssessmentNote_Product extends $pb.GeneratedMessage {
   void clearGenericUri() => clearField(3);
 }
 
+/// Justification provides the justification when the state of the
+/// assessment if NOT_AFFECTED.
 class VulnerabilityAssessmentNote_Assessment_Justification
     extends $pb.GeneratedMessage {
+  factory VulnerabilityAssessmentNote_Assessment_Justification({
+    VulnerabilityAssessmentNote_Assessment_Justification_JustificationType?
+        justificationType,
+    $core.String? details,
+  }) {
+    final $result = create();
+    if (justificationType != null) {
+      $result.justificationType = justificationType;
+    }
+    if (details != null) {
+      $result.details = details;
+    }
+    return $result;
+  }
+  VulnerabilityAssessmentNote_Assessment_Justification._() : super();
+  factory VulnerabilityAssessmentNote_Assessment_Justification.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerabilityAssessmentNote_Assessment_Justification.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+      _omitMessageNames
           ? ''
           : 'VulnerabilityAssessmentNote.Assessment.Justification',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
       createEmptyInstance: create)
     ..e<VulnerabilityAssessmentNote_Assessment_Justification_JustificationType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'justificationType',
-        $pb.PbFieldType.OE,
+        1, _omitFieldNames ? '' : 'justificationType', $pb.PbFieldType.OE,
         defaultOrMaker:
             VulnerabilityAssessmentNote_Assessment_Justification_JustificationType
                 .JUSTIFICATION_TYPE_UNSPECIFIED,
@@ -284,36 +301,9 @@ class VulnerabilityAssessmentNote_Assessment_Justification
         enumValues:
             VulnerabilityAssessmentNote_Assessment_Justification_JustificationType
                 .values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details')
+    ..aOS(2, _omitFieldNames ? '' : 'details')
     ..hasRequiredFields = false;
 
-  VulnerabilityAssessmentNote_Assessment_Justification._() : super();
-  factory VulnerabilityAssessmentNote_Assessment_Justification({
-    VulnerabilityAssessmentNote_Assessment_Justification_JustificationType?
-        justificationType,
-    $core.String? details,
-  }) {
-    final _result = create();
-    if (justificationType != null) {
-      _result.justificationType = justificationType;
-    }
-    if (details != null) {
-      _result.details = details;
-    }
-    return _result;
-  }
-  factory VulnerabilityAssessmentNote_Assessment_Justification.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory VulnerabilityAssessmentNote_Assessment_Justification.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -328,8 +318,10 @@ class VulnerabilityAssessmentNote_Assessment_Justification
               updates) =>
       super.copyWith((message) => updates(
               message as VulnerabilityAssessmentNote_Assessment_Justification))
-          as VulnerabilityAssessmentNote_Assessment_Justification; // ignore: deprecated_member_use
+          as VulnerabilityAssessmentNote_Assessment_Justification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityAssessmentNote_Assessment_Justification create() =>
       VulnerabilityAssessmentNote_Assessment_Justification._();
@@ -344,6 +336,7 @@ class VulnerabilityAssessmentNote_Assessment_Justification
           VulnerabilityAssessmentNote_Assessment_Justification>(create);
   static VulnerabilityAssessmentNote_Assessment_Justification? _defaultInstance;
 
+  /// The justification type for this vulnerability.
   @$pb.TagNumber(1)
   VulnerabilityAssessmentNote_Assessment_Justification_JustificationType
       get justificationType => $_getN(0);
@@ -359,6 +352,7 @@ class VulnerabilityAssessmentNote_Assessment_Justification
   @$pb.TagNumber(1)
   void clearJustificationType() => clearField(1);
 
+  /// Additional details on why this justification was chosen.
   @$pb.TagNumber(2)
   $core.String get details => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -372,23 +366,45 @@ class VulnerabilityAssessmentNote_Assessment_Justification
   void clearDetails() => clearField(2);
 }
 
+/// Specifies details on how to handle (and presumably, fix) a vulnerability.
 class VulnerabilityAssessmentNote_Assessment_Remediation
     extends $pb.GeneratedMessage {
+  factory VulnerabilityAssessmentNote_Assessment_Remediation({
+    VulnerabilityAssessmentNote_Assessment_Remediation_RemediationType?
+        remediationType,
+    $core.String? details,
+    $0.RelatedUrl? remediationUri,
+  }) {
+    final $result = create();
+    if (remediationType != null) {
+      $result.remediationType = remediationType;
+    }
+    if (details != null) {
+      $result.details = details;
+    }
+    if (remediationUri != null) {
+      $result.remediationUri = remediationUri;
+    }
+    return $result;
+  }
+  VulnerabilityAssessmentNote_Assessment_Remediation._() : super();
+  factory VulnerabilityAssessmentNote_Assessment_Remediation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerabilityAssessmentNote_Assessment_Remediation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+      _omitMessageNames
           ? ''
           : 'VulnerabilityAssessmentNote.Assessment.Remediation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
       createEmptyInstance: create)
     ..e<VulnerabilityAssessmentNote_Assessment_Remediation_RemediationType>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remediationType',
-        $pb.PbFieldType.OE,
+        1, _omitFieldNames ? '' : 'remediationType', $pb.PbFieldType.OE,
         defaultOrMaker:
             VulnerabilityAssessmentNote_Assessment_Remediation_RemediationType
                 .REMEDIATION_TYPE_UNSPECIFIED,
@@ -398,46 +414,11 @@ class VulnerabilityAssessmentNote_Assessment_Remediation
         enumValues:
             VulnerabilityAssessmentNote_Assessment_Remediation_RemediationType
                 .values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'details')
-    ..aOM<$0.RelatedUrl>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remediationUri',
+    ..aOS(2, _omitFieldNames ? '' : 'details')
+    ..aOM<$0.RelatedUrl>(3, _omitFieldNames ? '' : 'remediationUri',
         subBuilder: $0.RelatedUrl.create)
     ..hasRequiredFields = false;
 
-  VulnerabilityAssessmentNote_Assessment_Remediation._() : super();
-  factory VulnerabilityAssessmentNote_Assessment_Remediation({
-    VulnerabilityAssessmentNote_Assessment_Remediation_RemediationType?
-        remediationType,
-    $core.String? details,
-    $0.RelatedUrl? remediationUri,
-  }) {
-    final _result = create();
-    if (remediationType != null) {
-      _result.remediationType = remediationType;
-    }
-    if (details != null) {
-      _result.details = details;
-    }
-    if (remediationUri != null) {
-      _result.remediationUri = remediationUri;
-    }
-    return _result;
-  }
-  factory VulnerabilityAssessmentNote_Assessment_Remediation.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory VulnerabilityAssessmentNote_Assessment_Remediation.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -452,8 +433,10 @@ class VulnerabilityAssessmentNote_Assessment_Remediation
               updates) =>
       super.copyWith((message) => updates(
               message as VulnerabilityAssessmentNote_Assessment_Remediation))
-          as VulnerabilityAssessmentNote_Assessment_Remediation; // ignore: deprecated_member_use
+          as VulnerabilityAssessmentNote_Assessment_Remediation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityAssessmentNote_Assessment_Remediation create() =>
       VulnerabilityAssessmentNote_Assessment_Remediation._();
@@ -468,6 +451,7 @@ class VulnerabilityAssessmentNote_Assessment_Remediation
           VulnerabilityAssessmentNote_Assessment_Remediation>(create);
   static VulnerabilityAssessmentNote_Assessment_Remediation? _defaultInstance;
 
+  /// The type of remediation that can be applied.
   @$pb.TagNumber(1)
   VulnerabilityAssessmentNote_Assessment_Remediation_RemediationType
       get remediationType => $_getN(0);
@@ -482,6 +466,7 @@ class VulnerabilityAssessmentNote_Assessment_Remediation
   @$pb.TagNumber(1)
   void clearRemediationType() => clearField(1);
 
+  /// Contains a comprehensive human-readable discussion of the remediation.
   @$pb.TagNumber(2)
   $core.String get details => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -494,6 +479,7 @@ class VulnerabilityAssessmentNote_Assessment_Remediation
   @$pb.TagNumber(2)
   void clearDetails() => clearField(2);
 
+  /// Contains the URL where to obtain the remediation.
   @$pb.TagNumber(3)
   $0.RelatedUrl get remediationUri => $_getN(2);
   @$pb.TagNumber(3)
@@ -509,71 +495,11 @@ class VulnerabilityAssessmentNote_Assessment_Remediation
   $0.RelatedUrl ensureRemediationUri() => $_ensure(2);
 }
 
+/// Assessment provides all information that is related to a single
+/// vulnerability for this product.
 class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VulnerabilityAssessmentNote.Assessment',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cve')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shortDescription')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'longDescription')
-    ..pc<$0.RelatedUrl>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'relatedUris',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.RelatedUrl.create)
-    ..e<VulnerabilityAssessmentNote_Assessment_State>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            VulnerabilityAssessmentNote_Assessment_State.STATE_UNSPECIFIED,
-        valueOf: VulnerabilityAssessmentNote_Assessment_State.valueOf,
-        enumValues: VulnerabilityAssessmentNote_Assessment_State.values)
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'impacts')
-    ..aOM<VulnerabilityAssessmentNote_Assessment_Justification>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'justification',
-        subBuilder: VulnerabilityAssessmentNote_Assessment_Justification.create)
-    ..pc<VulnerabilityAssessmentNote_Assessment_Remediation>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remediations',
-        $pb.PbFieldType.PM,
-        subBuilder: VulnerabilityAssessmentNote_Assessment_Remediation.create)
-    ..hasRequiredFields = false;
-
-  VulnerabilityAssessmentNote_Assessment._() : super();
   factory VulnerabilityAssessmentNote_Assessment({
-    $core.String? cve,
+    @$core.Deprecated('This field is deprecated.') $core.String? cve,
     $core.String? shortDescription,
     $core.String? longDescription,
     $core.Iterable<$0.RelatedUrl>? relatedUris,
@@ -582,34 +508,40 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
     VulnerabilityAssessmentNote_Assessment_Justification? justification,
     $core.Iterable<VulnerabilityAssessmentNote_Assessment_Remediation>?
         remediations,
+    $core.String? vulnerabilityId,
   }) {
-    final _result = create();
+    final $result = create();
     if (cve != null) {
-      _result.cve = cve;
+      // ignore: deprecated_member_use_from_same_package
+      $result.cve = cve;
     }
     if (shortDescription != null) {
-      _result.shortDescription = shortDescription;
+      $result.shortDescription = shortDescription;
     }
     if (longDescription != null) {
-      _result.longDescription = longDescription;
+      $result.longDescription = longDescription;
     }
     if (relatedUris != null) {
-      _result.relatedUris.addAll(relatedUris);
+      $result.relatedUris.addAll(relatedUris);
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (impacts != null) {
-      _result.impacts.addAll(impacts);
+      $result.impacts.addAll(impacts);
     }
     if (justification != null) {
-      _result.justification = justification;
+      $result.justification = justification;
     }
     if (remediations != null) {
-      _result.remediations.addAll(remediations);
+      $result.remediations.addAll(remediations);
     }
-    return _result;
+    if (vulnerabilityId != null) {
+      $result.vulnerabilityId = vulnerabilityId;
+    }
+    return $result;
   }
+  VulnerabilityAssessmentNote_Assessment._() : super();
   factory VulnerabilityAssessmentNote_Assessment.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -617,6 +549,33 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
   factory VulnerabilityAssessmentNote_Assessment.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VulnerabilityAssessmentNote.Assessment',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'cve')
+    ..aOS(2, _omitFieldNames ? '' : 'shortDescription')
+    ..aOS(3, _omitFieldNames ? '' : 'longDescription')
+    ..pc<$0.RelatedUrl>(
+        4, _omitFieldNames ? '' : 'relatedUris', $pb.PbFieldType.PM,
+        subBuilder: $0.RelatedUrl.create)
+    ..e<VulnerabilityAssessmentNote_Assessment_State>(
+        5, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            VulnerabilityAssessmentNote_Assessment_State.STATE_UNSPECIFIED,
+        valueOf: VulnerabilityAssessmentNote_Assessment_State.valueOf,
+        enumValues: VulnerabilityAssessmentNote_Assessment_State.values)
+    ..pPS(6, _omitFieldNames ? '' : 'impacts')
+    ..aOM<VulnerabilityAssessmentNote_Assessment_Justification>(
+        7, _omitFieldNames ? '' : 'justification',
+        subBuilder: VulnerabilityAssessmentNote_Assessment_Justification.create)
+    ..pc<VulnerabilityAssessmentNote_Assessment_Remediation>(
+        8, _omitFieldNames ? '' : 'remediations', $pb.PbFieldType.PM,
+        subBuilder: VulnerabilityAssessmentNote_Assessment_Remediation.create)
+    ..aOS(9, _omitFieldNames ? '' : 'vulnerabilityId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -629,8 +588,10 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
           void Function(VulnerabilityAssessmentNote_Assessment) updates) =>
       super.copyWith((message) =>
               updates(message as VulnerabilityAssessmentNote_Assessment))
-          as VulnerabilityAssessmentNote_Assessment; // ignore: deprecated_member_use
+          as VulnerabilityAssessmentNote_Assessment;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityAssessmentNote_Assessment create() =>
       VulnerabilityAssessmentNote_Assessment._();
@@ -643,18 +604,26 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
           VulnerabilityAssessmentNote_Assessment>(create);
   static VulnerabilityAssessmentNote_Assessment? _defaultInstance;
 
+  /// Holds the MITRE standard Common Vulnerabilities and Exposures (CVE)
+  /// tracking number for the vulnerability.
+  /// Deprecated: Use vulnerability_id instead to denote CVEs.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get cve => $_getSZ(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   set cve($core.String v) {
     $_setString(0, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.bool hasCve() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   void clearCve() => clearField(1);
 
+  /// A one sentence description of this Vex.
   @$pb.TagNumber(2)
   $core.String get shortDescription => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -667,6 +636,7 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearShortDescription() => clearField(2);
 
+  /// A detailed description of this Vex.
   @$pb.TagNumber(3)
   $core.String get longDescription => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -679,9 +649,14 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLongDescription() => clearField(3);
 
+  /// Holds a list of references associated with this vulnerability item and
+  /// assessment. These uris have additional information about the
+  /// vulnerability and the assessment itself. E.g. Link to a document which
+  /// details how this assessment concluded the state of this vulnerability.
   @$pb.TagNumber(4)
   $core.List<$0.RelatedUrl> get relatedUris => $_getList(3);
 
+  /// Provides the state of this Vulnerability assessment.
   @$pb.TagNumber(5)
   VulnerabilityAssessmentNote_Assessment_State get state => $_getN(4);
   @$pb.TagNumber(5)
@@ -694,9 +669,13 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearState() => clearField(5);
 
+  /// Contains information about the impact of this vulnerability,
+  /// this will change with time.
   @$pb.TagNumber(6)
   $core.List<$core.String> get impacts => $_getList(5);
 
+  /// Justification provides the justification when the state of the
+  /// assessment if NOT_AFFECTED.
   @$pb.TagNumber(7)
   VulnerabilityAssessmentNote_Assessment_Justification get justification =>
       $_getN(6);
@@ -713,62 +692,29 @@ class VulnerabilityAssessmentNote_Assessment extends $pb.GeneratedMessage {
   VulnerabilityAssessmentNote_Assessment_Justification ensureJustification() =>
       $_ensure(6);
 
+  /// Specifies details on how to handle (and presumably, fix) a vulnerability.
   @$pb.TagNumber(8)
   $core.List<VulnerabilityAssessmentNote_Assessment_Remediation>
       get remediations => $_getList(7);
+
+  /// The vulnerability identifier for this Assessment. Will hold one of
+  /// common identifiers e.g. CVE, GHSA etc.
+  @$pb.TagNumber(9)
+  $core.String get vulnerabilityId => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set vulnerabilityId($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasVulnerabilityId() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearVulnerabilityId() => clearField(9);
 }
 
+/// A single VulnerabilityAssessmentNote represents
+/// one particular product's vulnerability assessment for one CVE.
 class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VulnerabilityAssessmentNote',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shortDescription')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'longDescription')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'languageCode')
-    ..aOM<VulnerabilityAssessmentNote_Publisher>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publisher',
-        subBuilder: VulnerabilityAssessmentNote_Publisher.create)
-    ..aOM<VulnerabilityAssessmentNote_Product>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'product',
-        subBuilder: VulnerabilityAssessmentNote_Product.create)
-    ..aOM<VulnerabilityAssessmentNote_Assessment>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'assessment',
-        subBuilder: VulnerabilityAssessmentNote_Assessment.create)
-    ..hasRequiredFields = false;
-
-  VulnerabilityAssessmentNote._() : super();
   factory VulnerabilityAssessmentNote({
     $core.String? title,
     $core.String? shortDescription,
@@ -778,36 +724,57 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
     VulnerabilityAssessmentNote_Product? product,
     VulnerabilityAssessmentNote_Assessment? assessment,
   }) {
-    final _result = create();
+    final $result = create();
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (shortDescription != null) {
-      _result.shortDescription = shortDescription;
+      $result.shortDescription = shortDescription;
     }
     if (longDescription != null) {
-      _result.longDescription = longDescription;
+      $result.longDescription = longDescription;
     }
     if (languageCode != null) {
-      _result.languageCode = languageCode;
+      $result.languageCode = languageCode;
     }
     if (publisher != null) {
-      _result.publisher = publisher;
+      $result.publisher = publisher;
     }
     if (product != null) {
-      _result.product = product;
+      $result.product = product;
     }
     if (assessment != null) {
-      _result.assessment = assessment;
+      $result.assessment = assessment;
     }
-    return _result;
+    return $result;
   }
+  VulnerabilityAssessmentNote._() : super();
   factory VulnerabilityAssessmentNote.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory VulnerabilityAssessmentNote.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VulnerabilityAssessmentNote',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'title')
+    ..aOS(2, _omitFieldNames ? '' : 'shortDescription')
+    ..aOS(3, _omitFieldNames ? '' : 'longDescription')
+    ..aOS(4, _omitFieldNames ? '' : 'languageCode')
+    ..aOM<VulnerabilityAssessmentNote_Publisher>(
+        5, _omitFieldNames ? '' : 'publisher',
+        subBuilder: VulnerabilityAssessmentNote_Publisher.create)
+    ..aOM<VulnerabilityAssessmentNote_Product>(
+        6, _omitFieldNames ? '' : 'product',
+        subBuilder: VulnerabilityAssessmentNote_Product.create)
+    ..aOM<VulnerabilityAssessmentNote_Assessment>(
+        7, _omitFieldNames ? '' : 'assessment',
+        subBuilder: VulnerabilityAssessmentNote_Assessment.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -820,8 +787,10 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
           void Function(VulnerabilityAssessmentNote) updates) =>
       super.copyWith(
               (message) => updates(message as VulnerabilityAssessmentNote))
-          as VulnerabilityAssessmentNote; // ignore: deprecated_member_use
+          as VulnerabilityAssessmentNote;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VulnerabilityAssessmentNote create() =>
       VulnerabilityAssessmentNote._();
@@ -833,6 +802,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<VulnerabilityAssessmentNote>(create);
   static VulnerabilityAssessmentNote? _defaultInstance;
 
+  /// The title of the note. E.g. `Vex-Debian-11.4`
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -845,6 +815,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => clearField(1);
 
+  /// A one sentence description of this Vex.
   @$pb.TagNumber(2)
   $core.String get shortDescription => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -857,6 +828,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearShortDescription() => clearField(2);
 
+  /// A detailed description of this Vex.
   @$pb.TagNumber(3)
   $core.String get longDescription => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -869,6 +841,8 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLongDescription() => clearField(3);
 
+  /// Identifies the language used by this document,
+  /// corresponding to IETF BCP 47 / RFC 5646.
   @$pb.TagNumber(4)
   $core.String get languageCode => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -881,6 +855,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearLanguageCode() => clearField(4);
 
+  /// Publisher details of this Note.
   @$pb.TagNumber(5)
   VulnerabilityAssessmentNote_Publisher get publisher => $_getN(4);
   @$pb.TagNumber(5)
@@ -895,6 +870,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   VulnerabilityAssessmentNote_Publisher ensurePublisher() => $_ensure(4);
 
+  /// The product affected by this vex.
   @$pb.TagNumber(6)
   VulnerabilityAssessmentNote_Product get product => $_getN(5);
   @$pb.TagNumber(6)
@@ -909,6 +885,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   VulnerabilityAssessmentNote_Product ensureProduct() => $_ensure(5);
 
+  /// Represents a vulnerability assessment for the product.
   @$pb.TagNumber(7)
   VulnerabilityAssessmentNote_Assessment get assessment => $_getN(6);
   @$pb.TagNumber(7)
@@ -923,3 +900,7 @@ class VulnerabilityAssessmentNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   VulnerabilityAssessmentNote_Assessment ensureAssessment() => $_ensure(6);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

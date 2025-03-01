@@ -1,96 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routes/v1/route.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import 'polyline.pb.dart' as $1;
 import '../../../geo/type/viewport.pb.dart' as $2;
-import 'waypoint.pb.dart' as $3;
+import '../../../protobuf/duration.pb.dart' as $0;
 import '../../../type/money.pb.dart' as $4;
-
+import 'polyline.pb.dart' as $1;
 import 'route.pbenum.dart';
+import 'waypoint.pb.dart' as $3;
 
 export 'route.pbenum.dart';
 
+/// Encapsulates a route, which consists of a series of connected road segments
+/// that join beginning, ending, and intermediate waypoints.
 class Route extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Route',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..pc<RouteLeg>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'legs',
-        $pb.PbFieldType.PM,
-        subBuilder: RouteLeg.create)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'distanceMeters',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Duration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'duration',
-        subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'staticDuration',
-        subBuilder: $0.Duration.create)
-    ..aOM<$1.Polyline>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'polyline',
-        subBuilder: $1.Polyline.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..pPS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'warnings')
-    ..aOM<$2.Viewport>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'viewport',
-        subBuilder: $2.Viewport.create)
-    ..aOM<RouteTravelAdvisory>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'travelAdvisory',
-        subBuilder: RouteTravelAdvisory.create)
-    ..p<$core.int>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'optimizedIntermediateWaypointIndex',
-        $pb.PbFieldType.K3)
-    ..hasRequiredFields = false;
-
-  Route._() : super();
   factory Route({
     $core.Iterable<RouteLeg>? legs,
     $core.int? distanceMeters,
@@ -103,46 +37,75 @@ class Route extends $pb.GeneratedMessage {
     RouteTravelAdvisory? travelAdvisory,
     $core.Iterable<$core.int>? optimizedIntermediateWaypointIndex,
   }) {
-    final _result = create();
+    final $result = create();
     if (legs != null) {
-      _result.legs.addAll(legs);
+      $result.legs.addAll(legs);
     }
     if (distanceMeters != null) {
-      _result.distanceMeters = distanceMeters;
+      $result.distanceMeters = distanceMeters;
     }
     if (duration != null) {
-      _result.duration = duration;
+      $result.duration = duration;
     }
     if (staticDuration != null) {
-      _result.staticDuration = staticDuration;
+      $result.staticDuration = staticDuration;
     }
     if (polyline != null) {
-      _result.polyline = polyline;
+      $result.polyline = polyline;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (warnings != null) {
-      _result.warnings.addAll(warnings);
+      $result.warnings.addAll(warnings);
     }
     if (viewport != null) {
-      _result.viewport = viewport;
+      $result.viewport = viewport;
     }
     if (travelAdvisory != null) {
-      _result.travelAdvisory = travelAdvisory;
+      $result.travelAdvisory = travelAdvisory;
     }
     if (optimizedIntermediateWaypointIndex != null) {
-      _result.optimizedIntermediateWaypointIndex
+      $result.optimizedIntermediateWaypointIndex
           .addAll(optimizedIntermediateWaypointIndex);
     }
-    return _result;
+    return $result;
   }
+  Route._() : super();
   factory Route.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Route.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Route',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..pc<RouteLeg>(1, _omitFieldNames ? '' : 'legs', $pb.PbFieldType.PM,
+        subBuilder: RouteLeg.create)
+    ..a<$core.int>(
+        2, _omitFieldNames ? '' : 'distanceMeters', $pb.PbFieldType.O3)
+    ..aOM<$0.Duration>(3, _omitFieldNames ? '' : 'duration',
+        subBuilder: $0.Duration.create)
+    ..aOM<$0.Duration>(4, _omitFieldNames ? '' : 'staticDuration',
+        subBuilder: $0.Duration.create)
+    ..aOM<$1.Polyline>(5, _omitFieldNames ? '' : 'polyline',
+        subBuilder: $1.Polyline.create)
+    ..aOS(6, _omitFieldNames ? '' : 'description')
+    ..pPS(7, _omitFieldNames ? '' : 'warnings')
+    ..aOM<$2.Viewport>(8, _omitFieldNames ? '' : 'viewport',
+        subBuilder: $2.Viewport.create)
+    ..aOM<RouteTravelAdvisory>(9, _omitFieldNames ? '' : 'travelAdvisory',
+        subBuilder: RouteTravelAdvisory.create)
+    ..p<$core.int>(
+        10,
+        _omitFieldNames ? '' : 'optimizedIntermediateWaypointIndex',
+        $pb.PbFieldType.K3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -151,9 +114,10 @@ class Route extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Route copyWith(void Function(Route) updates) =>
-      super.copyWith((message) => updates(message as Route))
-          as Route; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Route)) as Route;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Route create() => Route._();
   Route createEmptyInstance() => create();
@@ -163,9 +127,17 @@ class Route extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Route>(create);
   static Route? _defaultInstance;
 
+  /// A collection of legs (path segments between waypoints) that make-up the
+  /// route. Each leg corresponds to the trip between two non-`via` Waypoints.
+  /// For example, a route with no intermediate waypoints has only one leg. A
+  /// route that includes one non-`via` intermediate waypoint has two legs. A
+  /// route that includes one `via` intermediate waypoint has one leg. The order
+  /// of the legs matches the order of Waypoints from `origin` to `intermediates`
+  /// to `destination`.
   @$pb.TagNumber(1)
   $core.List<RouteLeg> get legs => $_getList(0);
 
+  /// The travel distance of the route, in meters.
   @$pb.TagNumber(2)
   $core.int get distanceMeters => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -178,6 +150,11 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDistanceMeters() => clearField(2);
 
+  /// The length of time needed to navigate the route. If you set the
+  /// `routing_preference` to `TRAFFIC_UNAWARE`, then this value is the same as
+  /// `static_duration`. If you set the `routing_preference` to either
+  /// `TRAFFIC_AWARE` or `TRAFFIC_AWARE_OPTIMAL`, then this value is calculated
+  /// taking traffic conditions into account.
   @$pb.TagNumber(3)
   $0.Duration get duration => $_getN(2);
   @$pb.TagNumber(3)
@@ -192,6 +169,8 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Duration ensureDuration() => $_ensure(2);
 
+  /// The duration of traveling through the route without taking traffic
+  /// conditions into consideration.
   @$pb.TagNumber(4)
   $0.Duration get staticDuration => $_getN(3);
   @$pb.TagNumber(4)
@@ -206,6 +185,8 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Duration ensureStaticDuration() => $_ensure(3);
 
+  /// The overall route polyline. This polyline is the combined polyline of all
+  /// `legs`.
   @$pb.TagNumber(5)
   $1.Polyline get polyline => $_getN(4);
   @$pb.TagNumber(5)
@@ -220,6 +201,7 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.Polyline ensurePolyline() => $_ensure(4);
 
+  /// A description of the route.
   @$pb.TagNumber(6)
   $core.String get description => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -232,9 +214,11 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearDescription() => clearField(6);
 
+  /// An array of warnings to show when displaying the route.
   @$pb.TagNumber(7)
   $core.List<$core.String> get warnings => $_getList(6);
 
+  /// The viewport bounding box of the polyline.
   @$pb.TagNumber(8)
   $2.Viewport get viewport => $_getN(7);
   @$pb.TagNumber(8)
@@ -249,6 +233,7 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $2.Viewport ensureViewport() => $_ensure(7);
 
+  /// Additional information about the route.
   @$pb.TagNumber(9)
   RouteTravelAdvisory get travelAdvisory => $_getN(8);
   @$pb.TagNumber(9)
@@ -263,75 +248,68 @@ class Route extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   RouteTravelAdvisory ensureTravelAdvisory() => $_ensure(8);
 
+  /// If `ComputeRoutesRequest.optimize_waypoint_order` is set to true, this
+  /// field contains the optimized ordering of intermediates waypoints.
+  /// otherwise, this field is empty.
+  /// For example, suppose the input is Origin: LA; Intermediates: Dallas,
+  /// Bangor, Phoenix;  Destination: New York; and the optimized intermediate
+  /// waypoint order is:  Phoenix, Dallas, Bangor. Then this field contains the
+  /// values [2, 0, 1]. The index starts with 0 for the first intermediate
+  /// waypoint.
   @$pb.TagNumber(10)
   $core.List<$core.int> get optimizedIntermediateWaypointIndex => $_getList(9);
 }
 
+/// Encapsulates the additional information that the user should be informed
+/// about, such as possible traffic zone restriction etc.
 class RouteTravelAdvisory extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteTravelAdvisory',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<TrafficRestriction>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'trafficRestriction',
-        subBuilder: TrafficRestriction.create)
-    ..aOM<TollInfo>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tollInfo',
-        subBuilder: TollInfo.create)
-    ..pc<SpeedReadingInterval>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'speedReadingIntervals',
-        $pb.PbFieldType.PM,
-        subBuilder: SpeedReadingInterval.create)
-    ..aOM<CustomLayerInfo>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customLayerInfo',
-        subBuilder: CustomLayerInfo.create)
-    ..hasRequiredFields = false;
-
-  RouteTravelAdvisory._() : super();
   factory RouteTravelAdvisory({
     TrafficRestriction? trafficRestriction,
     TollInfo? tollInfo,
     $core.Iterable<SpeedReadingInterval>? speedReadingIntervals,
+    @$core.Deprecated('This field is deprecated.')
     CustomLayerInfo? customLayerInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (trafficRestriction != null) {
-      _result.trafficRestriction = trafficRestriction;
+      $result.trafficRestriction = trafficRestriction;
     }
     if (tollInfo != null) {
-      _result.tollInfo = tollInfo;
+      $result.tollInfo = tollInfo;
     }
     if (speedReadingIntervals != null) {
-      _result.speedReadingIntervals.addAll(speedReadingIntervals);
+      $result.speedReadingIntervals.addAll(speedReadingIntervals);
     }
     if (customLayerInfo != null) {
-      _result.customLayerInfo = customLayerInfo;
+      // ignore: deprecated_member_use_from_same_package
+      $result.customLayerInfo = customLayerInfo;
     }
-    return _result;
+    return $result;
   }
+  RouteTravelAdvisory._() : super();
   factory RouteTravelAdvisory.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteTravelAdvisory.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteTravelAdvisory',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<TrafficRestriction>(1, _omitFieldNames ? '' : 'trafficRestriction',
+        subBuilder: TrafficRestriction.create)
+    ..aOM<TollInfo>(2, _omitFieldNames ? '' : 'tollInfo',
+        subBuilder: TollInfo.create)
+    ..pc<SpeedReadingInterval>(
+        3, _omitFieldNames ? '' : 'speedReadingIntervals', $pb.PbFieldType.PM,
+        subBuilder: SpeedReadingInterval.create)
+    ..aOM<CustomLayerInfo>(4, _omitFieldNames ? '' : 'customLayerInfo',
+        subBuilder: CustomLayerInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -341,8 +319,10 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RouteTravelAdvisory copyWith(void Function(RouteTravelAdvisory) updates) =>
       super.copyWith((message) => updates(message as RouteTravelAdvisory))
-          as RouteTravelAdvisory; // ignore: deprecated_member_use
+          as RouteTravelAdvisory;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteTravelAdvisory create() => RouteTravelAdvisory._();
   RouteTravelAdvisory createEmptyInstance() => create();
@@ -353,6 +333,9 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RouteTravelAdvisory>(create);
   static RouteTravelAdvisory? _defaultInstance;
 
+  /// The traffic restriction that applies to the route. A vehicle that is
+  /// subject to the restriction is not allowed to travel on the route. As of
+  /// October 2019, only Jakarta, Indonesia takes into consideration.
   @$pb.TagNumber(1)
   TrafficRestriction get trafficRestriction => $_getN(0);
   @$pb.TagNumber(1)
@@ -367,6 +350,11 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   TrafficRestriction ensureTrafficRestriction() => $_ensure(0);
 
+  /// Encapsulates information about tolls on the Route.
+  /// This field is only populated if we expect there are tolls on the Route.
+  /// If this field is set but the `estimated_price` subfield is not populated,
+  /// we expect that road contains tolls but we do not know an estimated price.
+  /// If this field is not set, then we expect there is no toll on the Route.
   @$pb.TagNumber(2)
   TollInfo get tollInfo => $_getN(1);
   @$pb.TagNumber(2)
@@ -381,79 +369,86 @@ class RouteTravelAdvisory extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   TollInfo ensureTollInfo() => $_ensure(1);
 
+  ///  Speed reading intervals detailing traffic density. Applicable in case of
+  ///  `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+  ///  The intervals cover the entire polyline of the route without overlap.
+  ///  The start point of a specified interval is the same as the end point of the
+  ///  preceding interval.
+  ///
+  ///  Example:
+  ///
+  ///      polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+  ///      speed_reading_intervals: [A,C), [C,D), [D,G).
   @$pb.TagNumber(3)
   $core.List<SpeedReadingInterval> get speedReadingIntervals => $_getList(2);
 
+  /// Deprecated: This field will stop being populated soon.
+  /// Information related to the custom layer data that the customer specified
+  /// (e.g. time spent in a customer specified area).
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   CustomLayerInfo get customLayerInfo => $_getN(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   set customLayerInfo(CustomLayerInfo v) {
     setField(4, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.bool hasCustomLayerInfo() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   void clearCustomLayerInfo() => clearField(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   CustomLayerInfo ensureCustomLayerInfo() => $_ensure(3);
 }
 
+/// Encapsulates the additional information that the user should be informed
+/// about, such as possible traffic zone restriction etc. on a route leg.
 class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteLegTravelAdvisory',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<TollInfo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tollInfo',
-        subBuilder: TollInfo.create)
-    ..pc<SpeedReadingInterval>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'speedReadingIntervals',
-        $pb.PbFieldType.PM,
-        subBuilder: SpeedReadingInterval.create)
-    ..aOM<CustomLayerInfo>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customLayerInfo',
-        subBuilder: CustomLayerInfo.create)
-    ..hasRequiredFields = false;
-
-  RouteLegTravelAdvisory._() : super();
   factory RouteLegTravelAdvisory({
     TollInfo? tollInfo,
     $core.Iterable<SpeedReadingInterval>? speedReadingIntervals,
+    @$core.Deprecated('This field is deprecated.')
     CustomLayerInfo? customLayerInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (tollInfo != null) {
-      _result.tollInfo = tollInfo;
+      $result.tollInfo = tollInfo;
     }
     if (speedReadingIntervals != null) {
-      _result.speedReadingIntervals.addAll(speedReadingIntervals);
+      $result.speedReadingIntervals.addAll(speedReadingIntervals);
     }
     if (customLayerInfo != null) {
-      _result.customLayerInfo = customLayerInfo;
+      // ignore: deprecated_member_use_from_same_package
+      $result.customLayerInfo = customLayerInfo;
     }
-    return _result;
+    return $result;
   }
+  RouteLegTravelAdvisory._() : super();
   factory RouteLegTravelAdvisory.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteLegTravelAdvisory.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteLegTravelAdvisory',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<TollInfo>(1, _omitFieldNames ? '' : 'tollInfo',
+        subBuilder: TollInfo.create)
+    ..pc<SpeedReadingInterval>(
+        2, _omitFieldNames ? '' : 'speedReadingIntervals', $pb.PbFieldType.PM,
+        subBuilder: SpeedReadingInterval.create)
+    ..aOM<CustomLayerInfo>(3, _omitFieldNames ? '' : 'customLayerInfo',
+        subBuilder: CustomLayerInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -465,8 +460,10 @@ class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
   RouteLegTravelAdvisory copyWith(
           void Function(RouteLegTravelAdvisory) updates) =>
       super.copyWith((message) => updates(message as RouteLegTravelAdvisory))
-          as RouteLegTravelAdvisory; // ignore: deprecated_member_use
+          as RouteLegTravelAdvisory;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteLegTravelAdvisory create() => RouteLegTravelAdvisory._();
   RouteLegTravelAdvisory createEmptyInstance() => create();
@@ -477,6 +474,12 @@ class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RouteLegTravelAdvisory>(create);
   static RouteLegTravelAdvisory? _defaultInstance;
 
+  /// Encapsulates information about tolls on the specific `RouteLeg`.
+  /// This field is only populated if we expect there are tolls on the
+  /// `RouteLeg`. If this field is set but the `estimated_price` subfield is not
+  /// populated, we expect that road contains tolls but we do not know an
+  /// estimated price. If this field does not exist, then there is no toll on the
+  /// `RouteLeg`.
   @$pb.TagNumber(1)
   TollInfo get tollInfo => $_getN(0);
   @$pb.TagNumber(1)
@@ -491,59 +494,72 @@ class RouteLegTravelAdvisory extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   TollInfo ensureTollInfo() => $_ensure(0);
 
+  ///  Speed reading intervals detailing traffic density. Applicable in case of
+  ///  `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+  ///  The intervals cover the entire polyline of the `RouteLeg` without overlap.
+  ///  The start point of a specified interval is the same as the end point of the
+  ///  preceding interval.
+  ///
+  ///  Example:
+  ///
+  ///      polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+  ///      speed_reading_intervals: [A,C), [C,D), [D,G).
   @$pb.TagNumber(2)
   $core.List<SpeedReadingInterval> get speedReadingIntervals => $_getList(1);
 
+  /// Deprecated: This field will stop being populated soon.
+  /// Information related to the custom layer data that the customer specified
+  /// (e.g. time spent in a customer specified area).
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   CustomLayerInfo get customLayerInfo => $_getN(2);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   set customLayerInfo(CustomLayerInfo v) {
     setField(3, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $core.bool hasCustomLayerInfo() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   void clearCustomLayerInfo() => clearField(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   CustomLayerInfo ensureCustomLayerInfo() => $_ensure(2);
 }
 
+/// Encapsulates the additional information that the user should be informed
+/// about, such as possible traffic zone restriction on a leg step.
 class RouteLegStepTravelAdvisory extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteLegStepTravelAdvisory',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..pc<SpeedReadingInterval>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'speedReadingIntervals',
-        $pb.PbFieldType.PM,
-        subBuilder: SpeedReadingInterval.create)
-    ..hasRequiredFields = false;
-
-  RouteLegStepTravelAdvisory._() : super();
   factory RouteLegStepTravelAdvisory({
     $core.Iterable<SpeedReadingInterval>? speedReadingIntervals,
   }) {
-    final _result = create();
+    final $result = create();
     if (speedReadingIntervals != null) {
-      _result.speedReadingIntervals.addAll(speedReadingIntervals);
+      $result.speedReadingIntervals.addAll(speedReadingIntervals);
     }
-    return _result;
+    return $result;
   }
+  RouteLegStepTravelAdvisory._() : super();
   factory RouteLegStepTravelAdvisory.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteLegStepTravelAdvisory.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteLegStepTravelAdvisory',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..pc<SpeedReadingInterval>(
+        1, _omitFieldNames ? '' : 'speedReadingIntervals', $pb.PbFieldType.PM,
+        subBuilder: SpeedReadingInterval.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -556,8 +572,10 @@ class RouteLegStepTravelAdvisory extends $pb.GeneratedMessage {
           void Function(RouteLegStepTravelAdvisory) updates) =>
       super.copyWith(
               (message) => updates(message as RouteLegStepTravelAdvisory))
-          as RouteLegStepTravelAdvisory; // ignore: deprecated_member_use
+          as RouteLegStepTravelAdvisory;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteLegStepTravelAdvisory create() => RouteLegStepTravelAdvisory._();
   RouteLegStepTravelAdvisory createEmptyInstance() => create();
@@ -568,45 +586,42 @@ class RouteLegStepTravelAdvisory extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RouteLegStepTravelAdvisory>(create);
   static RouteLegStepTravelAdvisory? _defaultInstance;
 
+  /// NOTE: This field is not currently populated.
   @$pb.TagNumber(1)
   $core.List<SpeedReadingInterval> get speedReadingIntervals => $_getList(0);
 }
 
+/// Encapsulates the traffic restriction applied to the route. As of October
+/// 2019, only Jakarta, Indonesia takes into consideration.
 class TrafficRestriction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TrafficRestriction',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<LicensePlateLastCharacterRestriction>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'licensePlateLastCharacterRestriction',
-        subBuilder: LicensePlateLastCharacterRestriction.create)
-    ..hasRequiredFields = false;
-
-  TrafficRestriction._() : super();
   factory TrafficRestriction({
     LicensePlateLastCharacterRestriction? licensePlateLastCharacterRestriction,
   }) {
-    final _result = create();
+    final $result = create();
     if (licensePlateLastCharacterRestriction != null) {
-      _result.licensePlateLastCharacterRestriction =
+      $result.licensePlateLastCharacterRestriction =
           licensePlateLastCharacterRestriction;
     }
-    return _result;
+    return $result;
   }
+  TrafficRestriction._() : super();
   factory TrafficRestriction.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TrafficRestriction.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TrafficRestriction',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<LicensePlateLastCharacterRestriction>(
+        1, _omitFieldNames ? '' : 'licensePlateLastCharacterRestriction',
+        subBuilder: LicensePlateLastCharacterRestriction.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -616,8 +631,10 @@ class TrafficRestriction extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TrafficRestriction copyWith(void Function(TrafficRestriction) updates) =>
       super.copyWith((message) => updates(message as TrafficRestriction))
-          as TrafficRestriction; // ignore: deprecated_member_use
+          as TrafficRestriction;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TrafficRestriction create() => TrafficRestriction._();
   TrafficRestriction createEmptyInstance() => create();
@@ -628,6 +645,8 @@ class TrafficRestriction extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TrafficRestriction>(create);
   static TrafficRestriction? _defaultInstance;
 
+  /// The restriction based on the vehicle's license plate last character. If
+  /// this field does not exist, then no restriction on route.
   @$pb.TagNumber(1)
   LicensePlateLastCharacterRestriction
       get licensePlateLastCharacterRestriction => $_getN(0);
@@ -646,33 +665,18 @@ class TrafficRestriction extends $pb.GeneratedMessage {
       ensureLicensePlateLastCharacterRestriction() => $_ensure(0);
 }
 
+/// Encapsulates the license plate last character restriction.
 class LicensePlateLastCharacterRestriction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LicensePlateLastCharacterRestriction',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'allowedLastCharacters')
-    ..hasRequiredFields = false;
-
-  LicensePlateLastCharacterRestriction._() : super();
   factory LicensePlateLastCharacterRestriction({
     $core.Iterable<$core.String>? allowedLastCharacters,
   }) {
-    final _result = create();
+    final $result = create();
     if (allowedLastCharacters != null) {
-      _result.allowedLastCharacters.addAll(allowedLastCharacters);
+      $result.allowedLastCharacters.addAll(allowedLastCharacters);
     }
-    return _result;
+    return $result;
   }
+  LicensePlateLastCharacterRestriction._() : super();
   factory LicensePlateLastCharacterRestriction.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -680,6 +684,15 @@ class LicensePlateLastCharacterRestriction extends $pb.GeneratedMessage {
   factory LicensePlateLastCharacterRestriction.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LicensePlateLastCharacterRestriction',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'allowedLastCharacters')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -692,8 +705,10 @@ class LicensePlateLastCharacterRestriction extends $pb.GeneratedMessage {
           void Function(LicensePlateLastCharacterRestriction) updates) =>
       super.copyWith((message) =>
               updates(message as LicensePlateLastCharacterRestriction))
-          as LicensePlateLastCharacterRestriction; // ignore: deprecated_member_use
+          as LicensePlateLastCharacterRestriction;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LicensePlateLastCharacterRestriction create() =>
       LicensePlateLastCharacterRestriction._();
@@ -706,72 +721,15 @@ class LicensePlateLastCharacterRestriction extends $pb.GeneratedMessage {
           LicensePlateLastCharacterRestriction>(create);
   static LicensePlateLastCharacterRestriction? _defaultInstance;
 
+  /// The allowed last character of a license plate of a vehicle. Only vehicles
+  /// whose license plate's last characters match these are allowed to travel on
+  /// the route. If empty, no vehicle is allowed.
   @$pb.TagNumber(1)
   $core.List<$core.String> get allowedLastCharacters => $_getList(0);
 }
 
+/// Encapsulates a segment between non-`via` waypoints.
 class RouteLeg extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteLeg',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'distanceMeters',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Duration>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'duration',
-        subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'staticDuration',
-        subBuilder: $0.Duration.create)
-    ..aOM<$1.Polyline>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'polyline',
-        subBuilder: $1.Polyline.create)
-    ..aOM<$3.Location>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startLocation',
-        subBuilder: $3.Location.create)
-    ..aOM<$3.Location>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endLocation',
-        subBuilder: $3.Location.create)
-    ..pc<RouteLegStep>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'steps',
-        $pb.PbFieldType.PM,
-        subBuilder: RouteLegStep.create)
-    ..aOM<RouteLegTravelAdvisory>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'travelAdvisory',
-        subBuilder: RouteLegTravelAdvisory.create)
-    ..hasRequiredFields = false;
-
-  RouteLeg._() : super();
   factory RouteLeg({
     $core.int? distanceMeters,
     $0.Duration? duration,
@@ -782,39 +740,64 @@ class RouteLeg extends $pb.GeneratedMessage {
     $core.Iterable<RouteLegStep>? steps,
     RouteLegTravelAdvisory? travelAdvisory,
   }) {
-    final _result = create();
+    final $result = create();
     if (distanceMeters != null) {
-      _result.distanceMeters = distanceMeters;
+      $result.distanceMeters = distanceMeters;
     }
     if (duration != null) {
-      _result.duration = duration;
+      $result.duration = duration;
     }
     if (staticDuration != null) {
-      _result.staticDuration = staticDuration;
+      $result.staticDuration = staticDuration;
     }
     if (polyline != null) {
-      _result.polyline = polyline;
+      $result.polyline = polyline;
     }
     if (startLocation != null) {
-      _result.startLocation = startLocation;
+      $result.startLocation = startLocation;
     }
     if (endLocation != null) {
-      _result.endLocation = endLocation;
+      $result.endLocation = endLocation;
     }
     if (steps != null) {
-      _result.steps.addAll(steps);
+      $result.steps.addAll(steps);
     }
     if (travelAdvisory != null) {
-      _result.travelAdvisory = travelAdvisory;
+      $result.travelAdvisory = travelAdvisory;
     }
-    return _result;
+    return $result;
   }
+  RouteLeg._() : super();
   factory RouteLeg.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteLeg.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteLeg',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'distanceMeters', $pb.PbFieldType.O3)
+    ..aOM<$0.Duration>(2, _omitFieldNames ? '' : 'duration',
+        subBuilder: $0.Duration.create)
+    ..aOM<$0.Duration>(3, _omitFieldNames ? '' : 'staticDuration',
+        subBuilder: $0.Duration.create)
+    ..aOM<$1.Polyline>(4, _omitFieldNames ? '' : 'polyline',
+        subBuilder: $1.Polyline.create)
+    ..aOM<$3.Location>(5, _omitFieldNames ? '' : 'startLocation',
+        subBuilder: $3.Location.create)
+    ..aOM<$3.Location>(6, _omitFieldNames ? '' : 'endLocation',
+        subBuilder: $3.Location.create)
+    ..pc<RouteLegStep>(7, _omitFieldNames ? '' : 'steps', $pb.PbFieldType.PM,
+        subBuilder: RouteLegStep.create)
+    ..aOM<RouteLegTravelAdvisory>(8, _omitFieldNames ? '' : 'travelAdvisory',
+        subBuilder: RouteLegTravelAdvisory.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -823,9 +806,10 @@ class RouteLeg extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RouteLeg copyWith(void Function(RouteLeg) updates) =>
-      super.copyWith((message) => updates(message as RouteLeg))
-          as RouteLeg; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RouteLeg)) as RouteLeg;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteLeg create() => RouteLeg._();
   RouteLeg createEmptyInstance() => create();
@@ -835,6 +819,7 @@ class RouteLeg extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RouteLeg>(create);
   static RouteLeg? _defaultInstance;
 
+  /// The travel distance of the route leg, in meters.
   @$pb.TagNumber(1)
   $core.int get distanceMeters => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -847,6 +832,11 @@ class RouteLeg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDistanceMeters() => clearField(1);
 
+  /// The length of time needed to navigate the leg. If the `route_preference`
+  /// is set to `TRAFFIC_UNAWARE`, then this value is the same as
+  /// `static_duration`. If the `route_preference` is either `TRAFFIC_AWARE` or
+  /// `TRAFFIC_AWARE_OPTIMAL`, then this value is calculated taking traffic
+  /// conditions into account.
   @$pb.TagNumber(2)
   $0.Duration get duration => $_getN(1);
   @$pb.TagNumber(2)
@@ -861,6 +851,8 @@ class RouteLeg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Duration ensureDuration() => $_ensure(1);
 
+  /// The duration of traveling through the leg, calculated without taking
+  /// traffic conditions into consideration.
   @$pb.TagNumber(3)
   $0.Duration get staticDuration => $_getN(2);
   @$pb.TagNumber(3)
@@ -875,6 +867,8 @@ class RouteLeg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Duration ensureStaticDuration() => $_ensure(2);
 
+  /// The overall polyline for this leg. This includes that each `step`'s
+  /// polyline.
   @$pb.TagNumber(4)
   $1.Polyline get polyline => $_getN(3);
   @$pb.TagNumber(4)
@@ -889,6 +883,9 @@ class RouteLeg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $1.Polyline ensurePolyline() => $_ensure(3);
 
+  /// The start location of this leg. This might be different from the provided
+  /// `origin`. For example, when the provided `origin` is not near a road, this
+  /// is a point on the road.
   @$pb.TagNumber(5)
   $3.Location get startLocation => $_getN(4);
   @$pb.TagNumber(5)
@@ -903,6 +900,9 @@ class RouteLeg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $3.Location ensureStartLocation() => $_ensure(4);
 
+  /// The end location of this leg. This might be different from the provided
+  /// `destination`. For example, when the provided `destination` is not near a
+  /// road, this is a point on the road.
   @$pb.TagNumber(6)
   $3.Location get endLocation => $_getN(5);
   @$pb.TagNumber(6)
@@ -917,9 +917,13 @@ class RouteLeg extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $3.Location ensureEndLocation() => $_ensure(5);
 
+  /// An array of steps denoting segments within this leg. Each step represents
+  /// one navigation instruction.
   @$pb.TagNumber(7)
   $core.List<RouteLegStep> get steps => $_getList(6);
 
+  /// Encapsulates the additional information that the user should be informed
+  /// about, such as possible traffic zone restriction etc. on a route leg.
   @$pb.TagNumber(8)
   RouteLegTravelAdvisory get travelAdvisory => $_getN(7);
   @$pb.TagNumber(8)
@@ -935,41 +939,35 @@ class RouteLeg extends $pb.GeneratedMessage {
   RouteLegTravelAdvisory ensureTravelAdvisory() => $_ensure(7);
 }
 
+/// Encapsulates toll information on a `Route` or on a `RouteLeg`.
 class TollInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TollInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..pc<$4.Money>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'estimatedPrice',
-        $pb.PbFieldType.PM,
-        subBuilder: $4.Money.create)
-    ..hasRequiredFields = false;
-
-  TollInfo._() : super();
   factory TollInfo({
     $core.Iterable<$4.Money>? estimatedPrice,
   }) {
-    final _result = create();
+    final $result = create();
     if (estimatedPrice != null) {
-      _result.estimatedPrice.addAll(estimatedPrice);
+      $result.estimatedPrice.addAll(estimatedPrice);
     }
-    return _result;
+    return $result;
   }
+  TollInfo._() : super();
   factory TollInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TollInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TollInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..pc<$4.Money>(
+        1, _omitFieldNames ? '' : 'estimatedPrice', $pb.PbFieldType.PM,
+        subBuilder: $4.Money.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -978,9 +976,10 @@ class TollInfo extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TollInfo copyWith(void Function(TollInfo) updates) =>
-      super.copyWith((message) => updates(message as TollInfo))
-          as TollInfo; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TollInfo)) as TollInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TollInfo create() => TollInfo._();
   TollInfo createEmptyInstance() => create();
@@ -990,65 +989,18 @@ class TollInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TollInfo>(create);
   static TollInfo? _defaultInstance;
 
+  /// The monetary amount of tolls for the corresponding `Route` or `RouteLeg`.
+  /// This list contains a money amount for each currency that is expected
+  /// to be charged by the toll stations. Typically this list contains only one
+  /// item for routes with tolls in one currency. For international trips, this
+  /// list may contain multiple items to reflect tolls in different currencies.
   @$pb.TagNumber(1)
   $core.List<$4.Money> get estimatedPrice => $_getList(0);
 }
 
+/// Encapsulates a segment of a `RouteLeg`. A step corresponds to a single
+/// navigation instruction. Route legs are made up of steps.
 class RouteLegStep extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteLegStep',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'distanceMeters',
-        $pb.PbFieldType.O3)
-    ..aOM<$0.Duration>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'staticDuration',
-        subBuilder: $0.Duration.create)
-    ..aOM<$1.Polyline>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'polyline',
-        subBuilder: $1.Polyline.create)
-    ..aOM<$3.Location>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startLocation',
-        subBuilder: $3.Location.create)
-    ..aOM<$3.Location>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endLocation',
-        subBuilder: $3.Location.create)
-    ..aOM<NavigationInstruction>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'navigationInstruction',
-        subBuilder: NavigationInstruction.create)
-    ..aOM<RouteLegStepTravelAdvisory>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'travelAdvisory',
-        subBuilder: RouteLegStepTravelAdvisory.create)
-    ..hasRequiredFields = false;
-
-  RouteLegStep._() : super();
   factory RouteLegStep({
     $core.int? distanceMeters,
     $0.Duration? staticDuration,
@@ -1058,36 +1010,61 @@ class RouteLegStep extends $pb.GeneratedMessage {
     NavigationInstruction? navigationInstruction,
     RouteLegStepTravelAdvisory? travelAdvisory,
   }) {
-    final _result = create();
+    final $result = create();
     if (distanceMeters != null) {
-      _result.distanceMeters = distanceMeters;
+      $result.distanceMeters = distanceMeters;
     }
     if (staticDuration != null) {
-      _result.staticDuration = staticDuration;
+      $result.staticDuration = staticDuration;
     }
     if (polyline != null) {
-      _result.polyline = polyline;
+      $result.polyline = polyline;
     }
     if (startLocation != null) {
-      _result.startLocation = startLocation;
+      $result.startLocation = startLocation;
     }
     if (endLocation != null) {
-      _result.endLocation = endLocation;
+      $result.endLocation = endLocation;
     }
     if (navigationInstruction != null) {
-      _result.navigationInstruction = navigationInstruction;
+      $result.navigationInstruction = navigationInstruction;
     }
     if (travelAdvisory != null) {
-      _result.travelAdvisory = travelAdvisory;
+      $result.travelAdvisory = travelAdvisory;
     }
-    return _result;
+    return $result;
   }
+  RouteLegStep._() : super();
   factory RouteLegStep.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteLegStep.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteLegStep',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'distanceMeters', $pb.PbFieldType.O3)
+    ..aOM<$0.Duration>(2, _omitFieldNames ? '' : 'staticDuration',
+        subBuilder: $0.Duration.create)
+    ..aOM<$1.Polyline>(3, _omitFieldNames ? '' : 'polyline',
+        subBuilder: $1.Polyline.create)
+    ..aOM<$3.Location>(4, _omitFieldNames ? '' : 'startLocation',
+        subBuilder: $3.Location.create)
+    ..aOM<$3.Location>(5, _omitFieldNames ? '' : 'endLocation',
+        subBuilder: $3.Location.create)
+    ..aOM<NavigationInstruction>(
+        6, _omitFieldNames ? '' : 'navigationInstruction',
+        subBuilder: NavigationInstruction.create)
+    ..aOM<RouteLegStepTravelAdvisory>(
+        7, _omitFieldNames ? '' : 'travelAdvisory',
+        subBuilder: RouteLegStepTravelAdvisory.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1097,8 +1074,10 @@ class RouteLegStep extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RouteLegStep copyWith(void Function(RouteLegStep) updates) =>
       super.copyWith((message) => updates(message as RouteLegStep))
-          as RouteLegStep; // ignore: deprecated_member_use
+          as RouteLegStep;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteLegStep create() => RouteLegStep._();
   RouteLegStep createEmptyInstance() => create();
@@ -1109,6 +1088,8 @@ class RouteLegStep extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RouteLegStep>(create);
   static RouteLegStep? _defaultInstance;
 
+  /// The travel distance of this step, in meters. In some circumstances, this
+  /// field might not have a value.
   @$pb.TagNumber(1)
   $core.int get distanceMeters => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1121,6 +1102,9 @@ class RouteLegStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDistanceMeters() => clearField(1);
 
+  /// The duration of travel through this step without taking traffic conditions
+  /// into consideration. In some circumstances, this field might not have a
+  /// value.
   @$pb.TagNumber(2)
   $0.Duration get staticDuration => $_getN(1);
   @$pb.TagNumber(2)
@@ -1135,6 +1119,7 @@ class RouteLegStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Duration ensureStaticDuration() => $_ensure(1);
 
+  /// The polyline associated with this step.
   @$pb.TagNumber(3)
   $1.Polyline get polyline => $_getN(2);
   @$pb.TagNumber(3)
@@ -1149,6 +1134,7 @@ class RouteLegStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Polyline ensurePolyline() => $_ensure(2);
 
+  /// The start location of this step.
   @$pb.TagNumber(4)
   $3.Location get startLocation => $_getN(3);
   @$pb.TagNumber(4)
@@ -1163,6 +1149,7 @@ class RouteLegStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $3.Location ensureStartLocation() => $_ensure(3);
 
+  /// The end location of this step.
   @$pb.TagNumber(5)
   $3.Location get endLocation => $_getN(4);
   @$pb.TagNumber(5)
@@ -1177,6 +1164,7 @@ class RouteLegStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $3.Location ensureEndLocation() => $_ensure(4);
 
+  /// Navigation instructions.
   @$pb.TagNumber(6)
   NavigationInstruction get navigationInstruction => $_getN(5);
   @$pb.TagNumber(6)
@@ -1191,6 +1179,8 @@ class RouteLegStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   NavigationInstruction ensureNavigationInstruction() => $_ensure(5);
 
+  /// Encapsulates the additional information that the user should be informed
+  /// about, such as possible traffic zone restriction on a leg step.
   @$pb.TagNumber(7)
   RouteLegStepTravelAdvisory get travelAdvisory => $_getN(6);
   @$pb.TagNumber(7)
@@ -1207,51 +1197,39 @@ class RouteLegStep extends $pb.GeneratedMessage {
 }
 
 class NavigationInstruction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NavigationInstruction',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..e<Maneuver>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maneuver',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Maneuver.MANEUVER_UNSPECIFIED,
-        valueOf: Maneuver.valueOf,
-        enumValues: Maneuver.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instructions')
-    ..hasRequiredFields = false;
-
-  NavigationInstruction._() : super();
   factory NavigationInstruction({
     Maneuver? maneuver,
     $core.String? instructions,
   }) {
-    final _result = create();
+    final $result = create();
     if (maneuver != null) {
-      _result.maneuver = maneuver;
+      $result.maneuver = maneuver;
     }
     if (instructions != null) {
-      _result.instructions = instructions;
+      $result.instructions = instructions;
     }
-    return _result;
+    return $result;
   }
+  NavigationInstruction._() : super();
   factory NavigationInstruction.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NavigationInstruction.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NavigationInstruction',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..e<Maneuver>(1, _omitFieldNames ? '' : 'maneuver', $pb.PbFieldType.OE,
+        defaultOrMaker: Maneuver.MANEUVER_UNSPECIFIED,
+        valueOf: Maneuver.valueOf,
+        enumValues: Maneuver.values)
+    ..aOS(2, _omitFieldNames ? '' : 'instructions')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1263,8 +1241,10 @@ class NavigationInstruction extends $pb.GeneratedMessage {
   NavigationInstruction copyWith(
           void Function(NavigationInstruction) updates) =>
       super.copyWith((message) => updates(message as NavigationInstruction))
-          as NavigationInstruction; // ignore: deprecated_member_use
+          as NavigationInstruction;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NavigationInstruction create() => NavigationInstruction._();
   NavigationInstruction createEmptyInstance() => create();
@@ -1275,6 +1255,9 @@ class NavigationInstruction extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NavigationInstruction>(create);
   static NavigationInstruction? _defaultInstance;
 
+  /// Encapsulates the navigation instructions for the current step (for example,
+  /// turn left, merge, or straight). This field determines which icon to
+  /// display.
   @$pb.TagNumber(1)
   Maneuver get maneuver => $_getN(0);
   @$pb.TagNumber(1)
@@ -1287,6 +1270,7 @@ class NavigationInstruction extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearManeuver() => clearField(1);
 
+  /// Instructions for navigating this step.
   @$pb.TagNumber(2)
   $core.String get instructions => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1300,63 +1284,52 @@ class NavigationInstruction extends $pb.GeneratedMessage {
   void clearInstructions() => clearField(2);
 }
 
+/// Traffic density indicator on a contiguous segment of a polyline or path.
+/// Given a path with points P_0, P_1, ... , P_N (zero-based index), the
+/// `SpeedReadingInterval` defines an interval and describes its traffic using
+/// the following categories.
 class SpeedReadingInterval extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SpeedReadingInterval',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startPolylinePointIndex',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endPolylinePointIndex',
-        $pb.PbFieldType.O3)
-    ..e<SpeedReadingInterval_Speed>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'speed',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: SpeedReadingInterval_Speed.SPEED_UNSPECIFIED,
-        valueOf: SpeedReadingInterval_Speed.valueOf,
-        enumValues: SpeedReadingInterval_Speed.values)
-    ..hasRequiredFields = false;
-
-  SpeedReadingInterval._() : super();
   factory SpeedReadingInterval({
     $core.int? startPolylinePointIndex,
     $core.int? endPolylinePointIndex,
     SpeedReadingInterval_Speed? speed,
   }) {
-    final _result = create();
+    final $result = create();
     if (startPolylinePointIndex != null) {
-      _result.startPolylinePointIndex = startPolylinePointIndex;
+      $result.startPolylinePointIndex = startPolylinePointIndex;
     }
     if (endPolylinePointIndex != null) {
-      _result.endPolylinePointIndex = endPolylinePointIndex;
+      $result.endPolylinePointIndex = endPolylinePointIndex;
     }
     if (speed != null) {
-      _result.speed = speed;
+      $result.speed = speed;
     }
-    return _result;
+    return $result;
   }
+  SpeedReadingInterval._() : super();
   factory SpeedReadingInterval.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SpeedReadingInterval.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SpeedReadingInterval',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'startPolylinePointIndex', $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        2, _omitFieldNames ? '' : 'endPolylinePointIndex', $pb.PbFieldType.O3)
+    ..e<SpeedReadingInterval_Speed>(
+        3, _omitFieldNames ? '' : 'speed', $pb.PbFieldType.OE,
+        defaultOrMaker: SpeedReadingInterval_Speed.SPEED_UNSPECIFIED,
+        valueOf: SpeedReadingInterval_Speed.valueOf,
+        enumValues: SpeedReadingInterval_Speed.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1367,8 +1340,10 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SpeedReadingInterval copyWith(void Function(SpeedReadingInterval) updates) =>
       super.copyWith((message) => updates(message as SpeedReadingInterval))
-          as SpeedReadingInterval; // ignore: deprecated_member_use
+          as SpeedReadingInterval;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SpeedReadingInterval create() => SpeedReadingInterval._();
   SpeedReadingInterval createEmptyInstance() => create();
@@ -1379,6 +1354,8 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SpeedReadingInterval>(create);
   static SpeedReadingInterval? _defaultInstance;
 
+  /// The starting index of this interval in the polyline.
+  /// In JSON, when the index is 0, the field appears to be unpopulated.
   @$pb.TagNumber(1)
   $core.int get startPolylinePointIndex => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1391,6 +1368,8 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStartPolylinePointIndex() => clearField(1);
 
+  /// The ending index of this interval in the polyline.
+  /// In JSON, when the index is 0, the field appears to be unpopulated.
   @$pb.TagNumber(2)
   $core.int get endPolylinePointIndex => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1403,6 +1382,7 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEndPolylinePointIndex() => clearField(2);
 
+  /// Traffic speed in this interval.
   @$pb.TagNumber(3)
   SpeedReadingInterval_Speed get speed => $_getN(2);
   @$pb.TagNumber(3)
@@ -1416,59 +1396,45 @@ class SpeedReadingInterval extends $pb.GeneratedMessage {
   void clearSpeed() => clearField(3);
 }
 
+/// Encapsulates areas related information on a `Route` or on a `RouteLeg`.
 class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CustomLayerInfo.AreaInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'areaId')
-    ..a<$core.double>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'distanceInAreaMeters',
-        $pb.PbFieldType.OF)
-    ..aOM<$0.Duration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'durationInArea',
-        subBuilder: $0.Duration.create)
-    ..hasRequiredFields = false;
-
-  CustomLayerInfo_AreaInfo._() : super();
   factory CustomLayerInfo_AreaInfo({
     $core.String? areaId,
     $core.double? distanceInAreaMeters,
     $0.Duration? durationInArea,
   }) {
-    final _result = create();
+    final $result = create();
     if (areaId != null) {
-      _result.areaId = areaId;
+      $result.areaId = areaId;
     }
     if (distanceInAreaMeters != null) {
-      _result.distanceInAreaMeters = distanceInAreaMeters;
+      $result.distanceInAreaMeters = distanceInAreaMeters;
     }
     if (durationInArea != null) {
-      _result.durationInArea = durationInArea;
+      $result.durationInArea = durationInArea;
     }
-    return _result;
+    return $result;
   }
+  CustomLayerInfo_AreaInfo._() : super();
   factory CustomLayerInfo_AreaInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CustomLayerInfo_AreaInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CustomLayerInfo.AreaInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'areaId')
+    ..a<$core.double>(
+        2, _omitFieldNames ? '' : 'distanceInAreaMeters', $pb.PbFieldType.OF)
+    ..aOM<$0.Duration>(3, _omitFieldNames ? '' : 'durationInArea',
+        subBuilder: $0.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1480,8 +1446,10 @@ class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
   CustomLayerInfo_AreaInfo copyWith(
           void Function(CustomLayerInfo_AreaInfo) updates) =>
       super.copyWith((message) => updates(message as CustomLayerInfo_AreaInfo))
-          as CustomLayerInfo_AreaInfo; // ignore: deprecated_member_use
+          as CustomLayerInfo_AreaInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CustomLayerInfo_AreaInfo create() => CustomLayerInfo_AreaInfo._();
   CustomLayerInfo_AreaInfo createEmptyInstance() => create();
@@ -1492,6 +1460,14 @@ class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CustomLayerInfo_AreaInfo>(create);
   static CustomLayerInfo_AreaInfo? _defaultInstance;
 
+  /// ID of an area inside a customer provided dataset. An area represents a
+  /// collection of polygons on the map that are of concern to the customer.
+  /// For example, the customer may be interested in knowing whether a
+  /// returned route is traveling through multiple busy city blocks during
+  /// a predefined period of time. An area ID is unique within a single
+  /// dataset uploaded by a customer. That is, a (`customer_id`, `dataset_id`,
+  /// `area_id`) triplet should uniquely identify a set of polygons on the map
+  /// that "activates" following a common schedule.
   @$pb.TagNumber(1)
   $core.String get areaId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1504,6 +1480,7 @@ class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAreaId() => clearField(1);
 
+  /// Total distance traveled in the area (in meters).
   @$pb.TagNumber(2)
   $core.double get distanceInAreaMeters => $_getN(1);
   @$pb.TagNumber(2)
@@ -1516,6 +1493,7 @@ class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDistanceInAreaMeters() => clearField(2);
 
+  /// Total time spent in the area.
   @$pb.TagNumber(3)
   $0.Duration get durationInArea => $_getN(2);
   @$pb.TagNumber(3)
@@ -1531,41 +1509,49 @@ class CustomLayerInfo_AreaInfo extends $pb.GeneratedMessage {
   $0.Duration ensureDurationInArea() => $_ensure(2);
 }
 
+/// Deprecated: This field will stop being populated soon.
+/// Encapsulates statistics about the time spent and distance travelled in a
+/// custom area.
 class CustomLayerInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CustomLayerInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..pc<CustomLayerInfo_AreaInfo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'areaInfo',
-        $pb.PbFieldType.PM,
-        subBuilder: CustomLayerInfo_AreaInfo.create)
-    ..hasRequiredFields = false;
-
-  CustomLayerInfo._() : super();
   factory CustomLayerInfo({
     $core.Iterable<CustomLayerInfo_AreaInfo>? areaInfo,
+    $core.double? totalDistanceInAreasMeters,
+    $0.Duration? totalDurationInAreas,
   }) {
-    final _result = create();
+    final $result = create();
     if (areaInfo != null) {
-      _result.areaInfo.addAll(areaInfo);
+      $result.areaInfo.addAll(areaInfo);
     }
-    return _result;
+    if (totalDistanceInAreasMeters != null) {
+      $result.totalDistanceInAreasMeters = totalDistanceInAreasMeters;
+    }
+    if (totalDurationInAreas != null) {
+      $result.totalDurationInAreas = totalDurationInAreas;
+    }
+    return $result;
   }
+  CustomLayerInfo._() : super();
   factory CustomLayerInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CustomLayerInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CustomLayerInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..pc<CustomLayerInfo_AreaInfo>(
+        1, _omitFieldNames ? '' : 'areaInfo', $pb.PbFieldType.PM,
+        subBuilder: CustomLayerInfo_AreaInfo.create)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'totalDistanceInAreasMeters',
+        $pb.PbFieldType.OF)
+    ..aOM<$0.Duration>(3, _omitFieldNames ? '' : 'totalDurationInAreas',
+        subBuilder: $0.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1575,8 +1561,10 @@ class CustomLayerInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CustomLayerInfo copyWith(void Function(CustomLayerInfo) updates) =>
       super.copyWith((message) => updates(message as CustomLayerInfo))
-          as CustomLayerInfo; // ignore: deprecated_member_use
+          as CustomLayerInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CustomLayerInfo create() => CustomLayerInfo._();
   CustomLayerInfo createEmptyInstance() => create();
@@ -1587,6 +1575,47 @@ class CustomLayerInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CustomLayerInfo>(create);
   static CustomLayerInfo? _defaultInstance;
 
+  /// Encapsulates information about areas in the custom layer on the Route.
+  /// This field is only populated if a route travels through areas in the
+  /// custom layer.
   @$pb.TagNumber(1)
   $core.List<CustomLayerInfo_AreaInfo> get areaInfo => $_getList(0);
+
+  /// Total unique distance traveled across all activated areas in the provided
+  /// dataset (in meters). For example, if a route travels through the
+  /// intersection of area A and area B, the distance in the intersection region
+  /// is only added once to the `total_distance_in_areas_meters`.
+  @$pb.TagNumber(2)
+  $core.double get totalDistanceInAreasMeters => $_getN(1);
+  @$pb.TagNumber(2)
+  set totalDistanceInAreasMeters($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTotalDistanceInAreasMeters() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalDistanceInAreasMeters() => clearField(2);
+
+  /// Total time spent across all activated areas in the provided dataset.
+  /// For example, if a route travels through the intersection of area A and
+  /// area B, the time spent in the intersection region is only added once to the
+  /// `total_duration_in_areas`.
+  @$pb.TagNumber(3)
+  $0.Duration get totalDurationInAreas => $_getN(2);
+  @$pb.TagNumber(3)
+  set totalDurationInAreas($0.Duration v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasTotalDurationInAreas() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTotalDurationInAreas() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Duration ensureTotalDurationInAreas() => $_ensure(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

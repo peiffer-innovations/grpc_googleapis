@@ -1,66 +1,59 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/position.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// An abstraction for referring to a genomic position, in relation to some
+/// already known reference. For now, represents a genomic position as a
+/// reference name, a base number on that reference (0-based), and a
+/// determination of forward or reverse strand.
 class Position extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Position',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'referenceName')
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'position')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reverseStrand')
-    ..hasRequiredFields = false;
-
-  Position._() : super();
   factory Position({
     $core.String? referenceName,
     $fixnum.Int64? position,
     $core.bool? reverseStrand,
   }) {
-    final _result = create();
+    final $result = create();
     if (referenceName != null) {
-      _result.referenceName = referenceName;
+      $result.referenceName = referenceName;
     }
     if (position != null) {
-      _result.position = position;
+      $result.position = position;
     }
     if (reverseStrand != null) {
-      _result.reverseStrand = reverseStrand;
+      $result.reverseStrand = reverseStrand;
     }
-    return _result;
+    return $result;
   }
+  Position._() : super();
   factory Position.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Position.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Position',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'referenceName')
+    ..aInt64(2, _omitFieldNames ? '' : 'position')
+    ..aOB(3, _omitFieldNames ? '' : 'reverseStrand')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -69,9 +62,10 @@ class Position extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Position copyWith(void Function(Position) updates) =>
-      super.copyWith((message) => updates(message as Position))
-          as Position; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Position)) as Position;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Position create() => Position._();
   Position createEmptyInstance() => create();
@@ -81,6 +75,7 @@ class Position extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Position>(create);
   static Position? _defaultInstance;
 
+  /// The name of the reference in whatever reference set is being used.
   @$pb.TagNumber(1)
   $core.String get referenceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -93,6 +88,7 @@ class Position extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearReferenceName() => clearField(1);
 
+  /// The 0-based offset from the start of the forward strand for that reference.
   @$pb.TagNumber(2)
   $fixnum.Int64 get position => $_getI64(1);
   @$pb.TagNumber(2)
@@ -105,6 +101,8 @@ class Position extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPosition() => clearField(2);
 
+  /// Whether this position is on the reverse strand, as opposed to the forward
+  /// strand.
   @$pb.TagNumber(3)
   $core.bool get reverseStrand => $_getBF(2);
   @$pb.TagNumber(3)
@@ -117,3 +115,7 @@ class Position extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearReverseStrand() => clearField(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

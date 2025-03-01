@@ -1,30 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/cvss.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// CVSS Version.
 class CVSSVersion extends $pb.ProtobufEnum {
-  static const CVSSVersion CVSS_VERSION_UNSPECIFIED = CVSSVersion._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CVSS_VERSION_UNSPECIFIED');
-  static const CVSSVersion CVSS_VERSION_2 = CVSSVersion._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CVSS_VERSION_2');
-  static const CVSSVersion CVSS_VERSION_3 = CVSSVersion._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CVSS_VERSION_3');
+  static const CVSSVersion CVSS_VERSION_UNSPECIFIED =
+      CVSSVersion._(0, _omitEnumNames ? '' : 'CVSS_VERSION_UNSPECIFIED');
+  static const CVSSVersion CVSS_VERSION_2 =
+      CVSSVersion._(1, _omitEnumNames ? '' : 'CVSS_VERSION_2');
+  static const CVSSVersion CVSS_VERSION_3 =
+      CVSSVersion._(2, _omitEnumNames ? '' : 'CVSS_VERSION_3');
 
   static const $core.List<CVSSVersion> values = <CVSSVersion>[
     CVSS_VERSION_UNSPECIFIED,
@@ -42,33 +38,15 @@ class CVSSVersion extends $pb.ProtobufEnum {
 class CVSSv3_AttackVector extends $pb.ProtobufEnum {
   static const CVSSv3_AttackVector ATTACK_VECTOR_UNSPECIFIED =
       CVSSv3_AttackVector._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_VECTOR_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'ATTACK_VECTOR_UNSPECIFIED');
   static const CVSSv3_AttackVector ATTACK_VECTOR_NETWORK =
-      CVSSv3_AttackVector._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_VECTOR_NETWORK');
+      CVSSv3_AttackVector._(1, _omitEnumNames ? '' : 'ATTACK_VECTOR_NETWORK');
   static const CVSSv3_AttackVector ATTACK_VECTOR_ADJACENT =
-      CVSSv3_AttackVector._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_VECTOR_ADJACENT');
-  static const CVSSv3_AttackVector ATTACK_VECTOR_LOCAL = CVSSv3_AttackVector._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ATTACK_VECTOR_LOCAL');
+      CVSSv3_AttackVector._(2, _omitEnumNames ? '' : 'ATTACK_VECTOR_ADJACENT');
+  static const CVSSv3_AttackVector ATTACK_VECTOR_LOCAL =
+      CVSSv3_AttackVector._(3, _omitEnumNames ? '' : 'ATTACK_VECTOR_LOCAL');
   static const CVSSv3_AttackVector ATTACK_VECTOR_PHYSICAL =
-      CVSSv3_AttackVector._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_VECTOR_PHYSICAL');
+      CVSSv3_AttackVector._(4, _omitEnumNames ? '' : 'ATTACK_VECTOR_PHYSICAL');
 
   static const $core.List<CVSSv3_AttackVector> values = <CVSSv3_AttackVector>[
     ATTACK_VECTOR_UNSPECIFIED,
@@ -88,22 +66,13 @@ class CVSSv3_AttackVector extends $pb.ProtobufEnum {
 class CVSSv3_AttackComplexity extends $pb.ProtobufEnum {
   static const CVSSv3_AttackComplexity ATTACK_COMPLEXITY_UNSPECIFIED =
       CVSSv3_AttackComplexity._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_UNSPECIFIED');
   static const CVSSv3_AttackComplexity ATTACK_COMPLEXITY_LOW =
       CVSSv3_AttackComplexity._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_LOW');
+          1, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_LOW');
   static const CVSSv3_AttackComplexity ATTACK_COMPLEXITY_HIGH =
       CVSSv3_AttackComplexity._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_HIGH');
+          2, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_HIGH');
 
   static const $core.List<CVSSv3_AttackComplexity> values =
       <CVSSv3_AttackComplexity>[
@@ -122,28 +91,16 @@ class CVSSv3_AttackComplexity extends $pb.ProtobufEnum {
 class CVSSv3_PrivilegesRequired extends $pb.ProtobufEnum {
   static const CVSSv3_PrivilegesRequired PRIVILEGES_REQUIRED_UNSPECIFIED =
       CVSSv3_PrivilegesRequired._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_UNSPECIFIED');
   static const CVSSv3_PrivilegesRequired PRIVILEGES_REQUIRED_NONE =
       CVSSv3_PrivilegesRequired._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_NONE');
+          1, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_NONE');
   static const CVSSv3_PrivilegesRequired PRIVILEGES_REQUIRED_LOW =
       CVSSv3_PrivilegesRequired._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_LOW');
+          2, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_LOW');
   static const CVSSv3_PrivilegesRequired PRIVILEGES_REQUIRED_HIGH =
       CVSSv3_PrivilegesRequired._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_HIGH');
+          3, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_HIGH');
 
   static const $core.List<CVSSv3_PrivilegesRequired> values =
       <CVSSv3_PrivilegesRequired>[
@@ -163,22 +120,13 @@ class CVSSv3_PrivilegesRequired extends $pb.ProtobufEnum {
 class CVSSv3_UserInteraction extends $pb.ProtobufEnum {
   static const CVSSv3_UserInteraction USER_INTERACTION_UNSPECIFIED =
       CVSSv3_UserInteraction._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_INTERACTION_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'USER_INTERACTION_UNSPECIFIED');
   static const CVSSv3_UserInteraction USER_INTERACTION_NONE =
       CVSSv3_UserInteraction._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_INTERACTION_NONE');
+          1, _omitEnumNames ? '' : 'USER_INTERACTION_NONE');
   static const CVSSv3_UserInteraction USER_INTERACTION_REQUIRED =
       CVSSv3_UserInteraction._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_INTERACTION_REQUIRED');
+          2, _omitEnumNames ? '' : 'USER_INTERACTION_REQUIRED');
 
   static const $core.List<CVSSv3_UserInteraction> values =
       <CVSSv3_UserInteraction>[
@@ -195,21 +143,12 @@ class CVSSv3_UserInteraction extends $pb.ProtobufEnum {
 }
 
 class CVSSv3_Scope extends $pb.ProtobufEnum {
-  static const CVSSv3_Scope SCOPE_UNSPECIFIED = CVSSv3_Scope._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCOPE_UNSPECIFIED');
-  static const CVSSv3_Scope SCOPE_UNCHANGED = CVSSv3_Scope._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCOPE_UNCHANGED');
-  static const CVSSv3_Scope SCOPE_CHANGED = CVSSv3_Scope._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCOPE_CHANGED');
+  static const CVSSv3_Scope SCOPE_UNSPECIFIED =
+      CVSSv3_Scope._(0, _omitEnumNames ? '' : 'SCOPE_UNSPECIFIED');
+  static const CVSSv3_Scope SCOPE_UNCHANGED =
+      CVSSv3_Scope._(1, _omitEnumNames ? '' : 'SCOPE_UNCHANGED');
+  static const CVSSv3_Scope SCOPE_CHANGED =
+      CVSSv3_Scope._(2, _omitEnumNames ? '' : 'SCOPE_CHANGED');
 
   static const $core.List<CVSSv3_Scope> values = <CVSSv3_Scope>[
     SCOPE_UNSPECIFIED,
@@ -225,26 +164,14 @@ class CVSSv3_Scope extends $pb.ProtobufEnum {
 }
 
 class CVSSv3_Impact extends $pb.ProtobufEnum {
-  static const CVSSv3_Impact IMPACT_UNSPECIFIED = CVSSv3_Impact._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_UNSPECIFIED');
-  static const CVSSv3_Impact IMPACT_HIGH = CVSSv3_Impact._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_HIGH');
-  static const CVSSv3_Impact IMPACT_LOW = CVSSv3_Impact._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_LOW');
-  static const CVSSv3_Impact IMPACT_NONE = CVSSv3_Impact._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_NONE');
+  static const CVSSv3_Impact IMPACT_UNSPECIFIED =
+      CVSSv3_Impact._(0, _omitEnumNames ? '' : 'IMPACT_UNSPECIFIED');
+  static const CVSSv3_Impact IMPACT_HIGH =
+      CVSSv3_Impact._(1, _omitEnumNames ? '' : 'IMPACT_HIGH');
+  static const CVSSv3_Impact IMPACT_LOW =
+      CVSSv3_Impact._(2, _omitEnumNames ? '' : 'IMPACT_LOW');
+  static const CVSSv3_Impact IMPACT_NONE =
+      CVSSv3_Impact._(3, _omitEnumNames ? '' : 'IMPACT_NONE');
 
   static const $core.List<CVSSv3_Impact> values = <CVSSv3_Impact>[
     IMPACT_UNSPECIFIED,
@@ -262,31 +189,15 @@ class CVSSv3_Impact extends $pb.ProtobufEnum {
 
 class CVSS_AttackVector extends $pb.ProtobufEnum {
   static const CVSS_AttackVector ATTACK_VECTOR_UNSPECIFIED =
-      CVSS_AttackVector._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_VECTOR_UNSPECIFIED');
-  static const CVSS_AttackVector ATTACK_VECTOR_NETWORK = CVSS_AttackVector._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ATTACK_VECTOR_NETWORK');
-  static const CVSS_AttackVector ATTACK_VECTOR_ADJACENT = CVSS_AttackVector._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ATTACK_VECTOR_ADJACENT');
-  static const CVSS_AttackVector ATTACK_VECTOR_LOCAL = CVSS_AttackVector._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ATTACK_VECTOR_LOCAL');
-  static const CVSS_AttackVector ATTACK_VECTOR_PHYSICAL = CVSS_AttackVector._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ATTACK_VECTOR_PHYSICAL');
+      CVSS_AttackVector._(0, _omitEnumNames ? '' : 'ATTACK_VECTOR_UNSPECIFIED');
+  static const CVSS_AttackVector ATTACK_VECTOR_NETWORK =
+      CVSS_AttackVector._(1, _omitEnumNames ? '' : 'ATTACK_VECTOR_NETWORK');
+  static const CVSS_AttackVector ATTACK_VECTOR_ADJACENT =
+      CVSS_AttackVector._(2, _omitEnumNames ? '' : 'ATTACK_VECTOR_ADJACENT');
+  static const CVSS_AttackVector ATTACK_VECTOR_LOCAL =
+      CVSS_AttackVector._(3, _omitEnumNames ? '' : 'ATTACK_VECTOR_LOCAL');
+  static const CVSS_AttackVector ATTACK_VECTOR_PHYSICAL =
+      CVSS_AttackVector._(4, _omitEnumNames ? '' : 'ATTACK_VECTOR_PHYSICAL');
 
   static const $core.List<CVSS_AttackVector> values = <CVSS_AttackVector>[
     ATTACK_VECTOR_UNSPECIFIED,
@@ -306,28 +217,15 @@ class CVSS_AttackVector extends $pb.ProtobufEnum {
 class CVSS_AttackComplexity extends $pb.ProtobufEnum {
   static const CVSS_AttackComplexity ATTACK_COMPLEXITY_UNSPECIFIED =
       CVSS_AttackComplexity._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_UNSPECIFIED');
   static const CVSS_AttackComplexity ATTACK_COMPLEXITY_LOW =
-      CVSS_AttackComplexity._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_LOW');
+      CVSS_AttackComplexity._(1, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_LOW');
   static const CVSS_AttackComplexity ATTACK_COMPLEXITY_HIGH =
       CVSS_AttackComplexity._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_HIGH');
+          2, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_HIGH');
   static const CVSS_AttackComplexity ATTACK_COMPLEXITY_MEDIUM =
       CVSS_AttackComplexity._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ATTACK_COMPLEXITY_MEDIUM');
+          3, _omitEnumNames ? '' : 'ATTACK_COMPLEXITY_MEDIUM');
 
   static const $core.List<CVSS_AttackComplexity> values =
       <CVSS_AttackComplexity>[
@@ -347,27 +245,13 @@ class CVSS_AttackComplexity extends $pb.ProtobufEnum {
 class CVSS_Authentication extends $pb.ProtobufEnum {
   static const CVSS_Authentication AUTHENTICATION_UNSPECIFIED =
       CVSS_Authentication._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTHENTICATION_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'AUTHENTICATION_UNSPECIFIED');
   static const CVSS_Authentication AUTHENTICATION_MULTIPLE =
-      CVSS_Authentication._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTHENTICATION_MULTIPLE');
+      CVSS_Authentication._(1, _omitEnumNames ? '' : 'AUTHENTICATION_MULTIPLE');
   static const CVSS_Authentication AUTHENTICATION_SINGLE =
-      CVSS_Authentication._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTHENTICATION_SINGLE');
-  static const CVSS_Authentication AUTHENTICATION_NONE = CVSS_Authentication._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'AUTHENTICATION_NONE');
+      CVSS_Authentication._(2, _omitEnumNames ? '' : 'AUTHENTICATION_SINGLE');
+  static const CVSS_Authentication AUTHENTICATION_NONE =
+      CVSS_Authentication._(3, _omitEnumNames ? '' : 'AUTHENTICATION_NONE');
 
   static const $core.List<CVSS_Authentication> values = <CVSS_Authentication>[
     AUTHENTICATION_UNSPECIFIED,
@@ -386,28 +270,16 @@ class CVSS_Authentication extends $pb.ProtobufEnum {
 class CVSS_PrivilegesRequired extends $pb.ProtobufEnum {
   static const CVSS_PrivilegesRequired PRIVILEGES_REQUIRED_UNSPECIFIED =
       CVSS_PrivilegesRequired._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_UNSPECIFIED');
   static const CVSS_PrivilegesRequired PRIVILEGES_REQUIRED_NONE =
       CVSS_PrivilegesRequired._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_NONE');
+          1, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_NONE');
   static const CVSS_PrivilegesRequired PRIVILEGES_REQUIRED_LOW =
       CVSS_PrivilegesRequired._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_LOW');
+          2, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_LOW');
   static const CVSS_PrivilegesRequired PRIVILEGES_REQUIRED_HIGH =
       CVSS_PrivilegesRequired._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PRIVILEGES_REQUIRED_HIGH');
+          3, _omitEnumNames ? '' : 'PRIVILEGES_REQUIRED_HIGH');
 
   static const $core.List<CVSS_PrivilegesRequired> values =
       <CVSS_PrivilegesRequired>[
@@ -427,22 +299,12 @@ class CVSS_PrivilegesRequired extends $pb.ProtobufEnum {
 class CVSS_UserInteraction extends $pb.ProtobufEnum {
   static const CVSS_UserInteraction USER_INTERACTION_UNSPECIFIED =
       CVSS_UserInteraction._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_INTERACTION_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'USER_INTERACTION_UNSPECIFIED');
   static const CVSS_UserInteraction USER_INTERACTION_NONE =
-      CVSS_UserInteraction._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_INTERACTION_NONE');
+      CVSS_UserInteraction._(1, _omitEnumNames ? '' : 'USER_INTERACTION_NONE');
   static const CVSS_UserInteraction USER_INTERACTION_REQUIRED =
       CVSS_UserInteraction._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'USER_INTERACTION_REQUIRED');
+          2, _omitEnumNames ? '' : 'USER_INTERACTION_REQUIRED');
 
   static const $core.List<CVSS_UserInteraction> values = <CVSS_UserInteraction>[
     USER_INTERACTION_UNSPECIFIED,
@@ -458,21 +320,12 @@ class CVSS_UserInteraction extends $pb.ProtobufEnum {
 }
 
 class CVSS_Scope extends $pb.ProtobufEnum {
-  static const CVSS_Scope SCOPE_UNSPECIFIED = CVSS_Scope._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCOPE_UNSPECIFIED');
-  static const CVSS_Scope SCOPE_UNCHANGED = CVSS_Scope._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCOPE_UNCHANGED');
-  static const CVSS_Scope SCOPE_CHANGED = CVSS_Scope._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SCOPE_CHANGED');
+  static const CVSS_Scope SCOPE_UNSPECIFIED =
+      CVSS_Scope._(0, _omitEnumNames ? '' : 'SCOPE_UNSPECIFIED');
+  static const CVSS_Scope SCOPE_UNCHANGED =
+      CVSS_Scope._(1, _omitEnumNames ? '' : 'SCOPE_UNCHANGED');
+  static const CVSS_Scope SCOPE_CHANGED =
+      CVSS_Scope._(2, _omitEnumNames ? '' : 'SCOPE_CHANGED');
 
   static const $core.List<CVSS_Scope> values = <CVSS_Scope>[
     SCOPE_UNSPECIFIED,
@@ -488,36 +341,18 @@ class CVSS_Scope extends $pb.ProtobufEnum {
 }
 
 class CVSS_Impact extends $pb.ProtobufEnum {
-  static const CVSS_Impact IMPACT_UNSPECIFIED = CVSS_Impact._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_UNSPECIFIED');
-  static const CVSS_Impact IMPACT_HIGH = CVSS_Impact._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_HIGH');
-  static const CVSS_Impact IMPACT_LOW = CVSS_Impact._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_LOW');
-  static const CVSS_Impact IMPACT_NONE = CVSS_Impact._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_NONE');
-  static const CVSS_Impact IMPACT_PARTIAL = CVSS_Impact._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_PARTIAL');
-  static const CVSS_Impact IMPACT_COMPLETE = CVSS_Impact._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'IMPACT_COMPLETE');
+  static const CVSS_Impact IMPACT_UNSPECIFIED =
+      CVSS_Impact._(0, _omitEnumNames ? '' : 'IMPACT_UNSPECIFIED');
+  static const CVSS_Impact IMPACT_HIGH =
+      CVSS_Impact._(1, _omitEnumNames ? '' : 'IMPACT_HIGH');
+  static const CVSS_Impact IMPACT_LOW =
+      CVSS_Impact._(2, _omitEnumNames ? '' : 'IMPACT_LOW');
+  static const CVSS_Impact IMPACT_NONE =
+      CVSS_Impact._(3, _omitEnumNames ? '' : 'IMPACT_NONE');
+  static const CVSS_Impact IMPACT_PARTIAL =
+      CVSS_Impact._(4, _omitEnumNames ? '' : 'IMPACT_PARTIAL');
+  static const CVSS_Impact IMPACT_COMPLETE =
+      CVSS_Impact._(5, _omitEnumNames ? '' : 'IMPACT_COMPLETE');
 
   static const $core.List<CVSS_Impact> values = <CVSS_Impact>[
     IMPACT_UNSPECIFIED,
@@ -534,3 +369,5 @@ class CVSS_Impact extends $pb.ProtobufEnum {
 
   const CVSS_Impact._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

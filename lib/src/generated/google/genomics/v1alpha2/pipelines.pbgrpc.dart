@@ -1,20 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/genomics/v1alpha2/pipelines.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'pipelines.pb.dart' as $2;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../longrunning/operations.pb.dart' as $0;
 import '../../protobuf/empty.pb.dart' as $1;
+import 'pipelines.pb.dart' as $2;
+
 export 'pipelines.pb.dart';
 
+@$pb.GrpcServiceName('google.genomics.v1alpha2.PipelinesV1Alpha2')
 class PipelinesV1Alpha2Client extends $grpc.Client {
   static final _$createPipeline =
       $grpc.ClientMethod<$2.CreatePipelineRequest, $2.Pipeline>(
@@ -100,6 +107,7 @@ class PipelinesV1Alpha2Client extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.genomics.v1alpha2.PipelinesV1Alpha2')
 abstract class PipelinesV1Alpha2ServiceBase extends $grpc.Service {
   $core.String get $name => 'google.genomics.v1alpha2.PipelinesV1Alpha2';
 

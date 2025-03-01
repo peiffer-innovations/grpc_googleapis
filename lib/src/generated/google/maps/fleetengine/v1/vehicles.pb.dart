@@ -1,60 +1,57 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/v1/vehicles.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'fleetengine.pb.dart' as $0;
 import '../../../protobuf/timestamp.pb.dart' as $1;
 import '../../../protobuf/wrappers.pb.dart' as $2;
-
-import 'vehicles.pbenum.dart';
+import 'fleetengine.pb.dart' as $0;
 import 'fleetengine.pbenum.dart' as $0;
+import 'vehicles.pbenum.dart';
 
 export 'vehicles.pbenum.dart';
 
+/// The type of vehicle.
 class Vehicle_VehicleType extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Vehicle.VehicleType',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..e<Vehicle_VehicleType_Category>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'category',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Vehicle_VehicleType_Category.UNKNOWN,
-        valueOf: Vehicle_VehicleType_Category.valueOf,
-        enumValues: Vehicle_VehicleType_Category.values)
-    ..hasRequiredFields = false;
-
-  Vehicle_VehicleType._() : super();
   factory Vehicle_VehicleType({
     Vehicle_VehicleType_Category? category,
   }) {
-    final _result = create();
+    final $result = create();
     if (category != null) {
-      _result.category = category;
+      $result.category = category;
     }
-    return _result;
+    return $result;
   }
+  Vehicle_VehicleType._() : super();
   factory Vehicle_VehicleType.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Vehicle_VehicleType.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Vehicle.VehicleType',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..e<Vehicle_VehicleType_Category>(
+        1, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE,
+        defaultOrMaker: Vehicle_VehicleType_Category.UNKNOWN,
+        valueOf: Vehicle_VehicleType_Category.valueOf,
+        enumValues: Vehicle_VehicleType_Category.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -64,8 +61,10 @@ class Vehicle_VehicleType extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Vehicle_VehicleType copyWith(void Function(Vehicle_VehicleType) updates) =>
       super.copyWith((message) => updates(message as Vehicle_VehicleType))
-          as Vehicle_VehicleType; // ignore: deprecated_member_use
+          as Vehicle_VehicleType;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Vehicle_VehicleType create() => Vehicle_VehicleType._();
   Vehicle_VehicleType createEmptyInstance() => create();
@@ -76,6 +75,7 @@ class Vehicle_VehicleType extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Vehicle_VehicleType>(create);
   static Vehicle_VehicleType? _defaultInstance;
 
+  /// Vehicle type category
   @$pb.TagNumber(1)
   Vehicle_VehicleType_Category get category => $_getN(0);
   @$pb.TagNumber(1)
@@ -89,159 +89,8 @@ class Vehicle_VehicleType extends $pb.GeneratedMessage {
   void clearCategory() => clearField(1);
 }
 
+/// Vehicle metadata.
 class Vehicle extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Vehicle',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<VehicleState>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vehicleState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: VehicleState.UNKNOWN_VEHICLE_STATE,
-        valueOf: VehicleState.valueOf,
-        enumValues: VehicleState.values)
-    ..pc<$0.TripType>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'supportedTripTypes',
-        $pb.PbFieldType.KE,
-        valueOf: $0.TripType.valueOf,
-        enumValues: $0.TripType.values,
-        defaultEnumValue: $0.TripType.UNKNOWN_TRIP_TYPE)
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentTrips')
-    ..aOM<$0.VehicleLocation>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastLocation',
-        subBuilder: $0.VehicleLocation.create)
-    ..a<$core.int>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maximumCapacity',
-        $pb.PbFieldType.O3)
-    ..pc<$0.VehicleAttribute>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'attributes',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.VehicleAttribute.create)
-    ..aOM<Vehicle_VehicleType>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vehicleType',
-        subBuilder: Vehicle_VehicleType.create)
-    ..aOM<LicensePlate>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'licensePlate',
-        subBuilder: LicensePlate.create)
-    ..pc<$0.TerminalLocation>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'route',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.TerminalLocation.create)
-    ..aOM<$1.Timestamp>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentRouteSegmentVersion',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'waypointsVersion',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$2.Int32Value>(
-        18,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remainingDistanceMeters',
-        subBuilder: $2.Int32Value.create)
-    ..aOM<$1.Timestamp>(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etaToFirstWaypoint',
-        subBuilder: $1.Timestamp.create)
-    ..aOS(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentRouteSegment')
-    ..pc<$0.TripWaypoint>(
-        22,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'waypoints',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.TripWaypoint.create)
-    ..aOB(
-        23,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'backToBackEnabled')
-    ..aOM<$0.TripWaypoint>(
-        24,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentRouteSegmentEndPoint',
-        subBuilder: $0.TripWaypoint.create)
-    ..aOM<$2.Int32Value>(
-        25,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'remainingTimeSeconds',
-        subBuilder: $2.Int32Value.create)
-    ..e<$0.NavigationStatus>(
-        26,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'navigationStatus',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $0.NavigationStatus.UNKNOWN_NAVIGATION_STATUS,
-        valueOf: $0.NavigationStatus.valueOf,
-        enumValues: $0.NavigationStatus.values)
-    ..aOM<DeviceSettings>(
-        27,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deviceSettings',
-        subBuilder: DeviceSettings.create)
-    ..aOM<TrafficPolylineData>(
-        28,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentRouteSegmentTraffic',
-        subBuilder: TrafficPolylineData.create)
-    ..hasRequiredFields = false;
-
-  Vehicle._() : super();
   factory Vehicle({
     $core.String? name,
     VehicleState? vehicleState,
@@ -266,83 +115,153 @@ class Vehicle extends $pb.GeneratedMessage {
     $0.NavigationStatus? navigationStatus,
     DeviceSettings? deviceSettings,
     TrafficPolylineData? currentRouteSegmentTraffic,
+    $core.Iterable<$0.VehicleLocation>? pastLocations,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (vehicleState != null) {
-      _result.vehicleState = vehicleState;
+      $result.vehicleState = vehicleState;
     }
     if (supportedTripTypes != null) {
-      _result.supportedTripTypes.addAll(supportedTripTypes);
+      $result.supportedTripTypes.addAll(supportedTripTypes);
     }
     if (currentTrips != null) {
-      _result.currentTrips.addAll(currentTrips);
+      $result.currentTrips.addAll(currentTrips);
     }
     if (lastLocation != null) {
-      _result.lastLocation = lastLocation;
+      $result.lastLocation = lastLocation;
     }
     if (maximumCapacity != null) {
-      _result.maximumCapacity = maximumCapacity;
+      $result.maximumCapacity = maximumCapacity;
     }
     if (attributes != null) {
-      _result.attributes.addAll(attributes);
+      $result.attributes.addAll(attributes);
     }
     if (vehicleType != null) {
-      _result.vehicleType = vehicleType;
+      $result.vehicleType = vehicleType;
     }
     if (licensePlate != null) {
-      _result.licensePlate = licensePlate;
+      $result.licensePlate = licensePlate;
     }
     if (route != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.route.addAll(route);
+      $result.route.addAll(route);
     }
     if (currentRouteSegmentVersion != null) {
-      _result.currentRouteSegmentVersion = currentRouteSegmentVersion;
+      $result.currentRouteSegmentVersion = currentRouteSegmentVersion;
     }
     if (waypointsVersion != null) {
-      _result.waypointsVersion = waypointsVersion;
+      $result.waypointsVersion = waypointsVersion;
     }
     if (remainingDistanceMeters != null) {
-      _result.remainingDistanceMeters = remainingDistanceMeters;
+      $result.remainingDistanceMeters = remainingDistanceMeters;
     }
     if (etaToFirstWaypoint != null) {
-      _result.etaToFirstWaypoint = etaToFirstWaypoint;
+      $result.etaToFirstWaypoint = etaToFirstWaypoint;
     }
     if (currentRouteSegment != null) {
-      _result.currentRouteSegment = currentRouteSegment;
+      $result.currentRouteSegment = currentRouteSegment;
     }
     if (waypoints != null) {
-      _result.waypoints.addAll(waypoints);
+      $result.waypoints.addAll(waypoints);
     }
     if (backToBackEnabled != null) {
-      _result.backToBackEnabled = backToBackEnabled;
+      $result.backToBackEnabled = backToBackEnabled;
     }
     if (currentRouteSegmentEndPoint != null) {
-      _result.currentRouteSegmentEndPoint = currentRouteSegmentEndPoint;
+      $result.currentRouteSegmentEndPoint = currentRouteSegmentEndPoint;
     }
     if (remainingTimeSeconds != null) {
-      _result.remainingTimeSeconds = remainingTimeSeconds;
+      $result.remainingTimeSeconds = remainingTimeSeconds;
     }
     if (navigationStatus != null) {
-      _result.navigationStatus = navigationStatus;
+      $result.navigationStatus = navigationStatus;
     }
     if (deviceSettings != null) {
-      _result.deviceSettings = deviceSettings;
+      $result.deviceSettings = deviceSettings;
     }
     if (currentRouteSegmentTraffic != null) {
-      _result.currentRouteSegmentTraffic = currentRouteSegmentTraffic;
+      $result.currentRouteSegmentTraffic = currentRouteSegmentTraffic;
     }
-    return _result;
+    if (pastLocations != null) {
+      $result.pastLocations.addAll(pastLocations);
+    }
+    return $result;
   }
+  Vehicle._() : super();
   factory Vehicle.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Vehicle.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Vehicle',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<VehicleState>(
+        2, _omitFieldNames ? '' : 'vehicleState', $pb.PbFieldType.OE,
+        defaultOrMaker: VehicleState.UNKNOWN_VEHICLE_STATE,
+        valueOf: VehicleState.valueOf,
+        enumValues: VehicleState.values)
+    ..pc<$0.TripType>(
+        3, _omitFieldNames ? '' : 'supportedTripTypes', $pb.PbFieldType.KE,
+        valueOf: $0.TripType.valueOf,
+        enumValues: $0.TripType.values,
+        defaultEnumValue: $0.TripType.UNKNOWN_TRIP_TYPE)
+    ..pPS(4, _omitFieldNames ? '' : 'currentTrips')
+    ..aOM<$0.VehicleLocation>(5, _omitFieldNames ? '' : 'lastLocation',
+        subBuilder: $0.VehicleLocation.create)
+    ..a<$core.int>(
+        6, _omitFieldNames ? '' : 'maximumCapacity', $pb.PbFieldType.O3)
+    ..pc<$0.VehicleAttribute>(
+        8, _omitFieldNames ? '' : 'attributes', $pb.PbFieldType.PM,
+        subBuilder: $0.VehicleAttribute.create)
+    ..aOM<Vehicle_VehicleType>(9, _omitFieldNames ? '' : 'vehicleType',
+        subBuilder: Vehicle_VehicleType.create)
+    ..aOM<LicensePlate>(10, _omitFieldNames ? '' : 'licensePlate',
+        subBuilder: LicensePlate.create)
+    ..pc<$0.TerminalLocation>(
+        12, _omitFieldNames ? '' : 'route', $pb.PbFieldType.PM,
+        subBuilder: $0.TerminalLocation.create)
+    ..aOM<$1.Timestamp>(15, _omitFieldNames ? '' : 'currentRouteSegmentVersion',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(16, _omitFieldNames ? '' : 'waypointsVersion',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$2.Int32Value>(18, _omitFieldNames ? '' : 'remainingDistanceMeters',
+        subBuilder: $2.Int32Value.create)
+    ..aOM<$1.Timestamp>(19, _omitFieldNames ? '' : 'etaToFirstWaypoint',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(20, _omitFieldNames ? '' : 'currentRouteSegment')
+    ..pc<$0.TripWaypoint>(
+        22, _omitFieldNames ? '' : 'waypoints', $pb.PbFieldType.PM,
+        subBuilder: $0.TripWaypoint.create)
+    ..aOB(23, _omitFieldNames ? '' : 'backToBackEnabled')
+    ..aOM<$0.TripWaypoint>(
+        24, _omitFieldNames ? '' : 'currentRouteSegmentEndPoint',
+        subBuilder: $0.TripWaypoint.create)
+    ..aOM<$2.Int32Value>(25, _omitFieldNames ? '' : 'remainingTimeSeconds',
+        subBuilder: $2.Int32Value.create)
+    ..e<$0.NavigationStatus>(
+        26, _omitFieldNames ? '' : 'navigationStatus', $pb.PbFieldType.OE,
+        defaultOrMaker: $0.NavigationStatus.UNKNOWN_NAVIGATION_STATUS,
+        valueOf: $0.NavigationStatus.valueOf,
+        enumValues: $0.NavigationStatus.values)
+    ..aOM<DeviceSettings>(27, _omitFieldNames ? '' : 'deviceSettings',
+        subBuilder: DeviceSettings.create)
+    ..aOM<TrafficPolylineData>(
+        28, _omitFieldNames ? '' : 'currentRouteSegmentTraffic',
+        subBuilder: TrafficPolylineData.create)
+    ..pc<$0.VehicleLocation>(
+        30, _omitFieldNames ? '' : 'pastLocations', $pb.PbFieldType.PM,
+        subBuilder: $0.VehicleLocation.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -351,9 +270,10 @@ class Vehicle extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Vehicle copyWith(void Function(Vehicle) updates) =>
-      super.copyWith((message) => updates(message as Vehicle))
-          as Vehicle; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Vehicle)) as Vehicle;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Vehicle create() => Vehicle._();
   Vehicle createEmptyInstance() => create();
@@ -363,6 +283,8 @@ class Vehicle extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Vehicle>(create);
   static Vehicle? _defaultInstance;
 
+  /// Output only. The unique name for this vehicle.
+  /// The format is `providers/{provider}/vehicles/{vehicle}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -375,6 +297,7 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The vehicle state.
   @$pb.TagNumber(2)
   VehicleState get vehicleState => $_getN(1);
   @$pb.TagNumber(2)
@@ -387,12 +310,16 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVehicleState() => clearField(2);
 
+  /// Trip types supported by this vehicle.
   @$pb.TagNumber(3)
   $core.List<$0.TripType> get supportedTripTypes => $_getList(2);
 
+  /// Output only. List of `trip_id`'s for trips currently assigned to this
+  /// vehicle.
   @$pb.TagNumber(4)
   $core.List<$core.String> get currentTrips => $_getList(3);
 
+  /// Last reported location of the vehicle.
   @$pb.TagNumber(5)
   $0.VehicleLocation get lastLocation => $_getN(4);
   @$pb.TagNumber(5)
@@ -407,6 +334,8 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.VehicleLocation ensureLastLocation() => $_ensure(4);
 
+  /// The total numbers of riders this vehicle can carry.  The driver is not
+  /// considered in this value. This value must be greater than or equal to one.
   @$pb.TagNumber(6)
   $core.int get maximumCapacity => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -419,9 +348,13 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearMaximumCapacity() => clearField(6);
 
+  /// List of vehicle attributes. A vehicle can have at most 100
+  /// attributes, and each attribute must have a unique key.
   @$pb.TagNumber(8)
   $core.List<$0.VehicleAttribute> get attributes => $_getList(6);
 
+  /// Required. The type of this vehicle.  Can be used to filter vehicles in
+  /// `SearchVehicles` results.  Also influences ETA and route calculations.
   @$pb.TagNumber(9)
   Vehicle_VehicleType get vehicleType => $_getN(7);
   @$pb.TagNumber(9)
@@ -436,6 +369,7 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   Vehicle_VehicleType ensureVehicleType() => $_ensure(7);
 
+  /// License plate information for the vehicle.
   @$pb.TagNumber(10)
   LicensePlate get licensePlate => $_getN(8);
   @$pb.TagNumber(10)
@@ -450,10 +384,14 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   LicensePlate ensureLicensePlate() => $_ensure(8);
 
+  /// Deprecated: Use `Vehicle.waypoints` instead.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(12)
   $core.List<$0.TerminalLocation> get route => $_getList(9);
 
+  /// Output only. Time when `current_route_segment` was set. It can be stored by
+  /// the client and passed in future `GetVehicle` requests to prevent returning
+  /// routes that haven't changed.
   @$pb.TagNumber(15)
   $1.Timestamp get currentRouteSegmentVersion => $_getN(10);
   @$pb.TagNumber(15)
@@ -468,6 +406,9 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $1.Timestamp ensureCurrentRouteSegmentVersion() => $_ensure(10);
 
+  /// Output only. Last time the `waypoints` field was updated. Clients should
+  /// cache this value and pass it in `GetVehicleRequest` to ensure the
+  /// `waypoints` field is only returned if it is updated.
   @$pb.TagNumber(16)
   $1.Timestamp get waypointsVersion => $_getN(11);
   @$pb.TagNumber(16)
@@ -482,6 +423,10 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $1.Timestamp ensureWaypointsVersion() => $_ensure(11);
 
+  /// The remaining driving distance for the `current_route_segment`.
+  /// This value is also returned in `Trip.remaining_distance_meters` for all
+  /// active trips assigned to the vehicle. The value is unspecified if the
+  /// `current_route_segment` field is empty.
   @$pb.TagNumber(18)
   $2.Int32Value get remainingDistanceMeters => $_getN(12);
   @$pb.TagNumber(18)
@@ -496,6 +441,12 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $2.Int32Value ensureRemainingDistanceMeters() => $_ensure(12);
 
+  ///  The ETA to the first entry in the `waypoints` field.  The value is
+  ///  unspecified if the `waypoints` field is empty or the
+  ///  `Vehicle.current_route_segment` field is empty.
+  ///
+  ///  When updating a vehicle, `remaining_time_seconds` takes precedence over
+  ///  `eta_to_first_waypoint` in the same request.
   @$pb.TagNumber(19)
   $1.Timestamp get etaToFirstWaypoint => $_getN(13);
   @$pb.TagNumber(19)
@@ -510,6 +461,12 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   $1.Timestamp ensureEtaToFirstWaypoint() => $_ensure(13);
 
+  ///  The polyline specifying the route the driver app intends to take to
+  ///  the next waypoint. This list is also returned in
+  ///  `Trip.current_route_segment` for all active trips assigned to the vehicle.
+  ///
+  ///  Note: This field is intended only for use by the Driver SDK. Decoding is
+  ///  not yet supported.
   @$pb.TagNumber(20)
   $core.String get currentRouteSegment => $_getSZ(14);
   @$pb.TagNumber(20)
@@ -522,9 +479,13 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   void clearCurrentRouteSegment() => clearField(20);
 
+  /// The remaining waypoints assigned to this Vehicle.
   @$pb.TagNumber(22)
   $core.List<$0.TripWaypoint> get waypoints => $_getList(15);
 
+  /// Indicates if the driver accepts back-to-back trips. If `true`,
+  /// `SearchVehicles` may include the vehicle even if it is currently assigned
+  /// to a trip. The default value is `false`.
   @$pb.TagNumber(23)
   $core.bool get backToBackEnabled => $_getBF(16);
   @$pb.TagNumber(23)
@@ -537,6 +498,12 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   void clearBackToBackEnabled() => clearField(23);
 
+  /// The waypoint where `current_route_segment` ends. This can be supplied by
+  /// drivers on `UpdateVehicle` calls either as a full trip waypoint, a waypoint
+  /// `LatLng`, or as the last `LatLng` of the `current_route_segment`. Fleet
+  /// Engine will then do its best to interpolate to an actual waypoint if it is
+  /// not fully specified. This field is ignored in `UpdateVehicle` calls unless
+  /// `current_route_segment` is also specified.
   @$pb.TagNumber(24)
   $0.TripWaypoint get currentRouteSegmentEndPoint => $_getN(17);
   @$pb.TagNumber(24)
@@ -551,6 +518,14 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   $0.TripWaypoint ensureCurrentRouteSegmentEndPoint() => $_ensure(17);
 
+  ///  Input only. The remaining driving time for the `current_route_segment`. The
+  ///  value is unspecified if the `waypoints` field is empty or the
+  ///  `Vehicle.current_route_segment` field is empty. This value should match
+  ///  `eta_to_first_waypoint` - `current_time` if all parties are using the same
+  ///  clock.
+  ///
+  ///  When updating a vehicle, `remaining_time_seconds` takes precedence over
+  ///  `eta_to_first_waypoint` in the same request.
   @$pb.TagNumber(25)
   $2.Int32Value get remainingTimeSeconds => $_getN(18);
   @$pb.TagNumber(25)
@@ -565,6 +540,7 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(25)
   $2.Int32Value ensureRemainingTimeSeconds() => $_ensure(18);
 
+  /// The vehicle's navigation status.
   @$pb.TagNumber(26)
   $0.NavigationStatus get navigationStatus => $_getN(19);
   @$pb.TagNumber(26)
@@ -577,6 +553,8 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(26)
   void clearNavigationStatus() => clearField(26);
 
+  /// Input only. Information about settings in the mobile device being used by
+  /// the driver.
   @$pb.TagNumber(27)
   DeviceSettings get deviceSettings => $_getN(20);
   @$pb.TagNumber(27)
@@ -591,6 +569,8 @@ class Vehicle extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   DeviceSettings ensureDeviceSettings() => $_ensure(20);
 
+  /// Input only. Fleet Engine uses this information to improve journey sharing.
+  /// Note: This field is intended only for use by the Driver SDK.
   @$pb.TagNumber(28)
   TrafficPolylineData get currentRouteSegmentTraffic => $_getN(21);
   @$pb.TagNumber(28)
@@ -604,68 +584,62 @@ class Vehicle extends $pb.GeneratedMessage {
   void clearCurrentRouteSegmentTraffic() => clearField(28);
   @$pb.TagNumber(28)
   TrafficPolylineData ensureCurrentRouteSegmentTraffic() => $_ensure(21);
+
+  /// Input only. Locations where this vehicle has been in the past that haven't
+  /// yet been reported to Fleet Engine. This is used in `UpdateVehicleRequest`
+  /// to record locations which were previously unable to be sent to the server.
+  /// Typically this happens when the vehicle does not have internet
+  /// connectivity.
+  @$pb.TagNumber(30)
+  $core.List<$0.VehicleLocation> get pastLocations => $_getList(22);
 }
 
+/// Information about the device's battery.
 class BatteryInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatteryInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..e<BatteryStatus>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'batteryStatus',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: BatteryStatus.UNKNOWN_BATTERY_STATUS,
-        valueOf: BatteryStatus.valueOf,
-        enumValues: BatteryStatus.values)
-    ..e<PowerSource>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'powerSource',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: PowerSource.UNKNOWN_POWER_SOURCE,
-        valueOf: PowerSource.valueOf,
-        enumValues: PowerSource.values)
-    ..a<$core.double>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'batteryPercentage',
-        $pb.PbFieldType.OF)
-    ..hasRequiredFields = false;
-
-  BatteryInfo._() : super();
   factory BatteryInfo({
     BatteryStatus? batteryStatus,
     PowerSource? powerSource,
     $core.double? batteryPercentage,
   }) {
-    final _result = create();
+    final $result = create();
     if (batteryStatus != null) {
-      _result.batteryStatus = batteryStatus;
+      $result.batteryStatus = batteryStatus;
     }
     if (powerSource != null) {
-      _result.powerSource = powerSource;
+      $result.powerSource = powerSource;
     }
     if (batteryPercentage != null) {
-      _result.batteryPercentage = batteryPercentage;
+      $result.batteryPercentage = batteryPercentage;
     }
-    return _result;
+    return $result;
   }
+  BatteryInfo._() : super();
   factory BatteryInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatteryInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatteryInfo',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..e<BatteryStatus>(
+        1, _omitFieldNames ? '' : 'batteryStatus', $pb.PbFieldType.OE,
+        defaultOrMaker: BatteryStatus.UNKNOWN_BATTERY_STATUS,
+        valueOf: BatteryStatus.valueOf,
+        enumValues: BatteryStatus.values)
+    ..e<PowerSource>(
+        2, _omitFieldNames ? '' : 'powerSource', $pb.PbFieldType.OE,
+        defaultOrMaker: PowerSource.UNKNOWN_POWER_SOURCE,
+        valueOf: PowerSource.valueOf,
+        enumValues: PowerSource.values)
+    ..a<$core.double>(
+        3, _omitFieldNames ? '' : 'batteryPercentage', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -675,8 +649,10 @@ class BatteryInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   BatteryInfo copyWith(void Function(BatteryInfo) updates) =>
       super.copyWith((message) => updates(message as BatteryInfo))
-          as BatteryInfo; // ignore: deprecated_member_use
+          as BatteryInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatteryInfo create() => BatteryInfo._();
   BatteryInfo createEmptyInstance() => create();
@@ -686,6 +662,7 @@ class BatteryInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatteryInfo>(create);
   static BatteryInfo? _defaultInstance;
 
+  /// Status of the battery, whether full or charging etc.
   @$pb.TagNumber(1)
   BatteryStatus get batteryStatus => $_getN(0);
   @$pb.TagNumber(1)
@@ -698,6 +675,7 @@ class BatteryInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBatteryStatus() => clearField(1);
 
+  /// Status of battery power source.
   @$pb.TagNumber(2)
   PowerSource get powerSource => $_getN(1);
   @$pb.TagNumber(2)
@@ -710,6 +688,7 @@ class BatteryInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPowerSource() => clearField(2);
 
+  /// Current battery percentage [0-100].
   @$pb.TagNumber(3)
   $core.double get batteryPercentage => $_getN(2);
   @$pb.TagNumber(3)
@@ -723,71 +702,53 @@ class BatteryInfo extends $pb.GeneratedMessage {
   void clearBatteryPercentage() => clearField(3);
 }
 
+/// Information about various settings on the mobile device.
 class DeviceSettings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeviceSettings',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..e<LocationPowerSaveMode>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locationPowerSaveMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: LocationPowerSaveMode.UNKNOWN_LOCATION_POWER_SAVE_MODE,
-        valueOf: LocationPowerSaveMode.valueOf,
-        enumValues: LocationPowerSaveMode.values)
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'isPowerSaveMode')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'isInteractive')
-    ..aOM<BatteryInfo>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'batteryInfo',
-        subBuilder: BatteryInfo.create)
-    ..hasRequiredFields = false;
-
-  DeviceSettings._() : super();
   factory DeviceSettings({
     LocationPowerSaveMode? locationPowerSaveMode,
     $core.bool? isPowerSaveMode,
     $core.bool? isInteractive,
     BatteryInfo? batteryInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (locationPowerSaveMode != null) {
-      _result.locationPowerSaveMode = locationPowerSaveMode;
+      $result.locationPowerSaveMode = locationPowerSaveMode;
     }
     if (isPowerSaveMode != null) {
-      _result.isPowerSaveMode = isPowerSaveMode;
+      $result.isPowerSaveMode = isPowerSaveMode;
     }
     if (isInteractive != null) {
-      _result.isInteractive = isInteractive;
+      $result.isInteractive = isInteractive;
     }
     if (batteryInfo != null) {
-      _result.batteryInfo = batteryInfo;
+      $result.batteryInfo = batteryInfo;
     }
-    return _result;
+    return $result;
   }
+  DeviceSettings._() : super();
   factory DeviceSettings.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeviceSettings.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeviceSettings',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..e<LocationPowerSaveMode>(
+        1, _omitFieldNames ? '' : 'locationPowerSaveMode', $pb.PbFieldType.OE,
+        defaultOrMaker: LocationPowerSaveMode.UNKNOWN_LOCATION_POWER_SAVE_MODE,
+        valueOf: LocationPowerSaveMode.valueOf,
+        enumValues: LocationPowerSaveMode.values)
+    ..aOB(2, _omitFieldNames ? '' : 'isPowerSaveMode')
+    ..aOB(3, _omitFieldNames ? '' : 'isInteractive')
+    ..aOM<BatteryInfo>(4, _omitFieldNames ? '' : 'batteryInfo',
+        subBuilder: BatteryInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -797,8 +758,10 @@ class DeviceSettings extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeviceSettings copyWith(void Function(DeviceSettings) updates) =>
       super.copyWith((message) => updates(message as DeviceSettings))
-          as DeviceSettings; // ignore: deprecated_member_use
+          as DeviceSettings;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeviceSettings create() => DeviceSettings._();
   DeviceSettings createEmptyInstance() => create();
@@ -809,6 +772,8 @@ class DeviceSettings extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeviceSettings>(create);
   static DeviceSettings? _defaultInstance;
 
+  /// How location features are set to behave on the device when battery saver is
+  /// on.
   @$pb.TagNumber(1)
   LocationPowerSaveMode get locationPowerSaveMode => $_getN(0);
   @$pb.TagNumber(1)
@@ -821,6 +786,7 @@ class DeviceSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLocationPowerSaveMode() => clearField(1);
 
+  /// Whether the device is currently in power save mode.
   @$pb.TagNumber(2)
   $core.bool get isPowerSaveMode => $_getBF(1);
   @$pb.TagNumber(2)
@@ -833,6 +799,7 @@ class DeviceSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIsPowerSaveMode() => clearField(2);
 
+  /// Whether the device is in an interactive state.
   @$pb.TagNumber(3)
   $core.bool get isInteractive => $_getBF(2);
   @$pb.TagNumber(3)
@@ -845,6 +812,7 @@ class DeviceSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIsInteractive() => clearField(3);
 
+  /// Information about the battery state.
   @$pb.TagNumber(4)
   BatteryInfo get batteryInfo => $_getN(3);
   @$pb.TagNumber(4)
@@ -860,48 +828,40 @@ class DeviceSettings extends $pb.GeneratedMessage {
   BatteryInfo ensureBatteryInfo() => $_ensure(3);
 }
 
+/// The license plate information of the Vehicle.  To avoid storing
+/// personally-identifiable information, only the minimum information
+/// about the license plate is stored as part of the entity.
 class LicensePlate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LicensePlate',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'countryCode')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastCharacter')
-    ..hasRequiredFields = false;
-
-  LicensePlate._() : super();
   factory LicensePlate({
     $core.String? countryCode,
     $core.String? lastCharacter,
   }) {
-    final _result = create();
+    final $result = create();
     if (countryCode != null) {
-      _result.countryCode = countryCode;
+      $result.countryCode = countryCode;
     }
     if (lastCharacter != null) {
-      _result.lastCharacter = lastCharacter;
+      $result.lastCharacter = lastCharacter;
     }
-    return _result;
+    return $result;
   }
+  LicensePlate._() : super();
   factory LicensePlate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LicensePlate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LicensePlate',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'countryCode')
+    ..aOS(2, _omitFieldNames ? '' : 'lastCharacter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -911,8 +871,10 @@ class LicensePlate extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LicensePlate copyWith(void Function(LicensePlate) updates) =>
       super.copyWith((message) => updates(message as LicensePlate))
-          as LicensePlate; // ignore: deprecated_member_use
+          as LicensePlate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LicensePlate create() => LicensePlate._();
   LicensePlate createEmptyInstance() => create();
@@ -923,6 +885,8 @@ class LicensePlate extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LicensePlate>(create);
   static LicensePlate? _defaultInstance;
 
+  /// Required. CLDR Country/Region Code.  For example, `US` for United States,
+  /// or `IN` for India.
   @$pb.TagNumber(1)
   $core.String get countryCode => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -935,6 +899,12 @@ class LicensePlate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCountryCode() => clearField(1);
 
+  ///  The last digit of the license plate or "-1" to denote no numeric value
+  ///  is present in the license plate.
+  ///
+  ///  * "ABC 1234" -> "4"
+  ///  * "AB 123 CD" -> "3"
+  ///  * "ABCDEF" -> "-1"
   @$pb.TagNumber(2)
   $core.String get lastCharacter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -948,60 +918,27 @@ class LicensePlate extends $pb.GeneratedMessage {
   void clearLastCharacter() => clearField(2);
 }
 
+/// One road stretch that should be rendered.
 class VisualTrafficReportPolylineRendering_RoadStretch
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VisualTrafficReportPolylineRendering.RoadStretch',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..e<VisualTrafficReportPolylineRendering_RoadStretch_Style>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'style',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: VisualTrafficReportPolylineRendering_RoadStretch_Style
-            .STYLE_UNSPECIFIED,
-        valueOf: VisualTrafficReportPolylineRendering_RoadStretch_Style.valueOf,
-        enumValues:
-            VisualTrafficReportPolylineRendering_RoadStretch_Style.values)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'offsetMeters',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lengthMeters',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  VisualTrafficReportPolylineRendering_RoadStretch._() : super();
   factory VisualTrafficReportPolylineRendering_RoadStretch({
     VisualTrafficReportPolylineRendering_RoadStretch_Style? style,
     $core.int? offsetMeters,
     $core.int? lengthMeters,
   }) {
-    final _result = create();
+    final $result = create();
     if (style != null) {
-      _result.style = style;
+      $result.style = style;
     }
     if (offsetMeters != null) {
-      _result.offsetMeters = offsetMeters;
+      $result.offsetMeters = offsetMeters;
     }
     if (lengthMeters != null) {
-      _result.lengthMeters = lengthMeters;
+      $result.lengthMeters = lengthMeters;
     }
-    return _result;
+    return $result;
   }
+  VisualTrafficReportPolylineRendering_RoadStretch._() : super();
   factory VisualTrafficReportPolylineRendering_RoadStretch.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1010,6 +947,25 @@ class VisualTrafficReportPolylineRendering_RoadStretch
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'VisualTrafficReportPolylineRendering.RoadStretch',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..e<VisualTrafficReportPolylineRendering_RoadStretch_Style>(
+        1, _omitFieldNames ? '' : 'style', $pb.PbFieldType.OE,
+        defaultOrMaker: VisualTrafficReportPolylineRendering_RoadStretch_Style
+            .STYLE_UNSPECIFIED,
+        valueOf: VisualTrafficReportPolylineRendering_RoadStretch_Style.valueOf,
+        enumValues:
+            VisualTrafficReportPolylineRendering_RoadStretch_Style.values)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'offsetMeters', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'lengthMeters', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1024,8 +980,10 @@ class VisualTrafficReportPolylineRendering_RoadStretch
               updates) =>
       super.copyWith((message) => updates(
               message as VisualTrafficReportPolylineRendering_RoadStretch))
-          as VisualTrafficReportPolylineRendering_RoadStretch; // ignore: deprecated_member_use
+          as VisualTrafficReportPolylineRendering_RoadStretch;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VisualTrafficReportPolylineRendering_RoadStretch create() =>
       VisualTrafficReportPolylineRendering_RoadStretch._();
@@ -1040,6 +998,7 @@ class VisualTrafficReportPolylineRendering_RoadStretch
           VisualTrafficReportPolylineRendering_RoadStretch>(create);
   static VisualTrafficReportPolylineRendering_RoadStretch? _defaultInstance;
 
+  /// Required. The style to apply.
   @$pb.TagNumber(1)
   VisualTrafficReportPolylineRendering_RoadStretch_Style get style => $_getN(0);
   @$pb.TagNumber(1)
@@ -1052,6 +1011,8 @@ class VisualTrafficReportPolylineRendering_RoadStretch
   @$pb.TagNumber(1)
   void clearStyle() => clearField(1);
 
+  /// Required. The style should be applied between `[offset_meters,
+  /// offset_meters + length_meters)`.
   @$pb.TagNumber(2)
   $core.int get offsetMeters => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1064,6 +1025,7 @@ class VisualTrafficReportPolylineRendering_RoadStretch
   @$pb.TagNumber(2)
   void clearOffsetMeters() => clearField(2);
 
+  /// Required. The length of the path where to apply the style.
   @$pb.TagNumber(3)
   $core.int get lengthMeters => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1077,36 +1039,20 @@ class VisualTrafficReportPolylineRendering_RoadStretch
   void clearLengthMeters() => clearField(3);
 }
 
+/// Describes how clients should color one portion of the polyline along the
+/// route.
 class VisualTrafficReportPolylineRendering extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'VisualTrafficReportPolylineRendering',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..pc<VisualTrafficReportPolylineRendering_RoadStretch>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roadStretch',
-        $pb.PbFieldType.PM,
-        subBuilder: VisualTrafficReportPolylineRendering_RoadStretch.create)
-    ..hasRequiredFields = false;
-
-  VisualTrafficReportPolylineRendering._() : super();
   factory VisualTrafficReportPolylineRendering({
     $core.Iterable<VisualTrafficReportPolylineRendering_RoadStretch>?
         roadStretch,
   }) {
-    final _result = create();
+    final $result = create();
     if (roadStretch != null) {
-      _result.roadStretch.addAll(roadStretch);
+      $result.roadStretch.addAll(roadStretch);
     }
-    return _result;
+    return $result;
   }
+  VisualTrafficReportPolylineRendering._() : super();
   factory VisualTrafficReportPolylineRendering.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1114,6 +1060,17 @@ class VisualTrafficReportPolylineRendering extends $pb.GeneratedMessage {
   factory VisualTrafficReportPolylineRendering.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'VisualTrafficReportPolylineRendering',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..pc<VisualTrafficReportPolylineRendering_RoadStretch>(
+        1, _omitFieldNames ? '' : 'roadStretch', $pb.PbFieldType.PM,
+        subBuilder: VisualTrafficReportPolylineRendering_RoadStretch.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1126,8 +1083,10 @@ class VisualTrafficReportPolylineRendering extends $pb.GeneratedMessage {
           void Function(VisualTrafficReportPolylineRendering) updates) =>
       super.copyWith((message) =>
               updates(message as VisualTrafficReportPolylineRendering))
-          as VisualTrafficReportPolylineRendering; // ignore: deprecated_member_use
+          as VisualTrafficReportPolylineRendering;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VisualTrafficReportPolylineRendering create() =>
       VisualTrafficReportPolylineRendering._();
@@ -1140,45 +1099,46 @@ class VisualTrafficReportPolylineRendering extends $pb.GeneratedMessage {
           VisualTrafficReportPolylineRendering>(create);
   static VisualTrafficReportPolylineRendering? _defaultInstance;
 
+  ///  Optional. Road stretches that should be rendered along the polyline.
+  ///  Stretches are guaranteed to not overlap, and do not necessarily span the
+  ///  full route.
+  ///
+  ///  In the absence of a road stretch to style, the client should apply the
+  ///  default for the route.
   @$pb.TagNumber(1)
   $core.List<VisualTrafficReportPolylineRendering_RoadStretch>
       get roadStretch => $_getList(0);
 }
 
+/// Traffic conditions along the expected vehicle route.
 class TrafficPolylineData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TrafficPolylineData',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'maps.fleetengine.v1'),
-      createEmptyInstance: create)
-    ..aOM<VisualTrafficReportPolylineRendering>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'trafficRendering',
-        subBuilder: VisualTrafficReportPolylineRendering.create)
-    ..hasRequiredFields = false;
-
-  TrafficPolylineData._() : super();
   factory TrafficPolylineData({
     VisualTrafficReportPolylineRendering? trafficRendering,
   }) {
-    final _result = create();
+    final $result = create();
     if (trafficRendering != null) {
-      _result.trafficRendering = trafficRendering;
+      $result.trafficRendering = trafficRendering;
     }
-    return _result;
+    return $result;
   }
+  TrafficPolylineData._() : super();
   factory TrafficPolylineData.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TrafficPolylineData.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TrafficPolylineData',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'maps.fleetengine.v1'),
+      createEmptyInstance: create)
+    ..aOM<VisualTrafficReportPolylineRendering>(
+        1, _omitFieldNames ? '' : 'trafficRendering',
+        subBuilder: VisualTrafficReportPolylineRendering.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1188,8 +1148,10 @@ class TrafficPolylineData extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TrafficPolylineData copyWith(void Function(TrafficPolylineData) updates) =>
       super.copyWith((message) => updates(message as TrafficPolylineData))
-          as TrafficPolylineData; // ignore: deprecated_member_use
+          as TrafficPolylineData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TrafficPolylineData create() => TrafficPolylineData._();
   TrafficPolylineData createEmptyInstance() => create();
@@ -1200,6 +1162,8 @@ class TrafficPolylineData extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TrafficPolylineData>(create);
   static TrafficPolylineData? _defaultInstance;
 
+  /// A polyline rendering of how fast traffic is for all regions along
+  /// one stretch of a customer ride.
   @$pb.TagNumber(1)
   VisualTrafficReportPolylineRendering get trafficRendering => $_getN(0);
   @$pb.TagNumber(1)
@@ -1214,3 +1178,7 @@ class TrafficPolylineData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   VisualTrafficReportPolylineRendering ensureTrafficRendering() => $_ensure(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

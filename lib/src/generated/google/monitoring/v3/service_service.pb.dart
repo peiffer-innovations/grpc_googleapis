@@ -1,71 +1,60 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/service_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'service.pb.dart' as $1;
 import '../../protobuf/field_mask.pb.dart' as $3;
-
+import 'service.pb.dart' as $1;
 import 'service.pbenum.dart' as $1;
 
+/// The `CreateService` request.
 class CreateServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.Service>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service',
-        subBuilder: $1.Service.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceId')
-    ..hasRequiredFields = false;
-
-  CreateServiceRequest._() : super();
   factory CreateServiceRequest({
     $core.String? parent,
     $1.Service? service,
     $core.String? serviceId,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
     if (serviceId != null) {
-      _result.serviceId = serviceId;
+      $result.serviceId = serviceId;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceRequest._() : super();
   factory CreateServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.Service>(2, _omitFieldNames ? '' : 'service',
+        subBuilder: $1.Service.create)
+    ..aOS(3, _omitFieldNames ? '' : 'serviceId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -76,8 +65,10 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateServiceRequest copyWith(void Function(CreateServiceRequest) updates) =>
       super.copyWith((message) => updates(message as CreateServiceRequest))
-          as CreateServiceRequest; // ignore: deprecated_member_use
+          as CreateServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceRequest create() => CreateServiceRequest._();
   CreateServiceRequest createEmptyInstance() => create();
@@ -88,6 +79,11 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServiceRequest>(create);
   static CreateServiceRequest? _defaultInstance;
 
+  ///  Required. Resource
+  ///  [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+  ///  parent Metrics Scope. The format is:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -100,6 +96,7 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The `Service` to create.
   @$pb.TagNumber(2)
   $1.Service get service => $_getN(1);
   @$pb.TagNumber(2)
@@ -114,6 +111,8 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Service ensureService() => $_ensure(1);
 
+  /// Optional. The Service id to use for this Service. If omitted, an id will be
+  /// generated instead. Must match the pattern `[a-z0-9\-]+`
   @$pb.TagNumber(3)
   $core.String get serviceId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -127,39 +126,33 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
   void clearServiceId() => clearField(3);
 }
 
+/// The `GetService` request.
 class GetServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetServiceRequest._() : super();
   factory GetServiceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetServiceRequest._() : super();
   factory GetServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -169,8 +162,10 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetServiceRequest copyWith(void Function(GetServiceRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceRequest))
-          as GetServiceRequest; // ignore: deprecated_member_use
+          as GetServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceRequest create() => GetServiceRequest._();
   GetServiceRequest createEmptyInstance() => create();
@@ -181,6 +176,9 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceRequest>(create);
   static GetServiceRequest? _defaultInstance;
 
+  ///  Required. Resource name of the `Service`. The format is:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -194,67 +192,48 @@ class GetServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The `ListServices` request.
 class ListServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListServicesRequest._() : super();
   factory ListServicesRequest({
     $core.String? parent,
     $core.String? filter,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicesRequest._() : super();
   factory ListServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -264,8 +243,10 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesRequest copyWith(void Function(ListServicesRequest) updates) =>
       super.copyWith((message) => updates(message as ListServicesRequest))
-          as ListServicesRequest; // ignore: deprecated_member_use
+          as ListServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesRequest create() => ListServicesRequest._();
   ListServicesRequest createEmptyInstance() => create();
@@ -276,6 +257,12 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesRequest>(create);
   static ListServicesRequest? _defaultInstance;
 
+  ///  Required. Resource name of the parent containing the listed services,
+  ///  either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+  ///  or a Monitoring Metrics Scope. The formats are:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]
+  ///      workspaces/[HOST_PROJECT_ID_OR_NUMBER]
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -288,6 +275,24 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  ///  A filter specifying what `Service`s to return. The filter supports
+  ///  filtering on a particular service-identifier type or one of its attributes.
+  ///
+  ///  To filter on a particular service-identifier type, the `identifier_case`
+  ///  refers to which option in the `identifier` field is populated. For example,
+  ///  the filter `identifier_case = "CUSTOM"` would match all services with a
+  ///  value for the `custom` field. Valid options include "CUSTOM", "APP_ENGINE",
+  ///  "MESH_ISTIO", and the other options listed at
+  ///  https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services#Service
+  ///
+  ///  To filter on an attribute of a service-identifier type, apply the filter
+  ///  name by using the snake case of the service-identifier type and the
+  ///  attribute of that service-identifier type, and join the two with a period.
+  ///  For example, to filter by the `meshUid` field of the `MeshIstio`
+  ///  service-identifier type, you must filter on `mesh_istio.mesh_uid =
+  ///  "123"` to match all services with mesh UID "123". Service-identifier types
+  ///  and their attributes are described at
+  ///  https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services#Service
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -300,6 +305,8 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
+  /// A non-negative number that is the maximum number of results to return.
+  /// When 0, use default page size.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -312,6 +319,9 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// If this field is not empty then it must contain the `nextPageToken` value
+  /// returned by a previous call to this method.  Using this field causes the
+  /// method to return additional results from the previous method call.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -325,50 +335,39 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(4);
 }
 
+/// The `ListServices` response.
 class ListServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..pc<$1.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'services',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Service.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServicesResponse._() : super();
   factory ListServicesResponse({
     $core.Iterable<$1.Service>? services,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicesResponse._() : super();
   factory ListServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$1.Service>(1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: $1.Service.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -379,8 +378,10 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesResponse copyWith(void Function(ListServicesResponse) updates) =>
       super.copyWith((message) => updates(message as ListServicesResponse))
-          as ListServicesResponse; // ignore: deprecated_member_use
+          as ListServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesResponse create() => ListServicesResponse._();
   ListServicesResponse createEmptyInstance() => create();
@@ -391,9 +392,13 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesResponse>(create);
   static ListServicesResponse? _defaultInstance;
 
+  /// The `Service`s matching the specified filter.
   @$pb.TagNumber(1)
   $core.List<$1.Service> get services => $_getList(0);
 
+  /// If there are more results than have been returned, then this field is set
+  /// to a non-empty value.  To see the additional results,
+  /// use that value as `page_token` in the next call to this method.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -407,50 +412,40 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The `UpdateService` request.
 class UpdateServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateServiceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOM<$1.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service',
-        subBuilder: $1.Service.create)
-    ..aOM<$3.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $3.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateServiceRequest._() : super();
   factory UpdateServiceRequest({
     $1.Service? service,
     $3.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateServiceRequest._() : super();
   factory UpdateServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$1.Service>(1, _omitFieldNames ? '' : 'service',
+        subBuilder: $1.Service.create)
+    ..aOM<$3.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $3.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -461,8 +456,10 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateServiceRequest copyWith(void Function(UpdateServiceRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateServiceRequest))
-          as UpdateServiceRequest; // ignore: deprecated_member_use
+          as UpdateServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateServiceRequest create() => UpdateServiceRequest._();
   UpdateServiceRequest createEmptyInstance() => create();
@@ -473,6 +470,8 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateServiceRequest>(create);
   static UpdateServiceRequest? _defaultInstance;
 
+  /// Required. The `Service` to draw updates from.
+  /// The given `name` specifies the resource to update.
   @$pb.TagNumber(1)
   $1.Service get service => $_getN(0);
   @$pb.TagNumber(1)
@@ -487,6 +486,7 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Service ensureService() => $_ensure(0);
 
+  /// A set of field paths defining which fields to use for the update.
   @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -502,39 +502,33 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// The `DeleteService` request.
 class DeleteServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServiceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteServiceRequest._() : super();
   factory DeleteServiceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteServiceRequest._() : super();
   factory DeleteServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -545,8 +539,10 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteServiceRequest copyWith(void Function(DeleteServiceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteServiceRequest))
-          as DeleteServiceRequest; // ignore: deprecated_member_use
+          as DeleteServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServiceRequest create() => DeleteServiceRequest._();
   DeleteServiceRequest createEmptyInstance() => create();
@@ -557,6 +553,9 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteServiceRequest>(create);
   static DeleteServiceRequest? _defaultInstance;
 
+  ///  Required. Resource name of the `Service` to delete. The format is:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -570,58 +569,45 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The `CreateServiceLevelObjective` request.
 class CreateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceLevelObjectiveRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.ServiceLevelObjective>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceLevelObjective',
-        subBuilder: $1.ServiceLevelObjective.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceLevelObjectiveId')
-    ..hasRequiredFields = false;
-
-  CreateServiceLevelObjectiveRequest._() : super();
   factory CreateServiceLevelObjectiveRequest({
     $core.String? parent,
     $1.ServiceLevelObjective? serviceLevelObjective,
     $core.String? serviceLevelObjectiveId,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (serviceLevelObjective != null) {
-      _result.serviceLevelObjective = serviceLevelObjective;
+      $result.serviceLevelObjective = serviceLevelObjective;
     }
     if (serviceLevelObjectiveId != null) {
-      _result.serviceLevelObjectiveId = serviceLevelObjectiveId;
+      $result.serviceLevelObjectiveId = serviceLevelObjectiveId;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceLevelObjectiveRequest._() : super();
   factory CreateServiceLevelObjectiveRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceLevelObjectiveRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceLevelObjectiveRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.ServiceLevelObjective>(
+        2, _omitFieldNames ? '' : 'serviceLevelObjective',
+        subBuilder: $1.ServiceLevelObjective.create)
+    ..aOS(3, _omitFieldNames ? '' : 'serviceLevelObjectiveId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -634,8 +620,10 @@ class CreateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           void Function(CreateServiceLevelObjectiveRequest) updates) =>
       super.copyWith((message) =>
               updates(message as CreateServiceLevelObjectiveRequest))
-          as CreateServiceLevelObjectiveRequest; // ignore: deprecated_member_use
+          as CreateServiceLevelObjectiveRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceLevelObjectiveRequest create() =>
       CreateServiceLevelObjectiveRequest._();
@@ -648,6 +636,9 @@ class CreateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           create);
   static CreateServiceLevelObjectiveRequest? _defaultInstance;
 
+  ///  Required. Resource name of the parent `Service`. The format is:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -660,6 +651,9 @@ class CreateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The `ServiceLevelObjective` to create.
+  /// The provided `name` will be respected if no `ServiceLevelObjective` exists
+  /// with this name.
   @$pb.TagNumber(2)
   $1.ServiceLevelObjective get serviceLevelObjective => $_getN(1);
   @$pb.TagNumber(2)
@@ -674,6 +668,9 @@ class CreateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.ServiceLevelObjective ensureServiceLevelObjective() => $_ensure(1);
 
+  /// Optional. The ServiceLevelObjective id to use for this
+  /// ServiceLevelObjective. If omitted, an id will be generated instead. Must
+  /// match the pattern `^[a-zA-Z0-9-_:.]+$`
   @$pb.TagNumber(3)
   $core.String get serviceLevelObjectiveId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -687,52 +684,42 @@ class CreateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   void clearServiceLevelObjectiveId() => clearField(3);
 }
 
+/// The `GetServiceLevelObjective` request.
 class GetServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceLevelObjectiveRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<$1.ServiceLevelObjective_View>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $1.ServiceLevelObjective_View.VIEW_UNSPECIFIED,
-        valueOf: $1.ServiceLevelObjective_View.valueOf,
-        enumValues: $1.ServiceLevelObjective_View.values)
-    ..hasRequiredFields = false;
-
-  GetServiceLevelObjectiveRequest._() : super();
   factory GetServiceLevelObjectiveRequest({
     $core.String? name,
     $1.ServiceLevelObjective_View? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  GetServiceLevelObjectiveRequest._() : super();
   factory GetServiceLevelObjectiveRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceLevelObjectiveRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceLevelObjectiveRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<$1.ServiceLevelObjective_View>(
+        2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.ServiceLevelObjective_View.VIEW_UNSPECIFIED,
+        valueOf: $1.ServiceLevelObjective_View.valueOf,
+        enumValues: $1.ServiceLevelObjective_View.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -745,8 +732,10 @@ class GetServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           void Function(GetServiceLevelObjectiveRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetServiceLevelObjectiveRequest))
-          as GetServiceLevelObjectiveRequest; // ignore: deprecated_member_use
+          as GetServiceLevelObjectiveRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceLevelObjectiveRequest create() =>
       GetServiceLevelObjectiveRequest._();
@@ -759,6 +748,10 @@ class GetServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           create);
   static GetServiceLevelObjectiveRequest? _defaultInstance;
 
+  ///  Required. Resource name of the `ServiceLevelObjective` to get. The format
+  ///  is:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -771,6 +764,10 @@ class GetServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// View of the `ServiceLevelObjective` to return. If `DEFAULT`, return the
+  /// `ServiceLevelObjective` as originally defined. If `EXPLICIT` and the
+  /// `ServiceLevelObjective` is defined in terms of a `BasicSli`, replace the
+  /// `BasicSli` with a `RequestBasedSli` spelling out how the SLI is computed.
   @$pb.TagNumber(2)
   $1.ServiceLevelObjective_View get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -784,49 +781,8 @@ class GetServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(2);
 }
 
+/// The `ListServiceLevelObjectives` request.
 class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceLevelObjectivesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..e<$1.ServiceLevelObjective_View>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $1.ServiceLevelObjective_View.VIEW_UNSPECIFIED,
-        valueOf: $1.ServiceLevelObjective_View.valueOf,
-        enumValues: $1.ServiceLevelObjective_View.values)
-    ..hasRequiredFields = false;
-
-  ListServiceLevelObjectivesRequest._() : super();
   factory ListServiceLevelObjectivesRequest({
     $core.String? parent,
     $core.String? filter,
@@ -834,30 +790,48 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $1.ServiceLevelObjective_View? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  ListServiceLevelObjectivesRequest._() : super();
   factory ListServiceLevelObjectivesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceLevelObjectivesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceLevelObjectivesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..e<$1.ServiceLevelObjective_View>(
+        5, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.ServiceLevelObjective_View.VIEW_UNSPECIFIED,
+        valueOf: $1.ServiceLevelObjective_View.valueOf,
+        enumValues: $1.ServiceLevelObjective_View.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -870,8 +844,10 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
           void Function(ListServiceLevelObjectivesRequest) updates) =>
       super.copyWith((message) =>
               updates(message as ListServiceLevelObjectivesRequest))
-          as ListServiceLevelObjectivesRequest; // ignore: deprecated_member_use
+          as ListServiceLevelObjectivesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceLevelObjectivesRequest create() =>
       ListServiceLevelObjectivesRequest._();
@@ -884,6 +860,11 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
           create);
   static ListServiceLevelObjectivesRequest? _defaultInstance;
 
+  ///  Required. Resource name of the parent containing the listed SLOs, either a
+  ///  project or a Monitoring Metrics Scope. The formats are:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+  ///      workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -896,6 +877,7 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// A filter specifying what `ServiceLevelObjective`s to return.
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -908,6 +890,8 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
+  /// A non-negative number that is the maximum number of results to return.
+  /// When 0, use default page size.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -920,6 +904,9 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// If this field is not empty then it must contain the `nextPageToken` value
+  /// returned by a previous call to this method.  Using this field causes the
+  /// method to return additional results from the previous method call.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -932,6 +919,10 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
+  /// View of the `ServiceLevelObjective`s to return. If `DEFAULT`, return each
+  /// `ServiceLevelObjective` as originally defined. If `EXPLICIT` and the
+  /// `ServiceLevelObjective` is defined in terms of a `BasicSli`, replace the
+  /// `BasicSli` with a `RequestBasedSli` spelling out how the SLI is computed.
   @$pb.TagNumber(5)
   $1.ServiceLevelObjective_View get view => $_getN(4);
   @$pb.TagNumber(5)
@@ -945,50 +936,40 @@ class ListServiceLevelObjectivesRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(5);
 }
 
+/// The `ListServiceLevelObjectives` response.
 class ListServiceLevelObjectivesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceLevelObjectivesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..pc<$1.ServiceLevelObjective>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceLevelObjectives',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.ServiceLevelObjective.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServiceLevelObjectivesResponse._() : super();
   factory ListServiceLevelObjectivesResponse({
     $core.Iterable<$1.ServiceLevelObjective>? serviceLevelObjectives,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceLevelObjectives != null) {
-      _result.serviceLevelObjectives.addAll(serviceLevelObjectives);
+      $result.serviceLevelObjectives.addAll(serviceLevelObjectives);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServiceLevelObjectivesResponse._() : super();
   factory ListServiceLevelObjectivesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceLevelObjectivesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceLevelObjectivesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$1.ServiceLevelObjective>(
+        1, _omitFieldNames ? '' : 'serviceLevelObjectives', $pb.PbFieldType.PM,
+        subBuilder: $1.ServiceLevelObjective.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1001,8 +982,10 @@ class ListServiceLevelObjectivesResponse extends $pb.GeneratedMessage {
           void Function(ListServiceLevelObjectivesResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListServiceLevelObjectivesResponse))
-          as ListServiceLevelObjectivesResponse; // ignore: deprecated_member_use
+          as ListServiceLevelObjectivesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceLevelObjectivesResponse create() =>
       ListServiceLevelObjectivesResponse._();
@@ -1015,10 +998,14 @@ class ListServiceLevelObjectivesResponse extends $pb.GeneratedMessage {
           create);
   static ListServiceLevelObjectivesResponse? _defaultInstance;
 
+  /// The `ServiceLevelObjective`s matching the specified filter.
   @$pb.TagNumber(1)
   $core.List<$1.ServiceLevelObjective> get serviceLevelObjectives =>
       $_getList(0);
 
+  /// If there are more results than have been returned, then this field is set
+  /// to a non-empty value.  To see the additional results,
+  /// use that value as `page_token` in the next call to this method.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1032,50 +1019,41 @@ class ListServiceLevelObjectivesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The `UpdateServiceLevelObjective` request.
 class UpdateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateServiceLevelObjectiveRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOM<$1.ServiceLevelObjective>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceLevelObjective',
-        subBuilder: $1.ServiceLevelObjective.create)
-    ..aOM<$3.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $3.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateServiceLevelObjectiveRequest._() : super();
   factory UpdateServiceLevelObjectiveRequest({
     $1.ServiceLevelObjective? serviceLevelObjective,
     $3.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceLevelObjective != null) {
-      _result.serviceLevelObjective = serviceLevelObjective;
+      $result.serviceLevelObjective = serviceLevelObjective;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateServiceLevelObjectiveRequest._() : super();
   factory UpdateServiceLevelObjectiveRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateServiceLevelObjectiveRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateServiceLevelObjectiveRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$1.ServiceLevelObjective>(
+        1, _omitFieldNames ? '' : 'serviceLevelObjective',
+        subBuilder: $1.ServiceLevelObjective.create)
+    ..aOM<$3.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $3.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1088,8 +1066,10 @@ class UpdateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           void Function(UpdateServiceLevelObjectiveRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateServiceLevelObjectiveRequest))
-          as UpdateServiceLevelObjectiveRequest; // ignore: deprecated_member_use
+          as UpdateServiceLevelObjectiveRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateServiceLevelObjectiveRequest create() =>
       UpdateServiceLevelObjectiveRequest._();
@@ -1102,6 +1082,8 @@ class UpdateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           create);
   static UpdateServiceLevelObjectiveRequest? _defaultInstance;
 
+  /// Required. The `ServiceLevelObjective` to draw updates from.
+  /// The given `name` specifies the resource to update.
   @$pb.TagNumber(1)
   $1.ServiceLevelObjective get serviceLevelObjective => $_getN(0);
   @$pb.TagNumber(1)
@@ -1116,6 +1098,7 @@ class UpdateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.ServiceLevelObjective ensureServiceLevelObjective() => $_ensure(0);
 
+  /// A set of field paths defining which fields to use for the update.
   @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -1131,39 +1114,33 @@ class UpdateServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// The `DeleteServiceLevelObjective` request.
 class DeleteServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServiceLevelObjectiveRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.v3'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteServiceLevelObjectiveRequest._() : super();
   factory DeleteServiceLevelObjectiveRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteServiceLevelObjectiveRequest._() : super();
   factory DeleteServiceLevelObjectiveRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServiceLevelObjectiveRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServiceLevelObjectiveRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1176,8 +1153,10 @@ class DeleteServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           void Function(DeleteServiceLevelObjectiveRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeleteServiceLevelObjectiveRequest))
-          as DeleteServiceLevelObjectiveRequest; // ignore: deprecated_member_use
+          as DeleteServiceLevelObjectiveRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServiceLevelObjectiveRequest create() =>
       DeleteServiceLevelObjectiveRequest._();
@@ -1190,6 +1169,10 @@ class DeleteServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
           create);
   static DeleteServiceLevelObjectiveRequest? _defaultInstance;
 
+  ///  Required. Resource name of the `ServiceLevelObjective` to delete. The
+  ///  format is:
+  ///
+  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1202,3 +1185,7 @@ class DeleteServiceLevelObjectiveRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

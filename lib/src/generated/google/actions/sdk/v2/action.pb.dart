@@ -1,28 +1,22 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/action.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Defines push notification settings that this engagement supports.
 class Actions_Engagement_PushNotification extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions.Engagement.PushNotification',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  Actions_Engagement_PushNotification._() : super();
   factory Actions_Engagement_PushNotification() => create();
+  Actions_Engagement_PushNotification._() : super();
   factory Actions_Engagement_PushNotification.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -30,6 +24,14 @@ class Actions_Engagement_PushNotification extends $pb.GeneratedMessage {
   factory Actions_Engagement_PushNotification.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions.Engagement.PushNotification',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -42,8 +44,10 @@ class Actions_Engagement_PushNotification extends $pb.GeneratedMessage {
           void Function(Actions_Engagement_PushNotification) updates) =>
       super.copyWith((message) =>
               updates(message as Actions_Engagement_PushNotification))
-          as Actions_Engagement_PushNotification; // ignore: deprecated_member_use
+          as Actions_Engagement_PushNotification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions_Engagement_PushNotification create() =>
       Actions_Engagement_PushNotification._();
@@ -57,26 +61,24 @@ class Actions_Engagement_PushNotification extends $pb.GeneratedMessage {
   static Actions_Engagement_PushNotification? _defaultInstance;
 }
 
+/// Defines daily update settings that this engagement supports.
 class Actions_Engagement_DailyUpdate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions.Engagement.DailyUpdate',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  Actions_Engagement_DailyUpdate._() : super();
   factory Actions_Engagement_DailyUpdate() => create();
+  Actions_Engagement_DailyUpdate._() : super();
   factory Actions_Engagement_DailyUpdate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Actions_Engagement_DailyUpdate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions.Engagement.DailyUpdate',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -89,8 +91,10 @@ class Actions_Engagement_DailyUpdate extends $pb.GeneratedMessage {
           void Function(Actions_Engagement_DailyUpdate) updates) =>
       super.copyWith(
               (message) => updates(message as Actions_Engagement_DailyUpdate))
-          as Actions_Engagement_DailyUpdate; // ignore: deprecated_member_use
+          as Actions_Engagement_DailyUpdate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions_Engagement_DailyUpdate create() =>
       Actions_Engagement_DailyUpdate._();
@@ -103,39 +107,36 @@ class Actions_Engagement_DailyUpdate extends $pb.GeneratedMessage {
   static Actions_Engagement_DailyUpdate? _defaultInstance;
 }
 
+/// Indicates whether sharing links is enabled for this action and the
+/// corresponding settings. Action links are used to deep link a user into a
+/// specific action.
+/// ActionLink is deprecated. Use AssistantLink instead.
 class Actions_Engagement_ActionLink extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions.Engagement.ActionLink',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..hasRequiredFields = false;
-
-  Actions_Engagement_ActionLink._() : super();
   factory Actions_Engagement_ActionLink({
     $core.String? title,
   }) {
-    final _result = create();
+    final $result = create();
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
-    return _result;
+    return $result;
   }
+  Actions_Engagement_ActionLink._() : super();
   factory Actions_Engagement_ActionLink.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Actions_Engagement_ActionLink.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions.Engagement.ActionLink',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'title')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -148,8 +149,10 @@ class Actions_Engagement_ActionLink extends $pb.GeneratedMessage {
           void Function(Actions_Engagement_ActionLink) updates) =>
       super.copyWith(
               (message) => updates(message as Actions_Engagement_ActionLink))
-          as Actions_Engagement_ActionLink; // ignore: deprecated_member_use
+          as Actions_Engagement_ActionLink;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions_Engagement_ActionLink create() =>
       Actions_Engagement_ActionLink._();
@@ -161,6 +164,7 @@ class Actions_Engagement_ActionLink extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Actions_Engagement_ActionLink>(create);
   static Actions_Engagement_ActionLink? _defaultInstance;
 
+  /// User friendly display title for the link.
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -174,39 +178,35 @@ class Actions_Engagement_ActionLink extends $pb.GeneratedMessage {
   void clearTitle() => clearField(1);
 }
 
+/// Indicates whether sharing links is enabled for this action and the
+/// corresponding settings. Assistant links are used to deep link a user into
+/// a specific action.
 class Actions_Engagement_AssistantLink extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions.Engagement.AssistantLink',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..hasRequiredFields = false;
-
-  Actions_Engagement_AssistantLink._() : super();
   factory Actions_Engagement_AssistantLink({
     $core.String? title,
   }) {
-    final _result = create();
+    final $result = create();
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
-    return _result;
+    return $result;
   }
+  Actions_Engagement_AssistantLink._() : super();
   factory Actions_Engagement_AssistantLink.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Actions_Engagement_AssistantLink.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions.Engagement.AssistantLink',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'title')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -219,8 +219,10 @@ class Actions_Engagement_AssistantLink extends $pb.GeneratedMessage {
           void Function(Actions_Engagement_AssistantLink) updates) =>
       super.copyWith(
               (message) => updates(message as Actions_Engagement_AssistantLink))
-          as Actions_Engagement_AssistantLink; // ignore: deprecated_member_use
+          as Actions_Engagement_AssistantLink;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions_Engagement_AssistantLink create() =>
       Actions_Engagement_AssistantLink._();
@@ -233,6 +235,7 @@ class Actions_Engagement_AssistantLink extends $pb.GeneratedMessage {
           create);
   static Actions_Engagement_AssistantLink? _defaultInstance;
 
+  /// User friendly display title for the link.
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -248,54 +251,9 @@ class Actions_Engagement_AssistantLink extends $pb.GeneratedMessage {
 
 enum Actions_Engagement_RecurringUpdate { dailyUpdate, notSet }
 
+/// Defines the engagement mechanisms associated with this action. This
+/// allows end users to subscribe to push notification and daily update.
 class Actions_Engagement extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Actions_Engagement_RecurringUpdate>
-      _Actions_Engagement_RecurringUpdateByTag = {
-    3: Actions_Engagement_RecurringUpdate.dailyUpdate,
-    0: Actions_Engagement_RecurringUpdate.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions.Engagement',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..oo(0, [3])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..aOM<Actions_Engagement_PushNotification>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pushNotification',
-        subBuilder: Actions_Engagement_PushNotification.create)
-    ..aOM<Actions_Engagement_DailyUpdate>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dailyUpdate',
-        subBuilder: Actions_Engagement_DailyUpdate.create)
-    ..aOM<Actions_Engagement_ActionLink>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'actionLink',
-        subBuilder: Actions_Engagement_ActionLink.create)
-    ..aOM<Actions_Engagement_AssistantLink>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'assistantLink',
-        subBuilder: Actions_Engagement_AssistantLink.create)
-    ..hasRequiredFields = false;
-
-  Actions_Engagement._() : super();
   factory Actions_Engagement({
     $core.String? title,
     Actions_Engagement_PushNotification? pushNotification,
@@ -304,31 +262,58 @@ class Actions_Engagement extends $pb.GeneratedMessage {
     Actions_Engagement_ActionLink? actionLink,
     Actions_Engagement_AssistantLink? assistantLink,
   }) {
-    final _result = create();
+    final $result = create();
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (pushNotification != null) {
-      _result.pushNotification = pushNotification;
+      $result.pushNotification = pushNotification;
     }
     if (dailyUpdate != null) {
-      _result.dailyUpdate = dailyUpdate;
+      $result.dailyUpdate = dailyUpdate;
     }
     if (actionLink != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.actionLink = actionLink;
+      $result.actionLink = actionLink;
     }
     if (assistantLink != null) {
-      _result.assistantLink = assistantLink;
+      $result.assistantLink = assistantLink;
     }
-    return _result;
+    return $result;
   }
+  Actions_Engagement._() : super();
   factory Actions_Engagement.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Actions_Engagement.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Actions_Engagement_RecurringUpdate>
+      _Actions_Engagement_RecurringUpdateByTag = {
+    3: Actions_Engagement_RecurringUpdate.dailyUpdate,
+    0: Actions_Engagement_RecurringUpdate.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions.Engagement',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [3])
+    ..aOS(1, _omitFieldNames ? '' : 'title')
+    ..aOM<Actions_Engagement_PushNotification>(
+        2, _omitFieldNames ? '' : 'pushNotification',
+        subBuilder: Actions_Engagement_PushNotification.create)
+    ..aOM<Actions_Engagement_DailyUpdate>(
+        3, _omitFieldNames ? '' : 'dailyUpdate',
+        subBuilder: Actions_Engagement_DailyUpdate.create)
+    ..aOM<Actions_Engagement_ActionLink>(4, _omitFieldNames ? '' : 'actionLink',
+        subBuilder: Actions_Engagement_ActionLink.create)
+    ..aOM<Actions_Engagement_AssistantLink>(
+        6, _omitFieldNames ? '' : 'assistantLink',
+        subBuilder: Actions_Engagement_AssistantLink.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -338,8 +323,10 @@ class Actions_Engagement extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Actions_Engagement copyWith(void Function(Actions_Engagement) updates) =>
       super.copyWith((message) => updates(message as Actions_Engagement))
-          as Actions_Engagement; // ignore: deprecated_member_use
+          as Actions_Engagement;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions_Engagement create() => Actions_Engagement._();
   Actions_Engagement createEmptyInstance() => create();
@@ -354,6 +341,12 @@ class Actions_Engagement extends $pb.GeneratedMessage {
       _Actions_Engagement_RecurringUpdateByTag[$_whichOneof(0)]!;
   void clearRecurringUpdate() => clearField($_whichOneof(0));
 
+  /// The title of the engagement that will be sent to end users asking for
+  /// their permission to receive updates. The prompt sent to end users for
+  /// daily updates will look like "What time would you like me to send your
+  /// daily {title}" and for push notifications will look like
+  /// "Is it ok if I send push notifications for {title}".
+  /// **This field is localizable.**
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -366,6 +359,7 @@ class Actions_Engagement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => clearField(1);
 
+  /// Push notification settings that this engagement supports.
   @$pb.TagNumber(2)
   Actions_Engagement_PushNotification get pushNotification => $_getN(1);
   @$pb.TagNumber(2)
@@ -380,6 +374,7 @@ class Actions_Engagement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Actions_Engagement_PushNotification ensurePushNotification() => $_ensure(1);
 
+  /// Daily update settings that this engagement supports.
   @$pb.TagNumber(3)
   Actions_Engagement_DailyUpdate get dailyUpdate => $_getN(2);
   @$pb.TagNumber(3)
@@ -394,6 +389,10 @@ class Actions_Engagement extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Actions_Engagement_DailyUpdate ensureDailyUpdate() => $_ensure(2);
 
+  /// Link config for an action which determines whether sharing links is
+  /// enabled for the action and if so, contains the user friendly display name
+  /// for the link.
+  /// ActionLink is deprecated. Use AssistantLink instead.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   Actions_Engagement_ActionLink get actionLink => $_getN(3);
@@ -413,6 +412,9 @@ class Actions_Engagement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Actions_Engagement_ActionLink ensureActionLink() => $_ensure(3);
 
+  /// Link config for an action which determines whether sharing links is
+  /// enabled for the action and if so, contains the user friendly display name
+  /// for the link.
   @$pb.TagNumber(6)
   Actions_Engagement_AssistantLink get assistantLink => $_getN(4);
   @$pb.TagNumber(6)
@@ -428,40 +430,34 @@ class Actions_Engagement extends $pb.GeneratedMessage {
   Actions_Engagement_AssistantLink ensureAssistantLink() => $_ensure(4);
 }
 
+/// Details regarding a custom action.
 class Actions_CustomAction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions.CustomAction',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOM<Actions_Engagement>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'engagement',
-        subBuilder: Actions_Engagement.create)
-    ..hasRequiredFields = false;
-
-  Actions_CustomAction._() : super();
   factory Actions_CustomAction({
     Actions_Engagement? engagement,
   }) {
-    final _result = create();
+    final $result = create();
     if (engagement != null) {
-      _result.engagement = engagement;
+      $result.engagement = engagement;
     }
-    return _result;
+    return $result;
   }
+  Actions_CustomAction._() : super();
   factory Actions_CustomAction.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Actions_CustomAction.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions.CustomAction',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOM<Actions_Engagement>(2, _omitFieldNames ? '' : 'engagement',
+        subBuilder: Actions_Engagement.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -472,8 +468,10 @@ class Actions_CustomAction extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Actions_CustomAction copyWith(void Function(Actions_CustomAction) updates) =>
       super.copyWith((message) => updates(message as Actions_CustomAction))
-          as Actions_CustomAction; // ignore: deprecated_member_use
+          as Actions_CustomAction;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions_CustomAction create() => Actions_CustomAction._();
   Actions_CustomAction createEmptyInstance() => create();
@@ -484,6 +482,11 @@ class Actions_CustomAction extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Actions_CustomAction>(create);
   static Actions_CustomAction? _defaultInstance;
 
+  /// Engagement mechanisms associated with the action to help end users
+  /// subscribe to push notifications and daily updates.
+  /// Note that the intent name specified in daily updates/push notifications
+  /// slot config needs to match the intent corresponding to this action for
+  /// end users to subscribe to these updates.
   @$pb.TagNumber(2)
   Actions_Engagement get engagement => $_getN(0);
   @$pb.TagNumber(2)
@@ -499,44 +502,39 @@ class Actions_CustomAction extends $pb.GeneratedMessage {
   Actions_Engagement ensureEngagement() => $_ensure(0);
 }
 
+/// Represents the list of Actions defined in a project.
 class Actions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Actions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..m<$core.String, Actions_CustomAction>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'custom',
-        entryClassName: 'Actions.CustomEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: Actions_CustomAction.create,
-        packageName: const $pb.PackageName('google.actions.sdk.v2'))
-    ..hasRequiredFields = false;
-
-  Actions._() : super();
   factory Actions({
     $core.Map<$core.String, Actions_CustomAction>? custom,
   }) {
-    final _result = create();
+    final $result = create();
     if (custom != null) {
-      _result.custom.addAll(custom);
+      $result.custom.addAll(custom);
     }
-    return _result;
+    return $result;
   }
+  Actions._() : super();
   factory Actions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Actions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Actions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..m<$core.String, Actions_CustomAction>(3, _omitFieldNames ? '' : 'custom',
+        entryClassName: 'Actions.CustomEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: Actions_CustomAction.create,
+        valueDefaultOrMaker: Actions_CustomAction.getDefault,
+        packageName: const $pb.PackageName('google.actions.sdk.v2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -545,9 +543,10 @@ class Actions extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Actions copyWith(void Function(Actions) updates) =>
-      super.copyWith((message) => updates(message as Actions))
-          as Actions; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Actions)) as Actions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Actions create() => Actions._();
   Actions createEmptyInstance() => create();
@@ -557,6 +556,15 @@ class Actions extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Actions>(create);
   static Actions? _defaultInstance;
 
+  /// Map from intents to custom Actions to configure invocation for the project.
+  /// The invocation intents could either be system or custom intents defined
+  /// in the "custom/intents/" package. All intents defined here (system
+  /// intents & custom intents) must have a corresponding intent file in the
+  /// "custom/global/" package.
   @$pb.TagNumber(3)
   $core.Map<$core.String, Actions_CustomAction> get custom => $_getMap(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

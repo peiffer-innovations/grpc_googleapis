@@ -1,21 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/iam/admin/v1/iam.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'iam.pb.dart' as $2;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../protobuf/empty.pb.dart' as $3;
 import '../../v1/iam_policy.pb.dart' as $0;
 import '../../v1/policy.pb.dart' as $1;
+import 'iam.pb.dart' as $2;
+
 export 'iam.pb.dart';
 
+@$pb.GrpcServiceName('google.iam.admin.v1.IAM')
 class IAMClient extends $grpc.Client {
   static final _$listServiceAccounts = $grpc.ClientMethod<
           $2.ListServiceAccountsRequest, $2.ListServiceAccountsResponse>(
@@ -374,6 +381,7 @@ class IAMClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.iam.admin.v1.IAM')
 abstract class IAMServiceBase extends $grpc.Service {
   $core.String get $name => 'google.iam.admin.v1.IAM';
 

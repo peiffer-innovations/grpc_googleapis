@@ -1,25 +1,33 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/identity/accesscontextmanager/v1/access_context_manager.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'access_context_manager.pb.dart' as $4;
-import 'access_policy.pb.dart' as $5;
-import '../../../longrunning/operations.pb.dart' as $2;
-import 'access_level.pb.dart' as $6;
-import 'service_perimeter.pb.dart' as $7;
-import 'gcp_user_access_binding.pb.dart' as $8;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../iam/v1/iam_policy.pb.dart' as $0;
 import '../../../iam/v1/policy.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
+import 'access_context_manager.pb.dart' as $4;
+import 'access_level.pb.dart' as $6;
+import 'access_policy.pb.dart' as $5;
+import 'gcp_user_access_binding.pb.dart' as $8;
+import 'service_perimeter.pb.dart' as $7;
+
 export 'access_context_manager.pb.dart';
 
+@$pb.GrpcServiceName(
+    'google.identity.accesscontextmanager.v1.AccessContextManager')
 class AccessContextManagerClient extends $grpc.Client {
   static final _$listAccessPolicies = $grpc.ClientMethod<
           $4.ListAccessPoliciesRequest, $4.ListAccessPoliciesResponse>(
@@ -328,6 +336,8 @@ class AccessContextManagerClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName(
+    'google.identity.accesscontextmanager.v1.AccessContextManager')
 abstract class AccessContextManagerServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.identity.accesscontextmanager.v1.AccessContextManager';

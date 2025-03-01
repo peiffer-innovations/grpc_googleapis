@@ -1,18 +1,25 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routing/v2/routes_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'routes_service.pb.dart' as $0;
+
 export 'routes_service.pb.dart';
 
+@$pb.GrpcServiceName('google.maps.routing.v2.Routes')
 class RoutesClient extends $grpc.Client {
   static final _$computeRoutes =
       $grpc.ClientMethod<$0.ComputeRoutesRequest, $0.ComputeRoutesResponse>(
@@ -47,6 +54,7 @@ class RoutesClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.maps.routing.v2.Routes')
 abstract class RoutesServiceBase extends $grpc.Service {
   $core.String get $name => 'google.maps.routing.v2.Routes';
 

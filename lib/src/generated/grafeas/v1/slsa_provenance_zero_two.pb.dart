@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/slsa_provenance_zero_two.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,39 +16,33 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../google/protobuf/struct.pb.dart' as $0;
 import '../../google/protobuf/timestamp.pb.dart' as $1;
 
+/// Identifies the entity that executed the recipe, which is trusted to have
+/// correctly performed the operation and populated this provenance.
 class SlsaProvenanceZeroTwo_SlsaBuilder extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo.SlsaBuilder',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo_SlsaBuilder._() : super();
   factory SlsaProvenanceZeroTwo_SlsaBuilder({
     $core.String? id,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo_SlsaBuilder._() : super();
   factory SlsaProvenanceZeroTwo_SlsaBuilder.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlsaProvenanceZeroTwo_SlsaBuilder.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo.SlsaBuilder',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -57,8 +55,10 @@ class SlsaProvenanceZeroTwo_SlsaBuilder extends $pb.GeneratedMessage {
           void Function(SlsaProvenanceZeroTwo_SlsaBuilder) updates) =>
       super.copyWith((message) =>
               updates(message as SlsaProvenanceZeroTwo_SlsaBuilder))
-          as SlsaProvenanceZeroTwo_SlsaBuilder; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo_SlsaBuilder;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo_SlsaBuilder create() =>
       SlsaProvenanceZeroTwo_SlsaBuilder._();
@@ -84,52 +84,42 @@ class SlsaProvenanceZeroTwo_SlsaBuilder extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 }
 
+/// The collection of artifacts that influenced the build including sources,
+/// dependencies, build tools, base images, and so on.
 class SlsaProvenanceZeroTwo_SlsaMaterial extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo.SlsaMaterial',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uri')
-    ..m<$core.String, $core.String>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'digest',
-        entryClassName: 'SlsaProvenanceZeroTwo.SlsaMaterial.DigestEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('grafeas.v1'))
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo_SlsaMaterial._() : super();
   factory SlsaProvenanceZeroTwo_SlsaMaterial({
     $core.String? uri,
     $core.Map<$core.String, $core.String>? digest,
   }) {
-    final _result = create();
+    final $result = create();
     if (uri != null) {
-      _result.uri = uri;
+      $result.uri = uri;
     }
     if (digest != null) {
-      _result.digest.addAll(digest);
+      $result.digest.addAll(digest);
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo_SlsaMaterial._() : super();
   factory SlsaProvenanceZeroTwo_SlsaMaterial.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlsaProvenanceZeroTwo_SlsaMaterial.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo.SlsaMaterial',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uri')
+    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'digest',
+        entryClassName: 'SlsaProvenanceZeroTwo.SlsaMaterial.DigestEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('grafeas.v1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -142,8 +132,10 @@ class SlsaProvenanceZeroTwo_SlsaMaterial extends $pb.GeneratedMessage {
           void Function(SlsaProvenanceZeroTwo_SlsaMaterial) updates) =>
       super.copyWith((message) =>
               updates(message as SlsaProvenanceZeroTwo_SlsaMaterial))
-          as SlsaProvenanceZeroTwo_SlsaMaterial; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo_SlsaMaterial;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo_SlsaMaterial create() =>
       SlsaProvenanceZeroTwo_SlsaMaterial._();
@@ -172,54 +164,26 @@ class SlsaProvenanceZeroTwo_SlsaMaterial extends $pb.GeneratedMessage {
   $core.Map<$core.String, $core.String> get digest => $_getMap(1);
 }
 
+/// Identifies the event that kicked off the build.
 class SlsaProvenanceZeroTwo_SlsaInvocation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo.SlsaInvocation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOM<SlsaProvenanceZeroTwo_SlsaConfigSource>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'configSource',
-        subBuilder: SlsaProvenanceZeroTwo_SlsaConfigSource.create)
-    ..aOM<$0.Struct>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parameters',
-        subBuilder: $0.Struct.create)
-    ..aOM<$0.Struct>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environment',
-        subBuilder: $0.Struct.create)
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo_SlsaInvocation._() : super();
   factory SlsaProvenanceZeroTwo_SlsaInvocation({
     SlsaProvenanceZeroTwo_SlsaConfigSource? configSource,
     $0.Struct? parameters,
     $0.Struct? environment,
   }) {
-    final _result = create();
+    final $result = create();
     if (configSource != null) {
-      _result.configSource = configSource;
+      $result.configSource = configSource;
     }
     if (parameters != null) {
-      _result.parameters = parameters;
+      $result.parameters = parameters;
     }
     if (environment != null) {
-      _result.environment = environment;
+      $result.environment = environment;
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo_SlsaInvocation._() : super();
   factory SlsaProvenanceZeroTwo_SlsaInvocation.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -227,6 +191,20 @@ class SlsaProvenanceZeroTwo_SlsaInvocation extends $pb.GeneratedMessage {
   factory SlsaProvenanceZeroTwo_SlsaInvocation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo.SlsaInvocation',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOM<SlsaProvenanceZeroTwo_SlsaConfigSource>(
+        1, _omitFieldNames ? '' : 'configSource',
+        subBuilder: SlsaProvenanceZeroTwo_SlsaConfigSource.create)
+    ..aOM<$0.Struct>(2, _omitFieldNames ? '' : 'parameters',
+        subBuilder: $0.Struct.create)
+    ..aOM<$0.Struct>(3, _omitFieldNames ? '' : 'environment',
+        subBuilder: $0.Struct.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -239,8 +217,10 @@ class SlsaProvenanceZeroTwo_SlsaInvocation extends $pb.GeneratedMessage {
           void Function(SlsaProvenanceZeroTwo_SlsaInvocation) updates) =>
       super.copyWith((message) =>
               updates(message as SlsaProvenanceZeroTwo_SlsaInvocation))
-          as SlsaProvenanceZeroTwo_SlsaInvocation; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo_SlsaInvocation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo_SlsaInvocation create() =>
       SlsaProvenanceZeroTwo_SlsaInvocation._();
@@ -296,55 +276,27 @@ class SlsaProvenanceZeroTwo_SlsaInvocation extends $pb.GeneratedMessage {
   $0.Struct ensureEnvironment() => $_ensure(2);
 }
 
+/// Describes where the config file that kicked off the build came from.
+/// This is effectively a pointer to the source where buildConfig came from.
 class SlsaProvenanceZeroTwo_SlsaConfigSource extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo.SlsaConfigSource',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uri')
-    ..m<$core.String, $core.String>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'digest',
-        entryClassName: 'SlsaProvenanceZeroTwo.SlsaConfigSource.DigestEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('grafeas.v1'))
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entryPoint')
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo_SlsaConfigSource._() : super();
   factory SlsaProvenanceZeroTwo_SlsaConfigSource({
     $core.String? uri,
     $core.Map<$core.String, $core.String>? digest,
     $core.String? entryPoint,
   }) {
-    final _result = create();
+    final $result = create();
     if (uri != null) {
-      _result.uri = uri;
+      $result.uri = uri;
     }
     if (digest != null) {
-      _result.digest.addAll(digest);
+      $result.digest.addAll(digest);
     }
     if (entryPoint != null) {
-      _result.entryPoint = entryPoint;
+      $result.entryPoint = entryPoint;
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo_SlsaConfigSource._() : super();
   factory SlsaProvenanceZeroTwo_SlsaConfigSource.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -352,6 +304,20 @@ class SlsaProvenanceZeroTwo_SlsaConfigSource extends $pb.GeneratedMessage {
   factory SlsaProvenanceZeroTwo_SlsaConfigSource.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo.SlsaConfigSource',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uri')
+    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'digest',
+        entryClassName: 'SlsaProvenanceZeroTwo.SlsaConfigSource.DigestEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('grafeas.v1'))
+    ..aOS(3, _omitFieldNames ? '' : 'entryPoint')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -364,8 +330,10 @@ class SlsaProvenanceZeroTwo_SlsaConfigSource extends $pb.GeneratedMessage {
           void Function(SlsaProvenanceZeroTwo_SlsaConfigSource) updates) =>
       super.copyWith((message) =>
               updates(message as SlsaProvenanceZeroTwo_SlsaConfigSource))
-          as SlsaProvenanceZeroTwo_SlsaConfigSource; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo_SlsaConfigSource;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo_SlsaConfigSource create() =>
       SlsaProvenanceZeroTwo_SlsaConfigSource._();
@@ -406,47 +374,8 @@ class SlsaProvenanceZeroTwo_SlsaConfigSource extends $pb.GeneratedMessage {
   void clearEntryPoint() => clearField(3);
 }
 
+/// Other properties of the build.
 class SlsaProvenanceZeroTwo_SlsaMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo.SlsaMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildInvocationId')
-    ..aOM<$1.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildStartedOn',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildFinishedOn',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<SlsaProvenanceZeroTwo_SlsaCompleteness>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'completeness',
-        subBuilder: SlsaProvenanceZeroTwo_SlsaCompleteness.create)
-    ..aOB(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reproducible')
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo_SlsaMetadata._() : super();
   factory SlsaProvenanceZeroTwo_SlsaMetadata({
     $core.String? buildInvocationId,
     $1.Timestamp? buildStartedOn,
@@ -454,30 +383,47 @@ class SlsaProvenanceZeroTwo_SlsaMetadata extends $pb.GeneratedMessage {
     SlsaProvenanceZeroTwo_SlsaCompleteness? completeness,
     $core.bool? reproducible,
   }) {
-    final _result = create();
+    final $result = create();
     if (buildInvocationId != null) {
-      _result.buildInvocationId = buildInvocationId;
+      $result.buildInvocationId = buildInvocationId;
     }
     if (buildStartedOn != null) {
-      _result.buildStartedOn = buildStartedOn;
+      $result.buildStartedOn = buildStartedOn;
     }
     if (buildFinishedOn != null) {
-      _result.buildFinishedOn = buildFinishedOn;
+      $result.buildFinishedOn = buildFinishedOn;
     }
     if (completeness != null) {
-      _result.completeness = completeness;
+      $result.completeness = completeness;
     }
     if (reproducible != null) {
-      _result.reproducible = reproducible;
+      $result.reproducible = reproducible;
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo_SlsaMetadata._() : super();
   factory SlsaProvenanceZeroTwo_SlsaMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlsaProvenanceZeroTwo_SlsaMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo.SlsaMetadata',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'buildInvocationId')
+    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'buildStartedOn',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'buildFinishedOn',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<SlsaProvenanceZeroTwo_SlsaCompleteness>(
+        4, _omitFieldNames ? '' : 'completeness',
+        subBuilder: SlsaProvenanceZeroTwo_SlsaCompleteness.create)
+    ..aOB(5, _omitFieldNames ? '' : 'reproducible')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -490,8 +436,10 @@ class SlsaProvenanceZeroTwo_SlsaMetadata extends $pb.GeneratedMessage {
           void Function(SlsaProvenanceZeroTwo_SlsaMetadata) updates) =>
       super.copyWith((message) =>
               updates(message as SlsaProvenanceZeroTwo_SlsaMetadata))
-          as SlsaProvenanceZeroTwo_SlsaMetadata; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo_SlsaMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo_SlsaMetadata create() =>
       SlsaProvenanceZeroTwo_SlsaMetadata._();
@@ -571,51 +519,27 @@ class SlsaProvenanceZeroTwo_SlsaMetadata extends $pb.GeneratedMessage {
   void clearReproducible() => clearField(5);
 }
 
+/// Indicates that the builder claims certain fields in this message to be
+/// complete.
 class SlsaProvenanceZeroTwo_SlsaCompleteness extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo.SlsaCompleteness',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parameters')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environment')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'materials')
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo_SlsaCompleteness._() : super();
   factory SlsaProvenanceZeroTwo_SlsaCompleteness({
     $core.bool? parameters,
     $core.bool? environment,
     $core.bool? materials,
   }) {
-    final _result = create();
+    final $result = create();
     if (parameters != null) {
-      _result.parameters = parameters;
+      $result.parameters = parameters;
     }
     if (environment != null) {
-      _result.environment = environment;
+      $result.environment = environment;
     }
     if (materials != null) {
-      _result.materials = materials;
+      $result.materials = materials;
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo_SlsaCompleteness._() : super();
   factory SlsaProvenanceZeroTwo_SlsaCompleteness.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -623,6 +547,16 @@ class SlsaProvenanceZeroTwo_SlsaCompleteness extends $pb.GeneratedMessage {
   factory SlsaProvenanceZeroTwo_SlsaCompleteness.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo.SlsaCompleteness',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'parameters')
+    ..aOB(2, _omitFieldNames ? '' : 'environment')
+    ..aOB(3, _omitFieldNames ? '' : 'materials')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -635,8 +569,10 @@ class SlsaProvenanceZeroTwo_SlsaCompleteness extends $pb.GeneratedMessage {
           void Function(SlsaProvenanceZeroTwo_SlsaCompleteness) updates) =>
       super.copyWith((message) =>
               updates(message as SlsaProvenanceZeroTwo_SlsaCompleteness))
-          as SlsaProvenanceZeroTwo_SlsaCompleteness; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo_SlsaCompleteness;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo_SlsaCompleteness create() =>
       SlsaProvenanceZeroTwo_SlsaCompleteness._();
@@ -687,54 +623,6 @@ class SlsaProvenanceZeroTwo_SlsaCompleteness extends $pb.GeneratedMessage {
 }
 
 class SlsaProvenanceZeroTwo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlsaProvenanceZeroTwo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'grafeas.v1'),
-      createEmptyInstance: create)
-    ..aOM<SlsaProvenanceZeroTwo_SlsaBuilder>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'builder',
-        subBuilder: SlsaProvenanceZeroTwo_SlsaBuilder.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildType')
-    ..aOM<SlsaProvenanceZeroTwo_SlsaInvocation>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'invocation',
-        subBuilder: SlsaProvenanceZeroTwo_SlsaInvocation.create)
-    ..aOM<$0.Struct>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'buildConfig',
-        subBuilder: $0.Struct.create)
-    ..aOM<SlsaProvenanceZeroTwo_SlsaMetadata>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        subBuilder: SlsaProvenanceZeroTwo_SlsaMetadata.create)
-    ..pc<SlsaProvenanceZeroTwo_SlsaMaterial>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'materials',
-        $pb.PbFieldType.PM,
-        subBuilder: SlsaProvenanceZeroTwo_SlsaMaterial.create)
-    ..hasRequiredFields = false;
-
-  SlsaProvenanceZeroTwo._() : super();
   factory SlsaProvenanceZeroTwo({
     SlsaProvenanceZeroTwo_SlsaBuilder? builder,
     $core.String? buildType,
@@ -743,33 +631,56 @@ class SlsaProvenanceZeroTwo extends $pb.GeneratedMessage {
     SlsaProvenanceZeroTwo_SlsaMetadata? metadata,
     $core.Iterable<SlsaProvenanceZeroTwo_SlsaMaterial>? materials,
   }) {
-    final _result = create();
+    final $result = create();
     if (builder != null) {
-      _result.builder = builder;
+      $result.builder = builder;
     }
     if (buildType != null) {
-      _result.buildType = buildType;
+      $result.buildType = buildType;
     }
     if (invocation != null) {
-      _result.invocation = invocation;
+      $result.invocation = invocation;
     }
     if (buildConfig != null) {
-      _result.buildConfig = buildConfig;
+      $result.buildConfig = buildConfig;
     }
     if (metadata != null) {
-      _result.metadata = metadata;
+      $result.metadata = metadata;
     }
     if (materials != null) {
-      _result.materials.addAll(materials);
+      $result.materials.addAll(materials);
     }
-    return _result;
+    return $result;
   }
+  SlsaProvenanceZeroTwo._() : super();
   factory SlsaProvenanceZeroTwo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlsaProvenanceZeroTwo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlsaProvenanceZeroTwo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
+      createEmptyInstance: create)
+    ..aOM<SlsaProvenanceZeroTwo_SlsaBuilder>(
+        1, _omitFieldNames ? '' : 'builder',
+        subBuilder: SlsaProvenanceZeroTwo_SlsaBuilder.create)
+    ..aOS(2, _omitFieldNames ? '' : 'buildType')
+    ..aOM<SlsaProvenanceZeroTwo_SlsaInvocation>(
+        3, _omitFieldNames ? '' : 'invocation',
+        subBuilder: SlsaProvenanceZeroTwo_SlsaInvocation.create)
+    ..aOM<$0.Struct>(4, _omitFieldNames ? '' : 'buildConfig',
+        subBuilder: $0.Struct.create)
+    ..aOM<SlsaProvenanceZeroTwo_SlsaMetadata>(
+        5, _omitFieldNames ? '' : 'metadata',
+        subBuilder: SlsaProvenanceZeroTwo_SlsaMetadata.create)
+    ..pc<SlsaProvenanceZeroTwo_SlsaMaterial>(
+        6, _omitFieldNames ? '' : 'materials', $pb.PbFieldType.PM,
+        subBuilder: SlsaProvenanceZeroTwo_SlsaMaterial.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -781,8 +692,10 @@ class SlsaProvenanceZeroTwo extends $pb.GeneratedMessage {
   SlsaProvenanceZeroTwo copyWith(
           void Function(SlsaProvenanceZeroTwo) updates) =>
       super.copyWith((message) => updates(message as SlsaProvenanceZeroTwo))
-          as SlsaProvenanceZeroTwo; // ignore: deprecated_member_use
+          as SlsaProvenanceZeroTwo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlsaProvenanceZeroTwo create() => SlsaProvenanceZeroTwo._();
   SlsaProvenanceZeroTwo createEmptyInstance() => create();
@@ -864,3 +777,7 @@ class SlsaProvenanceZeroTwo extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.List<SlsaProvenanceZeroTwo_SlsaMaterial> get materials => $_getList(5);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

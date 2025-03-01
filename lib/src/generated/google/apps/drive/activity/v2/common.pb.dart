@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/activity/v2/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,50 +15,40 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../../protobuf/timestamp.pb.dart' as $0;
 
+/// Information about time ranges.
 class TimeRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TimeRange',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  TimeRange._() : super();
   factory TimeRange({
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
-    return _result;
+    return $result;
   }
+  TimeRange._() : super();
   factory TimeRange.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TimeRange.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimeRange',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -63,9 +57,10 @@ class TimeRange extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TimeRange copyWith(void Function(TimeRange) updates) =>
-      super.copyWith((message) => updates(message as TimeRange))
-          as TimeRange; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TimeRange)) as TimeRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TimeRange create() => TimeRange._();
   TimeRange createEmptyInstance() => create();
@@ -75,6 +70,7 @@ class TimeRange extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeRange>(create);
   static TimeRange? _defaultInstance;
 
+  /// The start of the time range.
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -89,6 +85,7 @@ class TimeRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
+  /// The end of the time range.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -104,48 +101,38 @@ class TimeRange extends $pb.GeneratedMessage {
   $0.Timestamp ensureEndTime() => $_ensure(1);
 }
 
+/// Information about a group.
 class Group extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Group',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'email')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..hasRequiredFields = false;
-
-  Group._() : super();
   factory Group({
     $core.String? email,
     $core.String? title,
   }) {
-    final _result = create();
+    final $result = create();
     if (email != null) {
-      _result.email = email;
+      $result.email = email;
     }
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
-    return _result;
+    return $result;
   }
+  Group._() : super();
   factory Group.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Group.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Group',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'email')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -154,9 +141,10 @@ class Group extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Group copyWith(void Function(Group) updates) =>
-      super.copyWith((message) => updates(message as Group))
-          as Group; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Group)) as Group;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Group create() => Group._();
   Group createEmptyInstance() => create();
@@ -166,6 +154,7 @@ class Group extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Group>(create);
   static Group? _defaultInstance;
 
+  /// The email address of the group.
   @$pb.TagNumber(1)
   $core.String get email => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -178,6 +167,7 @@ class Group extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEmail() => clearField(1);
 
+  /// The title of the group.
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -191,48 +181,38 @@ class Group extends $pb.GeneratedMessage {
   void clearTitle() => clearField(2);
 }
 
+/// Information about a domain.
 class Domain extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Domain',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.drive.activity.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'legacyId')
-    ..hasRequiredFields = false;
-
-  Domain._() : super();
   factory Domain({
     $core.String? name,
     $core.String? legacyId,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (legacyId != null) {
-      _result.legacyId = legacyId;
+      $result.legacyId = legacyId;
     }
-    return _result;
+    return $result;
   }
+  Domain._() : super();
   factory Domain.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Domain.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Domain',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'legacyId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -241,9 +221,10 @@ class Domain extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Domain copyWith(void Function(Domain) updates) =>
-      super.copyWith((message) => updates(message as Domain))
-          as Domain; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Domain)) as Domain;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Domain create() => Domain._();
   Domain createEmptyInstance() => create();
@@ -253,6 +234,7 @@ class Domain extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Domain>(create);
   static Domain? _defaultInstance;
 
+  /// The name of the domain, e.g. `google.com`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -265,6 +247,7 @@ class Domain extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// An opaque string used to identify this domain.
   @$pb.TagNumber(3)
   $core.String get legacyId => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -277,3 +260,7 @@ class Domain extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLegacyId() => clearField(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

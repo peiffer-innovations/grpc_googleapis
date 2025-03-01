@@ -1,55 +1,36 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1beta1/firestore_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The various possible states for an ongoing Operation.
 class OperationState extends $pb.ProtobufEnum {
-  static const OperationState STATE_UNSPECIFIED = OperationState._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STATE_UNSPECIFIED');
-  static const OperationState INITIALIZING = OperationState._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'INITIALIZING');
-  static const OperationState PROCESSING = OperationState._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PROCESSING');
-  static const OperationState CANCELLING = OperationState._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CANCELLING');
-  static const OperationState FINALIZING = OperationState._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FINALIZING');
-  static const OperationState SUCCESSFUL = OperationState._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SUCCESSFUL');
-  static const OperationState FAILED = OperationState._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILED');
-  static const OperationState CANCELLED = OperationState._(
-      7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CANCELLED');
+  static const OperationState STATE_UNSPECIFIED =
+      OperationState._(0, _omitEnumNames ? '' : 'STATE_UNSPECIFIED');
+  static const OperationState INITIALIZING =
+      OperationState._(1, _omitEnumNames ? '' : 'INITIALIZING');
+  static const OperationState PROCESSING =
+      OperationState._(2, _omitEnumNames ? '' : 'PROCESSING');
+  static const OperationState CANCELLING =
+      OperationState._(3, _omitEnumNames ? '' : 'CANCELLING');
+  static const OperationState FINALIZING =
+      OperationState._(4, _omitEnumNames ? '' : 'FINALIZING');
+  static const OperationState SUCCESSFUL =
+      OperationState._(5, _omitEnumNames ? '' : 'SUCCESSFUL');
+  static const OperationState FAILED =
+      OperationState._(6, _omitEnumNames ? '' : 'FAILED');
+  static const OperationState CANCELLED =
+      OperationState._(7, _omitEnumNames ? '' : 'CANCELLED');
 
   static const $core.List<OperationState> values = <OperationState>[
     STATE_UNSPECIFIED,
@@ -69,19 +50,14 @@ class OperationState extends $pb.ProtobufEnum {
   const OperationState._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The type of index operation.
 class IndexOperationMetadata_OperationType extends $pb.ProtobufEnum {
   static const IndexOperationMetadata_OperationType OPERATION_TYPE_UNSPECIFIED =
       IndexOperationMetadata_OperationType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OPERATION_TYPE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'OPERATION_TYPE_UNSPECIFIED');
   static const IndexOperationMetadata_OperationType CREATING_INDEX =
       IndexOperationMetadata_OperationType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'CREATING_INDEX');
+          1, _omitEnumNames ? '' : 'CREATING_INDEX');
 
   static const $core.List<IndexOperationMetadata_OperationType> values =
       <IndexOperationMetadata_OperationType>[
@@ -97,3 +73,5 @@ class IndexOperationMetadata_OperationType extends $pb.ProtobufEnum {
   const IndexOperationMetadata_OperationType._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

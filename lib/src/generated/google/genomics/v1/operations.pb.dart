@@ -1,86 +1,23 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/operations.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
 import '../../protobuf/any.pb.dart' as $1;
+import '../../protobuf/timestamp.pb.dart' as $0;
 
+/// Metadata describing an [Operation][google.longrunning.Operation].
 class OperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$1.Any>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'request',
-        subBuilder: $1.Any.create)
-    ..pc<OperationEvent>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'events',
-        $pb.PbFieldType.PM,
-        subBuilder: OperationEvent.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientId')
-    ..aOM<$1.Any>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'runtimeMetadata',
-        subBuilder: $1.Any.create)
-    ..m<$core.String, $core.String>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labels',
-        entryClassName: 'OperationMetadata.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.genomics.v1'))
-    ..hasRequiredFields = false;
-
-  OperationMetadata._() : super();
   factory OperationMetadata({
     $core.String? projectId,
     $0.Timestamp? createTime,
@@ -92,42 +29,70 @@ class OperationMetadata extends $pb.GeneratedMessage {
     $1.Any? runtimeMetadata,
     $core.Map<$core.String, $core.String>? labels,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (request != null) {
-      _result.request = request;
+      $result.request = request;
     }
     if (events != null) {
-      _result.events.addAll(events);
+      $result.events.addAll(events);
     }
     if (clientId != null) {
-      _result.clientId = clientId;
+      $result.clientId = clientId;
     }
     if (runtimeMetadata != null) {
-      _result.runtimeMetadata = runtimeMetadata;
+      $result.runtimeMetadata = runtimeMetadata;
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
-    return _result;
+    return $result;
   }
+  OperationMetadata._() : super();
   factory OperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationMetadata',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$1.Any>(5, _omitFieldNames ? '' : 'request',
+        subBuilder: $1.Any.create)
+    ..pc<OperationEvent>(6, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM,
+        subBuilder: OperationEvent.create)
+    ..aOS(7, _omitFieldNames ? '' : 'clientId')
+    ..aOM<$1.Any>(8, _omitFieldNames ? '' : 'runtimeMetadata',
+        subBuilder: $1.Any.create)
+    ..m<$core.String, $core.String>(9, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'OperationMetadata.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.genomics.v1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -137,8 +102,10 @@ class OperationMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata))
-          as OperationMetadata; // ignore: deprecated_member_use
+          as OperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
@@ -149,6 +116,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata? _defaultInstance;
 
+  /// The Google Cloud Project in which the job is scoped.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -161,6 +129,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The time at which the job was submitted to the Genomics service.
   @$pb.TagNumber(2)
   $0.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -175,6 +144,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureCreateTime() => $_ensure(1);
 
+  /// The time at which the job began to run.
   @$pb.TagNumber(3)
   $0.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -189,6 +159,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp ensureStartTime() => $_ensure(2);
 
+  /// The time at which the job stopped running.
   @$pb.TagNumber(4)
   $0.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
@@ -203,6 +174,9 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Timestamp ensureEndTime() => $_ensure(3);
 
+  /// The original request that started the operation. Note that this will be in
+  /// current version of the API. If the operation was started with v1beta2 API
+  /// and a GetOperation is performed on v1 API, a v1 request will be returned.
   @$pb.TagNumber(5)
   $1.Any get request => $_getN(4);
   @$pb.TagNumber(5)
@@ -217,9 +191,14 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.Any ensureRequest() => $_ensure(4);
 
+  /// Optional event messages that were generated during the job's execution.
+  /// This also contains any warnings that were generated during import
+  /// or export.
   @$pb.TagNumber(6)
   $core.List<OperationEvent> get events => $_getList(5);
 
+  /// This field is deprecated. Use `labels` instead. Optionally provided by the
+  /// caller when submitting the request that creates the operation.
   @$pb.TagNumber(7)
   $core.String get clientId => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -232,6 +211,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearClientId() => clearField(7);
 
+  /// Runtime metadata on this Operation.
   @$pb.TagNumber(8)
   $1.Any get runtimeMetadata => $_getN(7);
   @$pb.TagNumber(8)
@@ -246,63 +226,51 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $1.Any ensureRuntimeMetadata() => $_ensure(7);
 
+  /// Optionally provided by the caller when submitting the request that creates
+  /// the operation.
   @$pb.TagNumber(9)
   $core.Map<$core.String, $core.String> get labels => $_getMap(8);
 }
 
+/// An event that occurred during an [Operation][google.longrunning.Operation].
 class OperationEvent extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationEvent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.genomics.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..hasRequiredFields = false;
-
-  OperationEvent._() : super();
   factory OperationEvent({
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
     $core.String? description,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
-    return _result;
+    return $result;
   }
+  OperationEvent._() : super();
   factory OperationEvent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationEvent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationEvent',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -312,8 +280,10 @@ class OperationEvent extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationEvent copyWith(void Function(OperationEvent) updates) =>
       super.copyWith((message) => updates(message as OperationEvent))
-          as OperationEvent; // ignore: deprecated_member_use
+          as OperationEvent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationEvent create() => OperationEvent._();
   OperationEvent createEmptyInstance() => create();
@@ -324,6 +294,7 @@ class OperationEvent extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OperationEvent>(create);
   static OperationEvent? _defaultInstance;
 
+  /// Optional time of when event started.
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -338,6 +309,8 @@ class OperationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
+  /// Optional time of when event finished. An event can have a start time and no
+  /// finish time. If an event has a finish time, there must be a start time.
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
@@ -352,6 +325,7 @@ class OperationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
+  /// Required description of event.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -364,3 +338,7 @@ class OperationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,119 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/testing/v1/test_execution.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $1;
 import '../../../protobuf/duration.pb.dart' as $2;
-
+import '../../../protobuf/timestamp.pb.dart' as $1;
 import 'test_execution.pbenum.dart';
 
 export 'test_execution.pbenum.dart';
 
+/// TestMatrix captures all details about a test. It contains the environment
+/// configuration, test specification, test executions and overall state and
+/// outcome.
 class TestMatrix extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestMatrix',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testMatrixId')
-    ..aOM<TestSpecification>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testSpecification',
-        subBuilder: TestSpecification.create)
-    ..aOM<EnvironmentMatrix>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environmentMatrix',
-        subBuilder: EnvironmentMatrix.create)
-    ..pc<TestExecution>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testExecutions',
-        $pb.PbFieldType.PM,
-        subBuilder: TestExecution.create)
-    ..aOM<ResultStorage>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resultStorage',
-        subBuilder: ResultStorage.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..e<TestState>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TestState.TEST_STATE_UNSPECIFIED,
-        valueOf: TestState.valueOf,
-        enumValues: TestState.values)
-    ..aOM<$1.Timestamp>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timestamp',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<ClientInfo>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientInfo',
-        subBuilder: ClientInfo.create)
-    ..e<InvalidMatrixDetails>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'invalidMatrixDetails',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: InvalidMatrixDetails.INVALID_MATRIX_DETAILS_UNSPECIFIED,
-        valueOf: InvalidMatrixDetails.valueOf,
-        enumValues: InvalidMatrixDetails.values)
-    ..a<$core.int>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'flakyTestAttempts',
-        $pb.PbFieldType.O3)
-    ..e<OutcomeSummary>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'outcomeSummary',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OutcomeSummary.OUTCOME_SUMMARY_UNSPECIFIED,
-        valueOf: OutcomeSummary.valueOf,
-        enumValues: OutcomeSummary.values)
-    ..aOB(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failFast')
-    ..hasRequiredFields = false;
-
-  TestMatrix._() : super();
   factory TestMatrix({
     $core.String? testMatrixId,
     TestSpecification? testSpecification,
@@ -128,55 +37,105 @@ class TestMatrix extends $pb.GeneratedMessage {
     $core.int? flakyTestAttempts,
     OutcomeSummary? outcomeSummary,
     $core.bool? failFast,
+    $core.Iterable<MatrixErrorDetail>? extendedInvalidMatrixDetails,
   }) {
-    final _result = create();
+    final $result = create();
     if (testMatrixId != null) {
-      _result.testMatrixId = testMatrixId;
+      $result.testMatrixId = testMatrixId;
     }
     if (testSpecification != null) {
-      _result.testSpecification = testSpecification;
+      $result.testSpecification = testSpecification;
     }
     if (environmentMatrix != null) {
-      _result.environmentMatrix = environmentMatrix;
+      $result.environmentMatrix = environmentMatrix;
     }
     if (testExecutions != null) {
-      _result.testExecutions.addAll(testExecutions);
+      $result.testExecutions.addAll(testExecutions);
     }
     if (resultStorage != null) {
-      _result.resultStorage = resultStorage;
+      $result.resultStorage = resultStorage;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (timestamp != null) {
-      _result.timestamp = timestamp;
+      $result.timestamp = timestamp;
     }
     if (clientInfo != null) {
-      _result.clientInfo = clientInfo;
+      $result.clientInfo = clientInfo;
     }
     if (invalidMatrixDetails != null) {
-      _result.invalidMatrixDetails = invalidMatrixDetails;
+      $result.invalidMatrixDetails = invalidMatrixDetails;
     }
     if (flakyTestAttempts != null) {
-      _result.flakyTestAttempts = flakyTestAttempts;
+      $result.flakyTestAttempts = flakyTestAttempts;
     }
     if (outcomeSummary != null) {
-      _result.outcomeSummary = outcomeSummary;
+      $result.outcomeSummary = outcomeSummary;
     }
     if (failFast != null) {
-      _result.failFast = failFast;
+      $result.failFast = failFast;
     }
-    return _result;
+    if (extendedInvalidMatrixDetails != null) {
+      $result.extendedInvalidMatrixDetails.addAll(extendedInvalidMatrixDetails);
+    }
+    return $result;
   }
+  TestMatrix._() : super();
   factory TestMatrix.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestMatrix.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestMatrix',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'testMatrixId')
+    ..aOM<TestSpecification>(3, _omitFieldNames ? '' : 'testSpecification',
+        subBuilder: TestSpecification.create)
+    ..aOM<EnvironmentMatrix>(4, _omitFieldNames ? '' : 'environmentMatrix',
+        subBuilder: EnvironmentMatrix.create)
+    ..pc<TestExecution>(
+        5, _omitFieldNames ? '' : 'testExecutions', $pb.PbFieldType.PM,
+        subBuilder: TestExecution.create)
+    ..aOM<ResultStorage>(6, _omitFieldNames ? '' : 'resultStorage',
+        subBuilder: ResultStorage.create)
+    ..aOS(7, _omitFieldNames ? '' : 'projectId')
+    ..e<TestState>(8, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: TestState.TEST_STATE_UNSPECIFIED,
+        valueOf: TestState.valueOf,
+        enumValues: TestState.values)
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'timestamp',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<ClientInfo>(10, _omitFieldNames ? '' : 'clientInfo',
+        subBuilder: ClientInfo.create)
+    ..e<InvalidMatrixDetails>(
+        11, _omitFieldNames ? '' : 'invalidMatrixDetails', $pb.PbFieldType.OE,
+        defaultOrMaker: InvalidMatrixDetails.INVALID_MATRIX_DETAILS_UNSPECIFIED,
+        valueOf: InvalidMatrixDetails.valueOf,
+        enumValues: InvalidMatrixDetails.values)
+    ..a<$core.int>(
+        13, _omitFieldNames ? '' : 'flakyTestAttempts', $pb.PbFieldType.O3)
+    ..e<OutcomeSummary>(
+        14, _omitFieldNames ? '' : 'outcomeSummary', $pb.PbFieldType.OE,
+        defaultOrMaker: OutcomeSummary.OUTCOME_SUMMARY_UNSPECIFIED,
+        valueOf: OutcomeSummary.valueOf,
+        enumValues: OutcomeSummary.values)
+    ..aOB(17, _omitFieldNames ? '' : 'failFast')
+    ..pc<MatrixErrorDetail>(
+        22,
+        _omitFieldNames ? '' : 'extendedInvalidMatrixDetails',
+        $pb.PbFieldType.PM,
+        subBuilder: MatrixErrorDetail.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -185,9 +144,10 @@ class TestMatrix extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TestMatrix copyWith(void Function(TestMatrix) updates) =>
-      super.copyWith((message) => updates(message as TestMatrix))
-          as TestMatrix; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TestMatrix)) as TestMatrix;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestMatrix create() => TestMatrix._();
   TestMatrix createEmptyInstance() => create();
@@ -197,6 +157,7 @@ class TestMatrix extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TestMatrix>(create);
   static TestMatrix? _defaultInstance;
 
+  /// Output only. Unique id set by the service.
   @$pb.TagNumber(1)
   $core.String get testMatrixId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -209,6 +170,7 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTestMatrixId() => clearField(1);
 
+  /// Required. How to run the test.
   @$pb.TagNumber(3)
   TestSpecification get testSpecification => $_getN(1);
   @$pb.TagNumber(3)
@@ -223,6 +185,7 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   TestSpecification ensureTestSpecification() => $_ensure(1);
 
+  /// Required. The devices the tests are being executed on.
   @$pb.TagNumber(4)
   EnvironmentMatrix get environmentMatrix => $_getN(2);
   @$pb.TagNumber(4)
@@ -237,9 +200,12 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   EnvironmentMatrix ensureEnvironmentMatrix() => $_ensure(2);
 
+  /// Output only. The list of test executions that the service creates for
+  /// this matrix.
   @$pb.TagNumber(5)
   $core.List<TestExecution> get testExecutions => $_getList(3);
 
+  /// Required. Where the results for the matrix are written.
   @$pb.TagNumber(6)
   ResultStorage get resultStorage => $_getN(4);
   @$pb.TagNumber(6)
@@ -254,6 +220,7 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   ResultStorage ensureResultStorage() => $_ensure(4);
 
+  /// The cloud project that owns the test matrix.
   @$pb.TagNumber(7)
   $core.String get projectId => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -266,6 +233,7 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearProjectId() => clearField(7);
 
+  /// Output only. Indicates the current progress of the test matrix.
   @$pb.TagNumber(8)
   TestState get state => $_getN(6);
   @$pb.TagNumber(8)
@@ -278,6 +246,7 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearState() => clearField(8);
 
+  /// Output only. The time this test matrix was initially created.
   @$pb.TagNumber(9)
   $1.Timestamp get timestamp => $_getN(7);
   @$pb.TagNumber(9)
@@ -292,6 +261,7 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $1.Timestamp ensureTimestamp() => $_ensure(7);
 
+  /// Information about the client which invoked the test.
   @$pb.TagNumber(10)
   ClientInfo get clientInfo => $_getN(8);
   @$pb.TagNumber(10)
@@ -306,6 +276,8 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   ClientInfo ensureClientInfo() => $_ensure(8);
 
+  /// Output only. Describes why the matrix is considered invalid.
+  /// Only useful for matrices in the INVALID state.
   @$pb.TagNumber(11)
   InvalidMatrixDetails get invalidMatrixDetails => $_getN(9);
   @$pb.TagNumber(11)
@@ -318,6 +290,11 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearInvalidMatrixDetails() => clearField(11);
 
+  ///  The number of times a TestExecution should be re-attempted if one or more
+  ///  of its test cases fail for any reason.
+  ///  The maximum number of reruns allowed is 10.
+  ///
+  ///  Default is 0, which implies no reruns.
   @$pb.TagNumber(13)
   $core.int get flakyTestAttempts => $_getIZ(10);
   @$pb.TagNumber(13)
@@ -330,6 +307,8 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearFlakyTestAttempts() => clearField(13);
 
+  /// Output Only. The overall outcome of the test.
+  /// Only set when the test matrix state is FINISHED.
   @$pb.TagNumber(14)
   OutcomeSummary get outcomeSummary => $_getN(11);
   @$pb.TagNumber(14)
@@ -342,6 +321,15 @@ class TestMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearOutcomeSummary() => clearField(14);
 
+  ///  If true, only a single attempt at most will be made to run each
+  ///  execution/shard in the matrix. Flaky test attempts are not affected.
+  ///
+  ///  Normally, 2 or more attempts are made if a potential infrastructure issue
+  ///  is detected.
+  ///
+  ///  This feature is for latency sensitive workloads. The incidence of
+  ///  execution failures may be significantly greater for fail-fast matrices
+  ///  and support is more limited because of that expectation.
   @$pb.TagNumber(17)
   $core.bool get failFast => $_getBF(12);
   @$pb.TagNumber(17)
@@ -353,81 +341,102 @@ class TestMatrix extends $pb.GeneratedMessage {
   $core.bool hasFailFast() => $_has(12);
   @$pb.TagNumber(17)
   void clearFailFast() => clearField(17);
+
+  /// Output only. Details about why a matrix was deemed invalid.
+  /// If multiple checks can be safely performed, they will be reported but no
+  /// assumptions should be made about the length of this list.
+  @$pb.TagNumber(22)
+  $core.List<MatrixErrorDetail> get extendedInvalidMatrixDetails =>
+      $_getList(13);
 }
 
-class TestExecution extends $pb.GeneratedMessage {
+/// Describes a single error or issue with a matrix.
+class MatrixErrorDetail extends $pb.GeneratedMessage {
+  factory MatrixErrorDetail({
+    $core.String? reason,
+    $core.String? message,
+  }) {
+    final $result = create();
+    if (reason != null) {
+      $result.reason = reason;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  MatrixErrorDetail._() : super();
+  factory MatrixErrorDetail.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MatrixErrorDetail.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestExecution',
+      _omitMessageNames ? '' : 'MatrixErrorDetail',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOM<TestSpecification>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testSpecification',
-        subBuilder: TestSpecification.create)
-    ..aOM<Environment>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environment',
-        subBuilder: Environment.create)
-    ..e<TestState>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'state',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TestState.TEST_STATE_UNSPECIFIED,
-        valueOf: TestState.valueOf,
-        enumValues: TestState.values)
-    ..aOM<$1.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timestamp',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<TestDetails>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testDetails',
-        subBuilder: TestDetails.create)
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'matrixId')
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOM<ToolResultsStep>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'toolResultsStep',
-        subBuilder: ToolResultsStep.create)
-    ..aOM<Shard>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shard',
-        subBuilder: Shard.create)
+    ..aOS(1, _omitFieldNames ? '' : 'reason')
+    ..aOS(2, _omitFieldNames ? '' : 'message')
     ..hasRequiredFields = false;
 
-  TestExecution._() : super();
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  MatrixErrorDetail clone() => MatrixErrorDetail()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MatrixErrorDetail copyWith(void Function(MatrixErrorDetail) updates) =>
+      super.copyWith((message) => updates(message as MatrixErrorDetail))
+          as MatrixErrorDetail;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MatrixErrorDetail create() => MatrixErrorDetail._();
+  MatrixErrorDetail createEmptyInstance() => create();
+  static $pb.PbList<MatrixErrorDetail> createRepeated() =>
+      $pb.PbList<MatrixErrorDetail>();
+  @$core.pragma('dart2js:noInline')
+  static MatrixErrorDetail getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MatrixErrorDetail>(create);
+  static MatrixErrorDetail? _defaultInstance;
+
+  /// Output only. The reason for the error. This is a constant value in
+  /// UPPER_SNAKE_CASE that identifies the cause of the error.
+  @$pb.TagNumber(1)
+  $core.String get reason => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set reason($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasReason() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearReason() => clearField(1);
+
+  /// Output only. A human-readable message about how the error in the
+  /// TestMatrix. Expands on the `reason` field with additional details and
+  /// possible options to fix the issue.
+  @$pb.TagNumber(2)
+  $core.String get message => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set message($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMessage() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessage() => clearField(2);
+}
+
+/// A single test executed in a single environment.
+class TestExecution extends $pb.GeneratedMessage {
   factory TestExecution({
     $core.String? id,
     TestSpecification? testSpecification,
@@ -440,45 +449,72 @@ class TestExecution extends $pb.GeneratedMessage {
     ToolResultsStep? toolResultsStep,
     Shard? shard,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (testSpecification != null) {
-      _result.testSpecification = testSpecification;
+      $result.testSpecification = testSpecification;
     }
     if (environment != null) {
-      _result.environment = environment;
+      $result.environment = environment;
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
     if (timestamp != null) {
-      _result.timestamp = timestamp;
+      $result.timestamp = timestamp;
     }
     if (testDetails != null) {
-      _result.testDetails = testDetails;
+      $result.testDetails = testDetails;
     }
     if (matrixId != null) {
-      _result.matrixId = matrixId;
+      $result.matrixId = matrixId;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (toolResultsStep != null) {
-      _result.toolResultsStep = toolResultsStep;
+      $result.toolResultsStep = toolResultsStep;
     }
     if (shard != null) {
-      _result.shard = shard;
+      $result.shard = shard;
     }
-    return _result;
+    return $result;
   }
+  TestExecution._() : super();
   factory TestExecution.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestExecution.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestExecution',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOM<TestSpecification>(3, _omitFieldNames ? '' : 'testSpecification',
+        subBuilder: TestSpecification.create)
+    ..aOM<Environment>(4, _omitFieldNames ? '' : 'environment',
+        subBuilder: Environment.create)
+    ..e<TestState>(5, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: TestState.TEST_STATE_UNSPECIFIED,
+        valueOf: TestState.valueOf,
+        enumValues: TestState.values)
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'timestamp',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<TestDetails>(8, _omitFieldNames ? '' : 'testDetails',
+        subBuilder: TestDetails.create)
+    ..aOS(9, _omitFieldNames ? '' : 'matrixId')
+    ..aOS(10, _omitFieldNames ? '' : 'projectId')
+    ..aOM<ToolResultsStep>(11, _omitFieldNames ? '' : 'toolResultsStep',
+        subBuilder: ToolResultsStep.create)
+    ..aOM<Shard>(12, _omitFieldNames ? '' : 'shard', subBuilder: Shard.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -488,8 +524,10 @@ class TestExecution extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TestExecution copyWith(void Function(TestExecution) updates) =>
       super.copyWith((message) => updates(message as TestExecution))
-          as TestExecution; // ignore: deprecated_member_use
+          as TestExecution;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestExecution create() => TestExecution._();
   TestExecution createEmptyInstance() => create();
@@ -500,6 +538,7 @@ class TestExecution extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TestExecution>(create);
   static TestExecution? _defaultInstance;
 
+  /// Output only. Unique id set by the service.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -512,6 +551,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// Output only. How to run the test.
   @$pb.TagNumber(3)
   TestSpecification get testSpecification => $_getN(1);
   @$pb.TagNumber(3)
@@ -526,6 +566,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   TestSpecification ensureTestSpecification() => $_ensure(1);
 
+  /// Output only. How the host machine(s) are configured.
   @$pb.TagNumber(4)
   Environment get environment => $_getN(2);
   @$pb.TagNumber(4)
@@ -540,6 +581,8 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Environment ensureEnvironment() => $_ensure(2);
 
+  /// Output only. Indicates the current progress of the test execution
+  /// (e.g., FINISHED).
   @$pb.TagNumber(5)
   TestState get state => $_getN(3);
   @$pb.TagNumber(5)
@@ -552,6 +595,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearState() => clearField(5);
 
+  /// Output only. The time this test execution was initially created.
   @$pb.TagNumber(7)
   $1.Timestamp get timestamp => $_getN(4);
   @$pb.TagNumber(7)
@@ -566,6 +610,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $1.Timestamp ensureTimestamp() => $_ensure(4);
 
+  /// Output only. Additional details about the running test.
   @$pb.TagNumber(8)
   TestDetails get testDetails => $_getN(5);
   @$pb.TagNumber(8)
@@ -580,6 +625,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   TestDetails ensureTestDetails() => $_ensure(5);
 
+  /// Output only. Id of the containing TestMatrix.
   @$pb.TagNumber(9)
   $core.String get matrixId => $_getSZ(6);
   @$pb.TagNumber(9)
@@ -592,6 +638,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearMatrixId() => clearField(9);
 
+  /// Output only. The cloud project that owns the test execution.
   @$pb.TagNumber(10)
   $core.String get projectId => $_getSZ(7);
   @$pb.TagNumber(10)
@@ -604,6 +651,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearProjectId() => clearField(10);
 
+  /// Output only. Where the results for this execution are written.
   @$pb.TagNumber(11)
   ToolResultsStep get toolResultsStep => $_getN(8);
   @$pb.TagNumber(11)
@@ -618,6 +666,7 @@ class TestExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   ToolResultsStep ensureToolResultsStep() => $_ensure(8);
 
+  /// Output only. Details about the shard.
   @$pb.TagNumber(12)
   Shard get shard => $_getN(9);
   @$pb.TagNumber(12)
@@ -641,10 +690,69 @@ enum TestSpecification_Test {
   androidTestLoop,
   iosXcTest,
   iosTestLoop,
+  iosRoboTest,
   notSet
 }
 
+/// A description of how to run the test.
 class TestSpecification extends $pb.GeneratedMessage {
+  factory TestSpecification({
+    $2.Duration? testTimeout,
+    AndroidInstrumentationTest? androidInstrumentationTest,
+    AndroidRoboTest? androidRoboTest,
+    TestSetup? testSetup,
+    AndroidTestLoop? androidTestLoop,
+    $core.bool? disableVideoRecording,
+    $core.bool? disablePerformanceMetrics,
+    IosXcTest? iosXcTest,
+    IosTestSetup? iosTestSetup,
+    IosTestLoop? iosTestLoop,
+    IosRoboTest? iosRoboTest,
+  }) {
+    final $result = create();
+    if (testTimeout != null) {
+      $result.testTimeout = testTimeout;
+    }
+    if (androidInstrumentationTest != null) {
+      $result.androidInstrumentationTest = androidInstrumentationTest;
+    }
+    if (androidRoboTest != null) {
+      $result.androidRoboTest = androidRoboTest;
+    }
+    if (testSetup != null) {
+      $result.testSetup = testSetup;
+    }
+    if (androidTestLoop != null) {
+      $result.androidTestLoop = androidTestLoop;
+    }
+    if (disableVideoRecording != null) {
+      $result.disableVideoRecording = disableVideoRecording;
+    }
+    if (disablePerformanceMetrics != null) {
+      $result.disablePerformanceMetrics = disablePerformanceMetrics;
+    }
+    if (iosXcTest != null) {
+      $result.iosXcTest = iosXcTest;
+    }
+    if (iosTestSetup != null) {
+      $result.iosTestSetup = iosTestSetup;
+    }
+    if (iosTestLoop != null) {
+      $result.iosTestLoop = iosTestLoop;
+    }
+    if (iosRoboTest != null) {
+      $result.iosRoboTest = iosRoboTest;
+    }
+    return $result;
+  }
+  TestSpecification._() : super();
+  factory TestSpecification.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestSpecification.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, TestSpecification_Setup>
       _TestSpecification_SetupByTag = {
     6: TestSpecification_Setup.testSetup,
@@ -658,131 +766,39 @@ class TestSpecification extends $pb.GeneratedMessage {
     9: TestSpecification_Test.androidTestLoop,
     13: TestSpecification_Test.iosXcTest,
     15: TestSpecification_Test.iosTestLoop,
+    17: TestSpecification_Test.iosRoboTest,
     0: TestSpecification_Test.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestSpecification',
+      _omitMessageNames ? '' : 'TestSpecification',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
     ..oo(0, [6, 14])
-    ..oo(1, [2, 3, 9, 13, 15])
-    ..aOM<$2.Duration>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testTimeout',
+    ..oo(1, [2, 3, 9, 13, 15, 17])
+    ..aOM<$2.Duration>(1, _omitFieldNames ? '' : 'testTimeout',
         subBuilder: $2.Duration.create)
     ..aOM<AndroidInstrumentationTest>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidInstrumentationTest',
+        2, _omitFieldNames ? '' : 'androidInstrumentationTest',
         subBuilder: AndroidInstrumentationTest.create)
-    ..aOM<AndroidRoboTest>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidRoboTest',
+    ..aOM<AndroidRoboTest>(3, _omitFieldNames ? '' : 'androidRoboTest',
         subBuilder: AndroidRoboTest.create)
-    ..aOM<TestSetup>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testSetup',
+    ..aOM<TestSetup>(6, _omitFieldNames ? '' : 'testSetup',
         subBuilder: TestSetup.create)
-    ..aOM<AndroidTestLoop>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidTestLoop',
+    ..aOM<AndroidTestLoop>(9, _omitFieldNames ? '' : 'androidTestLoop',
         subBuilder: AndroidTestLoop.create)
-    ..aOB(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disableVideoRecording')
-    ..aOB(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disablePerformanceMetrics')
-    ..aOM<IosXcTest>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosXcTest',
+    ..aOB(10, _omitFieldNames ? '' : 'disableVideoRecording')
+    ..aOB(11, _omitFieldNames ? '' : 'disablePerformanceMetrics')
+    ..aOM<IosXcTest>(13, _omitFieldNames ? '' : 'iosXcTest',
         subBuilder: IosXcTest.create)
-    ..aOM<IosTestSetup>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosTestSetup',
+    ..aOM<IosTestSetup>(14, _omitFieldNames ? '' : 'iosTestSetup',
         subBuilder: IosTestSetup.create)
-    ..aOM<IosTestLoop>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosTestLoop',
+    ..aOM<IosTestLoop>(15, _omitFieldNames ? '' : 'iosTestLoop',
         subBuilder: IosTestLoop.create)
+    ..aOM<IosRoboTest>(17, _omitFieldNames ? '' : 'iosRoboTest',
+        subBuilder: IosRoboTest.create)
     ..hasRequiredFields = false;
 
-  TestSpecification._() : super();
-  factory TestSpecification({
-    $2.Duration? testTimeout,
-    AndroidInstrumentationTest? androidInstrumentationTest,
-    AndroidRoboTest? androidRoboTest,
-    TestSetup? testSetup,
-    AndroidTestLoop? androidTestLoop,
-    $core.bool? disableVideoRecording,
-    $core.bool? disablePerformanceMetrics,
-    IosXcTest? iosXcTest,
-    IosTestSetup? iosTestSetup,
-    IosTestLoop? iosTestLoop,
-  }) {
-    final _result = create();
-    if (testTimeout != null) {
-      _result.testTimeout = testTimeout;
-    }
-    if (androidInstrumentationTest != null) {
-      _result.androidInstrumentationTest = androidInstrumentationTest;
-    }
-    if (androidRoboTest != null) {
-      _result.androidRoboTest = androidRoboTest;
-    }
-    if (testSetup != null) {
-      _result.testSetup = testSetup;
-    }
-    if (androidTestLoop != null) {
-      _result.androidTestLoop = androidTestLoop;
-    }
-    if (disableVideoRecording != null) {
-      _result.disableVideoRecording = disableVideoRecording;
-    }
-    if (disablePerformanceMetrics != null) {
-      _result.disablePerformanceMetrics = disablePerformanceMetrics;
-    }
-    if (iosXcTest != null) {
-      _result.iosXcTest = iosXcTest;
-    }
-    if (iosTestSetup != null) {
-      _result.iosTestSetup = iosTestSetup;
-    }
-    if (iosTestLoop != null) {
-      _result.iosTestLoop = iosTestLoop;
-    }
-    return _result;
-  }
-  factory TestSpecification.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TestSpecification.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -792,8 +808,10 @@ class TestSpecification extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TestSpecification copyWith(void Function(TestSpecification) updates) =>
       super.copyWith((message) => updates(message as TestSpecification))
-          as TestSpecification; // ignore: deprecated_member_use
+          as TestSpecification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestSpecification create() => TestSpecification._();
   TestSpecification createEmptyInstance() => create();
@@ -812,6 +830,9 @@ class TestSpecification extends $pb.GeneratedMessage {
       _TestSpecification_TestByTag[$_whichOneof(1)]!;
   void clearTest() => clearField($_whichOneof(1));
 
+  /// Max time a test execution is allowed to run before it is
+  /// automatically cancelled.
+  /// The default value is 5 min.
   @$pb.TagNumber(1)
   $2.Duration get testTimeout => $_getN(0);
   @$pb.TagNumber(1)
@@ -826,6 +847,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.Duration ensureTestTimeout() => $_ensure(0);
 
+  /// An Android instrumentation test.
   @$pb.TagNumber(2)
   AndroidInstrumentationTest get androidInstrumentationTest => $_getN(1);
   @$pb.TagNumber(2)
@@ -840,6 +862,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AndroidInstrumentationTest ensureAndroidInstrumentationTest() => $_ensure(1);
 
+  /// An Android robo test.
   @$pb.TagNumber(3)
   AndroidRoboTest get androidRoboTest => $_getN(2);
   @$pb.TagNumber(3)
@@ -854,6 +877,8 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AndroidRoboTest ensureAndroidRoboTest() => $_ensure(2);
 
+  /// Test setup requirements for Android e.g. files to install, bootstrap
+  /// scripts.
   @$pb.TagNumber(6)
   TestSetup get testSetup => $_getN(3);
   @$pb.TagNumber(6)
@@ -868,6 +893,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   TestSetup ensureTestSetup() => $_ensure(3);
 
+  /// An Android Application with a Test Loop.
   @$pb.TagNumber(9)
   AndroidTestLoop get androidTestLoop => $_getN(4);
   @$pb.TagNumber(9)
@@ -882,6 +908,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   AndroidTestLoop ensureAndroidTestLoop() => $_ensure(4);
 
+  /// Disables video recording. May reduce test latency.
   @$pb.TagNumber(10)
   $core.bool get disableVideoRecording => $_getBF(5);
   @$pb.TagNumber(10)
@@ -894,6 +921,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearDisableVideoRecording() => clearField(10);
 
+  /// Disables performance metrics recording. May reduce test latency.
   @$pb.TagNumber(11)
   $core.bool get disablePerformanceMetrics => $_getBF(6);
   @$pb.TagNumber(11)
@@ -906,6 +934,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearDisablePerformanceMetrics() => clearField(11);
 
+  /// An iOS XCTest, via an .xctestrun file.
   @$pb.TagNumber(13)
   IosXcTest get iosXcTest => $_getN(7);
   @$pb.TagNumber(13)
@@ -920,6 +949,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   IosXcTest ensureIosXcTest() => $_ensure(7);
 
+  /// Test setup requirements for iOS.
   @$pb.TagNumber(14)
   IosTestSetup get iosTestSetup => $_getN(8);
   @$pb.TagNumber(14)
@@ -934,6 +964,7 @@ class TestSpecification extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   IosTestSetup ensureIosTestSetup() => $_ensure(8);
 
+  /// An iOS application with a test loop.
   @$pb.TagNumber(15)
   IosTestLoop get iosTestLoop => $_getN(9);
   @$pb.TagNumber(15)
@@ -947,43 +978,51 @@ class TestSpecification extends $pb.GeneratedMessage {
   void clearIosTestLoop() => clearField(15);
   @$pb.TagNumber(15)
   IosTestLoop ensureIosTestLoop() => $_ensure(9);
+
+  /// An iOS Robo test.
+  @$pb.TagNumber(17)
+  IosRoboTest get iosRoboTest => $_getN(10);
+  @$pb.TagNumber(17)
+  set iosRoboTest(IosRoboTest v) {
+    setField(17, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasIosRoboTest() => $_has(10);
+  @$pb.TagNumber(17)
+  void clearIosRoboTest() => clearField(17);
+  @$pb.TagNumber(17)
+  IosRoboTest ensureIosRoboTest() => $_ensure(10);
 }
 
 class SystraceSetup extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SystraceSetup',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'durationSeconds',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  SystraceSetup._() : super();
   factory SystraceSetup({
     @$core.Deprecated('This field is deprecated.') $core.int? durationSeconds,
   }) {
-    final _result = create();
+    final $result = create();
     if (durationSeconds != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.durationSeconds = durationSeconds;
+      $result.durationSeconds = durationSeconds;
     }
-    return _result;
+    return $result;
   }
+  SystraceSetup._() : super();
   factory SystraceSetup.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SystraceSetup.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SystraceSetup',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'durationSeconds', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -993,8 +1032,10 @@ class SystraceSetup extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SystraceSetup copyWith(void Function(SystraceSetup) updates) =>
       super.copyWith((message) => updates(message as SystraceSetup))
-          as SystraceSetup; // ignore: deprecated_member_use
+          as SystraceSetup;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SystraceSetup create() => SystraceSetup._();
   SystraceSetup createEmptyInstance() => create();
@@ -1005,6 +1046,8 @@ class SystraceSetup extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SystraceSetup>(create);
   static SystraceSetup? _defaultInstance;
 
+  /// Systrace duration in seconds.
+  /// Should be between 1 and 30 seconds. 0 disables systrace.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.int get durationSeconds => $_getIZ(0);
@@ -1022,67 +1065,8 @@ class SystraceSetup extends $pb.GeneratedMessage {
   void clearDurationSeconds() => clearField(1);
 }
 
+/// A description of how to set up the Android device prior to running the test.
 class TestSetup extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestSetup',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<DeviceFile>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filesToPush',
-        $pb.PbFieldType.PM,
-        subBuilder: DeviceFile.create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'directoriesToPull')
-    ..pc<Apk>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'additionalApks',
-        $pb.PbFieldType.PM,
-        subBuilder: Apk.create)
-    ..aOM<Account>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'account',
-        subBuilder: Account.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'networkProfile')
-    ..pc<EnvironmentVariable>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'environmentVariables',
-        $pb.PbFieldType.PM,
-        subBuilder: EnvironmentVariable.create)
-    ..aOM<SystraceSetup>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'systrace',
-        subBuilder: SystraceSetup.create)
-    ..aOB(
-        23,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dontAutograntPermissions')
-    ..hasRequiredFields = false;
-
-  TestSetup._() : super();
   factory TestSetup({
     $core.Iterable<DeviceFile>? filesToPush,
     $core.Iterable<$core.String>? directoriesToPull,
@@ -1092,41 +1076,71 @@ class TestSetup extends $pb.GeneratedMessage {
     $core.Iterable<EnvironmentVariable>? environmentVariables,
     @$core.Deprecated('This field is deprecated.') SystraceSetup? systrace,
     $core.bool? dontAutograntPermissions,
+    $core.Iterable<Apk>? initialSetupApks,
   }) {
-    final _result = create();
+    final $result = create();
     if (filesToPush != null) {
-      _result.filesToPush.addAll(filesToPush);
+      $result.filesToPush.addAll(filesToPush);
     }
     if (directoriesToPull != null) {
-      _result.directoriesToPull.addAll(directoriesToPull);
+      $result.directoriesToPull.addAll(directoriesToPull);
     }
     if (additionalApks != null) {
-      _result.additionalApks.addAll(additionalApks);
+      $result.additionalApks.addAll(additionalApks);
     }
     if (account != null) {
-      _result.account = account;
+      $result.account = account;
     }
     if (networkProfile != null) {
-      _result.networkProfile = networkProfile;
+      $result.networkProfile = networkProfile;
     }
     if (environmentVariables != null) {
-      _result.environmentVariables.addAll(environmentVariables);
+      $result.environmentVariables.addAll(environmentVariables);
     }
     if (systrace != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.systrace = systrace;
+      $result.systrace = systrace;
     }
     if (dontAutograntPermissions != null) {
-      _result.dontAutograntPermissions = dontAutograntPermissions;
+      $result.dontAutograntPermissions = dontAutograntPermissions;
     }
-    return _result;
+    if (initialSetupApks != null) {
+      $result.initialSetupApks.addAll(initialSetupApks);
+    }
+    return $result;
   }
+  TestSetup._() : super();
   factory TestSetup.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestSetup.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestSetup',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<DeviceFile>(
+        1, _omitFieldNames ? '' : 'filesToPush', $pb.PbFieldType.PM,
+        subBuilder: DeviceFile.create)
+    ..pPS(2, _omitFieldNames ? '' : 'directoriesToPull')
+    ..pc<Apk>(3, _omitFieldNames ? '' : 'additionalApks', $pb.PbFieldType.PM,
+        subBuilder: Apk.create)
+    ..aOM<Account>(4, _omitFieldNames ? '' : 'account',
+        subBuilder: Account.create)
+    ..aOS(5, _omitFieldNames ? '' : 'networkProfile')
+    ..pc<EnvironmentVariable>(
+        6, _omitFieldNames ? '' : 'environmentVariables', $pb.PbFieldType.PM,
+        subBuilder: EnvironmentVariable.create)
+    ..aOM<SystraceSetup>(9, _omitFieldNames ? '' : 'systrace',
+        subBuilder: SystraceSetup.create)
+    ..aOB(23, _omitFieldNames ? '' : 'dontAutograntPermissions')
+    ..pc<Apk>(29, _omitFieldNames ? '' : 'initialSetupApks', $pb.PbFieldType.PM,
+        subBuilder: Apk.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1135,9 +1149,10 @@ class TestSetup extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TestSetup copyWith(void Function(TestSetup) updates) =>
-      super.copyWith((message) => updates(message as TestSetup))
-          as TestSetup; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TestSetup)) as TestSetup;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestSetup create() => TestSetup._();
   TestSetup createEmptyInstance() => create();
@@ -1147,15 +1162,28 @@ class TestSetup extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TestSetup>(create);
   static TestSetup? _defaultInstance;
 
+  /// List of files to push to the device before starting the test.
   @$pb.TagNumber(1)
   $core.List<DeviceFile> get filesToPush => $_getList(0);
 
+  ///  List of directories on the device to upload to GCS at the end of the test;
+  ///  they must be absolute paths under /sdcard, /storage or /data/local/tmp.
+  ///  Path names are restricted to characters a-z A-Z 0-9 _ - . + and /
+  ///
+  ///  Note: The paths /sdcard and /data will be made available and treated as
+  ///  implicit path substitutions. E.g. if /sdcard on a particular device does
+  ///  not map to external storage, the system will replace it with the external
+  ///  storage path prefix for that device.
   @$pb.TagNumber(2)
   $core.List<$core.String> get directoriesToPull => $_getList(1);
 
+  /// APKs to install in addition to those being directly tested. These will be
+  /// installed after the app under test.
+  /// Currently capped at 100.
   @$pb.TagNumber(3)
   $core.List<Apk> get additionalApks => $_getList(2);
 
+  /// The device will be logged in on this account for the duration of the test.
   @$pb.TagNumber(4)
   Account get account => $_getN(3);
   @$pb.TagNumber(4)
@@ -1170,6 +1198,10 @@ class TestSetup extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Account ensureAccount() => $_ensure(3);
 
+  /// The network traffic profile used for running the test.
+  /// Available network profiles can be queried by using the
+  /// NETWORK_CONFIGURATION environment type when calling
+  /// TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
   @$pb.TagNumber(5)
   $core.String get networkProfile => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1182,9 +1214,15 @@ class TestSetup extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearNetworkProfile() => clearField(5);
 
+  /// Environment variables to set for the test (only applicable for
+  /// instrumentation tests).
   @$pb.TagNumber(6)
   $core.List<EnvironmentVariable> get environmentVariables => $_getList(5);
 
+  /// Systrace configuration for the run.
+  /// Deprecated: Systrace used Python 2 which was sunsetted on 2020-01-01.
+  /// Systrace is no longer supported in the Cloud Testing API, and no Systrace
+  /// file will be provided in the results.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
   SystraceSetup get systrace => $_getN(6);
@@ -1204,6 +1242,7 @@ class TestSetup extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   SystraceSetup ensureSystrace() => $_ensure(6);
 
+  /// Whether to prevent all runtime permissions to be granted at app install
   @$pb.TagNumber(23)
   $core.bool get dontAutograntPermissions => $_getBF(7);
   @$pb.TagNumber(23)
@@ -1215,74 +1254,61 @@ class TestSetup extends $pb.GeneratedMessage {
   $core.bool hasDontAutograntPermissions() => $_has(7);
   @$pb.TagNumber(23)
   void clearDontAutograntPermissions() => clearField(23);
+
+  /// Optional. Initial setup APKs to install before the app under test is
+  /// installed. Currently capped at 100.
+  @$pb.TagNumber(29)
+  $core.List<Apk> get initialSetupApks => $_getList(8);
 }
 
+/// A description of how to set up an iOS device prior to running the test.
 class IosTestSetup extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosTestSetup',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'networkProfile')
-    ..pc<FileReference>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'additionalIpas',
-        $pb.PbFieldType.PM,
-        subBuilder: FileReference.create)
-    ..pc<IosDeviceFile>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pushFiles',
-        $pb.PbFieldType.PM,
-        subBuilder: IosDeviceFile.create)
-    ..pc<IosDeviceFile>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pullDirectories',
-        $pb.PbFieldType.PM,
-        subBuilder: IosDeviceFile.create)
-    ..hasRequiredFields = false;
-
-  IosTestSetup._() : super();
   factory IosTestSetup({
     $core.String? networkProfile,
     $core.Iterable<FileReference>? additionalIpas,
     $core.Iterable<IosDeviceFile>? pushFiles,
     $core.Iterable<IosDeviceFile>? pullDirectories,
   }) {
-    final _result = create();
+    final $result = create();
     if (networkProfile != null) {
-      _result.networkProfile = networkProfile;
+      $result.networkProfile = networkProfile;
     }
     if (additionalIpas != null) {
-      _result.additionalIpas.addAll(additionalIpas);
+      $result.additionalIpas.addAll(additionalIpas);
     }
     if (pushFiles != null) {
-      _result.pushFiles.addAll(pushFiles);
+      $result.pushFiles.addAll(pushFiles);
     }
     if (pullDirectories != null) {
-      _result.pullDirectories.addAll(pullDirectories);
+      $result.pullDirectories.addAll(pullDirectories);
     }
-    return _result;
+    return $result;
   }
+  IosTestSetup._() : super();
   factory IosTestSetup.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosTestSetup.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosTestSetup',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'networkProfile')
+    ..pc<FileReference>(
+        2, _omitFieldNames ? '' : 'additionalIpas', $pb.PbFieldType.PM,
+        subBuilder: FileReference.create)
+    ..pc<IosDeviceFile>(
+        3, _omitFieldNames ? '' : 'pushFiles', $pb.PbFieldType.PM,
+        subBuilder: IosDeviceFile.create)
+    ..pc<IosDeviceFile>(
+        4, _omitFieldNames ? '' : 'pullDirectories', $pb.PbFieldType.PM,
+        subBuilder: IosDeviceFile.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1292,8 +1318,10 @@ class IosTestSetup extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IosTestSetup copyWith(void Function(IosTestSetup) updates) =>
       super.copyWith((message) => updates(message as IosTestSetup))
-          as IosTestSetup; // ignore: deprecated_member_use
+          as IosTestSetup;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosTestSetup create() => IosTestSetup._();
   IosTestSetup createEmptyInstance() => create();
@@ -1304,6 +1332,10 @@ class IosTestSetup extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosTestSetup>(create);
   static IosTestSetup? _defaultInstance;
 
+  /// The network traffic profile used for running the test.
+  /// Available network profiles can be queried by using the
+  /// NETWORK_CONFIGURATION environment type when calling
+  /// TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
   @$pb.TagNumber(1)
   $core.String get networkProfile => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1316,58 +1348,56 @@ class IosTestSetup extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNetworkProfile() => clearField(1);
 
+  /// iOS apps to install in addition to those being directly tested.
   @$pb.TagNumber(2)
   $core.List<FileReference> get additionalIpas => $_getList(1);
 
+  /// List of files to push to the device before starting the test.
   @$pb.TagNumber(3)
   $core.List<IosDeviceFile> get pushFiles => $_getList(2);
 
+  ///  List of directories on the device to upload to Cloud Storage at the end of
+  ///  the test.
+  ///
+  ///  Directories should either be in a shared directory (such as
+  ///  /private/var/mobile/Media) or within an accessible directory inside the
+  ///  app's filesystem (such as /Documents) by specifying the bundle ID.
   @$pb.TagNumber(4)
   $core.List<IosDeviceFile> get pullDirectories => $_getList(3);
 }
 
+/// A key-value pair passed as an environment variable to the test.
 class EnvironmentVariable extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnvironmentVariable',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value')
-    ..hasRequiredFields = false;
-
-  EnvironmentVariable._() : super();
   factory EnvironmentVariable({
     $core.String? key,
     $core.String? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  EnvironmentVariable._() : super();
   factory EnvironmentVariable.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EnvironmentVariable.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnvironmentVariable',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..aOS(2, _omitFieldNames ? '' : 'value')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1377,8 +1407,10 @@ class EnvironmentVariable extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   EnvironmentVariable copyWith(void Function(EnvironmentVariable) updates) =>
       super.copyWith((message) => updates(message as EnvironmentVariable))
-          as EnvironmentVariable; // ignore: deprecated_member_use
+          as EnvironmentVariable;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnvironmentVariable create() => EnvironmentVariable._();
   EnvironmentVariable createEmptyInstance() => create();
@@ -1389,6 +1421,7 @@ class EnvironmentVariable extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EnvironmentVariable>(create);
   static EnvironmentVariable? _defaultInstance;
 
+  /// Key for the environment variable.
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1401,6 +1434,7 @@ class EnvironmentVariable extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// Value for the environment variable.
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1416,46 +1450,40 @@ class EnvironmentVariable extends $pb.GeneratedMessage {
 
 enum Account_AccountType { googleAuto, notSet }
 
+/// Identifies an account and how to log into it.
 class Account extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Account_AccountType>
-      _Account_AccountTypeByTag = {
-    1: Account_AccountType.googleAuto,
-    0: Account_AccountType.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Account',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOM<GoogleAuto>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'googleAuto',
-        subBuilder: GoogleAuto.create)
-    ..hasRequiredFields = false;
-
-  Account._() : super();
   factory Account({
     GoogleAuto? googleAuto,
   }) {
-    final _result = create();
+    final $result = create();
     if (googleAuto != null) {
-      _result.googleAuto = googleAuto;
+      $result.googleAuto = googleAuto;
     }
-    return _result;
+    return $result;
   }
+  Account._() : super();
   factory Account.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Account.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Account_AccountType>
+      _Account_AccountTypeByTag = {
+    1: Account_AccountType.googleAuto,
+    0: Account_AccountType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Account',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<GoogleAuto>(1, _omitFieldNames ? '' : 'googleAuto',
+        subBuilder: GoogleAuto.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1464,9 +1492,10 @@ class Account extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Account copyWith(void Function(Account) updates) =>
-      super.copyWith((message) => updates(message as Account))
-          as Account; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Account)) as Account;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Account create() => Account._();
   Account createEmptyInstance() => create();
@@ -1480,6 +1509,7 @@ class Account extends $pb.GeneratedMessage {
       _Account_AccountTypeByTag[$_whichOneof(0)]!;
   void clearAccountType() => clearField($_whichOneof(0));
 
+  /// An automatic google login account.
   @$pb.TagNumber(1)
   GoogleAuto get googleAuto => $_getN(0);
   @$pb.TagNumber(1)
@@ -1495,26 +1525,30 @@ class Account extends $pb.GeneratedMessage {
   GoogleAuto ensureGoogleAuto() => $_ensure(0);
 }
 
+/// Enables automatic Google account login.
+/// If set, the service automatically generates a Google test account and adds
+/// it to the device, before executing the test. Note that test accounts might be
+/// reused.
+/// Many applications show their full set of functionalities when an account is
+/// present on the device. Logging into the device with these generated accounts
+/// allows testing more functionalities.
 class GoogleAuto extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GoogleAuto',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  GoogleAuto._() : super();
   factory GoogleAuto() => create();
+  GoogleAuto._() : super();
   factory GoogleAuto.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GoogleAuto.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GoogleAuto',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1523,9 +1557,10 @@ class GoogleAuto extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   GoogleAuto copyWith(void Function(GoogleAuto) updates) =>
-      super.copyWith((message) => updates(message as GoogleAuto))
-          as GoogleAuto; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as GoogleAuto)) as GoogleAuto;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GoogleAuto create() => GoogleAuto._();
   GoogleAuto createEmptyInstance() => create();
@@ -1536,49 +1571,39 @@ class GoogleAuto extends $pb.GeneratedMessage {
   static GoogleAuto? _defaultInstance;
 }
 
+/// An Android package file to install.
 class Apk extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Apk',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location',
-        subBuilder: FileReference.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'packageName')
-    ..hasRequiredFields = false;
-
-  Apk._() : super();
   factory Apk({
     FileReference? location,
     $core.String? packageName,
   }) {
-    final _result = create();
+    final $result = create();
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (packageName != null) {
-      _result.packageName = packageName;
+      $result.packageName = packageName;
     }
-    return _result;
+    return $result;
   }
+  Apk._() : super();
   factory Apk.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Apk.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Apk',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'location',
+        subBuilder: FileReference.create)
+    ..aOS(2, _omitFieldNames ? '' : 'packageName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1587,9 +1612,10 @@ class Apk extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Apk copyWith(void Function(Apk) updates) =>
-      super.copyWith((message) => updates(message as Apk))
-          as Apk; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Apk)) as Apk;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Apk create() => Apk._();
   Apk createEmptyInstance() => create();
@@ -1599,6 +1625,7 @@ class Apk extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Apk>(create);
   static Apk? _defaultInstance;
 
+  /// The path to an APK to be installed on the device before the test begins.
   @$pb.TagNumber(1)
   FileReference get location => $_getN(0);
   @$pb.TagNumber(1)
@@ -1613,6 +1640,8 @@ class Apk extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureLocation() => $_ensure(0);
 
+  /// The java package for the APK to be installed.
+  /// Value is determined by examining the application's manifest.
   @$pb.TagNumber(2)
   $core.String get packageName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1628,45 +1657,42 @@ class Apk extends $pb.GeneratedMessage {
 
 enum AppBundle_Bundle { bundleLocation, notSet }
 
+/// An Android App Bundle file format, containing a BundleConfig.pb file,
+/// a base module directory, zero or more dynamic feature module directories.
+/// <p>See https://developer.android.com/guide/app-bundle/build for guidance on
+/// building App Bundles.
 class AppBundle extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, AppBundle_Bundle> _AppBundle_BundleByTag = {
-    1: AppBundle_Bundle.bundleLocation,
-    0: AppBundle_Bundle.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AppBundle',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bundleLocation',
-        subBuilder: FileReference.create)
-    ..hasRequiredFields = false;
-
-  AppBundle._() : super();
   factory AppBundle({
     FileReference? bundleLocation,
   }) {
-    final _result = create();
+    final $result = create();
     if (bundleLocation != null) {
-      _result.bundleLocation = bundleLocation;
+      $result.bundleLocation = bundleLocation;
     }
-    return _result;
+    return $result;
   }
+  AppBundle._() : super();
   factory AppBundle.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AppBundle.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, AppBundle_Bundle> _AppBundle_BundleByTag = {
+    1: AppBundle_Bundle.bundleLocation,
+    0: AppBundle_Bundle.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AppBundle',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'bundleLocation',
+        subBuilder: FileReference.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1675,9 +1701,10 @@ class AppBundle extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   AppBundle copyWith(void Function(AppBundle) updates) =>
-      super.copyWith((message) => updates(message as AppBundle))
-          as AppBundle; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as AppBundle)) as AppBundle;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AppBundle create() => AppBundle._();
   AppBundle createEmptyInstance() => create();
@@ -1690,6 +1717,7 @@ class AppBundle extends $pb.GeneratedMessage {
   AppBundle_Bundle whichBundle() => _AppBundle_BundleByTag[$_whichOneof(0)]!;
   void clearBundle() => clearField($_whichOneof(0));
 
+  /// .aab file representing the app bundle under test.
   @$pb.TagNumber(1)
   FileReference get bundleLocation => $_getN(0);
   @$pb.TagNumber(1)
@@ -1707,7 +1735,29 @@ class AppBundle extends $pb.GeneratedMessage {
 
 enum DeviceFile_DeviceFile { obbFile, regularFile, notSet }
 
+/// A single device file description.
 class DeviceFile extends $pb.GeneratedMessage {
+  factory DeviceFile({
+    ObbFile? obbFile,
+    RegularFile? regularFile,
+  }) {
+    final $result = create();
+    if (obbFile != null) {
+      $result.obbFile = obbFile;
+    }
+    if (regularFile != null) {
+      $result.regularFile = regularFile;
+    }
+    return $result;
+  }
+  DeviceFile._() : super();
+  factory DeviceFile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceFile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, DeviceFile_DeviceFile>
       _DeviceFile_DeviceFileByTag = {
     1: DeviceFile_DeviceFile.obbFile,
@@ -1715,49 +1765,17 @@ class DeviceFile extends $pb.GeneratedMessage {
     0: DeviceFile_DeviceFile.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeviceFile',
+      _omitMessageNames ? '' : 'DeviceFile',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<ObbFile>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'obbFile',
+    ..aOM<ObbFile>(1, _omitFieldNames ? '' : 'obbFile',
         subBuilder: ObbFile.create)
-    ..aOM<RegularFile>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'regularFile',
+    ..aOM<RegularFile>(2, _omitFieldNames ? '' : 'regularFile',
         subBuilder: RegularFile.create)
     ..hasRequiredFields = false;
 
-  DeviceFile._() : super();
-  factory DeviceFile({
-    ObbFile? obbFile,
-    RegularFile? regularFile,
-  }) {
-    final _result = create();
-    if (obbFile != null) {
-      _result.obbFile = obbFile;
-    }
-    if (regularFile != null) {
-      _result.regularFile = regularFile;
-    }
-    return _result;
-  }
-  factory DeviceFile.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeviceFile.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1766,9 +1784,10 @@ class DeviceFile extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   DeviceFile copyWith(void Function(DeviceFile) updates) =>
-      super.copyWith((message) => updates(message as DeviceFile))
-          as DeviceFile; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as DeviceFile)) as DeviceFile;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeviceFile create() => DeviceFile._();
   DeviceFile createEmptyInstance() => create();
@@ -1782,6 +1801,7 @@ class DeviceFile extends $pb.GeneratedMessage {
       _DeviceFile_DeviceFileByTag[$_whichOneof(0)]!;
   void clearDeviceFile() => clearField($_whichOneof(0));
 
+  /// A reference to an opaque binary blob file.
   @$pb.TagNumber(1)
   ObbFile get obbFile => $_getN(0);
   @$pb.TagNumber(1)
@@ -1796,6 +1816,7 @@ class DeviceFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ObbFile ensureObbFile() => $_ensure(0);
 
+  /// A reference to a regular file.
   @$pb.TagNumber(2)
   RegularFile get regularFile => $_getN(1);
   @$pb.TagNumber(2)
@@ -1811,49 +1832,39 @@ class DeviceFile extends $pb.GeneratedMessage {
   RegularFile ensureRegularFile() => $_ensure(1);
 }
 
+/// An opaque binary blob file to install on the device before the test starts.
 class ObbFile extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ObbFile',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'obbFileName')
-    ..aOM<FileReference>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'obb',
-        subBuilder: FileReference.create)
-    ..hasRequiredFields = false;
-
-  ObbFile._() : super();
   factory ObbFile({
     $core.String? obbFileName,
     FileReference? obb,
   }) {
-    final _result = create();
+    final $result = create();
     if (obbFileName != null) {
-      _result.obbFileName = obbFileName;
+      $result.obbFileName = obbFileName;
     }
     if (obb != null) {
-      _result.obb = obb;
+      $result.obb = obb;
     }
-    return _result;
+    return $result;
   }
+  ObbFile._() : super();
   factory ObbFile.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ObbFile.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ObbFile',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'obbFileName')
+    ..aOM<FileReference>(2, _omitFieldNames ? '' : 'obb',
+        subBuilder: FileReference.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1862,9 +1873,10 @@ class ObbFile extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ObbFile copyWith(void Function(ObbFile) updates) =>
-      super.copyWith((message) => updates(message as ObbFile))
-          as ObbFile; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ObbFile)) as ObbFile;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ObbFile create() => ObbFile._();
   ObbFile createEmptyInstance() => create();
@@ -1874,6 +1886,12 @@ class ObbFile extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ObbFile>(create);
   static ObbFile? _defaultInstance;
 
+  /// Required. OBB file name which must conform to the format as specified by
+  /// Android
+  /// e.g. [main|patch].0300110.com.example.android.obb
+  /// which will be installed into
+  ///   \<shared-storage\>/Android/obb/\<package-name\>/
+  /// on the device.
   @$pb.TagNumber(1)
   $core.String get obbFileName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1886,6 +1904,7 @@ class ObbFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearObbFileName() => clearField(1);
 
+  /// Required. Opaque Binary Blob (OBB) file(s) to install on the device.
   @$pb.TagNumber(2)
   FileReference get obb => $_getN(1);
   @$pb.TagNumber(2)
@@ -1901,49 +1920,39 @@ class ObbFile extends $pb.GeneratedMessage {
   FileReference ensureObb() => $_ensure(1);
 }
 
+/// A file or directory to install on the device before the test starts.
 class RegularFile extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RegularFile',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'content',
-        subBuilder: FileReference.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'devicePath')
-    ..hasRequiredFields = false;
-
-  RegularFile._() : super();
   factory RegularFile({
     FileReference? content,
     $core.String? devicePath,
   }) {
-    final _result = create();
+    final $result = create();
     if (content != null) {
-      _result.content = content;
+      $result.content = content;
     }
     if (devicePath != null) {
-      _result.devicePath = devicePath;
+      $result.devicePath = devicePath;
     }
-    return _result;
+    return $result;
   }
+  RegularFile._() : super();
   factory RegularFile.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RegularFile.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegularFile',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'content',
+        subBuilder: FileReference.create)
+    ..aOS(2, _omitFieldNames ? '' : 'devicePath')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1953,8 +1962,10 @@ class RegularFile extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RegularFile copyWith(void Function(RegularFile) updates) =>
       super.copyWith((message) => updates(message as RegularFile))
-          as RegularFile; // ignore: deprecated_member_use
+          as RegularFile;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RegularFile create() => RegularFile._();
   RegularFile createEmptyInstance() => create();
@@ -1964,6 +1975,7 @@ class RegularFile extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RegularFile>(create);
   static RegularFile? _defaultInstance;
 
+  /// Required. The source file.
   @$pb.TagNumber(1)
   FileReference get content => $_getN(0);
   @$pb.TagNumber(1)
@@ -1978,6 +1990,23 @@ class RegularFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureContent() => $_ensure(0);
 
+  ///  Required. Where to put the content on the device. Must be an absolute,
+  ///  allowlisted path. If the file exists, it will be replaced.
+  ///  The following device-side directories and any of their subdirectories are
+  ///  allowlisted:
+  ///  <p>${EXTERNAL_STORAGE}, /sdcard, or /storage</p>
+  ///  <p>${ANDROID_DATA}/local/tmp, or /data/local/tmp</p>
+  ///  <p>Specifying a path outside of these directory trees is invalid.
+  ///
+  ///  <p> The paths /sdcard and /data will be made available and treated as
+  ///  implicit path substitutions. E.g. if /sdcard on a particular device does
+  ///  not map to external storage, the system will replace it with the external
+  ///  storage path prefix for that device and copy the file there.
+  ///
+  ///  <p> It is strongly advised to use the <a href=
+  ///  "http://developer.android.com/reference/android/os/Environment.html">
+  ///  Environment API</a> in app and test code to access files on the device in a
+  ///  portable way.
   @$pb.TagNumber(2)
   $core.String get devicePath => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1991,58 +2020,44 @@ class RegularFile extends $pb.GeneratedMessage {
   void clearDevicePath() => clearField(2);
 }
 
+/// A file or directory to install on the device before the test starts.
 class IosDeviceFile extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosDeviceFile',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'content',
-        subBuilder: FileReference.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bundleId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'devicePath')
-    ..hasRequiredFields = false;
-
-  IosDeviceFile._() : super();
   factory IosDeviceFile({
     FileReference? content,
     $core.String? bundleId,
     $core.String? devicePath,
   }) {
-    final _result = create();
+    final $result = create();
     if (content != null) {
-      _result.content = content;
+      $result.content = content;
     }
     if (bundleId != null) {
-      _result.bundleId = bundleId;
+      $result.bundleId = bundleId;
     }
     if (devicePath != null) {
-      _result.devicePath = devicePath;
+      $result.devicePath = devicePath;
     }
-    return _result;
+    return $result;
   }
+  IosDeviceFile._() : super();
   factory IosDeviceFile.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosDeviceFile.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosDeviceFile',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'content',
+        subBuilder: FileReference.create)
+    ..aOS(2, _omitFieldNames ? '' : 'bundleId')
+    ..aOS(3, _omitFieldNames ? '' : 'devicePath')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2052,8 +2067,10 @@ class IosDeviceFile extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IosDeviceFile copyWith(void Function(IosDeviceFile) updates) =>
       super.copyWith((message) => updates(message as IosDeviceFile))
-          as IosDeviceFile; // ignore: deprecated_member_use
+          as IosDeviceFile;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosDeviceFile create() => IosDeviceFile._();
   IosDeviceFile createEmptyInstance() => create();
@@ -2064,6 +2081,7 @@ class IosDeviceFile extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosDeviceFile>(create);
   static IosDeviceFile? _defaultInstance;
 
+  /// The source file
   @$pb.TagNumber(1)
   FileReference get content => $_getN(0);
   @$pb.TagNumber(1)
@@ -2078,6 +2096,10 @@ class IosDeviceFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureContent() => $_ensure(0);
 
+  ///  The bundle id of the app where this file lives.
+  ///
+  ///  iOS apps sandbox their own filesystem, so app files must specify which app
+  ///  installed on the device.
   @$pb.TagNumber(2)
   $core.String get bundleId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2090,6 +2112,7 @@ class IosDeviceFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearBundleId() => clearField(2);
 
+  /// Location of the file on the device, inside the app's sandboxed filesystem
   @$pb.TagNumber(3)
   $core.String get devicePath => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2105,54 +2128,10 @@ class IosDeviceFile extends $pb.GeneratedMessage {
 
 enum AndroidTestLoop_AppUnderTest { appApk, appBundle, notSet }
 
+/// A test of an Android Application with a Test Loop.
+/// The intent \<intent-name\> will be implicitly added, since Games is the only
+/// user of this api, for the time being.
 class AndroidTestLoop extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, AndroidTestLoop_AppUnderTest>
-      _AndroidTestLoop_AppUnderTestByTag = {
-    1: AndroidTestLoop_AppUnderTest.appApk,
-    5: AndroidTestLoop_AppUnderTest.appBundle,
-    0: AndroidTestLoop_AppUnderTest.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidTestLoop',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1, 5])
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appApk',
-        subBuilder: FileReference.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appPackageId')
-    ..p<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scenarios',
-        $pb.PbFieldType.K3)
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scenarioLabels')
-    ..aOM<AppBundle>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appBundle',
-        subBuilder: AppBundle.create)
-    ..hasRequiredFields = false;
-
-  AndroidTestLoop._() : super();
   factory AndroidTestLoop({
     FileReference? appApk,
     $core.String? appPackageId,
@@ -2160,30 +2139,53 @@ class AndroidTestLoop extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? scenarioLabels,
     AppBundle? appBundle,
   }) {
-    final _result = create();
+    final $result = create();
     if (appApk != null) {
-      _result.appApk = appApk;
+      $result.appApk = appApk;
     }
     if (appPackageId != null) {
-      _result.appPackageId = appPackageId;
+      $result.appPackageId = appPackageId;
     }
     if (scenarios != null) {
-      _result.scenarios.addAll(scenarios);
+      $result.scenarios.addAll(scenarios);
     }
     if (scenarioLabels != null) {
-      _result.scenarioLabels.addAll(scenarioLabels);
+      $result.scenarioLabels.addAll(scenarioLabels);
     }
     if (appBundle != null) {
-      _result.appBundle = appBundle;
+      $result.appBundle = appBundle;
     }
-    return _result;
+    return $result;
   }
+  AndroidTestLoop._() : super();
   factory AndroidTestLoop.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidTestLoop.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, AndroidTestLoop_AppUnderTest>
+      _AndroidTestLoop_AppUnderTestByTag = {
+    1: AndroidTestLoop_AppUnderTest.appApk,
+    5: AndroidTestLoop_AppUnderTest.appBundle,
+    0: AndroidTestLoop_AppUnderTest.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidTestLoop',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 5])
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'appApk',
+        subBuilder: FileReference.create)
+    ..aOS(2, _omitFieldNames ? '' : 'appPackageId')
+    ..p<$core.int>(3, _omitFieldNames ? '' : 'scenarios', $pb.PbFieldType.K3)
+    ..pPS(4, _omitFieldNames ? '' : 'scenarioLabels')
+    ..aOM<AppBundle>(5, _omitFieldNames ? '' : 'appBundle',
+        subBuilder: AppBundle.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2193,8 +2195,10 @@ class AndroidTestLoop extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidTestLoop copyWith(void Function(AndroidTestLoop) updates) =>
       super.copyWith((message) => updates(message as AndroidTestLoop))
-          as AndroidTestLoop; // ignore: deprecated_member_use
+          as AndroidTestLoop;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidTestLoop create() => AndroidTestLoop._();
   AndroidTestLoop createEmptyInstance() => create();
@@ -2209,6 +2213,7 @@ class AndroidTestLoop extends $pb.GeneratedMessage {
       _AndroidTestLoop_AppUnderTestByTag[$_whichOneof(0)]!;
   void clearAppUnderTest() => clearField($_whichOneof(0));
 
+  /// The APK for the application under test.
   @$pb.TagNumber(1)
   FileReference get appApk => $_getN(0);
   @$pb.TagNumber(1)
@@ -2223,6 +2228,8 @@ class AndroidTestLoop extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureAppApk() => $_ensure(0);
 
+  /// The java package for the application under test.
+  /// The default is determined by examining the application's manifest.
   @$pb.TagNumber(2)
   $core.String get appPackageId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2235,12 +2242,23 @@ class AndroidTestLoop extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAppPackageId() => clearField(2);
 
+  /// The list of scenarios that should be run during the test.
+  /// The default is all test loops, derived from the application's
+  /// manifest.
   @$pb.TagNumber(3)
   $core.List<$core.int> get scenarios => $_getList(2);
 
+  /// The list of scenario labels that should be run during the test.
+  /// The scenario labels should map to labels defined in the application's
+  /// manifest. For example, player_experience and
+  /// com.google.test.loops.player_experience add all of the loops labeled in the
+  /// manifest with the com.google.test.loops.player_experience name to the
+  /// execution.
+  /// Scenarios can also be specified in the scenarios field.
   @$pb.TagNumber(4)
   $core.List<$core.String> get scenarioLabels => $_getList(3);
 
+  /// A multi-apk app bundle for the application under test.
   @$pb.TagNumber(5)
   AppBundle get appBundle => $_getN(4);
   @$pb.TagNumber(5)
@@ -2256,46 +2274,13 @@ class AndroidTestLoop extends $pb.GeneratedMessage {
   AppBundle ensureAppBundle() => $_ensure(4);
 }
 
+/// A test of an iOS application that uses the XCTest framework.
+/// Xcode supports the option to "build for testing", which generates an
+/// .xctestrun file that contains a test specification (arguments, test methods,
+/// etc). This test type accepts a zip file containing the .xctestrun file and
+/// the corresponding contents of the Build/Products directory that contains all
+/// the binaries needed to run the tests.
 class IosXcTest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosXcTest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testsZip',
-        subBuilder: FileReference.create)
-    ..aOM<FileReference>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'xctestrun',
-        subBuilder: FileReference.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'xcodeVersion')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appBundleId')
-    ..aOB(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testSpecialEntitlements')
-    ..hasRequiredFields = false;
-
-  IosXcTest._() : super();
   factory IosXcTest({
     FileReference? testsZip,
     FileReference? xctestrun,
@@ -2303,30 +2288,46 @@ class IosXcTest extends $pb.GeneratedMessage {
     $core.String? appBundleId,
     $core.bool? testSpecialEntitlements,
   }) {
-    final _result = create();
+    final $result = create();
     if (testsZip != null) {
-      _result.testsZip = testsZip;
+      $result.testsZip = testsZip;
     }
     if (xctestrun != null) {
-      _result.xctestrun = xctestrun;
+      $result.xctestrun = xctestrun;
     }
     if (xcodeVersion != null) {
-      _result.xcodeVersion = xcodeVersion;
+      $result.xcodeVersion = xcodeVersion;
     }
     if (appBundleId != null) {
-      _result.appBundleId = appBundleId;
+      $result.appBundleId = appBundleId;
     }
     if (testSpecialEntitlements != null) {
-      _result.testSpecialEntitlements = testSpecialEntitlements;
+      $result.testSpecialEntitlements = testSpecialEntitlements;
     }
-    return _result;
+    return $result;
   }
+  IosXcTest._() : super();
   factory IosXcTest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosXcTest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosXcTest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'testsZip',
+        subBuilder: FileReference.create)
+    ..aOM<FileReference>(2, _omitFieldNames ? '' : 'xctestrun',
+        subBuilder: FileReference.create)
+    ..aOS(3, _omitFieldNames ? '' : 'xcodeVersion')
+    ..aOS(4, _omitFieldNames ? '' : 'appBundleId')
+    ..aOB(6, _omitFieldNames ? '' : 'testSpecialEntitlements')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2335,9 +2336,10 @@ class IosXcTest extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   IosXcTest copyWith(void Function(IosXcTest) updates) =>
-      super.copyWith((message) => updates(message as IosXcTest))
-          as IosXcTest; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as IosXcTest)) as IosXcTest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosXcTest create() => IosXcTest._();
   IosXcTest createEmptyInstance() => create();
@@ -2347,6 +2349,10 @@ class IosXcTest extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IosXcTest>(create);
   static IosXcTest? _defaultInstance;
 
+  /// Required. The .zip containing the .xctestrun file and the contents of the
+  /// DerivedData/Build/Products directory.
+  /// The .xctestrun file in this zip is ignored if the xctestrun field is
+  /// specified.
   @$pb.TagNumber(1)
   FileReference get testsZip => $_getN(0);
   @$pb.TagNumber(1)
@@ -2361,6 +2367,10 @@ class IosXcTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureTestsZip() => $_ensure(0);
 
+  /// An .xctestrun file that will override the .xctestrun file in the
+  /// tests zip. Because the .xctestrun file contains environment variables along
+  /// with test methods to run and/or ignore, this can be useful for sharding
+  /// tests. Default is taken from the tests zip.
   @$pb.TagNumber(2)
   FileReference get xctestrun => $_getN(1);
   @$pb.TagNumber(2)
@@ -2375,6 +2385,9 @@ class IosXcTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   FileReference ensureXctestrun() => $_ensure(1);
 
+  /// The Xcode version that should be used for the test.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
+  /// Defaults to the latest Xcode version Firebase Test Lab supports.
   @$pb.TagNumber(3)
   $core.String get xcodeVersion => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2387,6 +2400,7 @@ class IosXcTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearXcodeVersion() => clearField(3);
 
+  /// Output only. The bundle id for the application under test.
   @$pb.TagNumber(4)
   $core.String get appBundleId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2399,6 +2413,9 @@ class IosXcTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearAppBundleId() => clearField(4);
 
+  /// The option to test special app entitlements. Setting this would re-sign the
+  /// app having special entitlements with an explicit application-identifier.
+  /// Currently supports testing aps-environment entitlement.
   @$pb.TagNumber(6)
   $core.bool get testSpecialEntitlements => $_getBF(4);
   @$pb.TagNumber(6)
@@ -2412,59 +2429,46 @@ class IosXcTest extends $pb.GeneratedMessage {
   void clearTestSpecialEntitlements() => clearField(6);
 }
 
+/// A test of an iOS application that implements one or more game loop scenarios.
+/// This test type accepts an archived application (.ipa file) and a list of
+/// integer scenarios that will be executed on the app sequentially.
 class IosTestLoop extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosTestLoop',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appIpa',
-        subBuilder: FileReference.create)
-    ..p<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scenarios',
-        $pb.PbFieldType.K3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appBundleId')
-    ..hasRequiredFields = false;
-
-  IosTestLoop._() : super();
   factory IosTestLoop({
     FileReference? appIpa,
     $core.Iterable<$core.int>? scenarios,
     $core.String? appBundleId,
   }) {
-    final _result = create();
+    final $result = create();
     if (appIpa != null) {
-      _result.appIpa = appIpa;
+      $result.appIpa = appIpa;
     }
     if (scenarios != null) {
-      _result.scenarios.addAll(scenarios);
+      $result.scenarios.addAll(scenarios);
     }
     if (appBundleId != null) {
-      _result.appBundleId = appBundleId;
+      $result.appBundleId = appBundleId;
     }
-    return _result;
+    return $result;
   }
+  IosTestLoop._() : super();
   factory IosTestLoop.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosTestLoop.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosTestLoop',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'appIpa',
+        subBuilder: FileReference.create)
+    ..p<$core.int>(2, _omitFieldNames ? '' : 'scenarios', $pb.PbFieldType.K3)
+    ..aOS(3, _omitFieldNames ? '' : 'appBundleId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2474,8 +2478,10 @@ class IosTestLoop extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IosTestLoop copyWith(void Function(IosTestLoop) updates) =>
       super.copyWith((message) => updates(message as IosTestLoop))
-          as IosTestLoop; // ignore: deprecated_member_use
+          as IosTestLoop;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosTestLoop create() => IosTestLoop._();
   IosTestLoop createEmptyInstance() => create();
@@ -2485,6 +2491,7 @@ class IosTestLoop extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosTestLoop>(create);
   static IosTestLoop? _defaultInstance;
 
+  /// Required. The .ipa of the application to test.
   @$pb.TagNumber(1)
   FileReference get appIpa => $_getN(0);
   @$pb.TagNumber(1)
@@ -2499,9 +2506,12 @@ class IosTestLoop extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureAppIpa() => $_ensure(0);
 
+  /// The list of scenarios that should be run during the test. Defaults to the
+  /// single scenario 0 if unspecified.
   @$pb.TagNumber(2)
   $core.List<$core.int> get scenarios => $_getList(1);
 
+  /// Output only. The bundle id for the application under test.
   @$pb.TagNumber(3)
   $core.String get appBundleId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2515,81 +2525,127 @@ class IosTestLoop extends $pb.GeneratedMessage {
   void clearAppBundleId() => clearField(3);
 }
 
-enum AndroidInstrumentationTest_AppUnderTest { appApk, appBundle, notSet }
+/// A test that explores an iOS application on an iOS device.
+class IosRoboTest extends $pb.GeneratedMessage {
+  factory IosRoboTest({
+    FileReference? appIpa,
+    $core.String? appBundleId,
+    FileReference? roboScript,
+  }) {
+    final $result = create();
+    if (appIpa != null) {
+      $result.appIpa = appIpa;
+    }
+    if (appBundleId != null) {
+      $result.appBundleId = appBundleId;
+    }
+    if (roboScript != null) {
+      $result.roboScript = roboScript;
+    }
+    return $result;
+  }
+  IosRoboTest._() : super();
+  factory IosRoboTest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IosRoboTest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-class AndroidInstrumentationTest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, AndroidInstrumentationTest_AppUnderTest>
-      _AndroidInstrumentationTest_AppUnderTestByTag = {
-    1: AndroidInstrumentationTest_AppUnderTest.appApk,
-    8: AndroidInstrumentationTest_AppUnderTest.appBundle,
-    0: AndroidInstrumentationTest_AppUnderTest.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidInstrumentationTest',
+      _omitMessageNames ? '' : 'IosRoboTest',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 8])
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appApk',
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'appIpa',
         subBuilder: FileReference.create)
-    ..aOM<FileReference>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testApk',
+    ..aOS(4, _omitFieldNames ? '' : 'appBundleId')
+    ..aOM<FileReference>(5, _omitFieldNames ? '' : 'roboScript',
         subBuilder: FileReference.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appPackageId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testPackageId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testRunnerClass')
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testTargets')
-    ..e<OrchestratorOption>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orchestratorOption',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: OrchestratorOption.ORCHESTRATOR_OPTION_UNSPECIFIED,
-        valueOf: OrchestratorOption.valueOf,
-        enumValues: OrchestratorOption.values)
-    ..aOM<AppBundle>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appBundle',
-        subBuilder: AppBundle.create)
-    ..aOM<ShardingOption>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shardingOption',
-        subBuilder: ShardingOption.create)
     ..hasRequiredFields = false;
 
-  AndroidInstrumentationTest._() : super();
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  IosRoboTest clone() => IosRoboTest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  IosRoboTest copyWith(void Function(IosRoboTest) updates) =>
+      super.copyWith((message) => updates(message as IosRoboTest))
+          as IosRoboTest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static IosRoboTest create() => IosRoboTest._();
+  IosRoboTest createEmptyInstance() => create();
+  static $pb.PbList<IosRoboTest> createRepeated() => $pb.PbList<IosRoboTest>();
+  @$core.pragma('dart2js:noInline')
+  static IosRoboTest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IosRoboTest>(create);
+  static IosRoboTest? _defaultInstance;
+
+  /// Required. The ipa stored at this file should be used to run the test.
+  @$pb.TagNumber(1)
+  FileReference get appIpa => $_getN(0);
+  @$pb.TagNumber(1)
+  set appIpa(FileReference v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAppIpa() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAppIpa() => clearField(1);
+  @$pb.TagNumber(1)
+  FileReference ensureAppIpa() => $_ensure(0);
+
+  /// The bundle ID for the app-under-test.
+  /// This is determined by examining the application's "Info.plist" file.
+  @$pb.TagNumber(4)
+  $core.String get appBundleId => $_getSZ(1);
+  @$pb.TagNumber(4)
+  set appBundleId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasAppBundleId() => $_has(1);
+  @$pb.TagNumber(4)
+  void clearAppBundleId() => clearField(4);
+
+  /// An optional Roboscript to customize the crawl. See
+  /// https://firebase.google.com/docs/test-lab/android/robo-scripts-reference
+  /// for more information about Roboscripts.
+  /// The maximum allowed file size of the roboscript is 10MiB.
+  @$pb.TagNumber(5)
+  FileReference get roboScript => $_getN(2);
+  @$pb.TagNumber(5)
+  set roboScript(FileReference v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasRoboScript() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearRoboScript() => clearField(5);
+  @$pb.TagNumber(5)
+  FileReference ensureRoboScript() => $_ensure(2);
+}
+
+enum AndroidInstrumentationTest_AppUnderTest { appApk, appBundle, notSet }
+
+///  A test of an Android application that can control an Android component
+///  independently of its normal lifecycle.
+///  Android instrumentation tests run an application APK and test APK inside the
+///  same process on a virtual or physical AndroidDevice.  They also specify
+///  a test runner class, such as com.google.GoogleTestRunner, which can vary
+///  on the specific instrumentation framework chosen.
+///
+///  See <https://developer.android.com/training/testing/fundamentals> for
+///  more information on types of Android tests.
+class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   factory AndroidInstrumentationTest({
     FileReference? appApk,
     FileReference? testApk,
@@ -2601,42 +2657,75 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
     AppBundle? appBundle,
     ShardingOption? shardingOption,
   }) {
-    final _result = create();
+    final $result = create();
     if (appApk != null) {
-      _result.appApk = appApk;
+      $result.appApk = appApk;
     }
     if (testApk != null) {
-      _result.testApk = testApk;
+      $result.testApk = testApk;
     }
     if (appPackageId != null) {
-      _result.appPackageId = appPackageId;
+      $result.appPackageId = appPackageId;
     }
     if (testPackageId != null) {
-      _result.testPackageId = testPackageId;
+      $result.testPackageId = testPackageId;
     }
     if (testRunnerClass != null) {
-      _result.testRunnerClass = testRunnerClass;
+      $result.testRunnerClass = testRunnerClass;
     }
     if (testTargets != null) {
-      _result.testTargets.addAll(testTargets);
+      $result.testTargets.addAll(testTargets);
     }
     if (orchestratorOption != null) {
-      _result.orchestratorOption = orchestratorOption;
+      $result.orchestratorOption = orchestratorOption;
     }
     if (appBundle != null) {
-      _result.appBundle = appBundle;
+      $result.appBundle = appBundle;
     }
     if (shardingOption != null) {
-      _result.shardingOption = shardingOption;
+      $result.shardingOption = shardingOption;
     }
-    return _result;
+    return $result;
   }
+  AndroidInstrumentationTest._() : super();
   factory AndroidInstrumentationTest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidInstrumentationTest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, AndroidInstrumentationTest_AppUnderTest>
+      _AndroidInstrumentationTest_AppUnderTestByTag = {
+    1: AndroidInstrumentationTest_AppUnderTest.appApk,
+    8: AndroidInstrumentationTest_AppUnderTest.appBundle,
+    0: AndroidInstrumentationTest_AppUnderTest.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidInstrumentationTest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 8])
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'appApk',
+        subBuilder: FileReference.create)
+    ..aOM<FileReference>(2, _omitFieldNames ? '' : 'testApk',
+        subBuilder: FileReference.create)
+    ..aOS(3, _omitFieldNames ? '' : 'appPackageId')
+    ..aOS(4, _omitFieldNames ? '' : 'testPackageId')
+    ..aOS(5, _omitFieldNames ? '' : 'testRunnerClass')
+    ..pPS(6, _omitFieldNames ? '' : 'testTargets')
+    ..e<OrchestratorOption>(
+        7, _omitFieldNames ? '' : 'orchestratorOption', $pb.PbFieldType.OE,
+        defaultOrMaker: OrchestratorOption.ORCHESTRATOR_OPTION_UNSPECIFIED,
+        valueOf: OrchestratorOption.valueOf,
+        enumValues: OrchestratorOption.values)
+    ..aOM<AppBundle>(8, _omitFieldNames ? '' : 'appBundle',
+        subBuilder: AppBundle.create)
+    ..aOM<ShardingOption>(9, _omitFieldNames ? '' : 'shardingOption',
+        subBuilder: ShardingOption.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2649,8 +2738,10 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
           void Function(AndroidInstrumentationTest) updates) =>
       super.copyWith(
               (message) => updates(message as AndroidInstrumentationTest))
-          as AndroidInstrumentationTest; // ignore: deprecated_member_use
+          as AndroidInstrumentationTest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidInstrumentationTest create() => AndroidInstrumentationTest._();
   AndroidInstrumentationTest createEmptyInstance() => create();
@@ -2665,6 +2756,7 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
       _AndroidInstrumentationTest_AppUnderTestByTag[$_whichOneof(0)]!;
   void clearAppUnderTest() => clearField($_whichOneof(0));
 
+  /// The APK for the application under test.
   @$pb.TagNumber(1)
   FileReference get appApk => $_getN(0);
   @$pb.TagNumber(1)
@@ -2679,6 +2771,7 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureAppApk() => $_ensure(0);
 
+  /// Required. The APK containing the test code to be executed.
   @$pb.TagNumber(2)
   FileReference get testApk => $_getN(1);
   @$pb.TagNumber(2)
@@ -2693,6 +2786,8 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   FileReference ensureTestApk() => $_ensure(1);
 
+  /// The java package for the application under test.
+  /// The default value is determined by examining the application's manifest.
   @$pb.TagNumber(3)
   $core.String get appPackageId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2705,6 +2800,8 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearAppPackageId() => clearField(3);
 
+  /// The java package for the test to be executed.
+  /// The default value is determined by examining the application's manifest.
   @$pb.TagNumber(4)
   $core.String get testPackageId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2717,6 +2814,8 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearTestPackageId() => clearField(4);
 
+  /// The InstrumentationTestRunner class.
+  /// The default value is determined by examining the application's manifest.
   @$pb.TagNumber(5)
   $core.String get testRunnerClass => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -2729,9 +2828,32 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearTestRunnerClass() => clearField(5);
 
+  ///  Each target must be fully qualified with the package name or class name,
+  ///  in one of these formats:
+  ///
+  ///   - "package package_name"
+  ///   - "class package_name.class_name"
+  ///   - "class package_name.class_name#method_name"
+  ///
+  ///  If empty, all targets in the module will be run.
   @$pb.TagNumber(6)
   $core.List<$core.String> get testTargets => $_getList(5);
 
+  ///  The option of whether running each test within its own invocation of
+  ///  instrumentation with Android Test Orchestrator or not.
+  ///  ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or
+  ///  higher! **
+  ///  Orchestrator offers the following benefits:
+  ///
+  ///   - No shared state
+  ///   - Crashes are isolated
+  ///   - Logs are scoped per test
+  ///
+  ///  See
+  ///  <https://developer.android.com/training/testing/junit-runner.html#using-android-test-orchestrator>
+  ///  for more information about Android Test Orchestrator.
+  ///
+  ///  If not set, the test will be run without the orchestrator.
   @$pb.TagNumber(7)
   OrchestratorOption get orchestratorOption => $_getN(6);
   @$pb.TagNumber(7)
@@ -2744,6 +2866,7 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearOrchestratorOption() => clearField(7);
 
+  /// A multi-apk app bundle for the application under test.
   @$pb.TagNumber(8)
   AppBundle get appBundle => $_getN(7);
   @$pb.TagNumber(8)
@@ -2758,6 +2881,7 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   AppBundle ensureAppBundle() => $_ensure(7);
 
+  /// The option to run tests in multiple shards in parallel.
   @$pb.TagNumber(9)
   ShardingOption get shardingOption => $_getN(8);
   @$pb.TagNumber(9)
@@ -2775,89 +2899,9 @@ class AndroidInstrumentationTest extends $pb.GeneratedMessage {
 
 enum AndroidRoboTest_AppUnderTest { appApk, appBundle, notSet }
 
+/// A test of an android application that explores the application on a virtual
+/// or physical Android Device, finding culprits and crashes as it goes.
 class AndroidRoboTest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, AndroidRoboTest_AppUnderTest>
-      _AndroidRoboTest_AppUnderTestByTag = {
-    1: AndroidRoboTest_AppUnderTest.appApk,
-    16: AndroidRoboTest_AppUnderTest.appBundle,
-    0: AndroidRoboTest_AppUnderTest.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidRoboTest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1, 16])
-    ..aOM<FileReference>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appApk',
-        subBuilder: FileReference.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appPackageId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appInitialActivity')
-    ..a<$core.int>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxDepth',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxSteps',
-        $pb.PbFieldType.O3)
-    ..pc<RoboDirective>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roboDirectives',
-        $pb.PbFieldType.PM,
-        subBuilder: RoboDirective.create)
-    ..aOM<FileReference>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roboScript',
-        subBuilder: FileReference.create)
-    ..e<RoboMode>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roboMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: RoboMode.ROBO_MODE_UNSPECIFIED,
-        valueOf: RoboMode.valueOf,
-        enumValues: RoboMode.values)
-    ..pc<RoboStartingIntent>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startingIntents',
-        $pb.PbFieldType.PM,
-        subBuilder: RoboStartingIntent.create)
-    ..aOM<AppBundle>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appBundle',
-        subBuilder: AppBundle.create)
-    ..hasRequiredFields = false;
-
-  AndroidRoboTest._() : super();
   factory AndroidRoboTest({
     FileReference? appApk,
     $core.String? appPackageId,
@@ -2870,47 +2914,83 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
     $core.Iterable<RoboStartingIntent>? startingIntents,
     AppBundle? appBundle,
   }) {
-    final _result = create();
+    final $result = create();
     if (appApk != null) {
-      _result.appApk = appApk;
+      $result.appApk = appApk;
     }
     if (appPackageId != null) {
-      _result.appPackageId = appPackageId;
+      $result.appPackageId = appPackageId;
     }
     if (appInitialActivity != null) {
-      _result.appInitialActivity = appInitialActivity;
+      $result.appInitialActivity = appInitialActivity;
     }
     if (maxDepth != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.maxDepth = maxDepth;
+      $result.maxDepth = maxDepth;
     }
     if (maxSteps != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.maxSteps = maxSteps;
+      $result.maxSteps = maxSteps;
     }
     if (roboDirectives != null) {
-      _result.roboDirectives.addAll(roboDirectives);
+      $result.roboDirectives.addAll(roboDirectives);
     }
     if (roboScript != null) {
-      _result.roboScript = roboScript;
+      $result.roboScript = roboScript;
     }
     if (roboMode != null) {
-      _result.roboMode = roboMode;
+      $result.roboMode = roboMode;
     }
     if (startingIntents != null) {
-      _result.startingIntents.addAll(startingIntents);
+      $result.startingIntents.addAll(startingIntents);
     }
     if (appBundle != null) {
-      _result.appBundle = appBundle;
+      $result.appBundle = appBundle;
     }
-    return _result;
+    return $result;
   }
+  AndroidRoboTest._() : super();
   factory AndroidRoboTest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidRoboTest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, AndroidRoboTest_AppUnderTest>
+      _AndroidRoboTest_AppUnderTestByTag = {
+    1: AndroidRoboTest_AppUnderTest.appApk,
+    16: AndroidRoboTest_AppUnderTest.appBundle,
+    0: AndroidRoboTest_AppUnderTest.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidRoboTest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 16])
+    ..aOM<FileReference>(1, _omitFieldNames ? '' : 'appApk',
+        subBuilder: FileReference.create)
+    ..aOS(2, _omitFieldNames ? '' : 'appPackageId')
+    ..aOS(3, _omitFieldNames ? '' : 'appInitialActivity')
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'maxDepth', $pb.PbFieldType.O3)
+    ..a<$core.int>(8, _omitFieldNames ? '' : 'maxSteps', $pb.PbFieldType.O3)
+    ..pc<RoboDirective>(
+        11, _omitFieldNames ? '' : 'roboDirectives', $pb.PbFieldType.PM,
+        subBuilder: RoboDirective.create)
+    ..aOM<FileReference>(13, _omitFieldNames ? '' : 'roboScript',
+        subBuilder: FileReference.create)
+    ..e<RoboMode>(14, _omitFieldNames ? '' : 'roboMode', $pb.PbFieldType.OE,
+        defaultOrMaker: RoboMode.ROBO_MODE_UNSPECIFIED,
+        valueOf: RoboMode.valueOf,
+        enumValues: RoboMode.values)
+    ..pc<RoboStartingIntent>(
+        15, _omitFieldNames ? '' : 'startingIntents', $pb.PbFieldType.PM,
+        subBuilder: RoboStartingIntent.create)
+    ..aOM<AppBundle>(16, _omitFieldNames ? '' : 'appBundle',
+        subBuilder: AppBundle.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2920,8 +3000,10 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidRoboTest copyWith(void Function(AndroidRoboTest) updates) =>
       super.copyWith((message) => updates(message as AndroidRoboTest))
-          as AndroidRoboTest; // ignore: deprecated_member_use
+          as AndroidRoboTest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidRoboTest create() => AndroidRoboTest._();
   AndroidRoboTest createEmptyInstance() => create();
@@ -2936,6 +3018,7 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
       _AndroidRoboTest_AppUnderTestByTag[$_whichOneof(0)]!;
   void clearAppUnderTest() => clearField($_whichOneof(0));
 
+  /// The APK for the application under test.
   @$pb.TagNumber(1)
   FileReference get appApk => $_getN(0);
   @$pb.TagNumber(1)
@@ -2950,6 +3033,8 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FileReference ensureAppApk() => $_ensure(0);
 
+  /// The java package for the application under test.
+  /// The default value is determined by examining the application's manifest.
   @$pb.TagNumber(2)
   $core.String get appPackageId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2962,6 +3047,7 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAppPackageId() => clearField(2);
 
+  /// The initial activity that should be used to start the app.
   @$pb.TagNumber(3)
   $core.String get appInitialActivity => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2974,6 +3060,9 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearAppInitialActivity() => clearField(3);
 
+  /// The max depth of the traversal stack Robo can explore. Needs to be at least
+  /// 2 to make Robo explore the app beyond the first activity.
+  /// Default is 50.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
   $core.int get maxDepth => $_getIZ(3);
@@ -2990,6 +3079,8 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearMaxDepth() => clearField(7);
 
+  /// The max number of steps Robo can execute.
+  /// Default is no limit.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(8)
   $core.int get maxSteps => $_getIZ(4);
@@ -3006,9 +3097,14 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearMaxSteps() => clearField(8);
 
+  /// A set of directives Robo should apply during the crawl.
+  /// This allows users to customize the crawl. For example, the username and
+  /// password for a test account can be provided.
   @$pb.TagNumber(11)
   $core.List<RoboDirective> get roboDirectives => $_getList(5);
 
+  /// A JSON file with a sequence of actions Robo should perform as a prologue
+  /// for the crawl.
   @$pb.TagNumber(13)
   FileReference get roboScript => $_getN(6);
   @$pb.TagNumber(13)
@@ -3023,6 +3119,8 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   FileReference ensureRoboScript() => $_ensure(6);
 
+  /// The mode in which Robo should run. Most clients should allow the server to
+  /// populate this field automatically.
   @$pb.TagNumber(14)
   RoboMode get roboMode => $_getN(7);
   @$pb.TagNumber(14)
@@ -3035,9 +3133,14 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearRoboMode() => clearField(14);
 
+  /// The intents used to launch the app for the crawl.
+  /// If none are provided, then the main launcher activity is launched.
+  /// If some are provided, then only those provided are launched (the main
+  /// launcher activity must be provided explicitly).
   @$pb.TagNumber(15)
   $core.List<RoboStartingIntent> get startingIntents => $_getList(8);
 
+  /// A multi-apk app bundle for the application under test.
   @$pb.TagNumber(16)
   AppBundle get appBundle => $_getN(9);
   @$pb.TagNumber(16)
@@ -3053,61 +3156,48 @@ class AndroidRoboTest extends $pb.GeneratedMessage {
   AppBundle ensureAppBundle() => $_ensure(9);
 }
 
+/// Directs Robo to interact with a specific UI element if it is encountered
+/// during the crawl. Currently, Robo can perform text entry or element click.
 class RoboDirective extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RoboDirective',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'inputText')
-    ..e<RoboActionType>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'actionType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: RoboActionType.ACTION_TYPE_UNSPECIFIED,
-        valueOf: RoboActionType.valueOf,
-        enumValues: RoboActionType.values)
-    ..hasRequiredFields = false;
-
-  RoboDirective._() : super();
   factory RoboDirective({
     $core.String? resourceName,
     $core.String? inputText,
     RoboActionType? actionType,
   }) {
-    final _result = create();
+    final $result = create();
     if (resourceName != null) {
-      _result.resourceName = resourceName;
+      $result.resourceName = resourceName;
     }
     if (inputText != null) {
-      _result.inputText = inputText;
+      $result.inputText = inputText;
     }
     if (actionType != null) {
-      _result.actionType = actionType;
+      $result.actionType = actionType;
     }
-    return _result;
+    return $result;
   }
+  RoboDirective._() : super();
   factory RoboDirective.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RoboDirective.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RoboDirective',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..aOS(2, _omitFieldNames ? '' : 'inputText')
+    ..e<RoboActionType>(
+        3, _omitFieldNames ? '' : 'actionType', $pb.PbFieldType.OE,
+        defaultOrMaker: RoboActionType.ACTION_TYPE_UNSPECIFIED,
+        valueOf: RoboActionType.valueOf,
+        enumValues: RoboActionType.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3117,8 +3207,10 @@ class RoboDirective extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RoboDirective copyWith(void Function(RoboDirective) updates) =>
       super.copyWith((message) => updates(message as RoboDirective))
-          as RoboDirective; // ignore: deprecated_member_use
+          as RoboDirective;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RoboDirective create() => RoboDirective._();
   RoboDirective createEmptyInstance() => create();
@@ -3129,6 +3221,13 @@ class RoboDirective extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RoboDirective>(create);
   static RoboDirective? _defaultInstance;
 
+  /// Required. The android resource name of the target UI element.
+  /// For example,
+  ///    in Java: R.string.foo
+  ///    in xml: @string/foo
+  /// Only the "foo" part is needed.
+  /// Reference doc:
+  /// https://developer.android.com/guide/topics/resources/accessing-resources.html
   @$pb.TagNumber(1)
   $core.String get resourceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3141,6 +3240,8 @@ class RoboDirective extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  /// The text that Robo is directed to set. If left empty, the directive will be
+  /// treated as a CLICK on the element matching the resource_name.
   @$pb.TagNumber(2)
   $core.String get inputText => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3153,6 +3254,8 @@ class RoboDirective extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInputText() => clearField(2);
 
+  /// Required. The type of action that Robo should perform on the specified
+  /// element.
   @$pb.TagNumber(3)
   RoboActionType get actionType => $_getN(2);
   @$pb.TagNumber(3)
@@ -3169,70 +3272,64 @@ class RoboDirective extends $pb.GeneratedMessage {
 enum RoboStartingIntent_StartingIntent {
   launcherActivity,
   startActivity,
+  noActivity,
   notSet
 }
 
+/// Message for specifying the start activities to crawl.
 class RoboStartingIntent extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, RoboStartingIntent_StartingIntent>
-      _RoboStartingIntent_StartingIntentByTag = {
-    1: RoboStartingIntent_StartingIntent.launcherActivity,
-    2: RoboStartingIntent_StartingIntent.startActivity,
-    0: RoboStartingIntent_StartingIntent.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RoboStartingIntent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1, 2])
-    ..aOM<LauncherActivityIntent>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'launcherActivity',
-        subBuilder: LauncherActivityIntent.create)
-    ..aOM<StartActivityIntent>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startActivity',
-        subBuilder: StartActivityIntent.create)
-    ..aOM<$2.Duration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeout',
-        subBuilder: $2.Duration.create)
-    ..hasRequiredFields = false;
-
-  RoboStartingIntent._() : super();
   factory RoboStartingIntent({
     LauncherActivityIntent? launcherActivity,
     StartActivityIntent? startActivity,
     $2.Duration? timeout,
+    NoActivityIntent? noActivity,
   }) {
-    final _result = create();
+    final $result = create();
     if (launcherActivity != null) {
-      _result.launcherActivity = launcherActivity;
+      $result.launcherActivity = launcherActivity;
     }
     if (startActivity != null) {
-      _result.startActivity = startActivity;
+      $result.startActivity = startActivity;
     }
     if (timeout != null) {
-      _result.timeout = timeout;
+      $result.timeout = timeout;
     }
-    return _result;
+    if (noActivity != null) {
+      $result.noActivity = noActivity;
+    }
+    return $result;
   }
+  RoboStartingIntent._() : super();
   factory RoboStartingIntent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RoboStartingIntent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, RoboStartingIntent_StartingIntent>
+      _RoboStartingIntent_StartingIntentByTag = {
+    1: RoboStartingIntent_StartingIntent.launcherActivity,
+    2: RoboStartingIntent_StartingIntent.startActivity,
+    4: RoboStartingIntent_StartingIntent.noActivity,
+    0: RoboStartingIntent_StartingIntent.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RoboStartingIntent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2, 4])
+    ..aOM<LauncherActivityIntent>(1, _omitFieldNames ? '' : 'launcherActivity',
+        subBuilder: LauncherActivityIntent.create)
+    ..aOM<StartActivityIntent>(2, _omitFieldNames ? '' : 'startActivity',
+        subBuilder: StartActivityIntent.create)
+    ..aOM<$2.Duration>(3, _omitFieldNames ? '' : 'timeout',
+        subBuilder: $2.Duration.create)
+    ..aOM<NoActivityIntent>(4, _omitFieldNames ? '' : 'noActivity',
+        subBuilder: NoActivityIntent.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3242,8 +3339,10 @@ class RoboStartingIntent extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RoboStartingIntent copyWith(void Function(RoboStartingIntent) updates) =>
       super.copyWith((message) => updates(message as RoboStartingIntent))
-          as RoboStartingIntent; // ignore: deprecated_member_use
+          as RoboStartingIntent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RoboStartingIntent create() => RoboStartingIntent._();
   RoboStartingIntent createEmptyInstance() => create();
@@ -3258,6 +3357,7 @@ class RoboStartingIntent extends $pb.GeneratedMessage {
       _RoboStartingIntent_StartingIntentByTag[$_whichOneof(0)]!;
   void clearStartingIntent() => clearField($_whichOneof(0));
 
+  /// An intent that starts the main launcher activity.
   @$pb.TagNumber(1)
   LauncherActivityIntent get launcherActivity => $_getN(0);
   @$pb.TagNumber(1)
@@ -3272,6 +3372,7 @@ class RoboStartingIntent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   LauncherActivityIntent ensureLauncherActivity() => $_ensure(0);
 
+  /// An intent that starts an activity with specific details.
   @$pb.TagNumber(2)
   StartActivityIntent get startActivity => $_getN(1);
   @$pb.TagNumber(2)
@@ -3286,6 +3387,7 @@ class RoboStartingIntent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   StartActivityIntent ensureStartActivity() => $_ensure(1);
 
+  /// Timeout in seconds for each intent.
   @$pb.TagNumber(3)
   $2.Duration get timeout => $_getN(2);
   @$pb.TagNumber(3)
@@ -3299,28 +3401,41 @@ class RoboStartingIntent extends $pb.GeneratedMessage {
   void clearTimeout() => clearField(3);
   @$pb.TagNumber(3)
   $2.Duration ensureTimeout() => $_ensure(2);
+
+  /// Skips the starting activity
+  @$pb.TagNumber(4)
+  NoActivityIntent get noActivity => $_getN(3);
+  @$pb.TagNumber(4)
+  set noActivity(NoActivityIntent v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasNoActivity() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNoActivity() => clearField(4);
+  @$pb.TagNumber(4)
+  NoActivityIntent ensureNoActivity() => $_ensure(3);
 }
 
+/// Specifies an intent that starts the main launcher activity.
 class LauncherActivityIntent extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LauncherActivityIntent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  LauncherActivityIntent._() : super();
   factory LauncherActivityIntent() => create();
+  LauncherActivityIntent._() : super();
   factory LauncherActivityIntent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LauncherActivityIntent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LauncherActivityIntent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3332,8 +3447,10 @@ class LauncherActivityIntent extends $pb.GeneratedMessage {
   LauncherActivityIntent copyWith(
           void Function(LauncherActivityIntent) updates) =>
       super.copyWith((message) => updates(message as LauncherActivityIntent))
-          as LauncherActivityIntent; // ignore: deprecated_member_use
+          as LauncherActivityIntent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LauncherActivityIntent create() => LauncherActivityIntent._();
   LauncherActivityIntent createEmptyInstance() => create();
@@ -3345,57 +3462,43 @@ class LauncherActivityIntent extends $pb.GeneratedMessage {
   static LauncherActivityIntent? _defaultInstance;
 }
 
+/// A starting intent specified by an action, uri, and categories.
 class StartActivityIntent extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StartActivityIntent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'action')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uri')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'categories')
-    ..hasRequiredFields = false;
-
-  StartActivityIntent._() : super();
   factory StartActivityIntent({
     $core.String? action,
     $core.String? uri,
     $core.Iterable<$core.String>? categories,
   }) {
-    final _result = create();
+    final $result = create();
     if (action != null) {
-      _result.action = action;
+      $result.action = action;
     }
     if (uri != null) {
-      _result.uri = uri;
+      $result.uri = uri;
     }
     if (categories != null) {
-      _result.categories.addAll(categories);
+      $result.categories.addAll(categories);
     }
-    return _result;
+    return $result;
   }
+  StartActivityIntent._() : super();
   factory StartActivityIntent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StartActivityIntent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StartActivityIntent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(2, _omitFieldNames ? '' : 'action')
+    ..aOS(3, _omitFieldNames ? '' : 'uri')
+    ..pPS(4, _omitFieldNames ? '' : 'categories')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3405,8 +3508,10 @@ class StartActivityIntent extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   StartActivityIntent copyWith(void Function(StartActivityIntent) updates) =>
       super.copyWith((message) => updates(message as StartActivityIntent))
-          as StartActivityIntent; // ignore: deprecated_member_use
+          as StartActivityIntent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StartActivityIntent create() => StartActivityIntent._();
   StartActivityIntent createEmptyInstance() => create();
@@ -3417,6 +3522,8 @@ class StartActivityIntent extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StartActivityIntent>(create);
   static StartActivityIntent? _defaultInstance;
 
+  /// Action name.
+  /// Required for START_ACTIVITY.
   @$pb.TagNumber(2)
   $core.String get action => $_getSZ(0);
   @$pb.TagNumber(2)
@@ -3429,6 +3536,7 @@ class StartActivityIntent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAction() => clearField(2);
 
+  /// URI for the action.
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -3441,8 +3549,51 @@ class StartActivityIntent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => clearField(3);
 
+  /// Intent categories to set on the intent.
   @$pb.TagNumber(4)
   $core.List<$core.String> get categories => $_getList(2);
+}
+
+/// Skips the starting activity
+class NoActivityIntent extends $pb.GeneratedMessage {
+  factory NoActivityIntent() => create();
+  NoActivityIntent._() : super();
+  factory NoActivityIntent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NoActivityIntent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NoActivityIntent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NoActivityIntent clone() => NoActivityIntent()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NoActivityIntent copyWith(void Function(NoActivityIntent) updates) =>
+      super.copyWith((message) => updates(message as NoActivityIntent))
+          as NoActivityIntent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static NoActivityIntent create() => NoActivityIntent._();
+  NoActivityIntent createEmptyInstance() => create();
+  static $pb.PbList<NoActivityIntent> createRepeated() =>
+      $pb.PbList<NoActivityIntent>();
+  @$core.pragma('dart2js:noInline')
+  static NoActivityIntent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NoActivityIntent>(create);
+  static NoActivityIntent? _defaultInstance;
 }
 
 enum EnvironmentMatrix_EnvironmentMatrix {
@@ -3452,7 +3603,33 @@ enum EnvironmentMatrix_EnvironmentMatrix {
   notSet
 }
 
+/// The matrix of environments in which the test is to be executed.
 class EnvironmentMatrix extends $pb.GeneratedMessage {
+  factory EnvironmentMatrix({
+    AndroidMatrix? androidMatrix,
+    AndroidDeviceList? androidDeviceList,
+    IosDeviceList? iosDeviceList,
+  }) {
+    final $result = create();
+    if (androidMatrix != null) {
+      $result.androidMatrix = androidMatrix;
+    }
+    if (androidDeviceList != null) {
+      $result.androidDeviceList = androidDeviceList;
+    }
+    if (iosDeviceList != null) {
+      $result.iosDeviceList = iosDeviceList;
+    }
+    return $result;
+  }
+  EnvironmentMatrix._() : super();
+  factory EnvironmentMatrix.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnvironmentMatrix.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, EnvironmentMatrix_EnvironmentMatrix>
       _EnvironmentMatrix_EnvironmentMatrixByTag = {
     1: EnvironmentMatrix_EnvironmentMatrix.androidMatrix,
@@ -3461,59 +3638,19 @@ class EnvironmentMatrix extends $pb.GeneratedMessage {
     0: EnvironmentMatrix_EnvironmentMatrix.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnvironmentMatrix',
+      _omitMessageNames ? '' : 'EnvironmentMatrix',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<AndroidMatrix>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidMatrix',
+    ..aOM<AndroidMatrix>(1, _omitFieldNames ? '' : 'androidMatrix',
         subBuilder: AndroidMatrix.create)
-    ..aOM<AndroidDeviceList>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidDeviceList',
+    ..aOM<AndroidDeviceList>(2, _omitFieldNames ? '' : 'androidDeviceList',
         subBuilder: AndroidDeviceList.create)
-    ..aOM<IosDeviceList>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosDeviceList',
+    ..aOM<IosDeviceList>(3, _omitFieldNames ? '' : 'iosDeviceList',
         subBuilder: IosDeviceList.create)
     ..hasRequiredFields = false;
 
-  EnvironmentMatrix._() : super();
-  factory EnvironmentMatrix({
-    AndroidMatrix? androidMatrix,
-    AndroidDeviceList? androidDeviceList,
-    IosDeviceList? iosDeviceList,
-  }) {
-    final _result = create();
-    if (androidMatrix != null) {
-      _result.androidMatrix = androidMatrix;
-    }
-    if (androidDeviceList != null) {
-      _result.androidDeviceList = androidDeviceList;
-    }
-    if (iosDeviceList != null) {
-      _result.iosDeviceList = iosDeviceList;
-    }
-    return _result;
-  }
-  factory EnvironmentMatrix.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EnvironmentMatrix.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3523,8 +3660,10 @@ class EnvironmentMatrix extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   EnvironmentMatrix copyWith(void Function(EnvironmentMatrix) updates) =>
       super.copyWith((message) => updates(message as EnvironmentMatrix))
-          as EnvironmentMatrix; // ignore: deprecated_member_use
+          as EnvironmentMatrix;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnvironmentMatrix create() => EnvironmentMatrix._();
   EnvironmentMatrix createEmptyInstance() => create();
@@ -3539,6 +3678,7 @@ class EnvironmentMatrix extends $pb.GeneratedMessage {
       _EnvironmentMatrix_EnvironmentMatrixByTag[$_whichOneof(0)]!;
   void clearEnvironmentMatrix() => clearField($_whichOneof(0));
 
+  /// A matrix of Android devices.
   @$pb.TagNumber(1)
   AndroidMatrix get androidMatrix => $_getN(0);
   @$pb.TagNumber(1)
@@ -3553,6 +3693,8 @@ class EnvironmentMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AndroidMatrix ensureAndroidMatrix() => $_ensure(0);
 
+  /// A list of Android devices; the test will be run only on the specified
+  /// devices.
   @$pb.TagNumber(2)
   AndroidDeviceList get androidDeviceList => $_getN(1);
   @$pb.TagNumber(2)
@@ -3567,6 +3709,7 @@ class EnvironmentMatrix extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AndroidDeviceList ensureAndroidDeviceList() => $_ensure(1);
 
+  /// A list of iOS devices.
   @$pb.TagNumber(3)
   IosDeviceList get iosDeviceList => $_getN(2);
   @$pb.TagNumber(3)
@@ -3582,41 +3725,35 @@ class EnvironmentMatrix extends $pb.GeneratedMessage {
   IosDeviceList ensureIosDeviceList() => $_ensure(2);
 }
 
+/// A list of Android device configurations in which the test is to be executed.
 class AndroidDeviceList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidDeviceList',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<AndroidDevice>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidDevices',
-        $pb.PbFieldType.PM,
-        subBuilder: AndroidDevice.create)
-    ..hasRequiredFields = false;
-
-  AndroidDeviceList._() : super();
   factory AndroidDeviceList({
     $core.Iterable<AndroidDevice>? androidDevices,
   }) {
-    final _result = create();
+    final $result = create();
     if (androidDevices != null) {
-      _result.androidDevices.addAll(androidDevices);
+      $result.androidDevices.addAll(androidDevices);
     }
-    return _result;
+    return $result;
   }
+  AndroidDeviceList._() : super();
   factory AndroidDeviceList.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidDeviceList.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidDeviceList',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<AndroidDevice>(
+        1, _omitFieldNames ? '' : 'androidDevices', $pb.PbFieldType.PM,
+        subBuilder: AndroidDevice.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3626,8 +3763,10 @@ class AndroidDeviceList extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidDeviceList copyWith(void Function(AndroidDeviceList) updates) =>
       super.copyWith((message) => updates(message as AndroidDeviceList))
-          as AndroidDeviceList; // ignore: deprecated_member_use
+          as AndroidDeviceList;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidDeviceList create() => AndroidDeviceList._();
   AndroidDeviceList createEmptyInstance() => create();
@@ -3638,45 +3777,39 @@ class AndroidDeviceList extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidDeviceList>(create);
   static AndroidDeviceList? _defaultInstance;
 
+  /// Required. A list of Android devices.
   @$pb.TagNumber(1)
   $core.List<AndroidDevice> get androidDevices => $_getList(0);
 }
 
+/// A list of iOS device configurations in which the test is to be executed.
 class IosDeviceList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosDeviceList',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<IosDevice>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosDevices',
-        $pb.PbFieldType.PM,
-        subBuilder: IosDevice.create)
-    ..hasRequiredFields = false;
-
-  IosDeviceList._() : super();
   factory IosDeviceList({
     $core.Iterable<IosDevice>? iosDevices,
   }) {
-    final _result = create();
+    final $result = create();
     if (iosDevices != null) {
-      _result.iosDevices.addAll(iosDevices);
+      $result.iosDevices.addAll(iosDevices);
     }
-    return _result;
+    return $result;
   }
+  IosDeviceList._() : super();
   factory IosDeviceList.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosDeviceList.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosDeviceList',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<IosDevice>(1, _omitFieldNames ? '' : 'iosDevices', $pb.PbFieldType.PM,
+        subBuilder: IosDevice.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3686,8 +3819,10 @@ class IosDeviceList extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IosDeviceList copyWith(void Function(IosDeviceList) updates) =>
       super.copyWith((message) => updates(message as IosDeviceList))
-          as IosDeviceList; // ignore: deprecated_member_use
+          as IosDeviceList;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosDeviceList create() => IosDeviceList._();
   IosDeviceList createEmptyInstance() => create();
@@ -3698,70 +3833,58 @@ class IosDeviceList extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IosDeviceList>(create);
   static IosDeviceList? _defaultInstance;
 
+  /// Required. A list of iOS devices.
   @$pb.TagNumber(1)
   $core.List<IosDevice> get iosDevices => $_getList(0);
 }
 
+///  A set of Android device configuration permutations is defined by the
+///  the cross-product of the given axes. Internally, the given AndroidMatrix
+///  will be expanded into a set of AndroidDevices.
+///
+///  Only supported permutations will be instantiated.  Invalid permutations
+///  (e.g., incompatible models/versions) are ignored.
 class AndroidMatrix extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidMatrix',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidModelIds')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidVersionIds')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locales')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orientations')
-    ..hasRequiredFields = false;
-
-  AndroidMatrix._() : super();
   factory AndroidMatrix({
     $core.Iterable<$core.String>? androidModelIds,
     $core.Iterable<$core.String>? androidVersionIds,
     $core.Iterable<$core.String>? locales,
     $core.Iterable<$core.String>? orientations,
   }) {
-    final _result = create();
+    final $result = create();
     if (androidModelIds != null) {
-      _result.androidModelIds.addAll(androidModelIds);
+      $result.androidModelIds.addAll(androidModelIds);
     }
     if (androidVersionIds != null) {
-      _result.androidVersionIds.addAll(androidVersionIds);
+      $result.androidVersionIds.addAll(androidVersionIds);
     }
     if (locales != null) {
-      _result.locales.addAll(locales);
+      $result.locales.addAll(locales);
     }
     if (orientations != null) {
-      _result.orientations.addAll(orientations);
+      $result.orientations.addAll(orientations);
     }
-    return _result;
+    return $result;
   }
+  AndroidMatrix._() : super();
   factory AndroidMatrix.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidMatrix.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidMatrix',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'androidModelIds')
+    ..pPS(2, _omitFieldNames ? '' : 'androidVersionIds')
+    ..pPS(3, _omitFieldNames ? '' : 'locales')
+    ..pPS(4, _omitFieldNames ? '' : 'orientations')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3771,8 +3894,10 @@ class AndroidMatrix extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidMatrix copyWith(void Function(AndroidMatrix) updates) =>
       super.copyWith((message) => updates(message as AndroidMatrix))
-          as AndroidMatrix; // ignore: deprecated_member_use
+          as AndroidMatrix;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidMatrix create() => AndroidMatrix._();
   AndroidMatrix createEmptyInstance() => create();
@@ -3783,63 +3908,61 @@ class AndroidMatrix extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidMatrix>(create);
   static AndroidMatrix? _defaultInstance;
 
+  /// Required. The ids of the set of Android device to be used.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(1)
   $core.List<$core.String> get androidModelIds => $_getList(0);
 
+  /// Required. The ids of the set of Android OS version to be used.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(2)
   $core.List<$core.String> get androidVersionIds => $_getList(1);
 
+  /// Required. The set of locales the test device will enable for testing.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(3)
   $core.List<$core.String> get locales => $_getList(2);
 
+  /// Required. The set of orientations to test with.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(4)
   $core.List<$core.String> get orientations => $_getList(3);
 }
 
+/// Information about the client which invoked the test.
 class ClientInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ClientInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..pc<ClientInfoDetail>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientInfoDetails',
-        $pb.PbFieldType.PM,
-        subBuilder: ClientInfoDetail.create)
-    ..hasRequiredFields = false;
-
-  ClientInfo._() : super();
   factory ClientInfo({
     $core.String? name,
     $core.Iterable<ClientInfoDetail>? clientInfoDetails,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (clientInfoDetails != null) {
-      _result.clientInfoDetails.addAll(clientInfoDetails);
+      $result.clientInfoDetails.addAll(clientInfoDetails);
     }
-    return _result;
+    return $result;
   }
+  ClientInfo._() : super();
   factory ClientInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ClientInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ClientInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..pc<ClientInfoDetail>(
+        2, _omitFieldNames ? '' : 'clientInfoDetails', $pb.PbFieldType.PM,
+        subBuilder: ClientInfoDetail.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3848,9 +3971,10 @@ class ClientInfo extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ClientInfo copyWith(void Function(ClientInfo) updates) =>
-      super.copyWith((message) => updates(message as ClientInfo))
-          as ClientInfo; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ClientInfo)) as ClientInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ClientInfo create() => ClientInfo._();
   ClientInfo createEmptyInstance() => create();
@@ -3860,6 +3984,7 @@ class ClientInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ClientInfo>(create);
   static ClientInfo? _defaultInstance;
 
+  /// Required. Client name, such as gcloud.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3872,52 +3997,44 @@ class ClientInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The list of detailed information about client.
   @$pb.TagNumber(2)
   $core.List<ClientInfoDetail> get clientInfoDetails => $_getList(1);
 }
 
+/// Key-value pair of detailed information about the client which invoked the
+/// test. Examples: {'Version', '1.0'}, {'Release Track', 'BETA'}.
 class ClientInfoDetail extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ClientInfoDetail',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value')
-    ..hasRequiredFields = false;
-
-  ClientInfoDetail._() : super();
   factory ClientInfoDetail({
     $core.String? key,
     $core.String? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  ClientInfoDetail._() : super();
   factory ClientInfoDetail.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ClientInfoDetail.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ClientInfoDetail',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..aOS(2, _omitFieldNames ? '' : 'value')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3927,8 +4044,10 @@ class ClientInfoDetail extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ClientInfoDetail copyWith(void Function(ClientInfoDetail) updates) =>
       super.copyWith((message) => updates(message as ClientInfoDetail))
-          as ClientInfoDetail; // ignore: deprecated_member_use
+          as ClientInfoDetail;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ClientInfoDetail create() => ClientInfoDetail._();
   ClientInfoDetail createEmptyInstance() => create();
@@ -3939,6 +4058,7 @@ class ClientInfoDetail extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ClientInfoDetail>(create);
   static ClientInfoDetail? _defaultInstance;
 
+  /// Required. The key of detailed client information.
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3951,6 +4071,7 @@ class ClientInfoDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// Required. The value of detailed client information.
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3964,69 +4085,52 @@ class ClientInfoDetail extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+/// Locations where the results of running the test are stored.
 class ResultStorage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ResultStorage',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<GoogleCloudStorage>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'googleCloudStorage',
-        subBuilder: GoogleCloudStorage.create)
-    ..aOM<ToolResultsHistory>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'toolResultsHistory',
-        subBuilder: ToolResultsHistory.create)
-    ..aOM<ToolResultsExecution>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'toolResultsExecution',
-        subBuilder: ToolResultsExecution.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resultsUrl')
-    ..hasRequiredFields = false;
-
-  ResultStorage._() : super();
   factory ResultStorage({
     GoogleCloudStorage? googleCloudStorage,
     ToolResultsHistory? toolResultsHistory,
     ToolResultsExecution? toolResultsExecution,
     $core.String? resultsUrl,
   }) {
-    final _result = create();
+    final $result = create();
     if (googleCloudStorage != null) {
-      _result.googleCloudStorage = googleCloudStorage;
+      $result.googleCloudStorage = googleCloudStorage;
     }
     if (toolResultsHistory != null) {
-      _result.toolResultsHistory = toolResultsHistory;
+      $result.toolResultsHistory = toolResultsHistory;
     }
     if (toolResultsExecution != null) {
-      _result.toolResultsExecution = toolResultsExecution;
+      $result.toolResultsExecution = toolResultsExecution;
     }
     if (resultsUrl != null) {
-      _result.resultsUrl = resultsUrl;
+      $result.resultsUrl = resultsUrl;
     }
-    return _result;
+    return $result;
   }
+  ResultStorage._() : super();
   factory ResultStorage.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ResultStorage.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ResultStorage',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<GoogleCloudStorage>(1, _omitFieldNames ? '' : 'googleCloudStorage',
+        subBuilder: GoogleCloudStorage.create)
+    ..aOM<ToolResultsHistory>(5, _omitFieldNames ? '' : 'toolResultsHistory',
+        subBuilder: ToolResultsHistory.create)
+    ..aOM<ToolResultsExecution>(
+        6, _omitFieldNames ? '' : 'toolResultsExecution',
+        subBuilder: ToolResultsExecution.create)
+    ..aOS(7, _omitFieldNames ? '' : 'resultsUrl')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4036,8 +4140,10 @@ class ResultStorage extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ResultStorage copyWith(void Function(ResultStorage) updates) =>
       super.copyWith((message) => updates(message as ResultStorage))
-          as ResultStorage; // ignore: deprecated_member_use
+          as ResultStorage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ResultStorage create() => ResultStorage._();
   ResultStorage createEmptyInstance() => create();
@@ -4048,6 +4154,7 @@ class ResultStorage extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ResultStorage>(create);
   static ResultStorage? _defaultInstance;
 
+  /// Required.
   @$pb.TagNumber(1)
   GoogleCloudStorage get googleCloudStorage => $_getN(0);
   @$pb.TagNumber(1)
@@ -4062,6 +4169,10 @@ class ResultStorage extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   GoogleCloudStorage ensureGoogleCloudStorage() => $_ensure(0);
 
+  ///  The tool results history that contains the tool results execution that
+  ///  results are written to.
+  ///
+  ///  If not provided, the service will choose an appropriate value.
   @$pb.TagNumber(5)
   ToolResultsHistory get toolResultsHistory => $_getN(1);
   @$pb.TagNumber(5)
@@ -4076,6 +4187,7 @@ class ResultStorage extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ToolResultsHistory ensureToolResultsHistory() => $_ensure(1);
 
+  /// Output only. The tool results execution that results are written to.
   @$pb.TagNumber(6)
   ToolResultsExecution get toolResultsExecution => $_getN(2);
   @$pb.TagNumber(6)
@@ -4090,6 +4202,7 @@ class ResultStorage extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   ToolResultsExecution ensureToolResultsExecution() => $_ensure(2);
 
+  /// Output only. URL to the results in the Firebase Web Console.
   @$pb.TagNumber(7)
   $core.String get resultsUrl => $_getSZ(3);
   @$pb.TagNumber(7)
@@ -4103,48 +4216,38 @@ class ResultStorage extends $pb.GeneratedMessage {
   void clearResultsUrl() => clearField(7);
 }
 
+/// Represents a tool results history resource.
 class ToolResultsHistory extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ToolResultsHistory',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'historyId')
-    ..hasRequiredFields = false;
-
-  ToolResultsHistory._() : super();
   factory ToolResultsHistory({
     $core.String? projectId,
     $core.String? historyId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (historyId != null) {
-      _result.historyId = historyId;
+      $result.historyId = historyId;
     }
-    return _result;
+    return $result;
   }
+  ToolResultsHistory._() : super();
   factory ToolResultsHistory.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ToolResultsHistory.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ToolResultsHistory',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'historyId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4154,8 +4257,10 @@ class ToolResultsHistory extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ToolResultsHistory copyWith(void Function(ToolResultsHistory) updates) =>
       super.copyWith((message) => updates(message as ToolResultsHistory))
-          as ToolResultsHistory; // ignore: deprecated_member_use
+          as ToolResultsHistory;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ToolResultsHistory create() => ToolResultsHistory._();
   ToolResultsHistory createEmptyInstance() => create();
@@ -4166,6 +4271,7 @@ class ToolResultsHistory extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ToolResultsHistory>(create);
   static ToolResultsHistory? _defaultInstance;
 
+  /// Required. The cloud project that owns the tool results history.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4178,6 +4284,7 @@ class ToolResultsHistory extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Required. A tool results history ID.
   @$pb.TagNumber(2)
   $core.String get historyId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4191,57 +4298,45 @@ class ToolResultsHistory extends $pb.GeneratedMessage {
   void clearHistoryId() => clearField(2);
 }
 
+///  Represents a tool results execution resource.
+///
+///  This has the results of a TestMatrix.
 class ToolResultsExecution extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ToolResultsExecution',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'historyId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionId')
-    ..hasRequiredFields = false;
-
-  ToolResultsExecution._() : super();
   factory ToolResultsExecution({
     $core.String? projectId,
     $core.String? historyId,
     $core.String? executionId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (historyId != null) {
-      _result.historyId = historyId;
+      $result.historyId = historyId;
     }
     if (executionId != null) {
-      _result.executionId = executionId;
+      $result.executionId = executionId;
     }
-    return _result;
+    return $result;
   }
+  ToolResultsExecution._() : super();
   factory ToolResultsExecution.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ToolResultsExecution.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ToolResultsExecution',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'historyId')
+    ..aOS(3, _omitFieldNames ? '' : 'executionId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4252,8 +4347,10 @@ class ToolResultsExecution extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ToolResultsExecution copyWith(void Function(ToolResultsExecution) updates) =>
       super.copyWith((message) => updates(message as ToolResultsExecution))
-          as ToolResultsExecution; // ignore: deprecated_member_use
+          as ToolResultsExecution;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ToolResultsExecution create() => ToolResultsExecution._();
   ToolResultsExecution createEmptyInstance() => create();
@@ -4264,6 +4361,7 @@ class ToolResultsExecution extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ToolResultsExecution>(create);
   static ToolResultsExecution? _defaultInstance;
 
+  /// Output only. The cloud project that owns the tool results execution.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4276,6 +4374,7 @@ class ToolResultsExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Output only. A tool results history ID.
   @$pb.TagNumber(2)
   $core.String get historyId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4288,6 +4387,7 @@ class ToolResultsExecution extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHistoryId() => clearField(2);
 
+  /// Output only. A tool results execution ID.
   @$pb.TagNumber(3)
   $core.String get executionId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4301,66 +4401,50 @@ class ToolResultsExecution extends $pb.GeneratedMessage {
   void clearExecutionId() => clearField(3);
 }
 
+///  Represents a tool results step resource.
+///
+///  This has the results of a TestExecution.
 class ToolResultsStep extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ToolResultsStep',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'historyId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'stepId')
-    ..hasRequiredFields = false;
-
-  ToolResultsStep._() : super();
   factory ToolResultsStep({
     $core.String? projectId,
     $core.String? historyId,
     $core.String? executionId,
     $core.String? stepId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (historyId != null) {
-      _result.historyId = historyId;
+      $result.historyId = historyId;
     }
     if (executionId != null) {
-      _result.executionId = executionId;
+      $result.executionId = executionId;
     }
     if (stepId != null) {
-      _result.stepId = stepId;
+      $result.stepId = stepId;
     }
-    return _result;
+    return $result;
   }
+  ToolResultsStep._() : super();
   factory ToolResultsStep.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ToolResultsStep.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ToolResultsStep',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'historyId')
+    ..aOS(3, _omitFieldNames ? '' : 'executionId')
+    ..aOS(4, _omitFieldNames ? '' : 'stepId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4370,8 +4454,10 @@ class ToolResultsStep extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ToolResultsStep copyWith(void Function(ToolResultsStep) updates) =>
       super.copyWith((message) => updates(message as ToolResultsStep))
-          as ToolResultsStep; // ignore: deprecated_member_use
+          as ToolResultsStep;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ToolResultsStep create() => ToolResultsStep._();
   ToolResultsStep createEmptyInstance() => create();
@@ -4382,6 +4468,7 @@ class ToolResultsStep extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ToolResultsStep>(create);
   static ToolResultsStep? _defaultInstance;
 
+  /// Output only. The cloud project that owns the tool results step.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4394,6 +4481,7 @@ class ToolResultsStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Output only. A tool results history ID.
   @$pb.TagNumber(2)
   $core.String get historyId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4406,6 +4494,7 @@ class ToolResultsStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHistoryId() => clearField(2);
 
+  /// Output only. A tool results execution ID.
   @$pb.TagNumber(3)
   $core.String get executionId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4418,6 +4507,7 @@ class ToolResultsStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearExecutionId() => clearField(3);
 
+  /// Output only. A tool results step ID.
   @$pb.TagNumber(4)
   $core.String get stepId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4431,39 +4521,33 @@ class ToolResultsStep extends $pb.GeneratedMessage {
   void clearStepId() => clearField(4);
 }
 
+/// A storage location within Google cloud storage (GCS).
 class GoogleCloudStorage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GoogleCloudStorage',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcsPath')
-    ..hasRequiredFields = false;
-
-  GoogleCloudStorage._() : super();
   factory GoogleCloudStorage({
     $core.String? gcsPath,
   }) {
-    final _result = create();
+    final $result = create();
     if (gcsPath != null) {
-      _result.gcsPath = gcsPath;
+      $result.gcsPath = gcsPath;
     }
-    return _result;
+    return $result;
   }
+  GoogleCloudStorage._() : super();
   factory GoogleCloudStorage.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GoogleCloudStorage.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GoogleCloudStorage',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'gcsPath')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4473,8 +4557,10 @@ class GoogleCloudStorage extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GoogleCloudStorage copyWith(void Function(GoogleCloudStorage) updates) =>
       super.copyWith((message) => updates(message as GoogleCloudStorage))
-          as GoogleCloudStorage; // ignore: deprecated_member_use
+          as GoogleCloudStorage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GoogleCloudStorage create() => GoogleCloudStorage._();
   GoogleCloudStorage createEmptyInstance() => create();
@@ -4485,6 +4571,10 @@ class GoogleCloudStorage extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GoogleCloudStorage>(create);
   static GoogleCloudStorage? _defaultInstance;
 
+  /// Required. The path to a directory in GCS that will
+  /// eventually contain the results for this test.
+  /// The requesting user must have write access on the bucket in the supplied
+  /// path.
   @$pb.TagNumber(1)
   $core.String get gcsPath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4500,45 +4590,39 @@ class GoogleCloudStorage extends $pb.GeneratedMessage {
 
 enum FileReference_File { gcsPath, notSet }
 
+/// A reference to a file, used for user inputs.
 class FileReference extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, FileReference_File>
-      _FileReference_FileByTag = {
-    1: FileReference_File.gcsPath,
-    0: FileReference_File.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FileReference',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcsPath')
-    ..hasRequiredFields = false;
-
-  FileReference._() : super();
   factory FileReference({
     $core.String? gcsPath,
   }) {
-    final _result = create();
+    final $result = create();
     if (gcsPath != null) {
-      _result.gcsPath = gcsPath;
+      $result.gcsPath = gcsPath;
     }
-    return _result;
+    return $result;
   }
+  FileReference._() : super();
   factory FileReference.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FileReference.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, FileReference_File>
+      _FileReference_FileByTag = {
+    1: FileReference_File.gcsPath,
+    0: FileReference_File.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FileReference',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOS(1, _omitFieldNames ? '' : 'gcsPath')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4548,8 +4632,10 @@ class FileReference extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   FileReference copyWith(void Function(FileReference) updates) =>
       super.copyWith((message) => updates(message as FileReference))
-          as FileReference; // ignore: deprecated_member_use
+          as FileReference;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FileReference create() => FileReference._();
   FileReference createEmptyInstance() => create();
@@ -4563,6 +4649,9 @@ class FileReference extends $pb.GeneratedMessage {
   FileReference_File whichFile() => _FileReference_FileByTag[$_whichOneof(0)]!;
   void clearFile() => clearField($_whichOneof(0));
 
+  /// A path to a file in Google Cloud Storage.
+  /// Example: gs://build-app-1414623860166/app%40debug-unaligned.apk
+  /// These paths are expected to be url encoded (percent encoding)
   @$pb.TagNumber(1)
   $core.String get gcsPath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4578,7 +4667,29 @@ class FileReference extends $pb.GeneratedMessage {
 
 enum Environment_Environment { androidDevice, iosDevice, notSet }
 
+/// The environment in which the test is run.
 class Environment extends $pb.GeneratedMessage {
+  factory Environment({
+    AndroidDevice? androidDevice,
+    IosDevice? iosDevice,
+  }) {
+    final $result = create();
+    if (androidDevice != null) {
+      $result.androidDevice = androidDevice;
+    }
+    if (iosDevice != null) {
+      $result.iosDevice = iosDevice;
+    }
+    return $result;
+  }
+  Environment._() : super();
+  factory Environment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Environment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Environment_Environment>
       _Environment_EnvironmentByTag = {
     1: Environment_Environment.androidDevice,
@@ -4586,49 +4697,17 @@ class Environment extends $pb.GeneratedMessage {
     0: Environment_Environment.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Environment',
+      _omitMessageNames ? '' : 'Environment',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<AndroidDevice>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidDevice',
+    ..aOM<AndroidDevice>(1, _omitFieldNames ? '' : 'androidDevice',
         subBuilder: AndroidDevice.create)
-    ..aOM<IosDevice>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosDevice',
+    ..aOM<IosDevice>(2, _omitFieldNames ? '' : 'iosDevice',
         subBuilder: IosDevice.create)
     ..hasRequiredFields = false;
 
-  Environment._() : super();
-  factory Environment({
-    AndroidDevice? androidDevice,
-    IosDevice? iosDevice,
-  }) {
-    final _result = create();
-    if (androidDevice != null) {
-      _result.androidDevice = androidDevice;
-    }
-    if (iosDevice != null) {
-      _result.iosDevice = iosDevice;
-    }
-    return _result;
-  }
-  factory Environment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Environment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4638,8 +4717,10 @@ class Environment extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Environment copyWith(void Function(Environment) updates) =>
       super.copyWith((message) => updates(message as Environment))
-          as Environment; // ignore: deprecated_member_use
+          as Environment;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Environment create() => Environment._();
   Environment createEmptyInstance() => create();
@@ -4653,6 +4734,7 @@ class Environment extends $pb.GeneratedMessage {
       _Environment_EnvironmentByTag[$_whichOneof(0)]!;
   void clearEnvironment() => clearField($_whichOneof(0));
 
+  /// An Android device which must be used with an Android test.
   @$pb.TagNumber(1)
   AndroidDevice get androidDevice => $_getN(0);
   @$pb.TagNumber(1)
@@ -4667,6 +4749,7 @@ class Environment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AndroidDevice ensureAndroidDevice() => $_ensure(0);
 
+  /// An iOS device which must be used with an iOS test.
   @$pb.TagNumber(2)
   IosDevice get iosDevice => $_getN(1);
   @$pb.TagNumber(2)
@@ -4682,66 +4765,48 @@ class Environment extends $pb.GeneratedMessage {
   IosDevice ensureIosDevice() => $_ensure(1);
 }
 
+/// A single Android device.
 class AndroidDevice extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AndroidDevice',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidModelId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'androidVersionId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locale')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orientation')
-    ..hasRequiredFields = false;
-
-  AndroidDevice._() : super();
   factory AndroidDevice({
     $core.String? androidModelId,
     $core.String? androidVersionId,
     $core.String? locale,
     $core.String? orientation,
   }) {
-    final _result = create();
+    final $result = create();
     if (androidModelId != null) {
-      _result.androidModelId = androidModelId;
+      $result.androidModelId = androidModelId;
     }
     if (androidVersionId != null) {
-      _result.androidVersionId = androidVersionId;
+      $result.androidVersionId = androidVersionId;
     }
     if (locale != null) {
-      _result.locale = locale;
+      $result.locale = locale;
     }
     if (orientation != null) {
-      _result.orientation = orientation;
+      $result.orientation = orientation;
     }
-    return _result;
+    return $result;
   }
+  AndroidDevice._() : super();
   factory AndroidDevice.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AndroidDevice.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AndroidDevice',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'androidModelId')
+    ..aOS(2, _omitFieldNames ? '' : 'androidVersionId')
+    ..aOS(3, _omitFieldNames ? '' : 'locale')
+    ..aOS(4, _omitFieldNames ? '' : 'orientation')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4751,8 +4816,10 @@ class AndroidDevice extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AndroidDevice copyWith(void Function(AndroidDevice) updates) =>
       super.copyWith((message) => updates(message as AndroidDevice))
-          as AndroidDevice; // ignore: deprecated_member_use
+          as AndroidDevice;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AndroidDevice create() => AndroidDevice._();
   AndroidDevice createEmptyInstance() => create();
@@ -4763,6 +4830,8 @@ class AndroidDevice extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AndroidDevice>(create);
   static AndroidDevice? _defaultInstance;
 
+  /// Required. The id of the Android device to be used.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(1)
   $core.String get androidModelId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4775,6 +4844,8 @@ class AndroidDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAndroidModelId() => clearField(1);
 
+  /// Required. The id of the Android OS version to be used.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(2)
   $core.String get androidVersionId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4787,6 +4858,8 @@ class AndroidDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAndroidVersionId() => clearField(2);
 
+  /// Required. The locale the test device used for testing.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(3)
   $core.String get locale => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4799,6 +4872,8 @@ class AndroidDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLocale() => clearField(3);
 
+  /// Required. How the device is oriented during the test.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(4)
   $core.String get orientation => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4812,66 +4887,48 @@ class AndroidDevice extends $pb.GeneratedMessage {
   void clearOrientation() => clearField(4);
 }
 
+/// A single iOS device.
 class IosDevice extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IosDevice',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosModelId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iosVersionId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locale')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orientation')
-    ..hasRequiredFields = false;
-
-  IosDevice._() : super();
   factory IosDevice({
     $core.String? iosModelId,
     $core.String? iosVersionId,
     $core.String? locale,
     $core.String? orientation,
   }) {
-    final _result = create();
+    final $result = create();
     if (iosModelId != null) {
-      _result.iosModelId = iosModelId;
+      $result.iosModelId = iosModelId;
     }
     if (iosVersionId != null) {
-      _result.iosVersionId = iosVersionId;
+      $result.iosVersionId = iosVersionId;
     }
     if (locale != null) {
-      _result.locale = locale;
+      $result.locale = locale;
     }
     if (orientation != null) {
-      _result.orientation = orientation;
+      $result.orientation = orientation;
     }
-    return _result;
+    return $result;
   }
+  IosDevice._() : super();
   factory IosDevice.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IosDevice.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IosDevice',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'iosModelId')
+    ..aOS(2, _omitFieldNames ? '' : 'iosVersionId')
+    ..aOS(3, _omitFieldNames ? '' : 'locale')
+    ..aOS(4, _omitFieldNames ? '' : 'orientation')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4880,9 +4937,10 @@ class IosDevice extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   IosDevice copyWith(void Function(IosDevice) updates) =>
-      super.copyWith((message) => updates(message as IosDevice))
-          as IosDevice; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as IosDevice)) as IosDevice;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IosDevice create() => IosDevice._();
   IosDevice createEmptyInstance() => create();
@@ -4892,6 +4950,8 @@ class IosDevice extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IosDevice>(create);
   static IosDevice? _defaultInstance;
 
+  /// Required. The id of the iOS device to be used.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(1)
   $core.String get iosModelId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4904,6 +4964,8 @@ class IosDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIosModelId() => clearField(1);
 
+  /// Required. The id of the iOS major software version to be used.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(2)
   $core.String get iosVersionId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4916,6 +4978,8 @@ class IosDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIosVersionId() => clearField(2);
 
+  /// Required. The locale the test device used for testing.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(3)
   $core.String get locale => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4928,6 +4992,8 @@ class IosDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLocale() => clearField(3);
 
+  /// Required. How the device is oriented during the test.
+  /// Use the TestEnvironmentDiscoveryService to get supported options.
   @$pb.TagNumber(4)
   $core.String get orientation => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4941,48 +5007,38 @@ class IosDevice extends $pb.GeneratedMessage {
   void clearOrientation() => clearField(4);
 }
 
+/// Additional details about the progress of the running test.
 class TestDetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestDetails',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'progressMessages')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorMessage')
-    ..hasRequiredFields = false;
-
-  TestDetails._() : super();
   factory TestDetails({
     $core.Iterable<$core.String>? progressMessages,
     $core.String? errorMessage,
   }) {
-    final _result = create();
+    final $result = create();
     if (progressMessages != null) {
-      _result.progressMessages.addAll(progressMessages);
+      $result.progressMessages.addAll(progressMessages);
     }
     if (errorMessage != null) {
-      _result.errorMessage = errorMessage;
+      $result.errorMessage = errorMessage;
     }
-    return _result;
+    return $result;
   }
+  TestDetails._() : super();
   factory TestDetails.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestDetails.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestDetails',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pPS(3, _omitFieldNames ? '' : 'progressMessages')
+    ..aOS(4, _omitFieldNames ? '' : 'errorMessage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4992,8 +5048,10 @@ class TestDetails extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TestDetails copyWith(void Function(TestDetails) updates) =>
       super.copyWith((message) => updates(message as TestDetails))
-          as TestDetails; // ignore: deprecated_member_use
+          as TestDetails;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestDetails create() => TestDetails._();
   TestDetails createEmptyInstance() => create();
@@ -5003,9 +5061,16 @@ class TestDetails extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TestDetails>(create);
   static TestDetails? _defaultInstance;
 
+  ///  Output only. Human-readable, detailed descriptions of the test's progress.
+  ///  For example: "Provisioning a device", "Starting Test".
+  ///
+  ///  During the course of execution new data may be appended
+  ///  to the end of progress_messages.
   @$pb.TagNumber(3)
   $core.List<$core.String> get progressMessages => $_getList(0);
 
+  /// Output only. If the TestState is ERROR, then this string will contain
+  /// human-readable details about the error.
   @$pb.TagNumber(4)
   $core.String get errorMessage => $_getSZ(1);
   @$pb.TagNumber(4)
@@ -5019,43 +5084,37 @@ class TestDetails extends $pb.GeneratedMessage {
   void clearErrorMessage() => clearField(4);
 }
 
+/// Details behind an invalid request.
 class InvalidRequestDetail extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'InvalidRequestDetail',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..e<InvalidRequestDetail_Reason>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reason',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: InvalidRequestDetail_Reason.REASON_UNSPECIFIED,
-        valueOf: InvalidRequestDetail_Reason.valueOf,
-        enumValues: InvalidRequestDetail_Reason.values)
-    ..hasRequiredFields = false;
-
-  InvalidRequestDetail._() : super();
   factory InvalidRequestDetail({
     InvalidRequestDetail_Reason? reason,
   }) {
-    final _result = create();
+    final $result = create();
     if (reason != null) {
-      _result.reason = reason;
+      $result.reason = reason;
     }
-    return _result;
+    return $result;
   }
+  InvalidRequestDetail._() : super();
   factory InvalidRequestDetail.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory InvalidRequestDetail.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'InvalidRequestDetail',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..e<InvalidRequestDetail_Reason>(
+        1, _omitFieldNames ? '' : 'reason', $pb.PbFieldType.OE,
+        defaultOrMaker: InvalidRequestDetail_Reason.REASON_UNSPECIFIED,
+        valueOf: InvalidRequestDetail_Reason.valueOf,
+        enumValues: InvalidRequestDetail_Reason.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5066,8 +5125,10 @@ class InvalidRequestDetail extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   InvalidRequestDetail copyWith(void Function(InvalidRequestDetail) updates) =>
       super.copyWith((message) => updates(message as InvalidRequestDetail))
-          as InvalidRequestDetail; // ignore: deprecated_member_use
+          as InvalidRequestDetail;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static InvalidRequestDetail create() => InvalidRequestDetail._();
   InvalidRequestDetail createEmptyInstance() => create();
@@ -5078,6 +5139,7 @@ class InvalidRequestDetail extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<InvalidRequestDetail>(create);
   static InvalidRequestDetail? _defaultInstance;
 
+  /// The reason behind the error.
   @$pb.TagNumber(1)
   InvalidRequestDetail_Reason get reason => $_getN(0);
   @$pb.TagNumber(1)
@@ -5098,7 +5160,33 @@ enum ShardingOption_Option {
   notSet
 }
 
+/// Options for enabling sharding.
 class ShardingOption extends $pb.GeneratedMessage {
+  factory ShardingOption({
+    UniformSharding? uniformSharding,
+    ManualSharding? manualSharding,
+    SmartSharding? smartSharding,
+  }) {
+    final $result = create();
+    if (uniformSharding != null) {
+      $result.uniformSharding = uniformSharding;
+    }
+    if (manualSharding != null) {
+      $result.manualSharding = manualSharding;
+    }
+    if (smartSharding != null) {
+      $result.smartSharding = smartSharding;
+    }
+    return $result;
+  }
+  ShardingOption._() : super();
+  factory ShardingOption.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ShardingOption.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ShardingOption_Option>
       _ShardingOption_OptionByTag = {
     1: ShardingOption_Option.uniformSharding,
@@ -5107,59 +5195,19 @@ class ShardingOption extends $pb.GeneratedMessage {
     0: ShardingOption_Option.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ShardingOption',
+      _omitMessageNames ? '' : 'ShardingOption',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<UniformSharding>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uniformSharding',
+    ..aOM<UniformSharding>(1, _omitFieldNames ? '' : 'uniformSharding',
         subBuilder: UniformSharding.create)
-    ..aOM<ManualSharding>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'manualSharding',
+    ..aOM<ManualSharding>(2, _omitFieldNames ? '' : 'manualSharding',
         subBuilder: ManualSharding.create)
-    ..aOM<SmartSharding>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'smartSharding',
+    ..aOM<SmartSharding>(3, _omitFieldNames ? '' : 'smartSharding',
         subBuilder: SmartSharding.create)
     ..hasRequiredFields = false;
 
-  ShardingOption._() : super();
-  factory ShardingOption({
-    UniformSharding? uniformSharding,
-    ManualSharding? manualSharding,
-    SmartSharding? smartSharding,
-  }) {
-    final _result = create();
-    if (uniformSharding != null) {
-      _result.uniformSharding = uniformSharding;
-    }
-    if (manualSharding != null) {
-      _result.manualSharding = manualSharding;
-    }
-    if (smartSharding != null) {
-      _result.smartSharding = smartSharding;
-    }
-    return _result;
-  }
-  factory ShardingOption.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ShardingOption.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5169,8 +5217,10 @@ class ShardingOption extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ShardingOption copyWith(void Function(ShardingOption) updates) =>
       super.copyWith((message) => updates(message as ShardingOption))
-          as ShardingOption; // ignore: deprecated_member_use
+          as ShardingOption;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ShardingOption create() => ShardingOption._();
   ShardingOption createEmptyInstance() => create();
@@ -5185,6 +5235,7 @@ class ShardingOption extends $pb.GeneratedMessage {
       _ShardingOption_OptionByTag[$_whichOneof(0)]!;
   void clearOption() => clearField($_whichOneof(0));
 
+  /// Uniformly shards test cases given a total number of shards.
   @$pb.TagNumber(1)
   UniformSharding get uniformSharding => $_getN(0);
   @$pb.TagNumber(1)
@@ -5199,6 +5250,8 @@ class ShardingOption extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UniformSharding ensureUniformSharding() => $_ensure(0);
 
+  /// Shards test cases into the specified groups of packages, classes, and/or
+  /// methods.
   @$pb.TagNumber(2)
   ManualSharding get manualSharding => $_getN(1);
   @$pb.TagNumber(2)
@@ -5213,6 +5266,7 @@ class ShardingOption extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ManualSharding ensureManualSharding() => $_ensure(1);
 
+  /// Shards test based on previous test case timing records.
   @$pb.TagNumber(3)
   SmartSharding get smartSharding => $_getN(2);
   @$pb.TagNumber(3)
@@ -5228,40 +5282,41 @@ class ShardingOption extends $pb.GeneratedMessage {
   SmartSharding ensureSmartSharding() => $_ensure(2);
 }
 
+///  Uniformly shards test cases given a total number of shards.
+///
+///  For instrumentation tests, it will be translated to "-e numShard" and "-e
+///  shardIndex" AndroidJUnitRunner arguments. With uniform sharding enabled,
+///  specifying either of these sharding arguments via `environment_variables` is
+///  invalid.
+///
+///  Based on the sharding mechanism AndroidJUnitRunner uses, there is no
+///  guarantee that test cases will be distributed uniformly across all shards.
 class UniformSharding extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UniformSharding',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'numShards',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  UniformSharding._() : super();
   factory UniformSharding({
     $core.int? numShards,
   }) {
-    final _result = create();
+    final $result = create();
     if (numShards != null) {
-      _result.numShards = numShards;
+      $result.numShards = numShards;
     }
-    return _result;
+    return $result;
   }
+  UniformSharding._() : super();
   factory UniformSharding.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UniformSharding.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UniformSharding',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'numShards', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5271,8 +5326,10 @@ class UniformSharding extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UniformSharding copyWith(void Function(UniformSharding) updates) =>
       super.copyWith((message) => updates(message as UniformSharding))
-          as UniformSharding; // ignore: deprecated_member_use
+          as UniformSharding;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UniformSharding create() => UniformSharding._();
   UniformSharding createEmptyInstance() => create();
@@ -5283,6 +5340,11 @@ class UniformSharding extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UniformSharding>(create);
   static UniformSharding? _defaultInstance;
 
+  /// Required. The total number of shards to create. This must always be a
+  /// positive number that is no greater than the total number of test cases.
+  /// When you select one or more physical devices, the number of shards must be
+  /// <= 50. When you select one or more ARM virtual devices, it must be <= 200.
+  /// When you select only x86 virtual devices, it must be <= 500.
   @$pb.TagNumber(1)
   $core.int get numShards => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -5296,41 +5358,39 @@ class UniformSharding extends $pb.GeneratedMessage {
   void clearNumShards() => clearField(1);
 }
 
+///  Shards test cases into the specified groups of packages, classes, and/or
+///  methods.
+///
+///  With manual sharding enabled, specifying test targets via
+///  environment_variables or in InstrumentationTest is invalid.
 class ManualSharding extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ManualSharding',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pc<TestTargetsForShard>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testTargetsForShard',
-        $pb.PbFieldType.PM,
-        subBuilder: TestTargetsForShard.create)
-    ..hasRequiredFields = false;
-
-  ManualSharding._() : super();
   factory ManualSharding({
     $core.Iterable<TestTargetsForShard>? testTargetsForShard,
   }) {
-    final _result = create();
+    final $result = create();
     if (testTargetsForShard != null) {
-      _result.testTargetsForShard.addAll(testTargetsForShard);
+      $result.testTargetsForShard.addAll(testTargetsForShard);
     }
-    return _result;
+    return $result;
   }
+  ManualSharding._() : super();
   factory ManualSharding.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ManualSharding.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ManualSharding',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pc<TestTargetsForShard>(
+        1, _omitFieldNames ? '' : 'testTargetsForShard', $pb.PbFieldType.PM,
+        subBuilder: TestTargetsForShard.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5340,8 +5400,10 @@ class ManualSharding extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ManualSharding copyWith(void Function(ManualSharding) updates) =>
       super.copyWith((message) => updates(message as ManualSharding))
-          as ManualSharding; // ignore: deprecated_member_use
+          as ManualSharding;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ManualSharding create() => ManualSharding._();
   ManualSharding createEmptyInstance() => create();
@@ -5352,43 +5414,43 @@ class ManualSharding extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ManualSharding>(create);
   static ManualSharding? _defaultInstance;
 
+  /// Required. Group of packages, classes, and/or test methods to be run for
+  /// each manually-created shard. You must specify at least one shard if this
+  /// field is present. When you select one or more physical devices, the number
+  /// of repeated test_targets_for_shard must be <= 50. When you select one or
+  /// more ARM virtual devices, it must be <= 200. When you select only x86
+  /// virtual devices, it must be <= 500.
   @$pb.TagNumber(1)
   $core.List<TestTargetsForShard> get testTargetsForShard => $_getList(0);
 }
 
+/// Test targets for a shard.
 class TestTargetsForShard extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestTargetsForShard',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testTargets')
-    ..hasRequiredFields = false;
-
-  TestTargetsForShard._() : super();
   factory TestTargetsForShard({
     $core.Iterable<$core.String>? testTargets,
   }) {
-    final _result = create();
+    final $result = create();
     if (testTargets != null) {
-      _result.testTargets.addAll(testTargets);
+      $result.testTargets.addAll(testTargets);
     }
-    return _result;
+    return $result;
   }
+  TestTargetsForShard._() : super();
   factory TestTargetsForShard.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestTargetsForShard.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestTargetsForShard',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'testTargets')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5398,8 +5460,10 @@ class TestTargetsForShard extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TestTargetsForShard copyWith(void Function(TestTargetsForShard) updates) =>
       super.copyWith((message) => updates(message as TestTargetsForShard))
-          as TestTargetsForShard; // ignore: deprecated_member_use
+          as TestTargetsForShard;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestTargetsForShard create() => TestTargetsForShard._();
   TestTargetsForShard createEmptyInstance() => create();
@@ -5410,44 +5474,43 @@ class TestTargetsForShard extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TestTargetsForShard>(create);
   static TestTargetsForShard? _defaultInstance;
 
+  ///  Group of packages, classes, and/or test methods to be run for each shard.
+  ///  The targets need to be specified in AndroidJUnitRunner argument format. For
+  ///  example, "package com.my.packages" "class com.my.package.MyClass".
+  ///
+  ///  The number of test_targets must be greater than 0.
   @$pb.TagNumber(1)
   $core.List<$core.String> get testTargets => $_getList(0);
 }
 
+/// Shards test based on previous test case timing records.
 class SmartSharding extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SmartSharding',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.Duration>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'targetedShardDuration',
-        subBuilder: $2.Duration.create)
-    ..hasRequiredFields = false;
-
-  SmartSharding._() : super();
   factory SmartSharding({
     $2.Duration? targetedShardDuration,
   }) {
-    final _result = create();
+    final $result = create();
     if (targetedShardDuration != null) {
-      _result.targetedShardDuration = targetedShardDuration;
+      $result.targetedShardDuration = targetedShardDuration;
     }
-    return _result;
+    return $result;
   }
+  SmartSharding._() : super();
   factory SmartSharding.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SmartSharding.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SmartSharding',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Duration>(1, _omitFieldNames ? '' : 'targetedShardDuration',
+        subBuilder: $2.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5457,8 +5520,10 @@ class SmartSharding extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SmartSharding copyWith(void Function(SmartSharding) updates) =>
       super.copyWith((message) => updates(message as SmartSharding))
-          as SmartSharding; // ignore: deprecated_member_use
+          as SmartSharding;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SmartSharding create() => SmartSharding._();
   SmartSharding createEmptyInstance() => create();
@@ -5469,6 +5534,45 @@ class SmartSharding extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SmartSharding>(create);
   static SmartSharding? _defaultInstance;
 
+  ///  The amount of time tests within a shard should take.
+  ///
+  ///  Default: 300 seconds (5 minutes).
+  ///  The minimum allowed: 120 seconds (2 minutes).
+  ///
+  ///  The shard count is dynamically set based on time, up to the maximum shard
+  ///  limit (described below). To guarantee at least one test case for each
+  ///  shard, the number of shards will not exceed the number of test cases. Shard
+  ///  duration will be exceeded if:
+  ///
+  ///  - The maximum shard limit is reached and there is more calculated test time
+  ///  remaining to allocate into shards.
+  ///  - Any individual test is estimated to be longer than the targeted shard
+  ///  duration.
+  ///
+  ///  Shard duration is not guaranteed because smart sharding uses test case
+  ///  history and default durations which may not be accurate. The rules for
+  ///  finding the test case timing records are:
+  ///
+  ///  - If the service has processed a test case in the last 30 days, the record
+  ///   of the latest successful test case will be used.
+  ///  - For new test cases, the average duration of other known test cases will
+  ///   be used.
+  ///  - If there are no previous test case timing records available, the default
+  ///   test case duration is 15 seconds.
+  ///
+  ///  Because the actual shard duration can exceed the targeted shard duration,
+  ///  we recommend that you set the targeted value at least 5 minutes less than
+  ///  the maximum allowed test timeout (45 minutes for physical devices and 60
+  ///  minutes for virtual), or that you use the custom test timeout value that
+  ///  you set. This approach avoids cancelling the shard before all tests can
+  ///  finish.
+  ///
+  ///  Note that there is a limit for maximum number of shards. When you select
+  ///  one or more physical devices, the number of shards must be <= 50. When you
+  ///  select one or more ARM virtual devices, it must be <= 200. When you select
+  ///  only x86 virtual devices, it must be <= 500. To guarantee at least one test
+  ///  case for per shard, the number of shards will not exceed the number of test
+  ///  cases. Each shard created counts toward daily test quota.
   @$pb.TagNumber(1)
   $2.Duration get targetedShardDuration => $_getN(0);
   @$pb.TagNumber(1)
@@ -5484,60 +5588,50 @@ class SmartSharding extends $pb.GeneratedMessage {
   $2.Duration ensureTargetedShardDuration() => $_ensure(0);
 }
 
+/// Output only. Details about the shard.
 class Shard extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Shard',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'shardIndex',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'numShards',
-        $pb.PbFieldType.O3)
-    ..aOM<TestTargetsForShard>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testTargetsForShard',
-        subBuilder: TestTargetsForShard.create)
-    ..hasRequiredFields = false;
-
-  Shard._() : super();
   factory Shard({
     $core.int? shardIndex,
     $core.int? numShards,
     TestTargetsForShard? testTargetsForShard,
+    $2.Duration? estimatedShardDuration,
   }) {
-    final _result = create();
+    final $result = create();
     if (shardIndex != null) {
-      _result.shardIndex = shardIndex;
+      $result.shardIndex = shardIndex;
     }
     if (numShards != null) {
-      _result.numShards = numShards;
+      $result.numShards = numShards;
     }
     if (testTargetsForShard != null) {
-      _result.testTargetsForShard = testTargetsForShard;
+      $result.testTargetsForShard = testTargetsForShard;
     }
-    return _result;
+    if (estimatedShardDuration != null) {
+      $result.estimatedShardDuration = estimatedShardDuration;
+    }
+    return $result;
   }
+  Shard._() : super();
   factory Shard.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Shard.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Shard',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'shardIndex', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'numShards', $pb.PbFieldType.O3)
+    ..aOM<TestTargetsForShard>(3, _omitFieldNames ? '' : 'testTargetsForShard',
+        subBuilder: TestTargetsForShard.create)
+    ..aOM<$2.Duration>(4, _omitFieldNames ? '' : 'estimatedShardDuration',
+        subBuilder: $2.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5546,9 +5640,10 @@ class Shard extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Shard copyWith(void Function(Shard) updates) =>
-      super.copyWith((message) => updates(message as Shard))
-          as Shard; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Shard)) as Shard;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Shard create() => Shard._();
   Shard createEmptyInstance() => create();
@@ -5558,6 +5653,7 @@ class Shard extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Shard>(create);
   static Shard? _defaultInstance;
 
+  /// Output only. The index of the shard among all the shards.
   @$pb.TagNumber(1)
   $core.int get shardIndex => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -5570,6 +5666,7 @@ class Shard extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearShardIndex() => clearField(1);
 
+  /// Output only. The total number of shards.
   @$pb.TagNumber(2)
   $core.int get numShards => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -5582,6 +5679,7 @@ class Shard extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNumShards() => clearField(2);
 
+  /// Output only. Test targets for each shard. Only set for manual sharding.
   @$pb.TagNumber(3)
   TestTargetsForShard get testTargetsForShard => $_getN(2);
   @$pb.TagNumber(3)
@@ -5595,60 +5693,62 @@ class Shard extends $pb.GeneratedMessage {
   void clearTestTargetsForShard() => clearField(3);
   @$pb.TagNumber(3)
   TestTargetsForShard ensureTestTargetsForShard() => $_ensure(2);
+
+  /// Output only. The estimated shard duration based on previous test case
+  /// timing records, if available.
+  @$pb.TagNumber(4)
+  $2.Duration get estimatedShardDuration => $_getN(3);
+  @$pb.TagNumber(4)
+  set estimatedShardDuration($2.Duration v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasEstimatedShardDuration() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearEstimatedShardDuration() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.Duration ensureEstimatedShardDuration() => $_ensure(3);
 }
 
+/// Request to submit a matrix of tests for execution.
 class CreateTestMatrixRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateTestMatrixRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOM<TestMatrix>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testMatrix',
-        subBuilder: TestMatrix.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestId')
-    ..hasRequiredFields = false;
-
-  CreateTestMatrixRequest._() : super();
   factory CreateTestMatrixRequest({
     $core.String? projectId,
     TestMatrix? testMatrix,
     $core.String? requestId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (testMatrix != null) {
-      _result.testMatrix = testMatrix;
+      $result.testMatrix = testMatrix;
     }
     if (requestId != null) {
-      _result.requestId = requestId;
+      $result.requestId = requestId;
     }
-    return _result;
+    return $result;
   }
+  CreateTestMatrixRequest._() : super();
   factory CreateTestMatrixRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateTestMatrixRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateTestMatrixRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOM<TestMatrix>(2, _omitFieldNames ? '' : 'testMatrix',
+        subBuilder: TestMatrix.create)
+    ..aOS(3, _omitFieldNames ? '' : 'requestId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5660,8 +5760,10 @@ class CreateTestMatrixRequest extends $pb.GeneratedMessage {
   CreateTestMatrixRequest copyWith(
           void Function(CreateTestMatrixRequest) updates) =>
       super.copyWith((message) => updates(message as CreateTestMatrixRequest))
-          as CreateTestMatrixRequest; // ignore: deprecated_member_use
+          as CreateTestMatrixRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateTestMatrixRequest create() => CreateTestMatrixRequest._();
   CreateTestMatrixRequest createEmptyInstance() => create();
@@ -5672,6 +5774,7 @@ class CreateTestMatrixRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateTestMatrixRequest>(create);
   static CreateTestMatrixRequest? _defaultInstance;
 
+  /// The GCE project under which this job will run.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5684,6 +5787,7 @@ class CreateTestMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The matrix of tests that the user wants to run.
   @$pb.TagNumber(2)
   TestMatrix get testMatrix => $_getN(1);
   @$pb.TagNumber(2)
@@ -5698,6 +5802,12 @@ class CreateTestMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   TestMatrix ensureTestMatrix() => $_ensure(1);
 
+  ///  A string id used to detect duplicated requests.
+  ///  Ids are automatically scoped to a project, so
+  ///  users should ensure the ID is unique per-project.
+  ///  A UUID is recommended.
+  ///
+  ///  Optional, but strongly recommended.
   @$pb.TagNumber(3)
   $core.String get requestId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5711,48 +5821,38 @@ class CreateTestMatrixRequest extends $pb.GeneratedMessage {
   void clearRequestId() => clearField(3);
 }
 
+/// Request to get the Test Matrix with the given id.
 class GetTestMatrixRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetTestMatrixRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testMatrixId')
-    ..hasRequiredFields = false;
-
-  GetTestMatrixRequest._() : super();
   factory GetTestMatrixRequest({
     $core.String? projectId,
     $core.String? testMatrixId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (testMatrixId != null) {
-      _result.testMatrixId = testMatrixId;
+      $result.testMatrixId = testMatrixId;
     }
-    return _result;
+    return $result;
   }
+  GetTestMatrixRequest._() : super();
   factory GetTestMatrixRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetTestMatrixRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetTestMatrixRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'testMatrixId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5763,8 +5863,10 @@ class GetTestMatrixRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetTestMatrixRequest copyWith(void Function(GetTestMatrixRequest) updates) =>
       super.copyWith((message) => updates(message as GetTestMatrixRequest))
-          as GetTestMatrixRequest; // ignore: deprecated_member_use
+          as GetTestMatrixRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetTestMatrixRequest create() => GetTestMatrixRequest._();
   GetTestMatrixRequest createEmptyInstance() => create();
@@ -5775,6 +5877,7 @@ class GetTestMatrixRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetTestMatrixRequest>(create);
   static GetTestMatrixRequest? _defaultInstance;
 
+  /// Cloud project that owns the test matrix.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5787,6 +5890,7 @@ class GetTestMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Unique test matrix id which was assigned by the service.
   @$pb.TagNumber(2)
   $core.String get testMatrixId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5800,48 +5904,38 @@ class GetTestMatrixRequest extends $pb.GeneratedMessage {
   void clearTestMatrixId() => clearField(2);
 }
 
+/// Request to stop running all of the tests in the specified matrix.
 class CancelTestMatrixRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CancelTestMatrixRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testMatrixId')
-    ..hasRequiredFields = false;
-
-  CancelTestMatrixRequest._() : super();
   factory CancelTestMatrixRequest({
     $core.String? projectId,
     $core.String? testMatrixId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (testMatrixId != null) {
-      _result.testMatrixId = testMatrixId;
+      $result.testMatrixId = testMatrixId;
     }
-    return _result;
+    return $result;
   }
+  CancelTestMatrixRequest._() : super();
   factory CancelTestMatrixRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CancelTestMatrixRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CancelTestMatrixRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'testMatrixId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5853,8 +5947,10 @@ class CancelTestMatrixRequest extends $pb.GeneratedMessage {
   CancelTestMatrixRequest copyWith(
           void Function(CancelTestMatrixRequest) updates) =>
       super.copyWith((message) => updates(message as CancelTestMatrixRequest))
-          as CancelTestMatrixRequest; // ignore: deprecated_member_use
+          as CancelTestMatrixRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CancelTestMatrixRequest create() => CancelTestMatrixRequest._();
   CancelTestMatrixRequest createEmptyInstance() => create();
@@ -5865,6 +5961,7 @@ class CancelTestMatrixRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CancelTestMatrixRequest>(create);
   static CancelTestMatrixRequest? _defaultInstance;
 
+  /// Cloud project that owns the test.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5877,6 +5974,7 @@ class CancelTestMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Test matrix that will be canceled.
   @$pb.TagNumber(2)
   $core.String get testMatrixId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5890,43 +5988,36 @@ class CancelTestMatrixRequest extends $pb.GeneratedMessage {
   void clearTestMatrixId() => clearField(2);
 }
 
+/// Response containing the current state of the specified test matrix.
 class CancelTestMatrixResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CancelTestMatrixResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.testing.v1'),
-      createEmptyInstance: create)
-    ..e<TestState>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'testState',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TestState.TEST_STATE_UNSPECIFIED,
-        valueOf: TestState.valueOf,
-        enumValues: TestState.values)
-    ..hasRequiredFields = false;
-
-  CancelTestMatrixResponse._() : super();
   factory CancelTestMatrixResponse({
     TestState? testState,
   }) {
-    final _result = create();
+    final $result = create();
     if (testState != null) {
-      _result.testState = testState;
+      $result.testState = testState;
     }
-    return _result;
+    return $result;
   }
+  CancelTestMatrixResponse._() : super();
   factory CancelTestMatrixResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CancelTestMatrixResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CancelTestMatrixResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.testing.v1'),
+      createEmptyInstance: create)
+    ..e<TestState>(1, _omitFieldNames ? '' : 'testState', $pb.PbFieldType.OE,
+        defaultOrMaker: TestState.TEST_STATE_UNSPECIFIED,
+        valueOf: TestState.valueOf,
+        enumValues: TestState.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5938,8 +6029,10 @@ class CancelTestMatrixResponse extends $pb.GeneratedMessage {
   CancelTestMatrixResponse copyWith(
           void Function(CancelTestMatrixResponse) updates) =>
       super.copyWith((message) => updates(message as CancelTestMatrixResponse))
-          as CancelTestMatrixResponse; // ignore: deprecated_member_use
+          as CancelTestMatrixResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CancelTestMatrixResponse create() => CancelTestMatrixResponse._();
   CancelTestMatrixResponse createEmptyInstance() => create();
@@ -5950,6 +6043,9 @@ class CancelTestMatrixResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CancelTestMatrixResponse>(create);
   static CancelTestMatrixResponse? _defaultInstance;
 
+  /// The current rolled-up state of the test matrix.
+  /// If this state is already final, then the cancelation request will
+  /// have no effect.
   @$pb.TagNumber(1)
   TestState get testState => $_getN(0);
   @$pb.TagNumber(1)
@@ -5962,3 +6058,7 @@ class CancelTestMatrixResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTestState() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/alertcenter/v1beta1/alertcenter.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'alertcenter.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../../protobuf/empty.pb.dart' as $1;
+import 'alertcenter.pb.dart' as $0;
+
 export 'alertcenter.pb.dart';
 
+@$pb.GrpcServiceName('google.apps.alertcenter.v1beta1.AlertCenterService')
 class AlertCenterServiceClient extends $grpc.Client {
   static final _$listAlerts =
       $grpc.ClientMethod<$0.ListAlertsRequest, $0.ListAlertsResponse>(
@@ -142,6 +149,7 @@ class AlertCenterServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.apps.alertcenter.v1beta1.AlertCenterService')
 abstract class AlertCenterServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.apps.alertcenter.v1beta1.AlertCenterService';

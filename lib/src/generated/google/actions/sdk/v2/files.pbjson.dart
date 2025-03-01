@@ -1,19 +1,23 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/files.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use filesDescriptor instead')
-const Files$json = const {
+const Files$json = {
   '1': 'Files',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'config_files',
       '3': 1,
       '4': 1,
@@ -22,7 +26,7 @@ const Files$json = const {
       '9': 0,
       '10': 'configFiles'
     },
-    const {
+    {
       '1': 'data_files',
       '3': 2,
       '4': 1,
@@ -32,11 +36,13 @@ const Files$json = const {
       '10': 'dataFiles'
     },
   ],
-  '8': const [
-    const {'1': 'file_type'},
+  '8': [
+    {'1': 'file_type'},
   ],
 };
 
 /// Descriptor for `Files`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List filesDescriptor = $convert.base64Decode(
-    'CgVGaWxlcxJHCgxjb25maWdfZmlsZXMYASABKAsyIi5nb29nbGUuYWN0aW9ucy5zZGsudjIuQ29uZmlnRmlsZXNIAFILY29uZmlnRmlsZXMSQQoKZGF0YV9maWxlcxgCIAEoCzIgLmdvb2dsZS5hY3Rpb25zLnNkay52Mi5EYXRhRmlsZXNIAFIJZGF0YUZpbGVzQgsKCWZpbGVfdHlwZQ==');
+    'CgVGaWxlcxJHCgxjb25maWdfZmlsZXMYASABKAsyIi5nb29nbGUuYWN0aW9ucy5zZGsudjIuQ2'
+    '9uZmlnRmlsZXNIAFILY29uZmlnRmlsZXMSQQoKZGF0YV9maWxlcxgCIAEoCzIgLmdvb2dsZS5h'
+    'Y3Rpb25zLnNkay52Mi5EYXRhRmlsZXNIAFIJZGF0YUZpbGVzQgsKCWZpbGVfdHlwZQ==');

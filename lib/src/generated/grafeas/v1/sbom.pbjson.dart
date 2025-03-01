@@ -1,31 +1,37 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: grafeas/v1/sbom.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use sBOMReferenceNoteDescriptor instead')
-const SBOMReferenceNote$json = const {
+const SBOMReferenceNote$json = {
   '1': 'SBOMReferenceNote',
-  '2': const [
-    const {'1': 'format', '3': 1, '4': 1, '5': 9, '10': 'format'},
-    const {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
+  '2': [
+    {'1': 'format', '3': 1, '4': 1, '5': 9, '10': 'format'},
+    {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
   ],
 };
 
 /// Descriptor for `SBOMReferenceNote`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sBOMReferenceNoteDescriptor = $convert.base64Decode(
-    'ChFTQk9NUmVmZXJlbmNlTm90ZRIWCgZmb3JtYXQYASABKAlSBmZvcm1hdBIYCgd2ZXJzaW9uGAIgASgJUgd2ZXJzaW9u');
+    'ChFTQk9NUmVmZXJlbmNlTm90ZRIWCgZmb3JtYXQYASABKAlSBmZvcm1hdBIYCgd2ZXJzaW9uGA'
+    'IgASgJUgd2ZXJzaW9u');
+
 @$core.Deprecated('Use sBOMReferenceOccurrenceDescriptor instead')
-const SBOMReferenceOccurrence$json = const {
+const SBOMReferenceOccurrence$json = {
   '1': 'SBOMReferenceOccurrence',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'payload',
       '3': 1,
       '4': 1,
@@ -33,8 +39,8 @@ const SBOMReferenceOccurrence$json = const {
       '6': '.grafeas.v1.SbomReferenceIntotoPayload',
       '10': 'payload'
     },
-    const {'1': 'payload_type', '3': 2, '4': 1, '5': 9, '10': 'payloadType'},
-    const {
+    {'1': 'payload_type', '3': 2, '4': 1, '5': 9, '10': 'payloadType'},
+    {
       '1': 'signatures',
       '3': 3,
       '4': 3,
@@ -46,22 +52,19 @@ const SBOMReferenceOccurrence$json = const {
 };
 
 /// Descriptor for `SBOMReferenceOccurrence`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sBOMReferenceOccurrenceDescriptor =
-    $convert.base64Decode(
-        'ChdTQk9NUmVmZXJlbmNlT2NjdXJyZW5jZRJACgdwYXlsb2FkGAEgASgLMiYuZ3JhZmVhcy52MS5TYm9tUmVmZXJlbmNlSW50b3RvUGF5bG9hZFIHcGF5bG9hZBIhCgxwYXlsb2FkX3R5cGUYAiABKAlSC3BheWxvYWRUeXBlEj0KCnNpZ25hdHVyZXMYAyADKAsyHS5ncmFmZWFzLnYxLkVudmVsb3BlU2lnbmF0dXJlUgpzaWduYXR1cmVz');
+final $typed_data.Uint8List sBOMReferenceOccurrenceDescriptor = $convert.base64Decode(
+    'ChdTQk9NUmVmZXJlbmNlT2NjdXJyZW5jZRJACgdwYXlsb2FkGAEgASgLMiYuZ3JhZmVhcy52MS'
+    '5TYm9tUmVmZXJlbmNlSW50b3RvUGF5bG9hZFIHcGF5bG9hZBIhCgxwYXlsb2FkX3R5cGUYAiAB'
+    'KAlSC3BheWxvYWRUeXBlEj0KCnNpZ25hdHVyZXMYAyADKAsyHS5ncmFmZWFzLnYxLkVudmVsb3'
+    'BlU2lnbmF0dXJlUgpzaWduYXR1cmVz');
+
 @$core.Deprecated('Use sbomReferenceIntotoPayloadDescriptor instead')
-const SbomReferenceIntotoPayload$json = const {
+const SbomReferenceIntotoPayload$json = {
   '1': 'SbomReferenceIntotoPayload',
-  '2': const [
-    const {'1': 'type', '3': 1, '4': 1, '5': 9, '10': '_type'},
-    const {
-      '1': 'predicate_type',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'predicateType'
-    },
-    const {
+  '2': [
+    {'1': 'type', '3': 1, '4': 1, '5': 9, '10': '_type'},
+    {'1': 'predicate_type', '3': 2, '4': 1, '5': 9, '10': 'predicateType'},
+    {
       '1': 'subject',
       '3': 3,
       '4': 3,
@@ -69,7 +72,7 @@ const SbomReferenceIntotoPayload$json = const {
       '6': '.grafeas.v1.Subject',
       '10': 'subject'
     },
-    const {
+    {
       '1': 'predicate',
       '3': 4,
       '4': 1,
@@ -81,17 +84,20 @@ const SbomReferenceIntotoPayload$json = const {
 };
 
 /// Descriptor for `SbomReferenceIntotoPayload`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sbomReferenceIntotoPayloadDescriptor =
-    $convert.base64Decode(
-        'ChpTYm9tUmVmZXJlbmNlSW50b3RvUGF5bG9hZBITCgR0eXBlGAEgASgJUgVfdHlwZRIlCg5wcmVkaWNhdGVfdHlwZRgCIAEoCVINcHJlZGljYXRlVHlwZRItCgdzdWJqZWN0GAMgAygLMhMuZ3JhZmVhcy52MS5TdWJqZWN0UgdzdWJqZWN0EkYKCXByZWRpY2F0ZRgEIAEoCzIoLmdyYWZlYXMudjEuU2JvbVJlZmVyZW5jZUludG90b1ByZWRpY2F0ZVIJcHJlZGljYXRl');
+final $typed_data.Uint8List sbomReferenceIntotoPayloadDescriptor = $convert.base64Decode(
+    'ChpTYm9tUmVmZXJlbmNlSW50b3RvUGF5bG9hZBITCgR0eXBlGAEgASgJUgVfdHlwZRIlCg5wcm'
+    'VkaWNhdGVfdHlwZRgCIAEoCVINcHJlZGljYXRlVHlwZRItCgdzdWJqZWN0GAMgAygLMhMuZ3Jh'
+    'ZmVhcy52MS5TdWJqZWN0UgdzdWJqZWN0EkYKCXByZWRpY2F0ZRgEIAEoCzIoLmdyYWZlYXMudj'
+    'EuU2JvbVJlZmVyZW5jZUludG90b1ByZWRpY2F0ZVIJcHJlZGljYXRl');
+
 @$core.Deprecated('Use sbomReferenceIntotoPredicateDescriptor instead')
-const SbomReferenceIntotoPredicate$json = const {
+const SbomReferenceIntotoPredicate$json = {
   '1': 'SbomReferenceIntotoPredicate',
-  '2': const [
-    const {'1': 'referrer_id', '3': 1, '4': 1, '5': 9, '10': 'referrerId'},
-    const {'1': 'location', '3': 2, '4': 1, '5': 9, '10': 'location'},
-    const {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
-    const {
+  '2': [
+    {'1': 'referrer_id', '3': 1, '4': 1, '5': 9, '10': 'referrerId'},
+    {'1': 'location', '3': 2, '4': 1, '5': 9, '10': 'location'},
+    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
+    {
       '1': 'digest',
       '3': 4,
       '4': 3,
@@ -100,20 +106,23 @@ const SbomReferenceIntotoPredicate$json = const {
       '10': 'digest'
     },
   ],
-  '3': const [SbomReferenceIntotoPredicate_DigestEntry$json],
+  '3': [SbomReferenceIntotoPredicate_DigestEntry$json],
 };
 
 @$core.Deprecated('Use sbomReferenceIntotoPredicateDescriptor instead')
-const SbomReferenceIntotoPredicate_DigestEntry$json = const {
+const SbomReferenceIntotoPredicate_DigestEntry$json = {
   '1': 'DigestEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
 /// Descriptor for `SbomReferenceIntotoPredicate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sbomReferenceIntotoPredicateDescriptor =
-    $convert.base64Decode(
-        'ChxTYm9tUmVmZXJlbmNlSW50b3RvUHJlZGljYXRlEh8KC3JlZmVycmVyX2lkGAEgASgJUgpyZWZlcnJlcklkEhoKCGxvY2F0aW9uGAIgASgJUghsb2NhdGlvbhIbCgltaW1lX3R5cGUYAyABKAlSCG1pbWVUeXBlEkwKBmRpZ2VzdBgEIAMoCzI0LmdyYWZlYXMudjEuU2JvbVJlZmVyZW5jZUludG90b1ByZWRpY2F0ZS5EaWdlc3RFbnRyeVIGZGlnZXN0GjkKC0RpZ2VzdEVudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
+final $typed_data.Uint8List sbomReferenceIntotoPredicateDescriptor = $convert.base64Decode(
+    'ChxTYm9tUmVmZXJlbmNlSW50b3RvUHJlZGljYXRlEh8KC3JlZmVycmVyX2lkGAEgASgJUgpyZW'
+    'ZlcnJlcklkEhoKCGxvY2F0aW9uGAIgASgJUghsb2NhdGlvbhIbCgltaW1lX3R5cGUYAyABKAlS'
+    'CG1pbWVUeXBlEkwKBmRpZ2VzdBgEIAMoCzI0LmdyYWZlYXMudjEuU2JvbVJlZmVyZW5jZUludG'
+    '90b1ByZWRpY2F0ZS5EaWdlc3RFbnRyeVIGZGlnZXN0GjkKC0RpZ2VzdEVudHJ5EhAKA2tleRgB'
+    'IAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');

@@ -1,21 +1,28 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/storagetransfer/v1/transfer.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../../longrunning/operations.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $1;
 import 'transfer.pb.dart' as $2;
 import 'transfer_types.pb.dart' as $3;
-import '../../protobuf/empty.pb.dart' as $1;
-import '../../longrunning/operations.pb.dart' as $0;
+
 export 'transfer.pb.dart';
 
+@$pb.GrpcServiceName('google.storagetransfer.v1.StorageTransferService')
 class StorageTransferServiceClient extends $grpc.Client {
   static final _$getGoogleServiceAccount = $grpc.ClientMethod<
           $2.GetGoogleServiceAccountRequest, $3.GoogleServiceAccount>(
@@ -184,6 +191,7 @@ class StorageTransferServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.storagetransfer.v1.StorageTransferService')
 abstract class StorageTransferServiceBase extends $grpc.Service {
   $core.String get $name => 'google.storagetransfer.v1.StorageTransferService';
 

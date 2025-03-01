@@ -1,106 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/alertcenter/v1beta1/alertcenter.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
 import '../../../protobuf/any.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 import '../../../rpc/status.pb.dart' as $4;
-
 import 'alertcenter.pbenum.dart';
 
 export 'alertcenter.pbenum.dart';
 
+/// An alert affecting a customer.
 class Alert extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Alert',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..aOM<$2.Timestamp>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'source')
-    ..aOM<$3.Any>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'data',
-        subBuilder: $3.Any.create)
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'securityInvestigationToolLink')
-    ..aOB(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'deleted')
-    ..aOM<AlertMetadata>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        subBuilder: AlertMetadata.create)
-    ..aOM<$2.Timestamp>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOS(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  Alert._() : super();
   factory Alert({
     $core.String? customerId,
     $core.String? alertId,
@@ -116,54 +37,81 @@ class Alert extends $pb.GeneratedMessage {
     $2.Timestamp? updateTime,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (source != null) {
-      _result.source = source;
+      $result.source = source;
     }
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
     if (securityInvestigationToolLink != null) {
-      _result.securityInvestigationToolLink = securityInvestigationToolLink;
+      $result.securityInvestigationToolLink = securityInvestigationToolLink;
     }
     if (deleted != null) {
-      _result.deleted = deleted;
+      $result.deleted = deleted;
     }
     if (metadata != null) {
-      _result.metadata = metadata;
+      $result.metadata = metadata;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  Alert._() : super();
   factory Alert.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Alert.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Alert',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOS(6, _omitFieldNames ? '' : 'type')
+    ..aOS(7, _omitFieldNames ? '' : 'source')
+    ..aOM<$3.Any>(8, _omitFieldNames ? '' : 'data', subBuilder: $3.Any.create)
+    ..aOS(9, _omitFieldNames ? '' : 'securityInvestigationToolLink')
+    ..aOB(11, _omitFieldNames ? '' : 'deleted')
+    ..aOM<AlertMetadata>(12, _omitFieldNames ? '' : 'metadata',
+        subBuilder: AlertMetadata.create)
+    ..aOM<$2.Timestamp>(13, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOS(14, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -172,9 +120,10 @@ class Alert extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Alert copyWith(void Function(Alert) updates) =>
-      super.copyWith((message) => updates(message as Alert))
-          as Alert; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Alert)) as Alert;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Alert create() => Alert._();
   Alert createEmptyInstance() => create();
@@ -184,6 +133,8 @@ class Alert extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Alert>(create);
   static Alert? _defaultInstance;
 
+  /// Output only. The unique identifier of the Google Workspace account of the
+  /// customer.
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -196,6 +147,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Output only. The unique identifier for the alert.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -208,6 +160,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlertId() => clearField(2);
 
+  /// Output only. The time this alert was created.
   @$pb.TagNumber(3)
   $2.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
@@ -222,6 +175,8 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.Timestamp ensureCreateTime() => $_ensure(2);
 
+  /// Required. The time the event that caused this alert was started or
+  /// detected.
   @$pb.TagNumber(4)
   $2.Timestamp get startTime => $_getN(3);
   @$pb.TagNumber(4)
@@ -236,6 +191,9 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Timestamp ensureStartTime() => $_ensure(3);
 
+  /// Optional. The time the event that caused this alert ceased being active.
+  /// If provided, the end time must not be earlier than the start time.
+  /// If not provided, it indicates an ongoing alert.
   @$pb.TagNumber(5)
   $2.Timestamp get endTime => $_getN(4);
   @$pb.TagNumber(5)
@@ -250,6 +208,11 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp ensureEndTime() => $_ensure(4);
 
+  /// Required. The type of the alert.
+  /// This is output only after alert is created.
+  /// For a list of available alert types see
+  /// [Google Workspace Alert
+  /// types](https://developers.google.com/admin-sdk/alertcenter/reference/alert-types).
   @$pb.TagNumber(6)
   $core.String get type => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -262,6 +225,19 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearType() => clearField(6);
 
+  ///  Required. A unique identifier for the system that reported the alert.
+  ///  This is output only after alert is created.
+  ///
+  ///  Supported sources are any of the following:
+  ///
+  ///  * Google Operations
+  ///  * Mobile device management
+  ///  * Gmail phishing
+  ///  * Data Loss Prevention
+  ///  * Domain wide takeout
+  ///  * State sponsored attack
+  ///  * Google identity
+  ///  * Apps outage
   @$pb.TagNumber(7)
   $core.String get source => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -274,6 +250,9 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearSource() => clearField(7);
 
+  /// Optional. The data associated with this alert, for example
+  /// [google.apps.alertcenter.type.DeviceCompromised]
+  /// [google.apps.alertcenter.type.DeviceCompromised].
   @$pb.TagNumber(8)
   $3.Any get data => $_getN(7);
   @$pb.TagNumber(8)
@@ -288,6 +267,9 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $3.Any ensureData() => $_ensure(7);
 
+  /// Output only. An optional
+  /// [Security Investigation Tool](https://support.google.com/a/answer/7575955)
+  /// query for this alert.
   @$pb.TagNumber(9)
   $core.String get securityInvestigationToolLink => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -300,6 +282,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearSecurityInvestigationToolLink() => clearField(9);
 
+  /// Output only. `True` if this alert is marked for deletion.
   @$pb.TagNumber(11)
   $core.bool get deleted => $_getBF(9);
   @$pb.TagNumber(11)
@@ -312,6 +295,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearDeleted() => clearField(11);
 
+  /// Output only. The metadata associated with this alert.
   @$pb.TagNumber(12)
   AlertMetadata get metadata => $_getN(10);
   @$pb.TagNumber(12)
@@ -326,6 +310,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   AlertMetadata ensureMetadata() => $_ensure(10);
 
+  /// Output only. The time this alert was last updated.
   @$pb.TagNumber(13)
   $2.Timestamp get updateTime => $_getN(11);
   @$pb.TagNumber(13)
@@ -340,6 +325,16 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $2.Timestamp ensureUpdateTime() => $_ensure(11);
 
+  ///  Optional. `etag` is used for optimistic concurrency control as a way to
+  ///  help prevent simultaneous updates of an alert from overwriting each other.
+  ///  It is strongly suggested that systems make use of the `etag` in the
+  ///  read-modify-write cycle to perform alert updates in order to avoid race
+  ///  conditions: An `etag` is returned in the response which contains alerts,
+  ///  and systems are expected to put that etag in the request to update alert to
+  ///  ensure that their change will be applied to the same version of the alert.
+  ///
+  ///  If no `etag` is provided in the call to update alert, then the existing
+  ///  alert is overwritten blindly.
   @$pb.TagNumber(14)
   $core.String get etag => $_getSZ(12);
   @$pb.TagNumber(14)
@@ -353,54 +348,8 @@ class Alert extends $pb.GeneratedMessage {
   void clearEtag() => clearField(14);
 }
 
+/// A customer feedback about an alert.
 class AlertFeedback extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AlertFeedback',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'feedbackId')
-    ..aOM<$2.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime',
-        subBuilder: $2.Timestamp.create)
-    ..e<AlertFeedbackType>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: AlertFeedbackType.ALERT_FEEDBACK_TYPE_UNSPECIFIED,
-        valueOf: AlertFeedbackType.valueOf,
-        enumValues: AlertFeedbackType.values)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'email')
-    ..hasRequiredFields = false;
-
-  AlertFeedback._() : super();
   factory AlertFeedback({
     $core.String? customerId,
     $core.String? alertId,
@@ -409,33 +358,52 @@ class AlertFeedback extends $pb.GeneratedMessage {
     AlertFeedbackType? type,
     $core.String? email,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
     if (feedbackId != null) {
-      _result.feedbackId = feedbackId;
+      $result.feedbackId = feedbackId;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (email != null) {
-      _result.email = email;
+      $result.email = email;
     }
-    return _result;
+    return $result;
   }
+  AlertFeedback._() : super();
   factory AlertFeedback.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AlertFeedback.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AlertFeedback',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..aOS(3, _omitFieldNames ? '' : 'feedbackId')
+    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $2.Timestamp.create)
+    ..e<AlertFeedbackType>(5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: AlertFeedbackType.ALERT_FEEDBACK_TYPE_UNSPECIFIED,
+        valueOf: AlertFeedbackType.valueOf,
+        enumValues: AlertFeedbackType.values)
+    ..aOS(6, _omitFieldNames ? '' : 'email')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -445,8 +413,10 @@ class AlertFeedback extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AlertFeedback copyWith(void Function(AlertFeedback) updates) =>
       super.copyWith((message) => updates(message as AlertFeedback))
-          as AlertFeedback; // ignore: deprecated_member_use
+          as AlertFeedback;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AlertFeedback create() => AlertFeedback._();
   AlertFeedback createEmptyInstance() => create();
@@ -457,6 +427,8 @@ class AlertFeedback extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AlertFeedback>(create);
   static AlertFeedback? _defaultInstance;
 
+  /// Output only. The unique identifier of the Google Workspace account of the
+  /// customer.
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -469,6 +441,7 @@ class AlertFeedback extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Output only. The alert identifier.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -481,6 +454,7 @@ class AlertFeedback extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlertId() => clearField(2);
 
+  /// Output only. The unique identifier for the feedback.
   @$pb.TagNumber(3)
   $core.String get feedbackId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -493,6 +467,7 @@ class AlertFeedback extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFeedbackId() => clearField(3);
 
+  /// Output only. The time this feedback was created.
   @$pb.TagNumber(4)
   $2.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(4)
@@ -507,6 +482,7 @@ class AlertFeedback extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Timestamp ensureCreateTime() => $_ensure(3);
 
+  /// Required. The type of the feedback.
   @$pb.TagNumber(5)
   AlertFeedbackType get type => $_getN(4);
   @$pb.TagNumber(5)
@@ -519,6 +495,7 @@ class AlertFeedback extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearType() => clearField(5);
 
+  /// Output only. The email of the user that provided the feedback.
   @$pb.TagNumber(6)
   $core.String get email => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -532,55 +509,8 @@ class AlertFeedback extends $pb.GeneratedMessage {
   void clearEmail() => clearField(6);
 }
 
+/// An alert metadata.
 class AlertMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AlertMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'assignee')
-    ..aOM<$2.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'severity')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  AlertMetadata._() : super();
   factory AlertMetadata({
     $core.String? customerId,
     $core.String? alertId,
@@ -590,36 +520,53 @@ class AlertMetadata extends $pb.GeneratedMessage {
     $core.String? severity,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (assignee != null) {
-      _result.assignee = assignee;
+      $result.assignee = assignee;
     }
     if (updateTime != null) {
-      _result.updateTime = updateTime;
+      $result.updateTime = updateTime;
     }
     if (severity != null) {
-      _result.severity = severity;
+      $result.severity = severity;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  AlertMetadata._() : super();
   factory AlertMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AlertMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AlertMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..aOS(4, _omitFieldNames ? '' : 'status')
+    ..aOS(5, _omitFieldNames ? '' : 'assignee')
+    ..aOM<$2.Timestamp>(6, _omitFieldNames ? '' : 'updateTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOS(7, _omitFieldNames ? '' : 'severity')
+    ..aOS(8, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -629,8 +576,10 @@ class AlertMetadata extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AlertMetadata copyWith(void Function(AlertMetadata) updates) =>
       super.copyWith((message) => updates(message as AlertMetadata))
-          as AlertMetadata; // ignore: deprecated_member_use
+          as AlertMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AlertMetadata create() => AlertMetadata._();
   AlertMetadata createEmptyInstance() => create();
@@ -641,6 +590,8 @@ class AlertMetadata extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AlertMetadata>(create);
   static AlertMetadata? _defaultInstance;
 
+  /// Output only. The unique identifier of the Google Workspace account of the
+  /// customer.
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -653,6 +604,7 @@ class AlertMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Output only. The alert identifier.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -665,6 +617,12 @@ class AlertMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlertId() => clearField(2);
 
+  ///  The current status of the alert.
+  ///  The supported values are the following:
+  ///
+  ///  * NOT_STARTED
+  ///  * IN_PROGRESS
+  ///  * CLOSED
   @$pb.TagNumber(4)
   $core.String get status => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -677,6 +635,7 @@ class AlertMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearStatus() => clearField(4);
 
+  /// The email address of the user assigned to the alert.
   @$pb.TagNumber(5)
   $core.String get assignee => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -689,6 +648,7 @@ class AlertMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearAssignee() => clearField(5);
 
+  /// Output only. The time this metadata was last updated.
   @$pb.TagNumber(6)
   $2.Timestamp get updateTime => $_getN(4);
   @$pb.TagNumber(6)
@@ -703,6 +663,14 @@ class AlertMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Timestamp ensureUpdateTime() => $_ensure(4);
 
+  ///  The severity value of the alert. Alert Center will set this field at alert
+  ///  creation time, default's to an empty string when it could not be
+  ///  determined.
+  ///  The supported values for update actions on this field are the following:
+  ///
+  ///  * HIGH
+  ///  * MEDIUM
+  ///  * LOW
   @$pb.TagNumber(7)
   $core.String get severity => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -715,6 +683,17 @@ class AlertMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearSeverity() => clearField(7);
 
+  ///  Optional. `etag` is used for optimistic concurrency control as a way to
+  ///  help prevent simultaneous updates of an alert metadata from overwriting
+  ///  each other. It is strongly suggested that systems make use of the `etag` in
+  ///  the read-modify-write cycle to perform metadata updates in order to avoid
+  ///  race conditions: An `etag` is returned in the response which contains alert
+  ///  metadata, and systems are expected to put that etag in the request to
+  ///  update alert metadata to ensure that their change will be applied to the
+  ///  same version of the alert metadata.
+  ///
+  ///  If no `etag` is provided in the call to update alert metadata, then the
+  ///  existing alert metadata is overwritten blindly.
   @$pb.TagNumber(8)
   $core.String get etag => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -728,47 +707,26 @@ class AlertMetadata extends $pb.GeneratedMessage {
   void clearEtag() => clearField(8);
 }
 
+///  A reference to a Cloud Pubsub topic.
+///
+///  To register for notifications, the owner of the topic must grant
+///  `alerts-api-push-notifications@system.gserviceaccount.com` the
+///   `projects.topics.publish` permission.
 class Settings_Notification_CloudPubsubTopic extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Settings.Notification.CloudPubsubTopic',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'topicName')
-    ..e<Settings_Notification_PayloadFormat>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'payloadFormat',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            Settings_Notification_PayloadFormat.PAYLOAD_FORMAT_UNSPECIFIED,
-        valueOf: Settings_Notification_PayloadFormat.valueOf,
-        enumValues: Settings_Notification_PayloadFormat.values)
-    ..hasRequiredFields = false;
-
-  Settings_Notification_CloudPubsubTopic._() : super();
   factory Settings_Notification_CloudPubsubTopic({
     $core.String? topicName,
     Settings_Notification_PayloadFormat? payloadFormat,
   }) {
-    final _result = create();
+    final $result = create();
     if (topicName != null) {
-      _result.topicName = topicName;
+      $result.topicName = topicName;
     }
     if (payloadFormat != null) {
-      _result.payloadFormat = payloadFormat;
+      $result.payloadFormat = payloadFormat;
     }
-    return _result;
+    return $result;
   }
+  Settings_Notification_CloudPubsubTopic._() : super();
   factory Settings_Notification_CloudPubsubTopic.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -776,6 +734,21 @@ class Settings_Notification_CloudPubsubTopic extends $pb.GeneratedMessage {
   factory Settings_Notification_CloudPubsubTopic.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Settings.Notification.CloudPubsubTopic',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topicName')
+    ..e<Settings_Notification_PayloadFormat>(
+        2, _omitFieldNames ? '' : 'payloadFormat', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            Settings_Notification_PayloadFormat.PAYLOAD_FORMAT_UNSPECIFIED,
+        valueOf: Settings_Notification_PayloadFormat.valueOf,
+        enumValues: Settings_Notification_PayloadFormat.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -788,8 +761,10 @@ class Settings_Notification_CloudPubsubTopic extends $pb.GeneratedMessage {
           void Function(Settings_Notification_CloudPubsubTopic) updates) =>
       super.copyWith((message) =>
               updates(message as Settings_Notification_CloudPubsubTopic))
-          as Settings_Notification_CloudPubsubTopic; // ignore: deprecated_member_use
+          as Settings_Notification_CloudPubsubTopic;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Settings_Notification_CloudPubsubTopic create() =>
       Settings_Notification_CloudPubsubTopic._();
@@ -802,6 +777,8 @@ class Settings_Notification_CloudPubsubTopic extends $pb.GeneratedMessage {
           Settings_Notification_CloudPubsubTopic>(create);
   static Settings_Notification_CloudPubsubTopic? _defaultInstance;
 
+  /// The `name` field of a Cloud Pubsub [Topic]
+  /// (https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics#Topic).
   @$pb.TagNumber(1)
   $core.String get topicName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -814,6 +791,8 @@ class Settings_Notification_CloudPubsubTopic extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTopicName() => clearField(1);
 
+  /// Optional. The format of the payload that would be sent.
+  /// If not specified the format will be JSON.
   @$pb.TagNumber(2)
   Settings_Notification_PayloadFormat get payloadFormat => $_getN(1);
   @$pb.TagNumber(2)
@@ -829,46 +808,43 @@ class Settings_Notification_CloudPubsubTopic extends $pb.GeneratedMessage {
 
 enum Settings_Notification_Destination { cloudPubsubTopic, notSet }
 
+/// Settings for callback notifications.
+/// For more details see [Google Workspace Alert
+/// Notification](https://developers.google.com/admin-sdk/alertcenter/guides/notifications).
 class Settings_Notification extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Settings_Notification_Destination>
-      _Settings_Notification_DestinationByTag = {
-    1: Settings_Notification_Destination.cloudPubsubTopic,
-    0: Settings_Notification_Destination.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Settings.Notification',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOM<Settings_Notification_CloudPubsubTopic>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cloudPubsubTopic',
-        subBuilder: Settings_Notification_CloudPubsubTopic.create)
-    ..hasRequiredFields = false;
-
-  Settings_Notification._() : super();
   factory Settings_Notification({
     Settings_Notification_CloudPubsubTopic? cloudPubsubTopic,
   }) {
-    final _result = create();
+    final $result = create();
     if (cloudPubsubTopic != null) {
-      _result.cloudPubsubTopic = cloudPubsubTopic;
+      $result.cloudPubsubTopic = cloudPubsubTopic;
     }
-    return _result;
+    return $result;
   }
+  Settings_Notification._() : super();
   factory Settings_Notification.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Settings_Notification.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Settings_Notification_Destination>
+      _Settings_Notification_DestinationByTag = {
+    1: Settings_Notification_Destination.cloudPubsubTopic,
+    0: Settings_Notification_Destination.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Settings.Notification',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Settings_Notification_CloudPubsubTopic>(
+        1, _omitFieldNames ? '' : 'cloudPubsubTopic',
+        subBuilder: Settings_Notification_CloudPubsubTopic.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -880,8 +856,10 @@ class Settings_Notification extends $pb.GeneratedMessage {
   Settings_Notification copyWith(
           void Function(Settings_Notification) updates) =>
       super.copyWith((message) => updates(message as Settings_Notification))
-          as Settings_Notification; // ignore: deprecated_member_use
+          as Settings_Notification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Settings_Notification create() => Settings_Notification._();
   Settings_Notification createEmptyInstance() => create();
@@ -896,6 +874,7 @@ class Settings_Notification extends $pb.GeneratedMessage {
       _Settings_Notification_DestinationByTag[$_whichOneof(0)]!;
   void clearDestination() => clearField($_whichOneof(0));
 
+  /// A Google Cloud Pub/sub topic destination.
   @$pb.TagNumber(1)
   Settings_Notification_CloudPubsubTopic get cloudPubsubTopic => $_getN(0);
   @$pb.TagNumber(1)
@@ -912,41 +891,35 @@ class Settings_Notification extends $pb.GeneratedMessage {
       $_ensure(0);
 }
 
+/// Customer-level settings.
 class Settings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Settings',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Settings_Notification>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'notifications',
-        $pb.PbFieldType.PM,
-        subBuilder: Settings_Notification.create)
-    ..hasRequiredFields = false;
-
-  Settings._() : super();
   factory Settings({
     $core.Iterable<Settings_Notification>? notifications,
   }) {
-    final _result = create();
+    final $result = create();
     if (notifications != null) {
-      _result.notifications.addAll(notifications);
+      $result.notifications.addAll(notifications);
     }
-    return _result;
+    return $result;
   }
+  Settings._() : super();
   factory Settings.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Settings.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Settings',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Settings_Notification>(
+        1, _omitFieldNames ? '' : 'notifications', $pb.PbFieldType.PM,
+        subBuilder: Settings_Notification.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -955,9 +928,10 @@ class Settings extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Settings copyWith(void Function(Settings) updates) =>
-      super.copyWith((message) => updates(message as Settings))
-          as Settings; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Settings)) as Settings;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Settings create() => Settings._();
   Settings createEmptyInstance() => create();
@@ -967,52 +941,43 @@ class Settings extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Settings>(create);
   static Settings? _defaultInstance;
 
+  /// The list of notifications.
   @$pb.TagNumber(1)
   $core.List<Settings_Notification> get notifications => $_getList(0);
 }
 
+/// A request to perform batch delete on alerts.
 class BatchDeleteAlertsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchDeleteAlertsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..hasRequiredFields = false;
-
-  BatchDeleteAlertsRequest._() : super();
   factory BatchDeleteAlertsRequest({
     $core.String? customerId,
     $core.Iterable<$core.String>? alertId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId.addAll(alertId);
+      $result.alertId.addAll(alertId);
     }
-    return _result;
+    return $result;
   }
+  BatchDeleteAlertsRequest._() : super();
   factory BatchDeleteAlertsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchDeleteAlertsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchDeleteAlertsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..pPS(2, _omitFieldNames ? '' : 'alertId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1024,8 +989,10 @@ class BatchDeleteAlertsRequest extends $pb.GeneratedMessage {
   BatchDeleteAlertsRequest copyWith(
           void Function(BatchDeleteAlertsRequest) updates) =>
       super.copyWith((message) => updates(message as BatchDeleteAlertsRequest))
-          as BatchDeleteAlertsRequest; // ignore: deprecated_member_use
+          as BatchDeleteAlertsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchDeleteAlertsRequest create() => BatchDeleteAlertsRequest._();
   BatchDeleteAlertsRequest createEmptyInstance() => create();
@@ -1036,6 +1003,11 @@ class BatchDeleteAlertsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchDeleteAlertsRequest>(create);
   static BatchDeleteAlertsRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alerts are associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1048,57 +1020,49 @@ class BatchDeleteAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The list of alert IDs to delete.
   @$pb.TagNumber(2)
   $core.List<$core.String> get alertId => $_getList(1);
 }
 
+/// Response to batch delete operation on alerts.
 class BatchDeleteAlertsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchDeleteAlertsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'successAlertIds')
-    ..m<$core.String, $4.Status>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedAlertStatus',
-        entryClassName: 'BatchDeleteAlertsResponse.FailedAlertStatusEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $4.Status.create,
-        packageName: const $pb.PackageName('google.apps.alertcenter.v1beta1'))
-    ..hasRequiredFields = false;
-
-  BatchDeleteAlertsResponse._() : super();
   factory BatchDeleteAlertsResponse({
     $core.Iterable<$core.String>? successAlertIds,
     $core.Map<$core.String, $4.Status>? failedAlertStatus,
   }) {
-    final _result = create();
+    final $result = create();
     if (successAlertIds != null) {
-      _result.successAlertIds.addAll(successAlertIds);
+      $result.successAlertIds.addAll(successAlertIds);
     }
     if (failedAlertStatus != null) {
-      _result.failedAlertStatus.addAll(failedAlertStatus);
+      $result.failedAlertStatus.addAll(failedAlertStatus);
     }
-    return _result;
+    return $result;
   }
+  BatchDeleteAlertsResponse._() : super();
   factory BatchDeleteAlertsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchDeleteAlertsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchDeleteAlertsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'successAlertIds')
+    ..m<$core.String, $4.Status>(2, _omitFieldNames ? '' : 'failedAlertStatus',
+        entryClassName: 'BatchDeleteAlertsResponse.FailedAlertStatusEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $4.Status.create,
+        valueDefaultOrMaker: $4.Status.getDefault,
+        packageName: const $pb.PackageName('google.apps.alertcenter.v1beta1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1110,8 +1074,10 @@ class BatchDeleteAlertsResponse extends $pb.GeneratedMessage {
   BatchDeleteAlertsResponse copyWith(
           void Function(BatchDeleteAlertsResponse) updates) =>
       super.copyWith((message) => updates(message as BatchDeleteAlertsResponse))
-          as BatchDeleteAlertsResponse; // ignore: deprecated_member_use
+          as BatchDeleteAlertsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchDeleteAlertsResponse create() => BatchDeleteAlertsResponse._();
   BatchDeleteAlertsResponse createEmptyInstance() => create();
@@ -1122,55 +1088,47 @@ class BatchDeleteAlertsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchDeleteAlertsResponse>(create);
   static BatchDeleteAlertsResponse? _defaultInstance;
 
+  /// The successful list of alert IDs.
   @$pb.TagNumber(1)
   $core.List<$core.String> get successAlertIds => $_getList(0);
 
+  /// The status details for each failed `alert_id`.
   @$pb.TagNumber(2)
   $core.Map<$core.String, $4.Status> get failedAlertStatus => $_getMap(1);
 }
 
+/// A request to perform batch undelete on alerts.
 class BatchUndeleteAlertsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchUndeleteAlertsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..hasRequiredFields = false;
-
-  BatchUndeleteAlertsRequest._() : super();
   factory BatchUndeleteAlertsRequest({
     $core.String? customerId,
     $core.Iterable<$core.String>? alertId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId.addAll(alertId);
+      $result.alertId.addAll(alertId);
     }
-    return _result;
+    return $result;
   }
+  BatchUndeleteAlertsRequest._() : super();
   factory BatchUndeleteAlertsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchUndeleteAlertsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchUndeleteAlertsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..pPS(2, _omitFieldNames ? '' : 'alertId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1183,8 +1141,10 @@ class BatchUndeleteAlertsRequest extends $pb.GeneratedMessage {
           void Function(BatchUndeleteAlertsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as BatchUndeleteAlertsRequest))
-          as BatchUndeleteAlertsRequest; // ignore: deprecated_member_use
+          as BatchUndeleteAlertsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchUndeleteAlertsRequest create() => BatchUndeleteAlertsRequest._();
   BatchUndeleteAlertsRequest createEmptyInstance() => create();
@@ -1195,6 +1155,11 @@ class BatchUndeleteAlertsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchUndeleteAlertsRequest>(create);
   static BatchUndeleteAlertsRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alerts are associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1207,57 +1172,49 @@ class BatchUndeleteAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The list of alert IDs to undelete.
   @$pb.TagNumber(2)
   $core.List<$core.String> get alertId => $_getList(1);
 }
 
+/// Response to batch undelete operation on alerts.
 class BatchUndeleteAlertsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchUndeleteAlertsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..pPS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'successAlertIds')
-    ..m<$core.String, $4.Status>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedAlertStatus',
-        entryClassName: 'BatchUndeleteAlertsResponse.FailedAlertStatusEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $4.Status.create,
-        packageName: const $pb.PackageName('google.apps.alertcenter.v1beta1'))
-    ..hasRequiredFields = false;
-
-  BatchUndeleteAlertsResponse._() : super();
   factory BatchUndeleteAlertsResponse({
     $core.Iterable<$core.String>? successAlertIds,
     $core.Map<$core.String, $4.Status>? failedAlertStatus,
   }) {
-    final _result = create();
+    final $result = create();
     if (successAlertIds != null) {
-      _result.successAlertIds.addAll(successAlertIds);
+      $result.successAlertIds.addAll(successAlertIds);
     }
     if (failedAlertStatus != null) {
-      _result.failedAlertStatus.addAll(failedAlertStatus);
+      $result.failedAlertStatus.addAll(failedAlertStatus);
     }
-    return _result;
+    return $result;
   }
+  BatchUndeleteAlertsResponse._() : super();
   factory BatchUndeleteAlertsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchUndeleteAlertsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchUndeleteAlertsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'successAlertIds')
+    ..m<$core.String, $4.Status>(2, _omitFieldNames ? '' : 'failedAlertStatus',
+        entryClassName: 'BatchUndeleteAlertsResponse.FailedAlertStatusEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $4.Status.create,
+        valueDefaultOrMaker: $4.Status.getDefault,
+        packageName: const $pb.PackageName('google.apps.alertcenter.v1beta1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1270,8 +1227,10 @@ class BatchUndeleteAlertsResponse extends $pb.GeneratedMessage {
           void Function(BatchUndeleteAlertsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as BatchUndeleteAlertsResponse))
-          as BatchUndeleteAlertsResponse; // ignore: deprecated_member_use
+          as BatchUndeleteAlertsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchUndeleteAlertsResponse create() =>
       BatchUndeleteAlertsResponse._();
@@ -1283,52 +1242,17 @@ class BatchUndeleteAlertsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchUndeleteAlertsResponse>(create);
   static BatchUndeleteAlertsResponse? _defaultInstance;
 
+  /// The successful list of alert IDs.
   @$pb.TagNumber(1)
   $core.List<$core.String> get successAlertIds => $_getList(0);
 
+  /// The status details for each failed `alert_id`.
   @$pb.TagNumber(2)
   $core.Map<$core.String, $4.Status> get failedAlertStatus => $_getMap(1);
 }
 
+/// An alert listing request.
 class ListAlertsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAlertsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orderBy')
-    ..hasRequiredFields = false;
-
-  ListAlertsRequest._() : super();
   factory ListAlertsRequest({
     $core.String? customerId,
     $core.int? pageSize,
@@ -1336,30 +1260,44 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
     $core.String? filter,
     $core.String? orderBy,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (orderBy != null) {
-      _result.orderBy = orderBy;
+      $result.orderBy = orderBy;
     }
-    return _result;
+    return $result;
   }
+  ListAlertsRequest._() : super();
   factory ListAlertsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAlertsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAlertsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..aOS(5, _omitFieldNames ? '' : 'orderBy')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1369,8 +1307,10 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListAlertsRequest copyWith(void Function(ListAlertsRequest) updates) =>
       super.copyWith((message) => updates(message as ListAlertsRequest))
-          as ListAlertsRequest; // ignore: deprecated_member_use
+          as ListAlertsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAlertsRequest create() => ListAlertsRequest._();
   ListAlertsRequest createEmptyInstance() => create();
@@ -1381,6 +1321,11 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAlertsRequest>(create);
   static ListAlertsRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alerts are associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1393,6 +1338,8 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Optional. The requested page size. Server may return fewer items than
+  /// requested. If unspecified, server picks an appropriate default.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1405,6 +1352,11 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional. A token identifying a page of results the server should return.
+  /// If empty, a new iteration is started. To continue an iteration, pass in
+  /// the value from the previous ListAlertsResponse's
+  /// [next_page_token][google.apps.alertcenter.v1beta1.ListAlertsResponse.next_page_token]
+  /// field.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1417,6 +1369,11 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Optional. A query string for filtering alert results.
+  /// For more details, see [Query
+  /// filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters)
+  /// and [Supported query filter
+  /// fields](https://developers.google.com/admin-sdk/alertcenter/reference/filter-fields#alerts.list).
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1429,6 +1386,12 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 
+  /// Optional. The sort order of the list results.
+  /// If not specified results may be returned in arbitrary order.
+  /// You can sort the results in descending order based on the creation
+  /// timestamp using `order_by="create_time desc"`.
+  /// Currently, supported sorting are `create_time asc`, `create_time desc`,
+  /// `update_time desc`
   @$pb.TagNumber(5)
   $core.String get orderBy => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1442,50 +1405,39 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   void clearOrderBy() => clearField(5);
 }
 
+/// Response message for an alert listing request.
 class ListAlertsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAlertsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<Alert>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alerts',
-        $pb.PbFieldType.PM,
-        subBuilder: Alert.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAlertsResponse._() : super();
   factory ListAlertsResponse({
     $core.Iterable<Alert>? alerts,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (alerts != null) {
-      _result.alerts.addAll(alerts);
+      $result.alerts.addAll(alerts);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAlertsResponse._() : super();
   factory ListAlertsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAlertsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAlertsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Alert>(1, _omitFieldNames ? '' : 'alerts', $pb.PbFieldType.PM,
+        subBuilder: Alert.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1495,8 +1447,10 @@ class ListAlertsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListAlertsResponse copyWith(void Function(ListAlertsResponse) updates) =>
       super.copyWith((message) => updates(message as ListAlertsResponse))
-          as ListAlertsResponse; // ignore: deprecated_member_use
+          as ListAlertsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAlertsResponse create() => ListAlertsResponse._();
   ListAlertsResponse createEmptyInstance() => create();
@@ -1507,9 +1461,15 @@ class ListAlertsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAlertsResponse>(create);
   static ListAlertsResponse? _defaultInstance;
 
+  /// The list of alerts.
   @$pb.TagNumber(1)
   $core.List<Alert> get alerts => $_getList(0);
 
+  /// The token for the next page. If not empty, indicates that there may be more
+  /// alerts that match the listing request; this value can be used in a
+  /// subsequent
+  /// [ListAlertsRequest][google.apps.alertcenter.v1beta1.ListAlertsRequest] to
+  /// get alerts continuing from last result of the current list call.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1523,48 +1483,38 @@ class ListAlertsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request for a specific alert.
 class GetAlertRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAlertRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..hasRequiredFields = false;
-
-  GetAlertRequest._() : super();
   factory GetAlertRequest({
     $core.String? customerId,
     $core.String? alertId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
-    return _result;
+    return $result;
   }
+  GetAlertRequest._() : super();
   factory GetAlertRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAlertRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAlertRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1574,8 +1524,10 @@ class GetAlertRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetAlertRequest copyWith(void Function(GetAlertRequest) updates) =>
       super.copyWith((message) => updates(message as GetAlertRequest))
-          as GetAlertRequest; // ignore: deprecated_member_use
+          as GetAlertRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAlertRequest create() => GetAlertRequest._();
   GetAlertRequest createEmptyInstance() => create();
@@ -1586,6 +1538,11 @@ class GetAlertRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAlertRequest>(create);
   static GetAlertRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert is associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1598,6 +1555,7 @@ class GetAlertRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The identifier of the alert to retrieve.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1611,48 +1569,38 @@ class GetAlertRequest extends $pb.GeneratedMessage {
   void clearAlertId() => clearField(2);
 }
 
+/// A request to mark a specific alert for deletion.
 class DeleteAlertRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteAlertRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..hasRequiredFields = false;
-
-  DeleteAlertRequest._() : super();
   factory DeleteAlertRequest({
     $core.String? customerId,
     $core.String? alertId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
-    return _result;
+    return $result;
   }
+  DeleteAlertRequest._() : super();
   factory DeleteAlertRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteAlertRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAlertRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1662,8 +1610,10 @@ class DeleteAlertRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteAlertRequest copyWith(void Function(DeleteAlertRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAlertRequest))
-          as DeleteAlertRequest; // ignore: deprecated_member_use
+          as DeleteAlertRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteAlertRequest create() => DeleteAlertRequest._();
   DeleteAlertRequest createEmptyInstance() => create();
@@ -1674,6 +1624,11 @@ class DeleteAlertRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteAlertRequest>(create);
   static DeleteAlertRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert is associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1686,6 +1641,7 @@ class DeleteAlertRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The identifier of the alert to delete.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1699,48 +1655,38 @@ class DeleteAlertRequest extends $pb.GeneratedMessage {
   void clearAlertId() => clearField(2);
 }
 
+/// A request to undelete a specific alert that was marked for deletion.
 class UndeleteAlertRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteAlertRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..hasRequiredFields = false;
-
-  UndeleteAlertRequest._() : super();
   factory UndeleteAlertRequest({
     $core.String? customerId,
     $core.String? alertId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
-    return _result;
+    return $result;
   }
+  UndeleteAlertRequest._() : super();
   factory UndeleteAlertRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteAlertRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteAlertRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1751,8 +1697,10 @@ class UndeleteAlertRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UndeleteAlertRequest copyWith(void Function(UndeleteAlertRequest) updates) =>
       super.copyWith((message) => updates(message as UndeleteAlertRequest))
-          as UndeleteAlertRequest; // ignore: deprecated_member_use
+          as UndeleteAlertRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteAlertRequest create() => UndeleteAlertRequest._();
   UndeleteAlertRequest createEmptyInstance() => create();
@@ -1763,6 +1711,11 @@ class UndeleteAlertRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteAlertRequest>(create);
   static UndeleteAlertRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert is associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1775,6 +1728,7 @@ class UndeleteAlertRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The identifier of the alert to undelete.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1788,58 +1742,44 @@ class UndeleteAlertRequest extends $pb.GeneratedMessage {
   void clearAlertId() => clearField(2);
 }
 
+/// A request to create a new alert feedback.
 class CreateAlertFeedbackRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateAlertFeedbackRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..aOM<AlertFeedback>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'feedback',
-        subBuilder: AlertFeedback.create)
-    ..hasRequiredFields = false;
-
-  CreateAlertFeedbackRequest._() : super();
   factory CreateAlertFeedbackRequest({
     $core.String? customerId,
     $core.String? alertId,
     AlertFeedback? feedback,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
     if (feedback != null) {
-      _result.feedback = feedback;
+      $result.feedback = feedback;
     }
-    return _result;
+    return $result;
   }
+  CreateAlertFeedbackRequest._() : super();
   factory CreateAlertFeedbackRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateAlertFeedbackRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateAlertFeedbackRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..aOM<AlertFeedback>(3, _omitFieldNames ? '' : 'feedback',
+        subBuilder: AlertFeedback.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1852,8 +1792,10 @@ class CreateAlertFeedbackRequest extends $pb.GeneratedMessage {
           void Function(CreateAlertFeedbackRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateAlertFeedbackRequest))
-          as CreateAlertFeedbackRequest; // ignore: deprecated_member_use
+          as CreateAlertFeedbackRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateAlertFeedbackRequest create() => CreateAlertFeedbackRequest._();
   CreateAlertFeedbackRequest createEmptyInstance() => create();
@@ -1864,6 +1806,11 @@ class CreateAlertFeedbackRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateAlertFeedbackRequest>(create);
   static CreateAlertFeedbackRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert is associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1876,6 +1823,7 @@ class CreateAlertFeedbackRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The identifier of the alert this feedback belongs to.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1888,6 +1836,7 @@ class CreateAlertFeedbackRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlertId() => clearField(2);
 
+  /// Required. The new alert feedback to create.
   @$pb.TagNumber(3)
   AlertFeedback get feedback => $_getN(2);
   @$pb.TagNumber(3)
@@ -1903,57 +1852,43 @@ class CreateAlertFeedbackRequest extends $pb.GeneratedMessage {
   AlertFeedback ensureFeedback() => $_ensure(2);
 }
 
+/// An alert feedback listing request.
 class ListAlertFeedbackRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAlertFeedbackRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..hasRequiredFields = false;
-
-  ListAlertFeedbackRequest._() : super();
   factory ListAlertFeedbackRequest({
     $core.String? customerId,
     $core.String? alertId,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  ListAlertFeedbackRequest._() : super();
   factory ListAlertFeedbackRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAlertFeedbackRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAlertFeedbackRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..aOS(3, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1965,8 +1900,10 @@ class ListAlertFeedbackRequest extends $pb.GeneratedMessage {
   ListAlertFeedbackRequest copyWith(
           void Function(ListAlertFeedbackRequest) updates) =>
       super.copyWith((message) => updates(message as ListAlertFeedbackRequest))
-          as ListAlertFeedbackRequest; // ignore: deprecated_member_use
+          as ListAlertFeedbackRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAlertFeedbackRequest create() => ListAlertFeedbackRequest._();
   ListAlertFeedbackRequest createEmptyInstance() => create();
@@ -1977,6 +1914,11 @@ class ListAlertFeedbackRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAlertFeedbackRequest>(create);
   static ListAlertFeedbackRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert is associated with. The `customer_id` must have the
+  /// initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+  /// identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1989,6 +1931,8 @@ class ListAlertFeedbackRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The alert identifier.
+  /// The "-" wildcard could be used to represent all alerts.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2001,6 +1945,11 @@ class ListAlertFeedbackRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAlertId() => clearField(2);
 
+  /// Optional. A query string for filtering alert feedback results.
+  /// For more details, see [Query
+  /// filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters)
+  /// and [Supported query filter
+  /// fields](https://developers.google.com/admin-sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
   @$pb.TagNumber(3)
   $core.String get filter => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2014,41 +1963,35 @@ class ListAlertFeedbackRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(3);
 }
 
+/// Response message for an alert feedback listing request.
 class ListAlertFeedbackResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAlertFeedbackResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..pc<AlertFeedback>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'feedback',
-        $pb.PbFieldType.PM,
-        subBuilder: AlertFeedback.create)
-    ..hasRequiredFields = false;
-
-  ListAlertFeedbackResponse._() : super();
   factory ListAlertFeedbackResponse({
     $core.Iterable<AlertFeedback>? feedback,
   }) {
-    final _result = create();
+    final $result = create();
     if (feedback != null) {
-      _result.feedback.addAll(feedback);
+      $result.feedback.addAll(feedback);
     }
-    return _result;
+    return $result;
   }
+  ListAlertFeedbackResponse._() : super();
   factory ListAlertFeedbackResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAlertFeedbackResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAlertFeedbackResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<AlertFeedback>(
+        1, _omitFieldNames ? '' : 'feedback', $pb.PbFieldType.PM,
+        subBuilder: AlertFeedback.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2060,8 +2003,10 @@ class ListAlertFeedbackResponse extends $pb.GeneratedMessage {
   ListAlertFeedbackResponse copyWith(
           void Function(ListAlertFeedbackResponse) updates) =>
       super.copyWith((message) => updates(message as ListAlertFeedbackResponse))
-          as ListAlertFeedbackResponse; // ignore: deprecated_member_use
+          as ListAlertFeedbackResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAlertFeedbackResponse create() => ListAlertFeedbackResponse._();
   ListAlertFeedbackResponse createEmptyInstance() => create();
@@ -2072,52 +2017,44 @@ class ListAlertFeedbackResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAlertFeedbackResponse>(create);
   static ListAlertFeedbackResponse? _defaultInstance;
 
+  /// The list of alert feedback.
+  /// Feedback entries for each alert are ordered by creation time descending.
   @$pb.TagNumber(1)
   $core.List<AlertFeedback> get feedback => $_getList(0);
 }
 
+/// Get the alert metadata.
 class GetAlertMetadataRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAlertMetadataRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'alertId')
-    ..hasRequiredFields = false;
-
-  GetAlertMetadataRequest._() : super();
   factory GetAlertMetadataRequest({
     $core.String? customerId,
     $core.String? alertId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (alertId != null) {
-      _result.alertId = alertId;
+      $result.alertId = alertId;
     }
-    return _result;
+    return $result;
   }
+  GetAlertMetadataRequest._() : super();
   factory GetAlertMetadataRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAlertMetadataRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAlertMetadataRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOS(2, _omitFieldNames ? '' : 'alertId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2129,8 +2066,10 @@ class GetAlertMetadataRequest extends $pb.GeneratedMessage {
   GetAlertMetadataRequest copyWith(
           void Function(GetAlertMetadataRequest) updates) =>
       super.copyWith((message) => updates(message as GetAlertMetadataRequest))
-          as GetAlertMetadataRequest; // ignore: deprecated_member_use
+          as GetAlertMetadataRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAlertMetadataRequest create() => GetAlertMetadataRequest._();
   GetAlertMetadataRequest createEmptyInstance() => create();
@@ -2141,6 +2080,11 @@ class GetAlertMetadataRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAlertMetadataRequest>(create);
   static GetAlertMetadataRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert metadata is associated with. The `customer_id` must
+  /// have the initial "C" stripped (for example, `046psxkn`). Inferred from the
+  /// caller identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2153,6 +2097,7 @@ class GetAlertMetadataRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// Required. The identifier of the alert this metadata belongs to.
   @$pb.TagNumber(2)
   $core.String get alertId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2166,39 +2111,33 @@ class GetAlertMetadataRequest extends $pb.GeneratedMessage {
   void clearAlertId() => clearField(2);
 }
 
+/// Get the customer level settings.
 class GetSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..hasRequiredFields = false;
-
-  GetSettingsRequest._() : super();
   factory GetSettingsRequest({
     $core.String? customerId,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
-    return _result;
+    return $result;
   }
+  GetSettingsRequest._() : super();
   factory GetSettingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetSettingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSettingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2208,8 +2147,10 @@ class GetSettingsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetSettingsRequest copyWith(void Function(GetSettingsRequest) updates) =>
       super.copyWith((message) => updates(message as GetSettingsRequest))
-          as GetSettingsRequest; // ignore: deprecated_member_use
+          as GetSettingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetSettingsRequest create() => GetSettingsRequest._();
   GetSettingsRequest createEmptyInstance() => create();
@@ -2220,6 +2161,11 @@ class GetSettingsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetSettingsRequest>(create);
   static GetSettingsRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert settings are associated with. The `customer_id` must/
+  /// have the initial "C" stripped (for example, `046psxkn`). Inferred from the
+  /// caller identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2233,49 +2179,39 @@ class GetSettingsRequest extends $pb.GeneratedMessage {
   void clearCustomerId() => clearField(1);
 }
 
+/// Update the customer level settings.
 class UpdateSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.apps.alertcenter.v1beta1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customerId')
-    ..aOM<Settings>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'settings',
-        subBuilder: Settings.create)
-    ..hasRequiredFields = false;
-
-  UpdateSettingsRequest._() : super();
   factory UpdateSettingsRequest({
     $core.String? customerId,
     Settings? settings,
   }) {
-    final _result = create();
+    final $result = create();
     if (customerId != null) {
-      _result.customerId = customerId;
+      $result.customerId = customerId;
     }
     if (settings != null) {
-      _result.settings = settings;
+      $result.settings = settings;
     }
-    return _result;
+    return $result;
   }
+  UpdateSettingsRequest._() : super();
   factory UpdateSettingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateSettingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateSettingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.apps.alertcenter.v1beta1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customerId')
+    ..aOM<Settings>(2, _omitFieldNames ? '' : 'settings',
+        subBuilder: Settings.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2287,8 +2223,10 @@ class UpdateSettingsRequest extends $pb.GeneratedMessage {
   UpdateSettingsRequest copyWith(
           void Function(UpdateSettingsRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateSettingsRequest))
-          as UpdateSettingsRequest; // ignore: deprecated_member_use
+          as UpdateSettingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateSettingsRequest create() => UpdateSettingsRequest._();
   UpdateSettingsRequest createEmptyInstance() => create();
@@ -2299,6 +2237,11 @@ class UpdateSettingsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateSettingsRequest>(create);
   static UpdateSettingsRequest? _defaultInstance;
 
+  /// Optional. The unique identifier of the Google Workspace account of the
+  /// customer the alert settings are associated with. The `customer_id` must
+  /// have the initial "C" stripped (for example, `046psxkn`). Inferred from the
+  /// caller identity if not provided. [Find your customer
+  /// ID](https://support.google.com/cloudidentity/answer/10070793).
   @$pb.TagNumber(1)
   $core.String get customerId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2311,6 +2254,7 @@ class UpdateSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  /// The customer settings to update.
   @$pb.TagNumber(2)
   Settings get settings => $_getN(1);
   @$pb.TagNumber(2)
@@ -2325,3 +2269,7 @@ class UpdateSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Settings ensureSettings() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

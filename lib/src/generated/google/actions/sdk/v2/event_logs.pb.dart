@@ -1,21 +1,24 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/event_logs.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../protobuf/struct.pb.dart' as $2;
 import '../../../protobuf/timestamp.pb.dart' as $0;
 import '../../../rpc/status.pb.dart' as $1;
-import '../../../protobuf/struct.pb.dart' as $2;
+import 'conversation/intent.pb.dart' as $5;
 import 'conversation/prompt/prompt.pb.dart' as $3;
 import 'conversation/scene.pb.dart' as $4;
-import 'conversation/intent.pb.dart' as $5;
-
 import 'conversation/scene.pbenum.dart' as $4;
 
 enum ExecutionEvent_EventData {
@@ -35,138 +38,11 @@ enum ExecutionEvent_EventData {
   notSet
 }
 
+/// Contains information about execution event which happened during processing
+/// Actions Builder conversation request. For an overview of the stages involved
+/// in a conversation request, see
+/// https://developers.google.com/assistant/conversational/actions.
 class ExecutionEvent extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, ExecutionEvent_EventData>
-      _ExecutionEvent_EventDataByTag = {
-    4: ExecutionEvent_EventData.userInput,
-    5: ExecutionEvent_EventData.intentMatch,
-    6: ExecutionEvent_EventData.conditionsEvaluated,
-    7: ExecutionEvent_EventData.onSceneEnter,
-    8: ExecutionEvent_EventData.webhookRequest,
-    9: ExecutionEvent_EventData.webhookResponse,
-    10: ExecutionEvent_EventData.webhookInitiatedTransition,
-    11: ExecutionEvent_EventData.slotMatch,
-    12: ExecutionEvent_EventData.slotRequested,
-    13: ExecutionEvent_EventData.slotValidated,
-    14: ExecutionEvent_EventData.formFilled,
-    15: ExecutionEvent_EventData.waitingUserInput,
-    16: ExecutionEvent_EventData.endConversation,
-    0: ExecutionEvent_EventData.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionEvent',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..oo(0, [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
-    ..aOM<$0.Timestamp>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'eventTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<ExecutionState>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'executionState',
-        subBuilder: ExecutionState.create)
-    ..aOM<$1.Status>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        subBuilder: $1.Status.create)
-    ..aOM<UserConversationInput>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userInput',
-        subBuilder: UserConversationInput.create)
-    ..aOM<IntentMatch>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intentMatch',
-        subBuilder: IntentMatch.create)
-    ..aOM<ConditionsEvaluated>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'conditionsEvaluated',
-        subBuilder: ConditionsEvaluated.create)
-    ..aOM<OnSceneEnter>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'onSceneEnter',
-        subBuilder: OnSceneEnter.create)
-    ..aOM<WebhookRequest>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'webhookRequest',
-        subBuilder: WebhookRequest.create)
-    ..aOM<WebhookResponse>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'webhookResponse',
-        subBuilder: WebhookResponse.create)
-    ..aOM<WebhookInitiatedTransition>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'webhookInitiatedTransition',
-        subBuilder: WebhookInitiatedTransition.create)
-    ..aOM<SlotMatch>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'slotMatch',
-        subBuilder: SlotMatch.create)
-    ..aOM<SlotRequested>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'slotRequested',
-        subBuilder: SlotRequested.create)
-    ..aOM<SlotValidated>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'slotValidated',
-        subBuilder: SlotValidated.create)
-    ..aOM<FormFilled>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'formFilled',
-        subBuilder: FormFilled.create)
-    ..aOM<WaitingForUserInput>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'waitingUserInput',
-        subBuilder: WaitingForUserInput.create)
-    ..aOM<EndConversation>(
-        16,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endConversation',
-        subBuilder: EndConversation.create)
-    ..pPS(
-        17,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'warningMessages')
-    ..hasRequiredFields = false;
-
-  ExecutionEvent._() : super();
   factory ExecutionEvent({
     $0.Timestamp? eventTime,
     ExecutionState? executionState,
@@ -186,66 +62,127 @@ class ExecutionEvent extends $pb.GeneratedMessage {
     EndConversation? endConversation,
     $core.Iterable<$core.String>? warningMessages,
   }) {
-    final _result = create();
+    final $result = create();
     if (eventTime != null) {
-      _result.eventTime = eventTime;
+      $result.eventTime = eventTime;
     }
     if (executionState != null) {
-      _result.executionState = executionState;
+      $result.executionState = executionState;
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (userInput != null) {
-      _result.userInput = userInput;
+      $result.userInput = userInput;
     }
     if (intentMatch != null) {
-      _result.intentMatch = intentMatch;
+      $result.intentMatch = intentMatch;
     }
     if (conditionsEvaluated != null) {
-      _result.conditionsEvaluated = conditionsEvaluated;
+      $result.conditionsEvaluated = conditionsEvaluated;
     }
     if (onSceneEnter != null) {
-      _result.onSceneEnter = onSceneEnter;
+      $result.onSceneEnter = onSceneEnter;
     }
     if (webhookRequest != null) {
-      _result.webhookRequest = webhookRequest;
+      $result.webhookRequest = webhookRequest;
     }
     if (webhookResponse != null) {
-      _result.webhookResponse = webhookResponse;
+      $result.webhookResponse = webhookResponse;
     }
     if (webhookInitiatedTransition != null) {
-      _result.webhookInitiatedTransition = webhookInitiatedTransition;
+      $result.webhookInitiatedTransition = webhookInitiatedTransition;
     }
     if (slotMatch != null) {
-      _result.slotMatch = slotMatch;
+      $result.slotMatch = slotMatch;
     }
     if (slotRequested != null) {
-      _result.slotRequested = slotRequested;
+      $result.slotRequested = slotRequested;
     }
     if (slotValidated != null) {
-      _result.slotValidated = slotValidated;
+      $result.slotValidated = slotValidated;
     }
     if (formFilled != null) {
-      _result.formFilled = formFilled;
+      $result.formFilled = formFilled;
     }
     if (waitingUserInput != null) {
-      _result.waitingUserInput = waitingUserInput;
+      $result.waitingUserInput = waitingUserInput;
     }
     if (endConversation != null) {
-      _result.endConversation = endConversation;
+      $result.endConversation = endConversation;
     }
     if (warningMessages != null) {
-      _result.warningMessages.addAll(warningMessages);
+      $result.warningMessages.addAll(warningMessages);
     }
-    return _result;
+    return $result;
   }
+  ExecutionEvent._() : super();
   factory ExecutionEvent.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExecutionEvent.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, ExecutionEvent_EventData>
+      _ExecutionEvent_EventDataByTag = {
+    4: ExecutionEvent_EventData.userInput,
+    5: ExecutionEvent_EventData.intentMatch,
+    6: ExecutionEvent_EventData.conditionsEvaluated,
+    7: ExecutionEvent_EventData.onSceneEnter,
+    8: ExecutionEvent_EventData.webhookRequest,
+    9: ExecutionEvent_EventData.webhookResponse,
+    10: ExecutionEvent_EventData.webhookInitiatedTransition,
+    11: ExecutionEvent_EventData.slotMatch,
+    12: ExecutionEvent_EventData.slotRequested,
+    13: ExecutionEvent_EventData.slotValidated,
+    14: ExecutionEvent_EventData.formFilled,
+    15: ExecutionEvent_EventData.waitingUserInput,
+    16: ExecutionEvent_EventData.endConversation,
+    0: ExecutionEvent_EventData.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionEvent',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'eventTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<ExecutionState>(2, _omitFieldNames ? '' : 'executionState',
+        subBuilder: ExecutionState.create)
+    ..aOM<$1.Status>(3, _omitFieldNames ? '' : 'status',
+        subBuilder: $1.Status.create)
+    ..aOM<UserConversationInput>(4, _omitFieldNames ? '' : 'userInput',
+        subBuilder: UserConversationInput.create)
+    ..aOM<IntentMatch>(5, _omitFieldNames ? '' : 'intentMatch',
+        subBuilder: IntentMatch.create)
+    ..aOM<ConditionsEvaluated>(6, _omitFieldNames ? '' : 'conditionsEvaluated',
+        subBuilder: ConditionsEvaluated.create)
+    ..aOM<OnSceneEnter>(7, _omitFieldNames ? '' : 'onSceneEnter',
+        subBuilder: OnSceneEnter.create)
+    ..aOM<WebhookRequest>(8, _omitFieldNames ? '' : 'webhookRequest',
+        subBuilder: WebhookRequest.create)
+    ..aOM<WebhookResponse>(9, _omitFieldNames ? '' : 'webhookResponse',
+        subBuilder: WebhookResponse.create)
+    ..aOM<WebhookInitiatedTransition>(
+        10, _omitFieldNames ? '' : 'webhookInitiatedTransition',
+        subBuilder: WebhookInitiatedTransition.create)
+    ..aOM<SlotMatch>(11, _omitFieldNames ? '' : 'slotMatch',
+        subBuilder: SlotMatch.create)
+    ..aOM<SlotRequested>(12, _omitFieldNames ? '' : 'slotRequested',
+        subBuilder: SlotRequested.create)
+    ..aOM<SlotValidated>(13, _omitFieldNames ? '' : 'slotValidated',
+        subBuilder: SlotValidated.create)
+    ..aOM<FormFilled>(14, _omitFieldNames ? '' : 'formFilled',
+        subBuilder: FormFilled.create)
+    ..aOM<WaitingForUserInput>(15, _omitFieldNames ? '' : 'waitingUserInput',
+        subBuilder: WaitingForUserInput.create)
+    ..aOM<EndConversation>(16, _omitFieldNames ? '' : 'endConversation',
+        subBuilder: EndConversation.create)
+    ..pPS(17, _omitFieldNames ? '' : 'warningMessages')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -255,8 +192,10 @@ class ExecutionEvent extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ExecutionEvent copyWith(void Function(ExecutionEvent) updates) =>
       super.copyWith((message) => updates(message as ExecutionEvent))
-          as ExecutionEvent; // ignore: deprecated_member_use
+          as ExecutionEvent;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionEvent create() => ExecutionEvent._();
   ExecutionEvent createEmptyInstance() => create();
@@ -271,6 +210,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
       _ExecutionEvent_EventDataByTag[$_whichOneof(0)]!;
   void clearEventData() => clearField($_whichOneof(0));
 
+  /// Timestamp when the event happened.
   @$pb.TagNumber(1)
   $0.Timestamp get eventTime => $_getN(0);
   @$pb.TagNumber(1)
@@ -285,6 +225,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp ensureEventTime() => $_ensure(0);
 
+  /// State of the execution during this event.
   @$pb.TagNumber(2)
   ExecutionState get executionState => $_getN(1);
   @$pb.TagNumber(2)
@@ -299,6 +240,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ExecutionState ensureExecutionState() => $_ensure(1);
 
+  /// Resulting status of particular execution step.
   @$pb.TagNumber(3)
   $1.Status get status => $_getN(2);
   @$pb.TagNumber(3)
@@ -313,6 +255,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Status ensureStatus() => $_ensure(2);
 
+  /// User input handling event.
   @$pb.TagNumber(4)
   UserConversationInput get userInput => $_getN(3);
   @$pb.TagNumber(4)
@@ -327,6 +270,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   UserConversationInput ensureUserInput() => $_ensure(3);
 
+  /// Intent matching event.
   @$pb.TagNumber(5)
   IntentMatch get intentMatch => $_getN(4);
   @$pb.TagNumber(5)
@@ -341,6 +285,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   IntentMatch ensureIntentMatch() => $_ensure(4);
 
+  /// Condition evaluation event.
   @$pb.TagNumber(6)
   ConditionsEvaluated get conditionsEvaluated => $_getN(5);
   @$pb.TagNumber(6)
@@ -355,6 +300,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   ConditionsEvaluated ensureConditionsEvaluated() => $_ensure(5);
 
+  /// OnSceneEnter execution event.
   @$pb.TagNumber(7)
   OnSceneEnter get onSceneEnter => $_getN(6);
   @$pb.TagNumber(7)
@@ -369,6 +315,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   OnSceneEnter ensureOnSceneEnter() => $_ensure(6);
 
+  /// Webhook request dispatch event.
   @$pb.TagNumber(8)
   WebhookRequest get webhookRequest => $_getN(7);
   @$pb.TagNumber(8)
@@ -383,6 +330,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   WebhookRequest ensureWebhookRequest() => $_ensure(7);
 
+  /// Webhook response receipt event.
   @$pb.TagNumber(9)
   WebhookResponse get webhookResponse => $_getN(8);
   @$pb.TagNumber(9)
@@ -397,6 +345,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   WebhookResponse ensureWebhookResponse() => $_ensure(8);
 
+  /// Webhook-initiated transition event.
   @$pb.TagNumber(10)
   WebhookInitiatedTransition get webhookInitiatedTransition => $_getN(9);
   @$pb.TagNumber(10)
@@ -411,6 +360,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   WebhookInitiatedTransition ensureWebhookInitiatedTransition() => $_ensure(9);
 
+  /// Slot matching event.
   @$pb.TagNumber(11)
   SlotMatch get slotMatch => $_getN(10);
   @$pb.TagNumber(11)
@@ -425,6 +375,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   SlotMatch ensureSlotMatch() => $_ensure(10);
 
+  /// Slot requesting event.
   @$pb.TagNumber(12)
   SlotRequested get slotRequested => $_getN(11);
   @$pb.TagNumber(12)
@@ -439,6 +390,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   SlotRequested ensureSlotRequested() => $_ensure(11);
 
+  /// Slot validation event.
   @$pb.TagNumber(13)
   SlotValidated get slotValidated => $_getN(12);
   @$pb.TagNumber(13)
@@ -453,6 +405,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   SlotValidated ensureSlotValidated() => $_ensure(12);
 
+  /// Form filling event.
   @$pb.TagNumber(14)
   FormFilled get formFilled => $_getN(13);
   @$pb.TagNumber(14)
@@ -467,6 +420,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   FormFilled ensureFormFilled() => $_ensure(13);
 
+  /// Waiting-for-user-input event.
   @$pb.TagNumber(15)
   WaitingForUserInput get waitingUserInput => $_getN(14);
   @$pb.TagNumber(15)
@@ -481,6 +435,7 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   WaitingForUserInput ensureWaitingUserInput() => $_ensure(14);
 
+  /// End-of-conversation event.
   @$pb.TagNumber(16)
   EndConversation get endConversation => $_getN(15);
   @$pb.TagNumber(16)
@@ -495,59 +450,18 @@ class ExecutionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   EndConversation ensureEndConversation() => $_ensure(15);
 
+  /// List of warnings generated during execution of this Event. Warnings are
+  /// tips for the developer discovered during the conversation request. These
+  /// are usually non-critical and do not halt the execution of the request. For
+  /// example, a warnings might be generated when webhook tries to override a
+  /// custom Type which does not exist. Errors are reported as a failed status
+  /// code, but warnings can be present even when the status is OK.
   @$pb.TagNumber(17)
   $core.List<$core.String> get warningMessages => $_getList(16);
 }
 
+/// Current state of the execution.
 class ExecutionState extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExecutionState',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentSceneId')
-    ..aOM<$2.Struct>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sessionStorage',
-        subBuilder: $2.Struct.create)
-    ..aOM<Slots>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'slots',
-        subBuilder: Slots.create)
-    ..aOM<$2.Struct>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'userStorage',
-        subBuilder: $2.Struct.create)
-    ..pc<$3.Prompt>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'promptQueue',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.Prompt.create)
-    ..aOM<$2.Struct>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'householdStorage',
-        subBuilder: $2.Struct.create)
-    ..hasRequiredFields = false;
-
-  ExecutionState._() : super();
   factory ExecutionState({
     $core.String? currentSceneId,
     $2.Struct? sessionStorage,
@@ -556,33 +470,52 @@ class ExecutionState extends $pb.GeneratedMessage {
     $core.Iterable<$3.Prompt>? promptQueue,
     $2.Struct? householdStorage,
   }) {
-    final _result = create();
+    final $result = create();
     if (currentSceneId != null) {
-      _result.currentSceneId = currentSceneId;
+      $result.currentSceneId = currentSceneId;
     }
     if (sessionStorage != null) {
-      _result.sessionStorage = sessionStorage;
+      $result.sessionStorage = sessionStorage;
     }
     if (slots != null) {
-      _result.slots = slots;
+      $result.slots = slots;
     }
     if (userStorage != null) {
-      _result.userStorage = userStorage;
+      $result.userStorage = userStorage;
     }
     if (promptQueue != null) {
-      _result.promptQueue.addAll(promptQueue);
+      $result.promptQueue.addAll(promptQueue);
     }
     if (householdStorage != null) {
-      _result.householdStorage = householdStorage;
+      $result.householdStorage = householdStorage;
     }
-    return _result;
+    return $result;
   }
+  ExecutionState._() : super();
   factory ExecutionState.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ExecutionState.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionState',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'currentSceneId')
+    ..aOM<$2.Struct>(2, _omitFieldNames ? '' : 'sessionStorage',
+        subBuilder: $2.Struct.create)
+    ..aOM<Slots>(5, _omitFieldNames ? '' : 'slots', subBuilder: Slots.create)
+    ..aOM<$2.Struct>(6, _omitFieldNames ? '' : 'userStorage',
+        subBuilder: $2.Struct.create)
+    ..pc<$3.Prompt>(7, _omitFieldNames ? '' : 'promptQueue', $pb.PbFieldType.PM,
+        subBuilder: $3.Prompt.create)
+    ..aOM<$2.Struct>(8, _omitFieldNames ? '' : 'householdStorage',
+        subBuilder: $2.Struct.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -592,8 +525,10 @@ class ExecutionState extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ExecutionState copyWith(void Function(ExecutionState) updates) =>
       super.copyWith((message) => updates(message as ExecutionState))
-          as ExecutionState; // ignore: deprecated_member_use
+          as ExecutionState;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionState create() => ExecutionState._();
   ExecutionState createEmptyInstance() => create();
@@ -604,6 +539,7 @@ class ExecutionState extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExecutionState>(create);
   static ExecutionState? _defaultInstance;
 
+  /// ID of the scene which is currently  active.
   @$pb.TagNumber(1)
   $core.String get currentSceneId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -616,6 +552,8 @@ class ExecutionState extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCurrentSceneId() => clearField(1);
 
+  /// State of the session storage:
+  /// https://developers.google.com/assistant/conversational/storage-session
   @$pb.TagNumber(2)
   $2.Struct get sessionStorage => $_getN(1);
   @$pb.TagNumber(2)
@@ -630,6 +568,8 @@ class ExecutionState extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.Struct ensureSessionStorage() => $_ensure(1);
 
+  /// State of the slots filling, if applicable:
+  /// https://developers.google.com/assistant/conversational/scenes#slot_filling
   @$pb.TagNumber(5)
   Slots get slots => $_getN(2);
   @$pb.TagNumber(5)
@@ -644,6 +584,8 @@ class ExecutionState extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Slots ensureSlots() => $_ensure(2);
 
+  /// State of the user storage:
+  /// https://developers.google.com/assistant/conversational/storage-user
   @$pb.TagNumber(6)
   $2.Struct get userStorage => $_getN(3);
   @$pb.TagNumber(6)
@@ -658,9 +600,13 @@ class ExecutionState extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Struct ensureUserStorage() => $_ensure(3);
 
+  /// Prompt queue:
+  /// https://developers.google.com/assistant/conversational/prompts
   @$pb.TagNumber(7)
   $core.List<$3.Prompt> get promptQueue => $_getList(4);
 
+  /// State of the home storage:
+  /// https://developers.google.com/assistant/conversational/storage-home
   @$pb.TagNumber(8)
   $2.Struct get householdStorage => $_getN(5);
   @$pb.TagNumber(8)
@@ -676,57 +622,48 @@ class ExecutionState extends $pb.GeneratedMessage {
   $2.Struct ensureHouseholdStorage() => $_ensure(5);
 }
 
+/// Represents the current state of a the scene's slots.
 class Slots extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Slots',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..e<$4.SlotFillingStatus>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $4.SlotFillingStatus.UNSPECIFIED,
-        valueOf: $4.SlotFillingStatus.valueOf,
-        enumValues: $4.SlotFillingStatus.values)
-    ..m<$core.String, $4.Slot>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'slots',
-        entryClassName: 'Slots.SlotsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $4.Slot.create,
-        packageName: const $pb.PackageName('google.actions.sdk.v2'))
-    ..hasRequiredFields = false;
-
-  Slots._() : super();
   factory Slots({
     $4.SlotFillingStatus? status,
     $core.Map<$core.String, $4.Slot>? slots,
   }) {
-    final _result = create();
+    final $result = create();
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (slots != null) {
-      _result.slots.addAll(slots);
+      $result.slots.addAll(slots);
     }
-    return _result;
+    return $result;
   }
+  Slots._() : super();
   factory Slots.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Slots.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Slots',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..e<$4.SlotFillingStatus>(
+        2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: $4.SlotFillingStatus.UNSPECIFIED,
+        valueOf: $4.SlotFillingStatus.valueOf,
+        enumValues: $4.SlotFillingStatus.values)
+    ..m<$core.String, $4.Slot>(3, _omitFieldNames ? '' : 'slots',
+        entryClassName: 'Slots.SlotsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $4.Slot.create,
+        valueDefaultOrMaker: $4.Slot.getDefault,
+        packageName: const $pb.PackageName('google.actions.sdk.v2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -735,9 +672,10 @@ class Slots extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Slots copyWith(void Function(Slots) updates) =>
-      super.copyWith((message) => updates(message as Slots))
-          as Slots; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Slots)) as Slots;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Slots create() => Slots._();
   Slots createEmptyInstance() => create();
@@ -747,6 +685,7 @@ class Slots extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Slots>(create);
   static Slots? _defaultInstance;
 
+  /// The current status of slot filling.
   @$pb.TagNumber(2)
   $4.SlotFillingStatus get status => $_getN(0);
   @$pb.TagNumber(2)
@@ -759,52 +698,43 @@ class Slots extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStatus() => clearField(2);
 
+  /// The slots associated with the current scene.
   @$pb.TagNumber(3)
   $core.Map<$core.String, $4.Slot> get slots => $_getMap(1);
 }
 
+/// Information related to user input.
 class UserConversationInput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UserConversationInput',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'originalQuery')
-    ..hasRequiredFields = false;
-
-  UserConversationInput._() : super();
   factory UserConversationInput({
     $core.String? type,
     $core.String? originalQuery,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (originalQuery != null) {
-      _result.originalQuery = originalQuery;
+      $result.originalQuery = originalQuery;
     }
-    return _result;
+    return $result;
   }
+  UserConversationInput._() : super();
   factory UserConversationInput.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UserConversationInput.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserConversationInput',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'type')
+    ..aOS(2, _omitFieldNames ? '' : 'originalQuery')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -816,8 +746,10 @@ class UserConversationInput extends $pb.GeneratedMessage {
   UserConversationInput copyWith(
           void Function(UserConversationInput) updates) =>
       super.copyWith((message) => updates(message as UserConversationInput))
-          as UserConversationInput; // ignore: deprecated_member_use
+          as UserConversationInput;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UserConversationInput create() => UserConversationInput._();
   UserConversationInput createEmptyInstance() => create();
@@ -828,6 +760,7 @@ class UserConversationInput extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UserConversationInput>(create);
   static UserConversationInput? _defaultInstance;
 
+  /// Type of user input. E.g. keyboard, voice, touch, etc.
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -840,6 +773,7 @@ class UserConversationInput extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// Original text input from the user.
   @$pb.TagNumber(2)
   $core.String get originalQuery => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -853,71 +787,56 @@ class UserConversationInput extends $pb.GeneratedMessage {
   void clearOriginalQuery() => clearField(2);
 }
 
+/// Information about triggered intent match (global or within a scene):
+/// https://developers.google.com/assistant/conversational/intents
 class IntentMatch extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IntentMatch',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intentId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'handler')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextSceneId')
-    ..m<$core.String, $5.IntentParameterValue>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intentParameters',
-        entryClassName: 'IntentMatch.IntentParametersEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $5.IntentParameterValue.create,
-        packageName: const $pb.PackageName('google.actions.sdk.v2'))
-    ..hasRequiredFields = false;
-
-  IntentMatch._() : super();
   factory IntentMatch({
     $core.String? intentId,
     $core.String? handler,
     $core.String? nextSceneId,
     $core.Map<$core.String, $5.IntentParameterValue>? intentParameters,
   }) {
-    final _result = create();
+    final $result = create();
     if (intentId != null) {
-      _result.intentId = intentId;
+      $result.intentId = intentId;
     }
     if (handler != null) {
-      _result.handler = handler;
+      $result.handler = handler;
     }
     if (nextSceneId != null) {
-      _result.nextSceneId = nextSceneId;
+      $result.nextSceneId = nextSceneId;
     }
     if (intentParameters != null) {
-      _result.intentParameters.addAll(intentParameters);
+      $result.intentParameters.addAll(intentParameters);
     }
-    return _result;
+    return $result;
   }
+  IntentMatch._() : super();
   factory IntentMatch.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IntentMatch.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IntentMatch',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'intentId')
+    ..aOS(3, _omitFieldNames ? '' : 'handler')
+    ..aOS(4, _omitFieldNames ? '' : 'nextSceneId')
+    ..m<$core.String, $5.IntentParameterValue>(
+        5, _omitFieldNames ? '' : 'intentParameters',
+        entryClassName: 'IntentMatch.IntentParametersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $5.IntentParameterValue.create,
+        valueDefaultOrMaker: $5.IntentParameterValue.getDefault,
+        packageName: const $pb.PackageName('google.actions.sdk.v2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -927,8 +846,10 @@ class IntentMatch extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IntentMatch copyWith(void Function(IntentMatch) updates) =>
       super.copyWith((message) => updates(message as IntentMatch))
-          as IntentMatch; // ignore: deprecated_member_use
+          as IntentMatch;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IntentMatch create() => IntentMatch._();
   IntentMatch createEmptyInstance() => create();
@@ -938,6 +859,7 @@ class IntentMatch extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IntentMatch>(create);
   static IntentMatch? _defaultInstance;
 
+  /// Intent id which triggered this interaction.
   @$pb.TagNumber(1)
   $core.String get intentId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -950,6 +872,7 @@ class IntentMatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIntentId() => clearField(1);
 
+  /// Name of the handler attached to this interaction.
   @$pb.TagNumber(3)
   $core.String get handler => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -962,6 +885,7 @@ class IntentMatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHandler() => clearField(3);
 
+  /// Scene to which this interaction leads to.
   @$pb.TagNumber(4)
   $core.String get nextSceneId => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -974,56 +898,48 @@ class IntentMatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNextSceneId() => clearField(4);
 
+  /// Parameters of intent which triggered this interaction.
   @$pb.TagNumber(5)
   $core.Map<$core.String, $5.IntentParameterValue> get intentParameters =>
       $_getMap(3);
 }
 
+/// Results of conditions evaluation:
+/// https://developers.google.com/assistant/conversational/scenes#conditions
 class ConditionsEvaluated extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ConditionsEvaluated',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..pc<Condition>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failedConditions',
-        $pb.PbFieldType.PM,
-        subBuilder: Condition.create)
-    ..aOM<Condition>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'successCondition',
-        subBuilder: Condition.create)
-    ..hasRequiredFields = false;
-
-  ConditionsEvaluated._() : super();
   factory ConditionsEvaluated({
     $core.Iterable<Condition>? failedConditions,
     Condition? successCondition,
   }) {
-    final _result = create();
+    final $result = create();
     if (failedConditions != null) {
-      _result.failedConditions.addAll(failedConditions);
+      $result.failedConditions.addAll(failedConditions);
     }
     if (successCondition != null) {
-      _result.successCondition = successCondition;
+      $result.successCondition = successCondition;
     }
-    return _result;
+    return $result;
   }
+  ConditionsEvaluated._() : super();
   factory ConditionsEvaluated.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ConditionsEvaluated.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConditionsEvaluated',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..pc<Condition>(
+        1, _omitFieldNames ? '' : 'failedConditions', $pb.PbFieldType.PM,
+        subBuilder: Condition.create)
+    ..aOM<Condition>(2, _omitFieldNames ? '' : 'successCondition',
+        subBuilder: Condition.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1033,8 +949,10 @@ class ConditionsEvaluated extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ConditionsEvaluated copyWith(void Function(ConditionsEvaluated) updates) =>
       super.copyWith((message) => updates(message as ConditionsEvaluated))
-          as ConditionsEvaluated; // ignore: deprecated_member_use
+          as ConditionsEvaluated;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ConditionsEvaluated create() => ConditionsEvaluated._();
   ConditionsEvaluated createEmptyInstance() => create();
@@ -1045,9 +963,11 @@ class ConditionsEvaluated extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ConditionsEvaluated>(create);
   static ConditionsEvaluated? _defaultInstance;
 
+  /// List of conditions which were evaluated to 'false'.
   @$pb.TagNumber(1)
   $core.List<Condition> get failedConditions => $_getList(0);
 
+  /// The first condition which was evaluated to 'true', if any.
   @$pb.TagNumber(2)
   Condition get successCondition => $_getN(1);
   @$pb.TagNumber(2)
@@ -1063,57 +983,43 @@ class ConditionsEvaluated extends $pb.GeneratedMessage {
   Condition ensureSuccessCondition() => $_ensure(1);
 }
 
+/// Evaluated condition.
 class Condition extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Condition',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'expression')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'handler')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextSceneId')
-    ..hasRequiredFields = false;
-
-  Condition._() : super();
   factory Condition({
     $core.String? expression,
     $core.String? handler,
     $core.String? nextSceneId,
   }) {
-    final _result = create();
+    final $result = create();
     if (expression != null) {
-      _result.expression = expression;
+      $result.expression = expression;
     }
     if (handler != null) {
-      _result.handler = handler;
+      $result.handler = handler;
     }
     if (nextSceneId != null) {
-      _result.nextSceneId = nextSceneId;
+      $result.nextSceneId = nextSceneId;
     }
-    return _result;
+    return $result;
   }
+  Condition._() : super();
   factory Condition.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Condition.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Condition',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'expression')
+    ..aOS(2, _omitFieldNames ? '' : 'handler')
+    ..aOS(3, _omitFieldNames ? '' : 'nextSceneId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1122,9 +1028,10 @@ class Condition extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Condition copyWith(void Function(Condition) updates) =>
-      super.copyWith((message) => updates(message as Condition))
-          as Condition; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Condition)) as Condition;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Condition create() => Condition._();
   Condition createEmptyInstance() => create();
@@ -1134,6 +1041,7 @@ class Condition extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Condition>(create);
   static Condition? _defaultInstance;
 
+  /// Expression specified in this condition.
   @$pb.TagNumber(1)
   $core.String get expression => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1146,6 +1054,7 @@ class Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearExpression() => clearField(1);
 
+  /// Handler name specified in evaluated condition.
   @$pb.TagNumber(2)
   $core.String get handler => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1158,6 +1067,7 @@ class Condition extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHandler() => clearField(2);
 
+  /// Destination scene specified in evaluated condition.
   @$pb.TagNumber(3)
   $core.String get nextSceneId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1171,39 +1081,34 @@ class Condition extends $pb.GeneratedMessage {
   void clearNextSceneId() => clearField(3);
 }
 
+/// Information about execution of onSceneEnter stage:
+/// https://developers.google.com/assistant/conversational/scenes#on_enter
 class OnSceneEnter extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OnSceneEnter',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'handler')
-    ..hasRequiredFields = false;
-
-  OnSceneEnter._() : super();
   factory OnSceneEnter({
     $core.String? handler,
   }) {
-    final _result = create();
+    final $result = create();
     if (handler != null) {
-      _result.handler = handler;
+      $result.handler = handler;
     }
-    return _result;
+    return $result;
   }
+  OnSceneEnter._() : super();
   factory OnSceneEnter.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OnSceneEnter.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OnSceneEnter',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'handler')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1213,8 +1118,10 @@ class OnSceneEnter extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OnSceneEnter copyWith(void Function(OnSceneEnter) updates) =>
       super.copyWith((message) => updates(message as OnSceneEnter))
-          as OnSceneEnter; // ignore: deprecated_member_use
+          as OnSceneEnter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OnSceneEnter create() => OnSceneEnter._();
   OnSceneEnter createEmptyInstance() => create();
@@ -1225,6 +1132,7 @@ class OnSceneEnter extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OnSceneEnter>(create);
   static OnSceneEnter? _defaultInstance;
 
+  /// Handler name specified in onSceneEnter event.
   @$pb.TagNumber(1)
   $core.String get handler => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1238,39 +1146,34 @@ class OnSceneEnter extends $pb.GeneratedMessage {
   void clearHandler() => clearField(1);
 }
 
+/// Event triggered by destination scene returned from webhook:
+/// https://developers.google.com/assistant/conversational/webhooks#transition_scenes
 class WebhookInitiatedTransition extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WebhookInitiatedTransition',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextSceneId')
-    ..hasRequiredFields = false;
-
-  WebhookInitiatedTransition._() : super();
   factory WebhookInitiatedTransition({
     $core.String? nextSceneId,
   }) {
-    final _result = create();
+    final $result = create();
     if (nextSceneId != null) {
-      _result.nextSceneId = nextSceneId;
+      $result.nextSceneId = nextSceneId;
     }
-    return _result;
+    return $result;
   }
+  WebhookInitiatedTransition._() : super();
   factory WebhookInitiatedTransition.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory WebhookInitiatedTransition.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WebhookInitiatedTransition',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'nextSceneId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1283,8 +1186,10 @@ class WebhookInitiatedTransition extends $pb.GeneratedMessage {
           void Function(WebhookInitiatedTransition) updates) =>
       super.copyWith(
               (message) => updates(message as WebhookInitiatedTransition))
-          as WebhookInitiatedTransition; // ignore: deprecated_member_use
+          as WebhookInitiatedTransition;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WebhookInitiatedTransition create() => WebhookInitiatedTransition._();
   WebhookInitiatedTransition createEmptyInstance() => create();
@@ -1295,6 +1200,7 @@ class WebhookInitiatedTransition extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<WebhookInitiatedTransition>(create);
   static WebhookInitiatedTransition? _defaultInstance;
 
+  /// ID of the scene the transition is leading to.
   @$pb.TagNumber(1)
   $core.String get nextSceneId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1308,39 +1214,34 @@ class WebhookInitiatedTransition extends $pb.GeneratedMessage {
   void clearNextSceneId() => clearField(1);
 }
 
+/// Information about a request dispatched to the Action webhook:
+/// https://developers.google.com/assistant/conversational/webhooks#payloads
 class WebhookRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WebhookRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requestJson')
-    ..hasRequiredFields = false;
-
-  WebhookRequest._() : super();
   factory WebhookRequest({
     $core.String? requestJson,
   }) {
-    final _result = create();
+    final $result = create();
     if (requestJson != null) {
-      _result.requestJson = requestJson;
+      $result.requestJson = requestJson;
     }
-    return _result;
+    return $result;
   }
+  WebhookRequest._() : super();
   factory WebhookRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory WebhookRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WebhookRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'requestJson')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1350,8 +1251,10 @@ class WebhookRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   WebhookRequest copyWith(void Function(WebhookRequest) updates) =>
       super.copyWith((message) => updates(message as WebhookRequest))
-          as WebhookRequest; // ignore: deprecated_member_use
+          as WebhookRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WebhookRequest create() => WebhookRequest._();
   WebhookRequest createEmptyInstance() => create();
@@ -1362,6 +1265,7 @@ class WebhookRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<WebhookRequest>(create);
   static WebhookRequest? _defaultInstance;
 
+  /// Payload of the webhook request.
   @$pb.TagNumber(1)
   $core.String get requestJson => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1375,39 +1279,34 @@ class WebhookRequest extends $pb.GeneratedMessage {
   void clearRequestJson() => clearField(1);
 }
 
+/// Information about a response received from the Action webhook:
+/// https://developers.google.com/assistant/conversational/webhooks#payloads
 class WebhookResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WebhookResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'responseJson')
-    ..hasRequiredFields = false;
-
-  WebhookResponse._() : super();
   factory WebhookResponse({
     $core.String? responseJson,
   }) {
-    final _result = create();
+    final $result = create();
     if (responseJson != null) {
-      _result.responseJson = responseJson;
+      $result.responseJson = responseJson;
     }
-    return _result;
+    return $result;
   }
+  WebhookResponse._() : super();
   factory WebhookResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory WebhookResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WebhookResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'responseJson')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1417,8 +1316,10 @@ class WebhookResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   WebhookResponse copyWith(void Function(WebhookResponse) updates) =>
       super.copyWith((message) => updates(message as WebhookResponse))
-          as WebhookResponse; // ignore: deprecated_member_use
+          as WebhookResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WebhookResponse create() => WebhookResponse._();
   WebhookResponse createEmptyInstance() => create();
@@ -1429,6 +1330,7 @@ class WebhookResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<WebhookResponse>(create);
   static WebhookResponse? _defaultInstance;
 
+  /// Payload of the webhook response.
   @$pb.TagNumber(1)
   $core.String get responseJson => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1442,44 +1344,41 @@ class WebhookResponse extends $pb.GeneratedMessage {
   void clearResponseJson() => clearField(1);
 }
 
+/// Information about matched slot(s):
+/// https://developers.google.com/assistant/conversational/scenes#slot_filling
 class SlotMatch extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlotMatch',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..m<$core.String, $5.IntentParameterValue>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nluParameters',
-        entryClassName: 'SlotMatch.NluParametersEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $5.IntentParameterValue.create,
-        packageName: const $pb.PackageName('google.actions.sdk.v2'))
-    ..hasRequiredFields = false;
-
-  SlotMatch._() : super();
   factory SlotMatch({
     $core.Map<$core.String, $5.IntentParameterValue>? nluParameters,
   }) {
-    final _result = create();
+    final $result = create();
     if (nluParameters != null) {
-      _result.nluParameters.addAll(nluParameters);
+      $result.nluParameters.addAll(nluParameters);
     }
-    return _result;
+    return $result;
   }
+  SlotMatch._() : super();
   factory SlotMatch.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlotMatch.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlotMatch',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..m<$core.String, $5.IntentParameterValue>(
+        2, _omitFieldNames ? '' : 'nluParameters',
+        entryClassName: 'SlotMatch.NluParametersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $5.IntentParameterValue.create,
+        valueDefaultOrMaker: $5.IntentParameterValue.getDefault,
+        packageName: const $pb.PackageName('google.actions.sdk.v2'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1488,9 +1387,10 @@ class SlotMatch extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SlotMatch copyWith(void Function(SlotMatch) updates) =>
-      super.copyWith((message) => updates(message as SlotMatch))
-          as SlotMatch; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SlotMatch)) as SlotMatch;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlotMatch create() => SlotMatch._();
   SlotMatch createEmptyInstance() => create();
@@ -1500,54 +1400,46 @@ class SlotMatch extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SlotMatch>(create);
   static SlotMatch? _defaultInstance;
 
+  /// Parameters extracted by NLU from user input.
   @$pb.TagNumber(2)
   $core.Map<$core.String, $5.IntentParameterValue> get nluParameters =>
       $_getMap(0);
 }
 
+/// Information about currently requested slot:
+/// https://developers.google.com/assistant/conversational/scenes#slot_filling
 class SlotRequested extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlotRequested',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'slot')
-    ..aOM<$3.Prompt>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'prompt',
-        subBuilder: $3.Prompt.create)
-    ..hasRequiredFields = false;
-
-  SlotRequested._() : super();
   factory SlotRequested({
     $core.String? slot,
     $3.Prompt? prompt,
   }) {
-    final _result = create();
+    final $result = create();
     if (slot != null) {
-      _result.slot = slot;
+      $result.slot = slot;
     }
     if (prompt != null) {
-      _result.prompt = prompt;
+      $result.prompt = prompt;
     }
-    return _result;
+    return $result;
   }
+  SlotRequested._() : super();
   factory SlotRequested.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlotRequested.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlotRequested',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'slot')
+    ..aOM<$3.Prompt>(3, _omitFieldNames ? '' : 'prompt',
+        subBuilder: $3.Prompt.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1557,8 +1449,10 @@ class SlotRequested extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SlotRequested copyWith(void Function(SlotRequested) updates) =>
       super.copyWith((message) => updates(message as SlotRequested))
-          as SlotRequested; // ignore: deprecated_member_use
+          as SlotRequested;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlotRequested create() => SlotRequested._();
   SlotRequested createEmptyInstance() => create();
@@ -1569,6 +1463,7 @@ class SlotRequested extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SlotRequested>(create);
   static SlotRequested? _defaultInstance;
 
+  /// Name of the requested slot.
   @$pb.TagNumber(1)
   $core.String get slot => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1581,6 +1476,7 @@ class SlotRequested extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSlot() => clearField(1);
 
+  /// Slot prompt.
   @$pb.TagNumber(3)
   $3.Prompt get prompt => $_getN(1);
   @$pb.TagNumber(3)
@@ -1596,26 +1492,25 @@ class SlotRequested extends $pb.GeneratedMessage {
   $3.Prompt ensurePrompt() => $_ensure(1);
 }
 
+/// Event which happens after webhook validation was finished for slot(s):
+/// https://developers.google.com/assistant/conversational/scenes#slot_filling
 class SlotValidated extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SlotValidated',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  SlotValidated._() : super();
   factory SlotValidated() => create();
+  SlotValidated._() : super();
   factory SlotValidated.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SlotValidated.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlotValidated',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1625,8 +1520,10 @@ class SlotValidated extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SlotValidated copyWith(void Function(SlotValidated) updates) =>
       super.copyWith((message) => updates(message as SlotValidated))
-          as SlotValidated; // ignore: deprecated_member_use
+          as SlotValidated;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SlotValidated create() => SlotValidated._();
   SlotValidated createEmptyInstance() => create();
@@ -1638,26 +1535,25 @@ class SlotValidated extends $pb.GeneratedMessage {
   static SlotValidated? _defaultInstance;
 }
 
+/// Event which happens when form is fully filled:
+/// https://developers.google.com/assistant/conversational/scenes#slot_filling
 class FormFilled extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FormFilled',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  FormFilled._() : super();
   factory FormFilled() => create();
+  FormFilled._() : super();
   factory FormFilled.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FormFilled.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FormFilled',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1666,9 +1562,10 @@ class FormFilled extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   FormFilled copyWith(void Function(FormFilled) updates) =>
-      super.copyWith((message) => updates(message as FormFilled))
-          as FormFilled; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as FormFilled)) as FormFilled;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FormFilled create() => FormFilled._();
   FormFilled createEmptyInstance() => create();
@@ -1679,26 +1576,25 @@ class FormFilled extends $pb.GeneratedMessage {
   static FormFilled? _defaultInstance;
 }
 
+/// Event which happens when system needs user input:
+/// https://developers.google.com/assistant/conversational/scenes#input
 class WaitingForUserInput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'WaitingForUserInput',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  WaitingForUserInput._() : super();
   factory WaitingForUserInput() => create();
+  WaitingForUserInput._() : super();
   factory WaitingForUserInput.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory WaitingForUserInput.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WaitingForUserInput',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1708,8 +1604,10 @@ class WaitingForUserInput extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   WaitingForUserInput copyWith(void Function(WaitingForUserInput) updates) =>
       super.copyWith((message) => updates(message as WaitingForUserInput))
-          as WaitingForUserInput; // ignore: deprecated_member_use
+          as WaitingForUserInput;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static WaitingForUserInput create() => WaitingForUserInput._();
   WaitingForUserInput createEmptyInstance() => create();
@@ -1721,26 +1619,24 @@ class WaitingForUserInput extends $pb.GeneratedMessage {
   static WaitingForUserInput? _defaultInstance;
 }
 
+/// Event which informs that conversation with agent was ended.
 class EndConversation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EndConversation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  EndConversation._() : super();
   factory EndConversation() => create();
+  EndConversation._() : super();
   factory EndConversation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EndConversation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EndConversation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.actions.sdk.v2'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1750,8 +1646,10 @@ class EndConversation extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   EndConversation copyWith(void Function(EndConversation) updates) =>
       super.copyWith((message) => updates(message as EndConversation))
-          as EndConversation; // ignore: deprecated_member_use
+          as EndConversation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EndConversation create() => EndConversation._();
   EndConversation createEmptyInstance() => create();
@@ -1762,3 +1660,7 @@ class EndConversation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EndConversation>(create);
   static EndConversation? _defaultInstance;
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,42 +1,31 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/apps/drive/labels/v2/label_permission.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Roles are concentric with subsequent role.
 class LabelPermission_LabelRole extends $pb.ProtobufEnum {
   static const LabelPermission_LabelRole LABEL_ROLE_UNSPECIFIED =
       LabelPermission_LabelRole._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LABEL_ROLE_UNSPECIFIED');
-  static const LabelPermission_LabelRole READER = LabelPermission_LabelRole._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'READER');
-  static const LabelPermission_LabelRole APPLIER = LabelPermission_LabelRole._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'APPLIER');
+          0, _omitEnumNames ? '' : 'LABEL_ROLE_UNSPECIFIED');
+  static const LabelPermission_LabelRole READER =
+      LabelPermission_LabelRole._(1, _omitEnumNames ? '' : 'READER');
+  static const LabelPermission_LabelRole APPLIER =
+      LabelPermission_LabelRole._(2, _omitEnumNames ? '' : 'APPLIER');
   static const LabelPermission_LabelRole ORGANIZER =
-      LabelPermission_LabelRole._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ORGANIZER');
-  static const LabelPermission_LabelRole EDITOR = LabelPermission_LabelRole._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'EDITOR');
+      LabelPermission_LabelRole._(3, _omitEnumNames ? '' : 'ORGANIZER');
+  static const LabelPermission_LabelRole EDITOR =
+      LabelPermission_LabelRole._(4, _omitEnumNames ? '' : 'EDITOR');
 
   static const $core.List<LabelPermission_LabelRole> values =
       <LabelPermission_LabelRole>[
@@ -53,3 +42,5 @@ class LabelPermission_LabelRole extends $pb.ProtobufEnum {
 
   const LabelPermission_LabelRole._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

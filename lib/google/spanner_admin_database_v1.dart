@@ -1,6 +1,9 @@
 export '../src/generated/google/spanner/admin/database/v1/backup.pb.dart';
 export '../src/generated/google/spanner/admin/database/v1/backup.pbenum.dart';
 export '../src/generated/google/spanner/admin/database/v1/backup.pbjson.dart';
+export '../src/generated/google/spanner/admin/database/v1/backup_schedule.pb.dart';
+export '../src/generated/google/spanner/admin/database/v1/backup_schedule.pbenum.dart';
+export '../src/generated/google/spanner/admin/database/v1/backup_schedule.pbjson.dart';
 export '../src/generated/google/spanner/admin/database/v1/common.pb.dart';
 export '../src/generated/google/spanner/admin/database/v1/common.pbenum.dart';
 export '../src/generated/google/spanner/admin/database/v1/common.pbjson.dart';

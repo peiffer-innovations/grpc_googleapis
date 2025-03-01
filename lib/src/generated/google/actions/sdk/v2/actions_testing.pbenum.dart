@@ -1,41 +1,30 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/actions_testing.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Indicates the input source, typed query or voice query.
 class UserInput_InputType extends $pb.ProtobufEnum {
   static const UserInput_InputType INPUT_TYPE_UNSPECIFIED =
-      UserInput_InputType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'INPUT_TYPE_UNSPECIFIED');
-  static const UserInput_InputType TOUCH = UserInput_InputType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TOUCH');
-  static const UserInput_InputType VOICE = UserInput_InputType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'VOICE');
-  static const UserInput_InputType KEYBOARD = UserInput_InputType._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'KEYBOARD');
-  static const UserInput_InputType URL = UserInput_InputType._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'URL');
+      UserInput_InputType._(0, _omitEnumNames ? '' : 'INPUT_TYPE_UNSPECIFIED');
+  static const UserInput_InputType TOUCH =
+      UserInput_InputType._(1, _omitEnumNames ? '' : 'TOUCH');
+  static const UserInput_InputType VOICE =
+      UserInput_InputType._(2, _omitEnumNames ? '' : 'VOICE');
+  static const UserInput_InputType KEYBOARD =
+      UserInput_InputType._(3, _omitEnumNames ? '' : 'KEYBOARD');
+  static const UserInput_InputType URL =
+      UserInput_InputType._(4, _omitEnumNames ? '' : 'URL');
 
   static const $core.List<UserInput_InputType> values = <UserInput_InputType>[
     INPUT_TYPE_UNSPECIFIED,
@@ -52,39 +41,22 @@ class UserInput_InputType extends $pb.ProtobufEnum {
   const UserInput_InputType._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Possible surfaces used to interact with the Action.
+/// Additional values may be included in the future.
 class DeviceProperties_Surface extends $pb.ProtobufEnum {
   static const DeviceProperties_Surface SURFACE_UNSPECIFIED =
       DeviceProperties_Surface._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SURFACE_UNSPECIFIED');
-  static const DeviceProperties_Surface SPEAKER = DeviceProperties_Surface._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SPEAKER');
-  static const DeviceProperties_Surface PHONE = DeviceProperties_Surface._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PHONE');
-  static const DeviceProperties_Surface ALLO = DeviceProperties_Surface._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ALLO');
+          0, _omitEnumNames ? '' : 'SURFACE_UNSPECIFIED');
+  static const DeviceProperties_Surface SPEAKER =
+      DeviceProperties_Surface._(1, _omitEnumNames ? '' : 'SPEAKER');
+  static const DeviceProperties_Surface PHONE =
+      DeviceProperties_Surface._(2, _omitEnumNames ? '' : 'PHONE');
+  static const DeviceProperties_Surface ALLO =
+      DeviceProperties_Surface._(3, _omitEnumNames ? '' : 'ALLO');
   static const DeviceProperties_Surface SMART_DISPLAY =
-      DeviceProperties_Surface._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SMART_DISPLAY');
-  static const DeviceProperties_Surface KAI_OS = DeviceProperties_Surface._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'KAI_OS');
+      DeviceProperties_Surface._(4, _omitEnumNames ? '' : 'SMART_DISPLAY');
+  static const DeviceProperties_Surface KAI_OS =
+      DeviceProperties_Surface._(5, _omitEnumNames ? '' : 'KAI_OS');
 
   static const $core.List<DeviceProperties_Surface> values =
       <DeviceProperties_Surface>[
@@ -102,3 +74,5 @@ class DeviceProperties_Surface extends $pb.ProtobufEnum {
 
   const DeviceProperties_Surface._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

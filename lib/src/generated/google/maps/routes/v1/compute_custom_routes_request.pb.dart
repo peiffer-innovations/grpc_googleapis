@@ -1,121 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/routes/v1/compute_custom_routes_request.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'waypoint.pb.dart' as $0;
 import '../../../protobuf/timestamp.pb.dart' as $1;
 import 'compute_routes_request.pb.dart' as $2;
-
 import 'compute_routes_request.pbenum.dart' as $2;
 import 'polyline.pbenum.dart' as $3;
+import 'waypoint.pb.dart' as $0;
 
+/// ComputeCustomRoutes request message.
 class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ComputeCustomRoutesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.Waypoint>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'origin',
-        subBuilder: $0.Waypoint.create)
-    ..aOM<$0.Waypoint>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'destination',
-        subBuilder: $0.Waypoint.create)
-    ..pc<$0.Waypoint>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'intermediates',
-        $pb.PbFieldType.PM,
-        subBuilder: $0.Waypoint.create)
-    ..e<$2.RouteTravelMode>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'travelMode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $2.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: $2.RouteTravelMode.valueOf,
-        enumValues: $2.RouteTravelMode.values)
-    ..e<$2.RoutingPreference>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'routingPreference',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $2.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
-        valueOf: $2.RoutingPreference.valueOf,
-        enumValues: $2.RoutingPreference.values)
-    ..e<$3.PolylineQuality>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'polylineQuality',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $3.PolylineQuality.POLYLINE_QUALITY_UNSPECIFIED,
-        valueOf: $3.PolylineQuality.valueOf,
-        enumValues: $3.PolylineQuality.values)
-    ..aOM<$1.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'departureTime',
-        subBuilder: $1.Timestamp.create)
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'languageCode')
-    ..e<$2.Units>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'units',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $2.Units.UNITS_UNSPECIFIED,
-        valueOf: $2.Units.valueOf,
-        enumValues: $2.Units.values)
-    ..aOM<$2.RouteModifiers>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'routeModifiers',
-        subBuilder: $2.RouteModifiers.create)
-    ..aOM<RouteObjective>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'routeObjective',
-        subBuilder: RouteObjective.create)
-    ..e<$3.PolylineEncoding>(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'polylineEncoding',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $3.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
-        valueOf: $3.PolylineEncoding.valueOf,
-        enumValues: $3.PolylineEncoding.values)
-    ..hasRequiredFields = false;
-
-  ComputeCustomRoutesRequest._() : super();
   factory ComputeCustomRoutesRequest({
     $0.Waypoint? origin,
     $0.Waypoint? destination,
@@ -130,51 +35,98 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
     RouteObjective? routeObjective,
     $3.PolylineEncoding? polylineEncoding,
   }) {
-    final _result = create();
+    final $result = create();
     if (origin != null) {
-      _result.origin = origin;
+      $result.origin = origin;
     }
     if (destination != null) {
-      _result.destination = destination;
+      $result.destination = destination;
     }
     if (intermediates != null) {
-      _result.intermediates.addAll(intermediates);
+      $result.intermediates.addAll(intermediates);
     }
     if (travelMode != null) {
-      _result.travelMode = travelMode;
+      $result.travelMode = travelMode;
     }
     if (routingPreference != null) {
-      _result.routingPreference = routingPreference;
+      $result.routingPreference = routingPreference;
     }
     if (polylineQuality != null) {
-      _result.polylineQuality = polylineQuality;
+      $result.polylineQuality = polylineQuality;
     }
     if (departureTime != null) {
-      _result.departureTime = departureTime;
+      $result.departureTime = departureTime;
     }
     if (languageCode != null) {
-      _result.languageCode = languageCode;
+      $result.languageCode = languageCode;
     }
     if (units != null) {
-      _result.units = units;
+      $result.units = units;
     }
     if (routeModifiers != null) {
-      _result.routeModifiers = routeModifiers;
+      $result.routeModifiers = routeModifiers;
     }
     if (routeObjective != null) {
-      _result.routeObjective = routeObjective;
+      $result.routeObjective = routeObjective;
     }
     if (polylineEncoding != null) {
-      _result.polylineEncoding = polylineEncoding;
+      $result.polylineEncoding = polylineEncoding;
     }
-    return _result;
+    return $result;
   }
+  ComputeCustomRoutesRequest._() : super();
   factory ComputeCustomRoutesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ComputeCustomRoutesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ComputeCustomRoutesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Waypoint>(1, _omitFieldNames ? '' : 'origin',
+        subBuilder: $0.Waypoint.create)
+    ..aOM<$0.Waypoint>(2, _omitFieldNames ? '' : 'destination',
+        subBuilder: $0.Waypoint.create)
+    ..pc<$0.Waypoint>(
+        3, _omitFieldNames ? '' : 'intermediates', $pb.PbFieldType.PM,
+        subBuilder: $0.Waypoint.create)
+    ..e<$2.RouteTravelMode>(
+        4, _omitFieldNames ? '' : 'travelMode', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
+        valueOf: $2.RouteTravelMode.valueOf,
+        enumValues: $2.RouteTravelMode.values)
+    ..e<$2.RoutingPreference>(
+        5, _omitFieldNames ? '' : 'routingPreference', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
+        valueOf: $2.RoutingPreference.valueOf,
+        enumValues: $2.RoutingPreference.values)
+    ..e<$3.PolylineQuality>(
+        6, _omitFieldNames ? '' : 'polylineQuality', $pb.PbFieldType.OE,
+        defaultOrMaker: $3.PolylineQuality.POLYLINE_QUALITY_UNSPECIFIED,
+        valueOf: $3.PolylineQuality.valueOf,
+        enumValues: $3.PolylineQuality.values)
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'departureTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(9, _omitFieldNames ? '' : 'languageCode')
+    ..e<$2.Units>(10, _omitFieldNames ? '' : 'units', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.Units.UNITS_UNSPECIFIED,
+        valueOf: $2.Units.valueOf,
+        enumValues: $2.Units.values)
+    ..aOM<$2.RouteModifiers>(11, _omitFieldNames ? '' : 'routeModifiers',
+        subBuilder: $2.RouteModifiers.create)
+    ..aOM<RouteObjective>(12, _omitFieldNames ? '' : 'routeObjective',
+        subBuilder: RouteObjective.create)
+    ..e<$3.PolylineEncoding>(
+        13, _omitFieldNames ? '' : 'polylineEncoding', $pb.PbFieldType.OE,
+        defaultOrMaker: $3.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
+        valueOf: $3.PolylineEncoding.valueOf,
+        enumValues: $3.PolylineEncoding.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -187,8 +139,10 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
           void Function(ComputeCustomRoutesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ComputeCustomRoutesRequest))
-          as ComputeCustomRoutesRequest; // ignore: deprecated_member_use
+          as ComputeCustomRoutesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ComputeCustomRoutesRequest create() => ComputeCustomRoutesRequest._();
   ComputeCustomRoutesRequest createEmptyInstance() => create();
@@ -199,6 +153,7 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ComputeCustomRoutesRequest>(create);
   static ComputeCustomRoutesRequest? _defaultInstance;
 
+  /// Required. Origin waypoint.
   @$pb.TagNumber(1)
   $0.Waypoint get origin => $_getN(0);
   @$pb.TagNumber(1)
@@ -213,6 +168,7 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Waypoint ensureOrigin() => $_ensure(0);
 
+  /// Required. Destination waypoint.
   @$pb.TagNumber(2)
   $0.Waypoint get destination => $_getN(1);
   @$pb.TagNumber(2)
@@ -227,9 +183,14 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Waypoint ensureDestination() => $_ensure(1);
 
+  /// Optional. A set of waypoints along the route (excluding terminal points),
+  /// for either stopping at or passing by. Up to 25 intermediate waypoints are
+  /// supported.
   @$pb.TagNumber(3)
   $core.List<$0.Waypoint> get intermediates => $_getList(2);
 
+  /// Optional. Specifies the mode of transportation. Only `DRIVE` and
+  /// 'TWO_WHEELER' are supported.
   @$pb.TagNumber(4)
   $2.RouteTravelMode get travelMode => $_getN(3);
   @$pb.TagNumber(4)
@@ -242,6 +203,11 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearTravelMode() => clearField(4);
 
+  /// Optional. Specifies how to compute the route. The server attempts to use
+  /// the selected routing preference to compute the route. If the routing
+  /// preference results in an error or an extra long latency, then an error is
+  /// returned. You can specify this option only when the `travel_mode` is
+  /// `DRIVE` or `TWO_WHEELER`, otherwise the request fails.
   @$pb.TagNumber(5)
   $2.RoutingPreference get routingPreference => $_getN(4);
   @$pb.TagNumber(5)
@@ -254,6 +220,7 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearRoutingPreference() => clearField(5);
 
+  /// Optional. Specifies your preference for the quality of the polyline.
   @$pb.TagNumber(6)
   $3.PolylineQuality get polylineQuality => $_getN(5);
   @$pb.TagNumber(6)
@@ -266,6 +233,9 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPolylineQuality() => clearField(6);
 
+  /// Optional. The departure time. If you don't set this value, then this value
+  /// defaults to the time that you made the request. If you set this value to a
+  /// time that has already occurred, then the request fails.
   @$pb.TagNumber(7)
   $1.Timestamp get departureTime => $_getN(6);
   @$pb.TagNumber(7)
@@ -280,6 +250,13 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $1.Timestamp ensureDepartureTime() => $_ensure(6);
 
+  /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+  /// information, see [Unicode Locale
+  /// Identifier](http://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+  /// See [Language
+  /// Support](https://developers.google.com/maps/faq#languagesupport) for the
+  /// list of supported languages. When you don't provide this value, the display
+  /// language is inferred from the location of the route request.
   @$pb.TagNumber(9)
   $core.String get languageCode => $_getSZ(7);
   @$pb.TagNumber(9)
@@ -292,6 +269,11 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearLanguageCode() => clearField(9);
 
+  /// Optional. Specifies the units of measure for the display fields. This
+  /// includes the `instruction` field in `NavigationInstruction`. The units of
+  /// measure used for the route, leg, step distance, and duration are not
+  /// affected by this value. If you don't provide this value, then the display
+  /// units are inferred from the location of the request.
   @$pb.TagNumber(10)
   $2.Units get units => $_getN(8);
   @$pb.TagNumber(10)
@@ -304,6 +286,8 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearUnits() => clearField(10);
 
+  /// Optional. A set of conditions to satisfy that affect the way routes are
+  /// calculated.
   @$pb.TagNumber(11)
   $2.RouteModifiers get routeModifiers => $_getN(9);
   @$pb.TagNumber(11)
@@ -318,6 +302,7 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $2.RouteModifiers ensureRouteModifiers() => $_ensure(9);
 
+  /// Required. A route objective to optimize for.
   @$pb.TagNumber(12)
   RouteObjective get routeObjective => $_getN(10);
   @$pb.TagNumber(12)
@@ -332,6 +317,7 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   RouteObjective ensureRouteObjective() => $_ensure(10);
 
+  /// Optional. Specifies the preferred encoding for the polyline.
   @$pb.TagNumber(13)
   $3.PolylineEncoding get polylineEncoding => $_getN(11);
   @$pb.TagNumber(13)
@@ -345,34 +331,18 @@ class ComputeCustomRoutesRequest extends $pb.GeneratedMessage {
   void clearPolylineEncoding() => clearField(13);
 }
 
+/// Encapsulates the cost used in the rate card.
 class RouteObjective_RateCard_MonetaryCost extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteObjective.RateCard.MonetaryCost',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..a<$core.double>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value',
-        $pb.PbFieldType.OD)
-    ..hasRequiredFields = false;
-
-  RouteObjective_RateCard_MonetaryCost._() : super();
   factory RouteObjective_RateCard_MonetaryCost({
     $core.double? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  RouteObjective_RateCard_MonetaryCost._() : super();
   factory RouteObjective_RateCard_MonetaryCost.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -380,6 +350,15 @@ class RouteObjective_RateCard_MonetaryCost extends $pb.GeneratedMessage {
   factory RouteObjective_RateCard_MonetaryCost.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteObjective.RateCard.MonetaryCost',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -392,8 +371,10 @@ class RouteObjective_RateCard_MonetaryCost extends $pb.GeneratedMessage {
           void Function(RouteObjective_RateCard_MonetaryCost) updates) =>
       super.copyWith((message) =>
               updates(message as RouteObjective_RateCard_MonetaryCost))
-          as RouteObjective_RateCard_MonetaryCost; // ignore: deprecated_member_use
+          as RouteObjective_RateCard_MonetaryCost;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteObjective_RateCard_MonetaryCost create() =>
       RouteObjective_RateCard_MonetaryCost._();
@@ -406,6 +387,7 @@ class RouteObjective_RateCard_MonetaryCost extends $pb.GeneratedMessage {
           RouteObjective_RateCard_MonetaryCost>(create);
   static RouteObjective_RateCard_MonetaryCost? _defaultInstance;
 
+  /// Required. The cost value in local currency inferred from the request.
   @$pb.TagNumber(1)
   $core.double get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -419,59 +401,47 @@ class RouteObjective_RateCard_MonetaryCost extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Encapsulates a `RateCard` route objective.
 class RouteObjective_RateCard extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteObjective.RateCard',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<RouteObjective_RateCard_MonetaryCost>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'costPerMinute',
-        subBuilder: RouteObjective_RateCard_MonetaryCost.create)
-    ..aOM<RouteObjective_RateCard_MonetaryCost>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'costPerKm',
-        subBuilder: RouteObjective_RateCard_MonetaryCost.create)
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'includeTolls')
-    ..hasRequiredFields = false;
-
-  RouteObjective_RateCard._() : super();
   factory RouteObjective_RateCard({
     RouteObjective_RateCard_MonetaryCost? costPerMinute,
     RouteObjective_RateCard_MonetaryCost? costPerKm,
     $core.bool? includeTolls,
   }) {
-    final _result = create();
+    final $result = create();
     if (costPerMinute != null) {
-      _result.costPerMinute = costPerMinute;
+      $result.costPerMinute = costPerMinute;
     }
     if (costPerKm != null) {
-      _result.costPerKm = costPerKm;
+      $result.costPerKm = costPerKm;
     }
     if (includeTolls != null) {
-      _result.includeTolls = includeTolls;
+      $result.includeTolls = includeTolls;
     }
-    return _result;
+    return $result;
   }
+  RouteObjective_RateCard._() : super();
   factory RouteObjective_RateCard.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteObjective_RateCard.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteObjective.RateCard',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<RouteObjective_RateCard_MonetaryCost>(
+        2, _omitFieldNames ? '' : 'costPerMinute',
+        subBuilder: RouteObjective_RateCard_MonetaryCost.create)
+    ..aOM<RouteObjective_RateCard_MonetaryCost>(
+        3, _omitFieldNames ? '' : 'costPerKm',
+        subBuilder: RouteObjective_RateCard_MonetaryCost.create)
+    ..aOB(4, _omitFieldNames ? '' : 'includeTolls')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -483,8 +453,10 @@ class RouteObjective_RateCard extends $pb.GeneratedMessage {
   RouteObjective_RateCard copyWith(
           void Function(RouteObjective_RateCard) updates) =>
       super.copyWith((message) => updates(message as RouteObjective_RateCard))
-          as RouteObjective_RateCard; // ignore: deprecated_member_use
+          as RouteObjective_RateCard;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteObjective_RateCard create() => RouteObjective_RateCard._();
   RouteObjective_RateCard createEmptyInstance() => create();
@@ -495,6 +467,7 @@ class RouteObjective_RateCard extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RouteObjective_RateCard>(create);
   static RouteObjective_RateCard? _defaultInstance;
 
+  /// Optional. Cost per minute.
   @$pb.TagNumber(2)
   RouteObjective_RateCard_MonetaryCost get costPerMinute => $_getN(0);
   @$pb.TagNumber(2)
@@ -509,6 +482,7 @@ class RouteObjective_RateCard extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   RouteObjective_RateCard_MonetaryCost ensureCostPerMinute() => $_ensure(0);
 
+  /// Optional. Cost per kilometer.
   @$pb.TagNumber(3)
   RouteObjective_RateCard_MonetaryCost get costPerKm => $_getN(1);
   @$pb.TagNumber(3)
@@ -523,6 +497,7 @@ class RouteObjective_RateCard extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   RouteObjective_RateCard_MonetaryCost ensureCostPerKm() => $_ensure(1);
 
+  /// Optional. Whether to include toll cost in the overall cost.
   @$pb.TagNumber(4)
   $core.bool get includeTolls => $_getBF(2);
   @$pb.TagNumber(4)
@@ -536,33 +511,24 @@ class RouteObjective_RateCard extends $pb.GeneratedMessage {
   void clearIncludeTolls() => clearField(4);
 }
 
+/// Information about a dataset that customers have uploaded in advance. The
+/// dataset information is used to influence routing.
 class RouteObjective_CustomLayer_DatasetInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteObjective.CustomLayer.DatasetInfo',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'datasetId')
-    ..hasRequiredFields = false;
-
-  RouteObjective_CustomLayer_DatasetInfo._() : super();
   factory RouteObjective_CustomLayer_DatasetInfo({
-    $core.String? datasetId,
+    @$core.Deprecated('This field is deprecated.') $core.String? datasetId,
+    $core.String? displayName,
   }) {
-    final _result = create();
+    final $result = create();
     if (datasetId != null) {
-      _result.datasetId = datasetId;
+      // ignore: deprecated_member_use_from_same_package
+      $result.datasetId = datasetId;
     }
-    return _result;
+    if (displayName != null) {
+      $result.displayName = displayName;
+    }
+    return $result;
   }
+  RouteObjective_CustomLayer_DatasetInfo._() : super();
   factory RouteObjective_CustomLayer_DatasetInfo.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -570,6 +536,16 @@ class RouteObjective_CustomLayer_DatasetInfo extends $pb.GeneratedMessage {
   factory RouteObjective_CustomLayer_DatasetInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteObjective.CustomLayer.DatasetInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'datasetId')
+    ..aOS(2, _omitFieldNames ? '' : 'displayName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -582,8 +558,10 @@ class RouteObjective_CustomLayer_DatasetInfo extends $pb.GeneratedMessage {
           void Function(RouteObjective_CustomLayer_DatasetInfo) updates) =>
       super.copyWith((message) =>
               updates(message as RouteObjective_CustomLayer_DatasetInfo))
-          as RouteObjective_CustomLayer_DatasetInfo; // ignore: deprecated_member_use
+          as RouteObjective_CustomLayer_DatasetInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteObjective_CustomLayer_DatasetInfo create() =>
       RouteObjective_CustomLayer_DatasetInfo._();
@@ -596,53 +574,71 @@ class RouteObjective_CustomLayer_DatasetInfo extends $pb.GeneratedMessage {
           RouteObjective_CustomLayer_DatasetInfo>(create);
   static RouteObjective_CustomLayer_DatasetInfo? _defaultInstance;
 
+  /// Optional. Deprecated: use display_name instead.
+  /// ID of a customer uploaded dataset which is used to influence the route.
+  /// If the dataset does not exist or is not yet ready, the request fails.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get datasetId => $_getSZ(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   set datasetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.bool hasDatasetId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   void clearDatasetId() => clearField(1);
+
+  /// Optional. Display name of the customer uploaded dataset which is used
+  /// to influence the route. If the dataset does not exist or is not yet
+  /// ready, the request fails.
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set displayName($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDisplayName() => clearField(2);
 }
 
+/// Deprecated: Custom layers will stop affecting route generation soon.
+/// Customized data layer that customers use to influence the generated route.
 class RouteObjective_CustomLayer extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteObjective.CustomLayer',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..aOM<RouteObjective_CustomLayer_DatasetInfo>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'datasetInfo',
-        subBuilder: RouteObjective_CustomLayer_DatasetInfo.create)
-    ..hasRequiredFields = false;
-
-  RouteObjective_CustomLayer._() : super();
   factory RouteObjective_CustomLayer({
     RouteObjective_CustomLayer_DatasetInfo? datasetInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (datasetInfo != null) {
-      _result.datasetInfo = datasetInfo;
+      $result.datasetInfo = datasetInfo;
     }
-    return _result;
+    return $result;
   }
+  RouteObjective_CustomLayer._() : super();
   factory RouteObjective_CustomLayer.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteObjective_CustomLayer.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteObjective.CustomLayer',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..aOM<RouteObjective_CustomLayer_DatasetInfo>(
+        1, _omitFieldNames ? '' : 'datasetInfo',
+        subBuilder: RouteObjective_CustomLayer_DatasetInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -655,8 +651,10 @@ class RouteObjective_CustomLayer extends $pb.GeneratedMessage {
           void Function(RouteObjective_CustomLayer) updates) =>
       super.copyWith(
               (message) => updates(message as RouteObjective_CustomLayer))
-          as RouteObjective_CustomLayer; // ignore: deprecated_member_use
+          as RouteObjective_CustomLayer;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteObjective_CustomLayer create() => RouteObjective_CustomLayer._();
   RouteObjective_CustomLayer createEmptyInstance() => create();
@@ -667,6 +665,7 @@ class RouteObjective_CustomLayer extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RouteObjective_CustomLayer>(create);
   static RouteObjective_CustomLayer? _defaultInstance;
 
+  /// Required. A dataset that the customer has uploaded in advance.
   @$pb.TagNumber(1)
   RouteObjective_CustomLayer_DatasetInfo get datasetInfo => $_getN(0);
   @$pb.TagNumber(1)
@@ -684,56 +683,46 @@ class RouteObjective_CustomLayer extends $pb.GeneratedMessage {
 
 enum RouteObjective_Objective { rateCard, notSet }
 
+/// Encapsulates an objective to optimize for by `ComputeCustomRoutes`.
 class RouteObjective extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, RouteObjective_Objective>
-      _RouteObjective_ObjectiveByTag = {
-    1: RouteObjective_Objective.rateCard,
-    0: RouteObjective_Objective.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RouteObjective',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.maps.routes.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1])
-    ..aOM<RouteObjective_RateCard>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rateCard',
-        subBuilder: RouteObjective_RateCard.create)
-    ..aOM<RouteObjective_CustomLayer>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customLayer',
-        subBuilder: RouteObjective_CustomLayer.create)
-    ..hasRequiredFields = false;
-
-  RouteObjective._() : super();
   factory RouteObjective({
     RouteObjective_RateCard? rateCard,
     RouteObjective_CustomLayer? customLayer,
   }) {
-    final _result = create();
+    final $result = create();
     if (rateCard != null) {
-      _result.rateCard = rateCard;
+      $result.rateCard = rateCard;
     }
     if (customLayer != null) {
-      _result.customLayer = customLayer;
+      $result.customLayer = customLayer;
     }
-    return _result;
+    return $result;
   }
+  RouteObjective._() : super();
   factory RouteObjective.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RouteObjective.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, RouteObjective_Objective>
+      _RouteObjective_ObjectiveByTag = {
+    1: RouteObjective_Objective.rateCard,
+    0: RouteObjective_Objective.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RouteObjective',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.maps.routes.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<RouteObjective_RateCard>(1, _omitFieldNames ? '' : 'rateCard',
+        subBuilder: RouteObjective_RateCard.create)
+    ..aOM<RouteObjective_CustomLayer>(2, _omitFieldNames ? '' : 'customLayer',
+        subBuilder: RouteObjective_CustomLayer.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -743,8 +732,10 @@ class RouteObjective extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   RouteObjective copyWith(void Function(RouteObjective) updates) =>
       super.copyWith((message) => updates(message as RouteObjective))
-          as RouteObjective; // ignore: deprecated_member_use
+          as RouteObjective;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RouteObjective create() => RouteObjective._();
   RouteObjective createEmptyInstance() => create();
@@ -759,6 +750,7 @@ class RouteObjective extends $pb.GeneratedMessage {
       _RouteObjective_ObjectiveByTag[$_whichOneof(0)]!;
   void clearObjective() => clearField($_whichOneof(0));
 
+  /// The RateCard objective.
   @$pb.TagNumber(1)
   RouteObjective_RateCard get rateCard => $_getN(0);
   @$pb.TagNumber(1)
@@ -773,6 +765,9 @@ class RouteObjective extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   RouteObjective_RateCard ensureRateCard() => $_ensure(0);
 
+  /// Optional. Deprecated: Custom layers will stop affecting route generation
+  /// soon. Specifies the custom data layer being used to affect generated
+  /// routes. Customers can turn off the custom layer by not setting this field.
   @$pb.TagNumber(2)
   RouteObjective_CustomLayer get customLayer => $_getN(1);
   @$pb.TagNumber(2)
@@ -787,3 +782,7 @@ class RouteObjective extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   RouteObjective_CustomLayer ensureCustomLayer() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

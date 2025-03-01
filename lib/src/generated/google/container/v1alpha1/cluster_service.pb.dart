@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/container/v1alpha1/cluster_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -14,98 +18,8 @@ import 'cluster_service.pbenum.dart';
 
 export 'cluster_service.pbenum.dart';
 
+/// Parameters that describe the nodes in a cluster.
 class NodeConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NodeConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'machineType')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'diskSizeGb',
-        $pb.PbFieldType.O3)
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'oauthScopes')
-    ..m<$core.String, $core.String>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metadata',
-        entryClassName: 'NodeConfig.MetadataEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.container.v1alpha1'))
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'imageType')
-    ..m<$core.String, $core.String>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labels',
-        entryClassName: 'NodeConfig.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.container.v1alpha1'))
-    ..a<$core.int>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'localSsdCount',
-        $pb.PbFieldType.O3)
-    ..pPS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tags')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceAccount')
-    ..aOB(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'preemptible')
-    ..pc<AcceleratorConfig>(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accelerators',
-        $pb.PbFieldType.PM,
-        subBuilder: AcceleratorConfig.create)
-    ..aOS(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minCpuPlatform')
-    ..pc<NodeTaint>(
-        15,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'taints',
-        $pb.PbFieldType.PM,
-        subBuilder: NodeTaint.create)
-    ..hasRequiredFields = false;
-
-  NodeConfig._() : super();
   factory NodeConfig({
     $core.String? machineType,
     $core.int? diskSizeGb,
@@ -121,54 +35,88 @@ class NodeConfig extends $pb.GeneratedMessage {
     $core.String? minCpuPlatform,
     $core.Iterable<NodeTaint>? taints,
   }) {
-    final _result = create();
+    final $result = create();
     if (machineType != null) {
-      _result.machineType = machineType;
+      $result.machineType = machineType;
     }
     if (diskSizeGb != null) {
-      _result.diskSizeGb = diskSizeGb;
+      $result.diskSizeGb = diskSizeGb;
     }
     if (oauthScopes != null) {
-      _result.oauthScopes.addAll(oauthScopes);
+      $result.oauthScopes.addAll(oauthScopes);
     }
     if (metadata != null) {
-      _result.metadata.addAll(metadata);
+      $result.metadata.addAll(metadata);
     }
     if (imageType != null) {
-      _result.imageType = imageType;
+      $result.imageType = imageType;
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
     if (localSsdCount != null) {
-      _result.localSsdCount = localSsdCount;
+      $result.localSsdCount = localSsdCount;
     }
     if (tags != null) {
-      _result.tags.addAll(tags);
+      $result.tags.addAll(tags);
     }
     if (serviceAccount != null) {
-      _result.serviceAccount = serviceAccount;
+      $result.serviceAccount = serviceAccount;
     }
     if (preemptible != null) {
-      _result.preemptible = preemptible;
+      $result.preemptible = preemptible;
     }
     if (accelerators != null) {
-      _result.accelerators.addAll(accelerators);
+      $result.accelerators.addAll(accelerators);
     }
     if (minCpuPlatform != null) {
-      _result.minCpuPlatform = minCpuPlatform;
+      $result.minCpuPlatform = minCpuPlatform;
     }
     if (taints != null) {
-      _result.taints.addAll(taints);
+      $result.taints.addAll(taints);
     }
-    return _result;
+    return $result;
   }
+  NodeConfig._() : super();
   factory NodeConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NodeConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NodeConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'machineType')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'diskSizeGb', $pb.PbFieldType.O3)
+    ..pPS(3, _omitFieldNames ? '' : 'oauthScopes')
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'metadata',
+        entryClassName: 'NodeConfig.MetadataEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.container.v1alpha1'))
+    ..aOS(5, _omitFieldNames ? '' : 'imageType')
+    ..m<$core.String, $core.String>(6, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'NodeConfig.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.container.v1alpha1'))
+    ..a<$core.int>(
+        7, _omitFieldNames ? '' : 'localSsdCount', $pb.PbFieldType.O3)
+    ..pPS(8, _omitFieldNames ? '' : 'tags')
+    ..aOS(9, _omitFieldNames ? '' : 'serviceAccount')
+    ..aOB(10, _omitFieldNames ? '' : 'preemptible')
+    ..pc<AcceleratorConfig>(
+        11, _omitFieldNames ? '' : 'accelerators', $pb.PbFieldType.PM,
+        subBuilder: AcceleratorConfig.create)
+    ..aOS(13, _omitFieldNames ? '' : 'minCpuPlatform')
+    ..pc<NodeTaint>(15, _omitFieldNames ? '' : 'taints', $pb.PbFieldType.PM,
+        subBuilder: NodeTaint.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -177,9 +125,10 @@ class NodeConfig extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   NodeConfig copyWith(void Function(NodeConfig) updates) =>
-      super.copyWith((message) => updates(message as NodeConfig))
-          as NodeConfig; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as NodeConfig)) as NodeConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NodeConfig create() => NodeConfig._();
   NodeConfig createEmptyInstance() => create();
@@ -189,6 +138,12 @@ class NodeConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NodeConfig>(create);
   static NodeConfig? _defaultInstance;
 
+  ///  The name of a Google Compute Engine [machine
+  ///  type](/compute/docs/machine-types) (e.g.
+  ///  `n1-standard-1`).
+  ///
+  ///  If unspecified, the default machine type is
+  ///  `n1-standard-1`.
   @$pb.TagNumber(1)
   $core.String get machineType => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -201,6 +156,10 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMachineType() => clearField(1);
 
+  ///  Size of the disk attached to each node, specified in GB.
+  ///  The smallest allowed disk size is 10GB.
+  ///
+  ///  If unspecified, the default disk size is 100GB.
   @$pb.TagNumber(2)
   $core.int get diskSizeGb => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -213,12 +172,41 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDiskSizeGb() => clearField(2);
 
+  ///  The set of Google API scopes to be made available on all of the
+  ///  node VMs under the "default" service account.
+  ///
+  ///  The following scopes are recommended, but not required, and by default are
+  ///  not included:
+  ///
+  ///  * `https://www.googleapis.com/auth/compute` is required for mounting
+  ///  persistent storage on your nodes.
+  ///  * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+  ///  communicating with **gcr.io**
+  ///  (the [Google Container Registry](/container-registry/)).
+  ///
+  ///  If unspecified, no scopes are added, unless Cloud Logging or Cloud
+  ///  Monitoring are enabled, in which case their required scopes will be added.
   @$pb.TagNumber(3)
   $core.List<$core.String> get oauthScopes => $_getList(2);
 
+  ///  The metadata key/value pairs assigned to instances in the cluster.
+  ///
+  ///  Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes
+  ///  in length. These are reflected as part of a URL in the metadata server.
+  ///  Additionally, to avoid ambiguity, keys must not conflict with any other
+  ///  metadata keys for the project or be one of the four reserved keys:
+  ///  "instance-template", "kube-env", "startup-script", and "user-data"
+  ///
+  ///  Values are free-form strings, and only have meaning as interpreted by
+  ///  the image running in the instance. The only restriction placed on them is
+  ///  that each value's size must be less than or equal to 32 KB.
+  ///
+  ///  The total size of all keys and values must be less than 512 KB.
   @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get metadata => $_getMap(3);
 
+  /// The image type to use for this node. Note that for a given image type,
+  /// the latest version of it will be used.
   @$pb.TagNumber(5)
   $core.String get imageType => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -231,9 +219,23 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearImageType() => clearField(5);
 
+  /// The map of Kubernetes labels (key/value pairs) to be applied to each node.
+  /// These will added in addition to any default label(s) that
+  /// Kubernetes may apply to the node.
+  /// In case of conflict in label keys, the applied set may differ depending on
+  /// the Kubernetes version -- it's best to assume the behavior is undefined
+  /// and conflicts should be avoided.
+  /// For more information, including usage and the valid values, see:
+  /// https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
   @$pb.TagNumber(6)
   $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 
+  ///  The number of local SSD disks to be attached to the node.
+  ///
+  ///  The limit for this value is dependant upon the maximum number of
+  ///  disks available on a machine per zone. See:
+  ///  https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits
+  ///  for more information.
   @$pb.TagNumber(7)
   $core.int get localSsdCount => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -246,9 +248,15 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearLocalSsdCount() => clearField(7);
 
+  /// The list of instance tags applied to all nodes. Tags are used to identify
+  /// valid sources or targets for network firewalls and are specified by
+  /// the client during cluster or node pool creation. Each tag within the list
+  /// must comply with RFC1035.
   @$pb.TagNumber(8)
   $core.List<$core.String> get tags => $_getList(7);
 
+  /// The Google Cloud Platform Service Account to be used by the node VMs. If
+  /// no Service Account is specified, the "default" service account is used.
   @$pb.TagNumber(9)
   $core.String get serviceAccount => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -261,6 +269,9 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearServiceAccount() => clearField(9);
 
+  /// Whether the nodes are created as preemptible VM instances. See:
+  /// https://cloud.google.com/compute/docs/instances/preemptible for more
+  /// inforamtion about preemptible VM instances.
   @$pb.TagNumber(10)
   $core.bool get preemptible => $_getBF(9);
   @$pb.TagNumber(10)
@@ -273,9 +284,18 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearPreemptible() => clearField(10);
 
+  /// A list of hardware accelerators to be attached to each node.
+  /// See https://cloud.google.com/compute/docs/gpus for more information about
+  /// support for GPUs.
   @$pb.TagNumber(11)
   $core.List<AcceleratorConfig> get accelerators => $_getList(10);
 
+  /// Minimum CPU platform to be used by this instance. The instance may be
+  /// scheduled on the specified or newer CPU platform. Applicable values are the
+  /// friendly names of CPU platforms, such as
+  /// <code>minCpuPlatform: &quot;Intel Haswell&quot;</code> or
+  /// <code>minCpuPlatform: &quot;Intel Sandy Bridge&quot;</code>. For more
+  /// information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
   @$pb.TagNumber(13)
   $core.String get minCpuPlatform => $_getSZ(11);
   @$pb.TagNumber(13)
@@ -288,65 +308,59 @@ class NodeConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearMinCpuPlatform() => clearField(13);
 
+  ///  List of kubernetes taints to be applied to each node.
+  ///
+  ///  For more information, including usage and the valid values, see:
+  ///  https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   @$pb.TagNumber(15)
   $core.List<NodeTaint> get taints => $_getList(12);
 }
 
+///  Kubernetes taint is comprised of three fields: key, value, and effect. Effect
+///  can only be one of three types:  NoSchedule, PreferNoSchedule or NoExecute.
+///
+///  For more information, including usage and the valid values, see:
+///  https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
 class NodeTaint extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NodeTaint',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'key')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value')
-    ..e<NodeTaint_Effect>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'effect',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: NodeTaint_Effect.EFFECT_UNSPECIFIED,
-        valueOf: NodeTaint_Effect.valueOf,
-        enumValues: NodeTaint_Effect.values)
-    ..hasRequiredFields = false;
-
-  NodeTaint._() : super();
   factory NodeTaint({
     $core.String? key,
     $core.String? value,
     NodeTaint_Effect? effect,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
     if (effect != null) {
-      _result.effect = effect;
+      $result.effect = effect;
     }
-    return _result;
+    return $result;
   }
+  NodeTaint._() : super();
   factory NodeTaint.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NodeTaint.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NodeTaint',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..aOS(2, _omitFieldNames ? '' : 'value')
+    ..e<NodeTaint_Effect>(
+        3, _omitFieldNames ? '' : 'effect', $pb.PbFieldType.OE,
+        defaultOrMaker: NodeTaint_Effect.EFFECT_UNSPECIFIED,
+        valueOf: NodeTaint_Effect.valueOf,
+        enumValues: NodeTaint_Effect.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -355,9 +369,10 @@ class NodeTaint extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   NodeTaint copyWith(void Function(NodeTaint) updates) =>
-      super.copyWith((message) => updates(message as NodeTaint))
-          as NodeTaint; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as NodeTaint)) as NodeTaint;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NodeTaint create() => NodeTaint._();
   NodeTaint createEmptyInstance() => create();
@@ -367,6 +382,7 @@ class NodeTaint extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodeTaint>(create);
   static NodeTaint? _defaultInstance;
 
+  /// Key for taint.
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -379,6 +395,7 @@ class NodeTaint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// Value for taint.
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -391,6 +408,7 @@ class NodeTaint extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  /// Effect for taint.
   @$pb.TagNumber(3)
   NodeTaint_Effect get effect => $_getN(2);
   @$pb.TagNumber(3)
@@ -404,50 +422,10 @@ class NodeTaint extends $pb.GeneratedMessage {
   void clearEffect() => clearField(3);
 }
 
+/// The authentication information for accessing the master endpoint.
+/// Authentication can be done using HTTP basic auth or using client
+/// certificates.
 class MasterAuth extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MasterAuth',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'username')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'password')
-    ..aOM<ClientCertificateConfig>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientCertificateConfig',
-        subBuilder: ClientCertificateConfig.create)
-    ..aOS(
-        100,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterCaCertificate')
-    ..aOS(
-        101,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientCertificate')
-    ..aOS(
-        102,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clientKey')
-    ..hasRequiredFields = false;
-
-  MasterAuth._() : super();
   factory MasterAuth({
     $core.String? username,
     $core.String? password,
@@ -456,33 +434,50 @@ class MasterAuth extends $pb.GeneratedMessage {
     $core.String? clientCertificate,
     $core.String? clientKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (username != null) {
-      _result.username = username;
+      $result.username = username;
     }
     if (password != null) {
-      _result.password = password;
+      $result.password = password;
     }
     if (clientCertificateConfig != null) {
-      _result.clientCertificateConfig = clientCertificateConfig;
+      $result.clientCertificateConfig = clientCertificateConfig;
     }
     if (clusterCaCertificate != null) {
-      _result.clusterCaCertificate = clusterCaCertificate;
+      $result.clusterCaCertificate = clusterCaCertificate;
     }
     if (clientCertificate != null) {
-      _result.clientCertificate = clientCertificate;
+      $result.clientCertificate = clientCertificate;
     }
     if (clientKey != null) {
-      _result.clientKey = clientKey;
+      $result.clientKey = clientKey;
     }
-    return _result;
+    return $result;
   }
+  MasterAuth._() : super();
   factory MasterAuth.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MasterAuth.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MasterAuth',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'username')
+    ..aOS(2, _omitFieldNames ? '' : 'password')
+    ..aOM<ClientCertificateConfig>(
+        3, _omitFieldNames ? '' : 'clientCertificateConfig',
+        subBuilder: ClientCertificateConfig.create)
+    ..aOS(100, _omitFieldNames ? '' : 'clusterCaCertificate')
+    ..aOS(101, _omitFieldNames ? '' : 'clientCertificate')
+    ..aOS(102, _omitFieldNames ? '' : 'clientKey')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -491,9 +486,10 @@ class MasterAuth extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   MasterAuth copyWith(void Function(MasterAuth) updates) =>
-      super.copyWith((message) => updates(message as MasterAuth))
-          as MasterAuth; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as MasterAuth)) as MasterAuth;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MasterAuth create() => MasterAuth._();
   MasterAuth createEmptyInstance() => create();
@@ -503,6 +499,9 @@ class MasterAuth extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MasterAuth>(create);
   static MasterAuth? _defaultInstance;
 
+  /// The username to use for HTTP basic authentication to the master endpoint.
+  /// For clusters v1.6.0 and later, you can disable basic authentication by
+  /// providing an empty username.
   @$pb.TagNumber(1)
   $core.String get username => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -515,6 +514,10 @@ class MasterAuth extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUsername() => clearField(1);
 
+  /// The password to use for HTTP basic authentication to the master endpoint.
+  /// Because the master endpoint is open to the Internet, you should create a
+  /// strong password.  If a password is provided for cluster creation, username
+  /// must be non-empty.
   @$pb.TagNumber(2)
   $core.String get password => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -527,6 +530,8 @@ class MasterAuth extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPassword() => clearField(2);
 
+  /// Configuration for client certificate authentication on the cluster.  If no
+  /// configuration is specified, a client certificate is issued.
   @$pb.TagNumber(3)
   ClientCertificateConfig get clientCertificateConfig => $_getN(2);
   @$pb.TagNumber(3)
@@ -541,6 +546,8 @@ class MasterAuth extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ClientCertificateConfig ensureClientCertificateConfig() => $_ensure(2);
 
+  /// [Output only] Base64-encoded public certificate that is the root of
+  /// trust for the cluster.
   @$pb.TagNumber(100)
   $core.String get clusterCaCertificate => $_getSZ(3);
   @$pb.TagNumber(100)
@@ -553,6 +560,8 @@ class MasterAuth extends $pb.GeneratedMessage {
   @$pb.TagNumber(100)
   void clearClusterCaCertificate() => clearField(100);
 
+  /// [Output only] Base64-encoded public certificate used by clients to
+  /// authenticate to the cluster endpoint.
   @$pb.TagNumber(101)
   $core.String get clientCertificate => $_getSZ(4);
   @$pb.TagNumber(101)
@@ -565,6 +574,8 @@ class MasterAuth extends $pb.GeneratedMessage {
   @$pb.TagNumber(101)
   void clearClientCertificate() => clearField(101);
 
+  /// [Output only] Base64-encoded private key used by clients to authenticate
+  /// to the cluster endpoint.
   @$pb.TagNumber(102)
   $core.String get clientKey => $_getSZ(5);
   @$pb.TagNumber(102)
@@ -578,39 +589,33 @@ class MasterAuth extends $pb.GeneratedMessage {
   void clearClientKey() => clearField(102);
 }
 
+/// Configuration for client certificates on the cluster.
 class ClientCertificateConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ClientCertificateConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'issueClientCertificate')
-    ..hasRequiredFields = false;
-
-  ClientCertificateConfig._() : super();
   factory ClientCertificateConfig({
     $core.bool? issueClientCertificate,
   }) {
-    final _result = create();
+    final $result = create();
     if (issueClientCertificate != null) {
-      _result.issueClientCertificate = issueClientCertificate;
+      $result.issueClientCertificate = issueClientCertificate;
     }
-    return _result;
+    return $result;
   }
+  ClientCertificateConfig._() : super();
   factory ClientCertificateConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ClientCertificateConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ClientCertificateConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'issueClientCertificate')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -622,8 +627,10 @@ class ClientCertificateConfig extends $pb.GeneratedMessage {
   ClientCertificateConfig copyWith(
           void Function(ClientCertificateConfig) updates) =>
       super.copyWith((message) => updates(message as ClientCertificateConfig))
-          as ClientCertificateConfig; // ignore: deprecated_member_use
+          as ClientCertificateConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ClientCertificateConfig create() => ClientCertificateConfig._();
   ClientCertificateConfig createEmptyInstance() => create();
@@ -634,6 +641,7 @@ class ClientCertificateConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ClientCertificateConfig>(create);
   static ClientCertificateConfig? _defaultInstance;
 
+  /// Issue a client certificate.
   @$pb.TagNumber(1)
   $core.bool get issueClientCertificate => $_getBF(0);
   @$pb.TagNumber(1)
@@ -647,70 +655,54 @@ class ClientCertificateConfig extends $pb.GeneratedMessage {
   void clearIssueClientCertificate() => clearField(1);
 }
 
+/// Configuration for the addons that can be automatically spun up in the
+/// cluster, enabling additional functionality.
 class AddonsConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AddonsConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOM<HttpLoadBalancing>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'httpLoadBalancing',
-        subBuilder: HttpLoadBalancing.create)
-    ..aOM<HorizontalPodAutoscaling>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'horizontalPodAutoscaling',
-        subBuilder: HorizontalPodAutoscaling.create)
-    ..aOM<KubernetesDashboard>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kubernetesDashboard',
-        subBuilder: KubernetesDashboard.create)
-    ..aOM<NetworkPolicyConfig>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'networkPolicyConfig',
-        subBuilder: NetworkPolicyConfig.create)
-    ..hasRequiredFields = false;
-
-  AddonsConfig._() : super();
   factory AddonsConfig({
     HttpLoadBalancing? httpLoadBalancing,
     HorizontalPodAutoscaling? horizontalPodAutoscaling,
     KubernetesDashboard? kubernetesDashboard,
     NetworkPolicyConfig? networkPolicyConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (httpLoadBalancing != null) {
-      _result.httpLoadBalancing = httpLoadBalancing;
+      $result.httpLoadBalancing = httpLoadBalancing;
     }
     if (horizontalPodAutoscaling != null) {
-      _result.horizontalPodAutoscaling = horizontalPodAutoscaling;
+      $result.horizontalPodAutoscaling = horizontalPodAutoscaling;
     }
     if (kubernetesDashboard != null) {
-      _result.kubernetesDashboard = kubernetesDashboard;
+      $result.kubernetesDashboard = kubernetesDashboard;
     }
     if (networkPolicyConfig != null) {
-      _result.networkPolicyConfig = networkPolicyConfig;
+      $result.networkPolicyConfig = networkPolicyConfig;
     }
-    return _result;
+    return $result;
   }
+  AddonsConfig._() : super();
   factory AddonsConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AddonsConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddonsConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<HttpLoadBalancing>(1, _omitFieldNames ? '' : 'httpLoadBalancing',
+        subBuilder: HttpLoadBalancing.create)
+    ..aOM<HorizontalPodAutoscaling>(
+        2, _omitFieldNames ? '' : 'horizontalPodAutoscaling',
+        subBuilder: HorizontalPodAutoscaling.create)
+    ..aOM<KubernetesDashboard>(3, _omitFieldNames ? '' : 'kubernetesDashboard',
+        subBuilder: KubernetesDashboard.create)
+    ..aOM<NetworkPolicyConfig>(4, _omitFieldNames ? '' : 'networkPolicyConfig',
+        subBuilder: NetworkPolicyConfig.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -720,8 +712,10 @@ class AddonsConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AddonsConfig copyWith(void Function(AddonsConfig) updates) =>
       super.copyWith((message) => updates(message as AddonsConfig))
-          as AddonsConfig; // ignore: deprecated_member_use
+          as AddonsConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddonsConfig create() => AddonsConfig._();
   AddonsConfig createEmptyInstance() => create();
@@ -732,6 +726,8 @@ class AddonsConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AddonsConfig>(create);
   static AddonsConfig? _defaultInstance;
 
+  /// Configuration for the HTTP (L7) load balancing controller addon, which
+  /// makes it easy to set up HTTP load balancers for services in a cluster.
   @$pb.TagNumber(1)
   HttpLoadBalancing get httpLoadBalancing => $_getN(0);
   @$pb.TagNumber(1)
@@ -746,6 +742,9 @@ class AddonsConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   HttpLoadBalancing ensureHttpLoadBalancing() => $_ensure(0);
 
+  /// Configuration for the horizontal pod autoscaling feature, which
+  /// increases or decreases the number of replica pods a replication controller
+  /// has based on the resource usage of the existing pods.
   @$pb.TagNumber(2)
   HorizontalPodAutoscaling get horizontalPodAutoscaling => $_getN(1);
   @$pb.TagNumber(2)
@@ -760,6 +759,7 @@ class AddonsConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   HorizontalPodAutoscaling ensureHorizontalPodAutoscaling() => $_ensure(1);
 
+  /// Configuration for the Kubernetes Dashboard.
   @$pb.TagNumber(3)
   KubernetesDashboard get kubernetesDashboard => $_getN(2);
   @$pb.TagNumber(3)
@@ -774,6 +774,9 @@ class AddonsConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   KubernetesDashboard ensureKubernetesDashboard() => $_ensure(2);
 
+  /// Configuration for NetworkPolicy. This only tracks whether the addon
+  /// is enabled or not on the Master, it does not track whether network policy
+  /// is enabled for the nodes.
   @$pb.TagNumber(4)
   NetworkPolicyConfig get networkPolicyConfig => $_getN(3);
   @$pb.TagNumber(4)
@@ -789,39 +792,34 @@ class AddonsConfig extends $pb.GeneratedMessage {
   NetworkPolicyConfig ensureNetworkPolicyConfig() => $_ensure(3);
 }
 
+/// Configuration options for the HTTP (L7) load balancing controller addon,
+/// which makes it easy to set up HTTP load balancers for services in a cluster.
 class HttpLoadBalancing extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HttpLoadBalancing',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..hasRequiredFields = false;
-
-  HttpLoadBalancing._() : super();
   factory HttpLoadBalancing({
     $core.bool? disabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
-    return _result;
+    return $result;
   }
+  HttpLoadBalancing._() : super();
   factory HttpLoadBalancing.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HttpLoadBalancing.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HttpLoadBalancing',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -831,8 +829,10 @@ class HttpLoadBalancing extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   HttpLoadBalancing copyWith(void Function(HttpLoadBalancing) updates) =>
       super.copyWith((message) => updates(message as HttpLoadBalancing))
-          as HttpLoadBalancing; // ignore: deprecated_member_use
+          as HttpLoadBalancing;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HttpLoadBalancing create() => HttpLoadBalancing._();
   HttpLoadBalancing createEmptyInstance() => create();
@@ -843,6 +843,9 @@ class HttpLoadBalancing extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HttpLoadBalancing>(create);
   static HttpLoadBalancing? _defaultInstance;
 
+  /// Whether the HTTP Load Balancing controller is enabled in the cluster.
+  /// When enabled, it runs a small pod in the cluster that manages the load
+  /// balancers.
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -856,39 +859,35 @@ class HttpLoadBalancing extends $pb.GeneratedMessage {
   void clearDisabled() => clearField(1);
 }
 
+/// Configuration options for the horizontal pod autoscaling feature, which
+/// increases or decreases the number of replica pods a replication controller
+/// has based on the resource usage of the existing pods.
 class HorizontalPodAutoscaling extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HorizontalPodAutoscaling',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..hasRequiredFields = false;
-
-  HorizontalPodAutoscaling._() : super();
   factory HorizontalPodAutoscaling({
     $core.bool? disabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
-    return _result;
+    return $result;
   }
+  HorizontalPodAutoscaling._() : super();
   factory HorizontalPodAutoscaling.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HorizontalPodAutoscaling.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HorizontalPodAutoscaling',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -900,8 +899,10 @@ class HorizontalPodAutoscaling extends $pb.GeneratedMessage {
   HorizontalPodAutoscaling copyWith(
           void Function(HorizontalPodAutoscaling) updates) =>
       super.copyWith((message) => updates(message as HorizontalPodAutoscaling))
-          as HorizontalPodAutoscaling; // ignore: deprecated_member_use
+          as HorizontalPodAutoscaling;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HorizontalPodAutoscaling create() => HorizontalPodAutoscaling._();
   HorizontalPodAutoscaling createEmptyInstance() => create();
@@ -912,6 +913,9 @@ class HorizontalPodAutoscaling extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HorizontalPodAutoscaling>(create);
   static HorizontalPodAutoscaling? _defaultInstance;
 
+  /// Whether the Horizontal Pod Autoscaling feature is enabled in the cluster.
+  /// When enabled, it ensures that a Heapster pod is running in the cluster,
+  /// which is also used by the Cloud Monitoring service.
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -925,39 +929,33 @@ class HorizontalPodAutoscaling extends $pb.GeneratedMessage {
   void clearDisabled() => clearField(1);
 }
 
+/// Configuration for the Kubernetes Dashboard.
 class KubernetesDashboard extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'KubernetesDashboard',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..hasRequiredFields = false;
-
-  KubernetesDashboard._() : super();
   factory KubernetesDashboard({
     $core.bool? disabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
-    return _result;
+    return $result;
   }
+  KubernetesDashboard._() : super();
   factory KubernetesDashboard.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory KubernetesDashboard.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'KubernetesDashboard',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -967,8 +965,10 @@ class KubernetesDashboard extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   KubernetesDashboard copyWith(void Function(KubernetesDashboard) updates) =>
       super.copyWith((message) => updates(message as KubernetesDashboard))
-          as KubernetesDashboard; // ignore: deprecated_member_use
+          as KubernetesDashboard;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static KubernetesDashboard create() => KubernetesDashboard._();
   KubernetesDashboard createEmptyInstance() => create();
@@ -979,6 +979,7 @@ class KubernetesDashboard extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<KubernetesDashboard>(create);
   static KubernetesDashboard? _defaultInstance;
 
+  /// Whether the Kubernetes Dashboard is enabled for this cluster.
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -992,39 +993,35 @@ class KubernetesDashboard extends $pb.GeneratedMessage {
   void clearDisabled() => clearField(1);
 }
 
+/// Configuration for NetworkPolicy. This only tracks whether the addon
+/// is enabled or not on the Master, it does not track whether network policy
+/// is enabled for the nodes.
 class NetworkPolicyConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NetworkPolicyConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disabled')
-    ..hasRequiredFields = false;
-
-  NetworkPolicyConfig._() : super();
   factory NetworkPolicyConfig({
     $core.bool? disabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
-    return _result;
+    return $result;
   }
+  NetworkPolicyConfig._() : super();
   factory NetworkPolicyConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NetworkPolicyConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NetworkPolicyConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1034,8 +1031,10 @@ class NetworkPolicyConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   NetworkPolicyConfig copyWith(void Function(NetworkPolicyConfig) updates) =>
       super.copyWith((message) => updates(message as NetworkPolicyConfig))
-          as NetworkPolicyConfig; // ignore: deprecated_member_use
+          as NetworkPolicyConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NetworkPolicyConfig create() => NetworkPolicyConfig._();
   NetworkPolicyConfig createEmptyInstance() => create();
@@ -1046,6 +1045,7 @@ class NetworkPolicyConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NetworkPolicyConfig>(create);
   static NetworkPolicyConfig? _defaultInstance;
 
+  /// Whether NetworkPolicy is enabled for this cluster.
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1059,42 +1059,22 @@ class NetworkPolicyConfig extends $pb.GeneratedMessage {
   void clearDisabled() => clearField(1);
 }
 
+/// CidrBlock contains an optional name and one CIDR block.
 class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MasterAuthorizedNetworksConfig.CidrBlock',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cidrBlock')
-    ..hasRequiredFields = false;
-
-  MasterAuthorizedNetworksConfig_CidrBlock._() : super();
   factory MasterAuthorizedNetworksConfig_CidrBlock({
     $core.String? displayName,
     $core.String? cidrBlock,
   }) {
-    final _result = create();
+    final $result = create();
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (cidrBlock != null) {
-      _result.cidrBlock = cidrBlock;
+      $result.cidrBlock = cidrBlock;
     }
-    return _result;
+    return $result;
   }
+  MasterAuthorizedNetworksConfig_CidrBlock._() : super();
   factory MasterAuthorizedNetworksConfig_CidrBlock.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -1102,6 +1082,16 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
   factory MasterAuthorizedNetworksConfig_CidrBlock.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MasterAuthorizedNetworksConfig.CidrBlock',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'displayName')
+    ..aOS(2, _omitFieldNames ? '' : 'cidrBlock')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1114,8 +1104,10 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
           void Function(MasterAuthorizedNetworksConfig_CidrBlock) updates) =>
       super.copyWith((message) =>
               updates(message as MasterAuthorizedNetworksConfig_CidrBlock))
-          as MasterAuthorizedNetworksConfig_CidrBlock; // ignore: deprecated_member_use
+          as MasterAuthorizedNetworksConfig_CidrBlock;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MasterAuthorizedNetworksConfig_CidrBlock create() =>
       MasterAuthorizedNetworksConfig_CidrBlock._();
@@ -1129,6 +1121,7 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
           MasterAuthorizedNetworksConfig_CidrBlock>(create);
   static MasterAuthorizedNetworksConfig_CidrBlock? _defaultInstance;
 
+  /// display_name is an optional field for users to identify CIDR blocks.
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1141,6 +1134,7 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisplayName() => clearField(1);
 
+  /// cidr_block must be specified in CIDR notation.
   @$pb.TagNumber(2)
   $core.String get cidrBlock => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1154,50 +1148,43 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
   void clearCidrBlock() => clearField(2);
 }
 
+/// Configuration options for the master authorized networks feature. Enabled
+/// master authorized networks will disallow all external traffic to access
+/// Kubernetes master through HTTPS except traffic from the given CIDR blocks,
+/// Google Compute Engine Public IPs and Google Prod IPs.
 class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MasterAuthorizedNetworksConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..pc<MasterAuthorizedNetworksConfig_CidrBlock>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cidrBlocks',
-        $pb.PbFieldType.PM,
-        subBuilder: MasterAuthorizedNetworksConfig_CidrBlock.create)
-    ..hasRequiredFields = false;
-
-  MasterAuthorizedNetworksConfig._() : super();
   factory MasterAuthorizedNetworksConfig({
     $core.bool? enabled,
     $core.Iterable<MasterAuthorizedNetworksConfig_CidrBlock>? cidrBlocks,
   }) {
-    final _result = create();
+    final $result = create();
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
     if (cidrBlocks != null) {
-      _result.cidrBlocks.addAll(cidrBlocks);
+      $result.cidrBlocks.addAll(cidrBlocks);
     }
-    return _result;
+    return $result;
   }
+  MasterAuthorizedNetworksConfig._() : super();
   factory MasterAuthorizedNetworksConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MasterAuthorizedNetworksConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MasterAuthorizedNetworksConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'enabled')
+    ..pc<MasterAuthorizedNetworksConfig_CidrBlock>(
+        2, _omitFieldNames ? '' : 'cidrBlocks', $pb.PbFieldType.PM,
+        subBuilder: MasterAuthorizedNetworksConfig_CidrBlock.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1210,8 +1197,10 @@ class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
           void Function(MasterAuthorizedNetworksConfig) updates) =>
       super.copyWith(
               (message) => updates(message as MasterAuthorizedNetworksConfig))
-          as MasterAuthorizedNetworksConfig; // ignore: deprecated_member_use
+          as MasterAuthorizedNetworksConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MasterAuthorizedNetworksConfig create() =>
       MasterAuthorizedNetworksConfig._();
@@ -1223,6 +1212,7 @@ class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MasterAuthorizedNetworksConfig>(create);
   static MasterAuthorizedNetworksConfig? _defaultInstance;
 
+  /// Whether or not master authorized networks is enabled.
   @$pb.TagNumber(1)
   $core.bool get enabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1235,57 +1225,50 @@ class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEnabled() => clearField(1);
 
+  /// cidr_blocks define up to 10 external networks that could access
+  /// Kubernetes master through HTTPS.
   @$pb.TagNumber(2)
   $core.List<MasterAuthorizedNetworksConfig_CidrBlock> get cidrBlocks =>
       $_getList(1);
 }
 
+/// Configuration options for the NetworkPolicy feature.
+/// https://kubernetes.io/docs/concepts/services-networking/networkpolicies/
 class NetworkPolicy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NetworkPolicy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..e<NetworkPolicy_Provider>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'provider',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: NetworkPolicy_Provider.PROVIDER_UNSPECIFIED,
-        valueOf: NetworkPolicy_Provider.valueOf,
-        enumValues: NetworkPolicy_Provider.values)
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..hasRequiredFields = false;
-
-  NetworkPolicy._() : super();
   factory NetworkPolicy({
     NetworkPolicy_Provider? provider,
     $core.bool? enabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (provider != null) {
-      _result.provider = provider;
+      $result.provider = provider;
     }
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
-    return _result;
+    return $result;
   }
+  NetworkPolicy._() : super();
   factory NetworkPolicy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NetworkPolicy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NetworkPolicy',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..e<NetworkPolicy_Provider>(
+        1, _omitFieldNames ? '' : 'provider', $pb.PbFieldType.OE,
+        defaultOrMaker: NetworkPolicy_Provider.PROVIDER_UNSPECIFIED,
+        valueOf: NetworkPolicy_Provider.valueOf,
+        enumValues: NetworkPolicy_Provider.values)
+    ..aOB(2, _omitFieldNames ? '' : 'enabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1295,8 +1278,10 @@ class NetworkPolicy extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   NetworkPolicy copyWith(void Function(NetworkPolicy) updates) =>
       super.copyWith((message) => updates(message as NetworkPolicy))
-          as NetworkPolicy; // ignore: deprecated_member_use
+          as NetworkPolicy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NetworkPolicy create() => NetworkPolicy._();
   NetworkPolicy createEmptyInstance() => create();
@@ -1307,6 +1292,7 @@ class NetworkPolicy extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NetworkPolicy>(create);
   static NetworkPolicy? _defaultInstance;
 
+  /// The selected network policy provider.
   @$pb.TagNumber(1)
   NetworkPolicy_Provider get provider => $_getN(0);
   @$pb.TagNumber(1)
@@ -1319,6 +1305,7 @@ class NetworkPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProvider() => clearField(1);
 
+  /// Whether network policy is enabled on the cluster.
   @$pb.TagNumber(2)
   $core.bool get enabled => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1332,74 +1319,8 @@ class NetworkPolicy extends $pb.GeneratedMessage {
   void clearEnabled() => clearField(2);
 }
 
+/// Configuration for controlling how IPs are allocated in the cluster.
 class IPAllocationPolicy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'IPAllocationPolicy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'useIpAliases')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createSubnetwork')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subnetworkName')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterIpv4Cidr')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodeIpv4Cidr')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicesIpv4Cidr')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterSecondaryRangeName')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicesSecondaryRangeName')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterIpv4CidrBlock')
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodeIpv4CidrBlock')
-    ..aOS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicesIpv4CidrBlock')
-    ..hasRequiredFields = false;
-
-  IPAllocationPolicy._() : super();
   factory IPAllocationPolicy({
     $core.bool? useIpAliases,
     $core.bool? createSubnetwork,
@@ -1413,48 +1334,68 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
     $core.String? nodeIpv4CidrBlock,
     $core.String? servicesIpv4CidrBlock,
   }) {
-    final _result = create();
+    final $result = create();
     if (useIpAliases != null) {
-      _result.useIpAliases = useIpAliases;
+      $result.useIpAliases = useIpAliases;
     }
     if (createSubnetwork != null) {
-      _result.createSubnetwork = createSubnetwork;
+      $result.createSubnetwork = createSubnetwork;
     }
     if (subnetworkName != null) {
-      _result.subnetworkName = subnetworkName;
+      $result.subnetworkName = subnetworkName;
     }
     if (clusterIpv4Cidr != null) {
-      _result.clusterIpv4Cidr = clusterIpv4Cidr;
+      $result.clusterIpv4Cidr = clusterIpv4Cidr;
     }
     if (nodeIpv4Cidr != null) {
-      _result.nodeIpv4Cidr = nodeIpv4Cidr;
+      $result.nodeIpv4Cidr = nodeIpv4Cidr;
     }
     if (servicesIpv4Cidr != null) {
-      _result.servicesIpv4Cidr = servicesIpv4Cidr;
+      $result.servicesIpv4Cidr = servicesIpv4Cidr;
     }
     if (clusterSecondaryRangeName != null) {
-      _result.clusterSecondaryRangeName = clusterSecondaryRangeName;
+      $result.clusterSecondaryRangeName = clusterSecondaryRangeName;
     }
     if (servicesSecondaryRangeName != null) {
-      _result.servicesSecondaryRangeName = servicesSecondaryRangeName;
+      $result.servicesSecondaryRangeName = servicesSecondaryRangeName;
     }
     if (clusterIpv4CidrBlock != null) {
-      _result.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
+      $result.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
     }
     if (nodeIpv4CidrBlock != null) {
-      _result.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
+      $result.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
     }
     if (servicesIpv4CidrBlock != null) {
-      _result.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
+      $result.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
     }
-    return _result;
+    return $result;
   }
+  IPAllocationPolicy._() : super();
   factory IPAllocationPolicy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IPAllocationPolicy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IPAllocationPolicy',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'useIpAliases')
+    ..aOB(2, _omitFieldNames ? '' : 'createSubnetwork')
+    ..aOS(3, _omitFieldNames ? '' : 'subnetworkName')
+    ..aOS(4, _omitFieldNames ? '' : 'clusterIpv4Cidr')
+    ..aOS(5, _omitFieldNames ? '' : 'nodeIpv4Cidr')
+    ..aOS(6, _omitFieldNames ? '' : 'servicesIpv4Cidr')
+    ..aOS(7, _omitFieldNames ? '' : 'clusterSecondaryRangeName')
+    ..aOS(8, _omitFieldNames ? '' : 'servicesSecondaryRangeName')
+    ..aOS(9, _omitFieldNames ? '' : 'clusterIpv4CidrBlock')
+    ..aOS(10, _omitFieldNames ? '' : 'nodeIpv4CidrBlock')
+    ..aOS(11, _omitFieldNames ? '' : 'servicesIpv4CidrBlock')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1464,8 +1405,10 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   IPAllocationPolicy copyWith(void Function(IPAllocationPolicy) updates) =>
       super.copyWith((message) => updates(message as IPAllocationPolicy))
-          as IPAllocationPolicy; // ignore: deprecated_member_use
+          as IPAllocationPolicy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IPAllocationPolicy create() => IPAllocationPolicy._();
   IPAllocationPolicy createEmptyInstance() => create();
@@ -1476,6 +1419,7 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<IPAllocationPolicy>(create);
   static IPAllocationPolicy? _defaultInstance;
 
+  /// Whether alias IPs will be used for pod IPs in the cluster.
   @$pb.TagNumber(1)
   $core.bool get useIpAliases => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1488,6 +1432,9 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUseIpAliases() => clearField(1);
 
+  ///  Whether a new subnetwork will be created automatically for the cluster.
+  ///
+  ///  This field is only applicable when `use_ip_aliases` is true.
   @$pb.TagNumber(2)
   $core.bool get createSubnetwork => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1500,6 +1447,9 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCreateSubnetwork() => clearField(2);
 
+  /// A custom subnetwork name to be used if `create_subnetwork` is true.  If
+  /// this field is empty, then an automatic name will be chosen for the new
+  /// subnetwork.
   @$pb.TagNumber(3)
   $core.String get subnetworkName => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1512,6 +1462,7 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearSubnetworkName() => clearField(3);
 
+  /// This field is deprecated, use cluster_ipv4_cidr_block.
   @$pb.TagNumber(4)
   $core.String get clusterIpv4Cidr => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1524,6 +1475,7 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearClusterIpv4Cidr() => clearField(4);
 
+  /// This field is deprecated, use node_ipv4_cidr_block.
   @$pb.TagNumber(5)
   $core.String get nodeIpv4Cidr => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1536,6 +1488,7 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearNodeIpv4Cidr() => clearField(5);
 
+  /// This field is deprecated, use services_ipv4_cidr_block.
   @$pb.TagNumber(6)
   $core.String get servicesIpv4Cidr => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1548,6 +1501,13 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearServicesIpv4Cidr() => clearField(6);
 
+  ///  The name of the secondary range to be used for the cluster CIDR
+  ///  block.  The secondary range will be used for pod IP
+  ///  addresses. This must be an existing secondary range associated
+  ///  with the cluster subnetwork.
+  ///
+  ///  This field is only applicable if use_ip_aliases is true and
+  ///  create_subnetwork is false.
   @$pb.TagNumber(7)
   $core.String get clusterSecondaryRangeName => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -1560,6 +1520,13 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearClusterSecondaryRangeName() => clearField(7);
 
+  ///  The name of the secondary range to be used as for the services
+  ///  CIDR block.  The secondary range will be used for service
+  ///  ClusterIPs. This must be an existing secondary range associated
+  ///  with the cluster subnetwork.
+  ///
+  ///  This field is only applicable with use_ip_aliases is true and
+  ///  create_subnetwork is false.
   @$pb.TagNumber(8)
   $core.String get servicesSecondaryRangeName => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -1572,6 +1539,21 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearServicesSecondaryRangeName() => clearField(8);
 
+  ///  The IP address range for the cluster pod IPs. If this field is set, then
+  ///  `cluster.cluster_ipv4_cidr` must be left blank.
+  ///
+  ///  This field is only applicable when `use_ip_aliases` is true.
+  ///
+  ///  Set to blank to have a range chosen with the default size.
+  ///
+  ///  Set to /netmask (e.g. `/14`) to have a range chosen with a specific
+  ///  netmask.
+  ///
+  ///  Set to a
+  ///  [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+  ///  notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g.
+  ///  `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range
+  ///  to use.
   @$pb.TagNumber(9)
   $core.String get clusterIpv4CidrBlock => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -1584,6 +1566,20 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearClusterIpv4CidrBlock() => clearField(9);
 
+  ///  The IP address range of the instance IPs in this cluster.
+  ///
+  ///  This is applicable only if `create_subnetwork` is true.
+  ///
+  ///  Set to blank to have a range chosen with the default size.
+  ///
+  ///  Set to /netmask (e.g. `/14`) to have a range chosen with a specific
+  ///  netmask.
+  ///
+  ///  Set to a
+  ///  [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+  ///  notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g.
+  ///  `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range
+  ///  to use.
   @$pb.TagNumber(10)
   $core.String get nodeIpv4CidrBlock => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -1596,6 +1592,21 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearNodeIpv4CidrBlock() => clearField(10);
 
+  ///  The IP address range of the services IPs in this cluster. If blank, a range
+  ///  will be automatically chosen with the default size.
+  ///
+  ///  This field is only applicable when `use_ip_aliases` is true.
+  ///
+  ///  Set to blank to have a range chosen with the default size.
+  ///
+  ///  Set to /netmask (e.g. `/14`) to have a range chosen with a specific
+  ///  netmask.
+  ///
+  ///  Set to a
+  ///  [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+  ///  notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g.
+  ///  `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range
+  ///  to use.
   @$pb.TagNumber(11)
   $core.String get servicesIpv4CidrBlock => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -1609,39 +1620,33 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
   void clearServicesIpv4CidrBlock() => clearField(11);
 }
 
+/// Configuration for the PodSecurityPolicy feature.
 class PodSecurityPolicyConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PodSecurityPolicyConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..hasRequiredFields = false;
-
-  PodSecurityPolicyConfig._() : super();
   factory PodSecurityPolicyConfig({
     $core.bool? enabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
-    return _result;
+    return $result;
   }
+  PodSecurityPolicyConfig._() : super();
   factory PodSecurityPolicyConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PodSecurityPolicyConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PodSecurityPolicyConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'enabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1653,8 +1658,10 @@ class PodSecurityPolicyConfig extends $pb.GeneratedMessage {
   PodSecurityPolicyConfig copyWith(
           void Function(PodSecurityPolicyConfig) updates) =>
       super.copyWith((message) => updates(message as PodSecurityPolicyConfig))
-          as PodSecurityPolicyConfig; // ignore: deprecated_member_use
+          as PodSecurityPolicyConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PodSecurityPolicyConfig create() => PodSecurityPolicyConfig._();
   PodSecurityPolicyConfig createEmptyInstance() => create();
@@ -1665,6 +1672,8 @@ class PodSecurityPolicyConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PodSecurityPolicyConfig>(create);
   static PodSecurityPolicyConfig? _defaultInstance;
 
+  /// Enable the PodSecurityPolicy controller for this cluster. If enabled, pods
+  /// must be valid under a PodSecurityPolicy to be created.
   @$pb.TagNumber(1)
   $core.bool get enabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -1678,206 +1687,8 @@ class PodSecurityPolicyConfig extends $pb.GeneratedMessage {
   void clearEnabled() => clearField(1);
 }
 
+/// A Google Container Engine cluster.
 class Cluster extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Cluster',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'initialNodeCount',
-        $pb.PbFieldType.O3)
-    ..aOM<NodeConfig>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodeConfig',
-        subBuilder: NodeConfig.create)
-    ..aOM<MasterAuth>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'masterAuth',
-        subBuilder: MasterAuth.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'loggingService')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoringService')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'network')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterIpv4Cidr')
-    ..aOM<AddonsConfig>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'addonsConfig',
-        subBuilder: AddonsConfig.create)
-    ..aOS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'subnetwork')
-    ..pc<NodePool>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePools',
-        $pb.PbFieldType.PM,
-        subBuilder: NodePool.create)
-    ..pPS(
-        13,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locations')
-    ..aOB(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enableKubernetesAlpha')
-    ..aOM<NetworkPolicy>(
-        19,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'networkPolicy',
-        subBuilder: NetworkPolicy.create)
-    ..aOM<IPAllocationPolicy>(
-        20,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ipAllocationPolicy',
-        subBuilder: IPAllocationPolicy.create)
-    ..aOM<MasterAuthorizedNetworksConfig>(
-        22,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'masterAuthorizedNetworksConfig',
-        subBuilder: MasterAuthorizedNetworksConfig.create)
-    ..aOM<MaintenancePolicy>(
-        23,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maintenancePolicy',
-        subBuilder: MaintenancePolicy.create)
-    ..aOM<PodSecurityPolicyConfig>(
-        25,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'podSecurityPolicyConfig',
-        subBuilder: PodSecurityPolicyConfig.create)
-    ..aOS(
-        100,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'selfLink')
-    ..aOS(
-        101,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        102,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endpoint')
-    ..aOS(
-        103,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'initialClusterVersion')
-    ..aOS(
-        104,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentMasterVersion')
-    ..aOS(
-        105,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentNodeVersion')
-    ..aOS(
-        106,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'createTime')
-    ..e<Cluster_Status>(
-        107,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Cluster_Status.STATUS_UNSPECIFIED,
-        valueOf: Cluster_Status.valueOf,
-        enumValues: Cluster_Status.values)
-    ..aOS(
-        108,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'statusMessage')
-    ..a<$core.int>(
-        109,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodeIpv4CidrSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        110,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicesIpv4Cidr')
-    ..pPS(
-        111,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instanceGroupUrls')
-    ..a<$core.int>(
-        112,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'currentNodeCount',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        113,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'expireTime')
-    ..aOS(
-        114,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..hasRequiredFields = false;
-
-  Cluster._() : super();
   factory Cluster({
     $core.String? name,
     $core.String? description,
@@ -1914,117 +1725,178 @@ class Cluster extends $pb.GeneratedMessage {
     $core.String? expireTime,
     $core.String? location,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (initialNodeCount != null) {
-      _result.initialNodeCount = initialNodeCount;
+      $result.initialNodeCount = initialNodeCount;
     }
     if (nodeConfig != null) {
-      _result.nodeConfig = nodeConfig;
+      $result.nodeConfig = nodeConfig;
     }
     if (masterAuth != null) {
-      _result.masterAuth = masterAuth;
+      $result.masterAuth = masterAuth;
     }
     if (loggingService != null) {
-      _result.loggingService = loggingService;
+      $result.loggingService = loggingService;
     }
     if (monitoringService != null) {
-      _result.monitoringService = monitoringService;
+      $result.monitoringService = monitoringService;
     }
     if (network != null) {
-      _result.network = network;
+      $result.network = network;
     }
     if (clusterIpv4Cidr != null) {
-      _result.clusterIpv4Cidr = clusterIpv4Cidr;
+      $result.clusterIpv4Cidr = clusterIpv4Cidr;
     }
     if (addonsConfig != null) {
-      _result.addonsConfig = addonsConfig;
+      $result.addonsConfig = addonsConfig;
     }
     if (subnetwork != null) {
-      _result.subnetwork = subnetwork;
+      $result.subnetwork = subnetwork;
     }
     if (nodePools != null) {
-      _result.nodePools.addAll(nodePools);
+      $result.nodePools.addAll(nodePools);
     }
     if (locations != null) {
-      _result.locations.addAll(locations);
+      $result.locations.addAll(locations);
     }
     if (enableKubernetesAlpha != null) {
-      _result.enableKubernetesAlpha = enableKubernetesAlpha;
+      $result.enableKubernetesAlpha = enableKubernetesAlpha;
     }
     if (networkPolicy != null) {
-      _result.networkPolicy = networkPolicy;
+      $result.networkPolicy = networkPolicy;
     }
     if (ipAllocationPolicy != null) {
-      _result.ipAllocationPolicy = ipAllocationPolicy;
+      $result.ipAllocationPolicy = ipAllocationPolicy;
     }
     if (masterAuthorizedNetworksConfig != null) {
-      _result.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
+      $result.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
     }
     if (maintenancePolicy != null) {
-      _result.maintenancePolicy = maintenancePolicy;
+      $result.maintenancePolicy = maintenancePolicy;
     }
     if (podSecurityPolicyConfig != null) {
-      _result.podSecurityPolicyConfig = podSecurityPolicyConfig;
+      $result.podSecurityPolicyConfig = podSecurityPolicyConfig;
     }
     if (selfLink != null) {
-      _result.selfLink = selfLink;
+      $result.selfLink = selfLink;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (endpoint != null) {
-      _result.endpoint = endpoint;
+      $result.endpoint = endpoint;
     }
     if (initialClusterVersion != null) {
-      _result.initialClusterVersion = initialClusterVersion;
+      $result.initialClusterVersion = initialClusterVersion;
     }
     if (currentMasterVersion != null) {
-      _result.currentMasterVersion = currentMasterVersion;
+      $result.currentMasterVersion = currentMasterVersion;
     }
     if (currentNodeVersion != null) {
-      _result.currentNodeVersion = currentNodeVersion;
+      $result.currentNodeVersion = currentNodeVersion;
     }
     if (createTime != null) {
-      _result.createTime = createTime;
+      $result.createTime = createTime;
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (statusMessage != null) {
-      _result.statusMessage = statusMessage;
+      $result.statusMessage = statusMessage;
     }
     if (nodeIpv4CidrSize != null) {
-      _result.nodeIpv4CidrSize = nodeIpv4CidrSize;
+      $result.nodeIpv4CidrSize = nodeIpv4CidrSize;
     }
     if (servicesIpv4Cidr != null) {
-      _result.servicesIpv4Cidr = servicesIpv4Cidr;
+      $result.servicesIpv4Cidr = servicesIpv4Cidr;
     }
     if (instanceGroupUrls != null) {
-      _result.instanceGroupUrls.addAll(instanceGroupUrls);
+      $result.instanceGroupUrls.addAll(instanceGroupUrls);
     }
     if (currentNodeCount != null) {
-      _result.currentNodeCount = currentNodeCount;
+      $result.currentNodeCount = currentNodeCount;
     }
     if (expireTime != null) {
-      _result.expireTime = expireTime;
+      $result.expireTime = expireTime;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
-    return _result;
+    return $result;
   }
+  Cluster._() : super();
   factory Cluster.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Cluster.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Cluster',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'description')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'initialNodeCount', $pb.PbFieldType.O3)
+    ..aOM<NodeConfig>(4, _omitFieldNames ? '' : 'nodeConfig',
+        subBuilder: NodeConfig.create)
+    ..aOM<MasterAuth>(5, _omitFieldNames ? '' : 'masterAuth',
+        subBuilder: MasterAuth.create)
+    ..aOS(6, _omitFieldNames ? '' : 'loggingService')
+    ..aOS(7, _omitFieldNames ? '' : 'monitoringService')
+    ..aOS(8, _omitFieldNames ? '' : 'network')
+    ..aOS(9, _omitFieldNames ? '' : 'clusterIpv4Cidr')
+    ..aOM<AddonsConfig>(10, _omitFieldNames ? '' : 'addonsConfig',
+        subBuilder: AddonsConfig.create)
+    ..aOS(11, _omitFieldNames ? '' : 'subnetwork')
+    ..pc<NodePool>(12, _omitFieldNames ? '' : 'nodePools', $pb.PbFieldType.PM,
+        subBuilder: NodePool.create)
+    ..pPS(13, _omitFieldNames ? '' : 'locations')
+    ..aOB(14, _omitFieldNames ? '' : 'enableKubernetesAlpha')
+    ..aOM<NetworkPolicy>(19, _omitFieldNames ? '' : 'networkPolicy',
+        subBuilder: NetworkPolicy.create)
+    ..aOM<IPAllocationPolicy>(20, _omitFieldNames ? '' : 'ipAllocationPolicy',
+        subBuilder: IPAllocationPolicy.create)
+    ..aOM<MasterAuthorizedNetworksConfig>(
+        22, _omitFieldNames ? '' : 'masterAuthorizedNetworksConfig',
+        subBuilder: MasterAuthorizedNetworksConfig.create)
+    ..aOM<MaintenancePolicy>(23, _omitFieldNames ? '' : 'maintenancePolicy',
+        subBuilder: MaintenancePolicy.create)
+    ..aOM<PodSecurityPolicyConfig>(
+        25, _omitFieldNames ? '' : 'podSecurityPolicyConfig',
+        subBuilder: PodSecurityPolicyConfig.create)
+    ..aOS(100, _omitFieldNames ? '' : 'selfLink')
+    ..aOS(101, _omitFieldNames ? '' : 'zone')
+    ..aOS(102, _omitFieldNames ? '' : 'endpoint')
+    ..aOS(103, _omitFieldNames ? '' : 'initialClusterVersion')
+    ..aOS(104, _omitFieldNames ? '' : 'currentMasterVersion')
+    ..aOS(105, _omitFieldNames ? '' : 'currentNodeVersion')
+    ..aOS(106, _omitFieldNames ? '' : 'createTime')
+    ..e<Cluster_Status>(
+        107, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: Cluster_Status.STATUS_UNSPECIFIED,
+        valueOf: Cluster_Status.valueOf,
+        enumValues: Cluster_Status.values)
+    ..aOS(108, _omitFieldNames ? '' : 'statusMessage')
+    ..a<$core.int>(
+        109, _omitFieldNames ? '' : 'nodeIpv4CidrSize', $pb.PbFieldType.O3)
+    ..aOS(110, _omitFieldNames ? '' : 'servicesIpv4Cidr')
+    ..pPS(111, _omitFieldNames ? '' : 'instanceGroupUrls')
+    ..a<$core.int>(
+        112, _omitFieldNames ? '' : 'currentNodeCount', $pb.PbFieldType.O3)
+    ..aOS(113, _omitFieldNames ? '' : 'expireTime')
+    ..aOS(114, _omitFieldNames ? '' : 'location')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2033,9 +1905,10 @@ class Cluster extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Cluster copyWith(void Function(Cluster) updates) =>
-      super.copyWith((message) => updates(message as Cluster))
-          as Cluster; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Cluster)) as Cluster;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Cluster create() => Cluster._();
   Cluster createEmptyInstance() => create();
@@ -2045,6 +1918,12 @@ class Cluster extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Cluster>(create);
   static Cluster? _defaultInstance;
 
+  ///  The name of this cluster. The name must be unique within this project
+  ///  and zone, and can be up to 40 characters with the following restrictions:
+  ///
+  ///  * Lowercase letters, numbers, and hyphens only.
+  ///  * Must start with a letter.
+  ///  * Must end with a number or a letter.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2057,6 +1936,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// An optional description of this cluster.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2069,6 +1949,14 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
+  /// The number of nodes to create in this cluster. You must ensure that your
+  /// Compute Engine <a href="/compute/docs/resource-quotas">resource quota</a>
+  /// is sufficient for this number of instances. You must also have available
+  /// firewall and routes quota.
+  /// For requests, this field should only be used in lieu of a
+  /// "node_pool" object, since this configuration (along with the
+  /// "node_config") will be used to create a "NodePool" object with an
+  /// auto-generated name. Do not use this and a node_pool at the same time.
   @$pb.TagNumber(3)
   $core.int get initialNodeCount => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -2081,6 +1969,16 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearInitialNodeCount() => clearField(3);
 
+  ///  Parameters used in creating the cluster's nodes.
+  ///  See `nodeConfig` for the description of its properties.
+  ///  For requests, this field should only be used in lieu of a
+  ///  "node_pool" object, since this configuration (along with the
+  ///  "initial_node_count") will be used to create a "NodePool" object with an
+  ///  auto-generated name. Do not use this and a node_pool at the same time.
+  ///  For responses, this field will be populated with the node configuration of
+  ///  the first node pool.
+  ///
+  ///  If unspecified, the defaults are used.
   @$pb.TagNumber(4)
   NodeConfig get nodeConfig => $_getN(3);
   @$pb.TagNumber(4)
@@ -2095,6 +1993,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   NodeConfig ensureNodeConfig() => $_ensure(3);
 
+  /// The authentication information for accessing the master endpoint.
   @$pb.TagNumber(5)
   MasterAuth get masterAuth => $_getN(4);
   @$pb.TagNumber(5)
@@ -2109,6 +2008,12 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   MasterAuth ensureMasterAuth() => $_ensure(4);
 
+  ///  The logging service the cluster should use to write logs.
+  ///  Currently available options:
+  ///
+  ///  * `logging.googleapis.com` - the Google Cloud Logging service.
+  ///  * `none` - no logs will be exported from the cluster.
+  ///  * if left as an empty string,`logging.googleapis.com` will be used.
   @$pb.TagNumber(6)
   $core.String get loggingService => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -2121,6 +2026,12 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearLoggingService() => clearField(6);
 
+  ///  The monitoring service the cluster should use to write metrics.
+  ///  Currently available options:
+  ///
+  ///  * `monitoring.googleapis.com` - the Google Cloud Monitoring service.
+  ///  * `none` - no metrics will be exported from the cluster.
+  ///  * if left as an empty string, `monitoring.googleapis.com` will be used.
   @$pb.TagNumber(7)
   $core.String get monitoringService => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -2133,6 +2044,10 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearMonitoringService() => clearField(7);
 
+  /// The name of the Google Compute Engine
+  /// [network](/compute/docs/networks-and-firewalls#networks) to which the
+  /// cluster is connected. If left unspecified, the `default` network
+  /// will be used.
   @$pb.TagNumber(8)
   $core.String get network => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -2145,6 +2060,10 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearNetwork() => clearField(8);
 
+  /// The IP address range of the container pods in this cluster, in
+  /// [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+  /// notation (e.g. `10.96.0.0/14`). Leave blank to have
+  /// one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
   @$pb.TagNumber(9)
   $core.String get clusterIpv4Cidr => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -2157,6 +2076,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearClusterIpv4Cidr() => clearField(9);
 
+  /// Configurations for the various addons available to run in the cluster.
   @$pb.TagNumber(10)
   AddonsConfig get addonsConfig => $_getN(9);
   @$pb.TagNumber(10)
@@ -2171,6 +2091,9 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   AddonsConfig ensureAddonsConfig() => $_ensure(9);
 
+  /// The name of the Google Compute Engine
+  /// [subnetwork](/compute/docs/subnetworks) to which the
+  /// cluster is connected.
   @$pb.TagNumber(11)
   $core.String get subnetwork => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -2183,12 +2106,24 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearSubnetwork() => clearField(11);
 
+  /// The node pools associated with this cluster.
+  /// This field should not be set if "node_config" or "initial_node_count" are
+  /// specified.
   @$pb.TagNumber(12)
   $core.List<NodePool> get nodePools => $_getList(11);
 
+  /// The list of Google Compute Engine
+  /// [locations](/compute/docs/zones#available) in which the cluster's nodes
+  /// should be located.
   @$pb.TagNumber(13)
   $core.List<$core.String> get locations => $_getList(12);
 
+  /// Kubernetes alpha features are enabled on this cluster. This includes alpha
+  /// API groups (e.g. v1alpha1) and features that may not be production ready in
+  /// the kubernetes version of the master and nodes.
+  /// The cluster has no SLA for uptime and master/node upgrades are disabled.
+  /// Alpha enabled clusters are automatically deleted thirty days after
+  /// creation.
   @$pb.TagNumber(14)
   $core.bool get enableKubernetesAlpha => $_getBF(13);
   @$pb.TagNumber(14)
@@ -2201,6 +2136,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearEnableKubernetesAlpha() => clearField(14);
 
+  /// Configuration options for the NetworkPolicy feature.
   @$pb.TagNumber(19)
   NetworkPolicy get networkPolicy => $_getN(14);
   @$pb.TagNumber(19)
@@ -2215,6 +2151,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   NetworkPolicy ensureNetworkPolicy() => $_ensure(14);
 
+  /// Configuration for cluster IP allocation.
   @$pb.TagNumber(20)
   IPAllocationPolicy get ipAllocationPolicy => $_getN(15);
   @$pb.TagNumber(20)
@@ -2229,6 +2166,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   IPAllocationPolicy ensureIpAllocationPolicy() => $_ensure(15);
 
+  /// The configuration options for master authorized networks feature.
   @$pb.TagNumber(22)
   MasterAuthorizedNetworksConfig get masterAuthorizedNetworksConfig =>
       $_getN(16);
@@ -2245,6 +2183,7 @@ class Cluster extends $pb.GeneratedMessage {
   MasterAuthorizedNetworksConfig ensureMasterAuthorizedNetworksConfig() =>
       $_ensure(16);
 
+  /// Configure the maintenance policy for this cluster.
   @$pb.TagNumber(23)
   MaintenancePolicy get maintenancePolicy => $_getN(17);
   @$pb.TagNumber(23)
@@ -2259,6 +2198,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   MaintenancePolicy ensureMaintenancePolicy() => $_ensure(17);
 
+  /// Configuration for the PodSecurityPolicy feature.
   @$pb.TagNumber(25)
   PodSecurityPolicyConfig get podSecurityPolicyConfig => $_getN(18);
   @$pb.TagNumber(25)
@@ -2273,6 +2213,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(25)
   PodSecurityPolicyConfig ensurePodSecurityPolicyConfig() => $_ensure(18);
 
+  /// [Output only] Server-defined URL for the resource.
   @$pb.TagNumber(100)
   $core.String get selfLink => $_getSZ(19);
   @$pb.TagNumber(100)
@@ -2285,6 +2226,10 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(100)
   void clearSelfLink() => clearField(100);
 
+  /// [Output only] The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use location instead.
   @$pb.TagNumber(101)
   $core.String get zone => $_getSZ(20);
   @$pb.TagNumber(101)
@@ -2297,6 +2242,12 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(101)
   void clearZone() => clearField(101);
 
+  ///  [Output only] The IP address of this cluster's master endpoint.
+  ///  The endpoint can be accessed from the internet at
+  ///  `https://username:password@endpoint/`.
+  ///
+  ///  See the `masterAuth` property of this resource for username and
+  ///  password information.
   @$pb.TagNumber(102)
   $core.String get endpoint => $_getSZ(21);
   @$pb.TagNumber(102)
@@ -2309,6 +2260,10 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(102)
   void clearEndpoint() => clearField(102);
 
+  /// The initial Kubernetes version for this cluster.  Valid versions are those
+  /// found in validMasterVersions returned by getServerConfig.  The version can
+  /// be upgraded over time; such upgrades are reflected in
+  /// currentMasterVersion and currentNodeVersion.
   @$pb.TagNumber(103)
   $core.String get initialClusterVersion => $_getSZ(22);
   @$pb.TagNumber(103)
@@ -2321,6 +2276,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(103)
   void clearInitialClusterVersion() => clearField(103);
 
+  /// [Output only] The current software version of the master endpoint.
   @$pb.TagNumber(104)
   $core.String get currentMasterVersion => $_getSZ(23);
   @$pb.TagNumber(104)
@@ -2333,6 +2289,9 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(104)
   void clearCurrentMasterVersion() => clearField(104);
 
+  /// [Output only] The current version of the node software components.
+  /// If they are currently at multiple versions because they're in the process
+  /// of being upgraded, this reflects the minimum version of all nodes.
   @$pb.TagNumber(105)
   $core.String get currentNodeVersion => $_getSZ(24);
   @$pb.TagNumber(105)
@@ -2345,6 +2304,8 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(105)
   void clearCurrentNodeVersion() => clearField(105);
 
+  /// [Output only] The time the cluster was created, in
+  /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   @$pb.TagNumber(106)
   $core.String get createTime => $_getSZ(25);
   @$pb.TagNumber(106)
@@ -2357,6 +2318,7 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(106)
   void clearCreateTime() => clearField(106);
 
+  /// [Output only] The current status of this cluster.
   @$pb.TagNumber(107)
   Cluster_Status get status => $_getN(26);
   @$pb.TagNumber(107)
@@ -2369,6 +2331,8 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(107)
   void clearStatus() => clearField(107);
 
+  /// [Output only] Additional information about the current status of this
+  /// cluster, if available.
   @$pb.TagNumber(108)
   $core.String get statusMessage => $_getSZ(27);
   @$pb.TagNumber(108)
@@ -2381,6 +2345,9 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(108)
   void clearStatusMessage() => clearField(108);
 
+  /// [Output only] The size of the address space on each node for hosting
+  /// containers. This is provisioned from within the `container_ipv4_cidr`
+  /// range.
   @$pb.TagNumber(109)
   $core.int get nodeIpv4CidrSize => $_getIZ(28);
   @$pb.TagNumber(109)
@@ -2393,6 +2360,11 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(109)
   void clearNodeIpv4CidrSize() => clearField(109);
 
+  /// [Output only] The IP address range of the Kubernetes services in
+  /// this cluster, in
+  /// [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+  /// notation (e.g. `1.2.3.4/29`). Service addresses are
+  /// typically put in the last `/16` from the container CIDR.
   @$pb.TagNumber(110)
   $core.String get servicesIpv4Cidr => $_getSZ(29);
   @$pb.TagNumber(110)
@@ -2405,9 +2377,13 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(110)
   void clearServicesIpv4Cidr() => clearField(110);
 
+  /// [Output only] The resource URLs of [instance
+  /// groups](/compute/docs/instance-groups/) associated with this
+  /// cluster.
   @$pb.TagNumber(111)
   $core.List<$core.String> get instanceGroupUrls => $_getList(30);
 
+  /// [Output only] The number of nodes currently in the cluster.
   @$pb.TagNumber(112)
   $core.int get currentNodeCount => $_getIZ(31);
   @$pb.TagNumber(112)
@@ -2420,6 +2396,8 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(112)
   void clearCurrentNodeCount() => clearField(112);
 
+  /// [Output only] The time the cluster will be automatically
+  /// deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   @$pb.TagNumber(113)
   $core.String get expireTime => $_getSZ(32);
   @$pb.TagNumber(113)
@@ -2432,6 +2410,10 @@ class Cluster extends $pb.GeneratedMessage {
   @$pb.TagNumber(113)
   void clearExpireTime() => clearField(113);
 
+  /// [Output only] The name of the Google Compute Engine
+  /// [zone](/compute/docs/regions-zones/regions-zones#available) or
+  /// [region](/compute/docs/regions-zones/regions-zones#available) in which
+  /// the cluster resides.
   @$pb.TagNumber(114)
   $core.String get location => $_getSZ(33);
   @$pb.TagNumber(114)
@@ -2445,73 +2427,10 @@ class Cluster extends $pb.GeneratedMessage {
   void clearLocation() => clearField(114);
 }
 
+/// ClusterUpdate describes an update to the cluster. Exactly one update can
+/// be applied to a cluster with each request, so at most one field can be
+/// provided.
 class ClusterUpdate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ClusterUpdate',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredNodeVersion')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredMonitoringService')
-    ..aOM<AddonsConfig>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredAddonsConfig',
-        subBuilder: AddonsConfig.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredNodePoolId')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredImageType')
-    ..aOM<NodePoolAutoscaling>(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredNodePoolAutoscaling',
-        subBuilder: NodePoolAutoscaling.create)
-    ..pPS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredLocations')
-    ..aOM<MasterAuthorizedNetworksConfig>(
-        12,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredMasterAuthorizedNetworksConfig',
-        subBuilder: MasterAuthorizedNetworksConfig.create)
-    ..aOM<PodSecurityPolicyConfig>(
-        14,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredPodSecurityPolicyConfig',
-        subBuilder: PodSecurityPolicyConfig.create)
-    ..aOS(
-        100,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'desiredMasterVersion')
-    ..hasRequiredFields = false;
-
-  ClusterUpdate._() : super();
   factory ClusterUpdate({
     $core.String? desiredNodeVersion,
     $core.String? desiredMonitoringService,
@@ -2524,46 +2443,72 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     PodSecurityPolicyConfig? desiredPodSecurityPolicyConfig,
     $core.String? desiredMasterVersion,
   }) {
-    final _result = create();
+    final $result = create();
     if (desiredNodeVersion != null) {
-      _result.desiredNodeVersion = desiredNodeVersion;
+      $result.desiredNodeVersion = desiredNodeVersion;
     }
     if (desiredMonitoringService != null) {
-      _result.desiredMonitoringService = desiredMonitoringService;
+      $result.desiredMonitoringService = desiredMonitoringService;
     }
     if (desiredAddonsConfig != null) {
-      _result.desiredAddonsConfig = desiredAddonsConfig;
+      $result.desiredAddonsConfig = desiredAddonsConfig;
     }
     if (desiredNodePoolId != null) {
-      _result.desiredNodePoolId = desiredNodePoolId;
+      $result.desiredNodePoolId = desiredNodePoolId;
     }
     if (desiredImageType != null) {
-      _result.desiredImageType = desiredImageType;
+      $result.desiredImageType = desiredImageType;
     }
     if (desiredNodePoolAutoscaling != null) {
-      _result.desiredNodePoolAutoscaling = desiredNodePoolAutoscaling;
+      $result.desiredNodePoolAutoscaling = desiredNodePoolAutoscaling;
     }
     if (desiredLocations != null) {
-      _result.desiredLocations.addAll(desiredLocations);
+      $result.desiredLocations.addAll(desiredLocations);
     }
     if (desiredMasterAuthorizedNetworksConfig != null) {
-      _result.desiredMasterAuthorizedNetworksConfig =
+      $result.desiredMasterAuthorizedNetworksConfig =
           desiredMasterAuthorizedNetworksConfig;
     }
     if (desiredPodSecurityPolicyConfig != null) {
-      _result.desiredPodSecurityPolicyConfig = desiredPodSecurityPolicyConfig;
+      $result.desiredPodSecurityPolicyConfig = desiredPodSecurityPolicyConfig;
     }
     if (desiredMasterVersion != null) {
-      _result.desiredMasterVersion = desiredMasterVersion;
+      $result.desiredMasterVersion = desiredMasterVersion;
     }
-    return _result;
+    return $result;
   }
+  ClusterUpdate._() : super();
   factory ClusterUpdate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ClusterUpdate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ClusterUpdate',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(4, _omitFieldNames ? '' : 'desiredNodeVersion')
+    ..aOS(5, _omitFieldNames ? '' : 'desiredMonitoringService')
+    ..aOM<AddonsConfig>(6, _omitFieldNames ? '' : 'desiredAddonsConfig',
+        subBuilder: AddonsConfig.create)
+    ..aOS(7, _omitFieldNames ? '' : 'desiredNodePoolId')
+    ..aOS(8, _omitFieldNames ? '' : 'desiredImageType')
+    ..aOM<NodePoolAutoscaling>(
+        9, _omitFieldNames ? '' : 'desiredNodePoolAutoscaling',
+        subBuilder: NodePoolAutoscaling.create)
+    ..pPS(10, _omitFieldNames ? '' : 'desiredLocations')
+    ..aOM<MasterAuthorizedNetworksConfig>(
+        12, _omitFieldNames ? '' : 'desiredMasterAuthorizedNetworksConfig',
+        subBuilder: MasterAuthorizedNetworksConfig.create)
+    ..aOM<PodSecurityPolicyConfig>(
+        14, _omitFieldNames ? '' : 'desiredPodSecurityPolicyConfig',
+        subBuilder: PodSecurityPolicyConfig.create)
+    ..aOS(100, _omitFieldNames ? '' : 'desiredMasterVersion')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2573,8 +2518,10 @@ class ClusterUpdate extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ClusterUpdate copyWith(void Function(ClusterUpdate) updates) =>
       super.copyWith((message) => updates(message as ClusterUpdate))
-          as ClusterUpdate; // ignore: deprecated_member_use
+          as ClusterUpdate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ClusterUpdate create() => ClusterUpdate._();
   ClusterUpdate createEmptyInstance() => create();
@@ -2585,6 +2532,9 @@ class ClusterUpdate extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ClusterUpdate>(create);
   static ClusterUpdate? _defaultInstance;
 
+  /// The Kubernetes version to change the nodes to (typically an
+  /// upgrade). Use `-` to upgrade to the latest version supported by
+  /// the server.
   @$pb.TagNumber(4)
   $core.String get desiredNodeVersion => $_getSZ(0);
   @$pb.TagNumber(4)
@@ -2597,6 +2547,11 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDesiredNodeVersion() => clearField(4);
 
+  ///  The monitoring service the cluster should use to write metrics.
+  ///  Currently available options:
+  ///
+  ///  * "monitoring.googleapis.com" - the Google Cloud Monitoring service
+  ///  * "none" - no metrics will be exported from the cluster
   @$pb.TagNumber(5)
   $core.String get desiredMonitoringService => $_getSZ(1);
   @$pb.TagNumber(5)
@@ -2609,6 +2564,7 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDesiredMonitoringService() => clearField(5);
 
+  /// Configurations for the various addons available to run in the cluster.
   @$pb.TagNumber(6)
   AddonsConfig get desiredAddonsConfig => $_getN(2);
   @$pb.TagNumber(6)
@@ -2623,6 +2579,10 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   AddonsConfig ensureDesiredAddonsConfig() => $_ensure(2);
 
+  /// The node pool to be upgraded. This field is mandatory if
+  /// "desired_node_version", "desired_image_family" or
+  /// "desired_node_pool_autoscaling" is specified and there is more than one
+  /// node pool on the cluster.
   @$pb.TagNumber(7)
   $core.String get desiredNodePoolId => $_getSZ(3);
   @$pb.TagNumber(7)
@@ -2635,6 +2595,8 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearDesiredNodePoolId() => clearField(7);
 
+  /// The desired image type for the node pool.
+  /// NOTE: Set the "desired_node_pool" field as well.
   @$pb.TagNumber(8)
   $core.String get desiredImageType => $_getSZ(4);
   @$pb.TagNumber(8)
@@ -2647,6 +2609,10 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearDesiredImageType() => clearField(8);
 
+  /// Autoscaler configuration for the node pool specified in
+  /// desired_node_pool_id. If there is only one pool in the
+  /// cluster and desired_node_pool_id is not provided then
+  /// the change applies to that single node pool.
   @$pb.TagNumber(9)
   NodePoolAutoscaling get desiredNodePoolAutoscaling => $_getN(5);
   @$pb.TagNumber(9)
@@ -2661,9 +2627,17 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   NodePoolAutoscaling ensureDesiredNodePoolAutoscaling() => $_ensure(5);
 
+  ///  The desired list of Google Compute Engine
+  ///  [locations](/compute/docs/zones#available) in which the cluster's nodes
+  ///  should be located. Changing the locations a cluster is in will result
+  ///  in nodes being either created or removed from the cluster, depending on
+  ///  whether locations are being added or removed.
+  ///
+  ///  This list must always include the cluster's primary zone.
   @$pb.TagNumber(10)
   $core.List<$core.String> get desiredLocations => $_getList(6);
 
+  /// The desired configuration options for master authorized networks feature.
   @$pb.TagNumber(12)
   MasterAuthorizedNetworksConfig get desiredMasterAuthorizedNetworksConfig =>
       $_getN(7);
@@ -2680,6 +2654,7 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   MasterAuthorizedNetworksConfig
       ensureDesiredMasterAuthorizedNetworksConfig() => $_ensure(7);
 
+  /// The desired configuration options for the PodSecurityPolicy feature.
   @$pb.TagNumber(14)
   PodSecurityPolicyConfig get desiredPodSecurityPolicyConfig => $_getN(8);
   @$pb.TagNumber(14)
@@ -2694,6 +2669,9 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   PodSecurityPolicyConfig ensureDesiredPodSecurityPolicyConfig() => $_ensure(8);
 
+  /// The Kubernetes version to change the master to. The only valid value is the
+  /// latest supported version. Use "-" to have the server automatically select
+  /// the latest version.
   @$pb.TagNumber(100)
   $core.String get desiredMasterVersion => $_getSZ(9);
   @$pb.TagNumber(100)
@@ -2707,82 +2685,9 @@ class ClusterUpdate extends $pb.GeneratedMessage {
   void clearDesiredMasterVersion() => clearField(100);
 }
 
+/// This operation resource represents operations that may have happened or are
+/// happening on the cluster. All fields are output only.
 class Operation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Operation',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..e<Operation_Type>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Operation_Type.TYPE_UNSPECIFIED,
-        valueOf: Operation_Type.valueOf,
-        enumValues: Operation_Type.values)
-    ..e<Operation_Status>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Operation_Status.STATUS_UNSPECIFIED,
-        valueOf: Operation_Status.valueOf,
-        enumValues: Operation_Status.values)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'statusMessage')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'selfLink')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'targetLink')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'detail')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..aOS(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime')
-    ..aOS(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime')
-    ..hasRequiredFields = false;
-
-  Operation._() : super();
   factory Operation({
     $core.String? name,
     $core.String? zone,
@@ -2796,48 +2701,76 @@ class Operation extends $pb.GeneratedMessage {
     $core.String? startTime,
     $core.String? endTime,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (operationType != null) {
-      _result.operationType = operationType;
+      $result.operationType = operationType;
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (statusMessage != null) {
-      _result.statusMessage = statusMessage;
+      $result.statusMessage = statusMessage;
     }
     if (selfLink != null) {
-      _result.selfLink = selfLink;
+      $result.selfLink = selfLink;
     }
     if (targetLink != null) {
-      _result.targetLink = targetLink;
+      $result.targetLink = targetLink;
     }
     if (detail != null) {
-      _result.detail = detail;
+      $result.detail = detail;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
-    return _result;
+    return $result;
   }
+  Operation._() : super();
   factory Operation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Operation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Operation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..e<Operation_Type>(
+        3, _omitFieldNames ? '' : 'operationType', $pb.PbFieldType.OE,
+        defaultOrMaker: Operation_Type.TYPE_UNSPECIFIED,
+        valueOf: Operation_Type.valueOf,
+        enumValues: Operation_Type.values)
+    ..e<Operation_Status>(
+        4, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: Operation_Status.STATUS_UNSPECIFIED,
+        valueOf: Operation_Status.valueOf,
+        enumValues: Operation_Status.values)
+    ..aOS(5, _omitFieldNames ? '' : 'statusMessage')
+    ..aOS(6, _omitFieldNames ? '' : 'selfLink')
+    ..aOS(7, _omitFieldNames ? '' : 'targetLink')
+    ..aOS(8, _omitFieldNames ? '' : 'detail')
+    ..aOS(9, _omitFieldNames ? '' : 'location')
+    ..aOS(10, _omitFieldNames ? '' : 'startTime')
+    ..aOS(11, _omitFieldNames ? '' : 'endTime')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2846,9 +2779,10 @@ class Operation extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Operation copyWith(void Function(Operation) updates) =>
-      super.copyWith((message) => updates(message as Operation))
-          as Operation; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Operation)) as Operation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Operation create() => Operation._();
   Operation createEmptyInstance() => create();
@@ -2858,6 +2792,7 @@ class Operation extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Operation>(create);
   static Operation? _defaultInstance;
 
+  /// The server-assigned ID for the operation.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2870,6 +2805,10 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the operation
+  /// is taking place.
+  /// This field is deprecated, use location instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2882,6 +2821,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The operation type.
   @$pb.TagNumber(3)
   Operation_Type get operationType => $_getN(2);
   @$pb.TagNumber(3)
@@ -2894,6 +2834,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOperationType() => clearField(3);
 
+  /// The current status of the operation.
   @$pb.TagNumber(4)
   Operation_Status get status => $_getN(3);
   @$pb.TagNumber(4)
@@ -2906,6 +2847,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearStatus() => clearField(4);
 
+  /// If an error has occurred, a textual description of the error.
   @$pb.TagNumber(5)
   $core.String get statusMessage => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -2918,6 +2860,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStatusMessage() => clearField(5);
 
+  /// Server-defined URL for the resource.
   @$pb.TagNumber(6)
   $core.String get selfLink => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -2930,6 +2873,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearSelfLink() => clearField(6);
 
+  /// Server-defined URL for the target of the operation.
   @$pb.TagNumber(7)
   $core.String get targetLink => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -2942,6 +2886,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearTargetLink() => clearField(7);
 
+  /// Detailed operation progress, if available.
   @$pb.TagNumber(8)
   $core.String get detail => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -2954,6 +2899,10 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearDetail() => clearField(8);
 
+  /// [Output only] The name of the Google Compute Engine
+  /// [zone](/compute/docs/regions-zones/regions-zones#available) or
+  /// [region](/compute/docs/regions-zones/regions-zones#available) in which
+  /// the cluster resides.
   @$pb.TagNumber(9)
   $core.String get location => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -2966,6 +2915,8 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearLocation() => clearField(9);
 
+  /// [Output only] The time the operation started, in
+  /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   @$pb.TagNumber(10)
   $core.String get startTime => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -2978,6 +2929,8 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearStartTime() => clearField(10);
 
+  /// [Output only] The time the operation completed, in
+  /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   @$pb.TagNumber(11)
   $core.String get endTime => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -2991,67 +2944,49 @@ class Operation extends $pb.GeneratedMessage {
   void clearEndTime() => clearField(11);
 }
 
+/// CreateClusterRequest creates a cluster.
 class CreateClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOM<Cluster>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cluster',
-        subBuilder: Cluster.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  CreateClusterRequest._() : super();
   factory CreateClusterRequest({
     $core.String? projectId,
     $core.String? zone,
     Cluster? cluster,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (cluster != null) {
-      _result.cluster = cluster;
+      $result.cluster = cluster;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  CreateClusterRequest._() : super();
   factory CreateClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOM<Cluster>(3, _omitFieldNames ? '' : 'cluster',
+        subBuilder: Cluster.create)
+    ..aOS(5, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3062,8 +2997,10 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateClusterRequest copyWith(void Function(CreateClusterRequest) updates) =>
       super.copyWith((message) => updates(message as CreateClusterRequest))
-          as CreateClusterRequest; // ignore: deprecated_member_use
+          as CreateClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateClusterRequest create() => CreateClusterRequest._();
   CreateClusterRequest createEmptyInstance() => create();
@@ -3074,6 +3011,9 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateClusterRequest>(create);
   static CreateClusterRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3086,6 +3026,10 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3098,6 +3042,8 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// A [cluster
+  /// resource](/container-engine/reference/rest/v1alpha1/projects.zones.clusters)
   @$pb.TagNumber(3)
   Cluster get cluster => $_getN(2);
   @$pb.TagNumber(3)
@@ -3112,6 +3058,8 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Cluster ensureCluster() => $_ensure(2);
 
+  /// The parent (project and location) where the cluster will be created.
+  /// Specified in the format 'projects/*/locations/*'.
   @$pb.TagNumber(5)
   $core.String get parent => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -3125,66 +3073,48 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(5);
 }
 
+/// GetClusterRequest gets the settings of a cluster.
 class GetClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetClusterRequest._() : super();
   factory GetClusterRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? clusterId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetClusterRequest._() : super();
   factory GetClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(5, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3194,8 +3124,10 @@ class GetClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetClusterRequest copyWith(void Function(GetClusterRequest) updates) =>
       super.copyWith((message) => updates(message as GetClusterRequest))
-          as GetClusterRequest; // ignore: deprecated_member_use
+          as GetClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetClusterRequest create() => GetClusterRequest._();
   GetClusterRequest createEmptyInstance() => create();
@@ -3206,6 +3138,9 @@ class GetClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetClusterRequest>(create);
   static GetClusterRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3218,6 +3153,10 @@ class GetClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3230,6 +3169,8 @@ class GetClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to retrieve.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3242,6 +3183,8 @@ class GetClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name (project, location, cluster) of the cluster to retrieve.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -3255,45 +3198,8 @@ class GetClusterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(5);
 }
 
+/// UpdateClusterRequest updates the settings of a cluster.
 class UpdateClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOM<ClusterUpdate>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'update',
-        subBuilder: ClusterUpdate.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  UpdateClusterRequest._() : super();
   factory UpdateClusterRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -3301,30 +3207,45 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
     ClusterUpdate? update,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (update != null) {
-      _result.update = update;
+      $result.update = update;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  UpdateClusterRequest._() : super();
   factory UpdateClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOM<ClusterUpdate>(4, _omitFieldNames ? '' : 'update',
+        subBuilder: ClusterUpdate.create)
+    ..aOS(5, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3335,8 +3256,10 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateClusterRequest copyWith(void Function(UpdateClusterRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateClusterRequest))
-          as UpdateClusterRequest; // ignore: deprecated_member_use
+          as UpdateClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateClusterRequest create() => UpdateClusterRequest._();
   UpdateClusterRequest createEmptyInstance() => create();
@@ -3347,6 +3270,9 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateClusterRequest>(create);
   static UpdateClusterRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3359,6 +3285,10 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3371,6 +3301,8 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3383,6 +3315,7 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// A description of the update.
   @$pb.TagNumber(4)
   ClusterUpdate get update => $_getN(3);
   @$pb.TagNumber(4)
@@ -3397,6 +3330,8 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   ClusterUpdate ensureUpdate() => $_ensure(3);
 
+  /// The name (project, location, cluster) of the cluster to update.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -3410,54 +3345,8 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(5);
 }
 
+/// SetNodePoolVersionRequest updates the version of a node pool.
 class UpdateNodePoolRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateNodePoolRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodeVersion')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'imageType')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  UpdateNodePoolRequest._() : super();
   factory UpdateNodePoolRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -3467,36 +3356,52 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
     $core.String? imageType,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (nodeVersion != null) {
-      _result.nodeVersion = nodeVersion;
+      $result.nodeVersion = nodeVersion;
     }
     if (imageType != null) {
-      _result.imageType = imageType;
+      $result.imageType = imageType;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  UpdateNodePoolRequest._() : super();
   factory UpdateNodePoolRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateNodePoolRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateNodePoolRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..aOS(5, _omitFieldNames ? '' : 'nodeVersion')
+    ..aOS(6, _omitFieldNames ? '' : 'imageType')
+    ..aOS(8, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3508,8 +3413,10 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   UpdateNodePoolRequest copyWith(
           void Function(UpdateNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateNodePoolRequest))
-          as UpdateNodePoolRequest; // ignore: deprecated_member_use
+          as UpdateNodePoolRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateNodePoolRequest create() => UpdateNodePoolRequest._();
   UpdateNodePoolRequest createEmptyInstance() => create();
@@ -3520,6 +3427,9 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateNodePoolRequest>(create);
   static UpdateNodePoolRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3532,6 +3442,10 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3544,6 +3458,8 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3556,6 +3472,8 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3568,6 +3486,9 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// The Kubernetes version to change the nodes to (typically an
+  /// upgrade). Use `-` to upgrade to the latest version supported by
+  /// the server.
   @$pb.TagNumber(5)
   $core.String get nodeVersion => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -3580,6 +3501,7 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearNodeVersion() => clearField(5);
 
+  /// The desired image type for the node pool.
   @$pb.TagNumber(6)
   $core.String get imageType => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -3592,6 +3514,8 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearImageType() => clearField(6);
 
+  /// The name (project, location, cluster, node pool) of the node pool to update.
+  /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(8)
   $core.String get name => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -3605,50 +3529,8 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(8);
 }
 
+/// SetNodePoolAutoscalingRequest sets the autoscaler settings of a node pool.
 class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetNodePoolAutoscalingRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..aOM<NodePoolAutoscaling>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'autoscaling',
-        subBuilder: NodePoolAutoscaling.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetNodePoolAutoscalingRequest._() : super();
   factory SetNodePoolAutoscalingRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -3657,33 +3539,49 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
     NodePoolAutoscaling? autoscaling,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (autoscaling != null) {
-      _result.autoscaling = autoscaling;
+      $result.autoscaling = autoscaling;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetNodePoolAutoscalingRequest._() : super();
   factory SetNodePoolAutoscalingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetNodePoolAutoscalingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetNodePoolAutoscalingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..aOM<NodePoolAutoscaling>(5, _omitFieldNames ? '' : 'autoscaling',
+        subBuilder: NodePoolAutoscaling.create)
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3696,8 +3594,10 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
           void Function(SetNodePoolAutoscalingRequest) updates) =>
       super.copyWith(
               (message) => updates(message as SetNodePoolAutoscalingRequest))
-          as SetNodePoolAutoscalingRequest; // ignore: deprecated_member_use
+          as SetNodePoolAutoscalingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetNodePoolAutoscalingRequest create() =>
       SetNodePoolAutoscalingRequest._();
@@ -3709,6 +3609,9 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetNodePoolAutoscalingRequest>(create);
   static SetNodePoolAutoscalingRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3721,6 +3624,10 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3733,6 +3640,8 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3745,6 +3654,8 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3757,6 +3668,7 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// Autoscaling configuration for the node pool.
   @$pb.TagNumber(5)
   NodePoolAutoscaling get autoscaling => $_getN(4);
   @$pb.TagNumber(5)
@@ -3771,6 +3683,9 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   NodePoolAutoscaling ensureAutoscaling() => $_ensure(4);
 
+  /// The name (project, location, cluster, node pool) of the node pool to set
+  /// autoscaler settings. Specified in the format
+  /// 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -3784,44 +3699,8 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// SetLoggingServiceRequest sets the logging service of a cluster.
 class SetLoggingServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetLoggingServiceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'loggingService')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetLoggingServiceRequest._() : super();
   factory SetLoggingServiceRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -3829,30 +3708,44 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
     $core.String? loggingService,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (loggingService != null) {
-      _result.loggingService = loggingService;
+      $result.loggingService = loggingService;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetLoggingServiceRequest._() : super();
   factory SetLoggingServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetLoggingServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetLoggingServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'loggingService')
+    ..aOS(5, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3864,8 +3757,10 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
   SetLoggingServiceRequest copyWith(
           void Function(SetLoggingServiceRequest) updates) =>
       super.copyWith((message) => updates(message as SetLoggingServiceRequest))
-          as SetLoggingServiceRequest; // ignore: deprecated_member_use
+          as SetLoggingServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetLoggingServiceRequest create() => SetLoggingServiceRequest._();
   SetLoggingServiceRequest createEmptyInstance() => create();
@@ -3876,6 +3771,9 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetLoggingServiceRequest>(create);
   static SetLoggingServiceRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3888,6 +3786,9 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3900,6 +3801,8 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3912,6 +3815,11 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  ///  The logging service the cluster should use to write metrics.
+  ///  Currently available options:
+  ///
+  ///  * "logging.googleapis.com" - the Google Cloud Logging service
+  ///  * "none" - no metrics will be exported from the cluster
   @$pb.TagNumber(4)
   $core.String get loggingService => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3924,6 +3832,8 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearLoggingService() => clearField(4);
 
+  /// The name (project, location, cluster) of the cluster to set logging.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -3937,44 +3847,8 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(5);
 }
 
+/// SetMonitoringServiceRequest sets the monitoring service of a cluster.
 class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetMonitoringServiceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'monitoringService')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetMonitoringServiceRequest._() : super();
   factory SetMonitoringServiceRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -3982,30 +3856,44 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
     $core.String? monitoringService,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (monitoringService != null) {
-      _result.monitoringService = monitoringService;
+      $result.monitoringService = monitoringService;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetMonitoringServiceRequest._() : super();
   factory SetMonitoringServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetMonitoringServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetMonitoringServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'monitoringService')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4018,8 +3906,10 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
           void Function(SetMonitoringServiceRequest) updates) =>
       super.copyWith(
               (message) => updates(message as SetMonitoringServiceRequest))
-          as SetMonitoringServiceRequest; // ignore: deprecated_member_use
+          as SetMonitoringServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetMonitoringServiceRequest create() =>
       SetMonitoringServiceRequest._();
@@ -4031,6 +3921,9 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetMonitoringServiceRequest>(create);
   static SetMonitoringServiceRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4043,6 +3936,10 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4055,6 +3952,8 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4067,6 +3966,11 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  ///  The monitoring service the cluster should use to write metrics.
+  ///  Currently available options:
+  ///
+  ///  * "monitoring.googleapis.com" - the Google Cloud Monitoring service
+  ///  * "none" - no metrics will be exported from the cluster
   @$pb.TagNumber(4)
   $core.String get monitoringService => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4079,6 +3983,8 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMonitoringService() => clearField(4);
 
+  /// The name (project, location, cluster) of the cluster to set monitoring.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -4092,45 +3998,8 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// SetAddonsRequest sets the addons associated with the cluster.
 class SetAddonsConfigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetAddonsConfigRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOM<AddonsConfig>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'addonsConfig',
-        subBuilder: AddonsConfig.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetAddonsConfigRequest._() : super();
   factory SetAddonsConfigRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -4138,30 +4007,45 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
     AddonsConfig? addonsConfig,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (addonsConfig != null) {
-      _result.addonsConfig = addonsConfig;
+      $result.addonsConfig = addonsConfig;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetAddonsConfigRequest._() : super();
   factory SetAddonsConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetAddonsConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetAddonsConfigRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOM<AddonsConfig>(4, _omitFieldNames ? '' : 'addonsConfig',
+        subBuilder: AddonsConfig.create)
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4173,8 +4057,10 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
   SetAddonsConfigRequest copyWith(
           void Function(SetAddonsConfigRequest) updates) =>
       super.copyWith((message) => updates(message as SetAddonsConfigRequest))
-          as SetAddonsConfigRequest; // ignore: deprecated_member_use
+          as SetAddonsConfigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetAddonsConfigRequest create() => SetAddonsConfigRequest._();
   SetAddonsConfigRequest createEmptyInstance() => create();
@@ -4185,6 +4071,9 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetAddonsConfigRequest>(create);
   static SetAddonsConfigRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4197,6 +4086,10 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4209,6 +4102,8 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4221,6 +4116,8 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The desired configurations for the various addons available to run in the
+  /// cluster.
   @$pb.TagNumber(4)
   AddonsConfig get addonsConfig => $_getN(3);
   @$pb.TagNumber(4)
@@ -4235,6 +4132,8 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AddonsConfig ensureAddonsConfig() => $_ensure(3);
 
+  /// The name (project, location, cluster) of the cluster to set addons.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -4248,44 +4147,8 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// SetLocationsRequest sets the locations of the cluster.
 class SetLocationsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetLocationsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'locations')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetLocationsRequest._() : super();
   factory SetLocationsRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -4293,30 +4156,44 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? locations,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (locations != null) {
-      _result.locations.addAll(locations);
+      $result.locations.addAll(locations);
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetLocationsRequest._() : super();
   factory SetLocationsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetLocationsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetLocationsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..pPS(4, _omitFieldNames ? '' : 'locations')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4326,8 +4203,10 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SetLocationsRequest copyWith(void Function(SetLocationsRequest) updates) =>
       super.copyWith((message) => updates(message as SetLocationsRequest))
-          as SetLocationsRequest; // ignore: deprecated_member_use
+          as SetLocationsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetLocationsRequest create() => SetLocationsRequest._();
   SetLocationsRequest createEmptyInstance() => create();
@@ -4338,6 +4217,9 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetLocationsRequest>(create);
   static SetLocationsRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4350,6 +4232,10 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4362,6 +4248,8 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4374,9 +4262,18 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  ///  The desired list of Google Compute Engine
+  ///  [locations](/compute/docs/zones#available) in which the cluster's nodes
+  ///  should be located. Changing the locations a cluster is in will result
+  ///  in nodes being either created or removed from the cluster, depending on
+  ///  whether locations are being added or removed.
+  ///
+  ///  This list must always include the cluster's primary zone.
   @$pb.TagNumber(4)
   $core.List<$core.String> get locations => $_getList(3);
 
+  /// The name (project, location, cluster) of the cluster to set locations.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -4390,44 +4287,8 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// UpdateMasterRequest updates the master of the cluster.
 class UpdateMasterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateMasterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'masterVersion')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  UpdateMasterRequest._() : super();
   factory UpdateMasterRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -4435,30 +4296,44 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
     $core.String? masterVersion,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (masterVersion != null) {
-      _result.masterVersion = masterVersion;
+      $result.masterVersion = masterVersion;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  UpdateMasterRequest._() : super();
   factory UpdateMasterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateMasterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateMasterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'masterVersion')
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4468,8 +4343,10 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateMasterRequest copyWith(void Function(UpdateMasterRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateMasterRequest))
-          as UpdateMasterRequest; // ignore: deprecated_member_use
+          as UpdateMasterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateMasterRequest create() => UpdateMasterRequest._();
   UpdateMasterRequest createEmptyInstance() => create();
@@ -4480,6 +4357,8 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateMasterRequest>(create);
   static UpdateMasterRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4492,6 +4371,10 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4504,6 +4387,8 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4516,6 +4401,9 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The Kubernetes version to change the master to. The only valid value is the
+  /// latest supported version. Use "-" to have the server automatically select
+  /// the latest version.
   @$pb.TagNumber(4)
   $core.String get masterVersion => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4528,6 +4416,8 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMasterVersion() => clearField(4);
 
+  /// The name (project, location, cluster) of the cluster to update.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(7)
@@ -4541,54 +4431,8 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+/// SetMasterAuthRequest updates the admin password of a cluster.
 class SetMasterAuthRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetMasterAuthRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..e<SetMasterAuthRequest_Action>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'action',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: SetMasterAuthRequest_Action.UNKNOWN,
-        valueOf: SetMasterAuthRequest_Action.valueOf,
-        enumValues: SetMasterAuthRequest_Action.values)
-    ..aOM<MasterAuth>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'update',
-        subBuilder: MasterAuth.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetMasterAuthRequest._() : super();
   factory SetMasterAuthRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -4597,33 +4441,53 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
     MasterAuth? update,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (action != null) {
-      _result.action = action;
+      $result.action = action;
     }
     if (update != null) {
-      _result.update = update;
+      $result.update = update;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetMasterAuthRequest._() : super();
   factory SetMasterAuthRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetMasterAuthRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetMasterAuthRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..e<SetMasterAuthRequest_Action>(
+        4, _omitFieldNames ? '' : 'action', $pb.PbFieldType.OE,
+        defaultOrMaker: SetMasterAuthRequest_Action.UNKNOWN,
+        valueOf: SetMasterAuthRequest_Action.valueOf,
+        enumValues: SetMasterAuthRequest_Action.values)
+    ..aOM<MasterAuth>(5, _omitFieldNames ? '' : 'update',
+        subBuilder: MasterAuth.create)
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4634,8 +4498,10 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SetMasterAuthRequest copyWith(void Function(SetMasterAuthRequest) updates) =>
       super.copyWith((message) => updates(message as SetMasterAuthRequest))
-          as SetMasterAuthRequest; // ignore: deprecated_member_use
+          as SetMasterAuthRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetMasterAuthRequest create() => SetMasterAuthRequest._();
   SetMasterAuthRequest createEmptyInstance() => create();
@@ -4646,6 +4512,9 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetMasterAuthRequest>(create);
   static SetMasterAuthRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4658,6 +4527,10 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4670,6 +4543,8 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to upgrade.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4682,6 +4557,7 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The exact form of action to be taken on the master auth.
   @$pb.TagNumber(4)
   SetMasterAuthRequest_Action get action => $_getN(3);
   @$pb.TagNumber(4)
@@ -4694,6 +4570,7 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearAction() => clearField(4);
 
+  /// A description of the update.
   @$pb.TagNumber(5)
   MasterAuth get update => $_getN(4);
   @$pb.TagNumber(5)
@@ -4708,6 +4585,8 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   MasterAuth ensureUpdate() => $_ensure(4);
 
+  /// The name (project, location, cluster) of the cluster to set auth.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -4721,66 +4600,48 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+/// DeleteClusterRequest deletes a cluster.
 class DeleteClusterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteClusterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteClusterRequest._() : super();
   factory DeleteClusterRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? clusterId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteClusterRequest._() : super();
   factory DeleteClusterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteClusterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteClusterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4791,8 +4652,10 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteClusterRequest copyWith(void Function(DeleteClusterRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteClusterRequest))
-          as DeleteClusterRequest; // ignore: deprecated_member_use
+          as DeleteClusterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteClusterRequest create() => DeleteClusterRequest._();
   DeleteClusterRequest createEmptyInstance() => create();
@@ -4803,6 +4666,9 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteClusterRequest>(create);
   static DeleteClusterRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4815,6 +4681,10 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4827,6 +4697,8 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to delete.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4839,6 +4711,8 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name (project, location, cluster) of the cluster to delete.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4852,57 +4726,43 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(4);
 }
 
+/// ListClustersRequest lists clusters.
 class ListClustersRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListClustersRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  ListClustersRequest._() : super();
   factory ListClustersRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  ListClustersRequest._() : super();
   factory ListClustersRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListClustersRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListClustersRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(4, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4912,8 +4772,10 @@ class ListClustersRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListClustersRequest copyWith(void Function(ListClustersRequest) updates) =>
       super.copyWith((message) => updates(message as ListClustersRequest))
-          as ListClustersRequest; // ignore: deprecated_member_use
+          as ListClustersRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListClustersRequest create() => ListClustersRequest._();
   ListClustersRequest createEmptyInstance() => create();
@@ -4924,6 +4786,9 @@ class ListClustersRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListClustersRequest>(create);
   static ListClustersRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4936,6 +4801,10 @@ class ListClustersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides, or "-" for all zones.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4948,6 +4817,9 @@ class ListClustersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The parent (project and location) where the clusters will be listed.
+  /// Specified in the format 'projects/*/locations/*'.
+  /// Location "-" matches all zones and all regions.
   @$pb.TagNumber(4)
   $core.String get parent => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -4961,50 +4833,39 @@ class ListClustersRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(4);
 }
 
+/// ListClustersResponse is the result of ListClustersRequest.
 class ListClustersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListClustersResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<Cluster>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusters',
-        $pb.PbFieldType.PM,
-        subBuilder: Cluster.create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'missingZones')
-    ..hasRequiredFields = false;
-
-  ListClustersResponse._() : super();
   factory ListClustersResponse({
     $core.Iterable<Cluster>? clusters,
     $core.Iterable<$core.String>? missingZones,
   }) {
-    final _result = create();
+    final $result = create();
     if (clusters != null) {
-      _result.clusters.addAll(clusters);
+      $result.clusters.addAll(clusters);
     }
     if (missingZones != null) {
-      _result.missingZones.addAll(missingZones);
+      $result.missingZones.addAll(missingZones);
     }
-    return _result;
+    return $result;
   }
+  ListClustersResponse._() : super();
   factory ListClustersResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListClustersResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListClustersResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Cluster>(1, _omitFieldNames ? '' : 'clusters', $pb.PbFieldType.PM,
+        subBuilder: Cluster.create)
+    ..pPS(2, _omitFieldNames ? '' : 'missingZones')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5015,8 +4876,10 @@ class ListClustersResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListClustersResponse copyWith(void Function(ListClustersResponse) updates) =>
       super.copyWith((message) => updates(message as ListClustersResponse))
-          as ListClustersResponse; // ignore: deprecated_member_use
+          as ListClustersResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListClustersResponse create() => ListClustersResponse._();
   ListClustersResponse createEmptyInstance() => create();
@@ -5027,73 +4890,59 @@ class ListClustersResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListClustersResponse>(create);
   static ListClustersResponse? _defaultInstance;
 
+  /// A list of clusters in the project in the specified zone, or
+  /// across all ones.
   @$pb.TagNumber(1)
   $core.List<Cluster> get clusters => $_getList(0);
 
+  /// If any zones are listed here, the list of clusters returned
+  /// may be missing those zones.
   @$pb.TagNumber(2)
   $core.List<$core.String> get missingZones => $_getList(1);
 }
 
+/// GetOperationRequest gets a single operation.
 class GetOperationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetOperationRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetOperationRequest._() : super();
   factory GetOperationRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? operationId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (operationId != null) {
-      _result.operationId = operationId;
+      $result.operationId = operationId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetOperationRequest._() : super();
   factory GetOperationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetOperationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetOperationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'operationId')
+    ..aOS(5, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5103,8 +4952,10 @@ class GetOperationRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetOperationRequest copyWith(void Function(GetOperationRequest) updates) =>
       super.copyWith((message) => updates(message as GetOperationRequest))
-          as GetOperationRequest; // ignore: deprecated_member_use
+          as GetOperationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOperationRequest create() => GetOperationRequest._();
   GetOperationRequest createEmptyInstance() => create();
@@ -5115,6 +4966,9 @@ class GetOperationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetOperationRequest>(create);
   static GetOperationRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5127,6 +4981,10 @@ class GetOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5139,6 +4997,8 @@ class GetOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The server-assigned `name` of the operation.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get operationId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5151,6 +5011,8 @@ class GetOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOperationId() => clearField(3);
 
+  /// The name (project, location, operation id) of the operation to get.
+  /// Specified in the format 'projects/*/locations/*/operations/*'.
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -5164,57 +5026,43 @@ class GetOperationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(5);
 }
 
+/// ListOperationsRequest lists operations.
 class ListOperationsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListOperationsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  ListOperationsRequest._() : super();
   factory ListOperationsRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  ListOperationsRequest._() : super();
   factory ListOperationsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListOperationsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListOperationsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(4, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5226,8 +5074,10 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
   ListOperationsRequest copyWith(
           void Function(ListOperationsRequest) updates) =>
       super.copyWith((message) => updates(message as ListOperationsRequest))
-          as ListOperationsRequest; // ignore: deprecated_member_use
+          as ListOperationsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListOperationsRequest create() => ListOperationsRequest._();
   ListOperationsRequest createEmptyInstance() => create();
@@ -5238,6 +5088,9 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListOperationsRequest>(create);
   static ListOperationsRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5250,6 +5103,9 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+  /// to return operations for, or `-` for all zones.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5262,6 +5118,9 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The parent (project and location) where the operations will be listed.
+  /// Specified in the format 'projects/*/locations/*'.
+  /// Location "-" matches all zones and all regions.
   @$pb.TagNumber(4)
   $core.String get parent => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -5275,66 +5134,48 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(4);
 }
 
+/// CancelOperationRequest cancels a single operation.
 class CancelOperationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CancelOperationRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  CancelOperationRequest._() : super();
   factory CancelOperationRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? operationId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (operationId != null) {
-      _result.operationId = operationId;
+      $result.operationId = operationId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  CancelOperationRequest._() : super();
   factory CancelOperationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CancelOperationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CancelOperationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'operationId')
+    ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5346,8 +5187,10 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   CancelOperationRequest copyWith(
           void Function(CancelOperationRequest) updates) =>
       super.copyWith((message) => updates(message as CancelOperationRequest))
-          as CancelOperationRequest; // ignore: deprecated_member_use
+          as CancelOperationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CancelOperationRequest create() => CancelOperationRequest._();
   CancelOperationRequest createEmptyInstance() => create();
@@ -5358,6 +5201,9 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CancelOperationRequest>(create);
   static CancelOperationRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5370,6 +5216,9 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the operation resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5382,6 +5231,8 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The server-assigned `name` of the operation.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get operationId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5394,6 +5245,8 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOperationId() => clearField(3);
 
+  /// The name (project, location, operation id) of the operation to cancel.
+  /// Specified in the format 'projects/*/locations/*/operations/*'.
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -5407,50 +5260,39 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(4);
 }
 
+/// ListOperationsResponse is the result of ListOperationsRequest.
 class ListOperationsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListOperationsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<Operation>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operations',
-        $pb.PbFieldType.PM,
-        subBuilder: Operation.create)
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'missingZones')
-    ..hasRequiredFields = false;
-
-  ListOperationsResponse._() : super();
   factory ListOperationsResponse({
     $core.Iterable<Operation>? operations,
     $core.Iterable<$core.String>? missingZones,
   }) {
-    final _result = create();
+    final $result = create();
     if (operations != null) {
-      _result.operations.addAll(operations);
+      $result.operations.addAll(operations);
     }
     if (missingZones != null) {
-      _result.missingZones.addAll(missingZones);
+      $result.missingZones.addAll(missingZones);
     }
-    return _result;
+    return $result;
   }
+  ListOperationsResponse._() : super();
   factory ListOperationsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListOperationsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListOperationsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Operation>(1, _omitFieldNames ? '' : 'operations', $pb.PbFieldType.PM,
+        subBuilder: Operation.create)
+    ..pPS(2, _omitFieldNames ? '' : 'missingZones')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5462,8 +5304,10 @@ class ListOperationsResponse extends $pb.GeneratedMessage {
   ListOperationsResponse copyWith(
           void Function(ListOperationsResponse) updates) =>
       super.copyWith((message) => updates(message as ListOperationsResponse))
-          as ListOperationsResponse; // ignore: deprecated_member_use
+          as ListOperationsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListOperationsResponse create() => ListOperationsResponse._();
   ListOperationsResponse createEmptyInstance() => create();
@@ -5474,64 +5318,53 @@ class ListOperationsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListOperationsResponse>(create);
   static ListOperationsResponse? _defaultInstance;
 
+  /// A list of operations in the project in the specified zone.
   @$pb.TagNumber(1)
   $core.List<Operation> get operations => $_getList(0);
 
+  /// If any zones are listed here, the list of operations returned
+  /// may be missing the operations from those zones.
   @$pb.TagNumber(2)
   $core.List<$core.String> get missingZones => $_getList(1);
 }
 
+/// Gets the current Container Engine service configuration.
 class GetServerConfigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServerConfigRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetServerConfigRequest._() : super();
   factory GetServerConfigRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetServerConfigRequest._() : super();
   factory GetServerConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServerConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServerConfigRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5543,8 +5376,10 @@ class GetServerConfigRequest extends $pb.GeneratedMessage {
   GetServerConfigRequest copyWith(
           void Function(GetServerConfigRequest) updates) =>
       super.copyWith((message) => updates(message as GetServerConfigRequest))
-          as GetServerConfigRequest; // ignore: deprecated_member_use
+          as GetServerConfigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServerConfigRequest create() => GetServerConfigRequest._();
   GetServerConfigRequest createEmptyInstance() => create();
@@ -5555,6 +5390,9 @@ class GetServerConfigRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServerConfigRequest>(create);
   static GetServerConfigRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5567,6 +5405,9 @@ class GetServerConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+  /// to return operations for.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5579,6 +5420,8 @@ class GetServerConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name (project and location) of the server config to get
+  /// Specified in the format 'projects/*/locations/*'.
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -5592,44 +5435,8 @@ class GetServerConfigRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(4);
 }
 
+/// Container Engine service configuration.
 class ServerConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServerConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'defaultClusterVersion')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validNodeVersions')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'defaultImageType')
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validImageTypes')
-    ..pPS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validMasterVersions')
-    ..hasRequiredFields = false;
-
-  ServerConfig._() : super();
   factory ServerConfig({
     $core.String? defaultClusterVersion,
     $core.Iterable<$core.String>? validNodeVersions,
@@ -5637,30 +5444,44 @@ class ServerConfig extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? validImageTypes,
     $core.Iterable<$core.String>? validMasterVersions,
   }) {
-    final _result = create();
+    final $result = create();
     if (defaultClusterVersion != null) {
-      _result.defaultClusterVersion = defaultClusterVersion;
+      $result.defaultClusterVersion = defaultClusterVersion;
     }
     if (validNodeVersions != null) {
-      _result.validNodeVersions.addAll(validNodeVersions);
+      $result.validNodeVersions.addAll(validNodeVersions);
     }
     if (defaultImageType != null) {
-      _result.defaultImageType = defaultImageType;
+      $result.defaultImageType = defaultImageType;
     }
     if (validImageTypes != null) {
-      _result.validImageTypes.addAll(validImageTypes);
+      $result.validImageTypes.addAll(validImageTypes);
     }
     if (validMasterVersions != null) {
-      _result.validMasterVersions.addAll(validMasterVersions);
+      $result.validMasterVersions.addAll(validMasterVersions);
     }
-    return _result;
+    return $result;
   }
+  ServerConfig._() : super();
   factory ServerConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServerConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServerConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'defaultClusterVersion')
+    ..pPS(3, _omitFieldNames ? '' : 'validNodeVersions')
+    ..aOS(4, _omitFieldNames ? '' : 'defaultImageType')
+    ..pPS(5, _omitFieldNames ? '' : 'validImageTypes')
+    ..pPS(6, _omitFieldNames ? '' : 'validMasterVersions')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5670,8 +5491,10 @@ class ServerConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServerConfig copyWith(void Function(ServerConfig) updates) =>
       super.copyWith((message) => updates(message as ServerConfig))
-          as ServerConfig; // ignore: deprecated_member_use
+          as ServerConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServerConfig create() => ServerConfig._();
   ServerConfig createEmptyInstance() => create();
@@ -5682,6 +5505,7 @@ class ServerConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServerConfig>(create);
   static ServerConfig? _defaultInstance;
 
+  /// Version of Kubernetes the service deploys by default.
   @$pb.TagNumber(1)
   $core.String get defaultClusterVersion => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5694,9 +5518,11 @@ class ServerConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDefaultClusterVersion() => clearField(1);
 
+  /// List of valid node upgrade target versions.
   @$pb.TagNumber(3)
   $core.List<$core.String> get validNodeVersions => $_getList(1);
 
+  /// Default image type.
   @$pb.TagNumber(4)
   $core.String get defaultImageType => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -5709,52 +5535,17 @@ class ServerConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDefaultImageType() => clearField(4);
 
+  /// List of valid image types.
   @$pb.TagNumber(5)
   $core.List<$core.String> get validImageTypes => $_getList(3);
 
+  /// List of valid master versions.
   @$pb.TagNumber(6)
   $core.List<$core.String> get validMasterVersions => $_getList(4);
 }
 
+/// CreateNodePoolRequest creates a node pool for a cluster.
 class CreateNodePoolRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateNodePoolRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOM<NodePool>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePool',
-        subBuilder: NodePool.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  CreateNodePoolRequest._() : super();
   factory CreateNodePoolRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -5762,30 +5553,45 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
     NodePool? nodePool,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePool != null) {
-      _result.nodePool = nodePool;
+      $result.nodePool = nodePool;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  CreateNodePoolRequest._() : super();
   factory CreateNodePoolRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateNodePoolRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateNodePoolRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOM<NodePool>(4, _omitFieldNames ? '' : 'nodePool',
+        subBuilder: NodePool.create)
+    ..aOS(6, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5797,8 +5603,10 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
   CreateNodePoolRequest copyWith(
           void Function(CreateNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as CreateNodePoolRequest))
-          as CreateNodePoolRequest; // ignore: deprecated_member_use
+          as CreateNodePoolRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateNodePoolRequest create() => CreateNodePoolRequest._();
   CreateNodePoolRequest createEmptyInstance() => create();
@@ -5809,6 +5617,9 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateNodePoolRequest>(create);
   static CreateNodePoolRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5821,6 +5632,10 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5833,6 +5648,8 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5845,6 +5662,7 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The node pool to create.
   @$pb.TagNumber(4)
   NodePool get nodePool => $_getN(3);
   @$pb.TagNumber(4)
@@ -5859,6 +5677,8 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   NodePool ensureNodePool() => $_ensure(3);
 
+  /// The parent (project, location, cluster id) where the node pool will be created.
+  /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(6)
   $core.String get parent => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -5872,44 +5692,8 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(6);
 }
 
+/// DeleteNodePoolRequest deletes a node pool for a cluster.
 class DeleteNodePoolRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteNodePoolRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteNodePoolRequest._() : super();
   factory DeleteNodePoolRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -5917,30 +5701,44 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
     $core.String? nodePoolId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteNodePoolRequest._() : super();
   factory DeleteNodePoolRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteNodePoolRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteNodePoolRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5952,8 +5750,10 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
   DeleteNodePoolRequest copyWith(
           void Function(DeleteNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteNodePoolRequest))
-          as DeleteNodePoolRequest; // ignore: deprecated_member_use
+          as DeleteNodePoolRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteNodePoolRequest create() => DeleteNodePoolRequest._();
   DeleteNodePoolRequest createEmptyInstance() => create();
@@ -5964,6 +5764,9 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteNodePoolRequest>(create);
   static DeleteNodePoolRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5976,6 +5779,10 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5988,6 +5795,8 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -6000,6 +5809,8 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool to delete.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -6012,6 +5823,8 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// The name (project, location, cluster, node pool id) of the node pool to delete.
+  /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -6025,66 +5838,48 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// ListNodePoolsRequest lists the node pool(s) for a cluster.
 class ListNodePoolsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNodePoolsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  ListNodePoolsRequest._() : super();
   factory ListNodePoolsRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? clusterId,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  ListNodePoolsRequest._() : super();
   factory ListNodePoolsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNodePoolsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNodePoolsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(5, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6095,8 +5890,10 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListNodePoolsRequest copyWith(void Function(ListNodePoolsRequest) updates) =>
       super.copyWith((message) => updates(message as ListNodePoolsRequest))
-          as ListNodePoolsRequest; // ignore: deprecated_member_use
+          as ListNodePoolsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNodePoolsRequest create() => ListNodePoolsRequest._();
   ListNodePoolsRequest createEmptyInstance() => create();
@@ -6107,6 +5904,9 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNodePoolsRequest>(create);
   static ListNodePoolsRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -6119,6 +5919,10 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -6131,6 +5935,8 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use parent instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -6143,6 +5949,8 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The parent (project, location, cluster id) where the node pools will be listed.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(5)
   $core.String get parent => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -6156,44 +5964,8 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(5);
 }
 
+/// GetNodePoolRequest retrieves a node pool for a cluster.
 class GetNodePoolRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetNodePoolRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetNodePoolRequest._() : super();
   factory GetNodePoolRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -6201,30 +5973,44 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
     $core.String? nodePoolId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetNodePoolRequest._() : super();
   factory GetNodePoolRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetNodePoolRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetNodePoolRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6234,8 +6020,10 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetNodePoolRequest copyWith(void Function(GetNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as GetNodePoolRequest))
-          as GetNodePoolRequest; // ignore: deprecated_member_use
+          as GetNodePoolRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetNodePoolRequest create() => GetNodePoolRequest._();
   GetNodePoolRequest createEmptyInstance() => create();
@@ -6246,6 +6034,9 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetNodePoolRequest>(create);
   static GetNodePoolRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -6258,6 +6049,10 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -6270,6 +6065,8 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -6282,6 +6079,8 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -6294,6 +6093,8 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// The name (project, location, cluster, node pool id) of the node pool to get.
+  /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -6307,77 +6108,13 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// NodePool contains the name and configuration for a cluster's node pool.
+/// Node pools are a set of nodes (i.e. VM's), with a common configuration and
+/// specification, under the control of the cluster master. They may have a set
+/// of Kubernetes labels applied to them, which may be used to reference them
+/// during pod scheduling. They may also be resized up or down, to accommodate
+/// the workload.
 class NodePool extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NodePool',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<NodeConfig>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'config',
-        subBuilder: NodeConfig.create)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'initialNodeCount',
-        $pb.PbFieldType.O3)
-    ..aOM<NodePoolAutoscaling>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'autoscaling',
-        subBuilder: NodePoolAutoscaling.create)
-    ..aOM<NodeManagement>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'management',
-        subBuilder: NodeManagement.create)
-    ..aOS(
-        100,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'selfLink')
-    ..aOS(
-        101,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..pPS(
-        102,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instanceGroupUrls')
-    ..e<NodePool_Status>(
-        103,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: NodePool_Status.STATUS_UNSPECIFIED,
-        valueOf: NodePool_Status.valueOf,
-        enumValues: NodePool_Status.values)
-    ..aOS(
-        104,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'statusMessage')
-    ..hasRequiredFields = false;
-
-  NodePool._() : super();
   factory NodePool({
     $core.String? name,
     NodeConfig? config,
@@ -6390,45 +6127,72 @@ class NodePool extends $pb.GeneratedMessage {
     NodePool_Status? status,
     $core.String? statusMessage,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (config != null) {
-      _result.config = config;
+      $result.config = config;
     }
     if (initialNodeCount != null) {
-      _result.initialNodeCount = initialNodeCount;
+      $result.initialNodeCount = initialNodeCount;
     }
     if (autoscaling != null) {
-      _result.autoscaling = autoscaling;
+      $result.autoscaling = autoscaling;
     }
     if (management != null) {
-      _result.management = management;
+      $result.management = management;
     }
     if (selfLink != null) {
-      _result.selfLink = selfLink;
+      $result.selfLink = selfLink;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (instanceGroupUrls != null) {
-      _result.instanceGroupUrls.addAll(instanceGroupUrls);
+      $result.instanceGroupUrls.addAll(instanceGroupUrls);
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
     if (statusMessage != null) {
-      _result.statusMessage = statusMessage;
+      $result.statusMessage = statusMessage;
     }
-    return _result;
+    return $result;
   }
+  NodePool._() : super();
   factory NodePool.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NodePool.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NodePool',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<NodeConfig>(2, _omitFieldNames ? '' : 'config',
+        subBuilder: NodeConfig.create)
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'initialNodeCount', $pb.PbFieldType.O3)
+    ..aOM<NodePoolAutoscaling>(4, _omitFieldNames ? '' : 'autoscaling',
+        subBuilder: NodePoolAutoscaling.create)
+    ..aOM<NodeManagement>(5, _omitFieldNames ? '' : 'management',
+        subBuilder: NodeManagement.create)
+    ..aOS(100, _omitFieldNames ? '' : 'selfLink')
+    ..aOS(101, _omitFieldNames ? '' : 'version')
+    ..pPS(102, _omitFieldNames ? '' : 'instanceGroupUrls')
+    ..e<NodePool_Status>(
+        103, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: NodePool_Status.STATUS_UNSPECIFIED,
+        valueOf: NodePool_Status.valueOf,
+        enumValues: NodePool_Status.values)
+    ..aOS(104, _omitFieldNames ? '' : 'statusMessage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6437,9 +6201,10 @@ class NodePool extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   NodePool copyWith(void Function(NodePool) updates) =>
-      super.copyWith((message) => updates(message as NodePool))
-          as NodePool; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as NodePool)) as NodePool;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NodePool create() => NodePool._();
   NodePool createEmptyInstance() => create();
@@ -6449,6 +6214,7 @@ class NodePool extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodePool>(create);
   static NodePool? _defaultInstance;
 
+  /// The name of the node pool.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -6461,6 +6227,7 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The node configuration of the pool.
   @$pb.TagNumber(2)
   NodeConfig get config => $_getN(1);
   @$pb.TagNumber(2)
@@ -6475,6 +6242,10 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   NodeConfig ensureConfig() => $_ensure(1);
 
+  /// The initial node count for the pool. You must ensure that your
+  /// Compute Engine <a href="/compute/docs/resource-quotas">resource quota</a>
+  /// is sufficient for this number of instances. You must also have available
+  /// firewall and routes quota.
   @$pb.TagNumber(3)
   $core.int get initialNodeCount => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -6487,6 +6258,8 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearInitialNodeCount() => clearField(3);
 
+  /// Autoscaler configuration for this NodePool. Autoscaler is enabled
+  /// only if a valid configuration is present.
   @$pb.TagNumber(4)
   NodePoolAutoscaling get autoscaling => $_getN(3);
   @$pb.TagNumber(4)
@@ -6501,6 +6274,7 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   NodePoolAutoscaling ensureAutoscaling() => $_ensure(3);
 
+  /// NodeManagement configuration for this NodePool.
   @$pb.TagNumber(5)
   NodeManagement get management => $_getN(4);
   @$pb.TagNumber(5)
@@ -6515,6 +6289,7 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   NodeManagement ensureManagement() => $_ensure(4);
 
+  /// [Output only] Server-defined URL for the resource.
   @$pb.TagNumber(100)
   $core.String get selfLink => $_getSZ(5);
   @$pb.TagNumber(100)
@@ -6527,6 +6302,7 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(100)
   void clearSelfLink() => clearField(100);
 
+  /// [Output only] The version of the Kubernetes of this node.
   @$pb.TagNumber(101)
   $core.String get version => $_getSZ(6);
   @$pb.TagNumber(101)
@@ -6539,9 +6315,13 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(101)
   void clearVersion() => clearField(101);
 
+  /// [Output only] The resource URLs of [instance
+  /// groups](/compute/docs/instance-groups/) associated with this
+  /// node pool.
   @$pb.TagNumber(102)
   $core.List<$core.String> get instanceGroupUrls => $_getList(7);
 
+  /// [Output only] The status of the nodes in this pool instance.
   @$pb.TagNumber(103)
   NodePool_Status get status => $_getN(8);
   @$pb.TagNumber(103)
@@ -6554,6 +6334,8 @@ class NodePool extends $pb.GeneratedMessage {
   @$pb.TagNumber(103)
   void clearStatus() => clearField(103);
 
+  /// [Output only] Additional information about the current status of this
+  /// node pool instance, if available.
   @$pb.TagNumber(104)
   $core.String get statusMessage => $_getSZ(9);
   @$pb.TagNumber(104)
@@ -6567,58 +6349,45 @@ class NodePool extends $pb.GeneratedMessage {
   void clearStatusMessage() => clearField(104);
 }
 
+/// NodeManagement defines the set of node management services turned on for the
+/// node pool.
 class NodeManagement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NodeManagement',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'autoUpgrade')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'autoRepair')
-    ..aOM<AutoUpgradeOptions>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'upgradeOptions',
-        subBuilder: AutoUpgradeOptions.create)
-    ..hasRequiredFields = false;
-
-  NodeManagement._() : super();
   factory NodeManagement({
     $core.bool? autoUpgrade,
     $core.bool? autoRepair,
     AutoUpgradeOptions? upgradeOptions,
   }) {
-    final _result = create();
+    final $result = create();
     if (autoUpgrade != null) {
-      _result.autoUpgrade = autoUpgrade;
+      $result.autoUpgrade = autoUpgrade;
     }
     if (autoRepair != null) {
-      _result.autoRepair = autoRepair;
+      $result.autoRepair = autoRepair;
     }
     if (upgradeOptions != null) {
-      _result.upgradeOptions = upgradeOptions;
+      $result.upgradeOptions = upgradeOptions;
     }
-    return _result;
+    return $result;
   }
+  NodeManagement._() : super();
   factory NodeManagement.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NodeManagement.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NodeManagement',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'autoUpgrade')
+    ..aOB(2, _omitFieldNames ? '' : 'autoRepair')
+    ..aOM<AutoUpgradeOptions>(10, _omitFieldNames ? '' : 'upgradeOptions',
+        subBuilder: AutoUpgradeOptions.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6628,8 +6397,10 @@ class NodeManagement extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   NodeManagement copyWith(void Function(NodeManagement) updates) =>
       super.copyWith((message) => updates(message as NodeManagement))
-          as NodeManagement; // ignore: deprecated_member_use
+          as NodeManagement;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NodeManagement create() => NodeManagement._();
   NodeManagement createEmptyInstance() => create();
@@ -6640,6 +6411,7 @@ class NodeManagement extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NodeManagement>(create);
   static NodeManagement? _defaultInstance;
 
+  /// Whether the nodes will be automatically upgraded.
   @$pb.TagNumber(1)
   $core.bool get autoUpgrade => $_getBF(0);
   @$pb.TagNumber(1)
@@ -6652,6 +6424,7 @@ class NodeManagement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAutoUpgrade() => clearField(1);
 
+  /// Whether the nodes will be automatically repaired.
   @$pb.TagNumber(2)
   $core.bool get autoRepair => $_getBF(1);
   @$pb.TagNumber(2)
@@ -6664,6 +6437,7 @@ class NodeManagement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAutoRepair() => clearField(2);
 
+  /// Specifies the Auto Upgrade knobs for the node pool.
   @$pb.TagNumber(10)
   AutoUpgradeOptions get upgradeOptions => $_getN(2);
   @$pb.TagNumber(10)
@@ -6679,48 +6453,39 @@ class NodeManagement extends $pb.GeneratedMessage {
   AutoUpgradeOptions ensureUpgradeOptions() => $_ensure(2);
 }
 
+/// AutoUpgradeOptions defines the set of options for the user to control how
+/// the Auto Upgrades will proceed.
 class AutoUpgradeOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AutoUpgradeOptions',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'autoUpgradeStartTime')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..hasRequiredFields = false;
-
-  AutoUpgradeOptions._() : super();
   factory AutoUpgradeOptions({
     $core.String? autoUpgradeStartTime,
     $core.String? description,
   }) {
-    final _result = create();
+    final $result = create();
     if (autoUpgradeStartTime != null) {
-      _result.autoUpgradeStartTime = autoUpgradeStartTime;
+      $result.autoUpgradeStartTime = autoUpgradeStartTime;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
-    return _result;
+    return $result;
   }
+  AutoUpgradeOptions._() : super();
   factory AutoUpgradeOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AutoUpgradeOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AutoUpgradeOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'autoUpgradeStartTime')
+    ..aOS(2, _omitFieldNames ? '' : 'description')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6730,8 +6495,10 @@ class AutoUpgradeOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AutoUpgradeOptions copyWith(void Function(AutoUpgradeOptions) updates) =>
       super.copyWith((message) => updates(message as AutoUpgradeOptions))
-          as AutoUpgradeOptions; // ignore: deprecated_member_use
+          as AutoUpgradeOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AutoUpgradeOptions create() => AutoUpgradeOptions._();
   AutoUpgradeOptions createEmptyInstance() => create();
@@ -6742,6 +6509,9 @@ class AutoUpgradeOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AutoUpgradeOptions>(create);
   static AutoUpgradeOptions? _defaultInstance;
 
+  /// [Output only] This field is set when upgrades are about to commence
+  /// with the approximate start time for the upgrades, in
+  /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   @$pb.TagNumber(1)
   $core.String get autoUpgradeStartTime => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -6754,6 +6524,8 @@ class AutoUpgradeOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAutoUpgradeStartTime() => clearField(1);
 
+  /// [Output only] This field is set when upgrades are about to commence
+  /// with the description of the upgrade.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -6767,40 +6539,34 @@ class AutoUpgradeOptions extends $pb.GeneratedMessage {
   void clearDescription() => clearField(2);
 }
 
+/// MaintenancePolicy defines the maintenance policy to be used for the cluster.
 class MaintenancePolicy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MaintenancePolicy',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOM<MaintenanceWindow>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'window',
-        subBuilder: MaintenanceWindow.create)
-    ..hasRequiredFields = false;
-
-  MaintenancePolicy._() : super();
   factory MaintenancePolicy({
     MaintenanceWindow? window,
   }) {
-    final _result = create();
+    final $result = create();
     if (window != null) {
-      _result.window = window;
+      $result.window = window;
     }
-    return _result;
+    return $result;
   }
+  MaintenancePolicy._() : super();
   factory MaintenancePolicy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MaintenancePolicy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MaintenancePolicy',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<MaintenanceWindow>(1, _omitFieldNames ? '' : 'window',
+        subBuilder: MaintenanceWindow.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6810,8 +6576,10 @@ class MaintenancePolicy extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MaintenancePolicy copyWith(void Function(MaintenancePolicy) updates) =>
       super.copyWith((message) => updates(message as MaintenancePolicy))
-          as MaintenancePolicy; // ignore: deprecated_member_use
+          as MaintenancePolicy;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MaintenancePolicy create() => MaintenancePolicy._();
   MaintenancePolicy createEmptyInstance() => create();
@@ -6822,6 +6590,7 @@ class MaintenancePolicy extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MaintenancePolicy>(create);
   static MaintenancePolicy? _defaultInstance;
 
+  /// Specifies the maintenance window in which maintenance may be performed.
   @$pb.TagNumber(1)
   MaintenanceWindow get window => $_getN(0);
   @$pb.TagNumber(1)
@@ -6839,46 +6608,41 @@ class MaintenancePolicy extends $pb.GeneratedMessage {
 
 enum MaintenanceWindow_Policy { dailyMaintenanceWindow, notSet }
 
+/// MaintenanceWindow defines the maintenance window to be used for the cluster.
 class MaintenanceWindow extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, MaintenanceWindow_Policy>
-      _MaintenanceWindow_PolicyByTag = {
-    2: MaintenanceWindow_Policy.dailyMaintenanceWindow,
-    0: MaintenanceWindow_Policy.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MaintenanceWindow',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..oo(0, [2])
-    ..aOM<DailyMaintenanceWindow>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dailyMaintenanceWindow',
-        subBuilder: DailyMaintenanceWindow.create)
-    ..hasRequiredFields = false;
-
-  MaintenanceWindow._() : super();
   factory MaintenanceWindow({
     DailyMaintenanceWindow? dailyMaintenanceWindow,
   }) {
-    final _result = create();
+    final $result = create();
     if (dailyMaintenanceWindow != null) {
-      _result.dailyMaintenanceWindow = dailyMaintenanceWindow;
+      $result.dailyMaintenanceWindow = dailyMaintenanceWindow;
     }
-    return _result;
+    return $result;
   }
+  MaintenanceWindow._() : super();
   factory MaintenanceWindow.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MaintenanceWindow.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, MaintenanceWindow_Policy>
+      _MaintenanceWindow_PolicyByTag = {
+    2: MaintenanceWindow_Policy.dailyMaintenanceWindow,
+    0: MaintenanceWindow_Policy.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MaintenanceWindow',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..oo(0, [2])
+    ..aOM<DailyMaintenanceWindow>(
+        2, _omitFieldNames ? '' : 'dailyMaintenanceWindow',
+        subBuilder: DailyMaintenanceWindow.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6888,8 +6652,10 @@ class MaintenanceWindow extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MaintenanceWindow copyWith(void Function(MaintenanceWindow) updates) =>
       super.copyWith((message) => updates(message as MaintenanceWindow))
-          as MaintenanceWindow; // ignore: deprecated_member_use
+          as MaintenanceWindow;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MaintenanceWindow create() => MaintenanceWindow._();
   MaintenanceWindow createEmptyInstance() => create();
@@ -6904,6 +6670,7 @@ class MaintenanceWindow extends $pb.GeneratedMessage {
       _MaintenanceWindow_PolicyByTag[$_whichOneof(0)]!;
   void clearPolicy() => clearField($_whichOneof(0));
 
+  /// DailyMaintenanceWindow specifies a daily maintenance operation window.
   @$pb.TagNumber(2)
   DailyMaintenanceWindow get dailyMaintenanceWindow => $_getN(0);
   @$pb.TagNumber(2)
@@ -6919,48 +6686,38 @@ class MaintenanceWindow extends $pb.GeneratedMessage {
   DailyMaintenanceWindow ensureDailyMaintenanceWindow() => $_ensure(0);
 }
 
+/// Time window specified for daily maintenance operations.
 class DailyMaintenanceWindow extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DailyMaintenanceWindow',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'duration')
-    ..hasRequiredFields = false;
-
-  DailyMaintenanceWindow._() : super();
   factory DailyMaintenanceWindow({
     $core.String? startTime,
     $core.String? duration,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (duration != null) {
-      _result.duration = duration;
+      $result.duration = duration;
     }
-    return _result;
+    return $result;
   }
+  DailyMaintenanceWindow._() : super();
   factory DailyMaintenanceWindow.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DailyMaintenanceWindow.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DailyMaintenanceWindow',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(2, _omitFieldNames ? '' : 'startTime')
+    ..aOS(3, _omitFieldNames ? '' : 'duration')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -6972,8 +6729,10 @@ class DailyMaintenanceWindow extends $pb.GeneratedMessage {
   DailyMaintenanceWindow copyWith(
           void Function(DailyMaintenanceWindow) updates) =>
       super.copyWith((message) => updates(message as DailyMaintenanceWindow))
-          as DailyMaintenanceWindow; // ignore: deprecated_member_use
+          as DailyMaintenanceWindow;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DailyMaintenanceWindow create() => DailyMaintenanceWindow._();
   DailyMaintenanceWindow createEmptyInstance() => create();
@@ -6984,6 +6743,8 @@ class DailyMaintenanceWindow extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DailyMaintenanceWindow>(create);
   static DailyMaintenanceWindow? _defaultInstance;
 
+  /// Time within the maintenance window to start the maintenance operations.
+  /// It must be in format "HH:MM”, where HH : [00-23] and MM : [00-59] GMT.
   @$pb.TagNumber(2)
   $core.String get startTime => $_getSZ(0);
   @$pb.TagNumber(2)
@@ -6996,6 +6757,8 @@ class DailyMaintenanceWindow extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
 
+  /// [Output only] Duration of the time window, automatically chosen to be
+  /// smallest possible in the given scenario.
   @$pb.TagNumber(3)
   $core.String get duration => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -7009,50 +6772,9 @@ class DailyMaintenanceWindow extends $pb.GeneratedMessage {
   void clearDuration() => clearField(3);
 }
 
+/// SetNodePoolManagementRequest sets the node management properties of a node
+/// pool.
 class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetNodePoolManagementRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..aOM<NodeManagement>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'management',
-        subBuilder: NodeManagement.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetNodePoolManagementRequest._() : super();
   factory SetNodePoolManagementRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -7061,33 +6783,49 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
     NodeManagement? management,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (management != null) {
-      _result.management = management;
+      $result.management = management;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetNodePoolManagementRequest._() : super();
   factory SetNodePoolManagementRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetNodePoolManagementRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetNodePoolManagementRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..aOM<NodeManagement>(5, _omitFieldNames ? '' : 'management',
+        subBuilder: NodeManagement.create)
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7100,8 +6838,10 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
           void Function(SetNodePoolManagementRequest) updates) =>
       super.copyWith(
               (message) => updates(message as SetNodePoolManagementRequest))
-          as SetNodePoolManagementRequest; // ignore: deprecated_member_use
+          as SetNodePoolManagementRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetNodePoolManagementRequest create() =>
       SetNodePoolManagementRequest._();
@@ -7113,6 +6853,9 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetNodePoolManagementRequest>(create);
   static SetNodePoolManagementRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7125,6 +6868,10 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7137,6 +6884,8 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to update.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7149,6 +6898,8 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool to update.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -7161,6 +6912,7 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// NodeManagement configuration for the node pool.
   @$pb.TagNumber(5)
   NodeManagement get management => $_getN(4);
   @$pb.TagNumber(5)
@@ -7175,6 +6927,9 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   NodeManagement ensureManagement() => $_ensure(4);
 
+  /// The name (project, location, cluster, node pool id) of the node pool to set
+  /// management properties. Specified in the format
+  /// 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -7188,50 +6943,9 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+/// SetNodePoolSizeRequest sets the size a node
+/// pool.
 class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetNodePoolSizeRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..a<$core.int>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodeCount',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetNodePoolSizeRequest._() : super();
   factory SetNodePoolSizeRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -7240,33 +6954,48 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
     $core.int? nodeCount,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (nodeCount != null) {
-      _result.nodeCount = nodeCount;
+      $result.nodeCount = nodeCount;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetNodePoolSizeRequest._() : super();
   factory SetNodePoolSizeRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetNodePoolSizeRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetNodePoolSizeRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'nodeCount', $pb.PbFieldType.O3)
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7278,8 +7007,10 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   SetNodePoolSizeRequest copyWith(
           void Function(SetNodePoolSizeRequest) updates) =>
       super.copyWith((message) => updates(message as SetNodePoolSizeRequest))
-          as SetNodePoolSizeRequest; // ignore: deprecated_member_use
+          as SetNodePoolSizeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetNodePoolSizeRequest create() => SetNodePoolSizeRequest._();
   SetNodePoolSizeRequest createEmptyInstance() => create();
@@ -7290,6 +7021,8 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetNodePoolSizeRequest>(create);
   static SetNodePoolSizeRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7302,6 +7035,10 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7314,6 +7051,8 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to update.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7326,6 +7065,8 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool to update.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -7338,6 +7079,7 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// The desired node count for the pool.
   @$pb.TagNumber(5)
   $core.int get nodeCount => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -7350,6 +7092,9 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearNodeCount() => clearField(5);
 
+  /// The name (project, location, cluster, node pool id) of the node pool to set
+  /// size.
+  /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -7363,44 +7108,10 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+/// RollbackNodePoolUpgradeRequest rollbacks the previously Aborted or Failed
+/// NodePool upgrade. This will be an no-op if the last upgrade successfully
+/// completed.
 class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RollbackNodePoolUpgradeRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePoolId')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  RollbackNodePoolUpgradeRequest._() : super();
   factory RollbackNodePoolUpgradeRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -7408,30 +7119,44 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
     $core.String? nodePoolId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (nodePoolId != null) {
-      _result.nodePoolId = nodePoolId;
+      $result.nodePoolId = nodePoolId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  RollbackNodePoolUpgradeRequest._() : super();
   factory RollbackNodePoolUpgradeRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RollbackNodePoolUpgradeRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RollbackNodePoolUpgradeRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(4, _omitFieldNames ? '' : 'nodePoolId')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7444,8 +7169,10 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
           void Function(RollbackNodePoolUpgradeRequest) updates) =>
       super.copyWith(
               (message) => updates(message as RollbackNodePoolUpgradeRequest))
-          as RollbackNodePoolUpgradeRequest; // ignore: deprecated_member_use
+          as RollbackNodePoolUpgradeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RollbackNodePoolUpgradeRequest create() =>
       RollbackNodePoolUpgradeRequest._();
@@ -7457,6 +7184,9 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RollbackNodePoolUpgradeRequest>(create);
   static RollbackNodePoolUpgradeRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7469,6 +7199,10 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7481,6 +7215,8 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to rollback.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7493,6 +7229,8 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name of the node pool to rollback.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(4)
   $core.String get nodePoolId => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -7505,6 +7243,9 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearNodePoolId() => clearField(4);
 
+  /// The name (project, location, cluster, node pool id) of the node poll to
+  /// rollback upgrade.
+  /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -7518,41 +7259,34 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// ListNodePoolsResponse is the result of ListNodePoolsRequest.
 class ListNodePoolsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListNodePoolsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<NodePool>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nodePools',
-        $pb.PbFieldType.PM,
-        subBuilder: NodePool.create)
-    ..hasRequiredFields = false;
-
-  ListNodePoolsResponse._() : super();
   factory ListNodePoolsResponse({
     $core.Iterable<NodePool>? nodePools,
   }) {
-    final _result = create();
+    final $result = create();
     if (nodePools != null) {
-      _result.nodePools.addAll(nodePools);
+      $result.nodePools.addAll(nodePools);
     }
-    return _result;
+    return $result;
   }
+  ListNodePoolsResponse._() : super();
   factory ListNodePoolsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListNodePoolsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNodePoolsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<NodePool>(1, _omitFieldNames ? '' : 'nodePools', $pb.PbFieldType.PM,
+        subBuilder: NodePool.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7564,8 +7298,10 @@ class ListNodePoolsResponse extends $pb.GeneratedMessage {
   ListNodePoolsResponse copyWith(
           void Function(ListNodePoolsResponse) updates) =>
       super.copyWith((message) => updates(message as ListNodePoolsResponse))
-          as ListNodePoolsResponse; // ignore: deprecated_member_use
+          as ListNodePoolsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListNodePoolsResponse create() => ListNodePoolsResponse._();
   ListNodePoolsResponse createEmptyInstance() => create();
@@ -7576,63 +7312,49 @@ class ListNodePoolsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListNodePoolsResponse>(create);
   static ListNodePoolsResponse? _defaultInstance;
 
+  /// A list of node pools for a cluster.
   @$pb.TagNumber(1)
   $core.List<NodePool> get nodePools => $_getList(0);
 }
 
+/// NodePoolAutoscaling contains information required by cluster autoscaler to
+/// adjust the size of the node pool to the current cluster usage.
 class NodePoolAutoscaling extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'NodePoolAutoscaling',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minNodeCount',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maxNodeCount',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  NodePoolAutoscaling._() : super();
   factory NodePoolAutoscaling({
     $core.bool? enabled,
     $core.int? minNodeCount,
     $core.int? maxNodeCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
     if (minNodeCount != null) {
-      _result.minNodeCount = minNodeCount;
+      $result.minNodeCount = minNodeCount;
     }
     if (maxNodeCount != null) {
-      _result.maxNodeCount = maxNodeCount;
+      $result.maxNodeCount = maxNodeCount;
     }
-    return _result;
+    return $result;
   }
+  NodePoolAutoscaling._() : super();
   factory NodePoolAutoscaling.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory NodePoolAutoscaling.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NodePoolAutoscaling',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'enabled')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'minNodeCount', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'maxNodeCount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7642,8 +7364,10 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   NodePoolAutoscaling copyWith(void Function(NodePoolAutoscaling) updates) =>
       super.copyWith((message) => updates(message as NodePoolAutoscaling))
-          as NodePoolAutoscaling; // ignore: deprecated_member_use
+          as NodePoolAutoscaling;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NodePoolAutoscaling create() => NodePoolAutoscaling._();
   NodePoolAutoscaling createEmptyInstance() => create();
@@ -7654,6 +7378,7 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<NodePoolAutoscaling>(create);
   static NodePoolAutoscaling? _defaultInstance;
 
+  /// Is autoscaling enabled for this node pool.
   @$pb.TagNumber(1)
   $core.bool get enabled => $_getBF(0);
   @$pb.TagNumber(1)
@@ -7666,6 +7391,8 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEnabled() => clearField(1);
 
+  /// Minimum number of nodes in the NodePool. Must be >= 1 and <=
+  /// max_node_count.
   @$pb.TagNumber(2)
   $core.int get minNodeCount => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -7678,6 +7405,8 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMinNodeCount() => clearField(2);
 
+  /// Maximum number of nodes in the NodePool. Must be >= min_node_count. There
+  /// has to enough quota to scale up the cluster.
   @$pb.TagNumber(3)
   $core.int get maxNodeCount => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -7691,53 +7420,10 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
   void clearMaxNodeCount() => clearField(3);
 }
 
+/// SetLabelsRequest sets the Google Cloud Platform labels on a Google Container
+/// Engine cluster, which will in turn set them for Google Compute Engine
+/// resources used by that cluster
 class SetLabelsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetLabelsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..m<$core.String, $core.String>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceLabels',
-        entryClassName: 'SetLabelsRequest.ResourceLabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.container.v1alpha1'))
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labelFingerprint')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetLabelsRequest._() : super();
   factory SetLabelsRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -7746,33 +7432,52 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
     $core.String? labelFingerprint,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (resourceLabels != null) {
-      _result.resourceLabels.addAll(resourceLabels);
+      $result.resourceLabels.addAll(resourceLabels);
     }
     if (labelFingerprint != null) {
-      _result.labelFingerprint = labelFingerprint;
+      $result.labelFingerprint = labelFingerprint;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetLabelsRequest._() : super();
   factory SetLabelsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetLabelsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetLabelsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'resourceLabels',
+        entryClassName: 'SetLabelsRequest.ResourceLabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.container.v1alpha1'))
+    ..aOS(5, _omitFieldNames ? '' : 'labelFingerprint')
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7782,8 +7487,10 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SetLabelsRequest copyWith(void Function(SetLabelsRequest) updates) =>
       super.copyWith((message) => updates(message as SetLabelsRequest))
-          as SetLabelsRequest; // ignore: deprecated_member_use
+          as SetLabelsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetLabelsRequest create() => SetLabelsRequest._();
   SetLabelsRequest createEmptyInstance() => create();
@@ -7794,6 +7501,9 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetLabelsRequest>(create);
   static SetLabelsRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7806,6 +7516,10 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7818,6 +7532,8 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7830,9 +7546,16 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The labels to set for that cluster.
   @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get resourceLabels => $_getMap(3);
 
+  /// The fingerprint of the previous set of labels for this resource,
+  /// used to detect conflicts. The fingerprint is initially generated by
+  /// Container Engine and changes after every request to modify or update
+  /// labels. You must always provide an up-to-date fingerprint hash when
+  /// updating or changing labels. Make a <code>get()</code> request to the
+  /// resource to get the latest fingerprint.
   @$pb.TagNumber(5)
   $core.String get labelFingerprint => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -7845,6 +7568,8 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearLabelFingerprint() => clearField(5);
 
+  /// The name (project, location, cluster id) of the cluster to set labels.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -7858,44 +7583,9 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+/// SetLegacyAbacRequest enables or disables the ABAC authorization mechanism for
+/// a cluster.
 class SetLegacyAbacRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetLegacyAbacRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'enabled')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetLegacyAbacRequest._() : super();
   factory SetLegacyAbacRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -7903,30 +7593,44 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
     $core.bool? enabled,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (enabled != null) {
-      _result.enabled = enabled;
+      $result.enabled = enabled;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetLegacyAbacRequest._() : super();
   factory SetLegacyAbacRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetLegacyAbacRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetLegacyAbacRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOB(4, _omitFieldNames ? '' : 'enabled')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -7937,8 +7641,10 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SetLegacyAbacRequest copyWith(void Function(SetLegacyAbacRequest) updates) =>
       super.copyWith((message) => updates(message as SetLegacyAbacRequest))
-          as SetLegacyAbacRequest; // ignore: deprecated_member_use
+          as SetLegacyAbacRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetLegacyAbacRequest create() => SetLegacyAbacRequest._();
   SetLegacyAbacRequest createEmptyInstance() => create();
@@ -7949,6 +7655,9 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetLegacyAbacRequest>(create);
   static SetLegacyAbacRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7961,6 +7670,10 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7973,6 +7686,8 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to update.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7985,6 +7700,7 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// Whether ABAC authorization will be enabled in the cluster.
   @$pb.TagNumber(4)
   $core.bool get enabled => $_getBF(3);
   @$pb.TagNumber(4)
@@ -7997,6 +7713,8 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearEnabled() => clearField(4);
 
+  /// The name (project, location, cluster id) of the cluster to set legacy abac.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -8010,66 +7728,49 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// StartIPRotationRequest creates a new IP for the cluster and then performs
+/// a node upgrade on each node pool to point to the new IP.
 class StartIPRotationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StartIPRotationRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  StartIPRotationRequest._() : super();
   factory StartIPRotationRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? clusterId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  StartIPRotationRequest._() : super();
   factory StartIPRotationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StartIPRotationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StartIPRotationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -8081,8 +7782,10 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
   StartIPRotationRequest copyWith(
           void Function(StartIPRotationRequest) updates) =>
       super.copyWith((message) => updates(message as StartIPRotationRequest))
-          as StartIPRotationRequest; // ignore: deprecated_member_use
+          as StartIPRotationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StartIPRotationRequest create() => StartIPRotationRequest._();
   StartIPRotationRequest createEmptyInstance() => create();
@@ -8093,6 +7796,9 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StartIPRotationRequest>(create);
   static StartIPRotationRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -8105,6 +7811,10 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8117,6 +7827,8 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -8129,6 +7841,8 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name (project, location, cluster id) of the cluster to start IP rotation.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(6)
@@ -8142,66 +7856,48 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// CompleteIPRotationRequest moves the cluster master back into single-IP mode.
 class CompleteIPRotationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CompleteIPRotationRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  CompleteIPRotationRequest._() : super();
   factory CompleteIPRotationRequest({
     $core.String? projectId,
     $core.String? zone,
     $core.String? clusterId,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  CompleteIPRotationRequest._() : super();
   factory CompleteIPRotationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CompleteIPRotationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CompleteIPRotationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOS(7, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -8213,8 +7909,10 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
   CompleteIPRotationRequest copyWith(
           void Function(CompleteIPRotationRequest) updates) =>
       super.copyWith((message) => updates(message as CompleteIPRotationRequest))
-          as CompleteIPRotationRequest; // ignore: deprecated_member_use
+          as CompleteIPRotationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompleteIPRotationRequest create() => CompleteIPRotationRequest._();
   CompleteIPRotationRequest createEmptyInstance() => create();
@@ -8225,6 +7923,9 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CompleteIPRotationRequest>(create);
   static CompleteIPRotationRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -8237,6 +7938,10 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8249,6 +7954,8 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -8261,6 +7968,8 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The name (project, location, cluster id) of the cluster to complete IP rotation.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(7)
@@ -8274,48 +7983,38 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 }
 
+/// AcceleratorConfig represents a Hardware Accelerator request.
 class AcceleratorConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AcceleratorConfig',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'acceleratorCount')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'acceleratorType')
-    ..hasRequiredFields = false;
-
-  AcceleratorConfig._() : super();
   factory AcceleratorConfig({
     $fixnum.Int64? acceleratorCount,
     $core.String? acceleratorType,
   }) {
-    final _result = create();
+    final $result = create();
     if (acceleratorCount != null) {
-      _result.acceleratorCount = acceleratorCount;
+      $result.acceleratorCount = acceleratorCount;
     }
     if (acceleratorType != null) {
-      _result.acceleratorType = acceleratorType;
+      $result.acceleratorType = acceleratorType;
     }
-    return _result;
+    return $result;
   }
+  AcceleratorConfig._() : super();
   factory AcceleratorConfig.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AcceleratorConfig.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AcceleratorConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'acceleratorCount')
+    ..aOS(2, _omitFieldNames ? '' : 'acceleratorType')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -8325,8 +8024,10 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   AcceleratorConfig copyWith(void Function(AcceleratorConfig) updates) =>
       super.copyWith((message) => updates(message as AcceleratorConfig))
-          as AcceleratorConfig; // ignore: deprecated_member_use
+          as AcceleratorConfig;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AcceleratorConfig create() => AcceleratorConfig._();
   AcceleratorConfig createEmptyInstance() => create();
@@ -8337,6 +8038,7 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AcceleratorConfig>(create);
   static AcceleratorConfig? _defaultInstance;
 
+  /// The number of the accelerator cards exposed to an instance.
   @$pb.TagNumber(1)
   $fixnum.Int64 get acceleratorCount => $_getI64(0);
   @$pb.TagNumber(1)
@@ -8349,6 +8051,8 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAcceleratorCount() => clearField(1);
 
+  /// The accelerator type resource name. List of supported accelerators
+  /// [here](/compute/docs/gpus/#Introduction)
   @$pb.TagNumber(2)
   $core.String get acceleratorType => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8362,45 +8066,8 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
   void clearAcceleratorType() => clearField(2);
 }
 
+/// SetNetworkPolicyRequest enables/disables network policy for a cluster.
 class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetNetworkPolicyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOM<NetworkPolicy>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'networkPolicy',
-        subBuilder: NetworkPolicy.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetNetworkPolicyRequest._() : super();
   factory SetNetworkPolicyRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -8408,30 +8075,45 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
     NetworkPolicy? networkPolicy,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (networkPolicy != null) {
-      _result.networkPolicy = networkPolicy;
+      $result.networkPolicy = networkPolicy;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetNetworkPolicyRequest._() : super();
   factory SetNetworkPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetNetworkPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetNetworkPolicyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOM<NetworkPolicy>(4, _omitFieldNames ? '' : 'networkPolicy',
+        subBuilder: NetworkPolicy.create)
+    ..aOS(6, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -8443,8 +8125,10 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
   SetNetworkPolicyRequest copyWith(
           void Function(SetNetworkPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as SetNetworkPolicyRequest))
-          as SetNetworkPolicyRequest; // ignore: deprecated_member_use
+          as SetNetworkPolicyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetNetworkPolicyRequest create() => SetNetworkPolicyRequest._();
   SetNetworkPolicyRequest createEmptyInstance() => create();
@@ -8455,6 +8139,9 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetNetworkPolicyRequest>(create);
   static SetNetworkPolicyRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://developers.google.com/console/help/new/#projectnumber).
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -8467,6 +8154,10 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8479,6 +8170,8 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster.
+  /// This field is deprecated, use name instead.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -8491,6 +8184,7 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// Configuration options for the NetworkPolicy feature.
   @$pb.TagNumber(4)
   NetworkPolicy get networkPolicy => $_getN(3);
   @$pb.TagNumber(4)
@@ -8505,6 +8199,9 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   NetworkPolicy ensureNetworkPolicy() => $_ensure(3);
 
+  /// The name (project, location, cluster id) of the cluster to set networking
+  /// policy.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -8518,45 +8215,8 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(6);
 }
 
+/// SetMaintenancePolicyRequest sets the maintenance policy for a cluster.
 class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SetMaintenancePolicyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.container.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'zone')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'clusterId')
-    ..aOM<MaintenancePolicy>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'maintenancePolicy',
-        subBuilder: MaintenancePolicy.create)
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  SetMaintenancePolicyRequest._() : super();
   factory SetMaintenancePolicyRequest({
     $core.String? projectId,
     $core.String? zone,
@@ -8564,30 +8224,45 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
     MaintenancePolicy? maintenancePolicy,
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (zone != null) {
-      _result.zone = zone;
+      $result.zone = zone;
     }
     if (clusterId != null) {
-      _result.clusterId = clusterId;
+      $result.clusterId = clusterId;
     }
     if (maintenancePolicy != null) {
-      _result.maintenancePolicy = maintenancePolicy;
+      $result.maintenancePolicy = maintenancePolicy;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  SetMaintenancePolicyRequest._() : super();
   factory SetMaintenancePolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetMaintenancePolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetMaintenancePolicyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.container.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'zone')
+    ..aOS(3, _omitFieldNames ? '' : 'clusterId')
+    ..aOM<MaintenancePolicy>(4, _omitFieldNames ? '' : 'maintenancePolicy',
+        subBuilder: MaintenancePolicy.create)
+    ..aOS(5, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -8600,8 +8275,10 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
           void Function(SetMaintenancePolicyRequest) updates) =>
       super.copyWith(
               (message) => updates(message as SetMaintenancePolicyRequest))
-          as SetMaintenancePolicyRequest; // ignore: deprecated_member_use
+          as SetMaintenancePolicyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetMaintenancePolicyRequest create() =>
       SetMaintenancePolicyRequest._();
@@ -8613,6 +8290,8 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SetMaintenancePolicyRequest>(create);
   static SetMaintenancePolicyRequest? _defaultInstance;
 
+  /// The Google Developers Console [project ID or project
+  /// number](https://support.google.com/cloud/answer/6158840).
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -8625,6 +8304,9 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// The name of the Google Compute Engine
+  /// [zone](/compute/docs/zones#available) in which the cluster
+  /// resides.
   @$pb.TagNumber(2)
   $core.String get zone => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8637,6 +8319,7 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearZone() => clearField(2);
 
+  /// The name of the cluster to update.
   @$pb.TagNumber(3)
   $core.String get clusterId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -8649,6 +8332,8 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearClusterId() => clearField(3);
 
+  /// The maintenance policy to be set for the cluster. An empty field
+  /// clears the existing maintenance policy.
   @$pb.TagNumber(4)
   MaintenancePolicy get maintenancePolicy => $_getN(3);
   @$pb.TagNumber(4)
@@ -8663,6 +8348,9 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   MaintenancePolicy ensureMaintenancePolicy() => $_ensure(3);
 
+  /// The name (project, location, cluster id) of the cluster to set maintenance
+  /// policy.
+  /// Specified in the format 'projects/*/locations/*/clusters/*'.
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -8675,3 +8363,7 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearName() => clearField(5);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

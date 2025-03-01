@@ -1,20 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/firestore/v1beta1/firestore.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'firestore.pb.dart' as $0;
-import 'document.pb.dart' as $1;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import '../../protobuf/empty.pb.dart' as $2;
+import 'document.pb.dart' as $1;
+import 'firestore.pb.dart' as $0;
+
 export 'firestore.pb.dart';
 
+@$pb.GrpcServiceName('google.firestore.v1beta1.Firestore')
 class FirestoreClient extends $grpc.Client {
   static final _$getDocument =
       $grpc.ClientMethod<$0.GetDocumentRequest, $1.Document>(
@@ -193,6 +200,7 @@ class FirestoreClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.firestore.v1beta1.Firestore')
 abstract class FirestoreServiceBase extends $grpc.Service {
   $core.String get $name => 'google.firestore.v1beta1.Firestore';
 

@@ -1,85 +1,71 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/monitoring/dashboard/v1/table.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'metrics.pb.dart' as $0;
 import '../../../protobuf/duration.pb.dart' as $1;
-import 'table_display_options.pb.dart' as $2;
-
+import 'metrics.pb.dart' as $0;
 import 'table.pbenum.dart';
+import 'table_display_options.pb.dart' as $2;
 
 export 'table.pbenum.dart';
 
+/// Groups a time series query definition with table options.
 class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TimeSeriesTable.TableDataSet',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.TimeSeriesQuery>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeSeriesQuery',
-        subBuilder: $0.TimeSeriesQuery.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tableTemplate')
-    ..aOM<$1.Duration>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minAlignmentPeriod',
-        subBuilder: $1.Duration.create)
-    ..aOM<$2.TableDisplayOptions>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'tableDisplayOptions',
-        subBuilder: $2.TableDisplayOptions.create)
-    ..hasRequiredFields = false;
-
-  TimeSeriesTable_TableDataSet._() : super();
   factory TimeSeriesTable_TableDataSet({
     $0.TimeSeriesQuery? timeSeriesQuery,
     $core.String? tableTemplate,
     $1.Duration? minAlignmentPeriod,
     $2.TableDisplayOptions? tableDisplayOptions,
   }) {
-    final _result = create();
+    final $result = create();
     if (timeSeriesQuery != null) {
-      _result.timeSeriesQuery = timeSeriesQuery;
+      $result.timeSeriesQuery = timeSeriesQuery;
     }
     if (tableTemplate != null) {
-      _result.tableTemplate = tableTemplate;
+      $result.tableTemplate = tableTemplate;
     }
     if (minAlignmentPeriod != null) {
-      _result.minAlignmentPeriod = minAlignmentPeriod;
+      $result.minAlignmentPeriod = minAlignmentPeriod;
     }
     if (tableDisplayOptions != null) {
-      _result.tableDisplayOptions = tableDisplayOptions;
+      $result.tableDisplayOptions = tableDisplayOptions;
     }
-    return _result;
+    return $result;
   }
+  TimeSeriesTable_TableDataSet._() : super();
   factory TimeSeriesTable_TableDataSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TimeSeriesTable_TableDataSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimeSeriesTable.TableDataSet',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.TimeSeriesQuery>(1, _omitFieldNames ? '' : 'timeSeriesQuery',
+        subBuilder: $0.TimeSeriesQuery.create)
+    ..aOS(2, _omitFieldNames ? '' : 'tableTemplate')
+    ..aOM<$1.Duration>(3, _omitFieldNames ? '' : 'minAlignmentPeriod',
+        subBuilder: $1.Duration.create)
+    ..aOM<$2.TableDisplayOptions>(
+        4, _omitFieldNames ? '' : 'tableDisplayOptions',
+        subBuilder: $2.TableDisplayOptions.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -92,8 +78,10 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
           void Function(TimeSeriesTable_TableDataSet) updates) =>
       super.copyWith(
               (message) => updates(message as TimeSeriesTable_TableDataSet))
-          as TimeSeriesTable_TableDataSet; // ignore: deprecated_member_use
+          as TimeSeriesTable_TableDataSet;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TimeSeriesTable_TableDataSet create() =>
       TimeSeriesTable_TableDataSet._();
@@ -105,6 +93,8 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesTable_TableDataSet>(create);
   static TimeSeriesTable_TableDataSet? _defaultInstance;
 
+  /// Required. Fields for querying time series data from the
+  /// Stackdriver metrics API.
   @$pb.TagNumber(1)
   $0.TimeSeriesQuery get timeSeriesQuery => $_getN(0);
   @$pb.TagNumber(1)
@@ -119,6 +109,10 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.TimeSeriesQuery ensureTimeSeriesQuery() => $_ensure(0);
 
+  /// Optional. A template string for naming `TimeSeries` in the resulting data
+  /// set. This should be a string with interpolations of the form
+  /// `${label_name}`, which will resolve to the label's value i.e.
+  /// "${resource.labels.project_id}."
   @$pb.TagNumber(2)
   $core.String get tableTemplate => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -131,6 +125,11 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTableTemplate() => clearField(2);
 
+  /// Optional. The lower bound on data point frequency for this data set,
+  /// implemented by specifying the minimum alignment period to use in a time
+  /// series query For example, if the data is published once every 10 minutes,
+  /// the `min_alignment_period` should be at least 10 minutes. It would not
+  /// make sense to fetch and align data at one minute intervals.
   @$pb.TagNumber(3)
   $1.Duration get minAlignmentPeriod => $_getN(2);
   @$pb.TagNumber(3)
@@ -145,6 +144,8 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Duration ensureMinAlignmentPeriod() => $_ensure(2);
 
+  /// Optional. Table display options for configuring how the table is
+  /// rendered.
   @$pb.TagNumber(4)
   $2.TableDisplayOptions get tableDisplayOptions => $_getN(3);
   @$pb.TagNumber(4)
@@ -160,48 +161,38 @@ class TimeSeriesTable_TableDataSet extends $pb.GeneratedMessage {
   $2.TableDisplayOptions ensureTableDisplayOptions() => $_ensure(3);
 }
 
+/// The persistent settings for a table's columns.
 class TimeSeriesTable_ColumnSettings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TimeSeriesTable.ColumnSettings',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'column')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'visible')
-    ..hasRequiredFields = false;
-
-  TimeSeriesTable_ColumnSettings._() : super();
   factory TimeSeriesTable_ColumnSettings({
     $core.String? column,
     $core.bool? visible,
   }) {
-    final _result = create();
+    final $result = create();
     if (column != null) {
-      _result.column = column;
+      $result.column = column;
     }
     if (visible != null) {
-      _result.visible = visible;
+      $result.visible = visible;
     }
-    return _result;
+    return $result;
   }
+  TimeSeriesTable_ColumnSettings._() : super();
   factory TimeSeriesTable_ColumnSettings.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TimeSeriesTable_ColumnSettings.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimeSeriesTable.ColumnSettings',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'column')
+    ..aOB(2, _omitFieldNames ? '' : 'visible')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -214,8 +205,10 @@ class TimeSeriesTable_ColumnSettings extends $pb.GeneratedMessage {
           void Function(TimeSeriesTable_ColumnSettings) updates) =>
       super.copyWith(
               (message) => updates(message as TimeSeriesTable_ColumnSettings))
-          as TimeSeriesTable_ColumnSettings; // ignore: deprecated_member_use
+          as TimeSeriesTable_ColumnSettings;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TimeSeriesTable_ColumnSettings create() =>
       TimeSeriesTable_ColumnSettings._();
@@ -227,6 +220,7 @@ class TimeSeriesTable_ColumnSettings extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesTable_ColumnSettings>(create);
   static TimeSeriesTable_ColumnSettings? _defaultInstance;
 
+  /// Required. The id of the column.
   @$pb.TagNumber(1)
   $core.String get column => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -239,6 +233,7 @@ class TimeSeriesTable_ColumnSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearColumn() => clearField(1);
 
+  /// Required. Whether the column should be visible on page load.
   @$pb.TagNumber(2)
   $core.bool get visible => $_getBF(1);
   @$pb.TagNumber(2)
@@ -252,66 +247,52 @@ class TimeSeriesTable_ColumnSettings extends $pb.GeneratedMessage {
   void clearVisible() => clearField(2);
 }
 
+/// A table that displays time series data.
 class TimeSeriesTable extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TimeSeriesTable',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.monitoring.dashboard.v1'),
-      createEmptyInstance: create)
-    ..pc<TimeSeriesTable_TableDataSet>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataSets',
-        $pb.PbFieldType.PM,
-        subBuilder: TimeSeriesTable_TableDataSet.create)
-    ..e<TimeSeriesTable_MetricVisualization>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metricVisualization',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TimeSeriesTable_MetricVisualization
-            .METRIC_VISUALIZATION_UNSPECIFIED,
-        valueOf: TimeSeriesTable_MetricVisualization.valueOf,
-        enumValues: TimeSeriesTable_MetricVisualization.values)
-    ..pc<TimeSeriesTable_ColumnSettings>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'columnSettings',
-        $pb.PbFieldType.PM,
-        subBuilder: TimeSeriesTable_ColumnSettings.create)
-    ..hasRequiredFields = false;
-
-  TimeSeriesTable._() : super();
   factory TimeSeriesTable({
     $core.Iterable<TimeSeriesTable_TableDataSet>? dataSets,
     TimeSeriesTable_MetricVisualization? metricVisualization,
     $core.Iterable<TimeSeriesTable_ColumnSettings>? columnSettings,
   }) {
-    final _result = create();
+    final $result = create();
     if (dataSets != null) {
-      _result.dataSets.addAll(dataSets);
+      $result.dataSets.addAll(dataSets);
     }
     if (metricVisualization != null) {
-      _result.metricVisualization = metricVisualization;
+      $result.metricVisualization = metricVisualization;
     }
     if (columnSettings != null) {
-      _result.columnSettings.addAll(columnSettings);
+      $result.columnSettings.addAll(columnSettings);
     }
-    return _result;
+    return $result;
   }
+  TimeSeriesTable._() : super();
   factory TimeSeriesTable.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TimeSeriesTable.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimeSeriesTable',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
+      createEmptyInstance: create)
+    ..pc<TimeSeriesTable_TableDataSet>(
+        1, _omitFieldNames ? '' : 'dataSets', $pb.PbFieldType.PM,
+        subBuilder: TimeSeriesTable_TableDataSet.create)
+    ..e<TimeSeriesTable_MetricVisualization>(
+        2, _omitFieldNames ? '' : 'metricVisualization', $pb.PbFieldType.OE,
+        defaultOrMaker: TimeSeriesTable_MetricVisualization
+            .METRIC_VISUALIZATION_UNSPECIFIED,
+        valueOf: TimeSeriesTable_MetricVisualization.valueOf,
+        enumValues: TimeSeriesTable_MetricVisualization.values)
+    ..pc<TimeSeriesTable_ColumnSettings>(
+        4, _omitFieldNames ? '' : 'columnSettings', $pb.PbFieldType.PM,
+        subBuilder: TimeSeriesTable_ColumnSettings.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -321,8 +302,10 @@ class TimeSeriesTable extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TimeSeriesTable copyWith(void Function(TimeSeriesTable) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesTable))
-          as TimeSeriesTable; // ignore: deprecated_member_use
+          as TimeSeriesTable;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TimeSeriesTable create() => TimeSeriesTable._();
   TimeSeriesTable createEmptyInstance() => create();
@@ -333,9 +316,11 @@ class TimeSeriesTable extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesTable>(create);
   static TimeSeriesTable? _defaultInstance;
 
+  /// Required. The data displayed in this table.
   @$pb.TagNumber(1)
   $core.List<TimeSeriesTable_TableDataSet> get dataSets => $_getList(0);
 
+  /// Optional. Store rendering strategy
   @$pb.TagNumber(2)
   TimeSeriesTable_MetricVisualization get metricVisualization => $_getN(1);
   @$pb.TagNumber(2)
@@ -348,6 +333,11 @@ class TimeSeriesTable extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMetricVisualization() => clearField(2);
 
+  /// Optional. The list of the persistent column settings for the table.
   @$pb.TagNumber(4)
   $core.List<TimeSeriesTable_ColumnSettings> get columnSettings => $_getList(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

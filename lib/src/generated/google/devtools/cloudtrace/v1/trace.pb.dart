@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudtrace/v1/trace.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -11,64 +15,50 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $2;
-
 import 'trace.pbenum.dart';
 
 export 'trace.pbenum.dart';
 
+/// A trace describes how long it takes for an application to perform an
+/// operation. It consists of a set of spans, each of which represent a single
+/// timed event within the operation.
 class Trace extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Trace',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'traceId')
-    ..pc<TraceSpan>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'spans',
-        $pb.PbFieldType.PM,
-        subBuilder: TraceSpan.create)
-    ..hasRequiredFields = false;
-
-  Trace._() : super();
   factory Trace({
     $core.String? projectId,
     $core.String? traceId,
     $core.Iterable<TraceSpan>? spans,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (traceId != null) {
-      _result.traceId = traceId;
+      $result.traceId = traceId;
     }
     if (spans != null) {
-      _result.spans.addAll(spans);
+      $result.spans.addAll(spans);
     }
-    return _result;
+    return $result;
   }
+  Trace._() : super();
   factory Trace.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Trace.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Trace',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'traceId')
+    ..pc<TraceSpan>(3, _omitFieldNames ? '' : 'spans', $pb.PbFieldType.PM,
+        subBuilder: TraceSpan.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -77,9 +67,10 @@ class Trace extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Trace copyWith(void Function(Trace) updates) =>
-      super.copyWith((message) => updates(message as Trace))
-          as Trace; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Trace)) as Trace;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Trace create() => Trace._();
   Trace createEmptyInstance() => create();
@@ -89,6 +80,7 @@ class Trace extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Trace>(create);
   static Trace? _defaultInstance;
 
+  /// Project ID of the Cloud project where the trace data is stored.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -101,6 +93,9 @@ class Trace extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Globally unique identifier for the trace. This identifier is a 128-bit
+  /// numeric value formatted as a 32-byte hex string. For example,
+  /// `382d4f4c6b7bb2f4a972559d9085001d`.
   @$pb.TagNumber(2)
   $core.String get traceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -113,45 +108,39 @@ class Trace extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTraceId() => clearField(2);
 
+  /// Collection of spans in the trace.
   @$pb.TagNumber(3)
   $core.List<TraceSpan> get spans => $_getList(2);
 }
 
+/// List of new or updated traces.
 class Traces extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Traces',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..pc<Trace>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'traces',
-        $pb.PbFieldType.PM,
-        subBuilder: Trace.create)
-    ..hasRequiredFields = false;
-
-  Traces._() : super();
   factory Traces({
     $core.Iterable<Trace>? traces,
   }) {
-    final _result = create();
+    final $result = create();
     if (traces != null) {
-      _result.traces.addAll(traces);
+      $result.traces.addAll(traces);
     }
-    return _result;
+    return $result;
   }
+  Traces._() : super();
   factory Traces.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Traces.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Traces',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..pc<Trace>(1, _omitFieldNames ? '' : 'traces', $pb.PbFieldType.PM,
+        subBuilder: Trace.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -160,9 +149,10 @@ class Traces extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Traces copyWith(void Function(Traces) updates) =>
-      super.copyWith((message) => updates(message as Traces))
-          as Traces; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Traces)) as Traces;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Traces create() => Traces._();
   Traces createEmptyInstance() => create();
@@ -172,72 +162,17 @@ class Traces extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Traces>(create);
   static Traces? _defaultInstance;
 
+  /// List of traces.
   @$pb.TagNumber(1)
   $core.List<Trace> get traces => $_getList(0);
 }
 
+/// A span represents a single timed event within a trace. Spans can be nested
+/// and form a trace tree. Often, a trace contains a root span that describes the
+/// end-to-end latency of an operation and, optionally, one or more subspans for
+/// its suboperations. Spans do not need to be contiguous. There may be gaps
+/// between spans in a trace.
 class TraceSpan extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TraceSpan',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..a<$fixnum.Int64>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'spanId',
-        $pb.PbFieldType.OF6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<TraceSpan_SpanKind>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: TraceSpan_SpanKind.SPAN_KIND_UNSPECIFIED,
-        valueOf: TraceSpan_SpanKind.valueOf,
-        enumValues: TraceSpan_SpanKind.values)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$2.Timestamp>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $2.Timestamp.create)
-    ..a<$fixnum.Int64>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parentSpanId',
-        $pb.PbFieldType.OF6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
-    ..m<$core.String, $core.String>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'labels',
-        entryClassName: 'TraceSpan.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.devtools.cloudtrace.v1'))
-    ..hasRequiredFields = false;
-
-  TraceSpan._() : super();
   factory TraceSpan({
     $fixnum.Int64? spanId,
     TraceSpan_SpanKind? kind,
@@ -247,36 +182,65 @@ class TraceSpan extends $pb.GeneratedMessage {
     $fixnum.Int64? parentSpanId,
     $core.Map<$core.String, $core.String>? labels,
   }) {
-    final _result = create();
+    final $result = create();
     if (spanId != null) {
-      _result.spanId = spanId;
+      $result.spanId = spanId;
     }
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (parentSpanId != null) {
-      _result.parentSpanId = parentSpanId;
+      $result.parentSpanId = parentSpanId;
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
-    return _result;
+    return $result;
   }
+  TraceSpan._() : super();
   factory TraceSpan.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TraceSpan.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TraceSpan',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'spanId', $pb.PbFieldType.OF6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<TraceSpan_SpanKind>(
+        2, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: TraceSpan_SpanKind.SPAN_KIND_UNSPECIFIED,
+        valueOf: TraceSpan_SpanKind.valueOf,
+        enumValues: TraceSpan_SpanKind.values)
+    ..aOS(3, _omitFieldNames ? '' : 'name')
+    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $2.Timestamp.create)
+    ..a<$fixnum.Int64>(
+        6, _omitFieldNames ? '' : 'parentSpanId', $pb.PbFieldType.OF6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..m<$core.String, $core.String>(7, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'TraceSpan.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.devtools.cloudtrace.v1'))
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -285,9 +249,10 @@ class TraceSpan extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TraceSpan copyWith(void Function(TraceSpan) updates) =>
-      super.copyWith((message) => updates(message as TraceSpan))
-          as TraceSpan; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TraceSpan)) as TraceSpan;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TraceSpan create() => TraceSpan._();
   TraceSpan createEmptyInstance() => create();
@@ -297,6 +262,8 @@ class TraceSpan extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TraceSpan>(create);
   static TraceSpan? _defaultInstance;
 
+  /// Identifier for the span. Must be a 64-bit integer other than 0 and
+  /// unique within a trace. For example, `2205310701640571284`.
   @$pb.TagNumber(1)
   $fixnum.Int64 get spanId => $_getI64(0);
   @$pb.TagNumber(1)
@@ -309,6 +276,9 @@ class TraceSpan extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSpanId() => clearField(1);
 
+  /// Distinguishes between spans generated in a particular context. For example,
+  /// two spans with the same name may be distinguished using `RPC_CLIENT`
+  /// and `RPC_SERVER` to identify queueing latency associated with the span.
   @$pb.TagNumber(2)
   TraceSpan_SpanKind get kind => $_getN(1);
   @$pb.TagNumber(2)
@@ -321,6 +291,13 @@ class TraceSpan extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearKind() => clearField(2);
 
+  /// Name of the span. Must be less than 128 bytes. The span name is sanitized
+  /// and displayed in the Stackdriver Trace tool in the
+  /// Google Cloud Platform Console.
+  /// The name may be a method name or some other per-call site name.
+  /// For the same executable and the same call point, a best practice is
+  /// to use a consistent name, which makes it easier to correlate
+  /// cross-trace spans.
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -333,6 +310,7 @@ class TraceSpan extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearName() => clearField(3);
 
+  /// Start time of the span in nanoseconds from the UNIX epoch.
   @$pb.TagNumber(4)
   $2.Timestamp get startTime => $_getN(3);
   @$pb.TagNumber(4)
@@ -347,6 +325,7 @@ class TraceSpan extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Timestamp ensureStartTime() => $_ensure(3);
 
+  /// End time of the span in nanoseconds from the UNIX epoch.
   @$pb.TagNumber(5)
   $2.Timestamp get endTime => $_getN(4);
   @$pb.TagNumber(5)
@@ -361,6 +340,7 @@ class TraceSpan extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp ensureEndTime() => $_ensure(4);
 
+  /// Optional. ID of the parent span, if any.
   @$pb.TagNumber(6)
   $fixnum.Int64 get parentSpanId => $_getI64(5);
   @$pb.TagNumber(6)
@@ -373,70 +353,48 @@ class TraceSpan extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearParentSpanId() => clearField(6);
 
+  ///  Collection of labels associated with the span. Label keys must be less than
+  ///  128 bytes. Label values must be less than 16 kilobytes (10MB for
+  ///  `/stacktrace` values).
+  ///
+  ///  Some predefined label keys exist, or you may create your own. When creating
+  ///  your own, we recommend the following formats:
+  ///
+  ///  * `/category/product/key` for agents of well-known products (e.g.
+  ///    `/db/mongodb/read_size`).
+  ///  * `short_host/path/key` for domain-specific keys (e.g.
+  ///    `foo.com/myproduct/bar`)
+  ///
+  ///  Predefined labels include:
+  ///
+  ///  *   `/agent`
+  ///  *   `/component`
+  ///  *   `/error/message`
+  ///  *   `/error/name`
+  ///  *   `/http/client_city`
+  ///  *   `/http/client_country`
+  ///  *   `/http/client_protocol`
+  ///  *   `/http/client_region`
+  ///  *   `/http/host`
+  ///  *   `/http/method`
+  ///  *   `/http/path`
+  ///  *   `/http/redirected_url`
+  ///  *   `/http/request/size`
+  ///  *   `/http/response/size`
+  ///  *   `/http/route`
+  ///  *   `/http/status_code`
+  ///  *   `/http/url`
+  ///  *   `/http/user_agent`
+  ///  *   `/pid`
+  ///  *   `/stacktrace`
+  ///  *   `/tid`
   @$pb.TagNumber(7)
   $core.Map<$core.String, $core.String> get labels => $_getMap(6);
 }
 
+/// The request message for the `ListTraces` method. All fields are required
+/// unless specified.
 class ListTracesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListTracesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..e<ListTracesRequest_ViewType>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ListTracesRequest_ViewType.VIEW_TYPE_UNSPECIFIED,
-        valueOf: ListTracesRequest_ViewType.valueOf,
-        enumValues: ListTracesRequest_ViewType.values)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOM<$2.Timestamp>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'startTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'endTime',
-        subBuilder: $2.Timestamp.create)
-    ..aOS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orderBy')
-    ..hasRequiredFields = false;
-
-  ListTracesRequest._() : super();
   factory ListTracesRequest({
     $core.String? projectId,
     ListTracesRequest_ViewType? view,
@@ -447,39 +405,62 @@ class ListTracesRequest extends $pb.GeneratedMessage {
     $core.String? filter,
     $core.String? orderBy,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (orderBy != null) {
-      _result.orderBy = orderBy;
+      $result.orderBy = orderBy;
     }
-    return _result;
+    return $result;
   }
+  ListTracesRequest._() : super();
   factory ListTracesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListTracesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTracesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..e<ListTracesRequest_ViewType>(
+        2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: ListTracesRequest_ViewType.VIEW_TYPE_UNSPECIFIED,
+        valueOf: ListTracesRequest_ViewType.valueOf,
+        enumValues: ListTracesRequest_ViewType.values)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(6, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOS(7, _omitFieldNames ? '' : 'filter')
+    ..aOS(8, _omitFieldNames ? '' : 'orderBy')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -489,8 +470,10 @@ class ListTracesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListTracesRequest copyWith(void Function(ListTracesRequest) updates) =>
       super.copyWith((message) => updates(message as ListTracesRequest))
-          as ListTracesRequest; // ignore: deprecated_member_use
+          as ListTracesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListTracesRequest create() => ListTracesRequest._();
   ListTracesRequest createEmptyInstance() => create();
@@ -501,6 +484,7 @@ class ListTracesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListTracesRequest>(create);
   static ListTracesRequest? _defaultInstance;
 
+  /// Required. ID of the Cloud project where the trace data is stored.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -513,6 +497,8 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Optional. Type of data returned for traces in the list. Default is
+  /// `MINIMAL`.
   @$pb.TagNumber(2)
   ListTracesRequest_ViewType get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -525,6 +511,9 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  /// Optional. Maximum number of traces to return. If not specified or <= 0, the
+  /// implementation selects a reasonable value.  The implementation may
+  /// return fewer traces than the requested page size.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -537,6 +526,8 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Token identifying the page of results to return. If provided, use the
+  /// value of the `next_page_token` field from a previous request.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -549,6 +540,8 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
+  /// Start of the time interval (inclusive) during which the trace data was
+  /// collected from the application.
   @$pb.TagNumber(5)
   $2.Timestamp get startTime => $_getN(4);
   @$pb.TagNumber(5)
@@ -563,6 +556,8 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp ensureStartTime() => $_ensure(4);
 
+  /// End of the time interval (inclusive) during which the trace data was
+  /// collected from the application.
   @$pb.TagNumber(6)
   $2.Timestamp get endTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -577,6 +572,36 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $2.Timestamp ensureEndTime() => $_ensure(5);
 
+  ///  Optional. A filter against labels for the request.
+  ///
+  ///  By default, searches use prefix matching. To specify exact match, prepend
+  ///  a plus symbol (`+`) to the search term.
+  ///  Multiple terms are ANDed. Syntax:
+  ///
+  ///  *   `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces where any root
+  ///      span starts with `NAME_PREFIX`.
+  ///  *   `+root:NAME` or `+NAME`: Return traces where any root span's name is
+  ///      exactly `NAME`.
+  ///  *   `span:NAME_PREFIX`: Return traces where any span starts with
+  ///      `NAME_PREFIX`.
+  ///  *   `+span:NAME`: Return traces where any span's name is exactly
+  ///      `NAME`.
+  ///  *   `latency:DURATION`: Return traces whose overall latency is
+  ///      greater or equal to than `DURATION`. Accepted units are nanoseconds
+  ///      (`ns`), milliseconds (`ms`), and seconds (`s`). Default is `ms`. For
+  ///      example, `latency:24ms` returns traces whose overall latency
+  ///      is greater than or equal to 24 milliseconds.
+  ///  *   `label:LABEL_KEY`: Return all traces containing the specified
+  ///      label key (exact match, case-sensitive) regardless of the key:value
+  ///      pair's value (including empty values).
+  ///  *   `LABEL_KEY:VALUE_PREFIX`: Return all traces containing the specified
+  ///      label key (exact match, case-sensitive) whose value starts with
+  ///      `VALUE_PREFIX`. Both a key and a value must be specified.
+  ///  *   `+LABEL_KEY:VALUE`: Return all traces containing a key:value pair
+  ///      exactly matching the specified text. Both a key and a value must be
+  ///      specified.
+  ///  *   `method:VALUE`: Equivalent to `/http/method:VALUE`.
+  ///  *   `url:VALUE`: Equivalent to `/http/url:VALUE`.
   @$pb.TagNumber(7)
   $core.String get filter => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -589,6 +614,19 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearFilter() => clearField(7);
 
+  ///  Optional. Field used to sort the returned traces.
+  ///  Can be one of the following:
+  ///
+  ///  *   `trace_id`
+  ///  *   `name` (`name` field of root span in the trace)
+  ///  *   `duration` (difference between `end_time` and `start_time` fields of
+  ///       the root span)
+  ///  *   `start` (`start_time` field of the root span)
+  ///
+  ///  Descending order can be specified by appending `desc` to the sort field
+  ///  (for example, `name desc`).
+  ///
+  ///  Only one sort field is permitted.
   @$pb.TagNumber(8)
   $core.String get orderBy => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -602,50 +640,39 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   void clearOrderBy() => clearField(8);
 }
 
+/// The response message for the `ListTraces` method.
 class ListTracesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListTracesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..pc<Trace>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'traces',
-        $pb.PbFieldType.PM,
-        subBuilder: Trace.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListTracesResponse._() : super();
   factory ListTracesResponse({
     $core.Iterable<Trace>? traces,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (traces != null) {
-      _result.traces.addAll(traces);
+      $result.traces.addAll(traces);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListTracesResponse._() : super();
   factory ListTracesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListTracesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTracesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..pc<Trace>(1, _omitFieldNames ? '' : 'traces', $pb.PbFieldType.PM,
+        subBuilder: Trace.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -655,8 +682,10 @@ class ListTracesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListTracesResponse copyWith(void Function(ListTracesResponse) updates) =>
       super.copyWith((message) => updates(message as ListTracesResponse))
-          as ListTracesResponse; // ignore: deprecated_member_use
+          as ListTracesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListTracesResponse create() => ListTracesResponse._();
   ListTracesResponse createEmptyInstance() => create();
@@ -667,9 +696,13 @@ class ListTracesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListTracesResponse>(create);
   static ListTracesResponse? _defaultInstance;
 
+  /// List of trace records as specified by the view parameter.
   @$pb.TagNumber(1)
   $core.List<Trace> get traces => $_getList(0);
 
+  /// If defined, indicates that there are more traces that match the request
+  /// and that this value should be passed to the next request to continue
+  /// retrieving additional traces.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -683,48 +716,38 @@ class ListTracesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The request message for the `GetTrace` method.
 class GetTraceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetTraceRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'traceId')
-    ..hasRequiredFields = false;
-
-  GetTraceRequest._() : super();
   factory GetTraceRequest({
     $core.String? projectId,
     $core.String? traceId,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (traceId != null) {
-      _result.traceId = traceId;
+      $result.traceId = traceId;
     }
-    return _result;
+    return $result;
   }
+  GetTraceRequest._() : super();
   factory GetTraceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetTraceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetTraceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(2, _omitFieldNames ? '' : 'traceId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -734,8 +757,10 @@ class GetTraceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetTraceRequest copyWith(void Function(GetTraceRequest) updates) =>
       super.copyWith((message) => updates(message as GetTraceRequest))
-          as GetTraceRequest; // ignore: deprecated_member_use
+          as GetTraceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetTraceRequest create() => GetTraceRequest._();
   GetTraceRequest createEmptyInstance() => create();
@@ -746,6 +771,7 @@ class GetTraceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetTraceRequest>(create);
   static GetTraceRequest? _defaultInstance;
 
+  /// Required. ID of the Cloud project where the trace data is stored.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -758,6 +784,7 @@ class GetTraceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Required. ID of the trace to return.
   @$pb.TagNumber(2)
   $core.String get traceId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -771,49 +798,38 @@ class GetTraceRequest extends $pb.GeneratedMessage {
   void clearTraceId() => clearField(2);
 }
 
+/// The request message for the `PatchTraces` method.
 class PatchTracesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PatchTracesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.cloudtrace.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOM<Traces>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'traces',
-        subBuilder: Traces.create)
-    ..hasRequiredFields = false;
-
-  PatchTracesRequest._() : super();
   factory PatchTracesRequest({
     $core.String? projectId,
     Traces? traces,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (traces != null) {
-      _result.traces = traces;
+      $result.traces = traces;
     }
-    return _result;
+    return $result;
   }
+  PatchTracesRequest._() : super();
   factory PatchTracesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PatchTracesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PatchTracesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.cloudtrace.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOM<Traces>(2, _omitFieldNames ? '' : 'traces', subBuilder: Traces.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -823,8 +839,10 @@ class PatchTracesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   PatchTracesRequest copyWith(void Function(PatchTracesRequest) updates) =>
       super.copyWith((message) => updates(message as PatchTracesRequest))
-          as PatchTracesRequest; // ignore: deprecated_member_use
+          as PatchTracesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PatchTracesRequest create() => PatchTracesRequest._();
   PatchTracesRequest createEmptyInstance() => create();
@@ -835,6 +853,7 @@ class PatchTracesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<PatchTracesRequest>(create);
   static PatchTracesRequest? _defaultInstance;
 
+  /// Required. ID of the Cloud project where the trace data is stored.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -847,6 +866,7 @@ class PatchTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Required. The body of the message.
   @$pb.TagNumber(2)
   Traces get traces => $_getN(1);
   @$pb.TagNumber(2)
@@ -861,3 +881,7 @@ class PatchTracesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Traces ensureTraces() => $_ensure(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,19 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/ai/generativelanguage/v1beta2/model_service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'model_service.pb.dart' as $0;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'model.pb.dart' as $1;
+import 'model_service.pb.dart' as $0;
+
 export 'model_service.pb.dart';
 
+@$pb.GrpcServiceName('google.ai.generativelanguage.v1beta2.ModelService')
 class ModelServiceClient extends $grpc.Client {
   static final _$getModel = $grpc.ClientMethod<$0.GetModelRequest, $1.Model>(
       '/google.ai.generativelanguage.v1beta2.ModelService/GetModel',
@@ -43,6 +50,7 @@ class ModelServiceClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.ai.generativelanguage.v1beta2.ModelService')
 abstract class ModelServiceBase extends $grpc.Service {
   $core.String get $name => 'google.ai.generativelanguage.v1beta2.ModelService';
 

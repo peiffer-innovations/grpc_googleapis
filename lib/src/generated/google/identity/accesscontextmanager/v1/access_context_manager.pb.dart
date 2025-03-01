@@ -1,76 +1,64 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/identity/accesscontextmanager/v1/access_context_manager.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'access_policy.pb.dart' as $5;
 import '../../../protobuf/field_mask.pb.dart' as $9;
-import 'access_level.pb.dart' as $6;
-import 'service_perimeter.pb.dart' as $7;
-import 'gcp_user_access_binding.pb.dart' as $8;
-
 import 'access_context_manager.pbenum.dart';
+import 'access_level.pb.dart' as $6;
+import 'access_policy.pb.dart' as $5;
+import 'gcp_user_access_binding.pb.dart' as $8;
+import 'service_perimeter.pb.dart' as $7;
 
 export 'access_context_manager.pbenum.dart';
 
+/// A request to list all `AccessPolicies` for a container.
 class ListAccessPoliciesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccessPoliciesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListAccessPoliciesRequest._() : super();
   factory ListAccessPoliciesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAccessPoliciesRequest._() : super();
   factory ListAccessPoliciesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccessPoliciesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccessPoliciesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -82,8 +70,10 @@ class ListAccessPoliciesRequest extends $pb.GeneratedMessage {
   ListAccessPoliciesRequest copyWith(
           void Function(ListAccessPoliciesRequest) updates) =>
       super.copyWith((message) => updates(message as ListAccessPoliciesRequest))
-          as ListAccessPoliciesRequest; // ignore: deprecated_member_use
+          as ListAccessPoliciesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccessPoliciesRequest create() => ListAccessPoliciesRequest._();
   ListAccessPoliciesRequest createEmptyInstance() => create();
@@ -94,6 +84,11 @@ class ListAccessPoliciesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccessPoliciesRequest>(create);
   static ListAccessPoliciesRequest? _defaultInstance;
 
+  ///  Required. Resource name for the container to list AccessPolicy instances
+  ///  from.
+  ///
+  ///  Format:
+  ///  `organizations/{org_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -106,6 +101,7 @@ class ListAccessPoliciesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Number of AccessPolicy instances to include in the list. Default 100.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -118,6 +114,8 @@ class ListAccessPoliciesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Next page token for the next batch of AccessPolicy instances. Defaults to
+  /// the first page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -131,50 +129,40 @@ class ListAccessPoliciesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// A response to `ListAccessPoliciesRequest`.
 class ListAccessPoliciesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccessPoliciesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$5.AccessPolicy>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessPolicies',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.AccessPolicy.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAccessPoliciesResponse._() : super();
   factory ListAccessPoliciesResponse({
     $core.Iterable<$5.AccessPolicy>? accessPolicies,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (accessPolicies != null) {
-      _result.accessPolicies.addAll(accessPolicies);
+      $result.accessPolicies.addAll(accessPolicies);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAccessPoliciesResponse._() : super();
   factory ListAccessPoliciesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccessPoliciesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccessPoliciesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$5.AccessPolicy>(
+        1, _omitFieldNames ? '' : 'accessPolicies', $pb.PbFieldType.PM,
+        subBuilder: $5.AccessPolicy.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -187,8 +175,10 @@ class ListAccessPoliciesResponse extends $pb.GeneratedMessage {
           void Function(ListAccessPoliciesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListAccessPoliciesResponse))
-          as ListAccessPoliciesResponse; // ignore: deprecated_member_use
+          as ListAccessPoliciesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccessPoliciesResponse create() => ListAccessPoliciesResponse._();
   ListAccessPoliciesResponse createEmptyInstance() => create();
@@ -199,9 +189,12 @@ class ListAccessPoliciesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccessPoliciesResponse>(create);
   static ListAccessPoliciesResponse? _defaultInstance;
 
+  /// List of the AccessPolicy instances.
   @$pb.TagNumber(1)
   $core.List<$5.AccessPolicy> get accessPolicies => $_getList(0);
 
+  /// The pagination token to retrieve the next page of results. If the value is
+  /// empty, no further results remain.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -215,39 +208,33 @@ class ListAccessPoliciesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// A request to get a particular `AccessPolicy`.
 class GetAccessPolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAccessPolicyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetAccessPolicyRequest._() : super();
   factory GetAccessPolicyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetAccessPolicyRequest._() : super();
   factory GetAccessPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAccessPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAccessPolicyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -259,8 +246,10 @@ class GetAccessPolicyRequest extends $pb.GeneratedMessage {
   GetAccessPolicyRequest copyWith(
           void Function(GetAccessPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as GetAccessPolicyRequest))
-          as GetAccessPolicyRequest; // ignore: deprecated_member_use
+          as GetAccessPolicyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAccessPolicyRequest create() => GetAccessPolicyRequest._();
   GetAccessPolicyRequest createEmptyInstance() => create();
@@ -271,6 +260,9 @@ class GetAccessPolicyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAccessPolicyRequest>(create);
   static GetAccessPolicyRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy to get.
+  ///
+  ///  Format `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -284,50 +276,40 @@ class GetAccessPolicyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A request to update an `AccessPolicy`.
 class UpdateAccessPolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateAccessPolicyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOM<$5.AccessPolicy>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'policy',
-        subBuilder: $5.AccessPolicy.create)
-    ..aOM<$9.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $9.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateAccessPolicyRequest._() : super();
   factory UpdateAccessPolicyRequest({
     $5.AccessPolicy? policy,
     $9.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (policy != null) {
-      _result.policy = policy;
+      $result.policy = policy;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateAccessPolicyRequest._() : super();
   factory UpdateAccessPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateAccessPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAccessPolicyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOM<$5.AccessPolicy>(1, _omitFieldNames ? '' : 'policy',
+        subBuilder: $5.AccessPolicy.create)
+    ..aOM<$9.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $9.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -339,8 +321,10 @@ class UpdateAccessPolicyRequest extends $pb.GeneratedMessage {
   UpdateAccessPolicyRequest copyWith(
           void Function(UpdateAccessPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAccessPolicyRequest))
-          as UpdateAccessPolicyRequest; // ignore: deprecated_member_use
+          as UpdateAccessPolicyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateAccessPolicyRequest create() => UpdateAccessPolicyRequest._();
   UpdateAccessPolicyRequest createEmptyInstance() => create();
@@ -351,6 +335,7 @@ class UpdateAccessPolicyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateAccessPolicyRequest>(create);
   static UpdateAccessPolicyRequest? _defaultInstance;
 
+  /// Required. The updated AccessPolicy.
   @$pb.TagNumber(1)
   $5.AccessPolicy get policy => $_getN(0);
   @$pb.TagNumber(1)
@@ -365,6 +350,7 @@ class UpdateAccessPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.AccessPolicy ensurePolicy() => $_ensure(0);
 
+  /// Required. Mask to control which fields get updated. Must be non-empty.
   @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -380,39 +366,33 @@ class UpdateAccessPolicyRequest extends $pb.GeneratedMessage {
   $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// A request to delete an `AccessPolicy`.
 class DeleteAccessPolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteAccessPolicyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteAccessPolicyRequest._() : super();
   factory DeleteAccessPolicyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteAccessPolicyRequest._() : super();
   factory DeleteAccessPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteAccessPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAccessPolicyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -424,8 +404,10 @@ class DeleteAccessPolicyRequest extends $pb.GeneratedMessage {
   DeleteAccessPolicyRequest copyWith(
           void Function(DeleteAccessPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAccessPolicyRequest))
-          as DeleteAccessPolicyRequest; // ignore: deprecated_member_use
+          as DeleteAccessPolicyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteAccessPolicyRequest create() => DeleteAccessPolicyRequest._();
   DeleteAccessPolicyRequest createEmptyInstance() => create();
@@ -436,6 +418,9 @@ class DeleteAccessPolicyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteAccessPolicyRequest>(create);
   static DeleteAccessPolicyRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy to delete.
+  ///
+  ///  Format `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -449,71 +434,52 @@ class DeleteAccessPolicyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A request to list all `AccessLevels` in an `AccessPolicy`.
 class ListAccessLevelsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccessLevelsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..e<LevelFormat>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevelFormat',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: LevelFormat.LEVEL_FORMAT_UNSPECIFIED,
-        valueOf: LevelFormat.valueOf,
-        enumValues: LevelFormat.values)
-    ..hasRequiredFields = false;
-
-  ListAccessLevelsRequest._() : super();
   factory ListAccessLevelsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     LevelFormat? accessLevelFormat,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (accessLevelFormat != null) {
-      _result.accessLevelFormat = accessLevelFormat;
+      $result.accessLevelFormat = accessLevelFormat;
     }
-    return _result;
+    return $result;
   }
+  ListAccessLevelsRequest._() : super();
   factory ListAccessLevelsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccessLevelsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccessLevelsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..e<LevelFormat>(
+        4, _omitFieldNames ? '' : 'accessLevelFormat', $pb.PbFieldType.OE,
+        defaultOrMaker: LevelFormat.LEVEL_FORMAT_UNSPECIFIED,
+        valueOf: LevelFormat.valueOf,
+        enumValues: LevelFormat.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -525,8 +491,10 @@ class ListAccessLevelsRequest extends $pb.GeneratedMessage {
   ListAccessLevelsRequest copyWith(
           void Function(ListAccessLevelsRequest) updates) =>
       super.copyWith((message) => updates(message as ListAccessLevelsRequest))
-          as ListAccessLevelsRequest; // ignore: deprecated_member_use
+          as ListAccessLevelsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccessLevelsRequest create() => ListAccessLevelsRequest._();
   ListAccessLevelsRequest createEmptyInstance() => create();
@@ -537,6 +505,11 @@ class ListAccessLevelsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccessLevelsRequest>(create);
   static ListAccessLevelsRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy to list [Access Levels]
+  ///  [google.identity.accesscontextmanager.v1.AccessLevel] from.
+  ///
+  ///  Format:
+  ///  `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -549,6 +522,9 @@ class ListAccessLevelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Number of [Access Levels]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] to include in
+  /// the list. Default 100.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -561,6 +537,9 @@ class ListAccessLevelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Next page token for the next batch of [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] instances.
+  /// Defaults to the first page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -573,6 +552,9 @@ class ListAccessLevelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Whether to return `BasicLevels` in the Cloud Common Expression language, as
+  /// `CustomLevels`, rather than as `BasicLevels`. Defaults to returning
+  /// `AccessLevels` in the format they were defined.
   @$pb.TagNumber(4)
   LevelFormat get accessLevelFormat => $_getN(3);
   @$pb.TagNumber(4)
@@ -586,50 +568,40 @@ class ListAccessLevelsRequest extends $pb.GeneratedMessage {
   void clearAccessLevelFormat() => clearField(4);
 }
 
+/// A response to `ListAccessLevelsRequest`.
 class ListAccessLevelsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccessLevelsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$6.AccessLevel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevels',
-        $pb.PbFieldType.PM,
-        subBuilder: $6.AccessLevel.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAccessLevelsResponse._() : super();
   factory ListAccessLevelsResponse({
     $core.Iterable<$6.AccessLevel>? accessLevels,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (accessLevels != null) {
-      _result.accessLevels.addAll(accessLevels);
+      $result.accessLevels.addAll(accessLevels);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAccessLevelsResponse._() : super();
   factory ListAccessLevelsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccessLevelsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccessLevelsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$6.AccessLevel>(
+        1, _omitFieldNames ? '' : 'accessLevels', $pb.PbFieldType.PM,
+        subBuilder: $6.AccessLevel.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -641,8 +613,10 @@ class ListAccessLevelsResponse extends $pb.GeneratedMessage {
   ListAccessLevelsResponse copyWith(
           void Function(ListAccessLevelsResponse) updates) =>
       super.copyWith((message) => updates(message as ListAccessLevelsResponse))
-          as ListAccessLevelsResponse; // ignore: deprecated_member_use
+          as ListAccessLevelsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccessLevelsResponse create() => ListAccessLevelsResponse._();
   ListAccessLevelsResponse createEmptyInstance() => create();
@@ -653,9 +627,13 @@ class ListAccessLevelsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccessLevelsResponse>(create);
   static ListAccessLevelsResponse? _defaultInstance;
 
+  /// List of the [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] instances.
   @$pb.TagNumber(1)
   $core.List<$6.AccessLevel> get accessLevels => $_getList(0);
 
+  /// The pagination token to retrieve the next page of results. If the value is
+  /// empty, no further results remain.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -669,52 +647,42 @@ class ListAccessLevelsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// A request to get a particular `AccessLevel`.
 class GetAccessLevelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAccessLevelRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<LevelFormat>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevelFormat',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: LevelFormat.LEVEL_FORMAT_UNSPECIFIED,
-        valueOf: LevelFormat.valueOf,
-        enumValues: LevelFormat.values)
-    ..hasRequiredFields = false;
-
-  GetAccessLevelRequest._() : super();
   factory GetAccessLevelRequest({
     $core.String? name,
     LevelFormat? accessLevelFormat,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (accessLevelFormat != null) {
-      _result.accessLevelFormat = accessLevelFormat;
+      $result.accessLevelFormat = accessLevelFormat;
     }
-    return _result;
+    return $result;
   }
+  GetAccessLevelRequest._() : super();
   factory GetAccessLevelRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAccessLevelRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAccessLevelRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<LevelFormat>(
+        2, _omitFieldNames ? '' : 'accessLevelFormat', $pb.PbFieldType.OE,
+        defaultOrMaker: LevelFormat.LEVEL_FORMAT_UNSPECIFIED,
+        valueOf: LevelFormat.valueOf,
+        enumValues: LevelFormat.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -726,8 +694,10 @@ class GetAccessLevelRequest extends $pb.GeneratedMessage {
   GetAccessLevelRequest copyWith(
           void Function(GetAccessLevelRequest) updates) =>
       super.copyWith((message) => updates(message as GetAccessLevelRequest))
-          as GetAccessLevelRequest; // ignore: deprecated_member_use
+          as GetAccessLevelRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAccessLevelRequest create() => GetAccessLevelRequest._();
   GetAccessLevelRequest createEmptyInstance() => create();
@@ -738,6 +708,11 @@ class GetAccessLevelRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAccessLevelRequest>(create);
   static GetAccessLevelRequest? _defaultInstance;
 
+  ///  Required. Resource name for the [Access Level]
+  ///  [google.identity.accesscontextmanager.v1.AccessLevel].
+  ///
+  ///  Format:
+  ///  `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -750,6 +725,14 @@ class GetAccessLevelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Whether to return `BasicLevels` in the Cloud Common Expression
+  /// Language rather than as `BasicLevels`. Defaults to AS_DEFINED, where
+  /// [Access Levels] [google.identity.accesscontextmanager.v1.AccessLevel]
+  /// are returned as `BasicLevels` or `CustomLevels` based on how they were
+  /// created. If set to CEL, all [Access Levels]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] are returned as
+  /// `CustomLevels`. In the CEL case, `BasicLevels` are translated to equivalent
+  /// `CustomLevels`.
   @$pb.TagNumber(2)
   LevelFormat get accessLevelFormat => $_getN(1);
   @$pb.TagNumber(2)
@@ -763,49 +746,39 @@ class GetAccessLevelRequest extends $pb.GeneratedMessage {
   void clearAccessLevelFormat() => clearField(2);
 }
 
+/// A request to create an `AccessLevel`.
 class CreateAccessLevelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateAccessLevelRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$6.AccessLevel>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevel',
-        subBuilder: $6.AccessLevel.create)
-    ..hasRequiredFields = false;
-
-  CreateAccessLevelRequest._() : super();
   factory CreateAccessLevelRequest({
     $core.String? parent,
     $6.AccessLevel? accessLevel,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (accessLevel != null) {
-      _result.accessLevel = accessLevel;
+      $result.accessLevel = accessLevel;
     }
-    return _result;
+    return $result;
   }
+  CreateAccessLevelRequest._() : super();
   factory CreateAccessLevelRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateAccessLevelRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateAccessLevelRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$6.AccessLevel>(2, _omitFieldNames ? '' : 'accessLevel',
+        subBuilder: $6.AccessLevel.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -817,8 +790,10 @@ class CreateAccessLevelRequest extends $pb.GeneratedMessage {
   CreateAccessLevelRequest copyWith(
           void Function(CreateAccessLevelRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAccessLevelRequest))
-          as CreateAccessLevelRequest; // ignore: deprecated_member_use
+          as CreateAccessLevelRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateAccessLevelRequest create() => CreateAccessLevelRequest._();
   CreateAccessLevelRequest createEmptyInstance() => create();
@@ -829,6 +804,10 @@ class CreateAccessLevelRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateAccessLevelRequest>(create);
   static CreateAccessLevelRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy which owns this [Access
+  ///  Level] [google.identity.accesscontextmanager.v1.AccessLevel].
+  ///
+  ///  Format: `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -841,6 +820,11 @@ class CreateAccessLevelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] to create.
+  /// Syntactic correctness of the [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] is a
+  /// precondition for creation.
   @$pb.TagNumber(2)
   $6.AccessLevel get accessLevel => $_getN(1);
   @$pb.TagNumber(2)
@@ -856,50 +840,40 @@ class CreateAccessLevelRequest extends $pb.GeneratedMessage {
   $6.AccessLevel ensureAccessLevel() => $_ensure(1);
 }
 
+/// A request to update an `AccessLevel`.
 class UpdateAccessLevelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateAccessLevelRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOM<$6.AccessLevel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevel',
-        subBuilder: $6.AccessLevel.create)
-    ..aOM<$9.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $9.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateAccessLevelRequest._() : super();
   factory UpdateAccessLevelRequest({
     $6.AccessLevel? accessLevel,
     $9.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (accessLevel != null) {
-      _result.accessLevel = accessLevel;
+      $result.accessLevel = accessLevel;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateAccessLevelRequest._() : super();
   factory UpdateAccessLevelRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateAccessLevelRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAccessLevelRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOM<$6.AccessLevel>(1, _omitFieldNames ? '' : 'accessLevel',
+        subBuilder: $6.AccessLevel.create)
+    ..aOM<$9.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $9.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -911,8 +885,10 @@ class UpdateAccessLevelRequest extends $pb.GeneratedMessage {
   UpdateAccessLevelRequest copyWith(
           void Function(UpdateAccessLevelRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAccessLevelRequest))
-          as UpdateAccessLevelRequest; // ignore: deprecated_member_use
+          as UpdateAccessLevelRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateAccessLevelRequest create() => UpdateAccessLevelRequest._();
   UpdateAccessLevelRequest createEmptyInstance() => create();
@@ -923,6 +899,11 @@ class UpdateAccessLevelRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateAccessLevelRequest>(create);
   static UpdateAccessLevelRequest? _defaultInstance;
 
+  /// Required. The updated [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel]. Syntactic
+  /// correctness of the [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] is a
+  /// precondition for creation.
   @$pb.TagNumber(1)
   $6.AccessLevel get accessLevel => $_getN(0);
   @$pb.TagNumber(1)
@@ -937,6 +918,7 @@ class UpdateAccessLevelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $6.AccessLevel ensureAccessLevel() => $_ensure(0);
 
+  /// Required. Mask to control which fields get updated. Must be non-empty.
   @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -952,39 +934,33 @@ class UpdateAccessLevelRequest extends $pb.GeneratedMessage {
   $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// A request to delete an `AccessLevel`.
 class DeleteAccessLevelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteAccessLevelRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteAccessLevelRequest._() : super();
   factory DeleteAccessLevelRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteAccessLevelRequest._() : super();
   factory DeleteAccessLevelRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteAccessLevelRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAccessLevelRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -996,8 +972,10 @@ class DeleteAccessLevelRequest extends $pb.GeneratedMessage {
   DeleteAccessLevelRequest copyWith(
           void Function(DeleteAccessLevelRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAccessLevelRequest))
-          as DeleteAccessLevelRequest; // ignore: deprecated_member_use
+          as DeleteAccessLevelRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteAccessLevelRequest create() => DeleteAccessLevelRequest._();
   DeleteAccessLevelRequest createEmptyInstance() => create();
@@ -1008,6 +986,11 @@ class DeleteAccessLevelRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteAccessLevelRequest>(create);
   static DeleteAccessLevelRequest? _defaultInstance;
 
+  ///  Required. Resource name for the [Access Level]
+  ///  [google.identity.accesscontextmanager.v1.AccessLevel].
+  ///
+  ///  Format:
+  ///  `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1021,59 +1004,46 @@ class DeleteAccessLevelRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A request to replace all existing Access Levels in an Access Policy with
+/// the Access Levels provided. This is done atomically.
 class ReplaceAccessLevelsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReplaceAccessLevelsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..pc<$6.AccessLevel>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevels',
-        $pb.PbFieldType.PM,
-        subBuilder: $6.AccessLevel.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  ReplaceAccessLevelsRequest._() : super();
   factory ReplaceAccessLevelsRequest({
     $core.String? parent,
     $core.Iterable<$6.AccessLevel>? accessLevels,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (accessLevels != null) {
-      _result.accessLevels.addAll(accessLevels);
+      $result.accessLevels.addAll(accessLevels);
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  ReplaceAccessLevelsRequest._() : super();
   factory ReplaceAccessLevelsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReplaceAccessLevelsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReplaceAccessLevelsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..pc<$6.AccessLevel>(
+        2, _omitFieldNames ? '' : 'accessLevels', $pb.PbFieldType.PM,
+        subBuilder: $6.AccessLevel.create)
+    ..aOS(4, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1086,8 +1056,10 @@ class ReplaceAccessLevelsRequest extends $pb.GeneratedMessage {
           void Function(ReplaceAccessLevelsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ReplaceAccessLevelsRequest))
-          as ReplaceAccessLevelsRequest; // ignore: deprecated_member_use
+          as ReplaceAccessLevelsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReplaceAccessLevelsRequest create() => ReplaceAccessLevelsRequest._();
   ReplaceAccessLevelsRequest createEmptyInstance() => create();
@@ -1098,6 +1070,11 @@ class ReplaceAccessLevelsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReplaceAccessLevelsRequest>(create);
   static ReplaceAccessLevelsRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy which owns these
+  ///  [Access Levels]
+  ///  [google.identity.accesscontextmanager.v1.AccessLevel].
+  ///
+  ///  Format: `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1110,9 +1087,22 @@ class ReplaceAccessLevelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The desired [Access Levels]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] that should
+  /// replace all existing [Access Levels]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] in the
+  /// [Access Policy]
+  /// [google.identity.accesscontextmanager.v1.AccessPolicy].
   @$pb.TagNumber(2)
   $core.List<$6.AccessLevel> get accessLevels => $_getList(1);
 
+  /// Optional. The etag for the version of the [Access Policy]
+  /// [google.identity.accesscontextmanager.v1.AccessPolicy] that this
+  /// replace operation is to be performed on. If, at the time of replace, the
+  /// etag for the Access Policy stored in Access Context Manager is different
+  /// from the specified etag, then the replace operation will not be performed
+  /// and the call will fail. This field is not required. If etag is not
+  /// provided, the operation will be performed as if a valid etag is provided.
   @$pb.TagNumber(4)
   $core.String get etag => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -1126,41 +1116,36 @@ class ReplaceAccessLevelsRequest extends $pb.GeneratedMessage {
   void clearEtag() => clearField(4);
 }
 
+/// A response to ReplaceAccessLevelsRequest. This will be put inside of
+/// Operation.response field.
 class ReplaceAccessLevelsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReplaceAccessLevelsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$6.AccessLevel>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accessLevels',
-        $pb.PbFieldType.PM,
-        subBuilder: $6.AccessLevel.create)
-    ..hasRequiredFields = false;
-
-  ReplaceAccessLevelsResponse._() : super();
   factory ReplaceAccessLevelsResponse({
     $core.Iterable<$6.AccessLevel>? accessLevels,
   }) {
-    final _result = create();
+    final $result = create();
     if (accessLevels != null) {
-      _result.accessLevels.addAll(accessLevels);
+      $result.accessLevels.addAll(accessLevels);
     }
-    return _result;
+    return $result;
   }
+  ReplaceAccessLevelsResponse._() : super();
   factory ReplaceAccessLevelsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReplaceAccessLevelsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReplaceAccessLevelsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$6.AccessLevel>(
+        1, _omitFieldNames ? '' : 'accessLevels', $pb.PbFieldType.PM,
+        subBuilder: $6.AccessLevel.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1173,8 +1158,10 @@ class ReplaceAccessLevelsResponse extends $pb.GeneratedMessage {
           void Function(ReplaceAccessLevelsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ReplaceAccessLevelsResponse))
-          as ReplaceAccessLevelsResponse; // ignore: deprecated_member_use
+          as ReplaceAccessLevelsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReplaceAccessLevelsResponse create() =>
       ReplaceAccessLevelsResponse._();
@@ -1186,62 +1173,49 @@ class ReplaceAccessLevelsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReplaceAccessLevelsResponse>(create);
   static ReplaceAccessLevelsResponse? _defaultInstance;
 
+  /// List of the [Access Level]
+  /// [google.identity.accesscontextmanager.v1.AccessLevel] instances.
   @$pb.TagNumber(1)
   $core.List<$6.AccessLevel> get accessLevels => $_getList(0);
 }
 
+/// A request to list all `ServicePerimeters` in an `AccessPolicy`.
 class ListServicePerimetersRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicePerimetersRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListServicePerimetersRequest._() : super();
   factory ListServicePerimetersRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicePerimetersRequest._() : super();
   factory ListServicePerimetersRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicePerimetersRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicePerimetersRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1254,8 +1228,10 @@ class ListServicePerimetersRequest extends $pb.GeneratedMessage {
           void Function(ListServicePerimetersRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListServicePerimetersRequest))
-          as ListServicePerimetersRequest; // ignore: deprecated_member_use
+          as ListServicePerimetersRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicePerimetersRequest create() =>
       ListServicePerimetersRequest._();
@@ -1267,6 +1243,11 @@ class ListServicePerimetersRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicePerimetersRequest>(create);
   static ListServicePerimetersRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy to list [Service Perimeters]
+  ///  [google.identity.accesscontextmanager.v1.ServicePerimeter] from.
+  ///
+  ///  Format:
+  ///  `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1279,6 +1260,9 @@ class ListServicePerimetersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Number of [Service Perimeters]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] to include
+  /// in the list. Default 100.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1291,6 +1275,9 @@ class ListServicePerimetersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Next page token for the next batch of [Service Perimeter]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] instances.
+  /// Defaults to the first page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1304,50 +1291,40 @@ class ListServicePerimetersRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// A response to `ListServicePerimetersRequest`.
 class ListServicePerimetersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicePerimetersResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$7.ServicePerimeter>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicePerimeters',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.ServicePerimeter.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServicePerimetersResponse._() : super();
   factory ListServicePerimetersResponse({
     $core.Iterable<$7.ServicePerimeter>? servicePerimeters,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (servicePerimeters != null) {
-      _result.servicePerimeters.addAll(servicePerimeters);
+      $result.servicePerimeters.addAll(servicePerimeters);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicePerimetersResponse._() : super();
   factory ListServicePerimetersResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicePerimetersResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicePerimetersResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$7.ServicePerimeter>(
+        1, _omitFieldNames ? '' : 'servicePerimeters', $pb.PbFieldType.PM,
+        subBuilder: $7.ServicePerimeter.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1360,8 +1337,10 @@ class ListServicePerimetersResponse extends $pb.GeneratedMessage {
           void Function(ListServicePerimetersResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListServicePerimetersResponse))
-          as ListServicePerimetersResponse; // ignore: deprecated_member_use
+          as ListServicePerimetersResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicePerimetersResponse create() =>
       ListServicePerimetersResponse._();
@@ -1373,9 +1352,13 @@ class ListServicePerimetersResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicePerimetersResponse>(create);
   static ListServicePerimetersResponse? _defaultInstance;
 
+  /// List of the [Service Perimeter]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] instances.
   @$pb.TagNumber(1)
   $core.List<$7.ServicePerimeter> get servicePerimeters => $_getList(0);
 
+  /// The pagination token to retrieve the next page of results. If the value is
+  /// empty, no further results remain.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1389,39 +1372,33 @@ class ListServicePerimetersResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// A request to get a particular `ServicePerimeter`.
 class GetServicePerimeterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServicePerimeterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetServicePerimeterRequest._() : super();
   factory GetServicePerimeterRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetServicePerimeterRequest._() : super();
   factory GetServicePerimeterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServicePerimeterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServicePerimeterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1434,8 +1411,10 @@ class GetServicePerimeterRequest extends $pb.GeneratedMessage {
           void Function(GetServicePerimeterRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetServicePerimeterRequest))
-          as GetServicePerimeterRequest; // ignore: deprecated_member_use
+          as GetServicePerimeterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServicePerimeterRequest create() => GetServicePerimeterRequest._();
   GetServicePerimeterRequest createEmptyInstance() => create();
@@ -1446,6 +1425,11 @@ class GetServicePerimeterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServicePerimeterRequest>(create);
   static GetServicePerimeterRequest? _defaultInstance;
 
+  ///  Required. Resource name for the [Service Perimeter]
+  ///  [google.identity.accesscontextmanager.v1.ServicePerimeter].
+  ///
+  ///  Format:
+  ///  `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1459,49 +1443,39 @@ class GetServicePerimeterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A request to create a `ServicePerimeter`.
 class CreateServicePerimeterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServicePerimeterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$7.ServicePerimeter>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicePerimeter',
-        subBuilder: $7.ServicePerimeter.create)
-    ..hasRequiredFields = false;
-
-  CreateServicePerimeterRequest._() : super();
   factory CreateServicePerimeterRequest({
     $core.String? parent,
     $7.ServicePerimeter? servicePerimeter,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (servicePerimeter != null) {
-      _result.servicePerimeter = servicePerimeter;
+      $result.servicePerimeter = servicePerimeter;
     }
-    return _result;
+    return $result;
   }
+  CreateServicePerimeterRequest._() : super();
   factory CreateServicePerimeterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServicePerimeterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServicePerimeterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$7.ServicePerimeter>(2, _omitFieldNames ? '' : 'servicePerimeter',
+        subBuilder: $7.ServicePerimeter.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1514,8 +1488,10 @@ class CreateServicePerimeterRequest extends $pb.GeneratedMessage {
           void Function(CreateServicePerimeterRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateServicePerimeterRequest))
-          as CreateServicePerimeterRequest; // ignore: deprecated_member_use
+          as CreateServicePerimeterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServicePerimeterRequest create() =>
       CreateServicePerimeterRequest._();
@@ -1527,6 +1503,10 @@ class CreateServicePerimeterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServicePerimeterRequest>(create);
   static CreateServicePerimeterRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy which owns this [Service
+  ///  Perimeter] [google.identity.accesscontextmanager.v1.ServicePerimeter].
+  ///
+  ///  Format: `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1539,6 +1519,11 @@ class CreateServicePerimeterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The [Service Perimeter]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] to create.
+  /// Syntactic correctness of the [Service Perimeter]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] is a
+  /// precondition for creation.
   @$pb.TagNumber(2)
   $7.ServicePerimeter get servicePerimeter => $_getN(1);
   @$pb.TagNumber(2)
@@ -1554,50 +1539,40 @@ class CreateServicePerimeterRequest extends $pb.GeneratedMessage {
   $7.ServicePerimeter ensureServicePerimeter() => $_ensure(1);
 }
 
+/// A request to update a `ServicePerimeter`.
 class UpdateServicePerimeterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateServicePerimeterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOM<$7.ServicePerimeter>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicePerimeter',
-        subBuilder: $7.ServicePerimeter.create)
-    ..aOM<$9.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $9.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateServicePerimeterRequest._() : super();
   factory UpdateServicePerimeterRequest({
     $7.ServicePerimeter? servicePerimeter,
     $9.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (servicePerimeter != null) {
-      _result.servicePerimeter = servicePerimeter;
+      $result.servicePerimeter = servicePerimeter;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateServicePerimeterRequest._() : super();
   factory UpdateServicePerimeterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateServicePerimeterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateServicePerimeterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOM<$7.ServicePerimeter>(1, _omitFieldNames ? '' : 'servicePerimeter',
+        subBuilder: $7.ServicePerimeter.create)
+    ..aOM<$9.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $9.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1610,8 +1585,10 @@ class UpdateServicePerimeterRequest extends $pb.GeneratedMessage {
           void Function(UpdateServicePerimeterRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateServicePerimeterRequest))
-          as UpdateServicePerimeterRequest; // ignore: deprecated_member_use
+          as UpdateServicePerimeterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateServicePerimeterRequest create() =>
       UpdateServicePerimeterRequest._();
@@ -1623,6 +1600,8 @@ class UpdateServicePerimeterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateServicePerimeterRequest>(create);
   static UpdateServicePerimeterRequest? _defaultInstance;
 
+  /// Required. The updated `ServicePerimeter`. Syntactic correctness of the
+  /// `ServicePerimeter` is a precondition for creation.
   @$pb.TagNumber(1)
   $7.ServicePerimeter get servicePerimeter => $_getN(0);
   @$pb.TagNumber(1)
@@ -1637,6 +1616,7 @@ class UpdateServicePerimeterRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $7.ServicePerimeter ensureServicePerimeter() => $_ensure(0);
 
+  /// Required. Mask to control which fields get updated. Must be non-empty.
   @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -1652,39 +1632,33 @@ class UpdateServicePerimeterRequest extends $pb.GeneratedMessage {
   $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// A request to delete a `ServicePerimeter`.
 class DeleteServicePerimeterRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServicePerimeterRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteServicePerimeterRequest._() : super();
   factory DeleteServicePerimeterRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteServicePerimeterRequest._() : super();
   factory DeleteServicePerimeterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServicePerimeterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServicePerimeterRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1697,8 +1671,10 @@ class DeleteServicePerimeterRequest extends $pb.GeneratedMessage {
           void Function(DeleteServicePerimeterRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteServicePerimeterRequest))
-          as DeleteServicePerimeterRequest; // ignore: deprecated_member_use
+          as DeleteServicePerimeterRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServicePerimeterRequest create() =>
       DeleteServicePerimeterRequest._();
@@ -1710,6 +1686,11 @@ class DeleteServicePerimeterRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteServicePerimeterRequest>(create);
   static DeleteServicePerimeterRequest? _defaultInstance;
 
+  ///  Required. Resource name for the [Service Perimeter]
+  ///  [google.identity.accesscontextmanager.v1.ServicePerimeter].
+  ///
+  ///  Format:
+  ///  `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1723,59 +1704,46 @@ class DeleteServicePerimeterRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A request to replace all existing Service Perimeters in an Access Policy
+/// with the Service Perimeters provided. This is done atomically.
 class ReplaceServicePerimetersRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReplaceServicePerimetersRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..pc<$7.ServicePerimeter>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicePerimeters',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.ServicePerimeter.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  ReplaceServicePerimetersRequest._() : super();
   factory ReplaceServicePerimetersRequest({
     $core.String? parent,
     $core.Iterable<$7.ServicePerimeter>? servicePerimeters,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (servicePerimeters != null) {
-      _result.servicePerimeters.addAll(servicePerimeters);
+      $result.servicePerimeters.addAll(servicePerimeters);
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  ReplaceServicePerimetersRequest._() : super();
   factory ReplaceServicePerimetersRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReplaceServicePerimetersRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReplaceServicePerimetersRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..pc<$7.ServicePerimeter>(
+        2, _omitFieldNames ? '' : 'servicePerimeters', $pb.PbFieldType.PM,
+        subBuilder: $7.ServicePerimeter.create)
+    ..aOS(3, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1788,8 +1756,10 @@ class ReplaceServicePerimetersRequest extends $pb.GeneratedMessage {
           void Function(ReplaceServicePerimetersRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ReplaceServicePerimetersRequest))
-          as ReplaceServicePerimetersRequest; // ignore: deprecated_member_use
+          as ReplaceServicePerimetersRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReplaceServicePerimetersRequest create() =>
       ReplaceServicePerimetersRequest._();
@@ -1802,6 +1772,11 @@ class ReplaceServicePerimetersRequest extends $pb.GeneratedMessage {
           create);
   static ReplaceServicePerimetersRequest? _defaultInstance;
 
+  ///  Required. Resource name for the access policy which owns these
+  ///  [Service Perimeters]
+  ///  [google.identity.accesscontextmanager.v1.ServicePerimeter].
+  ///
+  ///  Format: `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1814,9 +1789,22 @@ class ReplaceServicePerimetersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The desired [Service Perimeters]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] that should
+  /// replace all existing [Service Perimeters]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] in the
+  /// [Access Policy]
+  /// [google.identity.accesscontextmanager.v1.AccessPolicy].
   @$pb.TagNumber(2)
   $core.List<$7.ServicePerimeter> get servicePerimeters => $_getList(1);
 
+  /// Optional. The etag for the version of the [Access Policy]
+  /// [google.identity.accesscontextmanager.v1.AccessPolicy] that this
+  /// replace operation is to be performed on. If, at the time of replace, the
+  /// etag for the Access Policy stored in Access Context Manager is different
+  /// from the specified etag, then the replace operation will not be performed
+  /// and the call will fail. This field is not required. If etag is not
+  /// provided, the operation will be performed as if a valid etag is provided.
   @$pb.TagNumber(3)
   $core.String get etag => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1830,41 +1818,36 @@ class ReplaceServicePerimetersRequest extends $pb.GeneratedMessage {
   void clearEtag() => clearField(3);
 }
 
+/// A response to ReplaceServicePerimetersRequest. This will be put inside of
+/// Operation.response field.
 class ReplaceServicePerimetersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReplaceServicePerimetersResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$7.ServicePerimeter>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicePerimeters',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.ServicePerimeter.create)
-    ..hasRequiredFields = false;
-
-  ReplaceServicePerimetersResponse._() : super();
   factory ReplaceServicePerimetersResponse({
     $core.Iterable<$7.ServicePerimeter>? servicePerimeters,
   }) {
-    final _result = create();
+    final $result = create();
     if (servicePerimeters != null) {
-      _result.servicePerimeters.addAll(servicePerimeters);
+      $result.servicePerimeters.addAll(servicePerimeters);
     }
-    return _result;
+    return $result;
   }
+  ReplaceServicePerimetersResponse._() : super();
   factory ReplaceServicePerimetersResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReplaceServicePerimetersResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReplaceServicePerimetersResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$7.ServicePerimeter>(
+        1, _omitFieldNames ? '' : 'servicePerimeters', $pb.PbFieldType.PM,
+        subBuilder: $7.ServicePerimeter.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1877,8 +1860,10 @@ class ReplaceServicePerimetersResponse extends $pb.GeneratedMessage {
           void Function(ReplaceServicePerimetersResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ReplaceServicePerimetersResponse))
-          as ReplaceServicePerimetersResponse; // ignore: deprecated_member_use
+          as ReplaceServicePerimetersResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReplaceServicePerimetersResponse create() =>
       ReplaceServicePerimetersResponse._();
@@ -1891,52 +1876,46 @@ class ReplaceServicePerimetersResponse extends $pb.GeneratedMessage {
           create);
   static ReplaceServicePerimetersResponse? _defaultInstance;
 
+  /// List of the [Service Perimeter]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] instances.
   @$pb.TagNumber(1)
   $core.List<$7.ServicePerimeter> get servicePerimeters => $_getList(0);
 }
 
+/// A request to commit dry-run specs in all [Service Perimeters]
+/// [google.identity.accesscontextmanager.v1.ServicePerimeter] belonging to
+/// an [Access Policy][google.identity.accesscontextmanager.v1.AccessPolicy].
 class CommitServicePerimetersRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CommitServicePerimetersRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag')
-    ..hasRequiredFields = false;
-
-  CommitServicePerimetersRequest._() : super();
   factory CommitServicePerimetersRequest({
     $core.String? parent,
     $core.String? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  CommitServicePerimetersRequest._() : super();
   factory CommitServicePerimetersRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CommitServicePerimetersRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CommitServicePerimetersRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1949,8 +1928,10 @@ class CommitServicePerimetersRequest extends $pb.GeneratedMessage {
           void Function(CommitServicePerimetersRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CommitServicePerimetersRequest))
-          as CommitServicePerimetersRequest; // ignore: deprecated_member_use
+          as CommitServicePerimetersRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CommitServicePerimetersRequest create() =>
       CommitServicePerimetersRequest._();
@@ -1962,6 +1943,13 @@ class CommitServicePerimetersRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CommitServicePerimetersRequest>(create);
   static CommitServicePerimetersRequest? _defaultInstance;
 
+  ///  Required. Resource name for the parent [Access Policy]
+  ///  [google.identity.accesscontextmanager.v1.AccessPolicy] which owns all
+  ///  [Service Perimeters]
+  ///  [google.identity.accesscontextmanager.v1.ServicePerimeter] in scope for
+  ///  the commit operation.
+  ///
+  ///  Format: `accessPolicies/{policy_id}`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1974,6 +1962,13 @@ class CommitServicePerimetersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Optional. The etag for the version of the [Access Policy]
+  /// [google.identity.accesscontextmanager.v1.AccessPolicy] that this
+  /// commit operation is to be performed on. If, at the time of commit, the
+  /// etag for the Access Policy stored in Access Context Manager is different
+  /// from the specified etag, then the commit operation will not be performed
+  /// and the call will fail. This field is not required. If etag is not
+  /// provided, the operation will be performed as if a valid etag is provided.
   @$pb.TagNumber(2)
   $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1987,41 +1982,36 @@ class CommitServicePerimetersRequest extends $pb.GeneratedMessage {
   void clearEtag() => clearField(2);
 }
 
+/// A response to CommitServicePerimetersRequest. This will be put inside of
+/// Operation.response field.
 class CommitServicePerimetersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CommitServicePerimetersResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$7.ServicePerimeter>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'servicePerimeters',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.ServicePerimeter.create)
-    ..hasRequiredFields = false;
-
-  CommitServicePerimetersResponse._() : super();
   factory CommitServicePerimetersResponse({
     $core.Iterable<$7.ServicePerimeter>? servicePerimeters,
   }) {
-    final _result = create();
+    final $result = create();
     if (servicePerimeters != null) {
-      _result.servicePerimeters.addAll(servicePerimeters);
+      $result.servicePerimeters.addAll(servicePerimeters);
     }
-    return _result;
+    return $result;
   }
+  CommitServicePerimetersResponse._() : super();
   factory CommitServicePerimetersResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CommitServicePerimetersResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CommitServicePerimetersResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$7.ServicePerimeter>(
+        1, _omitFieldNames ? '' : 'servicePerimeters', $pb.PbFieldType.PM,
+        subBuilder: $7.ServicePerimeter.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2034,8 +2024,10 @@ class CommitServicePerimetersResponse extends $pb.GeneratedMessage {
           void Function(CommitServicePerimetersResponse) updates) =>
       super.copyWith(
               (message) => updates(message as CommitServicePerimetersResponse))
-          as CommitServicePerimetersResponse; // ignore: deprecated_member_use
+          as CommitServicePerimetersResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CommitServicePerimetersResponse create() =>
       CommitServicePerimetersResponse._();
@@ -2048,62 +2040,52 @@ class CommitServicePerimetersResponse extends $pb.GeneratedMessage {
           create);
   static CommitServicePerimetersResponse? _defaultInstance;
 
+  /// List of all the [Service Perimeter]
+  /// [google.identity.accesscontextmanager.v1.ServicePerimeter] instances in
+  /// the [Access Policy]
+  /// [google.identity.accesscontextmanager.v1.AccessPolicy].
   @$pb.TagNumber(1)
   $core.List<$7.ServicePerimeter> get servicePerimeters => $_getList(0);
 }
 
+/// Request of [ListGcpUserAccessBindings]
+/// [google.identity.accesscontextmanager.v1.AccessContextManager.ListGcpUserAccessBindings].
 class ListGcpUserAccessBindingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListGcpUserAccessBindingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListGcpUserAccessBindingsRequest._() : super();
   factory ListGcpUserAccessBindingsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListGcpUserAccessBindingsRequest._() : super();
   factory ListGcpUserAccessBindingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListGcpUserAccessBindingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListGcpUserAccessBindingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2116,8 +2098,10 @@ class ListGcpUserAccessBindingsRequest extends $pb.GeneratedMessage {
           void Function(ListGcpUserAccessBindingsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListGcpUserAccessBindingsRequest))
-          as ListGcpUserAccessBindingsRequest; // ignore: deprecated_member_use
+          as ListGcpUserAccessBindingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListGcpUserAccessBindingsRequest create() =>
       ListGcpUserAccessBindingsRequest._();
@@ -2130,6 +2114,7 @@ class ListGcpUserAccessBindingsRequest extends $pb.GeneratedMessage {
           create);
   static ListGcpUserAccessBindingsRequest? _defaultInstance;
 
+  /// Required. Example: "organizations/256"
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2142,6 +2127,8 @@ class ListGcpUserAccessBindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Optional. Maximum number of items to return. The server may return fewer items.
+  /// If left blank, the server may return any number of items.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -2154,6 +2141,10 @@ class ListGcpUserAccessBindingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional. If left blank, returns the first page. To enumerate all items, use the
+  /// [next_page_token]
+  /// [google.identity.accesscontextmanager.v1.ListGcpUserAccessBindingsResponse.next_page_token]
+  /// from your previous list operation.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2167,50 +2158,41 @@ class ListGcpUserAccessBindingsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response of [ListGcpUserAccessBindings]
+/// [google.identity.accesscontextmanager.v1.AccessContextManager.ListGcpUserAccessBindings].
 class ListGcpUserAccessBindingsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListGcpUserAccessBindingsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..pc<$8.GcpUserAccessBinding>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcpUserAccessBindings',
-        $pb.PbFieldType.PM,
-        subBuilder: $8.GcpUserAccessBinding.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListGcpUserAccessBindingsResponse._() : super();
   factory ListGcpUserAccessBindingsResponse({
     $core.Iterable<$8.GcpUserAccessBinding>? gcpUserAccessBindings,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (gcpUserAccessBindings != null) {
-      _result.gcpUserAccessBindings.addAll(gcpUserAccessBindings);
+      $result.gcpUserAccessBindings.addAll(gcpUserAccessBindings);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListGcpUserAccessBindingsResponse._() : super();
   factory ListGcpUserAccessBindingsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListGcpUserAccessBindingsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListGcpUserAccessBindingsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..pc<$8.GcpUserAccessBinding>(
+        1, _omitFieldNames ? '' : 'gcpUserAccessBindings', $pb.PbFieldType.PM,
+        subBuilder: $8.GcpUserAccessBinding.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2223,8 +2205,10 @@ class ListGcpUserAccessBindingsResponse extends $pb.GeneratedMessage {
           void Function(ListGcpUserAccessBindingsResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListGcpUserAccessBindingsResponse))
-          as ListGcpUserAccessBindingsResponse; // ignore: deprecated_member_use
+          as ListGcpUserAccessBindingsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListGcpUserAccessBindingsResponse create() =>
       ListGcpUserAccessBindingsResponse._();
@@ -2237,9 +2221,12 @@ class ListGcpUserAccessBindingsResponse extends $pb.GeneratedMessage {
           create);
   static ListGcpUserAccessBindingsResponse? _defaultInstance;
 
+  /// [GcpUserAccessBinding]
+  /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]
   @$pb.TagNumber(1)
   $core.List<$8.GcpUserAccessBinding> get gcpUserAccessBindings => $_getList(0);
 
+  /// Token to get the next page of items. If blank, there are no more items.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2253,39 +2240,34 @@ class ListGcpUserAccessBindingsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request of [GetGcpUserAccessBinding]
+/// [google.identity.accesscontextmanager.v1.AccessContextManager.GetGcpUserAccessBinding].
 class GetGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetGcpUserAccessBindingRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetGcpUserAccessBindingRequest._() : super();
   factory GetGcpUserAccessBindingRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetGcpUserAccessBindingRequest._() : super();
   factory GetGcpUserAccessBindingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetGcpUserAccessBindingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetGcpUserAccessBindingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2298,8 +2280,10 @@ class GetGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           void Function(GetGcpUserAccessBindingRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetGcpUserAccessBindingRequest))
-          as GetGcpUserAccessBindingRequest; // ignore: deprecated_member_use
+          as GetGcpUserAccessBindingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetGcpUserAccessBindingRequest create() =>
       GetGcpUserAccessBindingRequest._();
@@ -2311,6 +2295,7 @@ class GetGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetGcpUserAccessBindingRequest>(create);
   static GetGcpUserAccessBindingRequest? _defaultInstance;
 
+  /// Required. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2324,49 +2309,41 @@ class GetGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request of [CreateGcpUserAccessBinding]
+/// [google.identity.accesscontextmanager.v1.AccessContextManager.CreateGcpUserAccessBinding].
 class CreateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateGcpUserAccessBindingRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$8.GcpUserAccessBinding>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcpUserAccessBinding',
-        subBuilder: $8.GcpUserAccessBinding.create)
-    ..hasRequiredFields = false;
-
-  CreateGcpUserAccessBindingRequest._() : super();
   factory CreateGcpUserAccessBindingRequest({
     $core.String? parent,
     $8.GcpUserAccessBinding? gcpUserAccessBinding,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (gcpUserAccessBinding != null) {
-      _result.gcpUserAccessBinding = gcpUserAccessBinding;
+      $result.gcpUserAccessBinding = gcpUserAccessBinding;
     }
-    return _result;
+    return $result;
   }
+  CreateGcpUserAccessBindingRequest._() : super();
   factory CreateGcpUserAccessBindingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateGcpUserAccessBindingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateGcpUserAccessBindingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$8.GcpUserAccessBinding>(
+        2, _omitFieldNames ? '' : 'gcpUserAccessBinding',
+        subBuilder: $8.GcpUserAccessBinding.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2379,8 +2356,10 @@ class CreateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           void Function(CreateGcpUserAccessBindingRequest) updates) =>
       super.copyWith((message) =>
               updates(message as CreateGcpUserAccessBindingRequest))
-          as CreateGcpUserAccessBindingRequest; // ignore: deprecated_member_use
+          as CreateGcpUserAccessBindingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateGcpUserAccessBindingRequest create() =>
       CreateGcpUserAccessBindingRequest._();
@@ -2393,6 +2372,7 @@ class CreateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           create);
   static CreateGcpUserAccessBindingRequest? _defaultInstance;
 
+  /// Required. Example: "organizations/256"
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2405,6 +2385,8 @@ class CreateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. [GcpUserAccessBinding]
+  /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]
   @$pb.TagNumber(2)
   $8.GcpUserAccessBinding get gcpUserAccessBinding => $_getN(1);
   @$pb.TagNumber(2)
@@ -2420,50 +2402,42 @@ class CreateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
   $8.GcpUserAccessBinding ensureGcpUserAccessBinding() => $_ensure(1);
 }
 
+/// Request of [UpdateGcpUserAccessBinding]
+/// [google.identity.accesscontextmanager.v1.AccessContextManager.UpdateGcpUserAccessBinding].
 class UpdateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateGcpUserAccessBindingRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOM<$8.GcpUserAccessBinding>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'gcpUserAccessBinding',
-        subBuilder: $8.GcpUserAccessBinding.create)
-    ..aOM<$9.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $9.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateGcpUserAccessBindingRequest._() : super();
   factory UpdateGcpUserAccessBindingRequest({
     $8.GcpUserAccessBinding? gcpUserAccessBinding,
     $9.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (gcpUserAccessBinding != null) {
-      _result.gcpUserAccessBinding = gcpUserAccessBinding;
+      $result.gcpUserAccessBinding = gcpUserAccessBinding;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateGcpUserAccessBindingRequest._() : super();
   factory UpdateGcpUserAccessBindingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateGcpUserAccessBindingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateGcpUserAccessBindingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOM<$8.GcpUserAccessBinding>(
+        1, _omitFieldNames ? '' : 'gcpUserAccessBinding',
+        subBuilder: $8.GcpUserAccessBinding.create)
+    ..aOM<$9.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $9.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2476,8 +2450,10 @@ class UpdateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           void Function(UpdateGcpUserAccessBindingRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateGcpUserAccessBindingRequest))
-          as UpdateGcpUserAccessBindingRequest; // ignore: deprecated_member_use
+          as UpdateGcpUserAccessBindingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateGcpUserAccessBindingRequest create() =>
       UpdateGcpUserAccessBindingRequest._();
@@ -2490,6 +2466,8 @@ class UpdateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           create);
   static UpdateGcpUserAccessBindingRequest? _defaultInstance;
 
+  /// Required. [GcpUserAccessBinding]
+  /// [google.identity.accesscontextmanager.v1.GcpUserAccessBinding]
   @$pb.TagNumber(1)
   $8.GcpUserAccessBinding get gcpUserAccessBinding => $_getN(0);
   @$pb.TagNumber(1)
@@ -2504,6 +2482,12 @@ class UpdateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $8.GcpUserAccessBinding ensureGcpUserAccessBinding() => $_ensure(0);
 
+  ///  Required. Only the fields specified in this mask are updated. Because name and
+  ///  group_key cannot be changed, update_mask is required and must always be:
+  ///
+  ///  update_mask {
+  ///  paths: "access_levels"
+  ///  }
   @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -2519,39 +2503,34 @@ class UpdateGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
   $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request of [DeleteGcpUserAccessBinding]
+/// [google.identity.accesscontextmanager.v1.AccessContextManager.DeleteGcpUserAccessBinding].
 class DeleteGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteGcpUserAccessBindingRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteGcpUserAccessBindingRequest._() : super();
   factory DeleteGcpUserAccessBindingRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteGcpUserAccessBindingRequest._() : super();
   factory DeleteGcpUserAccessBindingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteGcpUserAccessBindingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteGcpUserAccessBindingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2564,8 +2543,10 @@ class DeleteGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           void Function(DeleteGcpUserAccessBindingRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeleteGcpUserAccessBindingRequest))
-          as DeleteGcpUserAccessBindingRequest; // ignore: deprecated_member_use
+          as DeleteGcpUserAccessBindingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteGcpUserAccessBindingRequest create() =>
       DeleteGcpUserAccessBindingRequest._();
@@ -2578,6 +2559,7 @@ class DeleteGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
           create);
   static DeleteGcpUserAccessBindingRequest? _defaultInstance;
 
+  /// Required. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2591,20 +2573,12 @@ class DeleteGcpUserAccessBindingRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Currently, a completed operation means nothing. In the future, this metadata
+/// and a completed operation may indicate that the binding has taken effect and
+/// is affecting access decisions for all users.
 class GcpUserAccessBindingOperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GcpUserAccessBindingOperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  GcpUserAccessBindingOperationMetadata._() : super();
   factory GcpUserAccessBindingOperationMetadata() => create();
+  GcpUserAccessBindingOperationMetadata._() : super();
   factory GcpUserAccessBindingOperationMetadata.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2612,6 +2586,14 @@ class GcpUserAccessBindingOperationMetadata extends $pb.GeneratedMessage {
   factory GcpUserAccessBindingOperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GcpUserAccessBindingOperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2624,8 +2606,10 @@ class GcpUserAccessBindingOperationMetadata extends $pb.GeneratedMessage {
           void Function(GcpUserAccessBindingOperationMetadata) updates) =>
       super.copyWith((message) =>
               updates(message as GcpUserAccessBindingOperationMetadata))
-          as GcpUserAccessBindingOperationMetadata; // ignore: deprecated_member_use
+          as GcpUserAccessBindingOperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GcpUserAccessBindingOperationMetadata create() =>
       GcpUserAccessBindingOperationMetadata._();
@@ -2639,20 +2623,10 @@ class GcpUserAccessBindingOperationMetadata extends $pb.GeneratedMessage {
   static GcpUserAccessBindingOperationMetadata? _defaultInstance;
 }
 
+/// Metadata of Access Context Manager's Long Running Operations.
 class AccessContextManagerOperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AccessContextManagerOperationMetadata',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.identity.accesscontextmanager.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  AccessContextManagerOperationMetadata._() : super();
   factory AccessContextManagerOperationMetadata() => create();
+  AccessContextManagerOperationMetadata._() : super();
   factory AccessContextManagerOperationMetadata.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2660,6 +2634,14 @@ class AccessContextManagerOperationMetadata extends $pb.GeneratedMessage {
   factory AccessContextManagerOperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AccessContextManagerOperationMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.identity.accesscontextmanager.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2672,8 +2654,10 @@ class AccessContextManagerOperationMetadata extends $pb.GeneratedMessage {
           void Function(AccessContextManagerOperationMetadata) updates) =>
       super.copyWith((message) =>
               updates(message as AccessContextManagerOperationMetadata))
-          as AccessContextManagerOperationMetadata; // ignore: deprecated_member_use
+          as AccessContextManagerOperationMetadata;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AccessContextManagerOperationMetadata create() =>
       AccessContextManagerOperationMetadata._();
@@ -2686,3 +2670,7 @@ class AccessContextManagerOperationMetadata extends $pb.GeneratedMessage {
           AccessContextManagerOperationMetadata>(create);
   static AccessContextManagerOperationMetadata? _defaultInstance;
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

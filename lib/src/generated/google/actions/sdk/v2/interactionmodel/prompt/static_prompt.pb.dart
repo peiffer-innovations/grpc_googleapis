@@ -1,77 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/actions/sdk/v2/interactionmodel/prompt/static_prompt.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'static_simple_prompt.pb.dart' as $0;
-import 'content/static_content_prompt.pb.dart' as $1;
-import 'suggestion.pb.dart' as $2;
-import 'content/static_link_prompt.pb.dart' as $3;
 import 'content/static_canvas_prompt.pb.dart' as $4;
+import 'content/static_content_prompt.pb.dart' as $1;
+import 'content/static_link_prompt.pb.dart' as $3;
+import 'static_simple_prompt.pb.dart' as $0;
+import 'suggestion.pb.dart' as $2;
 import 'surface_capabilities.pb.dart' as $5;
 
+/// Represents structured responses to send to the user, such as text,
+/// speech, cards, canvas data, suggestion chips, etc.
 class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StaticPrompt.StaticPromptCandidate.StaticPromptResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel.prompt'),
-      createEmptyInstance: create)
-    ..aOM<$0.StaticSimplePrompt>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firstSimple',
-        subBuilder: $0.StaticSimplePrompt.create)
-    ..aOM<$1.StaticContentPrompt>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'content',
-        subBuilder: $1.StaticContentPrompt.create)
-    ..aOM<$0.StaticSimplePrompt>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lastSimple',
-        subBuilder: $0.StaticSimplePrompt.create)
-    ..pc<$2.Suggestion>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'suggestions',
-        $pb.PbFieldType.PM,
-        subBuilder: $2.Suggestion.create)
-    ..aOM<$3.StaticLinkPrompt>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'link',
-        subBuilder: $3.StaticLinkPrompt.create)
-    ..aOB(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'override')
-    ..aOM<$4.StaticCanvasPrompt>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'canvas',
-        subBuilder: $4.StaticCanvasPrompt.create)
-    ..hasRequiredFields = false;
-
-  StaticPrompt_StaticPromptCandidate_StaticPromptResponse._() : super();
   factory StaticPrompt_StaticPromptCandidate_StaticPromptResponse({
     $0.StaticSimplePrompt? firstSimple,
     $1.StaticContentPrompt? content,
@@ -81,30 +33,31 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
     $core.bool? override,
     $4.StaticCanvasPrompt? canvas,
   }) {
-    final _result = create();
+    final $result = create();
     if (firstSimple != null) {
-      _result.firstSimple = firstSimple;
+      $result.firstSimple = firstSimple;
     }
     if (content != null) {
-      _result.content = content;
+      $result.content = content;
     }
     if (lastSimple != null) {
-      _result.lastSimple = lastSimple;
+      $result.lastSimple = lastSimple;
     }
     if (suggestions != null) {
-      _result.suggestions.addAll(suggestions);
+      $result.suggestions.addAll(suggestions);
     }
     if (link != null) {
-      _result.link = link;
+      $result.link = link;
     }
     if (override != null) {
-      _result.override = override;
+      $result.override = override;
     }
     if (canvas != null) {
-      _result.canvas = canvas;
+      $result.canvas = canvas;
     }
-    return _result;
+    return $result;
   }
+  StaticPrompt_StaticPromptCandidate_StaticPromptResponse._() : super();
   factory StaticPrompt_StaticPromptCandidate_StaticPromptResponse.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -113,6 +66,31 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'StaticPrompt.StaticPromptCandidate.StaticPromptResponse',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.actions.sdk.v2.interactionmodel.prompt'),
+      createEmptyInstance: create)
+    ..aOM<$0.StaticSimplePrompt>(2, _omitFieldNames ? '' : 'firstSimple',
+        subBuilder: $0.StaticSimplePrompt.create)
+    ..aOM<$1.StaticContentPrompt>(3, _omitFieldNames ? '' : 'content',
+        subBuilder: $1.StaticContentPrompt.create)
+    ..aOM<$0.StaticSimplePrompt>(4, _omitFieldNames ? '' : 'lastSimple',
+        subBuilder: $0.StaticSimplePrompt.create)
+    ..pc<$2.Suggestion>(
+        5, _omitFieldNames ? '' : 'suggestions', $pb.PbFieldType.PM,
+        subBuilder: $2.Suggestion.create)
+    ..aOM<$3.StaticLinkPrompt>(6, _omitFieldNames ? '' : 'link',
+        subBuilder: $3.StaticLinkPrompt.create)
+    ..aOB(7, _omitFieldNames ? '' : 'override')
+    ..aOM<$4.StaticCanvasPrompt>(8, _omitFieldNames ? '' : 'canvas',
+        subBuilder: $4.StaticCanvasPrompt.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -127,8 +105,10 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
               updates) =>
       super.copyWith((message) => updates(message
               as StaticPrompt_StaticPromptCandidate_StaticPromptResponse))
-          as StaticPrompt_StaticPromptCandidate_StaticPromptResponse; // ignore: deprecated_member_use
+          as StaticPrompt_StaticPromptCandidate_StaticPromptResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticPrompt_StaticPromptCandidate_StaticPromptResponse create() =>
       StaticPrompt_StaticPromptCandidate_StaticPromptResponse._();
@@ -144,6 +124,7 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   static StaticPrompt_StaticPromptCandidate_StaticPromptResponse?
       _defaultInstance;
 
+  /// Optional. The first voice and text-only response.
   @$pb.TagNumber(2)
   $0.StaticSimplePrompt get firstSimple => $_getN(0);
   @$pb.TagNumber(2)
@@ -158,6 +139,7 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   @$pb.TagNumber(2)
   $0.StaticSimplePrompt ensureFirstSimple() => $_ensure(0);
 
+  /// Optional. A content like a card, list or media to display to the user.
   @$pb.TagNumber(3)
   $1.StaticContentPrompt get content => $_getN(1);
   @$pb.TagNumber(3)
@@ -172,6 +154,7 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   @$pb.TagNumber(3)
   $1.StaticContentPrompt ensureContent() => $_ensure(1);
 
+  /// Optional. The last voice and text-only response.
   @$pb.TagNumber(4)
   $0.StaticSimplePrompt get lastSimple => $_getN(2);
   @$pb.TagNumber(4)
@@ -186,9 +169,17 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   @$pb.TagNumber(4)
   $0.StaticSimplePrompt ensureLastSimple() => $_ensure(2);
 
+  /// Optional. Suggestions to be displayed to the user which will always
+  /// appear at the end of the response. If the `append` field in the
+  /// containing prompt is `true` the titles defined in this field will be
+  /// added to titles defined in any previously defined suggestions prompts
+  /// and duplicate values will be removed.
   @$pb.TagNumber(5)
   $core.List<$2.Suggestion> get suggestions => $_getList(3);
 
+  /// Optional. An additional suggestion chip that can link out to the associated app
+  /// or site.
+  /// The chip will be rendered with the title "Open <name>". Max 20 chars.
   @$pb.TagNumber(6)
   $3.StaticLinkPrompt get link => $_getN(4);
   @$pb.TagNumber(6)
@@ -203,6 +194,16 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   @$pb.TagNumber(6)
   $3.StaticLinkPrompt ensureLink() => $_ensure(4);
 
+  /// Optional. Mode for how this messages should be merged with previously defined
+  /// messages.
+  /// `true` will clear all previously defined messages (first and last
+  /// simple, content, suggestions link and canvas) and add messages defined
+  /// in this prompt. `false` will add messages defined in this prompt to
+  /// messages defined in previous responses. Setting this field to `false`
+  /// will also enable appending to some fields inside Simple prompts, the
+  /// Suggestions prompt and the Canvas prompt (part of the Content prompt).
+  /// The Content and Link messages will always be overwritten if defined in
+  /// the prompt. Default value is `false`.
   @$pb.TagNumber(7)
   $core.bool get override => $_getBF(5);
   @$pb.TagNumber(7)
@@ -215,6 +216,7 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   @$pb.TagNumber(7)
   void clearOverride() => clearField(7);
 
+  /// A response to be used for interactive canvas experience.
   @$pb.TagNumber(8)
   $4.StaticCanvasPrompt get canvas => $_getN(6);
   @$pb.TagNumber(8)
@@ -230,51 +232,43 @@ class StaticPrompt_StaticPromptCandidate_StaticPromptResponse
   $4.StaticCanvasPrompt ensureCanvas() => $_ensure(6);
 }
 
+/// Represents a static prompt candidate.
 class StaticPrompt_StaticPromptCandidate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StaticPrompt.StaticPromptCandidate',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel.prompt'),
-      createEmptyInstance: create)
-    ..aOM<StaticPrompt_Selector>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'selector',
-        subBuilder: StaticPrompt_Selector.create)
-    ..aOM<StaticPrompt_StaticPromptCandidate_StaticPromptResponse>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'promptResponse',
-        subBuilder:
-            StaticPrompt_StaticPromptCandidate_StaticPromptResponse.create)
-    ..hasRequiredFields = false;
-
-  StaticPrompt_StaticPromptCandidate._() : super();
   factory StaticPrompt_StaticPromptCandidate({
     StaticPrompt_Selector? selector,
     StaticPrompt_StaticPromptCandidate_StaticPromptResponse? promptResponse,
   }) {
-    final _result = create();
+    final $result = create();
     if (selector != null) {
-      _result.selector = selector;
+      $result.selector = selector;
     }
     if (promptResponse != null) {
-      _result.promptResponse = promptResponse;
+      $result.promptResponse = promptResponse;
     }
-    return _result;
+    return $result;
   }
+  StaticPrompt_StaticPromptCandidate._() : super();
   factory StaticPrompt_StaticPromptCandidate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StaticPrompt_StaticPromptCandidate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StaticPrompt.StaticPromptCandidate',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.actions.sdk.v2.interactionmodel.prompt'),
+      createEmptyInstance: create)
+    ..aOM<StaticPrompt_Selector>(1, _omitFieldNames ? '' : 'selector',
+        subBuilder: StaticPrompt_Selector.create)
+    ..aOM<StaticPrompt_StaticPromptCandidate_StaticPromptResponse>(
+        2, _omitFieldNames ? '' : 'promptResponse',
+        subBuilder:
+            StaticPrompt_StaticPromptCandidate_StaticPromptResponse.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -287,8 +281,10 @@ class StaticPrompt_StaticPromptCandidate extends $pb.GeneratedMessage {
           void Function(StaticPrompt_StaticPromptCandidate) updates) =>
       super.copyWith((message) =>
               updates(message as StaticPrompt_StaticPromptCandidate))
-          as StaticPrompt_StaticPromptCandidate; // ignore: deprecated_member_use
+          as StaticPrompt_StaticPromptCandidate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticPrompt_StaticPromptCandidate create() =>
       StaticPrompt_StaticPromptCandidate._();
@@ -301,6 +297,8 @@ class StaticPrompt_StaticPromptCandidate extends $pb.GeneratedMessage {
           create);
   static StaticPrompt_StaticPromptCandidate? _defaultInstance;
 
+  /// Optional. The criteria for whether this prompt matches a request. If the selector
+  /// is empty, this prompt will always be triggered.
   @$pb.TagNumber(1)
   StaticPrompt_Selector get selector => $_getN(0);
   @$pb.TagNumber(1)
@@ -315,6 +313,7 @@ class StaticPrompt_StaticPromptCandidate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   StaticPrompt_Selector ensureSelector() => $_ensure(0);
 
+  /// The prompt response associated with the selector.
   @$pb.TagNumber(2)
   StaticPrompt_StaticPromptCandidate_StaticPromptResponse get promptResponse =>
       $_getN(1);
@@ -333,40 +332,36 @@ class StaticPrompt_StaticPromptCandidate extends $pb.GeneratedMessage {
       ensurePromptResponse() => $_ensure(1);
 }
 
+/// Defines the criteria for whether a prompt matches a request.
 class StaticPrompt_Selector extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StaticPrompt.Selector',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel.prompt'),
-      createEmptyInstance: create)
-    ..aOM<$5.SurfaceCapabilities>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'surfaceCapabilities',
-        subBuilder: $5.SurfaceCapabilities.create)
-    ..hasRequiredFields = false;
-
-  StaticPrompt_Selector._() : super();
   factory StaticPrompt_Selector({
     $5.SurfaceCapabilities? surfaceCapabilities,
   }) {
-    final _result = create();
+    final $result = create();
     if (surfaceCapabilities != null) {
-      _result.surfaceCapabilities = surfaceCapabilities;
+      $result.surfaceCapabilities = surfaceCapabilities;
     }
-    return _result;
+    return $result;
   }
+  StaticPrompt_Selector._() : super();
   factory StaticPrompt_Selector.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StaticPrompt_Selector.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StaticPrompt.Selector',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.actions.sdk.v2.interactionmodel.prompt'),
+      createEmptyInstance: create)
+    ..aOM<$5.SurfaceCapabilities>(
+        1, _omitFieldNames ? '' : 'surfaceCapabilities',
+        subBuilder: $5.SurfaceCapabilities.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -378,8 +373,10 @@ class StaticPrompt_Selector extends $pb.GeneratedMessage {
   StaticPrompt_Selector copyWith(
           void Function(StaticPrompt_Selector) updates) =>
       super.copyWith((message) => updates(message as StaticPrompt_Selector))
-          as StaticPrompt_Selector; // ignore: deprecated_member_use
+          as StaticPrompt_Selector;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticPrompt_Selector create() => StaticPrompt_Selector._();
   StaticPrompt_Selector createEmptyInstance() => create();
@@ -390,6 +387,7 @@ class StaticPrompt_Selector extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StaticPrompt_Selector>(create);
   static StaticPrompt_Selector? _defaultInstance;
 
+  /// The set of required surface capabilities.
   @$pb.TagNumber(1)
   $5.SurfaceCapabilities get surfaceCapabilities => $_getN(0);
   @$pb.TagNumber(1)
@@ -405,41 +403,38 @@ class StaticPrompt_Selector extends $pb.GeneratedMessage {
   $5.SurfaceCapabilities ensureSurfaceCapabilities() => $_ensure(0);
 }
 
+/// Represents a list of prompt candidates, one of which will be selected as the
+/// prompt to be shown in the response to the user.
+/// **This message is localizable.**
 class StaticPrompt extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StaticPrompt',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.actions.sdk.v2.interactionmodel.prompt'),
-      createEmptyInstance: create)
-    ..pc<StaticPrompt_StaticPromptCandidate>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'candidates',
-        $pb.PbFieldType.PM,
-        subBuilder: StaticPrompt_StaticPromptCandidate.create)
-    ..hasRequiredFields = false;
-
-  StaticPrompt._() : super();
   factory StaticPrompt({
     $core.Iterable<StaticPrompt_StaticPromptCandidate>? candidates,
   }) {
-    final _result = create();
+    final $result = create();
     if (candidates != null) {
-      _result.candidates.addAll(candidates);
+      $result.candidates.addAll(candidates);
     }
-    return _result;
+    return $result;
   }
+  StaticPrompt._() : super();
   factory StaticPrompt.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StaticPrompt.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StaticPrompt',
+      package: const $pb.PackageName(_omitMessageNames
+          ? ''
+          : 'google.actions.sdk.v2.interactionmodel.prompt'),
+      createEmptyInstance: create)
+    ..pc<StaticPrompt_StaticPromptCandidate>(
+        1, _omitFieldNames ? '' : 'candidates', $pb.PbFieldType.PM,
+        subBuilder: StaticPrompt_StaticPromptCandidate.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -449,8 +444,10 @@ class StaticPrompt extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   StaticPrompt copyWith(void Function(StaticPrompt) updates) =>
       super.copyWith((message) => updates(message as StaticPrompt))
-          as StaticPrompt; // ignore: deprecated_member_use
+          as StaticPrompt;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticPrompt create() => StaticPrompt._();
   StaticPrompt createEmptyInstance() => create();
@@ -461,6 +458,13 @@ class StaticPrompt extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StaticPrompt>(create);
   static StaticPrompt? _defaultInstance;
 
+  /// The list of candidate prompts to be sent to the client. Each prompt has a
+  /// selector to determine when it can be used. The first selector that matches
+  /// a request will be sent and the rest will be ignored.
   @$pb.TagNumber(1)
   $core.List<StaticPrompt_StaticPromptCandidate> get candidates => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

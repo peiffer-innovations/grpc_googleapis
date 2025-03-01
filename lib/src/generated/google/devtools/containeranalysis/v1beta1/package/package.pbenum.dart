@@ -1,30 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/package/package.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Instruction set architectures supported by various package managers.
 class Architecture extends $pb.ProtobufEnum {
-  static const Architecture ARCHITECTURE_UNSPECIFIED = Architecture._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ARCHITECTURE_UNSPECIFIED');
-  static const Architecture X86 = Architecture._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'X86');
-  static const Architecture X64 = Architecture._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'X64');
+  static const Architecture ARCHITECTURE_UNSPECIFIED =
+      Architecture._(0, _omitEnumNames ? '' : 'ARCHITECTURE_UNSPECIFIED');
+  static const Architecture X86 =
+      Architecture._(1, _omitEnumNames ? '' : 'X86');
+  static const Architecture X64 =
+      Architecture._(2, _omitEnumNames ? '' : 'X64');
 
   static const $core.List<Architecture> values = <Architecture>[
     ARCHITECTURE_UNSPECIFIED,
@@ -39,28 +35,17 @@ class Architecture extends $pb.ProtobufEnum {
   const Architecture._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Whether this is an ordinary package version or a sentinel MIN/MAX version.
 class Version_VersionKind extends $pb.ProtobufEnum {
   static const Version_VersionKind VERSION_KIND_UNSPECIFIED =
       Version_VersionKind._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'VERSION_KIND_UNSPECIFIED');
-  static const Version_VersionKind NORMAL = Version_VersionKind._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NORMAL');
-  static const Version_VersionKind MINIMUM = Version_VersionKind._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MINIMUM');
-  static const Version_VersionKind MAXIMUM = Version_VersionKind._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MAXIMUM');
+          0, _omitEnumNames ? '' : 'VERSION_KIND_UNSPECIFIED');
+  static const Version_VersionKind NORMAL =
+      Version_VersionKind._(1, _omitEnumNames ? '' : 'NORMAL');
+  static const Version_VersionKind MINIMUM =
+      Version_VersionKind._(2, _omitEnumNames ? '' : 'MINIMUM');
+  static const Version_VersionKind MAXIMUM =
+      Version_VersionKind._(3, _omitEnumNames ? '' : 'MAXIMUM');
 
   static const $core.List<Version_VersionKind> values = <Version_VersionKind>[
     VERSION_KIND_UNSPECIFIED,
@@ -75,3 +60,5 @@ class Version_VersionKind extends $pb.ProtobufEnum {
 
   const Version_VersionKind._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

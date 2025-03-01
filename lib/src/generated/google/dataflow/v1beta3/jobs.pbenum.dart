@@ -1,60 +1,38 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/dataflow/v1beta3/jobs.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Type of transform or stage operation.
 class KindType extends $pb.ProtobufEnum {
-  static const KindType UNKNOWN_KIND = KindType._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNKNOWN_KIND');
-  static const KindType PAR_DO_KIND = KindType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PAR_DO_KIND');
-  static const KindType GROUP_BY_KEY_KIND = KindType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'GROUP_BY_KEY_KIND');
-  static const KindType FLATTEN_KIND = KindType._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FLATTEN_KIND');
-  static const KindType READ_KIND = KindType._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'READ_KIND');
-  static const KindType WRITE_KIND = KindType._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'WRITE_KIND');
-  static const KindType CONSTANT_KIND = KindType._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CONSTANT_KIND');
-  static const KindType SINGLETON_KIND = KindType._(
-      7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SINGLETON_KIND');
-  static const KindType SHUFFLE_KIND = KindType._(
-      8,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SHUFFLE_KIND');
+  static const KindType UNKNOWN_KIND =
+      KindType._(0, _omitEnumNames ? '' : 'UNKNOWN_KIND');
+  static const KindType PAR_DO_KIND =
+      KindType._(1, _omitEnumNames ? '' : 'PAR_DO_KIND');
+  static const KindType GROUP_BY_KEY_KIND =
+      KindType._(2, _omitEnumNames ? '' : 'GROUP_BY_KEY_KIND');
+  static const KindType FLATTEN_KIND =
+      KindType._(3, _omitEnumNames ? '' : 'FLATTEN_KIND');
+  static const KindType READ_KIND =
+      KindType._(4, _omitEnumNames ? '' : 'READ_KIND');
+  static const KindType WRITE_KIND =
+      KindType._(5, _omitEnumNames ? '' : 'WRITE_KIND');
+  static const KindType CONSTANT_KIND =
+      KindType._(6, _omitEnumNames ? '' : 'CONSTANT_KIND');
+  static const KindType SINGLETON_KIND =
+      KindType._(7, _omitEnumNames ? '' : 'SINGLETON_KIND');
+  static const KindType SHUFFLE_KIND =
+      KindType._(8, _omitEnumNames ? '' : 'SHUFFLE_KIND');
 
   static const $core.List<KindType> values = <KindType>[
     UNKNOWN_KIND,
@@ -75,72 +53,34 @@ class KindType extends $pb.ProtobufEnum {
   const KindType._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Describes the overall state of a [google.dataflow.v1beta3.Job][google.dataflow.v1beta3.Job].
 class JobState extends $pb.ProtobufEnum {
-  static const JobState JOB_STATE_UNKNOWN = JobState._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_UNKNOWN');
-  static const JobState JOB_STATE_STOPPED = JobState._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_STOPPED');
-  static const JobState JOB_STATE_RUNNING = JobState._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_RUNNING');
-  static const JobState JOB_STATE_DONE = JobState._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_DONE');
-  static const JobState JOB_STATE_FAILED = JobState._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_FAILED');
-  static const JobState JOB_STATE_CANCELLED = JobState._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_CANCELLED');
-  static const JobState JOB_STATE_UPDATED = JobState._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_UPDATED');
-  static const JobState JOB_STATE_DRAINING = JobState._(
-      7,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_DRAINING');
-  static const JobState JOB_STATE_DRAINED = JobState._(
-      8,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_DRAINED');
-  static const JobState JOB_STATE_PENDING = JobState._(
-      9,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_PENDING');
-  static const JobState JOB_STATE_CANCELLING = JobState._(
-      10,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_CANCELLING');
-  static const JobState JOB_STATE_QUEUED = JobState._(
-      11,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_QUEUED');
-  static const JobState JOB_STATE_RESOURCE_CLEANING_UP = JobState._(
-      12,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_STATE_RESOURCE_CLEANING_UP');
+  static const JobState JOB_STATE_UNKNOWN =
+      JobState._(0, _omitEnumNames ? '' : 'JOB_STATE_UNKNOWN');
+  static const JobState JOB_STATE_STOPPED =
+      JobState._(1, _omitEnumNames ? '' : 'JOB_STATE_STOPPED');
+  static const JobState JOB_STATE_RUNNING =
+      JobState._(2, _omitEnumNames ? '' : 'JOB_STATE_RUNNING');
+  static const JobState JOB_STATE_DONE =
+      JobState._(3, _omitEnumNames ? '' : 'JOB_STATE_DONE');
+  static const JobState JOB_STATE_FAILED =
+      JobState._(4, _omitEnumNames ? '' : 'JOB_STATE_FAILED');
+  static const JobState JOB_STATE_CANCELLED =
+      JobState._(5, _omitEnumNames ? '' : 'JOB_STATE_CANCELLED');
+  static const JobState JOB_STATE_UPDATED =
+      JobState._(6, _omitEnumNames ? '' : 'JOB_STATE_UPDATED');
+  static const JobState JOB_STATE_DRAINING =
+      JobState._(7, _omitEnumNames ? '' : 'JOB_STATE_DRAINING');
+  static const JobState JOB_STATE_DRAINED =
+      JobState._(8, _omitEnumNames ? '' : 'JOB_STATE_DRAINED');
+  static const JobState JOB_STATE_PENDING =
+      JobState._(9, _omitEnumNames ? '' : 'JOB_STATE_PENDING');
+  static const JobState JOB_STATE_CANCELLING =
+      JobState._(10, _omitEnumNames ? '' : 'JOB_STATE_CANCELLING');
+  static const JobState JOB_STATE_QUEUED =
+      JobState._(11, _omitEnumNames ? '' : 'JOB_STATE_QUEUED');
+  static const JobState JOB_STATE_RESOURCE_CLEANING_UP =
+      JobState._(12, _omitEnumNames ? '' : 'JOB_STATE_RESOURCE_CLEANING_UP');
 
   static const $core.List<JobState> values = <JobState>[
     JOB_STATE_UNKNOWN,
@@ -165,27 +105,16 @@ class JobState extends $pb.ProtobufEnum {
   const JobState._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Selector for how much information is returned in Job responses.
 class JobView extends $pb.ProtobufEnum {
-  static const JobView JOB_VIEW_UNKNOWN = JobView._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_VIEW_UNKNOWN');
-  static const JobView JOB_VIEW_SUMMARY = JobView._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_VIEW_SUMMARY');
-  static const JobView JOB_VIEW_ALL = JobView._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_VIEW_ALL');
-  static const JobView JOB_VIEW_DESCRIPTION = JobView._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'JOB_VIEW_DESCRIPTION');
+  static const JobView JOB_VIEW_UNKNOWN =
+      JobView._(0, _omitEnumNames ? '' : 'JOB_VIEW_UNKNOWN');
+  static const JobView JOB_VIEW_SUMMARY =
+      JobView._(1, _omitEnumNames ? '' : 'JOB_VIEW_SUMMARY');
+  static const JobView JOB_VIEW_ALL =
+      JobView._(2, _omitEnumNames ? '' : 'JOB_VIEW_ALL');
+  static const JobView JOB_VIEW_DESCRIPTION =
+      JobView._(3, _omitEnumNames ? '' : 'JOB_VIEW_DESCRIPTION');
 
   static const $core.List<JobView> values = <JobView>[
     JOB_VIEW_UNKNOWN,
@@ -201,37 +130,18 @@ class JobView extends $pb.ProtobufEnum {
   const JobView._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The support status of the SDK used to run the job.
 class SdkVersion_SdkSupportStatus extends $pb.ProtobufEnum {
   static const SdkVersion_SdkSupportStatus UNKNOWN =
-      SdkVersion_SdkSupportStatus._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNKNOWN');
+      SdkVersion_SdkSupportStatus._(0, _omitEnumNames ? '' : 'UNKNOWN');
   static const SdkVersion_SdkSupportStatus SUPPORTED =
-      SdkVersion_SdkSupportStatus._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SUPPORTED');
+      SdkVersion_SdkSupportStatus._(1, _omitEnumNames ? '' : 'SUPPORTED');
   static const SdkVersion_SdkSupportStatus STALE =
-      SdkVersion_SdkSupportStatus._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STALE');
+      SdkVersion_SdkSupportStatus._(2, _omitEnumNames ? '' : 'STALE');
   static const SdkVersion_SdkSupportStatus DEPRECATED =
-      SdkVersion_SdkSupportStatus._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'DEPRECATED');
+      SdkVersion_SdkSupportStatus._(3, _omitEnumNames ? '' : 'DEPRECATED');
   static const SdkVersion_SdkSupportStatus UNSUPPORTED =
-      SdkVersion_SdkSupportStatus._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'UNSUPPORTED');
+      SdkVersion_SdkSupportStatus._(4, _omitEnumNames ? '' : 'UNSUPPORTED');
 
   static const $core.List<SdkVersion_SdkSupportStatus> values =
       <SdkVersion_SdkSupportStatus>[
@@ -251,27 +161,18 @@ class SdkVersion_SdkSupportStatus extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// This field filters out and returns jobs in the specified job state. The
+/// order of data returned is determined by the filter used, and is subject to
+/// change.
 class ListJobsRequest_Filter extends $pb.ProtobufEnum {
-  static const ListJobsRequest_Filter UNKNOWN = ListJobsRequest_Filter._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UNKNOWN');
-  static const ListJobsRequest_Filter ALL = ListJobsRequest_Filter._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ALL');
-  static const ListJobsRequest_Filter TERMINATED = ListJobsRequest_Filter._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TERMINATED');
-  static const ListJobsRequest_Filter ACTIVE = ListJobsRequest_Filter._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ACTIVE');
+  static const ListJobsRequest_Filter UNKNOWN =
+      ListJobsRequest_Filter._(0, _omitEnumNames ? '' : 'UNKNOWN');
+  static const ListJobsRequest_Filter ALL =
+      ListJobsRequest_Filter._(1, _omitEnumNames ? '' : 'ALL');
+  static const ListJobsRequest_Filter TERMINATED =
+      ListJobsRequest_Filter._(2, _omitEnumNames ? '' : 'TERMINATED');
+  static const ListJobsRequest_Filter ACTIVE =
+      ListJobsRequest_Filter._(3, _omitEnumNames ? '' : 'ACTIVE');
 
   static const $core.List<ListJobsRequest_Filter> values =
       <ListJobsRequest_Filter>[
@@ -287,3 +188,5 @@ class ListJobsRequest_Filter extends $pb.ProtobufEnum {
 
   const ListJobsRequest_Filter._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

@@ -1,37 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/maps/fleetengine/v1/traffic.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The classification of polyline speed based on traffic data.
 class SpeedReadingInterval_Speed extends $pb.ProtobufEnum {
   static const SpeedReadingInterval_Speed SPEED_UNSPECIFIED =
       SpeedReadingInterval_Speed._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SPEED_UNSPECIFIED');
-  static const SpeedReadingInterval_Speed NORMAL = SpeedReadingInterval_Speed._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NORMAL');
-  static const SpeedReadingInterval_Speed SLOW = SpeedReadingInterval_Speed._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SLOW');
+          0, _omitEnumNames ? '' : 'SPEED_UNSPECIFIED');
+  static const SpeedReadingInterval_Speed NORMAL =
+      SpeedReadingInterval_Speed._(1, _omitEnumNames ? '' : 'NORMAL');
+  static const SpeedReadingInterval_Speed SLOW =
+      SpeedReadingInterval_Speed._(2, _omitEnumNames ? '' : 'SLOW');
   static const SpeedReadingInterval_Speed TRAFFIC_JAM =
-      SpeedReadingInterval_Speed._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TRAFFIC_JAM');
+      SpeedReadingInterval_Speed._(3, _omitEnumNames ? '' : 'TRAFFIC_JAM');
 
   static const $core.List<SpeedReadingInterval_Speed> values =
       <SpeedReadingInterval_Speed>[
@@ -48,3 +40,5 @@ class SpeedReadingInterval_Speed extends $pb.ProtobufEnum {
 
   const SpeedReadingInterval_Speed._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

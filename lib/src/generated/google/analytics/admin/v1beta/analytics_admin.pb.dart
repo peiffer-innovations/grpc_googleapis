@@ -1,100 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/analytics/admin/v1beta/analytics_admin.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'access_report.pb.dart' as $3;
-import 'resources.pb.dart' as $1;
 import '../../../protobuf/field_mask.pb.dart' as $4;
 import '../../../protobuf/timestamp.pb.dart' as $5;
-
+import 'access_report.pb.dart' as $3;
+import 'resources.pb.dart' as $1;
 import 'resources.pbenum.dart' as $1;
 
+/// The request for a Data Access Record Report.
 class RunAccessReportRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RunAccessReportRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entity')
-    ..pc<$3.AccessDimension>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dimensions',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessDimension.create)
-    ..pc<$3.AccessMetric>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metrics',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessMetric.create)
-    ..pc<$3.AccessDateRange>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dateRanges',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessDateRange.create)
-    ..aOM<$3.AccessFilterExpression>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dimensionFilter',
-        subBuilder: $3.AccessFilterExpression.create)
-    ..aOM<$3.AccessFilterExpression>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metricFilter',
-        subBuilder: $3.AccessFilterExpression.create)
-    ..aInt64(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'offset')
-    ..aInt64(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'limit')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'timeZone')
-    ..pc<$3.AccessOrderBy>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'orderBys',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessOrderBy.create)
-    ..aOB(
-        11,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'returnEntityQuota')
-    ..hasRequiredFields = false;
-
-  RunAccessReportRequest._() : super();
   factory RunAccessReportRequest({
     $core.String? entity,
     $core.Iterable<$3.AccessDimension>? dimensions,
@@ -107,49 +34,90 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
     $core.String? timeZone,
     $core.Iterable<$3.AccessOrderBy>? orderBys,
     $core.bool? returnEntityQuota,
+    $core.bool? includeAllUsers,
+    $core.bool? expandGroups,
   }) {
-    final _result = create();
+    final $result = create();
     if (entity != null) {
-      _result.entity = entity;
+      $result.entity = entity;
     }
     if (dimensions != null) {
-      _result.dimensions.addAll(dimensions);
+      $result.dimensions.addAll(dimensions);
     }
     if (metrics != null) {
-      _result.metrics.addAll(metrics);
+      $result.metrics.addAll(metrics);
     }
     if (dateRanges != null) {
-      _result.dateRanges.addAll(dateRanges);
+      $result.dateRanges.addAll(dateRanges);
     }
     if (dimensionFilter != null) {
-      _result.dimensionFilter = dimensionFilter;
+      $result.dimensionFilter = dimensionFilter;
     }
     if (metricFilter != null) {
-      _result.metricFilter = metricFilter;
+      $result.metricFilter = metricFilter;
     }
     if (offset != null) {
-      _result.offset = offset;
+      $result.offset = offset;
     }
     if (limit != null) {
-      _result.limit = limit;
+      $result.limit = limit;
     }
     if (timeZone != null) {
-      _result.timeZone = timeZone;
+      $result.timeZone = timeZone;
     }
     if (orderBys != null) {
-      _result.orderBys.addAll(orderBys);
+      $result.orderBys.addAll(orderBys);
     }
     if (returnEntityQuota != null) {
-      _result.returnEntityQuota = returnEntityQuota;
+      $result.returnEntityQuota = returnEntityQuota;
     }
-    return _result;
+    if (includeAllUsers != null) {
+      $result.includeAllUsers = includeAllUsers;
+    }
+    if (expandGroups != null) {
+      $result.expandGroups = expandGroups;
+    }
+    return $result;
   }
+  RunAccessReportRequest._() : super();
   factory RunAccessReportRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RunAccessReportRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RunAccessReportRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'entity')
+    ..pc<$3.AccessDimension>(
+        2, _omitFieldNames ? '' : 'dimensions', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessDimension.create)
+    ..pc<$3.AccessMetric>(
+        3, _omitFieldNames ? '' : 'metrics', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessMetric.create)
+    ..pc<$3.AccessDateRange>(
+        4, _omitFieldNames ? '' : 'dateRanges', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessDateRange.create)
+    ..aOM<$3.AccessFilterExpression>(
+        5, _omitFieldNames ? '' : 'dimensionFilter',
+        subBuilder: $3.AccessFilterExpression.create)
+    ..aOM<$3.AccessFilterExpression>(6, _omitFieldNames ? '' : 'metricFilter',
+        subBuilder: $3.AccessFilterExpression.create)
+    ..aInt64(7, _omitFieldNames ? '' : 'offset')
+    ..aInt64(8, _omitFieldNames ? '' : 'limit')
+    ..aOS(9, _omitFieldNames ? '' : 'timeZone')
+    ..pc<$3.AccessOrderBy>(
+        10, _omitFieldNames ? '' : 'orderBys', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessOrderBy.create)
+    ..aOB(11, _omitFieldNames ? '' : 'returnEntityQuota')
+    ..aOB(12, _omitFieldNames ? '' : 'includeAllUsers')
+    ..aOB(13, _omitFieldNames ? '' : 'expandGroups')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -161,8 +129,10 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   RunAccessReportRequest copyWith(
           void Function(RunAccessReportRequest) updates) =>
       super.copyWith((message) => updates(message as RunAccessReportRequest))
-          as RunAccessReportRequest; // ignore: deprecated_member_use
+          as RunAccessReportRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RunAccessReportRequest create() => RunAccessReportRequest._();
   RunAccessReportRequest createEmptyInstance() => create();
@@ -173,6 +143,14 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RunAccessReportRequest>(create);
   static RunAccessReportRequest? _defaultInstance;
 
+  ///  The Data Access Report supports requesting at the property level or account
+  ///  level. If requested at the account level, Data Access Reports include all
+  ///  access for all properties under that account.
+  ///
+  ///  To request at the property level, entity should be for example
+  ///  'properties/123' if "123" is your Google Analytics property ID. To request
+  ///  at the account level, entity should be for example 'accounts/1234' if
+  ///  "1234" is your Google Analytics Account ID.
   @$pb.TagNumber(1)
   $core.String get entity => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -185,15 +163,29 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEntity() => clearField(1);
 
+  /// The dimensions requested and displayed in the response. Requests are
+  /// allowed up to 9 dimensions.
   @$pb.TagNumber(2)
   $core.List<$3.AccessDimension> get dimensions => $_getList(1);
 
+  /// The metrics requested and displayed in the response. Requests are allowed
+  /// up to 10 metrics.
   @$pb.TagNumber(3)
   $core.List<$3.AccessMetric> get metrics => $_getList(2);
 
+  /// Date ranges of access records to read. If multiple date ranges are
+  /// requested, each response row will contain a zero based date range index. If
+  /// two date ranges overlap, the access records for the overlapping days is
+  /// included in the response rows for both date ranges. Requests are allowed up
+  /// to 2 date ranges.
   @$pb.TagNumber(4)
   $core.List<$3.AccessDateRange> get dateRanges => $_getList(3);
 
+  /// Dimension filters let you restrict report response to specific
+  /// dimension values which match the filter. For example, filtering on access
+  /// records of a single user. To learn more, see [Fundamentals of Dimension
+  /// Filters](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#dimension_filters)
+  /// for examples. Metrics cannot be used in this filter.
   @$pb.TagNumber(5)
   $3.AccessFilterExpression get dimensionFilter => $_getN(4);
   @$pb.TagNumber(5)
@@ -208,6 +200,10 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $3.AccessFilterExpression ensureDimensionFilter() => $_ensure(4);
 
+  /// Metric filters allow you to restrict report response to specific metric
+  /// values which match the filter. Metric filters are applied after aggregating
+  /// the report's rows, similar to SQL having-clause. Dimensions cannot be used
+  /// in this filter.
   @$pb.TagNumber(6)
   $3.AccessFilterExpression get metricFilter => $_getN(5);
   @$pb.TagNumber(6)
@@ -222,6 +218,12 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $3.AccessFilterExpression ensureMetricFilter() => $_ensure(5);
 
+  ///  The row count of the start row. The first row is counted as row 0. If
+  ///  offset is unspecified, it is treated as 0. If offset is zero, then this
+  ///  method will return the first page of results with `limit` entries.
+  ///
+  ///  To learn more about this pagination parameter, see
+  ///  [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
   @$pb.TagNumber(7)
   $fixnum.Int64 get offset => $_getI64(6);
   @$pb.TagNumber(7)
@@ -234,6 +236,18 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearOffset() => clearField(7);
 
+  ///  The number of rows to return. If unspecified, 10,000 rows are returned. The
+  ///  API returns a maximum of 100,000 rows per request, no matter how many you
+  ///  ask for. `limit` must be positive.
+  ///
+  ///  The API may return fewer rows than the requested `limit`, if there aren't
+  ///  as many remaining rows as the `limit`. For instance, there are fewer than
+  ///  300 possible values for the dimension `country`, so when reporting on only
+  ///  `country`, you can't get more than 300 rows, even if you set `limit` to a
+  ///  higher value.
+  ///
+  ///  To learn more about this pagination parameter, see
+  ///  [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
   @$pb.TagNumber(8)
   $fixnum.Int64 get limit => $_getI64(7);
   @$pb.TagNumber(8)
@@ -246,6 +260,13 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearLimit() => clearField(8);
 
+  ///  This request's time zone if specified. If unspecified, the property's time
+  ///  zone is used. The request's time zone is used to interpret the start & end
+  ///  dates of the report.
+  ///
+  ///  Formatted as strings from the IANA Time Zone database
+  ///  (https://www.iana.org/time-zones); for example "America/New_York" or
+  ///  "Asia/Tokyo".
   @$pb.TagNumber(9)
   $core.String get timeZone => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -258,9 +279,13 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearTimeZone() => clearField(9);
 
+  /// Specifies how rows are ordered in the response.
   @$pb.TagNumber(10)
   $core.List<$3.AccessOrderBy> get orderBys => $_getList(9);
 
+  /// Toggles whether to return the current state of this Analytics Property's
+  /// quota. Quota is returned in [AccessQuota](#AccessQuota). For account-level
+  /// requests, this field must be false.
   @$pb.TagNumber(11)
   $core.bool get returnEntityQuota => $_getBF(10);
   @$pb.TagNumber(11)
@@ -272,54 +297,43 @@ class RunAccessReportRequest extends $pb.GeneratedMessage {
   $core.bool hasReturnEntityQuota() => $_has(10);
   @$pb.TagNumber(11)
   void clearReturnEntityQuota() => clearField(11);
+
+  /// Optional. Determines whether to include users who have never made an API
+  /// call in the response. If true, all users with access to the specified
+  /// property or account are included in the response, regardless of whether
+  /// they have made an API call or not. If false, only the users who have made
+  /// an API call will be included.
+  @$pb.TagNumber(12)
+  $core.bool get includeAllUsers => $_getBF(11);
+  @$pb.TagNumber(12)
+  set includeAllUsers($core.bool v) {
+    $_setBool(11, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasIncludeAllUsers() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearIncludeAllUsers() => clearField(12);
+
+  /// Optional. Decides whether to return the users within user groups. This
+  /// field works only when include_all_users is set to true. If true, it will
+  /// return all users with access to the specified property or account.
+  /// If false, only the users with direct access will be returned.
+  @$pb.TagNumber(13)
+  $core.bool get expandGroups => $_getBF(12);
+  @$pb.TagNumber(13)
+  set expandGroups($core.bool v) {
+    $_setBool(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasExpandGroups() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearExpandGroups() => clearField(13);
 }
 
+/// The customized Data Access Record Report response.
 class RunAccessReportResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RunAccessReportResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$3.AccessDimensionHeader>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dimensionHeaders',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessDimensionHeader.create)
-    ..pc<$3.AccessMetricHeader>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'metricHeaders',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessMetricHeader.create)
-    ..pc<$3.AccessRow>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rows',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.AccessRow.create)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rowCount',
-        $pb.PbFieldType.O3)
-    ..aOM<$3.AccessQuota>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'quota',
-        subBuilder: $3.AccessQuota.create)
-    ..hasRequiredFields = false;
-
-  RunAccessReportResponse._() : super();
   factory RunAccessReportResponse({
     $core.Iterable<$3.AccessDimensionHeader>? dimensionHeaders,
     $core.Iterable<$3.AccessMetricHeader>? metricHeaders,
@@ -327,30 +341,50 @@ class RunAccessReportResponse extends $pb.GeneratedMessage {
     $core.int? rowCount,
     $3.AccessQuota? quota,
   }) {
-    final _result = create();
+    final $result = create();
     if (dimensionHeaders != null) {
-      _result.dimensionHeaders.addAll(dimensionHeaders);
+      $result.dimensionHeaders.addAll(dimensionHeaders);
     }
     if (metricHeaders != null) {
-      _result.metricHeaders.addAll(metricHeaders);
+      $result.metricHeaders.addAll(metricHeaders);
     }
     if (rows != null) {
-      _result.rows.addAll(rows);
+      $result.rows.addAll(rows);
     }
     if (rowCount != null) {
-      _result.rowCount = rowCount;
+      $result.rowCount = rowCount;
     }
     if (quota != null) {
-      _result.quota = quota;
+      $result.quota = quota;
     }
-    return _result;
+    return $result;
   }
+  RunAccessReportResponse._() : super();
   factory RunAccessReportResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RunAccessReportResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RunAccessReportResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$3.AccessDimensionHeader>(
+        1, _omitFieldNames ? '' : 'dimensionHeaders', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessDimensionHeader.create)
+    ..pc<$3.AccessMetricHeader>(
+        2, _omitFieldNames ? '' : 'metricHeaders', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessMetricHeader.create)
+    ..pc<$3.AccessRow>(3, _omitFieldNames ? '' : 'rows', $pb.PbFieldType.PM,
+        subBuilder: $3.AccessRow.create)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'rowCount', $pb.PbFieldType.O3)
+    ..aOM<$3.AccessQuota>(5, _omitFieldNames ? '' : 'quota',
+        subBuilder: $3.AccessQuota.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -362,8 +396,10 @@ class RunAccessReportResponse extends $pb.GeneratedMessage {
   RunAccessReportResponse copyWith(
           void Function(RunAccessReportResponse) updates) =>
       super.copyWith((message) => updates(message as RunAccessReportResponse))
-          as RunAccessReportResponse; // ignore: deprecated_member_use
+          as RunAccessReportResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RunAccessReportResponse create() => RunAccessReportResponse._();
   RunAccessReportResponse createEmptyInstance() => create();
@@ -374,15 +410,30 @@ class RunAccessReportResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RunAccessReportResponse>(create);
   static RunAccessReportResponse? _defaultInstance;
 
+  /// The header for a column in the report that corresponds to a specific
+  /// dimension. The number of DimensionHeaders and ordering of DimensionHeaders
+  /// matches the dimensions present in rows.
   @$pb.TagNumber(1)
   $core.List<$3.AccessDimensionHeader> get dimensionHeaders => $_getList(0);
 
+  /// The header for a column in the report that corresponds to a specific
+  /// metric. The number of MetricHeaders and ordering of MetricHeaders matches
+  /// the metrics present in rows.
   @$pb.TagNumber(2)
   $core.List<$3.AccessMetricHeader> get metricHeaders => $_getList(1);
 
+  /// Rows of dimension value combinations and metric values in the report.
   @$pb.TagNumber(3)
   $core.List<$3.AccessRow> get rows => $_getList(2);
 
+  ///  The total number of rows in the query result. `rowCount` is independent of
+  ///  the number of rows returned in the response, the `limit` request
+  ///  parameter, and the `offset` request parameter. For example if a query
+  ///  returns 175 rows and includes `limit` of 50 in the API request, the
+  ///  response will contain `rowCount` of 175 but only 50 rows.
+  ///
+  ///  To learn more about this pagination parameter, see
+  ///  [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
   @$pb.TagNumber(4)
   $core.int get rowCount => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -395,6 +446,8 @@ class RunAccessReportResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearRowCount() => clearField(4);
 
+  /// The quota state for this Analytics property including this request. This
+  /// field doesn't work with account-level requests.
   @$pb.TagNumber(5)
   $3.AccessQuota get quota => $_getN(4);
   @$pb.TagNumber(5)
@@ -410,39 +463,33 @@ class RunAccessReportResponse extends $pb.GeneratedMessage {
   $3.AccessQuota ensureQuota() => $_ensure(4);
 }
 
+/// Request message for GetAccount RPC.
 class GetAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAccountRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetAccountRequest._() : super();
   factory GetAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetAccountRequest._() : super();
   factory GetAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAccountRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -452,8 +499,10 @@ class GetAccountRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetAccountRequest copyWith(void Function(GetAccountRequest) updates) =>
       super.copyWith((message) => updates(message as GetAccountRequest))
-          as GetAccountRequest; // ignore: deprecated_member_use
+          as GetAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAccountRequest create() => GetAccountRequest._();
   GetAccountRequest createEmptyInstance() => create();
@@ -464,6 +513,9 @@ class GetAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAccountRequest>(create);
   static GetAccountRequest? _defaultInstance;
 
+  /// Required. The name of the account to lookup.
+  /// Format: accounts/{account}
+  /// Example: "accounts/100"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -477,58 +529,43 @@ class GetAccountRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for ListAccounts RPC.
 class ListAccountsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccountsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'showDeleted')
-    ..hasRequiredFields = false;
-
-  ListAccountsRequest._() : super();
   factory ListAccountsRequest({
     $core.int? pageSize,
     $core.String? pageToken,
     $core.bool? showDeleted,
   }) {
-    final _result = create();
+    final $result = create();
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (showDeleted != null) {
-      _result.showDeleted = showDeleted;
+      $result.showDeleted = showDeleted;
     }
-    return _result;
+    return $result;
   }
+  ListAccountsRequest._() : super();
   factory ListAccountsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccountsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccountsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..aOB(3, _omitFieldNames ? '' : 'showDeleted')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -538,8 +575,10 @@ class ListAccountsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListAccountsRequest copyWith(void Function(ListAccountsRequest) updates) =>
       super.copyWith((message) => updates(message as ListAccountsRequest))
-          as ListAccountsRequest; // ignore: deprecated_member_use
+          as ListAccountsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccountsRequest create() => ListAccountsRequest._();
   ListAccountsRequest createEmptyInstance() => create();
@@ -550,6 +589,10 @@ class ListAccountsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccountsRequest>(create);
   static ListAccountsRequest? _defaultInstance;
 
+  /// The maximum number of resources to return. The service may return
+  /// fewer than this value, even if there are additional pages.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200; (higher values will be coerced to the maximum)
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -562,6 +605,10 @@ class ListAccountsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
+  /// A page token, received from a previous `ListAccounts` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListAccounts` must
+  /// match the call that provided the page token.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -574,6 +621,9 @@ class ListAccountsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
+  /// Whether to include soft-deleted (ie: "trashed") Accounts in the
+  /// results. Accounts can be inspected to determine whether they are deleted or
+  /// not.
   @$pb.TagNumber(3)
   $core.bool get showDeleted => $_getBF(2);
   @$pb.TagNumber(3)
@@ -587,50 +637,39 @@ class ListAccountsRequest extends $pb.GeneratedMessage {
   void clearShowDeleted() => clearField(3);
 }
 
+/// Request message for ListAccounts RPC.
 class ListAccountsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccountsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.Account>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accounts',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Account.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAccountsResponse._() : super();
   factory ListAccountsResponse({
     $core.Iterable<$1.Account>? accounts,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (accounts != null) {
-      _result.accounts.addAll(accounts);
+      $result.accounts.addAll(accounts);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAccountsResponse._() : super();
   factory ListAccountsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccountsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccountsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.Account>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM,
+        subBuilder: $1.Account.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -641,8 +680,10 @@ class ListAccountsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListAccountsResponse copyWith(void Function(ListAccountsResponse) updates) =>
       super.copyWith((message) => updates(message as ListAccountsResponse))
-          as ListAccountsResponse; // ignore: deprecated_member_use
+          as ListAccountsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccountsResponse create() => ListAccountsResponse._();
   ListAccountsResponse createEmptyInstance() => create();
@@ -653,9 +694,12 @@ class ListAccountsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccountsResponse>(create);
   static ListAccountsResponse? _defaultInstance;
 
+  /// Results that were accessible to the caller.
   @$pb.TagNumber(1)
   $core.List<$1.Account> get accounts => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -669,39 +713,33 @@ class ListAccountsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for DeleteAccount RPC.
 class DeleteAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteAccountRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteAccountRequest._() : super();
   factory DeleteAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteAccountRequest._() : super();
   factory DeleteAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAccountRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -712,8 +750,10 @@ class DeleteAccountRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteAccountRequest copyWith(void Function(DeleteAccountRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAccountRequest))
-          as DeleteAccountRequest; // ignore: deprecated_member_use
+          as DeleteAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteAccountRequest create() => DeleteAccountRequest._();
   DeleteAccountRequest createEmptyInstance() => create();
@@ -724,6 +764,9 @@ class DeleteAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteAccountRequest>(create);
   static DeleteAccountRequest? _defaultInstance;
 
+  /// Required. The name of the Account to soft-delete.
+  /// Format: accounts/{account}
+  /// Example: "accounts/100"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -737,50 +780,40 @@ class DeleteAccountRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for UpdateAccount RPC.
 class UpdateAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateAccountRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.Account>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'account',
-        subBuilder: $1.Account.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateAccountRequest._() : super();
   factory UpdateAccountRequest({
     $1.Account? account,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (account != null) {
-      _result.account = account;
+      $result.account = account;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateAccountRequest._() : super();
   factory UpdateAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAccountRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.Account>(1, _omitFieldNames ? '' : 'account',
+        subBuilder: $1.Account.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -791,8 +824,10 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateAccountRequest copyWith(void Function(UpdateAccountRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAccountRequest))
-          as UpdateAccountRequest; // ignore: deprecated_member_use
+          as UpdateAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateAccountRequest create() => UpdateAccountRequest._();
   UpdateAccountRequest createEmptyInstance() => create();
@@ -803,6 +838,8 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateAccountRequest>(create);
   static UpdateAccountRequest? _defaultInstance;
 
+  /// Required. The account to update.
+  /// The account's `name` field is used to identify the account.
   @$pb.TagNumber(1)
   $1.Account get account => $_getN(0);
   @$pb.TagNumber(1)
@@ -817,6 +854,10 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Account ensureAccount() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Field names must be in snake
+  /// case (for example, "field_to_update"). Omitted fields will not be updated.
+  /// To replace the entire entity, use one path with the string "*" to match all
+  /// fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -832,49 +873,39 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for ProvisionAccountTicket RPC.
 class ProvisionAccountTicketRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ProvisionAccountTicketRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.Account>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'account',
-        subBuilder: $1.Account.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'redirectUri')
-    ..hasRequiredFields = false;
-
-  ProvisionAccountTicketRequest._() : super();
   factory ProvisionAccountTicketRequest({
     $1.Account? account,
     $core.String? redirectUri,
   }) {
-    final _result = create();
+    final $result = create();
     if (account != null) {
-      _result.account = account;
+      $result.account = account;
     }
     if (redirectUri != null) {
-      _result.redirectUri = redirectUri;
+      $result.redirectUri = redirectUri;
     }
-    return _result;
+    return $result;
   }
+  ProvisionAccountTicketRequest._() : super();
   factory ProvisionAccountTicketRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ProvisionAccountTicketRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ProvisionAccountTicketRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.Account>(1, _omitFieldNames ? '' : 'account',
+        subBuilder: $1.Account.create)
+    ..aOS(2, _omitFieldNames ? '' : 'redirectUri')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -887,8 +918,10 @@ class ProvisionAccountTicketRequest extends $pb.GeneratedMessage {
           void Function(ProvisionAccountTicketRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ProvisionAccountTicketRequest))
-          as ProvisionAccountTicketRequest; // ignore: deprecated_member_use
+          as ProvisionAccountTicketRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ProvisionAccountTicketRequest create() =>
       ProvisionAccountTicketRequest._();
@@ -900,6 +933,7 @@ class ProvisionAccountTicketRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ProvisionAccountTicketRequest>(create);
   static ProvisionAccountTicketRequest? _defaultInstance;
 
+  /// The account to create.
   @$pb.TagNumber(1)
   $1.Account get account => $_getN(0);
   @$pb.TagNumber(1)
@@ -914,6 +948,8 @@ class ProvisionAccountTicketRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Account ensureAccount() => $_ensure(0);
 
+  /// Redirect URI where the user will be sent after accepting Terms of Service.
+  /// Must be configured in Cloud Console as a Redirect URI.
   @$pb.TagNumber(2)
   $core.String get redirectUri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -927,39 +963,33 @@ class ProvisionAccountTicketRequest extends $pb.GeneratedMessage {
   void clearRedirectUri() => clearField(2);
 }
 
+/// Response message for ProvisionAccountTicket RPC.
 class ProvisionAccountTicketResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ProvisionAccountTicketResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accountTicketId')
-    ..hasRequiredFields = false;
-
-  ProvisionAccountTicketResponse._() : super();
   factory ProvisionAccountTicketResponse({
     $core.String? accountTicketId,
   }) {
-    final _result = create();
+    final $result = create();
     if (accountTicketId != null) {
-      _result.accountTicketId = accountTicketId;
+      $result.accountTicketId = accountTicketId;
     }
-    return _result;
+    return $result;
   }
+  ProvisionAccountTicketResponse._() : super();
   factory ProvisionAccountTicketResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ProvisionAccountTicketResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ProvisionAccountTicketResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accountTicketId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -972,8 +1002,10 @@ class ProvisionAccountTicketResponse extends $pb.GeneratedMessage {
           void Function(ProvisionAccountTicketResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ProvisionAccountTicketResponse))
-          as ProvisionAccountTicketResponse; // ignore: deprecated_member_use
+          as ProvisionAccountTicketResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ProvisionAccountTicketResponse create() =>
       ProvisionAccountTicketResponse._();
@@ -985,6 +1017,7 @@ class ProvisionAccountTicketResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ProvisionAccountTicketResponse>(create);
   static ProvisionAccountTicketResponse? _defaultInstance;
 
+  /// The param to be passed in the ToS link.
   @$pb.TagNumber(1)
   $core.String get accountTicketId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -998,39 +1031,33 @@ class ProvisionAccountTicketResponse extends $pb.GeneratedMessage {
   void clearAccountTicketId() => clearField(1);
 }
 
+/// Request message for GetProperty RPC.
 class GetPropertyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetPropertyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetPropertyRequest._() : super();
   factory GetPropertyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetPropertyRequest._() : super();
   factory GetPropertyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetPropertyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetPropertyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1040,8 +1067,10 @@ class GetPropertyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetPropertyRequest copyWith(void Function(GetPropertyRequest) updates) =>
       super.copyWith((message) => updates(message as GetPropertyRequest))
-          as GetPropertyRequest; // ignore: deprecated_member_use
+          as GetPropertyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetPropertyRequest create() => GetPropertyRequest._();
   GetPropertyRequest createEmptyInstance() => create();
@@ -1052,6 +1081,9 @@ class GetPropertyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetPropertyRequest>(create);
   static GetPropertyRequest? _defaultInstance;
 
+  /// Required. The name of the property to lookup.
+  /// Format: properties/{property_id}
+  /// Example: "properties/1000"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1065,67 +1097,48 @@ class GetPropertyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for ListProperties RPC.
 class ListPropertiesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListPropertiesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filter')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'showDeleted')
-    ..hasRequiredFields = false;
-
-  ListPropertiesRequest._() : super();
   factory ListPropertiesRequest({
     $core.String? filter,
     $core.int? pageSize,
     $core.String? pageToken,
     $core.bool? showDeleted,
   }) {
-    final _result = create();
+    final $result = create();
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (showDeleted != null) {
-      _result.showDeleted = showDeleted;
+      $result.showDeleted = showDeleted;
     }
-    return _result;
+    return $result;
   }
+  ListPropertiesRequest._() : super();
   factory ListPropertiesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListPropertiesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListPropertiesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'filter')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOB(4, _omitFieldNames ? '' : 'showDeleted')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1137,8 +1150,10 @@ class ListPropertiesRequest extends $pb.GeneratedMessage {
   ListPropertiesRequest copyWith(
           void Function(ListPropertiesRequest) updates) =>
       super.copyWith((message) => updates(message as ListPropertiesRequest))
-          as ListPropertiesRequest; // ignore: deprecated_member_use
+          as ListPropertiesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListPropertiesRequest create() => ListPropertiesRequest._();
   ListPropertiesRequest createEmptyInstance() => create();
@@ -1149,6 +1164,22 @@ class ListPropertiesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListPropertiesRequest>(create);
   static ListPropertiesRequest? _defaultInstance;
 
+  ///  Required. An expression for filtering the results of the request.
+  ///  Fields eligible for filtering are:
+  ///  `parent:`(The resource name of the parent account/property) or
+  ///  `ancestor:`(The resource name of the parent account) or
+  ///  `firebase_project:`(The id or number of the linked firebase project).
+  ///  Some examples of filters:
+  ///
+  ///  ```
+  ///  | Filter                      | Description                               |
+  ///  |-----------------------------|-------------------------------------------|
+  ///  | parent:accounts/123         | The account with account id: 123.       |
+  ///  | parent:properties/123       | The property with property id: 123.       |
+  ///  | ancestor:accounts/123       | The account with account id: 123.         |
+  ///  | firebase_project:project-id | The firebase project with id: project-id. |
+  ///  | firebase_project:123        | The firebase project with number: 123.    |
+  ///  ```
   @$pb.TagNumber(1)
   $core.String get filter => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1161,6 +1192,10 @@ class ListPropertiesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
 
+  /// The maximum number of resources to return. The service may return
+  /// fewer than this value, even if there are additional pages.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200; (higher values will be coerced to the maximum)
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1173,6 +1208,10 @@ class ListPropertiesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// A page token, received from a previous `ListProperties` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListProperties` must
+  /// match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1185,6 +1224,9 @@ class ListPropertiesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Whether to include soft-deleted (ie: "trashed") Properties in the
+  /// results. Properties can be inspected to determine whether they are deleted
+  /// or not.
   @$pb.TagNumber(4)
   $core.bool get showDeleted => $_getBF(3);
   @$pb.TagNumber(4)
@@ -1198,50 +1240,40 @@ class ListPropertiesRequest extends $pb.GeneratedMessage {
   void clearShowDeleted() => clearField(4);
 }
 
+/// Response message for ListProperties RPC.
 class ListPropertiesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListPropertiesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.Property>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'properties',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Property.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListPropertiesResponse._() : super();
   factory ListPropertiesResponse({
     $core.Iterable<$1.Property>? properties,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (properties != null) {
-      _result.properties.addAll(properties);
+      $result.properties.addAll(properties);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListPropertiesResponse._() : super();
   factory ListPropertiesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListPropertiesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListPropertiesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.Property>(
+        1, _omitFieldNames ? '' : 'properties', $pb.PbFieldType.PM,
+        subBuilder: $1.Property.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1253,8 +1285,10 @@ class ListPropertiesResponse extends $pb.GeneratedMessage {
   ListPropertiesResponse copyWith(
           void Function(ListPropertiesResponse) updates) =>
       super.copyWith((message) => updates(message as ListPropertiesResponse))
-          as ListPropertiesResponse; // ignore: deprecated_member_use
+          as ListPropertiesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListPropertiesResponse create() => ListPropertiesResponse._();
   ListPropertiesResponse createEmptyInstance() => create();
@@ -1265,9 +1299,12 @@ class ListPropertiesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListPropertiesResponse>(create);
   static ListPropertiesResponse? _defaultInstance;
 
+  /// Results that matched the filter criteria and were accessible to the caller.
   @$pb.TagNumber(1)
   $core.List<$1.Property> get properties => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1281,50 +1318,40 @@ class ListPropertiesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for UpdateProperty RPC.
 class UpdatePropertyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdatePropertyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.Property>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'property',
-        subBuilder: $1.Property.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdatePropertyRequest._() : super();
   factory UpdatePropertyRequest({
     $1.Property? property,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (property != null) {
-      _result.property = property;
+      $result.property = property;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdatePropertyRequest._() : super();
   factory UpdatePropertyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdatePropertyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdatePropertyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.Property>(1, _omitFieldNames ? '' : 'property',
+        subBuilder: $1.Property.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1336,8 +1363,10 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
   UpdatePropertyRequest copyWith(
           void Function(UpdatePropertyRequest) updates) =>
       super.copyWith((message) => updates(message as UpdatePropertyRequest))
-          as UpdatePropertyRequest; // ignore: deprecated_member_use
+          as UpdatePropertyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdatePropertyRequest create() => UpdatePropertyRequest._();
   UpdatePropertyRequest createEmptyInstance() => create();
@@ -1348,6 +1377,9 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdatePropertyRequest>(create);
   static UpdatePropertyRequest? _defaultInstance;
 
+  /// Required. The property to update.
+  /// The property's `name` field is used to identify the property to be
+  /// updated.
   @$pb.TagNumber(1)
   $1.Property get property => $_getN(0);
   @$pb.TagNumber(1)
@@ -1362,6 +1394,10 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Property ensureProperty() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Field names must be in snake
+  /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+  /// replace the entire entity, use one path with the string "*" to match all
+  /// fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -1377,40 +1413,34 @@ class UpdatePropertyRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for CreateProperty RPC.
 class CreatePropertyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreatePropertyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.Property>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'property',
-        subBuilder: $1.Property.create)
-    ..hasRequiredFields = false;
-
-  CreatePropertyRequest._() : super();
   factory CreatePropertyRequest({
     $1.Property? property,
   }) {
-    final _result = create();
+    final $result = create();
     if (property != null) {
-      _result.property = property;
+      $result.property = property;
     }
-    return _result;
+    return $result;
   }
+  CreatePropertyRequest._() : super();
   factory CreatePropertyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreatePropertyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreatePropertyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.Property>(1, _omitFieldNames ? '' : 'property',
+        subBuilder: $1.Property.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1422,8 +1452,10 @@ class CreatePropertyRequest extends $pb.GeneratedMessage {
   CreatePropertyRequest copyWith(
           void Function(CreatePropertyRequest) updates) =>
       super.copyWith((message) => updates(message as CreatePropertyRequest))
-          as CreatePropertyRequest; // ignore: deprecated_member_use
+          as CreatePropertyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreatePropertyRequest create() => CreatePropertyRequest._();
   CreatePropertyRequest createEmptyInstance() => create();
@@ -1434,6 +1466,8 @@ class CreatePropertyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreatePropertyRequest>(create);
   static CreatePropertyRequest? _defaultInstance;
 
+  /// Required. The property to create.
+  /// Note: the supplied property must specify its parent.
   @$pb.TagNumber(1)
   $1.Property get property => $_getN(0);
   @$pb.TagNumber(1)
@@ -1449,39 +1483,33 @@ class CreatePropertyRequest extends $pb.GeneratedMessage {
   $1.Property ensureProperty() => $_ensure(0);
 }
 
+/// Request message for DeleteProperty RPC.
 class DeletePropertyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeletePropertyRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeletePropertyRequest._() : super();
   factory DeletePropertyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeletePropertyRequest._() : super();
   factory DeletePropertyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeletePropertyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeletePropertyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1493,8 +1521,10 @@ class DeletePropertyRequest extends $pb.GeneratedMessage {
   DeletePropertyRequest copyWith(
           void Function(DeletePropertyRequest) updates) =>
       super.copyWith((message) => updates(message as DeletePropertyRequest))
-          as DeletePropertyRequest; // ignore: deprecated_member_use
+          as DeletePropertyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeletePropertyRequest create() => DeletePropertyRequest._();
   DeletePropertyRequest createEmptyInstance() => create();
@@ -1505,6 +1535,9 @@ class DeletePropertyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeletePropertyRequest>(create);
   static DeletePropertyRequest? _defaultInstance;
 
+  /// Required. The name of the Property to soft-delete.
+  /// Format: properties/{property_id}
+  /// Example: "properties/1000"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1518,49 +1551,39 @@ class DeletePropertyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for CreateFirebaseLink RPC
 class CreateFirebaseLinkRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateFirebaseLinkRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.FirebaseLink>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firebaseLink',
-        subBuilder: $1.FirebaseLink.create)
-    ..hasRequiredFields = false;
-
-  CreateFirebaseLinkRequest._() : super();
   factory CreateFirebaseLinkRequest({
     $core.String? parent,
     $1.FirebaseLink? firebaseLink,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (firebaseLink != null) {
-      _result.firebaseLink = firebaseLink;
+      $result.firebaseLink = firebaseLink;
     }
-    return _result;
+    return $result;
   }
+  CreateFirebaseLinkRequest._() : super();
   factory CreateFirebaseLinkRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateFirebaseLinkRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateFirebaseLinkRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.FirebaseLink>(2, _omitFieldNames ? '' : 'firebaseLink',
+        subBuilder: $1.FirebaseLink.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1572,8 +1595,10 @@ class CreateFirebaseLinkRequest extends $pb.GeneratedMessage {
   CreateFirebaseLinkRequest copyWith(
           void Function(CreateFirebaseLinkRequest) updates) =>
       super.copyWith((message) => updates(message as CreateFirebaseLinkRequest))
-          as CreateFirebaseLinkRequest; // ignore: deprecated_member_use
+          as CreateFirebaseLinkRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateFirebaseLinkRequest create() => CreateFirebaseLinkRequest._();
   CreateFirebaseLinkRequest createEmptyInstance() => create();
@@ -1584,6 +1609,9 @@ class CreateFirebaseLinkRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateFirebaseLinkRequest>(create);
   static CreateFirebaseLinkRequest? _defaultInstance;
 
+  ///  Required. Format: properties/{property_id}
+  ///
+  ///  Example: `properties/1234`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1596,6 +1624,7 @@ class CreateFirebaseLinkRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The Firebase link to create.
   @$pb.TagNumber(2)
   $1.FirebaseLink get firebaseLink => $_getN(1);
   @$pb.TagNumber(2)
@@ -1611,39 +1640,33 @@ class CreateFirebaseLinkRequest extends $pb.GeneratedMessage {
   $1.FirebaseLink ensureFirebaseLink() => $_ensure(1);
 }
 
+/// Request message for DeleteFirebaseLink RPC
 class DeleteFirebaseLinkRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteFirebaseLinkRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteFirebaseLinkRequest._() : super();
   factory DeleteFirebaseLinkRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteFirebaseLinkRequest._() : super();
   factory DeleteFirebaseLinkRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteFirebaseLinkRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteFirebaseLinkRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1655,8 +1678,10 @@ class DeleteFirebaseLinkRequest extends $pb.GeneratedMessage {
   DeleteFirebaseLinkRequest copyWith(
           void Function(DeleteFirebaseLinkRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteFirebaseLinkRequest))
-          as DeleteFirebaseLinkRequest; // ignore: deprecated_member_use
+          as DeleteFirebaseLinkRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteFirebaseLinkRequest create() => DeleteFirebaseLinkRequest._();
   DeleteFirebaseLinkRequest createEmptyInstance() => create();
@@ -1667,6 +1692,9 @@ class DeleteFirebaseLinkRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteFirebaseLinkRequest>(create);
   static DeleteFirebaseLinkRequest? _defaultInstance;
 
+  ///  Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
+  ///
+  ///  Example: `properties/1234/firebaseLinks/5678`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1680,58 +1708,43 @@ class DeleteFirebaseLinkRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for ListFirebaseLinks RPC
 class ListFirebaseLinksRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListFirebaseLinksRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListFirebaseLinksRequest._() : super();
   factory ListFirebaseLinksRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListFirebaseLinksRequest._() : super();
   factory ListFirebaseLinksRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListFirebaseLinksRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListFirebaseLinksRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1743,8 +1756,10 @@ class ListFirebaseLinksRequest extends $pb.GeneratedMessage {
   ListFirebaseLinksRequest copyWith(
           void Function(ListFirebaseLinksRequest) updates) =>
       super.copyWith((message) => updates(message as ListFirebaseLinksRequest))
-          as ListFirebaseLinksRequest; // ignore: deprecated_member_use
+          as ListFirebaseLinksRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListFirebaseLinksRequest create() => ListFirebaseLinksRequest._();
   ListFirebaseLinksRequest createEmptyInstance() => create();
@@ -1755,6 +1770,9 @@ class ListFirebaseLinksRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListFirebaseLinksRequest>(create);
   static ListFirebaseLinksRequest? _defaultInstance;
 
+  ///  Required. Format: properties/{property_id}
+  ///
+  ///  Example: `properties/1234`
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1767,6 +1785,10 @@ class ListFirebaseLinksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return. The service may return
+  /// fewer than this value, even if there are additional pages.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200; (higher values will be coerced to the maximum)
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1779,6 +1801,10 @@ class ListFirebaseLinksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// A page token, received from a previous `ListFirebaseLinks` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListFirebaseLinks` must
+  /// match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1792,50 +1818,40 @@ class ListFirebaseLinksRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListFirebaseLinks RPC
 class ListFirebaseLinksResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListFirebaseLinksResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.FirebaseLink>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'firebaseLinks',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.FirebaseLink.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListFirebaseLinksResponse._() : super();
   factory ListFirebaseLinksResponse({
     $core.Iterable<$1.FirebaseLink>? firebaseLinks,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (firebaseLinks != null) {
-      _result.firebaseLinks.addAll(firebaseLinks);
+      $result.firebaseLinks.addAll(firebaseLinks);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListFirebaseLinksResponse._() : super();
   factory ListFirebaseLinksResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListFirebaseLinksResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListFirebaseLinksResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.FirebaseLink>(
+        1, _omitFieldNames ? '' : 'firebaseLinks', $pb.PbFieldType.PM,
+        subBuilder: $1.FirebaseLink.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1847,8 +1863,10 @@ class ListFirebaseLinksResponse extends $pb.GeneratedMessage {
   ListFirebaseLinksResponse copyWith(
           void Function(ListFirebaseLinksResponse) updates) =>
       super.copyWith((message) => updates(message as ListFirebaseLinksResponse))
-          as ListFirebaseLinksResponse; // ignore: deprecated_member_use
+          as ListFirebaseLinksResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListFirebaseLinksResponse create() => ListFirebaseLinksResponse._();
   ListFirebaseLinksResponse createEmptyInstance() => create();
@@ -1859,9 +1877,14 @@ class ListFirebaseLinksResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListFirebaseLinksResponse>(create);
   static ListFirebaseLinksResponse? _defaultInstance;
 
+  /// List of FirebaseLinks. This will have at most one value.
   @$pb.TagNumber(1)
   $core.List<$1.FirebaseLink> get firebaseLinks => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
+  /// Currently, Google Analytics supports only one FirebaseLink per property,
+  /// so this will never be populated.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1875,49 +1898,39 @@ class ListFirebaseLinksResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for CreateGoogleAdsLink RPC
 class CreateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateGoogleAdsLinkRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.GoogleAdsLink>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'googleAdsLink',
-        subBuilder: $1.GoogleAdsLink.create)
-    ..hasRequiredFields = false;
-
-  CreateGoogleAdsLinkRequest._() : super();
   factory CreateGoogleAdsLinkRequest({
     $core.String? parent,
     $1.GoogleAdsLink? googleAdsLink,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (googleAdsLink != null) {
-      _result.googleAdsLink = googleAdsLink;
+      $result.googleAdsLink = googleAdsLink;
     }
-    return _result;
+    return $result;
   }
+  CreateGoogleAdsLinkRequest._() : super();
   factory CreateGoogleAdsLinkRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateGoogleAdsLinkRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateGoogleAdsLinkRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.GoogleAdsLink>(2, _omitFieldNames ? '' : 'googleAdsLink',
+        subBuilder: $1.GoogleAdsLink.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1930,8 +1943,10 @@ class CreateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
           void Function(CreateGoogleAdsLinkRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateGoogleAdsLinkRequest))
-          as CreateGoogleAdsLinkRequest; // ignore: deprecated_member_use
+          as CreateGoogleAdsLinkRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateGoogleAdsLinkRequest create() => CreateGoogleAdsLinkRequest._();
   CreateGoogleAdsLinkRequest createEmptyInstance() => create();
@@ -1942,6 +1957,7 @@ class CreateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateGoogleAdsLinkRequest>(create);
   static CreateGoogleAdsLinkRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1954,6 +1970,7 @@ class CreateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The GoogleAdsLink to create.
   @$pb.TagNumber(2)
   $1.GoogleAdsLink get googleAdsLink => $_getN(1);
   @$pb.TagNumber(2)
@@ -1969,50 +1986,40 @@ class CreateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   $1.GoogleAdsLink ensureGoogleAdsLink() => $_ensure(1);
 }
 
+/// Request message for UpdateGoogleAdsLink RPC
 class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateGoogleAdsLinkRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.GoogleAdsLink>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'googleAdsLink',
-        subBuilder: $1.GoogleAdsLink.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateGoogleAdsLinkRequest._() : super();
   factory UpdateGoogleAdsLinkRequest({
     $1.GoogleAdsLink? googleAdsLink,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (googleAdsLink != null) {
-      _result.googleAdsLink = googleAdsLink;
+      $result.googleAdsLink = googleAdsLink;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateGoogleAdsLinkRequest._() : super();
   factory UpdateGoogleAdsLinkRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateGoogleAdsLinkRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateGoogleAdsLinkRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.GoogleAdsLink>(1, _omitFieldNames ? '' : 'googleAdsLink',
+        subBuilder: $1.GoogleAdsLink.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2025,8 +2032,10 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
           void Function(UpdateGoogleAdsLinkRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateGoogleAdsLinkRequest))
-          as UpdateGoogleAdsLinkRequest; // ignore: deprecated_member_use
+          as UpdateGoogleAdsLinkRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateGoogleAdsLinkRequest create() => UpdateGoogleAdsLinkRequest._();
   UpdateGoogleAdsLinkRequest createEmptyInstance() => create();
@@ -2037,6 +2046,7 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateGoogleAdsLinkRequest>(create);
   static UpdateGoogleAdsLinkRequest? _defaultInstance;
 
+  /// The GoogleAdsLink to update
   @$pb.TagNumber(1)
   $1.GoogleAdsLink get googleAdsLink => $_getN(0);
   @$pb.TagNumber(1)
@@ -2051,6 +2061,10 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.GoogleAdsLink ensureGoogleAdsLink() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Field names must be in snake
+  /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+  /// replace the entire entity, use one path with the string "*" to match all
+  /// fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -2066,39 +2080,33 @@ class UpdateGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for DeleteGoogleAdsLink RPC.
 class DeleteGoogleAdsLinkRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteGoogleAdsLinkRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteGoogleAdsLinkRequest._() : super();
   factory DeleteGoogleAdsLinkRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteGoogleAdsLinkRequest._() : super();
   factory DeleteGoogleAdsLinkRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteGoogleAdsLinkRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteGoogleAdsLinkRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2111,8 +2119,10 @@ class DeleteGoogleAdsLinkRequest extends $pb.GeneratedMessage {
           void Function(DeleteGoogleAdsLinkRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteGoogleAdsLinkRequest))
-          as DeleteGoogleAdsLinkRequest; // ignore: deprecated_member_use
+          as DeleteGoogleAdsLinkRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteGoogleAdsLinkRequest create() => DeleteGoogleAdsLinkRequest._();
   DeleteGoogleAdsLinkRequest createEmptyInstance() => create();
@@ -2123,6 +2133,7 @@ class DeleteGoogleAdsLinkRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteGoogleAdsLinkRequest>(create);
   static DeleteGoogleAdsLinkRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234/googleAdsLinks/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2136,58 +2147,43 @@ class DeleteGoogleAdsLinkRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for ListGoogleAdsLinks RPC.
 class ListGoogleAdsLinksRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListGoogleAdsLinksRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListGoogleAdsLinksRequest._() : super();
   factory ListGoogleAdsLinksRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListGoogleAdsLinksRequest._() : super();
   factory ListGoogleAdsLinksRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListGoogleAdsLinksRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListGoogleAdsLinksRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2199,8 +2195,10 @@ class ListGoogleAdsLinksRequest extends $pb.GeneratedMessage {
   ListGoogleAdsLinksRequest copyWith(
           void Function(ListGoogleAdsLinksRequest) updates) =>
       super.copyWith((message) => updates(message as ListGoogleAdsLinksRequest))
-          as ListGoogleAdsLinksRequest; // ignore: deprecated_member_use
+          as ListGoogleAdsLinksRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListGoogleAdsLinksRequest create() => ListGoogleAdsLinksRequest._();
   ListGoogleAdsLinksRequest createEmptyInstance() => create();
@@ -2211,6 +2209,7 @@ class ListGoogleAdsLinksRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListGoogleAdsLinksRequest>(create);
   static ListGoogleAdsLinksRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2223,6 +2222,9 @@ class ListGoogleAdsLinksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200 (higher values will be coerced to the maximum).
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -2235,6 +2237,11 @@ class ListGoogleAdsLinksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  ///  A page token, received from a previous `ListGoogleAdsLinks` call.
+  ///  Provide this to retrieve the subsequent page.
+  ///
+  ///  When paginating, all other parameters provided to `ListGoogleAdsLinks` must
+  ///  match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2248,50 +2255,40 @@ class ListGoogleAdsLinksRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListGoogleAdsLinks RPC.
 class ListGoogleAdsLinksResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListGoogleAdsLinksResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.GoogleAdsLink>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'googleAdsLinks',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.GoogleAdsLink.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListGoogleAdsLinksResponse._() : super();
   factory ListGoogleAdsLinksResponse({
     $core.Iterable<$1.GoogleAdsLink>? googleAdsLinks,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (googleAdsLinks != null) {
-      _result.googleAdsLinks.addAll(googleAdsLinks);
+      $result.googleAdsLinks.addAll(googleAdsLinks);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListGoogleAdsLinksResponse._() : super();
   factory ListGoogleAdsLinksResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListGoogleAdsLinksResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListGoogleAdsLinksResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.GoogleAdsLink>(
+        1, _omitFieldNames ? '' : 'googleAdsLinks', $pb.PbFieldType.PM,
+        subBuilder: $1.GoogleAdsLink.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2304,8 +2301,10 @@ class ListGoogleAdsLinksResponse extends $pb.GeneratedMessage {
           void Function(ListGoogleAdsLinksResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListGoogleAdsLinksResponse))
-          as ListGoogleAdsLinksResponse; // ignore: deprecated_member_use
+          as ListGoogleAdsLinksResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListGoogleAdsLinksResponse create() => ListGoogleAdsLinksResponse._();
   ListGoogleAdsLinksResponse createEmptyInstance() => create();
@@ -2316,9 +2315,12 @@ class ListGoogleAdsLinksResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListGoogleAdsLinksResponse>(create);
   static ListGoogleAdsLinksResponse? _defaultInstance;
 
+  /// List of GoogleAdsLinks.
   @$pb.TagNumber(1)
   $core.List<$1.GoogleAdsLink> get googleAdsLinks => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2332,39 +2334,33 @@ class ListGoogleAdsLinksResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for GetDataSharingSettings RPC.
 class GetDataSharingSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetDataSharingSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetDataSharingSettingsRequest._() : super();
   factory GetDataSharingSettingsRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetDataSharingSettingsRequest._() : super();
   factory GetDataSharingSettingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetDataSharingSettingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetDataSharingSettingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2377,8 +2373,10 @@ class GetDataSharingSettingsRequest extends $pb.GeneratedMessage {
           void Function(GetDataSharingSettingsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetDataSharingSettingsRequest))
-          as GetDataSharingSettingsRequest; // ignore: deprecated_member_use
+          as GetDataSharingSettingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDataSharingSettingsRequest create() =>
       GetDataSharingSettingsRequest._();
@@ -2390,6 +2388,10 @@ class GetDataSharingSettingsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetDataSharingSettingsRequest>(create);
   static GetDataSharingSettingsRequest? _defaultInstance;
 
+  ///  Required. The name of the settings to lookup.
+  ///  Format: accounts/{account}/dataSharingSettings
+  ///
+  ///  Example: `accounts/1000/dataSharingSettings`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2403,49 +2405,38 @@ class GetDataSharingSettingsRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for ListAccountSummaries RPC.
 class ListAccountSummariesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccountSummariesRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListAccountSummariesRequest._() : super();
   factory ListAccountSummariesRequest({
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAccountSummariesRequest._() : super();
   factory ListAccountSummariesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccountSummariesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccountSummariesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2458,8 +2449,10 @@ class ListAccountSummariesRequest extends $pb.GeneratedMessage {
           void Function(ListAccountSummariesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListAccountSummariesRequest))
-          as ListAccountSummariesRequest; // ignore: deprecated_member_use
+          as ListAccountSummariesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccountSummariesRequest create() =>
       ListAccountSummariesRequest._();
@@ -2471,6 +2464,10 @@ class ListAccountSummariesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccountSummariesRequest>(create);
   static ListAccountSummariesRequest? _defaultInstance;
 
+  /// The maximum number of AccountSummary resources to return. The service may
+  /// return fewer than this value, even if there are additional pages.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200; (higher values will be coerced to the maximum)
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -2483,6 +2480,10 @@ class ListAccountSummariesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
+  /// A page token, received from a previous `ListAccountSummaries` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListAccountSummaries`
+  /// must match the call that provided the page token.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2496,50 +2497,40 @@ class ListAccountSummariesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(2);
 }
 
+/// Response message for ListAccountSummaries RPC.
 class ListAccountSummariesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAccountSummariesResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.AccountSummary>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accountSummaries',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.AccountSummary.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAccountSummariesResponse._() : super();
   factory ListAccountSummariesResponse({
     $core.Iterable<$1.AccountSummary>? accountSummaries,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (accountSummaries != null) {
-      _result.accountSummaries.addAll(accountSummaries);
+      $result.accountSummaries.addAll(accountSummaries);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAccountSummariesResponse._() : super();
   factory ListAccountSummariesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAccountSummariesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAccountSummariesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.AccountSummary>(
+        1, _omitFieldNames ? '' : 'accountSummaries', $pb.PbFieldType.PM,
+        subBuilder: $1.AccountSummary.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2552,8 +2543,10 @@ class ListAccountSummariesResponse extends $pb.GeneratedMessage {
           void Function(ListAccountSummariesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListAccountSummariesResponse))
-          as ListAccountSummariesResponse; // ignore: deprecated_member_use
+          as ListAccountSummariesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAccountSummariesResponse create() =>
       ListAccountSummariesResponse._();
@@ -2565,9 +2558,12 @@ class ListAccountSummariesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAccountSummariesResponse>(create);
   static ListAccountSummariesResponse? _defaultInstance;
 
+  /// Account summaries of all accounts the caller has access to.
   @$pb.TagNumber(1)
   $core.List<$1.AccountSummary> get accountSummaries => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2581,42 +2577,22 @@ class ListAccountSummariesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for AcknowledgeUserDataCollection RPC.
 class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AcknowledgeUserDataCollectionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'property')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'acknowledgement')
-    ..hasRequiredFields = false;
-
-  AcknowledgeUserDataCollectionRequest._() : super();
   factory AcknowledgeUserDataCollectionRequest({
     $core.String? property,
     $core.String? acknowledgement,
   }) {
-    final _result = create();
+    final $result = create();
     if (property != null) {
-      _result.property = property;
+      $result.property = property;
     }
     if (acknowledgement != null) {
-      _result.acknowledgement = acknowledgement;
+      $result.acknowledgement = acknowledgement;
     }
-    return _result;
+    return $result;
   }
+  AcknowledgeUserDataCollectionRequest._() : super();
   factory AcknowledgeUserDataCollectionRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2624,6 +2600,16 @@ class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
   factory AcknowledgeUserDataCollectionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AcknowledgeUserDataCollectionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'property')
+    ..aOS(2, _omitFieldNames ? '' : 'acknowledgement')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2636,8 +2622,10 @@ class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
           void Function(AcknowledgeUserDataCollectionRequest) updates) =>
       super.copyWith((message) =>
               updates(message as AcknowledgeUserDataCollectionRequest))
-          as AcknowledgeUserDataCollectionRequest; // ignore: deprecated_member_use
+          as AcknowledgeUserDataCollectionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AcknowledgeUserDataCollectionRequest create() =>
       AcknowledgeUserDataCollectionRequest._();
@@ -2650,6 +2638,7 @@ class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
           AcknowledgeUserDataCollectionRequest>(create);
   static AcknowledgeUserDataCollectionRequest? _defaultInstance;
 
+  /// Required. The property for which to acknowledge user data collection.
   @$pb.TagNumber(1)
   $core.String get property => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2662,6 +2651,14 @@ class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProperty() => clearField(1);
 
+  ///  Required. An acknowledgement that the caller of this method understands the
+  ///  terms of user data collection.
+  ///
+  ///  This field must contain the exact value:
+  ///  "I acknowledge that I have the necessary privacy disclosures and rights
+  ///  from my end users for the collection and processing of their data,
+  ///  including the association of such data with the visitation information
+  ///  Google Analytics collects from my site and/or app property."
   @$pb.TagNumber(2)
   $core.String get acknowledgement => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2675,20 +2672,10 @@ class AcknowledgeUserDataCollectionRequest extends $pb.GeneratedMessage {
   void clearAcknowledgement() => clearField(2);
 }
 
+/// Response message for AcknowledgeUserDataCollection RPC.
 class AcknowledgeUserDataCollectionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AcknowledgeUserDataCollectionResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  AcknowledgeUserDataCollectionResponse._() : super();
   factory AcknowledgeUserDataCollectionResponse() => create();
+  AcknowledgeUserDataCollectionResponse._() : super();
   factory AcknowledgeUserDataCollectionResponse.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -2696,6 +2683,14 @@ class AcknowledgeUserDataCollectionResponse extends $pb.GeneratedMessage {
   factory AcknowledgeUserDataCollectionResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AcknowledgeUserDataCollectionResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2708,8 +2703,10 @@ class AcknowledgeUserDataCollectionResponse extends $pb.GeneratedMessage {
           void Function(AcknowledgeUserDataCollectionResponse) updates) =>
       super.copyWith((message) =>
               updates(message as AcknowledgeUserDataCollectionResponse))
-          as AcknowledgeUserDataCollectionResponse; // ignore: deprecated_member_use
+          as AcknowledgeUserDataCollectionResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AcknowledgeUserDataCollectionResponse create() =>
       AcknowledgeUserDataCollectionResponse._();
@@ -2723,76 +2720,8 @@ class AcknowledgeUserDataCollectionResponse extends $pb.GeneratedMessage {
   static AcknowledgeUserDataCollectionResponse? _defaultInstance;
 }
 
+/// Request message for SearchChangeHistoryEvents RPC.
 class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchChangeHistoryEventsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'account')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'property')
-    ..pc<$1.ChangeHistoryResourceType>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'resourceType',
-        $pb.PbFieldType.KE,
-        valueOf: $1.ChangeHistoryResourceType.valueOf,
-        enumValues: $1.ChangeHistoryResourceType.values,
-        defaultEnumValue: $1
-            .ChangeHistoryResourceType.CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED)
-    ..pc<$1.ActionType>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'action',
-        $pb.PbFieldType.KE,
-        valueOf: $1.ActionType.valueOf,
-        enumValues: $1.ActionType.values,
-        defaultEnumValue: $1.ActionType.ACTION_TYPE_UNSPECIFIED)
-    ..pPS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'actorEmail')
-    ..aOM<$5.Timestamp>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'earliestChangeTime',
-        subBuilder: $5.Timestamp.create)
-    ..aOM<$5.Timestamp>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'latestChangeTime',
-        subBuilder: $5.Timestamp.create)
-    ..a<$core.int>(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  SearchChangeHistoryEventsRequest._() : super();
   factory SearchChangeHistoryEventsRequest({
     $core.String? account,
     $core.String? property,
@@ -2804,42 +2733,70 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (account != null) {
-      _result.account = account;
+      $result.account = account;
     }
     if (property != null) {
-      _result.property = property;
+      $result.property = property;
     }
     if (resourceType != null) {
-      _result.resourceType.addAll(resourceType);
+      $result.resourceType.addAll(resourceType);
     }
     if (action != null) {
-      _result.action.addAll(action);
+      $result.action.addAll(action);
     }
     if (actorEmail != null) {
-      _result.actorEmail.addAll(actorEmail);
+      $result.actorEmail.addAll(actorEmail);
     }
     if (earliestChangeTime != null) {
-      _result.earliestChangeTime = earliestChangeTime;
+      $result.earliestChangeTime = earliestChangeTime;
     }
     if (latestChangeTime != null) {
-      _result.latestChangeTime = latestChangeTime;
+      $result.latestChangeTime = latestChangeTime;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  SearchChangeHistoryEventsRequest._() : super();
   factory SearchChangeHistoryEventsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchChangeHistoryEventsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchChangeHistoryEventsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'account')
+    ..aOS(2, _omitFieldNames ? '' : 'property')
+    ..pc<$1.ChangeHistoryResourceType>(
+        3, _omitFieldNames ? '' : 'resourceType', $pb.PbFieldType.KE,
+        valueOf: $1.ChangeHistoryResourceType.valueOf,
+        enumValues: $1.ChangeHistoryResourceType.values,
+        defaultEnumValue: $1
+            .ChangeHistoryResourceType.CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED)
+    ..pc<$1.ActionType>(4, _omitFieldNames ? '' : 'action', $pb.PbFieldType.KE,
+        valueOf: $1.ActionType.valueOf,
+        enumValues: $1.ActionType.values,
+        defaultEnumValue: $1.ActionType.ACTION_TYPE_UNSPECIFIED)
+    ..pPS(5, _omitFieldNames ? '' : 'actorEmail')
+    ..aOM<$5.Timestamp>(6, _omitFieldNames ? '' : 'earliestChangeTime',
+        subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(7, _omitFieldNames ? '' : 'latestChangeTime',
+        subBuilder: $5.Timestamp.create)
+    ..a<$core.int>(8, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(9, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2852,8 +2809,10 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
           void Function(SearchChangeHistoryEventsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as SearchChangeHistoryEventsRequest))
-          as SearchChangeHistoryEventsRequest; // ignore: deprecated_member_use
+          as SearchChangeHistoryEventsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchChangeHistoryEventsRequest create() =>
       SearchChangeHistoryEventsRequest._();
@@ -2866,6 +2825,10 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
           create);
   static SearchChangeHistoryEventsRequest? _defaultInstance;
 
+  ///  Required. The account resource for which to return change history
+  ///  resources. Format: accounts/{account}
+  ///
+  ///  Example: `accounts/100`
   @$pb.TagNumber(1)
   $core.String get account => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2878,6 +2841,11 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
 
+  ///  Optional. Resource name for a child property. If set, only return changes
+  ///  made to this property or its child resources.
+  ///  Format: properties/{propertyId}
+  ///
+  ///  Example: `properties/100`
   @$pb.TagNumber(2)
   $core.String get property => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2890,15 +2858,22 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProperty() => clearField(2);
 
+  /// Optional. If set, only return changes if they are for a resource that
+  /// matches at least one of these types.
   @$pb.TagNumber(3)
   $core.List<$1.ChangeHistoryResourceType> get resourceType => $_getList(2);
 
+  /// Optional. If set, only return changes that match one or more of these types
+  /// of actions.
   @$pb.TagNumber(4)
   $core.List<$1.ActionType> get action => $_getList(3);
 
+  /// Optional. If set, only return changes if they are made by a user in this
+  /// list.
   @$pb.TagNumber(5)
   $core.List<$core.String> get actorEmail => $_getList(4);
 
+  /// Optional. If set, only return changes made after this time (inclusive).
   @$pb.TagNumber(6)
   $5.Timestamp get earliestChangeTime => $_getN(5);
   @$pb.TagNumber(6)
@@ -2913,6 +2888,7 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $5.Timestamp ensureEarliestChangeTime() => $_ensure(5);
 
+  /// Optional. If set, only return changes made before this time (inclusive).
   @$pb.TagNumber(7)
   $5.Timestamp get latestChangeTime => $_getN(6);
   @$pb.TagNumber(7)
@@ -2927,6 +2903,15 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $5.Timestamp ensureLatestChangeTime() => $_ensure(6);
 
+  ///  Optional. The maximum number of ChangeHistoryEvent items to return.
+  ///  If unspecified, at most 50 items will be returned. The maximum value is 200
+  ///  (higher values will be coerced to the maximum).
+  ///
+  ///  Note that the service may return a page with fewer items than this value
+  ///  specifies (potentially even zero), and that there still may be additional
+  ///  pages. If you want a particular number of items, you'll need to continue
+  ///  requesting additional pages using `page_token` until you get the needed
+  ///  number.
   @$pb.TagNumber(8)
   $core.int get pageSize => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -2939,6 +2924,11 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearPageSize() => clearField(8);
 
+  /// Optional. A page token, received from a previous
+  /// `SearchChangeHistoryEvents` call. Provide this to retrieve the subsequent
+  /// page. When paginating, all other parameters provided to
+  /// `SearchChangeHistoryEvents` must match the call that provided the page
+  /// token.
   @$pb.TagNumber(9)
   $core.String get pageToken => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -2952,50 +2942,40 @@ class SearchChangeHistoryEventsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(9);
 }
 
+/// Response message for SearchAccounts RPC.
 class SearchChangeHistoryEventsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SearchChangeHistoryEventsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.ChangeHistoryEvent>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'changeHistoryEvents',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.ChangeHistoryEvent.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  SearchChangeHistoryEventsResponse._() : super();
   factory SearchChangeHistoryEventsResponse({
     $core.Iterable<$1.ChangeHistoryEvent>? changeHistoryEvents,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (changeHistoryEvents != null) {
-      _result.changeHistoryEvents.addAll(changeHistoryEvents);
+      $result.changeHistoryEvents.addAll(changeHistoryEvents);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  SearchChangeHistoryEventsResponse._() : super();
   factory SearchChangeHistoryEventsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SearchChangeHistoryEventsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SearchChangeHistoryEventsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.ChangeHistoryEvent>(
+        1, _omitFieldNames ? '' : 'changeHistoryEvents', $pb.PbFieldType.PM,
+        subBuilder: $1.ChangeHistoryEvent.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3008,8 +2988,10 @@ class SearchChangeHistoryEventsResponse extends $pb.GeneratedMessage {
           void Function(SearchChangeHistoryEventsResponse) updates) =>
       super.copyWith((message) =>
               updates(message as SearchChangeHistoryEventsResponse))
-          as SearchChangeHistoryEventsResponse; // ignore: deprecated_member_use
+          as SearchChangeHistoryEventsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SearchChangeHistoryEventsResponse create() =>
       SearchChangeHistoryEventsResponse._();
@@ -3022,9 +3004,12 @@ class SearchChangeHistoryEventsResponse extends $pb.GeneratedMessage {
           create);
   static SearchChangeHistoryEventsResponse? _defaultInstance;
 
+  /// Results that were accessible to the caller.
   @$pb.TagNumber(1)
   $core.List<$1.ChangeHistoryEvent> get changeHistoryEvents => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3038,33 +3023,18 @@ class SearchChangeHistoryEventsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for GetMeasurementProtocolSecret RPC.
 class GetMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetMeasurementProtocolSecretRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetMeasurementProtocolSecretRequest._() : super();
   factory GetMeasurementProtocolSecretRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetMeasurementProtocolSecretRequest._() : super();
   factory GetMeasurementProtocolSecretRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3072,6 +3042,15 @@ class GetMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   factory GetMeasurementProtocolSecretRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetMeasurementProtocolSecretRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3084,8 +3063,10 @@ class GetMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           void Function(GetMeasurementProtocolSecretRequest) updates) =>
       super.copyWith((message) =>
               updates(message as GetMeasurementProtocolSecretRequest))
-          as GetMeasurementProtocolSecretRequest; // ignore: deprecated_member_use
+          as GetMeasurementProtocolSecretRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetMeasurementProtocolSecretRequest create() =>
       GetMeasurementProtocolSecretRequest._();
@@ -3098,6 +3079,9 @@ class GetMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           GetMeasurementProtocolSecretRequest>(create);
   static GetMeasurementProtocolSecretRequest? _defaultInstance;
 
+  /// Required. The name of the measurement protocol secret to lookup.
+  /// Format:
+  /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3111,43 +3095,22 @@ class GetMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for CreateMeasurementProtocolSecret RPC
 class CreateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateMeasurementProtocolSecretRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.MeasurementProtocolSecret>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'measurementProtocolSecret',
-        subBuilder: $1.MeasurementProtocolSecret.create)
-    ..hasRequiredFields = false;
-
-  CreateMeasurementProtocolSecretRequest._() : super();
   factory CreateMeasurementProtocolSecretRequest({
     $core.String? parent,
     $1.MeasurementProtocolSecret? measurementProtocolSecret,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (measurementProtocolSecret != null) {
-      _result.measurementProtocolSecret = measurementProtocolSecret;
+      $result.measurementProtocolSecret = measurementProtocolSecret;
     }
-    return _result;
+    return $result;
   }
+  CreateMeasurementProtocolSecretRequest._() : super();
   factory CreateMeasurementProtocolSecretRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3155,6 +3118,18 @@ class CreateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   factory CreateMeasurementProtocolSecretRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateMeasurementProtocolSecretRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.MeasurementProtocolSecret>(
+        2, _omitFieldNames ? '' : 'measurementProtocolSecret',
+        subBuilder: $1.MeasurementProtocolSecret.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3167,8 +3142,10 @@ class CreateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           void Function(CreateMeasurementProtocolSecretRequest) updates) =>
       super.copyWith((message) =>
               updates(message as CreateMeasurementProtocolSecretRequest))
-          as CreateMeasurementProtocolSecretRequest; // ignore: deprecated_member_use
+          as CreateMeasurementProtocolSecretRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateMeasurementProtocolSecretRequest create() =>
       CreateMeasurementProtocolSecretRequest._();
@@ -3181,6 +3158,8 @@ class CreateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           CreateMeasurementProtocolSecretRequest>(create);
   static CreateMeasurementProtocolSecretRequest? _defaultInstance;
 
+  /// Required. The parent resource where this secret will be created.
+  /// Format: properties/{property}/dataStreams/{dataStream}
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3193,6 +3172,7 @@ class CreateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The measurement protocol secret to create.
   @$pb.TagNumber(2)
   $1.MeasurementProtocolSecret get measurementProtocolSecret => $_getN(1);
   @$pb.TagNumber(2)
@@ -3208,33 +3188,18 @@ class CreateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   $1.MeasurementProtocolSecret ensureMeasurementProtocolSecret() => $_ensure(1);
 }
 
+/// Request message for DeleteMeasurementProtocolSecret RPC
 class DeleteMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteMeasurementProtocolSecretRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteMeasurementProtocolSecretRequest._() : super();
   factory DeleteMeasurementProtocolSecretRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteMeasurementProtocolSecretRequest._() : super();
   factory DeleteMeasurementProtocolSecretRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3242,6 +3207,15 @@ class DeleteMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   factory DeleteMeasurementProtocolSecretRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteMeasurementProtocolSecretRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3254,8 +3228,10 @@ class DeleteMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           void Function(DeleteMeasurementProtocolSecretRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeleteMeasurementProtocolSecretRequest))
-          as DeleteMeasurementProtocolSecretRequest; // ignore: deprecated_member_use
+          as DeleteMeasurementProtocolSecretRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteMeasurementProtocolSecretRequest create() =>
       DeleteMeasurementProtocolSecretRequest._();
@@ -3268,6 +3244,9 @@ class DeleteMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           DeleteMeasurementProtocolSecretRequest>(create);
   static DeleteMeasurementProtocolSecretRequest? _defaultInstance;
 
+  /// Required. The name of the MeasurementProtocolSecret to delete.
+  /// Format:
+  /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3281,44 +3260,22 @@ class DeleteMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for UpdateMeasurementProtocolSecret RPC
 class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateMeasurementProtocolSecretRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.MeasurementProtocolSecret>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'measurementProtocolSecret',
-        subBuilder: $1.MeasurementProtocolSecret.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateMeasurementProtocolSecretRequest._() : super();
   factory UpdateMeasurementProtocolSecretRequest({
     $1.MeasurementProtocolSecret? measurementProtocolSecret,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (measurementProtocolSecret != null) {
-      _result.measurementProtocolSecret = measurementProtocolSecret;
+      $result.measurementProtocolSecret = measurementProtocolSecret;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateMeasurementProtocolSecretRequest._() : super();
   factory UpdateMeasurementProtocolSecretRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3326,6 +3283,19 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   factory UpdateMeasurementProtocolSecretRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateMeasurementProtocolSecretRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.MeasurementProtocolSecret>(
+        1, _omitFieldNames ? '' : 'measurementProtocolSecret',
+        subBuilder: $1.MeasurementProtocolSecret.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3338,8 +3308,10 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           void Function(UpdateMeasurementProtocolSecretRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateMeasurementProtocolSecretRequest))
-          as UpdateMeasurementProtocolSecretRequest; // ignore: deprecated_member_use
+          as UpdateMeasurementProtocolSecretRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateMeasurementProtocolSecretRequest create() =>
       UpdateMeasurementProtocolSecretRequest._();
@@ -3352,6 +3324,7 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
           UpdateMeasurementProtocolSecretRequest>(create);
   static UpdateMeasurementProtocolSecretRequest? _defaultInstance;
 
+  /// Required. The measurement protocol secret to update.
   @$pb.TagNumber(1)
   $1.MeasurementProtocolSecret get measurementProtocolSecret => $_getN(0);
   @$pb.TagNumber(1)
@@ -3366,6 +3339,8 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.MeasurementProtocolSecret ensureMeasurementProtocolSecret() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Omitted fields will not be
+  /// updated.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -3381,52 +3356,26 @@ class UpdateMeasurementProtocolSecretRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for ListMeasurementProtocolSecret RPC
 class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListMeasurementProtocolSecretsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListMeasurementProtocolSecretsRequest._() : super();
   factory ListMeasurementProtocolSecretsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListMeasurementProtocolSecretsRequest._() : super();
   factory ListMeasurementProtocolSecretsRequest.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3434,6 +3383,17 @@ class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
   factory ListMeasurementProtocolSecretsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListMeasurementProtocolSecretsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3446,8 +3406,10 @@ class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
           void Function(ListMeasurementProtocolSecretsRequest) updates) =>
       super.copyWith((message) =>
               updates(message as ListMeasurementProtocolSecretsRequest))
-          as ListMeasurementProtocolSecretsRequest; // ignore: deprecated_member_use
+          as ListMeasurementProtocolSecretsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListMeasurementProtocolSecretsRequest create() =>
       ListMeasurementProtocolSecretsRequest._();
@@ -3460,6 +3422,9 @@ class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
           ListMeasurementProtocolSecretsRequest>(create);
   static ListMeasurementProtocolSecretsRequest? _defaultInstance;
 
+  /// Required. The resource name of the parent stream.
+  /// Format:
+  /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3472,6 +3437,9 @@ class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 10 resources will be returned.
+  /// The maximum value is 10. Higher values will be coerced to the maximum.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -3484,6 +3452,10 @@ class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// A page token, received from a previous `ListMeasurementProtocolSecrets`
+  /// call. Provide this to retrieve the subsequent page. When paginating, all
+  /// other parameters provided to `ListMeasurementProtocolSecrets` must match
+  /// the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3497,44 +3469,22 @@ class ListMeasurementProtocolSecretsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListMeasurementProtocolSecret RPC
 class ListMeasurementProtocolSecretsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListMeasurementProtocolSecretsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.MeasurementProtocolSecret>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'measurementProtocolSecrets',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.MeasurementProtocolSecret.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListMeasurementProtocolSecretsResponse._() : super();
   factory ListMeasurementProtocolSecretsResponse({
     $core.Iterable<$1.MeasurementProtocolSecret>? measurementProtocolSecrets,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (measurementProtocolSecrets != null) {
-      _result.measurementProtocolSecrets.addAll(measurementProtocolSecrets);
+      $result.measurementProtocolSecrets.addAll(measurementProtocolSecrets);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListMeasurementProtocolSecretsResponse._() : super();
   factory ListMeasurementProtocolSecretsResponse.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3542,6 +3492,18 @@ class ListMeasurementProtocolSecretsResponse extends $pb.GeneratedMessage {
   factory ListMeasurementProtocolSecretsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListMeasurementProtocolSecretsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.MeasurementProtocolSecret>(1,
+        _omitFieldNames ? '' : 'measurementProtocolSecrets', $pb.PbFieldType.PM,
+        subBuilder: $1.MeasurementProtocolSecret.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3554,8 +3516,10 @@ class ListMeasurementProtocolSecretsResponse extends $pb.GeneratedMessage {
           void Function(ListMeasurementProtocolSecretsResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListMeasurementProtocolSecretsResponse))
-          as ListMeasurementProtocolSecretsResponse; // ignore: deprecated_member_use
+          as ListMeasurementProtocolSecretsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListMeasurementProtocolSecretsResponse create() =>
       ListMeasurementProtocolSecretsResponse._();
@@ -3568,10 +3532,13 @@ class ListMeasurementProtocolSecretsResponse extends $pb.GeneratedMessage {
           ListMeasurementProtocolSecretsResponse>(create);
   static ListMeasurementProtocolSecretsResponse? _defaultInstance;
 
+  /// A list of secrets for the parent stream specified in the request.
   @$pb.TagNumber(1)
   $core.List<$1.MeasurementProtocolSecret> get measurementProtocolSecrets =>
       $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3585,49 +3552,39 @@ class ListMeasurementProtocolSecretsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for CreateConversionEvent RPC
 class CreateConversionEventRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateConversionEventRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.ConversionEvent>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'conversionEvent',
-        subBuilder: $1.ConversionEvent.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..hasRequiredFields = false;
-
-  CreateConversionEventRequest._() : super();
   factory CreateConversionEventRequest({
     $1.ConversionEvent? conversionEvent,
     $core.String? parent,
   }) {
-    final _result = create();
+    final $result = create();
     if (conversionEvent != null) {
-      _result.conversionEvent = conversionEvent;
+      $result.conversionEvent = conversionEvent;
     }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    return _result;
+    return $result;
   }
+  CreateConversionEventRequest._() : super();
   factory CreateConversionEventRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateConversionEventRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateConversionEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.ConversionEvent>(1, _omitFieldNames ? '' : 'conversionEvent',
+        subBuilder: $1.ConversionEvent.create)
+    ..aOS(2, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3640,8 +3597,10 @@ class CreateConversionEventRequest extends $pb.GeneratedMessage {
           void Function(CreateConversionEventRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateConversionEventRequest))
-          as CreateConversionEventRequest; // ignore: deprecated_member_use
+          as CreateConversionEventRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateConversionEventRequest create() =>
       CreateConversionEventRequest._();
@@ -3653,6 +3612,7 @@ class CreateConversionEventRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateConversionEventRequest>(create);
   static CreateConversionEventRequest? _defaultInstance;
 
+  /// Required. The conversion event to create.
   @$pb.TagNumber(1)
   $1.ConversionEvent get conversionEvent => $_getN(0);
   @$pb.TagNumber(1)
@@ -3667,6 +3627,8 @@ class CreateConversionEventRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.ConversionEvent ensureConversionEvent() => $_ensure(0);
 
+  /// Required. The resource name of the parent property where this conversion
+  /// event will be created. Format: properties/123
   @$pb.TagNumber(2)
   $core.String get parent => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3680,39 +3642,129 @@ class CreateConversionEventRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(2);
 }
 
-class GetConversionEventRequest extends $pb.GeneratedMessage {
+/// Request message for UpdateConversionEvent RPC
+class UpdateConversionEventRequest extends $pb.GeneratedMessage {
+  factory UpdateConversionEventRequest({
+    $1.ConversionEvent? conversionEvent,
+    $4.FieldMask? updateMask,
+  }) {
+    final $result = create();
+    if (conversionEvent != null) {
+      $result.conversionEvent = conversionEvent;
+    }
+    if (updateMask != null) {
+      $result.updateMask = updateMask;
+    }
+    return $result;
+  }
+  UpdateConversionEventRequest._() : super();
+  factory UpdateConversionEventRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateConversionEventRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetConversionEventRequest',
+      _omitMessageNames ? '' : 'UpdateConversionEventRequest',
       package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
+    ..aOM<$1.ConversionEvent>(1, _omitFieldNames ? '' : 'conversionEvent',
+        subBuilder: $1.ConversionEvent.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  GetConversionEventRequest._() : super();
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateConversionEventRequest clone() =>
+      UpdateConversionEventRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateConversionEventRequest copyWith(
+          void Function(UpdateConversionEventRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateConversionEventRequest))
+          as UpdateConversionEventRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateConversionEventRequest create() =>
+      UpdateConversionEventRequest._();
+  UpdateConversionEventRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateConversionEventRequest> createRepeated() =>
+      $pb.PbList<UpdateConversionEventRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateConversionEventRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateConversionEventRequest>(create);
+  static UpdateConversionEventRequest? _defaultInstance;
+
+  /// Required. The conversion event to update.
+  /// The `name` field is used to identify the settings to be updated.
+  @$pb.TagNumber(1)
+  $1.ConversionEvent get conversionEvent => $_getN(0);
+  @$pb.TagNumber(1)
+  set conversionEvent($1.ConversionEvent v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasConversionEvent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearConversionEvent() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.ConversionEvent ensureConversionEvent() => $_ensure(0);
+
+  /// Required. The list of fields to be updated. Field names must be in snake
+  /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+  /// replace the entire entity, use one path with the string "*" to match all
+  /// fields.
+  @$pb.TagNumber(2)
+  $4.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($4.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+/// Request message for GetConversionEvent RPC
+class GetConversionEventRequest extends $pb.GeneratedMessage {
   factory GetConversionEventRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetConversionEventRequest._() : super();
   factory GetConversionEventRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetConversionEventRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetConversionEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3724,8 +3776,10 @@ class GetConversionEventRequest extends $pb.GeneratedMessage {
   GetConversionEventRequest copyWith(
           void Function(GetConversionEventRequest) updates) =>
       super.copyWith((message) => updates(message as GetConversionEventRequest))
-          as GetConversionEventRequest; // ignore: deprecated_member_use
+          as GetConversionEventRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetConversionEventRequest create() => GetConversionEventRequest._();
   GetConversionEventRequest createEmptyInstance() => create();
@@ -3736,6 +3790,9 @@ class GetConversionEventRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetConversionEventRequest>(create);
   static GetConversionEventRequest? _defaultInstance;
 
+  /// Required. The resource name of the conversion event to retrieve.
+  /// Format: properties/{property}/conversionEvents/{conversion_event}
+  /// Example: "properties/123/conversionEvents/456"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3749,39 +3806,33 @@ class GetConversionEventRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for DeleteConversionEvent RPC
 class DeleteConversionEventRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteConversionEventRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteConversionEventRequest._() : super();
   factory DeleteConversionEventRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteConversionEventRequest._() : super();
   factory DeleteConversionEventRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteConversionEventRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteConversionEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3794,8 +3845,10 @@ class DeleteConversionEventRequest extends $pb.GeneratedMessage {
           void Function(DeleteConversionEventRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteConversionEventRequest))
-          as DeleteConversionEventRequest; // ignore: deprecated_member_use
+          as DeleteConversionEventRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteConversionEventRequest create() =>
       DeleteConversionEventRequest._();
@@ -3807,6 +3860,9 @@ class DeleteConversionEventRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteConversionEventRequest>(create);
   static DeleteConversionEventRequest? _defaultInstance;
 
+  /// Required. The resource name of the conversion event to delete.
+  /// Format: properties/{property}/conversionEvents/{conversion_event}
+  /// Example: "properties/123/conversionEvents/456"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3820,58 +3876,43 @@ class DeleteConversionEventRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for ListConversionEvents RPC
 class ListConversionEventsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListConversionEventsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListConversionEventsRequest._() : super();
   factory ListConversionEventsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListConversionEventsRequest._() : super();
   factory ListConversionEventsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListConversionEventsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListConversionEventsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3884,8 +3925,10 @@ class ListConversionEventsRequest extends $pb.GeneratedMessage {
           void Function(ListConversionEventsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListConversionEventsRequest))
-          as ListConversionEventsRequest; // ignore: deprecated_member_use
+          as ListConversionEventsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListConversionEventsRequest create() =>
       ListConversionEventsRequest._();
@@ -3897,6 +3940,8 @@ class ListConversionEventsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListConversionEventsRequest>(create);
   static ListConversionEventsRequest? _defaultInstance;
 
+  /// Required. The resource name of the parent property.
+  /// Example: 'properties/123'
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3909,6 +3954,9 @@ class ListConversionEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200; (higher values will be coerced to the maximum)
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -3921,6 +3969,10 @@ class ListConversionEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// A page token, received from a previous `ListConversionEvents` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListConversionEvents`
+  /// must match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3934,50 +3986,40 @@ class ListConversionEventsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListConversionEvents RPC.
 class ListConversionEventsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListConversionEventsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.ConversionEvent>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'conversionEvents',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.ConversionEvent.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListConversionEventsResponse._() : super();
   factory ListConversionEventsResponse({
     $core.Iterable<$1.ConversionEvent>? conversionEvents,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (conversionEvents != null) {
-      _result.conversionEvents.addAll(conversionEvents);
+      $result.conversionEvents.addAll(conversionEvents);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListConversionEventsResponse._() : super();
   factory ListConversionEventsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListConversionEventsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListConversionEventsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.ConversionEvent>(
+        1, _omitFieldNames ? '' : 'conversionEvents', $pb.PbFieldType.PM,
+        subBuilder: $1.ConversionEvent.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3990,8 +4032,10 @@ class ListConversionEventsResponse extends $pb.GeneratedMessage {
           void Function(ListConversionEventsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListConversionEventsResponse))
-          as ListConversionEventsResponse; // ignore: deprecated_member_use
+          as ListConversionEventsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListConversionEventsResponse create() =>
       ListConversionEventsResponse._();
@@ -4003,9 +4047,12 @@ class ListConversionEventsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListConversionEventsResponse>(create);
   static ListConversionEventsResponse? _defaultInstance;
 
+  /// The requested conversion events
   @$pb.TagNumber(1)
   $core.List<$1.ConversionEvent> get conversionEvents => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4019,74 +4066,385 @@ class ListConversionEventsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
-class CreateCustomDimensionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateCustomDimensionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.CustomDimension>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customDimension',
-        subBuilder: $1.CustomDimension.create)
-    ..hasRequiredFields = false;
-
-  CreateCustomDimensionRequest._() : super();
-  factory CreateCustomDimensionRequest({
+/// Request message for CreateKeyEvent RPC
+class CreateKeyEventRequest extends $pb.GeneratedMessage {
+  factory CreateKeyEventRequest({
+    $1.KeyEvent? keyEvent,
     $core.String? parent,
-    $1.CustomDimension? customDimension,
   }) {
-    final _result = create();
+    final $result = create();
+    if (keyEvent != null) {
+      $result.keyEvent = keyEvent;
+    }
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
-    if (customDimension != null) {
-      _result.customDimension = customDimension;
-    }
-    return _result;
+    return $result;
   }
-  factory CreateCustomDimensionRequest.fromBuffer($core.List<$core.int> i,
+  CreateKeyEventRequest._() : super();
+  factory CreateKeyEventRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CreateCustomDimensionRequest.fromJson($core.String i,
+  factory CreateKeyEventRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateKeyEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.KeyEvent>(1, _omitFieldNames ? '' : 'keyEvent',
+        subBuilder: $1.KeyEvent.create)
+    ..aOS(2, _omitFieldNames ? '' : 'parent')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CreateCustomDimensionRequest clone() =>
-      CreateCustomDimensionRequest()..mergeFromMessage(this);
+  CreateKeyEventRequest clone() =>
+      CreateKeyEventRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CreateCustomDimensionRequest copyWith(
-          void Function(CreateCustomDimensionRequest) updates) =>
-      super.copyWith(
-              (message) => updates(message as CreateCustomDimensionRequest))
-          as CreateCustomDimensionRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static CreateCustomDimensionRequest create() =>
-      CreateCustomDimensionRequest._();
-  CreateCustomDimensionRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateCustomDimensionRequest> createRepeated() =>
-      $pb.PbList<CreateCustomDimensionRequest>();
-  @$core.pragma('dart2js:noInline')
-  static CreateCustomDimensionRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CreateCustomDimensionRequest>(create);
-  static CreateCustomDimensionRequest? _defaultInstance;
+  CreateKeyEventRequest copyWith(
+          void Function(CreateKeyEventRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateKeyEventRequest))
+          as CreateKeyEventRequest;
 
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateKeyEventRequest create() => CreateKeyEventRequest._();
+  CreateKeyEventRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateKeyEventRequest> createRepeated() =>
+      $pb.PbList<CreateKeyEventRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateKeyEventRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateKeyEventRequest>(create);
+  static CreateKeyEventRequest? _defaultInstance;
+
+  /// Required. The Key Event to create.
+  @$pb.TagNumber(1)
+  $1.KeyEvent get keyEvent => $_getN(0);
+  @$pb.TagNumber(1)
+  set keyEvent($1.KeyEvent v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasKeyEvent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKeyEvent() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.KeyEvent ensureKeyEvent() => $_ensure(0);
+
+  /// Required. The resource name of the parent property where this Key Event
+  /// will be created. Format: properties/123
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set parent($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearParent() => clearField(2);
+}
+
+/// Request message for UpdateKeyEvent RPC
+class UpdateKeyEventRequest extends $pb.GeneratedMessage {
+  factory UpdateKeyEventRequest({
+    $1.KeyEvent? keyEvent,
+    $4.FieldMask? updateMask,
+  }) {
+    final $result = create();
+    if (keyEvent != null) {
+      $result.keyEvent = keyEvent;
+    }
+    if (updateMask != null) {
+      $result.updateMask = updateMask;
+    }
+    return $result;
+  }
+  UpdateKeyEventRequest._() : super();
+  factory UpdateKeyEventRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateKeyEventRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateKeyEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.KeyEvent>(1, _omitFieldNames ? '' : 'keyEvent',
+        subBuilder: $1.KeyEvent.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateKeyEventRequest clone() =>
+      UpdateKeyEventRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateKeyEventRequest copyWith(
+          void Function(UpdateKeyEventRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateKeyEventRequest))
+          as UpdateKeyEventRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateKeyEventRequest create() => UpdateKeyEventRequest._();
+  UpdateKeyEventRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateKeyEventRequest> createRepeated() =>
+      $pb.PbList<UpdateKeyEventRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateKeyEventRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateKeyEventRequest>(create);
+  static UpdateKeyEventRequest? _defaultInstance;
+
+  /// Required. The Key Event to update.
+  /// The `name` field is used to identify the settings to be updated.
+  @$pb.TagNumber(1)
+  $1.KeyEvent get keyEvent => $_getN(0);
+  @$pb.TagNumber(1)
+  set keyEvent($1.KeyEvent v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasKeyEvent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKeyEvent() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.KeyEvent ensureKeyEvent() => $_ensure(0);
+
+  /// Required. The list of fields to be updated. Field names must be in snake
+  /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+  /// replace the entire entity, use one path with the string "*" to match all
+  /// fields.
+  @$pb.TagNumber(2)
+  $4.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($4.FieldMask v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.FieldMask ensureUpdateMask() => $_ensure(1);
+}
+
+/// Request message for GetKeyEvent RPC
+class GetKeyEventRequest extends $pb.GeneratedMessage {
+  factory GetKeyEventRequest({
+    $core.String? name,
+  }) {
+    final $result = create();
+    if (name != null) {
+      $result.name = name;
+    }
+    return $result;
+  }
+  GetKeyEventRequest._() : super();
+  factory GetKeyEventRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetKeyEventRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetKeyEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetKeyEventRequest clone() => GetKeyEventRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetKeyEventRequest copyWith(void Function(GetKeyEventRequest) updates) =>
+      super.copyWith((message) => updates(message as GetKeyEventRequest))
+          as GetKeyEventRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetKeyEventRequest create() => GetKeyEventRequest._();
+  GetKeyEventRequest createEmptyInstance() => create();
+  static $pb.PbList<GetKeyEventRequest> createRepeated() =>
+      $pb.PbList<GetKeyEventRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetKeyEventRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetKeyEventRequest>(create);
+  static GetKeyEventRequest? _defaultInstance;
+
+  /// Required. The resource name of the Key Event to retrieve.
+  /// Format: properties/{property}/keyEvents/{key_event}
+  /// Example: "properties/123/keyEvents/456"
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+/// Request message for DeleteKeyEvent RPC
+class DeleteKeyEventRequest extends $pb.GeneratedMessage {
+  factory DeleteKeyEventRequest({
+    $core.String? name,
+  }) {
+    final $result = create();
+    if (name != null) {
+      $result.name = name;
+    }
+    return $result;
+  }
+  DeleteKeyEventRequest._() : super();
+  factory DeleteKeyEventRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteKeyEventRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteKeyEventRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteKeyEventRequest clone() =>
+      DeleteKeyEventRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteKeyEventRequest copyWith(
+          void Function(DeleteKeyEventRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteKeyEventRequest))
+          as DeleteKeyEventRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteKeyEventRequest create() => DeleteKeyEventRequest._();
+  DeleteKeyEventRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteKeyEventRequest> createRepeated() =>
+      $pb.PbList<DeleteKeyEventRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteKeyEventRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteKeyEventRequest>(create);
+  static DeleteKeyEventRequest? _defaultInstance;
+
+  /// Required. The resource name of the Key Event to delete.
+  /// Format: properties/{property}/keyEvents/{key_event}
+  /// Example: "properties/123/keyEvents/456"
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+/// Request message for ListKeyEvents RPC
+class ListKeyEventsRequest extends $pb.GeneratedMessage {
+  factory ListKeyEventsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final $result = create();
+    if (parent != null) {
+      $result.parent = parent;
+    }
+    if (pageSize != null) {
+      $result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      $result.pageToken = pageToken;
+    }
+    return $result;
+  }
+  ListKeyEventsRequest._() : super();
+  factory ListKeyEventsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListKeyEventsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListKeyEventsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListKeyEventsRequest clone() =>
+      ListKeyEventsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListKeyEventsRequest copyWith(void Function(ListKeyEventsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListKeyEventsRequest))
+          as ListKeyEventsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListKeyEventsRequest create() => ListKeyEventsRequest._();
+  ListKeyEventsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListKeyEventsRequest> createRepeated() =>
+      $pb.PbList<ListKeyEventsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListKeyEventsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListKeyEventsRequest>(create);
+  static ListKeyEventsRequest? _defaultInstance;
+
+  /// Required. The resource name of the parent property.
+  /// Example: 'properties/123'
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4099,6 +4457,189 @@ class CreateCustomDimensionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200; (higher values will be coerced to the maximum)
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => clearField(2);
+
+  /// A page token, received from a previous `ListKeyEvents` call.
+  /// Provide this to retrieve the subsequent page.
+  /// When paginating, all other parameters provided to `ListKeyEvents`
+  /// must match the call that provided the page token.
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => clearField(3);
+}
+
+/// Response message for ListKeyEvents RPC.
+class ListKeyEventsResponse extends $pb.GeneratedMessage {
+  factory ListKeyEventsResponse({
+    $core.Iterable<$1.KeyEvent>? keyEvents,
+    $core.String? nextPageToken,
+  }) {
+    final $result = create();
+    if (keyEvents != null) {
+      $result.keyEvents.addAll(keyEvents);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
+    return $result;
+  }
+  ListKeyEventsResponse._() : super();
+  factory ListKeyEventsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListKeyEventsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListKeyEventsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.KeyEvent>(1, _omitFieldNames ? '' : 'keyEvents', $pb.PbFieldType.PM,
+        subBuilder: $1.KeyEvent.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListKeyEventsResponse clone() =>
+      ListKeyEventsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListKeyEventsResponse copyWith(
+          void Function(ListKeyEventsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListKeyEventsResponse))
+          as ListKeyEventsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListKeyEventsResponse create() => ListKeyEventsResponse._();
+  ListKeyEventsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListKeyEventsResponse> createRepeated() =>
+      $pb.PbList<ListKeyEventsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListKeyEventsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListKeyEventsResponse>(create);
+  static ListKeyEventsResponse? _defaultInstance;
+
+  /// The requested Key Events
+  @$pb.TagNumber(1)
+  $core.List<$1.KeyEvent> get keyEvents => $_getList(0);
+
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => clearField(2);
+}
+
+/// Request message for CreateCustomDimension RPC.
+class CreateCustomDimensionRequest extends $pb.GeneratedMessage {
+  factory CreateCustomDimensionRequest({
+    $core.String? parent,
+    $1.CustomDimension? customDimension,
+  }) {
+    final $result = create();
+    if (parent != null) {
+      $result.parent = parent;
+    }
+    if (customDimension != null) {
+      $result.customDimension = customDimension;
+    }
+    return $result;
+  }
+  CreateCustomDimensionRequest._() : super();
+  factory CreateCustomDimensionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateCustomDimensionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateCustomDimensionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.CustomDimension>(2, _omitFieldNames ? '' : 'customDimension',
+        subBuilder: $1.CustomDimension.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateCustomDimensionRequest clone() =>
+      CreateCustomDimensionRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateCustomDimensionRequest copyWith(
+          void Function(CreateCustomDimensionRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreateCustomDimensionRequest))
+          as CreateCustomDimensionRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateCustomDimensionRequest create() =>
+      CreateCustomDimensionRequest._();
+  CreateCustomDimensionRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateCustomDimensionRequest> createRepeated() =>
+      $pb.PbList<CreateCustomDimensionRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateCustomDimensionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCustomDimensionRequest>(create);
+  static CreateCustomDimensionRequest? _defaultInstance;
+
+  /// Required. Example format: properties/1234
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => clearField(1);
+
+  /// Required. The CustomDimension to create.
   @$pb.TagNumber(2)
   $1.CustomDimension get customDimension => $_getN(1);
   @$pb.TagNumber(2)
@@ -4114,50 +4655,40 @@ class CreateCustomDimensionRequest extends $pb.GeneratedMessage {
   $1.CustomDimension ensureCustomDimension() => $_ensure(1);
 }
 
+/// Request message for UpdateCustomDimension RPC.
 class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateCustomDimensionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.CustomDimension>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customDimension',
-        subBuilder: $1.CustomDimension.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateCustomDimensionRequest._() : super();
   factory UpdateCustomDimensionRequest({
     $1.CustomDimension? customDimension,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (customDimension != null) {
-      _result.customDimension = customDimension;
+      $result.customDimension = customDimension;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateCustomDimensionRequest._() : super();
   factory UpdateCustomDimensionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateCustomDimensionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateCustomDimensionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.CustomDimension>(1, _omitFieldNames ? '' : 'customDimension',
+        subBuilder: $1.CustomDimension.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4170,8 +4701,10 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
           void Function(UpdateCustomDimensionRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateCustomDimensionRequest))
-          as UpdateCustomDimensionRequest; // ignore: deprecated_member_use
+          as UpdateCustomDimensionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateCustomDimensionRequest create() =>
       UpdateCustomDimensionRequest._();
@@ -4183,6 +4716,7 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateCustomDimensionRequest>(create);
   static UpdateCustomDimensionRequest? _defaultInstance;
 
+  /// The CustomDimension to update
   @$pb.TagNumber(1)
   $1.CustomDimension get customDimension => $_getN(0);
   @$pb.TagNumber(1)
@@ -4197,6 +4731,9 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.CustomDimension ensureCustomDimension() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Omitted fields will not be
+  /// updated. To replace the entire entity, use one path with the string "*" to
+  /// match all fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -4212,58 +4749,43 @@ class UpdateCustomDimensionRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for ListCustomDimensions RPC.
 class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListCustomDimensionsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListCustomDimensionsRequest._() : super();
   factory ListCustomDimensionsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListCustomDimensionsRequest._() : super();
   factory ListCustomDimensionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListCustomDimensionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListCustomDimensionsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4276,8 +4798,10 @@ class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
           void Function(ListCustomDimensionsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListCustomDimensionsRequest))
-          as ListCustomDimensionsRequest; // ignore: deprecated_member_use
+          as ListCustomDimensionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListCustomDimensionsRequest create() =>
       ListCustomDimensionsRequest._();
@@ -4289,6 +4813,7 @@ class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListCustomDimensionsRequest>(create);
   static ListCustomDimensionsRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4301,6 +4826,9 @@ class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200 (higher values will be coerced to the maximum).
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -4313,6 +4841,11 @@ class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  ///  A page token, received from a previous `ListCustomDimensions` call.
+  ///  Provide this to retrieve the subsequent page.
+  ///
+  ///  When paginating, all other parameters provided to `ListCustomDimensions`
+  ///  must match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4326,50 +4859,40 @@ class ListCustomDimensionsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListCustomDimensions RPC.
 class ListCustomDimensionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListCustomDimensionsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.CustomDimension>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customDimensions',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.CustomDimension.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListCustomDimensionsResponse._() : super();
   factory ListCustomDimensionsResponse({
     $core.Iterable<$1.CustomDimension>? customDimensions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (customDimensions != null) {
-      _result.customDimensions.addAll(customDimensions);
+      $result.customDimensions.addAll(customDimensions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListCustomDimensionsResponse._() : super();
   factory ListCustomDimensionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListCustomDimensionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListCustomDimensionsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.CustomDimension>(
+        1, _omitFieldNames ? '' : 'customDimensions', $pb.PbFieldType.PM,
+        subBuilder: $1.CustomDimension.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4382,8 +4905,10 @@ class ListCustomDimensionsResponse extends $pb.GeneratedMessage {
           void Function(ListCustomDimensionsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListCustomDimensionsResponse))
-          as ListCustomDimensionsResponse; // ignore: deprecated_member_use
+          as ListCustomDimensionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListCustomDimensionsResponse create() =>
       ListCustomDimensionsResponse._();
@@ -4395,9 +4920,12 @@ class ListCustomDimensionsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListCustomDimensionsResponse>(create);
   static ListCustomDimensionsResponse? _defaultInstance;
 
+  /// List of CustomDimensions.
   @$pb.TagNumber(1)
   $core.List<$1.CustomDimension> get customDimensions => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4411,39 +4939,33 @@ class ListCustomDimensionsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for ArchiveCustomDimension RPC.
 class ArchiveCustomDimensionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ArchiveCustomDimensionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  ArchiveCustomDimensionRequest._() : super();
   factory ArchiveCustomDimensionRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  ArchiveCustomDimensionRequest._() : super();
   factory ArchiveCustomDimensionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ArchiveCustomDimensionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ArchiveCustomDimensionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4456,8 +4978,10 @@ class ArchiveCustomDimensionRequest extends $pb.GeneratedMessage {
           void Function(ArchiveCustomDimensionRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ArchiveCustomDimensionRequest))
-          as ArchiveCustomDimensionRequest; // ignore: deprecated_member_use
+          as ArchiveCustomDimensionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ArchiveCustomDimensionRequest create() =>
       ArchiveCustomDimensionRequest._();
@@ -4469,6 +4993,8 @@ class ArchiveCustomDimensionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ArchiveCustomDimensionRequest>(create);
   static ArchiveCustomDimensionRequest? _defaultInstance;
 
+  /// Required. The name of the CustomDimension to archive.
+  /// Example format: properties/1234/customDimensions/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4482,39 +5008,33 @@ class ArchiveCustomDimensionRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for GetCustomDimension RPC.
 class GetCustomDimensionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetCustomDimensionRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetCustomDimensionRequest._() : super();
   factory GetCustomDimensionRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetCustomDimensionRequest._() : super();
   factory GetCustomDimensionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetCustomDimensionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetCustomDimensionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4526,8 +5046,10 @@ class GetCustomDimensionRequest extends $pb.GeneratedMessage {
   GetCustomDimensionRequest copyWith(
           void Function(GetCustomDimensionRequest) updates) =>
       super.copyWith((message) => updates(message as GetCustomDimensionRequest))
-          as GetCustomDimensionRequest; // ignore: deprecated_member_use
+          as GetCustomDimensionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCustomDimensionRequest create() => GetCustomDimensionRequest._();
   GetCustomDimensionRequest createEmptyInstance() => create();
@@ -4538,6 +5060,8 @@ class GetCustomDimensionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetCustomDimensionRequest>(create);
   static GetCustomDimensionRequest? _defaultInstance;
 
+  /// Required. The name of the CustomDimension to get.
+  /// Example format: properties/1234/customDimensions/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4551,49 +5075,39 @@ class GetCustomDimensionRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for CreateCustomMetric RPC.
 class CreateCustomMetricRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateCustomMetricRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.CustomMetric>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customMetric',
-        subBuilder: $1.CustomMetric.create)
-    ..hasRequiredFields = false;
-
-  CreateCustomMetricRequest._() : super();
   factory CreateCustomMetricRequest({
     $core.String? parent,
     $1.CustomMetric? customMetric,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (customMetric != null) {
-      _result.customMetric = customMetric;
+      $result.customMetric = customMetric;
     }
-    return _result;
+    return $result;
   }
+  CreateCustomMetricRequest._() : super();
   factory CreateCustomMetricRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateCustomMetricRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateCustomMetricRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.CustomMetric>(2, _omitFieldNames ? '' : 'customMetric',
+        subBuilder: $1.CustomMetric.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4605,8 +5119,10 @@ class CreateCustomMetricRequest extends $pb.GeneratedMessage {
   CreateCustomMetricRequest copyWith(
           void Function(CreateCustomMetricRequest) updates) =>
       super.copyWith((message) => updates(message as CreateCustomMetricRequest))
-          as CreateCustomMetricRequest; // ignore: deprecated_member_use
+          as CreateCustomMetricRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateCustomMetricRequest create() => CreateCustomMetricRequest._();
   CreateCustomMetricRequest createEmptyInstance() => create();
@@ -4617,6 +5133,7 @@ class CreateCustomMetricRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateCustomMetricRequest>(create);
   static CreateCustomMetricRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4629,6 +5146,7 @@ class CreateCustomMetricRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The CustomMetric to create.
   @$pb.TagNumber(2)
   $1.CustomMetric get customMetric => $_getN(1);
   @$pb.TagNumber(2)
@@ -4644,50 +5162,40 @@ class CreateCustomMetricRequest extends $pb.GeneratedMessage {
   $1.CustomMetric ensureCustomMetric() => $_ensure(1);
 }
 
+/// Request message for UpdateCustomMetric RPC.
 class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateCustomMetricRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.CustomMetric>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customMetric',
-        subBuilder: $1.CustomMetric.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateCustomMetricRequest._() : super();
   factory UpdateCustomMetricRequest({
     $1.CustomMetric? customMetric,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (customMetric != null) {
-      _result.customMetric = customMetric;
+      $result.customMetric = customMetric;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateCustomMetricRequest._() : super();
   factory UpdateCustomMetricRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateCustomMetricRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateCustomMetricRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.CustomMetric>(1, _omitFieldNames ? '' : 'customMetric',
+        subBuilder: $1.CustomMetric.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4699,8 +5207,10 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
   UpdateCustomMetricRequest copyWith(
           void Function(UpdateCustomMetricRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateCustomMetricRequest))
-          as UpdateCustomMetricRequest; // ignore: deprecated_member_use
+          as UpdateCustomMetricRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateCustomMetricRequest create() => UpdateCustomMetricRequest._();
   UpdateCustomMetricRequest createEmptyInstance() => create();
@@ -4711,6 +5221,7 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateCustomMetricRequest>(create);
   static UpdateCustomMetricRequest? _defaultInstance;
 
+  /// The CustomMetric to update
   @$pb.TagNumber(1)
   $1.CustomMetric get customMetric => $_getN(0);
   @$pb.TagNumber(1)
@@ -4725,6 +5236,9 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.CustomMetric ensureCustomMetric() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Omitted fields will not be
+  /// updated. To replace the entire entity, use one path with the string "*" to
+  /// match all fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -4740,58 +5254,43 @@ class UpdateCustomMetricRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for ListCustomMetrics RPC.
 class ListCustomMetricsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListCustomMetricsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListCustomMetricsRequest._() : super();
   factory ListCustomMetricsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListCustomMetricsRequest._() : super();
   factory ListCustomMetricsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListCustomMetricsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListCustomMetricsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4803,8 +5302,10 @@ class ListCustomMetricsRequest extends $pb.GeneratedMessage {
   ListCustomMetricsRequest copyWith(
           void Function(ListCustomMetricsRequest) updates) =>
       super.copyWith((message) => updates(message as ListCustomMetricsRequest))
-          as ListCustomMetricsRequest; // ignore: deprecated_member_use
+          as ListCustomMetricsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListCustomMetricsRequest create() => ListCustomMetricsRequest._();
   ListCustomMetricsRequest createEmptyInstance() => create();
@@ -4815,6 +5316,7 @@ class ListCustomMetricsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListCustomMetricsRequest>(create);
   static ListCustomMetricsRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4827,6 +5329,9 @@ class ListCustomMetricsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200 (higher values will be coerced to the maximum).
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -4839,6 +5344,11 @@ class ListCustomMetricsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  ///  A page token, received from a previous `ListCustomMetrics` call.
+  ///  Provide this to retrieve the subsequent page.
+  ///
+  ///  When paginating, all other parameters provided to `ListCustomMetrics` must
+  ///  match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4852,50 +5362,40 @@ class ListCustomMetricsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListCustomMetrics RPC.
 class ListCustomMetricsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListCustomMetricsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.CustomMetric>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'customMetrics',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.CustomMetric.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListCustomMetricsResponse._() : super();
   factory ListCustomMetricsResponse({
     $core.Iterable<$1.CustomMetric>? customMetrics,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (customMetrics != null) {
-      _result.customMetrics.addAll(customMetrics);
+      $result.customMetrics.addAll(customMetrics);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListCustomMetricsResponse._() : super();
   factory ListCustomMetricsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListCustomMetricsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListCustomMetricsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.CustomMetric>(
+        1, _omitFieldNames ? '' : 'customMetrics', $pb.PbFieldType.PM,
+        subBuilder: $1.CustomMetric.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4907,8 +5407,10 @@ class ListCustomMetricsResponse extends $pb.GeneratedMessage {
   ListCustomMetricsResponse copyWith(
           void Function(ListCustomMetricsResponse) updates) =>
       super.copyWith((message) => updates(message as ListCustomMetricsResponse))
-          as ListCustomMetricsResponse; // ignore: deprecated_member_use
+          as ListCustomMetricsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListCustomMetricsResponse create() => ListCustomMetricsResponse._();
   ListCustomMetricsResponse createEmptyInstance() => create();
@@ -4919,9 +5421,12 @@ class ListCustomMetricsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListCustomMetricsResponse>(create);
   static ListCustomMetricsResponse? _defaultInstance;
 
+  /// List of CustomMetrics.
   @$pb.TagNumber(1)
   $core.List<$1.CustomMetric> get customMetrics => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4935,39 +5440,33 @@ class ListCustomMetricsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for ArchiveCustomMetric RPC.
 class ArchiveCustomMetricRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ArchiveCustomMetricRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  ArchiveCustomMetricRequest._() : super();
   factory ArchiveCustomMetricRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  ArchiveCustomMetricRequest._() : super();
   factory ArchiveCustomMetricRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ArchiveCustomMetricRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ArchiveCustomMetricRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4980,8 +5479,10 @@ class ArchiveCustomMetricRequest extends $pb.GeneratedMessage {
           void Function(ArchiveCustomMetricRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ArchiveCustomMetricRequest))
-          as ArchiveCustomMetricRequest; // ignore: deprecated_member_use
+          as ArchiveCustomMetricRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ArchiveCustomMetricRequest create() => ArchiveCustomMetricRequest._();
   ArchiveCustomMetricRequest createEmptyInstance() => create();
@@ -4992,6 +5493,8 @@ class ArchiveCustomMetricRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ArchiveCustomMetricRequest>(create);
   static ArchiveCustomMetricRequest? _defaultInstance;
 
+  /// Required. The name of the CustomMetric to archive.
+  /// Example format: properties/1234/customMetrics/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5005,39 +5508,33 @@ class ArchiveCustomMetricRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for GetCustomMetric RPC.
 class GetCustomMetricRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetCustomMetricRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetCustomMetricRequest._() : super();
   factory GetCustomMetricRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetCustomMetricRequest._() : super();
   factory GetCustomMetricRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetCustomMetricRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetCustomMetricRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5049,8 +5546,10 @@ class GetCustomMetricRequest extends $pb.GeneratedMessage {
   GetCustomMetricRequest copyWith(
           void Function(GetCustomMetricRequest) updates) =>
       super.copyWith((message) => updates(message as GetCustomMetricRequest))
-          as GetCustomMetricRequest; // ignore: deprecated_member_use
+          as GetCustomMetricRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCustomMetricRequest create() => GetCustomMetricRequest._();
   GetCustomMetricRequest createEmptyInstance() => create();
@@ -5061,6 +5560,8 @@ class GetCustomMetricRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetCustomMetricRequest>(create);
   static GetCustomMetricRequest? _defaultInstance;
 
+  /// Required. The name of the CustomMetric to get.
+  /// Example format: properties/1234/customMetrics/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5074,39 +5575,33 @@ class GetCustomMetricRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for GetDataRetentionSettings RPC.
 class GetDataRetentionSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetDataRetentionSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetDataRetentionSettingsRequest._() : super();
   factory GetDataRetentionSettingsRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetDataRetentionSettingsRequest._() : super();
   factory GetDataRetentionSettingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetDataRetentionSettingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetDataRetentionSettingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5119,8 +5614,10 @@ class GetDataRetentionSettingsRequest extends $pb.GeneratedMessage {
           void Function(GetDataRetentionSettingsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetDataRetentionSettingsRequest))
-          as GetDataRetentionSettingsRequest; // ignore: deprecated_member_use
+          as GetDataRetentionSettingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDataRetentionSettingsRequest create() =>
       GetDataRetentionSettingsRequest._();
@@ -5133,6 +5630,10 @@ class GetDataRetentionSettingsRequest extends $pb.GeneratedMessage {
           create);
   static GetDataRetentionSettingsRequest? _defaultInstance;
 
+  /// Required. The name of the settings to lookup.
+  /// Format:
+  /// properties/{property}/dataRetentionSettings
+  /// Example: "properties/1000/dataRetentionSettings"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5146,50 +5647,41 @@ class GetDataRetentionSettingsRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for UpdateDataRetentionSettings RPC.
 class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateDataRetentionSettingsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.DataRetentionSettings>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataRetentionSettings',
-        subBuilder: $1.DataRetentionSettings.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateDataRetentionSettingsRequest._() : super();
   factory UpdateDataRetentionSettingsRequest({
     $1.DataRetentionSettings? dataRetentionSettings,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (dataRetentionSettings != null) {
-      _result.dataRetentionSettings = dataRetentionSettings;
+      $result.dataRetentionSettings = dataRetentionSettings;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateDataRetentionSettingsRequest._() : super();
   factory UpdateDataRetentionSettingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateDataRetentionSettingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateDataRetentionSettingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.DataRetentionSettings>(
+        1, _omitFieldNames ? '' : 'dataRetentionSettings',
+        subBuilder: $1.DataRetentionSettings.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5202,8 +5694,10 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
           void Function(UpdateDataRetentionSettingsRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateDataRetentionSettingsRequest))
-          as UpdateDataRetentionSettingsRequest; // ignore: deprecated_member_use
+          as UpdateDataRetentionSettingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateDataRetentionSettingsRequest create() =>
       UpdateDataRetentionSettingsRequest._();
@@ -5216,6 +5710,8 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
           create);
   static UpdateDataRetentionSettingsRequest? _defaultInstance;
 
+  /// Required. The settings to update.
+  /// The `name` field is used to identify the settings to be updated.
   @$pb.TagNumber(1)
   $1.DataRetentionSettings get dataRetentionSettings => $_getN(0);
   @$pb.TagNumber(1)
@@ -5230,6 +5726,10 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.DataRetentionSettings ensureDataRetentionSettings() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Field names must be in snake
+  /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+  /// replace the entire entity, use one path with the string "*" to match all
+  /// fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -5245,49 +5745,39 @@ class UpdateDataRetentionSettingsRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for CreateDataStream RPC.
 class CreateDataStreamRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateDataStreamRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$1.DataStream>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataStream',
-        subBuilder: $1.DataStream.create)
-    ..hasRequiredFields = false;
-
-  CreateDataStreamRequest._() : super();
   factory CreateDataStreamRequest({
     $core.String? parent,
     $1.DataStream? dataStream,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (dataStream != null) {
-      _result.dataStream = dataStream;
+      $result.dataStream = dataStream;
     }
-    return _result;
+    return $result;
   }
+  CreateDataStreamRequest._() : super();
   factory CreateDataStreamRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateDataStreamRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateDataStreamRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$1.DataStream>(2, _omitFieldNames ? '' : 'dataStream',
+        subBuilder: $1.DataStream.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5299,8 +5789,10 @@ class CreateDataStreamRequest extends $pb.GeneratedMessage {
   CreateDataStreamRequest copyWith(
           void Function(CreateDataStreamRequest) updates) =>
       super.copyWith((message) => updates(message as CreateDataStreamRequest))
-          as CreateDataStreamRequest; // ignore: deprecated_member_use
+          as CreateDataStreamRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateDataStreamRequest create() => CreateDataStreamRequest._();
   CreateDataStreamRequest createEmptyInstance() => create();
@@ -5311,6 +5803,7 @@ class CreateDataStreamRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateDataStreamRequest>(create);
   static CreateDataStreamRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5323,6 +5816,7 @@ class CreateDataStreamRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Required. The DataStream to create.
   @$pb.TagNumber(2)
   $1.DataStream get dataStream => $_getN(1);
   @$pb.TagNumber(2)
@@ -5338,39 +5832,33 @@ class CreateDataStreamRequest extends $pb.GeneratedMessage {
   $1.DataStream ensureDataStream() => $_ensure(1);
 }
 
+/// Request message for DeleteDataStream RPC.
 class DeleteDataStreamRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteDataStreamRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteDataStreamRequest._() : super();
   factory DeleteDataStreamRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteDataStreamRequest._() : super();
   factory DeleteDataStreamRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteDataStreamRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteDataStreamRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5382,8 +5870,10 @@ class DeleteDataStreamRequest extends $pb.GeneratedMessage {
   DeleteDataStreamRequest copyWith(
           void Function(DeleteDataStreamRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteDataStreamRequest))
-          as DeleteDataStreamRequest; // ignore: deprecated_member_use
+          as DeleteDataStreamRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteDataStreamRequest create() => DeleteDataStreamRequest._();
   DeleteDataStreamRequest createEmptyInstance() => create();
@@ -5394,6 +5884,8 @@ class DeleteDataStreamRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteDataStreamRequest>(create);
   static DeleteDataStreamRequest? _defaultInstance;
 
+  /// Required. The name of the DataStream to delete.
+  /// Example format: properties/1234/dataStreams/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5407,50 +5899,40 @@ class DeleteDataStreamRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for UpdateDataStream RPC.
 class UpdateDataStreamRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateDataStreamRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$1.DataStream>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataStream',
-        subBuilder: $1.DataStream.create)
-    ..aOM<$4.FieldMask>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateDataStreamRequest._() : super();
   factory UpdateDataStreamRequest({
     $1.DataStream? dataStream,
     $4.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (dataStream != null) {
-      _result.dataStream = dataStream;
+      $result.dataStream = dataStream;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateDataStreamRequest._() : super();
   factory UpdateDataStreamRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateDataStreamRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateDataStreamRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$1.DataStream>(1, _omitFieldNames ? '' : 'dataStream',
+        subBuilder: $1.DataStream.create)
+    ..aOM<$4.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $4.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5462,8 +5944,10 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
   UpdateDataStreamRequest copyWith(
           void Function(UpdateDataStreamRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateDataStreamRequest))
-          as UpdateDataStreamRequest; // ignore: deprecated_member_use
+          as UpdateDataStreamRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateDataStreamRequest create() => UpdateDataStreamRequest._();
   UpdateDataStreamRequest createEmptyInstance() => create();
@@ -5474,6 +5958,7 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateDataStreamRequest>(create);
   static UpdateDataStreamRequest? _defaultInstance;
 
+  /// The DataStream to update
   @$pb.TagNumber(1)
   $1.DataStream get dataStream => $_getN(0);
   @$pb.TagNumber(1)
@@ -5488,6 +5973,9 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.DataStream ensureDataStream() => $_ensure(0);
 
+  /// Required. The list of fields to be updated. Omitted fields will not be
+  /// updated. To replace the entire entity, use one path with the string "*" to
+  /// match all fields.
   @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
@@ -5503,58 +5991,43 @@ class UpdateDataStreamRequest extends $pb.GeneratedMessage {
   $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// Request message for ListDataStreams RPC.
 class ListDataStreamsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListDataStreamsRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListDataStreamsRequest._() : super();
   factory ListDataStreamsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListDataStreamsRequest._() : super();
   factory ListDataStreamsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListDataStreamsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListDataStreamsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5566,8 +6039,10 @@ class ListDataStreamsRequest extends $pb.GeneratedMessage {
   ListDataStreamsRequest copyWith(
           void Function(ListDataStreamsRequest) updates) =>
       super.copyWith((message) => updates(message as ListDataStreamsRequest))
-          as ListDataStreamsRequest; // ignore: deprecated_member_use
+          as ListDataStreamsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListDataStreamsRequest create() => ListDataStreamsRequest._();
   ListDataStreamsRequest createEmptyInstance() => create();
@@ -5578,6 +6053,7 @@ class ListDataStreamsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListDataStreamsRequest>(create);
   static ListDataStreamsRequest? _defaultInstance;
 
+  /// Required. Example format: properties/1234
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5590,6 +6066,9 @@ class ListDataStreamsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// The maximum number of resources to return.
+  /// If unspecified, at most 50 resources will be returned.
+  /// The maximum value is 200 (higher values will be coerced to the maximum).
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -5602,6 +6081,11 @@ class ListDataStreamsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  ///  A page token, received from a previous `ListDataStreams` call.
+  ///  Provide this to retrieve the subsequent page.
+  ///
+  ///  When paginating, all other parameters provided to `ListDataStreams` must
+  ///  match the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5615,50 +6099,40 @@ class ListDataStreamsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for ListDataStreams RPC.
 class ListDataStreamsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListDataStreamsResponse',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$1.DataStream>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'dataStreams',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.DataStream.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListDataStreamsResponse._() : super();
   factory ListDataStreamsResponse({
     $core.Iterable<$1.DataStream>? dataStreams,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (dataStreams != null) {
-      _result.dataStreams.addAll(dataStreams);
+      $result.dataStreams.addAll(dataStreams);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListDataStreamsResponse._() : super();
   factory ListDataStreamsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListDataStreamsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListDataStreamsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$1.DataStream>(
+        1, _omitFieldNames ? '' : 'dataStreams', $pb.PbFieldType.PM,
+        subBuilder: $1.DataStream.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5670,8 +6144,10 @@ class ListDataStreamsResponse extends $pb.GeneratedMessage {
   ListDataStreamsResponse copyWith(
           void Function(ListDataStreamsResponse) updates) =>
       super.copyWith((message) => updates(message as ListDataStreamsResponse))
-          as ListDataStreamsResponse; // ignore: deprecated_member_use
+          as ListDataStreamsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListDataStreamsResponse create() => ListDataStreamsResponse._();
   ListDataStreamsResponse createEmptyInstance() => create();
@@ -5682,9 +6158,12 @@ class ListDataStreamsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListDataStreamsResponse>(create);
   static ListDataStreamsResponse? _defaultInstance;
 
+  /// List of DataStreams.
   @$pb.TagNumber(1)
   $core.List<$1.DataStream> get dataStreams => $_getList(0);
 
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5698,39 +6177,33 @@ class ListDataStreamsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for GetDataStream RPC.
 class GetDataStreamRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetDataStreamRequest',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.analytics.admin.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetDataStreamRequest._() : super();
   factory GetDataStreamRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetDataStreamRequest._() : super();
   factory GetDataStreamRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetDataStreamRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetDataStreamRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -5741,8 +6214,10 @@ class GetDataStreamRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetDataStreamRequest copyWith(void Function(GetDataStreamRequest) updates) =>
       super.copyWith((message) => updates(message as GetDataStreamRequest))
-          as GetDataStreamRequest; // ignore: deprecated_member_use
+          as GetDataStreamRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDataStreamRequest create() => GetDataStreamRequest._();
   GetDataStreamRequest createEmptyInstance() => create();
@@ -5753,6 +6228,8 @@ class GetDataStreamRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetDataStreamRequest>(create);
   static GetDataStreamRequest? _defaultInstance;
 
+  /// Required. The name of the DataStream to get.
+  /// Example format: properties/1234/dataStreams/5678
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5765,3 +6242,7 @@ class GetDataStreamRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

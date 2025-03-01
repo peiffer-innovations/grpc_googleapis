@@ -1,33 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/storagetransfer/v1/transfer_types.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The authentication and authorization method used by the storage service.
 class S3CompatibleMetadata_AuthMethod extends $pb.ProtobufEnum {
   static const S3CompatibleMetadata_AuthMethod AUTH_METHOD_UNSPECIFIED =
       S3CompatibleMetadata_AuthMethod._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTH_METHOD_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'AUTH_METHOD_UNSPECIFIED');
   static const S3CompatibleMetadata_AuthMethod AUTH_METHOD_AWS_SIGNATURE_V4 =
       S3CompatibleMetadata_AuthMethod._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTH_METHOD_AWS_SIGNATURE_V4');
+          1, _omitEnumNames ? '' : 'AUTH_METHOD_AWS_SIGNATURE_V4');
   static const S3CompatibleMetadata_AuthMethod AUTH_METHOD_AWS_SIGNATURE_V2 =
       S3CompatibleMetadata_AuthMethod._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'AUTH_METHOD_AWS_SIGNATURE_V2');
+          2, _omitEnumNames ? '' : 'AUTH_METHOD_AWS_SIGNATURE_V2');
 
   static const $core.List<S3CompatibleMetadata_AuthMethod> values =
       <S3CompatibleMetadata_AuthMethod>[
@@ -45,25 +41,17 @@ class S3CompatibleMetadata_AuthMethod extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The request model of the API.
 class S3CompatibleMetadata_RequestModel extends $pb.ProtobufEnum {
   static const S3CompatibleMetadata_RequestModel REQUEST_MODEL_UNSPECIFIED =
       S3CompatibleMetadata_RequestModel._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REQUEST_MODEL_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'REQUEST_MODEL_UNSPECIFIED');
   static const S3CompatibleMetadata_RequestModel
       REQUEST_MODEL_VIRTUAL_HOSTED_STYLE = S3CompatibleMetadata_RequestModel._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REQUEST_MODEL_VIRTUAL_HOSTED_STYLE');
+          1, _omitEnumNames ? '' : 'REQUEST_MODEL_VIRTUAL_HOSTED_STYLE');
   static const S3CompatibleMetadata_RequestModel REQUEST_MODEL_PATH_STYLE =
       S3CompatibleMetadata_RequestModel._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REQUEST_MODEL_PATH_STYLE');
+          2, _omitEnumNames ? '' : 'REQUEST_MODEL_PATH_STYLE');
 
   static const $core.List<S3CompatibleMetadata_RequestModel> values =
       <S3CompatibleMetadata_RequestModel>[
@@ -81,25 +69,17 @@ class S3CompatibleMetadata_RequestModel extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The agent network protocol to access the storage service.
 class S3CompatibleMetadata_NetworkProtocol extends $pb.ProtobufEnum {
   static const S3CompatibleMetadata_NetworkProtocol
       NETWORK_PROTOCOL_UNSPECIFIED = S3CompatibleMetadata_NetworkProtocol._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NETWORK_PROTOCOL_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'NETWORK_PROTOCOL_UNSPECIFIED');
   static const S3CompatibleMetadata_NetworkProtocol NETWORK_PROTOCOL_HTTPS =
       S3CompatibleMetadata_NetworkProtocol._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NETWORK_PROTOCOL_HTTPS');
+          1, _omitEnumNames ? '' : 'NETWORK_PROTOCOL_HTTPS');
   static const S3CompatibleMetadata_NetworkProtocol NETWORK_PROTOCOL_HTTP =
       S3CompatibleMetadata_NetworkProtocol._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NETWORK_PROTOCOL_HTTP');
+          2, _omitEnumNames ? '' : 'NETWORK_PROTOCOL_HTTP');
 
   static const $core.List<S3CompatibleMetadata_NetworkProtocol> values =
       <S3CompatibleMetadata_NetworkProtocol>[
@@ -117,25 +97,16 @@ class S3CompatibleMetadata_NetworkProtocol extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The Listing API to use for discovering objects.
 class S3CompatibleMetadata_ListApi extends $pb.ProtobufEnum {
   static const S3CompatibleMetadata_ListApi LIST_API_UNSPECIFIED =
       S3CompatibleMetadata_ListApi._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LIST_API_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'LIST_API_UNSPECIFIED');
   static const S3CompatibleMetadata_ListApi LIST_OBJECTS_V2 =
       S3CompatibleMetadata_ListApi._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LIST_OBJECTS_V2');
+          1, _omitEnumNames ? '' : 'LIST_OBJECTS_V2');
   static const S3CompatibleMetadata_ListApi LIST_OBJECTS =
-      S3CompatibleMetadata_ListApi._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LIST_OBJECTS');
+      S3CompatibleMetadata_ListApi._(2, _omitEnumNames ? '' : 'LIST_OBJECTS');
 
   static const $core.List<S3CompatibleMetadata_ListApi> values =
       <S3CompatibleMetadata_ListApi>[
@@ -153,27 +124,16 @@ class S3CompatibleMetadata_ListApi extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The state of an AgentPool.
 class AgentPool_State extends $pb.ProtobufEnum {
-  static const AgentPool_State STATE_UNSPECIFIED = AgentPool_State._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STATE_UNSPECIFIED');
-  static const AgentPool_State CREATING = AgentPool_State._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CREATING');
-  static const AgentPool_State CREATED = AgentPool_State._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'CREATED');
-  static const AgentPool_State DELETING = AgentPool_State._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DELETING');
+  static const AgentPool_State STATE_UNSPECIFIED =
+      AgentPool_State._(0, _omitEnumNames ? '' : 'STATE_UNSPECIFIED');
+  static const AgentPool_State CREATING =
+      AgentPool_State._(1, _omitEnumNames ? '' : 'CREATING');
+  static const AgentPool_State CREATED =
+      AgentPool_State._(2, _omitEnumNames ? '' : 'CREATED');
+  static const AgentPool_State DELETING =
+      AgentPool_State._(3, _omitEnumNames ? '' : 'DELETING');
 
   static const $core.List<AgentPool_State> values = <AgentPool_State>[
     STATE_UNSPECIFIED,
@@ -189,31 +149,18 @@ class AgentPool_State extends $pb.ProtobufEnum {
   const AgentPool_State._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Specifies when to overwrite an object in the sink when an object with
+/// matching name is found in the source.
 class TransferOptions_OverwriteWhen extends $pb.ProtobufEnum {
   static const TransferOptions_OverwriteWhen OVERWRITE_WHEN_UNSPECIFIED =
       TransferOptions_OverwriteWhen._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'OVERWRITE_WHEN_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'OVERWRITE_WHEN_UNSPECIFIED');
   static const TransferOptions_OverwriteWhen DIFFERENT =
-      TransferOptions_OverwriteWhen._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'DIFFERENT');
+      TransferOptions_OverwriteWhen._(1, _omitEnumNames ? '' : 'DIFFERENT');
   static const TransferOptions_OverwriteWhen NEVER =
-      TransferOptions_OverwriteWhen._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NEVER');
+      TransferOptions_OverwriteWhen._(2, _omitEnumNames ? '' : 'NEVER');
   static const TransferOptions_OverwriteWhen ALWAYS =
-      TransferOptions_OverwriteWhen._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ALWAYS');
+      TransferOptions_OverwriteWhen._(3, _omitEnumNames ? '' : 'ALWAYS');
 
   static const $core.List<TransferOptions_OverwriteWhen> values =
       <TransferOptions_OverwriteWhen>[
@@ -232,24 +179,14 @@ class TransferOptions_OverwriteWhen extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// Whether symlinks should be skipped or preserved during a transfer job.
 class MetadataOptions_Symlink extends $pb.ProtobufEnum {
   static const MetadataOptions_Symlink SYMLINK_UNSPECIFIED =
-      MetadataOptions_Symlink._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SYMLINK_UNSPECIFIED');
-  static const MetadataOptions_Symlink SYMLINK_SKIP = MetadataOptions_Symlink._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SYMLINK_SKIP');
+      MetadataOptions_Symlink._(0, _omitEnumNames ? '' : 'SYMLINK_UNSPECIFIED');
+  static const MetadataOptions_Symlink SYMLINK_SKIP =
+      MetadataOptions_Symlink._(1, _omitEnumNames ? '' : 'SYMLINK_SKIP');
   static const MetadataOptions_Symlink SYMLINK_PRESERVE =
-      MetadataOptions_Symlink._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SYMLINK_PRESERVE');
+      MetadataOptions_Symlink._(2, _omitEnumNames ? '' : 'SYMLINK_PRESERVE');
 
   static const $core.List<MetadataOptions_Symlink> values =
       <MetadataOptions_Symlink>[
@@ -265,22 +202,14 @@ class MetadataOptions_Symlink extends $pb.ProtobufEnum {
   const MetadataOptions_Symlink._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Options for handling file mode attribute.
 class MetadataOptions_Mode extends $pb.ProtobufEnum {
-  static const MetadataOptions_Mode MODE_UNSPECIFIED = MetadataOptions_Mode._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MODE_UNSPECIFIED');
-  static const MetadataOptions_Mode MODE_SKIP = MetadataOptions_Mode._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MODE_SKIP');
-  static const MetadataOptions_Mode MODE_PRESERVE = MetadataOptions_Mode._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MODE_PRESERVE');
+  static const MetadataOptions_Mode MODE_UNSPECIFIED =
+      MetadataOptions_Mode._(0, _omitEnumNames ? '' : 'MODE_UNSPECIFIED');
+  static const MetadataOptions_Mode MODE_SKIP =
+      MetadataOptions_Mode._(1, _omitEnumNames ? '' : 'MODE_SKIP');
+  static const MetadataOptions_Mode MODE_PRESERVE =
+      MetadataOptions_Mode._(2, _omitEnumNames ? '' : 'MODE_PRESERVE');
 
   static const $core.List<MetadataOptions_Mode> values = <MetadataOptions_Mode>[
     MODE_UNSPECIFIED,
@@ -295,22 +224,14 @@ class MetadataOptions_Mode extends $pb.ProtobufEnum {
   const MetadataOptions_Mode._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Options for handling file GID attribute.
 class MetadataOptions_GID extends $pb.ProtobufEnum {
-  static const MetadataOptions_GID GID_UNSPECIFIED = MetadataOptions_GID._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'GID_UNSPECIFIED');
-  static const MetadataOptions_GID GID_SKIP = MetadataOptions_GID._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'GID_SKIP');
-  static const MetadataOptions_GID GID_NUMBER = MetadataOptions_GID._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'GID_NUMBER');
+  static const MetadataOptions_GID GID_UNSPECIFIED =
+      MetadataOptions_GID._(0, _omitEnumNames ? '' : 'GID_UNSPECIFIED');
+  static const MetadataOptions_GID GID_SKIP =
+      MetadataOptions_GID._(1, _omitEnumNames ? '' : 'GID_SKIP');
+  static const MetadataOptions_GID GID_NUMBER =
+      MetadataOptions_GID._(2, _omitEnumNames ? '' : 'GID_NUMBER');
 
   static const $core.List<MetadataOptions_GID> values = <MetadataOptions_GID>[
     GID_UNSPECIFIED,
@@ -325,22 +246,14 @@ class MetadataOptions_GID extends $pb.ProtobufEnum {
   const MetadataOptions_GID._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Options for handling file UID attribute.
 class MetadataOptions_UID extends $pb.ProtobufEnum {
-  static const MetadataOptions_UID UID_UNSPECIFIED = MetadataOptions_UID._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UID_UNSPECIFIED');
-  static const MetadataOptions_UID UID_SKIP = MetadataOptions_UID._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UID_SKIP');
-  static const MetadataOptions_UID UID_NUMBER = MetadataOptions_UID._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'UID_NUMBER');
+  static const MetadataOptions_UID UID_UNSPECIFIED =
+      MetadataOptions_UID._(0, _omitEnumNames ? '' : 'UID_UNSPECIFIED');
+  static const MetadataOptions_UID UID_SKIP =
+      MetadataOptions_UID._(1, _omitEnumNames ? '' : 'UID_SKIP');
+  static const MetadataOptions_UID UID_NUMBER =
+      MetadataOptions_UID._(2, _omitEnumNames ? '' : 'UID_NUMBER');
 
   static const $core.List<MetadataOptions_UID> values = <MetadataOptions_UID>[
     UID_UNSPECIFIED,
@@ -355,23 +268,15 @@ class MetadataOptions_UID extends $pb.ProtobufEnum {
   const MetadataOptions_UID._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Options for handling Cloud Storage object ACLs.
 class MetadataOptions_Acl extends $pb.ProtobufEnum {
-  static const MetadataOptions_Acl ACL_UNSPECIFIED = MetadataOptions_Acl._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ACL_UNSPECIFIED');
+  static const MetadataOptions_Acl ACL_UNSPECIFIED =
+      MetadataOptions_Acl._(0, _omitEnumNames ? '' : 'ACL_UNSPECIFIED');
   static const MetadataOptions_Acl ACL_DESTINATION_BUCKET_DEFAULT =
       MetadataOptions_Acl._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ACL_DESTINATION_BUCKET_DEFAULT');
-  static const MetadataOptions_Acl ACL_PRESERVE = MetadataOptions_Acl._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ACL_PRESERVE');
+          1, _omitEnumNames ? '' : 'ACL_DESTINATION_BUCKET_DEFAULT');
+  static const MetadataOptions_Acl ACL_PRESERVE =
+      MetadataOptions_Acl._(2, _omitEnumNames ? '' : 'ACL_PRESERVE');
 
   static const $core.List<MetadataOptions_Acl> values = <MetadataOptions_Acl>[
     ACL_UNSPECIFIED,
@@ -386,49 +291,29 @@ class MetadataOptions_Acl extends $pb.ProtobufEnum {
   const MetadataOptions_Acl._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Options for handling Google Cloud Storage object storage class.
 class MetadataOptions_StorageClass extends $pb.ProtobufEnum {
   static const MetadataOptions_StorageClass STORAGE_CLASS_UNSPECIFIED =
       MetadataOptions_StorageClass._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'STORAGE_CLASS_UNSPECIFIED');
   static const MetadataOptions_StorageClass
       STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT = MetadataOptions_StorageClass._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT');
+          1, _omitEnumNames ? '' : 'STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT');
   static const MetadataOptions_StorageClass STORAGE_CLASS_PRESERVE =
       MetadataOptions_StorageClass._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_PRESERVE');
+          2, _omitEnumNames ? '' : 'STORAGE_CLASS_PRESERVE');
   static const MetadataOptions_StorageClass STORAGE_CLASS_STANDARD =
       MetadataOptions_StorageClass._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_STANDARD');
+          3, _omitEnumNames ? '' : 'STORAGE_CLASS_STANDARD');
   static const MetadataOptions_StorageClass STORAGE_CLASS_NEARLINE =
       MetadataOptions_StorageClass._(
-          4,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_NEARLINE');
+          4, _omitEnumNames ? '' : 'STORAGE_CLASS_NEARLINE');
   static const MetadataOptions_StorageClass STORAGE_CLASS_COLDLINE =
       MetadataOptions_StorageClass._(
-          5,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_COLDLINE');
+          5, _omitEnumNames ? '' : 'STORAGE_CLASS_COLDLINE');
   static const MetadataOptions_StorageClass STORAGE_CLASS_ARCHIVE =
       MetadataOptions_StorageClass._(
-          6,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STORAGE_CLASS_ARCHIVE');
+          6, _omitEnumNames ? '' : 'STORAGE_CLASS_ARCHIVE');
 
   static const $core.List<MetadataOptions_StorageClass> values =
       <MetadataOptions_StorageClass>[
@@ -450,25 +335,17 @@ class MetadataOptions_StorageClass extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// Options for handling temporary holds for Google Cloud Storage objects.
 class MetadataOptions_TemporaryHold extends $pb.ProtobufEnum {
   static const MetadataOptions_TemporaryHold TEMPORARY_HOLD_UNSPECIFIED =
       MetadataOptions_TemporaryHold._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TEMPORARY_HOLD_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'TEMPORARY_HOLD_UNSPECIFIED');
   static const MetadataOptions_TemporaryHold TEMPORARY_HOLD_SKIP =
       MetadataOptions_TemporaryHold._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TEMPORARY_HOLD_SKIP');
+          1, _omitEnumNames ? '' : 'TEMPORARY_HOLD_SKIP');
   static const MetadataOptions_TemporaryHold TEMPORARY_HOLD_PRESERVE =
       MetadataOptions_TemporaryHold._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TEMPORARY_HOLD_PRESERVE');
+          2, _omitEnumNames ? '' : 'TEMPORARY_HOLD_PRESERVE');
 
   static const $core.List<MetadataOptions_TemporaryHold> values =
       <MetadataOptions_TemporaryHold>[
@@ -486,25 +363,15 @@ class MetadataOptions_TemporaryHold extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// Options for handling the KmsKey setting for Google Cloud Storage objects.
 class MetadataOptions_KmsKey extends $pb.ProtobufEnum {
   static const MetadataOptions_KmsKey KMS_KEY_UNSPECIFIED =
-      MetadataOptions_KmsKey._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'KMS_KEY_UNSPECIFIED');
+      MetadataOptions_KmsKey._(0, _omitEnumNames ? '' : 'KMS_KEY_UNSPECIFIED');
   static const MetadataOptions_KmsKey KMS_KEY_DESTINATION_BUCKET_DEFAULT =
       MetadataOptions_KmsKey._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'KMS_KEY_DESTINATION_BUCKET_DEFAULT');
+          1, _omitEnumNames ? '' : 'KMS_KEY_DESTINATION_BUCKET_DEFAULT');
   static const MetadataOptions_KmsKey KMS_KEY_PRESERVE =
-      MetadataOptions_KmsKey._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'KMS_KEY_PRESERVE');
+      MetadataOptions_KmsKey._(2, _omitEnumNames ? '' : 'KMS_KEY_PRESERVE');
 
   static const $core.List<MetadataOptions_KmsKey> values =
       <MetadataOptions_KmsKey>[
@@ -520,25 +387,18 @@ class MetadataOptions_KmsKey extends $pb.ProtobufEnum {
   const MetadataOptions_KmsKey._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Options for handling `timeCreated` metadata for Google Cloud Storage
+/// objects.
 class MetadataOptions_TimeCreated extends $pb.ProtobufEnum {
   static const MetadataOptions_TimeCreated TIME_CREATED_UNSPECIFIED =
       MetadataOptions_TimeCreated._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TIME_CREATED_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'TIME_CREATED_UNSPECIFIED');
   static const MetadataOptions_TimeCreated TIME_CREATED_SKIP =
       MetadataOptions_TimeCreated._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TIME_CREATED_SKIP');
+          1, _omitEnumNames ? '' : 'TIME_CREATED_SKIP');
   static const MetadataOptions_TimeCreated
       TIME_CREATED_PRESERVE_AS_CUSTOM_TIME = MetadataOptions_TimeCreated._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TIME_CREATED_PRESERVE_AS_CUSTOM_TIME');
+          2, _omitEnumNames ? '' : 'TIME_CREATED_PRESERVE_AS_CUSTOM_TIME');
 
   static const $core.List<MetadataOptions_TimeCreated> values =
       <MetadataOptions_TimeCreated>[
@@ -556,27 +416,16 @@ class MetadataOptions_TimeCreated extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The status of the transfer job.
 class TransferJob_Status extends $pb.ProtobufEnum {
-  static const TransferJob_Status STATUS_UNSPECIFIED = TransferJob_Status._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'STATUS_UNSPECIFIED');
-  static const TransferJob_Status ENABLED = TransferJob_Status._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ENABLED');
-  static const TransferJob_Status DISABLED = TransferJob_Status._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DISABLED');
-  static const TransferJob_Status DELETED = TransferJob_Status._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'DELETED');
+  static const TransferJob_Status STATUS_UNSPECIFIED =
+      TransferJob_Status._(0, _omitEnumNames ? '' : 'STATUS_UNSPECIFIED');
+  static const TransferJob_Status ENABLED =
+      TransferJob_Status._(1, _omitEnumNames ? '' : 'ENABLED');
+  static const TransferJob_Status DISABLED =
+      TransferJob_Status._(2, _omitEnumNames ? '' : 'DISABLED');
+  static const TransferJob_Status DELETED =
+      TransferJob_Status._(3, _omitEnumNames ? '' : 'DELETED');
 
   static const $core.List<TransferJob_Status> values = <TransferJob_Status>[
     STATUS_UNSPECIFIED,
@@ -592,31 +441,25 @@ class TransferJob_Status extends $pb.ProtobufEnum {
   const TransferJob_Status._($core.int v, $core.String n) : super(v, n);
 }
 
+///  Enum for specifying event types for which notifications are to be
+///  published.
+///
+///  Additional event types may be added in the future. Clients should either
+///  safely ignore unrecognized event types or explicitly specify which event
+///  types they are prepared to accept.
 class NotificationConfig_EventType extends $pb.ProtobufEnum {
   static const NotificationConfig_EventType EVENT_TYPE_UNSPECIFIED =
       NotificationConfig_EventType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'EVENT_TYPE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'EVENT_TYPE_UNSPECIFIED');
   static const NotificationConfig_EventType TRANSFER_OPERATION_SUCCESS =
       NotificationConfig_EventType._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TRANSFER_OPERATION_SUCCESS');
+          1, _omitEnumNames ? '' : 'TRANSFER_OPERATION_SUCCESS');
   static const NotificationConfig_EventType TRANSFER_OPERATION_FAILED =
       NotificationConfig_EventType._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TRANSFER_OPERATION_FAILED');
+          2, _omitEnumNames ? '' : 'TRANSFER_OPERATION_FAILED');
   static const NotificationConfig_EventType TRANSFER_OPERATION_ABORTED =
       NotificationConfig_EventType._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'TRANSFER_OPERATION_ABORTED');
+          3, _omitEnumNames ? '' : 'TRANSFER_OPERATION_ABORTED');
 
   static const $core.List<NotificationConfig_EventType> values =
       <NotificationConfig_EventType>[
@@ -635,25 +478,15 @@ class NotificationConfig_EventType extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// Enum for specifying the format of a notification message's payload.
 class NotificationConfig_PayloadFormat extends $pb.ProtobufEnum {
   static const NotificationConfig_PayloadFormat PAYLOAD_FORMAT_UNSPECIFIED =
       NotificationConfig_PayloadFormat._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'PAYLOAD_FORMAT_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'PAYLOAD_FORMAT_UNSPECIFIED');
   static const NotificationConfig_PayloadFormat NONE =
-      NotificationConfig_PayloadFormat._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'NONE');
+      NotificationConfig_PayloadFormat._(1, _omitEnumNames ? '' : 'NONE');
   static const NotificationConfig_PayloadFormat JSON =
-      NotificationConfig_PayloadFormat._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'JSON');
+      NotificationConfig_PayloadFormat._(2, _omitEnumNames ? '' : 'JSON');
 
   static const $core.List<NotificationConfig_PayloadFormat> values =
       <NotificationConfig_PayloadFormat>[
@@ -671,31 +504,17 @@ class NotificationConfig_PayloadFormat extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// Loggable actions.
 class LoggingConfig_LoggableAction extends $pb.ProtobufEnum {
   static const LoggingConfig_LoggableAction LOGGABLE_ACTION_UNSPECIFIED =
       LoggingConfig_LoggableAction._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LOGGABLE_ACTION_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'LOGGABLE_ACTION_UNSPECIFIED');
   static const LoggingConfig_LoggableAction FIND =
-      LoggingConfig_LoggableAction._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'FIND');
+      LoggingConfig_LoggableAction._(1, _omitEnumNames ? '' : 'FIND');
   static const LoggingConfig_LoggableAction DELETE =
-      LoggingConfig_LoggableAction._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'DELETE');
+      LoggingConfig_LoggableAction._(2, _omitEnumNames ? '' : 'DELETE');
   static const LoggingConfig_LoggableAction COPY =
-      LoggingConfig_LoggableAction._(
-          3,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'COPY');
+      LoggingConfig_LoggableAction._(3, _omitEnumNames ? '' : 'COPY');
 
   static const $core.List<LoggingConfig_LoggableAction> values =
       <LoggingConfig_LoggableAction>[
@@ -714,25 +533,15 @@ class LoggingConfig_LoggableAction extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// Loggable action states.
 class LoggingConfig_LoggableActionState extends $pb.ProtobufEnum {
   static const LoggingConfig_LoggableActionState
       LOGGABLE_ACTION_STATE_UNSPECIFIED = LoggingConfig_LoggableActionState._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'LOGGABLE_ACTION_STATE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'LOGGABLE_ACTION_STATE_UNSPECIFIED');
   static const LoggingConfig_LoggableActionState SUCCEEDED =
-      LoggingConfig_LoggableActionState._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SUCCEEDED');
+      LoggingConfig_LoggableActionState._(1, _omitEnumNames ? '' : 'SUCCEEDED');
   static const LoggingConfig_LoggableActionState FAILED =
-      LoggingConfig_LoggableActionState._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'FAILED');
+      LoggingConfig_LoggableActionState._(2, _omitEnumNames ? '' : 'FAILED');
 
   static const $core.List<LoggingConfig_LoggableActionState> values =
       <LoggingConfig_LoggableActionState>[
@@ -750,44 +559,24 @@ class LoggingConfig_LoggableActionState extends $pb.ProtobufEnum {
       : super(v, n);
 }
 
+/// The status of a TransferOperation.
 class TransferOperation_Status extends $pb.ProtobufEnum {
   static const TransferOperation_Status STATUS_UNSPECIFIED =
-      TransferOperation_Status._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STATUS_UNSPECIFIED');
+      TransferOperation_Status._(0, _omitEnumNames ? '' : 'STATUS_UNSPECIFIED');
   static const TransferOperation_Status IN_PROGRESS =
-      TransferOperation_Status._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'IN_PROGRESS');
-  static const TransferOperation_Status PAUSED = TransferOperation_Status._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'PAUSED');
-  static const TransferOperation_Status SUCCESS = TransferOperation_Status._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SUCCESS');
-  static const TransferOperation_Status FAILED = TransferOperation_Status._(
-      4,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'FAILED');
-  static const TransferOperation_Status ABORTED = TransferOperation_Status._(
-      5,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ABORTED');
-  static const TransferOperation_Status QUEUED = TransferOperation_Status._(
-      6,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'QUEUED');
+      TransferOperation_Status._(1, _omitEnumNames ? '' : 'IN_PROGRESS');
+  static const TransferOperation_Status PAUSED =
+      TransferOperation_Status._(2, _omitEnumNames ? '' : 'PAUSED');
+  static const TransferOperation_Status SUCCESS =
+      TransferOperation_Status._(3, _omitEnumNames ? '' : 'SUCCESS');
+  static const TransferOperation_Status FAILED =
+      TransferOperation_Status._(4, _omitEnumNames ? '' : 'FAILED');
+  static const TransferOperation_Status ABORTED =
+      TransferOperation_Status._(5, _omitEnumNames ? '' : 'ABORTED');
+  static const TransferOperation_Status QUEUED =
+      TransferOperation_Status._(6, _omitEnumNames ? '' : 'QUEUED');
+  static const TransferOperation_Status SUSPENDING =
+      TransferOperation_Status._(7, _omitEnumNames ? '' : 'SUSPENDING');
 
   static const $core.List<TransferOperation_Status> values =
       <TransferOperation_Status>[
@@ -798,6 +587,7 @@ class TransferOperation_Status extends $pb.ProtobufEnum {
     FAILED,
     ABORTED,
     QUEUED,
+    SUSPENDING,
   ];
 
   static final $core.Map<$core.int, TransferOperation_Status> _byValue =
@@ -806,3 +596,5 @@ class TransferOperation_Status extends $pb.ProtobufEnum {
 
   const TransferOperation_Status._($core.int v, $core.String n) : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

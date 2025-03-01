@@ -1,26 +1,39 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/resultstore_download.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'resultstore_download.pb.dart' as $0;
-import 'invocation.pb.dart' as $1;
-import 'download_metadata.pb.dart' as $2;
-import 'configuration.pb.dart' as $3;
-import 'target.pb.dart' as $4;
-import 'configured_target.pb.dart' as $5;
+import 'package:protobuf/protobuf.dart' as $pb;
+
 import 'action.pb.dart' as $6;
+import 'configuration.pb.dart' as $3;
+import 'configured_target.pb.dart' as $5;
+import 'download_metadata.pb.dart' as $2;
 import 'file_set.pb.dart' as $7;
+import 'invocation.pb.dart' as $1;
+import 'resultstore_download.pb.dart' as $0;
+import 'target.pb.dart' as $4;
+
 export 'resultstore_download.pb.dart';
 
+@$pb.GrpcServiceName('google.devtools.resultstore.v2.ResultStoreDownload')
 class ResultStoreDownloadClient extends $grpc.Client {
+  static final _$exportInvocation = $grpc.ClientMethod<
+          $0.ExportInvocationRequest, $0.ExportInvocationResponse>(
+      '/google.devtools.resultstore.v2.ResultStoreDownload/ExportInvocation',
+      ($0.ExportInvocationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ExportInvocationResponse.fromBuffer(value));
   static final _$getInvocation =
       $grpc.ClientMethod<$0.GetInvocationRequest, $1.Invocation>(
           '/google.devtools.resultstore.v2.ResultStoreDownload/GetInvocation',
@@ -32,12 +45,6 @@ class ResultStoreDownloadClient extends $grpc.Client {
       ($0.SearchInvocationsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.SearchInvocationsResponse.fromBuffer(value));
-  static final _$exportInvocation = $grpc.ClientMethod<
-          $0.ExportInvocationRequest, $0.ExportInvocationResponse>(
-      '/google.devtools.resultstore.v2.ResultStoreDownload/ExportInvocation',
-      ($0.ExportInvocationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.ExportInvocationResponse.fromBuffer(value));
   static final _$getInvocationDownloadMetadata = $grpc.ClientMethod<
           $0.GetInvocationDownloadMetadataRequest, $2.DownloadMetadata>(
       '/google.devtools.resultstore.v2.ResultStoreDownload/GetInvocationDownloadMetadata',
@@ -121,6 +128,12 @@ class ResultStoreDownloadClient extends $grpc.Client {
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options, interceptors: interceptors);
 
+  $grpc.ResponseFuture<$0.ExportInvocationResponse> exportInvocation(
+      $0.ExportInvocationRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$exportInvocation, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.Invocation> getInvocation(
       $0.GetInvocationRequest request,
       {$grpc.CallOptions? options}) {
@@ -131,12 +144,6 @@ class ResultStoreDownloadClient extends $grpc.Client {
       $0.SearchInvocationsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$searchInvocations, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.ExportInvocationResponse> exportInvocation(
-      $0.ExportInvocationRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$exportInvocation, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.DownloadMetadata> getInvocationDownloadMetadata(
@@ -223,11 +230,21 @@ class ResultStoreDownloadClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.devtools.resultstore.v2.ResultStoreDownload')
 abstract class ResultStoreDownloadServiceBase extends $grpc.Service {
   $core.String get $name =>
       'google.devtools.resultstore.v2.ResultStoreDownload';
 
   ResultStoreDownloadServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.ExportInvocationRequest,
+            $0.ExportInvocationResponse>(
+        'ExportInvocation',
+        exportInvocation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ExportInvocationRequest.fromBuffer(value),
+        ($0.ExportInvocationResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetInvocationRequest, $1.Invocation>(
         'GetInvocation',
         getInvocation_Pre,
@@ -245,15 +262,6 @@ abstract class ResultStoreDownloadServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.SearchInvocationsRequest.fromBuffer(value),
         ($0.SearchInvocationsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ExportInvocationRequest,
-            $0.ExportInvocationResponse>(
-        'ExportInvocation',
-        exportInvocation_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.ExportInvocationRequest.fromBuffer(value),
-        ($0.ExportInvocationResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetInvocationDownloadMetadataRequest,
             $2.DownloadMetadata>(
         'GetInvocationDownloadMetadata',
@@ -376,6 +384,12 @@ abstract class ResultStoreDownloadServiceBase extends $grpc.Service {
         ($0.TraverseFileSetsResponse value) => value.writeToBuffer()));
   }
 
+  $async.Future<$0.ExportInvocationResponse> exportInvocation_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ExportInvocationRequest> request) async {
+    return exportInvocation(call, await request);
+  }
+
   $async.Future<$1.Invocation> getInvocation_Pre($grpc.ServiceCall call,
       $async.Future<$0.GetInvocationRequest> request) async {
     return getInvocation(call, await request);
@@ -385,12 +399,6 @@ abstract class ResultStoreDownloadServiceBase extends $grpc.Service {
       $grpc.ServiceCall call,
       $async.Future<$0.SearchInvocationsRequest> request) async {
     return searchInvocations(call, await request);
-  }
-
-  $async.Future<$0.ExportInvocationResponse> exportInvocation_Pre(
-      $grpc.ServiceCall call,
-      $async.Future<$0.ExportInvocationRequest> request) async {
-    return exportInvocation(call, await request);
   }
 
   $async.Future<$2.DownloadMetadata> getInvocationDownloadMetadata_Pre(
@@ -471,12 +479,12 @@ abstract class ResultStoreDownloadServiceBase extends $grpc.Service {
     return traverseFileSets(call, await request);
   }
 
+  $async.Future<$0.ExportInvocationResponse> exportInvocation(
+      $grpc.ServiceCall call, $0.ExportInvocationRequest request);
   $async.Future<$1.Invocation> getInvocation(
       $grpc.ServiceCall call, $0.GetInvocationRequest request);
   $async.Future<$0.SearchInvocationsResponse> searchInvocations(
       $grpc.ServiceCall call, $0.SearchInvocationsRequest request);
-  $async.Future<$0.ExportInvocationResponse> exportInvocation(
-      $grpc.ServiceCall call, $0.ExportInvocationRequest request);
   $async.Future<$2.DownloadMetadata> getInvocationDownloadMetadata(
       $grpc.ServiceCall call, $0.GetInvocationDownloadMetadataRequest request);
   $async.Future<$3.Configuration> getConfiguration(

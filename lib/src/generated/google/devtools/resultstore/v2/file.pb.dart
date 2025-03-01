@@ -1,89 +1,25 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/file.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/wrappers.pb.dart' as $0;
-
 import 'file.pbenum.dart';
 
 export 'file.pbenum.dart';
 
+/// The metadata for a file or an archive file entry.
 class File extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'File',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.resultstore.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uid')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uri')
-    ..aOM<$0.Int64Value>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'length',
-        subBuilder: $0.Int64Value.create)
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentType')
-    ..aOM<ArchiveEntry>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'archiveEntry',
-        subBuilder: ArchiveEntry.create)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentViewer')
-    ..aOB(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hidden')
-    ..aOS(
-        8,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..aOS(
-        9,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'digest')
-    ..e<File_HashType>(
-        10,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'hashType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: File_HashType.HASH_TYPE_UNSPECIFIED,
-        valueOf: File_HashType.valueOf,
-        enumValues: File_HashType.values)
-    ..hasRequiredFields = false;
-
-  File._() : super();
   factory File({
     $core.String? uid,
     $core.String? uri,
@@ -96,45 +32,70 @@ class File extends $pb.GeneratedMessage {
     $core.String? digest,
     File_HashType? hashType,
   }) {
-    final _result = create();
+    final $result = create();
     if (uid != null) {
-      _result.uid = uid;
+      $result.uid = uid;
     }
     if (uri != null) {
-      _result.uri = uri;
+      $result.uri = uri;
     }
     if (length != null) {
-      _result.length = length;
+      $result.length = length;
     }
     if (contentType != null) {
-      _result.contentType = contentType;
+      $result.contentType = contentType;
     }
     if (archiveEntry != null) {
-      _result.archiveEntry = archiveEntry;
+      $result.archiveEntry = archiveEntry;
     }
     if (contentViewer != null) {
-      _result.contentViewer = contentViewer;
+      $result.contentViewer = contentViewer;
     }
     if (hidden != null) {
-      _result.hidden = hidden;
+      $result.hidden = hidden;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (digest != null) {
-      _result.digest = digest;
+      $result.digest = digest;
     }
     if (hashType != null) {
-      _result.hashType = hashType;
+      $result.hashType = hashType;
     }
-    return _result;
+    return $result;
   }
+  File._() : super();
   factory File.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory File.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'File',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uid')
+    ..aOS(2, _omitFieldNames ? '' : 'uri')
+    ..aOM<$0.Int64Value>(3, _omitFieldNames ? '' : 'length',
+        subBuilder: $0.Int64Value.create)
+    ..aOS(4, _omitFieldNames ? '' : 'contentType')
+    ..aOM<ArchiveEntry>(5, _omitFieldNames ? '' : 'archiveEntry',
+        subBuilder: ArchiveEntry.create)
+    ..aOS(6, _omitFieldNames ? '' : 'contentViewer')
+    ..aOB(7, _omitFieldNames ? '' : 'hidden')
+    ..aOS(8, _omitFieldNames ? '' : 'description')
+    ..aOS(9, _omitFieldNames ? '' : 'digest')
+    ..e<File_HashType>(
+        10, _omitFieldNames ? '' : 'hashType', $pb.PbFieldType.OE,
+        defaultOrMaker: File_HashType.HASH_TYPE_UNSPECIFIED,
+        valueOf: File_HashType.valueOf,
+        enumValues: File_HashType.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -143,9 +104,10 @@ class File extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   File copyWith(void Function(File) updates) =>
-      super.copyWith((message) => updates(message as File))
-          as File; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as File)) as File;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static File create() => File._();
   File createEmptyInstance() => create();
@@ -155,6 +117,10 @@ class File extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<File>(create);
   static File? _defaultInstance;
 
+  /// The identifier of the file or archive entry.
+  /// User-provided, must be unique for the repeated field it is in. When an
+  /// Append RPC is called with a Files field populated, if a File already exists
+  /// with this ID, that File will be overwritten with the new File proto.
   @$pb.TagNumber(1)
   $core.String get uid => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -167,6 +133,11 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUid() => clearField(1);
 
+  /// The URI of a file.
+  /// This could also be the URI of an entire archive.
+  /// Most log data doesn't need to be stored forever, so a ttl is suggested.
+  /// Note that if you ever move or delete the file at this URI, the link from
+  /// the server will be broken.
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -179,6 +150,9 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => clearField(2);
 
+  /// The length of the file in bytes.  Allows the filesize to be shown in the
+  /// UI.  Omit if file is still being written or length is not known.  This
+  /// could also be the length of an entire archive.
   @$pb.TagNumber(3)
   $0.Int64Value get length => $_getN(2);
   @$pb.TagNumber(3)
@@ -193,6 +167,9 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Int64Value ensureLength() => $_ensure(2);
 
+  /// The content-type (aka MIME-type) of the file.  This is sent to the web
+  /// browser so it knows how to handle the file. (e.g. text/plain, image/jpeg,
+  /// text/html, etc). For zip archives, use "application/zip".
   @$pb.TagNumber(4)
   $core.String get contentType => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -205,6 +182,9 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearContentType() => clearField(4);
 
+  /// If the above path, length, and content_type are referring to an archive,
+  /// and you wish to refer to a particular entry within that archive, put the
+  /// particular archive entry data here.
   @$pb.TagNumber(5)
   ArchiveEntry get archiveEntry => $_getN(4);
   @$pb.TagNumber(5)
@@ -219,6 +199,7 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ArchiveEntry ensureArchiveEntry() => $_ensure(4);
 
+  /// A url to a content display app/site for this file or archive entry.
   @$pb.TagNumber(6)
   $core.String get contentViewer => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -231,6 +212,8 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearContentViewer() => clearField(6);
 
+  /// Whether to hide this file or archive entry in the UI.  Defaults to false.
+  /// A checkbox lets users see hidden files, but they're hidden by default.
   @$pb.TagNumber(7)
   $core.bool get hidden => $_getBF(6);
   @$pb.TagNumber(7)
@@ -243,6 +226,10 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearHidden() => clearField(7);
 
+  /// A short description of what this file or archive entry contains. This
+  /// description should help someone viewing the list of these files to
+  /// understand the purpose of this file and what they would want to view it
+  /// for.
   @$pb.TagNumber(8)
   $core.String get description => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -255,6 +242,7 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearDescription() => clearField(8);
 
+  /// The digest of this file in hexadecimal-like string if known.
   @$pb.TagNumber(9)
   $core.String get digest => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -267,6 +255,7 @@ class File extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearDigest() => clearField(9);
 
+  /// The algorithm corresponding to the digest if known.
   @$pb.TagNumber(10)
   File_HashType get hashType => $_getN(9);
   @$pb.TagNumber(10)
@@ -280,58 +269,44 @@ class File extends $pb.GeneratedMessage {
   void clearHashType() => clearField(10);
 }
 
+/// Information specific to an entry in an archive.
 class ArchiveEntry extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ArchiveEntry',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.devtools.resultstore.v2'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..aOM<$0.Int64Value>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'length',
-        subBuilder: $0.Int64Value.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'contentType')
-    ..hasRequiredFields = false;
-
-  ArchiveEntry._() : super();
   factory ArchiveEntry({
     $core.String? path,
     $0.Int64Value? length,
     $core.String? contentType,
   }) {
-    final _result = create();
+    final $result = create();
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
     if (length != null) {
-      _result.length = length;
+      $result.length = length;
     }
     if (contentType != null) {
-      _result.contentType = contentType;
+      $result.contentType = contentType;
     }
-    return _result;
+    return $result;
   }
+  ArchiveEntry._() : super();
   factory ArchiveEntry.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ArchiveEntry.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ArchiveEntry',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOM<$0.Int64Value>(2, _omitFieldNames ? '' : 'length',
+        subBuilder: $0.Int64Value.create)
+    ..aOS(3, _omitFieldNames ? '' : 'contentType')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -341,8 +316,10 @@ class ArchiveEntry extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ArchiveEntry copyWith(void Function(ArchiveEntry) updates) =>
       super.copyWith((message) => updates(message as ArchiveEntry))
-          as ArchiveEntry; // ignore: deprecated_member_use
+          as ArchiveEntry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ArchiveEntry create() => ArchiveEntry._();
   ArchiveEntry createEmptyInstance() => create();
@@ -353,6 +330,7 @@ class ArchiveEntry extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ArchiveEntry>(create);
   static ArchiveEntry? _defaultInstance;
 
+  /// The relative path of the entry within the archive.
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -365,6 +343,8 @@ class ArchiveEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  /// The uncompressed length of the archive entry in bytes.  Allows the entry
+  /// size to be shown in the UI.  Omit if the length is not known.
   @$pb.TagNumber(2)
   $0.Int64Value get length => $_getN(1);
   @$pb.TagNumber(2)
@@ -379,6 +359,9 @@ class ArchiveEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Int64Value ensureLength() => $_ensure(1);
 
+  /// The content-type (aka MIME-type) of the archive entry. (e.g. text/plain,
+  /// image/jpeg, text/html, etc). This is sent to the web browser so it knows
+  /// how to handle the entry.
   @$pb.TagNumber(3)
   $core.String get contentType => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -391,3 +374,7 @@ class ArchiveEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearContentType() => clearField(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

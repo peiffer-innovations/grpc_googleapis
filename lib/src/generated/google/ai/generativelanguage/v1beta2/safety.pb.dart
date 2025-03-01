@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/ai/generativelanguage/v1beta2/safety.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,52 +17,45 @@ import 'safety.pbenum.dart';
 
 export 'safety.pbenum.dart';
 
+///  Content filtering metadata associated with processing a single request.
+///
+///  ContentFilter contains a reason and an optional supporting string. The reason
+///  may be unspecified.
 class ContentFilter extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ContentFilter',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ai.generativelanguage.v1beta2'),
-      createEmptyInstance: create)
-    ..e<ContentFilter_BlockedReason>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'reason',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ContentFilter_BlockedReason.BLOCKED_REASON_UNSPECIFIED,
-        valueOf: ContentFilter_BlockedReason.valueOf,
-        enumValues: ContentFilter_BlockedReason.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'message')
-    ..hasRequiredFields = false;
-
-  ContentFilter._() : super();
   factory ContentFilter({
     ContentFilter_BlockedReason? reason,
     $core.String? message,
   }) {
-    final _result = create();
+    final $result = create();
     if (reason != null) {
-      _result.reason = reason;
+      $result.reason = reason;
     }
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
-    return _result;
+    return $result;
   }
+  ContentFilter._() : super();
   factory ContentFilter.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ContentFilter.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ContentFilter',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.ai.generativelanguage.v1beta2'),
+      createEmptyInstance: create)
+    ..e<ContentFilter_BlockedReason>(
+        1, _omitFieldNames ? '' : 'reason', $pb.PbFieldType.OE,
+        defaultOrMaker: ContentFilter_BlockedReason.BLOCKED_REASON_UNSPECIFIED,
+        valueOf: ContentFilter_BlockedReason.valueOf,
+        enumValues: ContentFilter_BlockedReason.values)
+    ..aOS(2, _omitFieldNames ? '' : 'message')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -68,8 +65,10 @@ class ContentFilter extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ContentFilter copyWith(void Function(ContentFilter) updates) =>
       super.copyWith((message) => updates(message as ContentFilter))
-          as ContentFilter; // ignore: deprecated_member_use
+          as ContentFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ContentFilter create() => ContentFilter._();
   ContentFilter createEmptyInstance() => create();
@@ -80,6 +79,7 @@ class ContentFilter extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ContentFilter>(create);
   static ContentFilter? _defaultInstance;
 
+  /// The reason content was blocked during request processing.
   @$pb.TagNumber(1)
   ContentFilter_BlockedReason get reason => $_getN(0);
   @$pb.TagNumber(1)
@@ -92,6 +92,7 @@ class ContentFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearReason() => clearField(1);
 
+  /// A string that describes the filtering behavior in more detail.
   @$pb.TagNumber(2)
   $core.String get message => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -105,50 +106,46 @@ class ContentFilter extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
 }
 
+///  Safety feedback for an entire request.
+///
+///  This field is populated if content in the input and/or response is blocked
+///  due to safety settings. SafetyFeedback may not exist for every HarmCategory.
+///  Each SafetyFeedback will return the safety settings used by the request as
+///  well as the lowest HarmProbability that should be allowed in order to return
+///  a result.
 class SafetyFeedback extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SafetyFeedback',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ai.generativelanguage.v1beta2'),
-      createEmptyInstance: create)
-    ..aOM<SafetyRating>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rating',
-        subBuilder: SafetyRating.create)
-    ..aOM<SafetySetting>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'setting',
-        subBuilder: SafetySetting.create)
-    ..hasRequiredFields = false;
-
-  SafetyFeedback._() : super();
   factory SafetyFeedback({
     SafetyRating? rating,
     SafetySetting? setting,
   }) {
-    final _result = create();
+    final $result = create();
     if (rating != null) {
-      _result.rating = rating;
+      $result.rating = rating;
     }
     if (setting != null) {
-      _result.setting = setting;
+      $result.setting = setting;
     }
-    return _result;
+    return $result;
   }
+  SafetyFeedback._() : super();
   factory SafetyFeedback.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SafetyFeedback.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SafetyFeedback',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.ai.generativelanguage.v1beta2'),
+      createEmptyInstance: create)
+    ..aOM<SafetyRating>(1, _omitFieldNames ? '' : 'rating',
+        subBuilder: SafetyRating.create)
+    ..aOM<SafetySetting>(2, _omitFieldNames ? '' : 'setting',
+        subBuilder: SafetySetting.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -158,8 +155,10 @@ class SafetyFeedback extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SafetyFeedback copyWith(void Function(SafetyFeedback) updates) =>
       super.copyWith((message) => updates(message as SafetyFeedback))
-          as SafetyFeedback; // ignore: deprecated_member_use
+          as SafetyFeedback;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SafetyFeedback create() => SafetyFeedback._();
   SafetyFeedback createEmptyInstance() => create();
@@ -170,6 +169,7 @@ class SafetyFeedback extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SafetyFeedback>(create);
   static SafetyFeedback? _defaultInstance;
 
+  /// Safety rating evaluated from content.
   @$pb.TagNumber(1)
   SafetyRating get rating => $_getN(0);
   @$pb.TagNumber(1)
@@ -184,6 +184,7 @@ class SafetyFeedback extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SafetyRating ensureRating() => $_ensure(0);
 
+  /// Safety settings applied to the request.
   @$pb.TagNumber(2)
   SafetySetting get setting => $_getN(1);
   @$pb.TagNumber(2)
@@ -199,57 +200,52 @@ class SafetyFeedback extends $pb.GeneratedMessage {
   SafetySetting ensureSetting() => $_ensure(1);
 }
 
+///  Safety rating for a piece of content.
+///
+///  The safety rating contains the category of harm and the
+///  harm probability level in that category for a piece of content.
+///  Content is classified for safety across a number of
+///  harm categories and the probability of the harm classification is included
+///  here.
 class SafetyRating extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SafetyRating',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ai.generativelanguage.v1beta2'),
-      createEmptyInstance: create)
-    ..e<HarmCategory>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'category',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: HarmCategory.HARM_CATEGORY_UNSPECIFIED,
-        valueOf: HarmCategory.valueOf,
-        enumValues: HarmCategory.values)
-    ..e<SafetyRating_HarmProbability>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'probability',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            SafetyRating_HarmProbability.HARM_PROBABILITY_UNSPECIFIED,
-        valueOf: SafetyRating_HarmProbability.valueOf,
-        enumValues: SafetyRating_HarmProbability.values)
-    ..hasRequiredFields = false;
-
-  SafetyRating._() : super();
   factory SafetyRating({
     HarmCategory? category,
     SafetyRating_HarmProbability? probability,
   }) {
-    final _result = create();
+    final $result = create();
     if (category != null) {
-      _result.category = category;
+      $result.category = category;
     }
     if (probability != null) {
-      _result.probability = probability;
+      $result.probability = probability;
     }
-    return _result;
+    return $result;
   }
+  SafetyRating._() : super();
   factory SafetyRating.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SafetyRating.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SafetyRating',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.ai.generativelanguage.v1beta2'),
+      createEmptyInstance: create)
+    ..e<HarmCategory>(3, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE,
+        defaultOrMaker: HarmCategory.HARM_CATEGORY_UNSPECIFIED,
+        valueOf: HarmCategory.valueOf,
+        enumValues: HarmCategory.values)
+    ..e<SafetyRating_HarmProbability>(
+        4, _omitFieldNames ? '' : 'probability', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            SafetyRating_HarmProbability.HARM_PROBABILITY_UNSPECIFIED,
+        valueOf: SafetyRating_HarmProbability.valueOf,
+        enumValues: SafetyRating_HarmProbability.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -259,8 +255,10 @@ class SafetyRating extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SafetyRating copyWith(void Function(SafetyRating) updates) =>
       super.copyWith((message) => updates(message as SafetyRating))
-          as SafetyRating; // ignore: deprecated_member_use
+          as SafetyRating;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SafetyRating create() => SafetyRating._();
   SafetyRating createEmptyInstance() => create();
@@ -271,6 +269,7 @@ class SafetyRating extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SafetyRating>(create);
   static SafetyRating? _defaultInstance;
 
+  /// Required. The category for this rating.
   @$pb.TagNumber(3)
   HarmCategory get category => $_getN(0);
   @$pb.TagNumber(3)
@@ -283,6 +282,7 @@ class SafetyRating extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCategory() => clearField(3);
 
+  /// Required. The probability of harm for this content.
   @$pb.TagNumber(4)
   SafetyRating_HarmProbability get probability => $_getN(1);
   @$pb.TagNumber(4)
@@ -296,57 +296,49 @@ class SafetyRating extends $pb.GeneratedMessage {
   void clearProbability() => clearField(4);
 }
 
+///  Safety setting, affecting the safety-blocking behavior.
+///
+///  Passing a safety setting for a category changes the allowed proability that
+///  content is blocked.
 class SafetySetting extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SafetySetting',
-      package: const $pb.PackageName(
-          const $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.ai.generativelanguage.v1beta2'),
-      createEmptyInstance: create)
-    ..e<HarmCategory>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'category',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: HarmCategory.HARM_CATEGORY_UNSPECIFIED,
-        valueOf: HarmCategory.valueOf,
-        enumValues: HarmCategory.values)
-    ..e<SafetySetting_HarmBlockThreshold>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'threshold',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            SafetySetting_HarmBlockThreshold.HARM_BLOCK_THRESHOLD_UNSPECIFIED,
-        valueOf: SafetySetting_HarmBlockThreshold.valueOf,
-        enumValues: SafetySetting_HarmBlockThreshold.values)
-    ..hasRequiredFields = false;
-
-  SafetySetting._() : super();
   factory SafetySetting({
     HarmCategory? category,
     SafetySetting_HarmBlockThreshold? threshold,
   }) {
-    final _result = create();
+    final $result = create();
     if (category != null) {
-      _result.category = category;
+      $result.category = category;
     }
     if (threshold != null) {
-      _result.threshold = threshold;
+      $result.threshold = threshold;
     }
-    return _result;
+    return $result;
   }
+  SafetySetting._() : super();
   factory SafetySetting.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SafetySetting.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SafetySetting',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.ai.generativelanguage.v1beta2'),
+      createEmptyInstance: create)
+    ..e<HarmCategory>(3, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE,
+        defaultOrMaker: HarmCategory.HARM_CATEGORY_UNSPECIFIED,
+        valueOf: HarmCategory.valueOf,
+        enumValues: HarmCategory.values)
+    ..e<SafetySetting_HarmBlockThreshold>(
+        4, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            SafetySetting_HarmBlockThreshold.HARM_BLOCK_THRESHOLD_UNSPECIFIED,
+        valueOf: SafetySetting_HarmBlockThreshold.valueOf,
+        enumValues: SafetySetting_HarmBlockThreshold.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -356,8 +348,10 @@ class SafetySetting extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SafetySetting copyWith(void Function(SafetySetting) updates) =>
       super.copyWith((message) => updates(message as SafetySetting))
-          as SafetySetting; // ignore: deprecated_member_use
+          as SafetySetting;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SafetySetting create() => SafetySetting._();
   SafetySetting createEmptyInstance() => create();
@@ -368,6 +362,7 @@ class SafetySetting extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SafetySetting>(create);
   static SafetySetting? _defaultInstance;
 
+  /// Required. The category for this setting.
   @$pb.TagNumber(3)
   HarmCategory get category => $_getN(0);
   @$pb.TagNumber(3)
@@ -380,6 +375,7 @@ class SafetySetting extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCategory() => clearField(3);
 
+  /// Required. Controls the probability threshold at which harm is blocked.
   @$pb.TagNumber(4)
   SafetySetting_HarmBlockThreshold get threshold => $_getN(1);
   @$pb.TagNumber(4)
@@ -392,3 +388,7 @@ class SafetySetting extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearThreshold() => clearField(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');
