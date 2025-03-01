@@ -1,10 +1,10 @@
 name: grpc_googleapis
 description: Generated GRPC Dart files for the Google APIs
-version: 3.0.38
+version: 3.0.39
 homepage: https://github.com/peiffer-innovations/grpc_googleapis
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   fixnum: ^1.1.1

@@ -1,3 +1,6 @@
+# 3.0.39
+ * Auto Generated
+
 # 3.0.38
  * Auto Generated
 
