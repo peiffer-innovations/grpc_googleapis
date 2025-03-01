@@ -1,3 +1,8 @@
+## [2.0.0] - March 1st, 2025
+
+* Dusted off and brought back to life
+
+
 ## [1.2.1] - January 24th, 2023
 
 * Flutter 3.7
