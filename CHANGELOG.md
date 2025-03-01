@@ -1,3 +1,6 @@
+# 3.0.0
+ * Dusted off and brought back to life
+
 # 2.0.33
  * Auto Generated
 
