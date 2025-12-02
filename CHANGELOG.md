@@ -1,3 +1,8 @@
+## [3.0.0] - December 2nd, 2025
+
+* Updated to the latest dependency versions
+
+
 ## [2.0.0] - March 1st, 2025
 
 * Dusted off and brought back to life

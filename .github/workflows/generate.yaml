@@ -42,6 +42,7 @@ jobs:
         run: |
           mkdir deps
           cd deps
+          git clone https://github.com/protocolbuffers/protobuf
           git clone https://github.com/googleapis/googleapis
           git clone https://github.com/grafeas/grafeas
 

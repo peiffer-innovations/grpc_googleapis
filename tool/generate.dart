@@ -51,14 +51,15 @@ Future<void> main(List<String> args) async {
   print('[PROTOBUF]');
   percent = 0;
   count = 0;
-  files = List<File>.from(
-      Directory('./assets/protos/protobuf').listSync(recursive: true).where(
-            (e) => e is File && e.path.endsWith('.proto'),
-          ))
+  files = List<File>.from(Directory('./deps/protobuf/src/google/protobuf')
+      .listSync(recursive: true)
+      .where(
+        (e) => e is File && e.path.endsWith('.proto'),
+      ))
     ..sort((a, b) => a.path.compareTo(b.path));
 
   protos.addAll(_copy(
-    Directory('./assets/protos/protobuf'),
+    Directory('./deps/protobuf/src/google/protobuf'),
     Directory('${temp.path}/google/protobuf'),
     files,
   ));
@@ -131,7 +132,7 @@ Future<void> main(List<String> args) async {
   }
 
   changelog.writeAsStringSync(
-    '# 3.0.$buildNumber\n * Auto Generated\n\n${changelog.readAsStringSync()}',
+    '# 4.0.$buildNumber\n * Auto Generated\n\n${changelog.readAsStringSync()}',
   );
 }
 
