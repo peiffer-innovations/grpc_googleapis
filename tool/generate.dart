@@ -32,6 +32,8 @@ Future<void> main(List<String> args) async {
     'deps/protobuf/src/google/protobuf/compiler',
   ]);
 
+  File('deps/protobuf/src/google/protobuf/util/json_format.proto').deleteSync();
+
   Directory('deps')
       .listSync(recursive: true)
       .whereType<File>()
@@ -175,12 +177,15 @@ Future<void> main(List<String> args) async {
 
 void _cloneDependency(String repo) {
   print('Cloning: $repo');
-  Process.runSync('git', [
-    'clone',
-    '--depth',
-    '1',
-    repo,
-  ], workingDirectory: './deps');
+  Process.runSync(
+      'git',
+      [
+        'clone',
+        '--depth',
+        '1',
+        repo,
+      ],
+      workingDirectory: './deps');
 }
 
 List<File> _copy(
